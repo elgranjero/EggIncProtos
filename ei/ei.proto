@@ -21,6 +21,7 @@ enum AdNetwork {
     FACEBOOK = 5;
     APPLOVIN = 6;
 }
+
 message Backup {
     optional string user_id = 1;
     optional string ei_user_id = 18;
