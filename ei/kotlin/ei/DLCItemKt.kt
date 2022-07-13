@@ -95,6 +95,54 @@ public object DLCItemKt {
     }
 
     /**
+     * <code>optional bool compressed = 6;</code>
+     */
+    public var compressed: kotlin.Boolean
+      @JvmName("getCompressed")
+      get() = _builder.getCompressed()
+      @JvmName("setCompressed")
+      set(value) {
+        _builder.setCompressed(value)
+      }
+    /**
+     * <code>optional bool compressed = 6;</code>
+     */
+    public fun clearCompressed() {
+      _builder.clearCompressed()
+    }
+    /**
+     * <code>optional bool compressed = 6;</code>
+     * @return Whether the compressed field is set.
+     */
+    public fun hasCompressed(): kotlin.Boolean {
+      return _builder.hasCompressed()
+    }
+
+    /**
+     * <code>optional uint64 original_size = 7;</code>
+     */
+    public var originalSize: kotlin.Long
+      @JvmName("getOriginalSize")
+      get() = _builder.getOriginalSize()
+      @JvmName("setOriginalSize")
+      set(value) {
+        _builder.setOriginalSize(value)
+      }
+    /**
+     * <code>optional uint64 original_size = 7;</code>
+     */
+    public fun clearOriginalSize() {
+      _builder.clearOriginalSize()
+    }
+    /**
+     * <code>optional uint64 original_size = 7;</code>
+     * @return Whether the originalSize field is set.
+     */
+    public fun hasOriginalSize(): kotlin.Boolean {
+      return _builder.hasOriginalSize()
+    }
+
+    /**
      * <code>optional string url = 4;</code>
      */
     public var url: kotlin.String

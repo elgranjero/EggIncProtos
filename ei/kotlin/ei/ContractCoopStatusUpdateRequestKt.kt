@@ -335,6 +335,30 @@ public object ContractCoopStatusUpdateRequestKt {
     }
 
     /**
+     * <code>optional .ei.PlayerFarmInfo farm_info = 16;</code>
+     */
+    public var farmInfo: ei.Ei.PlayerFarmInfo
+      @JvmName("getFarmInfo")
+      get() = _builder.getFarmInfo()
+      @JvmName("setFarmInfo")
+      set(value) {
+        _builder.setFarmInfo(value)
+      }
+    /**
+     * <code>optional .ei.PlayerFarmInfo farm_info = 16;</code>
+     */
+    public fun clearFarmInfo() {
+      _builder.clearFarmInfo()
+    }
+    /**
+     * <code>optional .ei.PlayerFarmInfo farm_info = 16;</code>
+     * @return Whether the farmInfo field is set.
+     */
+    public fun hasFarmInfo(): kotlin.Boolean {
+      return _builder.hasFarmInfo()
+    }
+
+    /**
      * <code>optional double egg_laying_rate_buff = 10 [default = 1];</code>
      */
     public var eggLayingRateBuff: kotlin.Double

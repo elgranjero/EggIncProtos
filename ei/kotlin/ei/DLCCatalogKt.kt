@@ -216,6 +216,136 @@ public object DLCCatalogKt {
     @kotlin.jvm.JvmName("clearShellSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.clear() {
       _builder.clearShellSets()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ShellObjectsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     */
+     public val shellObjects: com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getShellObjectsList()
+      )
+    /**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * @param value The shellObjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addShellObjects")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.add(value: ei.Ei.ShellObjectSpec) {
+      _builder.addShellObjects(value)
+    }/**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * @param value The shellObjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignShellObjects")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.plusAssign(value: ei.Ei.ShellObjectSpec) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * @param values The shellObjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllShellObjects")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec>) {
+      _builder.addAllShellObjects(values)
+    }/**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * @param values The shellObjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllShellObjects")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The shellObjects to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setShellObjects")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellObjectSpec) {
+      _builder.setShellObjects(index, value)
+    }/**
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearShellObjects")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.clear() {
+      _builder.clearShellObjects()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ShellGroupsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     */
+     public val shellGroups: com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getShellGroupsList()
+      )
+    /**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * @param value The shellGroups to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addShellGroups")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.add(value: ei.Ei.ShellGroupSpec) {
+      _builder.addShellGroups(value)
+    }/**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * @param value The shellGroups to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignShellGroups")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.plusAssign(value: ei.Ei.ShellGroupSpec) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * @param values The shellGroups to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllShellGroups")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellGroupSpec>) {
+      _builder.addAllShellGroups(values)
+    }/**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * @param values The shellGroups to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllShellGroups")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellGroupSpec>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * @param index The index to set the value at.
+     * @param value The shellGroups to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setShellGroups")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellGroupSpec) {
+      _builder.setShellGroups(index, value)
+    }/**
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearShellGroups")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.clear() {
+      _builder.clearShellGroups()
     }}
 }
 @kotlin.jvm.JvmSynthetic

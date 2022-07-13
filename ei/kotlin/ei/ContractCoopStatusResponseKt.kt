@@ -369,6 +369,71 @@ public object ContractCoopStatusResponseKt {
       _builder.clearGifts()
     }
     /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ChickenRunsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     */
+     public val chickenRuns: com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getChickenRunsList()
+      )
+    /**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     * @param value The chickenRuns to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addChickenRuns")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
+      _builder.addChickenRuns(value)
+    }/**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     * @param value The chickenRuns to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignChickenRuns")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     * @param values The chickenRuns to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllChickenRuns")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ChickenRun>) {
+      _builder.addAllChickenRuns(values)
+    }/**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     * @param values The chickenRuns to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllChickenRuns")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ChickenRun>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     * @param index The index to set the value at.
+     * @param value The chickenRuns to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setChickenRuns")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
+      _builder.setChickenRuns(index, value)
+    }/**
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearChickenRuns")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.clear() {
+      _builder.clearChickenRuns()
+    }
+    /**
      * <code>optional double local_timestamp = 12;</code>
      */
     public var localTimestamp: kotlin.Double
@@ -457,6 +522,30 @@ public object ContractCoopStatusResponseKt {
        */
       public fun hasUserName(): kotlin.Boolean {
         return _builder.hasUserName()
+      }
+
+      /**
+       * <code>optional string contract_identifier = 19;</code>
+       */
+      public var contractIdentifier: kotlin.String
+        @JvmName("getContractIdentifier")
+        get() = _builder.getContractIdentifier()
+        @JvmName("setContractIdentifier")
+        set(value) {
+          _builder.setContractIdentifier(value)
+        }
+      /**
+       * <code>optional string contract_identifier = 19;</code>
+       */
+      public fun clearContractIdentifier() {
+        _builder.clearContractIdentifier()
+      }
+      /**
+       * <code>optional string contract_identifier = 19;</code>
+       * @return Whether the contractIdentifier field is set.
+       */
+      public fun hasContractIdentifier(): kotlin.Boolean {
+        return _builder.hasContractIdentifier()
       }
 
       /**
@@ -553,6 +642,30 @@ public object ContractCoopStatusResponseKt {
        */
       public fun hasProductionParams(): kotlin.Boolean {
         return _builder.hasProductionParams()
+      }
+
+      /**
+       * <code>optional .ei.PlayerFarmInfo farm_info = 18;</code>
+       */
+      public var farmInfo: ei.Ei.PlayerFarmInfo
+        @JvmName("getFarmInfo")
+        get() = _builder.getFarmInfo()
+        @JvmName("setFarmInfo")
+        set(value) {
+          _builder.setFarmInfo(value)
+        }
+      /**
+       * <code>optional .ei.PlayerFarmInfo farm_info = 18;</code>
+       */
+      public fun clearFarmInfo() {
+        _builder.clearFarmInfo()
+      }
+      /**
+       * <code>optional .ei.PlayerFarmInfo farm_info = 18;</code>
+       * @return Whether the farmInfo field is set.
+       */
+      public fun hasFarmInfo(): kotlin.Boolean {
+        return _builder.hasFarmInfo()
       }
 
       /**
@@ -859,7 +972,31 @@ public object ContractCoopStatusResponseKt {
       @kotlin.jvm.JvmName("clearBuffHistory")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.clear() {
         _builder.clearBuffHistory()
-      }}
+      }
+      /**
+       * <code>optional double chicken_run_cooldown = 20;</code>
+       */
+      public var chickenRunCooldown: kotlin.Double
+        @JvmName("getChickenRunCooldown")
+        get() = _builder.getChickenRunCooldown()
+        @JvmName("setChickenRunCooldown")
+        set(value) {
+          _builder.setChickenRunCooldown(value)
+        }
+      /**
+       * <code>optional double chicken_run_cooldown = 20;</code>
+       */
+      public fun clearChickenRunCooldown() {
+        _builder.clearChickenRunCooldown()
+      }
+      /**
+       * <code>optional double chicken_run_cooldown = 20;</code>
+       * @return Whether the chickenRunCooldown field is set.
+       */
+      public fun hasChickenRunCooldown(): kotlin.Boolean {
+        return _builder.hasChickenRunCooldown()
+      }
+    }
   }
   @kotlin.jvm.JvmSynthetic
   public inline fun coopGift(block: ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.CoopGift =
@@ -953,6 +1090,98 @@ public object ContractCoopStatusResponseKt {
       }
     }
   }
+  @kotlin.jvm.JvmSynthetic
+  public inline fun chickenRun(block: ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ChickenRun =
+    ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl._create(ei.Ei.ContractCoopStatusResponse.ChickenRun.newBuilder()).apply { block() }._build()
+  public object ChickenRunKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.ContractCoopStatusResponse.ChickenRun.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.ContractCoopStatusResponse.ChickenRun.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.ContractCoopStatusResponse.ChickenRun = _builder.build()
+
+      /**
+       * <code>optional string user_id = 1;</code>
+       */
+      public var userId: kotlin.String
+        @JvmName("getUserId")
+        get() = _builder.getUserId()
+        @JvmName("setUserId")
+        set(value) {
+          _builder.setUserId(value)
+        }
+      /**
+       * <code>optional string user_id = 1;</code>
+       */
+      public fun clearUserId() {
+        _builder.clearUserId()
+      }
+      /**
+       * <code>optional string user_id = 1;</code>
+       * @return Whether the userId field is set.
+       */
+      public fun hasUserId(): kotlin.Boolean {
+        return _builder.hasUserId()
+      }
+
+      /**
+       * <code>optional string user_name = 3;</code>
+       */
+      public var userName: kotlin.String
+        @JvmName("getUserName")
+        get() = _builder.getUserName()
+        @JvmName("setUserName")
+        set(value) {
+          _builder.setUserName(value)
+        }
+      /**
+       * <code>optional string user_name = 3;</code>
+       */
+      public fun clearUserName() {
+        _builder.clearUserName()
+      }
+      /**
+       * <code>optional string user_name = 3;</code>
+       * @return Whether the userName field is set.
+       */
+      public fun hasUserName(): kotlin.Boolean {
+        return _builder.hasUserName()
+      }
+
+      /**
+       * <code>optional uint64 amount = 2;</code>
+       */
+      public var amount: kotlin.Long
+        @JvmName("getAmount")
+        get() = _builder.getAmount()
+        @JvmName("setAmount")
+        set(value) {
+          _builder.setAmount(value)
+        }
+      /**
+       * <code>optional uint64 amount = 2;</code>
+       */
+      public fun clearAmount() {
+        _builder.clearAmount()
+      }
+      /**
+       * <code>optional uint64 amount = 2;</code>
+       * @return Whether the amount field is set.
+       */
+      public fun hasAmount(): kotlin.Boolean {
+        return _builder.hasAmount()
+      }
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.copy(block: ei.ContractCoopStatusResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse =
@@ -963,3 +1192,6 @@ public inline fun ei.Ei.ContractCoopStatusResponse.ContributionInfo.copy(block: 
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.CoopGift.copy(block: ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.CoopGift =
   ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.ContractCoopStatusResponse.ChickenRun.copy(block: ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ChickenRun =
+  ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl._create(this.toBuilder()).apply { block() }._build()

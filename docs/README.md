@@ -38,6 +38,7 @@
     - [Backup.OwnedBoost](#ei-Backup-OwnedBoost)
     - [Backup.ResearchItem](#ei-Backup-ResearchItem)
     - [Backup.Settings](#ei-Backup-Settings)
+    - [Backup.Shells](#ei-Backup-Shells)
     - [Backup.Simulation](#ei-Backup-Simulation)
     - [Backup.Stats](#ei-Backup-Stats)
     - [Backup.Tutorial](#ei-Backup-Tutorial)
@@ -57,6 +58,7 @@
     - [Contract.GoalSet](#ei-Contract-GoalSet)
     - [ContractCoopStatusRequest](#ei-ContractCoopStatusRequest)
     - [ContractCoopStatusResponse](#ei-ContractCoopStatusResponse)
+    - [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun)
     - [ContractCoopStatusResponse.ContributionInfo](#ei-ContractCoopStatusResponse-ContributionInfo)
     - [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift)
     - [ContractCoopStatusUpdateRequest](#ei-ContractCoopStatusUpdateRequest)
@@ -65,10 +67,14 @@
     - [ContractsResponse](#ei-ContractsResponse)
     - [CoopBuffHistory](#ei-CoopBuffHistory)
     - [CoopBuffState](#ei-CoopBuffState)
+    - [CoopChickenRunEntry](#ei-CoopChickenRunEntry)
+    - [CoopLastChickenRunTimes](#ei-CoopLastChickenRunTimes)
     - [CraftArtifactRequest](#ei-CraftArtifactRequest)
     - [CraftArtifactResponse](#ei-CraftArtifactResponse)
     - [CreateCoopRequest](#ei-CreateCoopRequest)
     - [CreateCoopResponse](#ei-CreateCoopResponse)
+    - [CurrencyFlowBatchRequest](#ei-CurrencyFlowBatchRequest)
+    - [CurrencyFlowLog](#ei-CurrencyFlowLog)
     - [DLCCatalog](#ei-DLCCatalog)
     - [DLCItem](#ei-DLCItem)
     - [DailyGiftInfo](#ei-DailyGiftInfo)
@@ -80,6 +86,7 @@
     - [EggIncFirstContactResponse](#ei-EggIncFirstContactResponse)
     - [FarmProductionParams](#ei-FarmProductionParams)
     - [GenericAction](#ei-GenericAction)
+    - [GenericActionBatchRequest](#ei-GenericActionBatchRequest)
     - [GetPeriodicalsRequest](#ei-GetPeriodicalsRequest)
     - [GiftPlayerCoopRequest](#ei-GiftPlayerCoopRequest)
     - [IAPSaleEntry](#ei-IAPSaleEntry)
@@ -108,6 +115,7 @@
     - [MissionResponse](#ei-MissionResponse)
     - [MyContracts](#ei-MyContracts)
     - [PeriodicalsResponse](#ei-PeriodicalsResponse)
+    - [PlayerFarmInfo](#ei-PlayerFarmInfo)
     - [QueryCoopRequest](#ei-QueryCoopRequest)
     - [QueryCoopResponse](#ei-QueryCoopResponse)
     - [ReturnEDTPayload](#ei-ReturnEDTPayload)
@@ -115,16 +123,27 @@
     - [SalesInfo](#ei-SalesInfo)
     - [SalesInfoRequest](#ei-SalesInfoRequest)
     - [SaveBackupResponse](#ei-SaveBackupResponse)
+    - [SendChickenRunCoopRequest](#ei-SendChickenRunCoopRequest)
     - [ServerGift](#ei-ServerGift)
     - [SetArtifactRequest](#ei-SetArtifactRequest)
     - [SetArtifactResponse](#ei-SetArtifactResponse)
     - [ShellDB](#ei-ShellDB)
+    - [ShellDB.ChickenConfig](#ei-ShellDB-ChickenConfig)
     - [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration)
     - [ShellDB.ShellConfiguration](#ei-ShellDB-ShellConfiguration)
+    - [ShellDB.ShellElementStatus](#ei-ShellDB-ShellElementStatus)
+    - [ShellDB.ShellGroupConfiguration](#ei-ShellDB-ShellGroupConfiguration)
+    - [ShellDB.ShellSetConfiguration](#ei-ShellDB-ShellSetConfiguration)
+    - [ShellDB.ShellSetVariationStatus](#ei-ShellDB-ShellSetVariationStatus)
     - [ShellDB.ShellStatus](#ei-ShellDB-ShellStatus)
+    - [ShellGroupSpec](#ei-ShellGroupSpec)
+    - [ShellObjectSpec](#ei-ShellObjectSpec)
+    - [ShellObjectSpec.LODPiece](#ei-ShellObjectSpec-LODPiece)
     - [ShellSetSpec](#ei-ShellSetSpec)
+    - [ShellSetSpec.VariationInfo](#ei-ShellSetSpec-VariationInfo)
     - [ShellSpec](#ei-ShellSpec)
     - [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece)
+    - [ShellsActionLog](#ei-ShellsActionLog)
     - [UpdateCoopPermissionsRequest](#ei-UpdateCoopPermissionsRequest)
     - [UpdateCoopPermissionsResponse](#ei-UpdateCoopPermissionsResponse)
     - [UserDataInfoRequest](#ei-UserDataInfoRequest)
@@ -150,6 +169,7 @@
     - [Platform](#ei-Platform)
     - [RewardType](#ei-RewardType)
     - [SaveBackupResponse.ErrorCodes](#ei-SaveBackupResponse-ErrorCodes)
+    - [ShellDB.FarmElement](#ei-ShellDB-FarmElement)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
   
 - [Scalar Value Types](#scalar-value-types)
@@ -576,6 +596,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | message | [bytes](#bytes) | optional |  |
+| version | [uint32](#uint32) | optional |  |
 | code | [string](#string) | optional |  |
 
 
@@ -629,6 +650,7 @@
 | stats | [Backup.Stats](#ei-Backup-Stats) | optional |  |
 | game | [Backup.Game](#ei-Backup-Game) | optional |  |
 | artifacts | [Backup.Artifacts](#ei-Backup-Artifacts) | optional |  |
+| shells | [Backup.Shells](#ei-Backup-Shells) | optional |  |
 | sim | [Backup.Simulation](#ei-Backup-Simulation) | optional |  |
 | farms | [Backup.Simulation](#ei-Backup-Simulation) | repeated |  |
 | mission | [Backup.Mission](#ei-Backup-Mission) | optional |  |
@@ -727,6 +749,9 @@
 | unclaimed_soul_eggs_d | [double](#double) | optional |  |
 | eggs_of_prophecy | [uint64](#uint64) | optional |  |
 | unclaimed_eggs_of_prophecy | [uint64](#uint64) | optional |  |
+| shell_scripts_earned | [uint64](#uint64) | optional |  |
+| shell_scripts_spent | [uint64](#uint64) | optional |  |
+| unclaimed_shell_scripts | [uint64](#uint64) | optional |  |
 | prestige_cash_earned | [double](#double) | optional |  |
 | prestige_soul_boost_cash | [double](#double) | optional |  |
 | lifetime_cash_earned | [double](#double) | optional |  |
@@ -914,6 +939,23 @@
 
 
 
+<a name="ei-Backup-Shells"></a>
+
+### Backup.Shells
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| intro_alert | [bool](#bool) | optional |  |
+| contracts_intro_alert | [bool](#bool) | optional |  |
+| num_new | [int32](#int32) | repeated |  |
+
+
+
+
+
+
 <a name="ei-Backup-Simulation"></a>
 
 ### Backup.Simulation
@@ -1031,6 +1073,7 @@
 | platform | [string](#string) | optional |  |
 | country | [string](#string) | optional |  |
 | language | [string](#string) | optional |  |
+| debug | [bool](#bool) | optional |  |
 
 
 
@@ -1233,6 +1276,7 @@
 | max_coop_size | [uint32](#uint32) | optional |  |
 | max_boosts | [uint32](#uint32) | optional |  |
 | minutes_per_token | [double](#double) | optional |  Default: 60 |
+| chicken_run_cooldown_minutes | [double](#double) | optional |  Default: 60 |
 | start_time | [double](#double) | optional |  |
 | expiration_time | [double](#double) | optional |  |
 | length_seconds | [double](#double) | optional |  |
@@ -1318,7 +1362,25 @@
 | all_members_reporting | [bool](#bool) | optional |  |
 | grace_period_seconds_remaining | [double](#double) | optional |  |
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
+| chicken_runs | [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun) | repeated |  |
 | local_timestamp | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractCoopStatusResponse-ChickenRun"></a>
+
+### ContractCoopStatusResponse.ChickenRun
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) | optional |  |
+| user_name | [string](#string) | optional |  |
+| amount | [uint64](#uint64) | optional |  |
 
 
 
@@ -1335,10 +1397,12 @@
 | ----- | ---- | ----- | ----------- |
 | user_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
+| contract_identifier | [string](#string) | optional |  |
 | contribution_amount | [double](#double) | optional |  |
 | contribution_rate | [double](#double) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | production_params | [FarmProductionParams](#ei-FarmProductionParams) | optional |  |
+| farm_info | [PlayerFarmInfo](#ei-PlayerFarmInfo) | optional |  |
 | rank_change | [int32](#int32) | optional |  |
 | active | [bool](#bool) | optional |  |
 | leech | [bool](#bool) | optional |  |
@@ -1350,6 +1414,7 @@
 | boost_tokens | [uint32](#uint32) | optional |  |
 | boost_tokens_spent | [uint32](#uint32) | optional |  |
 | buff_history | [CoopBuffState](#ei-CoopBuffState) | repeated |  |
+| chicken_run_cooldown | [double](#double) | optional |  |
 
 
 
@@ -1394,6 +1459,7 @@
 | boost_tokens | [uint32](#uint32) | optional |  |
 | boost_tokens_spent | [uint32](#uint32) | optional |  |
 | production_params | [FarmProductionParams](#ei-FarmProductionParams) | optional |  |
+| farm_info | [PlayerFarmInfo](#ei-PlayerFarmInfo) | optional |  |
 | egg_laying_rate_buff | [double](#double) | optional |  Default: 1 |
 | earnings_buff | [double](#double) | optional |  Default: 1 |
 
@@ -1485,6 +1551,37 @@
 
 
 
+<a name="ei-CoopChickenRunEntry"></a>
+
+### CoopChickenRunEntry
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) | optional |  |
+| server_timestamp | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-CoopLastChickenRunTimes"></a>
+
+### CoopLastChickenRunTimes
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| entries | [CoopChickenRunEntry](#ei-CoopChickenRunEntry) | repeated |  |
+
+
+
+
+
+
 <a name="ei-CraftArtifactRequest"></a>
 
 ### CraftArtifactRequest
@@ -1565,6 +1662,43 @@
 
 
 
+<a name="ei-CurrencyFlowBatchRequest"></a>
+
+### CurrencyFlowBatchRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| logs | [CurrencyFlowLog](#ei-CurrencyFlowLog) | repeated |  |
+
+
+
+
+
+
+<a name="ei-CurrencyFlowLog"></a>
+
+### CurrencyFlowLog
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) | optional |  |
+| approx_time | [double](#double) | optional |  |
+| currency | [RewardType](#ei-RewardType) | optional |  |
+| amount | [int64](#int64) | optional |  |
+| location | [string](#string) | optional |  |
+| version | [string](#string) | optional |  |
+| platform | [string](#string) | optional |  |
+
+
+
+
+
+
 <a name="ei-DLCCatalog"></a>
 
 ### DLCCatalog
@@ -1576,6 +1710,8 @@
 | items | [DLCItem](#ei-DLCItem) | repeated |  |
 | shells | [ShellSpec](#ei-ShellSpec) | repeated |  |
 | shell_sets | [ShellSetSpec](#ei-ShellSetSpec) | repeated |  |
+| shell_objects | [ShellObjectSpec](#ei-ShellObjectSpec) | repeated |  |
+| shell_groups | [ShellGroupSpec](#ei-ShellGroupSpec) | repeated |  |
 
 
 
@@ -1593,6 +1729,8 @@
 | name | [string](#string) | optional |  |
 | directory | [string](#string) | optional |  |
 | ext | [string](#string) | optional |  |
+| compressed | [bool](#bool) | optional |  |
+| original_size | [uint64](#uint64) | optional |  |
 | url | [string](#string) | optional |  |
 | checksum | [string](#string) | optional |  |
 
@@ -1772,6 +1910,22 @@
 | data | [ActionKeyValuePair](#ei-ActionKeyValuePair) | repeated |  |
 | app | [AppInfo](#ei-AppInfo) | optional |  |
 | device | [DeviceInfo](#ei-DeviceInfo) | optional |  |
+
+
+
+
+
+
+<a name="ei-GenericActionBatchRequest"></a>
+
+### GenericActionBatchRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| actions | [GenericAction](#ei-GenericAction) | repeated |  |
 
 
 
@@ -2107,6 +2261,10 @@
 | ask_to_track_message | [string](#string) | optional |  |
 | ask_to_track_show_pre_dialog | [bool](#bool) | optional |  |
 | ask_to_track_after_privacy | [bool](#bool) | optional |  |
+| chicken_run_boost_percentage | [double](#double) | optional |  |
+| shells_intro_tickets | [uint32](#uint32) | optional |  |
+| shells_max_free_chicken_configs | [uint32](#uint32) | optional |  |
+| shells_intro_alert_threshold | [uint32](#uint32) | optional |  |
 
 
 
@@ -2132,6 +2290,7 @@
 | coop_contribution_finalized | [bool](#bool) | optional |  |
 | coop_last_uploaded_contribution | [double](#double) | optional |  |
 | coop_user_id | [string](#string) | optional |  |
+| coop_share_farm | [bool](#bool) | optional |  |
 | last_amount_when_reward_given | [double](#double) | optional |  |
 | num_goals_achieved | [uint32](#uint32) | optional |  |
 | boosts_used | [uint32](#uint32) | optional |  |
@@ -2337,6 +2496,41 @@
 
 
 
+<a name="ei-PlayerFarmInfo"></a>
+
+### PlayerFarmInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| client_version | [uint32](#uint32) | optional |  |
+| soul_eggs | [double](#double) | optional |  |
+| eggs_of_prophecy | [uint64](#uint64) | optional |  |
+| permit_level | [uint32](#uint32) | optional |  |
+| hyperloop_station | [bool](#bool) | optional |  |
+| egg_medal_level | [uint32](#uint32) | repeated |  |
+| epic_research | [Backup.ResearchItem](#ei-Backup-ResearchItem) | repeated |  |
+| egg_type | [Egg](#ei-Egg) | optional |  |
+| cash_on_hand | [double](#double) | optional |  |
+| habs | [uint32](#uint32) | repeated |  |
+| hab_population | [uint64](#uint64) | repeated |  |
+| hab_capacity | [uint64](#uint64) | repeated |  |
+| vehicles | [uint32](#uint32) | repeated |  |
+| train_length | [uint32](#uint32) | repeated |  |
+| silos_owned | [uint32](#uint32) | optional |  |
+| common_research | [Backup.ResearchItem](#ei-Backup-ResearchItem) | repeated |  |
+| active_boosts | [Backup.ActiveBoost](#ei-Backup-ActiveBoost) | repeated |  |
+| boost_tokens_on_hand | [uint32](#uint32) | optional |  |
+| equipped_artifacts | [CompleteArtifact](#ei-CompleteArtifact) | repeated |  |
+| artifact_inventory_score | [uint64](#uint64) | optional |  |
+| farm_appearance | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
+
+
+
+
+
+
 <a name="ei-QueryCoopRequest"></a>
 
 ### QueryCoopRequest
@@ -2461,6 +2655,28 @@
 
 
 
+<a name="ei-SendChickenRunCoopRequest"></a>
+
+### SendChickenRunCoopRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| contract_identifier | [string](#string) | optional |  |
+| coop_identifier | [string](#string) | optional |  |
+| player_identifier | [string](#string) | optional |  |
+| requesting_user_id | [string](#string) | optional |  |
+| requesting_user_name | [string](#string) | optional |  |
+| farm_pop | [uint64](#uint64) | optional |  |
+| client_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
 <a name="ei-ServerGift"></a>
 
 ### ServerGift
@@ -2523,7 +2739,29 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | shell_inventory | [ShellDB.ShellStatus](#ei-ShellDB-ShellStatus) | repeated |  |
+| shell_element_inventory | [ShellDB.ShellElementStatus](#ei-ShellDB-ShellElementStatus) | repeated |  |
+| shell_variation_inventory | [ShellDB.ShellSetVariationStatus](#ei-ShellDB-ShellSetVariationStatus) | repeated |  |
+| shell_set_inventory | [ShellDB.ShellStatus](#ei-ShellDB-ShellStatus) | repeated |  |
+| shell_object_inventory | [ShellDB.ShellStatus](#ei-ShellDB-ShellStatus) | repeated |  |
 | farm_configs | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | repeated |  |
+| new_shells_downloaded | [string](#string) | repeated |  |
+| new_shells_seen | [string](#string) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ShellDB-ChickenConfig"></a>
+
+### ShellDB.ChickenConfig
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| chicken_identifier | [string](#string) | optional |  |
+| hat_identifier | [string](#string) | optional |  |
 
 
 
@@ -2539,6 +2777,10 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | shell_configs | [ShellDB.ShellConfiguration](#ei-ShellDB-ShellConfiguration) | repeated |  |
+| shell_set_configs | [ShellDB.ShellSetConfiguration](#ei-ShellDB-ShellSetConfiguration) | repeated |  |
+| configure_chickens_by_group | [bool](#bool) | optional |  |
+| group_configs | [ShellDB.ShellGroupConfiguration](#ei-ShellDB-ShellGroupConfiguration) | repeated |  |
+| chicken_configs | [ShellDB.ChickenConfig](#ei-ShellDB-ChickenConfig) | repeated |  |
 
 
 
@@ -2562,6 +2804,73 @@
 
 
 
+<a name="ei-ShellDB-ShellElementStatus"></a>
+
+### ShellDB.ShellElementStatus
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| element | [ShellDB.FarmElement](#ei-ShellDB-FarmElement) | optional |  |
+| set_identifier | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellDB-ShellGroupConfiguration"></a>
+
+### ShellDB.ShellGroupConfiguration
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| asset_type | [ShellSpec.AssetType](#ei-ShellSpec-AssetType) | optional |  |
+| group_identifier | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellDB-ShellSetConfiguration"></a>
+
+### ShellDB.ShellSetConfiguration
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| element | [ShellDB.FarmElement](#ei-ShellDB-FarmElement) | optional |  |
+| index | [uint32](#uint32) | optional |  |
+| shell_set_identifier | [string](#string) | optional |  |
+| variation_identifier | [string](#string) | optional |  |
+| decorator_identifier | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellDB-ShellSetVariationStatus"></a>
+
+### ShellDB.ShellSetVariationStatus
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| set_identifier | [string](#string) | optional |  |
+| owned_variations | [string](#string) | repeated |  |
+
+
+
+
+
+
 <a name="ei-ShellDB-ShellStatus"></a>
 
 ### ShellDB.ShellStatus
@@ -2570,8 +2879,71 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| shell_identifier | [string](#string) | optional |  |
+| identifier | [string](#string) | optional |  |
 | owned | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellGroupSpec"></a>
+
+### ShellGroupSpec
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| identifier | [string](#string) | optional |  |
+| name | [string](#string) | optional |  |
+| asset_type | [ShellSpec.AssetType](#ei-ShellSpec-AssetType) | optional |  |
+| member_ids | [string](#string) | repeated |  |
+| price_mult_DEPRECATED | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellObjectSpec"></a>
+
+### ShellObjectSpec
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| identifier | [string](#string) | optional |  |
+| name | [string](#string) | optional |  |
+| asset_type | [ShellSpec.AssetType](#ei-ShellSpec-AssetType) | optional |  |
+| object_class | [string](#string) | optional |  |
+| price | [uint32](#uint32) | optional |  |
+| required_eop | [uint32](#uint32) | optional |  |
+| required_soul_eggs | [double](#double) | optional |  |
+| is_new | [bool](#bool) | optional |  |
+| expires | [bool](#bool) | optional |  |
+| seconds_remaining | [double](#double) | optional |  |
+| metadata | [double](#double) | repeated |  |
+| no_hats | [bool](#bool) | optional |  |
+| pieces | [ShellObjectSpec.LODPiece](#ei-ShellObjectSpec-LODPiece) | repeated |  |
+| default_appearance | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellObjectSpec-LODPiece"></a>
+
+### ShellObjectSpec.LODPiece
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| dlc | [DLCItem](#ei-DLCItem) | optional |  |
+| lod | [uint32](#uint32) | optional |  |
 
 
 
@@ -2589,8 +2961,37 @@
 | identifier | [string](#string) | optional |  |
 | name | [string](#string) | optional |  |
 | price | [uint32](#uint32) | optional |  |
+| price_mult_DEPRECATED | [double](#double) | optional |  Default: 1 |
+| discount | [double](#double) | optional |  |
 | required_eop | [uint32](#uint32) | optional |  |
 | required_soul_eggs | [double](#double) | optional |  |
+| is_new | [bool](#bool) | optional |  |
+| expires | [bool](#bool) | optional |  |
+| seconds_remaining | [double](#double) | optional |  |
+| decorator | [bool](#bool) | optional |  |
+| modified_geometry | [bool](#bool) | optional |  |
+| element_set | [bool](#bool) | optional |  |
+| hex_base_color | [string](#string) | optional |  |
+| variations | [ShellSetSpec.VariationInfo](#ei-ShellSetSpec-VariationInfo) | repeated |  |
+| default_appearance | [bool](#bool) | optional |  |
+| custom_appearance | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellSetSpec-VariationInfo"></a>
+
+### ShellSetSpec.VariationInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| identifier | [string](#string) | optional |  |
+| hex_color | [string](#string) | optional |  |
+| price | [uint32](#uint32) | optional |  |
 
 
 
@@ -2613,6 +3014,9 @@
 | price | [uint32](#uint32) | optional |  |
 | required_eop | [uint32](#uint32) | optional |  |
 | required_soul_eggs | [double](#double) | optional |  |
+| is_new | [bool](#bool) | optional |  |
+| expires | [bool](#bool) | optional |  |
+| seconds_remaining | [double](#double) | optional |  |
 | default_appearance | [bool](#bool) | optional |  |
 
 
@@ -2630,6 +3034,29 @@
 | ----- | ---- | ----- | ----------- |
 | asset_type | [ShellSpec.AssetType](#ei-ShellSpec-AssetType) | optional |  |
 | dlc | [DLCItem](#ei-DLCItem) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellsActionLog"></a>
+
+### ShellsActionLog
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| user_id | [string](#string) | optional |  |
+| action | [string](#string) | optional |  |
+| sub_id | [string](#string) | optional |  |
+| farm_element | [ShellDB.FarmElement](#ei-ShellDB-FarmElement) | optional |  |
+| cost | [uint32](#uint32) | optional |  |
+| approx_time | [double](#double) | optional |  |
+| version | [string](#string) | optional |  |
+| farm_index | [int32](#int32) | optional |  |
 
 
 
@@ -2720,6 +3147,7 @@
 | transaction_id | [string](#string) | optional |  |
 | receipt | [string](#string) | optional |  |
 | platform | [string](#string) | optional |  |
+| sandbox | [bool](#bool) | optional |  |
 | log | [GenericAction](#ei-GenericAction) | optional |  |
 
 
@@ -3067,6 +3495,8 @@
 | BOOST_TOKEN | 10 |  |
 | ARTIFACT | 11 |  |
 | ARTIFACT_CASE | 12 |  |
+| CHICKEN | 13 |  |
+| SHELL_SCRIPT | 14 |  |
 | UNKNOWN_REWARD | 100 |  |
 
 
@@ -3083,6 +3513,32 @@
 | COULD_NOT_OVERWRITE | 2 |  |
 | BACKUP_OFFERED | 3 |  |
 | BAD_USER_ID | 4 |  |
+
+
+
+<a name="ei-ShellDB-FarmElement"></a>
+
+### ShellDB.FarmElement
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| HEN_HOUSE | 1 |  |
+| SILO | 2 |  |
+| MAILBOX | 3 |  |
+| TROPHY_CASE | 4 |  |
+| GROUND | 5 |  |
+| HARDSCAPE | 6 |  |
+| HYPERLOOP | 7 |  |
+| DEPOT | 8 |  |
+| LAB | 9 |  |
+| HATCHERY | 10 |  |
+| HOA | 11 |  |
+| MISSION_CONTROL | 12 |  |
+| FUEL_TANK | 13 |  |
+| CHICKEN | 14 |  |
+| HAT | 15 |  |
+| UNKNOWN | 99 |  |
 
 
 
@@ -3167,6 +3623,10 @@
 | MISSION_CONTROL_1 | 180 |  |
 | MISSION_CONTROL_2 | 181 |  |
 | MISSION_CONTROL_3 | 182 |  |
+| FUEL_TANK_1 | 200 |  |
+| FUEL_TANK_2 | 201 |  |
+| FUEL_TANK_3 | 202 |  |
+| FUEL_TANK_4 | 203 |  |
 | HATCHERY_GRAVITON_TOP | 500 |  |
 | HATCHERY_NEBULA_MIDDLE | 501 |  |
 | HATCHERY_NEBULA_TOP | 502 |  |
@@ -3182,6 +3642,8 @@
 | HATCHERY_ENLIGHTENMENT_ORB | 520 |  |
 | HYPERLOOP_TRACK | 570 |  |
 | MAILBOX_FULL | 600 |  |
+| CHICKEN | 1000 |  |
+| HAT | 1010 |  |
 | UNKNOWN | 9999 |  |
 
 

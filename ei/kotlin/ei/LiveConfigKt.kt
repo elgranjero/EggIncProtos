@@ -1182,6 +1182,102 @@ public object LiveConfigKt {
       public fun hasAskToTrackAfterPrivacy(): kotlin.Boolean {
         return _builder.hasAskToTrackAfterPrivacy()
       }
+
+      /**
+       * <code>optional double chicken_run_boost_percentage = 6;</code>
+       */
+      public var chickenRunBoostPercentage: kotlin.Double
+        @JvmName("getChickenRunBoostPercentage")
+        get() = _builder.getChickenRunBoostPercentage()
+        @JvmName("setChickenRunBoostPercentage")
+        set(value) {
+          _builder.setChickenRunBoostPercentage(value)
+        }
+      /**
+       * <code>optional double chicken_run_boost_percentage = 6;</code>
+       */
+      public fun clearChickenRunBoostPercentage() {
+        _builder.clearChickenRunBoostPercentage()
+      }
+      /**
+       * <code>optional double chicken_run_boost_percentage = 6;</code>
+       * @return Whether the chickenRunBoostPercentage field is set.
+       */
+      public fun hasChickenRunBoostPercentage(): kotlin.Boolean {
+        return _builder.hasChickenRunBoostPercentage()
+      }
+
+      /**
+       * <code>optional uint32 shells_intro_tickets = 7;</code>
+       */
+      public var shellsIntroTickets: kotlin.Int
+        @JvmName("getShellsIntroTickets")
+        get() = _builder.getShellsIntroTickets()
+        @JvmName("setShellsIntroTickets")
+        set(value) {
+          _builder.setShellsIntroTickets(value)
+        }
+      /**
+       * <code>optional uint32 shells_intro_tickets = 7;</code>
+       */
+      public fun clearShellsIntroTickets() {
+        _builder.clearShellsIntroTickets()
+      }
+      /**
+       * <code>optional uint32 shells_intro_tickets = 7;</code>
+       * @return Whether the shellsIntroTickets field is set.
+       */
+      public fun hasShellsIntroTickets(): kotlin.Boolean {
+        return _builder.hasShellsIntroTickets()
+      }
+
+      /**
+       * <code>optional uint32 shells_max_free_chicken_configs = 8;</code>
+       */
+      public var shellsMaxFreeChickenConfigs: kotlin.Int
+        @JvmName("getShellsMaxFreeChickenConfigs")
+        get() = _builder.getShellsMaxFreeChickenConfigs()
+        @JvmName("setShellsMaxFreeChickenConfigs")
+        set(value) {
+          _builder.setShellsMaxFreeChickenConfigs(value)
+        }
+      /**
+       * <code>optional uint32 shells_max_free_chicken_configs = 8;</code>
+       */
+      public fun clearShellsMaxFreeChickenConfigs() {
+        _builder.clearShellsMaxFreeChickenConfigs()
+      }
+      /**
+       * <code>optional uint32 shells_max_free_chicken_configs = 8;</code>
+       * @return Whether the shellsMaxFreeChickenConfigs field is set.
+       */
+      public fun hasShellsMaxFreeChickenConfigs(): kotlin.Boolean {
+        return _builder.hasShellsMaxFreeChickenConfigs()
+      }
+
+      /**
+       * <code>optional uint32 shells_intro_alert_threshold = 9;</code>
+       */
+      public var shellsIntroAlertThreshold: kotlin.Int
+        @JvmName("getShellsIntroAlertThreshold")
+        get() = _builder.getShellsIntroAlertThreshold()
+        @JvmName("setShellsIntroAlertThreshold")
+        set(value) {
+          _builder.setShellsIntroAlertThreshold(value)
+        }
+      /**
+       * <code>optional uint32 shells_intro_alert_threshold = 9;</code>
+       */
+      public fun clearShellsIntroAlertThreshold() {
+        _builder.clearShellsIntroAlertThreshold()
+      }
+      /**
+       * <code>optional uint32 shells_intro_alert_threshold = 9;</code>
+       * @return Whether the shellsIntroAlertThreshold field is set.
+       */
+      public fun hasShellsIntroAlertThreshold(): kotlin.Boolean {
+        return _builder.hasShellsIntroAlertThreshold()
+      }
     }
   }
 }

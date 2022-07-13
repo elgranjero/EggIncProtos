@@ -110,6 +110,9 @@ proto.ei.ShellSpec.toObject = function(includeInstance, msg) {
     price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    isNew: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    expires: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
     defaultAppearance: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
@@ -180,6 +183,18 @@ proto.ei.ShellSpec.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setRequiredSoulEggs(value);
+      break;
+    case 14:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsNew(value);
+      break;
+    case 15:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setExpires(value);
+      break;
+    case 16:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setSecondsRemaining(value);
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -272,6 +287,27 @@ proto.ei.ShellSpec.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeBool(
+      14,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 15));
+  if (f != null) {
+    writer.writeBool(
+      15,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 16));
+  if (f != null) {
+    writer.writeDouble(
+      16,
+      f
+    );
+  }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 8));
   if (f != null) {
     writer.writeBool(
@@ -360,6 +396,10 @@ proto.ei.ShellSpec.AssetType = {
   MISSION_CONTROL_1: 180,
   MISSION_CONTROL_2: 181,
   MISSION_CONTROL_3: 182,
+  FUEL_TANK_1: 200,
+  FUEL_TANK_2: 201,
+  FUEL_TANK_3: 202,
+  FUEL_TANK_4: 203,
   HATCHERY_GRAVITON_TOP: 500,
   HATCHERY_NEBULA_MIDDLE: 501,
   HATCHERY_NEBULA_TOP: 502,
@@ -375,6 +415,8 @@ proto.ei.ShellSpec.AssetType = {
   HATCHERY_ENLIGHTENMENT_ORB: 520,
   HYPERLOOP_TRACK: 570,
   MAILBOX_FULL: 600,
+  CHICKEN: 1000,
+  HAT: 1010,
   UNKNOWN: 9999
 };
 
@@ -865,6 +907,114 @@ proto.ei.ShellSpec.prototype.clearRequiredSoulEggs = function() {
  */
 proto.ei.ShellSpec.prototype.hasRequiredSoulEggs = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool is_new = 14;
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.getIsNew = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.setIsNew = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.clearIsNew = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.hasIsNew = function() {
+  return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
+ * optional bool expires = 15;
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.getExpires = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.setExpires = function(value) {
+  return jspb.Message.setField(this, 15, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.clearExpires = function() {
+  return jspb.Message.setField(this, 15, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.hasExpires = function() {
+  return jspb.Message.getField(this, 15) != null;
+};
+
+
+/**
+ * optional double seconds_remaining = 16;
+ * @return {number}
+ */
+proto.ei.ShellSpec.prototype.getSecondsRemaining = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 16, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.setSecondsRemaining = function(value) {
+  return jspb.Message.setField(this, 16, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.clearSecondsRemaining = function() {
+  return jspb.Message.setField(this, 16, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.hasSecondsRemaining = function() {
+  return jspb.Message.getField(this, 16) != null;
 };
 
 

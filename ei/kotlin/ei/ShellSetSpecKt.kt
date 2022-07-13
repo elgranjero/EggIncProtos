@@ -95,6 +95,54 @@ public object ShellSetSpecKt {
     }
 
     /**
+     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
+     */
+    public var priceMultDEPRECATED: kotlin.Double
+      @JvmName("getPriceMultDEPRECATED")
+      get() = _builder.getPriceMultDEPRECATED()
+      @JvmName("setPriceMultDEPRECATED")
+      set(value) {
+        _builder.setPriceMultDEPRECATED(value)
+      }
+    /**
+     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
+     */
+    public fun clearPriceMultDEPRECATED() {
+      _builder.clearPriceMultDEPRECATED()
+    }
+    /**
+     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
+     * @return Whether the priceMultDEPRECATED field is set.
+     */
+    public fun hasPriceMultDEPRECATED(): kotlin.Boolean {
+      return _builder.hasPriceMultDEPRECATED()
+    }
+
+    /**
+     * <code>optional double discount = 17;</code>
+     */
+    public var discount: kotlin.Double
+      @JvmName("getDiscount")
+      get() = _builder.getDiscount()
+      @JvmName("setDiscount")
+      set(value) {
+        _builder.setDiscount(value)
+      }
+    /**
+     * <code>optional double discount = 17;</code>
+     */
+    public fun clearDiscount() {
+      _builder.clearDiscount()
+    }
+    /**
+     * <code>optional double discount = 17;</code>
+     * @return Whether the discount field is set.
+     */
+    public fun hasDiscount(): kotlin.Boolean {
+      return _builder.hasDiscount()
+    }
+
+    /**
      * <code>optional uint32 required_eop = 4;</code>
      */
     public var requiredEop: kotlin.Int
@@ -141,8 +189,384 @@ public object ShellSetSpecKt {
     public fun hasRequiredSoulEggs(): kotlin.Boolean {
       return _builder.hasRequiredSoulEggs()
     }
+
+    /**
+     * <code>optional bool is_new = 9;</code>
+     */
+    public var isNew: kotlin.Boolean
+      @JvmName("getIsNew")
+      get() = _builder.getIsNew()
+      @JvmName("setIsNew")
+      set(value) {
+        _builder.setIsNew(value)
+      }
+    /**
+     * <code>optional bool is_new = 9;</code>
+     */
+    public fun clearIsNew() {
+      _builder.clearIsNew()
+    }
+    /**
+     * <code>optional bool is_new = 9;</code>
+     * @return Whether the isNew field is set.
+     */
+    public fun hasIsNew(): kotlin.Boolean {
+      return _builder.hasIsNew()
+    }
+
+    /**
+     * <code>optional bool expires = 10;</code>
+     */
+    public var expires: kotlin.Boolean
+      @JvmName("getExpires")
+      get() = _builder.getExpires()
+      @JvmName("setExpires")
+      set(value) {
+        _builder.setExpires(value)
+      }
+    /**
+     * <code>optional bool expires = 10;</code>
+     */
+    public fun clearExpires() {
+      _builder.clearExpires()
+    }
+    /**
+     * <code>optional bool expires = 10;</code>
+     * @return Whether the expires field is set.
+     */
+    public fun hasExpires(): kotlin.Boolean {
+      return _builder.hasExpires()
+    }
+
+    /**
+     * <code>optional double seconds_remaining = 11;</code>
+     */
+    public var secondsRemaining: kotlin.Double
+      @JvmName("getSecondsRemaining")
+      get() = _builder.getSecondsRemaining()
+      @JvmName("setSecondsRemaining")
+      set(value) {
+        _builder.setSecondsRemaining(value)
+      }
+    /**
+     * <code>optional double seconds_remaining = 11;</code>
+     */
+    public fun clearSecondsRemaining() {
+      _builder.clearSecondsRemaining()
+    }
+    /**
+     * <code>optional double seconds_remaining = 11;</code>
+     * @return Whether the secondsRemaining field is set.
+     */
+    public fun hasSecondsRemaining(): kotlin.Boolean {
+      return _builder.hasSecondsRemaining()
+    }
+
+    /**
+     * <code>optional bool decorator = 14;</code>
+     */
+    public var decorator: kotlin.Boolean
+      @JvmName("getDecorator")
+      get() = _builder.getDecorator()
+      @JvmName("setDecorator")
+      set(value) {
+        _builder.setDecorator(value)
+      }
+    /**
+     * <code>optional bool decorator = 14;</code>
+     */
+    public fun clearDecorator() {
+      _builder.clearDecorator()
+    }
+    /**
+     * <code>optional bool decorator = 14;</code>
+     * @return Whether the decorator field is set.
+     */
+    public fun hasDecorator(): kotlin.Boolean {
+      return _builder.hasDecorator()
+    }
+
+    /**
+     * <code>optional bool modified_geometry = 13;</code>
+     */
+    public var modifiedGeometry: kotlin.Boolean
+      @JvmName("getModifiedGeometry")
+      get() = _builder.getModifiedGeometry()
+      @JvmName("setModifiedGeometry")
+      set(value) {
+        _builder.setModifiedGeometry(value)
+      }
+    /**
+     * <code>optional bool modified_geometry = 13;</code>
+     */
+    public fun clearModifiedGeometry() {
+      _builder.clearModifiedGeometry()
+    }
+    /**
+     * <code>optional bool modified_geometry = 13;</code>
+     * @return Whether the modifiedGeometry field is set.
+     */
+    public fun hasModifiedGeometry(): kotlin.Boolean {
+      return _builder.hasModifiedGeometry()
+    }
+
+    /**
+     * <code>optional bool element_set = 7;</code>
+     */
+    public var elementSet: kotlin.Boolean
+      @JvmName("getElementSet")
+      get() = _builder.getElementSet()
+      @JvmName("setElementSet")
+      set(value) {
+        _builder.setElementSet(value)
+      }
+    /**
+     * <code>optional bool element_set = 7;</code>
+     */
+    public fun clearElementSet() {
+      _builder.clearElementSet()
+    }
+    /**
+     * <code>optional bool element_set = 7;</code>
+     * @return Whether the elementSet field is set.
+     */
+    public fun hasElementSet(): kotlin.Boolean {
+      return _builder.hasElementSet()
+    }
+
+    /**
+     * <code>optional string hex_base_color = 16;</code>
+     */
+    public var hexBaseColor: kotlin.String
+      @JvmName("getHexBaseColor")
+      get() = _builder.getHexBaseColor()
+      @JvmName("setHexBaseColor")
+      set(value) {
+        _builder.setHexBaseColor(value)
+      }
+    /**
+     * <code>optional string hex_base_color = 16;</code>
+     */
+    public fun clearHexBaseColor() {
+      _builder.clearHexBaseColor()
+    }
+    /**
+     * <code>optional string hex_base_color = 16;</code>
+     * @return Whether the hexBaseColor field is set.
+     */
+    public fun hasHexBaseColor(): kotlin.Boolean {
+      return _builder.hasHexBaseColor()
+    }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class VariationsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     */
+     public val variations: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getVariationsList()
+      )
+    /**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * @param value The variations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addVariations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.add(value: ei.Ei.ShellSetSpec.VariationInfo) {
+      _builder.addVariations(value)
+    }/**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * @param value The variations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignVariations")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.plusAssign(value: ei.Ei.ShellSetSpec.VariationInfo) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * @param values The variations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllVariations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationInfo>) {
+      _builder.addAllVariations(values)
+    }/**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * @param values The variations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllVariations")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationInfo>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * @param index The index to set the value at.
+     * @param value The variations to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setVariations")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec.VariationInfo) {
+      _builder.setVariations(index, value)
+    }/**
+     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearVariations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.clear() {
+      _builder.clearVariations()
+    }
+    /**
+     * <code>optional bool default_appearance = 6;</code>
+     */
+    public var defaultAppearance: kotlin.Boolean
+      @JvmName("getDefaultAppearance")
+      get() = _builder.getDefaultAppearance()
+      @JvmName("setDefaultAppearance")
+      set(value) {
+        _builder.setDefaultAppearance(value)
+      }
+    /**
+     * <code>optional bool default_appearance = 6;</code>
+     */
+    public fun clearDefaultAppearance() {
+      _builder.clearDefaultAppearance()
+    }
+    /**
+     * <code>optional bool default_appearance = 6;</code>
+     * @return Whether the defaultAppearance field is set.
+     */
+    public fun hasDefaultAppearance(): kotlin.Boolean {
+      return _builder.hasDefaultAppearance()
+    }
+
+    /**
+     * <code>optional bool custom_appearance = 12;</code>
+     */
+    public var customAppearance: kotlin.Boolean
+      @JvmName("getCustomAppearance")
+      get() = _builder.getCustomAppearance()
+      @JvmName("setCustomAppearance")
+      set(value) {
+        _builder.setCustomAppearance(value)
+      }
+    /**
+     * <code>optional bool custom_appearance = 12;</code>
+     */
+    public fun clearCustomAppearance() {
+      _builder.clearCustomAppearance()
+    }
+    /**
+     * <code>optional bool custom_appearance = 12;</code>
+     * @return Whether the customAppearance field is set.
+     */
+    public fun hasCustomAppearance(): kotlin.Boolean {
+      return _builder.hasCustomAppearance()
+    }
+  }
+  @kotlin.jvm.JvmSynthetic
+  public inline fun variationInfo(block: ei.ShellSetSpecKt.VariationInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationInfo =
+    ei.ShellSetSpecKt.VariationInfoKt.Dsl._create(ei.Ei.ShellSetSpec.VariationInfo.newBuilder()).apply { block() }._build()
+  public object VariationInfoKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.ShellSetSpec.VariationInfo.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.ShellSetSpec.VariationInfo.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.ShellSetSpec.VariationInfo = _builder.build()
+
+      /**
+       * <code>optional string identifier = 1;</code>
+       */
+      public var identifier: kotlin.String
+        @JvmName("getIdentifier")
+        get() = _builder.getIdentifier()
+        @JvmName("setIdentifier")
+        set(value) {
+          _builder.setIdentifier(value)
+        }
+      /**
+       * <code>optional string identifier = 1;</code>
+       */
+      public fun clearIdentifier() {
+        _builder.clearIdentifier()
+      }
+      /**
+       * <code>optional string identifier = 1;</code>
+       * @return Whether the identifier field is set.
+       */
+      public fun hasIdentifier(): kotlin.Boolean {
+        return _builder.hasIdentifier()
+      }
+
+      /**
+       * <code>optional string hex_color = 2;</code>
+       */
+      public var hexColor: kotlin.String
+        @JvmName("getHexColor")
+        get() = _builder.getHexColor()
+        @JvmName("setHexColor")
+        set(value) {
+          _builder.setHexColor(value)
+        }
+      /**
+       * <code>optional string hex_color = 2;</code>
+       */
+      public fun clearHexColor() {
+        _builder.clearHexColor()
+      }
+      /**
+       * <code>optional string hex_color = 2;</code>
+       * @return Whether the hexColor field is set.
+       */
+      public fun hasHexColor(): kotlin.Boolean {
+        return _builder.hasHexColor()
+      }
+
+      /**
+       * <code>optional uint32 price = 3;</code>
+       */
+      public var price: kotlin.Int
+        @JvmName("getPrice")
+        get() = _builder.getPrice()
+        @JvmName("setPrice")
+        set(value) {
+          _builder.setPrice(value)
+        }
+      /**
+       * <code>optional uint32 price = 3;</code>
+       */
+      public fun clearPrice() {
+        _builder.clearPrice()
+      }
+      /**
+       * <code>optional uint32 price = 3;</code>
+       * @return Whether the price field is set.
+       */
+      public fun hasPrice(): kotlin.Boolean {
+        return _builder.hasPrice()
+      }
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellSetSpec.copy(block: ei.ShellSetSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec =
   ei.ShellSetSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.ShellSetSpec.VariationInfo.copy(block: ei.ShellSetSpecKt.VariationInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationInfo =
+  ei.ShellSetSpecKt.VariationInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()

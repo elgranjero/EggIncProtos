@@ -136,6 +136,7 @@ proto.ei.Contract.toObject = function(includeInstance, msg) {
     maxCoopSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     maxBoosts: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     minutesPerToken: jspb.Message.getFloatingPointFieldWithDefault(msg, 15, 60.0),
+    chickenRunCooldownMinutes: jspb.Message.getFloatingPointFieldWithDefault(msg, 18, 60.0),
     startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
     expirationTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
@@ -219,6 +220,10 @@ proto.ei.Contract.deserializeBinaryFromReader = function(msg, reader) {
     case 15:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setMinutesPerToken(value);
+      break;
+    case 18:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setChickenRunCooldownMinutes(value);
       break;
     case 17:
       var value = /** @type {number} */ (reader.readDouble());
@@ -342,6 +347,13 @@ proto.ei.Contract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       15,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 18));
+  if (f != null) {
+    writer.writeDouble(
+      18,
       f
     );
   }
@@ -1299,6 +1311,42 @@ proto.ei.Contract.prototype.clearMinutesPerToken = function() {
  */
 proto.ei.Contract.prototype.hasMinutesPerToken = function() {
   return jspb.Message.getField(this, 15) != null;
+};
+
+
+/**
+ * optional double chicken_run_cooldown_minutes = 18;
+ * @return {number}
+ */
+proto.ei.Contract.prototype.getChickenRunCooldownMinutes = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 18, 60.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.setChickenRunCooldownMinutes = function(value) {
+  return jspb.Message.setField(this, 18, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.clearChickenRunCooldownMinutes = function() {
+  return jspb.Message.setField(this, 18, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.hasChickenRunCooldownMinutes = function() {
+  return jspb.Message.getField(this, 18) != null;
 };
 
 

@@ -20,6 +20,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :stats, :message, 6, "ei.Backup.Stats"
       optional :game, :message, 7, "ei.Backup.Game"
       optional :artifacts, :message, 14, "ei.Backup.Artifacts"
+      optional :shells, :message, 25, "ei.Backup.Shells"
       optional :sim, :message, 8, "ei.Backup.Simulation"
       repeated :farms, :message, 12, "ei.Backup.Simulation"
       optional :mission, :message, 9, "ei.Backup.Mission"
@@ -103,6 +104,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :unclaimed_soul_eggs_d, :double, 35
       optional :eggs_of_prophecy, :uint64, 23
       optional :unclaimed_eggs_of_prophecy, :uint64, 24
+      optional :shell_scripts_earned, :uint64, 38
+      optional :shell_scripts_spent, :uint64, 39
+      optional :unclaimed_shell_scripts, :uint64, 40
       optional :prestige_cash_earned, :double, 5
       optional :prestige_soul_boost_cash, :double, 33
       optional :lifetime_cash_earned, :double, 6
@@ -146,6 +150,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :enabled, :bool, 11
       optional :intro_shown, :bool, 12
       optional :infusing_enabled_DEPRECATED, :bool, 8, default: true
+    end
+    add_message "ei.Backup.Shells" do
+      optional :intro_alert, :bool, 1
+      optional :contracts_intro_alert, :bool, 2
+      repeated :num_new, :int32, 3
     end
     add_message "ei.Backup.Simulation" do
       optional :egg_type, :enum, 1, "ei.Egg"
@@ -354,17 +363,35 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :app, :message, 5, "ei.AppInfo"
       optional :device, :message, 6, "ei.DeviceInfo"
     end
+    add_message "ei.GenericActionBatchRequest" do
+      optional :rinfo, :message, 1, "ei.BasicRequestInfo"
+      repeated :actions, :message, 2, "ei.GenericAction"
+    end
     add_message "ei.VerifyPurchaseRequest" do
       optional :rinfo, :message, 6, "ei.BasicRequestInfo"
       optional :sku, :string, 1
       optional :transaction_id, :string, 2
       optional :receipt, :string, 3
       optional :platform, :string, 4
+      optional :sandbox, :bool, 7
       optional :log, :message, 5, "ei.GenericAction"
     end
     add_message "ei.VerifyPurchaseResponse" do
       optional :verified, :bool, 1
       optional :message, :string, 2
+    end
+    add_message "ei.CurrencyFlowLog" do
+      optional :user_id, :string, 1
+      optional :approx_time, :double, 2
+      optional :currency, :enum, 3, "ei.RewardType"
+      optional :amount, :int64, 4
+      optional :location, :string, 5
+      optional :version, :string, 6
+      optional :platform, :string, 7
+    end
+    add_message "ei.CurrencyFlowBatchRequest" do
+      optional :rinfo, :message, 2, "ei.BasicRequestInfo"
+      repeated :logs, :message, 1, "ei.CurrencyFlowLog"
     end
     add_message "ei.Reward" do
       optional :reward_type, :enum, 1, "ei.RewardType"
@@ -382,6 +409,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :max_coop_size, :uint32, 5
       optional :max_boosts, :uint32, 12
       optional :minutes_per_token, :double, 15, default: 60
+      optional :chicken_run_cooldown_minutes, :double, 18, default: 60
       optional :start_time, :double, 17
       optional :expiration_time, :double, 6
       optional :length_seconds, :double, 7
@@ -408,6 +436,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :platform, :string, 5
       optional :country, :string, 6
       optional :language, :string, 7
+      optional :debug, :bool, 8
     end
     add_message "ei.ContractsRequest" do
       optional :soul_eggs, :double, 1
@@ -434,6 +463,29 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :sr, :double, 5
       optional :delivered, :double, 6
     end
+    add_message "ei.PlayerFarmInfo" do
+      optional :client_version, :uint32, 20
+      optional :soul_eggs, :double, 1
+      optional :eggs_of_prophecy, :uint64, 2
+      optional :permit_level, :uint32, 3
+      optional :hyperloop_station, :bool, 4
+      repeated :egg_medal_level, :uint32, 5
+      repeated :epic_research, :message, 6, "ei.Backup.ResearchItem"
+      optional :egg_type, :enum, 7, "ei.Egg"
+      optional :cash_on_hand, :double, 8
+      repeated :habs, :uint32, 9
+      repeated :hab_population, :uint64, 10
+      repeated :hab_capacity, :uint64, 21
+      repeated :vehicles, :uint32, 11
+      repeated :train_length, :uint32, 12
+      optional :silos_owned, :uint32, 13
+      repeated :common_research, :message, 14, "ei.Backup.ResearchItem"
+      repeated :active_boosts, :message, 15, "ei.Backup.ActiveBoost"
+      optional :boost_tokens_on_hand, :uint32, 16
+      repeated :equipped_artifacts, :message, 17, "ei.CompleteArtifact"
+      optional :artifact_inventory_score, :uint64, 18
+      optional :farm_appearance, :message, 19, "ei.ShellDB.FarmConfiguration"
+    end
     add_message "ei.ContractCoopStatusResponse" do
       optional :contract_identifier, :string, 1
       optional :total_amount, :double, 2
@@ -446,15 +498,18 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :all_members_reporting, :bool, 6
       optional :grace_period_seconds_remaining, :double, 7
       repeated :gifts, :message, 11, "ei.ContractCoopStatusResponse.CoopGift"
+      repeated :chicken_runs, :message, 13, "ei.ContractCoopStatusResponse.ChickenRun"
       optional :local_timestamp, :double, 12
     end
     add_message "ei.ContractCoopStatusResponse.ContributionInfo" do
       optional :user_id, :string, 1
       optional :user_name, :string, 2
+      optional :contract_identifier, :string, 19
       optional :contribution_amount, :double, 3
       optional :contribution_rate, :double, 6
       optional :soul_power, :double, 11
       optional :production_params, :message, 15, "ei.FarmProductionParams"
+      optional :farm_info, :message, 18, "ei.PlayerFarmInfo"
       optional :rank_change, :int32, 8
       optional :active, :bool, 4
       optional :leech, :bool, 16
@@ -466,11 +521,17 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :boost_tokens, :uint32, 12
       optional :boost_tokens_spent, :uint32, 14
       repeated :buff_history, :message, 13, "ei.CoopBuffState"
+      optional :chicken_run_cooldown, :double, 20
     end
     add_message "ei.ContractCoopStatusResponse.CoopGift" do
       optional :user_id, :string, 1
       optional :user_name, :string, 3
       optional :amount, :uint32, 2
+    end
+    add_message "ei.ContractCoopStatusResponse.ChickenRun" do
+      optional :user_id, :string, 1
+      optional :user_name, :string, 3
+      optional :amount, :uint64, 2
     end
     add_enum "ei.ContractCoopStatusResponse.MemberStatus" do
       value :VALID, 0
@@ -491,6 +552,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :coop_contribution_finalized, :bool, 10
       optional :coop_last_uploaded_contribution, :double, 11
       optional :coop_user_id, :string, 13
+      optional :coop_share_farm, :bool, 17
       optional :last_amount_when_reward_given, :double, 6
       optional :num_goals_achieved, :uint32, 14
       optional :boosts_used, :uint32, 12
@@ -597,6 +659,16 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :amount, :uint32, 5
       optional :client_version, :uint32, 7
     end
+    add_message "ei.SendChickenRunCoopRequest" do
+      optional :rinfo, :message, 8, "ei.BasicRequestInfo"
+      optional :contract_identifier, :string, 1
+      optional :coop_identifier, :string, 2
+      optional :player_identifier, :string, 3
+      optional :requesting_user_id, :string, 4
+      optional :requesting_user_name, :string, 6
+      optional :farm_pop, :uint64, 5
+      optional :client_version, :uint32, 7
+    end
     add_message "ei.KickPlayerCoopRequest" do
       optional :rinfo, :message, 8, "ei.BasicRequestInfo"
       optional :contract_identifier, :string, 1
@@ -627,6 +699,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :boost_tokens, :uint32, 9
       optional :boost_tokens_spent, :uint32, 13
       optional :production_params, :message, 14, "ei.FarmProductionParams"
+      optional :farm_info, :message, 16, "ei.PlayerFarmInfo"
       optional :egg_laying_rate_buff, :double, 10, default: 1
       optional :earnings_buff, :double, 11, default: 1
     end
@@ -642,6 +715,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.CoopBuffHistory" do
       repeated :history, :message, 1, "ei.CoopBuffState"
+    end
+    add_message "ei.CoopChickenRunEntry" do
+      optional :user_id, :string, 1
+      optional :server_timestamp, :double, 2
+    end
+    add_message "ei.CoopLastChickenRunTimes" do
+      repeated :entries, :message, 3, "ei.CoopChickenRunEntry"
     end
     add_message "ei.UserDataInfoRequest" do
       optional :rinfo, :message, 4, "ei.BasicRequestInfo"
@@ -719,6 +799,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :ask_to_track_message, :string, 3
       optional :ask_to_track_show_pre_dialog, :bool, 4
       optional :ask_to_track_after_privacy, :bool, 5
+      optional :chicken_run_boost_percentage, :double, 6
+      optional :shells_intro_tickets, :uint32, 7
+      optional :shells_max_free_chicken_configs, :uint32, 8
+      optional :shells_intro_alert_threshold, :uint32, 9
     end
     add_message "ei.InGameMail" do
       optional :id, :string, 1
@@ -1098,6 +1182,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.AuthenticatedMessage" do
       optional :message, :bytes, 1
+      optional :version, :uint32, 3
       optional :code, :string, 2
     end
     add_message "ei.LogCompleteMissionPayload" do
@@ -1144,6 +1229,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :name, :string, 1
       optional :directory, :string, 2
       optional :ext, :string, 3
+      optional :compressed, :bool, 6
+      optional :original_size, :uint64, 7
       optional :url, :string, 4
       optional :checksum, :string, 5
     end
@@ -1156,6 +1243,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :price, :uint32, 4
       optional :required_eop, :uint32, 5
       optional :required_soul_eggs, :double, 6
+      optional :is_new, :bool, 14
+      optional :expires, :bool, 15
+      optional :seconds_remaining, :double, 16
       optional :default_appearance, :bool, 8
     end
     add_message "ei.ShellSpec.ShellPiece" do
@@ -1237,6 +1327,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :MISSION_CONTROL_1, 180
       value :MISSION_CONTROL_2, 181
       value :MISSION_CONTROL_3, 182
+      value :FUEL_TANK_1, 200
+      value :FUEL_TANK_2, 201
+      value :FUEL_TANK_3, 202
+      value :FUEL_TANK_4, 203
       value :HATCHERY_GRAVITON_TOP, 500
       value :HATCHERY_NEBULA_MIDDLE, 501
       value :HATCHERY_NEBULA_TOP, 502
@@ -1252,35 +1346,145 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :HATCHERY_ENLIGHTENMENT_ORB, 520
       value :HYPERLOOP_TRACK, 570
       value :MAILBOX_FULL, 600
+      value :CHICKEN, 1000
+      value :HAT, 1010
       value :UNKNOWN, 9999
     end
     add_message "ei.ShellSetSpec" do
       optional :identifier, :string, 1
       optional :name, :string, 2
       optional :price, :uint32, 3
+      optional :price_mult_DEPRECATED, :double, 8, default: 1
+      optional :discount, :double, 17
       optional :required_eop, :uint32, 4
       optional :required_soul_eggs, :double, 5
+      optional :is_new, :bool, 9
+      optional :expires, :bool, 10
+      optional :seconds_remaining, :double, 11
+      optional :decorator, :bool, 14
+      optional :modified_geometry, :bool, 13
+      optional :element_set, :bool, 7
+      optional :hex_base_color, :string, 16
+      repeated :variations, :message, 15, "ei.ShellSetSpec.VariationInfo"
+      optional :default_appearance, :bool, 6
+      optional :custom_appearance, :bool, 12
+    end
+    add_message "ei.ShellSetSpec.VariationInfo" do
+      optional :identifier, :string, 1
+      optional :hex_color, :string, 2
+      optional :price, :uint32, 3
+    end
+    add_message "ei.ShellObjectSpec" do
+      optional :identifier, :string, 1
+      optional :name, :string, 2
+      optional :asset_type, :enum, 3, "ei.ShellSpec.AssetType"
+      optional :object_class, :string, 14
+      optional :price, :uint32, 4
+      optional :required_eop, :uint32, 5
+      optional :required_soul_eggs, :double, 6
+      optional :is_new, :bool, 10
+      optional :expires, :bool, 11
+      optional :seconds_remaining, :double, 12
+      repeated :metadata, :double, 7
+      optional :no_hats, :bool, 13
+      repeated :pieces, :message, 8, "ei.ShellObjectSpec.LODPiece"
+      optional :default_appearance, :bool, 9
+    end
+    add_message "ei.ShellObjectSpec.LODPiece" do
+      optional :dlc, :message, 1, "ei.DLCItem"
+      optional :lod, :uint32, 2
+    end
+    add_message "ei.ShellGroupSpec" do
+      optional :identifier, :string, 1
+      optional :name, :string, 2
+      optional :asset_type, :enum, 5, "ei.ShellSpec.AssetType"
+      repeated :member_ids, :string, 3
+      optional :price_mult_DEPRECATED, :double, 4
     end
     add_message "ei.DLCCatalog" do
       repeated :items, :message, 1, "ei.DLCItem"
       repeated :shells, :message, 2, "ei.ShellSpec"
       repeated :shell_sets, :message, 3, "ei.ShellSetSpec"
+      repeated :shell_objects, :message, 4, "ei.ShellObjectSpec"
+      repeated :shell_groups, :message, 5, "ei.ShellGroupSpec"
     end
     add_message "ei.ShellDB" do
       repeated :shell_inventory, :message, 1, "ei.ShellDB.ShellStatus"
+      repeated :shell_element_inventory, :message, 5, "ei.ShellDB.ShellElementStatus"
+      repeated :shell_variation_inventory, :message, 8, "ei.ShellDB.ShellSetVariationStatus"
+      repeated :shell_set_inventory, :message, 2, "ei.ShellDB.ShellStatus"
+      repeated :shell_object_inventory, :message, 4, "ei.ShellDB.ShellStatus"
       repeated :farm_configs, :message, 3, "ei.ShellDB.FarmConfiguration"
+      repeated :new_shells_downloaded, :string, 6
+      repeated :new_shells_seen, :string, 7
     end
     add_message "ei.ShellDB.ShellStatus" do
-      optional :shell_identifier, :string, 1
+      optional :identifier, :string, 1
       optional :owned, :bool, 2
+    end
+    add_message "ei.ShellDB.ShellElementStatus" do
+      optional :element, :enum, 1, "ei.ShellDB.FarmElement"
+      optional :set_identifier, :string, 2
+    end
+    add_message "ei.ShellDB.ShellSetVariationStatus" do
+      optional :set_identifier, :string, 1
+      repeated :owned_variations, :string, 2
     end
     add_message "ei.ShellDB.FarmConfiguration" do
       repeated :shell_configs, :message, 1, "ei.ShellDB.ShellConfiguration"
+      repeated :shell_set_configs, :message, 2, "ei.ShellDB.ShellSetConfiguration"
+      optional :configure_chickens_by_group, :bool, 7
+      repeated :group_configs, :message, 8, "ei.ShellDB.ShellGroupConfiguration"
+      repeated :chicken_configs, :message, 9, "ei.ShellDB.ChickenConfig"
     end
     add_message "ei.ShellDB.ShellConfiguration" do
       optional :asset_type, :enum, 1, "ei.ShellSpec.AssetType"
       optional :index, :uint32, 2
       optional :shell_identifier, :string, 3
+    end
+    add_message "ei.ShellDB.ShellSetConfiguration" do
+      optional :element, :enum, 1, "ei.ShellDB.FarmElement"
+      optional :index, :uint32, 2
+      optional :shell_set_identifier, :string, 3
+      optional :variation_identifier, :string, 4
+      optional :decorator_identifier, :string, 5
+    end
+    add_message "ei.ShellDB.ShellGroupConfiguration" do
+      optional :asset_type, :enum, 1, "ei.ShellSpec.AssetType"
+      optional :group_identifier, :string, 2
+    end
+    add_message "ei.ShellDB.ChickenConfig" do
+      optional :chicken_identifier, :string, 1
+      optional :hat_identifier, :string, 2
+    end
+    add_enum "ei.ShellDB.FarmElement" do
+      value :HEN_HOUSE, 1
+      value :SILO, 2
+      value :MAILBOX, 3
+      value :TROPHY_CASE, 4
+      value :GROUND, 5
+      value :HARDSCAPE, 6
+      value :HYPERLOOP, 7
+      value :DEPOT, 8
+      value :LAB, 9
+      value :HATCHERY, 10
+      value :HOA, 11
+      value :MISSION_CONTROL, 12
+      value :FUEL_TANK, 13
+      value :CHICKEN, 14
+      value :HAT, 15
+      value :UNKNOWN, 99
+    end
+    add_message "ei.ShellsActionLog" do
+      optional :rinfo, :message, 8, "ei.BasicRequestInfo"
+      optional :user_id, :string, 1
+      optional :action, :string, 2
+      optional :sub_id, :string, 3
+      optional :farm_element, :enum, 9, "ei.ShellDB.FarmElement"
+      optional :cost, :uint32, 4
+      optional :approx_time, :double, 5
+      optional :version, :string, 6
+      optional :farm_index, :int32, 7
     end
     add_enum "ei.Platform" do
       value :IOS, 1
@@ -1348,6 +1552,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :BOOST_TOKEN, 10
       value :ARTIFACT, 11
       value :ARTIFACT_CASE, 12
+      value :CHICKEN, 13
+      value :SHELL_SCRIPT, 14
       value :UNKNOWN_REWARD, 100
     end
   end
@@ -1360,6 +1566,7 @@ module Ei
   Backup::Stats = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Stats").msgclass
   Backup::Game = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Game").msgclass
   Backup::Artifacts = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Artifacts").msgclass
+  Backup::Shells = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Shells").msgclass
   Backup::Simulation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Simulation").msgclass
   Backup::Mission = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Mission").msgclass
   Backup::Misc = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Misc").msgclass
@@ -1383,8 +1590,11 @@ module Ei
   AppInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.AppInfo").msgclass
   ActionKeyValuePair = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ActionKeyValuePair").msgclass
   GenericAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GenericAction").msgclass
+  GenericActionBatchRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GenericActionBatchRequest").msgclass
   VerifyPurchaseRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.VerifyPurchaseRequest").msgclass
   VerifyPurchaseResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.VerifyPurchaseResponse").msgclass
+  CurrencyFlowLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CurrencyFlowLog").msgclass
+  CurrencyFlowBatchRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CurrencyFlowBatchRequest").msgclass
   Reward = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Reward").msgclass
   Contract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract").msgclass
   Contract::Goal = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.Goal").msgclass
@@ -1394,9 +1604,11 @@ module Ei
   ContractsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractsResponse").msgclass
   ContractCoopStatusRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusRequest").msgclass
   FarmProductionParams = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.FarmProductionParams").msgclass
+  PlayerFarmInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.PlayerFarmInfo").msgclass
   ContractCoopStatusResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse").msgclass
   ContractCoopStatusResponse::ContributionInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.ContributionInfo").msgclass
   ContractCoopStatusResponse::CoopGift = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.CoopGift").msgclass
+  ContractCoopStatusResponse::ChickenRun = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.ChickenRun").msgclass
   ContractCoopStatusResponse::MemberStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.MemberStatus").enummodule
   LocalContract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LocalContract").msgclass
   MyContracts = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MyContracts").msgclass
@@ -1411,12 +1623,15 @@ module Ei
   UpdateCoopPermissionsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UpdateCoopPermissionsResponse").msgclass
   LeaveCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaveCoopRequest").msgclass
   GiftPlayerCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GiftPlayerCoopRequest").msgclass
+  SendChickenRunCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SendChickenRunCoopRequest").msgclass
   KickPlayerCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.KickPlayerCoopRequest").msgclass
   KickPlayerCoopRequest::Reason = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.KickPlayerCoopRequest.Reason").enummodule
   ContractCoopStatusUpdateRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusUpdateRequest").msgclass
   ContractCoopStatusUpdateResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusUpdateResponse").msgclass
   CoopBuffState = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopBuffState").msgclass
   CoopBuffHistory = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopBuffHistory").msgclass
+  CoopChickenRunEntry = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopChickenRunEntry").msgclass
+  CoopLastChickenRunTimes = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopLastChickenRunTimes").msgclass
   UserDataInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserDataInfoRequest").msgclass
   UserDataInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserDataInfoResponse").msgclass
   ClearAllUserDataRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ClearAllUserDataRequest").msgclass
@@ -1488,11 +1703,22 @@ module Ei
   ShellSpec::ShellPiece = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSpec.ShellPiece").msgclass
   ShellSpec::AssetType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSpec.AssetType").enummodule
   ShellSetSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSetSpec").msgclass
+  ShellSetSpec::VariationInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSetSpec.VariationInfo").msgclass
+  ShellObjectSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellObjectSpec").msgclass
+  ShellObjectSpec::LODPiece = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellObjectSpec.LODPiece").msgclass
+  ShellGroupSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellGroupSpec").msgclass
   DLCCatalog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.DLCCatalog").msgclass
   ShellDB = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB").msgclass
   ShellDB::ShellStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellStatus").msgclass
+  ShellDB::ShellElementStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellElementStatus").msgclass
+  ShellDB::ShellSetVariationStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellSetVariationStatus").msgclass
   ShellDB::FarmConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.FarmConfiguration").msgclass
   ShellDB::ShellConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellConfiguration").msgclass
+  ShellDB::ShellSetConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellSetConfiguration").msgclass
+  ShellDB::ShellGroupConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellGroupConfiguration").msgclass
+  ShellDB::ChickenConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ChickenConfig").msgclass
+  ShellDB::FarmElement = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.FarmElement").enummodule
+  ShellsActionLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellsActionLog").msgclass
   Platform = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Platform").enummodule
   DeviceFormFactor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.DeviceFormFactor").enummodule
   AdNetwork = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.AdNetwork").enummodule

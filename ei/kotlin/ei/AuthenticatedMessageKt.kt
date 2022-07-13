@@ -47,6 +47,30 @@ public object AuthenticatedMessageKt {
     }
 
     /**
+     * <code>optional uint32 version = 3;</code>
+     */
+    public var version: kotlin.Int
+      @JvmName("getVersion")
+      get() = _builder.getVersion()
+      @JvmName("setVersion")
+      set(value) {
+        _builder.setVersion(value)
+      }
+    /**
+     * <code>optional uint32 version = 3;</code>
+     */
+    public fun clearVersion() {
+      _builder.clearVersion()
+    }
+    /**
+     * <code>optional uint32 version = 3;</code>
+     * @return Whether the version field is set.
+     */
+    public fun hasVersion(): kotlin.Boolean {
+      return _builder.hasVersion()
+    }
+
+    /**
      * <code>optional string code = 2;</code>
      */
     public var code: kotlin.String

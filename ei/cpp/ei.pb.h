@@ -47,7 +47,7 @@ struct TableStruct_ei_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[127]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[146]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -157,6 +157,9 @@ extern Backup_ResearchItemDefaultTypeInternal _Backup_ResearchItem_default_insta
 class Backup_Settings;
 struct Backup_SettingsDefaultTypeInternal;
 extern Backup_SettingsDefaultTypeInternal _Backup_Settings_default_instance_;
+class Backup_Shells;
+struct Backup_ShellsDefaultTypeInternal;
+extern Backup_ShellsDefaultTypeInternal _Backup_Shells_default_instance_;
 class Backup_Simulation;
 struct Backup_SimulationDefaultTypeInternal;
 extern Backup_SimulationDefaultTypeInternal _Backup_Simulation_default_instance_;
@@ -208,6 +211,9 @@ extern ContractCoopStatusRequestDefaultTypeInternal _ContractCoopStatusRequest_d
 class ContractCoopStatusResponse;
 struct ContractCoopStatusResponseDefaultTypeInternal;
 extern ContractCoopStatusResponseDefaultTypeInternal _ContractCoopStatusResponse_default_instance_;
+class ContractCoopStatusResponse_ChickenRun;
+struct ContractCoopStatusResponse_ChickenRunDefaultTypeInternal;
+extern ContractCoopStatusResponse_ChickenRunDefaultTypeInternal _ContractCoopStatusResponse_ChickenRun_default_instance_;
 class ContractCoopStatusResponse_ContributionInfo;
 struct ContractCoopStatusResponse_ContributionInfoDefaultTypeInternal;
 extern ContractCoopStatusResponse_ContributionInfoDefaultTypeInternal _ContractCoopStatusResponse_ContributionInfo_default_instance_;
@@ -238,6 +244,12 @@ extern CoopBuffHistoryDefaultTypeInternal _CoopBuffHistory_default_instance_;
 class CoopBuffState;
 struct CoopBuffStateDefaultTypeInternal;
 extern CoopBuffStateDefaultTypeInternal _CoopBuffState_default_instance_;
+class CoopChickenRunEntry;
+struct CoopChickenRunEntryDefaultTypeInternal;
+extern CoopChickenRunEntryDefaultTypeInternal _CoopChickenRunEntry_default_instance_;
+class CoopLastChickenRunTimes;
+struct CoopLastChickenRunTimesDefaultTypeInternal;
+extern CoopLastChickenRunTimesDefaultTypeInternal _CoopLastChickenRunTimes_default_instance_;
 class CraftArtifactRequest;
 struct CraftArtifactRequestDefaultTypeInternal;
 extern CraftArtifactRequestDefaultTypeInternal _CraftArtifactRequest_default_instance_;
@@ -250,6 +262,12 @@ extern CreateCoopRequestDefaultTypeInternal _CreateCoopRequest_default_instance_
 class CreateCoopResponse;
 struct CreateCoopResponseDefaultTypeInternal;
 extern CreateCoopResponseDefaultTypeInternal _CreateCoopResponse_default_instance_;
+class CurrencyFlowBatchRequest;
+struct CurrencyFlowBatchRequestDefaultTypeInternal;
+extern CurrencyFlowBatchRequestDefaultTypeInternal _CurrencyFlowBatchRequest_default_instance_;
+class CurrencyFlowLog;
+struct CurrencyFlowLogDefaultTypeInternal;
+extern CurrencyFlowLogDefaultTypeInternal _CurrencyFlowLog_default_instance_;
 class DLCCatalog;
 struct DLCCatalogDefaultTypeInternal;
 extern DLCCatalogDefaultTypeInternal _DLCCatalog_default_instance_;
@@ -283,6 +301,9 @@ extern FarmProductionParamsDefaultTypeInternal _FarmProductionParams_default_ins
 class GenericAction;
 struct GenericActionDefaultTypeInternal;
 extern GenericActionDefaultTypeInternal _GenericAction_default_instance_;
+class GenericActionBatchRequest;
+struct GenericActionBatchRequestDefaultTypeInternal;
+extern GenericActionBatchRequestDefaultTypeInternal _GenericActionBatchRequest_default_instance_;
 class GetPeriodicalsRequest;
 struct GetPeriodicalsRequestDefaultTypeInternal;
 extern GetPeriodicalsRequestDefaultTypeInternal _GetPeriodicalsRequest_default_instance_;
@@ -367,6 +388,9 @@ extern MyContractsDefaultTypeInternal _MyContracts_default_instance_;
 class PeriodicalsResponse;
 struct PeriodicalsResponseDefaultTypeInternal;
 extern PeriodicalsResponseDefaultTypeInternal _PeriodicalsResponse_default_instance_;
+class PlayerFarmInfo;
+struct PlayerFarmInfoDefaultTypeInternal;
+extern PlayerFarmInfoDefaultTypeInternal _PlayerFarmInfo_default_instance_;
 class QueryCoopRequest;
 struct QueryCoopRequestDefaultTypeInternal;
 extern QueryCoopRequestDefaultTypeInternal _QueryCoopRequest_default_instance_;
@@ -388,6 +412,9 @@ extern SalesInfoRequestDefaultTypeInternal _SalesInfoRequest_default_instance_;
 class SaveBackupResponse;
 struct SaveBackupResponseDefaultTypeInternal;
 extern SaveBackupResponseDefaultTypeInternal _SaveBackupResponse_default_instance_;
+class SendChickenRunCoopRequest;
+struct SendChickenRunCoopRequestDefaultTypeInternal;
+extern SendChickenRunCoopRequestDefaultTypeInternal _SendChickenRunCoopRequest_default_instance_;
 class ServerGift;
 struct ServerGiftDefaultTypeInternal;
 extern ServerGiftDefaultTypeInternal _ServerGift_default_instance_;
@@ -400,24 +427,54 @@ extern SetArtifactResponseDefaultTypeInternal _SetArtifactResponse_default_insta
 class ShellDB;
 struct ShellDBDefaultTypeInternal;
 extern ShellDBDefaultTypeInternal _ShellDB_default_instance_;
+class ShellDB_ChickenConfig;
+struct ShellDB_ChickenConfigDefaultTypeInternal;
+extern ShellDB_ChickenConfigDefaultTypeInternal _ShellDB_ChickenConfig_default_instance_;
 class ShellDB_FarmConfiguration;
 struct ShellDB_FarmConfigurationDefaultTypeInternal;
 extern ShellDB_FarmConfigurationDefaultTypeInternal _ShellDB_FarmConfiguration_default_instance_;
 class ShellDB_ShellConfiguration;
 struct ShellDB_ShellConfigurationDefaultTypeInternal;
 extern ShellDB_ShellConfigurationDefaultTypeInternal _ShellDB_ShellConfiguration_default_instance_;
+class ShellDB_ShellElementStatus;
+struct ShellDB_ShellElementStatusDefaultTypeInternal;
+extern ShellDB_ShellElementStatusDefaultTypeInternal _ShellDB_ShellElementStatus_default_instance_;
+class ShellDB_ShellGroupConfiguration;
+struct ShellDB_ShellGroupConfigurationDefaultTypeInternal;
+extern ShellDB_ShellGroupConfigurationDefaultTypeInternal _ShellDB_ShellGroupConfiguration_default_instance_;
+class ShellDB_ShellSetConfiguration;
+struct ShellDB_ShellSetConfigurationDefaultTypeInternal;
+extern ShellDB_ShellSetConfigurationDefaultTypeInternal _ShellDB_ShellSetConfiguration_default_instance_;
+class ShellDB_ShellSetVariationStatus;
+struct ShellDB_ShellSetVariationStatusDefaultTypeInternal;
+extern ShellDB_ShellSetVariationStatusDefaultTypeInternal _ShellDB_ShellSetVariationStatus_default_instance_;
 class ShellDB_ShellStatus;
 struct ShellDB_ShellStatusDefaultTypeInternal;
 extern ShellDB_ShellStatusDefaultTypeInternal _ShellDB_ShellStatus_default_instance_;
+class ShellGroupSpec;
+struct ShellGroupSpecDefaultTypeInternal;
+extern ShellGroupSpecDefaultTypeInternal _ShellGroupSpec_default_instance_;
+class ShellObjectSpec;
+struct ShellObjectSpecDefaultTypeInternal;
+extern ShellObjectSpecDefaultTypeInternal _ShellObjectSpec_default_instance_;
+class ShellObjectSpec_LODPiece;
+struct ShellObjectSpec_LODPieceDefaultTypeInternal;
+extern ShellObjectSpec_LODPieceDefaultTypeInternal _ShellObjectSpec_LODPiece_default_instance_;
 class ShellSetSpec;
 struct ShellSetSpecDefaultTypeInternal;
 extern ShellSetSpecDefaultTypeInternal _ShellSetSpec_default_instance_;
+class ShellSetSpec_VariationInfo;
+struct ShellSetSpec_VariationInfoDefaultTypeInternal;
+extern ShellSetSpec_VariationInfoDefaultTypeInternal _ShellSetSpec_VariationInfo_default_instance_;
 class ShellSpec;
 struct ShellSpecDefaultTypeInternal;
 extern ShellSpecDefaultTypeInternal _ShellSpec_default_instance_;
 class ShellSpec_ShellPiece;
 struct ShellSpec_ShellPieceDefaultTypeInternal;
 extern ShellSpec_ShellPieceDefaultTypeInternal _ShellSpec_ShellPiece_default_instance_;
+class ShellsActionLog;
+struct ShellsActionLogDefaultTypeInternal;
+extern ShellsActionLogDefaultTypeInternal _ShellsActionLog_default_instance_;
 class UpdateCoopPermissionsRequest;
 struct UpdateCoopPermissionsRequestDefaultTypeInternal;
 extern UpdateCoopPermissionsRequestDefaultTypeInternal _UpdateCoopPermissionsRequest_default_instance_;
@@ -472,6 +529,7 @@ template<> ::ei::Backup_NewsHeadline* Arena::CreateMaybeMessage<::ei::Backup_New
 template<> ::ei::Backup_OwnedBoost* Arena::CreateMaybeMessage<::ei::Backup_OwnedBoost>(Arena*);
 template<> ::ei::Backup_ResearchItem* Arena::CreateMaybeMessage<::ei::Backup_ResearchItem>(Arena*);
 template<> ::ei::Backup_Settings* Arena::CreateMaybeMessage<::ei::Backup_Settings>(Arena*);
+template<> ::ei::Backup_Shells* Arena::CreateMaybeMessage<::ei::Backup_Shells>(Arena*);
 template<> ::ei::Backup_Simulation* Arena::CreateMaybeMessage<::ei::Backup_Simulation>(Arena*);
 template<> ::ei::Backup_Stats* Arena::CreateMaybeMessage<::ei::Backup_Stats>(Arena*);
 template<> ::ei::Backup_Tutorial* Arena::CreateMaybeMessage<::ei::Backup_Tutorial>(Arena*);
@@ -489,6 +547,7 @@ template<> ::ei::ConsumeArtifactResponse* Arena::CreateMaybeMessage<::ei::Consum
 template<> ::ei::Contract* Arena::CreateMaybeMessage<::ei::Contract>(Arena*);
 template<> ::ei::ContractCoopStatusRequest* Arena::CreateMaybeMessage<::ei::ContractCoopStatusRequest>(Arena*);
 template<> ::ei::ContractCoopStatusResponse* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse>(Arena*);
+template<> ::ei::ContractCoopStatusResponse_ChickenRun* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse_ChickenRun>(Arena*);
 template<> ::ei::ContractCoopStatusResponse_ContributionInfo* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse_ContributionInfo>(Arena*);
 template<> ::ei::ContractCoopStatusResponse_CoopGift* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse_CoopGift>(Arena*);
 template<> ::ei::ContractCoopStatusUpdateRequest* Arena::CreateMaybeMessage<::ei::ContractCoopStatusUpdateRequest>(Arena*);
@@ -499,10 +558,14 @@ template<> ::ei::ContractsRequest* Arena::CreateMaybeMessage<::ei::ContractsRequ
 template<> ::ei::ContractsResponse* Arena::CreateMaybeMessage<::ei::ContractsResponse>(Arena*);
 template<> ::ei::CoopBuffHistory* Arena::CreateMaybeMessage<::ei::CoopBuffHistory>(Arena*);
 template<> ::ei::CoopBuffState* Arena::CreateMaybeMessage<::ei::CoopBuffState>(Arena*);
+template<> ::ei::CoopChickenRunEntry* Arena::CreateMaybeMessage<::ei::CoopChickenRunEntry>(Arena*);
+template<> ::ei::CoopLastChickenRunTimes* Arena::CreateMaybeMessage<::ei::CoopLastChickenRunTimes>(Arena*);
 template<> ::ei::CraftArtifactRequest* Arena::CreateMaybeMessage<::ei::CraftArtifactRequest>(Arena*);
 template<> ::ei::CraftArtifactResponse* Arena::CreateMaybeMessage<::ei::CraftArtifactResponse>(Arena*);
 template<> ::ei::CreateCoopRequest* Arena::CreateMaybeMessage<::ei::CreateCoopRequest>(Arena*);
 template<> ::ei::CreateCoopResponse* Arena::CreateMaybeMessage<::ei::CreateCoopResponse>(Arena*);
+template<> ::ei::CurrencyFlowBatchRequest* Arena::CreateMaybeMessage<::ei::CurrencyFlowBatchRequest>(Arena*);
+template<> ::ei::CurrencyFlowLog* Arena::CreateMaybeMessage<::ei::CurrencyFlowLog>(Arena*);
 template<> ::ei::DLCCatalog* Arena::CreateMaybeMessage<::ei::DLCCatalog>(Arena*);
 template<> ::ei::DLCItem* Arena::CreateMaybeMessage<::ei::DLCItem>(Arena*);
 template<> ::ei::DailyGiftInfo* Arena::CreateMaybeMessage<::ei::DailyGiftInfo>(Arena*);
@@ -514,6 +577,7 @@ template<> ::ei::EggIncFirstContactRequest* Arena::CreateMaybeMessage<::ei::EggI
 template<> ::ei::EggIncFirstContactResponse* Arena::CreateMaybeMessage<::ei::EggIncFirstContactResponse>(Arena*);
 template<> ::ei::FarmProductionParams* Arena::CreateMaybeMessage<::ei::FarmProductionParams>(Arena*);
 template<> ::ei::GenericAction* Arena::CreateMaybeMessage<::ei::GenericAction>(Arena*);
+template<> ::ei::GenericActionBatchRequest* Arena::CreateMaybeMessage<::ei::GenericActionBatchRequest>(Arena*);
 template<> ::ei::GetPeriodicalsRequest* Arena::CreateMaybeMessage<::ei::GetPeriodicalsRequest>(Arena*);
 template<> ::ei::GiftPlayerCoopRequest* Arena::CreateMaybeMessage<::ei::GiftPlayerCoopRequest>(Arena*);
 template<> ::ei::IAPSaleEntry* Arena::CreateMaybeMessage<::ei::IAPSaleEntry>(Arena*);
@@ -542,6 +606,7 @@ template<> ::ei::MissionRequest* Arena::CreateMaybeMessage<::ei::MissionRequest>
 template<> ::ei::MissionResponse* Arena::CreateMaybeMessage<::ei::MissionResponse>(Arena*);
 template<> ::ei::MyContracts* Arena::CreateMaybeMessage<::ei::MyContracts>(Arena*);
 template<> ::ei::PeriodicalsResponse* Arena::CreateMaybeMessage<::ei::PeriodicalsResponse>(Arena*);
+template<> ::ei::PlayerFarmInfo* Arena::CreateMaybeMessage<::ei::PlayerFarmInfo>(Arena*);
 template<> ::ei::QueryCoopRequest* Arena::CreateMaybeMessage<::ei::QueryCoopRequest>(Arena*);
 template<> ::ei::QueryCoopResponse* Arena::CreateMaybeMessage<::ei::QueryCoopResponse>(Arena*);
 template<> ::ei::ReturnEDTPayload* Arena::CreateMaybeMessage<::ei::ReturnEDTPayload>(Arena*);
@@ -549,16 +614,27 @@ template<> ::ei::Reward* Arena::CreateMaybeMessage<::ei::Reward>(Arena*);
 template<> ::ei::SalesInfo* Arena::CreateMaybeMessage<::ei::SalesInfo>(Arena*);
 template<> ::ei::SalesInfoRequest* Arena::CreateMaybeMessage<::ei::SalesInfoRequest>(Arena*);
 template<> ::ei::SaveBackupResponse* Arena::CreateMaybeMessage<::ei::SaveBackupResponse>(Arena*);
+template<> ::ei::SendChickenRunCoopRequest* Arena::CreateMaybeMessage<::ei::SendChickenRunCoopRequest>(Arena*);
 template<> ::ei::ServerGift* Arena::CreateMaybeMessage<::ei::ServerGift>(Arena*);
 template<> ::ei::SetArtifactRequest* Arena::CreateMaybeMessage<::ei::SetArtifactRequest>(Arena*);
 template<> ::ei::SetArtifactResponse* Arena::CreateMaybeMessage<::ei::SetArtifactResponse>(Arena*);
 template<> ::ei::ShellDB* Arena::CreateMaybeMessage<::ei::ShellDB>(Arena*);
+template<> ::ei::ShellDB_ChickenConfig* Arena::CreateMaybeMessage<::ei::ShellDB_ChickenConfig>(Arena*);
 template<> ::ei::ShellDB_FarmConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_FarmConfiguration>(Arena*);
 template<> ::ei::ShellDB_ShellConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_ShellConfiguration>(Arena*);
+template<> ::ei::ShellDB_ShellElementStatus* Arena::CreateMaybeMessage<::ei::ShellDB_ShellElementStatus>(Arena*);
+template<> ::ei::ShellDB_ShellGroupConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_ShellGroupConfiguration>(Arena*);
+template<> ::ei::ShellDB_ShellSetConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_ShellSetConfiguration>(Arena*);
+template<> ::ei::ShellDB_ShellSetVariationStatus* Arena::CreateMaybeMessage<::ei::ShellDB_ShellSetVariationStatus>(Arena*);
 template<> ::ei::ShellDB_ShellStatus* Arena::CreateMaybeMessage<::ei::ShellDB_ShellStatus>(Arena*);
+template<> ::ei::ShellGroupSpec* Arena::CreateMaybeMessage<::ei::ShellGroupSpec>(Arena*);
+template<> ::ei::ShellObjectSpec* Arena::CreateMaybeMessage<::ei::ShellObjectSpec>(Arena*);
+template<> ::ei::ShellObjectSpec_LODPiece* Arena::CreateMaybeMessage<::ei::ShellObjectSpec_LODPiece>(Arena*);
 template<> ::ei::ShellSetSpec* Arena::CreateMaybeMessage<::ei::ShellSetSpec>(Arena*);
+template<> ::ei::ShellSetSpec_VariationInfo* Arena::CreateMaybeMessage<::ei::ShellSetSpec_VariationInfo>(Arena*);
 template<> ::ei::ShellSpec* Arena::CreateMaybeMessage<::ei::ShellSpec>(Arena*);
 template<> ::ei::ShellSpec_ShellPiece* Arena::CreateMaybeMessage<::ei::ShellSpec_ShellPiece>(Arena*);
+template<> ::ei::ShellsActionLog* Arena::CreateMaybeMessage<::ei::ShellsActionLog>(Arena*);
 template<> ::ei::UpdateCoopPermissionsRequest* Arena::CreateMaybeMessage<::ei::UpdateCoopPermissionsRequest>(Arena*);
 template<> ::ei::UpdateCoopPermissionsResponse* Arena::CreateMaybeMessage<::ei::UpdateCoopPermissionsResponse>(Arena*);
 template<> ::ei::UserDataInfoRequest* Arena::CreateMaybeMessage<::ei::UserDataInfoRequest>(Arena*);
@@ -981,6 +1057,10 @@ enum ShellSpec_AssetType : int {
   ShellSpec_AssetType_MISSION_CONTROL_1 = 180,
   ShellSpec_AssetType_MISSION_CONTROL_2 = 181,
   ShellSpec_AssetType_MISSION_CONTROL_3 = 182,
+  ShellSpec_AssetType_FUEL_TANK_1 = 200,
+  ShellSpec_AssetType_FUEL_TANK_2 = 201,
+  ShellSpec_AssetType_FUEL_TANK_3 = 202,
+  ShellSpec_AssetType_FUEL_TANK_4 = 203,
   ShellSpec_AssetType_HATCHERY_GRAVITON_TOP = 500,
   ShellSpec_AssetType_HATCHERY_NEBULA_MIDDLE = 501,
   ShellSpec_AssetType_HATCHERY_NEBULA_TOP = 502,
@@ -996,6 +1076,8 @@ enum ShellSpec_AssetType : int {
   ShellSpec_AssetType_HATCHERY_ENLIGHTENMENT_ORB = 520,
   ShellSpec_AssetType_HYPERLOOP_TRACK = 570,
   ShellSpec_AssetType_MAILBOX_FULL = 600,
+  ShellSpec_AssetType_CHICKEN = 1000,
+  ShellSpec_AssetType_HAT = 1010,
   ShellSpec_AssetType_UNKNOWN = 9999
 };
 bool ShellSpec_AssetType_IsValid(int value);
@@ -1016,6 +1098,43 @@ inline bool ShellSpec_AssetType_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ShellSpec_AssetType* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ShellSpec_AssetType>(
     ShellSpec_AssetType_descriptor(), name, value);
+}
+enum ShellDB_FarmElement : int {
+  ShellDB_FarmElement_HEN_HOUSE = 1,
+  ShellDB_FarmElement_SILO = 2,
+  ShellDB_FarmElement_MAILBOX = 3,
+  ShellDB_FarmElement_TROPHY_CASE = 4,
+  ShellDB_FarmElement_GROUND = 5,
+  ShellDB_FarmElement_HARDSCAPE = 6,
+  ShellDB_FarmElement_HYPERLOOP = 7,
+  ShellDB_FarmElement_DEPOT = 8,
+  ShellDB_FarmElement_LAB = 9,
+  ShellDB_FarmElement_HATCHERY = 10,
+  ShellDB_FarmElement_HOA = 11,
+  ShellDB_FarmElement_MISSION_CONTROL = 12,
+  ShellDB_FarmElement_FUEL_TANK = 13,
+  ShellDB_FarmElement_CHICKEN = 14,
+  ShellDB_FarmElement_HAT = 15,
+  ShellDB_FarmElement_UNKNOWN = 99
+};
+bool ShellDB_FarmElement_IsValid(int value);
+constexpr ShellDB_FarmElement ShellDB_FarmElement_FarmElement_MIN = ShellDB_FarmElement_HEN_HOUSE;
+constexpr ShellDB_FarmElement ShellDB_FarmElement_FarmElement_MAX = ShellDB_FarmElement_UNKNOWN;
+constexpr int ShellDB_FarmElement_FarmElement_ARRAYSIZE = ShellDB_FarmElement_FarmElement_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ShellDB_FarmElement_descriptor();
+template<typename T>
+inline const std::string& ShellDB_FarmElement_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ShellDB_FarmElement>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ShellDB_FarmElement_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ShellDB_FarmElement_descriptor(), enum_t_value);
+}
+inline bool ShellDB_FarmElement_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ShellDB_FarmElement* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ShellDB_FarmElement>(
+    ShellDB_FarmElement_descriptor(), name, value);
 }
 enum Platform : int {
   IOS = 1,
@@ -1197,6 +1316,8 @@ enum RewardType : int {
   BOOST_TOKEN = 10,
   ARTIFACT = 11,
   ARTIFACT_CASE = 12,
+  CHICKEN = 13,
+  SHELL_SCRIPT = 14,
   UNKNOWN_REWARD = 100
 };
 bool RewardType_IsValid(int value);
@@ -2650,6 +2771,9 @@ class Backup_Game final :
     kSoulEggsDFieldNumber = 34,
     kUnclaimedSoulEggsDFieldNumber = 35,
     kNewPlayerEventEndTimeFieldNumber = 37,
+    kShellScriptsEarnedFieldNumber = 38,
+    kShellScriptsSpentFieldNumber = 39,
+    kUnclaimedShellScriptsFieldNumber = 40,
     kMaxEggReachedFieldNumber = 1,
   };
   // repeated .ei.Backup.ResearchItem epic_research = 9;
@@ -3145,6 +3269,45 @@ class Backup_Game final :
   void _internal_set_new_player_event_end_time(double value);
   public:
 
+  // optional uint64 shell_scripts_earned = 38;
+  bool has_shell_scripts_earned() const;
+  private:
+  bool _internal_has_shell_scripts_earned() const;
+  public:
+  void clear_shell_scripts_earned();
+  uint64_t shell_scripts_earned() const;
+  void set_shell_scripts_earned(uint64_t value);
+  private:
+  uint64_t _internal_shell_scripts_earned() const;
+  void _internal_set_shell_scripts_earned(uint64_t value);
+  public:
+
+  // optional uint64 shell_scripts_spent = 39;
+  bool has_shell_scripts_spent() const;
+  private:
+  bool _internal_has_shell_scripts_spent() const;
+  public:
+  void clear_shell_scripts_spent();
+  uint64_t shell_scripts_spent() const;
+  void set_shell_scripts_spent(uint64_t value);
+  private:
+  uint64_t _internal_shell_scripts_spent() const;
+  void _internal_set_shell_scripts_spent(uint64_t value);
+  public:
+
+  // optional uint64 unclaimed_shell_scripts = 40;
+  bool has_unclaimed_shell_scripts() const;
+  private:
+  bool _internal_has_unclaimed_shell_scripts() const;
+  public:
+  void clear_unclaimed_shell_scripts();
+  uint64_t unclaimed_shell_scripts() const;
+  void set_unclaimed_shell_scripts(uint64_t value);
+  private:
+  uint64_t _internal_unclaimed_shell_scripts() const;
+  void _internal_set_unclaimed_shell_scripts(uint64_t value);
+  public:
+
   // optional .ei.Egg max_egg_reached = 1;
   bool has_max_egg_reached() const;
   private:
@@ -3165,7 +3328,7 @@ class Backup_Game final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<2> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem > epic_research_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_NewsHeadline > news_;
@@ -3202,6 +3365,9 @@ class Backup_Game final :
   double soul_eggs_d_;
   double unclaimed_soul_eggs_d_;
   double new_player_event_end_time_;
+  uint64_t shell_scripts_earned_;
+  uint64_t shell_scripts_spent_;
+  uint64_t unclaimed_shell_scripts_;
   int max_egg_reached_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -3609,6 +3775,203 @@ class Backup_Artifacts final :
 };
 // -------------------------------------------------------------------
 
+class Backup_Shells final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.Backup.Shells) */ {
+ public:
+  inline Backup_Shells() : Backup_Shells(nullptr) {}
+  ~Backup_Shells() override;
+  explicit constexpr Backup_Shells(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Backup_Shells(const Backup_Shells& from);
+  Backup_Shells(Backup_Shells&& from) noexcept
+    : Backup_Shells() {
+    *this = ::std::move(from);
+  }
+
+  inline Backup_Shells& operator=(const Backup_Shells& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Backup_Shells& operator=(Backup_Shells&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Backup_Shells& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Backup_Shells* internal_default_instance() {
+    return reinterpret_cast<const Backup_Shells*>(
+               &_Backup_Shells_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(Backup_Shells& a, Backup_Shells& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Backup_Shells* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Backup_Shells* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  Backup_Shells* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Backup_Shells>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Backup_Shells& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Backup_Shells& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Backup_Shells* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.Backup.Shells";
+  }
+  protected:
+  explicit Backup_Shells(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNumNewFieldNumber = 3,
+    kIntroAlertFieldNumber = 1,
+    kContractsIntroAlertFieldNumber = 2,
+  };
+  // repeated int32 num_new = 3;
+  int num_new_size() const;
+  private:
+  int _internal_num_new_size() const;
+  public:
+  void clear_num_new();
+  private:
+  int32_t _internal_num_new(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+      _internal_num_new() const;
+  void _internal_add_num_new(int32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+      _internal_mutable_num_new();
+  public:
+  int32_t num_new(int index) const;
+  void set_num_new(int index, int32_t value);
+  void add_num_new(int32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+      num_new() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+      mutable_num_new();
+
+  // optional bool intro_alert = 1;
+  bool has_intro_alert() const;
+  private:
+  bool _internal_has_intro_alert() const;
+  public:
+  void clear_intro_alert();
+  bool intro_alert() const;
+  void set_intro_alert(bool value);
+  private:
+  bool _internal_intro_alert() const;
+  void _internal_set_intro_alert(bool value);
+  public:
+
+  // optional bool contracts_intro_alert = 2;
+  bool has_contracts_intro_alert() const;
+  private:
+  bool _internal_has_contracts_intro_alert() const;
+  public:
+  void clear_contracts_intro_alert();
+  bool contracts_intro_alert() const;
+  void set_contracts_intro_alert(bool value);
+  private:
+  bool _internal_contracts_intro_alert() const;
+  void _internal_set_contracts_intro_alert(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.Backup.Shells)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > num_new_;
+  bool intro_alert_;
+  bool contracts_intro_alert_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class Backup_Simulation final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.Backup.Simulation) */ {
  public:
@@ -3664,7 +4027,7 @@ class Backup_Simulation final :
                &_Backup_Simulation_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   friend void swap(Backup_Simulation& a, Backup_Simulation& b) {
     a.Swap(&b);
@@ -4341,7 +4704,7 @@ class Backup_Mission final :
                &_Backup_Mission_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   friend void swap(Backup_Mission& a, Backup_Mission& b) {
     a.Swap(&b);
@@ -4565,7 +4928,7 @@ class Backup_Misc final :
                &_Backup_Misc_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   friend void swap(Backup_Misc& a, Backup_Misc& b) {
     a.Swap(&b);
@@ -5008,7 +5371,7 @@ class Backup_ResearchItem final :
                &_Backup_ResearchItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   friend void swap(Backup_ResearchItem& a, Backup_ResearchItem& b) {
     a.Swap(&b);
@@ -5186,7 +5549,7 @@ class Backup_NewsHeadline final :
                &_Backup_NewsHeadline_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   friend void swap(Backup_NewsHeadline& a, Backup_NewsHeadline& b) {
     a.Swap(&b);
@@ -5364,7 +5727,7 @@ class Backup_AchievementInfo final :
                &_Backup_AchievementInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
   friend void swap(Backup_AchievementInfo& a, Backup_AchievementInfo& b) {
     a.Swap(&b);
@@ -5542,7 +5905,7 @@ class Backup_ActiveBoost final :
                &_Backup_ActiveBoost_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    12;
 
   friend void swap(Backup_ActiveBoost& a, Backup_ActiveBoost& b) {
     a.Swap(&b);
@@ -5735,7 +6098,7 @@ class Backup_OwnedBoost final :
                &_Backup_OwnedBoost_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   friend void swap(Backup_OwnedBoost& a, Backup_OwnedBoost& b) {
     a.Swap(&b);
@@ -5913,7 +6276,7 @@ class Backup_MissionInfo final :
                &_Backup_MissionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    14;
 
   friend void swap(Backup_MissionInfo& a, Backup_MissionInfo& b) {
     a.Swap(&b);
@@ -6106,7 +6469,7 @@ class Backup final :
                &_Backup_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    15;
 
   friend void swap(Backup& a, Backup& b) {
     a.Swap(&b);
@@ -6182,6 +6545,7 @@ class Backup final :
   typedef Backup_Stats Stats;
   typedef Backup_Game Game;
   typedef Backup_Artifacts Artifacts;
+  typedef Backup_Shells Shells;
   typedef Backup_Simulation Simulation;
   typedef Backup_Mission Mission;
   typedef Backup_Misc Misc;
@@ -6214,6 +6578,7 @@ class Backup final :
     kArtifactsFieldNumber = 14,
     kArtifactsDbFieldNumber = 15,
     kShellDbFieldNumber = 24,
+    kShellsFieldNumber = 25,
     kApproxTimeFieldNumber = 3,
     kVersionFieldNumber = 21,
     kForceOfferBackupFieldNumber = 20,
@@ -6568,6 +6933,24 @@ class Backup final :
       ::ei::ShellDB* shell_db);
   ::ei::ShellDB* unsafe_arena_release_shell_db();
 
+  // optional .ei.Backup.Shells shells = 25;
+  bool has_shells() const;
+  private:
+  bool _internal_has_shells() const;
+  public:
+  void clear_shells();
+  const ::ei::Backup_Shells& shells() const;
+  PROTOBUF_NODISCARD ::ei::Backup_Shells* release_shells();
+  ::ei::Backup_Shells* mutable_shells();
+  void set_allocated_shells(::ei::Backup_Shells* shells);
+  private:
+  const ::ei::Backup_Shells& _internal_shells() const;
+  ::ei::Backup_Shells* _internal_mutable_shells();
+  public:
+  void unsafe_arena_set_allocated_shells(
+      ::ei::Backup_Shells* shells);
+  ::ei::Backup_Shells* unsafe_arena_release_shells();
+
   // optional double approx_time = 3;
   bool has_approx_time() const;
   private:
@@ -6661,6 +7044,7 @@ class Backup final :
   ::ei::Backup_Artifacts* artifacts_;
   ::ei::ArtifactsDB* artifacts_db_;
   ::ei::ShellDB* shell_db_;
+  ::ei::Backup_Shells* shells_;
   double approx_time_;
   uint32_t version_;
   bool force_offer_backup_;
@@ -6725,7 +7109,7 @@ class EggIncFirstContactRequest final :
                &_EggIncFirstContactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    16;
 
   friend void swap(EggIncFirstContactRequest& a, EggIncFirstContactRequest& b) {
     a.Swap(&b);
@@ -7018,7 +7402,7 @@ class EggIncFirstContactResponse final :
                &_EggIncFirstContactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    17;
 
   friend void swap(EggIncFirstContactResponse& a, EggIncFirstContactResponse& b) {
     a.Swap(&b);
@@ -7296,7 +7680,7 @@ class EggIncAdConfig final :
                &_EggIncAdConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   friend void swap(EggIncAdConfig& a, EggIncAdConfig& b) {
     a.Swap(&b);
@@ -7457,7 +7841,7 @@ class DailyGiftInfo final :
                &_DailyGiftInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    19;
 
   friend void swap(DailyGiftInfo& a, DailyGiftInfo& b) {
     a.Swap(&b);
@@ -7630,7 +8014,7 @@ class SalesInfoRequest final :
                &_SalesInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    20;
 
   friend void swap(SalesInfoRequest& a, SalesInfoRequest& b) {
     a.Swap(&b);
@@ -7883,7 +8267,7 @@ class IAPSaleEntry final :
                &_IAPSaleEntry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    21;
 
   friend void swap(IAPSaleEntry& a, IAPSaleEntry& b) {
     a.Swap(&b);
@@ -8101,7 +8485,7 @@ class SalesInfo final :
                &_SalesInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    22;
 
   friend void swap(SalesInfo& a, SalesInfo& b) {
     a.Swap(&b);
@@ -8263,7 +8647,7 @@ class EggIncEvent final :
                &_EggIncEvent_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    23;
 
   friend void swap(EggIncEvent& a, EggIncEvent& b) {
     a.Swap(&b);
@@ -8526,7 +8910,7 @@ class EggIncCurrentEvents final :
                &_EggIncCurrentEvents_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    24;
 
   friend void swap(EggIncCurrentEvents& a, EggIncCurrentEvents& b) {
     a.Swap(&b);
@@ -8688,7 +9072,7 @@ class DeviceInfo final :
                &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    25;
 
   friend void swap(DeviceInfo& a, DeviceInfo& b) {
     a.Swap(&b);
@@ -9081,7 +9465,7 @@ class AppInfo final :
                &_AppInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    26;
 
   friend void swap(AppInfo& a, AppInfo& b) {
     a.Swap(&b);
@@ -9669,7 +10053,7 @@ class ActionKeyValuePair final :
                &_ActionKeyValuePair_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    27;
 
   friend void swap(ActionKeyValuePair& a, ActionKeyValuePair& b) {
     a.Swap(&b);
@@ -9855,7 +10239,7 @@ class GenericAction final :
                &_GenericAction_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    28;
 
   friend void swap(GenericAction& a, GenericAction& b) {
     a.Swap(&b);
@@ -10093,6 +10477,189 @@ class GenericAction final :
 };
 // -------------------------------------------------------------------
 
+class GenericActionBatchRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.GenericActionBatchRequest) */ {
+ public:
+  inline GenericActionBatchRequest() : GenericActionBatchRequest(nullptr) {}
+  ~GenericActionBatchRequest() override;
+  explicit constexpr GenericActionBatchRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GenericActionBatchRequest(const GenericActionBatchRequest& from);
+  GenericActionBatchRequest(GenericActionBatchRequest&& from) noexcept
+    : GenericActionBatchRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GenericActionBatchRequest& operator=(const GenericActionBatchRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GenericActionBatchRequest& operator=(GenericActionBatchRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GenericActionBatchRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GenericActionBatchRequest* internal_default_instance() {
+    return reinterpret_cast<const GenericActionBatchRequest*>(
+               &_GenericActionBatchRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    29;
+
+  friend void swap(GenericActionBatchRequest& a, GenericActionBatchRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GenericActionBatchRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GenericActionBatchRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GenericActionBatchRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GenericActionBatchRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const GenericActionBatchRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const GenericActionBatchRequest& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GenericActionBatchRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.GenericActionBatchRequest";
+  }
+  protected:
+  explicit GenericActionBatchRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kActionsFieldNumber = 2,
+    kRinfoFieldNumber = 1,
+  };
+  // repeated .ei.GenericAction actions = 2;
+  int actions_size() const;
+  private:
+  int _internal_actions_size() const;
+  public:
+  void clear_actions();
+  ::ei::GenericAction* mutable_actions(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GenericAction >*
+      mutable_actions();
+  private:
+  const ::ei::GenericAction& _internal_actions(int index) const;
+  ::ei::GenericAction* _internal_add_actions();
+  public:
+  const ::ei::GenericAction& actions(int index) const;
+  ::ei::GenericAction* add_actions();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GenericAction >&
+      actions() const;
+
+  // optional .ei.BasicRequestInfo rinfo = 1;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // @@protoc_insertion_point(class_scope:ei.GenericActionBatchRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GenericAction > actions_;
+  ::ei::BasicRequestInfo* rinfo_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class VerifyPurchaseRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.VerifyPurchaseRequest) */ {
  public:
@@ -10148,7 +10715,7 @@ class VerifyPurchaseRequest final :
                &_VerifyPurchaseRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    30;
 
   friend void swap(VerifyPurchaseRequest& a, VerifyPurchaseRequest& b) {
     a.Swap(&b);
@@ -10228,6 +10795,7 @@ class VerifyPurchaseRequest final :
     kPlatformFieldNumber = 4,
     kLogFieldNumber = 5,
     kRinfoFieldNumber = 6,
+    kSandboxFieldNumber = 7,
   };
   // optional string sku = 1;
   bool has_sku() const;
@@ -10337,6 +10905,19 @@ class VerifyPurchaseRequest final :
       ::ei::BasicRequestInfo* rinfo);
   ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
 
+  // optional bool sandbox = 7;
+  bool has_sandbox() const;
+  private:
+  bool _internal_has_sandbox() const;
+  public:
+  void clear_sandbox();
+  bool sandbox() const;
+  void set_sandbox(bool value);
+  private:
+  bool _internal_sandbox() const;
+  void _internal_set_sandbox(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.VerifyPurchaseRequest)
  private:
   class _Internal;
@@ -10352,6 +10933,7 @@ class VerifyPurchaseRequest final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr platform_;
   ::ei::GenericAction* log_;
   ::ei::BasicRequestInfo* rinfo_;
+  bool sandbox_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -10411,7 +10993,7 @@ class VerifyPurchaseResponse final :
                &_VerifyPurchaseResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    31;
 
   friend void swap(VerifyPurchaseResponse& a, VerifyPurchaseResponse& b) {
     a.Swap(&b);
@@ -10534,6 +11116,457 @@ class VerifyPurchaseResponse final :
 };
 // -------------------------------------------------------------------
 
+class CurrencyFlowLog final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CurrencyFlowLog) */ {
+ public:
+  inline CurrencyFlowLog() : CurrencyFlowLog(nullptr) {}
+  ~CurrencyFlowLog() override;
+  explicit constexpr CurrencyFlowLog(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CurrencyFlowLog(const CurrencyFlowLog& from);
+  CurrencyFlowLog(CurrencyFlowLog&& from) noexcept
+    : CurrencyFlowLog() {
+    *this = ::std::move(from);
+  }
+
+  inline CurrencyFlowLog& operator=(const CurrencyFlowLog& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CurrencyFlowLog& operator=(CurrencyFlowLog&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CurrencyFlowLog& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CurrencyFlowLog* internal_default_instance() {
+    return reinterpret_cast<const CurrencyFlowLog*>(
+               &_CurrencyFlowLog_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    32;
+
+  friend void swap(CurrencyFlowLog& a, CurrencyFlowLog& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CurrencyFlowLog* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CurrencyFlowLog* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CurrencyFlowLog* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CurrencyFlowLog>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CurrencyFlowLog& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CurrencyFlowLog& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CurrencyFlowLog* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CurrencyFlowLog";
+  }
+  protected:
+  explicit CurrencyFlowLog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kLocationFieldNumber = 5,
+    kVersionFieldNumber = 6,
+    kPlatformFieldNumber = 7,
+    kApproxTimeFieldNumber = 2,
+    kAmountFieldNumber = 4,
+    kCurrencyFieldNumber = 3,
+  };
+  // optional string user_id = 1;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional string location = 5;
+  bool has_location() const;
+  private:
+  bool _internal_has_location() const;
+  public:
+  void clear_location();
+  const std::string& location() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_location(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_location();
+  PROTOBUF_NODISCARD std::string* release_location();
+  void set_allocated_location(std::string* location);
+  private:
+  const std::string& _internal_location() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_location(const std::string& value);
+  std::string* _internal_mutable_location();
+  public:
+
+  // optional string version = 6;
+  bool has_version() const;
+  private:
+  bool _internal_has_version() const;
+  public:
+  void clear_version();
+  const std::string& version() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_version(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_version();
+  PROTOBUF_NODISCARD std::string* release_version();
+  void set_allocated_version(std::string* version);
+  private:
+  const std::string& _internal_version() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_version(const std::string& value);
+  std::string* _internal_mutable_version();
+  public:
+
+  // optional string platform = 7;
+  bool has_platform() const;
+  private:
+  bool _internal_has_platform() const;
+  public:
+  void clear_platform();
+  const std::string& platform() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_platform(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_platform();
+  PROTOBUF_NODISCARD std::string* release_platform();
+  void set_allocated_platform(std::string* platform);
+  private:
+  const std::string& _internal_platform() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_platform(const std::string& value);
+  std::string* _internal_mutable_platform();
+  public:
+
+  // optional double approx_time = 2;
+  bool has_approx_time() const;
+  private:
+  bool _internal_has_approx_time() const;
+  public:
+  void clear_approx_time();
+  double approx_time() const;
+  void set_approx_time(double value);
+  private:
+  double _internal_approx_time() const;
+  void _internal_set_approx_time(double value);
+  public:
+
+  // optional int64 amount = 4;
+  bool has_amount() const;
+  private:
+  bool _internal_has_amount() const;
+  public:
+  void clear_amount();
+  int64_t amount() const;
+  void set_amount(int64_t value);
+  private:
+  int64_t _internal_amount() const;
+  void _internal_set_amount(int64_t value);
+  public:
+
+  // optional .ei.RewardType currency = 3;
+  bool has_currency() const;
+  private:
+  bool _internal_has_currency() const;
+  public:
+  void clear_currency();
+  ::ei::RewardType currency() const;
+  void set_currency(::ei::RewardType value);
+  private:
+  ::ei::RewardType _internal_currency() const;
+  void _internal_set_currency(::ei::RewardType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.CurrencyFlowLog)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr location_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr platform_;
+  double approx_time_;
+  int64_t amount_;
+  int currency_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CurrencyFlowBatchRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CurrencyFlowBatchRequest) */ {
+ public:
+  inline CurrencyFlowBatchRequest() : CurrencyFlowBatchRequest(nullptr) {}
+  ~CurrencyFlowBatchRequest() override;
+  explicit constexpr CurrencyFlowBatchRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CurrencyFlowBatchRequest(const CurrencyFlowBatchRequest& from);
+  CurrencyFlowBatchRequest(CurrencyFlowBatchRequest&& from) noexcept
+    : CurrencyFlowBatchRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CurrencyFlowBatchRequest& operator=(const CurrencyFlowBatchRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CurrencyFlowBatchRequest& operator=(CurrencyFlowBatchRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CurrencyFlowBatchRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CurrencyFlowBatchRequest* internal_default_instance() {
+    return reinterpret_cast<const CurrencyFlowBatchRequest*>(
+               &_CurrencyFlowBatchRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    33;
+
+  friend void swap(CurrencyFlowBatchRequest& a, CurrencyFlowBatchRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CurrencyFlowBatchRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CurrencyFlowBatchRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CurrencyFlowBatchRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CurrencyFlowBatchRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CurrencyFlowBatchRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CurrencyFlowBatchRequest& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CurrencyFlowBatchRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CurrencyFlowBatchRequest";
+  }
+  protected:
+  explicit CurrencyFlowBatchRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kLogsFieldNumber = 1,
+    kRinfoFieldNumber = 2,
+  };
+  // repeated .ei.CurrencyFlowLog logs = 1;
+  int logs_size() const;
+  private:
+  int _internal_logs_size() const;
+  public:
+  void clear_logs();
+  ::ei::CurrencyFlowLog* mutable_logs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CurrencyFlowLog >*
+      mutable_logs();
+  private:
+  const ::ei::CurrencyFlowLog& _internal_logs(int index) const;
+  ::ei::CurrencyFlowLog* _internal_add_logs();
+  public:
+  const ::ei::CurrencyFlowLog& logs(int index) const;
+  ::ei::CurrencyFlowLog* add_logs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CurrencyFlowLog >&
+      logs() const;
+
+  // optional .ei.BasicRequestInfo rinfo = 2;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // @@protoc_insertion_point(class_scope:ei.CurrencyFlowBatchRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CurrencyFlowLog > logs_;
+  ::ei::BasicRequestInfo* rinfo_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class Reward final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.Reward) */ {
  public:
@@ -10589,7 +11622,7 @@ class Reward final :
                &_Reward_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    34;
 
   friend void swap(Reward& a, Reward& b) {
     a.Swap(&b);
@@ -10782,7 +11815,7 @@ class Contract_Goal final :
                &_Contract_Goal_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    35;
 
   friend void swap(Contract_Goal& a, Contract_Goal& b) {
     a.Swap(&b);
@@ -11020,7 +12053,7 @@ class Contract_GoalSet final :
                &_Contract_GoalSet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    36;
 
   friend void swap(Contract_GoalSet& a, Contract_GoalSet& b) {
     a.Swap(&b);
@@ -11182,7 +12215,7 @@ class Contract final :
                &_Contract_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    37;
 
   friend void swap(Contract& a, Contract& b) {
     a.Swap(&b);
@@ -11275,6 +12308,7 @@ class Contract final :
     kStartTimeFieldNumber = 17,
     kEggFieldNumber = 2,
     kMinutesPerTokenFieldNumber = 15,
+    kChickenRunCooldownMinutesFieldNumber = 18,
   };
   // repeated .ei.Contract.Goal goals = 3;
   int goals_size() const;
@@ -11509,6 +12543,19 @@ class Contract final :
   void _internal_set_minutes_per_token(double value);
   public:
 
+  // optional double chicken_run_cooldown_minutes = 18 [default = 60];
+  bool has_chicken_run_cooldown_minutes() const;
+  private:
+  bool _internal_has_chicken_run_cooldown_minutes() const;
+  public:
+  void clear_chicken_run_cooldown_minutes();
+  double chicken_run_cooldown_minutes() const;
+  void set_chicken_run_cooldown_minutes(double value);
+  private:
+  double _internal_chicken_run_cooldown_minutes() const;
+  void _internal_set_chicken_run_cooldown_minutes(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.Contract)
  private:
   class _Internal;
@@ -11534,6 +12581,7 @@ class Contract final :
   double start_time_;
   int egg_;
   double minutes_per_token_;
+  double chicken_run_cooldown_minutes_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -11593,7 +12641,7 @@ class BasicRequestInfo final :
                &_BasicRequestInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    38;
 
   friend void swap(BasicRequestInfo& a, BasicRequestInfo& b) {
     a.Swap(&b);
@@ -11674,6 +12722,7 @@ class BasicRequestInfo final :
     kCountryFieldNumber = 6,
     kLanguageFieldNumber = 7,
     kClientVersionFieldNumber = 2,
+    kDebugFieldNumber = 8,
   };
   // optional string ei_user_id = 1;
   bool has_ei_user_id() const;
@@ -11796,6 +12845,19 @@ class BasicRequestInfo final :
   void _internal_set_client_version(uint32_t value);
   public:
 
+  // optional bool debug = 8;
+  bool has_debug() const;
+  private:
+  bool _internal_has_debug() const;
+  public:
+  void clear_debug();
+  bool debug() const;
+  void set_debug(bool value);
+  private:
+  bool _internal_debug() const;
+  void _internal_set_debug(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.BasicRequestInfo)
  private:
   class _Internal;
@@ -11812,6 +12874,7 @@ class BasicRequestInfo final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr country_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr language_;
   uint32_t client_version_;
+  bool debug_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -11871,7 +12934,7 @@ class ContractsRequest final :
                &_ContractsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    39;
 
   friend void swap(ContractsRequest& a, ContractsRequest& b) {
     a.Swap(&b);
@@ -12044,7 +13107,7 @@ class ContractsResponse final :
                &_ContractsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    40;
 
   friend void swap(ContractsResponse& a, ContractsResponse& b) {
     a.Swap(&b);
@@ -12257,7 +13320,7 @@ class ContractCoopStatusRequest final :
                &_ContractCoopStatusRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    41;
 
   friend void swap(ContractCoopStatusRequest& a, ContractCoopStatusRequest& b) {
     a.Swap(&b);
@@ -12495,7 +13558,7 @@ class FarmProductionParams final :
                &_FarmProductionParams_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    42;
 
   friend void swap(FarmProductionParams& a, FarmProductionParams& b) {
     a.Swap(&b);
@@ -12673,6 +13736,543 @@ class FarmProductionParams final :
 };
 // -------------------------------------------------------------------
 
+class PlayerFarmInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.PlayerFarmInfo) */ {
+ public:
+  inline PlayerFarmInfo() : PlayerFarmInfo(nullptr) {}
+  ~PlayerFarmInfo() override;
+  explicit constexpr PlayerFarmInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  PlayerFarmInfo(const PlayerFarmInfo& from);
+  PlayerFarmInfo(PlayerFarmInfo&& from) noexcept
+    : PlayerFarmInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline PlayerFarmInfo& operator=(const PlayerFarmInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PlayerFarmInfo& operator=(PlayerFarmInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PlayerFarmInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PlayerFarmInfo* internal_default_instance() {
+    return reinterpret_cast<const PlayerFarmInfo*>(
+               &_PlayerFarmInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    43;
+
+  friend void swap(PlayerFarmInfo& a, PlayerFarmInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PlayerFarmInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PlayerFarmInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PlayerFarmInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PlayerFarmInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const PlayerFarmInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const PlayerFarmInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PlayerFarmInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.PlayerFarmInfo";
+  }
+  protected:
+  explicit PlayerFarmInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEggMedalLevelFieldNumber = 5,
+    kEpicResearchFieldNumber = 6,
+    kHabsFieldNumber = 9,
+    kHabPopulationFieldNumber = 10,
+    kVehiclesFieldNumber = 11,
+    kTrainLengthFieldNumber = 12,
+    kCommonResearchFieldNumber = 14,
+    kActiveBoostsFieldNumber = 15,
+    kEquippedArtifactsFieldNumber = 17,
+    kHabCapacityFieldNumber = 21,
+    kFarmAppearanceFieldNumber = 19,
+    kSoulEggsFieldNumber = 1,
+    kEggsOfProphecyFieldNumber = 2,
+    kPermitLevelFieldNumber = 3,
+    kHyperloopStationFieldNumber = 4,
+    kCashOnHandFieldNumber = 8,
+    kSilosOwnedFieldNumber = 13,
+    kBoostTokensOnHandFieldNumber = 16,
+    kArtifactInventoryScoreFieldNumber = 18,
+    kClientVersionFieldNumber = 20,
+    kEggTypeFieldNumber = 7,
+  };
+  // repeated uint32 egg_medal_level = 5;
+  int egg_medal_level_size() const;
+  private:
+  int _internal_egg_medal_level_size() const;
+  public:
+  void clear_egg_medal_level();
+  private:
+  uint32_t _internal_egg_medal_level(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_egg_medal_level() const;
+  void _internal_add_egg_medal_level(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_egg_medal_level();
+  public:
+  uint32_t egg_medal_level(int index) const;
+  void set_egg_medal_level(int index, uint32_t value);
+  void add_egg_medal_level(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      egg_medal_level() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_egg_medal_level();
+
+  // repeated .ei.Backup.ResearchItem epic_research = 6;
+  int epic_research_size() const;
+  private:
+  int _internal_epic_research_size() const;
+  public:
+  void clear_epic_research();
+  ::ei::Backup_ResearchItem* mutable_epic_research(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >*
+      mutable_epic_research();
+  private:
+  const ::ei::Backup_ResearchItem& _internal_epic_research(int index) const;
+  ::ei::Backup_ResearchItem* _internal_add_epic_research();
+  public:
+  const ::ei::Backup_ResearchItem& epic_research(int index) const;
+  ::ei::Backup_ResearchItem* add_epic_research();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >&
+      epic_research() const;
+
+  // repeated uint32 habs = 9;
+  int habs_size() const;
+  private:
+  int _internal_habs_size() const;
+  public:
+  void clear_habs();
+  private:
+  uint32_t _internal_habs(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_habs() const;
+  void _internal_add_habs(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_habs();
+  public:
+  uint32_t habs(int index) const;
+  void set_habs(int index, uint32_t value);
+  void add_habs(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      habs() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_habs();
+
+  // repeated uint64 hab_population = 10;
+  int hab_population_size() const;
+  private:
+  int _internal_hab_population_size() const;
+  public:
+  void clear_hab_population();
+  private:
+  uint64_t _internal_hab_population(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_hab_population() const;
+  void _internal_add_hab_population(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_hab_population();
+  public:
+  uint64_t hab_population(int index) const;
+  void set_hab_population(int index, uint64_t value);
+  void add_hab_population(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      hab_population() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_hab_population();
+
+  // repeated uint32 vehicles = 11;
+  int vehicles_size() const;
+  private:
+  int _internal_vehicles_size() const;
+  public:
+  void clear_vehicles();
+  private:
+  uint32_t _internal_vehicles(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_vehicles() const;
+  void _internal_add_vehicles(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_vehicles();
+  public:
+  uint32_t vehicles(int index) const;
+  void set_vehicles(int index, uint32_t value);
+  void add_vehicles(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      vehicles() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_vehicles();
+
+  // repeated uint32 train_length = 12;
+  int train_length_size() const;
+  private:
+  int _internal_train_length_size() const;
+  public:
+  void clear_train_length();
+  private:
+  uint32_t _internal_train_length(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      _internal_train_length() const;
+  void _internal_add_train_length(uint32_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      _internal_mutable_train_length();
+  public:
+  uint32_t train_length(int index) const;
+  void set_train_length(int index, uint32_t value);
+  void add_train_length(uint32_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+      train_length() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+      mutable_train_length();
+
+  // repeated .ei.Backup.ResearchItem common_research = 14;
+  int common_research_size() const;
+  private:
+  int _internal_common_research_size() const;
+  public:
+  void clear_common_research();
+  ::ei::Backup_ResearchItem* mutable_common_research(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >*
+      mutable_common_research();
+  private:
+  const ::ei::Backup_ResearchItem& _internal_common_research(int index) const;
+  ::ei::Backup_ResearchItem* _internal_add_common_research();
+  public:
+  const ::ei::Backup_ResearchItem& common_research(int index) const;
+  ::ei::Backup_ResearchItem* add_common_research();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >&
+      common_research() const;
+
+  // repeated .ei.Backup.ActiveBoost active_boosts = 15;
+  int active_boosts_size() const;
+  private:
+  int _internal_active_boosts_size() const;
+  public:
+  void clear_active_boosts();
+  ::ei::Backup_ActiveBoost* mutable_active_boosts(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ActiveBoost >*
+      mutable_active_boosts();
+  private:
+  const ::ei::Backup_ActiveBoost& _internal_active_boosts(int index) const;
+  ::ei::Backup_ActiveBoost* _internal_add_active_boosts();
+  public:
+  const ::ei::Backup_ActiveBoost& active_boosts(int index) const;
+  ::ei::Backup_ActiveBoost* add_active_boosts();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ActiveBoost >&
+      active_boosts() const;
+
+  // repeated .ei.CompleteArtifact equipped_artifacts = 17;
+  int equipped_artifacts_size() const;
+  private:
+  int _internal_equipped_artifacts_size() const;
+  public:
+  void clear_equipped_artifacts();
+  ::ei::CompleteArtifact* mutable_equipped_artifacts(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteArtifact >*
+      mutable_equipped_artifacts();
+  private:
+  const ::ei::CompleteArtifact& _internal_equipped_artifacts(int index) const;
+  ::ei::CompleteArtifact* _internal_add_equipped_artifacts();
+  public:
+  const ::ei::CompleteArtifact& equipped_artifacts(int index) const;
+  ::ei::CompleteArtifact* add_equipped_artifacts();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteArtifact >&
+      equipped_artifacts() const;
+
+  // repeated uint64 hab_capacity = 21;
+  int hab_capacity_size() const;
+  private:
+  int _internal_hab_capacity_size() const;
+  public:
+  void clear_hab_capacity();
+  private:
+  uint64_t _internal_hab_capacity(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_hab_capacity() const;
+  void _internal_add_hab_capacity(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_hab_capacity();
+  public:
+  uint64_t hab_capacity(int index) const;
+  void set_hab_capacity(int index, uint64_t value);
+  void add_hab_capacity(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      hab_capacity() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_hab_capacity();
+
+  // optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;
+  bool has_farm_appearance() const;
+  private:
+  bool _internal_has_farm_appearance() const;
+  public:
+  void clear_farm_appearance();
+  const ::ei::ShellDB_FarmConfiguration& farm_appearance() const;
+  PROTOBUF_NODISCARD ::ei::ShellDB_FarmConfiguration* release_farm_appearance();
+  ::ei::ShellDB_FarmConfiguration* mutable_farm_appearance();
+  void set_allocated_farm_appearance(::ei::ShellDB_FarmConfiguration* farm_appearance);
+  private:
+  const ::ei::ShellDB_FarmConfiguration& _internal_farm_appearance() const;
+  ::ei::ShellDB_FarmConfiguration* _internal_mutable_farm_appearance();
+  public:
+  void unsafe_arena_set_allocated_farm_appearance(
+      ::ei::ShellDB_FarmConfiguration* farm_appearance);
+  ::ei::ShellDB_FarmConfiguration* unsafe_arena_release_farm_appearance();
+
+  // optional double soul_eggs = 1;
+  bool has_soul_eggs() const;
+  private:
+  bool _internal_has_soul_eggs() const;
+  public:
+  void clear_soul_eggs();
+  double soul_eggs() const;
+  void set_soul_eggs(double value);
+  private:
+  double _internal_soul_eggs() const;
+  void _internal_set_soul_eggs(double value);
+  public:
+
+  // optional uint64 eggs_of_prophecy = 2;
+  bool has_eggs_of_prophecy() const;
+  private:
+  bool _internal_has_eggs_of_prophecy() const;
+  public:
+  void clear_eggs_of_prophecy();
+  uint64_t eggs_of_prophecy() const;
+  void set_eggs_of_prophecy(uint64_t value);
+  private:
+  uint64_t _internal_eggs_of_prophecy() const;
+  void _internal_set_eggs_of_prophecy(uint64_t value);
+  public:
+
+  // optional uint32 permit_level = 3;
+  bool has_permit_level() const;
+  private:
+  bool _internal_has_permit_level() const;
+  public:
+  void clear_permit_level();
+  uint32_t permit_level() const;
+  void set_permit_level(uint32_t value);
+  private:
+  uint32_t _internal_permit_level() const;
+  void _internal_set_permit_level(uint32_t value);
+  public:
+
+  // optional bool hyperloop_station = 4;
+  bool has_hyperloop_station() const;
+  private:
+  bool _internal_has_hyperloop_station() const;
+  public:
+  void clear_hyperloop_station();
+  bool hyperloop_station() const;
+  void set_hyperloop_station(bool value);
+  private:
+  bool _internal_hyperloop_station() const;
+  void _internal_set_hyperloop_station(bool value);
+  public:
+
+  // optional double cash_on_hand = 8;
+  bool has_cash_on_hand() const;
+  private:
+  bool _internal_has_cash_on_hand() const;
+  public:
+  void clear_cash_on_hand();
+  double cash_on_hand() const;
+  void set_cash_on_hand(double value);
+  private:
+  double _internal_cash_on_hand() const;
+  void _internal_set_cash_on_hand(double value);
+  public:
+
+  // optional uint32 silos_owned = 13;
+  bool has_silos_owned() const;
+  private:
+  bool _internal_has_silos_owned() const;
+  public:
+  void clear_silos_owned();
+  uint32_t silos_owned() const;
+  void set_silos_owned(uint32_t value);
+  private:
+  uint32_t _internal_silos_owned() const;
+  void _internal_set_silos_owned(uint32_t value);
+  public:
+
+  // optional uint32 boost_tokens_on_hand = 16;
+  bool has_boost_tokens_on_hand() const;
+  private:
+  bool _internal_has_boost_tokens_on_hand() const;
+  public:
+  void clear_boost_tokens_on_hand();
+  uint32_t boost_tokens_on_hand() const;
+  void set_boost_tokens_on_hand(uint32_t value);
+  private:
+  uint32_t _internal_boost_tokens_on_hand() const;
+  void _internal_set_boost_tokens_on_hand(uint32_t value);
+  public:
+
+  // optional uint64 artifact_inventory_score = 18;
+  bool has_artifact_inventory_score() const;
+  private:
+  bool _internal_has_artifact_inventory_score() const;
+  public:
+  void clear_artifact_inventory_score();
+  uint64_t artifact_inventory_score() const;
+  void set_artifact_inventory_score(uint64_t value);
+  private:
+  uint64_t _internal_artifact_inventory_score() const;
+  void _internal_set_artifact_inventory_score(uint64_t value);
+  public:
+
+  // optional uint32 client_version = 20;
+  bool has_client_version() const;
+  private:
+  bool _internal_has_client_version() const;
+  public:
+  void clear_client_version();
+  uint32_t client_version() const;
+  void set_client_version(uint32_t value);
+  private:
+  uint32_t _internal_client_version() const;
+  void _internal_set_client_version(uint32_t value);
+  public:
+
+  // optional .ei.Egg egg_type = 7;
+  bool has_egg_type() const;
+  private:
+  bool _internal_has_egg_type() const;
+  public:
+  void clear_egg_type();
+  ::ei::Egg egg_type() const;
+  void set_egg_type(::ei::Egg value);
+  private:
+  ::ei::Egg _internal_egg_type() const;
+  void _internal_set_egg_type(::ei::Egg value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.PlayerFarmInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > egg_medal_level_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem > epic_research_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > habs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > hab_population_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > vehicles_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > train_length_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem > common_research_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ActiveBoost > active_boosts_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteArtifact > equipped_artifacts_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > hab_capacity_;
+  ::ei::ShellDB_FarmConfiguration* farm_appearance_;
+  double soul_eggs_;
+  uint64_t eggs_of_prophecy_;
+  uint32_t permit_level_;
+  bool hyperloop_station_;
+  double cash_on_hand_;
+  uint32_t silos_owned_;
+  uint32_t boost_tokens_on_hand_;
+  uint64_t artifact_inventory_score_;
+  uint32_t client_version_;
+  int egg_type_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ContractCoopStatusResponse_ContributionInfo final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractCoopStatusResponse.ContributionInfo) */ {
  public:
@@ -12728,7 +14328,7 @@ class ContractCoopStatusResponse_ContributionInfo final :
                &_ContractCoopStatusResponse_ContributionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    44;
 
   friend void swap(ContractCoopStatusResponse_ContributionInfo& a, ContractCoopStatusResponse_ContributionInfo& b) {
     a.Swap(&b);
@@ -12806,7 +14406,9 @@ class ContractCoopStatusResponse_ContributionInfo final :
     kUserIdFieldNumber = 1,
     kUserNameFieldNumber = 2,
     kPushIdFieldNumber = 9,
+    kContractIdentifierFieldNumber = 19,
     kProductionParamsFieldNumber = 15,
+    kFarmInfoFieldNumber = 18,
     kContributionAmountFieldNumber = 3,
     kContributionRateFieldNumber = 6,
     kRankChangeFieldNumber = 8,
@@ -12817,6 +14419,7 @@ class ContractCoopStatusResponse_ContributionInfo final :
     kTimeCheatDetectedFieldNumber = 7,
     kAutojoinedFieldNumber = 17,
     kBoostTokensFieldNumber = 12,
+    kChickenRunCooldownFieldNumber = 20,
     kBoostTokensSpentFieldNumber = 14,
     kPlatformFieldNumber = 5,
   };
@@ -12892,6 +14495,24 @@ class ContractCoopStatusResponse_ContributionInfo final :
   std::string* _internal_mutable_push_id();
   public:
 
+  // optional string contract_identifier = 19;
+  bool has_contract_identifier() const;
+  private:
+  bool _internal_has_contract_identifier() const;
+  public:
+  void clear_contract_identifier();
+  const std::string& contract_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_contract_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_contract_identifier();
+  PROTOBUF_NODISCARD std::string* release_contract_identifier();
+  void set_allocated_contract_identifier(std::string* contract_identifier);
+  private:
+  const std::string& _internal_contract_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contract_identifier(const std::string& value);
+  std::string* _internal_mutable_contract_identifier();
+  public:
+
   // optional .ei.FarmProductionParams production_params = 15;
   bool has_production_params() const;
   private:
@@ -12909,6 +14530,24 @@ class ContractCoopStatusResponse_ContributionInfo final :
   void unsafe_arena_set_allocated_production_params(
       ::ei::FarmProductionParams* production_params);
   ::ei::FarmProductionParams* unsafe_arena_release_production_params();
+
+  // optional .ei.PlayerFarmInfo farm_info = 18;
+  bool has_farm_info() const;
+  private:
+  bool _internal_has_farm_info() const;
+  public:
+  void clear_farm_info();
+  const ::ei::PlayerFarmInfo& farm_info() const;
+  PROTOBUF_NODISCARD ::ei::PlayerFarmInfo* release_farm_info();
+  ::ei::PlayerFarmInfo* mutable_farm_info();
+  void set_allocated_farm_info(::ei::PlayerFarmInfo* farm_info);
+  private:
+  const ::ei::PlayerFarmInfo& _internal_farm_info() const;
+  ::ei::PlayerFarmInfo* _internal_mutable_farm_info();
+  public:
+  void unsafe_arena_set_allocated_farm_info(
+      ::ei::PlayerFarmInfo* farm_info);
+  ::ei::PlayerFarmInfo* unsafe_arena_release_farm_info();
 
   // optional double contribution_amount = 3;
   bool has_contribution_amount() const;
@@ -13040,6 +14679,19 @@ class ContractCoopStatusResponse_ContributionInfo final :
   void _internal_set_boost_tokens(uint32_t value);
   public:
 
+  // optional double chicken_run_cooldown = 20;
+  bool has_chicken_run_cooldown() const;
+  private:
+  bool _internal_has_chicken_run_cooldown() const;
+  public:
+  void clear_chicken_run_cooldown();
+  double chicken_run_cooldown() const;
+  void set_chicken_run_cooldown(double value);
+  private:
+  double _internal_chicken_run_cooldown() const;
+  void _internal_set_chicken_run_cooldown(double value);
+  public:
+
   // optional uint32 boost_tokens_spent = 14;
   bool has_boost_tokens_spent() const;
   private:
@@ -13079,7 +14731,9 @@ class ContractCoopStatusResponse_ContributionInfo final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr push_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_identifier_;
   ::ei::FarmProductionParams* production_params_;
+  ::ei::PlayerFarmInfo* farm_info_;
   double contribution_amount_;
   double contribution_rate_;
   int32_t rank_change_;
@@ -13090,6 +14744,7 @@ class ContractCoopStatusResponse_ContributionInfo final :
   bool time_cheat_detected_;
   bool autojoined_;
   uint32_t boost_tokens_;
+  double chicken_run_cooldown_;
   uint32_t boost_tokens_spent_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
@@ -13151,7 +14806,7 @@ class ContractCoopStatusResponse_CoopGift final :
                &_ContractCoopStatusResponse_CoopGift_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    45;
 
   friend void swap(ContractCoopStatusResponse_CoopGift& a, ContractCoopStatusResponse_CoopGift& b) {
     a.Swap(&b);
@@ -13294,6 +14949,204 @@ class ContractCoopStatusResponse_CoopGift final :
 };
 // -------------------------------------------------------------------
 
+class ContractCoopStatusResponse_ChickenRun final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractCoopStatusResponse.ChickenRun) */ {
+ public:
+  inline ContractCoopStatusResponse_ChickenRun() : ContractCoopStatusResponse_ChickenRun(nullptr) {}
+  ~ContractCoopStatusResponse_ChickenRun() override;
+  explicit constexpr ContractCoopStatusResponse_ChickenRun(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractCoopStatusResponse_ChickenRun(const ContractCoopStatusResponse_ChickenRun& from);
+  ContractCoopStatusResponse_ChickenRun(ContractCoopStatusResponse_ChickenRun&& from) noexcept
+    : ContractCoopStatusResponse_ChickenRun() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractCoopStatusResponse_ChickenRun& operator=(const ContractCoopStatusResponse_ChickenRun& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractCoopStatusResponse_ChickenRun& operator=(ContractCoopStatusResponse_ChickenRun&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractCoopStatusResponse_ChickenRun& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractCoopStatusResponse_ChickenRun* internal_default_instance() {
+    return reinterpret_cast<const ContractCoopStatusResponse_ChickenRun*>(
+               &_ContractCoopStatusResponse_ChickenRun_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    46;
+
+  friend void swap(ContractCoopStatusResponse_ChickenRun& a, ContractCoopStatusResponse_ChickenRun& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractCoopStatusResponse_ChickenRun* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractCoopStatusResponse_ChickenRun* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractCoopStatusResponse_ChickenRun* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractCoopStatusResponse_ChickenRun>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractCoopStatusResponse_ChickenRun& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractCoopStatusResponse_ChickenRun& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractCoopStatusResponse_ChickenRun* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractCoopStatusResponse.ChickenRun";
+  }
+  protected:
+  explicit ContractCoopStatusResponse_ChickenRun(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kUserNameFieldNumber = 3,
+    kAmountFieldNumber = 2,
+  };
+  // optional string user_id = 1;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional string user_name = 3;
+  bool has_user_name() const;
+  private:
+  bool _internal_has_user_name() const;
+  public:
+  void clear_user_name();
+  const std::string& user_name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_name();
+  PROTOBUF_NODISCARD std::string* release_user_name();
+  void set_allocated_user_name(std::string* user_name);
+  private:
+  const std::string& _internal_user_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_name(const std::string& value);
+  std::string* _internal_mutable_user_name();
+  public:
+
+  // optional uint64 amount = 2;
+  bool has_amount() const;
+  private:
+  bool _internal_has_amount() const;
+  public:
+  void clear_amount();
+  uint64_t amount() const;
+  void set_amount(uint64_t value);
+  private:
+  uint64_t _internal_amount() const;
+  void _internal_set_amount(uint64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ContractCoopStatusResponse.ChickenRun)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_name_;
+  uint64_t amount_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ContractCoopStatusResponse final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractCoopStatusResponse) */ {
  public:
@@ -13349,7 +15202,7 @@ class ContractCoopStatusResponse final :
                &_ContractCoopStatusResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    47;
 
   friend void swap(ContractCoopStatusResponse& a, ContractCoopStatusResponse& b) {
     a.Swap(&b);
@@ -13422,6 +15275,7 @@ class ContractCoopStatusResponse final :
 
   typedef ContractCoopStatusResponse_ContributionInfo ContributionInfo;
   typedef ContractCoopStatusResponse_CoopGift CoopGift;
+  typedef ContractCoopStatusResponse_ChickenRun ChickenRun;
 
   typedef ContractCoopStatusResponse_MemberStatus MemberStatus;
   static constexpr MemberStatus VALID =
@@ -13464,6 +15318,7 @@ class ContractCoopStatusResponse final :
   enum : int {
     kContributorsFieldNumber = 4,
     kGiftsFieldNumber = 11,
+    kChickenRunsFieldNumber = 13,
     kContractIdentifierFieldNumber = 1,
     kCoopIdentifierFieldNumber = 3,
     kCreatorIdFieldNumber = 9,
@@ -13510,6 +15365,24 @@ class ContractCoopStatusResponse final :
   ::ei::ContractCoopStatusResponse_CoopGift* add_gifts();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_CoopGift >&
       gifts() const;
+
+  // repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;
+  int chicken_runs_size() const;
+  private:
+  int _internal_chicken_runs_size() const;
+  public:
+  void clear_chicken_runs();
+  ::ei::ContractCoopStatusResponse_ChickenRun* mutable_chicken_runs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_ChickenRun >*
+      mutable_chicken_runs();
+  private:
+  const ::ei::ContractCoopStatusResponse_ChickenRun& _internal_chicken_runs(int index) const;
+  ::ei::ContractCoopStatusResponse_ChickenRun* _internal_add_chicken_runs();
+  public:
+  const ::ei::ContractCoopStatusResponse_ChickenRun& chicken_runs(int index) const;
+  ::ei::ContractCoopStatusResponse_ChickenRun* add_chicken_runs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_ChickenRun >&
+      chicken_runs() const;
 
   // optional string contract_identifier = 1;
   bool has_contract_identifier() const;
@@ -13667,6 +15540,7 @@ class ContractCoopStatusResponse final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_ContributionInfo > contributors_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_CoopGift > gifts_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_ChickenRun > chicken_runs_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr creator_id_;
@@ -13736,7 +15610,7 @@ class LocalContract final :
                &_LocalContract_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    48;
 
   friend void swap(LocalContract& a, LocalContract& b) {
     a.Swap(&b);
@@ -13826,6 +15700,7 @@ class LocalContract final :
     kNumGoalsAchievedFieldNumber = 14,
     kLeagueFieldNumber = 15,
     kLastNagTimeFieldNumber = 16,
+    kCoopShareFarmFieldNumber = 17,
   };
   // optional string coop_identifier = 2;
   bool has_coop_identifier() const;
@@ -14050,6 +15925,19 @@ class LocalContract final :
   void _internal_set_last_nag_time(double value);
   public:
 
+  // optional bool coop_share_farm = 17;
+  bool has_coop_share_farm() const;
+  private:
+  bool _internal_has_coop_share_farm() const;
+  public:
+  void clear_coop_share_farm();
+  bool coop_share_farm() const;
+  void set_coop_share_farm(bool value);
+  private:
+  bool _internal_coop_share_farm() const;
+  void _internal_set_coop_share_farm(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.LocalContract)
  private:
   class _Internal;
@@ -14075,6 +15963,7 @@ class LocalContract final :
   uint32_t num_goals_achieved_;
   uint32_t league_;
   double last_nag_time_;
+  bool coop_share_farm_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -14134,7 +16023,7 @@ class MyContracts final :
                &_MyContracts_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    49;
 
   friend void swap(MyContracts& a, MyContracts& b) {
     a.Swap(&b);
@@ -14362,7 +16251,7 @@ class QueryCoopRequest final :
                &_QueryCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    50;
 
   friend void swap(QueryCoopRequest& a, QueryCoopRequest& b) {
     a.Swap(&b);
@@ -14595,7 +16484,7 @@ class QueryCoopResponse final :
                &_QueryCoopResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    51;
 
   friend void swap(QueryCoopResponse& a, QueryCoopResponse& b) {
     a.Swap(&b);
@@ -14813,7 +16702,7 @@ class CreateCoopRequest final :
                &_CreateCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    52;
 
   friend void swap(CreateCoopRequest& a, CreateCoopRequest& b) {
     a.Swap(&b);
@@ -15146,7 +17035,7 @@ class CreateCoopResponse final :
                &_CreateCoopResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    53;
 
   friend void swap(CreateCoopResponse& a, CreateCoopResponse& b) {
     a.Swap(&b);
@@ -15324,7 +17213,7 @@ class JoinCoopRequest final :
                &_JoinCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    54;
 
   friend void swap(JoinCoopRequest& a, JoinCoopRequest& b) {
     a.Swap(&b);
@@ -15657,7 +17546,7 @@ class JoinCoopResponse final :
                &_JoinCoopResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    55;
 
   friend void swap(JoinCoopResponse& a, JoinCoopResponse& b) {
     a.Swap(&b);
@@ -15915,7 +17804,7 @@ class AutoJoinCoopRequest final :
                &_AutoJoinCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    56;
 
   friend void swap(AutoJoinCoopRequest& a, AutoJoinCoopRequest& b) {
     a.Swap(&b);
@@ -16228,7 +18117,7 @@ class UpdateCoopPermissionsRequest final :
                &_UpdateCoopPermissionsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    57;
 
   friend void swap(UpdateCoopPermissionsRequest& a, UpdateCoopPermissionsRequest& b) {
     a.Swap(&b);
@@ -16481,7 +18370,7 @@ class UpdateCoopPermissionsResponse final :
                &_UpdateCoopPermissionsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    58;
 
   friend void swap(UpdateCoopPermissionsResponse& a, UpdateCoopPermissionsResponse& b) {
     a.Swap(&b);
@@ -16659,7 +18548,7 @@ class LeaveCoopRequest final :
                &_LeaveCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    59;
 
   friend void swap(LeaveCoopRequest& a, LeaveCoopRequest& b) {
     a.Swap(&b);
@@ -16897,7 +18786,7 @@ class GiftPlayerCoopRequest final :
                &_GiftPlayerCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    60;
 
   friend void swap(GiftPlayerCoopRequest& a, GiftPlayerCoopRequest& b) {
     a.Swap(&b);
@@ -17135,6 +19024,299 @@ class GiftPlayerCoopRequest final :
 };
 // -------------------------------------------------------------------
 
+class SendChickenRunCoopRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.SendChickenRunCoopRequest) */ {
+ public:
+  inline SendChickenRunCoopRequest() : SendChickenRunCoopRequest(nullptr) {}
+  ~SendChickenRunCoopRequest() override;
+  explicit constexpr SendChickenRunCoopRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  SendChickenRunCoopRequest(const SendChickenRunCoopRequest& from);
+  SendChickenRunCoopRequest(SendChickenRunCoopRequest&& from) noexcept
+    : SendChickenRunCoopRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline SendChickenRunCoopRequest& operator=(const SendChickenRunCoopRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SendChickenRunCoopRequest& operator=(SendChickenRunCoopRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const SendChickenRunCoopRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const SendChickenRunCoopRequest* internal_default_instance() {
+    return reinterpret_cast<const SendChickenRunCoopRequest*>(
+               &_SendChickenRunCoopRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    61;
+
+  friend void swap(SendChickenRunCoopRequest& a, SendChickenRunCoopRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SendChickenRunCoopRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SendChickenRunCoopRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  SendChickenRunCoopRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SendChickenRunCoopRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const SendChickenRunCoopRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const SendChickenRunCoopRequest& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SendChickenRunCoopRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.SendChickenRunCoopRequest";
+  }
+  protected:
+  explicit SendChickenRunCoopRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kContractIdentifierFieldNumber = 1,
+    kCoopIdentifierFieldNumber = 2,
+    kPlayerIdentifierFieldNumber = 3,
+    kRequestingUserIdFieldNumber = 4,
+    kRequestingUserNameFieldNumber = 6,
+    kRinfoFieldNumber = 8,
+    kFarmPopFieldNumber = 5,
+    kClientVersionFieldNumber = 7,
+  };
+  // optional string contract_identifier = 1;
+  bool has_contract_identifier() const;
+  private:
+  bool _internal_has_contract_identifier() const;
+  public:
+  void clear_contract_identifier();
+  const std::string& contract_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_contract_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_contract_identifier();
+  PROTOBUF_NODISCARD std::string* release_contract_identifier();
+  void set_allocated_contract_identifier(std::string* contract_identifier);
+  private:
+  const std::string& _internal_contract_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contract_identifier(const std::string& value);
+  std::string* _internal_mutable_contract_identifier();
+  public:
+
+  // optional string coop_identifier = 2;
+  bool has_coop_identifier() const;
+  private:
+  bool _internal_has_coop_identifier() const;
+  public:
+  void clear_coop_identifier();
+  const std::string& coop_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_coop_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_coop_identifier();
+  PROTOBUF_NODISCARD std::string* release_coop_identifier();
+  void set_allocated_coop_identifier(std::string* coop_identifier);
+  private:
+  const std::string& _internal_coop_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_coop_identifier(const std::string& value);
+  std::string* _internal_mutable_coop_identifier();
+  public:
+
+  // optional string player_identifier = 3;
+  bool has_player_identifier() const;
+  private:
+  bool _internal_has_player_identifier() const;
+  public:
+  void clear_player_identifier();
+  const std::string& player_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_player_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_player_identifier();
+  PROTOBUF_NODISCARD std::string* release_player_identifier();
+  void set_allocated_player_identifier(std::string* player_identifier);
+  private:
+  const std::string& _internal_player_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_player_identifier(const std::string& value);
+  std::string* _internal_mutable_player_identifier();
+  public:
+
+  // optional string requesting_user_id = 4;
+  bool has_requesting_user_id() const;
+  private:
+  bool _internal_has_requesting_user_id() const;
+  public:
+  void clear_requesting_user_id();
+  const std::string& requesting_user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_requesting_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_requesting_user_id();
+  PROTOBUF_NODISCARD std::string* release_requesting_user_id();
+  void set_allocated_requesting_user_id(std::string* requesting_user_id);
+  private:
+  const std::string& _internal_requesting_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_requesting_user_id(const std::string& value);
+  std::string* _internal_mutable_requesting_user_id();
+  public:
+
+  // optional string requesting_user_name = 6;
+  bool has_requesting_user_name() const;
+  private:
+  bool _internal_has_requesting_user_name() const;
+  public:
+  void clear_requesting_user_name();
+  const std::string& requesting_user_name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_requesting_user_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_requesting_user_name();
+  PROTOBUF_NODISCARD std::string* release_requesting_user_name();
+  void set_allocated_requesting_user_name(std::string* requesting_user_name);
+  private:
+  const std::string& _internal_requesting_user_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_requesting_user_name(const std::string& value);
+  std::string* _internal_mutable_requesting_user_name();
+  public:
+
+  // optional .ei.BasicRequestInfo rinfo = 8;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // optional uint64 farm_pop = 5;
+  bool has_farm_pop() const;
+  private:
+  bool _internal_has_farm_pop() const;
+  public:
+  void clear_farm_pop();
+  uint64_t farm_pop() const;
+  void set_farm_pop(uint64_t value);
+  private:
+  uint64_t _internal_farm_pop() const;
+  void _internal_set_farm_pop(uint64_t value);
+  public:
+
+  // optional uint32 client_version = 7;
+  bool has_client_version() const;
+  private:
+  bool _internal_has_client_version() const;
+  public:
+  void clear_client_version();
+  uint32_t client_version() const;
+  void set_client_version(uint32_t value);
+  private:
+  uint32_t _internal_client_version() const;
+  void _internal_set_client_version(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.SendChickenRunCoopRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr player_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requesting_user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requesting_user_name_;
+  ::ei::BasicRequestInfo* rinfo_;
+  uint64_t farm_pop_;
+  uint32_t client_version_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class KickPlayerCoopRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.KickPlayerCoopRequest) */ {
  public:
@@ -17190,7 +19372,7 @@ class KickPlayerCoopRequest final :
                &_KickPlayerCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    62;
 
   friend void swap(KickPlayerCoopRequest& a, KickPlayerCoopRequest& b) {
     a.Swap(&b);
@@ -17499,7 +19681,7 @@ class ContractCoopStatusUpdateRequest final :
                &_ContractCoopStatusUpdateRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    63;
 
   friend void swap(ContractCoopStatusUpdateRequest& a, ContractCoopStatusUpdateRequest& b) {
     a.Swap(&b);
@@ -17579,6 +19761,7 @@ class ContractCoopStatusUpdateRequest final :
     kPushUserIdFieldNumber = 8,
     kRinfoFieldNumber = 12,
     kProductionParamsFieldNumber = 14,
+    kFarmInfoFieldNumber = 16,
     kAmountFieldNumber = 4,
     kRateFieldNumber = 5,
     kSoulPowerFieldNumber = 7,
@@ -17696,6 +19879,24 @@ class ContractCoopStatusUpdateRequest final :
   void unsafe_arena_set_allocated_production_params(
       ::ei::FarmProductionParams* production_params);
   ::ei::FarmProductionParams* unsafe_arena_release_production_params();
+
+  // optional .ei.PlayerFarmInfo farm_info = 16;
+  bool has_farm_info() const;
+  private:
+  bool _internal_has_farm_info() const;
+  public:
+  void clear_farm_info();
+  const ::ei::PlayerFarmInfo& farm_info() const;
+  PROTOBUF_NODISCARD ::ei::PlayerFarmInfo* release_farm_info();
+  ::ei::PlayerFarmInfo* mutable_farm_info();
+  void set_allocated_farm_info(::ei::PlayerFarmInfo* farm_info);
+  private:
+  const ::ei::PlayerFarmInfo& _internal_farm_info() const;
+  ::ei::PlayerFarmInfo* _internal_mutable_farm_info();
+  public:
+  void unsafe_arena_set_allocated_farm_info(
+      ::ei::PlayerFarmInfo* farm_info);
+  ::ei::PlayerFarmInfo* unsafe_arena_release_farm_info();
 
   // optional double amount = 4;
   bool has_amount() const;
@@ -17829,6 +20030,7 @@ class ContractCoopStatusUpdateRequest final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr push_user_id_;
   ::ei::BasicRequestInfo* rinfo_;
   ::ei::FarmProductionParams* production_params_;
+  ::ei::PlayerFarmInfo* farm_info_;
   double amount_;
   double rate_;
   double soul_power_;
@@ -17897,7 +20099,7 @@ class ContractCoopStatusUpdateResponse final :
                &_ContractCoopStatusUpdateResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    64;
 
   friend void swap(ContractCoopStatusUpdateResponse& a, ContractCoopStatusUpdateResponse& b) {
     a.Swap(&b);
@@ -18085,7 +20287,7 @@ class CoopBuffState final :
                &_CoopBuffState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    65;
 
   friend void swap(CoopBuffState& a, CoopBuffState& b) {
     a.Swap(&b);
@@ -18273,7 +20475,7 @@ class CoopBuffHistory final :
                &_CoopBuffHistory_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    66;
 
   friend void swap(CoopBuffHistory& a, CoopBuffHistory& b) {
     a.Swap(&b);
@@ -18380,6 +20582,346 @@ class CoopBuffHistory final :
 };
 // -------------------------------------------------------------------
 
+class CoopChickenRunEntry final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CoopChickenRunEntry) */ {
+ public:
+  inline CoopChickenRunEntry() : CoopChickenRunEntry(nullptr) {}
+  ~CoopChickenRunEntry() override;
+  explicit constexpr CoopChickenRunEntry(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CoopChickenRunEntry(const CoopChickenRunEntry& from);
+  CoopChickenRunEntry(CoopChickenRunEntry&& from) noexcept
+    : CoopChickenRunEntry() {
+    *this = ::std::move(from);
+  }
+
+  inline CoopChickenRunEntry& operator=(const CoopChickenRunEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CoopChickenRunEntry& operator=(CoopChickenRunEntry&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CoopChickenRunEntry& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CoopChickenRunEntry* internal_default_instance() {
+    return reinterpret_cast<const CoopChickenRunEntry*>(
+               &_CoopChickenRunEntry_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    67;
+
+  friend void swap(CoopChickenRunEntry& a, CoopChickenRunEntry& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CoopChickenRunEntry* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CoopChickenRunEntry* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CoopChickenRunEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CoopChickenRunEntry>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CoopChickenRunEntry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CoopChickenRunEntry& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CoopChickenRunEntry* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CoopChickenRunEntry";
+  }
+  protected:
+  explicit CoopChickenRunEntry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kServerTimestampFieldNumber = 2,
+  };
+  // optional string user_id = 1;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional double server_timestamp = 2;
+  bool has_server_timestamp() const;
+  private:
+  bool _internal_has_server_timestamp() const;
+  public:
+  void clear_server_timestamp();
+  double server_timestamp() const;
+  void set_server_timestamp(double value);
+  private:
+  double _internal_server_timestamp() const;
+  void _internal_set_server_timestamp(double value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.CoopChickenRunEntry)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  double server_timestamp_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CoopLastChickenRunTimes final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CoopLastChickenRunTimes) */ {
+ public:
+  inline CoopLastChickenRunTimes() : CoopLastChickenRunTimes(nullptr) {}
+  ~CoopLastChickenRunTimes() override;
+  explicit constexpr CoopLastChickenRunTimes(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CoopLastChickenRunTimes(const CoopLastChickenRunTimes& from);
+  CoopLastChickenRunTimes(CoopLastChickenRunTimes&& from) noexcept
+    : CoopLastChickenRunTimes() {
+    *this = ::std::move(from);
+  }
+
+  inline CoopLastChickenRunTimes& operator=(const CoopLastChickenRunTimes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CoopLastChickenRunTimes& operator=(CoopLastChickenRunTimes&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CoopLastChickenRunTimes& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CoopLastChickenRunTimes* internal_default_instance() {
+    return reinterpret_cast<const CoopLastChickenRunTimes*>(
+               &_CoopLastChickenRunTimes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    68;
+
+  friend void swap(CoopLastChickenRunTimes& a, CoopLastChickenRunTimes& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CoopLastChickenRunTimes* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CoopLastChickenRunTimes* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CoopLastChickenRunTimes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CoopLastChickenRunTimes>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CoopLastChickenRunTimes& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CoopLastChickenRunTimes& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CoopLastChickenRunTimes* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CoopLastChickenRunTimes";
+  }
+  protected:
+  explicit CoopLastChickenRunTimes(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEntriesFieldNumber = 3,
+  };
+  // repeated .ei.CoopChickenRunEntry entries = 3;
+  int entries_size() const;
+  private:
+  int _internal_entries_size() const;
+  public:
+  void clear_entries();
+  ::ei::CoopChickenRunEntry* mutable_entries(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopChickenRunEntry >*
+      mutable_entries();
+  private:
+  const ::ei::CoopChickenRunEntry& _internal_entries(int index) const;
+  ::ei::CoopChickenRunEntry* _internal_add_entries();
+  public:
+  const ::ei::CoopChickenRunEntry& entries(int index) const;
+  ::ei::CoopChickenRunEntry* add_entries();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopChickenRunEntry >&
+      entries() const;
+
+  // @@protoc_insertion_point(class_scope:ei.CoopLastChickenRunTimes)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopChickenRunEntry > entries_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class UserDataInfoRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.UserDataInfoRequest) */ {
  public:
@@ -18435,7 +20977,7 @@ class UserDataInfoRequest final :
                &_UserDataInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    69;
 
   friend void swap(UserDataInfoRequest& a, UserDataInfoRequest& b) {
     a.Swap(&b);
@@ -18653,7 +21195,7 @@ class UserDataInfoResponse final :
                &_UserDataInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    70;
 
   friend void swap(UserDataInfoResponse& a, UserDataInfoResponse& b) {
     a.Swap(&b);
@@ -18852,7 +21394,7 @@ class ClearAllUserDataRequest final :
                &_ClearAllUserDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    71;
 
   friend void swap(ClearAllUserDataRequest& a, ClearAllUserDataRequest& b) {
     a.Swap(&b);
@@ -19070,7 +21612,7 @@ class ServerGift final :
                &_ServerGift_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    72;
 
   friend void swap(ServerGift& a, ServerGift& b) {
     a.Swap(&b);
@@ -19283,7 +21825,7 @@ class LiveConfig_BoostsConfig_ItemConfig final :
                &_LiveConfig_BoostsConfig_ItemConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    73;
 
   friend void swap(LiveConfig_BoostsConfig_ItemConfig& a, LiveConfig_BoostsConfig_ItemConfig& b) {
     a.Swap(&b);
@@ -19491,7 +22033,7 @@ class LiveConfig_BoostsConfig final :
                &_LiveConfig_BoostsConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    65;
+    74;
 
   friend void swap(LiveConfig_BoostsConfig& a, LiveConfig_BoostsConfig& b) {
     a.Swap(&b);
@@ -19671,7 +22213,7 @@ class LiveConfig_GiftConfig_GiftValueConfig final :
                &_LiveConfig_GiftConfig_GiftValueConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    66;
+    75;
 
   friend void swap(LiveConfig_GiftConfig_GiftValueConfig& a, LiveConfig_GiftConfig_GiftValueConfig& b) {
     a.Swap(&b);
@@ -19909,7 +22451,7 @@ class LiveConfig_GiftConfig_GiftMuConfig final :
                &_LiveConfig_GiftConfig_GiftMuConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    67;
+    76;
 
   friend void swap(LiveConfig_GiftConfig_GiftMuConfig& a, LiveConfig_GiftConfig_GiftMuConfig& b) {
     a.Swap(&b);
@@ -20097,7 +22639,7 @@ class LiveConfig_GiftConfig final :
                &_LiveConfig_GiftConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    68;
+    77;
 
   friend void swap(LiveConfig_GiftConfig& a, LiveConfig_GiftConfig& b) {
     a.Swap(&b);
@@ -20498,7 +23040,7 @@ class LiveConfig_MiscConfig final :
                &_LiveConfig_MiscConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    69;
+    78;
 
   friend void swap(LiveConfig_MiscConfig& a, LiveConfig_MiscConfig& b) {
     a.Swap(&b);
@@ -20577,6 +23119,10 @@ class LiveConfig_MiscConfig final :
     kAskToTrackFieldNumber = 1,
     kAskToTrackShowPreDialogFieldNumber = 4,
     kAskToTrackAfterPrivacyFieldNumber = 5,
+    kShellsIntroTicketsFieldNumber = 7,
+    kChickenRunBoostPercentageFieldNumber = 6,
+    kShellsMaxFreeChickenConfigsFieldNumber = 8,
+    kShellsIntroAlertThresholdFieldNumber = 9,
   };
   // optional string ask_to_track_message = 3;
   bool has_ask_to_track_message() const;
@@ -20648,6 +23194,58 @@ class LiveConfig_MiscConfig final :
   void _internal_set_ask_to_track_after_privacy(bool value);
   public:
 
+  // optional uint32 shells_intro_tickets = 7;
+  bool has_shells_intro_tickets() const;
+  private:
+  bool _internal_has_shells_intro_tickets() const;
+  public:
+  void clear_shells_intro_tickets();
+  uint32_t shells_intro_tickets() const;
+  void set_shells_intro_tickets(uint32_t value);
+  private:
+  uint32_t _internal_shells_intro_tickets() const;
+  void _internal_set_shells_intro_tickets(uint32_t value);
+  public:
+
+  // optional double chicken_run_boost_percentage = 6;
+  bool has_chicken_run_boost_percentage() const;
+  private:
+  bool _internal_has_chicken_run_boost_percentage() const;
+  public:
+  void clear_chicken_run_boost_percentage();
+  double chicken_run_boost_percentage() const;
+  void set_chicken_run_boost_percentage(double value);
+  private:
+  double _internal_chicken_run_boost_percentage() const;
+  void _internal_set_chicken_run_boost_percentage(double value);
+  public:
+
+  // optional uint32 shells_max_free_chicken_configs = 8;
+  bool has_shells_max_free_chicken_configs() const;
+  private:
+  bool _internal_has_shells_max_free_chicken_configs() const;
+  public:
+  void clear_shells_max_free_chicken_configs();
+  uint32_t shells_max_free_chicken_configs() const;
+  void set_shells_max_free_chicken_configs(uint32_t value);
+  private:
+  uint32_t _internal_shells_max_free_chicken_configs() const;
+  void _internal_set_shells_max_free_chicken_configs(uint32_t value);
+  public:
+
+  // optional uint32 shells_intro_alert_threshold = 9;
+  bool has_shells_intro_alert_threshold() const;
+  private:
+  bool _internal_has_shells_intro_alert_threshold() const;
+  public:
+  void clear_shells_intro_alert_threshold();
+  uint32_t shells_intro_alert_threshold() const;
+  void set_shells_intro_alert_threshold(uint32_t value);
+  private:
+  uint32_t _internal_shells_intro_alert_threshold() const;
+  void _internal_set_shells_intro_alert_threshold(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.LiveConfig.MiscConfig)
  private:
   class _Internal;
@@ -20662,6 +23260,10 @@ class LiveConfig_MiscConfig final :
   bool ask_to_track_;
   bool ask_to_track_show_pre_dialog_;
   bool ask_to_track_after_privacy_;
+  uint32_t shells_intro_tickets_;
+  double chicken_run_boost_percentage_;
+  uint32_t shells_max_free_chicken_configs_;
+  uint32_t shells_intro_alert_threshold_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -20721,7 +23323,7 @@ class LiveConfig final :
                &_LiveConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    70;
+    79;
 
   friend void swap(LiveConfig& a, LiveConfig& b) {
     a.Swap(&b);
@@ -20948,7 +23550,7 @@ class InGameMail final :
                &_InGameMail_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    71;
+    80;
 
   friend void swap(InGameMail& a, InGameMail& b) {
     a.Swap(&b);
@@ -21327,7 +23929,7 @@ class MailDB final :
                &_MailDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    72;
+    81;
 
   friend void swap(MailDB& a, MailDB& b) {
     a.Swap(&b);
@@ -21489,7 +24091,7 @@ class PeriodicalsResponse final :
                &_PeriodicalsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    73;
+    82;
 
   friend void swap(PeriodicalsResponse& a, PeriodicalsResponse& b) {
     a.Swap(&b);
@@ -21752,7 +24354,7 @@ class GetPeriodicalsRequest final :
                &_GetPeriodicalsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    74;
+    83;
 
   friend void swap(GetPeriodicalsRequest& a, GetPeriodicalsRequest& b) {
     a.Swap(&b);
@@ -22115,7 +24717,7 @@ class ConfigRequest final :
                &_ConfigRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    75;
+    84;
 
   friend void swap(ConfigRequest& a, ConfigRequest& b) {
     a.Swap(&b);
@@ -22323,7 +24925,7 @@ class ConfigResponse final :
                &_ConfigResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    76;
+    85;
 
   friend void swap(ConfigResponse& a, ConfigResponse& b) {
     a.Swap(&b);
@@ -22526,7 +25128,7 @@ class AdAttributionRawData final :
                &_AdAttributionRawData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    77;
+    86;
 
   friend void swap(AdAttributionRawData& a, AdAttributionRawData& b) {
     a.Swap(&b);
@@ -22749,7 +25351,7 @@ class AdAttributionRow final :
                &_AdAttributionRow_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    78;
+    87;
 
   friend void swap(AdAttributionRow& a, AdAttributionRow& b) {
     a.Swap(&b);
@@ -23057,7 +25659,7 @@ class AdAttributionInfo final :
                &_AdAttributionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    79;
+    88;
 
   friend void swap(AdAttributionInfo& a, AdAttributionInfo& b) {
     a.Swap(&b);
@@ -23555,7 +26157,7 @@ class ArtifactsClientInfo_LaunchCount final :
                &_ArtifactsClientInfo_LaunchCount_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    80;
+    89;
 
   friend void swap(ArtifactsClientInfo_LaunchCount& a, ArtifactsClientInfo_LaunchCount& b) {
     a.Swap(&b);
@@ -23743,7 +26345,7 @@ class ArtifactsClientInfo final :
                &_ArtifactsClientInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    81;
+    90;
 
   friend void swap(ArtifactsClientInfo& a, ArtifactsClientInfo& b) {
     a.Swap(&b);
@@ -23953,7 +26555,7 @@ class MissionInfo_Fuel final :
                &_MissionInfo_Fuel_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    82;
+    91;
 
   friend void swap(MissionInfo_Fuel& a, MissionInfo_Fuel& b) {
     a.Swap(&b);
@@ -24126,7 +26728,7 @@ class MissionInfo final :
                &_MissionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    83;
+    92;
 
   friend void swap(MissionInfo& a, MissionInfo& b) {
     a.Swap(&b);
@@ -24586,7 +27188,7 @@ class ArtifactSpec final :
                &_ArtifactSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    84;
+    93;
 
   friend void swap(ArtifactSpec& a, ArtifactSpec& b) {
     a.Swap(&b);
@@ -25027,7 +27629,7 @@ class CompleteArtifact final :
                &_CompleteArtifact_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    85;
+    94;
 
   friend void swap(CompleteArtifact& a, CompleteArtifact& b) {
     a.Swap(&b);
@@ -25210,7 +27812,7 @@ class ArtifactInventoryItem final :
                &_ArtifactInventoryItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    86;
+    95;
 
   friend void swap(ArtifactInventoryItem& a, ArtifactInventoryItem& b) {
     a.Swap(&b);
@@ -25423,7 +28025,7 @@ class InventorySlot final :
                &_InventorySlot_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    87;
+    96;
 
   friend void swap(InventorySlot& a, InventorySlot& b) {
     a.Swap(&b);
@@ -25596,7 +28198,7 @@ class ArtifactsConfigurationRequest final :
                &_ArtifactsConfigurationRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    88;
+    97;
 
   friend void swap(ArtifactsConfigurationRequest& a, ArtifactsConfigurationRequest& b) {
     a.Swap(&b);
@@ -25774,7 +28376,7 @@ class ArtifactsConfigurationResponse_MissionParameters_Duration final :
                &_ArtifactsConfigurationResponse_MissionParameters_Duration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    89;
+    98;
 
   friend void swap(ArtifactsConfigurationResponse_MissionParameters_Duration& a, ArtifactsConfigurationResponse_MissionParameters_Duration& b) {
     a.Swap(&b);
@@ -26037,7 +28639,7 @@ class ArtifactsConfigurationResponse_MissionParameters final :
                &_ArtifactsConfigurationResponse_MissionParameters_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    90;
+    99;
 
   friend void swap(ArtifactsConfigurationResponse_MissionParameters& a, ArtifactsConfigurationResponse_MissionParameters& b) {
     a.Swap(&b);
@@ -26256,7 +28858,7 @@ class ArtifactsConfigurationResponse_ArtifactParameters final :
                &_ArtifactsConfigurationResponse_ArtifactParameters_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    91;
+    100;
 
   friend void swap(ArtifactsConfigurationResponse_ArtifactParameters& a, ArtifactsConfigurationResponse_ArtifactParameters& b) {
     a.Swap(&b);
@@ -26524,7 +29126,7 @@ class ArtifactsConfigurationResponse final :
                &_ArtifactsConfigurationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    92;
+    101;
 
   friend void swap(ArtifactsConfigurationResponse& a, ArtifactsConfigurationResponse& b) {
     a.Swap(&b);
@@ -26709,7 +29311,7 @@ class MissionRequest final :
                &_MissionRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    93;
+    102;
 
   friend void swap(MissionRequest& a, MissionRequest& b) {
     a.Swap(&b);
@@ -26947,7 +29549,7 @@ class MissionResponse final :
                &_MissionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    94;
+    103;
 
   friend void swap(MissionResponse& a, MissionResponse& b) {
     a.Swap(&b);
@@ -27125,7 +29727,7 @@ class CompleteMissionResponse_SecureArtifactSpec final :
                &_CompleteMissionResponse_SecureArtifactSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    95;
+    104;
 
   friend void swap(CompleteMissionResponse_SecureArtifactSpec& a, CompleteMissionResponse_SecureArtifactSpec& b) {
     a.Swap(&b);
@@ -27308,7 +29910,7 @@ class CompleteMissionResponse final :
                &_CompleteMissionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    96;
+    105;
 
   friend void swap(CompleteMissionResponse& a, CompleteMissionResponse& b) {
     a.Swap(&b);
@@ -27548,7 +30150,7 @@ class CollectContractArtifactRewardsRequest final :
                &_CollectContractArtifactRewardsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    97;
+    106;
 
   friend void swap(CollectContractArtifactRewardsRequest& a, CollectContractArtifactRewardsRequest& b) {
     a.Swap(&b);
@@ -27776,7 +30378,7 @@ class CraftArtifactRequest final :
                &_CraftArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    98;
+    107;
 
   friend void swap(CraftArtifactRequest& a, CraftArtifactRequest& b) {
     a.Swap(&b);
@@ -28044,7 +30646,7 @@ class CraftArtifactResponse final :
                &_CraftArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    99;
+    108;
 
   friend void swap(CraftArtifactResponse& a, CraftArtifactResponse& b) {
     a.Swap(&b);
@@ -28257,7 +30859,7 @@ class ConsumeArtifactRequest final :
                &_ConsumeArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    100;
+    109;
 
   friend void swap(ConsumeArtifactRequest& a, ConsumeArtifactRequest& b) {
     a.Swap(&b);
@@ -28510,7 +31112,7 @@ class ConsumeArtifactResponse final :
                &_ConsumeArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    101;
+    110;
 
   friend void swap(ConsumeArtifactResponse& a, ConsumeArtifactResponse& b) {
     a.Swap(&b);
@@ -28743,7 +31345,7 @@ class AuthenticateArtifactResponse final :
                &_AuthenticateArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    102;
+    111;
 
   friend void swap(AuthenticateArtifactResponse& a, AuthenticateArtifactResponse& b) {
     a.Swap(&b);
@@ -28966,7 +31568,7 @@ class SetArtifactRequest final :
                &_SetArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    103;
+    112;
 
   friend void swap(SetArtifactRequest& a, SetArtifactRequest& b) {
     a.Swap(&b);
@@ -29184,7 +31786,7 @@ class SetArtifactResponse final :
                &_SetArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    104;
+    113;
 
   friend void swap(SetArtifactResponse& a, SetArtifactResponse& b) {
     a.Swap(&b);
@@ -29377,7 +31979,7 @@ class ArtifactsDB_ActiveArtifactSlot final :
                &_ArtifactsDB_ActiveArtifactSlot_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    105;
+    114;
 
   friend void swap(ArtifactsDB_ActiveArtifactSlot& a, ArtifactsDB_ActiveArtifactSlot& b) {
     a.Swap(&b);
@@ -29550,7 +32152,7 @@ class ArtifactsDB_ActiveArtifactSet final :
                &_ArtifactsDB_ActiveArtifactSet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    106;
+    115;
 
   friend void swap(ArtifactsDB_ActiveArtifactSet& a, ArtifactsDB_ActiveArtifactSet& b) {
     a.Swap(&b);
@@ -29712,7 +32314,7 @@ class ArtifactsDB_CraftableArtifact final :
                &_ArtifactsDB_CraftableArtifact_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    107;
+    116;
 
   friend void swap(ArtifactsDB_CraftableArtifact& a, ArtifactsDB_CraftableArtifact& b) {
     a.Swap(&b);
@@ -29905,7 +32507,7 @@ class ArtifactsDB final :
                &_ArtifactsDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    108;
+    117;
 
   friend void swap(ArtifactsDB& a, ArtifactsDB& b) {
     a.Swap(&b);
@@ -30247,7 +32849,7 @@ class AuthenticatedMessage final :
                &_AuthenticatedMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    109;
+    118;
 
   friend void swap(AuthenticatedMessage& a, AuthenticatedMessage& b) {
     a.Swap(&b);
@@ -30323,6 +32925,7 @@ class AuthenticatedMessage final :
   enum : int {
     kMessageFieldNumber = 1,
     kCodeFieldNumber = 2,
+    kVersionFieldNumber = 3,
   };
   // optional bytes message = 1;
   bool has_message() const;
@@ -30360,6 +32963,19 @@ class AuthenticatedMessage final :
   std::string* _internal_mutable_code();
   public:
 
+  // optional uint32 version = 3;
+  bool has_version() const;
+  private:
+  bool _internal_has_version() const;
+  public:
+  void clear_version();
+  uint32_t version() const;
+  void set_version(uint32_t value);
+  private:
+  uint32_t _internal_version() const;
+  void _internal_set_version(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.AuthenticatedMessage)
  private:
   class _Internal;
@@ -30371,6 +32987,7 @@ class AuthenticatedMessage final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr code_;
+  uint32_t version_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -30430,7 +33047,7 @@ class LogCompleteMissionPayload final :
                &_LogCompleteMissionPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    110;
+    119;
 
   friend void swap(LogCompleteMissionPayload& a, LogCompleteMissionPayload& b) {
     a.Swap(&b);
@@ -30613,7 +33230,7 @@ class LogCraftArtifactPayload final :
                &_LogCraftArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    111;
+    120;
 
   friend void swap(LogCraftArtifactPayload& a, LogCraftArtifactPayload& b) {
     a.Swap(&b);
@@ -30796,7 +33413,7 @@ class LogConsumeArtifactPayload final :
                &_LogConsumeArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    112;
+    121;
 
   friend void swap(LogConsumeArtifactPayload& a, LogConsumeArtifactPayload& b) {
     a.Swap(&b);
@@ -30979,7 +33596,7 @@ class LogSetArtifactPayload final :
                &_LogSetArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    113;
+    122;
 
   friend void swap(LogSetArtifactPayload& a, LogSetArtifactPayload& b) {
     a.Swap(&b);
@@ -31162,7 +33779,7 @@ class AccountTransferPayload final :
                &_AccountTransferPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    114;
+    123;
 
   friend void swap(AccountTransferPayload& a, AccountTransferPayload& b) {
     a.Swap(&b);
@@ -31345,7 +33962,7 @@ class SaveBackupResponse final :
                &_SaveBackupResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    115;
+    124;
 
   friend void swap(SaveBackupResponse& a, SaveBackupResponse& b) {
     a.Swap(&b);
@@ -31594,7 +34211,7 @@ class CleanAccountRequest final :
                &_CleanAccountRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    116;
+    125;
 
   friend void swap(CleanAccountRequest& a, CleanAccountRequest& b) {
     a.Swap(&b);
@@ -31777,7 +34394,7 @@ class ReturnEDTPayload final :
                &_ReturnEDTPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    117;
+    126;
 
   friend void swap(ReturnEDTPayload& a, ReturnEDTPayload& b) {
     a.Swap(&b);
@@ -31940,7 +34557,7 @@ class DLCItem final :
                &_DLCItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    118;
+    127;
 
   friend void swap(DLCItem& a, DLCItem& b) {
     a.Swap(&b);
@@ -32019,6 +34636,8 @@ class DLCItem final :
     kExtFieldNumber = 3,
     kUrlFieldNumber = 4,
     kChecksumFieldNumber = 5,
+    kOriginalSizeFieldNumber = 7,
+    kCompressedFieldNumber = 6,
   };
   // optional string name = 1;
   bool has_name() const;
@@ -32110,6 +34729,32 @@ class DLCItem final :
   std::string* _internal_mutable_checksum();
   public:
 
+  // optional uint64 original_size = 7;
+  bool has_original_size() const;
+  private:
+  bool _internal_has_original_size() const;
+  public:
+  void clear_original_size();
+  uint64_t original_size() const;
+  void set_original_size(uint64_t value);
+  private:
+  uint64_t _internal_original_size() const;
+  void _internal_set_original_size(uint64_t value);
+  public:
+
+  // optional bool compressed = 6;
+  bool has_compressed() const;
+  private:
+  bool _internal_has_compressed() const;
+  public:
+  void clear_compressed();
+  bool compressed() const;
+  void set_compressed(bool value);
+  private:
+  bool _internal_compressed() const;
+  void _internal_set_compressed(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.DLCItem)
  private:
   class _Internal;
@@ -32124,6 +34769,8 @@ class DLCItem final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ext_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr checksum_;
+  uint64_t original_size_;
+  bool compressed_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -32183,7 +34830,7 @@ class ShellSpec_ShellPiece final :
                &_ShellSpec_ShellPiece_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    119;
+    128;
 
   friend void swap(ShellSpec_ShellPiece& a, ShellSpec_ShellPiece& b) {
     a.Swap(&b);
@@ -32361,7 +35008,7 @@ class ShellSpec final :
                &_ShellSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    120;
+    129;
 
   friend void swap(ShellSpec& a, ShellSpec& b) {
     a.Swap(&b);
@@ -32583,6 +35230,14 @@ class ShellSpec final :
     ShellSpec_AssetType_MISSION_CONTROL_2;
   static constexpr AssetType MISSION_CONTROL_3 =
     ShellSpec_AssetType_MISSION_CONTROL_3;
+  static constexpr AssetType FUEL_TANK_1 =
+    ShellSpec_AssetType_FUEL_TANK_1;
+  static constexpr AssetType FUEL_TANK_2 =
+    ShellSpec_AssetType_FUEL_TANK_2;
+  static constexpr AssetType FUEL_TANK_3 =
+    ShellSpec_AssetType_FUEL_TANK_3;
+  static constexpr AssetType FUEL_TANK_4 =
+    ShellSpec_AssetType_FUEL_TANK_4;
   static constexpr AssetType HATCHERY_GRAVITON_TOP =
     ShellSpec_AssetType_HATCHERY_GRAVITON_TOP;
   static constexpr AssetType HATCHERY_NEBULA_MIDDLE =
@@ -32613,6 +35268,10 @@ class ShellSpec final :
     ShellSpec_AssetType_HYPERLOOP_TRACK;
   static constexpr AssetType MAILBOX_FULL =
     ShellSpec_AssetType_MAILBOX_FULL;
+  static constexpr AssetType CHICKEN =
+    ShellSpec_AssetType_CHICKEN;
+  static constexpr AssetType HAT =
+    ShellSpec_AssetType_HAT;
   static constexpr AssetType UNKNOWN =
     ShellSpec_AssetType_UNKNOWN;
   static inline bool AssetType_IsValid(int value) {
@@ -32651,7 +35310,10 @@ class ShellSpec final :
     kPriceFieldNumber = 4,
     kRequiredEopFieldNumber = 5,
     kRequiredSoulEggsFieldNumber = 6,
+    kIsNewFieldNumber = 14,
+    kExpiresFieldNumber = 15,
     kDefaultAppearanceFieldNumber = 8,
+    kSecondsRemainingFieldNumber = 16,
   };
   // repeated .ei.ShellSpec.ShellPiece pieces = 11;
   int pieces_size() const;
@@ -32782,6 +35444,32 @@ class ShellSpec final :
   void _internal_set_required_soul_eggs(double value);
   public:
 
+  // optional bool is_new = 14;
+  bool has_is_new() const;
+  private:
+  bool _internal_has_is_new() const;
+  public:
+  void clear_is_new();
+  bool is_new() const;
+  void set_is_new(bool value);
+  private:
+  bool _internal_is_new() const;
+  void _internal_set_is_new(bool value);
+  public:
+
+  // optional bool expires = 15;
+  bool has_expires() const;
+  private:
+  bool _internal_has_expires() const;
+  public:
+  void clear_expires();
+  bool expires() const;
+  void set_expires(bool value);
+  private:
+  bool _internal_expires() const;
+  void _internal_set_expires(bool value);
+  public:
+
   // optional bool default_appearance = 8;
   bool has_default_appearance() const;
   private:
@@ -32793,6 +35481,19 @@ class ShellSpec final :
   private:
   bool _internal_default_appearance() const;
   void _internal_set_default_appearance(bool value);
+  public:
+
+  // optional double seconds_remaining = 16;
+  bool has_seconds_remaining() const;
+  private:
+  bool _internal_has_seconds_remaining() const;
+  public:
+  void clear_seconds_remaining();
+  double seconds_remaining() const;
+  void set_seconds_remaining(double value);
+  private:
+  double _internal_seconds_remaining() const;
+  void _internal_set_seconds_remaining(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.ShellSpec)
@@ -32812,7 +35513,208 @@ class ShellSpec final :
   uint32_t price_;
   uint32_t required_eop_;
   double required_soul_eggs_;
+  bool is_new_;
+  bool expires_;
   bool default_appearance_;
+  double seconds_remaining_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellSetSpec_VariationInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellSetSpec.VariationInfo) */ {
+ public:
+  inline ShellSetSpec_VariationInfo() : ShellSetSpec_VariationInfo(nullptr) {}
+  ~ShellSetSpec_VariationInfo() override;
+  explicit constexpr ShellSetSpec_VariationInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellSetSpec_VariationInfo(const ShellSetSpec_VariationInfo& from);
+  ShellSetSpec_VariationInfo(ShellSetSpec_VariationInfo&& from) noexcept
+    : ShellSetSpec_VariationInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellSetSpec_VariationInfo& operator=(const ShellSetSpec_VariationInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellSetSpec_VariationInfo& operator=(ShellSetSpec_VariationInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellSetSpec_VariationInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellSetSpec_VariationInfo* internal_default_instance() {
+    return reinterpret_cast<const ShellSetSpec_VariationInfo*>(
+               &_ShellSetSpec_VariationInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    130;
+
+  friend void swap(ShellSetSpec_VariationInfo& a, ShellSetSpec_VariationInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellSetSpec_VariationInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellSetSpec_VariationInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellSetSpec_VariationInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellSetSpec_VariationInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellSetSpec_VariationInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellSetSpec_VariationInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellSetSpec_VariationInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellSetSpec.VariationInfo";
+  }
+  protected:
+  explicit ShellSetSpec_VariationInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIdentifierFieldNumber = 1,
+    kHexColorFieldNumber = 2,
+    kPriceFieldNumber = 3,
+  };
+  // optional string identifier = 1;
+  bool has_identifier() const;
+  private:
+  bool _internal_has_identifier() const;
+  public:
+  void clear_identifier();
+  const std::string& identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_identifier();
+  PROTOBUF_NODISCARD std::string* release_identifier();
+  void set_allocated_identifier(std::string* identifier);
+  private:
+  const std::string& _internal_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_identifier(const std::string& value);
+  std::string* _internal_mutable_identifier();
+  public:
+
+  // optional string hex_color = 2;
+  bool has_hex_color() const;
+  private:
+  bool _internal_has_hex_color() const;
+  public:
+  void clear_hex_color();
+  const std::string& hex_color() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_hex_color(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_hex_color();
+  PROTOBUF_NODISCARD std::string* release_hex_color();
+  void set_allocated_hex_color(std::string* hex_color);
+  private:
+  const std::string& _internal_hex_color() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_hex_color(const std::string& value);
+  std::string* _internal_mutable_hex_color();
+  public:
+
+  // optional uint32 price = 3;
+  bool has_price() const;
+  private:
+  bool _internal_has_price() const;
+  public:
+  void clear_price();
+  uint32_t price() const;
+  void set_price(uint32_t value);
+  private:
+  uint32_t _internal_price() const;
+  void _internal_set_price(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellSetSpec.VariationInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hex_color_;
+  uint32_t price_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -32872,7 +35774,7 @@ class ShellSetSpec final :
                &_ShellSetSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    121;
+    131;
 
   friend void swap(ShellSetSpec& a, ShellSetSpec& b) {
     a.Swap(&b);
@@ -32943,15 +35845,47 @@ class ShellSetSpec final :
 
   // nested types ----------------------------------------------------
 
+  typedef ShellSetSpec_VariationInfo VariationInfo;
+
   // accessors -------------------------------------------------------
 
   enum : int {
+    kVariationsFieldNumber = 15,
     kIdentifierFieldNumber = 1,
     kNameFieldNumber = 2,
+    kHexBaseColorFieldNumber = 16,
     kPriceFieldNumber = 3,
     kRequiredEopFieldNumber = 4,
     kRequiredSoulEggsFieldNumber = 5,
+    kElementSetFieldNumber = 7,
+    kDefaultAppearanceFieldNumber = 6,
+    kCustomAppearanceFieldNumber = 12,
+    kIsNewFieldNumber = 9,
+    kExpiresFieldNumber = 10,
+    kDecoratorFieldNumber = 14,
+    kModifiedGeometryFieldNumber = 13,
+    kSecondsRemainingFieldNumber = 11,
+    kDiscountFieldNumber = 17,
+    kPriceMultDEPRECATEDFieldNumber = 8,
   };
+  // repeated .ei.ShellSetSpec.VariationInfo variations = 15;
+  int variations_size() const;
+  private:
+  int _internal_variations_size() const;
+  public:
+  void clear_variations();
+  ::ei::ShellSetSpec_VariationInfo* mutable_variations(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >*
+      mutable_variations();
+  private:
+  const ::ei::ShellSetSpec_VariationInfo& _internal_variations(int index) const;
+  ::ei::ShellSetSpec_VariationInfo* _internal_add_variations();
+  public:
+  const ::ei::ShellSetSpec_VariationInfo& variations(int index) const;
+  ::ei::ShellSetSpec_VariationInfo* add_variations();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >&
+      variations() const;
+
   // optional string identifier = 1;
   bool has_identifier() const;
   private:
@@ -32986,6 +35920,24 @@ class ShellSetSpec final :
   const std::string& _internal_name() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
   std::string* _internal_mutable_name();
+  public:
+
+  // optional string hex_base_color = 16;
+  bool has_hex_base_color() const;
+  private:
+  bool _internal_has_hex_base_color() const;
+  public:
+  void clear_hex_base_color();
+  const std::string& hex_base_color() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_hex_base_color(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_hex_base_color();
+  PROTOBUF_NODISCARD std::string* release_hex_base_color();
+  void set_allocated_hex_base_color(std::string* hex_base_color);
+  private:
+  const std::string& _internal_hex_base_color() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_hex_base_color(const std::string& value);
+  std::string* _internal_mutable_hex_base_color();
   public:
 
   // optional uint32 price = 3;
@@ -33027,6 +35979,136 @@ class ShellSetSpec final :
   void _internal_set_required_soul_eggs(double value);
   public:
 
+  // optional bool element_set = 7;
+  bool has_element_set() const;
+  private:
+  bool _internal_has_element_set() const;
+  public:
+  void clear_element_set();
+  bool element_set() const;
+  void set_element_set(bool value);
+  private:
+  bool _internal_element_set() const;
+  void _internal_set_element_set(bool value);
+  public:
+
+  // optional bool default_appearance = 6;
+  bool has_default_appearance() const;
+  private:
+  bool _internal_has_default_appearance() const;
+  public:
+  void clear_default_appearance();
+  bool default_appearance() const;
+  void set_default_appearance(bool value);
+  private:
+  bool _internal_default_appearance() const;
+  void _internal_set_default_appearance(bool value);
+  public:
+
+  // optional bool custom_appearance = 12;
+  bool has_custom_appearance() const;
+  private:
+  bool _internal_has_custom_appearance() const;
+  public:
+  void clear_custom_appearance();
+  bool custom_appearance() const;
+  void set_custom_appearance(bool value);
+  private:
+  bool _internal_custom_appearance() const;
+  void _internal_set_custom_appearance(bool value);
+  public:
+
+  // optional bool is_new = 9;
+  bool has_is_new() const;
+  private:
+  bool _internal_has_is_new() const;
+  public:
+  void clear_is_new();
+  bool is_new() const;
+  void set_is_new(bool value);
+  private:
+  bool _internal_is_new() const;
+  void _internal_set_is_new(bool value);
+  public:
+
+  // optional bool expires = 10;
+  bool has_expires() const;
+  private:
+  bool _internal_has_expires() const;
+  public:
+  void clear_expires();
+  bool expires() const;
+  void set_expires(bool value);
+  private:
+  bool _internal_expires() const;
+  void _internal_set_expires(bool value);
+  public:
+
+  // optional bool decorator = 14;
+  bool has_decorator() const;
+  private:
+  bool _internal_has_decorator() const;
+  public:
+  void clear_decorator();
+  bool decorator() const;
+  void set_decorator(bool value);
+  private:
+  bool _internal_decorator() const;
+  void _internal_set_decorator(bool value);
+  public:
+
+  // optional bool modified_geometry = 13;
+  bool has_modified_geometry() const;
+  private:
+  bool _internal_has_modified_geometry() const;
+  public:
+  void clear_modified_geometry();
+  bool modified_geometry() const;
+  void set_modified_geometry(bool value);
+  private:
+  bool _internal_modified_geometry() const;
+  void _internal_set_modified_geometry(bool value);
+  public:
+
+  // optional double seconds_remaining = 11;
+  bool has_seconds_remaining() const;
+  private:
+  bool _internal_has_seconds_remaining() const;
+  public:
+  void clear_seconds_remaining();
+  double seconds_remaining() const;
+  void set_seconds_remaining(double value);
+  private:
+  double _internal_seconds_remaining() const;
+  void _internal_set_seconds_remaining(double value);
+  public:
+
+  // optional double discount = 17;
+  bool has_discount() const;
+  private:
+  bool _internal_has_discount() const;
+  public:
+  void clear_discount();
+  double discount() const;
+  void set_discount(double value);
+  private:
+  double _internal_discount() const;
+  void _internal_set_discount(double value);
+  public:
+
+  // optional double price_mult_DEPRECATED = 8 [default = 1];
+  bool has_price_mult_deprecated() const;
+  private:
+  bool _internal_has_price_mult_deprecated() const;
+  public:
+  void clear_price_mult_deprecated();
+  double price_mult_deprecated() const;
+  void set_price_mult_deprecated(double value);
+  private:
+  double _internal_price_mult_deprecated() const;
+  void _internal_set_price_mult_deprecated(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ShellSetSpec)
  private:
   class _Internal;
@@ -33036,11 +36118,824 @@ class ShellSetSpec final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo > variations_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hex_base_color_;
   uint32_t price_;
   uint32_t required_eop_;
   double required_soul_eggs_;
+  bool element_set_;
+  bool default_appearance_;
+  bool custom_appearance_;
+  bool is_new_;
+  bool expires_;
+  bool decorator_;
+  bool modified_geometry_;
+  double seconds_remaining_;
+  double discount_;
+  double price_mult_deprecated_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellObjectSpec_LODPiece final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellObjectSpec.LODPiece) */ {
+ public:
+  inline ShellObjectSpec_LODPiece() : ShellObjectSpec_LODPiece(nullptr) {}
+  ~ShellObjectSpec_LODPiece() override;
+  explicit constexpr ShellObjectSpec_LODPiece(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellObjectSpec_LODPiece(const ShellObjectSpec_LODPiece& from);
+  ShellObjectSpec_LODPiece(ShellObjectSpec_LODPiece&& from) noexcept
+    : ShellObjectSpec_LODPiece() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellObjectSpec_LODPiece& operator=(const ShellObjectSpec_LODPiece& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellObjectSpec_LODPiece& operator=(ShellObjectSpec_LODPiece&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellObjectSpec_LODPiece& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellObjectSpec_LODPiece* internal_default_instance() {
+    return reinterpret_cast<const ShellObjectSpec_LODPiece*>(
+               &_ShellObjectSpec_LODPiece_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    132;
+
+  friend void swap(ShellObjectSpec_LODPiece& a, ShellObjectSpec_LODPiece& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellObjectSpec_LODPiece* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellObjectSpec_LODPiece* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellObjectSpec_LODPiece* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellObjectSpec_LODPiece>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellObjectSpec_LODPiece& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellObjectSpec_LODPiece& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellObjectSpec_LODPiece* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellObjectSpec.LODPiece";
+  }
+  protected:
+  explicit ShellObjectSpec_LODPiece(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kDlcFieldNumber = 1,
+    kLodFieldNumber = 2,
+  };
+  // optional .ei.DLCItem dlc = 1;
+  bool has_dlc() const;
+  private:
+  bool _internal_has_dlc() const;
+  public:
+  void clear_dlc();
+  const ::ei::DLCItem& dlc() const;
+  PROTOBUF_NODISCARD ::ei::DLCItem* release_dlc();
+  ::ei::DLCItem* mutable_dlc();
+  void set_allocated_dlc(::ei::DLCItem* dlc);
+  private:
+  const ::ei::DLCItem& _internal_dlc() const;
+  ::ei::DLCItem* _internal_mutable_dlc();
+  public:
+  void unsafe_arena_set_allocated_dlc(
+      ::ei::DLCItem* dlc);
+  ::ei::DLCItem* unsafe_arena_release_dlc();
+
+  // optional uint32 lod = 2;
+  bool has_lod() const;
+  private:
+  bool _internal_has_lod() const;
+  public:
+  void clear_lod();
+  uint32_t lod() const;
+  void set_lod(uint32_t value);
+  private:
+  uint32_t _internal_lod() const;
+  void _internal_set_lod(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellObjectSpec.LODPiece)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::ei::DLCItem* dlc_;
+  uint32_t lod_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellObjectSpec final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellObjectSpec) */ {
+ public:
+  inline ShellObjectSpec() : ShellObjectSpec(nullptr) {}
+  ~ShellObjectSpec() override;
+  explicit constexpr ShellObjectSpec(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellObjectSpec(const ShellObjectSpec& from);
+  ShellObjectSpec(ShellObjectSpec&& from) noexcept
+    : ShellObjectSpec() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellObjectSpec& operator=(const ShellObjectSpec& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellObjectSpec& operator=(ShellObjectSpec&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellObjectSpec& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellObjectSpec* internal_default_instance() {
+    return reinterpret_cast<const ShellObjectSpec*>(
+               &_ShellObjectSpec_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    133;
+
+  friend void swap(ShellObjectSpec& a, ShellObjectSpec& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellObjectSpec* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellObjectSpec* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellObjectSpec* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellObjectSpec>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellObjectSpec& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellObjectSpec& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellObjectSpec* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellObjectSpec";
+  }
+  protected:
+  explicit ShellObjectSpec(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ShellObjectSpec_LODPiece LODPiece;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMetadataFieldNumber = 7,
+    kPiecesFieldNumber = 8,
+    kIdentifierFieldNumber = 1,
+    kNameFieldNumber = 2,
+    kObjectClassFieldNumber = 14,
+    kPriceFieldNumber = 4,
+    kRequiredEopFieldNumber = 5,
+    kRequiredSoulEggsFieldNumber = 6,
+    kSecondsRemainingFieldNumber = 12,
+    kIsNewFieldNumber = 10,
+    kExpiresFieldNumber = 11,
+    kNoHatsFieldNumber = 13,
+    kDefaultAppearanceFieldNumber = 9,
+    kAssetTypeFieldNumber = 3,
+  };
+  // repeated double metadata = 7;
+  int metadata_size() const;
+  private:
+  int _internal_metadata_size() const;
+  public:
+  void clear_metadata();
+  private:
+  double _internal_metadata(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+      _internal_metadata() const;
+  void _internal_add_metadata(double value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+      _internal_mutable_metadata();
+  public:
+  double metadata(int index) const;
+  void set_metadata(int index, double value);
+  void add_metadata(double value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+      metadata() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+      mutable_metadata();
+
+  // repeated .ei.ShellObjectSpec.LODPiece pieces = 8;
+  int pieces_size() const;
+  private:
+  int _internal_pieces_size() const;
+  public:
+  void clear_pieces();
+  ::ei::ShellObjectSpec_LODPiece* mutable_pieces(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece >*
+      mutable_pieces();
+  private:
+  const ::ei::ShellObjectSpec_LODPiece& _internal_pieces(int index) const;
+  ::ei::ShellObjectSpec_LODPiece* _internal_add_pieces();
+  public:
+  const ::ei::ShellObjectSpec_LODPiece& pieces(int index) const;
+  ::ei::ShellObjectSpec_LODPiece* add_pieces();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece >&
+      pieces() const;
+
+  // optional string identifier = 1;
+  bool has_identifier() const;
+  private:
+  bool _internal_has_identifier() const;
+  public:
+  void clear_identifier();
+  const std::string& identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_identifier();
+  PROTOBUF_NODISCARD std::string* release_identifier();
+  void set_allocated_identifier(std::string* identifier);
+  private:
+  const std::string& _internal_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_identifier(const std::string& value);
+  std::string* _internal_mutable_identifier();
+  public:
+
+  // optional string name = 2;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // optional string object_class = 14;
+  bool has_object_class() const;
+  private:
+  bool _internal_has_object_class() const;
+  public:
+  void clear_object_class();
+  const std::string& object_class() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_object_class(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_object_class();
+  PROTOBUF_NODISCARD std::string* release_object_class();
+  void set_allocated_object_class(std::string* object_class);
+  private:
+  const std::string& _internal_object_class() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_object_class(const std::string& value);
+  std::string* _internal_mutable_object_class();
+  public:
+
+  // optional uint32 price = 4;
+  bool has_price() const;
+  private:
+  bool _internal_has_price() const;
+  public:
+  void clear_price();
+  uint32_t price() const;
+  void set_price(uint32_t value);
+  private:
+  uint32_t _internal_price() const;
+  void _internal_set_price(uint32_t value);
+  public:
+
+  // optional uint32 required_eop = 5;
+  bool has_required_eop() const;
+  private:
+  bool _internal_has_required_eop() const;
+  public:
+  void clear_required_eop();
+  uint32_t required_eop() const;
+  void set_required_eop(uint32_t value);
+  private:
+  uint32_t _internal_required_eop() const;
+  void _internal_set_required_eop(uint32_t value);
+  public:
+
+  // optional double required_soul_eggs = 6;
+  bool has_required_soul_eggs() const;
+  private:
+  bool _internal_has_required_soul_eggs() const;
+  public:
+  void clear_required_soul_eggs();
+  double required_soul_eggs() const;
+  void set_required_soul_eggs(double value);
+  private:
+  double _internal_required_soul_eggs() const;
+  void _internal_set_required_soul_eggs(double value);
+  public:
+
+  // optional double seconds_remaining = 12;
+  bool has_seconds_remaining() const;
+  private:
+  bool _internal_has_seconds_remaining() const;
+  public:
+  void clear_seconds_remaining();
+  double seconds_remaining() const;
+  void set_seconds_remaining(double value);
+  private:
+  double _internal_seconds_remaining() const;
+  void _internal_set_seconds_remaining(double value);
+  public:
+
+  // optional bool is_new = 10;
+  bool has_is_new() const;
+  private:
+  bool _internal_has_is_new() const;
+  public:
+  void clear_is_new();
+  bool is_new() const;
+  void set_is_new(bool value);
+  private:
+  bool _internal_is_new() const;
+  void _internal_set_is_new(bool value);
+  public:
+
+  // optional bool expires = 11;
+  bool has_expires() const;
+  private:
+  bool _internal_has_expires() const;
+  public:
+  void clear_expires();
+  bool expires() const;
+  void set_expires(bool value);
+  private:
+  bool _internal_expires() const;
+  void _internal_set_expires(bool value);
+  public:
+
+  // optional bool no_hats = 13;
+  bool has_no_hats() const;
+  private:
+  bool _internal_has_no_hats() const;
+  public:
+  void clear_no_hats();
+  bool no_hats() const;
+  void set_no_hats(bool value);
+  private:
+  bool _internal_no_hats() const;
+  void _internal_set_no_hats(bool value);
+  public:
+
+  // optional bool default_appearance = 9;
+  bool has_default_appearance() const;
+  private:
+  bool _internal_has_default_appearance() const;
+  public:
+  void clear_default_appearance();
+  bool default_appearance() const;
+  void set_default_appearance(bool value);
+  private:
+  bool _internal_default_appearance() const;
+  void _internal_set_default_appearance(bool value);
+  public:
+
+  // optional .ei.ShellSpec.AssetType asset_type = 3;
+  bool has_asset_type() const;
+  private:
+  bool _internal_has_asset_type() const;
+  public:
+  void clear_asset_type();
+  ::ei::ShellSpec_AssetType asset_type() const;
+  void set_asset_type(::ei::ShellSpec_AssetType value);
+  private:
+  ::ei::ShellSpec_AssetType _internal_asset_type() const;
+  void _internal_set_asset_type(::ei::ShellSpec_AssetType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellObjectSpec)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece > pieces_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr object_class_;
+  uint32_t price_;
+  uint32_t required_eop_;
+  double required_soul_eggs_;
+  double seconds_remaining_;
+  bool is_new_;
+  bool expires_;
+  bool no_hats_;
+  bool default_appearance_;
+  int asset_type_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellGroupSpec final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellGroupSpec) */ {
+ public:
+  inline ShellGroupSpec() : ShellGroupSpec(nullptr) {}
+  ~ShellGroupSpec() override;
+  explicit constexpr ShellGroupSpec(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellGroupSpec(const ShellGroupSpec& from);
+  ShellGroupSpec(ShellGroupSpec&& from) noexcept
+    : ShellGroupSpec() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellGroupSpec& operator=(const ShellGroupSpec& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellGroupSpec& operator=(ShellGroupSpec&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellGroupSpec& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellGroupSpec* internal_default_instance() {
+    return reinterpret_cast<const ShellGroupSpec*>(
+               &_ShellGroupSpec_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    134;
+
+  friend void swap(ShellGroupSpec& a, ShellGroupSpec& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellGroupSpec* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellGroupSpec* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellGroupSpec* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellGroupSpec>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellGroupSpec& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellGroupSpec& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellGroupSpec* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellGroupSpec";
+  }
+  protected:
+  explicit ShellGroupSpec(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMemberIdsFieldNumber = 3,
+    kIdentifierFieldNumber = 1,
+    kNameFieldNumber = 2,
+    kPriceMultDEPRECATEDFieldNumber = 4,
+    kAssetTypeFieldNumber = 5,
+  };
+  // repeated string member_ids = 3;
+  int member_ids_size() const;
+  private:
+  int _internal_member_ids_size() const;
+  public:
+  void clear_member_ids();
+  const std::string& member_ids(int index) const;
+  std::string* mutable_member_ids(int index);
+  void set_member_ids(int index, const std::string& value);
+  void set_member_ids(int index, std::string&& value);
+  void set_member_ids(int index, const char* value);
+  void set_member_ids(int index, const char* value, size_t size);
+  std::string* add_member_ids();
+  void add_member_ids(const std::string& value);
+  void add_member_ids(std::string&& value);
+  void add_member_ids(const char* value);
+  void add_member_ids(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& member_ids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_member_ids();
+  private:
+  const std::string& _internal_member_ids(int index) const;
+  std::string* _internal_add_member_ids();
+  public:
+
+  // optional string identifier = 1;
+  bool has_identifier() const;
+  private:
+  bool _internal_has_identifier() const;
+  public:
+  void clear_identifier();
+  const std::string& identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_identifier();
+  PROTOBUF_NODISCARD std::string* release_identifier();
+  void set_allocated_identifier(std::string* identifier);
+  private:
+  const std::string& _internal_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_identifier(const std::string& value);
+  std::string* _internal_mutable_identifier();
+  public:
+
+  // optional string name = 2;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // optional double price_mult_DEPRECATED = 4;
+  bool has_price_mult_deprecated() const;
+  private:
+  bool _internal_has_price_mult_deprecated() const;
+  public:
+  void clear_price_mult_deprecated();
+  double price_mult_deprecated() const;
+  void set_price_mult_deprecated(double value);
+  private:
+  double _internal_price_mult_deprecated() const;
+  void _internal_set_price_mult_deprecated(double value);
+  public:
+
+  // optional .ei.ShellSpec.AssetType asset_type = 5;
+  bool has_asset_type() const;
+  private:
+  bool _internal_has_asset_type() const;
+  public:
+  void clear_asset_type();
+  ::ei::ShellSpec_AssetType asset_type() const;
+  void set_asset_type(::ei::ShellSpec_AssetType value);
+  private:
+  ::ei::ShellSpec_AssetType _internal_asset_type() const;
+  void _internal_set_asset_type(::ei::ShellSpec_AssetType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellGroupSpec)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> member_ids_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  double price_mult_deprecated_;
+  int asset_type_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -33100,7 +36995,7 @@ class DLCCatalog final :
                &_DLCCatalog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    122;
+    135;
 
   friend void swap(DLCCatalog& a, DLCCatalog& b) {
     a.Swap(&b);
@@ -33177,6 +37072,8 @@ class DLCCatalog final :
     kItemsFieldNumber = 1,
     kShellsFieldNumber = 2,
     kShellSetsFieldNumber = 3,
+    kShellObjectsFieldNumber = 4,
+    kShellGroupsFieldNumber = 5,
   };
   // repeated .ei.DLCItem items = 1;
   int items_size() const;
@@ -33232,6 +37129,42 @@ class DLCCatalog final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec >&
       shell_sets() const;
 
+  // repeated .ei.ShellObjectSpec shell_objects = 4;
+  int shell_objects_size() const;
+  private:
+  int _internal_shell_objects_size() const;
+  public:
+  void clear_shell_objects();
+  ::ei::ShellObjectSpec* mutable_shell_objects(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec >*
+      mutable_shell_objects();
+  private:
+  const ::ei::ShellObjectSpec& _internal_shell_objects(int index) const;
+  ::ei::ShellObjectSpec* _internal_add_shell_objects();
+  public:
+  const ::ei::ShellObjectSpec& shell_objects(int index) const;
+  ::ei::ShellObjectSpec* add_shell_objects();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec >&
+      shell_objects() const;
+
+  // repeated .ei.ShellGroupSpec shell_groups = 5;
+  int shell_groups_size() const;
+  private:
+  int _internal_shell_groups_size() const;
+  public:
+  void clear_shell_groups();
+  ::ei::ShellGroupSpec* mutable_shell_groups(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec >*
+      mutable_shell_groups();
+  private:
+  const ::ei::ShellGroupSpec& _internal_shell_groups(int index) const;
+  ::ei::ShellGroupSpec* _internal_add_shell_groups();
+  public:
+  const ::ei::ShellGroupSpec& shell_groups(int index) const;
+  ::ei::ShellGroupSpec* add_shell_groups();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec >&
+      shell_groups() const;
+
   // @@protoc_insertion_point(class_scope:ei.DLCCatalog)
  private:
   class _Internal;
@@ -33242,6 +37175,8 @@ class DLCCatalog final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::DLCItem > items_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSpec > shells_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec > shell_sets_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec > shell_objects_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec > shell_groups_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -33302,7 +37237,7 @@ class ShellDB_ShellStatus final :
                &_ShellDB_ShellStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    123;
+    136;
 
   friend void swap(ShellDB_ShellStatus& a, ShellDB_ShellStatus& b) {
     a.Swap(&b);
@@ -33376,25 +37311,25 @@ class ShellDB_ShellStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kShellIdentifierFieldNumber = 1,
+    kIdentifierFieldNumber = 1,
     kOwnedFieldNumber = 2,
   };
-  // optional string shell_identifier = 1;
-  bool has_shell_identifier() const;
+  // optional string identifier = 1;
+  bool has_identifier() const;
   private:
-  bool _internal_has_shell_identifier() const;
+  bool _internal_has_identifier() const;
   public:
-  void clear_shell_identifier();
-  const std::string& shell_identifier() const;
+  void clear_identifier();
+  const std::string& identifier() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_shell_identifier(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_shell_identifier();
-  PROTOBUF_NODISCARD std::string* release_shell_identifier();
-  void set_allocated_shell_identifier(std::string* shell_identifier);
+  void set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_identifier();
+  PROTOBUF_NODISCARD std::string* release_identifier();
+  void set_allocated_identifier(std::string* identifier);
   private:
-  const std::string& _internal_shell_identifier() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_shell_identifier(const std::string& value);
-  std::string* _internal_mutable_shell_identifier();
+  const std::string& _internal_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_identifier(const std::string& value);
+  std::string* _internal_mutable_identifier();
   public:
 
   // optional bool owned = 2;
@@ -33419,8 +37354,375 @@ class ShellDB_ShellStatus final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr shell_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   bool owned_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellDB_ShellElementStatus final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.ShellElementStatus) */ {
+ public:
+  inline ShellDB_ShellElementStatus() : ShellDB_ShellElementStatus(nullptr) {}
+  ~ShellDB_ShellElementStatus() override;
+  explicit constexpr ShellDB_ShellElementStatus(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellDB_ShellElementStatus(const ShellDB_ShellElementStatus& from);
+  ShellDB_ShellElementStatus(ShellDB_ShellElementStatus&& from) noexcept
+    : ShellDB_ShellElementStatus() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellDB_ShellElementStatus& operator=(const ShellDB_ShellElementStatus& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellDB_ShellElementStatus& operator=(ShellDB_ShellElementStatus&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellDB_ShellElementStatus& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellDB_ShellElementStatus* internal_default_instance() {
+    return reinterpret_cast<const ShellDB_ShellElementStatus*>(
+               &_ShellDB_ShellElementStatus_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    137;
+
+  friend void swap(ShellDB_ShellElementStatus& a, ShellDB_ShellElementStatus& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellDB_ShellElementStatus* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellDB_ShellElementStatus* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellDB_ShellElementStatus* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellDB_ShellElementStatus>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellDB_ShellElementStatus& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellDB_ShellElementStatus& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellDB_ShellElementStatus* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellDB.ShellElementStatus";
+  }
+  protected:
+  explicit ShellDB_ShellElementStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSetIdentifierFieldNumber = 2,
+    kElementFieldNumber = 1,
+  };
+  // optional string set_identifier = 2;
+  bool has_set_identifier() const;
+  private:
+  bool _internal_has_set_identifier() const;
+  public:
+  void clear_set_identifier();
+  const std::string& set_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_set_identifier();
+  PROTOBUF_NODISCARD std::string* release_set_identifier();
+  void set_allocated_set_identifier(std::string* set_identifier);
+  private:
+  const std::string& _internal_set_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_set_identifier(const std::string& value);
+  std::string* _internal_mutable_set_identifier();
+  public:
+
+  // optional .ei.ShellDB.FarmElement element = 1;
+  bool has_element() const;
+  private:
+  bool _internal_has_element() const;
+  public:
+  void clear_element();
+  ::ei::ShellDB_FarmElement element() const;
+  void set_element(::ei::ShellDB_FarmElement value);
+  private:
+  ::ei::ShellDB_FarmElement _internal_element() const;
+  void _internal_set_element(::ei::ShellDB_FarmElement value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellDB.ShellElementStatus)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr set_identifier_;
+  int element_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellDB_ShellSetVariationStatus final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.ShellSetVariationStatus) */ {
+ public:
+  inline ShellDB_ShellSetVariationStatus() : ShellDB_ShellSetVariationStatus(nullptr) {}
+  ~ShellDB_ShellSetVariationStatus() override;
+  explicit constexpr ShellDB_ShellSetVariationStatus(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellDB_ShellSetVariationStatus(const ShellDB_ShellSetVariationStatus& from);
+  ShellDB_ShellSetVariationStatus(ShellDB_ShellSetVariationStatus&& from) noexcept
+    : ShellDB_ShellSetVariationStatus() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellDB_ShellSetVariationStatus& operator=(const ShellDB_ShellSetVariationStatus& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellDB_ShellSetVariationStatus& operator=(ShellDB_ShellSetVariationStatus&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellDB_ShellSetVariationStatus& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellDB_ShellSetVariationStatus* internal_default_instance() {
+    return reinterpret_cast<const ShellDB_ShellSetVariationStatus*>(
+               &_ShellDB_ShellSetVariationStatus_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    138;
+
+  friend void swap(ShellDB_ShellSetVariationStatus& a, ShellDB_ShellSetVariationStatus& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellDB_ShellSetVariationStatus* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellDB_ShellSetVariationStatus* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellDB_ShellSetVariationStatus* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellDB_ShellSetVariationStatus>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellDB_ShellSetVariationStatus& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellDB_ShellSetVariationStatus& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellDB_ShellSetVariationStatus* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellDB.ShellSetVariationStatus";
+  }
+  protected:
+  explicit ShellDB_ShellSetVariationStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kOwnedVariationsFieldNumber = 2,
+    kSetIdentifierFieldNumber = 1,
+  };
+  // repeated string owned_variations = 2;
+  int owned_variations_size() const;
+  private:
+  int _internal_owned_variations_size() const;
+  public:
+  void clear_owned_variations();
+  const std::string& owned_variations(int index) const;
+  std::string* mutable_owned_variations(int index);
+  void set_owned_variations(int index, const std::string& value);
+  void set_owned_variations(int index, std::string&& value);
+  void set_owned_variations(int index, const char* value);
+  void set_owned_variations(int index, const char* value, size_t size);
+  std::string* add_owned_variations();
+  void add_owned_variations(const std::string& value);
+  void add_owned_variations(std::string&& value);
+  void add_owned_variations(const char* value);
+  void add_owned_variations(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& owned_variations() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_owned_variations();
+  private:
+  const std::string& _internal_owned_variations(int index) const;
+  std::string* _internal_add_owned_variations();
+  public:
+
+  // optional string set_identifier = 1;
+  bool has_set_identifier() const;
+  private:
+  bool _internal_has_set_identifier() const;
+  public:
+  void clear_set_identifier();
+  const std::string& set_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_set_identifier();
+  PROTOBUF_NODISCARD std::string* release_set_identifier();
+  void set_allocated_set_identifier(std::string* set_identifier);
+  private:
+  const std::string& _internal_set_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_set_identifier(const std::string& value);
+  std::string* _internal_mutable_set_identifier();
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellDB.ShellSetVariationStatus)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> owned_variations_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr set_identifier_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -33480,7 +37782,7 @@ class ShellDB_FarmConfiguration final :
                &_ShellDB_FarmConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    124;
+    139;
 
   friend void swap(ShellDB_FarmConfiguration& a, ShellDB_FarmConfiguration& b) {
     a.Swap(&b);
@@ -33555,6 +37857,10 @@ class ShellDB_FarmConfiguration final :
 
   enum : int {
     kShellConfigsFieldNumber = 1,
+    kShellSetConfigsFieldNumber = 2,
+    kGroupConfigsFieldNumber = 8,
+    kChickenConfigsFieldNumber = 9,
+    kConfigureChickensByGroupFieldNumber = 7,
   };
   // repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;
   int shell_configs_size() const;
@@ -33574,6 +37880,73 @@ class ShellDB_FarmConfiguration final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellConfiguration >&
       shell_configs() const;
 
+  // repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;
+  int shell_set_configs_size() const;
+  private:
+  int _internal_shell_set_configs_size() const;
+  public:
+  void clear_shell_set_configs();
+  ::ei::ShellDB_ShellSetConfiguration* mutable_shell_set_configs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetConfiguration >*
+      mutable_shell_set_configs();
+  private:
+  const ::ei::ShellDB_ShellSetConfiguration& _internal_shell_set_configs(int index) const;
+  ::ei::ShellDB_ShellSetConfiguration* _internal_add_shell_set_configs();
+  public:
+  const ::ei::ShellDB_ShellSetConfiguration& shell_set_configs(int index) const;
+  ::ei::ShellDB_ShellSetConfiguration* add_shell_set_configs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetConfiguration >&
+      shell_set_configs() const;
+
+  // repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;
+  int group_configs_size() const;
+  private:
+  int _internal_group_configs_size() const;
+  public:
+  void clear_group_configs();
+  ::ei::ShellDB_ShellGroupConfiguration* mutable_group_configs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellGroupConfiguration >*
+      mutable_group_configs();
+  private:
+  const ::ei::ShellDB_ShellGroupConfiguration& _internal_group_configs(int index) const;
+  ::ei::ShellDB_ShellGroupConfiguration* _internal_add_group_configs();
+  public:
+  const ::ei::ShellDB_ShellGroupConfiguration& group_configs(int index) const;
+  ::ei::ShellDB_ShellGroupConfiguration* add_group_configs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellGroupConfiguration >&
+      group_configs() const;
+
+  // repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;
+  int chicken_configs_size() const;
+  private:
+  int _internal_chicken_configs_size() const;
+  public:
+  void clear_chicken_configs();
+  ::ei::ShellDB_ChickenConfig* mutable_chicken_configs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig >*
+      mutable_chicken_configs();
+  private:
+  const ::ei::ShellDB_ChickenConfig& _internal_chicken_configs(int index) const;
+  ::ei::ShellDB_ChickenConfig* _internal_add_chicken_configs();
+  public:
+  const ::ei::ShellDB_ChickenConfig& chicken_configs(int index) const;
+  ::ei::ShellDB_ChickenConfig* add_chicken_configs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig >&
+      chicken_configs() const;
+
+  // optional bool configure_chickens_by_group = 7;
+  bool has_configure_chickens_by_group() const;
+  private:
+  bool _internal_has_configure_chickens_by_group() const;
+  public:
+  void clear_configure_chickens_by_group();
+  bool configure_chickens_by_group() const;
+  void set_configure_chickens_by_group(bool value);
+  private:
+  bool _internal_configure_chickens_by_group() const;
+  void _internal_set_configure_chickens_by_group(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ShellDB.FarmConfiguration)
  private:
   class _Internal;
@@ -33581,8 +37954,13 @@ class ShellDB_FarmConfiguration final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellConfiguration > shell_configs_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellConfiguration > shell_configs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetConfiguration > shell_set_configs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellGroupConfiguration > group_configs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig > chicken_configs_;
+  bool configure_chickens_by_group_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -33642,7 +38020,7 @@ class ShellDB_ShellConfiguration final :
                &_ShellDB_ShellConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    125;
+    140;
 
   friend void swap(ShellDB_ShellConfiguration& a, ShellDB_ShellConfiguration& b) {
     a.Swap(&b);
@@ -33780,6 +38158,600 @@ class ShellDB_ShellConfiguration final :
 };
 // -------------------------------------------------------------------
 
+class ShellDB_ShellSetConfiguration final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.ShellSetConfiguration) */ {
+ public:
+  inline ShellDB_ShellSetConfiguration() : ShellDB_ShellSetConfiguration(nullptr) {}
+  ~ShellDB_ShellSetConfiguration() override;
+  explicit constexpr ShellDB_ShellSetConfiguration(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellDB_ShellSetConfiguration(const ShellDB_ShellSetConfiguration& from);
+  ShellDB_ShellSetConfiguration(ShellDB_ShellSetConfiguration&& from) noexcept
+    : ShellDB_ShellSetConfiguration() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellDB_ShellSetConfiguration& operator=(const ShellDB_ShellSetConfiguration& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellDB_ShellSetConfiguration& operator=(ShellDB_ShellSetConfiguration&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellDB_ShellSetConfiguration& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellDB_ShellSetConfiguration* internal_default_instance() {
+    return reinterpret_cast<const ShellDB_ShellSetConfiguration*>(
+               &_ShellDB_ShellSetConfiguration_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    141;
+
+  friend void swap(ShellDB_ShellSetConfiguration& a, ShellDB_ShellSetConfiguration& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellDB_ShellSetConfiguration* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellDB_ShellSetConfiguration* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellDB_ShellSetConfiguration* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellDB_ShellSetConfiguration>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellDB_ShellSetConfiguration& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellDB_ShellSetConfiguration& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellDB_ShellSetConfiguration* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellDB.ShellSetConfiguration";
+  }
+  protected:
+  explicit ShellDB_ShellSetConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kShellSetIdentifierFieldNumber = 3,
+    kVariationIdentifierFieldNumber = 4,
+    kDecoratorIdentifierFieldNumber = 5,
+    kIndexFieldNumber = 2,
+    kElementFieldNumber = 1,
+  };
+  // optional string shell_set_identifier = 3;
+  bool has_shell_set_identifier() const;
+  private:
+  bool _internal_has_shell_set_identifier() const;
+  public:
+  void clear_shell_set_identifier();
+  const std::string& shell_set_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_shell_set_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_shell_set_identifier();
+  PROTOBUF_NODISCARD std::string* release_shell_set_identifier();
+  void set_allocated_shell_set_identifier(std::string* shell_set_identifier);
+  private:
+  const std::string& _internal_shell_set_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_shell_set_identifier(const std::string& value);
+  std::string* _internal_mutable_shell_set_identifier();
+  public:
+
+  // optional string variation_identifier = 4;
+  bool has_variation_identifier() const;
+  private:
+  bool _internal_has_variation_identifier() const;
+  public:
+  void clear_variation_identifier();
+  const std::string& variation_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_variation_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_variation_identifier();
+  PROTOBUF_NODISCARD std::string* release_variation_identifier();
+  void set_allocated_variation_identifier(std::string* variation_identifier);
+  private:
+  const std::string& _internal_variation_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_variation_identifier(const std::string& value);
+  std::string* _internal_mutable_variation_identifier();
+  public:
+
+  // optional string decorator_identifier = 5;
+  bool has_decorator_identifier() const;
+  private:
+  bool _internal_has_decorator_identifier() const;
+  public:
+  void clear_decorator_identifier();
+  const std::string& decorator_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_decorator_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_decorator_identifier();
+  PROTOBUF_NODISCARD std::string* release_decorator_identifier();
+  void set_allocated_decorator_identifier(std::string* decorator_identifier);
+  private:
+  const std::string& _internal_decorator_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_decorator_identifier(const std::string& value);
+  std::string* _internal_mutable_decorator_identifier();
+  public:
+
+  // optional uint32 index = 2;
+  bool has_index() const;
+  private:
+  bool _internal_has_index() const;
+  public:
+  void clear_index();
+  uint32_t index() const;
+  void set_index(uint32_t value);
+  private:
+  uint32_t _internal_index() const;
+  void _internal_set_index(uint32_t value);
+  public:
+
+  // optional .ei.ShellDB.FarmElement element = 1;
+  bool has_element() const;
+  private:
+  bool _internal_has_element() const;
+  public:
+  void clear_element();
+  ::ei::ShellDB_FarmElement element() const;
+  void set_element(::ei::ShellDB_FarmElement value);
+  private:
+  ::ei::ShellDB_FarmElement _internal_element() const;
+  void _internal_set_element(::ei::ShellDB_FarmElement value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellDB.ShellSetConfiguration)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr shell_set_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr variation_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr decorator_identifier_;
+  uint32_t index_;
+  int element_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellDB_ShellGroupConfiguration final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.ShellGroupConfiguration) */ {
+ public:
+  inline ShellDB_ShellGroupConfiguration() : ShellDB_ShellGroupConfiguration(nullptr) {}
+  ~ShellDB_ShellGroupConfiguration() override;
+  explicit constexpr ShellDB_ShellGroupConfiguration(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellDB_ShellGroupConfiguration(const ShellDB_ShellGroupConfiguration& from);
+  ShellDB_ShellGroupConfiguration(ShellDB_ShellGroupConfiguration&& from) noexcept
+    : ShellDB_ShellGroupConfiguration() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellDB_ShellGroupConfiguration& operator=(const ShellDB_ShellGroupConfiguration& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellDB_ShellGroupConfiguration& operator=(ShellDB_ShellGroupConfiguration&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellDB_ShellGroupConfiguration& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellDB_ShellGroupConfiguration* internal_default_instance() {
+    return reinterpret_cast<const ShellDB_ShellGroupConfiguration*>(
+               &_ShellDB_ShellGroupConfiguration_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    142;
+
+  friend void swap(ShellDB_ShellGroupConfiguration& a, ShellDB_ShellGroupConfiguration& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellDB_ShellGroupConfiguration* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellDB_ShellGroupConfiguration* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellDB_ShellGroupConfiguration* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellDB_ShellGroupConfiguration>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellDB_ShellGroupConfiguration& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellDB_ShellGroupConfiguration& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellDB_ShellGroupConfiguration* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellDB.ShellGroupConfiguration";
+  }
+  protected:
+  explicit ShellDB_ShellGroupConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGroupIdentifierFieldNumber = 2,
+    kAssetTypeFieldNumber = 1,
+  };
+  // optional string group_identifier = 2;
+  bool has_group_identifier() const;
+  private:
+  bool _internal_has_group_identifier() const;
+  public:
+  void clear_group_identifier();
+  const std::string& group_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_group_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_group_identifier();
+  PROTOBUF_NODISCARD std::string* release_group_identifier();
+  void set_allocated_group_identifier(std::string* group_identifier);
+  private:
+  const std::string& _internal_group_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_group_identifier(const std::string& value);
+  std::string* _internal_mutable_group_identifier();
+  public:
+
+  // optional .ei.ShellSpec.AssetType asset_type = 1;
+  bool has_asset_type() const;
+  private:
+  bool _internal_has_asset_type() const;
+  public:
+  void clear_asset_type();
+  ::ei::ShellSpec_AssetType asset_type() const;
+  void set_asset_type(::ei::ShellSpec_AssetType value);
+  private:
+  ::ei::ShellSpec_AssetType _internal_asset_type() const;
+  void _internal_set_asset_type(::ei::ShellSpec_AssetType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellDB.ShellGroupConfiguration)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_identifier_;
+  int asset_type_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellDB_ChickenConfig final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.ChickenConfig) */ {
+ public:
+  inline ShellDB_ChickenConfig() : ShellDB_ChickenConfig(nullptr) {}
+  ~ShellDB_ChickenConfig() override;
+  explicit constexpr ShellDB_ChickenConfig(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellDB_ChickenConfig(const ShellDB_ChickenConfig& from);
+  ShellDB_ChickenConfig(ShellDB_ChickenConfig&& from) noexcept
+    : ShellDB_ChickenConfig() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellDB_ChickenConfig& operator=(const ShellDB_ChickenConfig& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellDB_ChickenConfig& operator=(ShellDB_ChickenConfig&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellDB_ChickenConfig& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellDB_ChickenConfig* internal_default_instance() {
+    return reinterpret_cast<const ShellDB_ChickenConfig*>(
+               &_ShellDB_ChickenConfig_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    143;
+
+  friend void swap(ShellDB_ChickenConfig& a, ShellDB_ChickenConfig& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellDB_ChickenConfig* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellDB_ChickenConfig* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellDB_ChickenConfig* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellDB_ChickenConfig>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellDB_ChickenConfig& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellDB_ChickenConfig& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellDB_ChickenConfig* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellDB.ChickenConfig";
+  }
+  protected:
+  explicit ShellDB_ChickenConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kChickenIdentifierFieldNumber = 1,
+    kHatIdentifierFieldNumber = 2,
+  };
+  // optional string chicken_identifier = 1;
+  bool has_chicken_identifier() const;
+  private:
+  bool _internal_has_chicken_identifier() const;
+  public:
+  void clear_chicken_identifier();
+  const std::string& chicken_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_chicken_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_chicken_identifier();
+  PROTOBUF_NODISCARD std::string* release_chicken_identifier();
+  void set_allocated_chicken_identifier(std::string* chicken_identifier);
+  private:
+  const std::string& _internal_chicken_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_chicken_identifier(const std::string& value);
+  std::string* _internal_mutable_chicken_identifier();
+  public:
+
+  // optional string hat_identifier = 2;
+  bool has_hat_identifier() const;
+  private:
+  bool _internal_has_hat_identifier() const;
+  public:
+  void clear_hat_identifier();
+  const std::string& hat_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_hat_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_hat_identifier();
+  PROTOBUF_NODISCARD std::string* release_hat_identifier();
+  void set_allocated_hat_identifier(std::string* hat_identifier);
+  private:
+  const std::string& _internal_hat_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_hat_identifier(const std::string& value);
+  std::string* _internal_mutable_hat_identifier();
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellDB.ChickenConfig)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr chicken_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hat_identifier_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ShellDB final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB) */ {
  public:
@@ -33835,7 +38807,7 @@ class ShellDB final :
                &_ShellDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    126;
+    144;
 
   friend void swap(ShellDB& a, ShellDB& b) {
     a.Swap(&b);
@@ -33907,14 +38879,83 @@ class ShellDB final :
   // nested types ----------------------------------------------------
 
   typedef ShellDB_ShellStatus ShellStatus;
+  typedef ShellDB_ShellElementStatus ShellElementStatus;
+  typedef ShellDB_ShellSetVariationStatus ShellSetVariationStatus;
   typedef ShellDB_FarmConfiguration FarmConfiguration;
   typedef ShellDB_ShellConfiguration ShellConfiguration;
+  typedef ShellDB_ShellSetConfiguration ShellSetConfiguration;
+  typedef ShellDB_ShellGroupConfiguration ShellGroupConfiguration;
+  typedef ShellDB_ChickenConfig ChickenConfig;
+
+  typedef ShellDB_FarmElement FarmElement;
+  static constexpr FarmElement HEN_HOUSE =
+    ShellDB_FarmElement_HEN_HOUSE;
+  static constexpr FarmElement SILO =
+    ShellDB_FarmElement_SILO;
+  static constexpr FarmElement MAILBOX =
+    ShellDB_FarmElement_MAILBOX;
+  static constexpr FarmElement TROPHY_CASE =
+    ShellDB_FarmElement_TROPHY_CASE;
+  static constexpr FarmElement GROUND =
+    ShellDB_FarmElement_GROUND;
+  static constexpr FarmElement HARDSCAPE =
+    ShellDB_FarmElement_HARDSCAPE;
+  static constexpr FarmElement HYPERLOOP =
+    ShellDB_FarmElement_HYPERLOOP;
+  static constexpr FarmElement DEPOT =
+    ShellDB_FarmElement_DEPOT;
+  static constexpr FarmElement LAB =
+    ShellDB_FarmElement_LAB;
+  static constexpr FarmElement HATCHERY =
+    ShellDB_FarmElement_HATCHERY;
+  static constexpr FarmElement HOA =
+    ShellDB_FarmElement_HOA;
+  static constexpr FarmElement MISSION_CONTROL =
+    ShellDB_FarmElement_MISSION_CONTROL;
+  static constexpr FarmElement FUEL_TANK =
+    ShellDB_FarmElement_FUEL_TANK;
+  static constexpr FarmElement CHICKEN =
+    ShellDB_FarmElement_CHICKEN;
+  static constexpr FarmElement HAT =
+    ShellDB_FarmElement_HAT;
+  static constexpr FarmElement UNKNOWN =
+    ShellDB_FarmElement_UNKNOWN;
+  static inline bool FarmElement_IsValid(int value) {
+    return ShellDB_FarmElement_IsValid(value);
+  }
+  static constexpr FarmElement FarmElement_MIN =
+    ShellDB_FarmElement_FarmElement_MIN;
+  static constexpr FarmElement FarmElement_MAX =
+    ShellDB_FarmElement_FarmElement_MAX;
+  static constexpr int FarmElement_ARRAYSIZE =
+    ShellDB_FarmElement_FarmElement_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  FarmElement_descriptor() {
+    return ShellDB_FarmElement_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& FarmElement_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, FarmElement>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function FarmElement_Name.");
+    return ShellDB_FarmElement_Name(enum_t_value);
+  }
+  static inline bool FarmElement_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      FarmElement* value) {
+    return ShellDB_FarmElement_Parse(name, value);
+  }
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kShellInventoryFieldNumber = 1,
+    kShellSetInventoryFieldNumber = 2,
     kFarmConfigsFieldNumber = 3,
+    kShellObjectInventoryFieldNumber = 4,
+    kShellElementInventoryFieldNumber = 5,
+    kNewShellsDownloadedFieldNumber = 6,
+    kNewShellsSeenFieldNumber = 7,
+    kShellVariationInventoryFieldNumber = 8,
   };
   // repeated .ei.ShellDB.ShellStatus shell_inventory = 1;
   int shell_inventory_size() const;
@@ -33934,6 +38975,24 @@ class ShellDB final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >&
       shell_inventory() const;
 
+  // repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;
+  int shell_set_inventory_size() const;
+  private:
+  int _internal_shell_set_inventory_size() const;
+  public:
+  void clear_shell_set_inventory();
+  ::ei::ShellDB_ShellStatus* mutable_shell_set_inventory(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >*
+      mutable_shell_set_inventory();
+  private:
+  const ::ei::ShellDB_ShellStatus& _internal_shell_set_inventory(int index) const;
+  ::ei::ShellDB_ShellStatus* _internal_add_shell_set_inventory();
+  public:
+  const ::ei::ShellDB_ShellStatus& shell_set_inventory(int index) const;
+  ::ei::ShellDB_ShellStatus* add_shell_set_inventory();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >&
+      shell_set_inventory() const;
+
   // repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;
   int farm_configs_size() const;
   private:
@@ -33952,6 +39011,108 @@ class ShellDB final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_FarmConfiguration >&
       farm_configs() const;
 
+  // repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;
+  int shell_object_inventory_size() const;
+  private:
+  int _internal_shell_object_inventory_size() const;
+  public:
+  void clear_shell_object_inventory();
+  ::ei::ShellDB_ShellStatus* mutable_shell_object_inventory(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >*
+      mutable_shell_object_inventory();
+  private:
+  const ::ei::ShellDB_ShellStatus& _internal_shell_object_inventory(int index) const;
+  ::ei::ShellDB_ShellStatus* _internal_add_shell_object_inventory();
+  public:
+  const ::ei::ShellDB_ShellStatus& shell_object_inventory(int index) const;
+  ::ei::ShellDB_ShellStatus* add_shell_object_inventory();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >&
+      shell_object_inventory() const;
+
+  // repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;
+  int shell_element_inventory_size() const;
+  private:
+  int _internal_shell_element_inventory_size() const;
+  public:
+  void clear_shell_element_inventory();
+  ::ei::ShellDB_ShellElementStatus* mutable_shell_element_inventory(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellElementStatus >*
+      mutable_shell_element_inventory();
+  private:
+  const ::ei::ShellDB_ShellElementStatus& _internal_shell_element_inventory(int index) const;
+  ::ei::ShellDB_ShellElementStatus* _internal_add_shell_element_inventory();
+  public:
+  const ::ei::ShellDB_ShellElementStatus& shell_element_inventory(int index) const;
+  ::ei::ShellDB_ShellElementStatus* add_shell_element_inventory();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellElementStatus >&
+      shell_element_inventory() const;
+
+  // repeated string new_shells_downloaded = 6;
+  int new_shells_downloaded_size() const;
+  private:
+  int _internal_new_shells_downloaded_size() const;
+  public:
+  void clear_new_shells_downloaded();
+  const std::string& new_shells_downloaded(int index) const;
+  std::string* mutable_new_shells_downloaded(int index);
+  void set_new_shells_downloaded(int index, const std::string& value);
+  void set_new_shells_downloaded(int index, std::string&& value);
+  void set_new_shells_downloaded(int index, const char* value);
+  void set_new_shells_downloaded(int index, const char* value, size_t size);
+  std::string* add_new_shells_downloaded();
+  void add_new_shells_downloaded(const std::string& value);
+  void add_new_shells_downloaded(std::string&& value);
+  void add_new_shells_downloaded(const char* value);
+  void add_new_shells_downloaded(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& new_shells_downloaded() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_new_shells_downloaded();
+  private:
+  const std::string& _internal_new_shells_downloaded(int index) const;
+  std::string* _internal_add_new_shells_downloaded();
+  public:
+
+  // repeated string new_shells_seen = 7;
+  int new_shells_seen_size() const;
+  private:
+  int _internal_new_shells_seen_size() const;
+  public:
+  void clear_new_shells_seen();
+  const std::string& new_shells_seen(int index) const;
+  std::string* mutable_new_shells_seen(int index);
+  void set_new_shells_seen(int index, const std::string& value);
+  void set_new_shells_seen(int index, std::string&& value);
+  void set_new_shells_seen(int index, const char* value);
+  void set_new_shells_seen(int index, const char* value, size_t size);
+  std::string* add_new_shells_seen();
+  void add_new_shells_seen(const std::string& value);
+  void add_new_shells_seen(std::string&& value);
+  void add_new_shells_seen(const char* value);
+  void add_new_shells_seen(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& new_shells_seen() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_new_shells_seen();
+  private:
+  const std::string& _internal_new_shells_seen(int index) const;
+  std::string* _internal_add_new_shells_seen();
+  public:
+
+  // repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;
+  int shell_variation_inventory_size() const;
+  private:
+  int _internal_shell_variation_inventory_size() const;
+  public:
+  void clear_shell_variation_inventory();
+  ::ei::ShellDB_ShellSetVariationStatus* mutable_shell_variation_inventory(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus >*
+      mutable_shell_variation_inventory();
+  private:
+  const ::ei::ShellDB_ShellSetVariationStatus& _internal_shell_variation_inventory(int index) const;
+  ::ei::ShellDB_ShellSetVariationStatus* _internal_add_shell_variation_inventory();
+  public:
+  const ::ei::ShellDB_ShellSetVariationStatus& shell_variation_inventory(int index) const;
+  ::ei::ShellDB_ShellSetVariationStatus* add_shell_variation_inventory();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus >&
+      shell_variation_inventory() const;
+
   // @@protoc_insertion_point(class_scope:ei.ShellDB)
  private:
   class _Internal;
@@ -33960,8 +39121,317 @@ class ShellDB final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus > shell_inventory_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus > shell_set_inventory_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_FarmConfiguration > farm_configs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus > shell_object_inventory_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellElementStatus > shell_element_inventory_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> new_shells_downloaded_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> new_shells_seen_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus > shell_variation_inventory_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellsActionLog final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellsActionLog) */ {
+ public:
+  inline ShellsActionLog() : ShellsActionLog(nullptr) {}
+  ~ShellsActionLog() override;
+  explicit constexpr ShellsActionLog(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellsActionLog(const ShellsActionLog& from);
+  ShellsActionLog(ShellsActionLog&& from) noexcept
+    : ShellsActionLog() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellsActionLog& operator=(const ShellsActionLog& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellsActionLog& operator=(ShellsActionLog&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellsActionLog& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellsActionLog* internal_default_instance() {
+    return reinterpret_cast<const ShellsActionLog*>(
+               &_ShellsActionLog_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    145;
+
+  friend void swap(ShellsActionLog& a, ShellsActionLog& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellsActionLog* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellsActionLog* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellsActionLog* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellsActionLog>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellsActionLog& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellsActionLog& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellsActionLog* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellsActionLog";
+  }
+  protected:
+  explicit ShellsActionLog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kActionFieldNumber = 2,
+    kSubIdFieldNumber = 3,
+    kVersionFieldNumber = 6,
+    kRinfoFieldNumber = 8,
+    kApproxTimeFieldNumber = 5,
+    kCostFieldNumber = 4,
+    kFarmIndexFieldNumber = 7,
+    kFarmElementFieldNumber = 9,
+  };
+  // optional string user_id = 1;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional string action = 2;
+  bool has_action() const;
+  private:
+  bool _internal_has_action() const;
+  public:
+  void clear_action();
+  const std::string& action() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_action(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_action();
+  PROTOBUF_NODISCARD std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // optional string sub_id = 3;
+  bool has_sub_id() const;
+  private:
+  bool _internal_has_sub_id() const;
+  public:
+  void clear_sub_id();
+  const std::string& sub_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_sub_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_sub_id();
+  PROTOBUF_NODISCARD std::string* release_sub_id();
+  void set_allocated_sub_id(std::string* sub_id);
+  private:
+  const std::string& _internal_sub_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sub_id(const std::string& value);
+  std::string* _internal_mutable_sub_id();
+  public:
+
+  // optional string version = 6;
+  bool has_version() const;
+  private:
+  bool _internal_has_version() const;
+  public:
+  void clear_version();
+  const std::string& version() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_version(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_version();
+  PROTOBUF_NODISCARD std::string* release_version();
+  void set_allocated_version(std::string* version);
+  private:
+  const std::string& _internal_version() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_version(const std::string& value);
+  std::string* _internal_mutable_version();
+  public:
+
+  // optional .ei.BasicRequestInfo rinfo = 8;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // optional double approx_time = 5;
+  bool has_approx_time() const;
+  private:
+  bool _internal_has_approx_time() const;
+  public:
+  void clear_approx_time();
+  double approx_time() const;
+  void set_approx_time(double value);
+  private:
+  double _internal_approx_time() const;
+  void _internal_set_approx_time(double value);
+  public:
+
+  // optional uint32 cost = 4;
+  bool has_cost() const;
+  private:
+  bool _internal_has_cost() const;
+  public:
+  void clear_cost();
+  uint32_t cost() const;
+  void set_cost(uint32_t value);
+  private:
+  uint32_t _internal_cost() const;
+  void _internal_set_cost(uint32_t value);
+  public:
+
+  // optional int32 farm_index = 7;
+  bool has_farm_index() const;
+  private:
+  bool _internal_has_farm_index() const;
+  public:
+  void clear_farm_index();
+  int32_t farm_index() const;
+  void set_farm_index(int32_t value);
+  private:
+  int32_t _internal_farm_index() const;
+  void _internal_set_farm_index(int32_t value);
+  public:
+
+  // optional .ei.ShellDB.FarmElement farm_element = 9;
+  bool has_farm_element() const;
+  private:
+  bool _internal_has_farm_element() const;
+  public:
+  void clear_farm_element();
+  ::ei::ShellDB_FarmElement farm_element() const;
+  void set_farm_element(::ei::ShellDB_FarmElement value);
+  private:
+  ::ei::ShellDB_FarmElement _internal_farm_element() const;
+  void _internal_set_farm_element(::ei::ShellDB_FarmElement value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellsActionLog)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sub_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
+  ::ei::BasicRequestInfo* rinfo_;
+  double approx_time_;
+  uint32_t cost_;
+  int32_t farm_index_;
+  int farm_element_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // ===================================================================
@@ -35586,7 +41056,7 @@ inline void Backup_Game::set_current_farm(uint32_t value) {
 
 // optional .ei.Egg max_egg_reached = 1;
 inline bool Backup_Game::_internal_has_max_egg_reached() const {
-  bool value = (_has_bits_[0] & 0x20000000u) != 0;
+  bool value = (_has_bits_[1] & 0x00000001u) != 0;
   return value;
 }
 inline bool Backup_Game::has_max_egg_reached() const {
@@ -35594,7 +41064,7 @@ inline bool Backup_Game::has_max_egg_reached() const {
 }
 inline void Backup_Game::clear_max_egg_reached() {
   max_egg_reached_ = 1;
-  _has_bits_[0] &= ~0x20000000u;
+  _has_bits_[1] &= ~0x00000001u;
 }
 inline ::ei::Egg Backup_Game::_internal_max_egg_reached() const {
   return static_cast< ::ei::Egg >(max_egg_reached_);
@@ -35605,7 +41075,7 @@ inline ::ei::Egg Backup_Game::max_egg_reached() const {
 }
 inline void Backup_Game::_internal_set_max_egg_reached(::ei::Egg value) {
   assert(::ei::Egg_IsValid(value));
-  _has_bits_[0] |= 0x20000000u;
+  _has_bits_[1] |= 0x00000001u;
   max_egg_reached_ = value;
 }
 inline void Backup_Game::set_max_egg_reached(::ei::Egg value) {
@@ -35863,6 +41333,90 @@ inline void Backup_Game::_internal_set_unclaimed_eggs_of_prophecy(uint64_t value
 inline void Backup_Game::set_unclaimed_eggs_of_prophecy(uint64_t value) {
   _internal_set_unclaimed_eggs_of_prophecy(value);
   // @@protoc_insertion_point(field_set:ei.Backup.Game.unclaimed_eggs_of_prophecy)
+}
+
+// optional uint64 shell_scripts_earned = 38;
+inline bool Backup_Game::_internal_has_shell_scripts_earned() const {
+  bool value = (_has_bits_[0] & 0x20000000u) != 0;
+  return value;
+}
+inline bool Backup_Game::has_shell_scripts_earned() const {
+  return _internal_has_shell_scripts_earned();
+}
+inline void Backup_Game::clear_shell_scripts_earned() {
+  shell_scripts_earned_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x20000000u;
+}
+inline uint64_t Backup_Game::_internal_shell_scripts_earned() const {
+  return shell_scripts_earned_;
+}
+inline uint64_t Backup_Game::shell_scripts_earned() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Game.shell_scripts_earned)
+  return _internal_shell_scripts_earned();
+}
+inline void Backup_Game::_internal_set_shell_scripts_earned(uint64_t value) {
+  _has_bits_[0] |= 0x20000000u;
+  shell_scripts_earned_ = value;
+}
+inline void Backup_Game::set_shell_scripts_earned(uint64_t value) {
+  _internal_set_shell_scripts_earned(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Game.shell_scripts_earned)
+}
+
+// optional uint64 shell_scripts_spent = 39;
+inline bool Backup_Game::_internal_has_shell_scripts_spent() const {
+  bool value = (_has_bits_[0] & 0x40000000u) != 0;
+  return value;
+}
+inline bool Backup_Game::has_shell_scripts_spent() const {
+  return _internal_has_shell_scripts_spent();
+}
+inline void Backup_Game::clear_shell_scripts_spent() {
+  shell_scripts_spent_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x40000000u;
+}
+inline uint64_t Backup_Game::_internal_shell_scripts_spent() const {
+  return shell_scripts_spent_;
+}
+inline uint64_t Backup_Game::shell_scripts_spent() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Game.shell_scripts_spent)
+  return _internal_shell_scripts_spent();
+}
+inline void Backup_Game::_internal_set_shell_scripts_spent(uint64_t value) {
+  _has_bits_[0] |= 0x40000000u;
+  shell_scripts_spent_ = value;
+}
+inline void Backup_Game::set_shell_scripts_spent(uint64_t value) {
+  _internal_set_shell_scripts_spent(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Game.shell_scripts_spent)
+}
+
+// optional uint64 unclaimed_shell_scripts = 40;
+inline bool Backup_Game::_internal_has_unclaimed_shell_scripts() const {
+  bool value = (_has_bits_[0] & 0x80000000u) != 0;
+  return value;
+}
+inline bool Backup_Game::has_unclaimed_shell_scripts() const {
+  return _internal_has_unclaimed_shell_scripts();
+}
+inline void Backup_Game::clear_unclaimed_shell_scripts() {
+  unclaimed_shell_scripts_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x80000000u;
+}
+inline uint64_t Backup_Game::_internal_unclaimed_shell_scripts() const {
+  return unclaimed_shell_scripts_;
+}
+inline uint64_t Backup_Game::unclaimed_shell_scripts() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Game.unclaimed_shell_scripts)
+  return _internal_unclaimed_shell_scripts();
+}
+inline void Backup_Game::_internal_set_unclaimed_shell_scripts(uint64_t value) {
+  _has_bits_[0] |= 0x80000000u;
+  unclaimed_shell_scripts_ = value;
+}
+inline void Backup_Game::set_unclaimed_shell_scripts(uint64_t value) {
+  _internal_set_unclaimed_shell_scripts(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Game.unclaimed_shell_scripts)
 }
 
 // optional double prestige_cash_earned = 5;
@@ -37246,6 +42800,113 @@ inline void Backup_Artifacts::_internal_set_infusing_enabled_deprecated(bool val
 inline void Backup_Artifacts::set_infusing_enabled_deprecated(bool value) {
   _internal_set_infusing_enabled_deprecated(value);
   // @@protoc_insertion_point(field_set:ei.Backup.Artifacts.infusing_enabled_DEPRECATED)
+}
+
+// -------------------------------------------------------------------
+
+// Backup_Shells
+
+// optional bool intro_alert = 1;
+inline bool Backup_Shells::_internal_has_intro_alert() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Backup_Shells::has_intro_alert() const {
+  return _internal_has_intro_alert();
+}
+inline void Backup_Shells::clear_intro_alert() {
+  intro_alert_ = false;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline bool Backup_Shells::_internal_intro_alert() const {
+  return intro_alert_;
+}
+inline bool Backup_Shells::intro_alert() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Shells.intro_alert)
+  return _internal_intro_alert();
+}
+inline void Backup_Shells::_internal_set_intro_alert(bool value) {
+  _has_bits_[0] |= 0x00000001u;
+  intro_alert_ = value;
+}
+inline void Backup_Shells::set_intro_alert(bool value) {
+  _internal_set_intro_alert(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Shells.intro_alert)
+}
+
+// optional bool contracts_intro_alert = 2;
+inline bool Backup_Shells::_internal_has_contracts_intro_alert() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Backup_Shells::has_contracts_intro_alert() const {
+  return _internal_has_contracts_intro_alert();
+}
+inline void Backup_Shells::clear_contracts_intro_alert() {
+  contracts_intro_alert_ = false;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline bool Backup_Shells::_internal_contracts_intro_alert() const {
+  return contracts_intro_alert_;
+}
+inline bool Backup_Shells::contracts_intro_alert() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Shells.contracts_intro_alert)
+  return _internal_contracts_intro_alert();
+}
+inline void Backup_Shells::_internal_set_contracts_intro_alert(bool value) {
+  _has_bits_[0] |= 0x00000002u;
+  contracts_intro_alert_ = value;
+}
+inline void Backup_Shells::set_contracts_intro_alert(bool value) {
+  _internal_set_contracts_intro_alert(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Shells.contracts_intro_alert)
+}
+
+// repeated int32 num_new = 3;
+inline int Backup_Shells::_internal_num_new_size() const {
+  return num_new_.size();
+}
+inline int Backup_Shells::num_new_size() const {
+  return _internal_num_new_size();
+}
+inline void Backup_Shells::clear_num_new() {
+  num_new_.Clear();
+}
+inline int32_t Backup_Shells::_internal_num_new(int index) const {
+  return num_new_.Get(index);
+}
+inline int32_t Backup_Shells::num_new(int index) const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Shells.num_new)
+  return _internal_num_new(index);
+}
+inline void Backup_Shells::set_num_new(int index, int32_t value) {
+  num_new_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Shells.num_new)
+}
+inline void Backup_Shells::_internal_add_num_new(int32_t value) {
+  num_new_.Add(value);
+}
+inline void Backup_Shells::add_num_new(int32_t value) {
+  _internal_add_num_new(value);
+  // @@protoc_insertion_point(field_add:ei.Backup.Shells.num_new)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+Backup_Shells::_internal_num_new() const {
+  return num_new_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+Backup_Shells::num_new() const {
+  // @@protoc_insertion_point(field_list:ei.Backup.Shells.num_new)
+  return _internal_num_new();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+Backup_Shells::_internal_mutable_num_new() {
+  return &num_new_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+Backup_Shells::mutable_num_new() {
+  // @@protoc_insertion_point(field_mutable_list:ei.Backup.Shells.num_new)
+  return _internal_mutable_num_new();
 }
 
 // -------------------------------------------------------------------
@@ -40094,7 +45755,7 @@ inline void Backup::set_allocated_user_name(std::string* user_name) {
 
 // optional double approx_time = 3;
 inline bool Backup::_internal_has_approx_time() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool Backup::has_approx_time() const {
@@ -40102,7 +45763,7 @@ inline bool Backup::has_approx_time() const {
 }
 inline void Backup::clear_approx_time() {
   approx_time_ = 0;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline double Backup::_internal_approx_time() const {
   return approx_time_;
@@ -40112,7 +45773,7 @@ inline double Backup::approx_time() const {
   return _internal_approx_time();
 }
 inline void Backup::_internal_set_approx_time(double value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
   approx_time_ = value;
 }
 inline void Backup::set_approx_time(double value) {
@@ -40122,7 +45783,7 @@ inline void Backup::set_approx_time(double value) {
 
 // optional uint32 version = 21 [default = 0];
 inline bool Backup::_internal_has_version() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool Backup::has_version() const {
@@ -40130,7 +45791,7 @@ inline bool Backup::has_version() const {
 }
 inline void Backup::clear_version() {
   version_ = 0u;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline uint32_t Backup::_internal_version() const {
   return version_;
@@ -40140,7 +45801,7 @@ inline uint32_t Backup::version() const {
   return _internal_version();
 }
 inline void Backup::_internal_set_version(uint32_t value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
   version_ = value;
 }
 inline void Backup::set_version(uint32_t value) {
@@ -40150,7 +45811,7 @@ inline void Backup::set_version(uint32_t value) {
 
 // optional bool force_offer_backup = 20;
 inline bool Backup::_internal_has_force_offer_backup() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup::has_force_offer_backup() const {
@@ -40158,7 +45819,7 @@ inline bool Backup::has_force_offer_backup() const {
 }
 inline void Backup::clear_force_offer_backup() {
   force_offer_backup_ = false;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool Backup::_internal_force_offer_backup() const {
   return force_offer_backup_;
@@ -40168,7 +45829,7 @@ inline bool Backup::force_offer_backup() const {
   return _internal_force_offer_backup();
 }
 inline void Backup::_internal_set_force_offer_backup(bool value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
   force_offer_backup_ = value;
 }
 inline void Backup::set_force_offer_backup(bool value) {
@@ -40178,7 +45839,7 @@ inline void Backup::set_force_offer_backup(bool value) {
 
 // optional bool force_backup = 22;
 inline bool Backup::_internal_has_force_backup() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool Backup::has_force_backup() const {
@@ -40186,7 +45847,7 @@ inline bool Backup::has_force_backup() const {
 }
 inline void Backup::clear_force_backup() {
   force_backup_ = false;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool Backup::_internal_force_backup() const {
   return force_backup_;
@@ -40196,7 +45857,7 @@ inline bool Backup::force_backup() const {
   return _internal_force_backup();
 }
 inline void Backup::_internal_set_force_backup(bool value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
   force_backup_ = value;
 }
 inline void Backup::set_force_backup(bool value) {
@@ -40652,6 +46313,96 @@ inline void Backup::set_allocated_artifacts(::ei::Backup_Artifacts* artifacts) {
   }
   artifacts_ = artifacts;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.artifacts)
+}
+
+// optional .ei.Backup.Shells shells = 25;
+inline bool Backup::_internal_has_shells() const {
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  PROTOBUF_ASSUME(!value || shells_ != nullptr);
+  return value;
+}
+inline bool Backup::has_shells() const {
+  return _internal_has_shells();
+}
+inline void Backup::clear_shells() {
+  if (shells_ != nullptr) shells_->Clear();
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline const ::ei::Backup_Shells& Backup::_internal_shells() const {
+  const ::ei::Backup_Shells* p = shells_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::Backup_Shells&>(
+      ::ei::_Backup_Shells_default_instance_);
+}
+inline const ::ei::Backup_Shells& Backup::shells() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.shells)
+  return _internal_shells();
+}
+inline void Backup::unsafe_arena_set_allocated_shells(
+    ::ei::Backup_Shells* shells) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(shells_);
+  }
+  shells_ = shells;
+  if (shells) {
+    _has_bits_[0] |= 0x00020000u;
+  } else {
+    _has_bits_[0] &= ~0x00020000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.shells)
+}
+inline ::ei::Backup_Shells* Backup::release_shells() {
+  _has_bits_[0] &= ~0x00020000u;
+  ::ei::Backup_Shells* temp = shells_;
+  shells_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::Backup_Shells* Backup::unsafe_arena_release_shells() {
+  // @@protoc_insertion_point(field_release:ei.Backup.shells)
+  _has_bits_[0] &= ~0x00020000u;
+  ::ei::Backup_Shells* temp = shells_;
+  shells_ = nullptr;
+  return temp;
+}
+inline ::ei::Backup_Shells* Backup::_internal_mutable_shells() {
+  _has_bits_[0] |= 0x00020000u;
+  if (shells_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::Backup_Shells>(GetArenaForAllocation());
+    shells_ = p;
+  }
+  return shells_;
+}
+inline ::ei::Backup_Shells* Backup::mutable_shells() {
+  ::ei::Backup_Shells* _msg = _internal_mutable_shells();
+  // @@protoc_insertion_point(field_mutable:ei.Backup.shells)
+  return _msg;
+}
+inline void Backup::set_allocated_shells(::ei::Backup_Shells* shells) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete shells_;
+  }
+  if (shells) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::Backup_Shells>::GetOwningArena(shells);
+    if (message_arena != submessage_arena) {
+      shells = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, shells, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00020000u;
+  } else {
+    _has_bits_[0] &= ~0x00020000u;
+  }
+  shells_ = shells;
+  // @@protoc_insertion_point(field_set_allocated:ei.Backup.shells)
 }
 
 // optional .ei.Backup.Simulation sim = 8;
@@ -41311,7 +47062,7 @@ Backup::mutable_read_mail_ids() {
 
 // optional uint64 checksum = 100;
 inline bool Backup::_internal_has_checksum() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool Backup::has_checksum() const {
@@ -41319,7 +47070,7 @@ inline bool Backup::has_checksum() const {
 }
 inline void Backup::clear_checksum() {
   checksum_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline uint64_t Backup::_internal_checksum() const {
   return checksum_;
@@ -41329,7 +47080,7 @@ inline uint64_t Backup::checksum() const {
   return _internal_checksum();
 }
 inline void Backup::_internal_set_checksum(uint64_t value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
   checksum_ = value;
 }
 inline void Backup::set_checksum(uint64_t value) {
@@ -45585,6 +51336,140 @@ inline void GenericAction::set_allocated_device(::ei::DeviceInfo* device) {
 
 // -------------------------------------------------------------------
 
+// GenericActionBatchRequest
+
+// optional .ei.BasicRequestInfo rinfo = 1;
+inline bool GenericActionBatchRequest::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool GenericActionBatchRequest::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void GenericActionBatchRequest::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::ei::BasicRequestInfo& GenericActionBatchRequest::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& GenericActionBatchRequest::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.GenericActionBatchRequest.rinfo)
+  return _internal_rinfo();
+}
+inline void GenericActionBatchRequest::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.GenericActionBatchRequest.rinfo)
+}
+inline ::ei::BasicRequestInfo* GenericActionBatchRequest::release_rinfo() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* GenericActionBatchRequest::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.GenericActionBatchRequest.rinfo)
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* GenericActionBatchRequest::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000001u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* GenericActionBatchRequest::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.GenericActionBatchRequest.rinfo)
+  return _msg;
+}
+inline void GenericActionBatchRequest::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::BasicRequestInfo>::GetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.GenericActionBatchRequest.rinfo)
+}
+
+// repeated .ei.GenericAction actions = 2;
+inline int GenericActionBatchRequest::_internal_actions_size() const {
+  return actions_.size();
+}
+inline int GenericActionBatchRequest::actions_size() const {
+  return _internal_actions_size();
+}
+inline void GenericActionBatchRequest::clear_actions() {
+  actions_.Clear();
+}
+inline ::ei::GenericAction* GenericActionBatchRequest::mutable_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.GenericActionBatchRequest.actions)
+  return actions_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GenericAction >*
+GenericActionBatchRequest::mutable_actions() {
+  // @@protoc_insertion_point(field_mutable_list:ei.GenericActionBatchRequest.actions)
+  return &actions_;
+}
+inline const ::ei::GenericAction& GenericActionBatchRequest::_internal_actions(int index) const {
+  return actions_.Get(index);
+}
+inline const ::ei::GenericAction& GenericActionBatchRequest::actions(int index) const {
+  // @@protoc_insertion_point(field_get:ei.GenericActionBatchRequest.actions)
+  return _internal_actions(index);
+}
+inline ::ei::GenericAction* GenericActionBatchRequest::_internal_add_actions() {
+  return actions_.Add();
+}
+inline ::ei::GenericAction* GenericActionBatchRequest::add_actions() {
+  ::ei::GenericAction* _add = _internal_add_actions();
+  // @@protoc_insertion_point(field_add:ei.GenericActionBatchRequest.actions)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GenericAction >&
+GenericActionBatchRequest::actions() const {
+  // @@protoc_insertion_point(field_list:ei.GenericActionBatchRequest.actions)
+  return actions_;
+}
+
+// -------------------------------------------------------------------
+
 // VerifyPurchaseRequest
 
 // optional .ei.BasicRequestInfo rinfo = 6;
@@ -45953,6 +51838,34 @@ inline void VerifyPurchaseRequest::set_allocated_platform(std::string* platform)
   // @@protoc_insertion_point(field_set_allocated:ei.VerifyPurchaseRequest.platform)
 }
 
+// optional bool sandbox = 7;
+inline bool VerifyPurchaseRequest::_internal_has_sandbox() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool VerifyPurchaseRequest::has_sandbox() const {
+  return _internal_has_sandbox();
+}
+inline void VerifyPurchaseRequest::clear_sandbox() {
+  sandbox_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool VerifyPurchaseRequest::_internal_sandbox() const {
+  return sandbox_;
+}
+inline bool VerifyPurchaseRequest::sandbox() const {
+  // @@protoc_insertion_point(field_get:ei.VerifyPurchaseRequest.sandbox)
+  return _internal_sandbox();
+}
+inline void VerifyPurchaseRequest::_internal_set_sandbox(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  sandbox_ = value;
+}
+inline void VerifyPurchaseRequest::set_sandbox(bool value) {
+  _internal_set_sandbox(value);
+  // @@protoc_insertion_point(field_set:ei.VerifyPurchaseRequest.sandbox)
+}
+
 // optional .ei.GenericAction log = 5;
 inline bool VerifyPurchaseRequest::_internal_has_log() const {
   bool value = (_has_bits_[0] & 0x00000010u) != 0;
@@ -46142,6 +52055,505 @@ inline void VerifyPurchaseResponse::set_allocated_message(std::string* message) 
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.VerifyPurchaseResponse.message)
+}
+
+// -------------------------------------------------------------------
+
+// CurrencyFlowLog
+
+// optional string user_id = 1;
+inline bool CurrencyFlowLog::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void CurrencyFlowLog::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CurrencyFlowLog::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CurrencyFlowLog::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.user_id)
+}
+inline std::string* CurrencyFlowLog::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.CurrencyFlowLog.user_id)
+  return _s;
+}
+inline const std::string& CurrencyFlowLog::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void CurrencyFlowLog::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.CurrencyFlowLog.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CurrencyFlowLog::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_id,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CurrencyFlowLog.user_id)
+}
+
+// optional double approx_time = 2;
+inline bool CurrencyFlowLog::_internal_has_approx_time() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_approx_time() const {
+  return _internal_has_approx_time();
+}
+inline void CurrencyFlowLog::clear_approx_time() {
+  approx_time_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline double CurrencyFlowLog::_internal_approx_time() const {
+  return approx_time_;
+}
+inline double CurrencyFlowLog::approx_time() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.approx_time)
+  return _internal_approx_time();
+}
+inline void CurrencyFlowLog::_internal_set_approx_time(double value) {
+  _has_bits_[0] |= 0x00000010u;
+  approx_time_ = value;
+}
+inline void CurrencyFlowLog::set_approx_time(double value) {
+  _internal_set_approx_time(value);
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.approx_time)
+}
+
+// optional .ei.RewardType currency = 3;
+inline bool CurrencyFlowLog::_internal_has_currency() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_currency() const {
+  return _internal_has_currency();
+}
+inline void CurrencyFlowLog::clear_currency() {
+  currency_ = 1;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline ::ei::RewardType CurrencyFlowLog::_internal_currency() const {
+  return static_cast< ::ei::RewardType >(currency_);
+}
+inline ::ei::RewardType CurrencyFlowLog::currency() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.currency)
+  return _internal_currency();
+}
+inline void CurrencyFlowLog::_internal_set_currency(::ei::RewardType value) {
+  assert(::ei::RewardType_IsValid(value));
+  _has_bits_[0] |= 0x00000040u;
+  currency_ = value;
+}
+inline void CurrencyFlowLog::set_currency(::ei::RewardType value) {
+  _internal_set_currency(value);
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.currency)
+}
+
+// optional int64 amount = 4;
+inline bool CurrencyFlowLog::_internal_has_amount() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_amount() const {
+  return _internal_has_amount();
+}
+inline void CurrencyFlowLog::clear_amount() {
+  amount_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline int64_t CurrencyFlowLog::_internal_amount() const {
+  return amount_;
+}
+inline int64_t CurrencyFlowLog::amount() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.amount)
+  return _internal_amount();
+}
+inline void CurrencyFlowLog::_internal_set_amount(int64_t value) {
+  _has_bits_[0] |= 0x00000020u;
+  amount_ = value;
+}
+inline void CurrencyFlowLog::set_amount(int64_t value) {
+  _internal_set_amount(value);
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.amount)
+}
+
+// optional string location = 5;
+inline bool CurrencyFlowLog::_internal_has_location() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_location() const {
+  return _internal_has_location();
+}
+inline void CurrencyFlowLog::clear_location() {
+  location_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& CurrencyFlowLog::location() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.location)
+  return _internal_location();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CurrencyFlowLog::set_location(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ location_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.location)
+}
+inline std::string* CurrencyFlowLog::mutable_location() {
+  std::string* _s = _internal_mutable_location();
+  // @@protoc_insertion_point(field_mutable:ei.CurrencyFlowLog.location)
+  return _s;
+}
+inline const std::string& CurrencyFlowLog::_internal_location() const {
+  return location_.Get();
+}
+inline void CurrencyFlowLog::_internal_set_location(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  location_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::_internal_mutable_location() {
+  _has_bits_[0] |= 0x00000002u;
+  return location_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::release_location() {
+  // @@protoc_insertion_point(field_release:ei.CurrencyFlowLog.location)
+  if (!_internal_has_location()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = location_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (location_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    location_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CurrencyFlowLog::set_allocated_location(std::string* location) {
+  if (location != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  location_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), location,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (location_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    location_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CurrencyFlowLog.location)
+}
+
+// optional string version = 6;
+inline bool CurrencyFlowLog::_internal_has_version() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_version() const {
+  return _internal_has_version();
+}
+inline void CurrencyFlowLog::clear_version() {
+  version_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& CurrencyFlowLog::version() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.version)
+  return _internal_version();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CurrencyFlowLog::set_version(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ version_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.version)
+}
+inline std::string* CurrencyFlowLog::mutable_version() {
+  std::string* _s = _internal_mutable_version();
+  // @@protoc_insertion_point(field_mutable:ei.CurrencyFlowLog.version)
+  return _s;
+}
+inline const std::string& CurrencyFlowLog::_internal_version() const {
+  return version_.Get();
+}
+inline void CurrencyFlowLog::_internal_set_version(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  version_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::_internal_mutable_version() {
+  _has_bits_[0] |= 0x00000004u;
+  return version_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::release_version() {
+  // @@protoc_insertion_point(field_release:ei.CurrencyFlowLog.version)
+  if (!_internal_has_version()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = version_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (version_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CurrencyFlowLog::set_allocated_version(std::string* version) {
+  if (version != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (version_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CurrencyFlowLog.version)
+}
+
+// optional string platform = 7;
+inline bool CurrencyFlowLog::_internal_has_platform() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_platform() const {
+  return _internal_has_platform();
+}
+inline void CurrencyFlowLog::clear_platform() {
+  platform_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& CurrencyFlowLog::platform() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.platform)
+  return _internal_platform();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CurrencyFlowLog::set_platform(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ platform_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.platform)
+}
+inline std::string* CurrencyFlowLog::mutable_platform() {
+  std::string* _s = _internal_mutable_platform();
+  // @@protoc_insertion_point(field_mutable:ei.CurrencyFlowLog.platform)
+  return _s;
+}
+inline const std::string& CurrencyFlowLog::_internal_platform() const {
+  return platform_.Get();
+}
+inline void CurrencyFlowLog::_internal_set_platform(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  platform_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::_internal_mutable_platform() {
+  _has_bits_[0] |= 0x00000008u;
+  return platform_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* CurrencyFlowLog::release_platform() {
+  // @@protoc_insertion_point(field_release:ei.CurrencyFlowLog.platform)
+  if (!_internal_has_platform()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  auto* p = platform_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (platform_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    platform_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CurrencyFlowLog::set_allocated_platform(std::string* platform) {
+  if (platform != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  platform_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), platform,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (platform_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    platform_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CurrencyFlowLog.platform)
+}
+
+// -------------------------------------------------------------------
+
+// CurrencyFlowBatchRequest
+
+// optional .ei.BasicRequestInfo rinfo = 2;
+inline bool CurrencyFlowBatchRequest::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool CurrencyFlowBatchRequest::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void CurrencyFlowBatchRequest::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::ei::BasicRequestInfo& CurrencyFlowBatchRequest::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& CurrencyFlowBatchRequest::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowBatchRequest.rinfo)
+  return _internal_rinfo();
+}
+inline void CurrencyFlowBatchRequest::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.CurrencyFlowBatchRequest.rinfo)
+}
+inline ::ei::BasicRequestInfo* CurrencyFlowBatchRequest::release_rinfo() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* CurrencyFlowBatchRequest::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.CurrencyFlowBatchRequest.rinfo)
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* CurrencyFlowBatchRequest::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000001u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* CurrencyFlowBatchRequest::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.CurrencyFlowBatchRequest.rinfo)
+  return _msg;
+}
+inline void CurrencyFlowBatchRequest::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::BasicRequestInfo>::GetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.CurrencyFlowBatchRequest.rinfo)
+}
+
+// repeated .ei.CurrencyFlowLog logs = 1;
+inline int CurrencyFlowBatchRequest::_internal_logs_size() const {
+  return logs_.size();
+}
+inline int CurrencyFlowBatchRequest::logs_size() const {
+  return _internal_logs_size();
+}
+inline void CurrencyFlowBatchRequest::clear_logs() {
+  logs_.Clear();
+}
+inline ::ei::CurrencyFlowLog* CurrencyFlowBatchRequest::mutable_logs(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.CurrencyFlowBatchRequest.logs)
+  return logs_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CurrencyFlowLog >*
+CurrencyFlowBatchRequest::mutable_logs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.CurrencyFlowBatchRequest.logs)
+  return &logs_;
+}
+inline const ::ei::CurrencyFlowLog& CurrencyFlowBatchRequest::_internal_logs(int index) const {
+  return logs_.Get(index);
+}
+inline const ::ei::CurrencyFlowLog& CurrencyFlowBatchRequest::logs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowBatchRequest.logs)
+  return _internal_logs(index);
+}
+inline ::ei::CurrencyFlowLog* CurrencyFlowBatchRequest::_internal_add_logs() {
+  return logs_.Add();
+}
+inline ::ei::CurrencyFlowLog* CurrencyFlowBatchRequest::add_logs() {
+  ::ei::CurrencyFlowLog* _add = _internal_add_logs();
+  // @@protoc_insertion_point(field_add:ei.CurrencyFlowBatchRequest.logs)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CurrencyFlowLog >&
+CurrencyFlowBatchRequest::logs() const {
+  // @@protoc_insertion_point(field_list:ei.CurrencyFlowBatchRequest.logs)
+  return logs_;
 }
 
 // -------------------------------------------------------------------
@@ -46965,6 +53377,34 @@ inline void Contract::set_minutes_per_token(double value) {
   // @@protoc_insertion_point(field_set:ei.Contract.minutes_per_token)
 }
 
+// optional double chicken_run_cooldown_minutes = 18 [default = 60];
+inline bool Contract::_internal_has_chicken_run_cooldown_minutes() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool Contract::has_chicken_run_cooldown_minutes() const {
+  return _internal_has_chicken_run_cooldown_minutes();
+}
+inline void Contract::clear_chicken_run_cooldown_minutes() {
+  chicken_run_cooldown_minutes_ = 60;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline double Contract::_internal_chicken_run_cooldown_minutes() const {
+  return chicken_run_cooldown_minutes_;
+}
+inline double Contract::chicken_run_cooldown_minutes() const {
+  // @@protoc_insertion_point(field_get:ei.Contract.chicken_run_cooldown_minutes)
+  return _internal_chicken_run_cooldown_minutes();
+}
+inline void Contract::_internal_set_chicken_run_cooldown_minutes(double value) {
+  _has_bits_[0] |= 0x00004000u;
+  chicken_run_cooldown_minutes_ = value;
+}
+inline void Contract::set_chicken_run_cooldown_minutes(double value) {
+  _internal_set_chicken_run_cooldown_minutes(value);
+  // @@protoc_insertion_point(field_set:ei.Contract.chicken_run_cooldown_minutes)
+}
+
 // optional double start_time = 17;
 inline bool Contract::_internal_has_start_time() const {
   bool value = (_has_bits_[0] & 0x00000800u) != 0;
@@ -47577,6 +54017,34 @@ inline void BasicRequestInfo::set_allocated_language(std::string* language) {
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.BasicRequestInfo.language)
+}
+
+// optional bool debug = 8;
+inline bool BasicRequestInfo::_internal_has_debug() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool BasicRequestInfo::has_debug() const {
+  return _internal_has_debug();
+}
+inline void BasicRequestInfo::clear_debug() {
+  debug_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool BasicRequestInfo::_internal_debug() const {
+  return debug_;
+}
+inline bool BasicRequestInfo::debug() const {
+  // @@protoc_insertion_point(field_get:ei.BasicRequestInfo.debug)
+  return _internal_debug();
+}
+inline void BasicRequestInfo::_internal_set_debug(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  debug_ = value;
+}
+inline void BasicRequestInfo::set_debug(bool value) {
+  _internal_set_debug(value);
+  // @@protoc_insertion_point(field_set:ei.BasicRequestInfo.debug)
 }
 
 // -------------------------------------------------------------------
@@ -48311,6 +54779,823 @@ inline void FarmProductionParams::set_delivered(double value) {
 
 // -------------------------------------------------------------------
 
+// PlayerFarmInfo
+
+// optional uint32 client_version = 20;
+inline bool PlayerFarmInfo::_internal_has_client_version() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_client_version() const {
+  return _internal_has_client_version();
+}
+inline void PlayerFarmInfo::clear_client_version() {
+  client_version_ = 0u;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline uint32_t PlayerFarmInfo::_internal_client_version() const {
+  return client_version_;
+}
+inline uint32_t PlayerFarmInfo::client_version() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.client_version)
+  return _internal_client_version();
+}
+inline void PlayerFarmInfo::_internal_set_client_version(uint32_t value) {
+  _has_bits_[0] |= 0x00000200u;
+  client_version_ = value;
+}
+inline void PlayerFarmInfo::set_client_version(uint32_t value) {
+  _internal_set_client_version(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.client_version)
+}
+
+// optional double soul_eggs = 1;
+inline bool PlayerFarmInfo::_internal_has_soul_eggs() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_soul_eggs() const {
+  return _internal_has_soul_eggs();
+}
+inline void PlayerFarmInfo::clear_soul_eggs() {
+  soul_eggs_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double PlayerFarmInfo::_internal_soul_eggs() const {
+  return soul_eggs_;
+}
+inline double PlayerFarmInfo::soul_eggs() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.soul_eggs)
+  return _internal_soul_eggs();
+}
+inline void PlayerFarmInfo::_internal_set_soul_eggs(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  soul_eggs_ = value;
+}
+inline void PlayerFarmInfo::set_soul_eggs(double value) {
+  _internal_set_soul_eggs(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.soul_eggs)
+}
+
+// optional uint64 eggs_of_prophecy = 2;
+inline bool PlayerFarmInfo::_internal_has_eggs_of_prophecy() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_eggs_of_prophecy() const {
+  return _internal_has_eggs_of_prophecy();
+}
+inline void PlayerFarmInfo::clear_eggs_of_prophecy() {
+  eggs_of_prophecy_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint64_t PlayerFarmInfo::_internal_eggs_of_prophecy() const {
+  return eggs_of_prophecy_;
+}
+inline uint64_t PlayerFarmInfo::eggs_of_prophecy() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.eggs_of_prophecy)
+  return _internal_eggs_of_prophecy();
+}
+inline void PlayerFarmInfo::_internal_set_eggs_of_prophecy(uint64_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  eggs_of_prophecy_ = value;
+}
+inline void PlayerFarmInfo::set_eggs_of_prophecy(uint64_t value) {
+  _internal_set_eggs_of_prophecy(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.eggs_of_prophecy)
+}
+
+// optional uint32 permit_level = 3;
+inline bool PlayerFarmInfo::_internal_has_permit_level() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_permit_level() const {
+  return _internal_has_permit_level();
+}
+inline void PlayerFarmInfo::clear_permit_level() {
+  permit_level_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t PlayerFarmInfo::_internal_permit_level() const {
+  return permit_level_;
+}
+inline uint32_t PlayerFarmInfo::permit_level() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.permit_level)
+  return _internal_permit_level();
+}
+inline void PlayerFarmInfo::_internal_set_permit_level(uint32_t value) {
+  _has_bits_[0] |= 0x00000008u;
+  permit_level_ = value;
+}
+inline void PlayerFarmInfo::set_permit_level(uint32_t value) {
+  _internal_set_permit_level(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.permit_level)
+}
+
+// optional bool hyperloop_station = 4;
+inline bool PlayerFarmInfo::_internal_has_hyperloop_station() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_hyperloop_station() const {
+  return _internal_has_hyperloop_station();
+}
+inline void PlayerFarmInfo::clear_hyperloop_station() {
+  hyperloop_station_ = false;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline bool PlayerFarmInfo::_internal_hyperloop_station() const {
+  return hyperloop_station_;
+}
+inline bool PlayerFarmInfo::hyperloop_station() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.hyperloop_station)
+  return _internal_hyperloop_station();
+}
+inline void PlayerFarmInfo::_internal_set_hyperloop_station(bool value) {
+  _has_bits_[0] |= 0x00000010u;
+  hyperloop_station_ = value;
+}
+inline void PlayerFarmInfo::set_hyperloop_station(bool value) {
+  _internal_set_hyperloop_station(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.hyperloop_station)
+}
+
+// repeated uint32 egg_medal_level = 5;
+inline int PlayerFarmInfo::_internal_egg_medal_level_size() const {
+  return egg_medal_level_.size();
+}
+inline int PlayerFarmInfo::egg_medal_level_size() const {
+  return _internal_egg_medal_level_size();
+}
+inline void PlayerFarmInfo::clear_egg_medal_level() {
+  egg_medal_level_.Clear();
+}
+inline uint32_t PlayerFarmInfo::_internal_egg_medal_level(int index) const {
+  return egg_medal_level_.Get(index);
+}
+inline uint32_t PlayerFarmInfo::egg_medal_level(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.egg_medal_level)
+  return _internal_egg_medal_level(index);
+}
+inline void PlayerFarmInfo::set_egg_medal_level(int index, uint32_t value) {
+  egg_medal_level_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.egg_medal_level)
+}
+inline void PlayerFarmInfo::_internal_add_egg_medal_level(uint32_t value) {
+  egg_medal_level_.Add(value);
+}
+inline void PlayerFarmInfo::add_egg_medal_level(uint32_t value) {
+  _internal_add_egg_medal_level(value);
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.egg_medal_level)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::_internal_egg_medal_level() const {
+  return egg_medal_level_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::egg_medal_level() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.egg_medal_level)
+  return _internal_egg_medal_level();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::_internal_mutable_egg_medal_level() {
+  return &egg_medal_level_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::mutable_egg_medal_level() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.egg_medal_level)
+  return _internal_mutable_egg_medal_level();
+}
+
+// repeated .ei.Backup.ResearchItem epic_research = 6;
+inline int PlayerFarmInfo::_internal_epic_research_size() const {
+  return epic_research_.size();
+}
+inline int PlayerFarmInfo::epic_research_size() const {
+  return _internal_epic_research_size();
+}
+inline void PlayerFarmInfo::clear_epic_research() {
+  epic_research_.Clear();
+}
+inline ::ei::Backup_ResearchItem* PlayerFarmInfo::mutable_epic_research(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.PlayerFarmInfo.epic_research)
+  return epic_research_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >*
+PlayerFarmInfo::mutable_epic_research() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.epic_research)
+  return &epic_research_;
+}
+inline const ::ei::Backup_ResearchItem& PlayerFarmInfo::_internal_epic_research(int index) const {
+  return epic_research_.Get(index);
+}
+inline const ::ei::Backup_ResearchItem& PlayerFarmInfo::epic_research(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.epic_research)
+  return _internal_epic_research(index);
+}
+inline ::ei::Backup_ResearchItem* PlayerFarmInfo::_internal_add_epic_research() {
+  return epic_research_.Add();
+}
+inline ::ei::Backup_ResearchItem* PlayerFarmInfo::add_epic_research() {
+  ::ei::Backup_ResearchItem* _add = _internal_add_epic_research();
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.epic_research)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >&
+PlayerFarmInfo::epic_research() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.epic_research)
+  return epic_research_;
+}
+
+// optional .ei.Egg egg_type = 7;
+inline bool PlayerFarmInfo::_internal_has_egg_type() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_egg_type() const {
+  return _internal_has_egg_type();
+}
+inline void PlayerFarmInfo::clear_egg_type() {
+  egg_type_ = 1;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline ::ei::Egg PlayerFarmInfo::_internal_egg_type() const {
+  return static_cast< ::ei::Egg >(egg_type_);
+}
+inline ::ei::Egg PlayerFarmInfo::egg_type() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.egg_type)
+  return _internal_egg_type();
+}
+inline void PlayerFarmInfo::_internal_set_egg_type(::ei::Egg value) {
+  assert(::ei::Egg_IsValid(value));
+  _has_bits_[0] |= 0x00000400u;
+  egg_type_ = value;
+}
+inline void PlayerFarmInfo::set_egg_type(::ei::Egg value) {
+  _internal_set_egg_type(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.egg_type)
+}
+
+// optional double cash_on_hand = 8;
+inline bool PlayerFarmInfo::_internal_has_cash_on_hand() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_cash_on_hand() const {
+  return _internal_has_cash_on_hand();
+}
+inline void PlayerFarmInfo::clear_cash_on_hand() {
+  cash_on_hand_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double PlayerFarmInfo::_internal_cash_on_hand() const {
+  return cash_on_hand_;
+}
+inline double PlayerFarmInfo::cash_on_hand() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.cash_on_hand)
+  return _internal_cash_on_hand();
+}
+inline void PlayerFarmInfo::_internal_set_cash_on_hand(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  cash_on_hand_ = value;
+}
+inline void PlayerFarmInfo::set_cash_on_hand(double value) {
+  _internal_set_cash_on_hand(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.cash_on_hand)
+}
+
+// repeated uint32 habs = 9;
+inline int PlayerFarmInfo::_internal_habs_size() const {
+  return habs_.size();
+}
+inline int PlayerFarmInfo::habs_size() const {
+  return _internal_habs_size();
+}
+inline void PlayerFarmInfo::clear_habs() {
+  habs_.Clear();
+}
+inline uint32_t PlayerFarmInfo::_internal_habs(int index) const {
+  return habs_.Get(index);
+}
+inline uint32_t PlayerFarmInfo::habs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.habs)
+  return _internal_habs(index);
+}
+inline void PlayerFarmInfo::set_habs(int index, uint32_t value) {
+  habs_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.habs)
+}
+inline void PlayerFarmInfo::_internal_add_habs(uint32_t value) {
+  habs_.Add(value);
+}
+inline void PlayerFarmInfo::add_habs(uint32_t value) {
+  _internal_add_habs(value);
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.habs)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::_internal_habs() const {
+  return habs_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::habs() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.habs)
+  return _internal_habs();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::_internal_mutable_habs() {
+  return &habs_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::mutable_habs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.habs)
+  return _internal_mutable_habs();
+}
+
+// repeated uint64 hab_population = 10;
+inline int PlayerFarmInfo::_internal_hab_population_size() const {
+  return hab_population_.size();
+}
+inline int PlayerFarmInfo::hab_population_size() const {
+  return _internal_hab_population_size();
+}
+inline void PlayerFarmInfo::clear_hab_population() {
+  hab_population_.Clear();
+}
+inline uint64_t PlayerFarmInfo::_internal_hab_population(int index) const {
+  return hab_population_.Get(index);
+}
+inline uint64_t PlayerFarmInfo::hab_population(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.hab_population)
+  return _internal_hab_population(index);
+}
+inline void PlayerFarmInfo::set_hab_population(int index, uint64_t value) {
+  hab_population_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.hab_population)
+}
+inline void PlayerFarmInfo::_internal_add_hab_population(uint64_t value) {
+  hab_population_.Add(value);
+}
+inline void PlayerFarmInfo::add_hab_population(uint64_t value) {
+  _internal_add_hab_population(value);
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.hab_population)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+PlayerFarmInfo::_internal_hab_population() const {
+  return hab_population_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+PlayerFarmInfo::hab_population() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.hab_population)
+  return _internal_hab_population();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+PlayerFarmInfo::_internal_mutable_hab_population() {
+  return &hab_population_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+PlayerFarmInfo::mutable_hab_population() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.hab_population)
+  return _internal_mutable_hab_population();
+}
+
+// repeated uint64 hab_capacity = 21;
+inline int PlayerFarmInfo::_internal_hab_capacity_size() const {
+  return hab_capacity_.size();
+}
+inline int PlayerFarmInfo::hab_capacity_size() const {
+  return _internal_hab_capacity_size();
+}
+inline void PlayerFarmInfo::clear_hab_capacity() {
+  hab_capacity_.Clear();
+}
+inline uint64_t PlayerFarmInfo::_internal_hab_capacity(int index) const {
+  return hab_capacity_.Get(index);
+}
+inline uint64_t PlayerFarmInfo::hab_capacity(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.hab_capacity)
+  return _internal_hab_capacity(index);
+}
+inline void PlayerFarmInfo::set_hab_capacity(int index, uint64_t value) {
+  hab_capacity_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.hab_capacity)
+}
+inline void PlayerFarmInfo::_internal_add_hab_capacity(uint64_t value) {
+  hab_capacity_.Add(value);
+}
+inline void PlayerFarmInfo::add_hab_capacity(uint64_t value) {
+  _internal_add_hab_capacity(value);
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.hab_capacity)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+PlayerFarmInfo::_internal_hab_capacity() const {
+  return hab_capacity_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+PlayerFarmInfo::hab_capacity() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.hab_capacity)
+  return _internal_hab_capacity();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+PlayerFarmInfo::_internal_mutable_hab_capacity() {
+  return &hab_capacity_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+PlayerFarmInfo::mutable_hab_capacity() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.hab_capacity)
+  return _internal_mutable_hab_capacity();
+}
+
+// repeated uint32 vehicles = 11;
+inline int PlayerFarmInfo::_internal_vehicles_size() const {
+  return vehicles_.size();
+}
+inline int PlayerFarmInfo::vehicles_size() const {
+  return _internal_vehicles_size();
+}
+inline void PlayerFarmInfo::clear_vehicles() {
+  vehicles_.Clear();
+}
+inline uint32_t PlayerFarmInfo::_internal_vehicles(int index) const {
+  return vehicles_.Get(index);
+}
+inline uint32_t PlayerFarmInfo::vehicles(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.vehicles)
+  return _internal_vehicles(index);
+}
+inline void PlayerFarmInfo::set_vehicles(int index, uint32_t value) {
+  vehicles_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.vehicles)
+}
+inline void PlayerFarmInfo::_internal_add_vehicles(uint32_t value) {
+  vehicles_.Add(value);
+}
+inline void PlayerFarmInfo::add_vehicles(uint32_t value) {
+  _internal_add_vehicles(value);
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.vehicles)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::_internal_vehicles() const {
+  return vehicles_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::vehicles() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.vehicles)
+  return _internal_vehicles();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::_internal_mutable_vehicles() {
+  return &vehicles_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::mutable_vehicles() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.vehicles)
+  return _internal_mutable_vehicles();
+}
+
+// repeated uint32 train_length = 12;
+inline int PlayerFarmInfo::_internal_train_length_size() const {
+  return train_length_.size();
+}
+inline int PlayerFarmInfo::train_length_size() const {
+  return _internal_train_length_size();
+}
+inline void PlayerFarmInfo::clear_train_length() {
+  train_length_.Clear();
+}
+inline uint32_t PlayerFarmInfo::_internal_train_length(int index) const {
+  return train_length_.Get(index);
+}
+inline uint32_t PlayerFarmInfo::train_length(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.train_length)
+  return _internal_train_length(index);
+}
+inline void PlayerFarmInfo::set_train_length(int index, uint32_t value) {
+  train_length_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.train_length)
+}
+inline void PlayerFarmInfo::_internal_add_train_length(uint32_t value) {
+  train_length_.Add(value);
+}
+inline void PlayerFarmInfo::add_train_length(uint32_t value) {
+  _internal_add_train_length(value);
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.train_length)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::_internal_train_length() const {
+  return train_length_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PlayerFarmInfo::train_length() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.train_length)
+  return _internal_train_length();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::_internal_mutable_train_length() {
+  return &train_length_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
+PlayerFarmInfo::mutable_train_length() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.train_length)
+  return _internal_mutable_train_length();
+}
+
+// optional uint32 silos_owned = 13;
+inline bool PlayerFarmInfo::_internal_has_silos_owned() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_silos_owned() const {
+  return _internal_has_silos_owned();
+}
+inline void PlayerFarmInfo::clear_silos_owned() {
+  silos_owned_ = 0u;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline uint32_t PlayerFarmInfo::_internal_silos_owned() const {
+  return silos_owned_;
+}
+inline uint32_t PlayerFarmInfo::silos_owned() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.silos_owned)
+  return _internal_silos_owned();
+}
+inline void PlayerFarmInfo::_internal_set_silos_owned(uint32_t value) {
+  _has_bits_[0] |= 0x00000040u;
+  silos_owned_ = value;
+}
+inline void PlayerFarmInfo::set_silos_owned(uint32_t value) {
+  _internal_set_silos_owned(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.silos_owned)
+}
+
+// repeated .ei.Backup.ResearchItem common_research = 14;
+inline int PlayerFarmInfo::_internal_common_research_size() const {
+  return common_research_.size();
+}
+inline int PlayerFarmInfo::common_research_size() const {
+  return _internal_common_research_size();
+}
+inline void PlayerFarmInfo::clear_common_research() {
+  common_research_.Clear();
+}
+inline ::ei::Backup_ResearchItem* PlayerFarmInfo::mutable_common_research(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.PlayerFarmInfo.common_research)
+  return common_research_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >*
+PlayerFarmInfo::mutable_common_research() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.common_research)
+  return &common_research_;
+}
+inline const ::ei::Backup_ResearchItem& PlayerFarmInfo::_internal_common_research(int index) const {
+  return common_research_.Get(index);
+}
+inline const ::ei::Backup_ResearchItem& PlayerFarmInfo::common_research(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.common_research)
+  return _internal_common_research(index);
+}
+inline ::ei::Backup_ResearchItem* PlayerFarmInfo::_internal_add_common_research() {
+  return common_research_.Add();
+}
+inline ::ei::Backup_ResearchItem* PlayerFarmInfo::add_common_research() {
+  ::ei::Backup_ResearchItem* _add = _internal_add_common_research();
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.common_research)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ResearchItem >&
+PlayerFarmInfo::common_research() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.common_research)
+  return common_research_;
+}
+
+// repeated .ei.Backup.ActiveBoost active_boosts = 15;
+inline int PlayerFarmInfo::_internal_active_boosts_size() const {
+  return active_boosts_.size();
+}
+inline int PlayerFarmInfo::active_boosts_size() const {
+  return _internal_active_boosts_size();
+}
+inline void PlayerFarmInfo::clear_active_boosts() {
+  active_boosts_.Clear();
+}
+inline ::ei::Backup_ActiveBoost* PlayerFarmInfo::mutable_active_boosts(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.PlayerFarmInfo.active_boosts)
+  return active_boosts_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ActiveBoost >*
+PlayerFarmInfo::mutable_active_boosts() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.active_boosts)
+  return &active_boosts_;
+}
+inline const ::ei::Backup_ActiveBoost& PlayerFarmInfo::_internal_active_boosts(int index) const {
+  return active_boosts_.Get(index);
+}
+inline const ::ei::Backup_ActiveBoost& PlayerFarmInfo::active_boosts(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.active_boosts)
+  return _internal_active_boosts(index);
+}
+inline ::ei::Backup_ActiveBoost* PlayerFarmInfo::_internal_add_active_boosts() {
+  return active_boosts_.Add();
+}
+inline ::ei::Backup_ActiveBoost* PlayerFarmInfo::add_active_boosts() {
+  ::ei::Backup_ActiveBoost* _add = _internal_add_active_boosts();
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.active_boosts)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Backup_ActiveBoost >&
+PlayerFarmInfo::active_boosts() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.active_boosts)
+  return active_boosts_;
+}
+
+// optional uint32 boost_tokens_on_hand = 16;
+inline bool PlayerFarmInfo::_internal_has_boost_tokens_on_hand() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_boost_tokens_on_hand() const {
+  return _internal_has_boost_tokens_on_hand();
+}
+inline void PlayerFarmInfo::clear_boost_tokens_on_hand() {
+  boost_tokens_on_hand_ = 0u;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline uint32_t PlayerFarmInfo::_internal_boost_tokens_on_hand() const {
+  return boost_tokens_on_hand_;
+}
+inline uint32_t PlayerFarmInfo::boost_tokens_on_hand() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.boost_tokens_on_hand)
+  return _internal_boost_tokens_on_hand();
+}
+inline void PlayerFarmInfo::_internal_set_boost_tokens_on_hand(uint32_t value) {
+  _has_bits_[0] |= 0x00000080u;
+  boost_tokens_on_hand_ = value;
+}
+inline void PlayerFarmInfo::set_boost_tokens_on_hand(uint32_t value) {
+  _internal_set_boost_tokens_on_hand(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.boost_tokens_on_hand)
+}
+
+// repeated .ei.CompleteArtifact equipped_artifacts = 17;
+inline int PlayerFarmInfo::_internal_equipped_artifacts_size() const {
+  return equipped_artifacts_.size();
+}
+inline int PlayerFarmInfo::equipped_artifacts_size() const {
+  return _internal_equipped_artifacts_size();
+}
+inline void PlayerFarmInfo::clear_equipped_artifacts() {
+  equipped_artifacts_.Clear();
+}
+inline ::ei::CompleteArtifact* PlayerFarmInfo::mutable_equipped_artifacts(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.PlayerFarmInfo.equipped_artifacts)
+  return equipped_artifacts_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteArtifact >*
+PlayerFarmInfo::mutable_equipped_artifacts() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PlayerFarmInfo.equipped_artifacts)
+  return &equipped_artifacts_;
+}
+inline const ::ei::CompleteArtifact& PlayerFarmInfo::_internal_equipped_artifacts(int index) const {
+  return equipped_artifacts_.Get(index);
+}
+inline const ::ei::CompleteArtifact& PlayerFarmInfo::equipped_artifacts(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.equipped_artifacts)
+  return _internal_equipped_artifacts(index);
+}
+inline ::ei::CompleteArtifact* PlayerFarmInfo::_internal_add_equipped_artifacts() {
+  return equipped_artifacts_.Add();
+}
+inline ::ei::CompleteArtifact* PlayerFarmInfo::add_equipped_artifacts() {
+  ::ei::CompleteArtifact* _add = _internal_add_equipped_artifacts();
+  // @@protoc_insertion_point(field_add:ei.PlayerFarmInfo.equipped_artifacts)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteArtifact >&
+PlayerFarmInfo::equipped_artifacts() const {
+  // @@protoc_insertion_point(field_list:ei.PlayerFarmInfo.equipped_artifacts)
+  return equipped_artifacts_;
+}
+
+// optional uint64 artifact_inventory_score = 18;
+inline bool PlayerFarmInfo::_internal_has_artifact_inventory_score() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_artifact_inventory_score() const {
+  return _internal_has_artifact_inventory_score();
+}
+inline void PlayerFarmInfo::clear_artifact_inventory_score() {
+  artifact_inventory_score_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline uint64_t PlayerFarmInfo::_internal_artifact_inventory_score() const {
+  return artifact_inventory_score_;
+}
+inline uint64_t PlayerFarmInfo::artifact_inventory_score() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.artifact_inventory_score)
+  return _internal_artifact_inventory_score();
+}
+inline void PlayerFarmInfo::_internal_set_artifact_inventory_score(uint64_t value) {
+  _has_bits_[0] |= 0x00000100u;
+  artifact_inventory_score_ = value;
+}
+inline void PlayerFarmInfo::set_artifact_inventory_score(uint64_t value) {
+  _internal_set_artifact_inventory_score(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.artifact_inventory_score)
+}
+
+// optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;
+inline bool PlayerFarmInfo::_internal_has_farm_appearance() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || farm_appearance_ != nullptr);
+  return value;
+}
+inline bool PlayerFarmInfo::has_farm_appearance() const {
+  return _internal_has_farm_appearance();
+}
+inline void PlayerFarmInfo::clear_farm_appearance() {
+  if (farm_appearance_ != nullptr) farm_appearance_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::ei::ShellDB_FarmConfiguration& PlayerFarmInfo::_internal_farm_appearance() const {
+  const ::ei::ShellDB_FarmConfiguration* p = farm_appearance_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::ShellDB_FarmConfiguration&>(
+      ::ei::_ShellDB_FarmConfiguration_default_instance_);
+}
+inline const ::ei::ShellDB_FarmConfiguration& PlayerFarmInfo::farm_appearance() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.farm_appearance)
+  return _internal_farm_appearance();
+}
+inline void PlayerFarmInfo::unsafe_arena_set_allocated_farm_appearance(
+    ::ei::ShellDB_FarmConfiguration* farm_appearance) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(farm_appearance_);
+  }
+  farm_appearance_ = farm_appearance;
+  if (farm_appearance) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.PlayerFarmInfo.farm_appearance)
+}
+inline ::ei::ShellDB_FarmConfiguration* PlayerFarmInfo::release_farm_appearance() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::ShellDB_FarmConfiguration* temp = farm_appearance_;
+  farm_appearance_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::ShellDB_FarmConfiguration* PlayerFarmInfo::unsafe_arena_release_farm_appearance() {
+  // @@protoc_insertion_point(field_release:ei.PlayerFarmInfo.farm_appearance)
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::ShellDB_FarmConfiguration* temp = farm_appearance_;
+  farm_appearance_ = nullptr;
+  return temp;
+}
+inline ::ei::ShellDB_FarmConfiguration* PlayerFarmInfo::_internal_mutable_farm_appearance() {
+  _has_bits_[0] |= 0x00000001u;
+  if (farm_appearance_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::ShellDB_FarmConfiguration>(GetArenaForAllocation());
+    farm_appearance_ = p;
+  }
+  return farm_appearance_;
+}
+inline ::ei::ShellDB_FarmConfiguration* PlayerFarmInfo::mutable_farm_appearance() {
+  ::ei::ShellDB_FarmConfiguration* _msg = _internal_mutable_farm_appearance();
+  // @@protoc_insertion_point(field_mutable:ei.PlayerFarmInfo.farm_appearance)
+  return _msg;
+}
+inline void PlayerFarmInfo::set_allocated_farm_appearance(::ei::ShellDB_FarmConfiguration* farm_appearance) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete farm_appearance_;
+  }
+  if (farm_appearance) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::ShellDB_FarmConfiguration>::GetOwningArena(farm_appearance);
+    if (message_arena != submessage_arena) {
+      farm_appearance = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, farm_appearance, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  farm_appearance_ = farm_appearance;
+  // @@protoc_insertion_point(field_set_allocated:ei.PlayerFarmInfo.farm_appearance)
+}
+
+// -------------------------------------------------------------------
+
 // ContractCoopStatusResponse_ContributionInfo
 
 // optional string user_id = 1;
@@ -48451,9 +55736,78 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_user_name
   // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.user_name)
 }
 
+// optional string contract_identifier = 19;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_contract_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_contract_identifier() const {
+  return _internal_has_contract_identifier();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_contract_identifier() {
+  contract_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& ContractCoopStatusResponse_ContributionInfo::contract_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.contract_identifier)
+  return _internal_contract_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractCoopStatusResponse_ContributionInfo::set_contract_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ contract_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.contract_identifier)
+}
+inline std::string* ContractCoopStatusResponse_ContributionInfo::mutable_contract_identifier() {
+  std::string* _s = _internal_mutable_contract_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.ContributionInfo.contract_identifier)
+  return _s;
+}
+inline const std::string& ContractCoopStatusResponse_ContributionInfo::_internal_contract_identifier() const {
+  return contract_identifier_.Get();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_contract_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  contract_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ContributionInfo::_internal_mutable_contract_identifier() {
+  _has_bits_[0] |= 0x00000008u;
+  return contract_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ContributionInfo::release_contract_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ContributionInfo.contract_identifier)
+  if (!_internal_has_contract_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  auto* p = contract_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    contract_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_contract_identifier(std::string* contract_identifier) {
+  if (contract_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  contract_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), contract_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    contract_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.contract_identifier)
+}
+
 // optional double contribution_amount = 3;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_contribution_amount() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_amount() const {
@@ -48461,7 +55815,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_amount
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_contribution_amount() {
   contribution_amount_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_contribution_amount() const {
   return contribution_amount_;
@@ -48471,7 +55825,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::contribution_amount()
   return _internal_contribution_amount();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_contribution_amount(double value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000040u;
   contribution_amount_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_amount(double value) {
@@ -48481,7 +55835,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_amount
 
 // optional double contribution_rate = 6;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_contribution_rate() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_rate() const {
@@ -48489,7 +55843,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_rate()
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_contribution_rate() {
   contribution_rate_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_contribution_rate() const {
   return contribution_rate_;
@@ -48499,7 +55853,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::contribution_rate() c
   return _internal_contribution_rate();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_contribution_rate(double value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000080u;
   contribution_rate_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_rate(double value) {
@@ -48509,7 +55863,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_rate(d
 
 // optional double soul_power = 11;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_soul_power() const {
@@ -48517,7 +55871,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_soul_power() const 
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_soul_power() {
   soul_power_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_soul_power() const {
   return soul_power_;
@@ -48527,7 +55881,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::soul_power() const {
   return _internal_soul_power();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_soul_power(double value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000400u;
   soul_power_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_soul_power(double value) {
@@ -48537,7 +55891,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_soul_power(double v
 
 // optional .ei.FarmProductionParams production_params = 15;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_production_params() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   PROTOBUF_ASSUME(!value || production_params_ != nullptr);
   return value;
 }
@@ -48546,7 +55900,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_production_params()
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_production_params() {
   if (production_params_ != nullptr) production_params_->Clear();
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline const ::ei::FarmProductionParams& ContractCoopStatusResponse_ContributionInfo::_internal_production_params() const {
   const ::ei::FarmProductionParams* p = production_params_;
@@ -48564,14 +55918,14 @@ inline void ContractCoopStatusResponse_ContributionInfo::unsafe_arena_set_alloca
   }
   production_params_ = production_params;
   if (production_params) {
-    _has_bits_[0] |= 0x00000008u;
+    _has_bits_[0] |= 0x00000010u;
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    _has_bits_[0] &= ~0x00000010u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.production_params)
 }
 inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::release_production_params() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
   ::ei::FarmProductionParams* temp = production_params_;
   production_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -48587,13 +55941,13 @@ inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::
 }
 inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::unsafe_arena_release_production_params() {
   // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ContributionInfo.production_params)
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
   ::ei::FarmProductionParams* temp = production_params_;
   production_params_ = nullptr;
   return temp;
 }
 inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::_internal_mutable_production_params() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
   if (production_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::FarmProductionParams>(GetArenaForAllocation());
     production_params_ = p;
@@ -48617,17 +55971,107 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_productio
       production_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, production_params, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000008u;
+    _has_bits_[0] |= 0x00000010u;
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    _has_bits_[0] &= ~0x00000010u;
   }
   production_params_ = production_params;
   // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.production_params)
 }
 
+// optional .ei.PlayerFarmInfo farm_info = 18;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_farm_info() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!value || farm_info_ != nullptr);
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_farm_info() const {
+  return _internal_has_farm_info();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_farm_info() {
+  if (farm_info_ != nullptr) farm_info_->Clear();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const ::ei::PlayerFarmInfo& ContractCoopStatusResponse_ContributionInfo::_internal_farm_info() const {
+  const ::ei::PlayerFarmInfo* p = farm_info_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::PlayerFarmInfo&>(
+      ::ei::_PlayerFarmInfo_default_instance_);
+}
+inline const ::ei::PlayerFarmInfo& ContractCoopStatusResponse_ContributionInfo::farm_info() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
+  return _internal_farm_info();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::unsafe_arena_set_allocated_farm_info(
+    ::ei::PlayerFarmInfo* farm_info) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(farm_info_);
+  }
+  farm_info_ = farm_info;
+  if (farm_info) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::release_farm_info() {
+  _has_bits_[0] &= ~0x00000020u;
+  ::ei::PlayerFarmInfo* temp = farm_info_;
+  farm_info_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::unsafe_arena_release_farm_info() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
+  _has_bits_[0] &= ~0x00000020u;
+  ::ei::PlayerFarmInfo* temp = farm_info_;
+  farm_info_ = nullptr;
+  return temp;
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::_internal_mutable_farm_info() {
+  _has_bits_[0] |= 0x00000020u;
+  if (farm_info_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::PlayerFarmInfo>(GetArenaForAllocation());
+    farm_info_ = p;
+  }
+  return farm_info_;
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::mutable_farm_info() {
+  ::ei::PlayerFarmInfo* _msg = _internal_mutable_farm_info();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
+  return _msg;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_farm_info(::ei::PlayerFarmInfo* farm_info) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete farm_info_;
+  }
+  if (farm_info) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::PlayerFarmInfo>::GetOwningArena(farm_info);
+    if (message_arena != submessage_arena) {
+      farm_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, farm_info, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  farm_info_ = farm_info;
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
+}
+
 // optional int32 rank_change = 8;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_rank_change() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_rank_change() const {
@@ -48635,7 +56079,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_rank_change() const
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_rank_change() {
   rank_change_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline int32_t ContractCoopStatusResponse_ContributionInfo::_internal_rank_change() const {
   return rank_change_;
@@ -48645,7 +56089,7 @@ inline int32_t ContractCoopStatusResponse_ContributionInfo::rank_change() const 
   return _internal_rank_change();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_rank_change(int32_t value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000100u;
   rank_change_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_rank_change(int32_t value) {
@@ -48655,7 +56099,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_rank_change(int32_t
 
 // optional bool active = 4;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_active() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
@@ -48663,7 +56107,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_active() {
   active_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_active() const {
   return active_;
@@ -48673,7 +56117,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::active() const {
   return _internal_active();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_active(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000800u;
   active_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) {
@@ -48683,7 +56127,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) 
 
 // optional bool leech = 16;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_leech() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
@@ -48691,7 +56135,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_leech() {
   leech_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_leech() const {
   return leech_;
@@ -48701,7 +56145,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::leech() const {
   return _internal_leech();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_leech(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00001000u;
   leech_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
@@ -48711,7 +56155,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
 
 // optional bool time_cheat_detected = 7;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_time_cheat_detected() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected() const {
@@ -48719,7 +56163,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_time_cheat_detected() {
   time_cheat_detected_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_time_cheat_detected() const {
   return time_cheat_detected_;
@@ -48729,7 +56173,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::time_cheat_detected() c
   return _internal_time_cheat_detected();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_time_cheat_detected(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00002000u;
   time_cheat_detected_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected(bool value) {
@@ -48739,7 +56183,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected
 
 // optional .ei.Platform platform = 5;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
@@ -48747,7 +56191,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -48758,7 +56202,7 @@ inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::platform() co
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00040000u;
   platform_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_platform(::ei::Platform value) {
@@ -48837,7 +56281,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_push_id(s
 
 // optional uint32 ban_votes = 10;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_ban_votes() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_ban_votes() const {
@@ -48845,7 +56289,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_ban_votes() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_ban_votes() {
   ban_votes_ = 0u;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_ban_votes() const {
   return ban_votes_;
@@ -48855,7 +56299,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::ban_votes() const {
   return _internal_ban_votes();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_ban_votes(uint32_t value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000200u;
   ban_votes_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_ban_votes(uint32_t value) {
@@ -48865,7 +56309,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_ban_votes(uint32_t 
 
 // optional bool autojoined = 17;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_autojoined() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const {
@@ -48873,7 +56317,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const 
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_autojoined() {
   autojoined_ = false;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_autojoined() const {
   return autojoined_;
@@ -48883,7 +56327,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::autojoined() const {
   return _internal_autojoined();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_autojoined(bool value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00004000u;
   autojoined_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool value) {
@@ -48893,7 +56337,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool val
 
 // optional uint32 boost_tokens = 12;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens() const {
@@ -48901,7 +56345,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens() cons
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens() {
   boost_tokens_ = 0u;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens() const {
   return boost_tokens_;
@@ -48911,7 +56355,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens() cons
   return _internal_boost_tokens();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens(uint32_t value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00008000u;
   boost_tokens_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32_t value) {
@@ -48921,7 +56365,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32
 
 // optional uint32 boost_tokens_spent = 14;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens_spent() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent() const {
@@ -48929,7 +56373,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent(
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens_spent() {
   boost_tokens_spent_ = 0u;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens_spent() const {
   return boost_tokens_spent_;
@@ -48939,7 +56383,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens_spent(
   return _internal_boost_tokens_spent();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens_spent(uint32_t value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00020000u;
   boost_tokens_spent_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens_spent(uint32_t value) {
@@ -48985,6 +56429,34 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopBuffState >&
 ContractCoopStatusResponse_ContributionInfo::buff_history() const {
   // @@protoc_insertion_point(field_list:ei.ContractCoopStatusResponse.ContributionInfo.buff_history)
   return buff_history_;
+}
+
+// optional double chicken_run_cooldown = 20;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_chicken_run_cooldown() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldown() const {
+  return _internal_has_chicken_run_cooldown();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_chicken_run_cooldown() {
+  chicken_run_cooldown_ = 0;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline double ContractCoopStatusResponse_ContributionInfo::_internal_chicken_run_cooldown() const {
+  return chicken_run_cooldown_;
+}
+inline double ContractCoopStatusResponse_ContributionInfo::chicken_run_cooldown() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.chicken_run_cooldown)
+  return _internal_chicken_run_cooldown();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_chicken_run_cooldown(double value) {
+  _has_bits_[0] |= 0x00010000u;
+  chicken_run_cooldown_ = value;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_chicken_run_cooldown(double value) {
+  _internal_set_chicken_run_cooldown(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.chicken_run_cooldown)
 }
 
 // -------------------------------------------------------------------
@@ -49155,6 +56627,176 @@ inline void ContractCoopStatusResponse_CoopGift::_internal_set_amount(uint32_t v
 inline void ContractCoopStatusResponse_CoopGift::set_amount(uint32_t value) {
   _internal_set_amount(value);
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.CoopGift.amount)
+}
+
+// -------------------------------------------------------------------
+
+// ContractCoopStatusResponse_ChickenRun
+
+// optional string user_id = 1;
+inline bool ContractCoopStatusResponse_ChickenRun::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ChickenRun::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void ContractCoopStatusResponse_ChickenRun::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ContractCoopStatusResponse_ChickenRun::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ChickenRun.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractCoopStatusResponse_ChickenRun::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ChickenRun.user_id)
+}
+inline std::string* ContractCoopStatusResponse_ChickenRun::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.ChickenRun.user_id)
+  return _s;
+}
+inline const std::string& ContractCoopStatusResponse_ChickenRun::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void ContractCoopStatusResponse_ChickenRun::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ChickenRun::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ChickenRun::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ChickenRun.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractCoopStatusResponse_ChickenRun::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_id,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ChickenRun.user_id)
+}
+
+// optional string user_name = 3;
+inline bool ContractCoopStatusResponse_ChickenRun::_internal_has_user_name() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ChickenRun::has_user_name() const {
+  return _internal_has_user_name();
+}
+inline void ContractCoopStatusResponse_ChickenRun::clear_user_name() {
+  user_name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ContractCoopStatusResponse_ChickenRun::user_name() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ChickenRun.user_name)
+  return _internal_user_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractCoopStatusResponse_ChickenRun::set_user_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ChickenRun.user_name)
+}
+inline std::string* ContractCoopStatusResponse_ChickenRun::mutable_user_name() {
+  std::string* _s = _internal_mutable_user_name();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.ChickenRun.user_name)
+  return _s;
+}
+inline const std::string& ContractCoopStatusResponse_ChickenRun::_internal_user_name() const {
+  return user_name_.Get();
+}
+inline void ContractCoopStatusResponse_ChickenRun::_internal_set_user_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ChickenRun::_internal_mutable_user_name() {
+  _has_bits_[0] |= 0x00000002u;
+  return user_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ChickenRun::release_user_name() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ChickenRun.user_name)
+  if (!_internal_has_user_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = user_name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractCoopStatusResponse_ChickenRun::set_allocated_user_name(std::string* user_name) {
+  if (user_name != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  user_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_name,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ChickenRun.user_name)
+}
+
+// optional uint64 amount = 2;
+inline bool ContractCoopStatusResponse_ChickenRun::_internal_has_amount() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ChickenRun::has_amount() const {
+  return _internal_has_amount();
+}
+inline void ContractCoopStatusResponse_ChickenRun::clear_amount() {
+  amount_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint64_t ContractCoopStatusResponse_ChickenRun::_internal_amount() const {
+  return amount_;
+}
+inline uint64_t ContractCoopStatusResponse_ChickenRun::amount() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ChickenRun.amount)
+  return _internal_amount();
+}
+inline void ContractCoopStatusResponse_ChickenRun::_internal_set_amount(uint64_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  amount_ = value;
+}
+inline void ContractCoopStatusResponse_ChickenRun::set_amount(uint64_t value) {
+  _internal_set_amount(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ChickenRun.amount)
 }
 
 // -------------------------------------------------------------------
@@ -49614,6 +57256,46 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatus
 ContractCoopStatusResponse::gifts() const {
   // @@protoc_insertion_point(field_list:ei.ContractCoopStatusResponse.gifts)
   return gifts_;
+}
+
+// repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;
+inline int ContractCoopStatusResponse::_internal_chicken_runs_size() const {
+  return chicken_runs_.size();
+}
+inline int ContractCoopStatusResponse::chicken_runs_size() const {
+  return _internal_chicken_runs_size();
+}
+inline void ContractCoopStatusResponse::clear_chicken_runs() {
+  chicken_runs_.Clear();
+}
+inline ::ei::ContractCoopStatusResponse_ChickenRun* ContractCoopStatusResponse::mutable_chicken_runs(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.chicken_runs)
+  return chicken_runs_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_ChickenRun >*
+ContractCoopStatusResponse::mutable_chicken_runs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractCoopStatusResponse.chicken_runs)
+  return &chicken_runs_;
+}
+inline const ::ei::ContractCoopStatusResponse_ChickenRun& ContractCoopStatusResponse::_internal_chicken_runs(int index) const {
+  return chicken_runs_.Get(index);
+}
+inline const ::ei::ContractCoopStatusResponse_ChickenRun& ContractCoopStatusResponse::chicken_runs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.chicken_runs)
+  return _internal_chicken_runs(index);
+}
+inline ::ei::ContractCoopStatusResponse_ChickenRun* ContractCoopStatusResponse::_internal_add_chicken_runs() {
+  return chicken_runs_.Add();
+}
+inline ::ei::ContractCoopStatusResponse_ChickenRun* ContractCoopStatusResponse::add_chicken_runs() {
+  ::ei::ContractCoopStatusResponse_ChickenRun* _add = _internal_add_chicken_runs();
+  // @@protoc_insertion_point(field_add:ei.ContractCoopStatusResponse.chicken_runs)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse_ChickenRun >&
+ContractCoopStatusResponse::chicken_runs() const {
+  // @@protoc_insertion_point(field_list:ei.ContractCoopStatusResponse.chicken_runs)
+  return chicken_runs_;
 }
 
 // optional double local_timestamp = 12;
@@ -50098,6 +57780,34 @@ inline void LocalContract::set_allocated_coop_user_id(std::string* coop_user_id)
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.LocalContract.coop_user_id)
+}
+
+// optional bool coop_share_farm = 17;
+inline bool LocalContract::_internal_has_coop_share_farm() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool LocalContract::has_coop_share_farm() const {
+  return _internal_has_coop_share_farm();
+}
+inline void LocalContract::clear_coop_share_farm() {
+  coop_share_farm_ = false;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline bool LocalContract::_internal_coop_share_farm() const {
+  return coop_share_farm_;
+}
+inline bool LocalContract::coop_share_farm() const {
+  // @@protoc_insertion_point(field_get:ei.LocalContract.coop_share_farm)
+  return _internal_coop_share_farm();
+}
+inline void LocalContract::_internal_set_coop_share_farm(bool value) {
+  _has_bits_[0] |= 0x00010000u;
+  coop_share_farm_ = value;
+}
+inline void LocalContract::set_coop_share_farm(bool value) {
+  _internal_set_coop_share_farm(value);
+  // @@protoc_insertion_point(field_set:ei.LocalContract.coop_share_farm)
 }
 
 // optional double last_amount_when_reward_given = 6;
@@ -54086,6 +61796,501 @@ inline void GiftPlayerCoopRequest::set_client_version(uint32_t value) {
 
 // -------------------------------------------------------------------
 
+// SendChickenRunCoopRequest
+
+// optional .ei.BasicRequestInfo rinfo = 8;
+inline bool SendChickenRunCoopRequest::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void SendChickenRunCoopRequest::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const ::ei::BasicRequestInfo& SendChickenRunCoopRequest::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& SendChickenRunCoopRequest::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.rinfo)
+  return _internal_rinfo();
+}
+inline void SendChickenRunCoopRequest::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.SendChickenRunCoopRequest.rinfo)
+}
+inline ::ei::BasicRequestInfo* SendChickenRunCoopRequest::release_rinfo() {
+  _has_bits_[0] &= ~0x00000020u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* SendChickenRunCoopRequest::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.SendChickenRunCoopRequest.rinfo)
+  _has_bits_[0] &= ~0x00000020u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* SendChickenRunCoopRequest::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000020u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* SendChickenRunCoopRequest::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.SendChickenRunCoopRequest.rinfo)
+  return _msg;
+}
+inline void SendChickenRunCoopRequest::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::BasicRequestInfo>::GetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.SendChickenRunCoopRequest.rinfo)
+}
+
+// optional string contract_identifier = 1;
+inline bool SendChickenRunCoopRequest::_internal_has_contract_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_contract_identifier() const {
+  return _internal_has_contract_identifier();
+}
+inline void SendChickenRunCoopRequest::clear_contract_identifier() {
+  contract_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& SendChickenRunCoopRequest::contract_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.contract_identifier)
+  return _internal_contract_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendChickenRunCoopRequest::set_contract_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ contract_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.contract_identifier)
+}
+inline std::string* SendChickenRunCoopRequest::mutable_contract_identifier() {
+  std::string* _s = _internal_mutable_contract_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.SendChickenRunCoopRequest.contract_identifier)
+  return _s;
+}
+inline const std::string& SendChickenRunCoopRequest::_internal_contract_identifier() const {
+  return contract_identifier_.Get();
+}
+inline void SendChickenRunCoopRequest::_internal_set_contract_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  contract_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::_internal_mutable_contract_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return contract_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::release_contract_identifier() {
+  // @@protoc_insertion_point(field_release:ei.SendChickenRunCoopRequest.contract_identifier)
+  if (!_internal_has_contract_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = contract_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    contract_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SendChickenRunCoopRequest::set_allocated_contract_identifier(std::string* contract_identifier) {
+  if (contract_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  contract_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), contract_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    contract_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.SendChickenRunCoopRequest.contract_identifier)
+}
+
+// optional string coop_identifier = 2;
+inline bool SendChickenRunCoopRequest::_internal_has_coop_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_coop_identifier() const {
+  return _internal_has_coop_identifier();
+}
+inline void SendChickenRunCoopRequest::clear_coop_identifier() {
+  coop_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& SendChickenRunCoopRequest::coop_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.coop_identifier)
+  return _internal_coop_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendChickenRunCoopRequest::set_coop_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ coop_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.coop_identifier)
+}
+inline std::string* SendChickenRunCoopRequest::mutable_coop_identifier() {
+  std::string* _s = _internal_mutable_coop_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.SendChickenRunCoopRequest.coop_identifier)
+  return _s;
+}
+inline const std::string& SendChickenRunCoopRequest::_internal_coop_identifier() const {
+  return coop_identifier_.Get();
+}
+inline void SendChickenRunCoopRequest::_internal_set_coop_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  coop_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::_internal_mutable_coop_identifier() {
+  _has_bits_[0] |= 0x00000002u;
+  return coop_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::release_coop_identifier() {
+  // @@protoc_insertion_point(field_release:ei.SendChickenRunCoopRequest.coop_identifier)
+  if (!_internal_has_coop_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = coop_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    coop_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SendChickenRunCoopRequest::set_allocated_coop_identifier(std::string* coop_identifier) {
+  if (coop_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  coop_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), coop_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    coop_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.SendChickenRunCoopRequest.coop_identifier)
+}
+
+// optional string player_identifier = 3;
+inline bool SendChickenRunCoopRequest::_internal_has_player_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_player_identifier() const {
+  return _internal_has_player_identifier();
+}
+inline void SendChickenRunCoopRequest::clear_player_identifier() {
+  player_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& SendChickenRunCoopRequest::player_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.player_identifier)
+  return _internal_player_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendChickenRunCoopRequest::set_player_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ player_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.player_identifier)
+}
+inline std::string* SendChickenRunCoopRequest::mutable_player_identifier() {
+  std::string* _s = _internal_mutable_player_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.SendChickenRunCoopRequest.player_identifier)
+  return _s;
+}
+inline const std::string& SendChickenRunCoopRequest::_internal_player_identifier() const {
+  return player_identifier_.Get();
+}
+inline void SendChickenRunCoopRequest::_internal_set_player_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  player_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::_internal_mutable_player_identifier() {
+  _has_bits_[0] |= 0x00000004u;
+  return player_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::release_player_identifier() {
+  // @@protoc_insertion_point(field_release:ei.SendChickenRunCoopRequest.player_identifier)
+  if (!_internal_has_player_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = player_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (player_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    player_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SendChickenRunCoopRequest::set_allocated_player_identifier(std::string* player_identifier) {
+  if (player_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  player_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), player_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (player_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    player_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.SendChickenRunCoopRequest.player_identifier)
+}
+
+// optional string requesting_user_id = 4;
+inline bool SendChickenRunCoopRequest::_internal_has_requesting_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_requesting_user_id() const {
+  return _internal_has_requesting_user_id();
+}
+inline void SendChickenRunCoopRequest::clear_requesting_user_id() {
+  requesting_user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& SendChickenRunCoopRequest::requesting_user_id() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.requesting_user_id)
+  return _internal_requesting_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendChickenRunCoopRequest::set_requesting_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ requesting_user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.requesting_user_id)
+}
+inline std::string* SendChickenRunCoopRequest::mutable_requesting_user_id() {
+  std::string* _s = _internal_mutable_requesting_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.SendChickenRunCoopRequest.requesting_user_id)
+  return _s;
+}
+inline const std::string& SendChickenRunCoopRequest::_internal_requesting_user_id() const {
+  return requesting_user_id_.Get();
+}
+inline void SendChickenRunCoopRequest::_internal_set_requesting_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  requesting_user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::_internal_mutable_requesting_user_id() {
+  _has_bits_[0] |= 0x00000008u;
+  return requesting_user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::release_requesting_user_id() {
+  // @@protoc_insertion_point(field_release:ei.SendChickenRunCoopRequest.requesting_user_id)
+  if (!_internal_has_requesting_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  auto* p = requesting_user_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (requesting_user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    requesting_user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SendChickenRunCoopRequest::set_allocated_requesting_user_id(std::string* requesting_user_id) {
+  if (requesting_user_id != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  requesting_user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), requesting_user_id,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (requesting_user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    requesting_user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.SendChickenRunCoopRequest.requesting_user_id)
+}
+
+// optional string requesting_user_name = 6;
+inline bool SendChickenRunCoopRequest::_internal_has_requesting_user_name() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_requesting_user_name() const {
+  return _internal_has_requesting_user_name();
+}
+inline void SendChickenRunCoopRequest::clear_requesting_user_name() {
+  requesting_user_name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& SendChickenRunCoopRequest::requesting_user_name() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.requesting_user_name)
+  return _internal_requesting_user_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendChickenRunCoopRequest::set_requesting_user_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ requesting_user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.requesting_user_name)
+}
+inline std::string* SendChickenRunCoopRequest::mutable_requesting_user_name() {
+  std::string* _s = _internal_mutable_requesting_user_name();
+  // @@protoc_insertion_point(field_mutable:ei.SendChickenRunCoopRequest.requesting_user_name)
+  return _s;
+}
+inline const std::string& SendChickenRunCoopRequest::_internal_requesting_user_name() const {
+  return requesting_user_name_.Get();
+}
+inline void SendChickenRunCoopRequest::_internal_set_requesting_user_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  requesting_user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::_internal_mutable_requesting_user_name() {
+  _has_bits_[0] |= 0x00000010u;
+  return requesting_user_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* SendChickenRunCoopRequest::release_requesting_user_name() {
+  // @@protoc_insertion_point(field_release:ei.SendChickenRunCoopRequest.requesting_user_name)
+  if (!_internal_has_requesting_user_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  auto* p = requesting_user_name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (requesting_user_name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    requesting_user_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SendChickenRunCoopRequest::set_allocated_requesting_user_name(std::string* requesting_user_name) {
+  if (requesting_user_name != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  requesting_user_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), requesting_user_name,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (requesting_user_name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    requesting_user_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.SendChickenRunCoopRequest.requesting_user_name)
+}
+
+// optional uint64 farm_pop = 5;
+inline bool SendChickenRunCoopRequest::_internal_has_farm_pop() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_farm_pop() const {
+  return _internal_has_farm_pop();
+}
+inline void SendChickenRunCoopRequest::clear_farm_pop() {
+  farm_pop_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline uint64_t SendChickenRunCoopRequest::_internal_farm_pop() const {
+  return farm_pop_;
+}
+inline uint64_t SendChickenRunCoopRequest::farm_pop() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.farm_pop)
+  return _internal_farm_pop();
+}
+inline void SendChickenRunCoopRequest::_internal_set_farm_pop(uint64_t value) {
+  _has_bits_[0] |= 0x00000040u;
+  farm_pop_ = value;
+}
+inline void SendChickenRunCoopRequest::set_farm_pop(uint64_t value) {
+  _internal_set_farm_pop(value);
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.farm_pop)
+}
+
+// optional uint32 client_version = 7;
+inline bool SendChickenRunCoopRequest::_internal_has_client_version() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool SendChickenRunCoopRequest::has_client_version() const {
+  return _internal_has_client_version();
+}
+inline void SendChickenRunCoopRequest::clear_client_version() {
+  client_version_ = 0u;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline uint32_t SendChickenRunCoopRequest::_internal_client_version() const {
+  return client_version_;
+}
+inline uint32_t SendChickenRunCoopRequest::client_version() const {
+  // @@protoc_insertion_point(field_get:ei.SendChickenRunCoopRequest.client_version)
+  return _internal_client_version();
+}
+inline void SendChickenRunCoopRequest::_internal_set_client_version(uint32_t value) {
+  _has_bits_[0] |= 0x00000080u;
+  client_version_ = value;
+}
+inline void SendChickenRunCoopRequest::set_client_version(uint32_t value) {
+  _internal_set_client_version(value);
+  // @@protoc_insertion_point(field_set:ei.SendChickenRunCoopRequest.client_version)
+}
+
+// -------------------------------------------------------------------
+
 // KickPlayerCoopRequest
 
 // optional .ei.BasicRequestInfo rinfo = 8;
@@ -54883,7 +63088,7 @@ inline void ContractCoopStatusUpdateRequest::set_allocated_push_user_id(std::str
 
 // optional double amount = 4;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_amount() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_amount() const {
@@ -54891,7 +63096,7 @@ inline bool ContractCoopStatusUpdateRequest::has_amount() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_amount() {
   amount_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_amount() const {
   return amount_;
@@ -54901,7 +63106,7 @@ inline double ContractCoopStatusUpdateRequest::amount() const {
   return _internal_amount();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_amount(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   amount_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_amount(double value) {
@@ -54911,7 +63116,7 @@ inline void ContractCoopStatusUpdateRequest::set_amount(double value) {
 
 // optional double rate = 5;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_rate() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_rate() const {
@@ -54919,7 +63124,7 @@ inline bool ContractCoopStatusUpdateRequest::has_rate() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_rate() {
   rate_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_rate() const {
   return rate_;
@@ -54929,7 +63134,7 @@ inline double ContractCoopStatusUpdateRequest::rate() const {
   return _internal_rate();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_rate(double value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   rate_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_rate(double value) {
@@ -54939,7 +63144,7 @@ inline void ContractCoopStatusUpdateRequest::set_rate(double value) {
 
 // optional uint32 time_cheats_detected = 6;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_time_cheats_detected() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_time_cheats_detected() const {
@@ -54947,7 +63152,7 @@ inline bool ContractCoopStatusUpdateRequest::has_time_cheats_detected() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_time_cheats_detected() {
   time_cheats_detected_ = 0u;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t ContractCoopStatusUpdateRequest::_internal_time_cheats_detected() const {
   return time_cheats_detected_;
@@ -54957,7 +63162,7 @@ inline uint32_t ContractCoopStatusUpdateRequest::time_cheats_detected() const {
   return _internal_time_cheats_detected();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_time_cheats_detected(uint32_t value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   time_cheats_detected_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_time_cheats_detected(uint32_t value) {
@@ -54967,7 +63172,7 @@ inline void ContractCoopStatusUpdateRequest::set_time_cheats_detected(uint32_t v
 
 // optional double soul_power = 7;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_soul_power() const {
@@ -54975,7 +63180,7 @@ inline bool ContractCoopStatusUpdateRequest::has_soul_power() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_soul_power() {
   soul_power_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_soul_power() const {
   return soul_power_;
@@ -54985,7 +63190,7 @@ inline double ContractCoopStatusUpdateRequest::soul_power() const {
   return _internal_soul_power();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_soul_power(double value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   soul_power_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_soul_power(double value) {
@@ -54995,7 +63200,7 @@ inline void ContractCoopStatusUpdateRequest::set_soul_power(double value) {
 
 // optional uint32 eop = 15;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_eop() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_eop() const {
@@ -55003,7 +63208,7 @@ inline bool ContractCoopStatusUpdateRequest::has_eop() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_eop() {
   eop_ = 0u;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline uint32_t ContractCoopStatusUpdateRequest::_internal_eop() const {
   return eop_;
@@ -55013,7 +63218,7 @@ inline uint32_t ContractCoopStatusUpdateRequest::eop() const {
   return _internal_eop();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_eop(uint32_t value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   eop_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_eop(uint32_t value) {
@@ -55023,7 +63228,7 @@ inline void ContractCoopStatusUpdateRequest::set_eop(uint32_t value) {
 
 // optional uint32 boost_tokens = 9;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_boost_tokens() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_boost_tokens() const {
@@ -55031,7 +63236,7 @@ inline bool ContractCoopStatusUpdateRequest::has_boost_tokens() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_boost_tokens() {
   boost_tokens_ = 0u;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline uint32_t ContractCoopStatusUpdateRequest::_internal_boost_tokens() const {
   return boost_tokens_;
@@ -55041,7 +63246,7 @@ inline uint32_t ContractCoopStatusUpdateRequest::boost_tokens() const {
   return _internal_boost_tokens();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_boost_tokens(uint32_t value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   boost_tokens_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_boost_tokens(uint32_t value) {
@@ -55051,7 +63256,7 @@ inline void ContractCoopStatusUpdateRequest::set_boost_tokens(uint32_t value) {
 
 // optional uint32 boost_tokens_spent = 13;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_boost_tokens_spent() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_boost_tokens_spent() const {
@@ -55059,7 +63264,7 @@ inline bool ContractCoopStatusUpdateRequest::has_boost_tokens_spent() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_boost_tokens_spent() {
   boost_tokens_spent_ = 0u;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline uint32_t ContractCoopStatusUpdateRequest::_internal_boost_tokens_spent() const {
   return boost_tokens_spent_;
@@ -55069,7 +63274,7 @@ inline uint32_t ContractCoopStatusUpdateRequest::boost_tokens_spent() const {
   return _internal_boost_tokens_spent();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_boost_tokens_spent(uint32_t value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   boost_tokens_spent_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_boost_tokens_spent(uint32_t value) {
@@ -55167,9 +63372,99 @@ inline void ContractCoopStatusUpdateRequest::set_allocated_production_params(::e
   // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusUpdateRequest.production_params)
 }
 
+// optional .ei.PlayerFarmInfo farm_info = 16;
+inline bool ContractCoopStatusUpdateRequest::_internal_has_farm_info() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  PROTOBUF_ASSUME(!value || farm_info_ != nullptr);
+  return value;
+}
+inline bool ContractCoopStatusUpdateRequest::has_farm_info() const {
+  return _internal_has_farm_info();
+}
+inline void ContractCoopStatusUpdateRequest::clear_farm_info() {
+  if (farm_info_ != nullptr) farm_info_->Clear();
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline const ::ei::PlayerFarmInfo& ContractCoopStatusUpdateRequest::_internal_farm_info() const {
+  const ::ei::PlayerFarmInfo* p = farm_info_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::PlayerFarmInfo&>(
+      ::ei::_PlayerFarmInfo_default_instance_);
+}
+inline const ::ei::PlayerFarmInfo& ContractCoopStatusUpdateRequest::farm_info() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusUpdateRequest.farm_info)
+  return _internal_farm_info();
+}
+inline void ContractCoopStatusUpdateRequest::unsafe_arena_set_allocated_farm_info(
+    ::ei::PlayerFarmInfo* farm_info) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(farm_info_);
+  }
+  farm_info_ = farm_info;
+  if (farm_info) {
+    _has_bits_[0] |= 0x00000040u;
+  } else {
+    _has_bits_[0] &= ~0x00000040u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ContractCoopStatusUpdateRequest.farm_info)
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusUpdateRequest::release_farm_info() {
+  _has_bits_[0] &= ~0x00000040u;
+  ::ei::PlayerFarmInfo* temp = farm_info_;
+  farm_info_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusUpdateRequest::unsafe_arena_release_farm_info() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusUpdateRequest.farm_info)
+  _has_bits_[0] &= ~0x00000040u;
+  ::ei::PlayerFarmInfo* temp = farm_info_;
+  farm_info_ = nullptr;
+  return temp;
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusUpdateRequest::_internal_mutable_farm_info() {
+  _has_bits_[0] |= 0x00000040u;
+  if (farm_info_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::PlayerFarmInfo>(GetArenaForAllocation());
+    farm_info_ = p;
+  }
+  return farm_info_;
+}
+inline ::ei::PlayerFarmInfo* ContractCoopStatusUpdateRequest::mutable_farm_info() {
+  ::ei::PlayerFarmInfo* _msg = _internal_mutable_farm_info();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusUpdateRequest.farm_info)
+  return _msg;
+}
+inline void ContractCoopStatusUpdateRequest::set_allocated_farm_info(::ei::PlayerFarmInfo* farm_info) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete farm_info_;
+  }
+  if (farm_info) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::PlayerFarmInfo>::GetOwningArena(farm_info);
+    if (message_arena != submessage_arena) {
+      farm_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, farm_info, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000040u;
+  } else {
+    _has_bits_[0] &= ~0x00000040u;
+  }
+  farm_info_ = farm_info;
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusUpdateRequest.farm_info)
+}
+
 // optional double egg_laying_rate_buff = 10 [default = 1];
 inline bool ContractCoopStatusUpdateRequest::_internal_has_egg_laying_rate_buff() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_egg_laying_rate_buff() const {
@@ -55177,7 +63472,7 @@ inline bool ContractCoopStatusUpdateRequest::has_egg_laying_rate_buff() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_egg_laying_rate_buff() {
   egg_laying_rate_buff_ = 1;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_egg_laying_rate_buff() const {
   return egg_laying_rate_buff_;
@@ -55187,7 +63482,7 @@ inline double ContractCoopStatusUpdateRequest::egg_laying_rate_buff() const {
   return _internal_egg_laying_rate_buff();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_egg_laying_rate_buff(double value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   egg_laying_rate_buff_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_egg_laying_rate_buff(double value) {
@@ -55197,7 +63492,7 @@ inline void ContractCoopStatusUpdateRequest::set_egg_laying_rate_buff(double val
 
 // optional double earnings_buff = 11 [default = 1];
 inline bool ContractCoopStatusUpdateRequest::_internal_has_earnings_buff() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_earnings_buff() const {
@@ -55205,7 +63500,7 @@ inline bool ContractCoopStatusUpdateRequest::has_earnings_buff() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_earnings_buff() {
   earnings_buff_ = 1;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_earnings_buff() const {
   return earnings_buff_;
@@ -55215,7 +63510,7 @@ inline double ContractCoopStatusUpdateRequest::earnings_buff() const {
   return _internal_earnings_buff();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_earnings_buff(double value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   earnings_buff_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_earnings_buff(double value) {
@@ -55442,6 +63737,151 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopBuffState >&
 CoopBuffHistory::history() const {
   // @@protoc_insertion_point(field_list:ei.CoopBuffHistory.history)
   return history_;
+}
+
+// -------------------------------------------------------------------
+
+// CoopChickenRunEntry
+
+// optional string user_id = 1;
+inline bool CoopChickenRunEntry::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CoopChickenRunEntry::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void CoopChickenRunEntry::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CoopChickenRunEntry::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.CoopChickenRunEntry.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CoopChickenRunEntry::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CoopChickenRunEntry.user_id)
+}
+inline std::string* CoopChickenRunEntry::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.CoopChickenRunEntry.user_id)
+  return _s;
+}
+inline const std::string& CoopChickenRunEntry::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void CoopChickenRunEntry::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* CoopChickenRunEntry::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* CoopChickenRunEntry::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.CoopChickenRunEntry.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CoopChickenRunEntry::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_id,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CoopChickenRunEntry.user_id)
+}
+
+// optional double server_timestamp = 2;
+inline bool CoopChickenRunEntry::_internal_has_server_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CoopChickenRunEntry::has_server_timestamp() const {
+  return _internal_has_server_timestamp();
+}
+inline void CoopChickenRunEntry::clear_server_timestamp() {
+  server_timestamp_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double CoopChickenRunEntry::_internal_server_timestamp() const {
+  return server_timestamp_;
+}
+inline double CoopChickenRunEntry::server_timestamp() const {
+  // @@protoc_insertion_point(field_get:ei.CoopChickenRunEntry.server_timestamp)
+  return _internal_server_timestamp();
+}
+inline void CoopChickenRunEntry::_internal_set_server_timestamp(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  server_timestamp_ = value;
+}
+inline void CoopChickenRunEntry::set_server_timestamp(double value) {
+  _internal_set_server_timestamp(value);
+  // @@protoc_insertion_point(field_set:ei.CoopChickenRunEntry.server_timestamp)
+}
+
+// -------------------------------------------------------------------
+
+// CoopLastChickenRunTimes
+
+// repeated .ei.CoopChickenRunEntry entries = 3;
+inline int CoopLastChickenRunTimes::_internal_entries_size() const {
+  return entries_.size();
+}
+inline int CoopLastChickenRunTimes::entries_size() const {
+  return _internal_entries_size();
+}
+inline void CoopLastChickenRunTimes::clear_entries() {
+  entries_.Clear();
+}
+inline ::ei::CoopChickenRunEntry* CoopLastChickenRunTimes::mutable_entries(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.CoopLastChickenRunTimes.entries)
+  return entries_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopChickenRunEntry >*
+CoopLastChickenRunTimes::mutable_entries() {
+  // @@protoc_insertion_point(field_mutable_list:ei.CoopLastChickenRunTimes.entries)
+  return &entries_;
+}
+inline const ::ei::CoopChickenRunEntry& CoopLastChickenRunTimes::_internal_entries(int index) const {
+  return entries_.Get(index);
+}
+inline const ::ei::CoopChickenRunEntry& CoopLastChickenRunTimes::entries(int index) const {
+  // @@protoc_insertion_point(field_get:ei.CoopLastChickenRunTimes.entries)
+  return _internal_entries(index);
+}
+inline ::ei::CoopChickenRunEntry* CoopLastChickenRunTimes::_internal_add_entries() {
+  return entries_.Add();
+}
+inline ::ei::CoopChickenRunEntry* CoopLastChickenRunTimes::add_entries() {
+  ::ei::CoopChickenRunEntry* _add = _internal_add_entries();
+  // @@protoc_insertion_point(field_add:ei.CoopLastChickenRunTimes.entries)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopChickenRunEntry >&
+CoopLastChickenRunTimes::entries() const {
+  // @@protoc_insertion_point(field_list:ei.CoopLastChickenRunTimes.entries)
+  return entries_;
 }
 
 // -------------------------------------------------------------------
@@ -57599,6 +66039,118 @@ inline void LiveConfig_MiscConfig::_internal_set_ask_to_track_after_privacy(bool
 inline void LiveConfig_MiscConfig::set_ask_to_track_after_privacy(bool value) {
   _internal_set_ask_to_track_after_privacy(value);
   // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.ask_to_track_after_privacy)
+}
+
+// optional double chicken_run_boost_percentage = 6;
+inline bool LiveConfig_MiscConfig::_internal_has_chicken_run_boost_percentage() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_chicken_run_boost_percentage() const {
+  return _internal_has_chicken_run_boost_percentage();
+}
+inline void LiveConfig_MiscConfig::clear_chicken_run_boost_percentage() {
+  chicken_run_boost_percentage_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline double LiveConfig_MiscConfig::_internal_chicken_run_boost_percentage() const {
+  return chicken_run_boost_percentage_;
+}
+inline double LiveConfig_MiscConfig::chicken_run_boost_percentage() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.chicken_run_boost_percentage)
+  return _internal_chicken_run_boost_percentage();
+}
+inline void LiveConfig_MiscConfig::_internal_set_chicken_run_boost_percentage(double value) {
+  _has_bits_[0] |= 0x00000040u;
+  chicken_run_boost_percentage_ = value;
+}
+inline void LiveConfig_MiscConfig::set_chicken_run_boost_percentage(double value) {
+  _internal_set_chicken_run_boost_percentage(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.chicken_run_boost_percentage)
+}
+
+// optional uint32 shells_intro_tickets = 7;
+inline bool LiveConfig_MiscConfig::_internal_has_shells_intro_tickets() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_shells_intro_tickets() const {
+  return _internal_has_shells_intro_tickets();
+}
+inline void LiveConfig_MiscConfig::clear_shells_intro_tickets() {
+  shells_intro_tickets_ = 0u;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline uint32_t LiveConfig_MiscConfig::_internal_shells_intro_tickets() const {
+  return shells_intro_tickets_;
+}
+inline uint32_t LiveConfig_MiscConfig::shells_intro_tickets() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.shells_intro_tickets)
+  return _internal_shells_intro_tickets();
+}
+inline void LiveConfig_MiscConfig::_internal_set_shells_intro_tickets(uint32_t value) {
+  _has_bits_[0] |= 0x00000020u;
+  shells_intro_tickets_ = value;
+}
+inline void LiveConfig_MiscConfig::set_shells_intro_tickets(uint32_t value) {
+  _internal_set_shells_intro_tickets(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.shells_intro_tickets)
+}
+
+// optional uint32 shells_max_free_chicken_configs = 8;
+inline bool LiveConfig_MiscConfig::_internal_has_shells_max_free_chicken_configs() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_shells_max_free_chicken_configs() const {
+  return _internal_has_shells_max_free_chicken_configs();
+}
+inline void LiveConfig_MiscConfig::clear_shells_max_free_chicken_configs() {
+  shells_max_free_chicken_configs_ = 0u;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline uint32_t LiveConfig_MiscConfig::_internal_shells_max_free_chicken_configs() const {
+  return shells_max_free_chicken_configs_;
+}
+inline uint32_t LiveConfig_MiscConfig::shells_max_free_chicken_configs() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.shells_max_free_chicken_configs)
+  return _internal_shells_max_free_chicken_configs();
+}
+inline void LiveConfig_MiscConfig::_internal_set_shells_max_free_chicken_configs(uint32_t value) {
+  _has_bits_[0] |= 0x00000080u;
+  shells_max_free_chicken_configs_ = value;
+}
+inline void LiveConfig_MiscConfig::set_shells_max_free_chicken_configs(uint32_t value) {
+  _internal_set_shells_max_free_chicken_configs(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.shells_max_free_chicken_configs)
+}
+
+// optional uint32 shells_intro_alert_threshold = 9;
+inline bool LiveConfig_MiscConfig::_internal_has_shells_intro_alert_threshold() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_shells_intro_alert_threshold() const {
+  return _internal_has_shells_intro_alert_threshold();
+}
+inline void LiveConfig_MiscConfig::clear_shells_intro_alert_threshold() {
+  shells_intro_alert_threshold_ = 0u;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline uint32_t LiveConfig_MiscConfig::_internal_shells_intro_alert_threshold() const {
+  return shells_intro_alert_threshold_;
+}
+inline uint32_t LiveConfig_MiscConfig::shells_intro_alert_threshold() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.shells_intro_alert_threshold)
+  return _internal_shells_intro_alert_threshold();
+}
+inline void LiveConfig_MiscConfig::_internal_set_shells_intro_alert_threshold(uint32_t value) {
+  _has_bits_[0] |= 0x00000100u;
+  shells_intro_alert_threshold_ = value;
+}
+inline void LiveConfig_MiscConfig::set_shells_intro_alert_threshold(uint32_t value) {
+  _internal_set_shells_intro_alert_threshold(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.shells_intro_alert_threshold)
 }
 
 // -------------------------------------------------------------------
@@ -67825,6 +76377,34 @@ inline void AuthenticatedMessage::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:ei.AuthenticatedMessage.message)
 }
 
+// optional uint32 version = 3;
+inline bool AuthenticatedMessage::_internal_has_version() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AuthenticatedMessage::has_version() const {
+  return _internal_has_version();
+}
+inline void AuthenticatedMessage::clear_version() {
+  version_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t AuthenticatedMessage::_internal_version() const {
+  return version_;
+}
+inline uint32_t AuthenticatedMessage::version() const {
+  // @@protoc_insertion_point(field_get:ei.AuthenticatedMessage.version)
+  return _internal_version();
+}
+inline void AuthenticatedMessage::_internal_set_version(uint32_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  version_ = value;
+}
+inline void AuthenticatedMessage::set_version(uint32_t value) {
+  _internal_set_version(value);
+  // @@protoc_insertion_point(field_set:ei.AuthenticatedMessage.version)
+}
+
 // optional string code = 2;
 inline bool AuthenticatedMessage::_internal_has_code() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
@@ -69417,6 +77997,62 @@ inline void DLCItem::set_allocated_ext(std::string* ext) {
   // @@protoc_insertion_point(field_set_allocated:ei.DLCItem.ext)
 }
 
+// optional bool compressed = 6;
+inline bool DLCItem::_internal_has_compressed() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool DLCItem::has_compressed() const {
+  return _internal_has_compressed();
+}
+inline void DLCItem::clear_compressed() {
+  compressed_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool DLCItem::_internal_compressed() const {
+  return compressed_;
+}
+inline bool DLCItem::compressed() const {
+  // @@protoc_insertion_point(field_get:ei.DLCItem.compressed)
+  return _internal_compressed();
+}
+inline void DLCItem::_internal_set_compressed(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  compressed_ = value;
+}
+inline void DLCItem::set_compressed(bool value) {
+  _internal_set_compressed(value);
+  // @@protoc_insertion_point(field_set:ei.DLCItem.compressed)
+}
+
+// optional uint64 original_size = 7;
+inline bool DLCItem::_internal_has_original_size() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool DLCItem::has_original_size() const {
+  return _internal_has_original_size();
+}
+inline void DLCItem::clear_original_size() {
+  original_size_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline uint64_t DLCItem::_internal_original_size() const {
+  return original_size_;
+}
+inline uint64_t DLCItem::original_size() const {
+  // @@protoc_insertion_point(field_get:ei.DLCItem.original_size)
+  return _internal_original_size();
+}
+inline void DLCItem::_internal_set_original_size(uint64_t value) {
+  _has_bits_[0] |= 0x00000020u;
+  original_size_ = value;
+}
+inline void DLCItem::set_original_size(uint64_t value) {
+  _internal_set_original_size(value);
+  // @@protoc_insertion_point(field_set:ei.DLCItem.original_size)
+}
+
 // optional string url = 4;
 inline bool DLCItem::_internal_has_url() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
@@ -70103,9 +78739,93 @@ inline void ShellSpec::set_required_soul_eggs(double value) {
   // @@protoc_insertion_point(field_set:ei.ShellSpec.required_soul_eggs)
 }
 
+// optional bool is_new = 14;
+inline bool ShellSpec::_internal_has_is_new() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ShellSpec::has_is_new() const {
+  return _internal_has_is_new();
+}
+inline void ShellSpec::clear_is_new() {
+  is_new_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool ShellSpec::_internal_is_new() const {
+  return is_new_;
+}
+inline bool ShellSpec::is_new() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSpec.is_new)
+  return _internal_is_new();
+}
+inline void ShellSpec::_internal_set_is_new(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  is_new_ = value;
+}
+inline void ShellSpec::set_is_new(bool value) {
+  _internal_set_is_new(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSpec.is_new)
+}
+
+// optional bool expires = 15;
+inline bool ShellSpec::_internal_has_expires() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ShellSpec::has_expires() const {
+  return _internal_has_expires();
+}
+inline void ShellSpec::clear_expires() {
+  expires_ = false;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline bool ShellSpec::_internal_expires() const {
+  return expires_;
+}
+inline bool ShellSpec::expires() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSpec.expires)
+  return _internal_expires();
+}
+inline void ShellSpec::_internal_set_expires(bool value) {
+  _has_bits_[0] |= 0x00000100u;
+  expires_ = value;
+}
+inline void ShellSpec::set_expires(bool value) {
+  _internal_set_expires(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSpec.expires)
+}
+
+// optional double seconds_remaining = 16;
+inline bool ShellSpec::_internal_has_seconds_remaining() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ShellSpec::has_seconds_remaining() const {
+  return _internal_has_seconds_remaining();
+}
+inline void ShellSpec::clear_seconds_remaining() {
+  seconds_remaining_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline double ShellSpec::_internal_seconds_remaining() const {
+  return seconds_remaining_;
+}
+inline double ShellSpec::seconds_remaining() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSpec.seconds_remaining)
+  return _internal_seconds_remaining();
+}
+inline void ShellSpec::_internal_set_seconds_remaining(double value) {
+  _has_bits_[0] |= 0x00000400u;
+  seconds_remaining_ = value;
+}
+inline void ShellSpec::set_seconds_remaining(double value) {
+  _internal_set_seconds_remaining(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSpec.seconds_remaining)
+}
+
 // optional bool default_appearance = 8;
 inline bool ShellSpec::_internal_has_default_appearance() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ShellSpec::has_default_appearance() const {
@@ -70113,7 +78833,7 @@ inline bool ShellSpec::has_default_appearance() const {
 }
 inline void ShellSpec::clear_default_appearance() {
   default_appearance_ = false;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool ShellSpec::_internal_default_appearance() const {
   return default_appearance_;
@@ -70123,12 +78843,182 @@ inline bool ShellSpec::default_appearance() const {
   return _internal_default_appearance();
 }
 inline void ShellSpec::_internal_set_default_appearance(bool value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000200u;
   default_appearance_ = value;
 }
 inline void ShellSpec::set_default_appearance(bool value) {
   _internal_set_default_appearance(value);
   // @@protoc_insertion_point(field_set:ei.ShellSpec.default_appearance)
+}
+
+// -------------------------------------------------------------------
+
+// ShellSetSpec_VariationInfo
+
+// optional string identifier = 1;
+inline bool ShellSetSpec_VariationInfo::_internal_has_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellSetSpec_VariationInfo::has_identifier() const {
+  return _internal_has_identifier();
+}
+inline void ShellSetSpec_VariationInfo::clear_identifier() {
+  identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellSetSpec_VariationInfo::identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationInfo.identifier)
+  return _internal_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellSetSpec_VariationInfo::set_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationInfo.identifier)
+}
+inline std::string* ShellSetSpec_VariationInfo::mutable_identifier() {
+  std::string* _s = _internal_mutable_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.VariationInfo.identifier)
+  return _s;
+}
+inline const std::string& ShellSetSpec_VariationInfo::_internal_identifier() const {
+  return identifier_.Get();
+}
+inline void ShellSetSpec_VariationInfo::_internal_set_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellSetSpec_VariationInfo::_internal_mutable_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellSetSpec_VariationInfo::release_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.VariationInfo.identifier)
+  if (!_internal_has_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellSetSpec_VariationInfo::set_allocated_identifier(std::string* identifier) {
+  if (identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.VariationInfo.identifier)
+}
+
+// optional string hex_color = 2;
+inline bool ShellSetSpec_VariationInfo::_internal_has_hex_color() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellSetSpec_VariationInfo::has_hex_color() const {
+  return _internal_has_hex_color();
+}
+inline void ShellSetSpec_VariationInfo::clear_hex_color() {
+  hex_color_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ShellSetSpec_VariationInfo::hex_color() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationInfo.hex_color)
+  return _internal_hex_color();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellSetSpec_VariationInfo::set_hex_color(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ hex_color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationInfo.hex_color)
+}
+inline std::string* ShellSetSpec_VariationInfo::mutable_hex_color() {
+  std::string* _s = _internal_mutable_hex_color();
+  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.VariationInfo.hex_color)
+  return _s;
+}
+inline const std::string& ShellSetSpec_VariationInfo::_internal_hex_color() const {
+  return hex_color_.Get();
+}
+inline void ShellSetSpec_VariationInfo::_internal_set_hex_color(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  hex_color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellSetSpec_VariationInfo::_internal_mutable_hex_color() {
+  _has_bits_[0] |= 0x00000002u;
+  return hex_color_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellSetSpec_VariationInfo::release_hex_color() {
+  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.VariationInfo.hex_color)
+  if (!_internal_has_hex_color()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = hex_color_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (hex_color_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    hex_color_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellSetSpec_VariationInfo::set_allocated_hex_color(std::string* hex_color) {
+  if (hex_color != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  hex_color_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hex_color,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (hex_color_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    hex_color_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.VariationInfo.hex_color)
+}
+
+// optional uint32 price = 3;
+inline bool ShellSetSpec_VariationInfo::_internal_has_price() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellSetSpec_VariationInfo::has_price() const {
+  return _internal_has_price();
+}
+inline void ShellSetSpec_VariationInfo::clear_price() {
+  price_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t ShellSetSpec_VariationInfo::_internal_price() const {
+  return price_;
+}
+inline uint32_t ShellSetSpec_VariationInfo::price() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationInfo.price)
+  return _internal_price();
+}
+inline void ShellSetSpec_VariationInfo::_internal_set_price(uint32_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  price_ = value;
+}
+inline void ShellSetSpec_VariationInfo::set_price(uint32_t value) {
+  _internal_set_price(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationInfo.price)
 }
 
 // -------------------------------------------------------------------
@@ -70275,7 +79165,7 @@ inline void ShellSetSpec::set_allocated_name(std::string* name) {
 
 // optional uint32 price = 3;
 inline bool ShellSetSpec::_internal_has_price() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_price() const {
@@ -70283,7 +79173,7 @@ inline bool ShellSetSpec::has_price() const {
 }
 inline void ShellSetSpec::clear_price() {
   price_ = 0u;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t ShellSetSpec::_internal_price() const {
   return price_;
@@ -70293,7 +79183,7 @@ inline uint32_t ShellSetSpec::price() const {
   return _internal_price();
 }
 inline void ShellSetSpec::_internal_set_price(uint32_t value) {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
   price_ = value;
 }
 inline void ShellSetSpec::set_price(uint32_t value) {
@@ -70301,9 +79191,65 @@ inline void ShellSetSpec::set_price(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.ShellSetSpec.price)
 }
 
+// optional double price_mult_DEPRECATED = 8 [default = 1];
+inline bool ShellSetSpec::_internal_has_price_mult_deprecated() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_price_mult_deprecated() const {
+  return _internal_has_price_mult_deprecated();
+}
+inline void ShellSetSpec::clear_price_mult_deprecated() {
+  price_mult_deprecated_ = 1;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline double ShellSetSpec::_internal_price_mult_deprecated() const {
+  return price_mult_deprecated_;
+}
+inline double ShellSetSpec::price_mult_deprecated() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.price_mult_DEPRECATED)
+  return _internal_price_mult_deprecated();
+}
+inline void ShellSetSpec::_internal_set_price_mult_deprecated(double value) {
+  _has_bits_[0] |= 0x00008000u;
+  price_mult_deprecated_ = value;
+}
+inline void ShellSetSpec::set_price_mult_deprecated(double value) {
+  _internal_set_price_mult_deprecated(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.price_mult_DEPRECATED)
+}
+
+// optional double discount = 17;
+inline bool ShellSetSpec::_internal_has_discount() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_discount() const {
+  return _internal_has_discount();
+}
+inline void ShellSetSpec::clear_discount() {
+  discount_ = 0;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline double ShellSetSpec::_internal_discount() const {
+  return discount_;
+}
+inline double ShellSetSpec::discount() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.discount)
+  return _internal_discount();
+}
+inline void ShellSetSpec::_internal_set_discount(double value) {
+  _has_bits_[0] |= 0x00004000u;
+  discount_ = value;
+}
+inline void ShellSetSpec::set_discount(double value) {
+  _internal_set_discount(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.discount)
+}
+
 // optional uint32 required_eop = 4;
 inline bool ShellSetSpec::_internal_has_required_eop() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_required_eop() const {
@@ -70311,7 +79257,7 @@ inline bool ShellSetSpec::has_required_eop() const {
 }
 inline void ShellSetSpec::clear_required_eop() {
   required_eop_ = 0u;
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t ShellSetSpec::_internal_required_eop() const {
   return required_eop_;
@@ -70321,7 +79267,7 @@ inline uint32_t ShellSetSpec::required_eop() const {
   return _internal_required_eop();
 }
 inline void ShellSetSpec::_internal_set_required_eop(uint32_t value) {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
   required_eop_ = value;
 }
 inline void ShellSetSpec::set_required_eop(uint32_t value) {
@@ -70331,7 +79277,7 @@ inline void ShellSetSpec::set_required_eop(uint32_t value) {
 
 // optional double required_soul_eggs = 5;
 inline bool ShellSetSpec::_internal_has_required_soul_eggs() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_required_soul_eggs() const {
@@ -70339,7 +79285,7 @@ inline bool ShellSetSpec::has_required_soul_eggs() const {
 }
 inline void ShellSetSpec::clear_required_soul_eggs() {
   required_soul_eggs_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline double ShellSetSpec::_internal_required_soul_eggs() const {
   return required_soul_eggs_;
@@ -70349,12 +79295,1292 @@ inline double ShellSetSpec::required_soul_eggs() const {
   return _internal_required_soul_eggs();
 }
 inline void ShellSetSpec::_internal_set_required_soul_eggs(double value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   required_soul_eggs_ = value;
 }
 inline void ShellSetSpec::set_required_soul_eggs(double value) {
   _internal_set_required_soul_eggs(value);
   // @@protoc_insertion_point(field_set:ei.ShellSetSpec.required_soul_eggs)
+}
+
+// optional bool is_new = 9;
+inline bool ShellSetSpec::_internal_has_is_new() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_is_new() const {
+  return _internal_has_is_new();
+}
+inline void ShellSetSpec::clear_is_new() {
+  is_new_ = false;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline bool ShellSetSpec::_internal_is_new() const {
+  return is_new_;
+}
+inline bool ShellSetSpec::is_new() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.is_new)
+  return _internal_is_new();
+}
+inline void ShellSetSpec::_internal_set_is_new(bool value) {
+  _has_bits_[0] |= 0x00000200u;
+  is_new_ = value;
+}
+inline void ShellSetSpec::set_is_new(bool value) {
+  _internal_set_is_new(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.is_new)
+}
+
+// optional bool expires = 10;
+inline bool ShellSetSpec::_internal_has_expires() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_expires() const {
+  return _internal_has_expires();
+}
+inline void ShellSetSpec::clear_expires() {
+  expires_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool ShellSetSpec::_internal_expires() const {
+  return expires_;
+}
+inline bool ShellSetSpec::expires() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.expires)
+  return _internal_expires();
+}
+inline void ShellSetSpec::_internal_set_expires(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  expires_ = value;
+}
+inline void ShellSetSpec::set_expires(bool value) {
+  _internal_set_expires(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.expires)
+}
+
+// optional double seconds_remaining = 11;
+inline bool ShellSetSpec::_internal_has_seconds_remaining() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_seconds_remaining() const {
+  return _internal_has_seconds_remaining();
+}
+inline void ShellSetSpec::clear_seconds_remaining() {
+  seconds_remaining_ = 0;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline double ShellSetSpec::_internal_seconds_remaining() const {
+  return seconds_remaining_;
+}
+inline double ShellSetSpec::seconds_remaining() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.seconds_remaining)
+  return _internal_seconds_remaining();
+}
+inline void ShellSetSpec::_internal_set_seconds_remaining(double value) {
+  _has_bits_[0] |= 0x00002000u;
+  seconds_remaining_ = value;
+}
+inline void ShellSetSpec::set_seconds_remaining(double value) {
+  _internal_set_seconds_remaining(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.seconds_remaining)
+}
+
+// optional bool decorator = 14;
+inline bool ShellSetSpec::_internal_has_decorator() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_decorator() const {
+  return _internal_has_decorator();
+}
+inline void ShellSetSpec::clear_decorator() {
+  decorator_ = false;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline bool ShellSetSpec::_internal_decorator() const {
+  return decorator_;
+}
+inline bool ShellSetSpec::decorator() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.decorator)
+  return _internal_decorator();
+}
+inline void ShellSetSpec::_internal_set_decorator(bool value) {
+  _has_bits_[0] |= 0x00000800u;
+  decorator_ = value;
+}
+inline void ShellSetSpec::set_decorator(bool value) {
+  _internal_set_decorator(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.decorator)
+}
+
+// optional bool modified_geometry = 13;
+inline bool ShellSetSpec::_internal_has_modified_geometry() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_modified_geometry() const {
+  return _internal_has_modified_geometry();
+}
+inline void ShellSetSpec::clear_modified_geometry() {
+  modified_geometry_ = false;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline bool ShellSetSpec::_internal_modified_geometry() const {
+  return modified_geometry_;
+}
+inline bool ShellSetSpec::modified_geometry() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.modified_geometry)
+  return _internal_modified_geometry();
+}
+inline void ShellSetSpec::_internal_set_modified_geometry(bool value) {
+  _has_bits_[0] |= 0x00001000u;
+  modified_geometry_ = value;
+}
+inline void ShellSetSpec::set_modified_geometry(bool value) {
+  _internal_set_modified_geometry(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.modified_geometry)
+}
+
+// optional bool element_set = 7;
+inline bool ShellSetSpec::_internal_has_element_set() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_element_set() const {
+  return _internal_has_element_set();
+}
+inline void ShellSetSpec::clear_element_set() {
+  element_set_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool ShellSetSpec::_internal_element_set() const {
+  return element_set_;
+}
+inline bool ShellSetSpec::element_set() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.element_set)
+  return _internal_element_set();
+}
+inline void ShellSetSpec::_internal_set_element_set(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  element_set_ = value;
+}
+inline void ShellSetSpec::set_element_set(bool value) {
+  _internal_set_element_set(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.element_set)
+}
+
+// optional string hex_base_color = 16;
+inline bool ShellSetSpec::_internal_has_hex_base_color() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_hex_base_color() const {
+  return _internal_has_hex_base_color();
+}
+inline void ShellSetSpec::clear_hex_base_color() {
+  hex_base_color_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ShellSetSpec::hex_base_color() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.hex_base_color)
+  return _internal_hex_base_color();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellSetSpec::set_hex_base_color(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ hex_base_color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.hex_base_color)
+}
+inline std::string* ShellSetSpec::mutable_hex_base_color() {
+  std::string* _s = _internal_mutable_hex_base_color();
+  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.hex_base_color)
+  return _s;
+}
+inline const std::string& ShellSetSpec::_internal_hex_base_color() const {
+  return hex_base_color_.Get();
+}
+inline void ShellSetSpec::_internal_set_hex_base_color(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  hex_base_color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellSetSpec::_internal_mutable_hex_base_color() {
+  _has_bits_[0] |= 0x00000004u;
+  return hex_base_color_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellSetSpec::release_hex_base_color() {
+  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.hex_base_color)
+  if (!_internal_has_hex_base_color()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = hex_base_color_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (hex_base_color_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    hex_base_color_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellSetSpec::set_allocated_hex_base_color(std::string* hex_base_color) {
+  if (hex_base_color != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  hex_base_color_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hex_base_color,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (hex_base_color_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    hex_base_color_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.hex_base_color)
+}
+
+// repeated .ei.ShellSetSpec.VariationInfo variations = 15;
+inline int ShellSetSpec::_internal_variations_size() const {
+  return variations_.size();
+}
+inline int ShellSetSpec::variations_size() const {
+  return _internal_variations_size();
+}
+inline void ShellSetSpec::clear_variations() {
+  variations_.Clear();
+}
+inline ::ei::ShellSetSpec_VariationInfo* ShellSetSpec::mutable_variations(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.variations)
+  return variations_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >*
+ShellSetSpec::mutable_variations() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellSetSpec.variations)
+  return &variations_;
+}
+inline const ::ei::ShellSetSpec_VariationInfo& ShellSetSpec::_internal_variations(int index) const {
+  return variations_.Get(index);
+}
+inline const ::ei::ShellSetSpec_VariationInfo& ShellSetSpec::variations(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.variations)
+  return _internal_variations(index);
+}
+inline ::ei::ShellSetSpec_VariationInfo* ShellSetSpec::_internal_add_variations() {
+  return variations_.Add();
+}
+inline ::ei::ShellSetSpec_VariationInfo* ShellSetSpec::add_variations() {
+  ::ei::ShellSetSpec_VariationInfo* _add = _internal_add_variations();
+  // @@protoc_insertion_point(field_add:ei.ShellSetSpec.variations)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >&
+ShellSetSpec::variations() const {
+  // @@protoc_insertion_point(field_list:ei.ShellSetSpec.variations)
+  return variations_;
+}
+
+// optional bool default_appearance = 6;
+inline bool ShellSetSpec::_internal_has_default_appearance() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_default_appearance() const {
+  return _internal_has_default_appearance();
+}
+inline void ShellSetSpec::clear_default_appearance() {
+  default_appearance_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool ShellSetSpec::_internal_default_appearance() const {
+  return default_appearance_;
+}
+inline bool ShellSetSpec::default_appearance() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.default_appearance)
+  return _internal_default_appearance();
+}
+inline void ShellSetSpec::_internal_set_default_appearance(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  default_appearance_ = value;
+}
+inline void ShellSetSpec::set_default_appearance(bool value) {
+  _internal_set_default_appearance(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.default_appearance)
+}
+
+// optional bool custom_appearance = 12;
+inline bool ShellSetSpec::_internal_has_custom_appearance() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_custom_appearance() const {
+  return _internal_has_custom_appearance();
+}
+inline void ShellSetSpec::clear_custom_appearance() {
+  custom_appearance_ = false;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline bool ShellSetSpec::_internal_custom_appearance() const {
+  return custom_appearance_;
+}
+inline bool ShellSetSpec::custom_appearance() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.custom_appearance)
+  return _internal_custom_appearance();
+}
+inline void ShellSetSpec::_internal_set_custom_appearance(bool value) {
+  _has_bits_[0] |= 0x00000100u;
+  custom_appearance_ = value;
+}
+inline void ShellSetSpec::set_custom_appearance(bool value) {
+  _internal_set_custom_appearance(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.custom_appearance)
+}
+
+// -------------------------------------------------------------------
+
+// ShellObjectSpec_LODPiece
+
+// optional .ei.DLCItem dlc = 1;
+inline bool ShellObjectSpec_LODPiece::_internal_has_dlc() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || dlc_ != nullptr);
+  return value;
+}
+inline bool ShellObjectSpec_LODPiece::has_dlc() const {
+  return _internal_has_dlc();
+}
+inline void ShellObjectSpec_LODPiece::clear_dlc() {
+  if (dlc_ != nullptr) dlc_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::ei::DLCItem& ShellObjectSpec_LODPiece::_internal_dlc() const {
+  const ::ei::DLCItem* p = dlc_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::DLCItem&>(
+      ::ei::_DLCItem_default_instance_);
+}
+inline const ::ei::DLCItem& ShellObjectSpec_LODPiece::dlc() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.LODPiece.dlc)
+  return _internal_dlc();
+}
+inline void ShellObjectSpec_LODPiece::unsafe_arena_set_allocated_dlc(
+    ::ei::DLCItem* dlc) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(dlc_);
+  }
+  dlc_ = dlc;
+  if (dlc) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ShellObjectSpec.LODPiece.dlc)
+}
+inline ::ei::DLCItem* ShellObjectSpec_LODPiece::release_dlc() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::DLCItem* temp = dlc_;
+  dlc_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::DLCItem* ShellObjectSpec_LODPiece::unsafe_arena_release_dlc() {
+  // @@protoc_insertion_point(field_release:ei.ShellObjectSpec.LODPiece.dlc)
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::DLCItem* temp = dlc_;
+  dlc_ = nullptr;
+  return temp;
+}
+inline ::ei::DLCItem* ShellObjectSpec_LODPiece::_internal_mutable_dlc() {
+  _has_bits_[0] |= 0x00000001u;
+  if (dlc_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::DLCItem>(GetArenaForAllocation());
+    dlc_ = p;
+  }
+  return dlc_;
+}
+inline ::ei::DLCItem* ShellObjectSpec_LODPiece::mutable_dlc() {
+  ::ei::DLCItem* _msg = _internal_mutable_dlc();
+  // @@protoc_insertion_point(field_mutable:ei.ShellObjectSpec.LODPiece.dlc)
+  return _msg;
+}
+inline void ShellObjectSpec_LODPiece::set_allocated_dlc(::ei::DLCItem* dlc) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete dlc_;
+  }
+  if (dlc) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::DLCItem>::GetOwningArena(dlc);
+    if (message_arena != submessage_arena) {
+      dlc = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, dlc, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  dlc_ = dlc;
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellObjectSpec.LODPiece.dlc)
+}
+
+// optional uint32 lod = 2;
+inline bool ShellObjectSpec_LODPiece::_internal_has_lod() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec_LODPiece::has_lod() const {
+  return _internal_has_lod();
+}
+inline void ShellObjectSpec_LODPiece::clear_lod() {
+  lod_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline uint32_t ShellObjectSpec_LODPiece::_internal_lod() const {
+  return lod_;
+}
+inline uint32_t ShellObjectSpec_LODPiece::lod() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.LODPiece.lod)
+  return _internal_lod();
+}
+inline void ShellObjectSpec_LODPiece::_internal_set_lod(uint32_t value) {
+  _has_bits_[0] |= 0x00000002u;
+  lod_ = value;
+}
+inline void ShellObjectSpec_LODPiece::set_lod(uint32_t value) {
+  _internal_set_lod(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.LODPiece.lod)
+}
+
+// -------------------------------------------------------------------
+
+// ShellObjectSpec
+
+// optional string identifier = 1;
+inline bool ShellObjectSpec::_internal_has_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_identifier() const {
+  return _internal_has_identifier();
+}
+inline void ShellObjectSpec::clear_identifier() {
+  identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellObjectSpec::identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.identifier)
+  return _internal_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellObjectSpec::set_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.identifier)
+}
+inline std::string* ShellObjectSpec::mutable_identifier() {
+  std::string* _s = _internal_mutable_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellObjectSpec.identifier)
+  return _s;
+}
+inline const std::string& ShellObjectSpec::_internal_identifier() const {
+  return identifier_.Get();
+}
+inline void ShellObjectSpec::_internal_set_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellObjectSpec::_internal_mutable_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellObjectSpec::release_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellObjectSpec.identifier)
+  if (!_internal_has_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellObjectSpec::set_allocated_identifier(std::string* identifier) {
+  if (identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellObjectSpec.identifier)
+}
+
+// optional string name = 2;
+inline bool ShellObjectSpec::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_name() const {
+  return _internal_has_name();
+}
+inline void ShellObjectSpec::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ShellObjectSpec::name() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellObjectSpec::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.name)
+}
+inline std::string* ShellObjectSpec::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:ei.ShellObjectSpec.name)
+  return _s;
+}
+inline const std::string& ShellObjectSpec::_internal_name() const {
+  return name_.Get();
+}
+inline void ShellObjectSpec::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellObjectSpec::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000002u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellObjectSpec::release_name() {
+  // @@protoc_insertion_point(field_release:ei.ShellObjectSpec.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellObjectSpec::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellObjectSpec.name)
+}
+
+// optional .ei.ShellSpec.AssetType asset_type = 3;
+inline bool ShellObjectSpec::_internal_has_asset_type() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_asset_type() const {
+  return _internal_has_asset_type();
+}
+inline void ShellObjectSpec::clear_asset_type() {
+  asset_type_ = 1;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline ::ei::ShellSpec_AssetType ShellObjectSpec::_internal_asset_type() const {
+  return static_cast< ::ei::ShellSpec_AssetType >(asset_type_);
+}
+inline ::ei::ShellSpec_AssetType ShellObjectSpec::asset_type() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.asset_type)
+  return _internal_asset_type();
+}
+inline void ShellObjectSpec::_internal_set_asset_type(::ei::ShellSpec_AssetType value) {
+  assert(::ei::ShellSpec_AssetType_IsValid(value));
+  _has_bits_[0] |= 0x00000800u;
+  asset_type_ = value;
+}
+inline void ShellObjectSpec::set_asset_type(::ei::ShellSpec_AssetType value) {
+  _internal_set_asset_type(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.asset_type)
+}
+
+// optional string object_class = 14;
+inline bool ShellObjectSpec::_internal_has_object_class() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_object_class() const {
+  return _internal_has_object_class();
+}
+inline void ShellObjectSpec::clear_object_class() {
+  object_class_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ShellObjectSpec::object_class() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.object_class)
+  return _internal_object_class();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellObjectSpec::set_object_class(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ object_class_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.object_class)
+}
+inline std::string* ShellObjectSpec::mutable_object_class() {
+  std::string* _s = _internal_mutable_object_class();
+  // @@protoc_insertion_point(field_mutable:ei.ShellObjectSpec.object_class)
+  return _s;
+}
+inline const std::string& ShellObjectSpec::_internal_object_class() const {
+  return object_class_.Get();
+}
+inline void ShellObjectSpec::_internal_set_object_class(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  object_class_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellObjectSpec::_internal_mutable_object_class() {
+  _has_bits_[0] |= 0x00000004u;
+  return object_class_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellObjectSpec::release_object_class() {
+  // @@protoc_insertion_point(field_release:ei.ShellObjectSpec.object_class)
+  if (!_internal_has_object_class()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = object_class_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (object_class_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    object_class_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellObjectSpec::set_allocated_object_class(std::string* object_class) {
+  if (object_class != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  object_class_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), object_class,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (object_class_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    object_class_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellObjectSpec.object_class)
+}
+
+// optional uint32 price = 4;
+inline bool ShellObjectSpec::_internal_has_price() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_price() const {
+  return _internal_has_price();
+}
+inline void ShellObjectSpec::clear_price() {
+  price_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t ShellObjectSpec::_internal_price() const {
+  return price_;
+}
+inline uint32_t ShellObjectSpec::price() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.price)
+  return _internal_price();
+}
+inline void ShellObjectSpec::_internal_set_price(uint32_t value) {
+  _has_bits_[0] |= 0x00000008u;
+  price_ = value;
+}
+inline void ShellObjectSpec::set_price(uint32_t value) {
+  _internal_set_price(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.price)
+}
+
+// optional uint32 required_eop = 5;
+inline bool ShellObjectSpec::_internal_has_required_eop() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_required_eop() const {
+  return _internal_has_required_eop();
+}
+inline void ShellObjectSpec::clear_required_eop() {
+  required_eop_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline uint32_t ShellObjectSpec::_internal_required_eop() const {
+  return required_eop_;
+}
+inline uint32_t ShellObjectSpec::required_eop() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.required_eop)
+  return _internal_required_eop();
+}
+inline void ShellObjectSpec::_internal_set_required_eop(uint32_t value) {
+  _has_bits_[0] |= 0x00000010u;
+  required_eop_ = value;
+}
+inline void ShellObjectSpec::set_required_eop(uint32_t value) {
+  _internal_set_required_eop(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.required_eop)
+}
+
+// optional double required_soul_eggs = 6;
+inline bool ShellObjectSpec::_internal_has_required_soul_eggs() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_required_soul_eggs() const {
+  return _internal_has_required_soul_eggs();
+}
+inline void ShellObjectSpec::clear_required_soul_eggs() {
+  required_soul_eggs_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double ShellObjectSpec::_internal_required_soul_eggs() const {
+  return required_soul_eggs_;
+}
+inline double ShellObjectSpec::required_soul_eggs() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.required_soul_eggs)
+  return _internal_required_soul_eggs();
+}
+inline void ShellObjectSpec::_internal_set_required_soul_eggs(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  required_soul_eggs_ = value;
+}
+inline void ShellObjectSpec::set_required_soul_eggs(double value) {
+  _internal_set_required_soul_eggs(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.required_soul_eggs)
+}
+
+// optional bool is_new = 10;
+inline bool ShellObjectSpec::_internal_has_is_new() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_is_new() const {
+  return _internal_has_is_new();
+}
+inline void ShellObjectSpec::clear_is_new() {
+  is_new_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool ShellObjectSpec::_internal_is_new() const {
+  return is_new_;
+}
+inline bool ShellObjectSpec::is_new() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.is_new)
+  return _internal_is_new();
+}
+inline void ShellObjectSpec::_internal_set_is_new(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  is_new_ = value;
+}
+inline void ShellObjectSpec::set_is_new(bool value) {
+  _internal_set_is_new(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.is_new)
+}
+
+// optional bool expires = 11;
+inline bool ShellObjectSpec::_internal_has_expires() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_expires() const {
+  return _internal_has_expires();
+}
+inline void ShellObjectSpec::clear_expires() {
+  expires_ = false;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline bool ShellObjectSpec::_internal_expires() const {
+  return expires_;
+}
+inline bool ShellObjectSpec::expires() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.expires)
+  return _internal_expires();
+}
+inline void ShellObjectSpec::_internal_set_expires(bool value) {
+  _has_bits_[0] |= 0x00000100u;
+  expires_ = value;
+}
+inline void ShellObjectSpec::set_expires(bool value) {
+  _internal_set_expires(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.expires)
+}
+
+// optional double seconds_remaining = 12;
+inline bool ShellObjectSpec::_internal_has_seconds_remaining() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_seconds_remaining() const {
+  return _internal_has_seconds_remaining();
+}
+inline void ShellObjectSpec::clear_seconds_remaining() {
+  seconds_remaining_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline double ShellObjectSpec::_internal_seconds_remaining() const {
+  return seconds_remaining_;
+}
+inline double ShellObjectSpec::seconds_remaining() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.seconds_remaining)
+  return _internal_seconds_remaining();
+}
+inline void ShellObjectSpec::_internal_set_seconds_remaining(double value) {
+  _has_bits_[0] |= 0x00000040u;
+  seconds_remaining_ = value;
+}
+inline void ShellObjectSpec::set_seconds_remaining(double value) {
+  _internal_set_seconds_remaining(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.seconds_remaining)
+}
+
+// repeated double metadata = 7;
+inline int ShellObjectSpec::_internal_metadata_size() const {
+  return metadata_.size();
+}
+inline int ShellObjectSpec::metadata_size() const {
+  return _internal_metadata_size();
+}
+inline void ShellObjectSpec::clear_metadata() {
+  metadata_.Clear();
+}
+inline double ShellObjectSpec::_internal_metadata(int index) const {
+  return metadata_.Get(index);
+}
+inline double ShellObjectSpec::metadata(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.metadata)
+  return _internal_metadata(index);
+}
+inline void ShellObjectSpec::set_metadata(int index, double value) {
+  metadata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.metadata)
+}
+inline void ShellObjectSpec::_internal_add_metadata(double value) {
+  metadata_.Add(value);
+}
+inline void ShellObjectSpec::add_metadata(double value) {
+  _internal_add_metadata(value);
+  // @@protoc_insertion_point(field_add:ei.ShellObjectSpec.metadata)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+ShellObjectSpec::_internal_metadata() const {
+  return metadata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+ShellObjectSpec::metadata() const {
+  // @@protoc_insertion_point(field_list:ei.ShellObjectSpec.metadata)
+  return _internal_metadata();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+ShellObjectSpec::_internal_mutable_metadata() {
+  return &metadata_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+ShellObjectSpec::mutable_metadata() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellObjectSpec.metadata)
+  return _internal_mutable_metadata();
+}
+
+// optional bool no_hats = 13;
+inline bool ShellObjectSpec::_internal_has_no_hats() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_no_hats() const {
+  return _internal_has_no_hats();
+}
+inline void ShellObjectSpec::clear_no_hats() {
+  no_hats_ = false;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline bool ShellObjectSpec::_internal_no_hats() const {
+  return no_hats_;
+}
+inline bool ShellObjectSpec::no_hats() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.no_hats)
+  return _internal_no_hats();
+}
+inline void ShellObjectSpec::_internal_set_no_hats(bool value) {
+  _has_bits_[0] |= 0x00000200u;
+  no_hats_ = value;
+}
+inline void ShellObjectSpec::set_no_hats(bool value) {
+  _internal_set_no_hats(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.no_hats)
+}
+
+// repeated .ei.ShellObjectSpec.LODPiece pieces = 8;
+inline int ShellObjectSpec::_internal_pieces_size() const {
+  return pieces_.size();
+}
+inline int ShellObjectSpec::pieces_size() const {
+  return _internal_pieces_size();
+}
+inline void ShellObjectSpec::clear_pieces() {
+  pieces_.Clear();
+}
+inline ::ei::ShellObjectSpec_LODPiece* ShellObjectSpec::mutable_pieces(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellObjectSpec.pieces)
+  return pieces_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece >*
+ShellObjectSpec::mutable_pieces() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellObjectSpec.pieces)
+  return &pieces_;
+}
+inline const ::ei::ShellObjectSpec_LODPiece& ShellObjectSpec::_internal_pieces(int index) const {
+  return pieces_.Get(index);
+}
+inline const ::ei::ShellObjectSpec_LODPiece& ShellObjectSpec::pieces(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.pieces)
+  return _internal_pieces(index);
+}
+inline ::ei::ShellObjectSpec_LODPiece* ShellObjectSpec::_internal_add_pieces() {
+  return pieces_.Add();
+}
+inline ::ei::ShellObjectSpec_LODPiece* ShellObjectSpec::add_pieces() {
+  ::ei::ShellObjectSpec_LODPiece* _add = _internal_add_pieces();
+  // @@protoc_insertion_point(field_add:ei.ShellObjectSpec.pieces)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece >&
+ShellObjectSpec::pieces() const {
+  // @@protoc_insertion_point(field_list:ei.ShellObjectSpec.pieces)
+  return pieces_;
+}
+
+// optional bool default_appearance = 9;
+inline bool ShellObjectSpec::_internal_has_default_appearance() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_default_appearance() const {
+  return _internal_has_default_appearance();
+}
+inline void ShellObjectSpec::clear_default_appearance() {
+  default_appearance_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool ShellObjectSpec::_internal_default_appearance() const {
+  return default_appearance_;
+}
+inline bool ShellObjectSpec::default_appearance() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.default_appearance)
+  return _internal_default_appearance();
+}
+inline void ShellObjectSpec::_internal_set_default_appearance(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  default_appearance_ = value;
+}
+inline void ShellObjectSpec::set_default_appearance(bool value) {
+  _internal_set_default_appearance(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.default_appearance)
+}
+
+// -------------------------------------------------------------------
+
+// ShellGroupSpec
+
+// optional string identifier = 1;
+inline bool ShellGroupSpec::_internal_has_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellGroupSpec::has_identifier() const {
+  return _internal_has_identifier();
+}
+inline void ShellGroupSpec::clear_identifier() {
+  identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellGroupSpec::identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellGroupSpec.identifier)
+  return _internal_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellGroupSpec::set_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellGroupSpec.identifier)
+}
+inline std::string* ShellGroupSpec::mutable_identifier() {
+  std::string* _s = _internal_mutable_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellGroupSpec.identifier)
+  return _s;
+}
+inline const std::string& ShellGroupSpec::_internal_identifier() const {
+  return identifier_.Get();
+}
+inline void ShellGroupSpec::_internal_set_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellGroupSpec::_internal_mutable_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellGroupSpec::release_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellGroupSpec.identifier)
+  if (!_internal_has_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellGroupSpec::set_allocated_identifier(std::string* identifier) {
+  if (identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellGroupSpec.identifier)
+}
+
+// optional string name = 2;
+inline bool ShellGroupSpec::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellGroupSpec::has_name() const {
+  return _internal_has_name();
+}
+inline void ShellGroupSpec::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ShellGroupSpec::name() const {
+  // @@protoc_insertion_point(field_get:ei.ShellGroupSpec.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellGroupSpec::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellGroupSpec.name)
+}
+inline std::string* ShellGroupSpec::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:ei.ShellGroupSpec.name)
+  return _s;
+}
+inline const std::string& ShellGroupSpec::_internal_name() const {
+  return name_.Get();
+}
+inline void ShellGroupSpec::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellGroupSpec::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000002u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellGroupSpec::release_name() {
+  // @@protoc_insertion_point(field_release:ei.ShellGroupSpec.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellGroupSpec::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellGroupSpec.name)
+}
+
+// optional .ei.ShellSpec.AssetType asset_type = 5;
+inline bool ShellGroupSpec::_internal_has_asset_type() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ShellGroupSpec::has_asset_type() const {
+  return _internal_has_asset_type();
+}
+inline void ShellGroupSpec::clear_asset_type() {
+  asset_type_ = 1;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::ei::ShellSpec_AssetType ShellGroupSpec::_internal_asset_type() const {
+  return static_cast< ::ei::ShellSpec_AssetType >(asset_type_);
+}
+inline ::ei::ShellSpec_AssetType ShellGroupSpec::asset_type() const {
+  // @@protoc_insertion_point(field_get:ei.ShellGroupSpec.asset_type)
+  return _internal_asset_type();
+}
+inline void ShellGroupSpec::_internal_set_asset_type(::ei::ShellSpec_AssetType value) {
+  assert(::ei::ShellSpec_AssetType_IsValid(value));
+  _has_bits_[0] |= 0x00000008u;
+  asset_type_ = value;
+}
+inline void ShellGroupSpec::set_asset_type(::ei::ShellSpec_AssetType value) {
+  _internal_set_asset_type(value);
+  // @@protoc_insertion_point(field_set:ei.ShellGroupSpec.asset_type)
+}
+
+// repeated string member_ids = 3;
+inline int ShellGroupSpec::_internal_member_ids_size() const {
+  return member_ids_.size();
+}
+inline int ShellGroupSpec::member_ids_size() const {
+  return _internal_member_ids_size();
+}
+inline void ShellGroupSpec::clear_member_ids() {
+  member_ids_.Clear();
+}
+inline std::string* ShellGroupSpec::add_member_ids() {
+  std::string* _s = _internal_add_member_ids();
+  // @@protoc_insertion_point(field_add_mutable:ei.ShellGroupSpec.member_ids)
+  return _s;
+}
+inline const std::string& ShellGroupSpec::_internal_member_ids(int index) const {
+  return member_ids_.Get(index);
+}
+inline const std::string& ShellGroupSpec::member_ids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellGroupSpec.member_ids)
+  return _internal_member_ids(index);
+}
+inline std::string* ShellGroupSpec::mutable_member_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellGroupSpec.member_ids)
+  return member_ids_.Mutable(index);
+}
+inline void ShellGroupSpec::set_member_ids(int index, const std::string& value) {
+  member_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ShellGroupSpec.member_ids)
+}
+inline void ShellGroupSpec::set_member_ids(int index, std::string&& value) {
+  member_ids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ShellGroupSpec.member_ids)
+}
+inline void ShellGroupSpec::set_member_ids(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  member_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ShellGroupSpec.member_ids)
+}
+inline void ShellGroupSpec::set_member_ids(int index, const char* value, size_t size) {
+  member_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ShellGroupSpec.member_ids)
+}
+inline std::string* ShellGroupSpec::_internal_add_member_ids() {
+  return member_ids_.Add();
+}
+inline void ShellGroupSpec::add_member_ids(const std::string& value) {
+  member_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ShellGroupSpec.member_ids)
+}
+inline void ShellGroupSpec::add_member_ids(std::string&& value) {
+  member_ids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ShellGroupSpec.member_ids)
+}
+inline void ShellGroupSpec::add_member_ids(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  member_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ShellGroupSpec.member_ids)
+}
+inline void ShellGroupSpec::add_member_ids(const char* value, size_t size) {
+  member_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ShellGroupSpec.member_ids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ShellGroupSpec::member_ids() const {
+  // @@protoc_insertion_point(field_list:ei.ShellGroupSpec.member_ids)
+  return member_ids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ShellGroupSpec::mutable_member_ids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellGroupSpec.member_ids)
+  return &member_ids_;
+}
+
+// optional double price_mult_DEPRECATED = 4;
+inline bool ShellGroupSpec::_internal_has_price_mult_deprecated() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellGroupSpec::has_price_mult_deprecated() const {
+  return _internal_has_price_mult_deprecated();
+}
+inline void ShellGroupSpec::clear_price_mult_deprecated() {
+  price_mult_deprecated_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline double ShellGroupSpec::_internal_price_mult_deprecated() const {
+  return price_mult_deprecated_;
+}
+inline double ShellGroupSpec::price_mult_deprecated() const {
+  // @@protoc_insertion_point(field_get:ei.ShellGroupSpec.price_mult_DEPRECATED)
+  return _internal_price_mult_deprecated();
+}
+inline void ShellGroupSpec::_internal_set_price_mult_deprecated(double value) {
+  _has_bits_[0] |= 0x00000004u;
+  price_mult_deprecated_ = value;
+}
+inline void ShellGroupSpec::set_price_mult_deprecated(double value) {
+  _internal_set_price_mult_deprecated(value);
+  // @@protoc_insertion_point(field_set:ei.ShellGroupSpec.price_mult_DEPRECATED)
 }
 
 // -------------------------------------------------------------------
@@ -70481,77 +80707,157 @@ DLCCatalog::shell_sets() const {
   return shell_sets_;
 }
 
+// repeated .ei.ShellObjectSpec shell_objects = 4;
+inline int DLCCatalog::_internal_shell_objects_size() const {
+  return shell_objects_.size();
+}
+inline int DLCCatalog::shell_objects_size() const {
+  return _internal_shell_objects_size();
+}
+inline void DLCCatalog::clear_shell_objects() {
+  shell_objects_.Clear();
+}
+inline ::ei::ShellObjectSpec* DLCCatalog::mutable_shell_objects(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.DLCCatalog.shell_objects)
+  return shell_objects_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec >*
+DLCCatalog::mutable_shell_objects() {
+  // @@protoc_insertion_point(field_mutable_list:ei.DLCCatalog.shell_objects)
+  return &shell_objects_;
+}
+inline const ::ei::ShellObjectSpec& DLCCatalog::_internal_shell_objects(int index) const {
+  return shell_objects_.Get(index);
+}
+inline const ::ei::ShellObjectSpec& DLCCatalog::shell_objects(int index) const {
+  // @@protoc_insertion_point(field_get:ei.DLCCatalog.shell_objects)
+  return _internal_shell_objects(index);
+}
+inline ::ei::ShellObjectSpec* DLCCatalog::_internal_add_shell_objects() {
+  return shell_objects_.Add();
+}
+inline ::ei::ShellObjectSpec* DLCCatalog::add_shell_objects() {
+  ::ei::ShellObjectSpec* _add = _internal_add_shell_objects();
+  // @@protoc_insertion_point(field_add:ei.DLCCatalog.shell_objects)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec >&
+DLCCatalog::shell_objects() const {
+  // @@protoc_insertion_point(field_list:ei.DLCCatalog.shell_objects)
+  return shell_objects_;
+}
+
+// repeated .ei.ShellGroupSpec shell_groups = 5;
+inline int DLCCatalog::_internal_shell_groups_size() const {
+  return shell_groups_.size();
+}
+inline int DLCCatalog::shell_groups_size() const {
+  return _internal_shell_groups_size();
+}
+inline void DLCCatalog::clear_shell_groups() {
+  shell_groups_.Clear();
+}
+inline ::ei::ShellGroupSpec* DLCCatalog::mutable_shell_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.DLCCatalog.shell_groups)
+  return shell_groups_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec >*
+DLCCatalog::mutable_shell_groups() {
+  // @@protoc_insertion_point(field_mutable_list:ei.DLCCatalog.shell_groups)
+  return &shell_groups_;
+}
+inline const ::ei::ShellGroupSpec& DLCCatalog::_internal_shell_groups(int index) const {
+  return shell_groups_.Get(index);
+}
+inline const ::ei::ShellGroupSpec& DLCCatalog::shell_groups(int index) const {
+  // @@protoc_insertion_point(field_get:ei.DLCCatalog.shell_groups)
+  return _internal_shell_groups(index);
+}
+inline ::ei::ShellGroupSpec* DLCCatalog::_internal_add_shell_groups() {
+  return shell_groups_.Add();
+}
+inline ::ei::ShellGroupSpec* DLCCatalog::add_shell_groups() {
+  ::ei::ShellGroupSpec* _add = _internal_add_shell_groups();
+  // @@protoc_insertion_point(field_add:ei.DLCCatalog.shell_groups)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec >&
+DLCCatalog::shell_groups() const {
+  // @@protoc_insertion_point(field_list:ei.DLCCatalog.shell_groups)
+  return shell_groups_;
+}
+
 // -------------------------------------------------------------------
 
 // ShellDB_ShellStatus
 
-// optional string shell_identifier = 1;
-inline bool ShellDB_ShellStatus::_internal_has_shell_identifier() const {
+// optional string identifier = 1;
+inline bool ShellDB_ShellStatus::_internal_has_identifier() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ShellDB_ShellStatus::has_shell_identifier() const {
-  return _internal_has_shell_identifier();
+inline bool ShellDB_ShellStatus::has_identifier() const {
+  return _internal_has_identifier();
 }
-inline void ShellDB_ShellStatus::clear_shell_identifier() {
-  shell_identifier_.ClearToEmpty();
+inline void ShellDB_ShellStatus::clear_identifier() {
+  identifier_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ShellDB_ShellStatus::shell_identifier() const {
-  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellStatus.shell_identifier)
-  return _internal_shell_identifier();
+inline const std::string& ShellDB_ShellStatus::identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellStatus.identifier)
+  return _internal_identifier();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ShellDB_ShellStatus::set_shell_identifier(ArgT0&& arg0, ArgT... args) {
+void ShellDB_ShellStatus::set_identifier(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
- shell_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellStatus.shell_identifier)
+ identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellStatus.identifier)
 }
-inline std::string* ShellDB_ShellStatus::mutable_shell_identifier() {
-  std::string* _s = _internal_mutable_shell_identifier();
-  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellStatus.shell_identifier)
+inline std::string* ShellDB_ShellStatus::mutable_identifier() {
+  std::string* _s = _internal_mutable_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellStatus.identifier)
   return _s;
 }
-inline const std::string& ShellDB_ShellStatus::_internal_shell_identifier() const {
-  return shell_identifier_.Get();
+inline const std::string& ShellDB_ShellStatus::_internal_identifier() const {
+  return identifier_.Get();
 }
-inline void ShellDB_ShellStatus::_internal_set_shell_identifier(const std::string& value) {
+inline void ShellDB_ShellStatus::_internal_set_identifier(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
-  shell_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* ShellDB_ShellStatus::_internal_mutable_shell_identifier() {
+inline std::string* ShellDB_ShellStatus::_internal_mutable_identifier() {
   _has_bits_[0] |= 0x00000001u;
-  return shell_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+  return identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* ShellDB_ShellStatus::release_shell_identifier() {
-  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellStatus.shell_identifier)
-  if (!_internal_has_shell_identifier()) {
+inline std::string* ShellDB_ShellStatus::release_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellStatus.identifier)
+  if (!_internal_has_identifier()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000001u;
-  auto* p = shell_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  auto* p = identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (shell_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
-    shell_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ShellDB_ShellStatus::set_allocated_shell_identifier(std::string* shell_identifier) {
-  if (shell_identifier != nullptr) {
+inline void ShellDB_ShellStatus::set_allocated_identifier(std::string* identifier) {
+  if (identifier != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  shell_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), shell_identifier,
+  identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), identifier,
       GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (shell_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
-    shell_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  if (identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellStatus.shell_identifier)
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellStatus.identifier)
 }
 
 // optional bool owned = 2;
@@ -70580,6 +80886,256 @@ inline void ShellDB_ShellStatus::_internal_set_owned(bool value) {
 inline void ShellDB_ShellStatus::set_owned(bool value) {
   _internal_set_owned(value);
   // @@protoc_insertion_point(field_set:ei.ShellDB.ShellStatus.owned)
+}
+
+// -------------------------------------------------------------------
+
+// ShellDB_ShellElementStatus
+
+// optional .ei.ShellDB.FarmElement element = 1;
+inline bool ShellDB_ShellElementStatus::_internal_has_element() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellElementStatus::has_element() const {
+  return _internal_has_element();
+}
+inline void ShellDB_ShellElementStatus::clear_element() {
+  element_ = 1;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::ei::ShellDB_FarmElement ShellDB_ShellElementStatus::_internal_element() const {
+  return static_cast< ::ei::ShellDB_FarmElement >(element_);
+}
+inline ::ei::ShellDB_FarmElement ShellDB_ShellElementStatus::element() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellElementStatus.element)
+  return _internal_element();
+}
+inline void ShellDB_ShellElementStatus::_internal_set_element(::ei::ShellDB_FarmElement value) {
+  assert(::ei::ShellDB_FarmElement_IsValid(value));
+  _has_bits_[0] |= 0x00000002u;
+  element_ = value;
+}
+inline void ShellDB_ShellElementStatus::set_element(::ei::ShellDB_FarmElement value) {
+  _internal_set_element(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellElementStatus.element)
+}
+
+// optional string set_identifier = 2;
+inline bool ShellDB_ShellElementStatus::_internal_has_set_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellElementStatus::has_set_identifier() const {
+  return _internal_has_set_identifier();
+}
+inline void ShellDB_ShellElementStatus::clear_set_identifier() {
+  set_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellDB_ShellElementStatus::set_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellElementStatus.set_identifier)
+  return _internal_set_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ShellElementStatus::set_set_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ set_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellElementStatus.set_identifier)
+}
+inline std::string* ShellDB_ShellElementStatus::mutable_set_identifier() {
+  std::string* _s = _internal_mutable_set_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellElementStatus.set_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ShellElementStatus::_internal_set_identifier() const {
+  return set_identifier_.Get();
+}
+inline void ShellDB_ShellElementStatus::_internal_set_set_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  set_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellElementStatus::_internal_mutable_set_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return set_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellElementStatus::release_set_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellElementStatus.set_identifier)
+  if (!_internal_has_set_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = set_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (set_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    set_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ShellElementStatus::set_allocated_set_identifier(std::string* set_identifier) {
+  if (set_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  set_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), set_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (set_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    set_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellElementStatus.set_identifier)
+}
+
+// -------------------------------------------------------------------
+
+// ShellDB_ShellSetVariationStatus
+
+// optional string set_identifier = 1;
+inline bool ShellDB_ShellSetVariationStatus::_internal_has_set_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellSetVariationStatus::has_set_identifier() const {
+  return _internal_has_set_identifier();
+}
+inline void ShellDB_ShellSetVariationStatus::clear_set_identifier() {
+  set_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellDB_ShellSetVariationStatus::set_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetVariationStatus.set_identifier)
+  return _internal_set_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ShellSetVariationStatus::set_set_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ set_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetVariationStatus.set_identifier)
+}
+inline std::string* ShellDB_ShellSetVariationStatus::mutable_set_identifier() {
+  std::string* _s = _internal_mutable_set_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellSetVariationStatus.set_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ShellSetVariationStatus::_internal_set_identifier() const {
+  return set_identifier_.Get();
+}
+inline void ShellDB_ShellSetVariationStatus::_internal_set_set_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  set_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetVariationStatus::_internal_mutable_set_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return set_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetVariationStatus::release_set_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellSetVariationStatus.set_identifier)
+  if (!_internal_has_set_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = set_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (set_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    set_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ShellSetVariationStatus::set_allocated_set_identifier(std::string* set_identifier) {
+  if (set_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  set_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), set_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (set_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    set_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellSetVariationStatus.set_identifier)
+}
+
+// repeated string owned_variations = 2;
+inline int ShellDB_ShellSetVariationStatus::_internal_owned_variations_size() const {
+  return owned_variations_.size();
+}
+inline int ShellDB_ShellSetVariationStatus::owned_variations_size() const {
+  return _internal_owned_variations_size();
+}
+inline void ShellDB_ShellSetVariationStatus::clear_owned_variations() {
+  owned_variations_.Clear();
+}
+inline std::string* ShellDB_ShellSetVariationStatus::add_owned_variations() {
+  std::string* _s = _internal_add_owned_variations();
+  // @@protoc_insertion_point(field_add_mutable:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+  return _s;
+}
+inline const std::string& ShellDB_ShellSetVariationStatus::_internal_owned_variations(int index) const {
+  return owned_variations_.Get(index);
+}
+inline const std::string& ShellDB_ShellSetVariationStatus::owned_variations(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+  return _internal_owned_variations(index);
+}
+inline std::string* ShellDB_ShellSetVariationStatus::mutable_owned_variations(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+  return owned_variations_.Mutable(index);
+}
+inline void ShellDB_ShellSetVariationStatus::set_owned_variations(int index, const std::string& value) {
+  owned_variations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline void ShellDB_ShellSetVariationStatus::set_owned_variations(int index, std::string&& value) {
+  owned_variations_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline void ShellDB_ShellSetVariationStatus::set_owned_variations(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  owned_variations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline void ShellDB_ShellSetVariationStatus::set_owned_variations(int index, const char* value, size_t size) {
+  owned_variations_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline std::string* ShellDB_ShellSetVariationStatus::_internal_add_owned_variations() {
+  return owned_variations_.Add();
+}
+inline void ShellDB_ShellSetVariationStatus::add_owned_variations(const std::string& value) {
+  owned_variations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline void ShellDB_ShellSetVariationStatus::add_owned_variations(std::string&& value) {
+  owned_variations_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline void ShellDB_ShellSetVariationStatus::add_owned_variations(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  owned_variations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline void ShellDB_ShellSetVariationStatus::add_owned_variations(const char* value, size_t size) {
+  owned_variations_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ShellDB_ShellSetVariationStatus::owned_variations() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+  return owned_variations_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ShellDB_ShellSetVariationStatus::mutable_owned_variations() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.ShellSetVariationStatus.owned_variations)
+  return &owned_variations_;
 }
 
 // -------------------------------------------------------------------
@@ -70624,6 +81180,154 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellConfi
 ShellDB_FarmConfiguration::shell_configs() const {
   // @@protoc_insertion_point(field_list:ei.ShellDB.FarmConfiguration.shell_configs)
   return shell_configs_;
+}
+
+// repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;
+inline int ShellDB_FarmConfiguration::_internal_shell_set_configs_size() const {
+  return shell_set_configs_.size();
+}
+inline int ShellDB_FarmConfiguration::shell_set_configs_size() const {
+  return _internal_shell_set_configs_size();
+}
+inline void ShellDB_FarmConfiguration::clear_shell_set_configs() {
+  shell_set_configs_.Clear();
+}
+inline ::ei::ShellDB_ShellSetConfiguration* ShellDB_FarmConfiguration::mutable_shell_set_configs(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.FarmConfiguration.shell_set_configs)
+  return shell_set_configs_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetConfiguration >*
+ShellDB_FarmConfiguration::mutable_shell_set_configs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.FarmConfiguration.shell_set_configs)
+  return &shell_set_configs_;
+}
+inline const ::ei::ShellDB_ShellSetConfiguration& ShellDB_FarmConfiguration::_internal_shell_set_configs(int index) const {
+  return shell_set_configs_.Get(index);
+}
+inline const ::ei::ShellDB_ShellSetConfiguration& ShellDB_FarmConfiguration::shell_set_configs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.FarmConfiguration.shell_set_configs)
+  return _internal_shell_set_configs(index);
+}
+inline ::ei::ShellDB_ShellSetConfiguration* ShellDB_FarmConfiguration::_internal_add_shell_set_configs() {
+  return shell_set_configs_.Add();
+}
+inline ::ei::ShellDB_ShellSetConfiguration* ShellDB_FarmConfiguration::add_shell_set_configs() {
+  ::ei::ShellDB_ShellSetConfiguration* _add = _internal_add_shell_set_configs();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.FarmConfiguration.shell_set_configs)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetConfiguration >&
+ShellDB_FarmConfiguration::shell_set_configs() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.FarmConfiguration.shell_set_configs)
+  return shell_set_configs_;
+}
+
+// optional bool configure_chickens_by_group = 7;
+inline bool ShellDB_FarmConfiguration::_internal_has_configure_chickens_by_group() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_FarmConfiguration::has_configure_chickens_by_group() const {
+  return _internal_has_configure_chickens_by_group();
+}
+inline void ShellDB_FarmConfiguration::clear_configure_chickens_by_group() {
+  configure_chickens_by_group_ = false;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline bool ShellDB_FarmConfiguration::_internal_configure_chickens_by_group() const {
+  return configure_chickens_by_group_;
+}
+inline bool ShellDB_FarmConfiguration::configure_chickens_by_group() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.FarmConfiguration.configure_chickens_by_group)
+  return _internal_configure_chickens_by_group();
+}
+inline void ShellDB_FarmConfiguration::_internal_set_configure_chickens_by_group(bool value) {
+  _has_bits_[0] |= 0x00000001u;
+  configure_chickens_by_group_ = value;
+}
+inline void ShellDB_FarmConfiguration::set_configure_chickens_by_group(bool value) {
+  _internal_set_configure_chickens_by_group(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.FarmConfiguration.configure_chickens_by_group)
+}
+
+// repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;
+inline int ShellDB_FarmConfiguration::_internal_group_configs_size() const {
+  return group_configs_.size();
+}
+inline int ShellDB_FarmConfiguration::group_configs_size() const {
+  return _internal_group_configs_size();
+}
+inline void ShellDB_FarmConfiguration::clear_group_configs() {
+  group_configs_.Clear();
+}
+inline ::ei::ShellDB_ShellGroupConfiguration* ShellDB_FarmConfiguration::mutable_group_configs(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.FarmConfiguration.group_configs)
+  return group_configs_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellGroupConfiguration >*
+ShellDB_FarmConfiguration::mutable_group_configs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.FarmConfiguration.group_configs)
+  return &group_configs_;
+}
+inline const ::ei::ShellDB_ShellGroupConfiguration& ShellDB_FarmConfiguration::_internal_group_configs(int index) const {
+  return group_configs_.Get(index);
+}
+inline const ::ei::ShellDB_ShellGroupConfiguration& ShellDB_FarmConfiguration::group_configs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.FarmConfiguration.group_configs)
+  return _internal_group_configs(index);
+}
+inline ::ei::ShellDB_ShellGroupConfiguration* ShellDB_FarmConfiguration::_internal_add_group_configs() {
+  return group_configs_.Add();
+}
+inline ::ei::ShellDB_ShellGroupConfiguration* ShellDB_FarmConfiguration::add_group_configs() {
+  ::ei::ShellDB_ShellGroupConfiguration* _add = _internal_add_group_configs();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.FarmConfiguration.group_configs)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellGroupConfiguration >&
+ShellDB_FarmConfiguration::group_configs() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.FarmConfiguration.group_configs)
+  return group_configs_;
+}
+
+// repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;
+inline int ShellDB_FarmConfiguration::_internal_chicken_configs_size() const {
+  return chicken_configs_.size();
+}
+inline int ShellDB_FarmConfiguration::chicken_configs_size() const {
+  return _internal_chicken_configs_size();
+}
+inline void ShellDB_FarmConfiguration::clear_chicken_configs() {
+  chicken_configs_.Clear();
+}
+inline ::ei::ShellDB_ChickenConfig* ShellDB_FarmConfiguration::mutable_chicken_configs(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.FarmConfiguration.chicken_configs)
+  return chicken_configs_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig >*
+ShellDB_FarmConfiguration::mutable_chicken_configs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.FarmConfiguration.chicken_configs)
+  return &chicken_configs_;
+}
+inline const ::ei::ShellDB_ChickenConfig& ShellDB_FarmConfiguration::_internal_chicken_configs(int index) const {
+  return chicken_configs_.Get(index);
+}
+inline const ::ei::ShellDB_ChickenConfig& ShellDB_FarmConfiguration::chicken_configs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.FarmConfiguration.chicken_configs)
+  return _internal_chicken_configs(index);
+}
+inline ::ei::ShellDB_ChickenConfig* ShellDB_FarmConfiguration::_internal_add_chicken_configs() {
+  return chicken_configs_.Add();
+}
+inline ::ei::ShellDB_ChickenConfig* ShellDB_FarmConfiguration::add_chicken_configs() {
+  ::ei::ShellDB_ChickenConfig* _add = _internal_add_chicken_configs();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.FarmConfiguration.chicken_configs)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig >&
+ShellDB_FarmConfiguration::chicken_configs() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.FarmConfiguration.chicken_configs)
+  return chicken_configs_;
 }
 
 // -------------------------------------------------------------------
@@ -70758,6 +81462,518 @@ inline void ShellDB_ShellConfiguration::set_allocated_shell_identifier(std::stri
 
 // -------------------------------------------------------------------
 
+// ShellDB_ShellSetConfiguration
+
+// optional .ei.ShellDB.FarmElement element = 1;
+inline bool ShellDB_ShellSetConfiguration::_internal_has_element() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellSetConfiguration::has_element() const {
+  return _internal_has_element();
+}
+inline void ShellDB_ShellSetConfiguration::clear_element() {
+  element_ = 1;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::ei::ShellDB_FarmElement ShellDB_ShellSetConfiguration::_internal_element() const {
+  return static_cast< ::ei::ShellDB_FarmElement >(element_);
+}
+inline ::ei::ShellDB_FarmElement ShellDB_ShellSetConfiguration::element() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetConfiguration.element)
+  return _internal_element();
+}
+inline void ShellDB_ShellSetConfiguration::_internal_set_element(::ei::ShellDB_FarmElement value) {
+  assert(::ei::ShellDB_FarmElement_IsValid(value));
+  _has_bits_[0] |= 0x00000010u;
+  element_ = value;
+}
+inline void ShellDB_ShellSetConfiguration::set_element(::ei::ShellDB_FarmElement value) {
+  _internal_set_element(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetConfiguration.element)
+}
+
+// optional uint32 index = 2;
+inline bool ShellDB_ShellSetConfiguration::_internal_has_index() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellSetConfiguration::has_index() const {
+  return _internal_has_index();
+}
+inline void ShellDB_ShellSetConfiguration::clear_index() {
+  index_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t ShellDB_ShellSetConfiguration::_internal_index() const {
+  return index_;
+}
+inline uint32_t ShellDB_ShellSetConfiguration::index() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetConfiguration.index)
+  return _internal_index();
+}
+inline void ShellDB_ShellSetConfiguration::_internal_set_index(uint32_t value) {
+  _has_bits_[0] |= 0x00000008u;
+  index_ = value;
+}
+inline void ShellDB_ShellSetConfiguration::set_index(uint32_t value) {
+  _internal_set_index(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetConfiguration.index)
+}
+
+// optional string shell_set_identifier = 3;
+inline bool ShellDB_ShellSetConfiguration::_internal_has_shell_set_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellSetConfiguration::has_shell_set_identifier() const {
+  return _internal_has_shell_set_identifier();
+}
+inline void ShellDB_ShellSetConfiguration::clear_shell_set_identifier() {
+  shell_set_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellDB_ShellSetConfiguration::shell_set_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetConfiguration.shell_set_identifier)
+  return _internal_shell_set_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ShellSetConfiguration::set_shell_set_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ shell_set_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetConfiguration.shell_set_identifier)
+}
+inline std::string* ShellDB_ShellSetConfiguration::mutable_shell_set_identifier() {
+  std::string* _s = _internal_mutable_shell_set_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellSetConfiguration.shell_set_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ShellSetConfiguration::_internal_shell_set_identifier() const {
+  return shell_set_identifier_.Get();
+}
+inline void ShellDB_ShellSetConfiguration::_internal_set_shell_set_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  shell_set_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetConfiguration::_internal_mutable_shell_set_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return shell_set_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetConfiguration::release_shell_set_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellSetConfiguration.shell_set_identifier)
+  if (!_internal_has_shell_set_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = shell_set_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (shell_set_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    shell_set_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ShellSetConfiguration::set_allocated_shell_set_identifier(std::string* shell_set_identifier) {
+  if (shell_set_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  shell_set_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), shell_set_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (shell_set_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    shell_set_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellSetConfiguration.shell_set_identifier)
+}
+
+// optional string variation_identifier = 4;
+inline bool ShellDB_ShellSetConfiguration::_internal_has_variation_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellSetConfiguration::has_variation_identifier() const {
+  return _internal_has_variation_identifier();
+}
+inline void ShellDB_ShellSetConfiguration::clear_variation_identifier() {
+  variation_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ShellDB_ShellSetConfiguration::variation_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetConfiguration.variation_identifier)
+  return _internal_variation_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ShellSetConfiguration::set_variation_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ variation_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetConfiguration.variation_identifier)
+}
+inline std::string* ShellDB_ShellSetConfiguration::mutable_variation_identifier() {
+  std::string* _s = _internal_mutable_variation_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellSetConfiguration.variation_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ShellSetConfiguration::_internal_variation_identifier() const {
+  return variation_identifier_.Get();
+}
+inline void ShellDB_ShellSetConfiguration::_internal_set_variation_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  variation_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetConfiguration::_internal_mutable_variation_identifier() {
+  _has_bits_[0] |= 0x00000002u;
+  return variation_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetConfiguration::release_variation_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellSetConfiguration.variation_identifier)
+  if (!_internal_has_variation_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = variation_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (variation_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    variation_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ShellSetConfiguration::set_allocated_variation_identifier(std::string* variation_identifier) {
+  if (variation_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  variation_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), variation_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (variation_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    variation_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellSetConfiguration.variation_identifier)
+}
+
+// optional string decorator_identifier = 5;
+inline bool ShellDB_ShellSetConfiguration::_internal_has_decorator_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellSetConfiguration::has_decorator_identifier() const {
+  return _internal_has_decorator_identifier();
+}
+inline void ShellDB_ShellSetConfiguration::clear_decorator_identifier() {
+  decorator_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ShellDB_ShellSetConfiguration::decorator_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellSetConfiguration.decorator_identifier)
+  return _internal_decorator_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ShellSetConfiguration::set_decorator_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ decorator_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellSetConfiguration.decorator_identifier)
+}
+inline std::string* ShellDB_ShellSetConfiguration::mutable_decorator_identifier() {
+  std::string* _s = _internal_mutable_decorator_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellSetConfiguration.decorator_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ShellSetConfiguration::_internal_decorator_identifier() const {
+  return decorator_identifier_.Get();
+}
+inline void ShellDB_ShellSetConfiguration::_internal_set_decorator_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  decorator_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetConfiguration::_internal_mutable_decorator_identifier() {
+  _has_bits_[0] |= 0x00000004u;
+  return decorator_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellSetConfiguration::release_decorator_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellSetConfiguration.decorator_identifier)
+  if (!_internal_has_decorator_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = decorator_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (decorator_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    decorator_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ShellSetConfiguration::set_allocated_decorator_identifier(std::string* decorator_identifier) {
+  if (decorator_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  decorator_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), decorator_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (decorator_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    decorator_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellSetConfiguration.decorator_identifier)
+}
+
+// -------------------------------------------------------------------
+
+// ShellDB_ShellGroupConfiguration
+
+// optional .ei.ShellSpec.AssetType asset_type = 1;
+inline bool ShellDB_ShellGroupConfiguration::_internal_has_asset_type() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellGroupConfiguration::has_asset_type() const {
+  return _internal_has_asset_type();
+}
+inline void ShellDB_ShellGroupConfiguration::clear_asset_type() {
+  asset_type_ = 1;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::ei::ShellSpec_AssetType ShellDB_ShellGroupConfiguration::_internal_asset_type() const {
+  return static_cast< ::ei::ShellSpec_AssetType >(asset_type_);
+}
+inline ::ei::ShellSpec_AssetType ShellDB_ShellGroupConfiguration::asset_type() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellGroupConfiguration.asset_type)
+  return _internal_asset_type();
+}
+inline void ShellDB_ShellGroupConfiguration::_internal_set_asset_type(::ei::ShellSpec_AssetType value) {
+  assert(::ei::ShellSpec_AssetType_IsValid(value));
+  _has_bits_[0] |= 0x00000002u;
+  asset_type_ = value;
+}
+inline void ShellDB_ShellGroupConfiguration::set_asset_type(::ei::ShellSpec_AssetType value) {
+  _internal_set_asset_type(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellGroupConfiguration.asset_type)
+}
+
+// optional string group_identifier = 2;
+inline bool ShellDB_ShellGroupConfiguration::_internal_has_group_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_ShellGroupConfiguration::has_group_identifier() const {
+  return _internal_has_group_identifier();
+}
+inline void ShellDB_ShellGroupConfiguration::clear_group_identifier() {
+  group_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellDB_ShellGroupConfiguration::group_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ShellGroupConfiguration.group_identifier)
+  return _internal_group_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ShellGroupConfiguration::set_group_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ group_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ShellGroupConfiguration.group_identifier)
+}
+inline std::string* ShellDB_ShellGroupConfiguration::mutable_group_identifier() {
+  std::string* _s = _internal_mutable_group_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ShellGroupConfiguration.group_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ShellGroupConfiguration::_internal_group_identifier() const {
+  return group_identifier_.Get();
+}
+inline void ShellDB_ShellGroupConfiguration::_internal_set_group_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  group_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellGroupConfiguration::_internal_mutable_group_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return group_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ShellGroupConfiguration::release_group_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ShellGroupConfiguration.group_identifier)
+  if (!_internal_has_group_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = group_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (group_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    group_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ShellGroupConfiguration::set_allocated_group_identifier(std::string* group_identifier) {
+  if (group_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  group_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), group_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (group_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    group_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ShellGroupConfiguration.group_identifier)
+}
+
+// -------------------------------------------------------------------
+
+// ShellDB_ChickenConfig
+
+// optional string chicken_identifier = 1;
+inline bool ShellDB_ChickenConfig::_internal_has_chicken_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_ChickenConfig::has_chicken_identifier() const {
+  return _internal_has_chicken_identifier();
+}
+inline void ShellDB_ChickenConfig::clear_chicken_identifier() {
+  chicken_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellDB_ChickenConfig::chicken_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ChickenConfig.chicken_identifier)
+  return _internal_chicken_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ChickenConfig::set_chicken_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ chicken_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ChickenConfig.chicken_identifier)
+}
+inline std::string* ShellDB_ChickenConfig::mutable_chicken_identifier() {
+  std::string* _s = _internal_mutable_chicken_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ChickenConfig.chicken_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ChickenConfig::_internal_chicken_identifier() const {
+  return chicken_identifier_.Get();
+}
+inline void ShellDB_ChickenConfig::_internal_set_chicken_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  chicken_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ChickenConfig::_internal_mutable_chicken_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return chicken_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ChickenConfig::release_chicken_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ChickenConfig.chicken_identifier)
+  if (!_internal_has_chicken_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = chicken_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (chicken_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    chicken_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ChickenConfig::set_allocated_chicken_identifier(std::string* chicken_identifier) {
+  if (chicken_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  chicken_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chicken_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (chicken_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    chicken_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ChickenConfig.chicken_identifier)
+}
+
+// optional string hat_identifier = 2;
+inline bool ShellDB_ChickenConfig::_internal_has_hat_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellDB_ChickenConfig::has_hat_identifier() const {
+  return _internal_has_hat_identifier();
+}
+inline void ShellDB_ChickenConfig::clear_hat_identifier() {
+  hat_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ShellDB_ChickenConfig::hat_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.ChickenConfig.hat_identifier)
+  return _internal_hat_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_ChickenConfig::set_hat_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ hat_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.ChickenConfig.hat_identifier)
+}
+inline std::string* ShellDB_ChickenConfig::mutable_hat_identifier() {
+  std::string* _s = _internal_mutable_hat_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.ChickenConfig.hat_identifier)
+  return _s;
+}
+inline const std::string& ShellDB_ChickenConfig::_internal_hat_identifier() const {
+  return hat_identifier_.Get();
+}
+inline void ShellDB_ChickenConfig::_internal_set_hat_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  hat_identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ChickenConfig::_internal_mutable_hat_identifier() {
+  _has_bits_[0] |= 0x00000002u;
+  return hat_identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_ChickenConfig::release_hat_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.ChickenConfig.hat_identifier)
+  if (!_internal_has_hat_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = hat_identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (hat_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    hat_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_ChickenConfig::set_allocated_hat_identifier(std::string* hat_identifier) {
+  if (hat_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  hat_identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hat_identifier,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (hat_identifier_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    hat_identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.ChickenConfig.hat_identifier)
+}
+
+// -------------------------------------------------------------------
+
 // ShellDB
 
 // repeated .ei.ShellDB.ShellStatus shell_inventory = 1;
@@ -70800,6 +82016,166 @@ ShellDB::shell_inventory() const {
   return shell_inventory_;
 }
 
+// repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;
+inline int ShellDB::_internal_shell_element_inventory_size() const {
+  return shell_element_inventory_.size();
+}
+inline int ShellDB::shell_element_inventory_size() const {
+  return _internal_shell_element_inventory_size();
+}
+inline void ShellDB::clear_shell_element_inventory() {
+  shell_element_inventory_.Clear();
+}
+inline ::ei::ShellDB_ShellElementStatus* ShellDB::mutable_shell_element_inventory(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.shell_element_inventory)
+  return shell_element_inventory_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellElementStatus >*
+ShellDB::mutable_shell_element_inventory() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.shell_element_inventory)
+  return &shell_element_inventory_;
+}
+inline const ::ei::ShellDB_ShellElementStatus& ShellDB::_internal_shell_element_inventory(int index) const {
+  return shell_element_inventory_.Get(index);
+}
+inline const ::ei::ShellDB_ShellElementStatus& ShellDB::shell_element_inventory(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.shell_element_inventory)
+  return _internal_shell_element_inventory(index);
+}
+inline ::ei::ShellDB_ShellElementStatus* ShellDB::_internal_add_shell_element_inventory() {
+  return shell_element_inventory_.Add();
+}
+inline ::ei::ShellDB_ShellElementStatus* ShellDB::add_shell_element_inventory() {
+  ::ei::ShellDB_ShellElementStatus* _add = _internal_add_shell_element_inventory();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.shell_element_inventory)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellElementStatus >&
+ShellDB::shell_element_inventory() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.shell_element_inventory)
+  return shell_element_inventory_;
+}
+
+// repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;
+inline int ShellDB::_internal_shell_variation_inventory_size() const {
+  return shell_variation_inventory_.size();
+}
+inline int ShellDB::shell_variation_inventory_size() const {
+  return _internal_shell_variation_inventory_size();
+}
+inline void ShellDB::clear_shell_variation_inventory() {
+  shell_variation_inventory_.Clear();
+}
+inline ::ei::ShellDB_ShellSetVariationStatus* ShellDB::mutable_shell_variation_inventory(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.shell_variation_inventory)
+  return shell_variation_inventory_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus >*
+ShellDB::mutable_shell_variation_inventory() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.shell_variation_inventory)
+  return &shell_variation_inventory_;
+}
+inline const ::ei::ShellDB_ShellSetVariationStatus& ShellDB::_internal_shell_variation_inventory(int index) const {
+  return shell_variation_inventory_.Get(index);
+}
+inline const ::ei::ShellDB_ShellSetVariationStatus& ShellDB::shell_variation_inventory(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.shell_variation_inventory)
+  return _internal_shell_variation_inventory(index);
+}
+inline ::ei::ShellDB_ShellSetVariationStatus* ShellDB::_internal_add_shell_variation_inventory() {
+  return shell_variation_inventory_.Add();
+}
+inline ::ei::ShellDB_ShellSetVariationStatus* ShellDB::add_shell_variation_inventory() {
+  ::ei::ShellDB_ShellSetVariationStatus* _add = _internal_add_shell_variation_inventory();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.shell_variation_inventory)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus >&
+ShellDB::shell_variation_inventory() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.shell_variation_inventory)
+  return shell_variation_inventory_;
+}
+
+// repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;
+inline int ShellDB::_internal_shell_set_inventory_size() const {
+  return shell_set_inventory_.size();
+}
+inline int ShellDB::shell_set_inventory_size() const {
+  return _internal_shell_set_inventory_size();
+}
+inline void ShellDB::clear_shell_set_inventory() {
+  shell_set_inventory_.Clear();
+}
+inline ::ei::ShellDB_ShellStatus* ShellDB::mutable_shell_set_inventory(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.shell_set_inventory)
+  return shell_set_inventory_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >*
+ShellDB::mutable_shell_set_inventory() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.shell_set_inventory)
+  return &shell_set_inventory_;
+}
+inline const ::ei::ShellDB_ShellStatus& ShellDB::_internal_shell_set_inventory(int index) const {
+  return shell_set_inventory_.Get(index);
+}
+inline const ::ei::ShellDB_ShellStatus& ShellDB::shell_set_inventory(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.shell_set_inventory)
+  return _internal_shell_set_inventory(index);
+}
+inline ::ei::ShellDB_ShellStatus* ShellDB::_internal_add_shell_set_inventory() {
+  return shell_set_inventory_.Add();
+}
+inline ::ei::ShellDB_ShellStatus* ShellDB::add_shell_set_inventory() {
+  ::ei::ShellDB_ShellStatus* _add = _internal_add_shell_set_inventory();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.shell_set_inventory)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >&
+ShellDB::shell_set_inventory() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.shell_set_inventory)
+  return shell_set_inventory_;
+}
+
+// repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;
+inline int ShellDB::_internal_shell_object_inventory_size() const {
+  return shell_object_inventory_.size();
+}
+inline int ShellDB::shell_object_inventory_size() const {
+  return _internal_shell_object_inventory_size();
+}
+inline void ShellDB::clear_shell_object_inventory() {
+  shell_object_inventory_.Clear();
+}
+inline ::ei::ShellDB_ShellStatus* ShellDB::mutable_shell_object_inventory(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.shell_object_inventory)
+  return shell_object_inventory_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >*
+ShellDB::mutable_shell_object_inventory() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.shell_object_inventory)
+  return &shell_object_inventory_;
+}
+inline const ::ei::ShellDB_ShellStatus& ShellDB::_internal_shell_object_inventory(int index) const {
+  return shell_object_inventory_.Get(index);
+}
+inline const ::ei::ShellDB_ShellStatus& ShellDB::shell_object_inventory(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.shell_object_inventory)
+  return _internal_shell_object_inventory(index);
+}
+inline ::ei::ShellDB_ShellStatus* ShellDB::_internal_add_shell_object_inventory() {
+  return shell_object_inventory_.Add();
+}
+inline ::ei::ShellDB_ShellStatus* ShellDB::add_shell_object_inventory() {
+  ::ei::ShellDB_ShellStatus* _add = _internal_add_shell_object_inventory();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.shell_object_inventory)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellStatus >&
+ShellDB::shell_object_inventory() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.shell_object_inventory)
+  return shell_object_inventory_;
+}
+
 // repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;
 inline int ShellDB::_internal_farm_configs_size() const {
   return farm_configs_.size();
@@ -70840,9 +82216,680 @@ ShellDB::farm_configs() const {
   return farm_configs_;
 }
 
+// repeated string new_shells_downloaded = 6;
+inline int ShellDB::_internal_new_shells_downloaded_size() const {
+  return new_shells_downloaded_.size();
+}
+inline int ShellDB::new_shells_downloaded_size() const {
+  return _internal_new_shells_downloaded_size();
+}
+inline void ShellDB::clear_new_shells_downloaded() {
+  new_shells_downloaded_.Clear();
+}
+inline std::string* ShellDB::add_new_shells_downloaded() {
+  std::string* _s = _internal_add_new_shells_downloaded();
+  // @@protoc_insertion_point(field_add_mutable:ei.ShellDB.new_shells_downloaded)
+  return _s;
+}
+inline const std::string& ShellDB::_internal_new_shells_downloaded(int index) const {
+  return new_shells_downloaded_.Get(index);
+}
+inline const std::string& ShellDB::new_shells_downloaded(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.new_shells_downloaded)
+  return _internal_new_shells_downloaded(index);
+}
+inline std::string* ShellDB::mutable_new_shells_downloaded(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.new_shells_downloaded)
+  return new_shells_downloaded_.Mutable(index);
+}
+inline void ShellDB::set_new_shells_downloaded(int index, const std::string& value) {
+  new_shells_downloaded_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.new_shells_downloaded)
+}
+inline void ShellDB::set_new_shells_downloaded(int index, std::string&& value) {
+  new_shells_downloaded_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ShellDB.new_shells_downloaded)
+}
+inline void ShellDB::set_new_shells_downloaded(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  new_shells_downloaded_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ShellDB.new_shells_downloaded)
+}
+inline void ShellDB::set_new_shells_downloaded(int index, const char* value, size_t size) {
+  new_shells_downloaded_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ShellDB.new_shells_downloaded)
+}
+inline std::string* ShellDB::_internal_add_new_shells_downloaded() {
+  return new_shells_downloaded_.Add();
+}
+inline void ShellDB::add_new_shells_downloaded(const std::string& value) {
+  new_shells_downloaded_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ShellDB.new_shells_downloaded)
+}
+inline void ShellDB::add_new_shells_downloaded(std::string&& value) {
+  new_shells_downloaded_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ShellDB.new_shells_downloaded)
+}
+inline void ShellDB::add_new_shells_downloaded(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  new_shells_downloaded_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ShellDB.new_shells_downloaded)
+}
+inline void ShellDB::add_new_shells_downloaded(const char* value, size_t size) {
+  new_shells_downloaded_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ShellDB.new_shells_downloaded)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ShellDB::new_shells_downloaded() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.new_shells_downloaded)
+  return new_shells_downloaded_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ShellDB::mutable_new_shells_downloaded() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.new_shells_downloaded)
+  return &new_shells_downloaded_;
+}
+
+// repeated string new_shells_seen = 7;
+inline int ShellDB::_internal_new_shells_seen_size() const {
+  return new_shells_seen_.size();
+}
+inline int ShellDB::new_shells_seen_size() const {
+  return _internal_new_shells_seen_size();
+}
+inline void ShellDB::clear_new_shells_seen() {
+  new_shells_seen_.Clear();
+}
+inline std::string* ShellDB::add_new_shells_seen() {
+  std::string* _s = _internal_add_new_shells_seen();
+  // @@protoc_insertion_point(field_add_mutable:ei.ShellDB.new_shells_seen)
+  return _s;
+}
+inline const std::string& ShellDB::_internal_new_shells_seen(int index) const {
+  return new_shells_seen_.Get(index);
+}
+inline const std::string& ShellDB::new_shells_seen(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.new_shells_seen)
+  return _internal_new_shells_seen(index);
+}
+inline std::string* ShellDB::mutable_new_shells_seen(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.new_shells_seen)
+  return new_shells_seen_.Mutable(index);
+}
+inline void ShellDB::set_new_shells_seen(int index, const std::string& value) {
+  new_shells_seen_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.new_shells_seen)
+}
+inline void ShellDB::set_new_shells_seen(int index, std::string&& value) {
+  new_shells_seen_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ShellDB.new_shells_seen)
+}
+inline void ShellDB::set_new_shells_seen(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  new_shells_seen_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ShellDB.new_shells_seen)
+}
+inline void ShellDB::set_new_shells_seen(int index, const char* value, size_t size) {
+  new_shells_seen_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ShellDB.new_shells_seen)
+}
+inline std::string* ShellDB::_internal_add_new_shells_seen() {
+  return new_shells_seen_.Add();
+}
+inline void ShellDB::add_new_shells_seen(const std::string& value) {
+  new_shells_seen_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ShellDB.new_shells_seen)
+}
+inline void ShellDB::add_new_shells_seen(std::string&& value) {
+  new_shells_seen_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ShellDB.new_shells_seen)
+}
+inline void ShellDB::add_new_shells_seen(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  new_shells_seen_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ShellDB.new_shells_seen)
+}
+inline void ShellDB::add_new_shells_seen(const char* value, size_t size) {
+  new_shells_seen_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ShellDB.new_shells_seen)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ShellDB::new_shells_seen() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.new_shells_seen)
+  return new_shells_seen_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ShellDB::mutable_new_shells_seen() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.new_shells_seen)
+  return &new_shells_seen_;
+}
+
+// -------------------------------------------------------------------
+
+// ShellsActionLog
+
+// optional .ei.BasicRequestInfo rinfo = 8;
+inline bool ShellsActionLog::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool ShellsActionLog::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void ShellsActionLog::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const ::ei::BasicRequestInfo& ShellsActionLog::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& ShellsActionLog::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.rinfo)
+  return _internal_rinfo();
+}
+inline void ShellsActionLog::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ShellsActionLog.rinfo)
+}
+inline ::ei::BasicRequestInfo* ShellsActionLog::release_rinfo() {
+  _has_bits_[0] &= ~0x00000010u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* ShellsActionLog::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.ShellsActionLog.rinfo)
+  _has_bits_[0] &= ~0x00000010u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* ShellsActionLog::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000010u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* ShellsActionLog::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.ShellsActionLog.rinfo)
+  return _msg;
+}
+inline void ShellsActionLog::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::BasicRequestInfo>::GetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellsActionLog.rinfo)
+}
+
+// optional string user_id = 1;
+inline bool ShellsActionLog::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void ShellsActionLog::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellsActionLog::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellsActionLog::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.user_id)
+}
+inline std::string* ShellsActionLog::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ShellsActionLog.user_id)
+  return _s;
+}
+inline const std::string& ShellsActionLog::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void ShellsActionLog::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ShellsActionLog.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellsActionLog::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_id,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    user_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellsActionLog.user_id)
+}
+
+// optional string action = 2;
+inline bool ShellsActionLog::_internal_has_action() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_action() const {
+  return _internal_has_action();
+}
+inline void ShellsActionLog::clear_action() {
+  action_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ShellsActionLog::action() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.action)
+  return _internal_action();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellsActionLog::set_action(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ action_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.action)
+}
+inline std::string* ShellsActionLog::mutable_action() {
+  std::string* _s = _internal_mutable_action();
+  // @@protoc_insertion_point(field_mutable:ei.ShellsActionLog.action)
+  return _s;
+}
+inline const std::string& ShellsActionLog::_internal_action() const {
+  return action_.Get();
+}
+inline void ShellsActionLog::_internal_set_action(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  action_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::_internal_mutable_action() {
+  _has_bits_[0] |= 0x00000002u;
+  return action_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::release_action() {
+  // @@protoc_insertion_point(field_release:ei.ShellsActionLog.action)
+  if (!_internal_has_action()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = action_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (action_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellsActionLog::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (action_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellsActionLog.action)
+}
+
+// optional string sub_id = 3;
+inline bool ShellsActionLog::_internal_has_sub_id() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_sub_id() const {
+  return _internal_has_sub_id();
+}
+inline void ShellsActionLog::clear_sub_id() {
+  sub_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ShellsActionLog::sub_id() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.sub_id)
+  return _internal_sub_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellsActionLog::set_sub_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ sub_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.sub_id)
+}
+inline std::string* ShellsActionLog::mutable_sub_id() {
+  std::string* _s = _internal_mutable_sub_id();
+  // @@protoc_insertion_point(field_mutable:ei.ShellsActionLog.sub_id)
+  return _s;
+}
+inline const std::string& ShellsActionLog::_internal_sub_id() const {
+  return sub_id_.Get();
+}
+inline void ShellsActionLog::_internal_set_sub_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  sub_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::_internal_mutable_sub_id() {
+  _has_bits_[0] |= 0x00000004u;
+  return sub_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::release_sub_id() {
+  // @@protoc_insertion_point(field_release:ei.ShellsActionLog.sub_id)
+  if (!_internal_has_sub_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = sub_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (sub_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    sub_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellsActionLog::set_allocated_sub_id(std::string* sub_id) {
+  if (sub_id != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  sub_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sub_id,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (sub_id_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    sub_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellsActionLog.sub_id)
+}
+
+// optional .ei.ShellDB.FarmElement farm_element = 9;
+inline bool ShellsActionLog::_internal_has_farm_element() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_farm_element() const {
+  return _internal_has_farm_element();
+}
+inline void ShellsActionLog::clear_farm_element() {
+  farm_element_ = 1;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline ::ei::ShellDB_FarmElement ShellsActionLog::_internal_farm_element() const {
+  return static_cast< ::ei::ShellDB_FarmElement >(farm_element_);
+}
+inline ::ei::ShellDB_FarmElement ShellsActionLog::farm_element() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.farm_element)
+  return _internal_farm_element();
+}
+inline void ShellsActionLog::_internal_set_farm_element(::ei::ShellDB_FarmElement value) {
+  assert(::ei::ShellDB_FarmElement_IsValid(value));
+  _has_bits_[0] |= 0x00000100u;
+  farm_element_ = value;
+}
+inline void ShellsActionLog::set_farm_element(::ei::ShellDB_FarmElement value) {
+  _internal_set_farm_element(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.farm_element)
+}
+
+// optional uint32 cost = 4;
+inline bool ShellsActionLog::_internal_has_cost() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_cost() const {
+  return _internal_has_cost();
+}
+inline void ShellsActionLog::clear_cost() {
+  cost_ = 0u;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline uint32_t ShellsActionLog::_internal_cost() const {
+  return cost_;
+}
+inline uint32_t ShellsActionLog::cost() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.cost)
+  return _internal_cost();
+}
+inline void ShellsActionLog::_internal_set_cost(uint32_t value) {
+  _has_bits_[0] |= 0x00000040u;
+  cost_ = value;
+}
+inline void ShellsActionLog::set_cost(uint32_t value) {
+  _internal_set_cost(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.cost)
+}
+
+// optional double approx_time = 5;
+inline bool ShellsActionLog::_internal_has_approx_time() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_approx_time() const {
+  return _internal_has_approx_time();
+}
+inline void ShellsActionLog::clear_approx_time() {
+  approx_time_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double ShellsActionLog::_internal_approx_time() const {
+  return approx_time_;
+}
+inline double ShellsActionLog::approx_time() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.approx_time)
+  return _internal_approx_time();
+}
+inline void ShellsActionLog::_internal_set_approx_time(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  approx_time_ = value;
+}
+inline void ShellsActionLog::set_approx_time(double value) {
+  _internal_set_approx_time(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.approx_time)
+}
+
+// optional string version = 6;
+inline bool ShellsActionLog::_internal_has_version() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_version() const {
+  return _internal_has_version();
+}
+inline void ShellsActionLog::clear_version() {
+  version_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& ShellsActionLog::version() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.version)
+  return _internal_version();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellsActionLog::set_version(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ version_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.version)
+}
+inline std::string* ShellsActionLog::mutable_version() {
+  std::string* _s = _internal_mutable_version();
+  // @@protoc_insertion_point(field_mutable:ei.ShellsActionLog.version)
+  return _s;
+}
+inline const std::string& ShellsActionLog::_internal_version() const {
+  return version_.Get();
+}
+inline void ShellsActionLog::_internal_set_version(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  version_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::_internal_mutable_version() {
+  _has_bits_[0] |= 0x00000008u;
+  return version_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellsActionLog::release_version() {
+  // @@protoc_insertion_point(field_release:ei.ShellsActionLog.version)
+  if (!_internal_has_version()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  auto* p = version_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (version_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellsActionLog::set_allocated_version(std::string* version) {
+  if (version != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (version_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellsActionLog.version)
+}
+
+// optional int32 farm_index = 7;
+inline bool ShellsActionLog::_internal_has_farm_index() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_farm_index() const {
+  return _internal_has_farm_index();
+}
+inline void ShellsActionLog::clear_farm_index() {
+  farm_index_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline int32_t ShellsActionLog::_internal_farm_index() const {
+  return farm_index_;
+}
+inline int32_t ShellsActionLog::farm_index() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.farm_index)
+  return _internal_farm_index();
+}
+inline void ShellsActionLog::_internal_set_farm_index(int32_t value) {
+  _has_bits_[0] |= 0x00000080u;
+  farm_index_ = value;
+}
+inline void ShellsActionLog::set_farm_index(int32_t value) {
+  _internal_set_farm_index(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.farm_index)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -71161,6 +83208,11 @@ template <> struct is_proto_enum< ::ei::ShellSpec_AssetType> : ::std::true_type 
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::ShellSpec_AssetType>() {
   return ::ei::ShellSpec_AssetType_descriptor();
+}
+template <> struct is_proto_enum< ::ei::ShellDB_FarmElement> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ShellDB_FarmElement>() {
+  return ::ei::ShellDB_FarmElement_descriptor();
 }
 template <> struct is_proto_enum< ::ei::Platform> : ::std::true_type {};
 template <>

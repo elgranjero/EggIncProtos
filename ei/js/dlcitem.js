@@ -73,6 +73,8 @@ proto.ei.DLCItem.toObject = function(includeInstance, msg) {
     name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     directory: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     ext: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    compressed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    originalSize: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
     url: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     checksum: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
@@ -122,6 +124,14 @@ proto.ei.DLCItem.deserializeBinaryFromReader = function(msg, reader) {
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setExt(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCompressed(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setOriginalSize(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -178,6 +188,20 @@ proto.ei.DLCItem.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeUint64(
+      7,
       f
     );
   }
@@ -303,6 +327,78 @@ proto.ei.DLCItem.prototype.clearExt = function() {
  */
 proto.ei.DLCItem.prototype.hasExt = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional bool compressed = 6;
+ * @return {boolean}
+ */
+proto.ei.DLCItem.prototype.getCompressed = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.DLCItem} returns this
+ */
+proto.ei.DLCItem.prototype.setCompressed = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.DLCItem} returns this
+ */
+proto.ei.DLCItem.prototype.clearCompressed = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.DLCItem.prototype.hasCompressed = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional uint64 original_size = 7;
+ * @return {number}
+ */
+proto.ei.DLCItem.prototype.getOriginalSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.DLCItem} returns this
+ */
+proto.ei.DLCItem.prototype.setOriginalSize = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.DLCItem} returns this
+ */
+proto.ei.DLCItem.prototype.clearOriginalSize = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.DLCItem.prototype.hasOriginalSize = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

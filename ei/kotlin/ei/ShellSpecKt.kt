@@ -256,6 +256,78 @@ public object ShellSpecKt {
     }
 
     /**
+     * <code>optional bool is_new = 14;</code>
+     */
+    public var isNew: kotlin.Boolean
+      @JvmName("getIsNew")
+      get() = _builder.getIsNew()
+      @JvmName("setIsNew")
+      set(value) {
+        _builder.setIsNew(value)
+      }
+    /**
+     * <code>optional bool is_new = 14;</code>
+     */
+    public fun clearIsNew() {
+      _builder.clearIsNew()
+    }
+    /**
+     * <code>optional bool is_new = 14;</code>
+     * @return Whether the isNew field is set.
+     */
+    public fun hasIsNew(): kotlin.Boolean {
+      return _builder.hasIsNew()
+    }
+
+    /**
+     * <code>optional bool expires = 15;</code>
+     */
+    public var expires: kotlin.Boolean
+      @JvmName("getExpires")
+      get() = _builder.getExpires()
+      @JvmName("setExpires")
+      set(value) {
+        _builder.setExpires(value)
+      }
+    /**
+     * <code>optional bool expires = 15;</code>
+     */
+    public fun clearExpires() {
+      _builder.clearExpires()
+    }
+    /**
+     * <code>optional bool expires = 15;</code>
+     * @return Whether the expires field is set.
+     */
+    public fun hasExpires(): kotlin.Boolean {
+      return _builder.hasExpires()
+    }
+
+    /**
+     * <code>optional double seconds_remaining = 16;</code>
+     */
+    public var secondsRemaining: kotlin.Double
+      @JvmName("getSecondsRemaining")
+      get() = _builder.getSecondsRemaining()
+      @JvmName("setSecondsRemaining")
+      set(value) {
+        _builder.setSecondsRemaining(value)
+      }
+    /**
+     * <code>optional double seconds_remaining = 16;</code>
+     */
+    public fun clearSecondsRemaining() {
+      _builder.clearSecondsRemaining()
+    }
+    /**
+     * <code>optional double seconds_remaining = 16;</code>
+     * @return Whether the secondsRemaining field is set.
+     */
+    public fun hasSecondsRemaining(): kotlin.Boolean {
+      return _builder.hasSecondsRemaining()
+    }
+
+    /**
      * <code>optional bool default_appearance = 8;</code>
      */
     public var defaultAppearance: kotlin.Boolean

@@ -29,6 +29,8 @@ proto.ei.RewardType = {
   BOOST_TOKEN: 10,
   ARTIFACT: 11,
   ARTIFACT_CASE: 12,
+  CHICKEN: 13,
+  SHELL_SCRIPT: 14,
   UNKNOWN_REWARD: 100
 };
 

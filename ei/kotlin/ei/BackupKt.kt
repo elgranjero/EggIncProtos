@@ -359,6 +359,30 @@ public object BackupKt {
     }
 
     /**
+     * <code>optional .ei.Backup.Shells shells = 25;</code>
+     */
+    public var shells: ei.Ei.Backup.Shells
+      @JvmName("getShells")
+      get() = _builder.getShells()
+      @JvmName("setShells")
+      set(value) {
+        _builder.setShells(value)
+      }
+    /**
+     * <code>optional .ei.Backup.Shells shells = 25;</code>
+     */
+    public fun clearShells() {
+      _builder.clearShells()
+    }
+    /**
+     * <code>optional .ei.Backup.Shells shells = 25;</code>
+     * @return Whether the shells field is set.
+     */
+    public fun hasShells(): kotlin.Boolean {
+      return _builder.hasShells()
+    }
+
+    /**
      * <code>optional .ei.Backup.Simulation sim = 8;</code>
      */
     public var sim: ei.Ei.Backup.Simulation
@@ -2448,6 +2472,78 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional uint64 shell_scripts_earned = 38;</code>
+       */
+      public var shellScriptsEarned: kotlin.Long
+        @JvmName("getShellScriptsEarned")
+        get() = _builder.getShellScriptsEarned()
+        @JvmName("setShellScriptsEarned")
+        set(value) {
+          _builder.setShellScriptsEarned(value)
+        }
+      /**
+       * <code>optional uint64 shell_scripts_earned = 38;</code>
+       */
+      public fun clearShellScriptsEarned() {
+        _builder.clearShellScriptsEarned()
+      }
+      /**
+       * <code>optional uint64 shell_scripts_earned = 38;</code>
+       * @return Whether the shellScriptsEarned field is set.
+       */
+      public fun hasShellScriptsEarned(): kotlin.Boolean {
+        return _builder.hasShellScriptsEarned()
+      }
+
+      /**
+       * <code>optional uint64 shell_scripts_spent = 39;</code>
+       */
+      public var shellScriptsSpent: kotlin.Long
+        @JvmName("getShellScriptsSpent")
+        get() = _builder.getShellScriptsSpent()
+        @JvmName("setShellScriptsSpent")
+        set(value) {
+          _builder.setShellScriptsSpent(value)
+        }
+      /**
+       * <code>optional uint64 shell_scripts_spent = 39;</code>
+       */
+      public fun clearShellScriptsSpent() {
+        _builder.clearShellScriptsSpent()
+      }
+      /**
+       * <code>optional uint64 shell_scripts_spent = 39;</code>
+       * @return Whether the shellScriptsSpent field is set.
+       */
+      public fun hasShellScriptsSpent(): kotlin.Boolean {
+        return _builder.hasShellScriptsSpent()
+      }
+
+      /**
+       * <code>optional uint64 unclaimed_shell_scripts = 40;</code>
+       */
+      public var unclaimedShellScripts: kotlin.Long
+        @JvmName("getUnclaimedShellScripts")
+        get() = _builder.getUnclaimedShellScripts()
+        @JvmName("setUnclaimedShellScripts")
+        set(value) {
+          _builder.setUnclaimedShellScripts(value)
+        }
+      /**
+       * <code>optional uint64 unclaimed_shell_scripts = 40;</code>
+       */
+      public fun clearUnclaimedShellScripts() {
+        _builder.clearUnclaimedShellScripts()
+      }
+      /**
+       * <code>optional uint64 unclaimed_shell_scripts = 40;</code>
+       * @return Whether the unclaimedShellScripts field is set.
+       */
+      public fun hasUnclaimedShellScripts(): kotlin.Boolean {
+        return _builder.hasUnclaimedShellScripts()
+      }
+
+      /**
        * <code>optional double prestige_cash_earned = 5;</code>
        */
       public var prestigeCashEarned: kotlin.Double
@@ -3738,6 +3834,139 @@ public object BackupKt {
         return _builder.hasInfusingEnabledDEPRECATED()
       }
     }
+  }
+  @kotlin.jvm.JvmSynthetic
+  public inline fun shells(block: ei.BackupKt.ShellsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Shells =
+    ei.BackupKt.ShellsKt.Dsl._create(ei.Ei.Backup.Shells.newBuilder()).apply { block() }._build()
+  public object ShellsKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.Backup.Shells.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.Backup.Shells.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.Backup.Shells = _builder.build()
+
+      /**
+       * <code>optional bool intro_alert = 1;</code>
+       */
+      public var introAlert: kotlin.Boolean
+        @JvmName("getIntroAlert")
+        get() = _builder.getIntroAlert()
+        @JvmName("setIntroAlert")
+        set(value) {
+          _builder.setIntroAlert(value)
+        }
+      /**
+       * <code>optional bool intro_alert = 1;</code>
+       */
+      public fun clearIntroAlert() {
+        _builder.clearIntroAlert()
+      }
+      /**
+       * <code>optional bool intro_alert = 1;</code>
+       * @return Whether the introAlert field is set.
+       */
+      public fun hasIntroAlert(): kotlin.Boolean {
+        return _builder.hasIntroAlert()
+      }
+
+      /**
+       * <code>optional bool contracts_intro_alert = 2;</code>
+       */
+      public var contractsIntroAlert: kotlin.Boolean
+        @JvmName("getContractsIntroAlert")
+        get() = _builder.getContractsIntroAlert()
+        @JvmName("setContractsIntroAlert")
+        set(value) {
+          _builder.setContractsIntroAlert(value)
+        }
+      /**
+       * <code>optional bool contracts_intro_alert = 2;</code>
+       */
+      public fun clearContractsIntroAlert() {
+        _builder.clearContractsIntroAlert()
+      }
+      /**
+       * <code>optional bool contracts_intro_alert = 2;</code>
+       * @return Whether the contractsIntroAlert field is set.
+       */
+      public fun hasContractsIntroAlert(): kotlin.Boolean {
+        return _builder.hasContractsIntroAlert()
+      }
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class NumNewProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * <code>repeated int32 num_new = 3;</code>
+       */
+       public val numNew: com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>
+        @kotlin.jvm.JvmSynthetic
+        get() = com.google.protobuf.kotlin.DslList(
+          _builder.getNumNewList()
+        )
+      /**
+       * <code>repeated int32 num_new = 3;</code>
+       * @param value The numNew to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addNumNew")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.add(value: kotlin.Int) {
+        _builder.addNumNew(value)
+      }/**
+       * <code>repeated int32 num_new = 3;</code>
+       * @param value The numNew to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignNumNew")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.plusAssign(value: kotlin.Int) {
+        add(value)
+      }/**
+       * <code>repeated int32 num_new = 3;</code>
+       * @param values The numNew to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addAllNumNew")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
+        _builder.addAllNumNew(values)
+      }/**
+       * <code>repeated int32 num_new = 3;</code>
+       * @param values The numNew to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignAllNumNew")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
+        addAll(values)
+      }/**
+       * <code>repeated int32 num_new = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The numNew to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("setNumNew")
+      public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.set(index: kotlin.Int, value: kotlin.Int) {
+        _builder.setNumNew(index, value)
+      }/**
+       * <code>repeated int32 num_new = 3;</code>
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("clearNumNew")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.clear() {
+        _builder.clearNumNew()
+      }}
   }
   @kotlin.jvm.JvmSynthetic
   public inline fun simulation(block: ei.BackupKt.SimulationKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Simulation =
@@ -6009,6 +6238,9 @@ public inline fun ei.Ei.Backup.Game.copy(block: ei.BackupKt.GameKt.Dsl.() -> kot
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Artifacts.copy(block: ei.BackupKt.ArtifactsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Artifacts =
   ei.BackupKt.ArtifactsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.Backup.Shells.copy(block: ei.BackupKt.ShellsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Shells =
+  ei.BackupKt.ShellsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Simulation.copy(block: ei.BackupKt.SimulationKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Simulation =
   ei.BackupKt.SimulationKt.Dsl._create(this.toBuilder()).apply { block() }._build()

@@ -2378,7 +2378,11 @@ proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
     askToTrackMinSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     askToTrackMessage: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     askToTrackShowPreDialog: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-    askToTrackAfterPrivacy: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f
+    askToTrackAfterPrivacy: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    chickenRunBoostPercentage: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    shellsIntroTickets: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2434,6 +2438,22 @@ proto.ei.LiveConfig.MiscConfig.deserializeBinaryFromReader = function(msg, reade
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setAskToTrackAfterPrivacy(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setChickenRunBoostPercentage(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setShellsIntroTickets(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setShellsMaxFreeChickenConfigs(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setShellsIntroAlertThreshold(value);
       break;
     default:
       reader.skipField();
@@ -2496,6 +2516,34 @@ proto.ei.LiveConfig.MiscConfig.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeBool(
       5,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeDouble(
+      6,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeUint32(
+      7,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeUint32(
+      8,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
+    writer.writeUint32(
+      9,
       f
     );
   }
@@ -2679,6 +2727,150 @@ proto.ei.LiveConfig.MiscConfig.prototype.clearAskToTrackAfterPrivacy = function(
  */
 proto.ei.LiveConfig.MiscConfig.prototype.hasAskToTrackAfterPrivacy = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional double chicken_run_boost_percentage = 6;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getChickenRunBoostPercentage = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setChickenRunBoostPercentage = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearChickenRunBoostPercentage = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasChickenRunBoostPercentage = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional uint32 shells_intro_tickets = 7;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getShellsIntroTickets = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setShellsIntroTickets = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearShellsIntroTickets = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasShellsIntroTickets = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional uint32 shells_max_free_chicken_configs = 8;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getShellsMaxFreeChickenConfigs = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setShellsMaxFreeChickenConfigs = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearShellsMaxFreeChickenConfigs = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasShellsMaxFreeChickenConfigs = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional uint32 shells_intro_alert_threshold = 9;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getShellsIntroAlertThreshold = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setShellsIntroAlertThreshold = function(value) {
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearShellsIntroAlertThreshold = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasShellsIntroAlertThreshold = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 

@@ -82,6 +82,7 @@ proto.ei.LocalContract.toObject = function(includeInstance, msg) {
     coopContributionFinalized: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
     coopLastUploadedContribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
     coopUserId: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    coopShareFarm: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
     lastAmountWhenRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     numGoalsAchieved: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     boostsUsed: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
@@ -167,6 +168,10 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
     case 13:
       var value = /** @type {string} */ (reader.readString());
       msg.setCoopUserId(value);
+      break;
+    case 17:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCoopShareFarm(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
@@ -292,6 +297,13 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       13,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
+    writer.writeBool(
+      17,
       f
     );
   }
@@ -727,6 +739,42 @@ proto.ei.LocalContract.prototype.clearCoopUserId = function() {
  */
 proto.ei.LocalContract.prototype.hasCoopUserId = function() {
   return jspb.Message.getField(this, 13) != null;
+};
+
+
+/**
+ * optional bool coop_share_farm = 17;
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.getCoopShareFarm = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 17, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setCoopShareFarm = function(value) {
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearCoopShareFarm = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasCoopShareFarm = function() {
+  return jspb.Message.getField(this, 17) != null;
 };
 
 

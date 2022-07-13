@@ -76,7 +76,8 @@ proto.ei.BasicRequestInfo.toObject = function(includeInstance, msg) {
     build: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     country: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    language: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    language: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    debug: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -140,6 +141,10 @@ proto.ei.BasicRequestInfo.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setLanguage(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setDebug(value);
       break;
     default:
       reader.skipField();
@@ -216,6 +221,13 @@ proto.ei.BasicRequestInfo.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       7,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeBool(
+      8,
       f
     );
   }
@@ -471,6 +483,42 @@ proto.ei.BasicRequestInfo.prototype.clearLanguage = function() {
  */
 proto.ei.BasicRequestInfo.prototype.hasLanguage = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional bool debug = 8;
+ * @return {boolean}
+ */
+proto.ei.BasicRequestInfo.prototype.getDebug = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.BasicRequestInfo} returns this
+ */
+proto.ei.BasicRequestInfo.prototype.setDebug = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.BasicRequestInfo} returns this
+ */
+proto.ei.BasicRequestInfo.prototype.clearDebug = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.BasicRequestInfo.prototype.hasDebug = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

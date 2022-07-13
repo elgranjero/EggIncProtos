@@ -287,6 +287,30 @@ public object LocalContractKt {
     }
 
     /**
+     * <code>optional bool coop_share_farm = 17;</code>
+     */
+    public var coopShareFarm: kotlin.Boolean
+      @JvmName("getCoopShareFarm")
+      get() = _builder.getCoopShareFarm()
+      @JvmName("setCoopShareFarm")
+      set(value) {
+        _builder.setCoopShareFarm(value)
+      }
+    /**
+     * <code>optional bool coop_share_farm = 17;</code>
+     */
+    public fun clearCoopShareFarm() {
+      _builder.clearCoopShareFarm()
+    }
+    /**
+     * <code>optional bool coop_share_farm = 17;</code>
+     * @return Whether the coopShareFarm field is set.
+     */
+    public fun hasCoopShareFarm(): kotlin.Boolean {
+      return _builder.hasCoopShareFarm()
+    }
+
+    /**
      * <code>optional double last_amount_when_reward_given = 6;</code>
      */
     public var lastAmountWhenRewardGiven: kotlin.Double

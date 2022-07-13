@@ -17,6 +17,8 @@ goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.ei.DLCItem');
+goog.require('proto.ei.ShellGroupSpec');
+goog.require('proto.ei.ShellObjectSpec');
 goog.require('proto.ei.ShellSetSpec');
 goog.require('proto.ei.ShellSpec');
 
@@ -47,7 +49,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.DLCCatalog.repeatedFields_ = [1,2,3];
+proto.ei.DLCCatalog.repeatedFields_ = [1,2,3,4,5];
 
 
 
@@ -85,7 +87,11 @@ proto.ei.DLCCatalog.toObject = function(includeInstance, msg) {
     shellsList: jspb.Message.toObjectList(msg.getShellsList(),
     proto.ei.ShellSpec.toObject, includeInstance),
     shellSetsList: jspb.Message.toObjectList(msg.getShellSetsList(),
-    proto.ei.ShellSetSpec.toObject, includeInstance)
+    proto.ei.ShellSetSpec.toObject, includeInstance),
+    shellObjectsList: jspb.Message.toObjectList(msg.getShellObjectsList(),
+    proto.ei.ShellObjectSpec.toObject, includeInstance),
+    shellGroupsList: jspb.Message.toObjectList(msg.getShellGroupsList(),
+    proto.ei.ShellGroupSpec.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -136,6 +142,16 @@ proto.ei.DLCCatalog.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.ShellSetSpec;
       reader.readMessage(value,proto.ei.ShellSetSpec.deserializeBinaryFromReader);
       msg.addShellSets(value);
+      break;
+    case 4:
+      var value = new proto.ei.ShellObjectSpec;
+      reader.readMessage(value,proto.ei.ShellObjectSpec.deserializeBinaryFromReader);
+      msg.addShellObjects(value);
+      break;
+    case 5:
+      var value = new proto.ei.ShellGroupSpec;
+      reader.readMessage(value,proto.ei.ShellGroupSpec.deserializeBinaryFromReader);
+      msg.addShellGroups(value);
       break;
     default:
       reader.skipField();
@@ -188,6 +204,22 @@ proto.ei.DLCCatalog.serializeBinaryToWriter = function(message, writer) {
       3,
       f,
       proto.ei.ShellSetSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getShellObjectsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      4,
+      f,
+      proto.ei.ShellObjectSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getShellGroupsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      5,
+      f,
+      proto.ei.ShellGroupSpec.serializeBinaryToWriter
     );
   }
 };
@@ -304,6 +336,82 @@ proto.ei.DLCCatalog.prototype.addShellSets = function(opt_value, opt_index) {
  */
 proto.ei.DLCCatalog.prototype.clearShellSetsList = function() {
   return this.setShellSetsList([]);
+};
+
+
+/**
+ * repeated ShellObjectSpec shell_objects = 4;
+ * @return {!Array<!proto.ei.ShellObjectSpec>}
+ */
+proto.ei.DLCCatalog.prototype.getShellObjectsList = function() {
+  return /** @type{!Array<!proto.ei.ShellObjectSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ShellObjectSpec, 4));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ShellObjectSpec>} value
+ * @return {!proto.ei.DLCCatalog} returns this
+*/
+proto.ei.DLCCatalog.prototype.setShellObjectsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 4, value);
+};
+
+
+/**
+ * @param {!proto.ei.ShellObjectSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ShellObjectSpec}
+ */
+proto.ei.DLCCatalog.prototype.addShellObjects = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.ei.ShellObjectSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.DLCCatalog} returns this
+ */
+proto.ei.DLCCatalog.prototype.clearShellObjectsList = function() {
+  return this.setShellObjectsList([]);
+};
+
+
+/**
+ * repeated ShellGroupSpec shell_groups = 5;
+ * @return {!Array<!proto.ei.ShellGroupSpec>}
+ */
+proto.ei.DLCCatalog.prototype.getShellGroupsList = function() {
+  return /** @type{!Array<!proto.ei.ShellGroupSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ShellGroupSpec, 5));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ShellGroupSpec>} value
+ * @return {!proto.ei.DLCCatalog} returns this
+*/
+proto.ei.DLCCatalog.prototype.setShellGroupsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 5, value);
+};
+
+
+/**
+ * @param {!proto.ei.ShellGroupSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ShellGroupSpec}
+ */
+proto.ei.DLCCatalog.prototype.addShellGroups = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.ei.ShellGroupSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.DLCCatalog} returns this
+ */
+proto.ei.DLCCatalog.prototype.clearShellGroupsList = function() {
+  return this.setShellGroupsList([]);
 };
 
 

@@ -345,6 +345,30 @@ public object ContractKt {
     }
 
     /**
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 60];</code>
+     */
+    public var chickenRunCooldownMinutes: kotlin.Double
+      @JvmName("getChickenRunCooldownMinutes")
+      get() = _builder.getChickenRunCooldownMinutes()
+      @JvmName("setChickenRunCooldownMinutes")
+      set(value) {
+        _builder.setChickenRunCooldownMinutes(value)
+      }
+    /**
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 60];</code>
+     */
+    public fun clearChickenRunCooldownMinutes() {
+      _builder.clearChickenRunCooldownMinutes()
+    }
+    /**
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 60];</code>
+     * @return Whether the chickenRunCooldownMinutes field is set.
+     */
+    public fun hasChickenRunCooldownMinutes(): kotlin.Boolean {
+      return _builder.hasChickenRunCooldownMinutes()
+    }
+
+    /**
      * <code>optional double start_time = 17;</code>
      */
     public var startTime: kotlin.Double

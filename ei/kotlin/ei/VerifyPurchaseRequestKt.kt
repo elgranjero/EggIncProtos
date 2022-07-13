@@ -143,6 +143,30 @@ public object VerifyPurchaseRequestKt {
     }
 
     /**
+     * <code>optional bool sandbox = 7;</code>
+     */
+    public var sandbox: kotlin.Boolean
+      @JvmName("getSandbox")
+      get() = _builder.getSandbox()
+      @JvmName("setSandbox")
+      set(value) {
+        _builder.setSandbox(value)
+      }
+    /**
+     * <code>optional bool sandbox = 7;</code>
+     */
+    public fun clearSandbox() {
+      _builder.clearSandbox()
+    }
+    /**
+     * <code>optional bool sandbox = 7;</code>
+     * @return Whether the sandbox field is set.
+     */
+    public fun hasSandbox(): kotlin.Boolean {
+      return _builder.hasSandbox()
+    }
+
+    /**
      * <code>optional .ei.GenericAction log = 5;</code>
      */
     public var log: ei.Ei.GenericAction

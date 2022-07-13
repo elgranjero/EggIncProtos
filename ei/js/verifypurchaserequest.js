@@ -77,6 +77,7 @@ proto.ei.VerifyPurchaseRequest.toObject = function(includeInstance, msg) {
     transactionId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     receipt: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     platform: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    sandbox: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     log: (f = msg.getLog()) && proto.ei.GenericAction.toObject(includeInstance, f)
   };
 
@@ -134,6 +135,10 @@ proto.ei.VerifyPurchaseRequest.deserializeBinaryFromReader = function(msg, reade
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setPlatform(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSandbox(value);
       break;
     case 5:
       var value = new proto.ei.GenericAction;
@@ -202,6 +207,13 @@ proto.ei.VerifyPurchaseRequest.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeBool(
+      7,
       f
     );
   }
@@ -394,6 +406,42 @@ proto.ei.VerifyPurchaseRequest.prototype.clearPlatform = function() {
  */
 proto.ei.VerifyPurchaseRequest.prototype.hasPlatform = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool sandbox = 7;
+ * @return {boolean}
+ */
+proto.ei.VerifyPurchaseRequest.prototype.getSandbox = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.VerifyPurchaseRequest} returns this
+ */
+proto.ei.VerifyPurchaseRequest.prototype.setSandbox = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.VerifyPurchaseRequest} returns this
+ */
+proto.ei.VerifyPurchaseRequest.prototype.clearSandbox = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.VerifyPurchaseRequest.prototype.hasSandbox = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

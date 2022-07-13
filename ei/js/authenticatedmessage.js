@@ -71,6 +71,7 @@ proto.ei.AuthenticatedMessage.prototype.toObject = function(opt_includeInstance)
 proto.ei.AuthenticatedMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
     message: msg.getMessage_asB64(),
+    version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     code: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
@@ -112,6 +113,10 @@ proto.ei.AuthenticatedMessage.deserializeBinaryFromReader = function(msg, reader
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setMessage(value);
       break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setVersion(value);
+      break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setCode(value);
@@ -149,6 +154,13 @@ proto.ei.AuthenticatedMessage.serializeBinaryToWriter = function(message, writer
   if (f != null) {
     writer.writeBytes(
       1,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeUint32(
+      3,
       f
     );
   }
@@ -219,6 +231,42 @@ proto.ei.AuthenticatedMessage.prototype.clearMessage = function() {
  */
 proto.ei.AuthenticatedMessage.prototype.hasMessage = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional uint32 version = 3;
+ * @return {number}
+ */
+proto.ei.AuthenticatedMessage.prototype.getVersion = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.setVersion = function(value) {
+  return jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.clearVersion = function() {
+  return jspb.Message.setField(this, 3, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.AuthenticatedMessage.prototype.hasVersion = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

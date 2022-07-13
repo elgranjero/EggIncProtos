@@ -189,6 +189,30 @@ public object BasicRequestInfoKt {
     public fun hasLanguage(): kotlin.Boolean {
       return _builder.hasLanguage()
     }
+
+    /**
+     * <code>optional bool debug = 8;</code>
+     */
+    public var debug: kotlin.Boolean
+      @JvmName("getDebug")
+      get() = _builder.getDebug()
+      @JvmName("setDebug")
+      set(value) {
+        _builder.setDebug(value)
+      }
+    /**
+     * <code>optional bool debug = 8;</code>
+     */
+    public fun clearDebug() {
+      _builder.clearDebug()
+    }
+    /**
+     * <code>optional bool debug = 8;</code>
+     * @return Whether the debug field is set.
+     */
+    public fun hasDebug(): kotlin.Boolean {
+      return _builder.hasDebug()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

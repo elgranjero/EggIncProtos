@@ -52,6 +52,7 @@ CF_EXTERN_C_BEGIN
 @class Backup_OwnedBoost;
 @class Backup_ResearchItem;
 @class Backup_Settings;
+@class Backup_Shells;
 @class Backup_Simulation;
 @class Backup_Stats;
 @class Backup_Tutorial;
@@ -63,14 +64,17 @@ CF_EXTERN_C_BEGIN
 @class ConsumeArtifactResponse;
 @class Contract;
 @class ContractCoopStatusResponse;
+@class ContractCoopStatusResponse_ChickenRun;
 @class ContractCoopStatusResponse_ContributionInfo;
 @class ContractCoopStatusResponse_CoopGift;
 @class Contract_Goal;
 @class Contract_GoalSet;
 @class ContractsResponse;
 @class CoopBuffState;
+@class CoopChickenRunEntry;
 @class CraftArtifactRequest;
 @class CraftArtifactResponse;
+@class CurrencyFlowLog;
 @class DLCCatalog;
 @class DLCItem;
 @class DeviceInfo;
@@ -94,16 +98,26 @@ CF_EXTERN_C_BEGIN
 @class MissionInfo_Fuel;
 @class MissionRequest;
 @class MyContracts;
+@class PlayerFarmInfo;
 @class Reward;
 @class SalesInfo;
 @class ServerGift;
 @class SetArtifactRequest;
 @class SetArtifactResponse;
 @class ShellDB;
+@class ShellDB_ChickenConfig;
 @class ShellDB_FarmConfiguration;
 @class ShellDB_ShellConfiguration;
+@class ShellDB_ShellElementStatus;
+@class ShellDB_ShellGroupConfiguration;
+@class ShellDB_ShellSetConfiguration;
+@class ShellDB_ShellSetVariationStatus;
 @class ShellDB_ShellStatus;
+@class ShellGroupSpec;
+@class ShellObjectSpec;
+@class ShellObjectSpec_LODPiece;
 @class ShellSetSpec;
+@class ShellSetSpec_VariationInfo;
 @class ShellSpec;
 @class ShellSpec_ShellPiece;
 
@@ -243,6 +257,8 @@ typedef GPB_ENUM(RewardType) {
   RewardType_BoostToken = 10,
   RewardType_Artifact = 11,
   RewardType_ArtifactCase = 12,
+  RewardType_Chicken = 13,
+  RewardType_ShellScript = 14,
   RewardType_UnknownReward = 100,
 };
 
@@ -581,6 +597,10 @@ typedef GPB_ENUM(ShellSpec_AssetType) {
   ShellSpec_AssetType_MissionControl1 = 180,
   ShellSpec_AssetType_MissionControl2 = 181,
   ShellSpec_AssetType_MissionControl3 = 182,
+  ShellSpec_AssetType_FuelTank1 = 200,
+  ShellSpec_AssetType_FuelTank2 = 201,
+  ShellSpec_AssetType_FuelTank3 = 202,
+  ShellSpec_AssetType_FuelTank4 = 203,
   ShellSpec_AssetType_HatcheryGravitonTop = 500,
   ShellSpec_AssetType_HatcheryNebulaMiddle = 501,
   ShellSpec_AssetType_HatcheryNebulaTop = 502,
@@ -596,6 +616,8 @@ typedef GPB_ENUM(ShellSpec_AssetType) {
   ShellSpec_AssetType_HatcheryEnlightenmentOrb = 520,
   ShellSpec_AssetType_HyperloopTrack = 570,
   ShellSpec_AssetType_MailboxFull = 600,
+  ShellSpec_AssetType_Chicken = 1000,
+  ShellSpec_AssetType_Hat = 1010,
   ShellSpec_AssetType_Unknown = 9999,
 };
 
@@ -606,6 +628,35 @@ GPBEnumDescriptor *ShellSpec_AssetType_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL ShellSpec_AssetType_IsValidValue(int32_t value);
+
+#pragma mark - Enum ShellDB_FarmElement
+
+typedef GPB_ENUM(ShellDB_FarmElement) {
+  ShellDB_FarmElement_HenHouse = 1,
+  ShellDB_FarmElement_Silo = 2,
+  ShellDB_FarmElement_Mailbox = 3,
+  ShellDB_FarmElement_TrophyCase = 4,
+  ShellDB_FarmElement_Ground = 5,
+  ShellDB_FarmElement_Hardscape = 6,
+  ShellDB_FarmElement_Hyperloop = 7,
+  ShellDB_FarmElement_Depot = 8,
+  ShellDB_FarmElement_Lab = 9,
+  ShellDB_FarmElement_Hatchery = 10,
+  ShellDB_FarmElement_Hoa = 11,
+  ShellDB_FarmElement_MissionControl = 12,
+  ShellDB_FarmElement_FuelTank = 13,
+  ShellDB_FarmElement_Chicken = 14,
+  ShellDB_FarmElement_Hat = 15,
+  ShellDB_FarmElement_Unknown = 99,
+};
+
+GPBEnumDescriptor *ShellDB_FarmElement_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL ShellDB_FarmElement_IsValidValue(int32_t value);
 
 #pragma mark - EiRoot
 
@@ -647,6 +698,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_ForceBackup = 22,
   Backup_FieldNumber_ReadMailIdsArray = 23,
   Backup_FieldNumber_ShellDb = 24,
+  Backup_FieldNumber_Shells = 25,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -704,6 +756,10 @@ GPB_FINAL @interface Backup : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) Backup_Artifacts *artifacts;
 /** Test to see if @c artifacts has been set. */
 @property(nonatomic, readwrite) BOOL hasArtifacts;
+
+@property(nonatomic, readwrite, strong, null_resettable) Backup_Shells *shells;
+/** Test to see if @c shells has been set. */
+@property(nonatomic, readwrite) BOOL hasShells;
 
 @property(nonatomic, readwrite, strong, null_resettable) Backup_Simulation *sim;
 /** Test to see if @c sim has been set. */
@@ -1031,6 +1087,9 @@ typedef GPB_ENUM(Backup_Game_FieldNumber) {
   Backup_Game_FieldNumber_UnclaimedSoulEggsD = 35,
   Backup_Game_FieldNumber_ForceEliteContracts = 36,
   Backup_Game_FieldNumber_NewPlayerEventEndTime = 37,
+  Backup_Game_FieldNumber_ShellScriptsEarned = 38,
+  Backup_Game_FieldNumber_ShellScriptsSpent = 39,
+  Backup_Game_FieldNumber_UnclaimedShellScripts = 40,
 };
 
 GPB_FINAL @interface Backup_Game : GPBMessage
@@ -1068,6 +1127,15 @@ GPB_FINAL @interface Backup_Game : GPBMessage
 @property(nonatomic, readwrite) uint64_t unclaimedEggsOfProphecy;
 
 @property(nonatomic, readwrite) BOOL hasUnclaimedEggsOfProphecy;
+@property(nonatomic, readwrite) uint64_t shellScriptsEarned;
+
+@property(nonatomic, readwrite) BOOL hasShellScriptsEarned;
+@property(nonatomic, readwrite) uint64_t shellScriptsSpent;
+
+@property(nonatomic, readwrite) BOOL hasShellScriptsSpent;
+@property(nonatomic, readwrite) uint64_t unclaimedShellScripts;
+
+@property(nonatomic, readwrite) BOOL hasUnclaimedShellScripts;
 @property(nonatomic, readwrite) double prestigeCashEarned;
 
 @property(nonatomic, readwrite) BOOL hasPrestigeCashEarned;
@@ -1225,6 +1293,28 @@ GPB_FINAL @interface Backup_Artifacts : GPBMessage
 @property(nonatomic, readwrite) BOOL infusingEnabledDeprecated;
 
 @property(nonatomic, readwrite) BOOL hasInfusingEnabledDeprecated;
+@end
+
+#pragma mark - Backup_Shells
+
+typedef GPB_ENUM(Backup_Shells_FieldNumber) {
+  Backup_Shells_FieldNumber_IntroAlert = 1,
+  Backup_Shells_FieldNumber_ContractsIntroAlert = 2,
+  Backup_Shells_FieldNumber_NumNewArray = 3,
+};
+
+GPB_FINAL @interface Backup_Shells : GPBMessage
+
+@property(nonatomic, readwrite) BOOL introAlert;
+
+@property(nonatomic, readwrite) BOOL hasIntroAlert;
+@property(nonatomic, readwrite) BOOL contractsIntroAlert;
+
+@property(nonatomic, readwrite) BOOL hasContractsIntroAlert;
+@property(nonatomic, readwrite, strong, null_resettable) GPBInt32Array *numNewArray;
+/** The number of items in @c numNewArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger numNewArray_Count;
+
 @end
 
 #pragma mark - Backup_Simulation
@@ -2113,6 +2203,25 @@ GPB_FINAL @interface GenericAction : GPBMessage
 
 @end
 
+#pragma mark - GenericActionBatchRequest
+
+typedef GPB_ENUM(GenericActionBatchRequest_FieldNumber) {
+  GenericActionBatchRequest_FieldNumber_Rinfo = 1,
+  GenericActionBatchRequest_FieldNumber_ActionsArray = 2,
+};
+
+GPB_FINAL @interface GenericActionBatchRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<GenericAction*> *actionsArray;
+/** The number of items in @c actionsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger actionsArray_Count;
+
+@end
+
 #pragma mark - VerifyPurchaseRequest
 
 typedef GPB_ENUM(VerifyPurchaseRequest_FieldNumber) {
@@ -2122,6 +2231,7 @@ typedef GPB_ENUM(VerifyPurchaseRequest_FieldNumber) {
   VerifyPurchaseRequest_FieldNumber_Platform = 4,
   VerifyPurchaseRequest_FieldNumber_Log = 5,
   VerifyPurchaseRequest_FieldNumber_Rinfo = 6,
+  VerifyPurchaseRequest_FieldNumber_Sandbox = 7,
 };
 
 GPB_FINAL @interface VerifyPurchaseRequest : GPBMessage
@@ -2146,6 +2256,9 @@ GPB_FINAL @interface VerifyPurchaseRequest : GPBMessage
 /** Test to see if @c platform has been set. */
 @property(nonatomic, readwrite) BOOL hasPlatform;
 
+@property(nonatomic, readwrite) BOOL sandbox;
+
+@property(nonatomic, readwrite) BOOL hasSandbox;
 @property(nonatomic, readwrite, strong, null_resettable) GenericAction *log;
 /** Test to see if @c log has been set. */
 @property(nonatomic, readwrite) BOOL hasLog;
@@ -2167,6 +2280,66 @@ GPB_FINAL @interface VerifyPurchaseResponse : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *message;
 /** Test to see if @c message has been set. */
 @property(nonatomic, readwrite) BOOL hasMessage;
+
+@end
+
+#pragma mark - CurrencyFlowLog
+
+typedef GPB_ENUM(CurrencyFlowLog_FieldNumber) {
+  CurrencyFlowLog_FieldNumber_UserId = 1,
+  CurrencyFlowLog_FieldNumber_ApproxTime = 2,
+  CurrencyFlowLog_FieldNumber_Currency = 3,
+  CurrencyFlowLog_FieldNumber_Amount = 4,
+  CurrencyFlowLog_FieldNumber_Location = 5,
+  CurrencyFlowLog_FieldNumber_Version = 6,
+  CurrencyFlowLog_FieldNumber_Platform = 7,
+};
+
+GPB_FINAL @interface CurrencyFlowLog : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+/** Test to see if @c userId has been set. */
+@property(nonatomic, readwrite) BOOL hasUserId;
+
+@property(nonatomic, readwrite) double approxTime;
+
+@property(nonatomic, readwrite) BOOL hasApproxTime;
+@property(nonatomic, readwrite) RewardType currency;
+
+@property(nonatomic, readwrite) BOOL hasCurrency;
+@property(nonatomic, readwrite) int64_t amount;
+
+@property(nonatomic, readwrite) BOOL hasAmount;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *location;
+/** Test to see if @c location has been set. */
+@property(nonatomic, readwrite) BOOL hasLocation;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *version;
+/** Test to see if @c version has been set. */
+@property(nonatomic, readwrite) BOOL hasVersion;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *platform;
+/** Test to see if @c platform has been set. */
+@property(nonatomic, readwrite) BOOL hasPlatform;
+
+@end
+
+#pragma mark - CurrencyFlowBatchRequest
+
+typedef GPB_ENUM(CurrencyFlowBatchRequest_FieldNumber) {
+  CurrencyFlowBatchRequest_FieldNumber_LogsArray = 1,
+  CurrencyFlowBatchRequest_FieldNumber_Rinfo = 2,
+};
+
+GPB_FINAL @interface CurrencyFlowBatchRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CurrencyFlowLog*> *logsArray;
+/** The number of items in @c logsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger logsArray_Count;
 
 @end
 
@@ -2211,6 +2384,7 @@ typedef GPB_ENUM(Contract_FieldNumber) {
   Contract_FieldNumber_MinutesPerToken = 15,
   Contract_FieldNumber_GoalSetsArray = 16,
   Contract_FieldNumber_StartTime = 17,
+  Contract_FieldNumber_ChickenRunCooldownMinutes = 18,
 };
 
 GPB_FINAL @interface Contract : GPBMessage
@@ -2250,6 +2424,9 @@ GPB_FINAL @interface Contract : GPBMessage
 @property(nonatomic, readwrite) double minutesPerToken;
 
 @property(nonatomic, readwrite) BOOL hasMinutesPerToken;
+@property(nonatomic, readwrite) double chickenRunCooldownMinutes;
+
+@property(nonatomic, readwrite) BOOL hasChickenRunCooldownMinutes;
 @property(nonatomic, readwrite) double startTime;
 
 @property(nonatomic, readwrite) BOOL hasStartTime;
@@ -2328,6 +2505,7 @@ typedef GPB_ENUM(BasicRequestInfo_FieldNumber) {
   BasicRequestInfo_FieldNumber_Platform = 5,
   BasicRequestInfo_FieldNumber_Country = 6,
   BasicRequestInfo_FieldNumber_Language = 7,
+  BasicRequestInfo_FieldNumber_Debug = 8,
 };
 
 GPB_FINAL @interface BasicRequestInfo : GPBMessage
@@ -2359,6 +2537,9 @@ GPB_FINAL @interface BasicRequestInfo : GPBMessage
 /** Test to see if @c language has been set. */
 @property(nonatomic, readwrite) BOOL hasLanguage;
 
+@property(nonatomic, readwrite) BOOL debug;
+
+@property(nonatomic, readwrite) BOOL hasDebug;
 @end
 
 #pragma mark - ContractsRequest
@@ -2471,6 +2652,110 @@ GPB_FINAL @interface FarmProductionParams : GPBMessage
 @property(nonatomic, readwrite) BOOL hasDelivered;
 @end
 
+#pragma mark - PlayerFarmInfo
+
+typedef GPB_ENUM(PlayerFarmInfo_FieldNumber) {
+  PlayerFarmInfo_FieldNumber_SoulEggs = 1,
+  PlayerFarmInfo_FieldNumber_EggsOfProphecy = 2,
+  PlayerFarmInfo_FieldNumber_PermitLevel = 3,
+  PlayerFarmInfo_FieldNumber_HyperloopStation = 4,
+  PlayerFarmInfo_FieldNumber_EggMedalLevelArray = 5,
+  PlayerFarmInfo_FieldNumber_EpicResearchArray = 6,
+  PlayerFarmInfo_FieldNumber_EggType = 7,
+  PlayerFarmInfo_FieldNumber_CashOnHand = 8,
+  PlayerFarmInfo_FieldNumber_HabsArray = 9,
+  PlayerFarmInfo_FieldNumber_HabPopulationArray = 10,
+  PlayerFarmInfo_FieldNumber_VehiclesArray = 11,
+  PlayerFarmInfo_FieldNumber_TrainLengthArray = 12,
+  PlayerFarmInfo_FieldNumber_SilosOwned = 13,
+  PlayerFarmInfo_FieldNumber_CommonResearchArray = 14,
+  PlayerFarmInfo_FieldNumber_ActiveBoostsArray = 15,
+  PlayerFarmInfo_FieldNumber_BoostTokensOnHand = 16,
+  PlayerFarmInfo_FieldNumber_EquippedArtifactsArray = 17,
+  PlayerFarmInfo_FieldNumber_ArtifactInventoryScore = 18,
+  PlayerFarmInfo_FieldNumber_FarmAppearance = 19,
+  PlayerFarmInfo_FieldNumber_ClientVersion = 20,
+  PlayerFarmInfo_FieldNumber_HabCapacityArray = 21,
+};
+
+GPB_FINAL @interface PlayerFarmInfo : GPBMessage
+
+@property(nonatomic, readwrite) uint32_t clientVersion;
+
+@property(nonatomic, readwrite) BOOL hasClientVersion;
+@property(nonatomic, readwrite) double soulEggs;
+
+@property(nonatomic, readwrite) BOOL hasSoulEggs;
+@property(nonatomic, readwrite) uint64_t eggsOfProphecy;
+
+@property(nonatomic, readwrite) BOOL hasEggsOfProphecy;
+@property(nonatomic, readwrite) uint32_t permitLevel;
+
+@property(nonatomic, readwrite) BOOL hasPermitLevel;
+@property(nonatomic, readwrite) BOOL hyperloopStation;
+
+@property(nonatomic, readwrite) BOOL hasHyperloopStation;
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt32Array *eggMedalLevelArray;
+/** The number of items in @c eggMedalLevelArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger eggMedalLevelArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Backup_ResearchItem*> *epicResearchArray;
+/** The number of items in @c epicResearchArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger epicResearchArray_Count;
+
+@property(nonatomic, readwrite) Egg eggType;
+
+@property(nonatomic, readwrite) BOOL hasEggType;
+@property(nonatomic, readwrite) double cashOnHand;
+
+@property(nonatomic, readwrite) BOOL hasCashOnHand;
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt32Array *habsArray;
+/** The number of items in @c habsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger habsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt64Array *habPopulationArray;
+/** The number of items in @c habPopulationArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger habPopulationArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt64Array *habCapacityArray;
+/** The number of items in @c habCapacityArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger habCapacityArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt32Array *vehiclesArray;
+/** The number of items in @c vehiclesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger vehiclesArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt32Array *trainLengthArray;
+/** The number of items in @c trainLengthArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger trainLengthArray_Count;
+
+@property(nonatomic, readwrite) uint32_t silosOwned;
+
+@property(nonatomic, readwrite) BOOL hasSilosOwned;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Backup_ResearchItem*> *commonResearchArray;
+/** The number of items in @c commonResearchArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger commonResearchArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Backup_ActiveBoost*> *activeBoostsArray;
+/** The number of items in @c activeBoostsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger activeBoostsArray_Count;
+
+@property(nonatomic, readwrite) uint32_t boostTokensOnHand;
+
+@property(nonatomic, readwrite) BOOL hasBoostTokensOnHand;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CompleteArtifact*> *equippedArtifactsArray;
+/** The number of items in @c equippedArtifactsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger equippedArtifactsArray_Count;
+
+@property(nonatomic, readwrite) uint64_t artifactInventoryScore;
+
+@property(nonatomic, readwrite) BOOL hasArtifactInventoryScore;
+@property(nonatomic, readwrite, strong, null_resettable) ShellDB_FarmConfiguration *farmAppearance;
+/** Test to see if @c farmAppearance has been set. */
+@property(nonatomic, readwrite) BOOL hasFarmAppearance;
+
+@end
+
 #pragma mark - ContractCoopStatusResponse
 
 typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
@@ -2486,6 +2771,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_Public_p = 10,
   ContractCoopStatusResponse_FieldNumber_GiftsArray = 11,
   ContractCoopStatusResponse_FieldNumber_LocalTimestamp = 12,
+  ContractCoopStatusResponse_FieldNumber_ChickenRunsArray = 13,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
@@ -2528,6 +2814,10 @@ GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 /** The number of items in @c giftsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger giftsArray_Count;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ContractCoopStatusResponse_ChickenRun*> *chickenRunsArray;
+/** The number of items in @c chickenRunsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger chickenRunsArray_Count;
+
 @property(nonatomic, readwrite) double localTimestamp;
 
 @property(nonatomic, readwrite) BOOL hasLocalTimestamp;
@@ -2553,6 +2843,9 @@ typedef GPB_ENUM(ContractCoopStatusResponse_ContributionInfo_FieldNumber) {
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_ProductionParams = 15,
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_Leech = 16,
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_Autojoined = 17,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_FarmInfo = 18,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContractIdentifier = 19,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_ChickenRunCooldown = 20,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
@@ -2564,6 +2857,10 @@ GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *userName;
 /** Test to see if @c userName has been set. */
 @property(nonatomic, readwrite) BOOL hasUserName;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *contractIdentifier;
+/** Test to see if @c contractIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasContractIdentifier;
 
 @property(nonatomic, readwrite) double contributionAmount;
 
@@ -2577,6 +2874,10 @@ GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) FarmProductionParams *productionParams;
 /** Test to see if @c productionParams has been set. */
 @property(nonatomic, readwrite) BOOL hasProductionParams;
+
+@property(nonatomic, readwrite, strong, null_resettable) PlayerFarmInfo *farmInfo;
+/** Test to see if @c farmInfo has been set. */
+@property(nonatomic, readwrite) BOOL hasFarmInfo;
 
 @property(nonatomic, readwrite) int32_t rankChange;
 
@@ -2613,6 +2914,9 @@ GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
 /** The number of items in @c buffHistoryArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger buffHistoryArray_Count;
 
+@property(nonatomic, readwrite) double chickenRunCooldown;
+
+@property(nonatomic, readwrite) BOOL hasChickenRunCooldown;
 @end
 
 #pragma mark - ContractCoopStatusResponse_CoopGift
@@ -2638,6 +2942,29 @@ GPB_FINAL @interface ContractCoopStatusResponse_CoopGift : GPBMessage
 @property(nonatomic, readwrite) BOOL hasAmount;
 @end
 
+#pragma mark - ContractCoopStatusResponse_ChickenRun
+
+typedef GPB_ENUM(ContractCoopStatusResponse_ChickenRun_FieldNumber) {
+  ContractCoopStatusResponse_ChickenRun_FieldNumber_UserId = 1,
+  ContractCoopStatusResponse_ChickenRun_FieldNumber_Amount = 2,
+  ContractCoopStatusResponse_ChickenRun_FieldNumber_UserName = 3,
+};
+
+GPB_FINAL @interface ContractCoopStatusResponse_ChickenRun : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+/** Test to see if @c userId has been set. */
+@property(nonatomic, readwrite) BOOL hasUserId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userName;
+/** Test to see if @c userName has been set. */
+@property(nonatomic, readwrite) BOOL hasUserName;
+
+@property(nonatomic, readwrite) uint64_t amount;
+
+@property(nonatomic, readwrite) BOOL hasAmount;
+@end
+
 #pragma mark - LocalContract
 
 typedef GPB_ENUM(LocalContract_FieldNumber) {
@@ -2657,6 +2984,7 @@ typedef GPB_ENUM(LocalContract_FieldNumber) {
   LocalContract_FieldNumber_NumGoalsAchieved = 14,
   LocalContract_FieldNumber_League = 15,
   LocalContract_FieldNumber_LastNagTime = 16,
+  LocalContract_FieldNumber_CoopShareFarm = 17,
 };
 
 GPB_FINAL @interface LocalContract : GPBMessage
@@ -2697,6 +3025,9 @@ GPB_FINAL @interface LocalContract : GPBMessage
 /** Test to see if @c coopUserId has been set. */
 @property(nonatomic, readwrite) BOOL hasCoopUserId;
 
+@property(nonatomic, readwrite) BOOL coopShareFarm;
+
+@property(nonatomic, readwrite) BOOL hasCoopShareFarm;
 @property(nonatomic, readwrite) double lastAmountWhenRewardGiven;
 
 @property(nonatomic, readwrite) BOOL hasLastAmountWhenRewardGiven;
@@ -3165,6 +3496,53 @@ GPB_FINAL @interface GiftPlayerCoopRequest : GPBMessage
 @property(nonatomic, readwrite) BOOL hasClientVersion;
 @end
 
+#pragma mark - SendChickenRunCoopRequest
+
+typedef GPB_ENUM(SendChickenRunCoopRequest_FieldNumber) {
+  SendChickenRunCoopRequest_FieldNumber_ContractIdentifier = 1,
+  SendChickenRunCoopRequest_FieldNumber_CoopIdentifier = 2,
+  SendChickenRunCoopRequest_FieldNumber_PlayerIdentifier = 3,
+  SendChickenRunCoopRequest_FieldNumber_RequestingUserId = 4,
+  SendChickenRunCoopRequest_FieldNumber_FarmPop = 5,
+  SendChickenRunCoopRequest_FieldNumber_RequestingUserName = 6,
+  SendChickenRunCoopRequest_FieldNumber_ClientVersion = 7,
+  SendChickenRunCoopRequest_FieldNumber_Rinfo = 8,
+};
+
+GPB_FINAL @interface SendChickenRunCoopRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *contractIdentifier;
+/** Test to see if @c contractIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasContractIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *coopIdentifier;
+/** Test to see if @c coopIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasCoopIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *playerIdentifier;
+/** Test to see if @c playerIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasPlayerIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *requestingUserId;
+/** Test to see if @c requestingUserId has been set. */
+@property(nonatomic, readwrite) BOOL hasRequestingUserId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *requestingUserName;
+/** Test to see if @c requestingUserName has been set. */
+@property(nonatomic, readwrite) BOOL hasRequestingUserName;
+
+@property(nonatomic, readwrite) uint64_t farmPop;
+
+@property(nonatomic, readwrite) BOOL hasFarmPop;
+@property(nonatomic, readwrite) uint32_t clientVersion;
+
+@property(nonatomic, readwrite) BOOL hasClientVersion;
+@end
+
 #pragma mark - KickPlayerCoopRequest
 
 typedef GPB_ENUM(KickPlayerCoopRequest_FieldNumber) {
@@ -3225,6 +3603,7 @@ typedef GPB_ENUM(ContractCoopStatusUpdateRequest_FieldNumber) {
   ContractCoopStatusUpdateRequest_FieldNumber_BoostTokensSpent = 13,
   ContractCoopStatusUpdateRequest_FieldNumber_ProductionParams = 14,
   ContractCoopStatusUpdateRequest_FieldNumber_Eop = 15,
+  ContractCoopStatusUpdateRequest_FieldNumber_FarmInfo = 16,
 };
 
 GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
@@ -3273,6 +3652,10 @@ GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) FarmProductionParams *productionParams;
 /** Test to see if @c productionParams has been set. */
 @property(nonatomic, readwrite) BOOL hasProductionParams;
+
+@property(nonatomic, readwrite, strong, null_resettable) PlayerFarmInfo *farmInfo;
+/** Test to see if @c farmInfo has been set. */
+@property(nonatomic, readwrite) BOOL hasFarmInfo;
 
 @property(nonatomic, readwrite) double eggLayingRateBuff;
 
@@ -3335,6 +3718,38 @@ GPB_FINAL @interface CoopBuffHistory : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CoopBuffState*> *historyArray;
 /** The number of items in @c historyArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger historyArray_Count;
+
+@end
+
+#pragma mark - CoopChickenRunEntry
+
+typedef GPB_ENUM(CoopChickenRunEntry_FieldNumber) {
+  CoopChickenRunEntry_FieldNumber_UserId = 1,
+  CoopChickenRunEntry_FieldNumber_ServerTimestamp = 2,
+};
+
+GPB_FINAL @interface CoopChickenRunEntry : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+/** Test to see if @c userId has been set. */
+@property(nonatomic, readwrite) BOOL hasUserId;
+
+@property(nonatomic, readwrite) double serverTimestamp;
+
+@property(nonatomic, readwrite) BOOL hasServerTimestamp;
+@end
+
+#pragma mark - CoopLastChickenRunTimes
+
+typedef GPB_ENUM(CoopLastChickenRunTimes_FieldNumber) {
+  CoopLastChickenRunTimes_FieldNumber_EntriesArray = 3,
+};
+
+GPB_FINAL @interface CoopLastChickenRunTimes : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CoopChickenRunEntry*> *entriesArray;
+/** The number of items in @c entriesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger entriesArray_Count;
 
 @end
 
@@ -3655,6 +4070,10 @@ typedef GPB_ENUM(LiveConfig_MiscConfig_FieldNumber) {
   LiveConfig_MiscConfig_FieldNumber_AskToTrackMessage = 3,
   LiveConfig_MiscConfig_FieldNumber_AskToTrackShowPreDialog = 4,
   LiveConfig_MiscConfig_FieldNumber_AskToTrackAfterPrivacy = 5,
+  LiveConfig_MiscConfig_FieldNumber_ChickenRunBoostPercentage = 6,
+  LiveConfig_MiscConfig_FieldNumber_ShellsIntroTickets = 7,
+  LiveConfig_MiscConfig_FieldNumber_ShellsMaxFreeChickenConfigs = 8,
+  LiveConfig_MiscConfig_FieldNumber_ShellsIntroAlertThreshold = 9,
 };
 
 GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
@@ -3675,6 +4094,18 @@ GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
 @property(nonatomic, readwrite) BOOL askToTrackAfterPrivacy;
 
 @property(nonatomic, readwrite) BOOL hasAskToTrackAfterPrivacy;
+@property(nonatomic, readwrite) double chickenRunBoostPercentage;
+
+@property(nonatomic, readwrite) BOOL hasChickenRunBoostPercentage;
+@property(nonatomic, readwrite) uint32_t shellsIntroTickets;
+
+@property(nonatomic, readwrite) BOOL hasShellsIntroTickets;
+@property(nonatomic, readwrite) uint32_t shellsMaxFreeChickenConfigs;
+
+@property(nonatomic, readwrite) BOOL hasShellsMaxFreeChickenConfigs;
+@property(nonatomic, readwrite) uint32_t shellsIntroAlertThreshold;
+
+@property(nonatomic, readwrite) BOOL hasShellsIntroAlertThreshold;
 @end
 
 #pragma mark - InGameMail
@@ -4919,6 +5350,7 @@ GPB_FINAL @interface ArtifactsDB_CraftableArtifact : GPBMessage
 typedef GPB_ENUM(AuthenticatedMessage_FieldNumber) {
   AuthenticatedMessage_FieldNumber_Message = 1,
   AuthenticatedMessage_FieldNumber_Code = 2,
+  AuthenticatedMessage_FieldNumber_Version = 3,
 };
 
 GPB_FINAL @interface AuthenticatedMessage : GPBMessage
@@ -4927,6 +5359,9 @@ GPB_FINAL @interface AuthenticatedMessage : GPBMessage
 /** Test to see if @c message has been set. */
 @property(nonatomic, readwrite) BOOL hasMessage;
 
+@property(nonatomic, readwrite) uint32_t version;
+
+@property(nonatomic, readwrite) BOOL hasVersion;
 @property(nonatomic, readwrite, copy, null_resettable) NSString *code;
 /** Test to see if @c code has been set. */
 @property(nonatomic, readwrite) BOOL hasCode;
@@ -5096,6 +5531,8 @@ typedef GPB_ENUM(DLCItem_FieldNumber) {
   DLCItem_FieldNumber_Ext = 3,
   DLCItem_FieldNumber_URL = 4,
   DLCItem_FieldNumber_Checksum = 5,
+  DLCItem_FieldNumber_Compressed = 6,
+  DLCItem_FieldNumber_OriginalSize = 7,
 };
 
 GPB_FINAL @interface DLCItem : GPBMessage
@@ -5112,6 +5549,12 @@ GPB_FINAL @interface DLCItem : GPBMessage
 /** Test to see if @c ext has been set. */
 @property(nonatomic, readwrite) BOOL hasExt;
 
+@property(nonatomic, readwrite) BOOL compressed;
+
+@property(nonatomic, readwrite) BOOL hasCompressed;
+@property(nonatomic, readwrite) uint64_t originalSize;
+
+@property(nonatomic, readwrite) BOOL hasOriginalSize;
 @property(nonatomic, readwrite, copy, null_resettable) NSString *URL;
 /** Test to see if @c URL has been set. */
 @property(nonatomic, readwrite) BOOL hasURL;
@@ -5134,6 +5577,9 @@ typedef GPB_ENUM(ShellSpec_FieldNumber) {
   ShellSpec_FieldNumber_PiecesArray = 11,
   ShellSpec_FieldNumber_PrimaryPiece = 12,
   ShellSpec_FieldNumber_SetIdentifier = 13,
+  ShellSpec_FieldNumber_IsNew = 14,
+  ShellSpec_FieldNumber_Expires = 15,
+  ShellSpec_FieldNumber_SecondsRemaining = 16,
 };
 
 GPB_FINAL @interface ShellSpec : GPBMessage
@@ -5167,6 +5613,15 @@ GPB_FINAL @interface ShellSpec : GPBMessage
 @property(nonatomic, readwrite) double requiredSoulEggs;
 
 @property(nonatomic, readwrite) BOOL hasRequiredSoulEggs;
+@property(nonatomic, readwrite) BOOL isNew;
+
+@property(nonatomic, readwrite) BOOL hasIsNew;
+@property(nonatomic, readwrite) BOOL expires;
+
+@property(nonatomic, readwrite) BOOL hasExpires;
+@property(nonatomic, readwrite) double secondsRemaining;
+
+@property(nonatomic, readwrite) BOOL hasSecondsRemaining;
 @property(nonatomic, readwrite) BOOL defaultAppearance;
 
 @property(nonatomic, readwrite) BOOL hasDefaultAppearance;
@@ -5198,6 +5653,18 @@ typedef GPB_ENUM(ShellSetSpec_FieldNumber) {
   ShellSetSpec_FieldNumber_Price = 3,
   ShellSetSpec_FieldNumber_RequiredEop = 4,
   ShellSetSpec_FieldNumber_RequiredSoulEggs = 5,
+  ShellSetSpec_FieldNumber_DefaultAppearance = 6,
+  ShellSetSpec_FieldNumber_ElementSet = 7,
+  ShellSetSpec_FieldNumber_PriceMultDeprecated = 8,
+  ShellSetSpec_FieldNumber_IsNew = 9,
+  ShellSetSpec_FieldNumber_Expires = 10,
+  ShellSetSpec_FieldNumber_SecondsRemaining = 11,
+  ShellSetSpec_FieldNumber_CustomAppearance = 12,
+  ShellSetSpec_FieldNumber_ModifiedGeometry = 13,
+  ShellSetSpec_FieldNumber_Decorator = 14,
+  ShellSetSpec_FieldNumber_VariationsArray = 15,
+  ShellSetSpec_FieldNumber_HexBaseColor = 16,
+  ShellSetSpec_FieldNumber_Discount = 17,
 };
 
 GPB_FINAL @interface ShellSetSpec : GPBMessage
@@ -5213,12 +5680,193 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 @property(nonatomic, readwrite) uint32_t price;
 
 @property(nonatomic, readwrite) BOOL hasPrice;
+@property(nonatomic, readwrite) double priceMultDeprecated;
+
+@property(nonatomic, readwrite) BOOL hasPriceMultDeprecated;
+@property(nonatomic, readwrite) double discount;
+
+@property(nonatomic, readwrite) BOOL hasDiscount;
 @property(nonatomic, readwrite) uint32_t requiredEop;
 
 @property(nonatomic, readwrite) BOOL hasRequiredEop;
 @property(nonatomic, readwrite) double requiredSoulEggs;
 
 @property(nonatomic, readwrite) BOOL hasRequiredSoulEggs;
+@property(nonatomic, readwrite) BOOL isNew;
+
+@property(nonatomic, readwrite) BOOL hasIsNew;
+@property(nonatomic, readwrite) BOOL expires;
+
+@property(nonatomic, readwrite) BOOL hasExpires;
+@property(nonatomic, readwrite) double secondsRemaining;
+
+@property(nonatomic, readwrite) BOOL hasSecondsRemaining;
+@property(nonatomic, readwrite) BOOL decorator;
+
+@property(nonatomic, readwrite) BOOL hasDecorator;
+@property(nonatomic, readwrite) BOOL modifiedGeometry;
+
+@property(nonatomic, readwrite) BOOL hasModifiedGeometry;
+@property(nonatomic, readwrite) BOOL elementSet;
+
+@property(nonatomic, readwrite) BOOL hasElementSet;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *hexBaseColor;
+/** Test to see if @c hexBaseColor has been set. */
+@property(nonatomic, readwrite) BOOL hasHexBaseColor;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellSetSpec_VariationInfo*> *variationsArray;
+/** The number of items in @c variationsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger variationsArray_Count;
+
+@property(nonatomic, readwrite) BOOL defaultAppearance;
+
+@property(nonatomic, readwrite) BOOL hasDefaultAppearance;
+@property(nonatomic, readwrite) BOOL customAppearance;
+
+@property(nonatomic, readwrite) BOOL hasCustomAppearance;
+@end
+
+#pragma mark - ShellSetSpec_VariationInfo
+
+typedef GPB_ENUM(ShellSetSpec_VariationInfo_FieldNumber) {
+  ShellSetSpec_VariationInfo_FieldNumber_Identifier = 1,
+  ShellSetSpec_VariationInfo_FieldNumber_HexColor = 2,
+  ShellSetSpec_VariationInfo_FieldNumber_Price = 3,
+};
+
+GPB_FINAL @interface ShellSetSpec_VariationInfo : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *identifier;
+/** Test to see if @c identifier has been set. */
+@property(nonatomic, readwrite) BOOL hasIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *hexColor;
+/** Test to see if @c hexColor has been set. */
+@property(nonatomic, readwrite) BOOL hasHexColor;
+
+@property(nonatomic, readwrite) uint32_t price;
+
+@property(nonatomic, readwrite) BOOL hasPrice;
+@end
+
+#pragma mark - ShellObjectSpec
+
+typedef GPB_ENUM(ShellObjectSpec_FieldNumber) {
+  ShellObjectSpec_FieldNumber_Identifier = 1,
+  ShellObjectSpec_FieldNumber_Name = 2,
+  ShellObjectSpec_FieldNumber_AssetType = 3,
+  ShellObjectSpec_FieldNumber_Price = 4,
+  ShellObjectSpec_FieldNumber_RequiredEop = 5,
+  ShellObjectSpec_FieldNumber_RequiredSoulEggs = 6,
+  ShellObjectSpec_FieldNumber_MetadataArray = 7,
+  ShellObjectSpec_FieldNumber_PiecesArray = 8,
+  ShellObjectSpec_FieldNumber_DefaultAppearance = 9,
+  ShellObjectSpec_FieldNumber_IsNew = 10,
+  ShellObjectSpec_FieldNumber_Expires = 11,
+  ShellObjectSpec_FieldNumber_SecondsRemaining = 12,
+  ShellObjectSpec_FieldNumber_NoHats = 13,
+  ShellObjectSpec_FieldNumber_ObjectClass = 14,
+};
+
+GPB_FINAL @interface ShellObjectSpec : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *identifier;
+/** Test to see if @c identifier has been set. */
+@property(nonatomic, readwrite) BOOL hasIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+/** Test to see if @c name has been set. */
+@property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite) ShellSpec_AssetType assetType;
+
+@property(nonatomic, readwrite) BOOL hasAssetType;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *objectClass;
+/** Test to see if @c objectClass has been set. */
+@property(nonatomic, readwrite) BOOL hasObjectClass;
+
+@property(nonatomic, readwrite) uint32_t price;
+
+@property(nonatomic, readwrite) BOOL hasPrice;
+@property(nonatomic, readwrite) uint32_t requiredEop;
+
+@property(nonatomic, readwrite) BOOL hasRequiredEop;
+@property(nonatomic, readwrite) double requiredSoulEggs;
+
+@property(nonatomic, readwrite) BOOL hasRequiredSoulEggs;
+@property(nonatomic, readwrite) BOOL isNew;
+
+@property(nonatomic, readwrite) BOOL hasIsNew;
+@property(nonatomic, readwrite) BOOL expires;
+
+@property(nonatomic, readwrite) BOOL hasExpires;
+@property(nonatomic, readwrite) double secondsRemaining;
+
+@property(nonatomic, readwrite) BOOL hasSecondsRemaining;
+@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *metadataArray;
+/** The number of items in @c metadataArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadataArray_Count;
+
+@property(nonatomic, readwrite) BOOL noHats;
+
+@property(nonatomic, readwrite) BOOL hasNoHats;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellObjectSpec_LODPiece*> *piecesArray;
+/** The number of items in @c piecesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger piecesArray_Count;
+
+@property(nonatomic, readwrite) BOOL defaultAppearance;
+
+@property(nonatomic, readwrite) BOOL hasDefaultAppearance;
+@end
+
+#pragma mark - ShellObjectSpec_LODPiece
+
+typedef GPB_ENUM(ShellObjectSpec_LODPiece_FieldNumber) {
+  ShellObjectSpec_LODPiece_FieldNumber_Dlc = 1,
+  ShellObjectSpec_LODPiece_FieldNumber_Lod = 2,
+};
+
+GPB_FINAL @interface ShellObjectSpec_LODPiece : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) DLCItem *dlc;
+/** Test to see if @c dlc has been set. */
+@property(nonatomic, readwrite) BOOL hasDlc;
+
+@property(nonatomic, readwrite) uint32_t lod;
+
+@property(nonatomic, readwrite) BOOL hasLod;
+@end
+
+#pragma mark - ShellGroupSpec
+
+typedef GPB_ENUM(ShellGroupSpec_FieldNumber) {
+  ShellGroupSpec_FieldNumber_Identifier = 1,
+  ShellGroupSpec_FieldNumber_Name = 2,
+  ShellGroupSpec_FieldNumber_MemberIdsArray = 3,
+  ShellGroupSpec_FieldNumber_PriceMultDeprecated = 4,
+  ShellGroupSpec_FieldNumber_AssetType = 5,
+};
+
+GPB_FINAL @interface ShellGroupSpec : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *identifier;
+/** Test to see if @c identifier has been set. */
+@property(nonatomic, readwrite) BOOL hasIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+/** Test to see if @c name has been set. */
+@property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite) ShellSpec_AssetType assetType;
+
+@property(nonatomic, readwrite) BOOL hasAssetType;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *memberIdsArray;
+/** The number of items in @c memberIdsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger memberIdsArray_Count;
+
+@property(nonatomic, readwrite) double priceMultDeprecated;
+
+@property(nonatomic, readwrite) BOOL hasPriceMultDeprecated;
 @end
 
 #pragma mark - DLCCatalog
@@ -5227,6 +5875,8 @@ typedef GPB_ENUM(DLCCatalog_FieldNumber) {
   DLCCatalog_FieldNumber_ItemsArray = 1,
   DLCCatalog_FieldNumber_ShellsArray = 2,
   DLCCatalog_FieldNumber_ShellSetsArray = 3,
+  DLCCatalog_FieldNumber_ShellObjectsArray = 4,
+  DLCCatalog_FieldNumber_ShellGroupsArray = 5,
 };
 
 GPB_FINAL @interface DLCCatalog : GPBMessage
@@ -5243,13 +5893,27 @@ GPB_FINAL @interface DLCCatalog : GPBMessage
 /** The number of items in @c shellSetsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger shellSetsArray_Count;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellObjectSpec*> *shellObjectsArray;
+/** The number of items in @c shellObjectsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellObjectsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellGroupSpec*> *shellGroupsArray;
+/** The number of items in @c shellGroupsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellGroupsArray_Count;
+
 @end
 
 #pragma mark - ShellDB
 
 typedef GPB_ENUM(ShellDB_FieldNumber) {
   ShellDB_FieldNumber_ShellInventoryArray = 1,
+  ShellDB_FieldNumber_ShellSetInventoryArray = 2,
   ShellDB_FieldNumber_FarmConfigsArray = 3,
+  ShellDB_FieldNumber_ShellObjectInventoryArray = 4,
+  ShellDB_FieldNumber_ShellElementInventoryArray = 5,
+  ShellDB_FieldNumber_NewShellsDownloadedArray = 6,
+  ShellDB_FieldNumber_NewShellsSeenArray = 7,
+  ShellDB_FieldNumber_ShellVariationInventoryArray = 8,
 };
 
 GPB_FINAL @interface ShellDB : GPBMessage
@@ -5258,34 +5922,99 @@ GPB_FINAL @interface ShellDB : GPBMessage
 /** The number of items in @c shellInventoryArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger shellInventoryArray_Count;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellElementStatus*> *shellElementInventoryArray;
+/** The number of items in @c shellElementInventoryArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellElementInventoryArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellSetVariationStatus*> *shellVariationInventoryArray;
+/** The number of items in @c shellVariationInventoryArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellVariationInventoryArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellStatus*> *shellSetInventoryArray;
+/** The number of items in @c shellSetInventoryArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellSetInventoryArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellStatus*> *shellObjectInventoryArray;
+/** The number of items in @c shellObjectInventoryArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellObjectInventoryArray_Count;
+
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_FarmConfiguration*> *farmConfigsArray;
 /** The number of items in @c farmConfigsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger farmConfigsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *newShellsDownloadedArray NS_RETURNS_NOT_RETAINED;
+/** The number of items in @c newShellsDownloadedArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger newShellsDownloadedArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *newShellsSeenArray NS_RETURNS_NOT_RETAINED;
+/** The number of items in @c newShellsSeenArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger newShellsSeenArray_Count;
 
 @end
 
 #pragma mark - ShellDB_ShellStatus
 
 typedef GPB_ENUM(ShellDB_ShellStatus_FieldNumber) {
-  ShellDB_ShellStatus_FieldNumber_ShellIdentifier = 1,
+  ShellDB_ShellStatus_FieldNumber_Identifier = 1,
   ShellDB_ShellStatus_FieldNumber_Owned = 2,
 };
 
 GPB_FINAL @interface ShellDB_ShellStatus : GPBMessage
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *shellIdentifier;
-/** Test to see if @c shellIdentifier has been set. */
-@property(nonatomic, readwrite) BOOL hasShellIdentifier;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *identifier;
+/** Test to see if @c identifier has been set. */
+@property(nonatomic, readwrite) BOOL hasIdentifier;
 
 @property(nonatomic, readwrite) BOOL owned;
 
 @property(nonatomic, readwrite) BOOL hasOwned;
 @end
 
+#pragma mark - ShellDB_ShellElementStatus
+
+typedef GPB_ENUM(ShellDB_ShellElementStatus_FieldNumber) {
+  ShellDB_ShellElementStatus_FieldNumber_Element = 1,
+  ShellDB_ShellElementStatus_FieldNumber_SetIdentifier = 2,
+};
+
+GPB_FINAL @interface ShellDB_ShellElementStatus : GPBMessage
+
+@property(nonatomic, readwrite) ShellDB_FarmElement element;
+
+@property(nonatomic, readwrite) BOOL hasElement;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *setIdentifier;
+/** Test to see if @c setIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasSetIdentifier;
+
+@end
+
+#pragma mark - ShellDB_ShellSetVariationStatus
+
+typedef GPB_ENUM(ShellDB_ShellSetVariationStatus_FieldNumber) {
+  ShellDB_ShellSetVariationStatus_FieldNumber_SetIdentifier = 1,
+  ShellDB_ShellSetVariationStatus_FieldNumber_OwnedVariationsArray = 2,
+};
+
+GPB_FINAL @interface ShellDB_ShellSetVariationStatus : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *setIdentifier;
+/** Test to see if @c setIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasSetIdentifier;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *ownedVariationsArray;
+/** The number of items in @c ownedVariationsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger ownedVariationsArray_Count;
+
+@end
+
 #pragma mark - ShellDB_FarmConfiguration
 
 typedef GPB_ENUM(ShellDB_FarmConfiguration_FieldNumber) {
   ShellDB_FarmConfiguration_FieldNumber_ShellConfigsArray = 1,
+  ShellDB_FarmConfiguration_FieldNumber_ShellSetConfigsArray = 2,
+  ShellDB_FarmConfiguration_FieldNumber_ConfigureChickensByGroup = 7,
+  ShellDB_FarmConfiguration_FieldNumber_GroupConfigsArray = 8,
+  ShellDB_FarmConfiguration_FieldNumber_ChickenConfigsArray = 9,
 };
 
 GPB_FINAL @interface ShellDB_FarmConfiguration : GPBMessage
@@ -5293,6 +6022,21 @@ GPB_FINAL @interface ShellDB_FarmConfiguration : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellConfiguration*> *shellConfigsArray;
 /** The number of items in @c shellConfigsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger shellConfigsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellSetConfiguration*> *shellSetConfigsArray;
+/** The number of items in @c shellSetConfigsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger shellSetConfigsArray_Count;
+
+@property(nonatomic, readwrite) BOOL configureChickensByGroup;
+
+@property(nonatomic, readwrite) BOOL hasConfigureChickensByGroup;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellGroupConfiguration*> *groupConfigsArray;
+/** The number of items in @c groupConfigsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger groupConfigsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ChickenConfig*> *chickenConfigsArray;
+/** The number of items in @c chickenConfigsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger chickenConfigsArray_Count;
 
 @end
 
@@ -5316,6 +6060,125 @@ GPB_FINAL @interface ShellDB_ShellConfiguration : GPBMessage
 /** Test to see if @c shellIdentifier has been set. */
 @property(nonatomic, readwrite) BOOL hasShellIdentifier;
 
+@end
+
+#pragma mark - ShellDB_ShellSetConfiguration
+
+typedef GPB_ENUM(ShellDB_ShellSetConfiguration_FieldNumber) {
+  ShellDB_ShellSetConfiguration_FieldNumber_Element = 1,
+  ShellDB_ShellSetConfiguration_FieldNumber_Index = 2,
+  ShellDB_ShellSetConfiguration_FieldNumber_ShellSetIdentifier = 3,
+  ShellDB_ShellSetConfiguration_FieldNumber_VariationIdentifier = 4,
+  ShellDB_ShellSetConfiguration_FieldNumber_DecoratorIdentifier = 5,
+};
+
+GPB_FINAL @interface ShellDB_ShellSetConfiguration : GPBMessage
+
+@property(nonatomic, readwrite) ShellDB_FarmElement element;
+
+@property(nonatomic, readwrite) BOOL hasElement;
+@property(nonatomic, readwrite) uint32_t index;
+
+@property(nonatomic, readwrite) BOOL hasIndex;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *shellSetIdentifier;
+/** Test to see if @c shellSetIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasShellSetIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *variationIdentifier;
+/** Test to see if @c variationIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasVariationIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *decoratorIdentifier;
+/** Test to see if @c decoratorIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasDecoratorIdentifier;
+
+@end
+
+#pragma mark - ShellDB_ShellGroupConfiguration
+
+typedef GPB_ENUM(ShellDB_ShellGroupConfiguration_FieldNumber) {
+  ShellDB_ShellGroupConfiguration_FieldNumber_AssetType = 1,
+  ShellDB_ShellGroupConfiguration_FieldNumber_GroupIdentifier = 2,
+};
+
+GPB_FINAL @interface ShellDB_ShellGroupConfiguration : GPBMessage
+
+@property(nonatomic, readwrite) ShellSpec_AssetType assetType;
+
+@property(nonatomic, readwrite) BOOL hasAssetType;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *groupIdentifier;
+/** Test to see if @c groupIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasGroupIdentifier;
+
+@end
+
+#pragma mark - ShellDB_ChickenConfig
+
+typedef GPB_ENUM(ShellDB_ChickenConfig_FieldNumber) {
+  ShellDB_ChickenConfig_FieldNumber_ChickenIdentifier = 1,
+  ShellDB_ChickenConfig_FieldNumber_HatIdentifier = 2,
+};
+
+GPB_FINAL @interface ShellDB_ChickenConfig : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *chickenIdentifier;
+/** Test to see if @c chickenIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasChickenIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *hatIdentifier;
+/** Test to see if @c hatIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasHatIdentifier;
+
+@end
+
+#pragma mark - ShellsActionLog
+
+typedef GPB_ENUM(ShellsActionLog_FieldNumber) {
+  ShellsActionLog_FieldNumber_UserId = 1,
+  ShellsActionLog_FieldNumber_Action = 2,
+  ShellsActionLog_FieldNumber_SubId = 3,
+  ShellsActionLog_FieldNumber_Cost = 4,
+  ShellsActionLog_FieldNumber_ApproxTime = 5,
+  ShellsActionLog_FieldNumber_Version = 6,
+  ShellsActionLog_FieldNumber_FarmIndex = 7,
+  ShellsActionLog_FieldNumber_Rinfo = 8,
+  ShellsActionLog_FieldNumber_FarmElement = 9,
+};
+
+GPB_FINAL @interface ShellsActionLog : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+/** Test to see if @c userId has been set. */
+@property(nonatomic, readwrite) BOOL hasUserId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *action;
+/** Test to see if @c action has been set. */
+@property(nonatomic, readwrite) BOOL hasAction;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *subId;
+/** Test to see if @c subId has been set. */
+@property(nonatomic, readwrite) BOOL hasSubId;
+
+@property(nonatomic, readwrite) ShellDB_FarmElement farmElement;
+
+@property(nonatomic, readwrite) BOOL hasFarmElement;
+@property(nonatomic, readwrite) uint32_t cost;
+
+@property(nonatomic, readwrite) BOOL hasCost;
+@property(nonatomic, readwrite) double approxTime;
+
+@property(nonatomic, readwrite) BOOL hasApproxTime;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *version;
+/** Test to see if @c version has been set. */
+@property(nonatomic, readwrite) BOOL hasVersion;
+
+@property(nonatomic, readwrite) int32_t farmIndex;
+
+@property(nonatomic, readwrite) BOOL hasFarmIndex;
 @end
 
 NS_ASSUME_NONNULL_END
