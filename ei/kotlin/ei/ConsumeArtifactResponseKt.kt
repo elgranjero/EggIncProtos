@@ -75,6 +75,71 @@ public object ConsumeArtifactResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class AdditionalItemIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     */
+     public val additionalItemIds: com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getAdditionalItemIdsList()
+      )
+    /**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * @param value The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAdditionalItemIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.add(value: kotlin.Long) {
+      _builder.addAdditionalItemIds(value)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * @param value The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAdditionalItemIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(value: kotlin.Long) {
+      add(value)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * @param values The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllAdditionalItemIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
+      _builder.addAllAdditionalItemIds(values)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * @param values The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllAdditionalItemIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
+      addAll(values)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * @param index The index to set the value at.
+     * @param value The additionalItemIds to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setAdditionalItemIds")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
+      _builder.setAdditionalItemIds(index, value)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearAdditionalItemIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.clear() {
+      _builder.clearAdditionalItemIds()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ByproductsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
      * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>

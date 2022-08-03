@@ -143,6 +143,141 @@ public object ConsumeArtifactRequestKt {
     }
 
     /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class AdditionalServerIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated string additional_server_ids = 7;</code>
+     * @return A list containing the additionalServerIds.
+     */
+    public val additionalServerIds: com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getAdditionalServerIdsList()
+      )
+    /**
+     * <code>repeated string additional_server_ids = 7;</code>
+     * @param value The additionalServerIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAdditionalServerIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.add(value: kotlin.String) {
+      _builder.addAdditionalServerIds(value)
+    }
+    /**
+     * <code>repeated string additional_server_ids = 7;</code>
+     * @param value The additionalServerIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAdditionalServerIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.plusAssign(value: kotlin.String) {
+      add(value)
+    }
+    /**
+     * <code>repeated string additional_server_ids = 7;</code>
+     * @param values The additionalServerIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllAdditionalServerIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllAdditionalServerIds(values)
+    }
+    /**
+     * <code>repeated string additional_server_ids = 7;</code>
+     * @param values The additionalServerIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllAdditionalServerIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated string additional_server_ids = 7;</code>
+     * @param index The index to set the value at.
+     * @param value The additionalServerIds to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setAdditionalServerIds")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
+      _builder.setAdditionalServerIds(index, value)
+    }/**
+     * <code>repeated string additional_server_ids = 7;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearAdditionalServerIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.clear() {
+      _builder.clearAdditionalServerIds()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class AdditionalItemIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     */
+     public val additionalItemIds: com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getAdditionalItemIdsList()
+      )
+    /**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * @param value The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAdditionalItemIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.add(value: kotlin.Long) {
+      _builder.addAdditionalItemIds(value)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * @param value The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAdditionalItemIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(value: kotlin.Long) {
+      add(value)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * @param values The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllAdditionalItemIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
+      _builder.addAllAdditionalItemIds(values)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * @param values The additionalItemIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllAdditionalItemIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
+      addAll(values)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * @param index The index to set the value at.
+     * @param value The additionalItemIds to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setAdditionalItemIds")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
+      _builder.setAdditionalItemIds(index, value)
+    }/**
+     * <code>repeated uint64 additional_item_ids = 8;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearAdditionalItemIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.clear() {
+      _builder.clearAdditionalItemIds()
+    }
+    /**
      * <code>optional uint32 quantity = 6;</code>
      */
     public var quantity: kotlin.Int

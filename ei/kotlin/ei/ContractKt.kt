@@ -489,6 +489,30 @@ public object ContractKt {
     }
 
     /**
+     * <code>optional bool leggacy = 19;</code>
+     */
+    public var leggacy: kotlin.Boolean
+      @JvmName("getLeggacy")
+      get() = _builder.getLeggacy()
+      @JvmName("setLeggacy")
+      set(value) {
+        _builder.setLeggacy(value)
+      }
+    /**
+     * <code>optional bool leggacy = 19;</code>
+     */
+    public fun clearLeggacy() {
+      _builder.clearLeggacy()
+    }
+    /**
+     * <code>optional bool leggacy = 19;</code>
+     * @return Whether the leggacy field is set.
+     */
+    public fun hasLeggacy(): kotlin.Boolean {
+      return _builder.hasLeggacy()
+    }
+
+    /**
      * <code>optional bool debug = 11;</code>
      */
     public var debug: kotlin.Boolean

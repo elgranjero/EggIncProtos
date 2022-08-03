@@ -167,6 +167,30 @@ public object CraftArtifactRequestKt {
     }
 
     /**
+     * <code>optional double crafting_xp = 8;</code>
+     */
+    public var craftingXp: kotlin.Double
+      @JvmName("getCraftingXp")
+      get() = _builder.getCraftingXp()
+      @JvmName("setCraftingXp")
+      set(value) {
+        _builder.setCraftingXp(value)
+      }
+    /**
+     * <code>optional double crafting_xp = 8;</code>
+     */
+    public fun clearCraftingXp() {
+      _builder.clearCraftingXp()
+    }
+    /**
+     * <code>optional double crafting_xp = 8;</code>
+     * @return Whether the craftingXp field is set.
+     */
+    public fun hasCraftingXp(): kotlin.Boolean {
+      return _builder.hasCraftingXp()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */

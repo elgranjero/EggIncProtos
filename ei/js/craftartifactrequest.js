@@ -86,6 +86,7 @@ proto.ei.CraftArtifactRequest.toObject = function(includeInstance, msg) {
     itemId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     goldPricePaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     craftingCount: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
     ingredientsList: jspb.Message.toObjectList(msg.getIngredientsList(),
     proto.ei.ArtifactInventoryItem.toObject, includeInstance)
   };
@@ -149,6 +150,10 @@ proto.ei.CraftArtifactRequest.deserializeBinaryFromReader = function(msg, reader
     case 7:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setCraftingCount(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setCraftingXp(value);
       break;
     case 4:
       var value = new proto.ei.ArtifactInventoryItem;
@@ -225,6 +230,13 @@ proto.ei.CraftArtifactRequest.serializeBinaryToWriter = function(message, writer
   if (f != null) {
     writer.writeUint32(
       7,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeDouble(
+      8,
       f
     );
   }
@@ -454,6 +466,42 @@ proto.ei.CraftArtifactRequest.prototype.clearCraftingCount = function() {
  */
 proto.ei.CraftArtifactRequest.prototype.hasCraftingCount = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional double crafting_xp = 8;
+ * @return {number}
+ */
+proto.ei.CraftArtifactRequest.prototype.getCraftingXp = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.CraftArtifactRequest} returns this
+ */
+proto.ei.CraftArtifactRequest.prototype.setCraftingXp = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CraftArtifactRequest} returns this
+ */
+proto.ei.CraftArtifactRequest.prototype.clearCraftingXp = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CraftArtifactRequest.prototype.hasCraftingXp = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

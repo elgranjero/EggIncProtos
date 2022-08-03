@@ -47,7 +47,7 @@ struct TableStruct_ei_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[146]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[147]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -94,6 +94,9 @@ extern ArtifactsConfigurationResponseDefaultTypeInternal _ArtifactsConfiguration
 class ArtifactsConfigurationResponse_ArtifactParameters;
 struct ArtifactsConfigurationResponse_ArtifactParametersDefaultTypeInternal;
 extern ArtifactsConfigurationResponse_ArtifactParametersDefaultTypeInternal _ArtifactsConfigurationResponse_ArtifactParameters_default_instance_;
+class ArtifactsConfigurationResponse_CraftingLevelInfo;
+struct ArtifactsConfigurationResponse_CraftingLevelInfoDefaultTypeInternal;
+extern ArtifactsConfigurationResponse_CraftingLevelInfoDefaultTypeInternal _ArtifactsConfigurationResponse_CraftingLevelInfo_default_instance_;
 class ArtifactsConfigurationResponse_MissionParameters;
 struct ArtifactsConfigurationResponse_MissionParametersDefaultTypeInternal;
 extern ArtifactsConfigurationResponse_MissionParametersDefaultTypeInternal _ArtifactsConfigurationResponse_MissionParameters_default_instance_;
@@ -463,9 +466,9 @@ extern ShellObjectSpec_LODPieceDefaultTypeInternal _ShellObjectSpec_LODPiece_def
 class ShellSetSpec;
 struct ShellSetSpecDefaultTypeInternal;
 extern ShellSetSpecDefaultTypeInternal _ShellSetSpec_default_instance_;
-class ShellSetSpec_VariationInfo;
-struct ShellSetSpec_VariationInfoDefaultTypeInternal;
-extern ShellSetSpec_VariationInfoDefaultTypeInternal _ShellSetSpec_VariationInfo_default_instance_;
+class ShellSetSpec_VariationSpec;
+struct ShellSetSpec_VariationSpecDefaultTypeInternal;
+extern ShellSetSpec_VariationSpecDefaultTypeInternal _ShellSetSpec_VariationSpec_default_instance_;
 class ShellSpec;
 struct ShellSpecDefaultTypeInternal;
 extern ShellSpecDefaultTypeInternal _ShellSpec_default_instance_;
@@ -508,6 +511,7 @@ template<> ::ei::ArtifactsClientInfo_LaunchCount* Arena::CreateMaybeMessage<::ei
 template<> ::ei::ArtifactsConfigurationRequest* Arena::CreateMaybeMessage<::ei::ArtifactsConfigurationRequest>(Arena*);
 template<> ::ei::ArtifactsConfigurationResponse* Arena::CreateMaybeMessage<::ei::ArtifactsConfigurationResponse>(Arena*);
 template<> ::ei::ArtifactsConfigurationResponse_ArtifactParameters* Arena::CreateMaybeMessage<::ei::ArtifactsConfigurationResponse_ArtifactParameters>(Arena*);
+template<> ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* Arena::CreateMaybeMessage<::ei::ArtifactsConfigurationResponse_CraftingLevelInfo>(Arena*);
 template<> ::ei::ArtifactsConfigurationResponse_MissionParameters* Arena::CreateMaybeMessage<::ei::ArtifactsConfigurationResponse_MissionParameters>(Arena*);
 template<> ::ei::ArtifactsConfigurationResponse_MissionParameters_Duration* Arena::CreateMaybeMessage<::ei::ArtifactsConfigurationResponse_MissionParameters_Duration>(Arena*);
 template<> ::ei::ArtifactsDB* Arena::CreateMaybeMessage<::ei::ArtifactsDB>(Arena*);
@@ -631,7 +635,7 @@ template<> ::ei::ShellGroupSpec* Arena::CreateMaybeMessage<::ei::ShellGroupSpec>
 template<> ::ei::ShellObjectSpec* Arena::CreateMaybeMessage<::ei::ShellObjectSpec>(Arena*);
 template<> ::ei::ShellObjectSpec_LODPiece* Arena::CreateMaybeMessage<::ei::ShellObjectSpec_LODPiece>(Arena*);
 template<> ::ei::ShellSetSpec* Arena::CreateMaybeMessage<::ei::ShellSetSpec>(Arena*);
-template<> ::ei::ShellSetSpec_VariationInfo* Arena::CreateMaybeMessage<::ei::ShellSetSpec_VariationInfo>(Arena*);
+template<> ::ei::ShellSetSpec_VariationSpec* Arena::CreateMaybeMessage<::ei::ShellSetSpec_VariationSpec>(Arena*);
 template<> ::ei::ShellSpec* Arena::CreateMaybeMessage<::ei::ShellSpec>(Arena*);
 template<> ::ei::ShellSpec_ShellPiece* Arena::CreateMaybeMessage<::ei::ShellSpec_ShellPiece>(Arena*);
 template<> ::ei::ShellsActionLog* Arena::CreateMaybeMessage<::ei::ShellsActionLog>(Arena*);
@@ -1098,6 +1102,36 @@ inline bool ShellSpec_AssetType_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ShellSpec_AssetType* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ShellSpec_AssetType>(
     ShellSpec_AssetType_descriptor(), name, value);
+}
+enum ShellObjectSpec_ChickenAnimation : int {
+  ShellObjectSpec_ChickenAnimation_STANDARD_RUN = 0,
+  ShellObjectSpec_ChickenAnimation_SLOWMO = 7,
+  ShellObjectSpec_ChickenAnimation_WOBBLE = 1,
+  ShellObjectSpec_ChickenAnimation_WOBBLE_LEAN = 5,
+  ShellObjectSpec_ChickenAnimation_SMOOTH = 2,
+  ShellObjectSpec_ChickenAnimation_SMOOTH_LEAN = 6,
+  ShellObjectSpec_ChickenAnimation_HOVER = 3,
+  ShellObjectSpec_ChickenAnimation_SIDEWAYS_SMOOTH = 4,
+  ShellObjectSpec_ChickenAnimation_SIDEWAYS_LEAN = 8
+};
+bool ShellObjectSpec_ChickenAnimation_IsValid(int value);
+constexpr ShellObjectSpec_ChickenAnimation ShellObjectSpec_ChickenAnimation_ChickenAnimation_MIN = ShellObjectSpec_ChickenAnimation_STANDARD_RUN;
+constexpr ShellObjectSpec_ChickenAnimation ShellObjectSpec_ChickenAnimation_ChickenAnimation_MAX = ShellObjectSpec_ChickenAnimation_SIDEWAYS_LEAN;
+constexpr int ShellObjectSpec_ChickenAnimation_ChickenAnimation_ARRAYSIZE = ShellObjectSpec_ChickenAnimation_ChickenAnimation_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ShellObjectSpec_ChickenAnimation_descriptor();
+template<typename T>
+inline const std::string& ShellObjectSpec_ChickenAnimation_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ShellObjectSpec_ChickenAnimation>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ShellObjectSpec_ChickenAnimation_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ShellObjectSpec_ChickenAnimation_descriptor(), enum_t_value);
+}
+inline bool ShellObjectSpec_ChickenAnimation_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ShellObjectSpec_ChickenAnimation* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ShellObjectSpec_ChickenAnimation>(
+    ShellObjectSpec_ChickenAnimation_descriptor(), name, value);
 }
 enum ShellDB_FarmElement : int {
   ShellDB_FarmElement_HEN_HOUSE = 1,
@@ -3513,6 +3547,7 @@ class Backup_Artifacts final :
     kEnabledFieldNumber = 11,
     kIntroShownFieldNumber = 12,
     kInventoryScoreFieldNumber = 10,
+    kCraftingXpFieldNumber = 17,
     kTankLevelFieldNumber = 15,
     kFlowPercentageArtifactsFieldNumber = 6,
     kEggTypeInfusingFieldNumber = 3,
@@ -3681,6 +3716,19 @@ class Backup_Artifacts final :
   void _internal_set_inventory_score(double value);
   public:
 
+  // optional double crafting_xp = 17;
+  bool has_crafting_xp() const;
+  private:
+  bool _internal_has_crafting_xp() const;
+  public:
+  void clear_crafting_xp();
+  double crafting_xp() const;
+  void set_crafting_xp(double value);
+  private:
+  double _internal_crafting_xp() const;
+  void _internal_set_crafting_xp(double value);
+  public:
+
   // optional uint32 tank_level = 15;
   bool has_tank_level() const;
   private:
@@ -3766,6 +3814,7 @@ class Backup_Artifacts final :
   bool enabled_;
   bool intro_shown_;
   double inventory_score_;
+  double crafting_xp_;
   uint32_t tank_level_;
   double flow_percentage_artifacts_;
   int egg_type_infusing_;
@@ -11251,6 +11300,9 @@ class CurrencyFlowLog final :
     kPlatformFieldNumber = 7,
     kApproxTimeFieldNumber = 2,
     kAmountFieldNumber = 4,
+    kSoulEggsFieldNumber = 8,
+    kTicketsSpentFieldNumber = 9,
+    kGoldSpentFieldNumber = 10,
     kCurrencyFieldNumber = 3,
   };
   // optional string user_id = 1;
@@ -11351,6 +11403,45 @@ class CurrencyFlowLog final :
   void _internal_set_amount(int64_t value);
   public:
 
+  // optional double soul_eggs = 8;
+  bool has_soul_eggs() const;
+  private:
+  bool _internal_has_soul_eggs() const;
+  public:
+  void clear_soul_eggs();
+  double soul_eggs() const;
+  void set_soul_eggs(double value);
+  private:
+  double _internal_soul_eggs() const;
+  void _internal_set_soul_eggs(double value);
+  public:
+
+  // optional uint64 tickets_spent = 9;
+  bool has_tickets_spent() const;
+  private:
+  bool _internal_has_tickets_spent() const;
+  public:
+  void clear_tickets_spent();
+  uint64_t tickets_spent() const;
+  void set_tickets_spent(uint64_t value);
+  private:
+  uint64_t _internal_tickets_spent() const;
+  void _internal_set_tickets_spent(uint64_t value);
+  public:
+
+  // optional uint64 gold_spent = 10;
+  bool has_gold_spent() const;
+  private:
+  bool _internal_has_gold_spent() const;
+  public:
+  void clear_gold_spent();
+  uint64_t gold_spent() const;
+  void set_gold_spent(uint64_t value);
+  private:
+  uint64_t _internal_gold_spent() const;
+  void _internal_set_gold_spent(uint64_t value);
+  public:
+
   // optional .ei.RewardType currency = 3;
   bool has_currency() const;
   private:
@@ -11379,6 +11470,9 @@ class CurrencyFlowLog final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr platform_;
   double approx_time_;
   int64_t amount_;
+  double soul_eggs_;
+  uint64_t tickets_spent_;
+  uint64_t gold_spent_;
   int currency_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -12298,10 +12392,11 @@ class Contract final :
     kNameFieldNumber = 9,
     kDescriptionFieldNumber = 10,
     kExpirationTimeFieldNumber = 6,
+    kLengthSecondsFieldNumber = 7,
     kMaxCoopSizeFieldNumber = 5,
     kCoopAllowedFieldNumber = 4,
+    kLeggacyFieldNumber = 19,
     kDebugFieldNumber = 11,
-    kLengthSecondsFieldNumber = 7,
     kMaxSoulEggsFieldNumber = 13,
     kMaxBoostsFieldNumber = 12,
     kMinClientVersionFieldNumber = 14,
@@ -12413,6 +12508,19 @@ class Contract final :
   void _internal_set_expiration_time(double value);
   public:
 
+  // optional double length_seconds = 7;
+  bool has_length_seconds() const;
+  private:
+  bool _internal_has_length_seconds() const;
+  public:
+  void clear_length_seconds();
+  double length_seconds() const;
+  void set_length_seconds(double value);
+  private:
+  double _internal_length_seconds() const;
+  void _internal_set_length_seconds(double value);
+  public:
+
   // optional uint32 max_coop_size = 5;
   bool has_max_coop_size() const;
   private:
@@ -12439,6 +12547,19 @@ class Contract final :
   void _internal_set_coop_allowed(bool value);
   public:
 
+  // optional bool leggacy = 19;
+  bool has_leggacy() const;
+  private:
+  bool _internal_has_leggacy() const;
+  public:
+  void clear_leggacy();
+  bool leggacy() const;
+  void set_leggacy(bool value);
+  private:
+  bool _internal_leggacy() const;
+  void _internal_set_leggacy(bool value);
+  public:
+
   // optional bool debug = 11;
   bool has_debug() const;
   private:
@@ -12450,19 +12571,6 @@ class Contract final :
   private:
   bool _internal_debug() const;
   void _internal_set_debug(bool value);
-  public:
-
-  // optional double length_seconds = 7;
-  bool has_length_seconds() const;
-  private:
-  bool _internal_has_length_seconds() const;
-  public:
-  void clear_length_seconds();
-  double length_seconds() const;
-  void set_length_seconds(double value);
-  private:
-  double _internal_length_seconds() const;
-  void _internal_set_length_seconds(double value);
   public:
 
   // optional double max_soul_eggs = 13;
@@ -12571,10 +12679,11 @@ class Contract final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
   double expiration_time_;
+  double length_seconds_;
   uint32_t max_coop_size_;
   bool coop_allowed_;
+  bool leggacy_;
   bool debug_;
-  double length_seconds_;
   double max_soul_eggs_;
   uint32_t max_boosts_;
   uint32_t min_client_version_;
@@ -13884,6 +13993,7 @@ class PlayerFarmInfo final :
     kSilosOwnedFieldNumber = 13,
     kBoostTokensOnHandFieldNumber = 16,
     kArtifactInventoryScoreFieldNumber = 18,
+    kTimestampFieldNumber = 22,
     kClientVersionFieldNumber = 20,
     kEggTypeFieldNumber = 7,
   };
@@ -14213,6 +14323,19 @@ class PlayerFarmInfo final :
   void _internal_set_artifact_inventory_score(uint64_t value);
   public:
 
+  // optional double timestamp = 22;
+  bool has_timestamp() const;
+  private:
+  bool _internal_has_timestamp() const;
+  public:
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
   // optional uint32 client_version = 20;
   bool has_client_version() const;
   private:
@@ -14267,6 +14390,7 @@ class PlayerFarmInfo final :
   uint32_t silos_owned_;
   uint32_t boost_tokens_on_hand_;
   uint64_t artifact_inventory_score_;
+  double timestamp_;
   uint32_t client_version_;
   int egg_type_;
   friend struct ::TableStruct_ei_2eproto;
@@ -28939,6 +29063,7 @@ class ArtifactsConfigurationResponse_ArtifactParameters final :
     kCraftingPriceFieldNumber = 5,
     kCraftingPriceLowFieldNumber = 6,
     kCraftingPriceCurveFieldNumber = 8,
+    kCraftingXpFieldNumber = 9,
     kCraftingPriceDomainFieldNumber = 7,
   };
   // optional .ei.ArtifactSpec spec = 1;
@@ -29037,6 +29162,19 @@ class ArtifactsConfigurationResponse_ArtifactParameters final :
   void _internal_set_crafting_price_curve(double value);
   public:
 
+  // optional uint64 crafting_xp = 9;
+  bool has_crafting_xp() const;
+  private:
+  bool _internal_has_crafting_xp() const;
+  public:
+  void clear_crafting_xp();
+  uint64_t crafting_xp() const;
+  void set_crafting_xp(uint64_t value);
+  private:
+  uint64_t _internal_crafting_xp() const;
+  void _internal_set_crafting_xp(uint64_t value);
+  public:
+
   // optional uint32 crafting_price_domain = 7;
   bool has_crafting_price_domain() const;
   private:
@@ -29066,7 +29204,181 @@ class ArtifactsConfigurationResponse_ArtifactParameters final :
   double crafting_price_;
   double crafting_price_low_;
   double crafting_price_curve_;
+  uint64_t crafting_xp_;
   uint32_t crafting_price_domain_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ArtifactsConfigurationResponse_CraftingLevelInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ArtifactsConfigurationResponse.CraftingLevelInfo) */ {
+ public:
+  inline ArtifactsConfigurationResponse_CraftingLevelInfo() : ArtifactsConfigurationResponse_CraftingLevelInfo(nullptr) {}
+  ~ArtifactsConfigurationResponse_CraftingLevelInfo() override;
+  explicit constexpr ArtifactsConfigurationResponse_CraftingLevelInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ArtifactsConfigurationResponse_CraftingLevelInfo(const ArtifactsConfigurationResponse_CraftingLevelInfo& from);
+  ArtifactsConfigurationResponse_CraftingLevelInfo(ArtifactsConfigurationResponse_CraftingLevelInfo&& from) noexcept
+    : ArtifactsConfigurationResponse_CraftingLevelInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline ArtifactsConfigurationResponse_CraftingLevelInfo& operator=(const ArtifactsConfigurationResponse_CraftingLevelInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ArtifactsConfigurationResponse_CraftingLevelInfo& operator=(ArtifactsConfigurationResponse_CraftingLevelInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ArtifactsConfigurationResponse_CraftingLevelInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ArtifactsConfigurationResponse_CraftingLevelInfo* internal_default_instance() {
+    return reinterpret_cast<const ArtifactsConfigurationResponse_CraftingLevelInfo*>(
+               &_ArtifactsConfigurationResponse_CraftingLevelInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    101;
+
+  friend void swap(ArtifactsConfigurationResponse_CraftingLevelInfo& a, ArtifactsConfigurationResponse_CraftingLevelInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ArtifactsConfigurationResponse_CraftingLevelInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ArtifactsConfigurationResponse_CraftingLevelInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ArtifactsConfigurationResponse_CraftingLevelInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ArtifactsConfigurationResponse_CraftingLevelInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ArtifactsConfigurationResponse_CraftingLevelInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ArtifactsConfigurationResponse_CraftingLevelInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ArtifactsConfigurationResponse_CraftingLevelInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ArtifactsConfigurationResponse.CraftingLevelInfo";
+  }
+  protected:
+  explicit ArtifactsConfigurationResponse_CraftingLevelInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kXpRequiredFieldNumber = 1,
+    kRarityMultFieldNumber = 2,
+  };
+  // optional double xp_required = 1;
+  bool has_xp_required() const;
+  private:
+  bool _internal_has_xp_required() const;
+  public:
+  void clear_xp_required();
+  double xp_required() const;
+  void set_xp_required(double value);
+  private:
+  double _internal_xp_required() const;
+  void _internal_set_xp_required(double value);
+  public:
+
+  // optional float rarity_mult = 2;
+  bool has_rarity_mult() const;
+  private:
+  bool _internal_has_rarity_mult() const;
+  public:
+  void clear_rarity_mult();
+  float rarity_mult() const;
+  void set_rarity_mult(float value);
+  private:
+  float _internal_rarity_mult() const;
+  void _internal_set_rarity_mult(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ArtifactsConfigurationResponse.CraftingLevelInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  double xp_required_;
+  float rarity_mult_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -29126,7 +29438,7 @@ class ArtifactsConfigurationResponse final :
                &_ArtifactsConfigurationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    101;
+    102;
 
   friend void swap(ArtifactsConfigurationResponse& a, ArtifactsConfigurationResponse& b) {
     a.Swap(&b);
@@ -29199,12 +29511,14 @@ class ArtifactsConfigurationResponse final :
 
   typedef ArtifactsConfigurationResponse_MissionParameters MissionParameters;
   typedef ArtifactsConfigurationResponse_ArtifactParameters ArtifactParameters;
+  typedef ArtifactsConfigurationResponse_CraftingLevelInfo CraftingLevelInfo;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kMissionParametersFieldNumber = 1,
     kArtifactParametersFieldNumber = 2,
+    kCraftingLevelInfosFieldNumber = 3,
   };
   // repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;
   int mission_parameters_size() const;
@@ -29242,6 +29556,24 @@ class ArtifactsConfigurationResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_ArtifactParameters >&
       artifact_parameters() const;
 
+  // repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;
+  int crafting_level_infos_size() const;
+  private:
+  int _internal_crafting_level_infos_size() const;
+  public:
+  void clear_crafting_level_infos();
+  ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* mutable_crafting_level_infos(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo >*
+      mutable_crafting_level_infos();
+  private:
+  const ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo& _internal_crafting_level_infos(int index) const;
+  ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* _internal_add_crafting_level_infos();
+  public:
+  const ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo& crafting_level_infos(int index) const;
+  ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* add_crafting_level_infos();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo >&
+      crafting_level_infos() const;
+
   // @@protoc_insertion_point(class_scope:ei.ArtifactsConfigurationResponse)
  private:
   class _Internal;
@@ -29251,6 +29583,7 @@ class ArtifactsConfigurationResponse final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_MissionParameters > mission_parameters_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_ArtifactParameters > artifact_parameters_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo > crafting_level_infos_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -29311,7 +29644,7 @@ class MissionRequest final :
                &_MissionRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    102;
+    103;
 
   friend void swap(MissionRequest& a, MissionRequest& b) {
     a.Swap(&b);
@@ -29549,7 +29882,7 @@ class MissionResponse final :
                &_MissionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    103;
+    104;
 
   friend void swap(MissionResponse& a, MissionResponse& b) {
     a.Swap(&b);
@@ -29727,7 +30060,7 @@ class CompleteMissionResponse_SecureArtifactSpec final :
                &_CompleteMissionResponse_SecureArtifactSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    104;
+    105;
 
   friend void swap(CompleteMissionResponse_SecureArtifactSpec& a, CompleteMissionResponse_SecureArtifactSpec& b) {
     a.Swap(&b);
@@ -29910,7 +30243,7 @@ class CompleteMissionResponse final :
                &_CompleteMissionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    105;
+    106;
 
   friend void swap(CompleteMissionResponse& a, CompleteMissionResponse& b) {
     a.Swap(&b);
@@ -30150,7 +30483,7 @@ class CollectContractArtifactRewardsRequest final :
                &_CollectContractArtifactRewardsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    106;
+    107;
 
   friend void swap(CollectContractArtifactRewardsRequest& a, CollectContractArtifactRewardsRequest& b) {
     a.Swap(&b);
@@ -30378,7 +30711,7 @@ class CraftArtifactRequest final :
                &_CraftArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    107;
+    108;
 
   friend void swap(CraftArtifactRequest& a, CraftArtifactRequest& b) {
     a.Swap(&b);
@@ -30458,6 +30791,7 @@ class CraftArtifactRequest final :
     kRinfoFieldNumber = 5,
     kItemIdFieldNumber = 3,
     kGoldPricePaidFieldNumber = 6,
+    kCraftingXpFieldNumber = 8,
     kCraftingCountFieldNumber = 7,
   };
   // repeated .ei.ArtifactInventoryItem ingredients = 4;
@@ -30558,6 +30892,19 @@ class CraftArtifactRequest final :
   void _internal_set_gold_price_paid(double value);
   public:
 
+  // optional double crafting_xp = 8;
+  bool has_crafting_xp() const;
+  private:
+  bool _internal_has_crafting_xp() const;
+  public:
+  void clear_crafting_xp();
+  double crafting_xp() const;
+  void set_crafting_xp(double value);
+  private:
+  double _internal_crafting_xp() const;
+  void _internal_set_crafting_xp(double value);
+  public:
+
   // optional uint32 crafting_count = 7;
   bool has_crafting_count() const;
   private:
@@ -30586,6 +30933,7 @@ class CraftArtifactRequest final :
   ::ei::BasicRequestInfo* rinfo_;
   uint64_t item_id_;
   double gold_price_paid_;
+  double crafting_xp_;
   uint32_t crafting_count_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -30646,7 +30994,7 @@ class CraftArtifactResponse final :
                &_CraftArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    108;
+    109;
 
   friend void swap(CraftArtifactResponse& a, CraftArtifactResponse& b) {
     a.Swap(&b);
@@ -30859,7 +31207,7 @@ class ConsumeArtifactRequest final :
                &_ConsumeArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    109;
+    110;
 
   friend void swap(ConsumeArtifactRequest& a, ConsumeArtifactRequest& b) {
     a.Swap(&b);
@@ -30933,6 +31281,8 @@ class ConsumeArtifactRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kAdditionalServerIdsFieldNumber = 7,
+    kAdditionalItemIdsFieldNumber = 8,
     kEiUserIdFieldNumber = 3,
     kArtifactServerIdFieldNumber = 5,
     kSpecFieldNumber = 1,
@@ -30940,6 +31290,52 @@ class ConsumeArtifactRequest final :
     kOriginalItemIdFieldNumber = 2,
     kQuantityFieldNumber = 6,
   };
+  // repeated string additional_server_ids = 7;
+  int additional_server_ids_size() const;
+  private:
+  int _internal_additional_server_ids_size() const;
+  public:
+  void clear_additional_server_ids();
+  const std::string& additional_server_ids(int index) const;
+  std::string* mutable_additional_server_ids(int index);
+  void set_additional_server_ids(int index, const std::string& value);
+  void set_additional_server_ids(int index, std::string&& value);
+  void set_additional_server_ids(int index, const char* value);
+  void set_additional_server_ids(int index, const char* value, size_t size);
+  std::string* add_additional_server_ids();
+  void add_additional_server_ids(const std::string& value);
+  void add_additional_server_ids(std::string&& value);
+  void add_additional_server_ids(const char* value);
+  void add_additional_server_ids(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& additional_server_ids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_additional_server_ids();
+  private:
+  const std::string& _internal_additional_server_ids(int index) const;
+  std::string* _internal_add_additional_server_ids();
+  public:
+
+  // repeated uint64 additional_item_ids = 8;
+  int additional_item_ids_size() const;
+  private:
+  int _internal_additional_item_ids_size() const;
+  public:
+  void clear_additional_item_ids();
+  private:
+  uint64_t _internal_additional_item_ids(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_additional_item_ids() const;
+  void _internal_add_additional_item_ids(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_additional_item_ids();
+  public:
+  uint64_t additional_item_ids(int index) const;
+  void set_additional_item_ids(int index, uint64_t value);
+  void add_additional_item_ids(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      additional_item_ids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_additional_item_ids();
+
   // optional string ei_user_id = 3;
   bool has_ei_user_id() const;
   private:
@@ -31047,6 +31443,8 @@ class ConsumeArtifactRequest final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> additional_server_ids_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > additional_item_ids_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ei_user_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr artifact_server_id_;
   ::ei::ArtifactSpec* spec_;
@@ -31112,7 +31510,7 @@ class ConsumeArtifactResponse final :
                &_ConsumeArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    110;
+    111;
 
   friend void swap(ConsumeArtifactResponse& a, ConsumeArtifactResponse& b) {
     a.Swap(&b);
@@ -31188,6 +31586,7 @@ class ConsumeArtifactResponse final :
   enum : int {
     kByproductsFieldNumber = 3,
     kOtherRewardsFieldNumber = 4,
+    kAdditionalItemIdsFieldNumber = 6,
     kEiUserIdFieldNumber = 5,
     kOriginalItemIdFieldNumber = 2,
     kSuccessFieldNumber = 1,
@@ -31227,6 +31626,28 @@ class ConsumeArtifactResponse final :
   ::ei::Reward* add_other_rewards();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Reward >&
       other_rewards() const;
+
+  // repeated uint64 additional_item_ids = 6;
+  int additional_item_ids_size() const;
+  private:
+  int _internal_additional_item_ids_size() const;
+  public:
+  void clear_additional_item_ids();
+  private:
+  uint64_t _internal_additional_item_ids(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      _internal_additional_item_ids() const;
+  void _internal_add_additional_item_ids(uint64_t value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      _internal_mutable_additional_item_ids();
+  public:
+  uint64_t additional_item_ids(int index) const;
+  void set_additional_item_ids(int index, uint64_t value);
+  void add_additional_item_ids(uint64_t value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+      additional_item_ids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+      mutable_additional_item_ids();
 
   // optional string ei_user_id = 5;
   bool has_ei_user_id() const;
@@ -31283,6 +31704,7 @@ class ConsumeArtifactResponse final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec > byproducts_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Reward > other_rewards_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > additional_item_ids_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ei_user_id_;
   uint64_t original_item_id_;
   bool success_;
@@ -31345,7 +31767,7 @@ class AuthenticateArtifactResponse final :
                &_AuthenticateArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    111;
+    112;
 
   friend void swap(AuthenticateArtifactResponse& a, AuthenticateArtifactResponse& b) {
     a.Swap(&b);
@@ -31568,7 +31990,7 @@ class SetArtifactRequest final :
                &_SetArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    112;
+    113;
 
   friend void swap(SetArtifactRequest& a, SetArtifactRequest& b) {
     a.Swap(&b);
@@ -31786,7 +32208,7 @@ class SetArtifactResponse final :
                &_SetArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    113;
+    114;
 
   friend void swap(SetArtifactResponse& a, SetArtifactResponse& b) {
     a.Swap(&b);
@@ -31979,7 +32401,7 @@ class ArtifactsDB_ActiveArtifactSlot final :
                &_ArtifactsDB_ActiveArtifactSlot_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    114;
+    115;
 
   friend void swap(ArtifactsDB_ActiveArtifactSlot& a, ArtifactsDB_ActiveArtifactSlot& b) {
     a.Swap(&b);
@@ -32152,7 +32574,7 @@ class ArtifactsDB_ActiveArtifactSet final :
                &_ArtifactsDB_ActiveArtifactSet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    115;
+    116;
 
   friend void swap(ArtifactsDB_ActiveArtifactSet& a, ArtifactsDB_ActiveArtifactSet& b) {
     a.Swap(&b);
@@ -32314,7 +32736,7 @@ class ArtifactsDB_CraftableArtifact final :
                &_ArtifactsDB_CraftableArtifact_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    116;
+    117;
 
   friend void swap(ArtifactsDB_CraftableArtifact& a, ArtifactsDB_CraftableArtifact& b) {
     a.Swap(&b);
@@ -32389,8 +32811,11 @@ class ArtifactsDB_CraftableArtifact final :
 
   enum : int {
     kSpecFieldNumber = 1,
-    kSeenFieldNumber = 2,
     kCountFieldNumber = 3,
+    kDiscoveredFieldNumber = 6,
+    kCraftableFieldNumber = 4,
+    kRecipeDiscoveredFieldNumber = 5,
+    kSeenFieldNumber = 2,
   };
   // optional .ei.ArtifactSpec spec = 1;
   bool has_spec() const;
@@ -32410,19 +32835,6 @@ class ArtifactsDB_CraftableArtifact final :
       ::ei::ArtifactSpec* spec);
   ::ei::ArtifactSpec* unsafe_arena_release_spec();
 
-  // optional bool seen = 2;
-  bool has_seen() const;
-  private:
-  bool _internal_has_seen() const;
-  public:
-  void clear_seen();
-  bool seen() const;
-  void set_seen(bool value);
-  private:
-  bool _internal_seen() const;
-  void _internal_set_seen(bool value);
-  public:
-
   // optional uint32 count = 3;
   bool has_count() const;
   private:
@@ -32436,6 +32848,58 @@ class ArtifactsDB_CraftableArtifact final :
   void _internal_set_count(uint32_t value);
   public:
 
+  // optional bool discovered = 6;
+  bool has_discovered() const;
+  private:
+  bool _internal_has_discovered() const;
+  public:
+  void clear_discovered();
+  bool discovered() const;
+  void set_discovered(bool value);
+  private:
+  bool _internal_discovered() const;
+  void _internal_set_discovered(bool value);
+  public:
+
+  // optional bool craftable = 4;
+  bool has_craftable() const;
+  private:
+  bool _internal_has_craftable() const;
+  public:
+  void clear_craftable();
+  bool craftable() const;
+  void set_craftable(bool value);
+  private:
+  bool _internal_craftable() const;
+  void _internal_set_craftable(bool value);
+  public:
+
+  // optional bool recipe_discovered = 5;
+  bool has_recipe_discovered() const;
+  private:
+  bool _internal_has_recipe_discovered() const;
+  public:
+  void clear_recipe_discovered();
+  bool recipe_discovered() const;
+  void set_recipe_discovered(bool value);
+  private:
+  bool _internal_recipe_discovered() const;
+  void _internal_set_recipe_discovered(bool value);
+  public:
+
+  // optional bool seen = 2;
+  bool has_seen() const;
+  private:
+  bool _internal_has_seen() const;
+  public:
+  void clear_seen();
+  bool seen() const;
+  void set_seen(bool value);
+  private:
+  bool _internal_seen() const;
+  void _internal_set_seen(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ArtifactsDB.CraftableArtifact)
  private:
   class _Internal;
@@ -32446,8 +32910,11 @@ class ArtifactsDB_CraftableArtifact final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::ei::ArtifactSpec* spec_;
-  bool seen_;
   uint32_t count_;
+  bool discovered_;
+  bool craftable_;
+  bool recipe_discovered_;
+  bool seen_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -32507,7 +32974,7 @@ class ArtifactsDB final :
                &_ArtifactsDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    117;
+    118;
 
   friend void swap(ArtifactsDB& a, ArtifactsDB& b) {
     a.Swap(&b);
@@ -32590,10 +33057,11 @@ class ArtifactsDB final :
     kMissionInfosFieldNumber = 4,
     kMissionArchiveFieldNumber = 5,
     kActiveArtifactsFieldNumber = 7,
-    kDiscoveredArtifactsFieldNumber = 8,
-    kCraftableArtifactsFieldNumber = 9,
-    kCraftingCountsFieldNumber = 10,
+    kDiscoveredArtifactsDEPRECATEDFieldNumber = 8,
+    kCraftableArtifactsDEPRECATEDFieldNumber = 9,
+    kCraftingCountsDEPRECATEDFieldNumber = 10,
     kActiveArtifactSetsFieldNumber = 11,
+    kArtifactStatusFieldNumber = 12,
     kItemSequenceFieldNumber = 2,
   };
   // repeated .ei.ArtifactInventoryItem inventory_items = 1;
@@ -32686,59 +33154,59 @@ class ArtifactsDB final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot >&
       active_artifacts() const;
 
-  // repeated .ei.ArtifactSpec discovered_artifacts = 8;
-  int discovered_artifacts_size() const;
+  // repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;
+  int discovered_artifacts_deprecated_size() const;
   private:
-  int _internal_discovered_artifacts_size() const;
+  int _internal_discovered_artifacts_deprecated_size() const;
   public:
-  void clear_discovered_artifacts();
-  ::ei::ArtifactSpec* mutable_discovered_artifacts(int index);
+  void clear_discovered_artifacts_deprecated();
+  ::ei::ArtifactSpec* mutable_discovered_artifacts_deprecated(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec >*
-      mutable_discovered_artifacts();
+      mutable_discovered_artifacts_deprecated();
   private:
-  const ::ei::ArtifactSpec& _internal_discovered_artifacts(int index) const;
-  ::ei::ArtifactSpec* _internal_add_discovered_artifacts();
+  const ::ei::ArtifactSpec& _internal_discovered_artifacts_deprecated(int index) const;
+  ::ei::ArtifactSpec* _internal_add_discovered_artifacts_deprecated();
   public:
-  const ::ei::ArtifactSpec& discovered_artifacts(int index) const;
-  ::ei::ArtifactSpec* add_discovered_artifacts();
+  const ::ei::ArtifactSpec& discovered_artifacts_deprecated(int index) const;
+  ::ei::ArtifactSpec* add_discovered_artifacts_deprecated();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec >&
-      discovered_artifacts() const;
+      discovered_artifacts_deprecated() const;
 
-  // repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;
-  int craftable_artifacts_size() const;
+  // repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;
+  int craftable_artifacts_deprecated_size() const;
   private:
-  int _internal_craftable_artifacts_size() const;
+  int _internal_craftable_artifacts_deprecated_size() const;
   public:
-  void clear_craftable_artifacts();
-  ::ei::ArtifactsDB_CraftableArtifact* mutable_craftable_artifacts(int index);
+  void clear_craftable_artifacts_deprecated();
+  ::ei::ArtifactsDB_CraftableArtifact* mutable_craftable_artifacts_deprecated(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
-      mutable_craftable_artifacts();
+      mutable_craftable_artifacts_deprecated();
   private:
-  const ::ei::ArtifactsDB_CraftableArtifact& _internal_craftable_artifacts(int index) const;
-  ::ei::ArtifactsDB_CraftableArtifact* _internal_add_craftable_artifacts();
+  const ::ei::ArtifactsDB_CraftableArtifact& _internal_craftable_artifacts_deprecated(int index) const;
+  ::ei::ArtifactsDB_CraftableArtifact* _internal_add_craftable_artifacts_deprecated();
   public:
-  const ::ei::ArtifactsDB_CraftableArtifact& craftable_artifacts(int index) const;
-  ::ei::ArtifactsDB_CraftableArtifact* add_craftable_artifacts();
+  const ::ei::ArtifactsDB_CraftableArtifact& craftable_artifacts_deprecated(int index) const;
+  ::ei::ArtifactsDB_CraftableArtifact* add_craftable_artifacts_deprecated();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
-      craftable_artifacts() const;
+      craftable_artifacts_deprecated() const;
 
-  // repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;
-  int crafting_counts_size() const;
+  // repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;
+  int crafting_counts_deprecated_size() const;
   private:
-  int _internal_crafting_counts_size() const;
+  int _internal_crafting_counts_deprecated_size() const;
   public:
-  void clear_crafting_counts();
-  ::ei::ArtifactsDB_CraftableArtifact* mutable_crafting_counts(int index);
+  void clear_crafting_counts_deprecated();
+  ::ei::ArtifactsDB_CraftableArtifact* mutable_crafting_counts_deprecated(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
-      mutable_crafting_counts();
+      mutable_crafting_counts_deprecated();
   private:
-  const ::ei::ArtifactsDB_CraftableArtifact& _internal_crafting_counts(int index) const;
-  ::ei::ArtifactsDB_CraftableArtifact* _internal_add_crafting_counts();
+  const ::ei::ArtifactsDB_CraftableArtifact& _internal_crafting_counts_deprecated(int index) const;
+  ::ei::ArtifactsDB_CraftableArtifact* _internal_add_crafting_counts_deprecated();
   public:
-  const ::ei::ArtifactsDB_CraftableArtifact& crafting_counts(int index) const;
-  ::ei::ArtifactsDB_CraftableArtifact* add_crafting_counts();
+  const ::ei::ArtifactsDB_CraftableArtifact& crafting_counts_deprecated(int index) const;
+  ::ei::ArtifactsDB_CraftableArtifact* add_crafting_counts_deprecated();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
-      crafting_counts() const;
+      crafting_counts_deprecated() const;
 
   // repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;
   int active_artifact_sets_size() const;
@@ -32757,6 +33225,24 @@ class ArtifactsDB final :
   ::ei::ArtifactsDB_ActiveArtifactSet* add_active_artifact_sets();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet >&
       active_artifact_sets() const;
+
+  // repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;
+  int artifact_status_size() const;
+  private:
+  int _internal_artifact_status_size() const;
+  public:
+  void clear_artifact_status();
+  ::ei::ArtifactsDB_CraftableArtifact* mutable_artifact_status(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
+      mutable_artifact_status();
+  private:
+  const ::ei::ArtifactsDB_CraftableArtifact& _internal_artifact_status(int index) const;
+  ::ei::ArtifactsDB_CraftableArtifact* _internal_add_artifact_status();
+  public:
+  const ::ei::ArtifactsDB_CraftableArtifact& artifact_status(int index) const;
+  ::ei::ArtifactsDB_CraftableArtifact* add_artifact_status();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
+      artifact_status() const;
 
   // optional uint64 item_sequence = 2;
   bool has_item_sequence() const;
@@ -32785,10 +33271,11 @@ class ArtifactsDB final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::MissionInfo > mission_infos_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::MissionInfo > mission_archive_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot > active_artifacts_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec > discovered_artifacts_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > craftable_artifacts_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > crafting_counts_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec > discovered_artifacts_deprecated_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > craftable_artifacts_deprecated_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > crafting_counts_deprecated_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet > active_artifact_sets_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > artifact_status_;
   uint64_t item_sequence_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -32849,7 +33336,7 @@ class AuthenticatedMessage final :
                &_AuthenticatedMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    118;
+    119;
 
   friend void swap(AuthenticatedMessage& a, AuthenticatedMessage& b) {
     a.Swap(&b);
@@ -33047,7 +33534,7 @@ class LogCompleteMissionPayload final :
                &_LogCompleteMissionPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    119;
+    120;
 
   friend void swap(LogCompleteMissionPayload& a, LogCompleteMissionPayload& b) {
     a.Swap(&b);
@@ -33230,7 +33717,7 @@ class LogCraftArtifactPayload final :
                &_LogCraftArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    120;
+    121;
 
   friend void swap(LogCraftArtifactPayload& a, LogCraftArtifactPayload& b) {
     a.Swap(&b);
@@ -33413,7 +33900,7 @@ class LogConsumeArtifactPayload final :
                &_LogConsumeArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    121;
+    122;
 
   friend void swap(LogConsumeArtifactPayload& a, LogConsumeArtifactPayload& b) {
     a.Swap(&b);
@@ -33596,7 +34083,7 @@ class LogSetArtifactPayload final :
                &_LogSetArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    122;
+    123;
 
   friend void swap(LogSetArtifactPayload& a, LogSetArtifactPayload& b) {
     a.Swap(&b);
@@ -33779,7 +34266,7 @@ class AccountTransferPayload final :
                &_AccountTransferPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    123;
+    124;
 
   friend void swap(AccountTransferPayload& a, AccountTransferPayload& b) {
     a.Swap(&b);
@@ -33962,7 +34449,7 @@ class SaveBackupResponse final :
                &_SaveBackupResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    124;
+    125;
 
   friend void swap(SaveBackupResponse& a, SaveBackupResponse& b) {
     a.Swap(&b);
@@ -34211,7 +34698,7 @@ class CleanAccountRequest final :
                &_CleanAccountRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    125;
+    126;
 
   friend void swap(CleanAccountRequest& a, CleanAccountRequest& b) {
     a.Swap(&b);
@@ -34394,7 +34881,7 @@ class ReturnEDTPayload final :
                &_ReturnEDTPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    126;
+    127;
 
   friend void swap(ReturnEDTPayload& a, ReturnEDTPayload& b) {
     a.Swap(&b);
@@ -34557,7 +35044,7 @@ class DLCItem final :
                &_DLCItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    127;
+    128;
 
   friend void swap(DLCItem& a, DLCItem& b) {
     a.Swap(&b);
@@ -34830,7 +35317,7 @@ class ShellSpec_ShellPiece final :
                &_ShellSpec_ShellPiece_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    128;
+    129;
 
   friend void swap(ShellSpec_ShellPiece& a, ShellSpec_ShellPiece& b) {
     a.Swap(&b);
@@ -35008,7 +35495,7 @@ class ShellSpec final :
                &_ShellSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    129;
+    130;
 
   friend void swap(ShellSpec& a, ShellSpec& b) {
     a.Swap(&b);
@@ -35521,24 +36008,24 @@ class ShellSpec final :
 };
 // -------------------------------------------------------------------
 
-class ShellSetSpec_VariationInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellSetSpec.VariationInfo) */ {
+class ShellSetSpec_VariationSpec final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellSetSpec.VariationSpec) */ {
  public:
-  inline ShellSetSpec_VariationInfo() : ShellSetSpec_VariationInfo(nullptr) {}
-  ~ShellSetSpec_VariationInfo() override;
-  explicit constexpr ShellSetSpec_VariationInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShellSetSpec_VariationSpec() : ShellSetSpec_VariationSpec(nullptr) {}
+  ~ShellSetSpec_VariationSpec() override;
+  explicit constexpr ShellSetSpec_VariationSpec(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  ShellSetSpec_VariationInfo(const ShellSetSpec_VariationInfo& from);
-  ShellSetSpec_VariationInfo(ShellSetSpec_VariationInfo&& from) noexcept
-    : ShellSetSpec_VariationInfo() {
+  ShellSetSpec_VariationSpec(const ShellSetSpec_VariationSpec& from);
+  ShellSetSpec_VariationSpec(ShellSetSpec_VariationSpec&& from) noexcept
+    : ShellSetSpec_VariationSpec() {
     *this = ::std::move(from);
   }
 
-  inline ShellSetSpec_VariationInfo& operator=(const ShellSetSpec_VariationInfo& from) {
+  inline ShellSetSpec_VariationSpec& operator=(const ShellSetSpec_VariationSpec& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ShellSetSpec_VariationInfo& operator=(ShellSetSpec_VariationInfo&& from) noexcept {
+  inline ShellSetSpec_VariationSpec& operator=(ShellSetSpec_VariationSpec&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -35568,20 +36055,20 @@ class ShellSetSpec_VariationInfo final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const ShellSetSpec_VariationInfo& default_instance() {
+  static const ShellSetSpec_VariationSpec& default_instance() {
     return *internal_default_instance();
   }
-  static inline const ShellSetSpec_VariationInfo* internal_default_instance() {
-    return reinterpret_cast<const ShellSetSpec_VariationInfo*>(
-               &_ShellSetSpec_VariationInfo_default_instance_);
+  static inline const ShellSetSpec_VariationSpec* internal_default_instance() {
+    return reinterpret_cast<const ShellSetSpec_VariationSpec*>(
+               &_ShellSetSpec_VariationSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    130;
+    131;
 
-  friend void swap(ShellSetSpec_VariationInfo& a, ShellSetSpec_VariationInfo& b) {
+  friend void swap(ShellSetSpec_VariationSpec& a, ShellSetSpec_VariationSpec& b) {
     a.Swap(&b);
   }
-  inline void Swap(ShellSetSpec_VariationInfo* other) {
+  inline void Swap(ShellSetSpec_VariationSpec* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -35594,7 +36081,7 @@ class ShellSetSpec_VariationInfo final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ShellSetSpec_VariationInfo* other) {
+  void UnsafeArenaSwap(ShellSetSpec_VariationSpec* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -35602,13 +36089,13 @@ class ShellSetSpec_VariationInfo final :
 
   // implements Message ----------------------------------------------
 
-  ShellSetSpec_VariationInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ShellSetSpec_VariationInfo>(arena);
+  ShellSetSpec_VariationSpec* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellSetSpec_VariationSpec>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ShellSetSpec_VariationInfo& from);
+  void CopyFrom(const ShellSetSpec_VariationSpec& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const ShellSetSpec_VariationInfo& from);
+  void MergeFrom(const ShellSetSpec_VariationSpec& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -35625,15 +36112,15 @@ class ShellSetSpec_VariationInfo final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ShellSetSpec_VariationInfo* other);
+  void InternalSwap(ShellSetSpec_VariationSpec* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ei.ShellSetSpec.VariationInfo";
+    return "ei.ShellSetSpec.VariationSpec";
   }
   protected:
-  explicit ShellSetSpec_VariationInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShellSetSpec_VariationSpec(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -35653,6 +36140,9 @@ class ShellSetSpec_VariationInfo final :
     kIdentifierFieldNumber = 1,
     kHexColorFieldNumber = 2,
     kPriceFieldNumber = 3,
+    kDefaultAppearanceFieldNumber = 4,
+    kCustomAppearanceFieldNumber = 5,
+    kSortPriorityFieldNumber = 6,
   };
   // optional string identifier = 1;
   bool has_identifier() const;
@@ -35703,7 +36193,46 @@ class ShellSetSpec_VariationInfo final :
   void _internal_set_price(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ei.ShellSetSpec.VariationInfo)
+  // optional bool default_appearance = 4;
+  bool has_default_appearance() const;
+  private:
+  bool _internal_has_default_appearance() const;
+  public:
+  void clear_default_appearance();
+  bool default_appearance() const;
+  void set_default_appearance(bool value);
+  private:
+  bool _internal_default_appearance() const;
+  void _internal_set_default_appearance(bool value);
+  public:
+
+  // optional bool custom_appearance = 5;
+  bool has_custom_appearance() const;
+  private:
+  bool _internal_has_custom_appearance() const;
+  public:
+  void clear_custom_appearance();
+  bool custom_appearance() const;
+  void set_custom_appearance(bool value);
+  private:
+  bool _internal_custom_appearance() const;
+  void _internal_set_custom_appearance(bool value);
+  public:
+
+  // optional int32 sort_priority = 6;
+  bool has_sort_priority() const;
+  private:
+  bool _internal_has_sort_priority() const;
+  public:
+  void clear_sort_priority();
+  int32_t sort_priority() const;
+  void set_sort_priority(int32_t value);
+  private:
+  int32_t _internal_sort_priority() const;
+  void _internal_set_sort_priority(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellSetSpec.VariationSpec)
  private:
   class _Internal;
 
@@ -35715,6 +36244,9 @@ class ShellSetSpec_VariationInfo final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hex_color_;
   uint32_t price_;
+  bool default_appearance_;
+  bool custom_appearance_;
+  int32_t sort_priority_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -35774,7 +36306,7 @@ class ShellSetSpec final :
                &_ShellSetSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    131;
+    132;
 
   friend void swap(ShellSetSpec& a, ShellSetSpec& b) {
     a.Swap(&b);
@@ -35845,7 +36377,7 @@ class ShellSetSpec final :
 
   // nested types ----------------------------------------------------
 
-  typedef ShellSetSpec_VariationInfo VariationInfo;
+  typedef ShellSetSpec_VariationSpec VariationSpec;
 
   // accessors -------------------------------------------------------
 
@@ -35868,22 +36400,22 @@ class ShellSetSpec final :
     kDiscountFieldNumber = 17,
     kPriceMultDEPRECATEDFieldNumber = 8,
   };
-  // repeated .ei.ShellSetSpec.VariationInfo variations = 15;
+  // repeated .ei.ShellSetSpec.VariationSpec variations = 15;
   int variations_size() const;
   private:
   int _internal_variations_size() const;
   public:
   void clear_variations();
-  ::ei::ShellSetSpec_VariationInfo* mutable_variations(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >*
+  ::ei::ShellSetSpec_VariationSpec* mutable_variations(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationSpec >*
       mutable_variations();
   private:
-  const ::ei::ShellSetSpec_VariationInfo& _internal_variations(int index) const;
-  ::ei::ShellSetSpec_VariationInfo* _internal_add_variations();
+  const ::ei::ShellSetSpec_VariationSpec& _internal_variations(int index) const;
+  ::ei::ShellSetSpec_VariationSpec* _internal_add_variations();
   public:
-  const ::ei::ShellSetSpec_VariationInfo& variations(int index) const;
-  ::ei::ShellSetSpec_VariationInfo* add_variations();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >&
+  const ::ei::ShellSetSpec_VariationSpec& variations(int index) const;
+  ::ei::ShellSetSpec_VariationSpec* add_variations();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationSpec >&
       variations() const;
 
   // optional string identifier = 1;
@@ -36118,7 +36650,7 @@ class ShellSetSpec final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo > variations_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationSpec > variations_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hex_base_color_;
@@ -36194,7 +36726,7 @@ class ShellObjectSpec_LODPiece final :
                &_ShellObjectSpec_LODPiece_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    132;
+    133;
 
   friend void swap(ShellObjectSpec_LODPiece& a, ShellObjectSpec_LODPiece& b) {
     a.Swap(&b);
@@ -36372,7 +36904,7 @@ class ShellObjectSpec final :
                &_ShellObjectSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    133;
+    134;
 
   friend void swap(ShellObjectSpec& a, ShellObjectSpec& b) {
     a.Swap(&b);
@@ -36445,22 +36977,69 @@ class ShellObjectSpec final :
 
   typedef ShellObjectSpec_LODPiece LODPiece;
 
+  typedef ShellObjectSpec_ChickenAnimation ChickenAnimation;
+  static constexpr ChickenAnimation STANDARD_RUN =
+    ShellObjectSpec_ChickenAnimation_STANDARD_RUN;
+  static constexpr ChickenAnimation SLOWMO =
+    ShellObjectSpec_ChickenAnimation_SLOWMO;
+  static constexpr ChickenAnimation WOBBLE =
+    ShellObjectSpec_ChickenAnimation_WOBBLE;
+  static constexpr ChickenAnimation WOBBLE_LEAN =
+    ShellObjectSpec_ChickenAnimation_WOBBLE_LEAN;
+  static constexpr ChickenAnimation SMOOTH =
+    ShellObjectSpec_ChickenAnimation_SMOOTH;
+  static constexpr ChickenAnimation SMOOTH_LEAN =
+    ShellObjectSpec_ChickenAnimation_SMOOTH_LEAN;
+  static constexpr ChickenAnimation HOVER =
+    ShellObjectSpec_ChickenAnimation_HOVER;
+  static constexpr ChickenAnimation SIDEWAYS_SMOOTH =
+    ShellObjectSpec_ChickenAnimation_SIDEWAYS_SMOOTH;
+  static constexpr ChickenAnimation SIDEWAYS_LEAN =
+    ShellObjectSpec_ChickenAnimation_SIDEWAYS_LEAN;
+  static inline bool ChickenAnimation_IsValid(int value) {
+    return ShellObjectSpec_ChickenAnimation_IsValid(value);
+  }
+  static constexpr ChickenAnimation ChickenAnimation_MIN =
+    ShellObjectSpec_ChickenAnimation_ChickenAnimation_MIN;
+  static constexpr ChickenAnimation ChickenAnimation_MAX =
+    ShellObjectSpec_ChickenAnimation_ChickenAnimation_MAX;
+  static constexpr int ChickenAnimation_ARRAYSIZE =
+    ShellObjectSpec_ChickenAnimation_ChickenAnimation_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  ChickenAnimation_descriptor() {
+    return ShellObjectSpec_ChickenAnimation_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& ChickenAnimation_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, ChickenAnimation>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function ChickenAnimation_Name.");
+    return ShellObjectSpec_ChickenAnimation_Name(enum_t_value);
+  }
+  static inline bool ChickenAnimation_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      ChickenAnimation* value) {
+    return ShellObjectSpec_ChickenAnimation_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
     kMetadataFieldNumber = 7,
     kPiecesFieldNumber = 8,
+    kIconColorsFieldNumber = 15,
     kIdentifierFieldNumber = 1,
     kNameFieldNumber = 2,
     kObjectClassFieldNumber = 14,
     kPriceFieldNumber = 4,
     kRequiredEopFieldNumber = 5,
     kRequiredSoulEggsFieldNumber = 6,
-    kSecondsRemainingFieldNumber = 12,
     kIsNewFieldNumber = 10,
     kExpiresFieldNumber = 11,
     kNoHatsFieldNumber = 13,
     kDefaultAppearanceFieldNumber = 9,
+    kChickenAnimationFieldNumber = 16,
+    kSecondsRemainingFieldNumber = 12,
+    kSortPriorityFieldNumber = 17,
     kAssetTypeFieldNumber = 3,
   };
   // repeated double metadata = 7;
@@ -36502,6 +37081,30 @@ class ShellObjectSpec final :
   ::ei::ShellObjectSpec_LODPiece* add_pieces();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece >&
       pieces() const;
+
+  // repeated string icon_colors = 15;
+  int icon_colors_size() const;
+  private:
+  int _internal_icon_colors_size() const;
+  public:
+  void clear_icon_colors();
+  const std::string& icon_colors(int index) const;
+  std::string* mutable_icon_colors(int index);
+  void set_icon_colors(int index, const std::string& value);
+  void set_icon_colors(int index, std::string&& value);
+  void set_icon_colors(int index, const char* value);
+  void set_icon_colors(int index, const char* value, size_t size);
+  std::string* add_icon_colors();
+  void add_icon_colors(const std::string& value);
+  void add_icon_colors(std::string&& value);
+  void add_icon_colors(const char* value);
+  void add_icon_colors(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& icon_colors() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_icon_colors();
+  private:
+  const std::string& _internal_icon_colors(int index) const;
+  std::string* _internal_add_icon_colors();
+  public:
 
   // optional string identifier = 1;
   bool has_identifier() const;
@@ -36596,19 +37199,6 @@ class ShellObjectSpec final :
   void _internal_set_required_soul_eggs(double value);
   public:
 
-  // optional double seconds_remaining = 12;
-  bool has_seconds_remaining() const;
-  private:
-  bool _internal_has_seconds_remaining() const;
-  public:
-  void clear_seconds_remaining();
-  double seconds_remaining() const;
-  void set_seconds_remaining(double value);
-  private:
-  double _internal_seconds_remaining() const;
-  void _internal_set_seconds_remaining(double value);
-  public:
-
   // optional bool is_new = 10;
   bool has_is_new() const;
   private:
@@ -36661,6 +37251,45 @@ class ShellObjectSpec final :
   void _internal_set_default_appearance(bool value);
   public:
 
+  // optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;
+  bool has_chicken_animation() const;
+  private:
+  bool _internal_has_chicken_animation() const;
+  public:
+  void clear_chicken_animation();
+  ::ei::ShellObjectSpec_ChickenAnimation chicken_animation() const;
+  void set_chicken_animation(::ei::ShellObjectSpec_ChickenAnimation value);
+  private:
+  ::ei::ShellObjectSpec_ChickenAnimation _internal_chicken_animation() const;
+  void _internal_set_chicken_animation(::ei::ShellObjectSpec_ChickenAnimation value);
+  public:
+
+  // optional double seconds_remaining = 12;
+  bool has_seconds_remaining() const;
+  private:
+  bool _internal_has_seconds_remaining() const;
+  public:
+  void clear_seconds_remaining();
+  double seconds_remaining() const;
+  void set_seconds_remaining(double value);
+  private:
+  double _internal_seconds_remaining() const;
+  void _internal_set_seconds_remaining(double value);
+  public:
+
+  // optional int32 sort_priority = 17;
+  bool has_sort_priority() const;
+  private:
+  bool _internal_has_sort_priority() const;
+  public:
+  void clear_sort_priority();
+  int32_t sort_priority() const;
+  void set_sort_priority(int32_t value);
+  private:
+  int32_t _internal_sort_priority() const;
+  void _internal_set_sort_priority(int32_t value);
+  public:
+
   // optional .ei.ShellSpec.AssetType asset_type = 3;
   bool has_asset_type() const;
   private:
@@ -36685,17 +37314,20 @@ class ShellObjectSpec final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > metadata_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec_LODPiece > pieces_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> icon_colors_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr object_class_;
   uint32_t price_;
   uint32_t required_eop_;
   double required_soul_eggs_;
-  double seconds_remaining_;
   bool is_new_;
   bool expires_;
   bool no_hats_;
   bool default_appearance_;
+  int chicken_animation_;
+  double seconds_remaining_;
+  int32_t sort_priority_;
   int asset_type_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -36756,7 +37388,7 @@ class ShellGroupSpec final :
                &_ShellGroupSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    134;
+    135;
 
   friend void swap(ShellGroupSpec& a, ShellGroupSpec& b) {
     a.Swap(&b);
@@ -36995,7 +37627,7 @@ class DLCCatalog final :
                &_DLCCatalog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    135;
+    136;
 
   friend void swap(DLCCatalog& a, DLCCatalog& b) {
     a.Swap(&b);
@@ -37237,7 +37869,7 @@ class ShellDB_ShellStatus final :
                &_ShellDB_ShellStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    136;
+    137;
 
   friend void swap(ShellDB_ShellStatus& a, ShellDB_ShellStatus& b) {
     a.Swap(&b);
@@ -37415,7 +38047,7 @@ class ShellDB_ShellElementStatus final :
                &_ShellDB_ShellElementStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    137;
+    138;
 
   friend void swap(ShellDB_ShellElementStatus& a, ShellDB_ShellElementStatus& b) {
     a.Swap(&b);
@@ -37593,7 +38225,7 @@ class ShellDB_ShellSetVariationStatus final :
                &_ShellDB_ShellSetVariationStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    138;
+    139;
 
   friend void swap(ShellDB_ShellSetVariationStatus& a, ShellDB_ShellSetVariationStatus& b) {
     a.Swap(&b);
@@ -37782,7 +38414,7 @@ class ShellDB_FarmConfiguration final :
                &_ShellDB_FarmConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    139;
+    140;
 
   friend void swap(ShellDB_FarmConfiguration& a, ShellDB_FarmConfiguration& b) {
     a.Swap(&b);
@@ -38020,7 +38652,7 @@ class ShellDB_ShellConfiguration final :
                &_ShellDB_ShellConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    140;
+    141;
 
   friend void swap(ShellDB_ShellConfiguration& a, ShellDB_ShellConfiguration& b) {
     a.Swap(&b);
@@ -38213,7 +38845,7 @@ class ShellDB_ShellSetConfiguration final :
                &_ShellDB_ShellSetConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    141;
+    142;
 
   friend void swap(ShellDB_ShellSetConfiguration& a, ShellDB_ShellSetConfiguration& b) {
     a.Swap(&b);
@@ -38446,7 +39078,7 @@ class ShellDB_ShellGroupConfiguration final :
                &_ShellDB_ShellGroupConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    142;
+    143;
 
   friend void swap(ShellDB_ShellGroupConfiguration& a, ShellDB_ShellGroupConfiguration& b) {
     a.Swap(&b);
@@ -38624,7 +39256,7 @@ class ShellDB_ChickenConfig final :
                &_ShellDB_ChickenConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    143;
+    144;
 
   friend void swap(ShellDB_ChickenConfig& a, ShellDB_ChickenConfig& b) {
     a.Swap(&b);
@@ -38807,7 +39439,7 @@ class ShellDB final :
                &_ShellDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    144;
+    145;
 
   friend void swap(ShellDB& a, ShellDB& b) {
     a.Swap(&b);
@@ -39188,7 +39820,7 @@ class ShellsActionLog final :
                &_ShellsActionLog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    145;
+    146;
 
   friend void swap(ShellsActionLog& a, ShellsActionLog& b) {
     a.Swap(&b);
@@ -39270,6 +39902,9 @@ class ShellsActionLog final :
     kApproxTimeFieldNumber = 5,
     kCostFieldNumber = 4,
     kFarmIndexFieldNumber = 7,
+    kSoulEggsFieldNumber = 10,
+    kTicketsSpentFieldNumber = 11,
+    kGoldSpentFieldNumber = 12,
     kFarmElementFieldNumber = 9,
   };
   // optional string user_id = 1;
@@ -39401,6 +40036,45 @@ class ShellsActionLog final :
   void _internal_set_farm_index(int32_t value);
   public:
 
+  // optional double soul_eggs = 10;
+  bool has_soul_eggs() const;
+  private:
+  bool _internal_has_soul_eggs() const;
+  public:
+  void clear_soul_eggs();
+  double soul_eggs() const;
+  void set_soul_eggs(double value);
+  private:
+  double _internal_soul_eggs() const;
+  void _internal_set_soul_eggs(double value);
+  public:
+
+  // optional uint64 tickets_spent = 11;
+  bool has_tickets_spent() const;
+  private:
+  bool _internal_has_tickets_spent() const;
+  public:
+  void clear_tickets_spent();
+  uint64_t tickets_spent() const;
+  void set_tickets_spent(uint64_t value);
+  private:
+  uint64_t _internal_tickets_spent() const;
+  void _internal_set_tickets_spent(uint64_t value);
+  public:
+
+  // optional uint64 gold_spent = 12;
+  bool has_gold_spent() const;
+  private:
+  bool _internal_has_gold_spent() const;
+  public:
+  void clear_gold_spent();
+  uint64_t gold_spent() const;
+  void set_gold_spent(uint64_t value);
+  private:
+  uint64_t _internal_gold_spent() const;
+  void _internal_set_gold_spent(uint64_t value);
+  public:
+
   // optional .ei.ShellDB.FarmElement farm_element = 9;
   bool has_farm_element() const;
   private:
@@ -39431,6 +40105,9 @@ class ShellsActionLog final :
   double approx_time_;
   uint32_t cost_;
   int32_t farm_index_;
+  double soul_eggs_;
+  uint64_t tickets_spent_;
+  uint64_t gold_spent_;
   int farm_element_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -42419,7 +43096,7 @@ inline void Backup_Artifacts::set_allocated_spec_being_infused(::ei::ArtifactSpe
 
 // optional .ei.Egg egg_type_infusing = 3;
 inline bool Backup_Artifacts::_internal_has_egg_type_infusing() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool Backup_Artifacts::has_egg_type_infusing() const {
@@ -42427,7 +43104,7 @@ inline bool Backup_Artifacts::has_egg_type_infusing() const {
 }
 inline void Backup_Artifacts::clear_egg_type_infusing() {
   egg_type_infusing_ = 1;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::ei::Egg Backup_Artifacts::_internal_egg_type_infusing() const {
   return static_cast< ::ei::Egg >(egg_type_infusing_);
@@ -42438,7 +43115,7 @@ inline ::ei::Egg Backup_Artifacts::egg_type_infusing() const {
 }
 inline void Backup_Artifacts::_internal_set_egg_type_infusing(::ei::Egg value) {
   assert(::ei::Egg_IsValid(value));
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   egg_type_infusing_ = value;
 }
 inline void Backup_Artifacts::set_egg_type_infusing(::ei::Egg value) {
@@ -42504,7 +43181,7 @@ inline void Backup_Artifacts::set_eggs_infused(double value) {
 
 // optional double flow_percentage_artifacts = 6 [default = 0.5];
 inline bool Backup_Artifacts::_internal_has_flow_percentage_artifacts() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool Backup_Artifacts::has_flow_percentage_artifacts() const {
@@ -42512,7 +43189,7 @@ inline bool Backup_Artifacts::has_flow_percentage_artifacts() const {
 }
 inline void Backup_Artifacts::clear_flow_percentage_artifacts() {
   flow_percentage_artifacts_ = 0.5;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline double Backup_Artifacts::_internal_flow_percentage_artifacts() const {
   return flow_percentage_artifacts_;
@@ -42522,7 +43199,7 @@ inline double Backup_Artifacts::flow_percentage_artifacts() const {
   return _internal_flow_percentage_artifacts();
 }
 inline void Backup_Artifacts::_internal_set_flow_percentage_artifacts(double value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   flow_percentage_artifacts_ = value;
 }
 inline void Backup_Artifacts::set_flow_percentage_artifacts(double value) {
@@ -42532,7 +43209,7 @@ inline void Backup_Artifacts::set_flow_percentage_artifacts(double value) {
 
 // optional bool fueling_enabled = 7 [default = true];
 inline bool Backup_Artifacts::_internal_has_fueling_enabled() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool Backup_Artifacts::has_fueling_enabled() const {
@@ -42540,7 +43217,7 @@ inline bool Backup_Artifacts::has_fueling_enabled() const {
 }
 inline void Backup_Artifacts::clear_fueling_enabled() {
   fueling_enabled_ = true;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool Backup_Artifacts::_internal_fueling_enabled() const {
   return fueling_enabled_;
@@ -42550,7 +43227,7 @@ inline bool Backup_Artifacts::fueling_enabled() const {
   return _internal_fueling_enabled();
 }
 inline void Backup_Artifacts::_internal_set_fueling_enabled(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   fueling_enabled_ = value;
 }
 inline void Backup_Artifacts::set_fueling_enabled(bool value) {
@@ -42588,7 +43265,7 @@ inline void Backup_Artifacts::set_tank_filling_enabled(bool value) {
 
 // optional uint32 tank_level = 15;
 inline bool Backup_Artifacts::_internal_has_tank_level() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Backup_Artifacts::has_tank_level() const {
@@ -42596,7 +43273,7 @@ inline bool Backup_Artifacts::has_tank_level() const {
 }
 inline void Backup_Artifacts::clear_tank_level() {
   tank_level_ = 0u;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline uint32_t Backup_Artifacts::_internal_tank_level() const {
   return tank_level_;
@@ -42606,7 +43283,7 @@ inline uint32_t Backup_Artifacts::tank_level() const {
   return _internal_tank_level();
 }
 inline void Backup_Artifacts::_internal_set_tank_level(uint32_t value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   tank_level_ = value;
 }
 inline void Backup_Artifacts::set_tank_level(uint32_t value) {
@@ -42718,6 +43395,34 @@ inline void Backup_Artifacts::set_inventory_score(double value) {
   // @@protoc_insertion_point(field_set:ei.Backup.Artifacts.inventory_score)
 }
 
+// optional double crafting_xp = 17;
+inline bool Backup_Artifacts::_internal_has_crafting_xp() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool Backup_Artifacts::has_crafting_xp() const {
+  return _internal_has_crafting_xp();
+}
+inline void Backup_Artifacts::clear_crafting_xp() {
+  crafting_xp_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline double Backup_Artifacts::_internal_crafting_xp() const {
+  return crafting_xp_;
+}
+inline double Backup_Artifacts::crafting_xp() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Artifacts.crafting_xp)
+  return _internal_crafting_xp();
+}
+inline void Backup_Artifacts::_internal_set_crafting_xp(double value) {
+  _has_bits_[0] |= 0x00000400u;
+  crafting_xp_ = value;
+}
+inline void Backup_Artifacts::set_crafting_xp(double value) {
+  _internal_set_crafting_xp(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Artifacts.crafting_xp)
+}
+
 // optional bool enabled = 11;
 inline bool Backup_Artifacts::_internal_has_enabled() const {
   bool value = (_has_bits_[0] & 0x00000080u) != 0;
@@ -42776,7 +43481,7 @@ inline void Backup_Artifacts::set_intro_shown(bool value) {
 
 // optional bool infusing_enabled_DEPRECATED = 8 [default = true];
 inline bool Backup_Artifacts::_internal_has_infusing_enabled_deprecated() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool Backup_Artifacts::has_infusing_enabled_deprecated() const {
@@ -42784,7 +43489,7 @@ inline bool Backup_Artifacts::has_infusing_enabled_deprecated() const {
 }
 inline void Backup_Artifacts::clear_infusing_enabled_deprecated() {
   infusing_enabled_deprecated_ = true;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline bool Backup_Artifacts::_internal_infusing_enabled_deprecated() const {
   return infusing_enabled_deprecated_;
@@ -42794,7 +43499,7 @@ inline bool Backup_Artifacts::infusing_enabled_deprecated() const {
   return _internal_infusing_enabled_deprecated();
 }
 inline void Backup_Artifacts::_internal_set_infusing_enabled_deprecated(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   infusing_enabled_deprecated_ = value;
 }
 inline void Backup_Artifacts::set_infusing_enabled_deprecated(bool value) {
@@ -52160,7 +52865,7 @@ inline void CurrencyFlowLog::set_approx_time(double value) {
 
 // optional .ei.RewardType currency = 3;
 inline bool CurrencyFlowLog::_internal_has_currency() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool CurrencyFlowLog::has_currency() const {
@@ -52168,7 +52873,7 @@ inline bool CurrencyFlowLog::has_currency() const {
 }
 inline void CurrencyFlowLog::clear_currency() {
   currency_ = 1;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::ei::RewardType CurrencyFlowLog::_internal_currency() const {
   return static_cast< ::ei::RewardType >(currency_);
@@ -52179,7 +52884,7 @@ inline ::ei::RewardType CurrencyFlowLog::currency() const {
 }
 inline void CurrencyFlowLog::_internal_set_currency(::ei::RewardType value) {
   assert(::ei::RewardType_IsValid(value));
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000200u;
   currency_ = value;
 }
 inline void CurrencyFlowLog::set_currency(::ei::RewardType value) {
@@ -52420,6 +53125,90 @@ inline void CurrencyFlowLog::set_allocated_platform(std::string* platform) {
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.CurrencyFlowLog.platform)
+}
+
+// optional double soul_eggs = 8;
+inline bool CurrencyFlowLog::_internal_has_soul_eggs() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_soul_eggs() const {
+  return _internal_has_soul_eggs();
+}
+inline void CurrencyFlowLog::clear_soul_eggs() {
+  soul_eggs_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline double CurrencyFlowLog::_internal_soul_eggs() const {
+  return soul_eggs_;
+}
+inline double CurrencyFlowLog::soul_eggs() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.soul_eggs)
+  return _internal_soul_eggs();
+}
+inline void CurrencyFlowLog::_internal_set_soul_eggs(double value) {
+  _has_bits_[0] |= 0x00000040u;
+  soul_eggs_ = value;
+}
+inline void CurrencyFlowLog::set_soul_eggs(double value) {
+  _internal_set_soul_eggs(value);
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.soul_eggs)
+}
+
+// optional uint64 tickets_spent = 9;
+inline bool CurrencyFlowLog::_internal_has_tickets_spent() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_tickets_spent() const {
+  return _internal_has_tickets_spent();
+}
+inline void CurrencyFlowLog::clear_tickets_spent() {
+  tickets_spent_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline uint64_t CurrencyFlowLog::_internal_tickets_spent() const {
+  return tickets_spent_;
+}
+inline uint64_t CurrencyFlowLog::tickets_spent() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.tickets_spent)
+  return _internal_tickets_spent();
+}
+inline void CurrencyFlowLog::_internal_set_tickets_spent(uint64_t value) {
+  _has_bits_[0] |= 0x00000080u;
+  tickets_spent_ = value;
+}
+inline void CurrencyFlowLog::set_tickets_spent(uint64_t value) {
+  _internal_set_tickets_spent(value);
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.tickets_spent)
+}
+
+// optional uint64 gold_spent = 10;
+inline bool CurrencyFlowLog::_internal_has_gold_spent() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool CurrencyFlowLog::has_gold_spent() const {
+  return _internal_has_gold_spent();
+}
+inline void CurrencyFlowLog::clear_gold_spent() {
+  gold_spent_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline uint64_t CurrencyFlowLog::_internal_gold_spent() const {
+  return gold_spent_;
+}
+inline uint64_t CurrencyFlowLog::gold_spent() const {
+  // @@protoc_insertion_point(field_get:ei.CurrencyFlowLog.gold_spent)
+  return _internal_gold_spent();
+}
+inline void CurrencyFlowLog::_internal_set_gold_spent(uint64_t value) {
+  _has_bits_[0] |= 0x00000100u;
+  gold_spent_ = value;
+}
+inline void CurrencyFlowLog::set_gold_spent(uint64_t value) {
+  _internal_set_gold_spent(value);
+  // @@protoc_insertion_point(field_set:ei.CurrencyFlowLog.gold_spent)
 }
 
 // -------------------------------------------------------------------
@@ -53158,7 +53947,7 @@ inline void Contract::set_allocated_description(std::string* description) {
 
 // optional .ei.Egg egg = 2;
 inline bool Contract::_internal_has_egg() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool Contract::has_egg() const {
@@ -53166,7 +53955,7 @@ inline bool Contract::has_egg() const {
 }
 inline void Contract::clear_egg() {
   egg_ = 1;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::ei::Egg Contract::_internal_egg() const {
   return static_cast< ::ei::Egg >(egg_);
@@ -53177,7 +53966,7 @@ inline ::ei::Egg Contract::egg() const {
 }
 inline void Contract::_internal_set_egg(::ei::Egg value) {
   assert(::ei::Egg_IsValid(value));
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   egg_ = value;
 }
 inline void Contract::set_egg(::ei::Egg value) {
@@ -53267,7 +54056,7 @@ Contract::goal_sets() const {
 
 // optional bool coop_allowed = 4;
 inline bool Contract::_internal_has_coop_allowed() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool Contract::has_coop_allowed() const {
@@ -53275,7 +54064,7 @@ inline bool Contract::has_coop_allowed() const {
 }
 inline void Contract::clear_coop_allowed() {
   coop_allowed_ = false;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline bool Contract::_internal_coop_allowed() const {
   return coop_allowed_;
@@ -53285,7 +54074,7 @@ inline bool Contract::coop_allowed() const {
   return _internal_coop_allowed();
 }
 inline void Contract::_internal_set_coop_allowed(bool value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   coop_allowed_ = value;
 }
 inline void Contract::set_coop_allowed(bool value) {
@@ -53295,7 +54084,7 @@ inline void Contract::set_coop_allowed(bool value) {
 
 // optional uint32 max_coop_size = 5;
 inline bool Contract::_internal_has_max_coop_size() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Contract::has_max_coop_size() const {
@@ -53303,7 +54092,7 @@ inline bool Contract::has_max_coop_size() const {
 }
 inline void Contract::clear_max_coop_size() {
   max_coop_size_ = 0u;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t Contract::_internal_max_coop_size() const {
   return max_coop_size_;
@@ -53313,7 +54102,7 @@ inline uint32_t Contract::max_coop_size() const {
   return _internal_max_coop_size();
 }
 inline void Contract::_internal_set_max_coop_size(uint32_t value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   max_coop_size_ = value;
 }
 inline void Contract::set_max_coop_size(uint32_t value) {
@@ -53323,7 +54112,7 @@ inline void Contract::set_max_coop_size(uint32_t value) {
 
 // optional uint32 max_boosts = 12;
 inline bool Contract::_internal_has_max_boosts() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool Contract::has_max_boosts() const {
@@ -53331,7 +54120,7 @@ inline bool Contract::has_max_boosts() const {
 }
 inline void Contract::clear_max_boosts() {
   max_boosts_ = 0u;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t Contract::_internal_max_boosts() const {
   return max_boosts_;
@@ -53341,7 +54130,7 @@ inline uint32_t Contract::max_boosts() const {
   return _internal_max_boosts();
 }
 inline void Contract::_internal_set_max_boosts(uint32_t value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   max_boosts_ = value;
 }
 inline void Contract::set_max_boosts(uint32_t value) {
@@ -53351,7 +54140,7 @@ inline void Contract::set_max_boosts(uint32_t value) {
 
 // optional double minutes_per_token = 15 [default = 60];
 inline bool Contract::_internal_has_minutes_per_token() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool Contract::has_minutes_per_token() const {
@@ -53359,7 +54148,7 @@ inline bool Contract::has_minutes_per_token() const {
 }
 inline void Contract::clear_minutes_per_token() {
   minutes_per_token_ = 60;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline double Contract::_internal_minutes_per_token() const {
   return minutes_per_token_;
@@ -53369,7 +54158,7 @@ inline double Contract::minutes_per_token() const {
   return _internal_minutes_per_token();
 }
 inline void Contract::_internal_set_minutes_per_token(double value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   minutes_per_token_ = value;
 }
 inline void Contract::set_minutes_per_token(double value) {
@@ -53379,7 +54168,7 @@ inline void Contract::set_minutes_per_token(double value) {
 
 // optional double chicken_run_cooldown_minutes = 18 [default = 60];
 inline bool Contract::_internal_has_chicken_run_cooldown_minutes() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool Contract::has_chicken_run_cooldown_minutes() const {
@@ -53387,7 +54176,7 @@ inline bool Contract::has_chicken_run_cooldown_minutes() const {
 }
 inline void Contract::clear_chicken_run_cooldown_minutes() {
   chicken_run_cooldown_minutes_ = 60;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline double Contract::_internal_chicken_run_cooldown_minutes() const {
   return chicken_run_cooldown_minutes_;
@@ -53397,7 +54186,7 @@ inline double Contract::chicken_run_cooldown_minutes() const {
   return _internal_chicken_run_cooldown_minutes();
 }
 inline void Contract::_internal_set_chicken_run_cooldown_minutes(double value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   chicken_run_cooldown_minutes_ = value;
 }
 inline void Contract::set_chicken_run_cooldown_minutes(double value) {
@@ -53407,7 +54196,7 @@ inline void Contract::set_chicken_run_cooldown_minutes(double value) {
 
 // optional double start_time = 17;
 inline bool Contract::_internal_has_start_time() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool Contract::has_start_time() const {
@@ -53415,7 +54204,7 @@ inline bool Contract::has_start_time() const {
 }
 inline void Contract::clear_start_time() {
   start_time_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline double Contract::_internal_start_time() const {
   return start_time_;
@@ -53425,7 +54214,7 @@ inline double Contract::start_time() const {
   return _internal_start_time();
 }
 inline void Contract::_internal_set_start_time(double value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   start_time_ = value;
 }
 inline void Contract::set_start_time(double value) {
@@ -53463,7 +54252,7 @@ inline void Contract::set_expiration_time(double value) {
 
 // optional double length_seconds = 7;
 inline bool Contract::_internal_has_length_seconds() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Contract::has_length_seconds() const {
@@ -53471,7 +54260,7 @@ inline bool Contract::has_length_seconds() const {
 }
 inline void Contract::clear_length_seconds() {
   length_seconds_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline double Contract::_internal_length_seconds() const {
   return length_seconds_;
@@ -53481,7 +54270,7 @@ inline double Contract::length_seconds() const {
   return _internal_length_seconds();
 }
 inline void Contract::_internal_set_length_seconds(double value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000010u;
   length_seconds_ = value;
 }
 inline void Contract::set_length_seconds(double value) {
@@ -53491,7 +54280,7 @@ inline void Contract::set_length_seconds(double value) {
 
 // optional double max_soul_eggs = 13;
 inline bool Contract::_internal_has_max_soul_eggs() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool Contract::has_max_soul_eggs() const {
@@ -53499,7 +54288,7 @@ inline bool Contract::has_max_soul_eggs() const {
 }
 inline void Contract::clear_max_soul_eggs() {
   max_soul_eggs_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline double Contract::_internal_max_soul_eggs() const {
   return max_soul_eggs_;
@@ -53509,7 +54298,7 @@ inline double Contract::max_soul_eggs() const {
   return _internal_max_soul_eggs();
 }
 inline void Contract::_internal_set_max_soul_eggs(double value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   max_soul_eggs_ = value;
 }
 inline void Contract::set_max_soul_eggs(double value) {
@@ -53519,7 +54308,7 @@ inline void Contract::set_max_soul_eggs(double value) {
 
 // optional uint32 min_client_version = 14;
 inline bool Contract::_internal_has_min_client_version() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Contract::has_min_client_version() const {
@@ -53527,7 +54316,7 @@ inline bool Contract::has_min_client_version() const {
 }
 inline void Contract::clear_min_client_version() {
   min_client_version_ = 0u;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline uint32_t Contract::_internal_min_client_version() const {
   return min_client_version_;
@@ -53537,7 +54326,7 @@ inline uint32_t Contract::min_client_version() const {
   return _internal_min_client_version();
 }
 inline void Contract::_internal_set_min_client_version(uint32_t value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   min_client_version_ = value;
 }
 inline void Contract::set_min_client_version(uint32_t value) {
@@ -53545,9 +54334,37 @@ inline void Contract::set_min_client_version(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.Contract.min_client_version)
 }
 
+// optional bool leggacy = 19;
+inline bool Contract::_internal_has_leggacy() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool Contract::has_leggacy() const {
+  return _internal_has_leggacy();
+}
+inline void Contract::clear_leggacy() {
+  leggacy_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool Contract::_internal_leggacy() const {
+  return leggacy_;
+}
+inline bool Contract::leggacy() const {
+  // @@protoc_insertion_point(field_get:ei.Contract.leggacy)
+  return _internal_leggacy();
+}
+inline void Contract::_internal_set_leggacy(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  leggacy_ = value;
+}
+inline void Contract::set_leggacy(bool value) {
+  _internal_set_leggacy(value);
+  // @@protoc_insertion_point(field_set:ei.Contract.leggacy)
+}
+
 // optional bool debug = 11;
 inline bool Contract::_internal_has_debug() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool Contract::has_debug() const {
@@ -53555,7 +54372,7 @@ inline bool Contract::has_debug() const {
 }
 inline void Contract::clear_debug() {
   debug_ = false;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool Contract::_internal_debug() const {
   return debug_;
@@ -53565,7 +54382,7 @@ inline bool Contract::debug() const {
   return _internal_debug();
 }
 inline void Contract::_internal_set_debug(bool value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000100u;
   debug_ = value;
 }
 inline void Contract::set_debug(bool value) {
@@ -54783,7 +55600,7 @@ inline void FarmProductionParams::set_delivered(double value) {
 
 // optional uint32 client_version = 20;
 inline bool PlayerFarmInfo::_internal_has_client_version() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool PlayerFarmInfo::has_client_version() const {
@@ -54791,7 +55608,7 @@ inline bool PlayerFarmInfo::has_client_version() const {
 }
 inline void PlayerFarmInfo::clear_client_version() {
   client_version_ = 0u;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t PlayerFarmInfo::_internal_client_version() const {
   return client_version_;
@@ -54801,7 +55618,7 @@ inline uint32_t PlayerFarmInfo::client_version() const {
   return _internal_client_version();
 }
 inline void PlayerFarmInfo::_internal_set_client_version(uint32_t value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   client_version_ = value;
 }
 inline void PlayerFarmInfo::set_client_version(uint32_t value) {
@@ -55010,7 +55827,7 @@ PlayerFarmInfo::epic_research() const {
 
 // optional .ei.Egg egg_type = 7;
 inline bool PlayerFarmInfo::_internal_has_egg_type() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool PlayerFarmInfo::has_egg_type() const {
@@ -55018,7 +55835,7 @@ inline bool PlayerFarmInfo::has_egg_type() const {
 }
 inline void PlayerFarmInfo::clear_egg_type() {
   egg_type_ = 1;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::ei::Egg PlayerFarmInfo::_internal_egg_type() const {
   return static_cast< ::ei::Egg >(egg_type_);
@@ -55029,7 +55846,7 @@ inline ::ei::Egg PlayerFarmInfo::egg_type() const {
 }
 inline void PlayerFarmInfo::_internal_set_egg_type(::ei::Egg value) {
   assert(::ei::Egg_IsValid(value));
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   egg_type_ = value;
 }
 inline void PlayerFarmInfo::set_egg_type(::ei::Egg value) {
@@ -55592,6 +56409,34 @@ inline void PlayerFarmInfo::set_allocated_farm_appearance(::ei::ShellDB_FarmConf
   }
   farm_appearance_ = farm_appearance;
   // @@protoc_insertion_point(field_set_allocated:ei.PlayerFarmInfo.farm_appearance)
+}
+
+// optional double timestamp = 22;
+inline bool PlayerFarmInfo::_internal_has_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool PlayerFarmInfo::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline void PlayerFarmInfo::clear_timestamp() {
+  timestamp_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline double PlayerFarmInfo::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double PlayerFarmInfo::timestamp() const {
+  // @@protoc_insertion_point(field_get:ei.PlayerFarmInfo.timestamp)
+  return _internal_timestamp();
+}
+inline void PlayerFarmInfo::_internal_set_timestamp(double value) {
+  _has_bits_[0] |= 0x00000200u;
+  timestamp_ = value;
+}
+inline void PlayerFarmInfo::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:ei.PlayerFarmInfo.timestamp)
 }
 
 // -------------------------------------------------------------------
@@ -72616,7 +73461,7 @@ inline void ArtifactsConfigurationResponse_ArtifactParameters::set_crafting_pric
 
 // optional uint32 crafting_price_domain = 7;
 inline bool ArtifactsConfigurationResponse_ArtifactParameters::_internal_has_crafting_price_domain() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ArtifactsConfigurationResponse_ArtifactParameters::has_crafting_price_domain() const {
@@ -72624,7 +73469,7 @@ inline bool ArtifactsConfigurationResponse_ArtifactParameters::has_crafting_pric
 }
 inline void ArtifactsConfigurationResponse_ArtifactParameters::clear_crafting_price_domain() {
   crafting_price_domain_ = 0u;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline uint32_t ArtifactsConfigurationResponse_ArtifactParameters::_internal_crafting_price_domain() const {
   return crafting_price_domain_;
@@ -72634,7 +73479,7 @@ inline uint32_t ArtifactsConfigurationResponse_ArtifactParameters::crafting_pric
   return _internal_crafting_price_domain();
 }
 inline void ArtifactsConfigurationResponse_ArtifactParameters::_internal_set_crafting_price_domain(uint32_t value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   crafting_price_domain_ = value;
 }
 inline void ArtifactsConfigurationResponse_ArtifactParameters::set_crafting_price_domain(uint32_t value) {
@@ -72668,6 +73513,94 @@ inline void ArtifactsConfigurationResponse_ArtifactParameters::_internal_set_cra
 inline void ArtifactsConfigurationResponse_ArtifactParameters::set_crafting_price_curve(double value) {
   _internal_set_crafting_price_curve(value);
   // @@protoc_insertion_point(field_set:ei.ArtifactsConfigurationResponse.ArtifactParameters.crafting_price_curve)
+}
+
+// optional uint64 crafting_xp = 9;
+inline bool ArtifactsConfigurationResponse_ArtifactParameters::_internal_has_crafting_xp() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ArtifactsConfigurationResponse_ArtifactParameters::has_crafting_xp() const {
+  return _internal_has_crafting_xp();
+}
+inline void ArtifactsConfigurationResponse_ArtifactParameters::clear_crafting_xp() {
+  crafting_xp_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline uint64_t ArtifactsConfigurationResponse_ArtifactParameters::_internal_crafting_xp() const {
+  return crafting_xp_;
+}
+inline uint64_t ArtifactsConfigurationResponse_ArtifactParameters::crafting_xp() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsConfigurationResponse.ArtifactParameters.crafting_xp)
+  return _internal_crafting_xp();
+}
+inline void ArtifactsConfigurationResponse_ArtifactParameters::_internal_set_crafting_xp(uint64_t value) {
+  _has_bits_[0] |= 0x00000080u;
+  crafting_xp_ = value;
+}
+inline void ArtifactsConfigurationResponse_ArtifactParameters::set_crafting_xp(uint64_t value) {
+  _internal_set_crafting_xp(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsConfigurationResponse.ArtifactParameters.crafting_xp)
+}
+
+// -------------------------------------------------------------------
+
+// ArtifactsConfigurationResponse_CraftingLevelInfo
+
+// optional double xp_required = 1;
+inline bool ArtifactsConfigurationResponse_CraftingLevelInfo::_internal_has_xp_required() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ArtifactsConfigurationResponse_CraftingLevelInfo::has_xp_required() const {
+  return _internal_has_xp_required();
+}
+inline void ArtifactsConfigurationResponse_CraftingLevelInfo::clear_xp_required() {
+  xp_required_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline double ArtifactsConfigurationResponse_CraftingLevelInfo::_internal_xp_required() const {
+  return xp_required_;
+}
+inline double ArtifactsConfigurationResponse_CraftingLevelInfo::xp_required() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsConfigurationResponse.CraftingLevelInfo.xp_required)
+  return _internal_xp_required();
+}
+inline void ArtifactsConfigurationResponse_CraftingLevelInfo::_internal_set_xp_required(double value) {
+  _has_bits_[0] |= 0x00000001u;
+  xp_required_ = value;
+}
+inline void ArtifactsConfigurationResponse_CraftingLevelInfo::set_xp_required(double value) {
+  _internal_set_xp_required(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsConfigurationResponse.CraftingLevelInfo.xp_required)
+}
+
+// optional float rarity_mult = 2;
+inline bool ArtifactsConfigurationResponse_CraftingLevelInfo::_internal_has_rarity_mult() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ArtifactsConfigurationResponse_CraftingLevelInfo::has_rarity_mult() const {
+  return _internal_has_rarity_mult();
+}
+inline void ArtifactsConfigurationResponse_CraftingLevelInfo::clear_rarity_mult() {
+  rarity_mult_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline float ArtifactsConfigurationResponse_CraftingLevelInfo::_internal_rarity_mult() const {
+  return rarity_mult_;
+}
+inline float ArtifactsConfigurationResponse_CraftingLevelInfo::rarity_mult() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsConfigurationResponse.CraftingLevelInfo.rarity_mult)
+  return _internal_rarity_mult();
+}
+inline void ArtifactsConfigurationResponse_CraftingLevelInfo::_internal_set_rarity_mult(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  rarity_mult_ = value;
+}
+inline void ArtifactsConfigurationResponse_CraftingLevelInfo::set_rarity_mult(float value) {
+  _internal_set_rarity_mult(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsConfigurationResponse.CraftingLevelInfo.rarity_mult)
 }
 
 // -------------------------------------------------------------------
@@ -72752,6 +73685,46 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigura
 ArtifactsConfigurationResponse::artifact_parameters() const {
   // @@protoc_insertion_point(field_list:ei.ArtifactsConfigurationResponse.artifact_parameters)
   return artifact_parameters_;
+}
+
+// repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;
+inline int ArtifactsConfigurationResponse::_internal_crafting_level_infos_size() const {
+  return crafting_level_infos_.size();
+}
+inline int ArtifactsConfigurationResponse::crafting_level_infos_size() const {
+  return _internal_crafting_level_infos_size();
+}
+inline void ArtifactsConfigurationResponse::clear_crafting_level_infos() {
+  crafting_level_infos_.Clear();
+}
+inline ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* ArtifactsConfigurationResponse::mutable_crafting_level_infos(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsConfigurationResponse.crafting_level_infos)
+  return crafting_level_infos_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo >*
+ArtifactsConfigurationResponse::mutable_crafting_level_infos() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsConfigurationResponse.crafting_level_infos)
+  return &crafting_level_infos_;
+}
+inline const ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo& ArtifactsConfigurationResponse::_internal_crafting_level_infos(int index) const {
+  return crafting_level_infos_.Get(index);
+}
+inline const ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo& ArtifactsConfigurationResponse::crafting_level_infos(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsConfigurationResponse.crafting_level_infos)
+  return _internal_crafting_level_infos(index);
+}
+inline ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* ArtifactsConfigurationResponse::_internal_add_crafting_level_infos() {
+  return crafting_level_infos_.Add();
+}
+inline ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* ArtifactsConfigurationResponse::add_crafting_level_infos() {
+  ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo* _add = _internal_add_crafting_level_infos();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsConfigurationResponse.crafting_level_infos)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsConfigurationResponse_CraftingLevelInfo >&
+ArtifactsConfigurationResponse::crafting_level_infos() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsConfigurationResponse.crafting_level_infos)
+  return crafting_level_infos_;
 }
 
 // -------------------------------------------------------------------
@@ -74240,7 +75213,7 @@ inline void CraftArtifactRequest::set_gold_price_paid(double value) {
 
 // optional uint32 crafting_count = 7;
 inline bool CraftArtifactRequest::_internal_has_crafting_count() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool CraftArtifactRequest::has_crafting_count() const {
@@ -74248,7 +75221,7 @@ inline bool CraftArtifactRequest::has_crafting_count() const {
 }
 inline void CraftArtifactRequest::clear_crafting_count() {
   crafting_count_ = 0u;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t CraftArtifactRequest::_internal_crafting_count() const {
   return crafting_count_;
@@ -74258,12 +75231,40 @@ inline uint32_t CraftArtifactRequest::crafting_count() const {
   return _internal_crafting_count();
 }
 inline void CraftArtifactRequest::_internal_set_crafting_count(uint32_t value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   crafting_count_ = value;
 }
 inline void CraftArtifactRequest::set_crafting_count(uint32_t value) {
   _internal_set_crafting_count(value);
   // @@protoc_insertion_point(field_set:ei.CraftArtifactRequest.crafting_count)
+}
+
+// optional double crafting_xp = 8;
+inline bool CraftArtifactRequest::_internal_has_crafting_xp() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool CraftArtifactRequest::has_crafting_xp() const {
+  return _internal_has_crafting_xp();
+}
+inline void CraftArtifactRequest::clear_crafting_xp() {
+  crafting_xp_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double CraftArtifactRequest::_internal_crafting_xp() const {
+  return crafting_xp_;
+}
+inline double CraftArtifactRequest::crafting_xp() const {
+  // @@protoc_insertion_point(field_get:ei.CraftArtifactRequest.crafting_xp)
+  return _internal_crafting_xp();
+}
+inline void CraftArtifactRequest::_internal_set_crafting_xp(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  crafting_xp_ = value;
+}
+inline void CraftArtifactRequest::set_crafting_xp(double value) {
+  _internal_set_crafting_xp(value);
+  // @@protoc_insertion_point(field_set:ei.CraftArtifactRequest.crafting_xp)
 }
 
 // repeated .ei.ArtifactInventoryItem ingredients = 4;
@@ -74855,6 +75856,128 @@ inline void ConsumeArtifactRequest::set_original_item_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:ei.ConsumeArtifactRequest.original_item_id)
 }
 
+// repeated string additional_server_ids = 7;
+inline int ConsumeArtifactRequest::_internal_additional_server_ids_size() const {
+  return additional_server_ids_.size();
+}
+inline int ConsumeArtifactRequest::additional_server_ids_size() const {
+  return _internal_additional_server_ids_size();
+}
+inline void ConsumeArtifactRequest::clear_additional_server_ids() {
+  additional_server_ids_.Clear();
+}
+inline std::string* ConsumeArtifactRequest::add_additional_server_ids() {
+  std::string* _s = _internal_add_additional_server_ids();
+  // @@protoc_insertion_point(field_add_mutable:ei.ConsumeArtifactRequest.additional_server_ids)
+  return _s;
+}
+inline const std::string& ConsumeArtifactRequest::_internal_additional_server_ids(int index) const {
+  return additional_server_ids_.Get(index);
+}
+inline const std::string& ConsumeArtifactRequest::additional_server_ids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ConsumeArtifactRequest.additional_server_ids)
+  return _internal_additional_server_ids(index);
+}
+inline std::string* ConsumeArtifactRequest::mutable_additional_server_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ConsumeArtifactRequest.additional_server_ids)
+  return additional_server_ids_.Mutable(index);
+}
+inline void ConsumeArtifactRequest::set_additional_server_ids(int index, const std::string& value) {
+  additional_server_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline void ConsumeArtifactRequest::set_additional_server_ids(int index, std::string&& value) {
+  additional_server_ids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline void ConsumeArtifactRequest::set_additional_server_ids(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  additional_server_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline void ConsumeArtifactRequest::set_additional_server_ids(int index, const char* value, size_t size) {
+  additional_server_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline std::string* ConsumeArtifactRequest::_internal_add_additional_server_ids() {
+  return additional_server_ids_.Add();
+}
+inline void ConsumeArtifactRequest::add_additional_server_ids(const std::string& value) {
+  additional_server_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline void ConsumeArtifactRequest::add_additional_server_ids(std::string&& value) {
+  additional_server_ids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline void ConsumeArtifactRequest::add_additional_server_ids(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  additional_server_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline void ConsumeArtifactRequest::add_additional_server_ids(const char* value, size_t size) {
+  additional_server_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ConsumeArtifactRequest.additional_server_ids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ConsumeArtifactRequest::additional_server_ids() const {
+  // @@protoc_insertion_point(field_list:ei.ConsumeArtifactRequest.additional_server_ids)
+  return additional_server_ids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ConsumeArtifactRequest::mutable_additional_server_ids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ConsumeArtifactRequest.additional_server_ids)
+  return &additional_server_ids_;
+}
+
+// repeated uint64 additional_item_ids = 8;
+inline int ConsumeArtifactRequest::_internal_additional_item_ids_size() const {
+  return additional_item_ids_.size();
+}
+inline int ConsumeArtifactRequest::additional_item_ids_size() const {
+  return _internal_additional_item_ids_size();
+}
+inline void ConsumeArtifactRequest::clear_additional_item_ids() {
+  additional_item_ids_.Clear();
+}
+inline uint64_t ConsumeArtifactRequest::_internal_additional_item_ids(int index) const {
+  return additional_item_ids_.Get(index);
+}
+inline uint64_t ConsumeArtifactRequest::additional_item_ids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ConsumeArtifactRequest.additional_item_ids)
+  return _internal_additional_item_ids(index);
+}
+inline void ConsumeArtifactRequest::set_additional_item_ids(int index, uint64_t value) {
+  additional_item_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.ConsumeArtifactRequest.additional_item_ids)
+}
+inline void ConsumeArtifactRequest::_internal_add_additional_item_ids(uint64_t value) {
+  additional_item_ids_.Add(value);
+}
+inline void ConsumeArtifactRequest::add_additional_item_ids(uint64_t value) {
+  _internal_add_additional_item_ids(value);
+  // @@protoc_insertion_point(field_add:ei.ConsumeArtifactRequest.additional_item_ids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+ConsumeArtifactRequest::_internal_additional_item_ids() const {
+  return additional_item_ids_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+ConsumeArtifactRequest::additional_item_ids() const {
+  // @@protoc_insertion_point(field_list:ei.ConsumeArtifactRequest.additional_item_ids)
+  return _internal_additional_item_ids();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+ConsumeArtifactRequest::_internal_mutable_additional_item_ids() {
+  return &additional_item_ids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+ConsumeArtifactRequest::mutable_additional_item_ids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ConsumeArtifactRequest.additional_item_ids)
+  return _internal_mutable_additional_item_ids();
+}
+
 // optional uint32 quantity = 6;
 inline bool ConsumeArtifactRequest::_internal_has_quantity() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
@@ -74941,6 +76064,53 @@ inline void ConsumeArtifactResponse::_internal_set_original_item_id(uint64_t val
 inline void ConsumeArtifactResponse::set_original_item_id(uint64_t value) {
   _internal_set_original_item_id(value);
   // @@protoc_insertion_point(field_set:ei.ConsumeArtifactResponse.original_item_id)
+}
+
+// repeated uint64 additional_item_ids = 6;
+inline int ConsumeArtifactResponse::_internal_additional_item_ids_size() const {
+  return additional_item_ids_.size();
+}
+inline int ConsumeArtifactResponse::additional_item_ids_size() const {
+  return _internal_additional_item_ids_size();
+}
+inline void ConsumeArtifactResponse::clear_additional_item_ids() {
+  additional_item_ids_.Clear();
+}
+inline uint64_t ConsumeArtifactResponse::_internal_additional_item_ids(int index) const {
+  return additional_item_ids_.Get(index);
+}
+inline uint64_t ConsumeArtifactResponse::additional_item_ids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ConsumeArtifactResponse.additional_item_ids)
+  return _internal_additional_item_ids(index);
+}
+inline void ConsumeArtifactResponse::set_additional_item_ids(int index, uint64_t value) {
+  additional_item_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.ConsumeArtifactResponse.additional_item_ids)
+}
+inline void ConsumeArtifactResponse::_internal_add_additional_item_ids(uint64_t value) {
+  additional_item_ids_.Add(value);
+}
+inline void ConsumeArtifactResponse::add_additional_item_ids(uint64_t value) {
+  _internal_add_additional_item_ids(value);
+  // @@protoc_insertion_point(field_add:ei.ConsumeArtifactResponse.additional_item_ids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+ConsumeArtifactResponse::_internal_additional_item_ids() const {
+  return additional_item_ids_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+ConsumeArtifactResponse::additional_item_ids() const {
+  // @@protoc_insertion_point(field_list:ei.ConsumeArtifactResponse.additional_item_ids)
+  return _internal_additional_item_ids();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+ConsumeArtifactResponse::_internal_mutable_additional_item_ids() {
+  return &additional_item_ids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
+ConsumeArtifactResponse::mutable_additional_item_ids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ConsumeArtifactResponse.additional_item_ids)
+  return _internal_mutable_additional_item_ids();
 }
 
 // repeated .ei.ArtifactSpec byproducts = 3;
@@ -75856,9 +77026,93 @@ inline void ArtifactsDB_CraftableArtifact::set_allocated_spec(::ei::ArtifactSpec
   // @@protoc_insertion_point(field_set_allocated:ei.ArtifactsDB.CraftableArtifact.spec)
 }
 
+// optional bool discovered = 6;
+inline bool ArtifactsDB_CraftableArtifact::_internal_has_discovered() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ArtifactsDB_CraftableArtifact::has_discovered() const {
+  return _internal_has_discovered();
+}
+inline void ArtifactsDB_CraftableArtifact::clear_discovered() {
+  discovered_ = false;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline bool ArtifactsDB_CraftableArtifact::_internal_discovered() const {
+  return discovered_;
+}
+inline bool ArtifactsDB_CraftableArtifact::discovered() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.CraftableArtifact.discovered)
+  return _internal_discovered();
+}
+inline void ArtifactsDB_CraftableArtifact::_internal_set_discovered(bool value) {
+  _has_bits_[0] |= 0x00000004u;
+  discovered_ = value;
+}
+inline void ArtifactsDB_CraftableArtifact::set_discovered(bool value) {
+  _internal_set_discovered(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsDB.CraftableArtifact.discovered)
+}
+
+// optional bool craftable = 4;
+inline bool ArtifactsDB_CraftableArtifact::_internal_has_craftable() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ArtifactsDB_CraftableArtifact::has_craftable() const {
+  return _internal_has_craftable();
+}
+inline void ArtifactsDB_CraftableArtifact::clear_craftable() {
+  craftable_ = false;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline bool ArtifactsDB_CraftableArtifact::_internal_craftable() const {
+  return craftable_;
+}
+inline bool ArtifactsDB_CraftableArtifact::craftable() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.CraftableArtifact.craftable)
+  return _internal_craftable();
+}
+inline void ArtifactsDB_CraftableArtifact::_internal_set_craftable(bool value) {
+  _has_bits_[0] |= 0x00000008u;
+  craftable_ = value;
+}
+inline void ArtifactsDB_CraftableArtifact::set_craftable(bool value) {
+  _internal_set_craftable(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsDB.CraftableArtifact.craftable)
+}
+
+// optional bool recipe_discovered = 5;
+inline bool ArtifactsDB_CraftableArtifact::_internal_has_recipe_discovered() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ArtifactsDB_CraftableArtifact::has_recipe_discovered() const {
+  return _internal_has_recipe_discovered();
+}
+inline void ArtifactsDB_CraftableArtifact::clear_recipe_discovered() {
+  recipe_discovered_ = false;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline bool ArtifactsDB_CraftableArtifact::_internal_recipe_discovered() const {
+  return recipe_discovered_;
+}
+inline bool ArtifactsDB_CraftableArtifact::recipe_discovered() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.CraftableArtifact.recipe_discovered)
+  return _internal_recipe_discovered();
+}
+inline void ArtifactsDB_CraftableArtifact::_internal_set_recipe_discovered(bool value) {
+  _has_bits_[0] |= 0x00000010u;
+  recipe_discovered_ = value;
+}
+inline void ArtifactsDB_CraftableArtifact::set_recipe_discovered(bool value) {
+  _internal_set_recipe_discovered(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsDB.CraftableArtifact.recipe_discovered)
+}
+
 // optional bool seen = 2;
 inline bool ArtifactsDB_CraftableArtifact::_internal_has_seen() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool ArtifactsDB_CraftableArtifact::has_seen() const {
@@ -75866,7 +77120,7 @@ inline bool ArtifactsDB_CraftableArtifact::has_seen() const {
 }
 inline void ArtifactsDB_CraftableArtifact::clear_seen() {
   seen_ = false;
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline bool ArtifactsDB_CraftableArtifact::_internal_seen() const {
   return seen_;
@@ -75876,7 +77130,7 @@ inline bool ArtifactsDB_CraftableArtifact::seen() const {
   return _internal_seen();
 }
 inline void ArtifactsDB_CraftableArtifact::_internal_set_seen(bool value) {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000020u;
   seen_ = value;
 }
 inline void ArtifactsDB_CraftableArtifact::set_seen(bool value) {
@@ -75886,7 +77140,7 @@ inline void ArtifactsDB_CraftableArtifact::set_seen(bool value) {
 
 // optional uint32 count = 3;
 inline bool ArtifactsDB_CraftableArtifact::_internal_has_count() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool ArtifactsDB_CraftableArtifact::has_count() const {
@@ -75894,7 +77148,7 @@ inline bool ArtifactsDB_CraftableArtifact::has_count() const {
 }
 inline void ArtifactsDB_CraftableArtifact::clear_count() {
   count_ = 0u;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t ArtifactsDB_CraftableArtifact::_internal_count() const {
   return count_;
@@ -75904,7 +77158,7 @@ inline uint32_t ArtifactsDB_CraftableArtifact::count() const {
   return _internal_count();
 }
 inline void ArtifactsDB_CraftableArtifact::_internal_set_count(uint32_t value) {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
   count_ = value;
 }
 inline void ArtifactsDB_CraftableArtifact::set_count(uint32_t value) {
@@ -76104,124 +77358,44 @@ ArtifactsDB::active_artifact_sets() const {
   return active_artifact_sets_;
 }
 
-// repeated .ei.ArtifactSpec discovered_artifacts = 8;
-inline int ArtifactsDB::_internal_discovered_artifacts_size() const {
-  return discovered_artifacts_.size();
+// repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;
+inline int ArtifactsDB::_internal_artifact_status_size() const {
+  return artifact_status_.size();
 }
-inline int ArtifactsDB::discovered_artifacts_size() const {
-  return _internal_discovered_artifacts_size();
+inline int ArtifactsDB::artifact_status_size() const {
+  return _internal_artifact_status_size();
 }
-inline void ArtifactsDB::clear_discovered_artifacts() {
-  discovered_artifacts_.Clear();
+inline void ArtifactsDB::clear_artifact_status() {
+  artifact_status_.Clear();
 }
-inline ::ei::ArtifactSpec* ArtifactsDB::mutable_discovered_artifacts(int index) {
-  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.discovered_artifacts)
-  return discovered_artifacts_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec >*
-ArtifactsDB::mutable_discovered_artifacts() {
-  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.discovered_artifacts)
-  return &discovered_artifacts_;
-}
-inline const ::ei::ArtifactSpec& ArtifactsDB::_internal_discovered_artifacts(int index) const {
-  return discovered_artifacts_.Get(index);
-}
-inline const ::ei::ArtifactSpec& ArtifactsDB::discovered_artifacts(int index) const {
-  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.discovered_artifacts)
-  return _internal_discovered_artifacts(index);
-}
-inline ::ei::ArtifactSpec* ArtifactsDB::_internal_add_discovered_artifacts() {
-  return discovered_artifacts_.Add();
-}
-inline ::ei::ArtifactSpec* ArtifactsDB::add_discovered_artifacts() {
-  ::ei::ArtifactSpec* _add = _internal_add_discovered_artifacts();
-  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.discovered_artifacts)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec >&
-ArtifactsDB::discovered_artifacts() const {
-  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.discovered_artifacts)
-  return discovered_artifacts_;
-}
-
-// repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;
-inline int ArtifactsDB::_internal_craftable_artifacts_size() const {
-  return craftable_artifacts_.size();
-}
-inline int ArtifactsDB::craftable_artifacts_size() const {
-  return _internal_craftable_artifacts_size();
-}
-inline void ArtifactsDB::clear_craftable_artifacts() {
-  craftable_artifacts_.Clear();
-}
-inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::mutable_craftable_artifacts(int index) {
-  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.craftable_artifacts)
-  return craftable_artifacts_.Mutable(index);
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::mutable_artifact_status(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.artifact_status)
+  return artifact_status_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
-ArtifactsDB::mutable_craftable_artifacts() {
-  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.craftable_artifacts)
-  return &craftable_artifacts_;
+ArtifactsDB::mutable_artifact_status() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.artifact_status)
+  return &artifact_status_;
 }
-inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::_internal_craftable_artifacts(int index) const {
-  return craftable_artifacts_.Get(index);
+inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::_internal_artifact_status(int index) const {
+  return artifact_status_.Get(index);
 }
-inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::craftable_artifacts(int index) const {
-  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.craftable_artifacts)
-  return _internal_craftable_artifacts(index);
+inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::artifact_status(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.artifact_status)
+  return _internal_artifact_status(index);
 }
-inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::_internal_add_craftable_artifacts() {
-  return craftable_artifacts_.Add();
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::_internal_add_artifact_status() {
+  return artifact_status_.Add();
 }
-inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::add_craftable_artifacts() {
-  ::ei::ArtifactsDB_CraftableArtifact* _add = _internal_add_craftable_artifacts();
-  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.craftable_artifacts)
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::add_artifact_status() {
+  ::ei::ArtifactsDB_CraftableArtifact* _add = _internal_add_artifact_status();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.artifact_status)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
-ArtifactsDB::craftable_artifacts() const {
-  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.craftable_artifacts)
-  return craftable_artifacts_;
-}
-
-// repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;
-inline int ArtifactsDB::_internal_crafting_counts_size() const {
-  return crafting_counts_.size();
-}
-inline int ArtifactsDB::crafting_counts_size() const {
-  return _internal_crafting_counts_size();
-}
-inline void ArtifactsDB::clear_crafting_counts() {
-  crafting_counts_.Clear();
-}
-inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::mutable_crafting_counts(int index) {
-  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.crafting_counts)
-  return crafting_counts_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
-ArtifactsDB::mutable_crafting_counts() {
-  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.crafting_counts)
-  return &crafting_counts_;
-}
-inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::_internal_crafting_counts(int index) const {
-  return crafting_counts_.Get(index);
-}
-inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::crafting_counts(int index) const {
-  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.crafting_counts)
-  return _internal_crafting_counts(index);
-}
-inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::_internal_add_crafting_counts() {
-  return crafting_counts_.Add();
-}
-inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::add_crafting_counts() {
-  ::ei::ArtifactsDB_CraftableArtifact* _add = _internal_add_crafting_counts();
-  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.crafting_counts)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
-ArtifactsDB::crafting_counts() const {
-  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.crafting_counts)
-  return crafting_counts_;
+ArtifactsDB::artifact_status() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.artifact_status)
+  return artifact_status_;
 }
 
 // repeated .ei.MissionInfo mission_infos = 4;
@@ -76302,6 +77476,126 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::MissionInfo >&
 ArtifactsDB::mission_archive() const {
   // @@protoc_insertion_point(field_list:ei.ArtifactsDB.mission_archive)
   return mission_archive_;
+}
+
+// repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;
+inline int ArtifactsDB::_internal_discovered_artifacts_deprecated_size() const {
+  return discovered_artifacts_deprecated_.size();
+}
+inline int ArtifactsDB::discovered_artifacts_deprecated_size() const {
+  return _internal_discovered_artifacts_deprecated_size();
+}
+inline void ArtifactsDB::clear_discovered_artifacts_deprecated() {
+  discovered_artifacts_deprecated_.Clear();
+}
+inline ::ei::ArtifactSpec* ArtifactsDB::mutable_discovered_artifacts_deprecated(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.discovered_artifacts_DEPRECATED)
+  return discovered_artifacts_deprecated_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec >*
+ArtifactsDB::mutable_discovered_artifacts_deprecated() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.discovered_artifacts_DEPRECATED)
+  return &discovered_artifacts_deprecated_;
+}
+inline const ::ei::ArtifactSpec& ArtifactsDB::_internal_discovered_artifacts_deprecated(int index) const {
+  return discovered_artifacts_deprecated_.Get(index);
+}
+inline const ::ei::ArtifactSpec& ArtifactsDB::discovered_artifacts_deprecated(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.discovered_artifacts_DEPRECATED)
+  return _internal_discovered_artifacts_deprecated(index);
+}
+inline ::ei::ArtifactSpec* ArtifactsDB::_internal_add_discovered_artifacts_deprecated() {
+  return discovered_artifacts_deprecated_.Add();
+}
+inline ::ei::ArtifactSpec* ArtifactsDB::add_discovered_artifacts_deprecated() {
+  ::ei::ArtifactSpec* _add = _internal_add_discovered_artifacts_deprecated();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.discovered_artifacts_DEPRECATED)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec >&
+ArtifactsDB::discovered_artifacts_deprecated() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.discovered_artifacts_DEPRECATED)
+  return discovered_artifacts_deprecated_;
+}
+
+// repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;
+inline int ArtifactsDB::_internal_craftable_artifacts_deprecated_size() const {
+  return craftable_artifacts_deprecated_.size();
+}
+inline int ArtifactsDB::craftable_artifacts_deprecated_size() const {
+  return _internal_craftable_artifacts_deprecated_size();
+}
+inline void ArtifactsDB::clear_craftable_artifacts_deprecated() {
+  craftable_artifacts_deprecated_.Clear();
+}
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::mutable_craftable_artifacts_deprecated(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.craftable_artifacts_DEPRECATED)
+  return craftable_artifacts_deprecated_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
+ArtifactsDB::mutable_craftable_artifacts_deprecated() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.craftable_artifacts_DEPRECATED)
+  return &craftable_artifacts_deprecated_;
+}
+inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::_internal_craftable_artifacts_deprecated(int index) const {
+  return craftable_artifacts_deprecated_.Get(index);
+}
+inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::craftable_artifacts_deprecated(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.craftable_artifacts_DEPRECATED)
+  return _internal_craftable_artifacts_deprecated(index);
+}
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::_internal_add_craftable_artifacts_deprecated() {
+  return craftable_artifacts_deprecated_.Add();
+}
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::add_craftable_artifacts_deprecated() {
+  ::ei::ArtifactsDB_CraftableArtifact* _add = _internal_add_craftable_artifacts_deprecated();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.craftable_artifacts_DEPRECATED)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
+ArtifactsDB::craftable_artifacts_deprecated() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.craftable_artifacts_DEPRECATED)
+  return craftable_artifacts_deprecated_;
+}
+
+// repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;
+inline int ArtifactsDB::_internal_crafting_counts_deprecated_size() const {
+  return crafting_counts_deprecated_.size();
+}
+inline int ArtifactsDB::crafting_counts_deprecated_size() const {
+  return _internal_crafting_counts_deprecated_size();
+}
+inline void ArtifactsDB::clear_crafting_counts_deprecated() {
+  crafting_counts_deprecated_.Clear();
+}
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::mutable_crafting_counts_deprecated(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.crafting_counts_DEPRECATED)
+  return crafting_counts_deprecated_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >*
+ArtifactsDB::mutable_crafting_counts_deprecated() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.crafting_counts_DEPRECATED)
+  return &crafting_counts_deprecated_;
+}
+inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::_internal_crafting_counts_deprecated(int index) const {
+  return crafting_counts_deprecated_.Get(index);
+}
+inline const ::ei::ArtifactsDB_CraftableArtifact& ArtifactsDB::crafting_counts_deprecated(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.crafting_counts_DEPRECATED)
+  return _internal_crafting_counts_deprecated(index);
+}
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::_internal_add_crafting_counts_deprecated() {
+  return crafting_counts_deprecated_.Add();
+}
+inline ::ei::ArtifactsDB_CraftableArtifact* ArtifactsDB::add_crafting_counts_deprecated() {
+  ::ei::ArtifactsDB_CraftableArtifact* _add = _internal_add_crafting_counts_deprecated();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.crafting_counts_DEPRECATED)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
+ArtifactsDB::crafting_counts_deprecated() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.crafting_counts_DEPRECATED)
+  return crafting_counts_deprecated_;
 }
 
 // -------------------------------------------------------------------
@@ -78853,49 +80147,49 @@ inline void ShellSpec::set_default_appearance(bool value) {
 
 // -------------------------------------------------------------------
 
-// ShellSetSpec_VariationInfo
+// ShellSetSpec_VariationSpec
 
 // optional string identifier = 1;
-inline bool ShellSetSpec_VariationInfo::_internal_has_identifier() const {
+inline bool ShellSetSpec_VariationSpec::_internal_has_identifier() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ShellSetSpec_VariationInfo::has_identifier() const {
+inline bool ShellSetSpec_VariationSpec::has_identifier() const {
   return _internal_has_identifier();
 }
-inline void ShellSetSpec_VariationInfo::clear_identifier() {
+inline void ShellSetSpec_VariationSpec::clear_identifier() {
   identifier_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ShellSetSpec_VariationInfo::identifier() const {
-  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationInfo.identifier)
+inline const std::string& ShellSetSpec_VariationSpec::identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationSpec.identifier)
   return _internal_identifier();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ShellSetSpec_VariationInfo::set_identifier(ArgT0&& arg0, ArgT... args) {
+void ShellSetSpec_VariationSpec::set_identifier(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
  identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationInfo.identifier)
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationSpec.identifier)
 }
-inline std::string* ShellSetSpec_VariationInfo::mutable_identifier() {
+inline std::string* ShellSetSpec_VariationSpec::mutable_identifier() {
   std::string* _s = _internal_mutable_identifier();
-  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.VariationInfo.identifier)
+  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.VariationSpec.identifier)
   return _s;
 }
-inline const std::string& ShellSetSpec_VariationInfo::_internal_identifier() const {
+inline const std::string& ShellSetSpec_VariationSpec::_internal_identifier() const {
   return identifier_.Get();
 }
-inline void ShellSetSpec_VariationInfo::_internal_set_identifier(const std::string& value) {
+inline void ShellSetSpec_VariationSpec::_internal_set_identifier(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* ShellSetSpec_VariationInfo::_internal_mutable_identifier() {
+inline std::string* ShellSetSpec_VariationSpec::_internal_mutable_identifier() {
   _has_bits_[0] |= 0x00000001u;
   return identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* ShellSetSpec_VariationInfo::release_identifier() {
-  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.VariationInfo.identifier)
+inline std::string* ShellSetSpec_VariationSpec::release_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.VariationSpec.identifier)
   if (!_internal_has_identifier()) {
     return nullptr;
   }
@@ -78908,7 +80202,7 @@ inline std::string* ShellSetSpec_VariationInfo::release_identifier() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ShellSetSpec_VariationInfo::set_allocated_identifier(std::string* identifier) {
+inline void ShellSetSpec_VariationSpec::set_allocated_identifier(std::string* identifier) {
   if (identifier != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -78921,50 +80215,50 @@ inline void ShellSetSpec_VariationInfo::set_allocated_identifier(std::string* id
     identifier_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.VariationInfo.identifier)
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.VariationSpec.identifier)
 }
 
 // optional string hex_color = 2;
-inline bool ShellSetSpec_VariationInfo::_internal_has_hex_color() const {
+inline bool ShellSetSpec_VariationSpec::_internal_has_hex_color() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ShellSetSpec_VariationInfo::has_hex_color() const {
+inline bool ShellSetSpec_VariationSpec::has_hex_color() const {
   return _internal_has_hex_color();
 }
-inline void ShellSetSpec_VariationInfo::clear_hex_color() {
+inline void ShellSetSpec_VariationSpec::clear_hex_color() {
   hex_color_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ShellSetSpec_VariationInfo::hex_color() const {
-  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationInfo.hex_color)
+inline const std::string& ShellSetSpec_VariationSpec::hex_color() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationSpec.hex_color)
   return _internal_hex_color();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ShellSetSpec_VariationInfo::set_hex_color(ArgT0&& arg0, ArgT... args) {
+void ShellSetSpec_VariationSpec::set_hex_color(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000002u;
  hex_color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationInfo.hex_color)
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationSpec.hex_color)
 }
-inline std::string* ShellSetSpec_VariationInfo::mutable_hex_color() {
+inline std::string* ShellSetSpec_VariationSpec::mutable_hex_color() {
   std::string* _s = _internal_mutable_hex_color();
-  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.VariationInfo.hex_color)
+  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.VariationSpec.hex_color)
   return _s;
 }
-inline const std::string& ShellSetSpec_VariationInfo::_internal_hex_color() const {
+inline const std::string& ShellSetSpec_VariationSpec::_internal_hex_color() const {
   return hex_color_.Get();
 }
-inline void ShellSetSpec_VariationInfo::_internal_set_hex_color(const std::string& value) {
+inline void ShellSetSpec_VariationSpec::_internal_set_hex_color(const std::string& value) {
   _has_bits_[0] |= 0x00000002u;
   hex_color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* ShellSetSpec_VariationInfo::_internal_mutable_hex_color() {
+inline std::string* ShellSetSpec_VariationSpec::_internal_mutable_hex_color() {
   _has_bits_[0] |= 0x00000002u;
   return hex_color_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* ShellSetSpec_VariationInfo::release_hex_color() {
-  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.VariationInfo.hex_color)
+inline std::string* ShellSetSpec_VariationSpec::release_hex_color() {
+  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.VariationSpec.hex_color)
   if (!_internal_has_hex_color()) {
     return nullptr;
   }
@@ -78977,7 +80271,7 @@ inline std::string* ShellSetSpec_VariationInfo::release_hex_color() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ShellSetSpec_VariationInfo::set_allocated_hex_color(std::string* hex_color) {
+inline void ShellSetSpec_VariationSpec::set_allocated_hex_color(std::string* hex_color) {
   if (hex_color != nullptr) {
     _has_bits_[0] |= 0x00000002u;
   } else {
@@ -78990,35 +80284,119 @@ inline void ShellSetSpec_VariationInfo::set_allocated_hex_color(std::string* hex
     hex_color_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.VariationInfo.hex_color)
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.VariationSpec.hex_color)
 }
 
 // optional uint32 price = 3;
-inline bool ShellSetSpec_VariationInfo::_internal_has_price() const {
+inline bool ShellSetSpec_VariationSpec::_internal_has_price() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ShellSetSpec_VariationInfo::has_price() const {
+inline bool ShellSetSpec_VariationSpec::has_price() const {
   return _internal_has_price();
 }
-inline void ShellSetSpec_VariationInfo::clear_price() {
+inline void ShellSetSpec_VariationSpec::clear_price() {
   price_ = 0u;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t ShellSetSpec_VariationInfo::_internal_price() const {
+inline uint32_t ShellSetSpec_VariationSpec::_internal_price() const {
   return price_;
 }
-inline uint32_t ShellSetSpec_VariationInfo::price() const {
-  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationInfo.price)
+inline uint32_t ShellSetSpec_VariationSpec::price() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationSpec.price)
   return _internal_price();
 }
-inline void ShellSetSpec_VariationInfo::_internal_set_price(uint32_t value) {
+inline void ShellSetSpec_VariationSpec::_internal_set_price(uint32_t value) {
   _has_bits_[0] |= 0x00000004u;
   price_ = value;
 }
-inline void ShellSetSpec_VariationInfo::set_price(uint32_t value) {
+inline void ShellSetSpec_VariationSpec::set_price(uint32_t value) {
   _internal_set_price(value);
-  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationInfo.price)
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationSpec.price)
+}
+
+// optional int32 sort_priority = 6;
+inline bool ShellSetSpec_VariationSpec::_internal_has_sort_priority() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ShellSetSpec_VariationSpec::has_sort_priority() const {
+  return _internal_has_sort_priority();
+}
+inline void ShellSetSpec_VariationSpec::clear_sort_priority() {
+  sort_priority_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline int32_t ShellSetSpec_VariationSpec::_internal_sort_priority() const {
+  return sort_priority_;
+}
+inline int32_t ShellSetSpec_VariationSpec::sort_priority() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationSpec.sort_priority)
+  return _internal_sort_priority();
+}
+inline void ShellSetSpec_VariationSpec::_internal_set_sort_priority(int32_t value) {
+  _has_bits_[0] |= 0x00000020u;
+  sort_priority_ = value;
+}
+inline void ShellSetSpec_VariationSpec::set_sort_priority(int32_t value) {
+  _internal_set_sort_priority(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationSpec.sort_priority)
+}
+
+// optional bool default_appearance = 4;
+inline bool ShellSetSpec_VariationSpec::_internal_has_default_appearance() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ShellSetSpec_VariationSpec::has_default_appearance() const {
+  return _internal_has_default_appearance();
+}
+inline void ShellSetSpec_VariationSpec::clear_default_appearance() {
+  default_appearance_ = false;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline bool ShellSetSpec_VariationSpec::_internal_default_appearance() const {
+  return default_appearance_;
+}
+inline bool ShellSetSpec_VariationSpec::default_appearance() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationSpec.default_appearance)
+  return _internal_default_appearance();
+}
+inline void ShellSetSpec_VariationSpec::_internal_set_default_appearance(bool value) {
+  _has_bits_[0] |= 0x00000008u;
+  default_appearance_ = value;
+}
+inline void ShellSetSpec_VariationSpec::set_default_appearance(bool value) {
+  _internal_set_default_appearance(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationSpec.default_appearance)
+}
+
+// optional bool custom_appearance = 5;
+inline bool ShellSetSpec_VariationSpec::_internal_has_custom_appearance() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ShellSetSpec_VariationSpec::has_custom_appearance() const {
+  return _internal_has_custom_appearance();
+}
+inline void ShellSetSpec_VariationSpec::clear_custom_appearance() {
+  custom_appearance_ = false;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline bool ShellSetSpec_VariationSpec::_internal_custom_appearance() const {
+  return custom_appearance_;
+}
+inline bool ShellSetSpec_VariationSpec::custom_appearance() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.VariationSpec.custom_appearance)
+  return _internal_custom_appearance();
+}
+inline void ShellSetSpec_VariationSpec::_internal_set_custom_appearance(bool value) {
+  _has_bits_[0] |= 0x00000010u;
+  custom_appearance_ = value;
+}
+inline void ShellSetSpec_VariationSpec::set_custom_appearance(bool value) {
+  _internal_set_custom_appearance(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.VariationSpec.custom_appearance)
 }
 
 // -------------------------------------------------------------------
@@ -79540,7 +80918,7 @@ inline void ShellSetSpec::set_allocated_hex_base_color(std::string* hex_base_col
   // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.hex_base_color)
 }
 
-// repeated .ei.ShellSetSpec.VariationInfo variations = 15;
+// repeated .ei.ShellSetSpec.VariationSpec variations = 15;
 inline int ShellSetSpec::_internal_variations_size() const {
   return variations_.size();
 }
@@ -79550,31 +80928,31 @@ inline int ShellSetSpec::variations_size() const {
 inline void ShellSetSpec::clear_variations() {
   variations_.Clear();
 }
-inline ::ei::ShellSetSpec_VariationInfo* ShellSetSpec::mutable_variations(int index) {
+inline ::ei::ShellSetSpec_VariationSpec* ShellSetSpec::mutable_variations(int index) {
   // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.variations)
   return variations_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationSpec >*
 ShellSetSpec::mutable_variations() {
   // @@protoc_insertion_point(field_mutable_list:ei.ShellSetSpec.variations)
   return &variations_;
 }
-inline const ::ei::ShellSetSpec_VariationInfo& ShellSetSpec::_internal_variations(int index) const {
+inline const ::ei::ShellSetSpec_VariationSpec& ShellSetSpec::_internal_variations(int index) const {
   return variations_.Get(index);
 }
-inline const ::ei::ShellSetSpec_VariationInfo& ShellSetSpec::variations(int index) const {
+inline const ::ei::ShellSetSpec_VariationSpec& ShellSetSpec::variations(int index) const {
   // @@protoc_insertion_point(field_get:ei.ShellSetSpec.variations)
   return _internal_variations(index);
 }
-inline ::ei::ShellSetSpec_VariationInfo* ShellSetSpec::_internal_add_variations() {
+inline ::ei::ShellSetSpec_VariationSpec* ShellSetSpec::_internal_add_variations() {
   return variations_.Add();
 }
-inline ::ei::ShellSetSpec_VariationInfo* ShellSetSpec::add_variations() {
-  ::ei::ShellSetSpec_VariationInfo* _add = _internal_add_variations();
+inline ::ei::ShellSetSpec_VariationSpec* ShellSetSpec::add_variations() {
+  ::ei::ShellSetSpec_VariationSpec* _add = _internal_add_variations();
   // @@protoc_insertion_point(field_add:ei.ShellSetSpec.variations)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationInfo >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec_VariationSpec >&
 ShellSetSpec::variations() const {
   // @@protoc_insertion_point(field_list:ei.ShellSetSpec.variations)
   return variations_;
@@ -79902,7 +81280,7 @@ inline void ShellObjectSpec::set_allocated_name(std::string* name) {
 
 // optional .ei.ShellSpec.AssetType asset_type = 3;
 inline bool ShellObjectSpec::_internal_has_asset_type() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_asset_type() const {
@@ -79910,7 +81288,7 @@ inline bool ShellObjectSpec::has_asset_type() const {
 }
 inline void ShellObjectSpec::clear_asset_type() {
   asset_type_ = 1;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::ei::ShellSpec_AssetType ShellObjectSpec::_internal_asset_type() const {
   return static_cast< ::ei::ShellSpec_AssetType >(asset_type_);
@@ -79921,7 +81299,7 @@ inline ::ei::ShellSpec_AssetType ShellObjectSpec::asset_type() const {
 }
 inline void ShellObjectSpec::_internal_set_asset_type(::ei::ShellSpec_AssetType value) {
   assert(::ei::ShellSpec_AssetType_IsValid(value));
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00002000u;
   asset_type_ = value;
 }
 inline void ShellObjectSpec::set_asset_type(::ei::ShellSpec_AssetType value) {
@@ -79996,6 +81374,81 @@ inline void ShellObjectSpec::set_allocated_object_class(std::string* object_clas
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.ShellObjectSpec.object_class)
+}
+
+// repeated string icon_colors = 15;
+inline int ShellObjectSpec::_internal_icon_colors_size() const {
+  return icon_colors_.size();
+}
+inline int ShellObjectSpec::icon_colors_size() const {
+  return _internal_icon_colors_size();
+}
+inline void ShellObjectSpec::clear_icon_colors() {
+  icon_colors_.Clear();
+}
+inline std::string* ShellObjectSpec::add_icon_colors() {
+  std::string* _s = _internal_add_icon_colors();
+  // @@protoc_insertion_point(field_add_mutable:ei.ShellObjectSpec.icon_colors)
+  return _s;
+}
+inline const std::string& ShellObjectSpec::_internal_icon_colors(int index) const {
+  return icon_colors_.Get(index);
+}
+inline const std::string& ShellObjectSpec::icon_colors(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.icon_colors)
+  return _internal_icon_colors(index);
+}
+inline std::string* ShellObjectSpec::mutable_icon_colors(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellObjectSpec.icon_colors)
+  return icon_colors_.Mutable(index);
+}
+inline void ShellObjectSpec::set_icon_colors(int index, const std::string& value) {
+  icon_colors_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.icon_colors)
+}
+inline void ShellObjectSpec::set_icon_colors(int index, std::string&& value) {
+  icon_colors_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.icon_colors)
+}
+inline void ShellObjectSpec::set_icon_colors(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  icon_colors_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ShellObjectSpec.icon_colors)
+}
+inline void ShellObjectSpec::set_icon_colors(int index, const char* value, size_t size) {
+  icon_colors_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ShellObjectSpec.icon_colors)
+}
+inline std::string* ShellObjectSpec::_internal_add_icon_colors() {
+  return icon_colors_.Add();
+}
+inline void ShellObjectSpec::add_icon_colors(const std::string& value) {
+  icon_colors_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ShellObjectSpec.icon_colors)
+}
+inline void ShellObjectSpec::add_icon_colors(std::string&& value) {
+  icon_colors_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ShellObjectSpec.icon_colors)
+}
+inline void ShellObjectSpec::add_icon_colors(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  icon_colors_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ShellObjectSpec.icon_colors)
+}
+inline void ShellObjectSpec::add_icon_colors(const char* value, size_t size) {
+  icon_colors_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ShellObjectSpec.icon_colors)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ShellObjectSpec::icon_colors() const {
+  // @@protoc_insertion_point(field_list:ei.ShellObjectSpec.icon_colors)
+  return icon_colors_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ShellObjectSpec::mutable_icon_colors() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellObjectSpec.icon_colors)
+  return &icon_colors_;
 }
 
 // optional uint32 price = 4;
@@ -80084,7 +81537,7 @@ inline void ShellObjectSpec::set_required_soul_eggs(double value) {
 
 // optional bool is_new = 10;
 inline bool ShellObjectSpec::_internal_has_is_new() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_is_new() const {
@@ -80092,7 +81545,7 @@ inline bool ShellObjectSpec::has_is_new() const {
 }
 inline void ShellObjectSpec::clear_is_new() {
   is_new_ = false;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline bool ShellObjectSpec::_internal_is_new() const {
   return is_new_;
@@ -80102,7 +81555,7 @@ inline bool ShellObjectSpec::is_new() const {
   return _internal_is_new();
 }
 inline void ShellObjectSpec::_internal_set_is_new(bool value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
   is_new_ = value;
 }
 inline void ShellObjectSpec::set_is_new(bool value) {
@@ -80112,7 +81565,7 @@ inline void ShellObjectSpec::set_is_new(bool value) {
 
 // optional bool expires = 11;
 inline bool ShellObjectSpec::_internal_has_expires() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_expires() const {
@@ -80120,7 +81573,7 @@ inline bool ShellObjectSpec::has_expires() const {
 }
 inline void ShellObjectSpec::clear_expires() {
   expires_ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline bool ShellObjectSpec::_internal_expires() const {
   return expires_;
@@ -80130,7 +81583,7 @@ inline bool ShellObjectSpec::expires() const {
   return _internal_expires();
 }
 inline void ShellObjectSpec::_internal_set_expires(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
   expires_ = value;
 }
 inline void ShellObjectSpec::set_expires(bool value) {
@@ -80140,7 +81593,7 @@ inline void ShellObjectSpec::set_expires(bool value) {
 
 // optional double seconds_remaining = 12;
 inline bool ShellObjectSpec::_internal_has_seconds_remaining() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_seconds_remaining() const {
@@ -80148,7 +81601,7 @@ inline bool ShellObjectSpec::has_seconds_remaining() const {
 }
 inline void ShellObjectSpec::clear_seconds_remaining() {
   seconds_remaining_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline double ShellObjectSpec::_internal_seconds_remaining() const {
   return seconds_remaining_;
@@ -80158,7 +81611,7 @@ inline double ShellObjectSpec::seconds_remaining() const {
   return _internal_seconds_remaining();
 }
 inline void ShellObjectSpec::_internal_set_seconds_remaining(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000800u;
   seconds_remaining_ = value;
 }
 inline void ShellObjectSpec::set_seconds_remaining(double value) {
@@ -80215,7 +81668,7 @@ ShellObjectSpec::mutable_metadata() {
 
 // optional bool no_hats = 13;
 inline bool ShellObjectSpec::_internal_has_no_hats() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_no_hats() const {
@@ -80223,7 +81676,7 @@ inline bool ShellObjectSpec::has_no_hats() const {
 }
 inline void ShellObjectSpec::clear_no_hats() {
   no_hats_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool ShellObjectSpec::_internal_no_hats() const {
   return no_hats_;
@@ -80233,12 +81686,69 @@ inline bool ShellObjectSpec::no_hats() const {
   return _internal_no_hats();
 }
 inline void ShellObjectSpec::_internal_set_no_hats(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
   no_hats_ = value;
 }
 inline void ShellObjectSpec::set_no_hats(bool value) {
   _internal_set_no_hats(value);
   // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.no_hats)
+}
+
+// optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;
+inline bool ShellObjectSpec::_internal_has_chicken_animation() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_chicken_animation() const {
+  return _internal_has_chicken_animation();
+}
+inline void ShellObjectSpec::clear_chicken_animation() {
+  chicken_animation_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline ::ei::ShellObjectSpec_ChickenAnimation ShellObjectSpec::_internal_chicken_animation() const {
+  return static_cast< ::ei::ShellObjectSpec_ChickenAnimation >(chicken_animation_);
+}
+inline ::ei::ShellObjectSpec_ChickenAnimation ShellObjectSpec::chicken_animation() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.chicken_animation)
+  return _internal_chicken_animation();
+}
+inline void ShellObjectSpec::_internal_set_chicken_animation(::ei::ShellObjectSpec_ChickenAnimation value) {
+  assert(::ei::ShellObjectSpec_ChickenAnimation_IsValid(value));
+  _has_bits_[0] |= 0x00000400u;
+  chicken_animation_ = value;
+}
+inline void ShellObjectSpec::set_chicken_animation(::ei::ShellObjectSpec_ChickenAnimation value) {
+  _internal_set_chicken_animation(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.chicken_animation)
+}
+
+// optional int32 sort_priority = 17;
+inline bool ShellObjectSpec::_internal_has_sort_priority() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_sort_priority() const {
+  return _internal_has_sort_priority();
+}
+inline void ShellObjectSpec::clear_sort_priority() {
+  sort_priority_ = 0;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline int32_t ShellObjectSpec::_internal_sort_priority() const {
+  return sort_priority_;
+}
+inline int32_t ShellObjectSpec::sort_priority() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.sort_priority)
+  return _internal_sort_priority();
+}
+inline void ShellObjectSpec::_internal_set_sort_priority(int32_t value) {
+  _has_bits_[0] |= 0x00001000u;
+  sort_priority_ = value;
+}
+inline void ShellObjectSpec::set_sort_priority(int32_t value) {
+  _internal_set_sort_priority(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.sort_priority)
 }
 
 // repeated .ei.ShellObjectSpec.LODPiece pieces = 8;
@@ -80283,7 +81793,7 @@ ShellObjectSpec::pieces() const {
 
 // optional bool default_appearance = 9;
 inline bool ShellObjectSpec::_internal_has_default_appearance() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_default_appearance() const {
@@ -80291,7 +81801,7 @@ inline bool ShellObjectSpec::has_default_appearance() const {
 }
 inline void ShellObjectSpec::clear_default_appearance() {
   default_appearance_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool ShellObjectSpec::_internal_default_appearance() const {
   return default_appearance_;
@@ -80301,7 +81811,7 @@ inline bool ShellObjectSpec::default_appearance() const {
   return _internal_default_appearance();
 }
 inline void ShellObjectSpec::_internal_set_default_appearance(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
   default_appearance_ = value;
 }
 inline void ShellObjectSpec::set_default_appearance(bool value) {
@@ -82669,7 +84179,7 @@ inline void ShellsActionLog::set_allocated_sub_id(std::string* sub_id) {
 
 // optional .ei.ShellDB.FarmElement farm_element = 9;
 inline bool ShellsActionLog::_internal_has_farm_element() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ShellsActionLog::has_farm_element() const {
@@ -82677,7 +84187,7 @@ inline bool ShellsActionLog::has_farm_element() const {
 }
 inline void ShellsActionLog::clear_farm_element() {
   farm_element_ = 1;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::ei::ShellDB_FarmElement ShellsActionLog::_internal_farm_element() const {
   return static_cast< ::ei::ShellDB_FarmElement >(farm_element_);
@@ -82688,7 +84198,7 @@ inline ::ei::ShellDB_FarmElement ShellsActionLog::farm_element() const {
 }
 inline void ShellsActionLog::_internal_set_farm_element(::ei::ShellDB_FarmElement value) {
   assert(::ei::ShellDB_FarmElement_IsValid(value));
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000800u;
   farm_element_ = value;
 }
 inline void ShellsActionLog::set_farm_element(::ei::ShellDB_FarmElement value) {
@@ -82849,9 +84359,95 @@ inline void ShellsActionLog::set_farm_index(int32_t value) {
   // @@protoc_insertion_point(field_set:ei.ShellsActionLog.farm_index)
 }
 
+// optional double soul_eggs = 10;
+inline bool ShellsActionLog::_internal_has_soul_eggs() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_soul_eggs() const {
+  return _internal_has_soul_eggs();
+}
+inline void ShellsActionLog::clear_soul_eggs() {
+  soul_eggs_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline double ShellsActionLog::_internal_soul_eggs() const {
+  return soul_eggs_;
+}
+inline double ShellsActionLog::soul_eggs() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.soul_eggs)
+  return _internal_soul_eggs();
+}
+inline void ShellsActionLog::_internal_set_soul_eggs(double value) {
+  _has_bits_[0] |= 0x00000100u;
+  soul_eggs_ = value;
+}
+inline void ShellsActionLog::set_soul_eggs(double value) {
+  _internal_set_soul_eggs(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.soul_eggs)
+}
+
+// optional uint64 tickets_spent = 11;
+inline bool ShellsActionLog::_internal_has_tickets_spent() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_tickets_spent() const {
+  return _internal_has_tickets_spent();
+}
+inline void ShellsActionLog::clear_tickets_spent() {
+  tickets_spent_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline uint64_t ShellsActionLog::_internal_tickets_spent() const {
+  return tickets_spent_;
+}
+inline uint64_t ShellsActionLog::tickets_spent() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.tickets_spent)
+  return _internal_tickets_spent();
+}
+inline void ShellsActionLog::_internal_set_tickets_spent(uint64_t value) {
+  _has_bits_[0] |= 0x00000200u;
+  tickets_spent_ = value;
+}
+inline void ShellsActionLog::set_tickets_spent(uint64_t value) {
+  _internal_set_tickets_spent(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.tickets_spent)
+}
+
+// optional uint64 gold_spent = 12;
+inline bool ShellsActionLog::_internal_has_gold_spent() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ShellsActionLog::has_gold_spent() const {
+  return _internal_has_gold_spent();
+}
+inline void ShellsActionLog::clear_gold_spent() {
+  gold_spent_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline uint64_t ShellsActionLog::_internal_gold_spent() const {
+  return gold_spent_;
+}
+inline uint64_t ShellsActionLog::gold_spent() const {
+  // @@protoc_insertion_point(field_get:ei.ShellsActionLog.gold_spent)
+  return _internal_gold_spent();
+}
+inline void ShellsActionLog::_internal_set_gold_spent(uint64_t value) {
+  _has_bits_[0] |= 0x00000400u;
+  gold_spent_ = value;
+}
+inline void ShellsActionLog::set_gold_spent(uint64_t value) {
+  _internal_set_gold_spent(value);
+  // @@protoc_insertion_point(field_set:ei.ShellsActionLog.gold_spent)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -83208,6 +84804,11 @@ template <> struct is_proto_enum< ::ei::ShellSpec_AssetType> : ::std::true_type 
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::ShellSpec_AssetType>() {
   return ::ei::ShellSpec_AssetType_descriptor();
+}
+template <> struct is_proto_enum< ::ei::ShellObjectSpec_ChickenAnimation> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ShellObjectSpec_ChickenAnimation>() {
+  return ::ei::ShellObjectSpec_ChickenAnimation_descriptor();
 }
 template <> struct is_proto_enum< ::ei::ShellDB_FarmElement> : ::std::true_type {};
 template <>

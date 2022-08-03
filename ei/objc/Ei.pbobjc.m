@@ -34,6 +34,7 @@ GPBObjCClassDeclaration(ArtifactsClientInfo);
 GPBObjCClassDeclaration(ArtifactsClientInfo_LaunchCount);
 GPBObjCClassDeclaration(ArtifactsConfigurationResponse);
 GPBObjCClassDeclaration(ArtifactsConfigurationResponse_ArtifactParameters);
+GPBObjCClassDeclaration(ArtifactsConfigurationResponse_CraftingLevelInfo);
 GPBObjCClassDeclaration(ArtifactsConfigurationResponse_MissionParameters);
 GPBObjCClassDeclaration(ArtifactsConfigurationResponse_MissionParameters_Duration);
 GPBObjCClassDeclaration(ArtifactsDB);
@@ -117,7 +118,7 @@ GPBObjCClassDeclaration(ShellGroupSpec);
 GPBObjCClassDeclaration(ShellObjectSpec);
 GPBObjCClassDeclaration(ShellObjectSpec_LODPiece);
 GPBObjCClassDeclaration(ShellSetSpec);
-GPBObjCClassDeclaration(ShellSetSpec_VariationInfo);
+GPBObjCClassDeclaration(ShellSetSpec_VariationSpec);
 GPBObjCClassDeclaration(ShellSpec);
 GPBObjCClassDeclaration(ShellSpec_ShellPiece);
 
@@ -2000,6 +2001,7 @@ typedef struct Backup_Game__storage_ {
 @dynamic tankFuelsArray, tankFuelsArray_Count;
 @dynamic hasLastFueledShip, lastFueledShip;
 @dynamic hasInventoryScore, inventoryScore;
+@dynamic hasCraftingXp, craftingXp;
 @dynamic hasEnabled, enabled;
 @dynamic hasIntroShown, introShown;
 @dynamic hasInfusingEnabledDeprecated, infusingEnabledDeprecated;
@@ -2016,6 +2018,7 @@ typedef struct Backup_Artifacts__storage_ {
   double eggsInfused;
   double flowPercentageArtifacts;
   double inventoryScore;
+  double craftingXp;
 } Backup_Artifacts__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2099,8 +2102,8 @@ typedef struct Backup_Artifacts__storage_ {
         .core.name = "infusingEnabledDeprecated",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Artifacts_FieldNumber_InfusingEnabledDeprecated,
-        .core.hasIndex = 19,
-        .core.offset = 20,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 20,
+        .core.offset = 21,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue | GPBFieldTextFormatNameCustom),
         .core.dataType = GPBDataTypeBool,
       },
@@ -2129,8 +2132,8 @@ typedef struct Backup_Artifacts__storage_ {
         .core.name = "enabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Artifacts_FieldNumber_Enabled,
-        .core.hasIndex = 15,
-        .core.offset = 16,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 16,
+        .core.offset = 17,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -2139,8 +2142,8 @@ typedef struct Backup_Artifacts__storage_ {
         .core.name = "introShown",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Artifacts_FieldNumber_IntroShown,
-        .core.hasIndex = 17,
-        .core.offset = 18,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 18,
+        .core.offset = 19,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -2182,6 +2185,16 @@ typedef struct Backup_Artifacts__storage_ {
         .core.hasIndex = GPBNoHasBit,
         .core.offset = (uint32_t)offsetof(Backup_Artifacts__storage_, tankFuelsArray),
         .core.flags = GPBFieldRepeated,
+        .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "craftingXp",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Artifacts_FieldNumber_CraftingXp,
+        .core.hasIndex = 15,
+        .core.offset = (uint32_t)offsetof(Backup_Artifacts__storage_, craftingXp),
+        .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
       },
     };
@@ -5080,6 +5093,9 @@ typedef struct VerifyPurchaseResponse__storage_ {
 @dynamic hasLocation, location;
 @dynamic hasVersion, version;
 @dynamic hasPlatform, platform;
+@dynamic hasSoulEggs, soulEggs;
+@dynamic hasTicketsSpent, ticketsSpent;
+@dynamic hasGoldSpent, goldSpent;
 
 typedef struct CurrencyFlowLog__storage_ {
   uint32_t _has_storage_[1];
@@ -5090,6 +5106,9 @@ typedef struct CurrencyFlowLog__storage_ {
   NSString *platform;
   double approxTime;
   int64_t amount;
+  double soulEggs;
+  uint64_t ticketsSpent;
+  uint64_t goldSpent;
 } CurrencyFlowLog__storage_;
 
 // This method is threadsafe because it is initially called
@@ -5167,6 +5186,36 @@ typedef struct CurrencyFlowLog__storage_ {
         .core.offset = (uint32_t)offsetof(CurrencyFlowLog__storage_, platform),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "soulEggs",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = CurrencyFlowLog_FieldNumber_SoulEggs,
+        .core.hasIndex = 7,
+        .core.offset = (uint32_t)offsetof(CurrencyFlowLog__storage_, soulEggs),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "ticketsSpent",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = CurrencyFlowLog_FieldNumber_TicketsSpent,
+        .core.hasIndex = 8,
+        .core.offset = (uint32_t)offsetof(CurrencyFlowLog__storage_, ticketsSpent),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "goldSpent",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = CurrencyFlowLog_FieldNumber_GoldSpent,
+        .core.hasIndex = 9,
+        .core.offset = (uint32_t)offsetof(CurrencyFlowLog__storage_, goldSpent),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -5333,6 +5382,7 @@ typedef struct Reward__storage_ {
 @dynamic hasLengthSeconds, lengthSeconds;
 @dynamic hasMaxSoulEggs, maxSoulEggs;
 @dynamic hasMinClientVersion, minClientVersion;
+@dynamic hasLeggacy, leggacy;
 @dynamic hasDebug, debug;
 
 typedef struct Contract__storage_ {
@@ -5455,8 +5505,8 @@ typedef struct Contract__storage_ {
         .core.name = "debug",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_Debug,
-        .core.hasIndex = 15,
-        .core.offset = 16,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -5529,6 +5579,16 @@ typedef struct Contract__storage_ {
         .core.offset = (uint32_t)offsetof(Contract__storage_, chickenRunCooldownMinutes),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueBool = NO,
+        .core.name = "leggacy",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Contract_FieldNumber_Leggacy,
+        .core.hasIndex = 15,
+        .core.offset = 16,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -6175,6 +6235,7 @@ typedef struct FarmProductionParams__storage_ {
 @dynamic equippedArtifactsArray, equippedArtifactsArray_Count;
 @dynamic hasArtifactInventoryScore, artifactInventoryScore;
 @dynamic hasFarmAppearance, farmAppearance;
+@dynamic hasTimestamp, timestamp;
 
 typedef struct PlayerFarmInfo__storage_ {
   uint32_t _has_storage_[1];
@@ -6198,6 +6259,7 @@ typedef struct PlayerFarmInfo__storage_ {
   uint64_t eggsOfProphecy;
   double cashOnHand;
   uint64_t artifactInventoryScore;
+  double timestamp;
 } PlayerFarmInfo__storage_;
 
 // This method is threadsafe because it is initially called
@@ -6415,6 +6477,16 @@ typedef struct PlayerFarmInfo__storage_ {
         .core.offset = (uint32_t)offsetof(PlayerFarmInfo__storage_, habCapacityArray),
         .core.flags = GPBFieldRepeated,
         .core.dataType = GPBDataTypeUInt64,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "timestamp",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = PlayerFarmInfo_FieldNumber_Timestamp,
+        .core.hasIndex = 12,
+        .core.offset = (uint32_t)offsetof(PlayerFarmInfo__storage_, timestamp),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -12565,11 +12637,13 @@ typedef struct ArtifactsConfigurationRequest__storage_ {
 
 @dynamic missionParametersArray, missionParametersArray_Count;
 @dynamic artifactParametersArray, artifactParametersArray_Count;
+@dynamic craftingLevelInfosArray, craftingLevelInfosArray_Count;
 
 typedef struct ArtifactsConfigurationResponse__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *missionParametersArray;
   NSMutableArray *artifactParametersArray;
+  NSMutableArray *craftingLevelInfosArray;
 } ArtifactsConfigurationResponse__storage_;
 
 // This method is threadsafe because it is initially called
@@ -12593,6 +12667,15 @@ typedef struct ArtifactsConfigurationResponse__storage_ {
         .number = ArtifactsConfigurationResponse_FieldNumber_ArtifactParametersArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(ArtifactsConfigurationResponse__storage_, artifactParametersArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "craftingLevelInfosArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsConfigurationResponse_CraftingLevelInfo),
+        .number = ArtifactsConfigurationResponse_FieldNumber_CraftingLevelInfosArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ArtifactsConfigurationResponse__storage_, craftingLevelInfosArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
@@ -12834,6 +12917,7 @@ typedef struct ArtifactsConfigurationResponse_MissionParameters_Duration__storag
 @dynamic hasCraftingPriceLow, craftingPriceLow;
 @dynamic hasCraftingPriceDomain, craftingPriceDomain;
 @dynamic hasCraftingPriceCurve, craftingPriceCurve;
+@dynamic hasCraftingXp, craftingXp;
 
 typedef struct ArtifactsConfigurationResponse_ArtifactParameters__storage_ {
   uint32_t _has_storage_[1];
@@ -12845,6 +12929,7 @@ typedef struct ArtifactsConfigurationResponse_ArtifactParameters__storage_ {
   double craftingPrice;
   double craftingPriceLow;
   double craftingPriceCurve;
+  uint64_t craftingXp;
 } ArtifactsConfigurationResponse_ArtifactParameters__storage_;
 
 // This method is threadsafe because it is initially called
@@ -12925,6 +13010,15 @@ typedef struct ArtifactsConfigurationResponse_ArtifactParameters__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
+      {
+        .name = "craftingXp",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsConfigurationResponse_ArtifactParameters_FieldNumber_CraftingXp,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(ArtifactsConfigurationResponse_ArtifactParameters__storage_, craftingXp),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[ArtifactsConfigurationResponse_ArtifactParameters class]
@@ -12933,6 +13027,63 @@ typedef struct ArtifactsConfigurationResponse_ArtifactParameters__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ArtifactsConfigurationResponse_ArtifactParameters__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(ArtifactsConfigurationResponse)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ArtifactsConfigurationResponse_CraftingLevelInfo
+
+@implementation ArtifactsConfigurationResponse_CraftingLevelInfo
+
+@dynamic hasXpRequired, xpRequired;
+@dynamic hasRarityMult, rarityMult;
+
+typedef struct ArtifactsConfigurationResponse_CraftingLevelInfo__storage_ {
+  uint32_t _has_storage_[1];
+  float rarityMult;
+  double xpRequired;
+} ArtifactsConfigurationResponse_CraftingLevelInfo__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "xpRequired",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsConfigurationResponse_CraftingLevelInfo_FieldNumber_XpRequired,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ArtifactsConfigurationResponse_CraftingLevelInfo__storage_, xpRequired),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "rarityMult",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsConfigurationResponse_CraftingLevelInfo_FieldNumber_RarityMult,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ArtifactsConfigurationResponse_CraftingLevelInfo__storage_, rarityMult),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ArtifactsConfigurationResponse_CraftingLevelInfo class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ArtifactsConfigurationResponse_CraftingLevelInfo__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     [localDescriptor setupContainingMessageClass:GPBObjCClass(ArtifactsConfigurationResponse)];
     #if defined(DEBUG) && DEBUG
@@ -13333,6 +13484,7 @@ typedef struct CollectContractArtifactRewardsRequest__storage_ {
 @dynamic hasItemId, itemId;
 @dynamic hasGoldPricePaid, goldPricePaid;
 @dynamic hasCraftingCount, craftingCount;
+@dynamic hasCraftingXp, craftingXp;
 @dynamic ingredientsArray, ingredientsArray_Count;
 
 typedef struct CraftArtifactRequest__storage_ {
@@ -13344,6 +13496,7 @@ typedef struct CraftArtifactRequest__storage_ {
   BasicRequestInfo *rinfo;
   uint64_t itemId;
   double goldPricePaid;
+  double craftingXp;
 } CraftArtifactRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -13414,6 +13567,15 @@ typedef struct CraftArtifactRequest__storage_ {
         .offset = (uint32_t)offsetof(CraftArtifactRequest__storage_, craftingCount),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "craftingXp",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CraftArtifactRequest_FieldNumber_CraftingXp,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(CraftArtifactRequest__storage_, craftingXp),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -13521,6 +13683,8 @@ typedef struct CraftArtifactResponse__storage_ {
 @dynamic hasSpec, spec;
 @dynamic hasArtifactServerId, artifactServerId;
 @dynamic hasOriginalItemId, originalItemId;
+@dynamic additionalServerIdsArray, additionalServerIdsArray_Count;
+@dynamic additionalItemIdsArray, additionalItemIdsArray_Count;
 @dynamic hasQuantity, quantity;
 
 typedef struct ConsumeArtifactRequest__storage_ {
@@ -13530,6 +13694,8 @@ typedef struct ConsumeArtifactRequest__storage_ {
   NSString *eiUserId;
   BasicRequestInfo *rinfo;
   NSString *artifactServerId;
+  NSMutableArray *additionalServerIdsArray;
+  GPBUInt64Array *additionalItemIdsArray;
   uint64_t originalItemId;
 } ConsumeArtifactRequest__storage_;
 
@@ -13593,6 +13759,24 @@ typedef struct ConsumeArtifactRequest__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
       },
+      {
+        .name = "additionalServerIdsArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConsumeArtifactRequest_FieldNumber_AdditionalServerIdsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ConsumeArtifactRequest__storage_, additionalServerIdsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "additionalItemIdsArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConsumeArtifactRequest_FieldNumber_AdditionalItemIdsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ConsumeArtifactRequest__storage_, additionalItemIdsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeUInt64,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[ConsumeArtifactRequest class]
@@ -13618,6 +13802,7 @@ typedef struct ConsumeArtifactRequest__storage_ {
 
 @dynamic hasSuccess, success;
 @dynamic hasOriginalItemId, originalItemId;
+@dynamic additionalItemIdsArray, additionalItemIdsArray_Count;
 @dynamic byproductsArray, byproductsArray_Count;
 @dynamic otherRewardsArray, otherRewardsArray_Count;
 @dynamic hasEiUserId, eiUserId;
@@ -13627,6 +13812,7 @@ typedef struct ConsumeArtifactResponse__storage_ {
   NSMutableArray *byproductsArray;
   NSMutableArray *otherRewardsArray;
   NSString *eiUserId;
+  GPBUInt64Array *additionalItemIdsArray;
   uint64_t originalItemId;
 } ConsumeArtifactResponse__storage_;
 
@@ -13680,6 +13866,15 @@ typedef struct ConsumeArtifactResponse__storage_ {
         .offset = (uint32_t)offsetof(ConsumeArtifactResponse__storage_, eiUserId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "additionalItemIdsArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConsumeArtifactResponse_FieldNumber_AdditionalItemIdsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ConsumeArtifactResponse__storage_, additionalItemIdsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -13939,11 +14134,12 @@ typedef struct SetArtifactResponse__storage_ {
 @dynamic inventorySlotsArray, inventorySlotsArray_Count;
 @dynamic activeArtifactsArray, activeArtifactsArray_Count;
 @dynamic activeArtifactSetsArray, activeArtifactSetsArray_Count;
-@dynamic discoveredArtifactsArray, discoveredArtifactsArray_Count;
-@dynamic craftableArtifactsArray, craftableArtifactsArray_Count;
-@dynamic craftingCountsArray, craftingCountsArray_Count;
+@dynamic artifactStatusArray, artifactStatusArray_Count;
 @dynamic missionInfosArray, missionInfosArray_Count;
 @dynamic missionArchiveArray, missionArchiveArray_Count;
+@dynamic discoveredArtifactsDeprecatedArray, discoveredArtifactsDeprecatedArray_Count;
+@dynamic craftableArtifactsDeprecatedArray, craftableArtifactsDeprecatedArray_Count;
+@dynamic craftingCountsDeprecatedArray, craftingCountsDeprecatedArray_Count;
 
 typedef struct ArtifactsDB__storage_ {
   uint32_t _has_storage_[1];
@@ -13952,10 +14148,11 @@ typedef struct ArtifactsDB__storage_ {
   NSMutableArray *missionInfosArray;
   NSMutableArray *missionArchiveArray;
   NSMutableArray *activeArtifactsArray;
-  NSMutableArray *discoveredArtifactsArray;
-  NSMutableArray *craftableArtifactsArray;
-  NSMutableArray *craftingCountsArray;
+  NSMutableArray *discoveredArtifactsDeprecatedArray;
+  NSMutableArray *craftableArtifactsDeprecatedArray;
+  NSMutableArray *craftingCountsDeprecatedArray;
   NSMutableArray *activeArtifactSetsArray;
+  NSMutableArray *artifactStatusArray;
   uint64_t itemSequence;
 } ArtifactsDB__storage_;
 
@@ -14020,30 +14217,30 @@ typedef struct ArtifactsDB__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "discoveredArtifactsArray",
+        .name = "discoveredArtifactsDeprecatedArray",
         .dataTypeSpecific.clazz = GPBObjCClass(ArtifactSpec),
-        .number = ArtifactsDB_FieldNumber_DiscoveredArtifactsArray,
+        .number = ArtifactsDB_FieldNumber_DiscoveredArtifactsDeprecatedArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, discoveredArtifactsArray),
-        .flags = GPBFieldRepeated,
+        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, discoveredArtifactsDeprecatedArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "craftableArtifactsArray",
+        .name = "craftableArtifactsDeprecatedArray",
         .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsDB_CraftableArtifact),
-        .number = ArtifactsDB_FieldNumber_CraftableArtifactsArray,
+        .number = ArtifactsDB_FieldNumber_CraftableArtifactsDeprecatedArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, craftableArtifactsArray),
-        .flags = GPBFieldRepeated,
+        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, craftableArtifactsDeprecatedArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "craftingCountsArray",
+        .name = "craftingCountsDeprecatedArray",
         .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsDB_CraftableArtifact),
-        .number = ArtifactsDB_FieldNumber_CraftingCountsArray,
+        .number = ArtifactsDB_FieldNumber_CraftingCountsDeprecatedArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, craftingCountsArray),
-        .flags = GPBFieldRepeated,
+        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, craftingCountsDeprecatedArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeMessage,
       },
       {
@@ -14052,6 +14249,15 @@ typedef struct ArtifactsDB__storage_ {
         .number = ArtifactsDB_FieldNumber_ActiveArtifactSetsArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(ArtifactsDB__storage_, activeArtifactSetsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "artifactStatusArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsDB_CraftableArtifact),
+        .number = ArtifactsDB_FieldNumber_ArtifactStatusArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, artifactStatusArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
@@ -14064,6 +14270,13 @@ typedef struct ArtifactsDB__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ArtifactsDB__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\003\010\000discovered_artifacts_DEPRECATED\000\t\000cra"
+        "ftable_artifacts_DEPRECATED\000\n\000crafting_c"
+        "ounts_DEPRECATED\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -14181,6 +14394,9 @@ typedef struct ArtifactsDB_ActiveArtifactSet__storage_ {
 @implementation ArtifactsDB_CraftableArtifact
 
 @dynamic hasSpec, spec;
+@dynamic hasDiscovered, discovered;
+@dynamic hasCraftable, craftable;
+@dynamic hasRecipeDiscovered, recipeDiscovered;
 @dynamic hasSeen, seen;
 @dynamic hasCount, count;
 
@@ -14209,8 +14425,8 @@ typedef struct ArtifactsDB_CraftableArtifact__storage_ {
         .name = "seen",
         .dataTypeSpecific.clazz = Nil,
         .number = ArtifactsDB_CraftableArtifact_FieldNumber_Seen,
-        .hasIndex = 1,
-        .offset = 2,  // Stored in _has_storage_ to save space.
+        .hasIndex = 7,
+        .offset = 8,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -14218,10 +14434,37 @@ typedef struct ArtifactsDB_CraftableArtifact__storage_ {
         .name = "count",
         .dataTypeSpecific.clazz = Nil,
         .number = ArtifactsDB_CraftableArtifact_FieldNumber_Count,
-        .hasIndex = 3,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(ArtifactsDB_CraftableArtifact__storage_, count),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "craftable",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsDB_CraftableArtifact_FieldNumber_Craftable,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "recipeDiscovered",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsDB_CraftableArtifact_FieldNumber_RecipeDiscovered,
+        .hasIndex = 5,
+        .offset = 6,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "discovered",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsDB_CraftableArtifact_FieldNumber_Discovered,
+        .hasIndex = 1,
+        .offset = 2,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -15586,7 +15829,7 @@ typedef struct ShellSetSpec__storage_ {
       {
         .defaultValue.valueMessage = nil,
         .core.name = "variationsArray",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(ShellSetSpec_VariationInfo),
+        .core.dataTypeSpecific.clazz = GPBObjCClass(ShellSetSpec_VariationSpec),
         .core.number = ShellSetSpec_FieldNumber_VariationsArray,
         .core.hasIndex = GPBNoHasBit,
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, variationsArray),
@@ -15637,20 +15880,24 @@ typedef struct ShellSetSpec__storage_ {
 
 @end
 
-#pragma mark - ShellSetSpec_VariationInfo
+#pragma mark - ShellSetSpec_VariationSpec
 
-@implementation ShellSetSpec_VariationInfo
+@implementation ShellSetSpec_VariationSpec
 
 @dynamic hasIdentifier, identifier;
 @dynamic hasHexColor, hexColor;
 @dynamic hasPrice, price;
+@dynamic hasSortPriority, sortPriority;
+@dynamic hasDefaultAppearance, defaultAppearance;
+@dynamic hasCustomAppearance, customAppearance;
 
-typedef struct ShellSetSpec_VariationInfo__storage_ {
+typedef struct ShellSetSpec_VariationSpec__storage_ {
   uint32_t _has_storage_[1];
   uint32_t price;
+  int32_t sortPriority;
   NSString *identifier;
   NSString *hexColor;
-} ShellSetSpec_VariationInfo__storage_;
+} ShellSetSpec_VariationSpec__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -15661,38 +15908,65 @@ typedef struct ShellSetSpec_VariationInfo__storage_ {
       {
         .name = "identifier",
         .dataTypeSpecific.clazz = Nil,
-        .number = ShellSetSpec_VariationInfo_FieldNumber_Identifier,
+        .number = ShellSetSpec_VariationSpec_FieldNumber_Identifier,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ShellSetSpec_VariationInfo__storage_, identifier),
+        .offset = (uint32_t)offsetof(ShellSetSpec_VariationSpec__storage_, identifier),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "hexColor",
         .dataTypeSpecific.clazz = Nil,
-        .number = ShellSetSpec_VariationInfo_FieldNumber_HexColor,
+        .number = ShellSetSpec_VariationSpec_FieldNumber_HexColor,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ShellSetSpec_VariationInfo__storage_, hexColor),
+        .offset = (uint32_t)offsetof(ShellSetSpec_VariationSpec__storage_, hexColor),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "price",
         .dataTypeSpecific.clazz = Nil,
-        .number = ShellSetSpec_VariationInfo_FieldNumber_Price,
+        .number = ShellSetSpec_VariationSpec_FieldNumber_Price,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ShellSetSpec_VariationInfo__storage_, price),
+        .offset = (uint32_t)offsetof(ShellSetSpec_VariationSpec__storage_, price),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
       },
+      {
+        .name = "defaultAppearance",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellSetSpec_VariationSpec_FieldNumber_DefaultAppearance,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "customAppearance",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellSetSpec_VariationSpec_FieldNumber_CustomAppearance,
+        .hasIndex = 6,
+        .offset = 7,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "sortPriority",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellSetSpec_VariationSpec_FieldNumber_SortPriority,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ShellSetSpec_VariationSpec__storage_, sortPriority),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt32,
+      },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ShellSetSpec_VariationInfo class]
+        [GPBDescriptor allocDescriptorForClass:[ShellSetSpec_VariationSpec class]
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ShellSetSpec_VariationInfo__storage_)
+                                   storageSize:sizeof(ShellSetSpec_VariationSpec__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     [localDescriptor setupContainingMessageClass:GPBObjCClass(ShellSetSpec)];
     #if defined(DEBUG) && DEBUG
@@ -15713,6 +15987,7 @@ typedef struct ShellSetSpec_VariationInfo__storage_ {
 @dynamic hasName, name;
 @dynamic hasAssetType, assetType;
 @dynamic hasObjectClass, objectClass;
+@dynamic iconColorsArray, iconColorsArray_Count;
 @dynamic hasPrice, price;
 @dynamic hasRequiredEop, requiredEop;
 @dynamic hasRequiredSoulEggs, requiredSoulEggs;
@@ -15721,6 +15996,8 @@ typedef struct ShellSetSpec_VariationInfo__storage_ {
 @dynamic hasSecondsRemaining, secondsRemaining;
 @dynamic metadataArray, metadataArray_Count;
 @dynamic hasNoHats, noHats;
+@dynamic hasChickenAnimation, chickenAnimation;
+@dynamic hasSortPriority, sortPriority;
 @dynamic piecesArray, piecesArray_Count;
 @dynamic hasDefaultAppearance, defaultAppearance;
 
@@ -15729,11 +16006,14 @@ typedef struct ShellObjectSpec__storage_ {
   ShellSpec_AssetType assetType;
   uint32_t price;
   uint32_t requiredEop;
+  ShellObjectSpec_ChickenAnimation chickenAnimation;
+  int32_t sortPriority;
   NSString *identifier;
   NSString *name;
   GPBDoubleArray *metadataArray;
   NSMutableArray *piecesArray;
   NSString *objectClass;
+  NSMutableArray *iconColorsArray;
   double requiredSoulEggs;
   double secondsRemaining;
 } ShellObjectSpec__storage_;
@@ -15829,8 +16109,8 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "defaultAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_DefaultAppearance,
-        .core.hasIndex = 14,
-        .core.offset = 15,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 16,
+        .core.offset = 17,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15884,6 +16164,36 @@ typedef struct ShellObjectSpec__storage_ {
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
       },
+      {
+        .defaultValue.valueMessage = nil,
+        .core.name = "iconColorsArray",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellObjectSpec_FieldNumber_IconColorsArray,
+        .core.hasIndex = GPBNoHasBit,
+        .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, iconColorsArray),
+        .core.flags = GPBFieldRepeated,
+        .core.dataType = GPBDataTypeString,
+      },
+      {
+        .defaultValue.valueEnum = ShellObjectSpec_ChickenAnimation_StandardRun,
+        .core.name = "chickenAnimation",
+        .core.dataTypeSpecific.enumDescFunc = ShellObjectSpec_ChickenAnimation_EnumDescriptor,
+        .core.number = ShellObjectSpec_FieldNumber_ChickenAnimation,
+        .core.hasIndex = 14,
+        .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, chickenAnimation),
+        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .core.dataType = GPBDataTypeEnum,
+      },
+      {
+        .defaultValue.valueInt32 = 0,
+        .core.name = "sortPriority",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellObjectSpec_FieldNumber_SortPriority,
+        .core.hasIndex = 15,
+        .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, sortPriority),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeInt32,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[ShellObjectSpec class]
@@ -15902,6 +16212,57 @@ typedef struct ShellObjectSpec__storage_ {
 }
 
 @end
+
+#pragma mark - Enum ShellObjectSpec_ChickenAnimation
+
+GPBEnumDescriptor *ShellObjectSpec_ChickenAnimation_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "StandardRun\000Slowmo\000Wobble\000WobbleLean\000Smo"
+        "oth\000SmoothLean\000Hover\000SidewaysSmooth\000Side"
+        "waysLean\000";
+    static const int32_t values[] = {
+        ShellObjectSpec_ChickenAnimation_StandardRun,
+        ShellObjectSpec_ChickenAnimation_Slowmo,
+        ShellObjectSpec_ChickenAnimation_Wobble,
+        ShellObjectSpec_ChickenAnimation_WobbleLean,
+        ShellObjectSpec_ChickenAnimation_Smooth,
+        ShellObjectSpec_ChickenAnimation_SmoothLean,
+        ShellObjectSpec_ChickenAnimation_Hover,
+        ShellObjectSpec_ChickenAnimation_SidewaysSmooth,
+        ShellObjectSpec_ChickenAnimation_SidewaysLean,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ShellObjectSpec_ChickenAnimation)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:ShellObjectSpec_ChickenAnimation_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL ShellObjectSpec_ChickenAnimation_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case ShellObjectSpec_ChickenAnimation_StandardRun:
+    case ShellObjectSpec_ChickenAnimation_Slowmo:
+    case ShellObjectSpec_ChickenAnimation_Wobble:
+    case ShellObjectSpec_ChickenAnimation_WobbleLean:
+    case ShellObjectSpec_ChickenAnimation_Smooth:
+    case ShellObjectSpec_ChickenAnimation_SmoothLean:
+    case ShellObjectSpec_ChickenAnimation_Hover:
+    case ShellObjectSpec_ChickenAnimation_SidewaysSmooth:
+    case ShellObjectSpec_ChickenAnimation_SidewaysLean:
+      return YES;
+    default:
+      return NO;
+  }
+}
 
 #pragma mark - ShellObjectSpec_LODPiece
 
@@ -16892,6 +17253,9 @@ typedef struct ShellDB_ChickenConfig__storage_ {
 @dynamic hasApproxTime, approxTime;
 @dynamic hasVersion, version;
 @dynamic hasFarmIndex, farmIndex;
+@dynamic hasSoulEggs, soulEggs;
+@dynamic hasTicketsSpent, ticketsSpent;
+@dynamic hasGoldSpent, goldSpent;
 
 typedef struct ShellsActionLog__storage_ {
   uint32_t _has_storage_[1];
@@ -16904,6 +17268,9 @@ typedef struct ShellsActionLog__storage_ {
   NSString *version;
   BasicRequestInfo *rinfo;
   double approxTime;
+  double soulEggs;
+  uint64_t ticketsSpent;
+  uint64_t goldSpent;
 } ShellsActionLog__storage_;
 
 // This method is threadsafe because it is initially called
@@ -17001,6 +17368,36 @@ typedef struct ShellsActionLog__storage_ {
         .core.offset = (uint32_t)offsetof(ShellsActionLog__storage_, farmElement),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .core.dataType = GPBDataTypeEnum,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "soulEggs",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellsActionLog_FieldNumber_SoulEggs,
+        .core.hasIndex = 9,
+        .core.offset = (uint32_t)offsetof(ShellsActionLog__storage_, soulEggs),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "ticketsSpent",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellsActionLog_FieldNumber_TicketsSpent,
+        .core.hasIndex = 10,
+        .core.offset = (uint32_t)offsetof(ShellsActionLog__storage_, ticketsSpent),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "goldSpent",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellsActionLog_FieldNumber_GoldSpent,
+        .core.hasIndex = 11,
+        .core.offset = (uint32_t)offsetof(ShellsActionLog__storage_, goldSpent),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =

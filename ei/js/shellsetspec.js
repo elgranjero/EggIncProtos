@@ -12,7 +12,7 @@
 // @ts-nocheck
 
 goog.provide('proto.ei.ShellSetSpec');
-goog.provide('proto.ei.ShellSetSpec.VariationInfo');
+goog.provide('proto.ei.ShellSetSpec.VariationSpec');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -49,16 +49,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ei.ShellSetSpec.VariationInfo = function(opt_data) {
+proto.ei.ShellSetSpec.VariationSpec = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ei.ShellSetSpec.VariationInfo, jspb.Message);
+goog.inherits(proto.ei.ShellSetSpec.VariationSpec, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ei.ShellSetSpec.VariationInfo.displayName = 'proto.ei.ShellSetSpec.VariationInfo';
+  proto.ei.ShellSetSpec.VariationSpec.displayName = 'proto.ei.ShellSetSpec.VariationSpec';
 }
 
 /**
@@ -114,7 +114,7 @@ proto.ei.ShellSetSpec.toObject = function(includeInstance, msg) {
     elementSet: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     hexBaseColor: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
     variationsList: jspb.Message.toObjectList(msg.getVariationsList(),
-    proto.ei.ShellSetSpec.VariationInfo.toObject, includeInstance),
+    proto.ei.ShellSetSpec.VariationSpec.toObject, includeInstance),
     defaultAppearance: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
     customAppearance: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f
   };
@@ -210,8 +210,8 @@ proto.ei.ShellSetSpec.deserializeBinaryFromReader = function(msg, reader) {
       msg.setHexBaseColor(value);
       break;
     case 15:
-      var value = new proto.ei.ShellSetSpec.VariationInfo;
-      reader.readMessage(value,proto.ei.ShellSetSpec.VariationInfo.deserializeBinaryFromReader);
+      var value = new proto.ei.ShellSetSpec.VariationSpec;
+      reader.readMessage(value,proto.ei.ShellSetSpec.VariationSpec.deserializeBinaryFromReader);
       msg.addVariations(value);
       break;
     case 6:
@@ -354,7 +354,7 @@ proto.ei.ShellSetSpec.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       15,
       f,
-      proto.ei.ShellSetSpec.VariationInfo.serializeBinaryToWriter
+      proto.ei.ShellSetSpec.VariationSpec.serializeBinaryToWriter
     );
   }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
@@ -390,8 +390,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.ei.ShellSetSpec.VariationInfo.toObject(opt_includeInstance, this);
+proto.ei.ShellSetSpec.VariationSpec.prototype.toObject = function(opt_includeInstance) {
+  return proto.ei.ShellSetSpec.VariationSpec.toObject(opt_includeInstance, this);
 };
 
 
@@ -400,15 +400,18 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ei.ShellSetSpec.VariationInfo} msg The msg instance to transform.
+ * @param {!proto.ei.ShellSetSpec.VariationSpec} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ei.ShellSetSpec.VariationInfo.toObject = function(includeInstance, msg) {
+proto.ei.ShellSetSpec.VariationSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
     identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     hexColor: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    price: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+    price: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    sortPriority: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    defaultAppearance: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    customAppearance: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -422,23 +425,23 @@ proto.ei.ShellSetSpec.VariationInfo.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ei.ShellSetSpec.VariationInfo}
+ * @return {!proto.ei.ShellSetSpec.VariationSpec}
  */
-proto.ei.ShellSetSpec.VariationInfo.deserializeBinary = function(bytes) {
+proto.ei.ShellSetSpec.VariationSpec.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ei.ShellSetSpec.VariationInfo;
-  return proto.ei.ShellSetSpec.VariationInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ei.ShellSetSpec.VariationSpec;
+  return proto.ei.ShellSetSpec.VariationSpec.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ei.ShellSetSpec.VariationInfo} msg The message object to deserialize into.
+ * @param {!proto.ei.ShellSetSpec.VariationSpec} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ei.ShellSetSpec.VariationInfo}
+ * @return {!proto.ei.ShellSetSpec.VariationSpec}
  */
-proto.ei.ShellSetSpec.VariationInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.ei.ShellSetSpec.VariationSpec.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -457,6 +460,18 @@ proto.ei.ShellSetSpec.VariationInfo.deserializeBinaryFromReader = function(msg, 
       var value = /** @type {number} */ (reader.readUint32());
       msg.setPrice(value);
       break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setSortPriority(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setDefaultAppearance(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCustomAppearance(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -470,9 +485,9 @@ proto.ei.ShellSetSpec.VariationInfo.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.serializeBinary = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ei.ShellSetSpec.VariationInfo.serializeBinaryToWriter(this, writer);
+  proto.ei.ShellSetSpec.VariationSpec.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -480,11 +495,11 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ei.ShellSetSpec.VariationInfo} message
+ * @param {!proto.ei.ShellSetSpec.VariationSpec} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ei.ShellSetSpec.VariationInfo.serializeBinaryToWriter = function(message, writer) {
+proto.ei.ShellSetSpec.VariationSpec.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {string} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -507,6 +522,27 @@ proto.ei.ShellSetSpec.VariationInfo.serializeBinaryToWriter = function(message, 
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
 };
 
 
@@ -514,25 +550,25 @@ proto.ei.ShellSetSpec.VariationInfo.serializeBinaryToWriter = function(message, 
  * optional string identifier = 1;
  * @return {string}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.getIdentifier = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.getIdentifier = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ei.ShellSetSpec.VariationInfo} returns this
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.setIdentifier = function(value) {
+proto.ei.ShellSetSpec.VariationSpec.prototype.setIdentifier = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.ei.ShellSetSpec.VariationInfo} returns this
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.clearIdentifier = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.clearIdentifier = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -541,7 +577,7 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.clearIdentifier = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.hasIdentifier = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.hasIdentifier = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -550,25 +586,25 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.hasIdentifier = function() {
  * optional string hex_color = 2;
  * @return {string}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.getHexColor = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.getHexColor = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.ei.ShellSetSpec.VariationInfo} returns this
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.setHexColor = function(value) {
+proto.ei.ShellSetSpec.VariationSpec.prototype.setHexColor = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.ei.ShellSetSpec.VariationInfo} returns this
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.clearHexColor = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.clearHexColor = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -577,7 +613,7 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.clearHexColor = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.hasHexColor = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.hasHexColor = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -586,25 +622,25 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.hasHexColor = function() {
  * optional uint32 price = 3;
  * @return {number}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.getPrice = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.getPrice = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ei.ShellSetSpec.VariationInfo} returns this
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.setPrice = function(value) {
+proto.ei.ShellSetSpec.VariationSpec.prototype.setPrice = function(value) {
   return jspb.Message.setField(this, 3, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.ei.ShellSetSpec.VariationInfo} returns this
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.clearPrice = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.clearPrice = function() {
   return jspb.Message.setField(this, 3, undefined);
 };
 
@@ -613,8 +649,116 @@ proto.ei.ShellSetSpec.VariationInfo.prototype.clearPrice = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ShellSetSpec.VariationInfo.prototype.hasPrice = function() {
+proto.ei.ShellSetSpec.VariationSpec.prototype.hasPrice = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional int32 sort_priority = 6;
+ * @return {number}
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.getSortPriority = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.setSortPriority = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.clearSortPriority = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.hasSortPriority = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool default_appearance = 4;
+ * @return {boolean}
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.getDefaultAppearance = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.setDefaultAppearance = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.clearDefaultAppearance = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.hasDefaultAppearance = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool custom_appearance = 5;
+ * @return {boolean}
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.getCustomAppearance = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.setCustomAppearance = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSetSpec.VariationSpec} returns this
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.clearCustomAppearance = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSetSpec.VariationSpec.prototype.hasCustomAppearance = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
@@ -1123,17 +1267,17 @@ proto.ei.ShellSetSpec.prototype.hasHexBaseColor = function() {
 
 
 /**
- * repeated VariationInfo variations = 15;
- * @return {!Array<!proto.ei.ShellSetSpec.VariationInfo>}
+ * repeated VariationSpec variations = 15;
+ * @return {!Array<!proto.ei.ShellSetSpec.VariationSpec>}
  */
 proto.ei.ShellSetSpec.prototype.getVariationsList = function() {
-  return /** @type{!Array<!proto.ei.ShellSetSpec.VariationInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ei.ShellSetSpec.VariationInfo, 15));
+  return /** @type{!Array<!proto.ei.ShellSetSpec.VariationSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ShellSetSpec.VariationSpec, 15));
 };
 
 
 /**
- * @param {!Array<!proto.ei.ShellSetSpec.VariationInfo>} value
+ * @param {!Array<!proto.ei.ShellSetSpec.VariationSpec>} value
  * @return {!proto.ei.ShellSetSpec} returns this
 */
 proto.ei.ShellSetSpec.prototype.setVariationsList = function(value) {
@@ -1142,12 +1286,12 @@ proto.ei.ShellSetSpec.prototype.setVariationsList = function(value) {
 
 
 /**
- * @param {!proto.ei.ShellSetSpec.VariationInfo=} opt_value
+ * @param {!proto.ei.ShellSetSpec.VariationSpec=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ei.ShellSetSpec.VariationInfo}
+ * @return {!proto.ei.ShellSetSpec.VariationSpec}
  */
 proto.ei.ShellSetSpec.prototype.addVariations = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.ei.ShellSetSpec.VariationInfo, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.ei.ShellSetSpec.VariationSpec, opt_index);
 };
 
 

@@ -311,195 +311,65 @@ public object ArtifactsDBKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class DiscoveredArtifactsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class ArtifactStatusProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      */
-     public val discoveredArtifacts: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>
+     public val artifactStatus: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
-        _builder.getDiscoveredArtifactsList()
+        _builder.getArtifactStatusList()
       )
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
-     * @param value The discoveredArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * @param value The artifactStatus to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addDiscoveredArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>.add(value: ei.Ei.ArtifactSpec) {
-      _builder.addDiscoveredArtifacts(value)
+    @kotlin.jvm.JvmName("addArtifactStatus")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      _builder.addArtifactStatus(value)
     }/**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
-     * @param value The discoveredArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * @param value The artifactStatus to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignDiscoveredArtifacts")
+    @kotlin.jvm.JvmName("plusAssignArtifactStatus")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       add(value)
     }/**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
-     * @param values The discoveredArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * @param values The artifactStatus to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllDiscoveredArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
-      _builder.addAllDiscoveredArtifacts(values)
+    @kotlin.jvm.JvmName("addAllArtifactStatus")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+      _builder.addAllArtifactStatus(values)
     }/**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
-     * @param values The discoveredArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * @param values The artifactStatus to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllDiscoveredArtifacts")
+    @kotlin.jvm.JvmName("plusAssignAllArtifactStatus")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       addAll(values)
     }/**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      * @param index The index to set the value at.
-     * @param value The discoveredArtifacts to set.
+     * @param value The artifactStatus to set.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setDiscoveredArtifacts")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
-      _builder.setDiscoveredArtifacts(index, value)
+    @kotlin.jvm.JvmName("setArtifactStatus")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      _builder.setArtifactStatus(index, value)
     }/**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts = 8;</code>
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearDiscoveredArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsProxy>.clear() {
-      _builder.clearDiscoveredArtifacts()
-    }
-    /**
-     * An uninstantiable, behaviorless type to represent the field in
-     * generics.
-     */
-    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class CraftableArtifactsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
-    /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     */
-     public val craftableArtifacts: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>
-      @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
-        _builder.getCraftableArtifactsList()
-      )
-    /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     * @param value The craftableArtifacts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCraftableArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
-      _builder.addCraftableArtifacts(value)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     * @param value The craftableArtifacts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCraftableArtifacts")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
-      add(value)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     * @param values The craftableArtifacts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCraftableArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
-      _builder.addAllCraftableArtifacts(values)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     * @param values The craftableArtifacts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCraftableArtifacts")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
-      addAll(values)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     * @param index The index to set the value at.
-     * @param value The craftableArtifacts to set.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCraftableArtifacts")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
-      _builder.setCraftableArtifacts(index, value)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts = 9;</code>
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCraftableArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsProxy>.clear() {
-      _builder.clearCraftableArtifacts()
-    }
-    /**
-     * An uninstantiable, behaviorless type to represent the field in
-     * generics.
-     */
-    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class CraftingCountsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
-    /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     */
-     public val craftingCounts: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>
-      @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
-        _builder.getCraftingCountsList()
-      )
-    /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     * @param value The craftingCounts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCraftingCounts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
-      _builder.addCraftingCounts(value)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     * @param value The craftingCounts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCraftingCounts")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
-      add(value)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     * @param values The craftingCounts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCraftingCounts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
-      _builder.addAllCraftingCounts(values)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     * @param values The craftingCounts to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCraftingCounts")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
-      addAll(values)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     * @param index The index to set the value at.
-     * @param value The craftingCounts to set.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCraftingCounts")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
-      _builder.setCraftingCounts(index, value)
-    }/**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts = 10;</code>
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCraftingCounts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsProxy>.clear() {
-      _builder.clearCraftingCounts()
+    @kotlin.jvm.JvmName("clearArtifactStatus")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.clear() {
+      _builder.clearArtifactStatus()
     }
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -630,6 +500,201 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("clearMissionArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.clear() {
       _builder.clearMissionArchive()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class DiscoveredArtifactsDEPRECATEDProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     */
+     public val discoveredArtifactsDEPRECATED: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getDiscoveredArtifactsDEPRECATEDList()
+      )
+    /**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * @param value The discoveredArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addDiscoveredArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactSpec) {
+      _builder.addDiscoveredArtifactsDEPRECATED(value)
+    }/**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * @param value The discoveredArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignDiscoveredArtifactsDEPRECATED")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * @param values The discoveredArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllDiscoveredArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
+      _builder.addAllDiscoveredArtifactsDEPRECATED(values)
+    }/**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * @param values The discoveredArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllDiscoveredArtifactsDEPRECATED")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * @param index The index to set the value at.
+     * @param value The discoveredArtifactsDEPRECATED to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setDiscoveredArtifactsDEPRECATED")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
+      _builder.setDiscoveredArtifactsDEPRECATED(index, value)
+    }/**
+     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearDiscoveredArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.clear() {
+      _builder.clearDiscoveredArtifactsDEPRECATED()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class CraftableArtifactsDEPRECATEDProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     */
+     public val craftableArtifactsDEPRECATED: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getCraftableArtifactsDEPRECATEDList()
+      )
+    /**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * @param value The craftableArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addCraftableArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      _builder.addCraftableArtifactsDEPRECATED(value)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * @param value The craftableArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignCraftableArtifactsDEPRECATED")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * @param values The craftableArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllCraftableArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+      _builder.addAllCraftableArtifactsDEPRECATED(values)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * @param values The craftableArtifactsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllCraftableArtifactsDEPRECATED")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * @param index The index to set the value at.
+     * @param value The craftableArtifactsDEPRECATED to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setCraftableArtifactsDEPRECATED")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      _builder.setCraftableArtifactsDEPRECATED(index, value)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearCraftableArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.clear() {
+      _builder.clearCraftableArtifactsDEPRECATED()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class CraftingCountsDEPRECATEDProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     */
+     public val craftingCountsDEPRECATED: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getCraftingCountsDEPRECATEDList()
+      )
+    /**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * @param value The craftingCountsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addCraftingCountsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      _builder.addCraftingCountsDEPRECATED(value)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * @param value The craftingCountsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignCraftingCountsDEPRECATED")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * @param values The craftingCountsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllCraftingCountsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+      _builder.addAllCraftingCountsDEPRECATED(values)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * @param values The craftingCountsDEPRECATED to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllCraftingCountsDEPRECATED")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * @param index The index to set the value at.
+     * @param value The craftingCountsDEPRECATED to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setCraftingCountsDEPRECATED")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+      _builder.setCraftingCountsDEPRECATED(index, value)
+    }/**
+     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearCraftingCountsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.clear() {
+      _builder.clearCraftingCountsDEPRECATED()
     }}
   @kotlin.jvm.JvmSynthetic
   public inline fun activeArtifactSlot(block: ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSlot =
@@ -825,6 +890,78 @@ public object ArtifactsDBKt {
        */
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
+      }
+
+      /**
+       * <code>optional bool discovered = 6;</code>
+       */
+      public var discovered: kotlin.Boolean
+        @JvmName("getDiscovered")
+        get() = _builder.getDiscovered()
+        @JvmName("setDiscovered")
+        set(value) {
+          _builder.setDiscovered(value)
+        }
+      /**
+       * <code>optional bool discovered = 6;</code>
+       */
+      public fun clearDiscovered() {
+        _builder.clearDiscovered()
+      }
+      /**
+       * <code>optional bool discovered = 6;</code>
+       * @return Whether the discovered field is set.
+       */
+      public fun hasDiscovered(): kotlin.Boolean {
+        return _builder.hasDiscovered()
+      }
+
+      /**
+       * <code>optional bool craftable = 4;</code>
+       */
+      public var craftable: kotlin.Boolean
+        @JvmName("getCraftable")
+        get() = _builder.getCraftable()
+        @JvmName("setCraftable")
+        set(value) {
+          _builder.setCraftable(value)
+        }
+      /**
+       * <code>optional bool craftable = 4;</code>
+       */
+      public fun clearCraftable() {
+        _builder.clearCraftable()
+      }
+      /**
+       * <code>optional bool craftable = 4;</code>
+       * @return Whether the craftable field is set.
+       */
+      public fun hasCraftable(): kotlin.Boolean {
+        return _builder.hasCraftable()
+      }
+
+      /**
+       * <code>optional bool recipe_discovered = 5;</code>
+       */
+      public var recipeDiscovered: kotlin.Boolean
+        @JvmName("getRecipeDiscovered")
+        get() = _builder.getRecipeDiscovered()
+        @JvmName("setRecipeDiscovered")
+        set(value) {
+          _builder.setRecipeDiscovered(value)
+        }
+      /**
+       * <code>optional bool recipe_discovered = 5;</code>
+       */
+      public fun clearRecipeDiscovered() {
+        _builder.clearRecipeDiscovered()
+      }
+      /**
+       * <code>optional bool recipe_discovered = 5;</code>
+       * @return Whether the recipeDiscovered field is set.
+       */
+      public fun hasRecipeDiscovered(): kotlin.Boolean {
+        return _builder.hasRecipeDiscovered()
       }
 
       /**

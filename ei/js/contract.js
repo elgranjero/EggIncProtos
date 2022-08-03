@@ -142,6 +142,7 @@ proto.ei.Contract.toObject = function(includeInstance, msg) {
     lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
     maxSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
     minClientVersion: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    leggacy: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
     debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f
   };
 
@@ -244,6 +245,10 @@ proto.ei.Contract.deserializeBinaryFromReader = function(msg, reader) {
     case 14:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setMinClientVersion(value);
+      break;
+    case 19:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLeggacy(value);
       break;
     case 11:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -389,6 +394,13 @@ proto.ei.Contract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeUint32(
       14,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 19));
+  if (f != null) {
+    writer.writeBool(
+      19,
       f
     );
   }
@@ -1527,6 +1539,42 @@ proto.ei.Contract.prototype.clearMinClientVersion = function() {
  */
 proto.ei.Contract.prototype.hasMinClientVersion = function() {
   return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
+ * optional bool leggacy = 19;
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.getLeggacy = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 19, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.setLeggacy = function(value) {
+  return jspb.Message.setField(this, 19, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.clearLeggacy = function() {
+  return jspb.Message.setField(this, 19, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.hasLeggacy = function() {
+  return jspb.Message.getField(this, 19) != null;
 };
 
 

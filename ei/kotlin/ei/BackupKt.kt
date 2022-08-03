@@ -3763,6 +3763,30 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional double crafting_xp = 17;</code>
+       */
+      public var craftingXp: kotlin.Double
+        @JvmName("getCraftingXp")
+        get() = _builder.getCraftingXp()
+        @JvmName("setCraftingXp")
+        set(value) {
+          _builder.setCraftingXp(value)
+        }
+      /**
+       * <code>optional double crafting_xp = 17;</code>
+       */
+      public fun clearCraftingXp() {
+        _builder.clearCraftingXp()
+      }
+      /**
+       * <code>optional double crafting_xp = 17;</code>
+       * @return Whether the craftingXp field is set.
+       */
+      public fun hasCraftingXp(): kotlin.Boolean {
+        return _builder.hasCraftingXp()
+      }
+
+      /**
        * <code>optional bool enabled = 11;</code>
        */
       public var enabled: kotlin.Boolean

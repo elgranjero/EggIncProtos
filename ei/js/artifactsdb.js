@@ -114,7 +114,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.ArtifactsDB.repeatedFields_ = [1,3,7,11,8,9,10,4,5];
+proto.ei.ArtifactsDB.repeatedFields_ = [1,3,7,11,12,4,5,8,9,10];
 
 
 
@@ -156,16 +156,18 @@ proto.ei.ArtifactsDB.toObject = function(includeInstance, msg) {
     proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject, includeInstance),
     activeArtifactSetsList: jspb.Message.toObjectList(msg.getActiveArtifactSetsList(),
     proto.ei.ArtifactsDB.ActiveArtifactSet.toObject, includeInstance),
-    discoveredArtifactsList: jspb.Message.toObjectList(msg.getDiscoveredArtifactsList(),
-    proto.ei.ArtifactSpec.toObject, includeInstance),
-    craftableArtifactsList: jspb.Message.toObjectList(msg.getCraftableArtifactsList(),
-    proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
-    craftingCountsList: jspb.Message.toObjectList(msg.getCraftingCountsList(),
+    artifactStatusList: jspb.Message.toObjectList(msg.getArtifactStatusList(),
     proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
     missionInfosList: jspb.Message.toObjectList(msg.getMissionInfosList(),
     proto.ei.MissionInfo.toObject, includeInstance),
     missionArchiveList: jspb.Message.toObjectList(msg.getMissionArchiveList(),
-    proto.ei.MissionInfo.toObject, includeInstance)
+    proto.ei.MissionInfo.toObject, includeInstance),
+    discoveredArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getDiscoveredArtifactsDeprecatedList(),
+    proto.ei.ArtifactSpec.toObject, includeInstance),
+    craftableArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getCraftableArtifactsDeprecatedList(),
+    proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
+    craftingCountsDeprecatedList: jspb.Message.toObjectList(msg.getCraftingCountsDeprecatedList(),
+    proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -226,20 +228,10 @@ proto.ei.ArtifactsDB.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,proto.ei.ArtifactsDB.ActiveArtifactSet.deserializeBinaryFromReader);
       msg.addActiveArtifactSets(value);
       break;
-    case 8:
-      var value = new proto.ei.ArtifactSpec;
-      reader.readMessage(value,proto.ei.ArtifactSpec.deserializeBinaryFromReader);
-      msg.addDiscoveredArtifacts(value);
-      break;
-    case 9:
+    case 12:
       var value = new proto.ei.ArtifactsDB.CraftableArtifact;
       reader.readMessage(value,proto.ei.ArtifactsDB.CraftableArtifact.deserializeBinaryFromReader);
-      msg.addCraftableArtifacts(value);
-      break;
-    case 10:
-      var value = new proto.ei.ArtifactsDB.CraftableArtifact;
-      reader.readMessage(value,proto.ei.ArtifactsDB.CraftableArtifact.deserializeBinaryFromReader);
-      msg.addCraftingCounts(value);
+      msg.addArtifactStatus(value);
       break;
     case 4:
       var value = new proto.ei.MissionInfo;
@@ -250,6 +242,21 @@ proto.ei.ArtifactsDB.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.MissionInfo;
       reader.readMessage(value,proto.ei.MissionInfo.deserializeBinaryFromReader);
       msg.addMissionArchive(value);
+      break;
+    case 8:
+      var value = new proto.ei.ArtifactSpec;
+      reader.readMessage(value,proto.ei.ArtifactSpec.deserializeBinaryFromReader);
+      msg.addDiscoveredArtifactsDeprecated(value);
+      break;
+    case 9:
+      var value = new proto.ei.ArtifactsDB.CraftableArtifact;
+      reader.readMessage(value,proto.ei.ArtifactsDB.CraftableArtifact.deserializeBinaryFromReader);
+      msg.addCraftableArtifactsDeprecated(value);
+      break;
+    case 10:
+      var value = new proto.ei.ArtifactsDB.CraftableArtifact;
+      reader.readMessage(value,proto.ei.ArtifactsDB.CraftableArtifact.deserializeBinaryFromReader);
+      msg.addCraftingCountsDeprecated(value);
       break;
     default:
       reader.skipField();
@@ -319,26 +326,10 @@ proto.ei.ArtifactsDB.serializeBinaryToWriter = function(message, writer) {
       proto.ei.ArtifactsDB.ActiveArtifactSet.serializeBinaryToWriter
     );
   }
-  f = message.getDiscoveredArtifactsList();
+  f = message.getArtifactStatusList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      8,
-      f,
-      proto.ei.ArtifactSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getCraftableArtifactsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      9,
-      f,
-      proto.ei.ArtifactsDB.CraftableArtifact.serializeBinaryToWriter
-    );
-  }
-  f = message.getCraftingCountsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      10,
+      12,
       f,
       proto.ei.ArtifactsDB.CraftableArtifact.serializeBinaryToWriter
     );
@@ -357,6 +348,30 @@ proto.ei.ArtifactsDB.serializeBinaryToWriter = function(message, writer) {
       5,
       f,
       proto.ei.MissionInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getDiscoveredArtifactsDeprecatedList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.ei.ArtifactSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCraftableArtifactsDeprecatedList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.ei.ArtifactsDB.CraftableArtifact.serializeBinaryToWriter
+    );
+  }
+  f = message.getCraftingCountsDeprecatedList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      10,
+      f,
+      proto.ei.ArtifactsDB.CraftableArtifact.serializeBinaryToWriter
     );
   }
 };
@@ -751,6 +766,9 @@ proto.ei.ArtifactsDB.CraftableArtifact.prototype.toObject = function(opt_include
 proto.ei.ArtifactsDB.CraftableArtifact.toObject = function(includeInstance, msg) {
   var f, obj = {
     spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+    discovered: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    craftable: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    recipeDiscovered: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
     seen: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
     count: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
@@ -793,6 +811,18 @@ proto.ei.ArtifactsDB.CraftableArtifact.deserializeBinaryFromReader = function(ms
       var value = new proto.ei.ArtifactSpec;
       reader.readMessage(value,proto.ei.ArtifactSpec.deserializeBinaryFromReader);
       msg.setSpec(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setDiscovered(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCraftable(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setRecipeDiscovered(value);
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -837,6 +867,27 @@ proto.ei.ArtifactsDB.CraftableArtifact.serializeBinaryToWriter = function(messag
       1,
       f,
       proto.ei.ArtifactSpec.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeBool(
+      5,
+      f
     );
   }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 2));
@@ -890,6 +941,114 @@ proto.ei.ArtifactsDB.CraftableArtifact.prototype.clearSpec = function() {
  */
 proto.ei.ArtifactsDB.CraftableArtifact.prototype.hasSpec = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bool discovered = 6;
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.getDiscovered = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact} returns this
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.setDiscovered = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact} returns this
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.clearDiscovered = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.hasDiscovered = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool craftable = 4;
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.getCraftable = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact} returns this
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.setCraftable = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact} returns this
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.clearCraftable = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.hasCraftable = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool recipe_discovered = 5;
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.getRecipeDiscovered = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact} returns this
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.setRecipeDiscovered = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact} returns this
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.clearRecipeDiscovered = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.CraftableArtifact.prototype.hasRecipeDiscovered = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
@@ -1154,50 +1313,12 @@ proto.ei.ArtifactsDB.prototype.clearActiveArtifactSetsList = function() {
 
 
 /**
- * repeated ArtifactSpec discovered_artifacts = 8;
- * @return {!Array<!proto.ei.ArtifactSpec>}
- */
-proto.ei.ArtifactsDB.prototype.getDiscoveredArtifactsList = function() {
-  return /** @type{!Array<!proto.ei.ArtifactSpec>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactSpec, 8));
-};
-
-
-/**
- * @param {!Array<!proto.ei.ArtifactSpec>} value
- * @return {!proto.ei.ArtifactsDB} returns this
-*/
-proto.ei.ArtifactsDB.prototype.setDiscoveredArtifactsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 8, value);
-};
-
-
-/**
- * @param {!proto.ei.ArtifactSpec=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ei.ArtifactSpec}
- */
-proto.ei.ArtifactsDB.prototype.addDiscoveredArtifacts = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.ei.ArtifactSpec, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ei.ArtifactsDB} returns this
- */
-proto.ei.ArtifactsDB.prototype.clearDiscoveredArtifactsList = function() {
-  return this.setDiscoveredArtifactsList([]);
-};
-
-
-/**
- * repeated CraftableArtifact craftable_artifacts = 9;
+ * repeated CraftableArtifact artifact_status = 12;
  * @return {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>}
  */
-proto.ei.ArtifactsDB.prototype.getCraftableArtifactsList = function() {
+proto.ei.ArtifactsDB.prototype.getArtifactStatusList = function() {
   return /** @type{!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.CraftableArtifact, 9));
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.CraftableArtifact, 12));
 };
 
 
@@ -1205,8 +1326,8 @@ proto.ei.ArtifactsDB.prototype.getCraftableArtifactsList = function() {
  * @param {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} value
  * @return {!proto.ei.ArtifactsDB} returns this
 */
-proto.ei.ArtifactsDB.prototype.setCraftableArtifactsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+proto.ei.ArtifactsDB.prototype.setArtifactStatusList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 12, value);
 };
 
 
@@ -1215,8 +1336,8 @@ proto.ei.ArtifactsDB.prototype.setCraftableArtifactsList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ei.ArtifactsDB.CraftableArtifact}
  */
-proto.ei.ArtifactsDB.prototype.addCraftableArtifacts = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.ei.ArtifactsDB.CraftableArtifact, opt_index);
+proto.ei.ArtifactsDB.prototype.addArtifactStatus = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.ei.ArtifactsDB.CraftableArtifact, opt_index);
 };
 
 
@@ -1224,46 +1345,8 @@ proto.ei.ArtifactsDB.prototype.addCraftableArtifacts = function(opt_value, opt_i
  * Clears the list making it empty but non-null.
  * @return {!proto.ei.ArtifactsDB} returns this
  */
-proto.ei.ArtifactsDB.prototype.clearCraftableArtifactsList = function() {
-  return this.setCraftableArtifactsList([]);
-};
-
-
-/**
- * repeated CraftableArtifact crafting_counts = 10;
- * @return {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>}
- */
-proto.ei.ArtifactsDB.prototype.getCraftingCountsList = function() {
-  return /** @type{!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.CraftableArtifact, 10));
-};
-
-
-/**
- * @param {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} value
- * @return {!proto.ei.ArtifactsDB} returns this
-*/
-proto.ei.ArtifactsDB.prototype.setCraftingCountsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 10, value);
-};
-
-
-/**
- * @param {!proto.ei.ArtifactsDB.CraftableArtifact=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ei.ArtifactsDB.CraftableArtifact}
- */
-proto.ei.ArtifactsDB.prototype.addCraftingCounts = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.ei.ArtifactsDB.CraftableArtifact, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ei.ArtifactsDB} returns this
- */
-proto.ei.ArtifactsDB.prototype.clearCraftingCountsList = function() {
-  return this.setCraftingCountsList([]);
+proto.ei.ArtifactsDB.prototype.clearArtifactStatusList = function() {
+  return this.setArtifactStatusList([]);
 };
 
 
@@ -1340,6 +1423,120 @@ proto.ei.ArtifactsDB.prototype.addMissionArchive = function(opt_value, opt_index
  */
 proto.ei.ArtifactsDB.prototype.clearMissionArchiveList = function() {
   return this.setMissionArchiveList([]);
+};
+
+
+/**
+ * repeated ArtifactSpec discovered_artifacts_DEPRECATED = 8;
+ * @return {!Array<!proto.ei.ArtifactSpec>}
+ */
+proto.ei.ArtifactsDB.prototype.getDiscoveredArtifactsDeprecatedList = function() {
+  return /** @type{!Array<!proto.ei.ArtifactSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactSpec, 8));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ArtifactSpec>} value
+ * @return {!proto.ei.ArtifactsDB} returns this
+*/
+proto.ei.ArtifactsDB.prototype.setDiscoveredArtifactsDeprecatedList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.ei.ArtifactSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ArtifactSpec}
+ */
+proto.ei.ArtifactsDB.prototype.addDiscoveredArtifactsDeprecated = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.ei.ArtifactSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ArtifactsDB} returns this
+ */
+proto.ei.ArtifactsDB.prototype.clearDiscoveredArtifactsDeprecatedList = function() {
+  return this.setDiscoveredArtifactsDeprecatedList([]);
+};
+
+
+/**
+ * repeated CraftableArtifact craftable_artifacts_DEPRECATED = 9;
+ * @return {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>}
+ */
+proto.ei.ArtifactsDB.prototype.getCraftableArtifactsDeprecatedList = function() {
+  return /** @type{!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.CraftableArtifact, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} value
+ * @return {!proto.ei.ArtifactsDB} returns this
+*/
+proto.ei.ArtifactsDB.prototype.setCraftableArtifactsDeprecatedList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.ei.ArtifactsDB.CraftableArtifact=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact}
+ */
+proto.ei.ArtifactsDB.prototype.addCraftableArtifactsDeprecated = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.ei.ArtifactsDB.CraftableArtifact, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ArtifactsDB} returns this
+ */
+proto.ei.ArtifactsDB.prototype.clearCraftableArtifactsDeprecatedList = function() {
+  return this.setCraftableArtifactsDeprecatedList([]);
+};
+
+
+/**
+ * repeated CraftableArtifact crafting_counts_DEPRECATED = 10;
+ * @return {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>}
+ */
+proto.ei.ArtifactsDB.prototype.getCraftingCountsDeprecatedList = function() {
+  return /** @type{!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.CraftableArtifact, 10));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ArtifactsDB.CraftableArtifact>} value
+ * @return {!proto.ei.ArtifactsDB} returns this
+*/
+proto.ei.ArtifactsDB.prototype.setCraftingCountsDeprecatedList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.ei.ArtifactsDB.CraftableArtifact=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ArtifactsDB.CraftableArtifact}
+ */
+proto.ei.ArtifactsDB.prototype.addCraftingCountsDeprecated = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.ei.ArtifactsDB.CraftableArtifact, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ArtifactsDB} returns this
+ */
+proto.ei.ArtifactsDB.prototype.clearCraftingCountsDeprecatedList = function() {
+  return this.setCraftingCountsDeprecatedList([]);
 };
 
 

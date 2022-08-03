@@ -189,6 +189,78 @@ public object CurrencyFlowLogKt {
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
     }
+
+    /**
+     * <code>optional double soul_eggs = 8;</code>
+     */
+    public var soulEggs: kotlin.Double
+      @JvmName("getSoulEggs")
+      get() = _builder.getSoulEggs()
+      @JvmName("setSoulEggs")
+      set(value) {
+        _builder.setSoulEggs(value)
+      }
+    /**
+     * <code>optional double soul_eggs = 8;</code>
+     */
+    public fun clearSoulEggs() {
+      _builder.clearSoulEggs()
+    }
+    /**
+     * <code>optional double soul_eggs = 8;</code>
+     * @return Whether the soulEggs field is set.
+     */
+    public fun hasSoulEggs(): kotlin.Boolean {
+      return _builder.hasSoulEggs()
+    }
+
+    /**
+     * <code>optional uint64 tickets_spent = 9;</code>
+     */
+    public var ticketsSpent: kotlin.Long
+      @JvmName("getTicketsSpent")
+      get() = _builder.getTicketsSpent()
+      @JvmName("setTicketsSpent")
+      set(value) {
+        _builder.setTicketsSpent(value)
+      }
+    /**
+     * <code>optional uint64 tickets_spent = 9;</code>
+     */
+    public fun clearTicketsSpent() {
+      _builder.clearTicketsSpent()
+    }
+    /**
+     * <code>optional uint64 tickets_spent = 9;</code>
+     * @return Whether the ticketsSpent field is set.
+     */
+    public fun hasTicketsSpent(): kotlin.Boolean {
+      return _builder.hasTicketsSpent()
+    }
+
+    /**
+     * <code>optional uint64 gold_spent = 10;</code>
+     */
+    public var goldSpent: kotlin.Long
+      @JvmName("getGoldSpent")
+      get() = _builder.getGoldSpent()
+      @JvmName("setGoldSpent")
+      set(value) {
+        _builder.setGoldSpent(value)
+      }
+    /**
+     * <code>optional uint64 gold_spent = 10;</code>
+     */
+    public fun clearGoldSpent() {
+      _builder.clearGoldSpent()
+    }
+    /**
+     * <code>optional uint64 gold_spent = 10;</code>
+     * @return Whether the goldSpent field is set.
+     */
+    public fun hasGoldSpent(): kotlin.Boolean {
+      return _builder.hasGoldSpent()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

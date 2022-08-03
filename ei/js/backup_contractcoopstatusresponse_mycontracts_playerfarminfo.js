@@ -5920,6 +5920,7 @@ proto.ei.Backup.Artifacts.toObject = function(includeInstance, msg) {
     tankFuelsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 16)) == null ? undefined : f,
     lastFueledShip: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     inventoryScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
     enabled: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     introShown: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
     infusingEnabledDeprecated: jspb.Message.getBooleanFieldWithDefault(msg, 8, true)
@@ -6014,6 +6015,10 @@ proto.ei.Backup.Artifacts.deserializeBinaryFromReader = function(msg, reader) {
     case 10:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setInventoryScore(value);
+      break;
+    case 17:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setCraftingXp(value);
       break;
     case 11:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -6146,6 +6151,13 @@ proto.ei.Backup.Artifacts.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       10,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
+    writer.writeDouble(
+      17,
       f
     );
   }
@@ -6641,6 +6653,42 @@ proto.ei.Backup.Artifacts.prototype.clearInventoryScore = function() {
  */
 proto.ei.Backup.Artifacts.prototype.hasInventoryScore = function() {
   return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional double crafting_xp = 17;
+ * @return {number}
+ */
+proto.ei.Backup.Artifacts.prototype.getCraftingXp = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 17, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Artifacts} returns this
+ */
+proto.ei.Backup.Artifacts.prototype.setCraftingXp = function(value) {
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Artifacts} returns this
+ */
+proto.ei.Backup.Artifacts.prototype.clearCraftingXp = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Artifacts.prototype.hasCraftingXp = function() {
+  return jspb.Message.getField(this, 17) != null;
 };
 
 
@@ -14882,7 +14930,8 @@ proto.ei.PlayerFarmInfo.toObject = function(includeInstance, msg) {
     equippedArtifactsList: jspb.Message.toObjectList(msg.getEquippedArtifactsList(),
     proto.ei.CompleteArtifact.toObject, includeInstance),
     artifactInventoryScore: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
-    farmAppearance: (f = msg.getFarmAppearance()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f)
+    farmAppearance: (f = msg.getFarmAppearance()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
+    timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 22)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -15019,6 +15068,10 @@ proto.ei.PlayerFarmInfo.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.ShellDB.FarmConfiguration;
       reader.readMessage(value,proto.ei.ShellDB.FarmConfiguration.deserializeBinaryFromReader);
       msg.setFarmAppearance(value);
+      break;
+    case 22:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setTimestamp(value);
       break;
     default:
       reader.skipField();
@@ -15199,6 +15252,13 @@ proto.ei.PlayerFarmInfo.serializeBinaryToWriter = function(message, writer) {
       19,
       f,
       proto.ei.ShellDB.FarmConfiguration.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 22));
+  if (f != null) {
+    writer.writeDouble(
+      22,
+      f
     );
   }
 };
@@ -15972,6 +16032,42 @@ proto.ei.PlayerFarmInfo.prototype.clearFarmAppearance = function() {
  */
 proto.ei.PlayerFarmInfo.prototype.hasFarmAppearance = function() {
   return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * optional double timestamp = 22;
+ * @return {number}
+ */
+proto.ei.PlayerFarmInfo.prototype.getTimestamp = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 22, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.PlayerFarmInfo} returns this
+ */
+proto.ei.PlayerFarmInfo.prototype.setTimestamp = function(value) {
+  return jspb.Message.setField(this, 22, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.PlayerFarmInfo} returns this
+ */
+proto.ei.PlayerFarmInfo.prototype.clearTimestamp = function() {
+  return jspb.Message.setField(this, 22, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.PlayerFarmInfo.prototype.hasTimestamp = function() {
+  return jspb.Message.getField(this, 22) != null;
 };
 
 

@@ -80,7 +80,10 @@ proto.ei.ShellsActionLog.toObject = function(includeInstance, msg) {
     cost: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
     version: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    farmIndex: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    farmIndex: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    ticketsSpent: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+    goldSpent: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -153,6 +156,18 @@ proto.ei.ShellsActionLog.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setFarmIndex(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setSoulEggs(value);
+      break;
+    case 11:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTicketsSpent(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setGoldSpent(value);
       break;
     default:
       reader.skipField();
@@ -244,6 +259,27 @@ proto.ei.ShellsActionLog.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeInt32(
       7,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
+    writer.writeDouble(
+      10,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 11));
+  if (f != null) {
+    writer.writeUint64(
+      11,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 12));
+  if (f != null) {
+    writer.writeUint64(
+      12,
       f
     );
   }
@@ -572,6 +608,114 @@ proto.ei.ShellsActionLog.prototype.clearFarmIndex = function() {
  */
 proto.ei.ShellsActionLog.prototype.hasFarmIndex = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional double soul_eggs = 10;
+ * @return {number}
+ */
+proto.ei.ShellsActionLog.prototype.getSoulEggs = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellsActionLog} returns this
+ */
+proto.ei.ShellsActionLog.prototype.setSoulEggs = function(value) {
+  return jspb.Message.setField(this, 10, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellsActionLog} returns this
+ */
+proto.ei.ShellsActionLog.prototype.clearSoulEggs = function() {
+  return jspb.Message.setField(this, 10, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellsActionLog.prototype.hasSoulEggs = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional uint64 tickets_spent = 11;
+ * @return {number}
+ */
+proto.ei.ShellsActionLog.prototype.getTicketsSpent = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellsActionLog} returns this
+ */
+proto.ei.ShellsActionLog.prototype.setTicketsSpent = function(value) {
+  return jspb.Message.setField(this, 11, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellsActionLog} returns this
+ */
+proto.ei.ShellsActionLog.prototype.clearTicketsSpent = function() {
+  return jspb.Message.setField(this, 11, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellsActionLog.prototype.hasTicketsSpent = function() {
+  return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional uint64 gold_spent = 12;
+ * @return {number}
+ */
+proto.ei.ShellsActionLog.prototype.getGoldSpent = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellsActionLog} returns this
+ */
+proto.ei.ShellsActionLog.prototype.setGoldSpent = function(value) {
+  return jspb.Message.setField(this, 12, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellsActionLog} returns this
+ */
+proto.ei.ShellsActionLog.prototype.clearGoldSpent = function() {
+  return jspb.Message.setField(this, 12, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellsActionLog.prototype.hasGoldSpent = function() {
+  return jspb.Message.getField(this, 12) != null;
 };
 
 

@@ -935,6 +935,30 @@ public object PlayerFarmInfoKt {
     public fun hasFarmAppearance(): kotlin.Boolean {
       return _builder.hasFarmAppearance()
     }
+
+    /**
+     * <code>optional double timestamp = 22;</code>
+     */
+    public var timestamp: kotlin.Double
+      @JvmName("getTimestamp")
+      get() = _builder.getTimestamp()
+      @JvmName("setTimestamp")
+      set(value) {
+        _builder.setTimestamp(value)
+      }
+    /**
+     * <code>optional double timestamp = 22;</code>
+     */
+    public fun clearTimestamp() {
+      _builder.clearTimestamp()
+    }
+    /**
+     * <code>optional double timestamp = 22;</code>
+     * @return Whether the timestamp field is set.
+     */
+    public fun hasTimestamp(): kotlin.Boolean {
+      return _builder.hasTimestamp()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

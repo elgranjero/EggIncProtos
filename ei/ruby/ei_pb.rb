@@ -147,6 +147,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :tank_fuels, :double, 16
       optional :last_fueled_ship, :enum, 9, "ei.MissionInfo.Spaceship"
       optional :inventory_score, :double, 10
+      optional :crafting_xp, :double, 17
       optional :enabled, :bool, 11
       optional :intro_shown, :bool, 12
       optional :infusing_enabled_DEPRECATED, :bool, 8, default: true
@@ -388,6 +389,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :location, :string, 5
       optional :version, :string, 6
       optional :platform, :string, 7
+      optional :soul_eggs, :double, 8
+      optional :tickets_spent, :uint64, 9
+      optional :gold_spent, :uint64, 10
     end
     add_message "ei.CurrencyFlowBatchRequest" do
       optional :rinfo, :message, 2, "ei.BasicRequestInfo"
@@ -415,6 +419,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :length_seconds, :double, 7
       optional :max_soul_eggs, :double, 13
       optional :min_client_version, :uint32, 14
+      optional :leggacy, :bool, 19
       optional :debug, :bool, 11
     end
     add_message "ei.Contract.Goal" do
@@ -485,6 +490,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :equipped_artifacts, :message, 17, "ei.CompleteArtifact"
       optional :artifact_inventory_score, :uint64, 18
       optional :farm_appearance, :message, 19, "ei.ShellDB.FarmConfiguration"
+      optional :timestamp, :double, 22
     end
     add_message "ei.ContractCoopStatusResponse" do
       optional :contract_identifier, :string, 1
@@ -1052,6 +1058,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ArtifactsConfigurationResponse" do
       repeated :mission_parameters, :message, 1, "ei.ArtifactsConfigurationResponse.MissionParameters"
       repeated :artifact_parameters, :message, 2, "ei.ArtifactsConfigurationResponse.ArtifactParameters"
+      repeated :crafting_level_infos, :message, 3, "ei.ArtifactsConfigurationResponse.CraftingLevelInfo"
     end
     add_message "ei.ArtifactsConfigurationResponse.MissionParameters" do
       optional :ship, :enum, 1, "ei.MissionInfo.Spaceship"
@@ -1078,6 +1085,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :crafting_price_low, :double, 6
       optional :crafting_price_domain, :uint32, 7
       optional :crafting_price_curve, :double, 8
+      optional :crafting_xp, :uint64, 9
+    end
+    add_message "ei.ArtifactsConfigurationResponse.CraftingLevelInfo" do
+      optional :xp_required, :double, 1
+      optional :rarity_mult, :float, 2
     end
     add_message "ei.MissionRequest" do
       optional :rinfo, :message, 4, "ei.BasicRequestInfo"
@@ -1115,6 +1127,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :item_id, :uint64, 3
       optional :gold_price_paid, :double, 6
       optional :crafting_count, :uint32, 7
+      optional :crafting_xp, :double, 8
       repeated :ingredients, :message, 4, "ei.ArtifactInventoryItem"
     end
     add_message "ei.CraftArtifactResponse" do
@@ -1129,11 +1142,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :spec, :message, 1, "ei.ArtifactSpec"
       optional :artifact_server_id, :string, 5
       optional :original_item_id, :uint64, 2
+      repeated :additional_server_ids, :string, 7
+      repeated :additional_item_ids, :uint64, 8
       optional :quantity, :uint32, 6
     end
     add_message "ei.ConsumeArtifactResponse" do
       optional :success, :bool, 1
       optional :original_item_id, :uint64, 2
+      repeated :additional_item_ids, :uint64, 6
       repeated :byproducts, :message, 3, "ei.ArtifactSpec"
       repeated :other_rewards, :message, 4, "ei.Reward"
       optional :ei_user_id, :string, 5
@@ -1162,11 +1178,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :inventory_slots, :message, 3, "ei.InventorySlot"
       repeated :active_artifacts, :message, 7, "ei.ArtifactsDB.ActiveArtifactSlot"
       repeated :active_artifact_sets, :message, 11, "ei.ArtifactsDB.ActiveArtifactSet"
-      repeated :discovered_artifacts, :message, 8, "ei.ArtifactSpec"
-      repeated :craftable_artifacts, :message, 9, "ei.ArtifactsDB.CraftableArtifact"
-      repeated :crafting_counts, :message, 10, "ei.ArtifactsDB.CraftableArtifact"
+      repeated :artifact_status, :message, 12, "ei.ArtifactsDB.CraftableArtifact"
       repeated :mission_infos, :message, 4, "ei.MissionInfo"
       repeated :mission_archive, :message, 5, "ei.MissionInfo"
+      repeated :discovered_artifacts_DEPRECATED, :message, 8, "ei.ArtifactSpec"
+      repeated :craftable_artifacts_DEPRECATED, :message, 9, "ei.ArtifactsDB.CraftableArtifact"
+      repeated :crafting_counts_DEPRECATED, :message, 10, "ei.ArtifactsDB.CraftableArtifact"
     end
     add_message "ei.ArtifactsDB.ActiveArtifactSlot" do
       optional :occupied, :bool, 1
@@ -1177,6 +1194,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.ArtifactsDB.CraftableArtifact" do
       optional :spec, :message, 1, "ei.ArtifactSpec"
+      optional :discovered, :bool, 6
+      optional :craftable, :bool, 4
+      optional :recipe_discovered, :bool, 5
       optional :seen, :bool, 2
       optional :count, :uint32, 3
     end
@@ -1365,20 +1385,24 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :modified_geometry, :bool, 13
       optional :element_set, :bool, 7
       optional :hex_base_color, :string, 16
-      repeated :variations, :message, 15, "ei.ShellSetSpec.VariationInfo"
+      repeated :variations, :message, 15, "ei.ShellSetSpec.VariationSpec"
       optional :default_appearance, :bool, 6
       optional :custom_appearance, :bool, 12
     end
-    add_message "ei.ShellSetSpec.VariationInfo" do
+    add_message "ei.ShellSetSpec.VariationSpec" do
       optional :identifier, :string, 1
       optional :hex_color, :string, 2
       optional :price, :uint32, 3
+      optional :sort_priority, :int32, 6
+      optional :default_appearance, :bool, 4
+      optional :custom_appearance, :bool, 5
     end
     add_message "ei.ShellObjectSpec" do
       optional :identifier, :string, 1
       optional :name, :string, 2
       optional :asset_type, :enum, 3, "ei.ShellSpec.AssetType"
       optional :object_class, :string, 14
+      repeated :icon_colors, :string, 15
       optional :price, :uint32, 4
       optional :required_eop, :uint32, 5
       optional :required_soul_eggs, :double, 6
@@ -1387,12 +1411,25 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :seconds_remaining, :double, 12
       repeated :metadata, :double, 7
       optional :no_hats, :bool, 13
+      optional :chicken_animation, :enum, 16, "ei.ShellObjectSpec.ChickenAnimation"
+      optional :sort_priority, :int32, 17
       repeated :pieces, :message, 8, "ei.ShellObjectSpec.LODPiece"
       optional :default_appearance, :bool, 9
     end
     add_message "ei.ShellObjectSpec.LODPiece" do
       optional :dlc, :message, 1, "ei.DLCItem"
       optional :lod, :uint32, 2
+    end
+    add_enum "ei.ShellObjectSpec.ChickenAnimation" do
+      value :STANDARD_RUN, 0
+      value :SLOWMO, 7
+      value :WOBBLE, 1
+      value :WOBBLE_LEAN, 5
+      value :SMOOTH, 2
+      value :SMOOTH_LEAN, 6
+      value :HOVER, 3
+      value :SIDEWAYS_SMOOTH, 4
+      value :SIDEWAYS_LEAN, 8
     end
     add_message "ei.ShellGroupSpec" do
       optional :identifier, :string, 1
@@ -1485,6 +1522,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :approx_time, :double, 5
       optional :version, :string, 6
       optional :farm_index, :int32, 7
+      optional :soul_eggs, :double, 10
+      optional :tickets_spent, :uint64, 11
+      optional :gold_spent, :uint64, 12
     end
     add_enum "ei.Platform" do
       value :IOS, 1
@@ -1672,6 +1712,7 @@ module Ei
   ArtifactsConfigurationResponse::MissionParameters = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ArtifactsConfigurationResponse.MissionParameters").msgclass
   ArtifactsConfigurationResponse::MissionParameters::Duration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ArtifactsConfigurationResponse.MissionParameters.Duration").msgclass
   ArtifactsConfigurationResponse::ArtifactParameters = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ArtifactsConfigurationResponse.ArtifactParameters").msgclass
+  ArtifactsConfigurationResponse::CraftingLevelInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ArtifactsConfigurationResponse.CraftingLevelInfo").msgclass
   MissionRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MissionRequest").msgclass
   MissionResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MissionResponse").msgclass
   CompleteMissionResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CompleteMissionResponse").msgclass
@@ -1703,9 +1744,10 @@ module Ei
   ShellSpec::ShellPiece = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSpec.ShellPiece").msgclass
   ShellSpec::AssetType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSpec.AssetType").enummodule
   ShellSetSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSetSpec").msgclass
-  ShellSetSpec::VariationInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSetSpec.VariationInfo").msgclass
+  ShellSetSpec::VariationSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellSetSpec.VariationSpec").msgclass
   ShellObjectSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellObjectSpec").msgclass
   ShellObjectSpec::LODPiece = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellObjectSpec.LODPiece").msgclass
+  ShellObjectSpec::ChickenAnimation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellObjectSpec.ChickenAnimation").enummodule
   ShellGroupSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellGroupSpec").msgclass
   DLCCatalog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.DLCCatalog").msgclass
   ShellDB = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB").msgclass

@@ -365,62 +365,62 @@ public object ShellSetSpecKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class VariationsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      */
-     public val variations: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>
+     public val variations: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getVariationsList()
       )
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param value The variations to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addVariations")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.add(value: ei.Ei.ShellSetSpec.VariationInfo) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.add(value: ei.Ei.ShellSetSpec.VariationSpec) {
       _builder.addVariations(value)
     }/**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param value The variations to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignVariations")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.plusAssign(value: ei.Ei.ShellSetSpec.VariationInfo) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.plusAssign(value: ei.Ei.ShellSetSpec.VariationSpec) {
       add(value)
     }/**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param values The variations to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllVariations")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationInfo>) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationSpec>) {
       _builder.addAllVariations(values)
     }/**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param values The variations to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllVariations")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationInfo>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationSpec>) {
       addAll(values)
     }/**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param index The index to set the value at.
      * @param value The variations to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setVariations")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec.VariationInfo) {
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec.VariationSpec) {
       _builder.setVariations(index, value)
     }/**
-     * <code>repeated .ei.ShellSetSpec.VariationInfo variations = 15;</code>
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearVariations")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationInfo, VariationsProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.clear() {
       _builder.clearVariations()
     }
     /**
@@ -472,23 +472,23 @@ public object ShellSetSpecKt {
     }
   }
   @kotlin.jvm.JvmSynthetic
-  public inline fun variationInfo(block: ei.ShellSetSpecKt.VariationInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationInfo =
-    ei.ShellSetSpecKt.VariationInfoKt.Dsl._create(ei.Ei.ShellSetSpec.VariationInfo.newBuilder()).apply { block() }._build()
-  public object VariationInfoKt {
+  public inline fun variationSpec(block: ei.ShellSetSpecKt.VariationSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationSpec =
+    ei.ShellSetSpecKt.VariationSpecKt.Dsl._create(ei.Ei.ShellSetSpec.VariationSpec.newBuilder()).apply { block() }._build()
+  public object VariationSpecKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     @com.google.protobuf.kotlin.ProtoDslMarker
     public class Dsl private constructor(
-      private val _builder: ei.Ei.ShellSetSpec.VariationInfo.Builder
+      private val _builder: ei.Ei.ShellSetSpec.VariationSpec.Builder
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
         @kotlin.PublishedApi
-        internal fun _create(builder: ei.Ei.ShellSetSpec.VariationInfo.Builder): Dsl = Dsl(builder)
+        internal fun _create(builder: ei.Ei.ShellSetSpec.VariationSpec.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
-      internal fun _build(): ei.Ei.ShellSetSpec.VariationInfo = _builder.build()
+      internal fun _build(): ei.Ei.ShellSetSpec.VariationSpec = _builder.build()
 
       /**
        * <code>optional string identifier = 1;</code>
@@ -561,6 +561,78 @@ public object ShellSetSpecKt {
       public fun hasPrice(): kotlin.Boolean {
         return _builder.hasPrice()
       }
+
+      /**
+       * <code>optional int32 sort_priority = 6;</code>
+       */
+      public var sortPriority: kotlin.Int
+        @JvmName("getSortPriority")
+        get() = _builder.getSortPriority()
+        @JvmName("setSortPriority")
+        set(value) {
+          _builder.setSortPriority(value)
+        }
+      /**
+       * <code>optional int32 sort_priority = 6;</code>
+       */
+      public fun clearSortPriority() {
+        _builder.clearSortPriority()
+      }
+      /**
+       * <code>optional int32 sort_priority = 6;</code>
+       * @return Whether the sortPriority field is set.
+       */
+      public fun hasSortPriority(): kotlin.Boolean {
+        return _builder.hasSortPriority()
+      }
+
+      /**
+       * <code>optional bool default_appearance = 4;</code>
+       */
+      public var defaultAppearance: kotlin.Boolean
+        @JvmName("getDefaultAppearance")
+        get() = _builder.getDefaultAppearance()
+        @JvmName("setDefaultAppearance")
+        set(value) {
+          _builder.setDefaultAppearance(value)
+        }
+      /**
+       * <code>optional bool default_appearance = 4;</code>
+       */
+      public fun clearDefaultAppearance() {
+        _builder.clearDefaultAppearance()
+      }
+      /**
+       * <code>optional bool default_appearance = 4;</code>
+       * @return Whether the defaultAppearance field is set.
+       */
+      public fun hasDefaultAppearance(): kotlin.Boolean {
+        return _builder.hasDefaultAppearance()
+      }
+
+      /**
+       * <code>optional bool custom_appearance = 5;</code>
+       */
+      public var customAppearance: kotlin.Boolean
+        @JvmName("getCustomAppearance")
+        get() = _builder.getCustomAppearance()
+        @JvmName("setCustomAppearance")
+        set(value) {
+          _builder.setCustomAppearance(value)
+        }
+      /**
+       * <code>optional bool custom_appearance = 5;</code>
+       */
+      public fun clearCustomAppearance() {
+        _builder.clearCustomAppearance()
+      }
+      /**
+       * <code>optional bool custom_appearance = 5;</code>
+       * @return Whether the customAppearance field is set.
+       */
+      public fun hasCustomAppearance(): kotlin.Boolean {
+        return _builder.hasCustomAppearance()
+      }
     }
   }
 }
@@ -568,5 +640,5 @@ public object ShellSetSpecKt {
 public inline fun ei.Ei.ShellSetSpec.copy(block: ei.ShellSetSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec =
   ei.ShellSetSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
-public inline fun ei.Ei.ShellSetSpec.VariationInfo.copy(block: ei.ShellSetSpecKt.VariationInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationInfo =
-  ei.ShellSetSpecKt.VariationInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+public inline fun ei.Ei.ShellSetSpec.VariationSpec.copy(block: ei.ShellSetSpecKt.VariationSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationSpec =
+  ei.ShellSetSpecKt.VariationSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()

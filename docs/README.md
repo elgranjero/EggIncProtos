@@ -17,6 +17,7 @@
     - [ArtifactsConfigurationRequest](#ei-ArtifactsConfigurationRequest)
     - [ArtifactsConfigurationResponse](#ei-ArtifactsConfigurationResponse)
     - [ArtifactsConfigurationResponse.ArtifactParameters](#ei-ArtifactsConfigurationResponse-ArtifactParameters)
+    - [ArtifactsConfigurationResponse.CraftingLevelInfo](#ei-ArtifactsConfigurationResponse-CraftingLevelInfo)
     - [ArtifactsConfigurationResponse.MissionParameters](#ei-ArtifactsConfigurationResponse-MissionParameters)
     - [ArtifactsConfigurationResponse.MissionParameters.Duration](#ei-ArtifactsConfigurationResponse-MissionParameters-Duration)
     - [ArtifactsDB](#ei-ArtifactsDB)
@@ -140,7 +141,7 @@
     - [ShellObjectSpec](#ei-ShellObjectSpec)
     - [ShellObjectSpec.LODPiece](#ei-ShellObjectSpec-LODPiece)
     - [ShellSetSpec](#ei-ShellSetSpec)
-    - [ShellSetSpec.VariationInfo](#ei-ShellSetSpec-VariationInfo)
+    - [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec)
     - [ShellSpec](#ei-ShellSpec)
     - [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece)
     - [ShellsActionLog](#ei-ShellsActionLog)
@@ -170,6 +171,7 @@
     - [RewardType](#ei-RewardType)
     - [SaveBackupResponse.ErrorCodes](#ei-SaveBackupResponse-ErrorCodes)
     - [ShellDB.FarmElement](#ei-ShellDB-FarmElement)
+    - [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
   
 - [Scalar Value Types](#scalar-value-types)
@@ -428,6 +430,7 @@
 | ----- | ---- | ----- | ----------- |
 | mission_parameters | [ArtifactsConfigurationResponse.MissionParameters](#ei-ArtifactsConfigurationResponse-MissionParameters) | repeated |  |
 | artifact_parameters | [ArtifactsConfigurationResponse.ArtifactParameters](#ei-ArtifactsConfigurationResponse-ArtifactParameters) | repeated |  |
+| crafting_level_infos | [ArtifactsConfigurationResponse.CraftingLevelInfo](#ei-ArtifactsConfigurationResponse-CraftingLevelInfo) | repeated |  |
 
 
 
@@ -450,6 +453,23 @@
 | crafting_price_low | [double](#double) | optional |  |
 | crafting_price_domain | [uint32](#uint32) | optional |  |
 | crafting_price_curve | [double](#double) | optional |  |
+| crafting_xp | [uint64](#uint64) | optional |  |
+
+
+
+
+
+
+<a name="ei-ArtifactsConfigurationResponse-CraftingLevelInfo"></a>
+
+### ArtifactsConfigurationResponse.CraftingLevelInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| xp_required | [double](#double) | optional |  |
+| rarity_mult | [float](#float) | optional |  |
 
 
 
@@ -509,11 +529,12 @@
 | inventory_slots | [InventorySlot](#ei-InventorySlot) | repeated |  |
 | active_artifacts | [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot) | repeated |  |
 | active_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
-| discovered_artifacts | [ArtifactSpec](#ei-ArtifactSpec) | repeated |  |
-| craftable_artifacts | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
-| crafting_counts | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
+| artifact_status | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
 | mission_infos | [MissionInfo](#ei-MissionInfo) | repeated |  |
 | mission_archive | [MissionInfo](#ei-MissionInfo) | repeated |  |
+| discovered_artifacts_DEPRECATED | [ArtifactSpec](#ei-ArtifactSpec) | repeated |  |
+| craftable_artifacts_DEPRECATED | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
+| crafting_counts_DEPRECATED | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
 
 
 
@@ -560,6 +581,9 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | spec | [ArtifactSpec](#ei-ArtifactSpec) | optional |  |
+| discovered | [bool](#bool) | optional |  |
+| craftable | [bool](#bool) | optional |  |
+| recipe_discovered | [bool](#bool) | optional |  |
 | seen | [bool](#bool) | optional |  |
 | count | [uint32](#uint32) | optional |  |
 
@@ -721,6 +745,7 @@
 | tank_fuels | [double](#double) | repeated |  |
 | last_fueled_ship | [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship) | optional |  |
 | inventory_score | [double](#double) | optional |  |
+| crafting_xp | [double](#double) | optional |  |
 | enabled | [bool](#bool) | optional |  |
 | intro_shown | [bool](#bool) | optional |  |
 | infusing_enabled_DEPRECATED | [bool](#bool) | optional |  Default: true |
@@ -1232,6 +1257,8 @@
 | spec | [ArtifactSpec](#ei-ArtifactSpec) | optional |  |
 | artifact_server_id | [string](#string) | optional |  |
 | original_item_id | [uint64](#uint64) | optional |  |
+| additional_server_ids | [string](#string) | repeated |  |
+| additional_item_ids | [uint64](#uint64) | repeated |  |
 | quantity | [uint32](#uint32) | optional |  |
 
 
@@ -1249,6 +1276,7 @@
 | ----- | ---- | ----- | ----------- |
 | success | [bool](#bool) | optional |  |
 | original_item_id | [uint64](#uint64) | optional |  |
+| additional_item_ids | [uint64](#uint64) | repeated |  |
 | byproducts | [ArtifactSpec](#ei-ArtifactSpec) | repeated |  |
 | other_rewards | [Reward](#ei-Reward) | repeated |  |
 | ei_user_id | [string](#string) | optional |  |
@@ -1282,6 +1310,7 @@
 | length_seconds | [double](#double) | optional |  |
 | max_soul_eggs | [double](#double) | optional |  |
 | min_client_version | [uint32](#uint32) | optional |  |
+| leggacy | [bool](#bool) | optional |  |
 | debug | [bool](#bool) | optional |  |
 
 
@@ -1596,6 +1625,7 @@
 | item_id | [uint64](#uint64) | optional |  |
 | gold_price_paid | [double](#double) | optional |  |
 | crafting_count | [uint32](#uint32) | optional |  |
+| crafting_xp | [double](#double) | optional |  |
 | ingredients | [ArtifactInventoryItem](#ei-ArtifactInventoryItem) | repeated |  |
 
 
@@ -1693,6 +1723,9 @@
 | location | [string](#string) | optional |  |
 | version | [string](#string) | optional |  |
 | platform | [string](#string) | optional |  |
+| soul_eggs | [double](#double) | optional |  |
+| tickets_spent | [uint64](#uint64) | optional |  |
+| gold_spent | [uint64](#uint64) | optional |  |
 
 
 
@@ -2525,6 +2558,7 @@
 | equipped_artifacts | [CompleteArtifact](#ei-CompleteArtifact) | repeated |  |
 | artifact_inventory_score | [uint64](#uint64) | optional |  |
 | farm_appearance | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
+| timestamp | [double](#double) | optional |  |
 
 
 
@@ -2918,6 +2952,7 @@
 | name | [string](#string) | optional |  |
 | asset_type | [ShellSpec.AssetType](#ei-ShellSpec-AssetType) | optional |  |
 | object_class | [string](#string) | optional |  |
+| icon_colors | [string](#string) | repeated |  |
 | price | [uint32](#uint32) | optional |  |
 | required_eop | [uint32](#uint32) | optional |  |
 | required_soul_eggs | [double](#double) | optional |  |
@@ -2926,6 +2961,8 @@
 | seconds_remaining | [double](#double) | optional |  |
 | metadata | [double](#double) | repeated |  |
 | no_hats | [bool](#bool) | optional |  |
+| chicken_animation | [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation) | optional |  |
+| sort_priority | [int32](#int32) | optional |  |
 | pieces | [ShellObjectSpec.LODPiece](#ei-ShellObjectSpec-LODPiece) | repeated |  |
 | default_appearance | [bool](#bool) | optional |  |
 
@@ -2972,7 +3009,7 @@
 | modified_geometry | [bool](#bool) | optional |  |
 | element_set | [bool](#bool) | optional |  |
 | hex_base_color | [string](#string) | optional |  |
-| variations | [ShellSetSpec.VariationInfo](#ei-ShellSetSpec-VariationInfo) | repeated |  |
+| variations | [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec) | repeated |  |
 | default_appearance | [bool](#bool) | optional |  |
 | custom_appearance | [bool](#bool) | optional |  |
 
@@ -2981,9 +3018,9 @@
 
 
 
-<a name="ei-ShellSetSpec-VariationInfo"></a>
+<a name="ei-ShellSetSpec-VariationSpec"></a>
 
-### ShellSetSpec.VariationInfo
+### ShellSetSpec.VariationSpec
 
 
 
@@ -2992,6 +3029,9 @@
 | identifier | [string](#string) | optional |  |
 | hex_color | [string](#string) | optional |  |
 | price | [uint32](#uint32) | optional |  |
+| sort_priority | [int32](#int32) | optional |  |
+| default_appearance | [bool](#bool) | optional |  |
+| custom_appearance | [bool](#bool) | optional |  |
 
 
 
@@ -3057,6 +3097,9 @@
 | approx_time | [double](#double) | optional |  |
 | version | [string](#string) | optional |  |
 | farm_index | [int32](#int32) | optional |  |
+| soul_eggs | [double](#double) | optional |  |
+| tickets_spent | [uint64](#uint64) | optional |  |
+| gold_spent | [uint64](#uint64) | optional |  |
 
 
 
@@ -3539,6 +3582,25 @@
 | CHICKEN | 14 |  |
 | HAT | 15 |  |
 | UNKNOWN | 99 |  |
+
+
+
+<a name="ei-ShellObjectSpec-ChickenAnimation"></a>
+
+### ShellObjectSpec.ChickenAnimation
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| STANDARD_RUN | 0 |  |
+| SLOWMO | 7 |  |
+| WOBBLE | 1 |  |
+| WOBBLE_LEAN | 5 |  |
+| SMOOTH | 2 |  |
+| SMOOTH_LEAN | 6 |  |
+| HOVER | 3 |  |
+| SIDEWAYS_SMOOTH | 4 |  |
+| SIDEWAYS_LEAN | 8 |  |
 
 
 

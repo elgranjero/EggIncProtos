@@ -231,6 +231,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ArtifactsConfigurationResponse.CraftingLevelInfo"><span class="badge">M</span>ArtifactsConfigurationResponse.CraftingLevelInfo</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ArtifactsConfigurationResponse.MissionParameters"><span class="badge">M</span>ArtifactsConfigurationResponse.MissionParameters</a>
                 </li>
               
@@ -723,7 +727,7 @@
                 </li>
               
                 <li>
-                  <a href="#ei.ShellSetSpec.VariationInfo"><span class="badge">M</span>ShellSetSpec.VariationInfo</a>
+                  <a href="#ei.ShellSetSpec.VariationSpec"><span class="badge">M</span>ShellSetSpec.VariationSpec</a>
                 </li>
               
                 <li>
@@ -837,6 +841,10 @@
               
                 <li>
                   <a href="#ei.ShellDB.FarmElement"><span class="badge">E</span>ShellDB.FarmElement</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShellObjectSpec.ChickenAnimation"><span class="badge">E</span>ShellObjectSpec.ChickenAnimation</a>
                 </li>
               
                 <li>
@@ -1638,6 +1646,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>crafting_level_infos</td>
+                  <td><a href="#ei.ArtifactsConfigurationResponse.CraftingLevelInfo">ArtifactsConfigurationResponse.CraftingLevelInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -1707,6 +1722,44 @@
                 <tr>
                   <td>crafting_price_curve</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>crafting_xp</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ArtifactsConfigurationResponse.CraftingLevelInfo">ArtifactsConfigurationResponse.CraftingLevelInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>xp_required</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rarity_mult</td>
+                  <td><a href="#float">float</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -1882,21 +1935,7 @@
                 </tr>
               
                 <tr>
-                  <td>discovered_artifacts</td>
-                  <td><a href="#ei.ArtifactSpec">ArtifactSpec</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>craftable_artifacts</td>
-                  <td><a href="#ei.ArtifactsDB.CraftableArtifact">ArtifactsDB.CraftableArtifact</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>crafting_counts</td>
+                  <td>artifact_status</td>
                   <td><a href="#ei.ArtifactsDB.CraftableArtifact">ArtifactsDB.CraftableArtifact</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
@@ -1912,6 +1951,27 @@
                 <tr>
                   <td>mission_archive</td>
                   <td><a href="#ei.MissionInfo">MissionInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>discovered_artifacts_DEPRECATED</td>
+                  <td><a href="#ei.ArtifactSpec">ArtifactSpec</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>craftable_artifacts_DEPRECATED</td>
+                  <td><a href="#ei.ArtifactsDB.CraftableArtifact">ArtifactsDB.CraftableArtifact</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>crafting_counts_DEPRECATED</td>
+                  <td><a href="#ei.ArtifactsDB.CraftableArtifact">ArtifactsDB.CraftableArtifact</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -1991,6 +2051,27 @@
                 <tr>
                   <td>spec</td>
                   <td><a href="#ei.ArtifactSpec">ArtifactSpec</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>discovered</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>craftable</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>recipe_discovered</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -2550,6 +2631,13 @@
               
                 <tr>
                   <td>inventory_score</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>crafting_xp</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -4351,6 +4439,20 @@
                 </tr>
               
                 <tr>
+                  <td>additional_server_ids</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>additional_item_ids</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>quantity</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -4385,6 +4487,13 @@
                   <td>original_item_id</td>
                   <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>additional_item_ids</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -4534,6 +4643,13 @@
                 <tr>
                   <td>min_client_version</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>leggacy</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -5441,6 +5557,13 @@
                 </tr>
               
                 <tr>
+                  <td>crafting_xp</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>ingredients</td>
                   <td><a href="#ei.ArtifactInventoryItem">ArtifactInventoryItem</a></td>
                   <td>repeated</td>
@@ -5710,6 +5833,27 @@
                 <tr>
                   <td>platform</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>soul_eggs</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tickets_spent</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gold_spent</td>
+                  <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -8217,6 +8361,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>timestamp</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -9187,6 +9338,13 @@
                 </tr>
               
                 <tr>
+                  <td>icon_colors</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>price</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -9238,6 +9396,20 @@
                 <tr>
                   <td>no_hats</td>
                   <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>chicken_animation</td>
+                  <td><a href="#ei.ShellObjectSpec.ChickenAnimation">ShellObjectSpec.ChickenAnimation</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sort_priority</td>
+                  <td><a href="#int32">int32</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -9404,7 +9576,7 @@
               
                 <tr>
                   <td>variations</td>
-                  <td><a href="#ei.ShellSetSpec.VariationInfo">ShellSetSpec.VariationInfo</a></td>
+                  <td><a href="#ei.ShellSetSpec.VariationSpec">ShellSetSpec.VariationSpec</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -9430,7 +9602,7 @@
 
         
       
-        <h3 id="ei.ShellSetSpec.VariationInfo">ShellSetSpec.VariationInfo</h3>
+        <h3 id="ei.ShellSetSpec.VariationSpec">ShellSetSpec.VariationSpec</h3>
         <p></p>
 
         
@@ -9457,6 +9629,27 @@
                 <tr>
                   <td>price</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sort_priority</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>default_appearance</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>custom_appearance</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -9669,6 +9862,27 @@
                 <tr>
                   <td>farm_index</td>
                   <td><a href="#int32">int32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>soul_eggs</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tickets_spent</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gold_spent</td>
+                  <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -11229,6 +11443,71 @@
               <tr>
                 <td>UNKNOWN</td>
                 <td>99</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.ShellObjectSpec.ChickenAnimation">ShellObjectSpec.ChickenAnimation</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>STANDARD_RUN</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SLOWMO</td>
+                <td>7</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>WOBBLE</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>WOBBLE_LEAN</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SMOOTH</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SMOOTH_LEAN</td>
+                <td>6</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HOVER</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SIDEWAYS_SMOOTH</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SIDEWAYS_LEAN</td>
+                <td>8</td>
                 <td><p></p></td>
               </tr>
             

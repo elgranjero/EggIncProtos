@@ -151,6 +151,71 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("clearArtifactParameters")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.clear() {
       _builder.clearArtifactParameters()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class CraftingLevelInfosProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     */
+     public val craftingLevelInfos: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getCraftingLevelInfosList()
+      )
+    /**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * @param value The craftingLevelInfos to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addCraftingLevelInfos")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.add(value: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo) {
+      _builder.addCraftingLevelInfos(value)
+    }/**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * @param value The craftingLevelInfos to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignCraftingLevelInfos")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.plusAssign(value: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * @param values The craftingLevelInfos to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllCraftingLevelInfos")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo>) {
+      _builder.addAllCraftingLevelInfos(values)
+    }/**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * @param values The craftingLevelInfos to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllCraftingLevelInfos")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The craftingLevelInfos to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setCraftingLevelInfos")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo) {
+      _builder.setCraftingLevelInfos(index, value)
+    }/**
+     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearCraftingLevelInfos")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.clear() {
+      _builder.clearCraftingLevelInfos()
     }}
   @kotlin.jvm.JvmSynthetic
   public inline fun missionParameters(block: ei.ArtifactsConfigurationResponseKt.MissionParametersKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.MissionParameters =
@@ -772,6 +837,98 @@ public object ArtifactsConfigurationResponseKt {
       public fun hasCraftingPriceCurve(): kotlin.Boolean {
         return _builder.hasCraftingPriceCurve()
       }
+
+      /**
+       * <code>optional uint64 crafting_xp = 9;</code>
+       */
+      public var craftingXp: kotlin.Long
+        @JvmName("getCraftingXp")
+        get() = _builder.getCraftingXp()
+        @JvmName("setCraftingXp")
+        set(value) {
+          _builder.setCraftingXp(value)
+        }
+      /**
+       * <code>optional uint64 crafting_xp = 9;</code>
+       */
+      public fun clearCraftingXp() {
+        _builder.clearCraftingXp()
+      }
+      /**
+       * <code>optional uint64 crafting_xp = 9;</code>
+       * @return Whether the craftingXp field is set.
+       */
+      public fun hasCraftingXp(): kotlin.Boolean {
+        return _builder.hasCraftingXp()
+      }
+    }
+  }
+  @kotlin.jvm.JvmSynthetic
+  public inline fun craftingLevelInfo(block: ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo =
+    ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl._create(ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.newBuilder()).apply { block() }._build()
+  public object CraftingLevelInfoKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo = _builder.build()
+
+      /**
+       * <code>optional double xp_required = 1;</code>
+       */
+      public var xpRequired: kotlin.Double
+        @JvmName("getXpRequired")
+        get() = _builder.getXpRequired()
+        @JvmName("setXpRequired")
+        set(value) {
+          _builder.setXpRequired(value)
+        }
+      /**
+       * <code>optional double xp_required = 1;</code>
+       */
+      public fun clearXpRequired() {
+        _builder.clearXpRequired()
+      }
+      /**
+       * <code>optional double xp_required = 1;</code>
+       * @return Whether the xpRequired field is set.
+       */
+      public fun hasXpRequired(): kotlin.Boolean {
+        return _builder.hasXpRequired()
+      }
+
+      /**
+       * <code>optional float rarity_mult = 2;</code>
+       */
+      public var rarityMult: kotlin.Float
+        @JvmName("getRarityMult")
+        get() = _builder.getRarityMult()
+        @JvmName("setRarityMult")
+        set(value) {
+          _builder.setRarityMult(value)
+        }
+      /**
+       * <code>optional float rarity_mult = 2;</code>
+       */
+      public fun clearRarityMult() {
+        _builder.clearRarityMult()
+      }
+      /**
+       * <code>optional float rarity_mult = 2;</code>
+       * @return Whether the rarityMult field is set.
+       */
+      public fun hasRarityMult(): kotlin.Boolean {
+        return _builder.hasRarityMult()
+      }
     }
   }
 }
@@ -787,3 +944,6 @@ public inline fun ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duratio
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters.copy(block: ei.ArtifactsConfigurationResponseKt.ArtifactParametersKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters =
   ei.ArtifactsConfigurationResponseKt.ArtifactParametersKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.copy(block: ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo =
+  ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()

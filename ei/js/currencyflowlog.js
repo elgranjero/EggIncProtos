@@ -77,7 +77,10 @@ proto.ei.CurrencyFlowLog.toObject = function(includeInstance, msg) {
     amount: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     location: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     version: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    platform: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    platform: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    ticketsSpent: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    goldSpent: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -141,6 +144,18 @@ proto.ei.CurrencyFlowLog.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setPlatform(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setSoulEggs(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTicketsSpent(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setGoldSpent(value);
       break;
     default:
       reader.skipField();
@@ -217,6 +232,27 @@ proto.ei.CurrencyFlowLog.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       7,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeDouble(
+      8,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
+    writer.writeUint64(
+      9,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
+    writer.writeUint64(
+      10,
       f
     );
   }
@@ -472,6 +508,114 @@ proto.ei.CurrencyFlowLog.prototype.clearPlatform = function() {
  */
 proto.ei.CurrencyFlowLog.prototype.hasPlatform = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional double soul_eggs = 8;
+ * @return {number}
+ */
+proto.ei.CurrencyFlowLog.prototype.getSoulEggs = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.CurrencyFlowLog} returns this
+ */
+proto.ei.CurrencyFlowLog.prototype.setSoulEggs = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CurrencyFlowLog} returns this
+ */
+proto.ei.CurrencyFlowLog.prototype.clearSoulEggs = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CurrencyFlowLog.prototype.hasSoulEggs = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional uint64 tickets_spent = 9;
+ * @return {number}
+ */
+proto.ei.CurrencyFlowLog.prototype.getTicketsSpent = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.CurrencyFlowLog} returns this
+ */
+proto.ei.CurrencyFlowLog.prototype.setTicketsSpent = function(value) {
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CurrencyFlowLog} returns this
+ */
+proto.ei.CurrencyFlowLog.prototype.clearTicketsSpent = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CurrencyFlowLog.prototype.hasTicketsSpent = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional uint64 gold_spent = 10;
+ * @return {number}
+ */
+proto.ei.CurrencyFlowLog.prototype.getGoldSpent = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.CurrencyFlowLog} returns this
+ */
+proto.ei.CurrencyFlowLog.prototype.setGoldSpent = function(value) {
+  return jspb.Message.setField(this, 10, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CurrencyFlowLog} returns this
+ */
+proto.ei.CurrencyFlowLog.prototype.clearGoldSpent = function() {
+  return jspb.Message.setField(this, 10, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CurrencyFlowLog.prototype.hasGoldSpent = function() {
+  return jspb.Message.getField(this, 10) != null;
 };
 
 

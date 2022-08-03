@@ -34,6 +34,7 @@ CF_EXTERN_C_BEGIN
 @class ArtifactsClientInfo;
 @class ArtifactsClientInfo_LaunchCount;
 @class ArtifactsConfigurationResponse_ArtifactParameters;
+@class ArtifactsConfigurationResponse_CraftingLevelInfo;
 @class ArtifactsConfigurationResponse_MissionParameters;
 @class ArtifactsConfigurationResponse_MissionParameters_Duration;
 @class ArtifactsDB;
@@ -117,7 +118,7 @@ CF_EXTERN_C_BEGIN
 @class ShellObjectSpec;
 @class ShellObjectSpec_LODPiece;
 @class ShellSetSpec;
-@class ShellSetSpec_VariationInfo;
+@class ShellSetSpec_VariationSpec;
 @class ShellSpec;
 @class ShellSpec_ShellPiece;
 
@@ -628,6 +629,28 @@ GPBEnumDescriptor *ShellSpec_AssetType_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL ShellSpec_AssetType_IsValidValue(int32_t value);
+
+#pragma mark - Enum ShellObjectSpec_ChickenAnimation
+
+typedef GPB_ENUM(ShellObjectSpec_ChickenAnimation) {
+  ShellObjectSpec_ChickenAnimation_StandardRun = 0,
+  ShellObjectSpec_ChickenAnimation_Slowmo = 7,
+  ShellObjectSpec_ChickenAnimation_Wobble = 1,
+  ShellObjectSpec_ChickenAnimation_WobbleLean = 5,
+  ShellObjectSpec_ChickenAnimation_Smooth = 2,
+  ShellObjectSpec_ChickenAnimation_SmoothLean = 6,
+  ShellObjectSpec_ChickenAnimation_Hover = 3,
+  ShellObjectSpec_ChickenAnimation_SidewaysSmooth = 4,
+  ShellObjectSpec_ChickenAnimation_SidewaysLean = 8,
+};
+
+GPBEnumDescriptor *ShellObjectSpec_ChickenAnimation_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL ShellObjectSpec_ChickenAnimation_IsValidValue(int32_t value);
 
 #pragma mark - Enum ShellDB_FarmElement
 
@@ -1238,6 +1261,7 @@ typedef GPB_ENUM(Backup_Artifacts_FieldNumber) {
   Backup_Artifacts_FieldNumber_TankFillingEnabled = 14,
   Backup_Artifacts_FieldNumber_TankLevel = 15,
   Backup_Artifacts_FieldNumber_TankFuelsArray = 16,
+  Backup_Artifacts_FieldNumber_CraftingXp = 17,
 };
 
 GPB_FINAL @interface Backup_Artifacts : GPBMessage
@@ -1284,6 +1308,9 @@ GPB_FINAL @interface Backup_Artifacts : GPBMessage
 @property(nonatomic, readwrite) double inventoryScore;
 
 @property(nonatomic, readwrite) BOOL hasInventoryScore;
+@property(nonatomic, readwrite) double craftingXp;
+
+@property(nonatomic, readwrite) BOOL hasCraftingXp;
 @property(nonatomic, readwrite) BOOL enabled;
 
 @property(nonatomic, readwrite) BOOL hasEnabled;
@@ -2293,6 +2320,9 @@ typedef GPB_ENUM(CurrencyFlowLog_FieldNumber) {
   CurrencyFlowLog_FieldNumber_Location = 5,
   CurrencyFlowLog_FieldNumber_Version = 6,
   CurrencyFlowLog_FieldNumber_Platform = 7,
+  CurrencyFlowLog_FieldNumber_SoulEggs = 8,
+  CurrencyFlowLog_FieldNumber_TicketsSpent = 9,
+  CurrencyFlowLog_FieldNumber_GoldSpent = 10,
 };
 
 GPB_FINAL @interface CurrencyFlowLog : GPBMessage
@@ -2322,6 +2352,15 @@ GPB_FINAL @interface CurrencyFlowLog : GPBMessage
 /** Test to see if @c platform has been set. */
 @property(nonatomic, readwrite) BOOL hasPlatform;
 
+@property(nonatomic, readwrite) double soulEggs;
+
+@property(nonatomic, readwrite) BOOL hasSoulEggs;
+@property(nonatomic, readwrite) uint64_t ticketsSpent;
+
+@property(nonatomic, readwrite) BOOL hasTicketsSpent;
+@property(nonatomic, readwrite) uint64_t goldSpent;
+
+@property(nonatomic, readwrite) BOOL hasGoldSpent;
 @end
 
 #pragma mark - CurrencyFlowBatchRequest
@@ -2385,6 +2424,7 @@ typedef GPB_ENUM(Contract_FieldNumber) {
   Contract_FieldNumber_GoalSetsArray = 16,
   Contract_FieldNumber_StartTime = 17,
   Contract_FieldNumber_ChickenRunCooldownMinutes = 18,
+  Contract_FieldNumber_Leggacy = 19,
 };
 
 GPB_FINAL @interface Contract : GPBMessage
@@ -2442,6 +2482,9 @@ GPB_FINAL @interface Contract : GPBMessage
 @property(nonatomic, readwrite) uint32_t minClientVersion;
 
 @property(nonatomic, readwrite) BOOL hasMinClientVersion;
+@property(nonatomic, readwrite) BOOL leggacy;
+
+@property(nonatomic, readwrite) BOOL hasLeggacy;
 @property(nonatomic, readwrite) BOOL debug;
 
 @property(nonatomic, readwrite) BOOL hasDebug;
@@ -2676,6 +2719,7 @@ typedef GPB_ENUM(PlayerFarmInfo_FieldNumber) {
   PlayerFarmInfo_FieldNumber_FarmAppearance = 19,
   PlayerFarmInfo_FieldNumber_ClientVersion = 20,
   PlayerFarmInfo_FieldNumber_HabCapacityArray = 21,
+  PlayerFarmInfo_FieldNumber_Timestamp = 22,
 };
 
 GPB_FINAL @interface PlayerFarmInfo : GPBMessage
@@ -2754,6 +2798,9 @@ GPB_FINAL @interface PlayerFarmInfo : GPBMessage
 /** Test to see if @c farmAppearance has been set. */
 @property(nonatomic, readwrite) BOOL hasFarmAppearance;
 
+@property(nonatomic, readwrite) double timestamp;
+
+@property(nonatomic, readwrite) BOOL hasTimestamp;
 @end
 
 #pragma mark - ContractCoopStatusResponse
@@ -4759,6 +4806,7 @@ GPB_FINAL @interface ArtifactsConfigurationRequest : GPBMessage
 typedef GPB_ENUM(ArtifactsConfigurationResponse_FieldNumber) {
   ArtifactsConfigurationResponse_FieldNumber_MissionParametersArray = 1,
   ArtifactsConfigurationResponse_FieldNumber_ArtifactParametersArray = 2,
+  ArtifactsConfigurationResponse_FieldNumber_CraftingLevelInfosArray = 3,
 };
 
 GPB_FINAL @interface ArtifactsConfigurationResponse : GPBMessage
@@ -4770,6 +4818,10 @@ GPB_FINAL @interface ArtifactsConfigurationResponse : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsConfigurationResponse_ArtifactParameters*> *artifactParametersArray;
 /** The number of items in @c artifactParametersArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger artifactParametersArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsConfigurationResponse_CraftingLevelInfo*> *craftingLevelInfosArray;
+/** The number of items in @c craftingLevelInfosArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger craftingLevelInfosArray_Count;
 
 @end
 
@@ -4852,6 +4904,7 @@ typedef GPB_ENUM(ArtifactsConfigurationResponse_ArtifactParameters_FieldNumber) 
   ArtifactsConfigurationResponse_ArtifactParameters_FieldNumber_CraftingPriceLow = 6,
   ArtifactsConfigurationResponse_ArtifactParameters_FieldNumber_CraftingPriceDomain = 7,
   ArtifactsConfigurationResponse_ArtifactParameters_FieldNumber_CraftingPriceCurve = 8,
+  ArtifactsConfigurationResponse_ArtifactParameters_FieldNumber_CraftingXp = 9,
 };
 
 GPB_FINAL @interface ArtifactsConfigurationResponse_ArtifactParameters : GPBMessage
@@ -4881,6 +4934,26 @@ GPB_FINAL @interface ArtifactsConfigurationResponse_ArtifactParameters : GPBMess
 @property(nonatomic, readwrite) double craftingPriceCurve;
 
 @property(nonatomic, readwrite) BOOL hasCraftingPriceCurve;
+@property(nonatomic, readwrite) uint64_t craftingXp;
+
+@property(nonatomic, readwrite) BOOL hasCraftingXp;
+@end
+
+#pragma mark - ArtifactsConfigurationResponse_CraftingLevelInfo
+
+typedef GPB_ENUM(ArtifactsConfigurationResponse_CraftingLevelInfo_FieldNumber) {
+  ArtifactsConfigurationResponse_CraftingLevelInfo_FieldNumber_XpRequired = 1,
+  ArtifactsConfigurationResponse_CraftingLevelInfo_FieldNumber_RarityMult = 2,
+};
+
+GPB_FINAL @interface ArtifactsConfigurationResponse_CraftingLevelInfo : GPBMessage
+
+@property(nonatomic, readwrite) double xpRequired;
+
+@property(nonatomic, readwrite) BOOL hasXpRequired;
+@property(nonatomic, readwrite) float rarityMult;
+
+@property(nonatomic, readwrite) BOOL hasRarityMult;
 @end
 
 #pragma mark - MissionRequest
@@ -5027,6 +5100,7 @@ typedef GPB_ENUM(CraftArtifactRequest_FieldNumber) {
   CraftArtifactRequest_FieldNumber_Rinfo = 5,
   CraftArtifactRequest_FieldNumber_GoldPricePaid = 6,
   CraftArtifactRequest_FieldNumber_CraftingCount = 7,
+  CraftArtifactRequest_FieldNumber_CraftingXp = 8,
 };
 
 GPB_FINAL @interface CraftArtifactRequest : GPBMessage
@@ -5052,6 +5126,9 @@ GPB_FINAL @interface CraftArtifactRequest : GPBMessage
 @property(nonatomic, readwrite) uint32_t craftingCount;
 
 @property(nonatomic, readwrite) BOOL hasCraftingCount;
+@property(nonatomic, readwrite) double craftingXp;
+
+@property(nonatomic, readwrite) BOOL hasCraftingXp;
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactInventoryItem*> *ingredientsArray;
 /** The number of items in @c ingredientsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger ingredientsArray_Count;
@@ -5094,6 +5171,8 @@ typedef GPB_ENUM(ConsumeArtifactRequest_FieldNumber) {
   ConsumeArtifactRequest_FieldNumber_Rinfo = 4,
   ConsumeArtifactRequest_FieldNumber_ArtifactServerId = 5,
   ConsumeArtifactRequest_FieldNumber_Quantity = 6,
+  ConsumeArtifactRequest_FieldNumber_AdditionalServerIdsArray = 7,
+  ConsumeArtifactRequest_FieldNumber_AdditionalItemIdsArray = 8,
 };
 
 GPB_FINAL @interface ConsumeArtifactRequest : GPBMessage
@@ -5117,6 +5196,14 @@ GPB_FINAL @interface ConsumeArtifactRequest : GPBMessage
 @property(nonatomic, readwrite) uint64_t originalItemId;
 
 @property(nonatomic, readwrite) BOOL hasOriginalItemId;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *additionalServerIdsArray;
+/** The number of items in @c additionalServerIdsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger additionalServerIdsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt64Array *additionalItemIdsArray;
+/** The number of items in @c additionalItemIdsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger additionalItemIdsArray_Count;
+
 @property(nonatomic, readwrite) uint32_t quantity;
 
 @property(nonatomic, readwrite) BOOL hasQuantity;
@@ -5130,6 +5217,7 @@ typedef GPB_ENUM(ConsumeArtifactResponse_FieldNumber) {
   ConsumeArtifactResponse_FieldNumber_ByproductsArray = 3,
   ConsumeArtifactResponse_FieldNumber_OtherRewardsArray = 4,
   ConsumeArtifactResponse_FieldNumber_EiUserId = 5,
+  ConsumeArtifactResponse_FieldNumber_AdditionalItemIdsArray = 6,
 };
 
 GPB_FINAL @interface ConsumeArtifactResponse : GPBMessage
@@ -5140,6 +5228,10 @@ GPB_FINAL @interface ConsumeArtifactResponse : GPBMessage
 @property(nonatomic, readwrite) uint64_t originalItemId;
 
 @property(nonatomic, readwrite) BOOL hasOriginalItemId;
+@property(nonatomic, readwrite, strong, null_resettable) GPBUInt64Array *additionalItemIdsArray;
+/** The number of items in @c additionalItemIdsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger additionalItemIdsArray_Count;
+
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactSpec*> *byproductsArray;
 /** The number of items in @c byproductsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger byproductsArray_Count;
@@ -5243,10 +5335,11 @@ typedef GPB_ENUM(ArtifactsDB_FieldNumber) {
   ArtifactsDB_FieldNumber_MissionInfosArray = 4,
   ArtifactsDB_FieldNumber_MissionArchiveArray = 5,
   ArtifactsDB_FieldNumber_ActiveArtifactsArray = 7,
-  ArtifactsDB_FieldNumber_DiscoveredArtifactsArray = 8,
-  ArtifactsDB_FieldNumber_CraftableArtifactsArray = 9,
-  ArtifactsDB_FieldNumber_CraftingCountsArray = 10,
+  ArtifactsDB_FieldNumber_DiscoveredArtifactsDeprecatedArray = 8,
+  ArtifactsDB_FieldNumber_CraftableArtifactsDeprecatedArray = 9,
+  ArtifactsDB_FieldNumber_CraftingCountsDeprecatedArray = 10,
   ArtifactsDB_FieldNumber_ActiveArtifactSetsArray = 11,
+  ArtifactsDB_FieldNumber_ArtifactStatusArray = 12,
 };
 
 GPB_FINAL @interface ArtifactsDB : GPBMessage
@@ -5270,17 +5363,9 @@ GPB_FINAL @interface ArtifactsDB : GPBMessage
 /** The number of items in @c activeArtifactSetsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger activeArtifactSetsArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactSpec*> *discoveredArtifactsArray;
-/** The number of items in @c discoveredArtifactsArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger discoveredArtifactsArray_Count;
-
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsDB_CraftableArtifact*> *craftableArtifactsArray;
-/** The number of items in @c craftableArtifactsArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger craftableArtifactsArray_Count;
-
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsDB_CraftableArtifact*> *craftingCountsArray;
-/** The number of items in @c craftingCountsArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger craftingCountsArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsDB_CraftableArtifact*> *artifactStatusArray;
+/** The number of items in @c artifactStatusArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger artifactStatusArray_Count;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<MissionInfo*> *missionInfosArray;
 /** The number of items in @c missionInfosArray without causing the array to be created. */
@@ -5289,6 +5374,18 @@ GPB_FINAL @interface ArtifactsDB : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<MissionInfo*> *missionArchiveArray;
 /** The number of items in @c missionArchiveArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger missionArchiveArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactSpec*> *discoveredArtifactsDeprecatedArray;
+/** The number of items in @c discoveredArtifactsDeprecatedArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger discoveredArtifactsDeprecatedArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsDB_CraftableArtifact*> *craftableArtifactsDeprecatedArray;
+/** The number of items in @c craftableArtifactsDeprecatedArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger craftableArtifactsDeprecatedArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsDB_CraftableArtifact*> *craftingCountsDeprecatedArray;
+/** The number of items in @c craftingCountsDeprecatedArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger craftingCountsDeprecatedArray_Count;
 
 @end
 
@@ -5329,6 +5426,9 @@ typedef GPB_ENUM(ArtifactsDB_CraftableArtifact_FieldNumber) {
   ArtifactsDB_CraftableArtifact_FieldNumber_Spec = 1,
   ArtifactsDB_CraftableArtifact_FieldNumber_Seen = 2,
   ArtifactsDB_CraftableArtifact_FieldNumber_Count = 3,
+  ArtifactsDB_CraftableArtifact_FieldNumber_Craftable = 4,
+  ArtifactsDB_CraftableArtifact_FieldNumber_RecipeDiscovered = 5,
+  ArtifactsDB_CraftableArtifact_FieldNumber_Discovered = 6,
 };
 
 GPB_FINAL @interface ArtifactsDB_CraftableArtifact : GPBMessage
@@ -5337,6 +5437,15 @@ GPB_FINAL @interface ArtifactsDB_CraftableArtifact : GPBMessage
 /** Test to see if @c spec has been set. */
 @property(nonatomic, readwrite) BOOL hasSpec;
 
+@property(nonatomic, readwrite) BOOL discovered;
+
+@property(nonatomic, readwrite) BOOL hasDiscovered;
+@property(nonatomic, readwrite) BOOL craftable;
+
+@property(nonatomic, readwrite) BOOL hasCraftable;
+@property(nonatomic, readwrite) BOOL recipeDiscovered;
+
+@property(nonatomic, readwrite) BOOL hasRecipeDiscovered;
 @property(nonatomic, readwrite) BOOL seen;
 
 @property(nonatomic, readwrite) BOOL hasSeen;
@@ -5714,7 +5823,7 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 /** Test to see if @c hexBaseColor has been set. */
 @property(nonatomic, readwrite) BOOL hasHexBaseColor;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellSetSpec_VariationInfo*> *variationsArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellSetSpec_VariationSpec*> *variationsArray;
 /** The number of items in @c variationsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger variationsArray_Count;
 
@@ -5726,15 +5835,18 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 @property(nonatomic, readwrite) BOOL hasCustomAppearance;
 @end
 
-#pragma mark - ShellSetSpec_VariationInfo
+#pragma mark - ShellSetSpec_VariationSpec
 
-typedef GPB_ENUM(ShellSetSpec_VariationInfo_FieldNumber) {
-  ShellSetSpec_VariationInfo_FieldNumber_Identifier = 1,
-  ShellSetSpec_VariationInfo_FieldNumber_HexColor = 2,
-  ShellSetSpec_VariationInfo_FieldNumber_Price = 3,
+typedef GPB_ENUM(ShellSetSpec_VariationSpec_FieldNumber) {
+  ShellSetSpec_VariationSpec_FieldNumber_Identifier = 1,
+  ShellSetSpec_VariationSpec_FieldNumber_HexColor = 2,
+  ShellSetSpec_VariationSpec_FieldNumber_Price = 3,
+  ShellSetSpec_VariationSpec_FieldNumber_DefaultAppearance = 4,
+  ShellSetSpec_VariationSpec_FieldNumber_CustomAppearance = 5,
+  ShellSetSpec_VariationSpec_FieldNumber_SortPriority = 6,
 };
 
-GPB_FINAL @interface ShellSetSpec_VariationInfo : GPBMessage
+GPB_FINAL @interface ShellSetSpec_VariationSpec : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *identifier;
 /** Test to see if @c identifier has been set. */
@@ -5747,6 +5859,15 @@ GPB_FINAL @interface ShellSetSpec_VariationInfo : GPBMessage
 @property(nonatomic, readwrite) uint32_t price;
 
 @property(nonatomic, readwrite) BOOL hasPrice;
+@property(nonatomic, readwrite) int32_t sortPriority;
+
+@property(nonatomic, readwrite) BOOL hasSortPriority;
+@property(nonatomic, readwrite) BOOL defaultAppearance;
+
+@property(nonatomic, readwrite) BOOL hasDefaultAppearance;
+@property(nonatomic, readwrite) BOOL customAppearance;
+
+@property(nonatomic, readwrite) BOOL hasCustomAppearance;
 @end
 
 #pragma mark - ShellObjectSpec
@@ -5766,6 +5887,9 @@ typedef GPB_ENUM(ShellObjectSpec_FieldNumber) {
   ShellObjectSpec_FieldNumber_SecondsRemaining = 12,
   ShellObjectSpec_FieldNumber_NoHats = 13,
   ShellObjectSpec_FieldNumber_ObjectClass = 14,
+  ShellObjectSpec_FieldNumber_IconColorsArray = 15,
+  ShellObjectSpec_FieldNumber_ChickenAnimation = 16,
+  ShellObjectSpec_FieldNumber_SortPriority = 17,
 };
 
 GPB_FINAL @interface ShellObjectSpec : GPBMessage
@@ -5784,6 +5908,10 @@ GPB_FINAL @interface ShellObjectSpec : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *objectClass;
 /** Test to see if @c objectClass has been set. */
 @property(nonatomic, readwrite) BOOL hasObjectClass;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *iconColorsArray;
+/** The number of items in @c iconColorsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger iconColorsArray_Count;
 
 @property(nonatomic, readwrite) uint32_t price;
 
@@ -5810,6 +5938,12 @@ GPB_FINAL @interface ShellObjectSpec : GPBMessage
 @property(nonatomic, readwrite) BOOL noHats;
 
 @property(nonatomic, readwrite) BOOL hasNoHats;
+@property(nonatomic, readwrite) ShellObjectSpec_ChickenAnimation chickenAnimation;
+
+@property(nonatomic, readwrite) BOOL hasChickenAnimation;
+@property(nonatomic, readwrite) int32_t sortPriority;
+
+@property(nonatomic, readwrite) BOOL hasSortPriority;
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellObjectSpec_LODPiece*> *piecesArray;
 /** The number of items in @c piecesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger piecesArray_Count;
@@ -6143,6 +6277,9 @@ typedef GPB_ENUM(ShellsActionLog_FieldNumber) {
   ShellsActionLog_FieldNumber_FarmIndex = 7,
   ShellsActionLog_FieldNumber_Rinfo = 8,
   ShellsActionLog_FieldNumber_FarmElement = 9,
+  ShellsActionLog_FieldNumber_SoulEggs = 10,
+  ShellsActionLog_FieldNumber_TicketsSpent = 11,
+  ShellsActionLog_FieldNumber_GoldSpent = 12,
 };
 
 GPB_FINAL @interface ShellsActionLog : GPBMessage
@@ -6179,6 +6316,15 @@ GPB_FINAL @interface ShellsActionLog : GPBMessage
 @property(nonatomic, readwrite) int32_t farmIndex;
 
 @property(nonatomic, readwrite) BOOL hasFarmIndex;
+@property(nonatomic, readwrite) double soulEggs;
+
+@property(nonatomic, readwrite) BOOL hasSoulEggs;
+@property(nonatomic, readwrite) uint64_t ticketsSpent;
+
+@property(nonatomic, readwrite) BOOL hasTicketsSpent;
+@property(nonatomic, readwrite) uint64_t goldSpent;
+
+@property(nonatomic, readwrite) BOOL hasGoldSpent;
 @end
 
 NS_ASSUME_NONNULL_END

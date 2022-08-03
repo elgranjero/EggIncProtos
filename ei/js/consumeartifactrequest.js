@@ -30,7 +30,7 @@ goog.require('proto.ei.BasicRequestInfo');
  * @constructor
  */
 proto.ei.ConsumeArtifactRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ei.ConsumeArtifactRequest.repeatedFields_, null);
 };
 goog.inherits(proto.ei.ConsumeArtifactRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -40,6 +40,13 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.ei.ConsumeArtifactRequest.displayName = 'proto.ei.ConsumeArtifactRequest';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ei.ConsumeArtifactRequest.repeatedFields_ = [7,8];
 
 
 
@@ -77,6 +84,8 @@ proto.ei.ConsumeArtifactRequest.toObject = function(includeInstance, msg) {
     spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
     artifactServerId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     originalItemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    additionalServerIdsList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
+    additionalItemIdsList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
     quantity: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
   };
 
@@ -135,6 +144,16 @@ proto.ei.ConsumeArtifactRequest.deserializeBinaryFromReader = function(msg, read
     case 2:
       var value = /** @type {number} */ (reader.readUint64());
       msg.setOriginalItemId(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addAdditionalServerIds(value);
+      break;
+    case 8:
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedUint64() : [reader.readUint64()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addAdditionalItemIds(values[i]);
+      }
       break;
     case 6:
       var value = /** @type {number} */ (reader.readUint32());
@@ -203,6 +222,20 @@ proto.ei.ConsumeArtifactRequest.serializeBinaryToWriter = function(message, writ
   if (f != null) {
     writer.writeUint64(
       2,
+      f
+    );
+  }
+  f = message.getAdditionalServerIdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      7,
+      f
+    );
+  }
+  f = message.getAdditionalItemIdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedUint64(
+      8,
       f
     );
   }
@@ -395,6 +428,80 @@ proto.ei.ConsumeArtifactRequest.prototype.clearOriginalItemId = function() {
  */
 proto.ei.ConsumeArtifactRequest.prototype.hasOriginalItemId = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated string additional_server_ids = 7;
+ * @return {!Array<string>}
+ */
+proto.ei.ConsumeArtifactRequest.prototype.getAdditionalServerIdsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 7));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ei.ConsumeArtifactRequest} returns this
+ */
+proto.ei.ConsumeArtifactRequest.prototype.setAdditionalServerIdsList = function(value) {
+  return jspb.Message.setField(this, 7, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ConsumeArtifactRequest} returns this
+ */
+proto.ei.ConsumeArtifactRequest.prototype.addAdditionalServerIds = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ConsumeArtifactRequest} returns this
+ */
+proto.ei.ConsumeArtifactRequest.prototype.clearAdditionalServerIdsList = function() {
+  return this.setAdditionalServerIdsList([]);
+};
+
+
+/**
+ * repeated uint64 additional_item_ids = 8;
+ * @return {!Array<number>}
+ */
+proto.ei.ConsumeArtifactRequest.prototype.getAdditionalItemIdsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 8));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.ei.ConsumeArtifactRequest} returns this
+ */
+proto.ei.ConsumeArtifactRequest.prototype.setAdditionalItemIdsList = function(value) {
+  return jspb.Message.setField(this, 8, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ConsumeArtifactRequest} returns this
+ */
+proto.ei.ConsumeArtifactRequest.prototype.addAdditionalItemIds = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 8, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ConsumeArtifactRequest} returns this
+ */
+proto.ei.ConsumeArtifactRequest.prototype.clearAdditionalItemIdsList = function() {
+  return this.setAdditionalItemIdsList([]);
 };
 
 

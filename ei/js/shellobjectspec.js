@@ -12,6 +12,7 @@
 // @ts-nocheck
 
 goog.provide('proto.ei.ShellObjectSpec');
+goog.provide('proto.ei.ShellObjectSpec.ChickenAnimation');
 goog.provide('proto.ei.ShellObjectSpec.LODPiece');
 
 goog.require('jspb.BinaryReader');
@@ -68,7 +69,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.ShellObjectSpec.repeatedFields_ = [7,8];
+proto.ei.ShellObjectSpec.repeatedFields_ = [15,7,8];
 
 
 
@@ -105,6 +106,7 @@ proto.ei.ShellObjectSpec.toObject = function(includeInstance, msg) {
     name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     assetType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     objectClass: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    iconColorsList: (f = jspb.Message.getRepeatedField(msg, 15)) == null ? undefined : f,
     price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
@@ -113,6 +115,8 @@ proto.ei.ShellObjectSpec.toObject = function(includeInstance, msg) {
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
     metadataList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f,
     noHats: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    chickenAnimation: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    sortPriority: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
     piecesList: jspb.Message.toObjectList(msg.getPiecesList(),
     proto.ei.ShellObjectSpec.LODPiece.toObject, includeInstance),
     defaultAppearance: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f
@@ -168,6 +172,10 @@ proto.ei.ShellObjectSpec.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setObjectClass(value);
       break;
+    case 15:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addIconColors(value);
+      break;
     case 4:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setPrice(value);
@@ -201,6 +209,14 @@ proto.ei.ShellObjectSpec.deserializeBinaryFromReader = function(msg, reader) {
     case 13:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setNoHats(value);
+      break;
+    case 16:
+      var value = /** @type {!proto.ei.ShellObjectSpec.ChickenAnimation} */ (reader.readEnum());
+      msg.setChickenAnimation(value);
+      break;
+    case 17:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setSortPriority(value);
       break;
     case 8:
       var value = new proto.ei.ShellObjectSpec.LODPiece;
@@ -268,6 +284,13 @@ proto.ei.ShellObjectSpec.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = message.getIconColorsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      15,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 4));
   if (f != null) {
     writer.writeUint32(
@@ -324,6 +347,20 @@ proto.ei.ShellObjectSpec.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = /** @type {!proto.ei.ShellObjectSpec.ChickenAnimation} */ (jspb.Message.getField(message, 16));
+  if (f != null) {
+    writer.writeEnum(
+      16,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
+    writer.writeInt32(
+      17,
+      f
+    );
+  }
   f = message.getPiecesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
@@ -341,6 +378,21 @@ proto.ei.ShellObjectSpec.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.ei.ShellObjectSpec.ChickenAnimation = {
+  STANDARD_RUN: 0,
+  SLOWMO: 7,
+  WOBBLE: 1,
+  WOBBLE_LEAN: 5,
+  SMOOTH: 2,
+  SMOOTH_LEAN: 6,
+  HOVER: 3,
+  SIDEWAYS_SMOOTH: 4,
+  SIDEWAYS_LEAN: 8
+};
 
 
 
@@ -686,6 +738,43 @@ proto.ei.ShellObjectSpec.prototype.hasObjectClass = function() {
 
 
 /**
+ * repeated string icon_colors = 15;
+ * @return {!Array<string>}
+ */
+proto.ei.ShellObjectSpec.prototype.getIconColorsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 15));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.setIconColorsList = function(value) {
+  return jspb.Message.setField(this, 15, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.addIconColors = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 15, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.clearIconColorsList = function() {
+  return this.setIconColorsList([]);
+};
+
+
+/**
  * optional uint32 price = 4;
  * @return {number}
  */
@@ -971,6 +1060,78 @@ proto.ei.ShellObjectSpec.prototype.clearNoHats = function() {
  */
 proto.ei.ShellObjectSpec.prototype.hasNoHats = function() {
   return jspb.Message.getField(this, 13) != null;
+};
+
+
+/**
+ * optional ChickenAnimation chicken_animation = 16;
+ * @return {!proto.ei.ShellObjectSpec.ChickenAnimation}
+ */
+proto.ei.ShellObjectSpec.prototype.getChickenAnimation = function() {
+  return /** @type {!proto.ei.ShellObjectSpec.ChickenAnimation} */ (jspb.Message.getFieldWithDefault(this, 16, 0));
+};
+
+
+/**
+ * @param {!proto.ei.ShellObjectSpec.ChickenAnimation} value
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.setChickenAnimation = function(value) {
+  return jspb.Message.setField(this, 16, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.clearChickenAnimation = function() {
+  return jspb.Message.setField(this, 16, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellObjectSpec.prototype.hasChickenAnimation = function() {
+  return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional int32 sort_priority = 17;
+ * @return {number}
+ */
+proto.ei.ShellObjectSpec.prototype.getSortPriority = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 17, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.setSortPriority = function(value) {
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.clearSortPriority = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellObjectSpec.prototype.hasSortPriority = function() {
+  return jspb.Message.getField(this, 17) != null;
 };
 
 

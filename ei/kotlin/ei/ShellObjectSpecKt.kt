@@ -119,6 +119,76 @@ public object ShellObjectSpecKt {
     }
 
     /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class IconColorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated string icon_colors = 15;</code>
+     * @return A list containing the iconColors.
+     */
+    public val iconColors: com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getIconColorsList()
+      )
+    /**
+     * <code>repeated string icon_colors = 15;</code>
+     * @param value The iconColors to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addIconColors")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.add(value: kotlin.String) {
+      _builder.addIconColors(value)
+    }
+    /**
+     * <code>repeated string icon_colors = 15;</code>
+     * @param value The iconColors to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignIconColors")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.plusAssign(value: kotlin.String) {
+      add(value)
+    }
+    /**
+     * <code>repeated string icon_colors = 15;</code>
+     * @param values The iconColors to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllIconColors")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllIconColors(values)
+    }
+    /**
+     * <code>repeated string icon_colors = 15;</code>
+     * @param values The iconColors to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllIconColors")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated string icon_colors = 15;</code>
+     * @param index The index to set the value at.
+     * @param value The iconColors to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setIconColors")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.set(index: kotlin.Int, value: kotlin.String) {
+      _builder.setIconColors(index, value)
+    }/**
+     * <code>repeated string icon_colors = 15;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearIconColors")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.clear() {
+      _builder.clearIconColors()
+    }
+    /**
      * <code>optional uint32 price = 4;</code>
      */
     public var price: kotlin.Int
@@ -349,6 +419,54 @@ public object ShellObjectSpecKt {
      */
     public fun hasNoHats(): kotlin.Boolean {
       return _builder.hasNoHats()
+    }
+
+    /**
+     * <code>optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;</code>
+     */
+    public var chickenAnimation: ei.Ei.ShellObjectSpec.ChickenAnimation
+      @JvmName("getChickenAnimation")
+      get() = _builder.getChickenAnimation()
+      @JvmName("setChickenAnimation")
+      set(value) {
+        _builder.setChickenAnimation(value)
+      }
+    /**
+     * <code>optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;</code>
+     */
+    public fun clearChickenAnimation() {
+      _builder.clearChickenAnimation()
+    }
+    /**
+     * <code>optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;</code>
+     * @return Whether the chickenAnimation field is set.
+     */
+    public fun hasChickenAnimation(): kotlin.Boolean {
+      return _builder.hasChickenAnimation()
+    }
+
+    /**
+     * <code>optional int32 sort_priority = 17;</code>
+     */
+    public var sortPriority: kotlin.Int
+      @JvmName("getSortPriority")
+      get() = _builder.getSortPriority()
+      @JvmName("setSortPriority")
+      set(value) {
+        _builder.setSortPriority(value)
+      }
+    /**
+     * <code>optional int32 sort_priority = 17;</code>
+     */
+    public fun clearSortPriority() {
+      _builder.clearSortPriority()
+    }
+    /**
+     * <code>optional int32 sort_priority = 17;</code>
+     * @return Whether the sortPriority field is set.
+     */
+    public fun hasSortPriority(): kotlin.Boolean {
+      return _builder.hasSortPriority()
     }
 
     /**
