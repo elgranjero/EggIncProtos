@@ -239,6 +239,30 @@ public object ShellSetSpecKt {
     }
 
     /**
+     * <code>optional double seconds_until_available = 18;</code>
+     */
+    public var secondsUntilAvailable: kotlin.Double
+      @JvmName("getSecondsUntilAvailable")
+      get() = _builder.getSecondsUntilAvailable()
+      @JvmName("setSecondsUntilAvailable")
+      set(value) {
+        _builder.setSecondsUntilAvailable(value)
+      }
+    /**
+     * <code>optional double seconds_until_available = 18;</code>
+     */
+    public fun clearSecondsUntilAvailable() {
+      _builder.clearSecondsUntilAvailable()
+    }
+    /**
+     * <code>optional double seconds_until_available = 18;</code>
+     * @return Whether the secondsUntilAvailable field is set.
+     */
+    public fun hasSecondsUntilAvailable(): kotlin.Boolean {
+      return _builder.hasSecondsUntilAvailable()
+    }
+
+    /**
      * <code>optional double seconds_remaining = 11;</code>
      */
     public var secondsRemaining: kotlin.Double

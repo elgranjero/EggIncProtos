@@ -35801,6 +35801,7 @@ class ShellSpec final :
     kExpiresFieldNumber = 15,
     kDefaultAppearanceFieldNumber = 8,
     kSecondsRemainingFieldNumber = 16,
+    kSecondsUntilAvailableFieldNumber = 17,
   };
   // repeated .ei.ShellSpec.ShellPiece pieces = 11;
   int pieces_size() const;
@@ -35983,6 +35984,19 @@ class ShellSpec final :
   void _internal_set_seconds_remaining(double value);
   public:
 
+  // optional double seconds_until_available = 17;
+  bool has_seconds_until_available() const;
+  private:
+  bool _internal_has_seconds_until_available() const;
+  public:
+  void clear_seconds_until_available();
+  double seconds_until_available() const;
+  void set_seconds_until_available(double value);
+  private:
+  double _internal_seconds_until_available() const;
+  void _internal_set_seconds_until_available(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ShellSpec)
  private:
   class _Internal;
@@ -36004,6 +36018,7 @@ class ShellSpec final :
   bool expires_;
   bool default_appearance_;
   double seconds_remaining_;
+  double seconds_until_available_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -36398,6 +36413,7 @@ class ShellSetSpec final :
     kModifiedGeometryFieldNumber = 13,
     kSecondsRemainingFieldNumber = 11,
     kDiscountFieldNumber = 17,
+    kSecondsUntilAvailableFieldNumber = 18,
     kPriceMultDEPRECATEDFieldNumber = 8,
   };
   // repeated .ei.ShellSetSpec.VariationSpec variations = 15;
@@ -36628,6 +36644,19 @@ class ShellSetSpec final :
   void _internal_set_discount(double value);
   public:
 
+  // optional double seconds_until_available = 18;
+  bool has_seconds_until_available() const;
+  private:
+  bool _internal_has_seconds_until_available() const;
+  public:
+  void clear_seconds_until_available();
+  double seconds_until_available() const;
+  void set_seconds_until_available(double value);
+  private:
+  double _internal_seconds_until_available() const;
+  void _internal_set_seconds_until_available(double value);
+  public:
+
   // optional double price_mult_DEPRECATED = 8 [default = 1];
   bool has_price_mult_deprecated() const;
   private:
@@ -36666,6 +36695,7 @@ class ShellSetSpec final :
   bool modified_geometry_;
   double seconds_remaining_;
   double discount_;
+  double seconds_until_available_;
   double price_mult_deprecated_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -37039,6 +37069,7 @@ class ShellObjectSpec final :
     kDefaultAppearanceFieldNumber = 9,
     kChickenAnimationFieldNumber = 16,
     kSecondsRemainingFieldNumber = 12,
+    kSecondsUntilAvailableFieldNumber = 18,
     kSortPriorityFieldNumber = 17,
     kAssetTypeFieldNumber = 3,
   };
@@ -37277,6 +37308,19 @@ class ShellObjectSpec final :
   void _internal_set_seconds_remaining(double value);
   public:
 
+  // optional double seconds_until_available = 18;
+  bool has_seconds_until_available() const;
+  private:
+  bool _internal_has_seconds_until_available() const;
+  public:
+  void clear_seconds_until_available();
+  double seconds_until_available() const;
+  void set_seconds_until_available(double value);
+  private:
+  double _internal_seconds_until_available() const;
+  void _internal_set_seconds_until_available(double value);
+  public:
+
   // optional int32 sort_priority = 17;
   bool has_sort_priority() const;
   private:
@@ -37327,6 +37371,7 @@ class ShellObjectSpec final :
   bool default_appearance_;
   int chicken_animation_;
   double seconds_remaining_;
+  double seconds_until_available_;
   int32_t sort_priority_;
   int asset_type_;
   friend struct ::TableStruct_ei_2eproto;
@@ -80089,6 +80134,34 @@ inline void ShellSpec::set_expires(bool value) {
   // @@protoc_insertion_point(field_set:ei.ShellSpec.expires)
 }
 
+// optional double seconds_until_available = 17;
+inline bool ShellSpec::_internal_has_seconds_until_available() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool ShellSpec::has_seconds_until_available() const {
+  return _internal_has_seconds_until_available();
+}
+inline void ShellSpec::clear_seconds_until_available() {
+  seconds_until_available_ = 0;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline double ShellSpec::_internal_seconds_until_available() const {
+  return seconds_until_available_;
+}
+inline double ShellSpec::seconds_until_available() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSpec.seconds_until_available)
+  return _internal_seconds_until_available();
+}
+inline void ShellSpec::_internal_set_seconds_until_available(double value) {
+  _has_bits_[0] |= 0x00000800u;
+  seconds_until_available_ = value;
+}
+inline void ShellSpec::set_seconds_until_available(double value) {
+  _internal_set_seconds_until_available(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSpec.seconds_until_available)
+}
+
 // optional double seconds_remaining = 16;
 inline bool ShellSpec::_internal_has_seconds_remaining() const {
   bool value = (_has_bits_[0] & 0x00000400u) != 0;
@@ -80571,7 +80644,7 @@ inline void ShellSetSpec::set_price(uint32_t value) {
 
 // optional double price_mult_DEPRECATED = 8 [default = 1];
 inline bool ShellSetSpec::_internal_has_price_mult_deprecated() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_price_mult_deprecated() const {
@@ -80579,7 +80652,7 @@ inline bool ShellSetSpec::has_price_mult_deprecated() const {
 }
 inline void ShellSetSpec::clear_price_mult_deprecated() {
   price_mult_deprecated_ = 1;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline double ShellSetSpec::_internal_price_mult_deprecated() const {
   return price_mult_deprecated_;
@@ -80589,7 +80662,7 @@ inline double ShellSetSpec::price_mult_deprecated() const {
   return _internal_price_mult_deprecated();
 }
 inline void ShellSetSpec::_internal_set_price_mult_deprecated(double value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
   price_mult_deprecated_ = value;
 }
 inline void ShellSetSpec::set_price_mult_deprecated(double value) {
@@ -80735,6 +80808,34 @@ inline void ShellSetSpec::_internal_set_expires(bool value) {
 inline void ShellSetSpec::set_expires(bool value) {
   _internal_set_expires(value);
   // @@protoc_insertion_point(field_set:ei.ShellSetSpec.expires)
+}
+
+// optional double seconds_until_available = 18;
+inline bool ShellSetSpec::_internal_has_seconds_until_available() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_seconds_until_available() const {
+  return _internal_has_seconds_until_available();
+}
+inline void ShellSetSpec::clear_seconds_until_available() {
+  seconds_until_available_ = 0;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline double ShellSetSpec::_internal_seconds_until_available() const {
+  return seconds_until_available_;
+}
+inline double ShellSetSpec::seconds_until_available() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.seconds_until_available)
+  return _internal_seconds_until_available();
+}
+inline void ShellSetSpec::_internal_set_seconds_until_available(double value) {
+  _has_bits_[0] |= 0x00008000u;
+  seconds_until_available_ = value;
+}
+inline void ShellSetSpec::set_seconds_until_available(double value) {
+  _internal_set_seconds_until_available(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.seconds_until_available)
 }
 
 // optional double seconds_remaining = 11;
@@ -81280,7 +81381,7 @@ inline void ShellObjectSpec::set_allocated_name(std::string* name) {
 
 // optional .ei.ShellSpec.AssetType asset_type = 3;
 inline bool ShellObjectSpec::_internal_has_asset_type() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_asset_type() const {
@@ -81288,7 +81389,7 @@ inline bool ShellObjectSpec::has_asset_type() const {
 }
 inline void ShellObjectSpec::clear_asset_type() {
   asset_type_ = 1;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline ::ei::ShellSpec_AssetType ShellObjectSpec::_internal_asset_type() const {
   return static_cast< ::ei::ShellSpec_AssetType >(asset_type_);
@@ -81299,7 +81400,7 @@ inline ::ei::ShellSpec_AssetType ShellObjectSpec::asset_type() const {
 }
 inline void ShellObjectSpec::_internal_set_asset_type(::ei::ShellSpec_AssetType value) {
   assert(::ei::ShellSpec_AssetType_IsValid(value));
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   asset_type_ = value;
 }
 inline void ShellObjectSpec::set_asset_type(::ei::ShellSpec_AssetType value) {
@@ -81591,6 +81692,34 @@ inline void ShellObjectSpec::set_expires(bool value) {
   // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.expires)
 }
 
+// optional double seconds_until_available = 18;
+inline bool ShellObjectSpec::_internal_has_seconds_until_available() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_seconds_until_available() const {
+  return _internal_has_seconds_until_available();
+}
+inline void ShellObjectSpec::clear_seconds_until_available() {
+  seconds_until_available_ = 0;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline double ShellObjectSpec::_internal_seconds_until_available() const {
+  return seconds_until_available_;
+}
+inline double ShellObjectSpec::seconds_until_available() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.seconds_until_available)
+  return _internal_seconds_until_available();
+}
+inline void ShellObjectSpec::_internal_set_seconds_until_available(double value) {
+  _has_bits_[0] |= 0x00001000u;
+  seconds_until_available_ = value;
+}
+inline void ShellObjectSpec::set_seconds_until_available(double value) {
+  _internal_set_seconds_until_available(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.seconds_until_available)
+}
+
 // optional double seconds_remaining = 12;
 inline bool ShellObjectSpec::_internal_has_seconds_remaining() const {
   bool value = (_has_bits_[0] & 0x00000800u) != 0;
@@ -81725,7 +81854,7 @@ inline void ShellObjectSpec::set_chicken_animation(::ei::ShellObjectSpec_Chicken
 
 // optional int32 sort_priority = 17;
 inline bool ShellObjectSpec::_internal_has_sort_priority() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_sort_priority() const {
@@ -81733,7 +81862,7 @@ inline bool ShellObjectSpec::has_sort_priority() const {
 }
 inline void ShellObjectSpec::clear_sort_priority() {
   sort_priority_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline int32_t ShellObjectSpec::_internal_sort_priority() const {
   return sort_priority_;
@@ -81743,7 +81872,7 @@ inline int32_t ShellObjectSpec::sort_priority() const {
   return _internal_sort_priority();
 }
 inline void ShellObjectSpec::_internal_set_sort_priority(int32_t value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   sort_priority_ = value;
 }
 inline void ShellObjectSpec::set_sort_priority(int32_t value) {

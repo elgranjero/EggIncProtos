@@ -15182,6 +15182,7 @@ typedef struct DLCItem__storage_ {
 @dynamic hasRequiredSoulEggs, requiredSoulEggs;
 @dynamic hasIsNew, isNew;
 @dynamic hasExpires, expires;
+@dynamic hasSecondsUntilAvailable, secondsUntilAvailable;
 @dynamic hasSecondsRemaining, secondsRemaining;
 @dynamic hasDefaultAppearance, defaultAppearance;
 
@@ -15196,6 +15197,7 @@ typedef struct ShellSpec__storage_ {
   NSString *setIdentifier;
   double requiredSoulEggs;
   double secondsRemaining;
+  double secondsUntilAvailable;
 } ShellSpec__storage_;
 
 // This method is threadsafe because it is initially called
@@ -15253,8 +15255,8 @@ typedef struct ShellSpec__storage_ {
         .name = "defaultAppearance",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_DefaultAppearance,
-        .hasIndex = 12,
-        .offset = 13,  // Stored in _has_storage_ to save space.
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -15307,8 +15309,17 @@ typedef struct ShellSpec__storage_ {
         .name = "secondsRemaining",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_SecondsRemaining,
-        .hasIndex = 11,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(ShellSpec__storage_, secondsRemaining),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "secondsUntilAvailable",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellSpec_FieldNumber_SecondsUntilAvailable,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(ShellSpec__storage_, secondsUntilAvailable),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -15657,6 +15668,7 @@ typedef struct ShellSpec_ShellPiece__storage_ {
 @dynamic hasRequiredSoulEggs, requiredSoulEggs;
 @dynamic hasIsNew, isNew;
 @dynamic hasExpires, expires;
+@dynamic hasSecondsUntilAvailable, secondsUntilAvailable;
 @dynamic hasSecondsRemaining, secondsRemaining;
 @dynamic hasDecorator, decorator;
 @dynamic hasModifiedGeometry, modifiedGeometry;
@@ -15678,6 +15690,7 @@ typedef struct ShellSetSpec__storage_ {
   double priceMultDeprecated;
   double secondsRemaining;
   double discount;
+  double secondsUntilAvailable;
 } ShellSetSpec__storage_;
 
 // This method is threadsafe because it is initially called
@@ -15741,8 +15754,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "defaultAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_DefaultAppearance,
-        .core.hasIndex = 19,
-        .core.offset = 20,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 20,
+        .core.offset = 21,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15751,8 +15764,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "elementSet",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_ElementSet,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15791,7 +15804,7 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "secondsRemaining",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_SecondsRemaining,
-        .core.hasIndex = 11,
+        .core.hasIndex = 12,
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, secondsRemaining),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -15801,8 +15814,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "customAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_CustomAppearance,
-        .core.hasIndex = 21,
-        .core.offset = 22,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 22,
+        .core.offset = 23,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15811,8 +15824,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "modifiedGeometry",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_ModifiedGeometry,
-        .core.hasIndex = 14,
-        .core.offset = 15,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 15,
+        .core.offset = 16,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15821,8 +15834,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "decorator",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_Decorator,
-        .core.hasIndex = 12,
-        .core.offset = 13,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 13,
+        .core.offset = 14,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15841,7 +15854,7 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "hexBaseColor",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_HexBaseColor,
-        .core.hasIndex = 18,
+        .core.hasIndex = 19,
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, hexBaseColor),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
@@ -15853,6 +15866,16 @@ typedef struct ShellSetSpec__storage_ {
         .core.number = ShellSetSpec_FieldNumber_Discount,
         .core.hasIndex = 4,
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, discount),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "secondsUntilAvailable",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellSetSpec_FieldNumber_SecondsUntilAvailable,
+        .core.hasIndex = 11,
+        .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, secondsUntilAvailable),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
       },
@@ -15993,6 +16016,7 @@ typedef struct ShellSetSpec_VariationSpec__storage_ {
 @dynamic hasRequiredSoulEggs, requiredSoulEggs;
 @dynamic hasIsNew, isNew;
 @dynamic hasExpires, expires;
+@dynamic hasSecondsUntilAvailable, secondsUntilAvailable;
 @dynamic hasSecondsRemaining, secondsRemaining;
 @dynamic metadataArray, metadataArray_Count;
 @dynamic hasNoHats, noHats;
@@ -16016,6 +16040,7 @@ typedef struct ShellObjectSpec__storage_ {
   NSMutableArray *iconColorsArray;
   double requiredSoulEggs;
   double secondsRemaining;
+  double secondsUntilAvailable;
 } ShellObjectSpec__storage_;
 
 // This method is threadsafe because it is initially called
@@ -16109,8 +16134,8 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "defaultAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_DefaultAppearance,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -16139,7 +16164,7 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "secondsRemaining",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_SecondsRemaining,
-        .core.hasIndex = 11,
+        .core.hasIndex = 12,
         .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, secondsRemaining),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -16149,8 +16174,8 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "noHats",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_NoHats,
-        .core.hasIndex = 12,
-        .core.offset = 13,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 13,
+        .core.offset = 14,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -16179,7 +16204,7 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "chickenAnimation",
         .core.dataTypeSpecific.enumDescFunc = ShellObjectSpec_ChickenAnimation_EnumDescriptor,
         .core.number = ShellObjectSpec_FieldNumber_ChickenAnimation,
-        .core.hasIndex = 14,
+        .core.hasIndex = 15,
         .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, chickenAnimation),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .core.dataType = GPBDataTypeEnum,
@@ -16189,10 +16214,20 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "sortPriority",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_SortPriority,
-        .core.hasIndex = 15,
+        .core.hasIndex = 16,
         .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, sortPriority),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeInt32,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "secondsUntilAvailable",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellObjectSpec_FieldNumber_SecondsUntilAvailable,
+        .core.hasIndex = 11,
+        .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, secondsUntilAvailable),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =

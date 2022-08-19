@@ -2958,6 +2958,7 @@
 | required_soul_eggs | [double](#double) | optional |  |
 | is_new | [bool](#bool) | optional |  |
 | expires | [bool](#bool) | optional |  |
+| seconds_until_available | [double](#double) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | metadata | [double](#double) | repeated |  |
 | no_hats | [bool](#bool) | optional |  |
@@ -3004,6 +3005,7 @@
 | required_soul_eggs | [double](#double) | optional |  |
 | is_new | [bool](#bool) | optional |  |
 | expires | [bool](#bool) | optional |  |
+| seconds_until_available | [double](#double) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | decorator | [bool](#bool) | optional |  |
 | modified_geometry | [bool](#bool) | optional |  |
@@ -3056,6 +3058,7 @@
 | required_soul_eggs | [double](#double) | optional |  |
 | is_new | [bool](#bool) | optional |  |
 | expires | [bool](#bool) | optional |  |
+| seconds_until_available | [double](#double) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | default_appearance | [bool](#bool) | optional |  |
 

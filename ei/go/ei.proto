@@ -2,7 +2,6 @@ syntax = "proto2";
 
 package ei;
 
-
 enum Platform {
     IOS = 1;
     DROID = 2;
@@ -22,6 +21,7 @@ enum AdNetwork {
     FACEBOOK = 5;
     APPLOVIN = 6;
 }
+
 message Backup {
     optional string user_id = 1;
     optional string ei_user_id = 18;
@@ -1437,6 +1437,7 @@ message ShellSpec {
     optional double required_soul_eggs = 6;
     optional bool is_new = 14;
     optional bool expires = 15;
+    optional double seconds_until_available = 17;
     optional double seconds_remaining = 16;
     optional bool default_appearance = 8;
     
@@ -1550,6 +1551,7 @@ message ShellSetSpec {
     optional double required_soul_eggs = 5;
     optional bool is_new = 9;
     optional bool expires = 10;
+    optional double seconds_until_available = 18;
     optional double seconds_remaining = 11;
     optional bool decorator = 14;
     optional bool modified_geometry = 13;
@@ -1581,6 +1583,7 @@ message ShellObjectSpec {
     optional double required_soul_eggs = 6;
     optional bool is_new = 10;
     optional bool expires = 11;
+    optional double seconds_until_available = 18;
     optional double seconds_remaining = 12;
     repeated double metadata = 7;
     optional bool no_hats = 13;

@@ -112,6 +112,7 @@ proto.ei.ShellSpec.toObject = function(includeInstance, msg) {
     requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     isNew: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
     expires: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
     defaultAppearance: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
@@ -191,6 +192,10 @@ proto.ei.ShellSpec.deserializeBinaryFromReader = function(msg, reader) {
     case 15:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setExpires(value);
+      break;
+    case 17:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setSecondsUntilAvailable(value);
       break;
     case 16:
       var value = /** @type {number} */ (reader.readDouble());
@@ -298,6 +303,13 @@ proto.ei.ShellSpec.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       15,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
+    writer.writeDouble(
+      17,
       f
     );
   }
@@ -979,6 +991,42 @@ proto.ei.ShellSpec.prototype.clearExpires = function() {
  */
 proto.ei.ShellSpec.prototype.hasExpires = function() {
   return jspb.Message.getField(this, 15) != null;
+};
+
+
+/**
+ * optional double seconds_until_available = 17;
+ * @return {number}
+ */
+proto.ei.ShellSpec.prototype.getSecondsUntilAvailable = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 17, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.setSecondsUntilAvailable = function(value) {
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.clearSecondsUntilAvailable = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.hasSecondsUntilAvailable = function() {
+  return jspb.Message.getField(this, 17) != null;
 };
 
 

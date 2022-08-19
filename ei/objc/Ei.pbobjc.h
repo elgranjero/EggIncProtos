@@ -5689,6 +5689,7 @@ typedef GPB_ENUM(ShellSpec_FieldNumber) {
   ShellSpec_FieldNumber_IsNew = 14,
   ShellSpec_FieldNumber_Expires = 15,
   ShellSpec_FieldNumber_SecondsRemaining = 16,
+  ShellSpec_FieldNumber_SecondsUntilAvailable = 17,
 };
 
 GPB_FINAL @interface ShellSpec : GPBMessage
@@ -5728,6 +5729,9 @@ GPB_FINAL @interface ShellSpec : GPBMessage
 @property(nonatomic, readwrite) BOOL expires;
 
 @property(nonatomic, readwrite) BOOL hasExpires;
+@property(nonatomic, readwrite) double secondsUntilAvailable;
+
+@property(nonatomic, readwrite) BOOL hasSecondsUntilAvailable;
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
@@ -5774,6 +5778,7 @@ typedef GPB_ENUM(ShellSetSpec_FieldNumber) {
   ShellSetSpec_FieldNumber_VariationsArray = 15,
   ShellSetSpec_FieldNumber_HexBaseColor = 16,
   ShellSetSpec_FieldNumber_Discount = 17,
+  ShellSetSpec_FieldNumber_SecondsUntilAvailable = 18,
 };
 
 GPB_FINAL @interface ShellSetSpec : GPBMessage
@@ -5807,6 +5812,9 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 @property(nonatomic, readwrite) BOOL expires;
 
 @property(nonatomic, readwrite) BOOL hasExpires;
+@property(nonatomic, readwrite) double secondsUntilAvailable;
+
+@property(nonatomic, readwrite) BOOL hasSecondsUntilAvailable;
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
@@ -5890,6 +5898,7 @@ typedef GPB_ENUM(ShellObjectSpec_FieldNumber) {
   ShellObjectSpec_FieldNumber_IconColorsArray = 15,
   ShellObjectSpec_FieldNumber_ChickenAnimation = 16,
   ShellObjectSpec_FieldNumber_SortPriority = 17,
+  ShellObjectSpec_FieldNumber_SecondsUntilAvailable = 18,
 };
 
 GPB_FINAL @interface ShellObjectSpec : GPBMessage
@@ -5928,6 +5937,9 @@ GPB_FINAL @interface ShellObjectSpec : GPBMessage
 @property(nonatomic, readwrite) BOOL expires;
 
 @property(nonatomic, readwrite) BOOL hasExpires;
+@property(nonatomic, readwrite) double secondsUntilAvailable;
+
+@property(nonatomic, readwrite) BOOL hasSecondsUntilAvailable;
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;

@@ -1265,6 +1265,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :required_soul_eggs, :double, 6
       optional :is_new, :bool, 14
       optional :expires, :bool, 15
+      optional :seconds_until_available, :double, 17
       optional :seconds_remaining, :double, 16
       optional :default_appearance, :bool, 8
     end
@@ -1380,6 +1381,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :required_soul_eggs, :double, 5
       optional :is_new, :bool, 9
       optional :expires, :bool, 10
+      optional :seconds_until_available, :double, 18
       optional :seconds_remaining, :double, 11
       optional :decorator, :bool, 14
       optional :modified_geometry, :bool, 13
@@ -1408,6 +1410,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :required_soul_eggs, :double, 6
       optional :is_new, :bool, 10
       optional :expires, :bool, 11
+      optional :seconds_until_available, :double, 18
       optional :seconds_remaining, :double, 12
       repeated :metadata, :double, 7
       optional :no_hats, :bool, 13
