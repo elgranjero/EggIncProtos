@@ -14493,10 +14493,13 @@ typedef struct ArtifactsDB_CraftableArtifact__storage_ {
 @dynamic hasMessage, message;
 @dynamic hasVersion, version;
 @dynamic hasCode, code;
+@dynamic hasCompressed, compressed;
+@dynamic hasOriginalSize, originalSize;
 
 typedef struct AuthenticatedMessage__storage_ {
   uint32_t _has_storage_[1];
   uint32_t version;
+  uint32_t originalSize;
   NSData *message;
   NSString *code;
 } AuthenticatedMessage__storage_;
@@ -14531,6 +14534,24 @@ typedef struct AuthenticatedMessage__storage_ {
         .number = AuthenticatedMessage_FieldNumber_Version,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(AuthenticatedMessage__storage_, version),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "compressed",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AuthenticatedMessage_FieldNumber_Compressed,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "originalSize",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AuthenticatedMessage_FieldNumber_OriginalSize,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(AuthenticatedMessage__storage_, originalSize),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
       },
@@ -15175,8 +15196,10 @@ typedef struct DLCItem__storage_ {
 @dynamic hasIdentifier, identifier;
 @dynamic hasPrimaryPiece, primaryPiece;
 @dynamic piecesArray, piecesArray_Count;
+@dynamic altAssetsArray, altAssetsArray_Count;
 @dynamic hasName, name;
 @dynamic hasSetIdentifier, setIdentifier;
+@dynamic hasModifiedGeometry, modifiedGeometry;
 @dynamic hasPrice, price;
 @dynamic hasRequiredEop, requiredEop;
 @dynamic hasRequiredSoulEggs, requiredSoulEggs;
@@ -15195,6 +15218,7 @@ typedef struct ShellSpec__storage_ {
   NSMutableArray *piecesArray;
   ShellSpec_ShellPiece *primaryPiece;
   NSString *setIdentifier;
+  NSMutableArray *altAssetsArray;
   double requiredSoulEggs;
   double secondsRemaining;
   double secondsUntilAvailable;
@@ -15228,7 +15252,7 @@ typedef struct ShellSpec__storage_ {
         .name = "price",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_Price,
-        .hasIndex = 4,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(ShellSpec__storage_, price),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -15237,7 +15261,7 @@ typedef struct ShellSpec__storage_ {
         .name = "requiredEop",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_RequiredEop,
-        .hasIndex = 5,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(ShellSpec__storage_, requiredEop),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -15246,7 +15270,7 @@ typedef struct ShellSpec__storage_ {
         .name = "requiredSoulEggs",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_RequiredSoulEggs,
-        .hasIndex = 6,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(ShellSpec__storage_, requiredSoulEggs),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -15255,8 +15279,8 @@ typedef struct ShellSpec__storage_ {
         .name = "defaultAppearance",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_DefaultAppearance,
-        .hasIndex = 13,
-        .offset = 14,  // Stored in _has_storage_ to save space.
+        .hasIndex = 15,
+        .offset = 16,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -15291,8 +15315,8 @@ typedef struct ShellSpec__storage_ {
         .name = "isNew",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_IsNew,
-        .hasIndex = 7,
-        .offset = 8,  // Stored in _has_storage_ to save space.
+        .hasIndex = 9,
+        .offset = 10,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -15300,8 +15324,8 @@ typedef struct ShellSpec__storage_ {
         .name = "expires",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_Expires,
-        .hasIndex = 9,
-        .offset = 10,  // Stored in _has_storage_ to save space.
+        .hasIndex = 11,
+        .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -15309,7 +15333,7 @@ typedef struct ShellSpec__storage_ {
         .name = "secondsRemaining",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_SecondsRemaining,
-        .hasIndex = 12,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(ShellSpec__storage_, secondsRemaining),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -15318,10 +15342,28 @@ typedef struct ShellSpec__storage_ {
         .name = "secondsUntilAvailable",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_SecondsUntilAvailable,
-        .hasIndex = 11,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(ShellSpec__storage_, secondsUntilAvailable),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "altAssetsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(DLCItem),
+        .number = ShellSpec_FieldNumber_AltAssetsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellSpec__storage_, altAssetsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "modifiedGeometry",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellSpec_FieldNumber_ModifiedGeometry,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -15675,6 +15717,7 @@ typedef struct ShellSpec_ShellPiece__storage_ {
 @dynamic hasElementSet, elementSet;
 @dynamic hasHexBaseColor, hexBaseColor;
 @dynamic variationsArray, variationsArray_Count;
+@dynamic hasIcon, icon;
 @dynamic hasDefaultAppearance, defaultAppearance;
 @dynamic hasCustomAppearance, customAppearance;
 
@@ -15686,6 +15729,7 @@ typedef struct ShellSetSpec__storage_ {
   NSString *name;
   NSMutableArray *variationsArray;
   NSString *hexBaseColor;
+  DLCItem *icon;
   double requiredSoulEggs;
   double priceMultDeprecated;
   double secondsRemaining;
@@ -15754,8 +15798,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "defaultAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_DefaultAppearance,
-        .core.hasIndex = 20,
-        .core.offset = 21,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 21,
+        .core.offset = 22,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15814,8 +15858,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "customAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_CustomAppearance,
-        .core.hasIndex = 22,
-        .core.offset = 23,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 23,
+        .core.offset = 24,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -15878,6 +15922,16 @@ typedef struct ShellSetSpec__storage_ {
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, secondsUntilAvailable),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueMessage = nil,
+        .core.name = "icon",
+        .core.dataTypeSpecific.clazz = GPBObjCClass(DLCItem),
+        .core.number = ShellSetSpec_FieldNumber_Icon,
+        .core.hasIndex = 20,
+        .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, icon),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -16462,6 +16516,7 @@ typedef struct ShellGroupSpec__storage_ {
 @dynamic itemsArray, itemsArray_Count;
 @dynamic shellsArray, shellsArray_Count;
 @dynamic shellSetsArray, shellSetsArray_Count;
+@dynamic decoratorsArray, decoratorsArray_Count;
 @dynamic shellObjectsArray, shellObjectsArray_Count;
 @dynamic shellGroupsArray, shellGroupsArray_Count;
 
@@ -16472,6 +16527,7 @@ typedef struct DLCCatalog__storage_ {
   NSMutableArray *shellSetsArray;
   NSMutableArray *shellObjectsArray;
   NSMutableArray *shellGroupsArray;
+  NSMutableArray *decoratorsArray;
 } DLCCatalog__storage_;
 
 // This method is threadsafe because it is initially called
@@ -16522,6 +16578,15 @@ typedef struct DLCCatalog__storage_ {
         .number = DLCCatalog_FieldNumber_ShellGroupsArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(DLCCatalog__storage_, shellGroupsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "decoratorsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellSetSpec),
+        .number = DLCCatalog_FieldNumber_DecoratorsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(DLCCatalog__storage_, decoratorsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },

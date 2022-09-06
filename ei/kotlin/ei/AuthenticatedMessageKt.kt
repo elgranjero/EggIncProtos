@@ -93,6 +93,54 @@ public object AuthenticatedMessageKt {
     public fun hasCode(): kotlin.Boolean {
       return _builder.hasCode()
     }
+
+    /**
+     * <code>optional bool compressed = 4;</code>
+     */
+    public var compressed: kotlin.Boolean
+      @JvmName("getCompressed")
+      get() = _builder.getCompressed()
+      @JvmName("setCompressed")
+      set(value) {
+        _builder.setCompressed(value)
+      }
+    /**
+     * <code>optional bool compressed = 4;</code>
+     */
+    public fun clearCompressed() {
+      _builder.clearCompressed()
+    }
+    /**
+     * <code>optional bool compressed = 4;</code>
+     * @return Whether the compressed field is set.
+     */
+    public fun hasCompressed(): kotlin.Boolean {
+      return _builder.hasCompressed()
+    }
+
+    /**
+     * <code>optional uint32 original_size = 5;</code>
+     */
+    public var originalSize: kotlin.Int
+      @JvmName("getOriginalSize")
+      get() = _builder.getOriginalSize()
+      @JvmName("setOriginalSize")
+      set(value) {
+        _builder.setOriginalSize(value)
+      }
+    /**
+     * <code>optional uint32 original_size = 5;</code>
+     */
+    public fun clearOriginalSize() {
+      _builder.clearOriginalSize()
+    }
+    /**
+     * <code>optional uint32 original_size = 5;</code>
+     * @return Whether the originalSize field is set.
+     */
+    public fun hasOriginalSize(): kotlin.Boolean {
+      return _builder.hasOriginalSize()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

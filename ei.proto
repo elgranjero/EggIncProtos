@@ -1359,6 +1359,8 @@ message AuthenticatedMessage {
     optional bytes message = 1;
     optional uint32 version = 3;
     optional string code = 2;
+    optional bool compressed = 4;
+    optional uint32 original_size = 5;
 }
 
 message LogCompleteMissionPayload {
@@ -1430,8 +1432,10 @@ message ShellSpec {
     }
     
     repeated ShellPiece pieces = 11;
+    repeated DLCItem alt_assets = 18;
     optional string name = 3;
     optional string set_identifier = 13;
+    optional bool modified_geometry = 19;
     optional uint32 price = 4;
     optional uint32 required_eop = 5;
     optional double required_soul_eggs = 6;
@@ -1568,6 +1572,7 @@ message ShellSetSpec {
         optional bool custom_appearance = 5;
     }
     
+    optional DLCItem icon = 19;
     optional bool default_appearance = 6;
     optional bool custom_appearance = 12;
 }
@@ -1624,6 +1629,7 @@ message DLCCatalog {
     repeated DLCItem items = 1;
     repeated ShellSpec shells = 2;
     repeated ShellSetSpec shell_sets = 3;
+    repeated ShellSetSpec decorators = 6;
     repeated ShellObjectSpec shell_objects = 4;
     repeated ShellGroupSpec shell_groups = 5;
 }
