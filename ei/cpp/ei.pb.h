@@ -33413,8 +33413,6 @@ class AuthenticatedMessage final :
     kMessageFieldNumber = 1,
     kCodeFieldNumber = 2,
     kVersionFieldNumber = 3,
-    kCompressedFieldNumber = 4,
-    kOriginalSizeFieldNumber = 5,
   };
   // optional bytes message = 1;
   bool has_message() const;
@@ -33465,32 +33463,6 @@ class AuthenticatedMessage final :
   void _internal_set_version(uint32_t value);
   public:
 
-  // optional bool compressed = 4;
-  bool has_compressed() const;
-  private:
-  bool _internal_has_compressed() const;
-  public:
-  void clear_compressed();
-  bool compressed() const;
-  void set_compressed(bool value);
-  private:
-  bool _internal_compressed() const;
-  void _internal_set_compressed(bool value);
-  public:
-
-  // optional uint32 original_size = 5;
-  bool has_original_size() const;
-  private:
-  bool _internal_has_original_size() const;
-  public:
-  void clear_original_size();
-  uint32_t original_size() const;
-  void set_original_size(uint32_t value);
-  private:
-  uint32_t _internal_original_size() const;
-  void _internal_set_original_size(uint32_t value);
-  public:
-
   // @@protoc_insertion_point(class_scope:ei.AuthenticatedMessage)
  private:
   class _Internal;
@@ -33503,8 +33475,6 @@ class AuthenticatedMessage final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr code_;
   uint32_t version_;
-  bool compressed_;
-  uint32_t original_size_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -35820,7 +35790,6 @@ class ShellSpec final :
 
   enum : int {
     kPiecesFieldNumber = 11,
-    kAltAssetsFieldNumber = 18,
     kIdentifierFieldNumber = 1,
     kNameFieldNumber = 3,
     kSetIdentifierFieldNumber = 13,
@@ -35828,11 +35797,10 @@ class ShellSpec final :
     kPriceFieldNumber = 4,
     kRequiredEopFieldNumber = 5,
     kRequiredSoulEggsFieldNumber = 6,
-    kSecondsRemainingFieldNumber = 16,
-    kModifiedGeometryFieldNumber = 19,
     kIsNewFieldNumber = 14,
     kExpiresFieldNumber = 15,
     kDefaultAppearanceFieldNumber = 8,
+    kSecondsRemainingFieldNumber = 16,
     kSecondsUntilAvailableFieldNumber = 17,
   };
   // repeated .ei.ShellSpec.ShellPiece pieces = 11;
@@ -35852,24 +35820,6 @@ class ShellSpec final :
   ::ei::ShellSpec_ShellPiece* add_pieces();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSpec_ShellPiece >&
       pieces() const;
-
-  // repeated .ei.DLCItem alt_assets = 18;
-  int alt_assets_size() const;
-  private:
-  int _internal_alt_assets_size() const;
-  public:
-  void clear_alt_assets();
-  ::ei::DLCItem* mutable_alt_assets(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::DLCItem >*
-      mutable_alt_assets();
-  private:
-  const ::ei::DLCItem& _internal_alt_assets(int index) const;
-  ::ei::DLCItem* _internal_add_alt_assets();
-  public:
-  const ::ei::DLCItem& alt_assets(int index) const;
-  ::ei::DLCItem* add_alt_assets();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::DLCItem >&
-      alt_assets() const;
 
   // optional string identifier = 1;
   bool has_identifier() const;
@@ -35982,32 +35932,6 @@ class ShellSpec final :
   void _internal_set_required_soul_eggs(double value);
   public:
 
-  // optional double seconds_remaining = 16;
-  bool has_seconds_remaining() const;
-  private:
-  bool _internal_has_seconds_remaining() const;
-  public:
-  void clear_seconds_remaining();
-  double seconds_remaining() const;
-  void set_seconds_remaining(double value);
-  private:
-  double _internal_seconds_remaining() const;
-  void _internal_set_seconds_remaining(double value);
-  public:
-
-  // optional bool modified_geometry = 19;
-  bool has_modified_geometry() const;
-  private:
-  bool _internal_has_modified_geometry() const;
-  public:
-  void clear_modified_geometry();
-  bool modified_geometry() const;
-  void set_modified_geometry(bool value);
-  private:
-  bool _internal_modified_geometry() const;
-  void _internal_set_modified_geometry(bool value);
-  public:
-
   // optional bool is_new = 14;
   bool has_is_new() const;
   private:
@@ -36047,6 +35971,19 @@ class ShellSpec final :
   void _internal_set_default_appearance(bool value);
   public:
 
+  // optional double seconds_remaining = 16;
+  bool has_seconds_remaining() const;
+  private:
+  bool _internal_has_seconds_remaining() const;
+  public:
+  void clear_seconds_remaining();
+  double seconds_remaining() const;
+  void set_seconds_remaining(double value);
+  private:
+  double _internal_seconds_remaining() const;
+  void _internal_set_seconds_remaining(double value);
+  public:
+
   // optional double seconds_until_available = 17;
   bool has_seconds_until_available() const;
   private:
@@ -36070,7 +36007,6 @@ class ShellSpec final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSpec_ShellPiece > pieces_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::DLCItem > alt_assets_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr set_identifier_;
@@ -36078,11 +36014,10 @@ class ShellSpec final :
   uint32_t price_;
   uint32_t required_eop_;
   double required_soul_eggs_;
-  double seconds_remaining_;
-  bool modified_geometry_;
   bool is_new_;
   bool expires_;
   bool default_appearance_;
+  double seconds_remaining_;
   double seconds_until_available_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -36466,7 +36401,6 @@ class ShellSetSpec final :
     kIdentifierFieldNumber = 1,
     kNameFieldNumber = 2,
     kHexBaseColorFieldNumber = 16,
-    kIconFieldNumber = 19,
     kPriceFieldNumber = 3,
     kRequiredEopFieldNumber = 4,
     kRequiredSoulEggsFieldNumber = 5,
@@ -36553,24 +36487,6 @@ class ShellSetSpec final :
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_hex_base_color(const std::string& value);
   std::string* _internal_mutable_hex_base_color();
   public:
-
-  // optional .ei.DLCItem icon = 19;
-  bool has_icon() const;
-  private:
-  bool _internal_has_icon() const;
-  public:
-  void clear_icon();
-  const ::ei::DLCItem& icon() const;
-  PROTOBUF_NODISCARD ::ei::DLCItem* release_icon();
-  ::ei::DLCItem* mutable_icon();
-  void set_allocated_icon(::ei::DLCItem* icon);
-  private:
-  const ::ei::DLCItem& _internal_icon() const;
-  ::ei::DLCItem* _internal_mutable_icon();
-  public:
-  void unsafe_arena_set_allocated_icon(
-      ::ei::DLCItem* icon);
-  ::ei::DLCItem* unsafe_arena_release_icon();
 
   // optional uint32 price = 3;
   bool has_price() const;
@@ -36767,7 +36683,6 @@ class ShellSetSpec final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hex_base_color_;
-  ::ei::DLCItem* icon_;
   uint32_t price_;
   uint32_t required_eop_;
   double required_soul_eggs_;
@@ -37836,7 +37751,6 @@ class DLCCatalog final :
     kShellSetsFieldNumber = 3,
     kShellObjectsFieldNumber = 4,
     kShellGroupsFieldNumber = 5,
-    kDecoratorsFieldNumber = 6,
   };
   // repeated .ei.DLCItem items = 1;
   int items_size() const;
@@ -37928,24 +37842,6 @@ class DLCCatalog final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec >&
       shell_groups() const;
 
-  // repeated .ei.ShellSetSpec decorators = 6;
-  int decorators_size() const;
-  private:
-  int _internal_decorators_size() const;
-  public:
-  void clear_decorators();
-  ::ei::ShellSetSpec* mutable_decorators(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec >*
-      mutable_decorators();
-  private:
-  const ::ei::ShellSetSpec& _internal_decorators(int index) const;
-  ::ei::ShellSetSpec* _internal_add_decorators();
-  public:
-  const ::ei::ShellSetSpec& decorators(int index) const;
-  ::ei::ShellSetSpec* add_decorators();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec >&
-      decorators() const;
-
   // @@protoc_insertion_point(class_scope:ei.DLCCatalog)
  private:
   class _Internal;
@@ -37958,7 +37854,6 @@ class DLCCatalog final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec > shell_sets_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellObjectSpec > shell_objects_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellGroupSpec > shell_groups_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec > decorators_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -77918,62 +77813,6 @@ inline void AuthenticatedMessage::set_allocated_code(std::string* code) {
   // @@protoc_insertion_point(field_set_allocated:ei.AuthenticatedMessage.code)
 }
 
-// optional bool compressed = 4;
-inline bool AuthenticatedMessage::_internal_has_compressed() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool AuthenticatedMessage::has_compressed() const {
-  return _internal_has_compressed();
-}
-inline void AuthenticatedMessage::clear_compressed() {
-  compressed_ = false;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline bool AuthenticatedMessage::_internal_compressed() const {
-  return compressed_;
-}
-inline bool AuthenticatedMessage::compressed() const {
-  // @@protoc_insertion_point(field_get:ei.AuthenticatedMessage.compressed)
-  return _internal_compressed();
-}
-inline void AuthenticatedMessage::_internal_set_compressed(bool value) {
-  _has_bits_[0] |= 0x00000008u;
-  compressed_ = value;
-}
-inline void AuthenticatedMessage::set_compressed(bool value) {
-  _internal_set_compressed(value);
-  // @@protoc_insertion_point(field_set:ei.AuthenticatedMessage.compressed)
-}
-
-// optional uint32 original_size = 5;
-inline bool AuthenticatedMessage::_internal_has_original_size() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool AuthenticatedMessage::has_original_size() const {
-  return _internal_has_original_size();
-}
-inline void AuthenticatedMessage::clear_original_size() {
-  original_size_ = 0u;
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline uint32_t AuthenticatedMessage::_internal_original_size() const {
-  return original_size_;
-}
-inline uint32_t AuthenticatedMessage::original_size() const {
-  // @@protoc_insertion_point(field_get:ei.AuthenticatedMessage.original_size)
-  return _internal_original_size();
-}
-inline void AuthenticatedMessage::_internal_set_original_size(uint32_t value) {
-  _has_bits_[0] |= 0x00000010u;
-  original_size_ = value;
-}
-inline void AuthenticatedMessage::set_original_size(uint32_t value) {
-  _internal_set_original_size(value);
-  // @@protoc_insertion_point(field_set:ei.AuthenticatedMessage.original_size)
-}
-
 // -------------------------------------------------------------------
 
 // LogCompleteMissionPayload
@@ -80017,46 +79856,6 @@ ShellSpec::pieces() const {
   return pieces_;
 }
 
-// repeated .ei.DLCItem alt_assets = 18;
-inline int ShellSpec::_internal_alt_assets_size() const {
-  return alt_assets_.size();
-}
-inline int ShellSpec::alt_assets_size() const {
-  return _internal_alt_assets_size();
-}
-inline void ShellSpec::clear_alt_assets() {
-  alt_assets_.Clear();
-}
-inline ::ei::DLCItem* ShellSpec::mutable_alt_assets(int index) {
-  // @@protoc_insertion_point(field_mutable:ei.ShellSpec.alt_assets)
-  return alt_assets_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::DLCItem >*
-ShellSpec::mutable_alt_assets() {
-  // @@protoc_insertion_point(field_mutable_list:ei.ShellSpec.alt_assets)
-  return &alt_assets_;
-}
-inline const ::ei::DLCItem& ShellSpec::_internal_alt_assets(int index) const {
-  return alt_assets_.Get(index);
-}
-inline const ::ei::DLCItem& ShellSpec::alt_assets(int index) const {
-  // @@protoc_insertion_point(field_get:ei.ShellSpec.alt_assets)
-  return _internal_alt_assets(index);
-}
-inline ::ei::DLCItem* ShellSpec::_internal_add_alt_assets() {
-  return alt_assets_.Add();
-}
-inline ::ei::DLCItem* ShellSpec::add_alt_assets() {
-  ::ei::DLCItem* _add = _internal_add_alt_assets();
-  // @@protoc_insertion_point(field_add:ei.ShellSpec.alt_assets)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::DLCItem >&
-ShellSpec::alt_assets() const {
-  // @@protoc_insertion_point(field_list:ei.ShellSpec.alt_assets)
-  return alt_assets_;
-}
-
 // optional string name = 3;
 inline bool ShellSpec::_internal_has_name() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
@@ -80195,34 +79994,6 @@ inline void ShellSpec::set_allocated_set_identifier(std::string* set_identifier)
   // @@protoc_insertion_point(field_set_allocated:ei.ShellSpec.set_identifier)
 }
 
-// optional bool modified_geometry = 19;
-inline bool ShellSpec::_internal_has_modified_geometry() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool ShellSpec::has_modified_geometry() const {
-  return _internal_has_modified_geometry();
-}
-inline void ShellSpec::clear_modified_geometry() {
-  modified_geometry_ = false;
-  _has_bits_[0] &= ~0x00000100u;
-}
-inline bool ShellSpec::_internal_modified_geometry() const {
-  return modified_geometry_;
-}
-inline bool ShellSpec::modified_geometry() const {
-  // @@protoc_insertion_point(field_get:ei.ShellSpec.modified_geometry)
-  return _internal_modified_geometry();
-}
-inline void ShellSpec::_internal_set_modified_geometry(bool value) {
-  _has_bits_[0] |= 0x00000100u;
-  modified_geometry_ = value;
-}
-inline void ShellSpec::set_modified_geometry(bool value) {
-  _internal_set_modified_geometry(value);
-  // @@protoc_insertion_point(field_set:ei.ShellSpec.modified_geometry)
-}
-
 // optional uint32 price = 4;
 inline bool ShellSpec::_internal_has_price() const {
   bool value = (_has_bits_[0] & 0x00000010u) != 0;
@@ -80309,7 +80080,7 @@ inline void ShellSpec::set_required_soul_eggs(double value) {
 
 // optional bool is_new = 14;
 inline bool ShellSpec::_internal_has_is_new() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ShellSpec::has_is_new() const {
@@ -80317,7 +80088,7 @@ inline bool ShellSpec::has_is_new() const {
 }
 inline void ShellSpec::clear_is_new() {
   is_new_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline bool ShellSpec::_internal_is_new() const {
   return is_new_;
@@ -80327,7 +80098,7 @@ inline bool ShellSpec::is_new() const {
   return _internal_is_new();
 }
 inline void ShellSpec::_internal_set_is_new(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000080u;
   is_new_ = value;
 }
 inline void ShellSpec::set_is_new(bool value) {
@@ -80337,7 +80108,7 @@ inline void ShellSpec::set_is_new(bool value) {
 
 // optional bool expires = 15;
 inline bool ShellSpec::_internal_has_expires() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ShellSpec::has_expires() const {
@@ -80345,7 +80116,7 @@ inline bool ShellSpec::has_expires() const {
 }
 inline void ShellSpec::clear_expires() {
   expires_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool ShellSpec::_internal_expires() const {
   return expires_;
@@ -80355,7 +80126,7 @@ inline bool ShellSpec::expires() const {
   return _internal_expires();
 }
 inline void ShellSpec::_internal_set_expires(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000100u;
   expires_ = value;
 }
 inline void ShellSpec::set_expires(bool value) {
@@ -80365,7 +80136,7 @@ inline void ShellSpec::set_expires(bool value) {
 
 // optional double seconds_until_available = 17;
 inline bool ShellSpec::_internal_has_seconds_until_available() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ShellSpec::has_seconds_until_available() const {
@@ -80373,7 +80144,7 @@ inline bool ShellSpec::has_seconds_until_available() const {
 }
 inline void ShellSpec::clear_seconds_until_available() {
   seconds_until_available_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline double ShellSpec::_internal_seconds_until_available() const {
   return seconds_until_available_;
@@ -80383,7 +80154,7 @@ inline double ShellSpec::seconds_until_available() const {
   return _internal_seconds_until_available();
 }
 inline void ShellSpec::_internal_set_seconds_until_available(double value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000800u;
   seconds_until_available_ = value;
 }
 inline void ShellSpec::set_seconds_until_available(double value) {
@@ -80393,7 +80164,7 @@ inline void ShellSpec::set_seconds_until_available(double value) {
 
 // optional double seconds_remaining = 16;
 inline bool ShellSpec::_internal_has_seconds_remaining() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool ShellSpec::has_seconds_remaining() const {
@@ -80401,7 +80172,7 @@ inline bool ShellSpec::has_seconds_remaining() const {
 }
 inline void ShellSpec::clear_seconds_remaining() {
   seconds_remaining_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline double ShellSpec::_internal_seconds_remaining() const {
   return seconds_remaining_;
@@ -80411,7 +80182,7 @@ inline double ShellSpec::seconds_remaining() const {
   return _internal_seconds_remaining();
 }
 inline void ShellSpec::_internal_set_seconds_remaining(double value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000400u;
   seconds_remaining_ = value;
 }
 inline void ShellSpec::set_seconds_remaining(double value) {
@@ -80421,7 +80192,7 @@ inline void ShellSpec::set_seconds_remaining(double value) {
 
 // optional bool default_appearance = 8;
 inline bool ShellSpec::_internal_has_default_appearance() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ShellSpec::has_default_appearance() const {
@@ -80429,7 +80200,7 @@ inline bool ShellSpec::has_default_appearance() const {
 }
 inline void ShellSpec::clear_default_appearance() {
   default_appearance_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool ShellSpec::_internal_default_appearance() const {
   return default_appearance_;
@@ -80439,7 +80210,7 @@ inline bool ShellSpec::default_appearance() const {
   return _internal_default_appearance();
 }
 inline void ShellSpec::_internal_set_default_appearance(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000200u;
   default_appearance_ = value;
 }
 inline void ShellSpec::set_default_appearance(bool value) {
@@ -80845,7 +80616,7 @@ inline void ShellSetSpec::set_allocated_name(std::string* name) {
 
 // optional uint32 price = 3;
 inline bool ShellSetSpec::_internal_has_price() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_price() const {
@@ -80853,7 +80624,7 @@ inline bool ShellSetSpec::has_price() const {
 }
 inline void ShellSetSpec::clear_price() {
   price_ = 0u;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t ShellSetSpec::_internal_price() const {
   return price_;
@@ -80863,7 +80634,7 @@ inline uint32_t ShellSetSpec::price() const {
   return _internal_price();
 }
 inline void ShellSetSpec::_internal_set_price(uint32_t value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000008u;
   price_ = value;
 }
 inline void ShellSetSpec::set_price(uint32_t value) {
@@ -80873,7 +80644,7 @@ inline void ShellSetSpec::set_price(uint32_t value) {
 
 // optional double price_mult_DEPRECATED = 8 [default = 1];
 inline bool ShellSetSpec::_internal_has_price_mult_deprecated() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_price_mult_deprecated() const {
@@ -80881,7 +80652,7 @@ inline bool ShellSetSpec::has_price_mult_deprecated() const {
 }
 inline void ShellSetSpec::clear_price_mult_deprecated() {
   price_mult_deprecated_ = 1;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline double ShellSetSpec::_internal_price_mult_deprecated() const {
   return price_mult_deprecated_;
@@ -80891,7 +80662,7 @@ inline double ShellSetSpec::price_mult_deprecated() const {
   return _internal_price_mult_deprecated();
 }
 inline void ShellSetSpec::_internal_set_price_mult_deprecated(double value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00010000u;
   price_mult_deprecated_ = value;
 }
 inline void ShellSetSpec::set_price_mult_deprecated(double value) {
@@ -80901,7 +80672,7 @@ inline void ShellSetSpec::set_price_mult_deprecated(double value) {
 
 // optional double discount = 17;
 inline bool ShellSetSpec::_internal_has_discount() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_discount() const {
@@ -80909,7 +80680,7 @@ inline bool ShellSetSpec::has_discount() const {
 }
 inline void ShellSetSpec::clear_discount() {
   discount_ = 0;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline double ShellSetSpec::_internal_discount() const {
   return discount_;
@@ -80919,7 +80690,7 @@ inline double ShellSetSpec::discount() const {
   return _internal_discount();
 }
 inline void ShellSetSpec::_internal_set_discount(double value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00004000u;
   discount_ = value;
 }
 inline void ShellSetSpec::set_discount(double value) {
@@ -80929,7 +80700,7 @@ inline void ShellSetSpec::set_discount(double value) {
 
 // optional uint32 required_eop = 4;
 inline bool ShellSetSpec::_internal_has_required_eop() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_required_eop() const {
@@ -80937,7 +80708,7 @@ inline bool ShellSetSpec::has_required_eop() const {
 }
 inline void ShellSetSpec::clear_required_eop() {
   required_eop_ = 0u;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t ShellSetSpec::_internal_required_eop() const {
   return required_eop_;
@@ -80947,7 +80718,7 @@ inline uint32_t ShellSetSpec::required_eop() const {
   return _internal_required_eop();
 }
 inline void ShellSetSpec::_internal_set_required_eop(uint32_t value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000010u;
   required_eop_ = value;
 }
 inline void ShellSetSpec::set_required_eop(uint32_t value) {
@@ -80957,7 +80728,7 @@ inline void ShellSetSpec::set_required_eop(uint32_t value) {
 
 // optional double required_soul_eggs = 5;
 inline bool ShellSetSpec::_internal_has_required_soul_eggs() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_required_soul_eggs() const {
@@ -80965,7 +80736,7 @@ inline bool ShellSetSpec::has_required_soul_eggs() const {
 }
 inline void ShellSetSpec::clear_required_soul_eggs() {
   required_soul_eggs_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline double ShellSetSpec::_internal_required_soul_eggs() const {
   return required_soul_eggs_;
@@ -80975,7 +80746,7 @@ inline double ShellSetSpec::required_soul_eggs() const {
   return _internal_required_soul_eggs();
 }
 inline void ShellSetSpec::_internal_set_required_soul_eggs(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000020u;
   required_soul_eggs_ = value;
 }
 inline void ShellSetSpec::set_required_soul_eggs(double value) {
@@ -80985,7 +80756,7 @@ inline void ShellSetSpec::set_required_soul_eggs(double value) {
 
 // optional bool is_new = 9;
 inline bool ShellSetSpec::_internal_has_is_new() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_is_new() const {
@@ -80993,7 +80764,7 @@ inline bool ShellSetSpec::has_is_new() const {
 }
 inline void ShellSetSpec::clear_is_new() {
   is_new_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool ShellSetSpec::_internal_is_new() const {
   return is_new_;
@@ -81003,7 +80774,7 @@ inline bool ShellSetSpec::is_new() const {
   return _internal_is_new();
 }
 inline void ShellSetSpec::_internal_set_is_new(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
   is_new_ = value;
 }
 inline void ShellSetSpec::set_is_new(bool value) {
@@ -81013,7 +80784,7 @@ inline void ShellSetSpec::set_is_new(bool value) {
 
 // optional bool expires = 10;
 inline bool ShellSetSpec::_internal_has_expires() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_expires() const {
@@ -81021,7 +80792,7 @@ inline bool ShellSetSpec::has_expires() const {
 }
 inline void ShellSetSpec::clear_expires() {
   expires_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline bool ShellSetSpec::_internal_expires() const {
   return expires_;
@@ -81031,7 +80802,7 @@ inline bool ShellSetSpec::expires() const {
   return _internal_expires();
 }
 inline void ShellSetSpec::_internal_set_expires(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000400u;
   expires_ = value;
 }
 inline void ShellSetSpec::set_expires(bool value) {
@@ -81041,7 +80812,7 @@ inline void ShellSetSpec::set_expires(bool value) {
 
 // optional double seconds_until_available = 18;
 inline bool ShellSetSpec::_internal_has_seconds_until_available() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_seconds_until_available() const {
@@ -81049,7 +80820,7 @@ inline bool ShellSetSpec::has_seconds_until_available() const {
 }
 inline void ShellSetSpec::clear_seconds_until_available() {
   seconds_until_available_ = 0;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline double ShellSetSpec::_internal_seconds_until_available() const {
   return seconds_until_available_;
@@ -81059,7 +80830,7 @@ inline double ShellSetSpec::seconds_until_available() const {
   return _internal_seconds_until_available();
 }
 inline void ShellSetSpec::_internal_set_seconds_until_available(double value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00008000u;
   seconds_until_available_ = value;
 }
 inline void ShellSetSpec::set_seconds_until_available(double value) {
@@ -81069,7 +80840,7 @@ inline void ShellSetSpec::set_seconds_until_available(double value) {
 
 // optional double seconds_remaining = 11;
 inline bool ShellSetSpec::_internal_has_seconds_remaining() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_seconds_remaining() const {
@@ -81077,7 +80848,7 @@ inline bool ShellSetSpec::has_seconds_remaining() const {
 }
 inline void ShellSetSpec::clear_seconds_remaining() {
   seconds_remaining_ = 0;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline double ShellSetSpec::_internal_seconds_remaining() const {
   return seconds_remaining_;
@@ -81087,7 +80858,7 @@ inline double ShellSetSpec::seconds_remaining() const {
   return _internal_seconds_remaining();
 }
 inline void ShellSetSpec::_internal_set_seconds_remaining(double value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00002000u;
   seconds_remaining_ = value;
 }
 inline void ShellSetSpec::set_seconds_remaining(double value) {
@@ -81097,7 +80868,7 @@ inline void ShellSetSpec::set_seconds_remaining(double value) {
 
 // optional bool decorator = 14;
 inline bool ShellSetSpec::_internal_has_decorator() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_decorator() const {
@@ -81105,7 +80876,7 @@ inline bool ShellSetSpec::has_decorator() const {
 }
 inline void ShellSetSpec::clear_decorator() {
   decorator_ = false;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool ShellSetSpec::_internal_decorator() const {
   return decorator_;
@@ -81115,7 +80886,7 @@ inline bool ShellSetSpec::decorator() const {
   return _internal_decorator();
 }
 inline void ShellSetSpec::_internal_set_decorator(bool value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000800u;
   decorator_ = value;
 }
 inline void ShellSetSpec::set_decorator(bool value) {
@@ -81125,7 +80896,7 @@ inline void ShellSetSpec::set_decorator(bool value) {
 
 // optional bool modified_geometry = 13;
 inline bool ShellSetSpec::_internal_has_modified_geometry() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_modified_geometry() const {
@@ -81133,7 +80904,7 @@ inline bool ShellSetSpec::has_modified_geometry() const {
 }
 inline void ShellSetSpec::clear_modified_geometry() {
   modified_geometry_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline bool ShellSetSpec::_internal_modified_geometry() const {
   return modified_geometry_;
@@ -81143,7 +80914,7 @@ inline bool ShellSetSpec::modified_geometry() const {
   return _internal_modified_geometry();
 }
 inline void ShellSetSpec::_internal_set_modified_geometry(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00001000u;
   modified_geometry_ = value;
 }
 inline void ShellSetSpec::set_modified_geometry(bool value) {
@@ -81153,7 +80924,7 @@ inline void ShellSetSpec::set_modified_geometry(bool value) {
 
 // optional bool element_set = 7;
 inline bool ShellSetSpec::_internal_has_element_set() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_element_set() const {
@@ -81161,7 +80932,7 @@ inline bool ShellSetSpec::has_element_set() const {
 }
 inline void ShellSetSpec::clear_element_set() {
   element_set_ = false;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline bool ShellSetSpec::_internal_element_set() const {
   return element_set_;
@@ -81171,7 +80942,7 @@ inline bool ShellSetSpec::element_set() const {
   return _internal_element_set();
 }
 inline void ShellSetSpec::_internal_set_element_set(bool value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
   element_set_ = value;
 }
 inline void ShellSetSpec::set_element_set(bool value) {
@@ -81288,99 +81059,9 @@ ShellSetSpec::variations() const {
   return variations_;
 }
 
-// optional .ei.DLCItem icon = 19;
-inline bool ShellSetSpec::_internal_has_icon() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || icon_ != nullptr);
-  return value;
-}
-inline bool ShellSetSpec::has_icon() const {
-  return _internal_has_icon();
-}
-inline void ShellSetSpec::clear_icon() {
-  if (icon_ != nullptr) icon_->Clear();
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline const ::ei::DLCItem& ShellSetSpec::_internal_icon() const {
-  const ::ei::DLCItem* p = icon_;
-  return p != nullptr ? *p : reinterpret_cast<const ::ei::DLCItem&>(
-      ::ei::_DLCItem_default_instance_);
-}
-inline const ::ei::DLCItem& ShellSetSpec::icon() const {
-  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.icon)
-  return _internal_icon();
-}
-inline void ShellSetSpec::unsafe_arena_set_allocated_icon(
-    ::ei::DLCItem* icon) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(icon_);
-  }
-  icon_ = icon;
-  if (icon) {
-    _has_bits_[0] |= 0x00000008u;
-  } else {
-    _has_bits_[0] &= ~0x00000008u;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ShellSetSpec.icon)
-}
-inline ::ei::DLCItem* ShellSetSpec::release_icon() {
-  _has_bits_[0] &= ~0x00000008u;
-  ::ei::DLCItem* temp = icon_;
-  icon_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::ei::DLCItem* ShellSetSpec::unsafe_arena_release_icon() {
-  // @@protoc_insertion_point(field_release:ei.ShellSetSpec.icon)
-  _has_bits_[0] &= ~0x00000008u;
-  ::ei::DLCItem* temp = icon_;
-  icon_ = nullptr;
-  return temp;
-}
-inline ::ei::DLCItem* ShellSetSpec::_internal_mutable_icon() {
-  _has_bits_[0] |= 0x00000008u;
-  if (icon_ == nullptr) {
-    auto* p = CreateMaybeMessage<::ei::DLCItem>(GetArenaForAllocation());
-    icon_ = p;
-  }
-  return icon_;
-}
-inline ::ei::DLCItem* ShellSetSpec::mutable_icon() {
-  ::ei::DLCItem* _msg = _internal_mutable_icon();
-  // @@protoc_insertion_point(field_mutable:ei.ShellSetSpec.icon)
-  return _msg;
-}
-inline void ShellSetSpec::set_allocated_icon(::ei::DLCItem* icon) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete icon_;
-  }
-  if (icon) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::DLCItem>::GetOwningArena(icon);
-    if (message_arena != submessage_arena) {
-      icon = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, icon, submessage_arena);
-    }
-    _has_bits_[0] |= 0x00000008u;
-  } else {
-    _has_bits_[0] &= ~0x00000008u;
-  }
-  icon_ = icon;
-  // @@protoc_insertion_point(field_set_allocated:ei.ShellSetSpec.icon)
-}
-
 // optional bool default_appearance = 6;
 inline bool ShellSetSpec::_internal_has_default_appearance() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_default_appearance() const {
@@ -81388,7 +81069,7 @@ inline bool ShellSetSpec::has_default_appearance() const {
 }
 inline void ShellSetSpec::clear_default_appearance() {
   default_appearance_ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline bool ShellSetSpec::_internal_default_appearance() const {
   return default_appearance_;
@@ -81398,7 +81079,7 @@ inline bool ShellSetSpec::default_appearance() const {
   return _internal_default_appearance();
 }
 inline void ShellSetSpec::_internal_set_default_appearance(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
   default_appearance_ = value;
 }
 inline void ShellSetSpec::set_default_appearance(bool value) {
@@ -81408,7 +81089,7 @@ inline void ShellSetSpec::set_default_appearance(bool value) {
 
 // optional bool custom_appearance = 12;
 inline bool ShellSetSpec::_internal_has_custom_appearance() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_custom_appearance() const {
@@ -81416,7 +81097,7 @@ inline bool ShellSetSpec::has_custom_appearance() const {
 }
 inline void ShellSetSpec::clear_custom_appearance() {
   custom_appearance_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool ShellSetSpec::_internal_custom_appearance() const {
   return custom_appearance_;
@@ -81426,7 +81107,7 @@ inline bool ShellSetSpec::custom_appearance() const {
   return _internal_custom_appearance();
 }
 inline void ShellSetSpec::_internal_set_custom_appearance(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
   custom_appearance_ = value;
 }
 inline void ShellSetSpec::set_custom_appearance(bool value) {
@@ -82663,46 +82344,6 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec >&
 DLCCatalog::shell_sets() const {
   // @@protoc_insertion_point(field_list:ei.DLCCatalog.shell_sets)
   return shell_sets_;
-}
-
-// repeated .ei.ShellSetSpec decorators = 6;
-inline int DLCCatalog::_internal_decorators_size() const {
-  return decorators_.size();
-}
-inline int DLCCatalog::decorators_size() const {
-  return _internal_decorators_size();
-}
-inline void DLCCatalog::clear_decorators() {
-  decorators_.Clear();
-}
-inline ::ei::ShellSetSpec* DLCCatalog::mutable_decorators(int index) {
-  // @@protoc_insertion_point(field_mutable:ei.DLCCatalog.decorators)
-  return decorators_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec >*
-DLCCatalog::mutable_decorators() {
-  // @@protoc_insertion_point(field_mutable_list:ei.DLCCatalog.decorators)
-  return &decorators_;
-}
-inline const ::ei::ShellSetSpec& DLCCatalog::_internal_decorators(int index) const {
-  return decorators_.Get(index);
-}
-inline const ::ei::ShellSetSpec& DLCCatalog::decorators(int index) const {
-  // @@protoc_insertion_point(field_get:ei.DLCCatalog.decorators)
-  return _internal_decorators(index);
-}
-inline ::ei::ShellSetSpec* DLCCatalog::_internal_add_decorators() {
-  return decorators_.Add();
-}
-inline ::ei::ShellSetSpec* DLCCatalog::add_decorators() {
-  ::ei::ShellSetSpec* _add = _internal_add_decorators();
-  // @@protoc_insertion_point(field_add:ei.DLCCatalog.decorators)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellSetSpec >&
-DLCCatalog::decorators() const {
-  // @@protoc_insertion_point(field_list:ei.DLCCatalog.decorators)
-  return decorators_;
 }
 
 // repeated .ei.ShellObjectSpec shell_objects = 4;

@@ -68,7 +68,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.ShellSpec.repeatedFields_ = [11,18];
+proto.ei.ShellSpec.repeatedFields_ = [11];
 
 
 
@@ -105,11 +105,8 @@ proto.ei.ShellSpec.toObject = function(includeInstance, msg) {
     primaryPiece: (f = msg.getPrimaryPiece()) && proto.ei.ShellSpec.ShellPiece.toObject(includeInstance, f),
     piecesList: jspb.Message.toObjectList(msg.getPiecesList(),
     proto.ei.ShellSpec.ShellPiece.toObject, includeInstance),
-    altAssetsList: jspb.Message.toObjectList(msg.getAltAssetsList(),
-    proto.ei.DLCItem.toObject, includeInstance),
     name: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     setIdentifier: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-    modifiedGeometry: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
     price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
@@ -168,11 +165,6 @@ proto.ei.ShellSpec.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,proto.ei.ShellSpec.ShellPiece.deserializeBinaryFromReader);
       msg.addPieces(value);
       break;
-    case 18:
-      var value = new proto.ei.DLCItem;
-      reader.readMessage(value,proto.ei.DLCItem.deserializeBinaryFromReader);
-      msg.addAltAssets(value);
-      break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
@@ -180,10 +172,6 @@ proto.ei.ShellSpec.deserializeBinaryFromReader = function(msg, reader) {
     case 13:
       var value = /** @type {string} */ (reader.readString());
       msg.setSetIdentifier(value);
-      break;
-    case 19:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setModifiedGeometry(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readUint32());
@@ -269,14 +257,6 @@ proto.ei.ShellSpec.serializeBinaryToWriter = function(message, writer) {
       proto.ei.ShellSpec.ShellPiece.serializeBinaryToWriter
     );
   }
-  f = message.getAltAssetsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      18,
-      f,
-      proto.ei.DLCItem.serializeBinaryToWriter
-    );
-  }
   f = /** @type {string} */ (jspb.Message.getField(message, 3));
   if (f != null) {
     writer.writeString(
@@ -288,13 +268,6 @@ proto.ei.ShellSpec.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       13,
-      f
-    );
-  }
-  f = /** @type {boolean} */ (jspb.Message.getField(message, 19));
-  if (f != null) {
-    writer.writeBool(
-      19,
       f
     );
   }
@@ -770,44 +743,6 @@ proto.ei.ShellSpec.prototype.clearPiecesList = function() {
 
 
 /**
- * repeated DLCItem alt_assets = 18;
- * @return {!Array<!proto.ei.DLCItem>}
- */
-proto.ei.ShellSpec.prototype.getAltAssetsList = function() {
-  return /** @type{!Array<!proto.ei.DLCItem>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ei.DLCItem, 18));
-};
-
-
-/**
- * @param {!Array<!proto.ei.DLCItem>} value
- * @return {!proto.ei.ShellSpec} returns this
-*/
-proto.ei.ShellSpec.prototype.setAltAssetsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 18, value);
-};
-
-
-/**
- * @param {!proto.ei.DLCItem=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ei.DLCItem}
- */
-proto.ei.ShellSpec.prototype.addAltAssets = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.ei.DLCItem, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ei.ShellSpec} returns this
- */
-proto.ei.ShellSpec.prototype.clearAltAssetsList = function() {
-  return this.setAltAssetsList([]);
-};
-
-
-/**
  * optional string name = 3;
  * @return {string}
  */
@@ -876,42 +811,6 @@ proto.ei.ShellSpec.prototype.clearSetIdentifier = function() {
  */
 proto.ei.ShellSpec.prototype.hasSetIdentifier = function() {
   return jspb.Message.getField(this, 13) != null;
-};
-
-
-/**
- * optional bool modified_geometry = 19;
- * @return {boolean}
- */
-proto.ei.ShellSpec.prototype.getModifiedGeometry = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 19, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.ei.ShellSpec} returns this
- */
-proto.ei.ShellSpec.prototype.setModifiedGeometry = function(value) {
-  return jspb.Message.setField(this, 19, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.ei.ShellSpec} returns this
- */
-proto.ei.ShellSpec.prototype.clearModifiedGeometry = function() {
-  return jspb.Message.setField(this, 19, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ei.ShellSpec.prototype.hasModifiedGeometry = function() {
-  return jspb.Message.getField(this, 19) != null;
 };
 
 

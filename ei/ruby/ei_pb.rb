@@ -1204,8 +1204,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :message, :bytes, 1
       optional :version, :uint32, 3
       optional :code, :string, 2
-      optional :compressed, :bool, 4
-      optional :original_size, :uint32, 5
     end
     add_message "ei.LogCompleteMissionPayload" do
       optional :req, :message, 1, "ei.MissionRequest"
@@ -1260,10 +1258,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :identifier, :string, 1
       optional :primary_piece, :message, 12, "ei.ShellSpec.ShellPiece"
       repeated :pieces, :message, 11, "ei.ShellSpec.ShellPiece"
-      repeated :alt_assets, :message, 18, "ei.DLCItem"
       optional :name, :string, 3
       optional :set_identifier, :string, 13
-      optional :modified_geometry, :bool, 19
       optional :price, :uint32, 4
       optional :required_eop, :uint32, 5
       optional :required_soul_eggs, :double, 6
@@ -1392,7 +1388,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :element_set, :bool, 7
       optional :hex_base_color, :string, 16
       repeated :variations, :message, 15, "ei.ShellSetSpec.VariationSpec"
-      optional :icon, :message, 19, "ei.DLCItem"
       optional :default_appearance, :bool, 6
       optional :custom_appearance, :bool, 12
     end
@@ -1450,7 +1445,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :items, :message, 1, "ei.DLCItem"
       repeated :shells, :message, 2, "ei.ShellSpec"
       repeated :shell_sets, :message, 3, "ei.ShellSetSpec"
-      repeated :decorators, :message, 6, "ei.ShellSetSpec"
       repeated :shell_objects, :message, 4, "ei.ShellObjectSpec"
       repeated :shell_groups, :message, 5, "ei.ShellGroupSpec"
     end

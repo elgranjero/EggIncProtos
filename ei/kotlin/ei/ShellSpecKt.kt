@@ -136,71 +136,6 @@ public object ShellSpecKt {
       _builder.clearPieces()
     }
     /**
-     * An uninstantiable, behaviorless type to represent the field in
-     * generics.
-     */
-    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class AltAssetsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
-    /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     */
-     public val altAssets: com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>
-      @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
-        _builder.getAltAssetsList()
-      )
-    /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     * @param value The altAssets to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAltAssets")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.add(value: ei.Ei.DLCItem) {
-      _builder.addAltAssets(value)
-    }/**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     * @param value The altAssets to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAltAssets")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.plusAssign(value: ei.Ei.DLCItem) {
-      add(value)
-    }/**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     * @param values The altAssets to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllAltAssets")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.DLCItem>) {
-      _builder.addAllAltAssets(values)
-    }/**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     * @param values The altAssets to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllAltAssets")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.DLCItem>) {
-      addAll(values)
-    }/**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     * @param index The index to set the value at.
-     * @param value The altAssets to set.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setAltAssets")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.set(index: kotlin.Int, value: ei.Ei.DLCItem) {
-      _builder.setAltAssets(index, value)
-    }/**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearAltAssets")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.clear() {
-      _builder.clearAltAssets()
-    }
-    /**
      * <code>optional string name = 3;</code>
      */
     public var name: kotlin.String
@@ -246,30 +181,6 @@ public object ShellSpecKt {
      */
     public fun hasSetIdentifier(): kotlin.Boolean {
       return _builder.hasSetIdentifier()
-    }
-
-    /**
-     * <code>optional bool modified_geometry = 19;</code>
-     */
-    public var modifiedGeometry: kotlin.Boolean
-      @JvmName("getModifiedGeometry")
-      get() = _builder.getModifiedGeometry()
-      @JvmName("setModifiedGeometry")
-      set(value) {
-        _builder.setModifiedGeometry(value)
-      }
-    /**
-     * <code>optional bool modified_geometry = 19;</code>
-     */
-    public fun clearModifiedGeometry() {
-      _builder.clearModifiedGeometry()
-    }
-    /**
-     * <code>optional bool modified_geometry = 19;</code>
-     * @return Whether the modifiedGeometry field is set.
-     */
-    public fun hasModifiedGeometry(): kotlin.Boolean {
-      return _builder.hasModifiedGeometry()
     }
 
     /**
