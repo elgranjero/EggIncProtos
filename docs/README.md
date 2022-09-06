@@ -622,6 +622,8 @@
 | message | [bytes](#bytes) | optional |  |
 | version | [uint32](#uint32) | optional |  |
 | code | [string](#string) | optional |  |
+| compressed | [bool](#bool) | optional |  |
+| original_size | [uint32](#uint32) | optional |  |
 
 
 
@@ -1743,6 +1745,7 @@
 | items | [DLCItem](#ei-DLCItem) | repeated |  |
 | shells | [ShellSpec](#ei-ShellSpec) | repeated |  |
 | shell_sets | [ShellSetSpec](#ei-ShellSetSpec) | repeated |  |
+| decorators | [ShellSetSpec](#ei-ShellSetSpec) | repeated |  |
 | shell_objects | [ShellObjectSpec](#ei-ShellObjectSpec) | repeated |  |
 | shell_groups | [ShellGroupSpec](#ei-ShellGroupSpec) | repeated |  |
 
@@ -3012,6 +3015,7 @@
 | element_set | [bool](#bool) | optional |  |
 | hex_base_color | [string](#string) | optional |  |
 | variations | [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec) | repeated |  |
+| icon | [DLCItem](#ei-DLCItem) | optional |  |
 | default_appearance | [bool](#bool) | optional |  |
 | custom_appearance | [bool](#bool) | optional |  |
 
@@ -3051,8 +3055,10 @@
 | identifier | [string](#string) | optional |  |
 | primary_piece | [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece) | optional |  |
 | pieces | [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece) | repeated |  |
+| alt_assets | [DLCItem](#ei-DLCItem) | repeated |  |
 | name | [string](#string) | optional |  |
 | set_identifier | [string](#string) | optional |  |
+| modified_geometry | [bool](#bool) | optional |  |
 | price | [uint32](#uint32) | optional |  |
 | required_eop | [uint32](#uint32) | optional |  |
 | required_soul_eggs | [double](#double) | optional |  |

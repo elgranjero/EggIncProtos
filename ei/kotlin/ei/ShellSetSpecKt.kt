@@ -448,6 +448,30 @@ public object ShellSetSpecKt {
       _builder.clearVariations()
     }
     /**
+     * <code>optional .ei.DLCItem icon = 19;</code>
+     */
+    public var icon: ei.Ei.DLCItem
+      @JvmName("getIcon")
+      get() = _builder.getIcon()
+      @JvmName("setIcon")
+      set(value) {
+        _builder.setIcon(value)
+      }
+    /**
+     * <code>optional .ei.DLCItem icon = 19;</code>
+     */
+    public fun clearIcon() {
+      _builder.clearIcon()
+    }
+    /**
+     * <code>optional .ei.DLCItem icon = 19;</code>
+     * @return Whether the icon field is set.
+     */
+    public fun hasIcon(): kotlin.Boolean {
+      return _builder.hasIcon()
+    }
+
+    /**
      * <code>optional bool default_appearance = 6;</code>
      */
     public var defaultAppearance: kotlin.Boolean

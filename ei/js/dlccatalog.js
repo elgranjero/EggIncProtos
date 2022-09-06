@@ -49,7 +49,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.DLCCatalog.repeatedFields_ = [1,2,3,4,5];
+proto.ei.DLCCatalog.repeatedFields_ = [1,2,3,6,4,5];
 
 
 
@@ -87,6 +87,8 @@ proto.ei.DLCCatalog.toObject = function(includeInstance, msg) {
     shellsList: jspb.Message.toObjectList(msg.getShellsList(),
     proto.ei.ShellSpec.toObject, includeInstance),
     shellSetsList: jspb.Message.toObjectList(msg.getShellSetsList(),
+    proto.ei.ShellSetSpec.toObject, includeInstance),
+    decoratorsList: jspb.Message.toObjectList(msg.getDecoratorsList(),
     proto.ei.ShellSetSpec.toObject, includeInstance),
     shellObjectsList: jspb.Message.toObjectList(msg.getShellObjectsList(),
     proto.ei.ShellObjectSpec.toObject, includeInstance),
@@ -142,6 +144,11 @@ proto.ei.DLCCatalog.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.ShellSetSpec;
       reader.readMessage(value,proto.ei.ShellSetSpec.deserializeBinaryFromReader);
       msg.addShellSets(value);
+      break;
+    case 6:
+      var value = new proto.ei.ShellSetSpec;
+      reader.readMessage(value,proto.ei.ShellSetSpec.deserializeBinaryFromReader);
+      msg.addDecorators(value);
       break;
     case 4:
       var value = new proto.ei.ShellObjectSpec;
@@ -202,6 +209,14 @@ proto.ei.DLCCatalog.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
+      f,
+      proto.ei.ShellSetSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getDecoratorsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
       f,
       proto.ei.ShellSetSpec.serializeBinaryToWriter
     );
@@ -336,6 +351,44 @@ proto.ei.DLCCatalog.prototype.addShellSets = function(opt_value, opt_index) {
  */
 proto.ei.DLCCatalog.prototype.clearShellSetsList = function() {
   return this.setShellSetsList([]);
+};
+
+
+/**
+ * repeated ShellSetSpec decorators = 6;
+ * @return {!Array<!proto.ei.ShellSetSpec>}
+ */
+proto.ei.DLCCatalog.prototype.getDecoratorsList = function() {
+  return /** @type{!Array<!proto.ei.ShellSetSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ShellSetSpec, 6));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ShellSetSpec>} value
+ * @return {!proto.ei.DLCCatalog} returns this
+*/
+proto.ei.DLCCatalog.prototype.setDecoratorsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.ei.ShellSetSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ShellSetSpec}
+ */
+proto.ei.DLCCatalog.prototype.addDecorators = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.ei.ShellSetSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.DLCCatalog} returns this
+ */
+proto.ei.DLCCatalog.prototype.clearDecoratorsList = function() {
+  return this.setDecoratorsList([]);
 };
 
 

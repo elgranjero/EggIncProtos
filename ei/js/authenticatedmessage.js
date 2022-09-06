@@ -72,7 +72,9 @@ proto.ei.AuthenticatedMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
     message: msg.getMessage_asB64(),
     version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    code: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    code: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    compressed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    originalSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -121,6 +123,14 @@ proto.ei.AuthenticatedMessage.deserializeBinaryFromReader = function(msg, reader
       var value = /** @type {string} */ (reader.readString());
       msg.setCode(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCompressed(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setOriginalSize(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -168,6 +178,20 @@ proto.ei.AuthenticatedMessage.serializeBinaryToWriter = function(message, writer
   if (f != null) {
     writer.writeString(
       2,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeUint32(
+      5,
       f
     );
   }
@@ -303,6 +327,78 @@ proto.ei.AuthenticatedMessage.prototype.clearCode = function() {
  */
 proto.ei.AuthenticatedMessage.prototype.hasCode = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bool compressed = 4;
+ * @return {boolean}
+ */
+proto.ei.AuthenticatedMessage.prototype.getCompressed = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.setCompressed = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.clearCompressed = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.AuthenticatedMessage.prototype.hasCompressed = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional uint32 original_size = 5;
+ * @return {number}
+ */
+proto.ei.AuthenticatedMessage.prototype.getOriginalSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.setOriginalSize = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.clearOriginalSize = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.AuthenticatedMessage.prototype.hasOriginalSize = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

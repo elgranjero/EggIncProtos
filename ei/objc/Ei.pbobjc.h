@@ -5460,6 +5460,8 @@ typedef GPB_ENUM(AuthenticatedMessage_FieldNumber) {
   AuthenticatedMessage_FieldNumber_Message = 1,
   AuthenticatedMessage_FieldNumber_Code = 2,
   AuthenticatedMessage_FieldNumber_Version = 3,
+  AuthenticatedMessage_FieldNumber_Compressed = 4,
+  AuthenticatedMessage_FieldNumber_OriginalSize = 5,
 };
 
 GPB_FINAL @interface AuthenticatedMessage : GPBMessage
@@ -5475,6 +5477,12 @@ GPB_FINAL @interface AuthenticatedMessage : GPBMessage
 /** Test to see if @c code has been set. */
 @property(nonatomic, readwrite) BOOL hasCode;
 
+@property(nonatomic, readwrite) BOOL compressed;
+
+@property(nonatomic, readwrite) BOOL hasCompressed;
+@property(nonatomic, readwrite) uint32_t originalSize;
+
+@property(nonatomic, readwrite) BOOL hasOriginalSize;
 @end
 
 #pragma mark - LogCompleteMissionPayload
@@ -5690,6 +5698,8 @@ typedef GPB_ENUM(ShellSpec_FieldNumber) {
   ShellSpec_FieldNumber_Expires = 15,
   ShellSpec_FieldNumber_SecondsRemaining = 16,
   ShellSpec_FieldNumber_SecondsUntilAvailable = 17,
+  ShellSpec_FieldNumber_AltAssetsArray = 18,
+  ShellSpec_FieldNumber_ModifiedGeometry = 19,
 };
 
 GPB_FINAL @interface ShellSpec : GPBMessage
@@ -5706,6 +5716,10 @@ GPB_FINAL @interface ShellSpec : GPBMessage
 /** The number of items in @c piecesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger piecesArray_Count;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<DLCItem*> *altAssetsArray;
+/** The number of items in @c altAssetsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger altAssetsArray_Count;
+
 @property(nonatomic, readwrite, copy, null_resettable) NSString *name;
 /** Test to see if @c name has been set. */
 @property(nonatomic, readwrite) BOOL hasName;
@@ -5714,6 +5728,9 @@ GPB_FINAL @interface ShellSpec : GPBMessage
 /** Test to see if @c setIdentifier has been set. */
 @property(nonatomic, readwrite) BOOL hasSetIdentifier;
 
+@property(nonatomic, readwrite) BOOL modifiedGeometry;
+
+@property(nonatomic, readwrite) BOOL hasModifiedGeometry;
 @property(nonatomic, readwrite) uint32_t price;
 
 @property(nonatomic, readwrite) BOOL hasPrice;
@@ -5779,6 +5796,7 @@ typedef GPB_ENUM(ShellSetSpec_FieldNumber) {
   ShellSetSpec_FieldNumber_HexBaseColor = 16,
   ShellSetSpec_FieldNumber_Discount = 17,
   ShellSetSpec_FieldNumber_SecondsUntilAvailable = 18,
+  ShellSetSpec_FieldNumber_Icon = 19,
 };
 
 GPB_FINAL @interface ShellSetSpec : GPBMessage
@@ -5834,6 +5852,10 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellSetSpec_VariationSpec*> *variationsArray;
 /** The number of items in @c variationsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger variationsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) DLCItem *icon;
+/** Test to see if @c icon has been set. */
+@property(nonatomic, readwrite) BOOL hasIcon;
 
 @property(nonatomic, readwrite) BOOL defaultAppearance;
 
@@ -6023,6 +6045,7 @@ typedef GPB_ENUM(DLCCatalog_FieldNumber) {
   DLCCatalog_FieldNumber_ShellSetsArray = 3,
   DLCCatalog_FieldNumber_ShellObjectsArray = 4,
   DLCCatalog_FieldNumber_ShellGroupsArray = 5,
+  DLCCatalog_FieldNumber_DecoratorsArray = 6,
 };
 
 GPB_FINAL @interface DLCCatalog : GPBMessage
@@ -6038,6 +6061,10 @@ GPB_FINAL @interface DLCCatalog : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellSetSpec*> *shellSetsArray;
 /** The number of items in @c shellSetsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger shellSetsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellSetSpec*> *decoratorsArray;
+/** The number of items in @c decoratorsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger decoratorsArray_Count;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellObjectSpec*> *shellObjectsArray;
 /** The number of items in @c shellObjectsArray without causing the array to be created. */
