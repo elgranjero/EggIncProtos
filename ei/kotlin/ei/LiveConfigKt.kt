@@ -1278,6 +1278,30 @@ public object LiveConfigKt {
       public fun hasShellsIntroAlertThreshold(): kotlin.Boolean {
         return _builder.hasShellsIntroAlertThreshold()
       }
+
+      /**
+       * <code>optional double contracts_expert_league_min_soul_power = 10;</code>
+       */
+      public var contractsExpertLeagueMinSoulPower: kotlin.Double
+        @JvmName("getContractsExpertLeagueMinSoulPower")
+        get() = _builder.getContractsExpertLeagueMinSoulPower()
+        @JvmName("setContractsExpertLeagueMinSoulPower")
+        set(value) {
+          _builder.setContractsExpertLeagueMinSoulPower(value)
+        }
+      /**
+       * <code>optional double contracts_expert_league_min_soul_power = 10;</code>
+       */
+      public fun clearContractsExpertLeagueMinSoulPower() {
+        _builder.clearContractsExpertLeagueMinSoulPower()
+      }
+      /**
+       * <code>optional double contracts_expert_league_min_soul_power = 10;</code>
+       * @return Whether the contractsExpertLeagueMinSoulPower field is set.
+       */
+      public fun hasContractsExpertLeagueMinSoulPower(): kotlin.Boolean {
+        return _builder.hasContractsExpertLeagueMinSoulPower()
+      }
     }
   }
 }

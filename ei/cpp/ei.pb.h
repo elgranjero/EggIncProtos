@@ -47,7 +47,7 @@ struct TableStruct_ei_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[147]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[148]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -436,6 +436,9 @@ extern ShellDB_ChickenConfigDefaultTypeInternal _ShellDB_ChickenConfig_default_i
 class ShellDB_FarmConfiguration;
 struct ShellDB_FarmConfigurationDefaultTypeInternal;
 extern ShellDB_FarmConfigurationDefaultTypeInternal _ShellDB_FarmConfiguration_default_instance_;
+class ShellDB_SavedFarmConfiguration;
+struct ShellDB_SavedFarmConfigurationDefaultTypeInternal;
+extern ShellDB_SavedFarmConfigurationDefaultTypeInternal _ShellDB_SavedFarmConfiguration_default_instance_;
 class ShellDB_ShellConfiguration;
 struct ShellDB_ShellConfigurationDefaultTypeInternal;
 extern ShellDB_ShellConfigurationDefaultTypeInternal _ShellDB_ShellConfiguration_default_instance_;
@@ -625,6 +628,7 @@ template<> ::ei::SetArtifactResponse* Arena::CreateMaybeMessage<::ei::SetArtifac
 template<> ::ei::ShellDB* Arena::CreateMaybeMessage<::ei::ShellDB>(Arena*);
 template<> ::ei::ShellDB_ChickenConfig* Arena::CreateMaybeMessage<::ei::ShellDB_ChickenConfig>(Arena*);
 template<> ::ei::ShellDB_FarmConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_FarmConfiguration>(Arena*);
+template<> ::ei::ShellDB_SavedFarmConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_SavedFarmConfiguration>(Arena*);
 template<> ::ei::ShellDB_ShellConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_ShellConfiguration>(Arena*);
 template<> ::ei::ShellDB_ShellElementStatus* Arena::CreateMaybeMessage<::ei::ShellDB_ShellElementStatus>(Arena*);
 template<> ::ei::ShellDB_ShellGroupConfiguration* Arena::CreateMaybeMessage<::ei::ShellDB_ShellGroupConfiguration>(Arena*);
@@ -23247,6 +23251,7 @@ class LiveConfig_MiscConfig final :
     kChickenRunBoostPercentageFieldNumber = 6,
     kShellsMaxFreeChickenConfigsFieldNumber = 8,
     kShellsIntroAlertThresholdFieldNumber = 9,
+    kContractsExpertLeagueMinSoulPowerFieldNumber = 10,
   };
   // optional string ask_to_track_message = 3;
   bool has_ask_to_track_message() const;
@@ -23370,6 +23375,19 @@ class LiveConfig_MiscConfig final :
   void _internal_set_shells_intro_alert_threshold(uint32_t value);
   public:
 
+  // optional double contracts_expert_league_min_soul_power = 10;
+  bool has_contracts_expert_league_min_soul_power() const;
+  private:
+  bool _internal_has_contracts_expert_league_min_soul_power() const;
+  public:
+  void clear_contracts_expert_league_min_soul_power();
+  double contracts_expert_league_min_soul_power() const;
+  void set_contracts_expert_league_min_soul_power(double value);
+  private:
+  double _internal_contracts_expert_league_min_soul_power() const;
+  void _internal_set_contracts_expert_league_min_soul_power(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.LiveConfig.MiscConfig)
  private:
   class _Internal;
@@ -23388,6 +23406,7 @@ class LiveConfig_MiscConfig final :
   double chicken_run_boost_percentage_;
   uint32_t shells_max_free_chicken_configs_;
   uint32_t shells_intro_alert_threshold_;
+  double contracts_expert_league_min_soul_power_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -38747,6 +38766,204 @@ class ShellDB_FarmConfiguration final :
 };
 // -------------------------------------------------------------------
 
+class ShellDB_SavedFarmConfiguration final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.SavedFarmConfiguration) */ {
+ public:
+  inline ShellDB_SavedFarmConfiguration() : ShellDB_SavedFarmConfiguration(nullptr) {}
+  ~ShellDB_SavedFarmConfiguration() override;
+  explicit constexpr ShellDB_SavedFarmConfiguration(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellDB_SavedFarmConfiguration(const ShellDB_SavedFarmConfiguration& from);
+  ShellDB_SavedFarmConfiguration(ShellDB_SavedFarmConfiguration&& from) noexcept
+    : ShellDB_SavedFarmConfiguration() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellDB_SavedFarmConfiguration& operator=(const ShellDB_SavedFarmConfiguration& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellDB_SavedFarmConfiguration& operator=(ShellDB_SavedFarmConfiguration&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellDB_SavedFarmConfiguration& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellDB_SavedFarmConfiguration* internal_default_instance() {
+    return reinterpret_cast<const ShellDB_SavedFarmConfiguration*>(
+               &_ShellDB_SavedFarmConfiguration_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    141;
+
+  friend void swap(ShellDB_SavedFarmConfiguration& a, ShellDB_SavedFarmConfiguration& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellDB_SavedFarmConfiguration* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellDB_SavedFarmConfiguration* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellDB_SavedFarmConfiguration* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellDB_SavedFarmConfiguration>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellDB_SavedFarmConfiguration& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellDB_SavedFarmConfiguration& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellDB_SavedFarmConfiguration* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellDB.SavedFarmConfiguration";
+  }
+  protected:
+  explicit ShellDB_SavedFarmConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+    kConfigFieldNumber = 2,
+    kClientSaveTimeFieldNumber = 3,
+  };
+  // optional string name = 1;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // optional .ei.ShellDB.FarmConfiguration config = 2;
+  bool has_config() const;
+  private:
+  bool _internal_has_config() const;
+  public:
+  void clear_config();
+  const ::ei::ShellDB_FarmConfiguration& config() const;
+  PROTOBUF_NODISCARD ::ei::ShellDB_FarmConfiguration* release_config();
+  ::ei::ShellDB_FarmConfiguration* mutable_config();
+  void set_allocated_config(::ei::ShellDB_FarmConfiguration* config);
+  private:
+  const ::ei::ShellDB_FarmConfiguration& _internal_config() const;
+  ::ei::ShellDB_FarmConfiguration* _internal_mutable_config();
+  public:
+  void unsafe_arena_set_allocated_config(
+      ::ei::ShellDB_FarmConfiguration* config);
+  ::ei::ShellDB_FarmConfiguration* unsafe_arena_release_config();
+
+  // optional double client_save_time = 3;
+  bool has_client_save_time() const;
+  private:
+  bool _internal_has_client_save_time() const;
+  public:
+  void clear_client_save_time();
+  double client_save_time() const;
+  void set_client_save_time(double value);
+  private:
+  double _internal_client_save_time() const;
+  void _internal_set_client_save_time(double value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellDB.SavedFarmConfiguration)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::ei::ShellDB_FarmConfiguration* config_;
+  double client_save_time_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ShellDB_ShellConfiguration final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellDB.ShellConfiguration) */ {
  public:
@@ -38802,7 +39019,7 @@ class ShellDB_ShellConfiguration final :
                &_ShellDB_ShellConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    141;
+    142;
 
   friend void swap(ShellDB_ShellConfiguration& a, ShellDB_ShellConfiguration& b) {
     a.Swap(&b);
@@ -38995,7 +39212,7 @@ class ShellDB_ShellSetConfiguration final :
                &_ShellDB_ShellSetConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    142;
+    143;
 
   friend void swap(ShellDB_ShellSetConfiguration& a, ShellDB_ShellSetConfiguration& b) {
     a.Swap(&b);
@@ -39228,7 +39445,7 @@ class ShellDB_ShellGroupConfiguration final :
                &_ShellDB_ShellGroupConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    143;
+    144;
 
   friend void swap(ShellDB_ShellGroupConfiguration& a, ShellDB_ShellGroupConfiguration& b) {
     a.Swap(&b);
@@ -39406,7 +39623,7 @@ class ShellDB_ChickenConfig final :
                &_ShellDB_ChickenConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    144;
+    145;
 
   friend void swap(ShellDB_ChickenConfig& a, ShellDB_ChickenConfig& b) {
     a.Swap(&b);
@@ -39589,7 +39806,7 @@ class ShellDB final :
                &_ShellDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    145;
+    146;
 
   friend void swap(ShellDB& a, ShellDB& b) {
     a.Swap(&b);
@@ -39664,6 +39881,7 @@ class ShellDB final :
   typedef ShellDB_ShellElementStatus ShellElementStatus;
   typedef ShellDB_ShellSetVariationStatus ShellSetVariationStatus;
   typedef ShellDB_FarmConfiguration FarmConfiguration;
+  typedef ShellDB_SavedFarmConfiguration SavedFarmConfiguration;
   typedef ShellDB_ShellConfiguration ShellConfiguration;
   typedef ShellDB_ShellSetConfiguration ShellSetConfiguration;
   typedef ShellDB_ShellGroupConfiguration ShellGroupConfiguration;
@@ -39738,6 +39956,7 @@ class ShellDB final :
     kNewShellsDownloadedFieldNumber = 6,
     kNewShellsSeenFieldNumber = 7,
     kShellVariationInventoryFieldNumber = 8,
+    kSavedConfigsFieldNumber = 9,
   };
   // repeated .ei.ShellDB.ShellStatus shell_inventory = 1;
   int shell_inventory_size() const;
@@ -39895,6 +40114,24 @@ class ShellDB final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus >&
       shell_variation_inventory() const;
 
+  // repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;
+  int saved_configs_size() const;
+  private:
+  int _internal_saved_configs_size() const;
+  public:
+  void clear_saved_configs();
+  ::ei::ShellDB_SavedFarmConfiguration* mutable_saved_configs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_SavedFarmConfiguration >*
+      mutable_saved_configs();
+  private:
+  const ::ei::ShellDB_SavedFarmConfiguration& _internal_saved_configs(int index) const;
+  ::ei::ShellDB_SavedFarmConfiguration* _internal_add_saved_configs();
+  public:
+  const ::ei::ShellDB_SavedFarmConfiguration& saved_configs(int index) const;
+  ::ei::ShellDB_SavedFarmConfiguration* add_saved_configs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_SavedFarmConfiguration >&
+      saved_configs() const;
+
   // @@protoc_insertion_point(class_scope:ei.ShellDB)
  private:
   class _Internal;
@@ -39910,6 +40147,7 @@ class ShellDB final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> new_shells_downloaded_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> new_shells_seen_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetVariationStatus > shell_variation_inventory_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_SavedFarmConfiguration > saved_configs_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -39970,7 +40208,7 @@ class ShellsActionLog final :
                &_ShellsActionLog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    146;
+    147;
 
   friend void swap(ShellsActionLog& a, ShellsActionLog& b) {
     a.Swap(&b);
@@ -67148,6 +67386,34 @@ inline void LiveConfig_MiscConfig::set_shells_intro_alert_threshold(uint32_t val
   // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.shells_intro_alert_threshold)
 }
 
+// optional double contracts_expert_league_min_soul_power = 10;
+inline bool LiveConfig_MiscConfig::_internal_has_contracts_expert_league_min_soul_power() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_contracts_expert_league_min_soul_power() const {
+  return _internal_has_contracts_expert_league_min_soul_power();
+}
+inline void LiveConfig_MiscConfig::clear_contracts_expert_league_min_soul_power() {
+  contracts_expert_league_min_soul_power_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline double LiveConfig_MiscConfig::_internal_contracts_expert_league_min_soul_power() const {
+  return contracts_expert_league_min_soul_power_;
+}
+inline double LiveConfig_MiscConfig::contracts_expert_league_min_soul_power() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.contracts_expert_league_min_soul_power)
+  return _internal_contracts_expert_league_min_soul_power();
+}
+inline void LiveConfig_MiscConfig::_internal_set_contracts_expert_league_min_soul_power(double value) {
+  _has_bits_[0] |= 0x00000200u;
+  contracts_expert_league_min_soul_power_ = value;
+}
+inline void LiveConfig_MiscConfig::set_contracts_expert_league_min_soul_power(double value) {
+  _internal_set_contracts_expert_league_min_soul_power(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.contracts_expert_league_min_soul_power)
+}
+
 // -------------------------------------------------------------------
 
 // LiveConfig
@@ -83330,6 +83596,197 @@ ShellDB_FarmConfiguration::chicken_configs() const {
 
 // -------------------------------------------------------------------
 
+// ShellDB_SavedFarmConfiguration
+
+// optional string name = 1;
+inline bool ShellDB_SavedFarmConfiguration::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellDB_SavedFarmConfiguration::has_name() const {
+  return _internal_has_name();
+}
+inline void ShellDB_SavedFarmConfiguration::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellDB_SavedFarmConfiguration::name() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.SavedFarmConfiguration.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellDB_SavedFarmConfiguration::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellDB.SavedFarmConfiguration.name)
+}
+inline std::string* ShellDB_SavedFarmConfiguration::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.SavedFarmConfiguration.name)
+  return _s;
+}
+inline const std::string& ShellDB_SavedFarmConfiguration::_internal_name() const {
+  return name_.Get();
+}
+inline void ShellDB_SavedFarmConfiguration::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ShellDB_SavedFarmConfiguration::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ShellDB_SavedFarmConfiguration::release_name() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.SavedFarmConfiguration.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellDB_SavedFarmConfiguration::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.SavedFarmConfiguration.name)
+}
+
+// optional .ei.ShellDB.FarmConfiguration config = 2;
+inline bool ShellDB_SavedFarmConfiguration::_internal_has_config() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || config_ != nullptr);
+  return value;
+}
+inline bool ShellDB_SavedFarmConfiguration::has_config() const {
+  return _internal_has_config();
+}
+inline void ShellDB_SavedFarmConfiguration::clear_config() {
+  if (config_ != nullptr) config_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::ei::ShellDB_FarmConfiguration& ShellDB_SavedFarmConfiguration::_internal_config() const {
+  const ::ei::ShellDB_FarmConfiguration* p = config_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::ShellDB_FarmConfiguration&>(
+      ::ei::_ShellDB_FarmConfiguration_default_instance_);
+}
+inline const ::ei::ShellDB_FarmConfiguration& ShellDB_SavedFarmConfiguration::config() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.SavedFarmConfiguration.config)
+  return _internal_config();
+}
+inline void ShellDB_SavedFarmConfiguration::unsafe_arena_set_allocated_config(
+    ::ei::ShellDB_FarmConfiguration* config) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(config_);
+  }
+  config_ = config;
+  if (config) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ShellDB.SavedFarmConfiguration.config)
+}
+inline ::ei::ShellDB_FarmConfiguration* ShellDB_SavedFarmConfiguration::release_config() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::ShellDB_FarmConfiguration* temp = config_;
+  config_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::ShellDB_FarmConfiguration* ShellDB_SavedFarmConfiguration::unsafe_arena_release_config() {
+  // @@protoc_insertion_point(field_release:ei.ShellDB.SavedFarmConfiguration.config)
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::ShellDB_FarmConfiguration* temp = config_;
+  config_ = nullptr;
+  return temp;
+}
+inline ::ei::ShellDB_FarmConfiguration* ShellDB_SavedFarmConfiguration::_internal_mutable_config() {
+  _has_bits_[0] |= 0x00000002u;
+  if (config_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::ShellDB_FarmConfiguration>(GetArenaForAllocation());
+    config_ = p;
+  }
+  return config_;
+}
+inline ::ei::ShellDB_FarmConfiguration* ShellDB_SavedFarmConfiguration::mutable_config() {
+  ::ei::ShellDB_FarmConfiguration* _msg = _internal_mutable_config();
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.SavedFarmConfiguration.config)
+  return _msg;
+}
+inline void ShellDB_SavedFarmConfiguration::set_allocated_config(::ei::ShellDB_FarmConfiguration* config) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete config_;
+  }
+  if (config) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::ei::ShellDB_FarmConfiguration>::GetOwningArena(config);
+    if (message_arena != submessage_arena) {
+      config = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, config, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  config_ = config;
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellDB.SavedFarmConfiguration.config)
+}
+
+// optional double client_save_time = 3;
+inline bool ShellDB_SavedFarmConfiguration::_internal_has_client_save_time() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellDB_SavedFarmConfiguration::has_client_save_time() const {
+  return _internal_has_client_save_time();
+}
+inline void ShellDB_SavedFarmConfiguration::clear_client_save_time() {
+  client_save_time_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline double ShellDB_SavedFarmConfiguration::_internal_client_save_time() const {
+  return client_save_time_;
+}
+inline double ShellDB_SavedFarmConfiguration::client_save_time() const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.SavedFarmConfiguration.client_save_time)
+  return _internal_client_save_time();
+}
+inline void ShellDB_SavedFarmConfiguration::_internal_set_client_save_time(double value) {
+  _has_bits_[0] |= 0x00000004u;
+  client_save_time_ = value;
+}
+inline void ShellDB_SavedFarmConfiguration::set_client_save_time(double value) {
+  _internal_set_client_save_time(value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.SavedFarmConfiguration.client_save_time)
+}
+
+// -------------------------------------------------------------------
+
 // ShellDB_ShellConfiguration
 
 // optional .ei.ShellSpec.AssetType asset_type = 1;
@@ -84214,6 +84671,46 @@ ShellDB::farm_configs() const {
   return farm_configs_;
 }
 
+// repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;
+inline int ShellDB::_internal_saved_configs_size() const {
+  return saved_configs_.size();
+}
+inline int ShellDB::saved_configs_size() const {
+  return _internal_saved_configs_size();
+}
+inline void ShellDB::clear_saved_configs() {
+  saved_configs_.Clear();
+}
+inline ::ei::ShellDB_SavedFarmConfiguration* ShellDB::mutable_saved_configs(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellDB.saved_configs)
+  return saved_configs_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_SavedFarmConfiguration >*
+ShellDB::mutable_saved_configs() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.saved_configs)
+  return &saved_configs_;
+}
+inline const ::ei::ShellDB_SavedFarmConfiguration& ShellDB::_internal_saved_configs(int index) const {
+  return saved_configs_.Get(index);
+}
+inline const ::ei::ShellDB_SavedFarmConfiguration& ShellDB::saved_configs(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.saved_configs)
+  return _internal_saved_configs(index);
+}
+inline ::ei::ShellDB_SavedFarmConfiguration* ShellDB::_internal_add_saved_configs() {
+  return saved_configs_.Add();
+}
+inline ::ei::ShellDB_SavedFarmConfiguration* ShellDB::add_saved_configs() {
+  ::ei::ShellDB_SavedFarmConfiguration* _add = _internal_add_saved_configs();
+  // @@protoc_insertion_point(field_add:ei.ShellDB.saved_configs)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_SavedFarmConfiguration >&
+ShellDB::saved_configs() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.saved_configs)
+  return saved_configs_;
+}
+
 // repeated string new_shells_downloaded = 6;
 inline int ShellDB::_internal_new_shells_downloaded_size() const {
   return new_shells_downloaded_.size();
@@ -84934,6 +85431,8 @@ inline void ShellsActionLog::set_gold_spent(uint64_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

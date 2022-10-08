@@ -687,6 +687,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ShellDB.SavedFarmConfiguration"><span class="badge">M</span>ShellDB.SavedFarmConfiguration</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ShellDB.ShellConfiguration"><span class="badge">M</span>ShellDB.ShellConfiguration</a>
                 </li>
               
@@ -7615,6 +7619,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>contracts_expert_league_min_soul_power</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -8951,6 +8962,13 @@
                 </tr>
               
                 <tr>
+                  <td>saved_configs</td>
+                  <td><a href="#ei.ShellDB.SavedFarmConfiguration">ShellDB.SavedFarmConfiguration</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>new_shells_downloaded</td>
                   <td><a href="#string">string</a></td>
                   <td>repeated</td>
@@ -9044,6 +9062,44 @@
                   <td>chicken_configs</td>
                   <td><a href="#ei.ShellDB.ChickenConfig">ShellDB.ChickenConfig</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellDB.SavedFarmConfiguration">ShellDB.SavedFarmConfiguration</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>config</td>
+                  <td><a href="#ei.ShellDB.FarmConfiguration">ShellDB.FarmConfiguration</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>client_save_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               

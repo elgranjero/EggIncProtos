@@ -2382,7 +2382,8 @@ proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
     chickenRunBoostPercentage: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     shellsIntroTickets: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
     shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-    shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
+    shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2454,6 +2455,10 @@ proto.ei.LiveConfig.MiscConfig.deserializeBinaryFromReader = function(msg, reade
     case 9:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setShellsIntroAlertThreshold(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setContractsExpertLeagueMinSoulPower(value);
       break;
     default:
       reader.skipField();
@@ -2544,6 +2549,13 @@ proto.ei.LiveConfig.MiscConfig.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeUint32(
       9,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
+    writer.writeDouble(
+      10,
       f
     );
   }
@@ -2871,6 +2883,42 @@ proto.ei.LiveConfig.MiscConfig.prototype.clearShellsIntroAlertThreshold = functi
  */
 proto.ei.LiveConfig.MiscConfig.prototype.hasShellsIntroAlertThreshold = function() {
   return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional double contracts_expert_league_min_soul_power = 10;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getContractsExpertLeagueMinSoulPower = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setContractsExpertLeagueMinSoulPower = function(value) {
+  return jspb.Message.setField(this, 10, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearContractsExpertLeagueMinSoulPower = function() {
+  return jspb.Message.setField(this, 10, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasContractsExpertLeagueMinSoulPower = function() {
+  return jspb.Message.getField(this, 10) != null;
 };
 
 

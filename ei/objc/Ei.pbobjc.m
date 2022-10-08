@@ -108,6 +108,7 @@ GPBObjCClassDeclaration(SetArtifactResponse);
 GPBObjCClassDeclaration(ShellDB);
 GPBObjCClassDeclaration(ShellDB_ChickenConfig);
 GPBObjCClassDeclaration(ShellDB_FarmConfiguration);
+GPBObjCClassDeclaration(ShellDB_SavedFarmConfiguration);
 GPBObjCClassDeclaration(ShellDB_ShellConfiguration);
 GPBObjCClassDeclaration(ShellDB_ShellElementStatus);
 GPBObjCClassDeclaration(ShellDB_ShellGroupConfiguration);
@@ -10303,6 +10304,7 @@ typedef struct LiveConfig_GiftConfig_GiftMuConfig__storage_ {
 @dynamic hasShellsIntroTickets, shellsIntroTickets;
 @dynamic hasShellsMaxFreeChickenConfigs, shellsMaxFreeChickenConfigs;
 @dynamic hasShellsIntroAlertThreshold, shellsIntroAlertThreshold;
+@dynamic hasContractsExpertLeagueMinSoulPower, contractsExpertLeagueMinSoulPower;
 
 typedef struct LiveConfig_MiscConfig__storage_ {
   uint32_t _has_storage_[1];
@@ -10312,6 +10314,7 @@ typedef struct LiveConfig_MiscConfig__storage_ {
   NSString *askToTrackMessage;
   double askToTrackMinSoulEggs;
   double chickenRunBoostPercentage;
+  double contractsExpertLeagueMinSoulPower;
 } LiveConfig_MiscConfig__storage_;
 
 // This method is threadsafe because it is initially called
@@ -10400,6 +10403,15 @@ typedef struct LiveConfig_MiscConfig__storage_ {
         .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsIntroAlertThreshold),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "contractsExpertLeagueMinSoulPower",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LiveConfig_MiscConfig_FieldNumber_ContractsExpertLeagueMinSoulPower,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, contractsExpertLeagueMinSoulPower),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -16619,6 +16631,7 @@ typedef struct DLCCatalog__storage_ {
 @dynamic shellSetInventoryArray, shellSetInventoryArray_Count;
 @dynamic shellObjectInventoryArray, shellObjectInventoryArray_Count;
 @dynamic farmConfigsArray, farmConfigsArray_Count;
+@dynamic savedConfigsArray, savedConfigsArray_Count;
 @dynamic newShellsDownloadedArray, newShellsDownloadedArray_Count;
 @dynamic newShellsSeenArray, newShellsSeenArray_Count;
 
@@ -16632,6 +16645,7 @@ typedef struct ShellDB__storage_ {
   NSMutableArray *newShellsDownloadedArray;
   NSMutableArray *newShellsSeenArray;
   NSMutableArray *shellVariationInventoryArray;
+  NSMutableArray *savedConfigsArray;
 } ShellDB__storage_;
 
 // This method is threadsafe because it is initially called
@@ -16709,6 +16723,15 @@ typedef struct ShellDB__storage_ {
         .number = ShellDB_FieldNumber_ShellVariationInventoryArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(ShellDB__storage_, shellVariationInventoryArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "savedConfigsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_SavedFarmConfiguration),
+        .number = ShellDB_FieldNumber_SavedConfigsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellDB__storage_, savedConfigsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
@@ -17046,6 +17069,74 @@ typedef struct ShellDB_FarmConfiguration__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ShellDB_FarmConfiguration__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(ShellDB)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellDB_SavedFarmConfiguration
+
+@implementation ShellDB_SavedFarmConfiguration
+
+@dynamic hasName, name;
+@dynamic hasConfig, config;
+@dynamic hasClientSaveTime, clientSaveTime;
+
+typedef struct ShellDB_SavedFarmConfiguration__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *name;
+  ShellDB_FarmConfiguration *config;
+  double clientSaveTime;
+} ShellDB_SavedFarmConfiguration__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "name",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_SavedFarmConfiguration_FieldNumber_Name,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, name),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "config",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_FarmConfiguration),
+        .number = ShellDB_SavedFarmConfiguration_FieldNumber_Config,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, config),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "clientSaveTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_SavedFarmConfiguration_FieldNumber_ClientSaveTime,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, clientSaveTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellDB_SavedFarmConfiguration class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellDB_SavedFarmConfiguration__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     [localDescriptor setupContainingMessageClass:GPBObjCClass(ShellDB)];
     #if defined(DEBUG) && DEBUG

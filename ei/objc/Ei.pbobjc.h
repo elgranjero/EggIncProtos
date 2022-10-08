@@ -108,6 +108,7 @@ CF_EXTERN_C_BEGIN
 @class ShellDB;
 @class ShellDB_ChickenConfig;
 @class ShellDB_FarmConfiguration;
+@class ShellDB_SavedFarmConfiguration;
 @class ShellDB_ShellConfiguration;
 @class ShellDB_ShellElementStatus;
 @class ShellDB_ShellGroupConfiguration;
@@ -4121,6 +4122,7 @@ typedef GPB_ENUM(LiveConfig_MiscConfig_FieldNumber) {
   LiveConfig_MiscConfig_FieldNumber_ShellsIntroTickets = 7,
   LiveConfig_MiscConfig_FieldNumber_ShellsMaxFreeChickenConfigs = 8,
   LiveConfig_MiscConfig_FieldNumber_ShellsIntroAlertThreshold = 9,
+  LiveConfig_MiscConfig_FieldNumber_ContractsExpertLeagueMinSoulPower = 10,
 };
 
 GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
@@ -4153,6 +4155,9 @@ GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
 @property(nonatomic, readwrite) uint32_t shellsIntroAlertThreshold;
 
 @property(nonatomic, readwrite) BOOL hasShellsIntroAlertThreshold;
+@property(nonatomic, readwrite) double contractsExpertLeagueMinSoulPower;
+
+@property(nonatomic, readwrite) BOOL hasContractsExpertLeagueMinSoulPower;
 @end
 
 #pragma mark - InGameMail
@@ -6087,6 +6092,7 @@ typedef GPB_ENUM(ShellDB_FieldNumber) {
   ShellDB_FieldNumber_NewShellsDownloadedArray = 6,
   ShellDB_FieldNumber_NewShellsSeenArray = 7,
   ShellDB_FieldNumber_ShellVariationInventoryArray = 8,
+  ShellDB_FieldNumber_SavedConfigsArray = 9,
 };
 
 GPB_FINAL @interface ShellDB : GPBMessage
@@ -6114,6 +6120,10 @@ GPB_FINAL @interface ShellDB : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_FarmConfiguration*> *farmConfigsArray;
 /** The number of items in @c farmConfigsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger farmConfigsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_SavedFarmConfiguration*> *savedConfigsArray;
+/** The number of items in @c savedConfigsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger savedConfigsArray_Count;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *newShellsDownloadedArray NS_RETURNS_NOT_RETAINED;
 /** The number of items in @c newShellsDownloadedArray without causing the array to be created. */
@@ -6211,6 +6221,29 @@ GPB_FINAL @interface ShellDB_FarmConfiguration : GPBMessage
 /** The number of items in @c chickenConfigsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger chickenConfigsArray_Count;
 
+@end
+
+#pragma mark - ShellDB_SavedFarmConfiguration
+
+typedef GPB_ENUM(ShellDB_SavedFarmConfiguration_FieldNumber) {
+  ShellDB_SavedFarmConfiguration_FieldNumber_Name = 1,
+  ShellDB_SavedFarmConfiguration_FieldNumber_Config = 2,
+  ShellDB_SavedFarmConfiguration_FieldNumber_ClientSaveTime = 3,
+};
+
+GPB_FINAL @interface ShellDB_SavedFarmConfiguration : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+/** Test to see if @c name has been set. */
+@property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite, strong, null_resettable) ShellDB_FarmConfiguration *config;
+/** Test to see if @c config has been set. */
+@property(nonatomic, readwrite) BOOL hasConfig;
+
+@property(nonatomic, readwrite) double clientSaveTime;
+
+@property(nonatomic, readwrite) BOOL hasClientSaveTime;
 @end
 
 #pragma mark - ShellDB_ShellConfiguration

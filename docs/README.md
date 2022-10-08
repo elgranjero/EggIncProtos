@@ -131,6 +131,7 @@
     - [ShellDB](#ei-ShellDB)
     - [ShellDB.ChickenConfig](#ei-ShellDB-ChickenConfig)
     - [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration)
+    - [ShellDB.SavedFarmConfiguration](#ei-ShellDB-SavedFarmConfiguration)
     - [ShellDB.ShellConfiguration](#ei-ShellDB-ShellConfiguration)
     - [ShellDB.ShellElementStatus](#ei-ShellDB-ShellElementStatus)
     - [ShellDB.ShellGroupConfiguration](#ei-ShellDB-ShellGroupConfiguration)
@@ -2301,6 +2302,7 @@
 | shells_intro_tickets | [uint32](#uint32) | optional |  |
 | shells_max_free_chicken_configs | [uint32](#uint32) | optional |  |
 | shells_intro_alert_threshold | [uint32](#uint32) | optional |  |
+| contracts_expert_league_min_soul_power | [double](#double) | optional |  |
 
 
 
@@ -2781,6 +2783,7 @@
 | shell_set_inventory | [ShellDB.ShellStatus](#ei-ShellDB-ShellStatus) | repeated |  |
 | shell_object_inventory | [ShellDB.ShellStatus](#ei-ShellDB-ShellStatus) | repeated |  |
 | farm_configs | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | repeated |  |
+| saved_configs | [ShellDB.SavedFarmConfiguration](#ei-ShellDB-SavedFarmConfiguration) | repeated |  |
 | new_shells_downloaded | [string](#string) | repeated |  |
 | new_shells_seen | [string](#string) | repeated |  |
 
@@ -2818,6 +2821,23 @@
 | configure_chickens_by_group | [bool](#bool) | optional |  |
 | group_configs | [ShellDB.ShellGroupConfiguration](#ei-ShellDB-ShellGroupConfiguration) | repeated |  |
 | chicken_configs | [ShellDB.ChickenConfig](#ei-ShellDB-ChickenConfig) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ShellDB-SavedFarmConfiguration"></a>
+
+### ShellDB.SavedFarmConfiguration
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [string](#string) | optional |  |
+| config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
+| client_save_time | [double](#double) | optional |  |
 
 
 

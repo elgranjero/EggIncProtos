@@ -417,6 +417,71 @@ public object ShellDBKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class SavedConfigsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     */
+     public val savedConfigs: com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getSavedConfigsList()
+      )
+    /**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * @param value The savedConfigs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addSavedConfigs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.add(value: ei.Ei.ShellDB.SavedFarmConfiguration) {
+      _builder.addSavedConfigs(value)
+    }/**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * @param value The savedConfigs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignSavedConfigs")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.SavedFarmConfiguration) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * @param values The savedConfigs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllSavedConfigs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.SavedFarmConfiguration>) {
+      _builder.addAllSavedConfigs(values)
+    }/**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * @param values The savedConfigs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllSavedConfigs")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.SavedFarmConfiguration>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * @param index The index to set the value at.
+     * @param value The savedConfigs to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setSavedConfigs")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.SavedFarmConfiguration) {
+      _builder.setSavedConfigs(index, value)
+    }/**
+     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearSavedConfigs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.clear() {
+      _builder.clearSavedConfigs()
+    }
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class NewShellsDownloadedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
      * <code>repeated string new_shells_downloaded = 6;</code>
@@ -1107,6 +1172,98 @@ public object ShellDBKt {
       }}
   }
   @kotlin.jvm.JvmSynthetic
+  public inline fun savedFarmConfiguration(block: ei.ShellDBKt.SavedFarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.SavedFarmConfiguration =
+    ei.ShellDBKt.SavedFarmConfigurationKt.Dsl._create(ei.Ei.ShellDB.SavedFarmConfiguration.newBuilder()).apply { block() }._build()
+  public object SavedFarmConfigurationKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.ShellDB.SavedFarmConfiguration.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.ShellDB.SavedFarmConfiguration.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.ShellDB.SavedFarmConfiguration = _builder.build()
+
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public var name: kotlin.String
+        @JvmName("getName")
+        get() = _builder.getName()
+        @JvmName("setName")
+        set(value) {
+          _builder.setName(value)
+        }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public fun clearName() {
+        _builder.clearName()
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return Whether the name field is set.
+       */
+      public fun hasName(): kotlin.Boolean {
+        return _builder.hasName()
+      }
+
+      /**
+       * <code>optional .ei.ShellDB.FarmConfiguration config = 2;</code>
+       */
+      public var config: ei.Ei.ShellDB.FarmConfiguration
+        @JvmName("getConfig")
+        get() = _builder.getConfig()
+        @JvmName("setConfig")
+        set(value) {
+          _builder.setConfig(value)
+        }
+      /**
+       * <code>optional .ei.ShellDB.FarmConfiguration config = 2;</code>
+       */
+      public fun clearConfig() {
+        _builder.clearConfig()
+      }
+      /**
+       * <code>optional .ei.ShellDB.FarmConfiguration config = 2;</code>
+       * @return Whether the config field is set.
+       */
+      public fun hasConfig(): kotlin.Boolean {
+        return _builder.hasConfig()
+      }
+
+      /**
+       * <code>optional double client_save_time = 3;</code>
+       */
+      public var clientSaveTime: kotlin.Double
+        @JvmName("getClientSaveTime")
+        get() = _builder.getClientSaveTime()
+        @JvmName("setClientSaveTime")
+        set(value) {
+          _builder.setClientSaveTime(value)
+        }
+      /**
+       * <code>optional double client_save_time = 3;</code>
+       */
+      public fun clearClientSaveTime() {
+        _builder.clearClientSaveTime()
+      }
+      /**
+       * <code>optional double client_save_time = 3;</code>
+       * @return Whether the clientSaveTime field is set.
+       */
+      public fun hasClientSaveTime(): kotlin.Boolean {
+        return _builder.hasClientSaveTime()
+      }
+    }
+  }
+  @kotlin.jvm.JvmSynthetic
   public inline fun shellConfiguration(block: ei.ShellDBKt.ShellConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellConfiguration =
     ei.ShellDBKt.ShellConfigurationKt.Dsl._create(ei.Ei.ShellDB.ShellConfiguration.newBuilder()).apply { block() }._build()
   public object ShellConfigurationKt {
@@ -1490,6 +1647,9 @@ public inline fun ei.Ei.ShellDB.ShellSetVariationStatus.copy(block: ei.ShellDBKt
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.FarmConfiguration.copy(block: ei.ShellDBKt.FarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.FarmConfiguration =
   ei.ShellDBKt.FarmConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.ShellDB.SavedFarmConfiguration.copy(block: ei.ShellDBKt.SavedFarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.SavedFarmConfiguration =
+  ei.ShellDBKt.SavedFarmConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellConfiguration.copy(block: ei.ShellDBKt.ShellConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellConfiguration =
   ei.ShellDBKt.ShellConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()

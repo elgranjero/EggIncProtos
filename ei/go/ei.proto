@@ -914,6 +914,7 @@ message LiveConfig {
         optional uint32 shells_intro_tickets = 7;
         optional uint32 shells_max_free_chicken_configs = 8;
         optional uint32 shells_intro_alert_threshold = 9;
+        optional double contracts_expert_league_min_soul_power = 10;
     }
 }
 
@@ -1665,6 +1666,13 @@ message ShellDB {
         repeated ChickenConfig chicken_configs = 9;
     }
     
+    repeated SavedFarmConfiguration saved_configs = 9;
+    message SavedFarmConfiguration {
+        optional string name = 1;
+        optional FarmConfiguration config = 2;
+        optional double client_save_time = 3;
+    }
+
     repeated string new_shells_downloaded = 6;
     repeated string new_shells_seen = 7;
     

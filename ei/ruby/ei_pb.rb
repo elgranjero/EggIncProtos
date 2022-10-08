@@ -809,6 +809,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :shells_intro_tickets, :uint32, 7
       optional :shells_max_free_chicken_configs, :uint32, 8
       optional :shells_intro_alert_threshold, :uint32, 9
+      optional :contracts_expert_league_min_soul_power, :double, 10
     end
     add_message "ei.InGameMail" do
       optional :id, :string, 1
@@ -1461,6 +1462,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :shell_set_inventory, :message, 2, "ei.ShellDB.ShellStatus"
       repeated :shell_object_inventory, :message, 4, "ei.ShellDB.ShellStatus"
       repeated :farm_configs, :message, 3, "ei.ShellDB.FarmConfiguration"
+      repeated :saved_configs, :message, 9, "ei.ShellDB.SavedFarmConfiguration"
       repeated :new_shells_downloaded, :string, 6
       repeated :new_shells_seen, :string, 7
     end
@@ -1482,6 +1484,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :configure_chickens_by_group, :bool, 7
       repeated :group_configs, :message, 8, "ei.ShellDB.ShellGroupConfiguration"
       repeated :chicken_configs, :message, 9, "ei.ShellDB.ChickenConfig"
+    end
+    add_message "ei.ShellDB.SavedFarmConfiguration" do
+      optional :name, :string, 1
+      optional :config, :message, 2, "ei.ShellDB.FarmConfiguration"
+      optional :client_save_time, :double, 3
     end
     add_message "ei.ShellDB.ShellConfiguration" do
       optional :asset_type, :enum, 1, "ei.ShellSpec.AssetType"
@@ -1764,6 +1771,7 @@ module Ei
   ShellDB::ShellElementStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellElementStatus").msgclass
   ShellDB::ShellSetVariationStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellSetVariationStatus").msgclass
   ShellDB::FarmConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.FarmConfiguration").msgclass
+  ShellDB::SavedFarmConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.SavedFarmConfiguration").msgclass
   ShellDB::ShellConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellConfiguration").msgclass
   ShellDB::ShellSetConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellSetConfiguration").msgclass
   ShellDB::ShellGroupConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellGroupConfiguration").msgclass
