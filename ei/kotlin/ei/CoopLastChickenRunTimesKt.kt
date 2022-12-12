@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoopLastChickenRunTimes")
 public inline fun coopLastChickenRunTimes(block: ei.CoopLastChickenRunTimesKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopLastChickenRunTimes =
   ei.CoopLastChickenRunTimesKt.Dsl._create(ei.Ei.CoopLastChickenRunTimes.newBuilder()).apply { block() }._build()
 public object CoopLastChickenRunTimesKt {
@@ -44,7 +44,8 @@ public object CoopLastChickenRunTimesKt {
     @kotlin.jvm.JvmName("addEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.add(value: ei.Ei.CoopChickenRunEntry) {
       _builder.addEntries(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param value The entries to add.
      */
@@ -53,7 +54,8 @@ public object CoopLastChickenRunTimesKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.plusAssign(value: ei.Ei.CoopChickenRunEntry) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param values The entries to add.
      */
@@ -61,7 +63,8 @@ public object CoopLastChickenRunTimesKt {
     @kotlin.jvm.JvmName("addAllEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopChickenRunEntry>) {
       _builder.addAllEntries(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param values The entries to add.
      */
@@ -70,7 +73,8 @@ public object CoopLastChickenRunTimesKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopChickenRunEntry>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param index The index to set the value at.
      * @param value The entries to set.
@@ -79,15 +83,19 @@ public object CoopLastChickenRunTimesKt {
     @kotlin.jvm.JvmName("setEntries")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.set(index: kotlin.Int, value: ei.Ei.CoopChickenRunEntry) {
       _builder.setEntries(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.clear() {
       _builder.clearEntries()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CoopLastChickenRunTimes.copy(block: ei.CoopLastChickenRunTimesKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopLastChickenRunTimes =
   ei.CoopLastChickenRunTimesKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

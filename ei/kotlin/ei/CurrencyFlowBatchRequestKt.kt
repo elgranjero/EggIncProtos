@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecurrencyFlowBatchRequest")
 public inline fun currencyFlowBatchRequest(block: ei.CurrencyFlowBatchRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CurrencyFlowBatchRequest =
   ei.CurrencyFlowBatchRequestKt.Dsl._create(ei.Ei.CurrencyFlowBatchRequest.newBuilder()).apply { block() }._build()
 public object CurrencyFlowBatchRequestKt {
@@ -45,6 +45,8 @@ public object CurrencyFlowBatchRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val CurrencyFlowBatchRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -68,7 +70,8 @@ public object CurrencyFlowBatchRequestKt {
     @kotlin.jvm.JvmName("addLogs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.add(value: ei.Ei.CurrencyFlowLog) {
       _builder.addLogs(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param value The logs to add.
      */
@@ -77,7 +80,8 @@ public object CurrencyFlowBatchRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.plusAssign(value: ei.Ei.CurrencyFlowLog) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param values The logs to add.
      */
@@ -85,7 +89,8 @@ public object CurrencyFlowBatchRequestKt {
     @kotlin.jvm.JvmName("addAllLogs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CurrencyFlowLog>) {
       _builder.addAllLogs(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param values The logs to add.
      */
@@ -94,7 +99,8 @@ public object CurrencyFlowBatchRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CurrencyFlowLog>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param index The index to set the value at.
      * @param value The logs to set.
@@ -103,15 +109,22 @@ public object CurrencyFlowBatchRequestKt {
     @kotlin.jvm.JvmName("setLogs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.set(index: kotlin.Int, value: ei.Ei.CurrencyFlowLog) {
       _builder.setLogs(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearLogs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.clear() {
       _builder.clearLogs()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CurrencyFlowBatchRequest.copy(block: ei.CurrencyFlowBatchRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CurrencyFlowBatchRequest =
   ei.CurrencyFlowBatchRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.CurrencyFlowBatchRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

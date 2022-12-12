@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeactionKeyValuePair")
 public inline fun actionKeyValuePair(block: ei.ActionKeyValuePairKt.Dsl.() -> kotlin.Unit): ei.Ei.ActionKeyValuePair =
   ei.ActionKeyValuePairKt.Dsl._create(ei.Ei.ActionKeyValuePair.newBuilder()).apply { block() }._build()
 public object ActionKeyValuePairKt {
@@ -74,3 +74,4 @@ public object ActionKeyValuePairKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ActionKeyValuePair.copy(block: ei.ActionKeyValuePairKt.Dsl.() -> kotlin.Unit): ei.Ei.ActionKeyValuePair =
   ei.ActionKeyValuePairKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

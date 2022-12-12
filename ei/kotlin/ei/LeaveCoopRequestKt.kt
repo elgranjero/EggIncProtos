@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeleaveCoopRequest")
 public inline fun leaveCoopRequest(block: ei.LeaveCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.LeaveCoopRequest =
   ei.LeaveCoopRequestKt.Dsl._create(ei.Ei.LeaveCoopRequest.newBuilder()).apply { block() }._build()
 public object LeaveCoopRequestKt {
@@ -45,6 +45,8 @@ public object LeaveCoopRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val LeaveCoopRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -146,3 +148,7 @@ public object LeaveCoopRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LeaveCoopRequest.copy(block: ei.LeaveCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.LeaveCoopRequest =
   ei.LeaveCoopRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LeaveCoopRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

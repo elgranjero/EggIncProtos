@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesetArtifactResponse")
 public inline fun setArtifactResponse(block: ei.SetArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.SetArtifactResponse =
   ei.SetArtifactResponseKt.Dsl._create(ei.Ei.SetArtifactResponse.newBuilder()).apply { block() }._build()
 public object SetArtifactResponseKt {
@@ -98,3 +98,4 @@ public object SetArtifactResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.SetArtifactResponse.copy(block: ei.SetArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.SetArtifactResponse =
   ei.SetArtifactResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

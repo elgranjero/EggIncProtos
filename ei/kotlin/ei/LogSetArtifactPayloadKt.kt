@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelogSetArtifactPayload")
 public inline fun logSetArtifactPayload(block: ei.LogSetArtifactPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogSetArtifactPayload =
   ei.LogSetArtifactPayloadKt.Dsl._create(ei.Ei.LogSetArtifactPayload.newBuilder()).apply { block() }._build()
 public object LogSetArtifactPayloadKt {
@@ -45,6 +45,8 @@ public object LogSetArtifactPayloadKt {
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
     }
+    public val LogSetArtifactPayloadKt.Dsl.reqOrNull: ei.Ei.SetArtifactRequest?
+      get() = _builder.reqOrNull
 
     /**
      * <code>optional .ei.SetArtifactResponse res = 2;</code>
@@ -69,8 +71,17 @@ public object LogSetArtifactPayloadKt {
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()
     }
+    public val LogSetArtifactPayloadKt.Dsl.resOrNull: ei.Ei.SetArtifactResponse?
+      get() = _builder.resOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LogSetArtifactPayload.copy(block: ei.LogSetArtifactPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogSetArtifactPayload =
   ei.LogSetArtifactPayloadKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LogSetArtifactPayloadOrBuilder.reqOrNull: ei.Ei.SetArtifactRequest?
+  get() = if (hasReq()) getReq() else null
+
+val ei.Ei.LogSetArtifactPayloadOrBuilder.resOrNull: ei.Ei.SetArtifactResponse?
+  get() = if (hasRes()) getRes() else null
+

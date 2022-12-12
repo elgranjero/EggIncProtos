@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeartifactsConfigurationRequest")
 public inline fun artifactsConfigurationRequest(block: ei.ArtifactsConfigurationRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationRequest =
   ei.ArtifactsConfigurationRequestKt.Dsl._create(ei.Ei.ArtifactsConfigurationRequest.newBuilder()).apply { block() }._build()
 public object ArtifactsConfigurationRequestKt {
@@ -45,6 +45,8 @@ public object ArtifactsConfigurationRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ArtifactsConfigurationRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional uint32 client_version = 1;</code>
@@ -74,3 +76,7 @@ public object ArtifactsConfigurationRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationRequest.copy(block: ei.ArtifactsConfigurationRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationRequest =
   ei.ArtifactsConfigurationRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ArtifactsConfigurationRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

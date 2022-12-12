@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeinGameMail")
 public inline fun inGameMail(block: ei.InGameMailKt.Dsl.() -> kotlin.Unit): ei.Ei.InGameMail =
   ei.InGameMailKt.Dsl._create(ei.Ei.InGameMail.newBuilder()).apply { block() }._build()
 public object InGameMailKt {
@@ -384,3 +384,4 @@ public object InGameMailKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.InGameMail.copy(block: ei.InGameMailKt.Dsl.() -> kotlin.Unit): ei.Ei.InGameMail =
   ei.InGameMailKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

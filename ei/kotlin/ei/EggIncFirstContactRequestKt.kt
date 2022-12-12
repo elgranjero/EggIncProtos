@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeggIncFirstContactRequest")
 public inline fun eggIncFirstContactRequest(block: ei.EggIncFirstContactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncFirstContactRequest =
   ei.EggIncFirstContactRequestKt.Dsl._create(ei.Ei.EggIncFirstContactRequest.newBuilder()).apply { block() }._build()
 public object EggIncFirstContactRequestKt {
@@ -45,6 +45,8 @@ public object EggIncFirstContactRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val EggIncFirstContactRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string ei_user_id = 4;</code>
@@ -218,3 +220,7 @@ public object EggIncFirstContactRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.EggIncFirstContactRequest.copy(block: ei.EggIncFirstContactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncFirstContactRequest =
   ei.EggIncFirstContactRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.EggIncFirstContactRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

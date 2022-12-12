@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeconfigRequest")
 public inline fun configRequest(block: ei.ConfigRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ConfigRequest =
   ei.ConfigRequestKt.Dsl._create(ei.Ei.ConfigRequest.newBuilder()).apply { block() }._build()
 public object ConfigRequestKt {
@@ -45,6 +45,8 @@ public object ConfigRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ConfigRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional double soul_eggs = 2;</code>
@@ -122,3 +124,7 @@ public object ConfigRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ConfigRequest.copy(block: ei.ConfigRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ConfigRequest =
   ei.ConfigRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ConfigRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

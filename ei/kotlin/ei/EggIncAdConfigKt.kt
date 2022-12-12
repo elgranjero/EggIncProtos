@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeggIncAdConfig")
 public inline fun eggIncAdConfig(block: ei.EggIncAdConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncAdConfig =
   ei.EggIncAdConfigKt.Dsl._create(ei.Ei.EggIncAdConfig.newBuilder()).apply { block() }._build()
 public object EggIncAdConfigKt {
@@ -91,3 +91,4 @@ public object EggIncAdConfigKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.EggIncAdConfig.copy(block: ei.EggIncAdConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncAdConfig =
   ei.EggIncAdConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

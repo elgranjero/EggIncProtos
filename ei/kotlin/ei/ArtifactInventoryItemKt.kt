@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeartifactInventoryItem")
 public inline fun artifactInventoryItem(block: ei.ArtifactInventoryItemKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactInventoryItem =
   ei.ArtifactInventoryItemKt.Dsl._create(ei.Ei.ArtifactInventoryItem.newBuilder()).apply { block() }._build()
 public object ArtifactInventoryItemKt {
@@ -69,6 +69,8 @@ public object ArtifactInventoryItemKt {
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
     }
+    public val ArtifactInventoryItemKt.Dsl.artifactOrNull: ei.Ei.CompleteArtifact?
+      get() = _builder.artifactOrNull
 
     /**
      * <code>optional double quantity = 3;</code>
@@ -122,3 +124,7 @@ public object ArtifactInventoryItemKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactInventoryItem.copy(block: ei.ArtifactInventoryItemKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactInventoryItem =
   ei.ArtifactInventoryItemKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ArtifactInventoryItemOrBuilder.artifactOrNull: ei.Ei.CompleteArtifact?
+  get() = if (hasArtifact()) getArtifact() else null
+

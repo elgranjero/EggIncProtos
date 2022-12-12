@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeconsumeArtifactResponse")
 public inline fun consumeArtifactResponse(block: ei.ConsumeArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ConsumeArtifactResponse =
   ei.ConsumeArtifactResponseKt.Dsl._create(ei.Ei.ConsumeArtifactResponse.newBuilder()).apply { block() }._build()
 public object ConsumeArtifactResponseKt {
@@ -157,7 +157,8 @@ public object ConsumeArtifactResponseKt {
     @kotlin.jvm.JvmName("addByproducts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addByproducts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param value The byproducts to add.
      */
@@ -166,7 +167,8 @@ public object ConsumeArtifactResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param values The byproducts to add.
      */
@@ -174,7 +176,8 @@ public object ConsumeArtifactResponseKt {
     @kotlin.jvm.JvmName("addAllByproducts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllByproducts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param values The byproducts to add.
      */
@@ -183,7 +186,8 @@ public object ConsumeArtifactResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param index The index to set the value at.
      * @param value The byproducts to set.
@@ -192,7 +196,8 @@ public object ConsumeArtifactResponseKt {
     @kotlin.jvm.JvmName("setByproducts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setByproducts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -200,6 +205,8 @@ public object ConsumeArtifactResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.clear() {
       _builder.clearByproducts()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -222,7 +229,8 @@ public object ConsumeArtifactResponseKt {
     @kotlin.jvm.JvmName("addOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.add(value: ei.Ei.Reward) {
       _builder.addOtherRewards(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param value The otherRewards to add.
      */
@@ -231,7 +239,8 @@ public object ConsumeArtifactResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(value: ei.Ei.Reward) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
      */
@@ -239,7 +248,8 @@ public object ConsumeArtifactResponseKt {
     @kotlin.jvm.JvmName("addAllOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       _builder.addAllOtherRewards(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
      */
@@ -248,7 +258,8 @@ public object ConsumeArtifactResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param index The index to set the value at.
      * @param value The otherRewards to set.
@@ -257,7 +268,8 @@ public object ConsumeArtifactResponseKt {
     @kotlin.jvm.JvmName("setOtherRewards")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.set(index: kotlin.Int, value: ei.Ei.Reward) {
       _builder.setOtherRewards(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -265,6 +277,8 @@ public object ConsumeArtifactResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.clear() {
       _builder.clearOtherRewards()
     }
+
+
     /**
      * <code>optional string ei_user_id = 5;</code>
      */
@@ -293,3 +307,4 @@ public object ConsumeArtifactResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ConsumeArtifactResponse.copy(block: ei.ConsumeArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ConsumeArtifactResponse =
   ei.ConsumeArtifactResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

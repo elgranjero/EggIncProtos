@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesendChickenRunCoopRequest")
 public inline fun sendChickenRunCoopRequest(block: ei.SendChickenRunCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SendChickenRunCoopRequest =
   ei.SendChickenRunCoopRequestKt.Dsl._create(ei.Ei.SendChickenRunCoopRequest.newBuilder()).apply { block() }._build()
 public object SendChickenRunCoopRequestKt {
@@ -45,6 +45,8 @@ public object SendChickenRunCoopRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val SendChickenRunCoopRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -218,3 +220,7 @@ public object SendChickenRunCoopRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.SendChickenRunCoopRequest.copy(block: ei.SendChickenRunCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SendChickenRunCoopRequest =
   ei.SendChickenRunCoopRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.SendChickenRunCoopRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

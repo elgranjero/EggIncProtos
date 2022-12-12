@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeverifyPurchaseResponse")
 public inline fun verifyPurchaseResponse(block: ei.VerifyPurchaseResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.VerifyPurchaseResponse =
   ei.VerifyPurchaseResponseKt.Dsl._create(ei.Ei.VerifyPurchaseResponse.newBuilder()).apply { block() }._build()
 public object VerifyPurchaseResponseKt {
@@ -74,3 +74,4 @@ public object VerifyPurchaseResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.VerifyPurchaseResponse.copy(block: ei.VerifyPurchaseResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.VerifyPurchaseResponse =
   ei.VerifyPurchaseResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

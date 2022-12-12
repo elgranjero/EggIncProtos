@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeggIncCurrentEvents")
 public inline fun eggIncCurrentEvents(block: ei.EggIncCurrentEventsKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncCurrentEvents =
   ei.EggIncCurrentEventsKt.Dsl._create(ei.Ei.EggIncCurrentEvents.newBuilder()).apply { block() }._build()
 public object EggIncCurrentEventsKt {
@@ -44,7 +44,8 @@ public object EggIncCurrentEventsKt {
     @kotlin.jvm.JvmName("addEvents")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.add(value: ei.Ei.EggIncEvent) {
       _builder.addEvents(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param value The events to add.
      */
@@ -53,7 +54,8 @@ public object EggIncCurrentEventsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.plusAssign(value: ei.Ei.EggIncEvent) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param values The events to add.
      */
@@ -61,7 +63,8 @@ public object EggIncCurrentEventsKt {
     @kotlin.jvm.JvmName("addAllEvents")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.EggIncEvent>) {
       _builder.addAllEvents(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param values The events to add.
      */
@@ -70,7 +73,8 @@ public object EggIncCurrentEventsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.EggIncEvent>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param index The index to set the value at.
      * @param value The events to set.
@@ -79,15 +83,19 @@ public object EggIncCurrentEventsKt {
     @kotlin.jvm.JvmName("setEvents")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.set(index: kotlin.Int, value: ei.Ei.EggIncEvent) {
       _builder.setEvents(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.EggIncEvent events = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearEvents")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.clear() {
       _builder.clearEvents()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.EggIncCurrentEvents.copy(block: ei.EggIncCurrentEventsKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncCurrentEvents =
   ei.EggIncCurrentEventsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

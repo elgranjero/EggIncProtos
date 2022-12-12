@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeartifactSpec")
 public inline fun artifactSpec(block: ei.ArtifactSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactSpec =
   ei.ArtifactSpecKt.Dsl._create(ei.Ei.ArtifactSpec.newBuilder()).apply { block() }._build()
 public object ArtifactSpecKt {
@@ -122,3 +122,4 @@ public object ArtifactSpecKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactSpec.copy(block: ei.ArtifactSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactSpec =
   ei.ArtifactSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

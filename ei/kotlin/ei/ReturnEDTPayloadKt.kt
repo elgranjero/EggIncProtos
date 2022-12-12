@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializereturnEDTPayload")
 public inline fun returnEDTPayload(block: ei.ReturnEDTPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.ReturnEDTPayload =
   ei.ReturnEDTPayloadKt.Dsl._create(ei.Ei.ReturnEDTPayload.newBuilder()).apply { block() }._build()
 public object ReturnEDTPayloadKt {
@@ -50,3 +50,4 @@ public object ReturnEDTPayloadKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ReturnEDTPayload.copy(block: ei.ReturnEDTPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.ReturnEDTPayload =
   ei.ReturnEDTPayloadKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

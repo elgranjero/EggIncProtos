@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecompleteMissionResponse")
 public inline fun completeMissionResponse(block: ei.CompleteMissionResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.CompleteMissionResponse =
   ei.CompleteMissionResponseKt.Dsl._create(ei.Ei.CompleteMissionResponse.newBuilder()).apply { block() }._build()
 public object CompleteMissionResponseKt {
@@ -69,6 +69,8 @@ public object CompleteMissionResponseKt {
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
     }
+    public val CompleteMissionResponseKt.Dsl.infoOrNull: ei.Ei.MissionInfo?
+      get() = _builder.infoOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -92,7 +94,8 @@ public object CompleteMissionResponseKt {
     @kotlin.jvm.JvmName("addArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.add(value: ei.Ei.CompleteMissionResponse.SecureArtifactSpec) {
       _builder.addArtifacts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param value The artifacts to add.
      */
@@ -101,7 +104,8 @@ public object CompleteMissionResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.plusAssign(value: ei.Ei.CompleteMissionResponse.SecureArtifactSpec) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param values The artifacts to add.
      */
@@ -109,7 +113,8 @@ public object CompleteMissionResponseKt {
     @kotlin.jvm.JvmName("addAllArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse.SecureArtifactSpec>) {
       _builder.addAllArtifacts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param values The artifacts to add.
      */
@@ -118,7 +123,8 @@ public object CompleteMissionResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse.SecureArtifactSpec>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param index The index to set the value at.
      * @param value The artifacts to set.
@@ -127,7 +133,8 @@ public object CompleteMissionResponseKt {
     @kotlin.jvm.JvmName("setArtifacts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.CompleteMissionResponse.SecureArtifactSpec) {
       _builder.setArtifacts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -135,6 +142,8 @@ public object CompleteMissionResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.clear() {
       _builder.clearArtifacts()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -157,7 +166,8 @@ public object CompleteMissionResponseKt {
     @kotlin.jvm.JvmName("addOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.add(value: ei.Ei.Reward) {
       _builder.addOtherRewards(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param value The otherRewards to add.
      */
@@ -166,7 +176,8 @@ public object CompleteMissionResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(value: ei.Ei.Reward) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
      */
@@ -174,7 +185,8 @@ public object CompleteMissionResponseKt {
     @kotlin.jvm.JvmName("addAllOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       _builder.addAllOtherRewards(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
      */
@@ -183,7 +195,8 @@ public object CompleteMissionResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param index The index to set the value at.
      * @param value The otherRewards to set.
@@ -192,7 +205,8 @@ public object CompleteMissionResponseKt {
     @kotlin.jvm.JvmName("setOtherRewards")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.set(index: kotlin.Int, value: ei.Ei.Reward) {
       _builder.setOtherRewards(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Reward other_rewards = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -200,6 +214,8 @@ public object CompleteMissionResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.clear() {
       _builder.clearOtherRewards()
     }
+
+
     /**
      * <code>optional string ei_user_id = 5;</code>
      */
@@ -224,7 +240,7 @@ public object CompleteMissionResponseKt {
       return _builder.hasEiUserId()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializesecureArtifactSpec")
   public inline fun secureArtifactSpec(block: ei.CompleteMissionResponseKt.SecureArtifactSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.CompleteMissionResponse.SecureArtifactSpec =
     ei.CompleteMissionResponseKt.SecureArtifactSpecKt.Dsl._create(ei.Ei.CompleteMissionResponse.SecureArtifactSpec.newBuilder()).apply { block() }._build()
   public object SecureArtifactSpecKt {
@@ -266,6 +282,8 @@ public object CompleteMissionResponseKt {
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
       }
+      public val SecureArtifactSpecKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
+        get() = _builder.specOrNull
 
       /**
        * <code>optional string server_id = 2;</code>
@@ -296,6 +314,14 @@ public object CompleteMissionResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CompleteMissionResponse.copy(block: ei.CompleteMissionResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.CompleteMissionResponse =
   ei.CompleteMissionResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CompleteMissionResponse.SecureArtifactSpec.copy(block: ei.CompleteMissionResponseKt.SecureArtifactSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.CompleteMissionResponse.SecureArtifactSpec =
   ei.CompleteMissionResponseKt.SecureArtifactSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.CompleteMissionResponse.SecureArtifactSpecOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpec()) getSpec() else null
+
+val ei.Ei.CompleteMissionResponseOrBuilder.infoOrNull: ei.Ei.MissionInfo?
+  get() = if (hasInfo()) getInfo() else null
+

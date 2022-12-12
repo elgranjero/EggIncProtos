@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeadAttributionRow")
 public inline fun adAttributionRow(block: ei.AdAttributionRowKt.Dsl.() -> kotlin.Unit): ei.Ei.AdAttributionRow =
   ei.AdAttributionRowKt.Dsl._create(ei.Ei.AdAttributionRow.newBuilder()).apply { block() }._build()
 public object AdAttributionRowKt {
@@ -242,3 +242,4 @@ public object AdAttributionRowKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AdAttributionRow.copy(block: ei.AdAttributionRowKt.Dsl.() -> kotlin.Unit): ei.Ei.AdAttributionRow =
   ei.AdAttributionRowKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

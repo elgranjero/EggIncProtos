@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeclearAllUserDataRequest")
 public inline fun clearAllUserDataRequest(block: ei.ClearAllUserDataRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ClearAllUserDataRequest =
   ei.ClearAllUserDataRequestKt.Dsl._create(ei.Ei.ClearAllUserDataRequest.newBuilder()).apply { block() }._build()
 public object ClearAllUserDataRequestKt {
@@ -45,6 +45,8 @@ public object ClearAllUserDataRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ClearAllUserDataRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string user_id = 1;</code>
@@ -122,3 +124,7 @@ public object ClearAllUserDataRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ClearAllUserDataRequest.copy(block: ei.ClearAllUserDataRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ClearAllUserDataRequest =
   ei.ClearAllUserDataRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ClearAllUserDataRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeshellsActionLog")
 public inline fun shellsActionLog(block: ei.ShellsActionLogKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellsActionLog =
   ei.ShellsActionLogKt.Dsl._create(ei.Ei.ShellsActionLog.newBuilder()).apply { block() }._build()
 public object ShellsActionLogKt {
@@ -45,6 +45,8 @@ public object ShellsActionLogKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ShellsActionLogKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string user_id = 1;</code>
@@ -314,3 +316,7 @@ public object ShellsActionLogKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellsActionLog.copy(block: ei.ShellsActionLogKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellsActionLog =
   ei.ShellsActionLogKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellsActionLogOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

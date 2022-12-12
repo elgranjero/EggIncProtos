@@ -402,6 +402,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :reward_sub_type, :string, 2
       optional :reward_amount, :double, 3
     end
+    add_message "ei.GameModifier" do
+      optional :dimension, :enum, 1, "ei.GameDimension"
+      optional :value_modifier, :double, 2
+      optional :description, :string, 3
+    end
     add_message "ei.Contract" do
       optional :identifier, :string, 1
       optional :name, :string, 9
@@ -409,6 +414,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :egg, :enum, 2, "ei.Egg"
       repeated :goals, :message, 3, "ei.Contract.Goal"
       repeated :goal_sets, :message, 16, "ei.Contract.GoalSet"
+      repeated :grade_specs, :message, 20, "ei.Contract.GradeSpec"
       optional :coop_allowed, :bool, 4
       optional :max_coop_size, :uint32, 5
       optional :max_boosts, :uint32, 12
@@ -421,6 +427,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :min_client_version, :uint32, 14
       optional :leggacy, :bool, 19
       optional :debug, :bool, 11
+      optional :key, :string, 21
     end
     add_message "ei.Contract.Goal" do
       optional :type, :enum, 1, "ei.GoalType"
@@ -433,6 +440,23 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.Contract.GoalSet" do
       repeated :goals, :message, 1, "ei.Contract.Goal"
     end
+    add_message "ei.Contract.GradeSpec" do
+      optional :grade, :enum, 1, "ei.Contract.PlayerGrade"
+      repeated :goals, :message, 2, "ei.Contract.Goal"
+      repeated :modifiers, :message, 3, "ei.GameModifier"
+    end
+    add_enum "ei.Contract.PlayerGrade" do
+      value :GRADE_UNSET, 0
+      value :GRADE_C, 1
+      value :GRADE_B, 2
+      value :GRADE_A, 3
+      value :GRADE_AA, 4
+      value :GRADE_AAA, 5
+    end
+    add_message "ei.ContractPlayerInfo" do
+      optional :grade, :enum, 1, "ei.Contract.PlayerGrade"
+      optional :total_cxp, :double, 2
+    end
     add_message "ei.BasicRequestInfo" do
       optional :ei_user_id, :string, 1
       optional :client_version, :uint32, 2
@@ -442,6 +466,34 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :country, :string, 6
       optional :language, :string, 7
       optional :debug, :bool, 8
+    end
+    add_message "ei.ContractSimConfig" do
+      repeated :grade_configs, :message, 1, "ei.ContractSimConfig.ContractGradeSimConfig"
+    end
+    add_message "ei.ContractSimConfig.ContractGradeSimConfig" do
+      optional :grade, :enum, 1, "ei.Contract.PlayerGrade"
+      repeated :goal_params, :message, 2, "ei.ContractSimConfig.ContractGradeSimConfig.GoalParams"
+    end
+    add_message "ei.ContractSimConfig.ContractGradeSimConfig.GoalParams" do
+      optional :target_se, :double, 1
+      optional :cps_mult, :double, 2
+      optional :earnings_mult, :double, 3
+    end
+    add_message "ei.ContractSimPoll" do
+      optional :client_version, :uint32, 1
+    end
+    add_message "ei.ContractSimPollResponse" do
+      optional :contract_to_simulate, :message, 1, "ei.Contract"
+      optional :sim_config, :message, 2, "ei.ContractSimConfig"
+    end
+    add_message "ei.ContractSimResultUpdate" do
+      optional :contract_id, :string, 1
+      repeated :goal_infos, :message, 2, "ei.ContractSimResultUpdate.GoalInfo"
+    end
+    add_message "ei.ContractSimResultUpdate.GoalInfo" do
+      optional :grade, :enum, 1, "ei.Contract.PlayerGrade"
+      optional :goal_index, :uint32, 2
+      optional :projected_eggs_laid, :double, 3
     end
     add_message "ei.ContractsRequest" do
       optional :soul_eggs, :double, 1
@@ -563,6 +615,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :num_goals_achieved, :uint32, 14
       optional :boosts_used, :uint32, 12
       optional :league, :uint32, 15
+      optional :grade, :enum, 18, "ei.Contract.PlayerGrade"
       optional :last_nag_time, :double, 16
     end
     add_message "ei.MyContracts" do
@@ -810,6 +863,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :shells_max_free_chicken_configs, :uint32, 8
       optional :shells_intro_alert_threshold, :uint32, 9
       optional :contracts_expert_league_min_soul_power, :double, 10
+      optional :new_player_event_duration, :double, 11
     end
     add_message "ei.InGameMail" do
       optional :id, :string, 1
@@ -836,6 +890,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :gifts, :message, 4, "ei.ServerGift"
       optional :live_config, :message, 5, "ei.LiveConfig"
       optional :mail_bag, :message, 6, "ei.MailDB"
+      optional :contract_player_info, :message, 7, "ei.ContractPlayerInfo"
     end
     add_message "ei.GetPeriodicalsRequest" do
       optional :rinfo, :message, 12, "ei.BasicRequestInfo"
@@ -1268,6 +1323,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :price, :uint32, 4
       optional :required_eop, :uint32, 5
       optional :required_soul_eggs, :double, 6
+      optional :required_parent_shell, :string, 20
       optional :is_new, :bool, 14
       optional :expires, :bool, 15
       optional :seconds_until_available, :double, 17
@@ -1384,6 +1440,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :discount, :double, 17
       optional :required_eop, :uint32, 4
       optional :required_soul_eggs, :double, 5
+      optional :required_parent_set, :string, 20
       optional :is_new, :bool, 9
       optional :expires, :bool, 10
       optional :seconds_until_available, :double, 18
@@ -1612,6 +1669,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :SHELL_SCRIPT, 14
       value :UNKNOWN_REWARD, 100
     end
+    add_enum "ei.GameDimension" do
+      value :EARNINGS, 1
+      value :AWAY_EARNINGS, 3
+    end
   end
 end
 
@@ -1652,10 +1713,21 @@ module Ei
   CurrencyFlowLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CurrencyFlowLog").msgclass
   CurrencyFlowBatchRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CurrencyFlowBatchRequest").msgclass
   Reward = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Reward").msgclass
+  GameModifier = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameModifier").msgclass
   Contract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract").msgclass
   Contract::Goal = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.Goal").msgclass
   Contract::GoalSet = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.GoalSet").msgclass
+  Contract::GradeSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.GradeSpec").msgclass
+  Contract::PlayerGrade = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.PlayerGrade").enummodule
+  ContractPlayerInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractPlayerInfo").msgclass
   BasicRequestInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.BasicRequestInfo").msgclass
+  ContractSimConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimConfig").msgclass
+  ContractSimConfig::ContractGradeSimConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimConfig.ContractGradeSimConfig").msgclass
+  ContractSimConfig::ContractGradeSimConfig::GoalParams = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimConfig.ContractGradeSimConfig.GoalParams").msgclass
+  ContractSimPoll = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimPoll").msgclass
+  ContractSimPollResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimPollResponse").msgclass
+  ContractSimResultUpdate = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimResultUpdate").msgclass
+  ContractSimResultUpdate::GoalInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimResultUpdate.GoalInfo").msgclass
   ContractsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractsRequest").msgclass
   ContractsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractsResponse").msgclass
   ContractCoopStatusRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusRequest").msgclass
@@ -1785,4 +1857,5 @@ module Ei
   FarmType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.FarmType").enummodule
   GoalType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GoalType").enummodule
   RewardType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.RewardType").enummodule
+  GameDimension = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameDimension").enummodule
 end

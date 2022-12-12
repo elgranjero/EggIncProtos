@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeauthenticatedMessage")
 public inline fun authenticatedMessage(block: ei.AuthenticatedMessageKt.Dsl.() -> kotlin.Unit): ei.Ei.AuthenticatedMessage =
   ei.AuthenticatedMessageKt.Dsl._create(ei.Ei.AuthenticatedMessage.newBuilder()).apply { block() }._build()
 public object AuthenticatedMessageKt {
@@ -146,3 +146,4 @@ public object AuthenticatedMessageKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AuthenticatedMessage.copy(block: ei.AuthenticatedMessageKt.Dsl.() -> kotlin.Unit): ei.Ei.AuthenticatedMessage =
   ei.AuthenticatedMessageKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

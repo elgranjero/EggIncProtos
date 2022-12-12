@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeuserDataInfoResponse")
 public inline fun userDataInfoResponse(block: ei.UserDataInfoResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.UserDataInfoResponse =
   ei.UserDataInfoResponseKt.Dsl._create(ei.Ei.UserDataInfoResponse.newBuilder()).apply { block() }._build()
 public object UserDataInfoResponseKt {
@@ -144,3 +144,4 @@ public object UserDataInfoResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.UserDataInfoResponse.copy(block: ei.UserDataInfoResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.UserDataInfoResponse =
   ei.UserDataInfoResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeplayerFarmInfo")
 public inline fun playerFarmInfo(block: ei.PlayerFarmInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.PlayerFarmInfo =
   ei.PlayerFarmInfoKt.Dsl._create(ei.Ei.PlayerFarmInfo.newBuilder()).apply { block() }._build()
 public object PlayerFarmInfoKt {
@@ -229,7 +229,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addEpicResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.add(value: ei.Ei.Backup.ResearchItem) {
       _builder.addEpicResearch(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param value The epicResearch to add.
      */
@@ -238,7 +239,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.plusAssign(value: ei.Ei.Backup.ResearchItem) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param values The epicResearch to add.
      */
@@ -246,7 +248,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addAllEpicResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       _builder.addAllEpicResearch(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param values The epicResearch to add.
      */
@@ -255,7 +258,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param index The index to set the value at.
      * @param value The epicResearch to set.
@@ -264,7 +268,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("setEpicResearch")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ResearchItem) {
       _builder.setEpicResearch(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -272,6 +277,8 @@ public object PlayerFarmInfoKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.clear() {
       _builder.clearEpicResearch()
     }
+
+
     /**
      * <code>optional .ei.Egg egg_type = 7;</code>
      */
@@ -691,7 +698,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addCommonResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.add(value: ei.Ei.Backup.ResearchItem) {
       _builder.addCommonResearch(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param value The commonResearch to add.
      */
@@ -700,7 +708,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.plusAssign(value: ei.Ei.Backup.ResearchItem) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param values The commonResearch to add.
      */
@@ -708,7 +717,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addAllCommonResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       _builder.addAllCommonResearch(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param values The commonResearch to add.
      */
@@ -717,7 +727,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param index The index to set the value at.
      * @param value The commonResearch to set.
@@ -726,7 +737,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("setCommonResearch")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ResearchItem) {
       _builder.setCommonResearch(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -734,6 +746,8 @@ public object PlayerFarmInfoKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.clear() {
       _builder.clearCommonResearch()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -756,7 +770,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addActiveBoosts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.add(value: ei.Ei.Backup.ActiveBoost) {
       _builder.addActiveBoosts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param value The activeBoosts to add.
      */
@@ -765,7 +780,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.plusAssign(value: ei.Ei.Backup.ActiveBoost) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param values The activeBoosts to add.
      */
@@ -773,7 +789,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addAllActiveBoosts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ActiveBoost>) {
       _builder.addAllActiveBoosts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param values The activeBoosts to add.
      */
@@ -782,7 +799,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ActiveBoost>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param index The index to set the value at.
      * @param value The activeBoosts to set.
@@ -791,7 +809,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("setActiveBoosts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ActiveBoost) {
       _builder.setActiveBoosts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -799,6 +818,8 @@ public object PlayerFarmInfoKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.clear() {
       _builder.clearActiveBoosts()
     }
+
+
     /**
      * <code>optional uint32 boost_tokens_on_hand = 16;</code>
      */
@@ -845,7 +866,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addEquippedArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.add(value: ei.Ei.CompleteArtifact) {
       _builder.addEquippedArtifacts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param value The equippedArtifacts to add.
      */
@@ -854,7 +876,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.plusAssign(value: ei.Ei.CompleteArtifact) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param values The equippedArtifacts to add.
      */
@@ -862,7 +885,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("addAllEquippedArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CompleteArtifact>) {
       _builder.addAllEquippedArtifacts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param values The equippedArtifacts to add.
      */
@@ -871,7 +895,8 @@ public object PlayerFarmInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CompleteArtifact>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param index The index to set the value at.
      * @param value The equippedArtifacts to set.
@@ -880,7 +905,8 @@ public object PlayerFarmInfoKt {
     @kotlin.jvm.JvmName("setEquippedArtifacts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.CompleteArtifact) {
       _builder.setEquippedArtifacts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -888,6 +914,8 @@ public object PlayerFarmInfoKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.clear() {
       _builder.clearEquippedArtifacts()
     }
+
+
     /**
      * <code>optional uint64 artifact_inventory_score = 18;</code>
      */
@@ -935,6 +963,8 @@ public object PlayerFarmInfoKt {
     public fun hasFarmAppearance(): kotlin.Boolean {
       return _builder.hasFarmAppearance()
     }
+    public val PlayerFarmInfoKt.Dsl.farmAppearanceOrNull: ei.Ei.ShellDB.FarmConfiguration?
+      get() = _builder.farmAppearanceOrNull
 
     /**
      * <code>optional double timestamp = 22;</code>
@@ -964,3 +994,7 @@ public object PlayerFarmInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.PlayerFarmInfo.copy(block: ei.PlayerFarmInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.PlayerFarmInfo =
   ei.PlayerFarmInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.PlayerFarmInfoOrBuilder.farmAppearanceOrNull: ei.Ei.ShellDB.FarmConfiguration?
+  get() = if (hasFarmAppearance()) getFarmAppearance() else null
+

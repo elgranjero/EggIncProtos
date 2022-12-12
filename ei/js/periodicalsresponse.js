@@ -16,6 +16,7 @@ goog.provide('proto.ei.PeriodicalsResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.ContractsResponse');
 goog.require('proto.ei.EggIncCurrentEvents');
 goog.require('proto.ei.LiveConfig');
@@ -89,7 +90,8 @@ proto.ei.PeriodicalsResponse.toObject = function(includeInstance, msg) {
     giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
     proto.ei.ServerGift.toObject, includeInstance),
     liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
-    mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f)
+    mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
+    contractPlayerInfo: (f = msg.getContractPlayerInfo()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -155,6 +157,11 @@ proto.ei.PeriodicalsResponse.deserializeBinaryFromReader = function(msg, reader)
       var value = new proto.ei.MailDB;
       reader.readMessage(value,proto.ei.MailDB.deserializeBinaryFromReader);
       msg.setMailBag(value);
+      break;
+    case 7:
+      var value = new proto.ei.ContractPlayerInfo;
+      reader.readMessage(value,proto.ei.ContractPlayerInfo.deserializeBinaryFromReader);
+      msg.setContractPlayerInfo(value);
       break;
     default:
       reader.skipField();
@@ -231,6 +238,14 @@ proto.ei.PeriodicalsResponse.serializeBinaryToWriter = function(message, writer)
       6,
       f,
       proto.ei.MailDB.serializeBinaryToWriter
+    );
+  }
+  f = message.getContractPlayerInfo();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.ei.ContractPlayerInfo.serializeBinaryToWriter
     );
   }
 };
@@ -456,6 +471,43 @@ proto.ei.PeriodicalsResponse.prototype.clearMailBag = function() {
  */
 proto.ei.PeriodicalsResponse.prototype.hasMailBag = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional ContractPlayerInfo contract_player_info = 7;
+ * @return {?proto.ei.ContractPlayerInfo}
+ */
+proto.ei.PeriodicalsResponse.prototype.getContractPlayerInfo = function() {
+  return /** @type{?proto.ei.ContractPlayerInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.ContractPlayerInfo, 7));
+};
+
+
+/**
+ * @param {?proto.ei.ContractPlayerInfo|undefined} value
+ * @return {!proto.ei.PeriodicalsResponse} returns this
+*/
+proto.ei.PeriodicalsResponse.prototype.setContractPlayerInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.PeriodicalsResponse} returns this
+ */
+proto.ei.PeriodicalsResponse.prototype.clearContractPlayerInfo = function() {
+  return this.setContractPlayerInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.PeriodicalsResponse.prototype.hasContractPlayerInfo = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializegiftPlayerCoopRequest")
 public inline fun giftPlayerCoopRequest(block: ei.GiftPlayerCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.GiftPlayerCoopRequest =
   ei.GiftPlayerCoopRequestKt.Dsl._create(ei.Ei.GiftPlayerCoopRequest.newBuilder()).apply { block() }._build()
 public object GiftPlayerCoopRequestKt {
@@ -45,6 +45,8 @@ public object GiftPlayerCoopRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val GiftPlayerCoopRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -218,3 +220,7 @@ public object GiftPlayerCoopRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.GiftPlayerCoopRequest.copy(block: ei.GiftPlayerCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.GiftPlayerCoopRequest =
   ei.GiftPlayerCoopRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.GiftPlayerCoopRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

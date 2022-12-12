@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeauthenticateArtifactResponse")
 public inline fun authenticateArtifactResponse(block: ei.AuthenticateArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.AuthenticateArtifactResponse =
   ei.AuthenticateArtifactResponseKt.Dsl._create(ei.Ei.AuthenticateArtifactResponse.newBuilder()).apply { block() }._build()
 public object AuthenticateArtifactResponseKt {
@@ -146,3 +146,4 @@ public object AuthenticateArtifactResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AuthenticateArtifactResponse.copy(block: ei.AuthenticateArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.AuthenticateArtifactResponse =
   ei.AuthenticateArtifactResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemyContracts")
 public inline fun myContracts(block: ei.MyContractsKt.Dsl.() -> kotlin.Unit): ei.Ei.MyContracts =
   ei.MyContractsKt.Dsl._create(ei.Ei.MyContracts.newBuilder()).apply { block() }._build()
 public object MyContractsKt {
@@ -114,7 +114,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("addContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.add(value: ei.Ei.LocalContract) {
       _builder.addContracts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param value The contracts to add.
      */
@@ -123,7 +124,8 @@ public object MyContractsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.plusAssign(value: ei.Ei.LocalContract) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param values The contracts to add.
      */
@@ -131,7 +133,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("addAllContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       _builder.addAllContracts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param values The contracts to add.
      */
@@ -140,7 +143,8 @@ public object MyContractsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param index The index to set the value at.
      * @param value The contracts to set.
@@ -149,7 +153,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("setContracts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.set(index: kotlin.Int, value: ei.Ei.LocalContract) {
       _builder.setContracts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract contracts = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -157,6 +162,8 @@ public object MyContractsKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.clear() {
       _builder.clearContracts()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -179,7 +186,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("addArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.add(value: ei.Ei.LocalContract) {
       _builder.addArchive(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param value The archive to add.
      */
@@ -188,7 +196,8 @@ public object MyContractsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.plusAssign(value: ei.Ei.LocalContract) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param values The archive to add.
      */
@@ -196,7 +205,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("addAllArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       _builder.addAllArchive(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param values The archive to add.
      */
@@ -205,7 +215,8 @@ public object MyContractsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param index The index to set the value at.
      * @param value The archive to set.
@@ -214,7 +225,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("setArchive")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.set(index: kotlin.Int, value: ei.Ei.LocalContract) {
       _builder.setArchive(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.LocalContract archive = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -222,6 +234,8 @@ public object MyContractsKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.clear() {
       _builder.clearArchive()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -244,7 +258,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("addCurrentCoopStatuses")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.add(value: ei.Ei.ContractCoopStatusResponse) {
       _builder.addCurrentCoopStatuses(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param value The currentCoopStatuses to add.
      */
@@ -253,7 +268,8 @@ public object MyContractsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param values The currentCoopStatuses to add.
      */
@@ -261,7 +277,8 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("addAllCurrentCoopStatuses")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse>) {
       _builder.addAllCurrentCoopStatuses(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param values The currentCoopStatuses to add.
      */
@@ -270,7 +287,8 @@ public object MyContractsKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param index The index to set the value at.
      * @param value The currentCoopStatuses to set.
@@ -279,15 +297,19 @@ public object MyContractsKt {
     @kotlin.jvm.JvmName("setCurrentCoopStatuses")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse) {
       _builder.setCurrentCoopStatuses(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearCurrentCoopStatuses")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.clear() {
       _builder.clearCurrentCoopStatuses()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MyContracts.copy(block: ei.MyContractsKt.Dsl.() -> kotlin.Unit): ei.Ei.MyContracts =
   ei.MyContractsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

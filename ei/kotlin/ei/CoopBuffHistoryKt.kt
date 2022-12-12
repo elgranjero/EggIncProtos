@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoopBuffHistory")
 public inline fun coopBuffHistory(block: ei.CoopBuffHistoryKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopBuffHistory =
   ei.CoopBuffHistoryKt.Dsl._create(ei.Ei.CoopBuffHistory.newBuilder()).apply { block() }._build()
 public object CoopBuffHistoryKt {
@@ -44,7 +44,8 @@ public object CoopBuffHistoryKt {
     @kotlin.jvm.JvmName("addHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.add(value: ei.Ei.CoopBuffState) {
       _builder.addHistory(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param value The history to add.
      */
@@ -53,7 +54,8 @@ public object CoopBuffHistoryKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.plusAssign(value: ei.Ei.CoopBuffState) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param values The history to add.
      */
@@ -61,7 +63,8 @@ public object CoopBuffHistoryKt {
     @kotlin.jvm.JvmName("addAllHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
       _builder.addAllHistory(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param values The history to add.
      */
@@ -70,7 +73,8 @@ public object CoopBuffHistoryKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param index The index to set the value at.
      * @param value The history to set.
@@ -79,15 +83,19 @@ public object CoopBuffHistoryKt {
     @kotlin.jvm.JvmName("setHistory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.set(index: kotlin.Int, value: ei.Ei.CoopBuffState) {
       _builder.setHistory(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.CoopBuffState history = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.clear() {
       _builder.clearHistory()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CoopBuffHistory.copy(block: ei.CoopBuffHistoryKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopBuffHistory =
   ei.CoopBuffHistoryKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

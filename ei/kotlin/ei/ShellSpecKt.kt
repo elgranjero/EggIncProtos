@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeshellSpec")
 public inline fun shellSpec(block: ei.ShellSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSpec =
   ei.ShellSpecKt.Dsl._create(ei.Ei.ShellSpec.newBuilder()).apply { block() }._build()
 public object ShellSpecKt {
@@ -69,6 +69,8 @@ public object ShellSpecKt {
     public fun hasPrimaryPiece(): kotlin.Boolean {
       return _builder.hasPrimaryPiece()
     }
+    public val ShellSpecKt.Dsl.primaryPieceOrNull: ei.Ei.ShellSpec.ShellPiece?
+      get() = _builder.primaryPieceOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -92,7 +94,8 @@ public object ShellSpecKt {
     @kotlin.jvm.JvmName("addPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec.ShellPiece, PiecesProxy>.add(value: ei.Ei.ShellSpec.ShellPiece) {
       _builder.addPieces(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
      * @param value The pieces to add.
      */
@@ -101,7 +104,8 @@ public object ShellSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec.ShellPiece, PiecesProxy>.plusAssign(value: ei.Ei.ShellSpec.ShellPiece) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
      * @param values The pieces to add.
      */
@@ -109,7 +113,8 @@ public object ShellSpecKt {
     @kotlin.jvm.JvmName("addAllPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec.ShellPiece, PiecesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSpec.ShellPiece>) {
       _builder.addAllPieces(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
      * @param values The pieces to add.
      */
@@ -118,7 +123,8 @@ public object ShellSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec.ShellPiece, PiecesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSpec.ShellPiece>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
      * @param index The index to set the value at.
      * @param value The pieces to set.
@@ -127,7 +133,8 @@ public object ShellSpecKt {
     @kotlin.jvm.JvmName("setPieces")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec.ShellPiece, PiecesProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSpec.ShellPiece) {
       _builder.setPieces(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -135,6 +142,8 @@ public object ShellSpecKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec.ShellPiece, PiecesProxy>.clear() {
       _builder.clearPieces()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -157,7 +166,8 @@ public object ShellSpecKt {
     @kotlin.jvm.JvmName("addAltAssets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.add(value: ei.Ei.DLCItem) {
       _builder.addAltAssets(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.DLCItem alt_assets = 18;</code>
      * @param value The altAssets to add.
      */
@@ -166,7 +176,8 @@ public object ShellSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.plusAssign(value: ei.Ei.DLCItem) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.DLCItem alt_assets = 18;</code>
      * @param values The altAssets to add.
      */
@@ -174,7 +185,8 @@ public object ShellSpecKt {
     @kotlin.jvm.JvmName("addAllAltAssets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.DLCItem>) {
       _builder.addAllAltAssets(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.DLCItem alt_assets = 18;</code>
      * @param values The altAssets to add.
      */
@@ -183,7 +195,8 @@ public object ShellSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.DLCItem>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.DLCItem alt_assets = 18;</code>
      * @param index The index to set the value at.
      * @param value The altAssets to set.
@@ -192,7 +205,8 @@ public object ShellSpecKt {
     @kotlin.jvm.JvmName("setAltAssets")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.set(index: kotlin.Int, value: ei.Ei.DLCItem) {
       _builder.setAltAssets(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.DLCItem alt_assets = 18;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -200,6 +214,8 @@ public object ShellSpecKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, AltAssetsProxy>.clear() {
       _builder.clearAltAssets()
     }
+
+
     /**
      * <code>optional string name = 3;</code>
      */
@@ -345,6 +361,30 @@ public object ShellSpecKt {
     }
 
     /**
+     * <code>optional string required_parent_shell = 20;</code>
+     */
+    public var requiredParentShell: kotlin.String
+      @JvmName("getRequiredParentShell")
+      get() = _builder.getRequiredParentShell()
+      @JvmName("setRequiredParentShell")
+      set(value) {
+        _builder.setRequiredParentShell(value)
+      }
+    /**
+     * <code>optional string required_parent_shell = 20;</code>
+     */
+    public fun clearRequiredParentShell() {
+      _builder.clearRequiredParentShell()
+    }
+    /**
+     * <code>optional string required_parent_shell = 20;</code>
+     * @return Whether the requiredParentShell field is set.
+     */
+    public fun hasRequiredParentShell(): kotlin.Boolean {
+      return _builder.hasRequiredParentShell()
+    }
+
+    /**
      * <code>optional bool is_new = 14;</code>
      */
     public var isNew: kotlin.Boolean
@@ -464,7 +504,7 @@ public object ShellSpecKt {
       return _builder.hasDefaultAppearance()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellPiece")
   public inline fun shellPiece(block: ei.ShellSpecKt.ShellPieceKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSpec.ShellPiece =
     ei.ShellSpecKt.ShellPieceKt.Dsl._create(ei.Ei.ShellSpec.ShellPiece.newBuilder()).apply { block() }._build()
   public object ShellPieceKt {
@@ -530,12 +570,22 @@ public object ShellSpecKt {
       public fun hasDlc(): kotlin.Boolean {
         return _builder.hasDlc()
       }
+      public val ShellPieceKt.Dsl.dlcOrNull: ei.Ei.DLCItem?
+        get() = _builder.dlcOrNull
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellSpec.copy(block: ei.ShellSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSpec =
   ei.ShellSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellSpec.ShellPiece.copy(block: ei.ShellSpecKt.ShellPieceKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSpec.ShellPiece =
   ei.ShellSpecKt.ShellPieceKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellSpec.ShellPieceOrBuilder.dlcOrNull: ei.Ei.DLCItem?
+  get() = if (hasDlc()) getDlc() else null
+
+val ei.Ei.ShellSpecOrBuilder.primaryPieceOrNull: ei.Ei.ShellSpec.ShellPiece?
+  get() = if (hasPrimaryPiece()) getPrimaryPiece() else null
+

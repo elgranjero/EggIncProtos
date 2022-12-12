@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeshellDB")
 public inline fun shellDB(block: ei.ShellDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB =
   ei.ShellDBKt.Dsl._create(ei.Ei.ShellDB.newBuilder()).apply { block() }._build()
 public object ShellDBKt {
@@ -44,7 +44,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addShellInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellInventoryProxy>.add(value: ei.Ei.ShellDB.ShellStatus) {
       _builder.addShellInventory(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
      * @param value The shellInventory to add.
      */
@@ -53,7 +54,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellInventoryProxy>.plusAssign(value: ei.Ei.ShellDB.ShellStatus) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
      * @param values The shellInventory to add.
      */
@@ -61,7 +63,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllShellInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellInventoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellStatus>) {
       _builder.addAllShellInventory(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
      * @param values The shellInventory to add.
      */
@@ -70,7 +73,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellInventoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellStatus>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
      * @param index The index to set the value at.
      * @param value The shellInventory to set.
@@ -79,7 +83,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setShellInventory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellInventoryProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellStatus) {
       _builder.setShellInventory(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -87,6 +92,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellInventoryProxy>.clear() {
       _builder.clearShellInventory()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -109,7 +116,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addShellElementInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellElementStatus, ShellElementInventoryProxy>.add(value: ei.Ei.ShellDB.ShellElementStatus) {
       _builder.addShellElementInventory(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
      * @param value The shellElementInventory to add.
      */
@@ -118,7 +126,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellElementStatus, ShellElementInventoryProxy>.plusAssign(value: ei.Ei.ShellDB.ShellElementStatus) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
      * @param values The shellElementInventory to add.
      */
@@ -126,7 +135,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllShellElementInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellElementStatus, ShellElementInventoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellElementStatus>) {
       _builder.addAllShellElementInventory(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
      * @param values The shellElementInventory to add.
      */
@@ -135,7 +145,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellElementStatus, ShellElementInventoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellElementStatus>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
      * @param index The index to set the value at.
      * @param value The shellElementInventory to set.
@@ -144,7 +155,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setShellElementInventory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellElementStatus, ShellElementInventoryProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellElementStatus) {
       _builder.setShellElementInventory(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -152,6 +164,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellElementStatus, ShellElementInventoryProxy>.clear() {
       _builder.clearShellElementInventory()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -174,7 +188,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addShellVariationInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetVariationStatus, ShellVariationInventoryProxy>.add(value: ei.Ei.ShellDB.ShellSetVariationStatus) {
       _builder.addShellVariationInventory(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
      * @param value The shellVariationInventory to add.
      */
@@ -183,7 +198,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetVariationStatus, ShellVariationInventoryProxy>.plusAssign(value: ei.Ei.ShellDB.ShellSetVariationStatus) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
      * @param values The shellVariationInventory to add.
      */
@@ -191,7 +207,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllShellVariationInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetVariationStatus, ShellVariationInventoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellSetVariationStatus>) {
       _builder.addAllShellVariationInventory(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
      * @param values The shellVariationInventory to add.
      */
@@ -200,7 +217,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetVariationStatus, ShellVariationInventoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellSetVariationStatus>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
      * @param index The index to set the value at.
      * @param value The shellVariationInventory to set.
@@ -209,7 +227,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setShellVariationInventory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetVariationStatus, ShellVariationInventoryProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellSetVariationStatus) {
       _builder.setShellVariationInventory(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -217,6 +236,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetVariationStatus, ShellVariationInventoryProxy>.clear() {
       _builder.clearShellVariationInventory()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -239,7 +260,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addShellSetInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellSetInventoryProxy>.add(value: ei.Ei.ShellDB.ShellStatus) {
       _builder.addShellSetInventory(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
      * @param value The shellSetInventory to add.
      */
@@ -248,7 +270,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellSetInventoryProxy>.plusAssign(value: ei.Ei.ShellDB.ShellStatus) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
      * @param values The shellSetInventory to add.
      */
@@ -256,7 +279,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllShellSetInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellSetInventoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellStatus>) {
       _builder.addAllShellSetInventory(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
      * @param values The shellSetInventory to add.
      */
@@ -265,7 +289,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellSetInventoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellStatus>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
      * @param index The index to set the value at.
      * @param value The shellSetInventory to set.
@@ -274,7 +299,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setShellSetInventory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellSetInventoryProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellStatus) {
       _builder.setShellSetInventory(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -282,6 +308,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellSetInventoryProxy>.clear() {
       _builder.clearShellSetInventory()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -304,7 +332,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addShellObjectInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellObjectInventoryProxy>.add(value: ei.Ei.ShellDB.ShellStatus) {
       _builder.addShellObjectInventory(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
      * @param value The shellObjectInventory to add.
      */
@@ -313,7 +342,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellObjectInventoryProxy>.plusAssign(value: ei.Ei.ShellDB.ShellStatus) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
      * @param values The shellObjectInventory to add.
      */
@@ -321,7 +351,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllShellObjectInventory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellObjectInventoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellStatus>) {
       _builder.addAllShellObjectInventory(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
      * @param values The shellObjectInventory to add.
      */
@@ -330,7 +361,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellObjectInventoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellStatus>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
      * @param index The index to set the value at.
      * @param value The shellObjectInventory to set.
@@ -339,7 +371,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setShellObjectInventory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellObjectInventoryProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellStatus) {
       _builder.setShellObjectInventory(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -347,6 +380,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellStatus, ShellObjectInventoryProxy>.clear() {
       _builder.clearShellObjectInventory()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -369,7 +404,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addFarmConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmConfiguration, FarmConfigsProxy>.add(value: ei.Ei.ShellDB.FarmConfiguration) {
       _builder.addFarmConfigs(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
      * @param value The farmConfigs to add.
      */
@@ -378,7 +414,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmConfiguration, FarmConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.FarmConfiguration) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
      * @param values The farmConfigs to add.
      */
@@ -386,7 +423,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllFarmConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmConfiguration, FarmConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.FarmConfiguration>) {
       _builder.addAllFarmConfigs(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
      * @param values The farmConfigs to add.
      */
@@ -395,7 +433,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmConfiguration, FarmConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.FarmConfiguration>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
      * @param index The index to set the value at.
      * @param value The farmConfigs to set.
@@ -404,7 +443,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setFarmConfigs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmConfiguration, FarmConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.FarmConfiguration) {
       _builder.setFarmConfigs(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -412,6 +452,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmConfiguration, FarmConfigsProxy>.clear() {
       _builder.clearFarmConfigs()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -434,7 +476,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addSavedConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.add(value: ei.Ei.ShellDB.SavedFarmConfiguration) {
       _builder.addSavedConfigs(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
      * @param value The savedConfigs to add.
      */
@@ -443,7 +486,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.SavedFarmConfiguration) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
      * @param values The savedConfigs to add.
      */
@@ -451,7 +495,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("addAllSavedConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.SavedFarmConfiguration>) {
       _builder.addAllSavedConfigs(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
      * @param values The savedConfigs to add.
      */
@@ -460,7 +505,8 @@ public object ShellDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.SavedFarmConfiguration>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
      * @param index The index to set the value at.
      * @param value The savedConfigs to set.
@@ -469,7 +515,8 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("setSavedConfigs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.SavedFarmConfiguration) {
       _builder.setSavedConfigs(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -477,6 +524,8 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.SavedFarmConfiguration, SavedConfigsProxy>.clear() {
       _builder.clearSavedConfigs()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -617,7 +666,7 @@ public object ShellDBKt {
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, NewShellsSeenProxy>.clear() {
       _builder.clearNewShellsSeen()
     }}
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellStatus")
   public inline fun shellStatus(block: ei.ShellDBKt.ShellStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellStatus =
     ei.ShellDBKt.ShellStatusKt.Dsl._create(ei.Ei.ShellDB.ShellStatus.newBuilder()).apply { block() }._build()
   public object ShellStatusKt {
@@ -685,7 +734,7 @@ public object ShellDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellElementStatus")
   public inline fun shellElementStatus(block: ei.ShellDBKt.ShellElementStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellElementStatus =
     ei.ShellDBKt.ShellElementStatusKt.Dsl._create(ei.Ei.ShellDB.ShellElementStatus.newBuilder()).apply { block() }._build()
   public object ShellElementStatusKt {
@@ -753,7 +802,7 @@ public object ShellDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellSetVariationStatus")
   public inline fun shellSetVariationStatus(block: ei.ShellDBKt.ShellSetVariationStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellSetVariationStatus =
     ei.ShellDBKt.ShellSetVariationStatusKt.Dsl._create(ei.Ei.ShellDB.ShellSetVariationStatus.newBuilder()).apply { block() }._build()
   public object ShellSetVariationStatusKt {
@@ -867,7 +916,7 @@ public object ShellDBKt {
         _builder.clearOwnedVariations()
       }}
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializefarmConfiguration")
   public inline fun farmConfiguration(block: ei.ShellDBKt.FarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.FarmConfiguration =
     ei.ShellDBKt.FarmConfigurationKt.Dsl._create(ei.Ei.ShellDB.FarmConfiguration.newBuilder()).apply { block() }._build()
   public object FarmConfigurationKt {
@@ -908,7 +957,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addShellConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellConfiguration, ShellConfigsProxy>.add(value: ei.Ei.ShellDB.ShellConfiguration) {
         _builder.addShellConfigs(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
        * @param value The shellConfigs to add.
        */
@@ -917,7 +967,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellConfiguration, ShellConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.ShellConfiguration) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
        * @param values The shellConfigs to add.
        */
@@ -925,7 +976,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addAllShellConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellConfiguration, ShellConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellConfiguration>) {
         _builder.addAllShellConfigs(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
        * @param values The shellConfigs to add.
        */
@@ -934,7 +986,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellConfiguration, ShellConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellConfiguration>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
        * @param index The index to set the value at.
        * @param value The shellConfigs to set.
@@ -943,7 +996,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("setShellConfigs")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellConfiguration, ShellConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellConfiguration) {
         _builder.setShellConfigs(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -951,6 +1005,8 @@ public object ShellDBKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellConfiguration, ShellConfigsProxy>.clear() {
         _builder.clearShellConfigs()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -973,7 +1029,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addShellSetConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetConfiguration, ShellSetConfigsProxy>.add(value: ei.Ei.ShellDB.ShellSetConfiguration) {
         _builder.addShellSetConfigs(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
        * @param value The shellSetConfigs to add.
        */
@@ -982,7 +1039,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetConfiguration, ShellSetConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.ShellSetConfiguration) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
        * @param values The shellSetConfigs to add.
        */
@@ -990,7 +1048,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addAllShellSetConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetConfiguration, ShellSetConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellSetConfiguration>) {
         _builder.addAllShellSetConfigs(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
        * @param values The shellSetConfigs to add.
        */
@@ -999,7 +1058,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetConfiguration, ShellSetConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellSetConfiguration>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
        * @param index The index to set the value at.
        * @param value The shellSetConfigs to set.
@@ -1008,7 +1068,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("setShellSetConfigs")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetConfiguration, ShellSetConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellSetConfiguration) {
         _builder.setShellSetConfigs(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -1016,6 +1077,8 @@ public object ShellDBKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellSetConfiguration, ShellSetConfigsProxy>.clear() {
         _builder.clearShellSetConfigs()
       }
+
+
       /**
        * <code>optional bool configure_chickens_by_group = 7;</code>
        */
@@ -1062,7 +1125,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addGroupConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellGroupConfiguration, GroupConfigsProxy>.add(value: ei.Ei.ShellDB.ShellGroupConfiguration) {
         _builder.addGroupConfigs(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
        * @param value The groupConfigs to add.
        */
@@ -1071,7 +1135,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellGroupConfiguration, GroupConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.ShellGroupConfiguration) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
        * @param values The groupConfigs to add.
        */
@@ -1079,7 +1144,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addAllGroupConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellGroupConfiguration, GroupConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellGroupConfiguration>) {
         _builder.addAllGroupConfigs(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
        * @param values The groupConfigs to add.
        */
@@ -1088,7 +1154,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellGroupConfiguration, GroupConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ShellGroupConfiguration>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
        * @param index The index to set the value at.
        * @param value The groupConfigs to set.
@@ -1097,7 +1164,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("setGroupConfigs")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellGroupConfiguration, GroupConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ShellGroupConfiguration) {
         _builder.setGroupConfigs(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -1105,6 +1173,8 @@ public object ShellDBKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ShellGroupConfiguration, GroupConfigsProxy>.clear() {
         _builder.clearGroupConfigs()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -1127,7 +1197,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addChickenConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ChickenConfig, ChickenConfigsProxy>.add(value: ei.Ei.ShellDB.ChickenConfig) {
         _builder.addChickenConfigs(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
        * @param value The chickenConfigs to add.
        */
@@ -1136,7 +1207,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ChickenConfig, ChickenConfigsProxy>.plusAssign(value: ei.Ei.ShellDB.ChickenConfig) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
        * @param values The chickenConfigs to add.
        */
@@ -1144,7 +1216,8 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("addAllChickenConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ChickenConfig, ChickenConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ChickenConfig>) {
         _builder.addAllChickenConfigs(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
        * @param values The chickenConfigs to add.
        */
@@ -1153,7 +1226,8 @@ public object ShellDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ChickenConfig, ChickenConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.ChickenConfig>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
        * @param index The index to set the value at.
        * @param value The chickenConfigs to set.
@@ -1162,16 +1236,19 @@ public object ShellDBKt {
       @kotlin.jvm.JvmName("setChickenConfigs")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ChickenConfig, ChickenConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.ChickenConfig) {
         _builder.setChickenConfigs(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearChickenConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.ChickenConfig, ChickenConfigsProxy>.clear() {
         _builder.clearChickenConfigs()
-      }}
+      }
+
+    }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializesavedFarmConfiguration")
   public inline fun savedFarmConfiguration(block: ei.ShellDBKt.SavedFarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.SavedFarmConfiguration =
     ei.ShellDBKt.SavedFarmConfigurationKt.Dsl._create(ei.Ei.ShellDB.SavedFarmConfiguration.newBuilder()).apply { block() }._build()
   public object SavedFarmConfigurationKt {
@@ -1237,6 +1314,8 @@ public object ShellDBKt {
       public fun hasConfig(): kotlin.Boolean {
         return _builder.hasConfig()
       }
+      public val SavedFarmConfigurationKt.Dsl.configOrNull: ei.Ei.ShellDB.FarmConfiguration?
+        get() = _builder.configOrNull
 
       /**
        * <code>optional double client_save_time = 3;</code>
@@ -1263,7 +1342,7 @@ public object ShellDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellConfiguration")
   public inline fun shellConfiguration(block: ei.ShellDBKt.ShellConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellConfiguration =
     ei.ShellDBKt.ShellConfigurationKt.Dsl._create(ei.Ei.ShellDB.ShellConfiguration.newBuilder()).apply { block() }._build()
   public object ShellConfigurationKt {
@@ -1355,7 +1434,7 @@ public object ShellDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellSetConfiguration")
   public inline fun shellSetConfiguration(block: ei.ShellDBKt.ShellSetConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellSetConfiguration =
     ei.ShellDBKt.ShellSetConfigurationKt.Dsl._create(ei.Ei.ShellDB.ShellSetConfiguration.newBuilder()).apply { block() }._build()
   public object ShellSetConfigurationKt {
@@ -1495,7 +1574,7 @@ public object ShellDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshellGroupConfiguration")
   public inline fun shellGroupConfiguration(block: ei.ShellDBKt.ShellGroupConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellGroupConfiguration =
     ei.ShellDBKt.ShellGroupConfigurationKt.Dsl._create(ei.Ei.ShellDB.ShellGroupConfiguration.newBuilder()).apply { block() }._build()
   public object ShellGroupConfigurationKt {
@@ -1563,7 +1642,7 @@ public object ShellDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializechickenConfig")
   public inline fun chickenConfig(block: ei.ShellDBKt.ChickenConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ChickenConfig =
     ei.ShellDBKt.ChickenConfigKt.Dsl._create(ei.Ei.ShellDB.ChickenConfig.newBuilder()).apply { block() }._build()
   public object ChickenConfigKt {
@@ -1635,30 +1714,43 @@ public object ShellDBKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.copy(block: ei.ShellDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB =
   ei.ShellDBKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellStatus.copy(block: ei.ShellDBKt.ShellStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellStatus =
   ei.ShellDBKt.ShellStatusKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellElementStatus.copy(block: ei.ShellDBKt.ShellElementStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellElementStatus =
   ei.ShellDBKt.ShellElementStatusKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellSetVariationStatus.copy(block: ei.ShellDBKt.ShellSetVariationStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellSetVariationStatus =
   ei.ShellDBKt.ShellSetVariationStatusKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.FarmConfiguration.copy(block: ei.ShellDBKt.FarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.FarmConfiguration =
   ei.ShellDBKt.FarmConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.SavedFarmConfiguration.copy(block: ei.ShellDBKt.SavedFarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.SavedFarmConfiguration =
   ei.ShellDBKt.SavedFarmConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellDB.SavedFarmConfigurationOrBuilder.configOrNull: ei.Ei.ShellDB.FarmConfiguration?
+  get() = if (hasConfig()) getConfig() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellConfiguration.copy(block: ei.ShellDBKt.ShellConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellConfiguration =
   ei.ShellDBKt.ShellConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellSetConfiguration.copy(block: ei.ShellDBKt.ShellSetConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellSetConfiguration =
   ei.ShellDBKt.ShellSetConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ShellGroupConfiguration.copy(block: ei.ShellDBKt.ShellGroupConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellGroupConfiguration =
   ei.ShellDBKt.ShellGroupConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ChickenConfig.copy(block: ei.ShellDBKt.ChickenConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ChickenConfig =
   ei.ShellDBKt.ChickenConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelocalContract")
 public inline fun localContract(block: ei.LocalContractKt.Dsl.() -> kotlin.Unit): ei.Ei.LocalContract =
   ei.LocalContractKt.Dsl._create(ei.Ei.LocalContract.newBuilder()).apply { block() }._build()
 public object LocalContractKt {
@@ -45,6 +45,8 @@ public object LocalContractKt {
     public fun hasContract(): kotlin.Boolean {
       return _builder.hasContract()
     }
+    public val LocalContractKt.Dsl.contractOrNull: ei.Ei.Contract?
+      get() = _builder.contractOrNull
 
     /**
      * <code>optional string coop_identifier = 2;</code>
@@ -407,6 +409,30 @@ public object LocalContractKt {
     }
 
     /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 18;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 18;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 18;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
+    }
+
+    /**
      * <code>optional double last_nag_time = 16;</code>
      */
     public var lastNagTime: kotlin.Double
@@ -434,3 +460,7 @@ public object LocalContractKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LocalContract.copy(block: ei.LocalContractKt.Dsl.() -> kotlin.Unit): ei.Ei.LocalContract =
   ei.LocalContractKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LocalContractOrBuilder.contractOrNull: ei.Ei.Contract?
+  get() = if (hasContract()) getContract() else null
+

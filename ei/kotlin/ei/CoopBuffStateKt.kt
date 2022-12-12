@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoopBuffState")
 public inline fun coopBuffState(block: ei.CoopBuffStateKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopBuffState =
   ei.CoopBuffStateKt.Dsl._create(ei.Ei.CoopBuffState.newBuilder()).apply { block() }._build()
 public object CoopBuffStateKt {
@@ -98,3 +98,4 @@ public object CoopBuffStateKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CoopBuffState.copy(block: ei.CoopBuffStateKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopBuffState =
   ei.CoopBuffStateKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

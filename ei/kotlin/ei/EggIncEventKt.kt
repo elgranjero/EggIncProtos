@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeggIncEvent")
 public inline fun eggIncEvent(block: ei.EggIncEventKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncEvent =
   ei.EggIncEventKt.Dsl._create(ei.Ei.EggIncEvent.newBuilder()).apply { block() }._build()
 public object EggIncEventKt {
@@ -194,3 +194,4 @@ public object EggIncEventKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.EggIncEvent.copy(block: ei.EggIncEventKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncEvent =
   ei.EggIncEventKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

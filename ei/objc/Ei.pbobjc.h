@@ -68,8 +68,14 @@ CF_EXTERN_C_BEGIN
 @class ContractCoopStatusResponse_ChickenRun;
 @class ContractCoopStatusResponse_ContributionInfo;
 @class ContractCoopStatusResponse_CoopGift;
+@class ContractPlayerInfo;
+@class ContractSimConfig;
+@class ContractSimConfig_ContractGradeSimConfig;
+@class ContractSimConfig_ContractGradeSimConfig_GoalParams;
+@class ContractSimResultUpdate_GoalInfo;
 @class Contract_Goal;
 @class Contract_GoalSet;
+@class Contract_GradeSpec;
 @class ContractsResponse;
 @class CoopBuffState;
 @class CoopChickenRunEntry;
@@ -82,6 +88,7 @@ CF_EXTERN_C_BEGIN
 @class EggIncCurrentEvents;
 @class EggIncEvent;
 @class FarmProductionParams;
+@class GameModifier;
 @class GenericAction;
 @class IAPSaleEntry;
 @class InGameMail;
@@ -272,6 +279,21 @@ GPBEnumDescriptor *RewardType_EnumDescriptor(void);
  **/
 BOOL RewardType_IsValidValue(int32_t value);
 
+#pragma mark - Enum GameDimension
+
+typedef GPB_ENUM(GameDimension) {
+  GameDimension_Earnings = 1,
+  GameDimension_AwayEarnings = 3,
+};
+
+GPBEnumDescriptor *GameDimension_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL GameDimension_IsValidValue(int32_t value);
+
 #pragma mark - Enum EggIncFirstContactResponse_ErrorCodes
 
 typedef GPB_ENUM(EggIncFirstContactResponse_ErrorCodes) {
@@ -288,6 +310,25 @@ GPBEnumDescriptor *EggIncFirstContactResponse_ErrorCodes_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL EggIncFirstContactResponse_ErrorCodes_IsValidValue(int32_t value);
+
+#pragma mark - Enum Contract_PlayerGrade
+
+typedef GPB_ENUM(Contract_PlayerGrade) {
+  Contract_PlayerGrade_GradeUnset = 0,
+  Contract_PlayerGrade_GradeC = 1,
+  Contract_PlayerGrade_GradeB = 2,
+  Contract_PlayerGrade_GradeA = 3,
+  Contract_PlayerGrade_GradeAa = 4,
+  Contract_PlayerGrade_GradeAaa = 5,
+};
+
+GPBEnumDescriptor *Contract_PlayerGrade_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL Contract_PlayerGrade_IsValidValue(int32_t value);
 
 #pragma mark - Enum ContractCoopStatusResponse_MemberStatus
 
@@ -2405,6 +2446,28 @@ GPB_FINAL @interface Reward : GPBMessage
 @property(nonatomic, readwrite) BOOL hasRewardAmount;
 @end
 
+#pragma mark - GameModifier
+
+typedef GPB_ENUM(GameModifier_FieldNumber) {
+  GameModifier_FieldNumber_Dimension = 1,
+  GameModifier_FieldNumber_ValueModifier = 2,
+  GameModifier_FieldNumber_Description_p = 3,
+};
+
+GPB_FINAL @interface GameModifier : GPBMessage
+
+@property(nonatomic, readwrite) GameDimension dimension;
+
+@property(nonatomic, readwrite) BOOL hasDimension;
+@property(nonatomic, readwrite) double valueModifier;
+
+@property(nonatomic, readwrite) BOOL hasValueModifier;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
+
+@end
+
 #pragma mark - Contract
 
 typedef GPB_ENUM(Contract_FieldNumber) {
@@ -2426,6 +2489,8 @@ typedef GPB_ENUM(Contract_FieldNumber) {
   Contract_FieldNumber_StartTime = 17,
   Contract_FieldNumber_ChickenRunCooldownMinutes = 18,
   Contract_FieldNumber_Leggacy = 19,
+  Contract_FieldNumber_GradeSpecsArray = 20,
+  Contract_FieldNumber_Key = 21,
 };
 
 GPB_FINAL @interface Contract : GPBMessage
@@ -2452,6 +2517,10 @@ GPB_FINAL @interface Contract : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Contract_GoalSet*> *goalSetsArray;
 /** The number of items in @c goalSetsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger goalSetsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Contract_GradeSpec*> *gradeSpecsArray;
+/** The number of items in @c gradeSpecsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger gradeSpecsArray_Count;
 
 @property(nonatomic, readwrite) BOOL coopAllowed;
 
@@ -2489,6 +2558,10 @@ GPB_FINAL @interface Contract : GPBMessage
 @property(nonatomic, readwrite) BOOL debug;
 
 @property(nonatomic, readwrite) BOOL hasDebug;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *key;
+/** Test to see if @c key has been set. */
+@property(nonatomic, readwrite) BOOL hasKey;
+
 @end
 
 #pragma mark - Contract_Goal
@@ -2539,6 +2612,46 @@ GPB_FINAL @interface Contract_GoalSet : GPBMessage
 
 @end
 
+#pragma mark - Contract_GradeSpec
+
+typedef GPB_ENUM(Contract_GradeSpec_FieldNumber) {
+  Contract_GradeSpec_FieldNumber_Grade = 1,
+  Contract_GradeSpec_FieldNumber_GoalsArray = 2,
+  Contract_GradeSpec_FieldNumber_ModifiersArray = 3,
+};
+
+GPB_FINAL @interface Contract_GradeSpec : GPBMessage
+
+@property(nonatomic, readwrite) Contract_PlayerGrade grade;
+
+@property(nonatomic, readwrite) BOOL hasGrade;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Contract_Goal*> *goalsArray;
+/** The number of items in @c goalsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger goalsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<GameModifier*> *modifiersArray;
+/** The number of items in @c modifiersArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger modifiersArray_Count;
+
+@end
+
+#pragma mark - ContractPlayerInfo
+
+typedef GPB_ENUM(ContractPlayerInfo_FieldNumber) {
+  ContractPlayerInfo_FieldNumber_Grade = 1,
+  ContractPlayerInfo_FieldNumber_TotalCxp = 2,
+};
+
+GPB_FINAL @interface ContractPlayerInfo : GPBMessage
+
+@property(nonatomic, readwrite) Contract_PlayerGrade grade;
+
+@property(nonatomic, readwrite) BOOL hasGrade;
+@property(nonatomic, readwrite) double totalCxp;
+
+@property(nonatomic, readwrite) BOOL hasTotalCxp;
+@end
+
 #pragma mark - BasicRequestInfo
 
 typedef GPB_ENUM(BasicRequestInfo_FieldNumber) {
@@ -2584,6 +2697,131 @@ GPB_FINAL @interface BasicRequestInfo : GPBMessage
 @property(nonatomic, readwrite) BOOL debug;
 
 @property(nonatomic, readwrite) BOOL hasDebug;
+@end
+
+#pragma mark - ContractSimConfig
+
+typedef GPB_ENUM(ContractSimConfig_FieldNumber) {
+  ContractSimConfig_FieldNumber_GradeConfigsArray = 1,
+};
+
+GPB_FINAL @interface ContractSimConfig : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ContractSimConfig_ContractGradeSimConfig*> *gradeConfigsArray;
+/** The number of items in @c gradeConfigsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger gradeConfigsArray_Count;
+
+@end
+
+#pragma mark - ContractSimConfig_ContractGradeSimConfig
+
+typedef GPB_ENUM(ContractSimConfig_ContractGradeSimConfig_FieldNumber) {
+  ContractSimConfig_ContractGradeSimConfig_FieldNumber_Grade = 1,
+  ContractSimConfig_ContractGradeSimConfig_FieldNumber_GoalParamsArray = 2,
+};
+
+GPB_FINAL @interface ContractSimConfig_ContractGradeSimConfig : GPBMessage
+
+@property(nonatomic, readwrite) Contract_PlayerGrade grade;
+
+@property(nonatomic, readwrite) BOOL hasGrade;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ContractSimConfig_ContractGradeSimConfig_GoalParams*> *goalParamsArray;
+/** The number of items in @c goalParamsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger goalParamsArray_Count;
+
+@end
+
+#pragma mark - ContractSimConfig_ContractGradeSimConfig_GoalParams
+
+typedef GPB_ENUM(ContractSimConfig_ContractGradeSimConfig_GoalParams_FieldNumber) {
+  ContractSimConfig_ContractGradeSimConfig_GoalParams_FieldNumber_TargetSe = 1,
+  ContractSimConfig_ContractGradeSimConfig_GoalParams_FieldNumber_CpsMult = 2,
+  ContractSimConfig_ContractGradeSimConfig_GoalParams_FieldNumber_EarningsMult = 3,
+};
+
+GPB_FINAL @interface ContractSimConfig_ContractGradeSimConfig_GoalParams : GPBMessage
+
+@property(nonatomic, readwrite) double targetSe;
+
+@property(nonatomic, readwrite) BOOL hasTargetSe;
+@property(nonatomic, readwrite) double cpsMult;
+
+@property(nonatomic, readwrite) BOOL hasCpsMult;
+@property(nonatomic, readwrite) double earningsMult;
+
+@property(nonatomic, readwrite) BOOL hasEarningsMult;
+@end
+
+#pragma mark - ContractSimPoll
+
+typedef GPB_ENUM(ContractSimPoll_FieldNumber) {
+  ContractSimPoll_FieldNumber_ClientVersion = 1,
+};
+
+GPB_FINAL @interface ContractSimPoll : GPBMessage
+
+@property(nonatomic, readwrite) uint32_t clientVersion;
+
+@property(nonatomic, readwrite) BOOL hasClientVersion;
+@end
+
+#pragma mark - ContractSimPollResponse
+
+typedef GPB_ENUM(ContractSimPollResponse_FieldNumber) {
+  ContractSimPollResponse_FieldNumber_ContractToSimulate = 1,
+  ContractSimPollResponse_FieldNumber_SimConfig = 2,
+};
+
+GPB_FINAL @interface ContractSimPollResponse : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) Contract *contractToSimulate;
+/** Test to see if @c contractToSimulate has been set. */
+@property(nonatomic, readwrite) BOOL hasContractToSimulate;
+
+@property(nonatomic, readwrite, strong, null_resettable) ContractSimConfig *simConfig;
+/** Test to see if @c simConfig has been set. */
+@property(nonatomic, readwrite) BOOL hasSimConfig;
+
+@end
+
+#pragma mark - ContractSimResultUpdate
+
+typedef GPB_ENUM(ContractSimResultUpdate_FieldNumber) {
+  ContractSimResultUpdate_FieldNumber_ContractId = 1,
+  ContractSimResultUpdate_FieldNumber_GoalInfosArray = 2,
+};
+
+GPB_FINAL @interface ContractSimResultUpdate : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *contractId;
+/** Test to see if @c contractId has been set. */
+@property(nonatomic, readwrite) BOOL hasContractId;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ContractSimResultUpdate_GoalInfo*> *goalInfosArray;
+/** The number of items in @c goalInfosArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger goalInfosArray_Count;
+
+@end
+
+#pragma mark - ContractSimResultUpdate_GoalInfo
+
+typedef GPB_ENUM(ContractSimResultUpdate_GoalInfo_FieldNumber) {
+  ContractSimResultUpdate_GoalInfo_FieldNumber_Grade = 1,
+  ContractSimResultUpdate_GoalInfo_FieldNumber_GoalIndex = 2,
+  ContractSimResultUpdate_GoalInfo_FieldNumber_ProjectedEggsLaid = 3,
+};
+
+GPB_FINAL @interface ContractSimResultUpdate_GoalInfo : GPBMessage
+
+@property(nonatomic, readwrite) Contract_PlayerGrade grade;
+
+@property(nonatomic, readwrite) BOOL hasGrade;
+@property(nonatomic, readwrite) uint32_t goalIndex;
+
+@property(nonatomic, readwrite) BOOL hasGoalIndex;
+@property(nonatomic, readwrite) double projectedEggsLaid;
+
+@property(nonatomic, readwrite) BOOL hasProjectedEggsLaid;
 @end
 
 #pragma mark - ContractsRequest
@@ -3033,6 +3271,7 @@ typedef GPB_ENUM(LocalContract_FieldNumber) {
   LocalContract_FieldNumber_League = 15,
   LocalContract_FieldNumber_LastNagTime = 16,
   LocalContract_FieldNumber_CoopShareFarm = 17,
+  LocalContract_FieldNumber_Grade = 18,
 };
 
 GPB_FINAL @interface LocalContract : GPBMessage
@@ -3088,6 +3327,9 @@ GPB_FINAL @interface LocalContract : GPBMessage
 @property(nonatomic, readwrite) uint32_t league;
 
 @property(nonatomic, readwrite) BOOL hasLeague;
+@property(nonatomic, readwrite) Contract_PlayerGrade grade;
+
+@property(nonatomic, readwrite) BOOL hasGrade;
 @property(nonatomic, readwrite) double lastNagTime;
 
 @property(nonatomic, readwrite) BOOL hasLastNagTime;
@@ -4123,6 +4365,7 @@ typedef GPB_ENUM(LiveConfig_MiscConfig_FieldNumber) {
   LiveConfig_MiscConfig_FieldNumber_ShellsMaxFreeChickenConfigs = 8,
   LiveConfig_MiscConfig_FieldNumber_ShellsIntroAlertThreshold = 9,
   LiveConfig_MiscConfig_FieldNumber_ContractsExpertLeagueMinSoulPower = 10,
+  LiveConfig_MiscConfig_FieldNumber_NewPlayerEventDuration = 11,
 };
 
 GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
@@ -4158,6 +4401,9 @@ GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
 @property(nonatomic, readwrite) double contractsExpertLeagueMinSoulPower;
 
 @property(nonatomic, readwrite) BOOL hasContractsExpertLeagueMinSoulPower;
+@property(nonatomic, readwrite) double newPlayerEventDuration;
+
+@property(nonatomic, readwrite) BOOL hasNewPlayerEventDuration;
 @end
 
 #pragma mark - InGameMail
@@ -4251,6 +4497,7 @@ typedef GPB_ENUM(PeriodicalsResponse_FieldNumber) {
   PeriodicalsResponse_FieldNumber_GiftsArray = 4,
   PeriodicalsResponse_FieldNumber_LiveConfig = 5,
   PeriodicalsResponse_FieldNumber_MailBag = 6,
+  PeriodicalsResponse_FieldNumber_ContractPlayerInfo = 7,
 };
 
 GPB_FINAL @interface PeriodicalsResponse : GPBMessage
@@ -4278,6 +4525,10 @@ GPB_FINAL @interface PeriodicalsResponse : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) MailDB *mailBag;
 /** Test to see if @c mailBag has been set. */
 @property(nonatomic, readwrite) BOOL hasMailBag;
+
+@property(nonatomic, readwrite, strong, null_resettable) ContractPlayerInfo *contractPlayerInfo;
+/** Test to see if @c contractPlayerInfo has been set. */
+@property(nonatomic, readwrite) BOOL hasContractPlayerInfo;
 
 @end
 
@@ -5705,6 +5956,7 @@ typedef GPB_ENUM(ShellSpec_FieldNumber) {
   ShellSpec_FieldNumber_SecondsUntilAvailable = 17,
   ShellSpec_FieldNumber_AltAssetsArray = 18,
   ShellSpec_FieldNumber_ModifiedGeometry = 19,
+  ShellSpec_FieldNumber_RequiredParentShell = 20,
 };
 
 GPB_FINAL @interface ShellSpec : GPBMessage
@@ -5745,6 +5997,10 @@ GPB_FINAL @interface ShellSpec : GPBMessage
 @property(nonatomic, readwrite) double requiredSoulEggs;
 
 @property(nonatomic, readwrite) BOOL hasRequiredSoulEggs;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *requiredParentShell;
+/** Test to see if @c requiredParentShell has been set. */
+@property(nonatomic, readwrite) BOOL hasRequiredParentShell;
+
 @property(nonatomic, readwrite) BOOL isNew;
 
 @property(nonatomic, readwrite) BOOL hasIsNew;
@@ -5802,6 +6058,7 @@ typedef GPB_ENUM(ShellSetSpec_FieldNumber) {
   ShellSetSpec_FieldNumber_Discount = 17,
   ShellSetSpec_FieldNumber_SecondsUntilAvailable = 18,
   ShellSetSpec_FieldNumber_Icon = 19,
+  ShellSetSpec_FieldNumber_RequiredParentSet = 20,
 };
 
 GPB_FINAL @interface ShellSetSpec : GPBMessage
@@ -5829,6 +6086,10 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 @property(nonatomic, readwrite) double requiredSoulEggs;
 
 @property(nonatomic, readwrite) BOOL hasRequiredSoulEggs;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *requiredParentSet;
+/** Test to see if @c requiredParentSet has been set. */
+@property(nonatomic, readwrite) BOOL hasRequiredParentSet;
+
 @property(nonatomic, readwrite) BOOL isNew;
 
 @property(nonatomic, readwrite) BOOL hasIsNew;

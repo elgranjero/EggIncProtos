@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecraftArtifactRequest")
 public inline fun craftArtifactRequest(block: ei.CraftArtifactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CraftArtifactRequest =
   ei.CraftArtifactRequestKt.Dsl._create(ei.Ei.CraftArtifactRequest.newBuilder()).apply { block() }._build()
 public object CraftArtifactRequestKt {
@@ -45,6 +45,8 @@ public object CraftArtifactRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val CraftArtifactRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string ei_user_id = 1;</code>
@@ -93,6 +95,8 @@ public object CraftArtifactRequestKt {
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
     }
+    public val CraftArtifactRequestKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
+      get() = _builder.specOrNull
 
     /**
      * <code>optional uint64 item_id = 3;</code>
@@ -212,7 +216,8 @@ public object CraftArtifactRequestKt {
     @kotlin.jvm.JvmName("addIngredients")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.add(value: ei.Ei.ArtifactInventoryItem) {
       _builder.addIngredients(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param value The ingredients to add.
      */
@@ -221,7 +226,8 @@ public object CraftArtifactRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.plusAssign(value: ei.Ei.ArtifactInventoryItem) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param values The ingredients to add.
      */
@@ -229,7 +235,8 @@ public object CraftArtifactRequestKt {
     @kotlin.jvm.JvmName("addAllIngredients")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
       _builder.addAllIngredients(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param values The ingredients to add.
      */
@@ -238,7 +245,8 @@ public object CraftArtifactRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param index The index to set the value at.
      * @param value The ingredients to set.
@@ -247,15 +255,25 @@ public object CraftArtifactRequestKt {
     @kotlin.jvm.JvmName("setIngredients")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactInventoryItem) {
       _builder.setIngredients(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearIngredients")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.clear() {
       _builder.clearIngredients()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CraftArtifactRequest.copy(block: ei.CraftArtifactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CraftArtifactRequest =
   ei.CraftArtifactRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.CraftArtifactRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
+val ei.Ei.CraftArtifactRequestOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpec()) getSpec() else null
+

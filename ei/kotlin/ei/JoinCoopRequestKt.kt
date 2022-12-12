@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializejoinCoopRequest")
 public inline fun joinCoopRequest(block: ei.JoinCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.JoinCoopRequest =
   ei.JoinCoopRequestKt.Dsl._create(ei.Ei.JoinCoopRequest.newBuilder()).apply { block() }._build()
 public object JoinCoopRequestKt {
@@ -45,6 +45,8 @@ public object JoinCoopRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val JoinCoopRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -290,3 +292,7 @@ public object JoinCoopRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.JoinCoopRequest.copy(block: ei.JoinCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.JoinCoopRequest =
   ei.JoinCoopRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.JoinCoopRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

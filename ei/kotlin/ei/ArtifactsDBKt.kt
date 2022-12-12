@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeartifactsDB")
 public inline fun artifactsDB(block: ei.ArtifactsDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB =
   ei.ArtifactsDBKt.Dsl._create(ei.Ei.ArtifactsDB.newBuilder()).apply { block() }._build()
 public object ArtifactsDBKt {
@@ -44,7 +44,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addInventoryItems")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.add(value: ei.Ei.ArtifactInventoryItem) {
       _builder.addInventoryItems(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
      * @param value The inventoryItems to add.
      */
@@ -53,7 +54,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.plusAssign(value: ei.Ei.ArtifactInventoryItem) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
      * @param values The inventoryItems to add.
      */
@@ -61,7 +63,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllInventoryItems")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
       _builder.addAllInventoryItems(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
      * @param values The inventoryItems to add.
      */
@@ -70,7 +73,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
      * @param index The index to set the value at.
      * @param value The inventoryItems to set.
@@ -79,7 +83,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setInventoryItems")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactInventoryItem) {
       _builder.setInventoryItems(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -87,6 +92,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.clear() {
       _builder.clearInventoryItems()
     }
+
+
     /**
      * <code>optional uint64 item_sequence = 2;</code>
      */
@@ -133,7 +140,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addInventorySlots")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.add(value: ei.Ei.InventorySlot) {
       _builder.addInventorySlots(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
      * @param value The inventorySlots to add.
      */
@@ -142,7 +150,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.plusAssign(value: ei.Ei.InventorySlot) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
      * @param values The inventorySlots to add.
      */
@@ -150,7 +159,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllInventorySlots")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.InventorySlot>) {
       _builder.addAllInventorySlots(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
      * @param values The inventorySlots to add.
      */
@@ -159,7 +169,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.InventorySlot>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
      * @param index The index to set the value at.
      * @param value The inventorySlots to set.
@@ -168,7 +179,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setInventorySlots")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.set(index: kotlin.Int, value: ei.Ei.InventorySlot) {
       _builder.setInventorySlots(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -176,6 +188,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.clear() {
       _builder.clearInventorySlots()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -198,7 +212,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addActiveArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
       _builder.addActiveArtifacts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
      * @param value The activeArtifacts to add.
      */
@@ -207,7 +222,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
      * @param values The activeArtifacts to add.
      */
@@ -215,7 +231,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllActiveArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
       _builder.addAllActiveArtifacts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
      * @param values The activeArtifacts to add.
      */
@@ -224,7 +241,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
      * @param index The index to set the value at.
      * @param value The activeArtifacts to set.
@@ -233,7 +251,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setActiveArtifacts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
       _builder.setActiveArtifacts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -241,6 +260,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.clear() {
       _builder.clearActiveArtifacts()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -263,7 +284,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addActiveArtifactSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSet) {
       _builder.addActiveArtifactSets(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
      * @param value The activeArtifactSets to add.
      */
@@ -272,7 +294,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSet) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
      * @param values The activeArtifactSets to add.
      */
@@ -280,7 +303,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllActiveArtifactSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSet>) {
       _builder.addAllActiveArtifactSets(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
      * @param values The activeArtifactSets to add.
      */
@@ -289,7 +313,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSet>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
      * @param index The index to set the value at.
      * @param value The activeArtifactSets to set.
@@ -298,7 +323,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setActiveArtifactSets")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSet) {
       _builder.setActiveArtifactSets(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -306,6 +332,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.clear() {
       _builder.clearActiveArtifactSets()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -328,7 +356,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addArtifactStatus")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       _builder.addArtifactStatus(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      * @param value The artifactStatus to add.
      */
@@ -337,7 +366,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      * @param values The artifactStatus to add.
      */
@@ -345,7 +375,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllArtifactStatus")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       _builder.addAllArtifactStatus(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      * @param values The artifactStatus to add.
      */
@@ -354,7 +385,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      * @param index The index to set the value at.
      * @param value The artifactStatus to set.
@@ -363,7 +395,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setArtifactStatus")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       _builder.setArtifactStatus(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -371,6 +404,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.clear() {
       _builder.clearArtifactStatus()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -393,7 +428,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addMissionInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionInfosProxy>.add(value: ei.Ei.MissionInfo) {
       _builder.addMissionInfos(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
      * @param value The missionInfos to add.
      */
@@ -402,7 +438,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionInfosProxy>.plusAssign(value: ei.Ei.MissionInfo) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
      * @param values The missionInfos to add.
      */
@@ -410,7 +447,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllMissionInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionInfosProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.MissionInfo>) {
       _builder.addAllMissionInfos(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
      * @param values The missionInfos to add.
      */
@@ -419,7 +457,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionInfosProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.MissionInfo>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
      * @param index The index to set the value at.
      * @param value The missionInfos to set.
@@ -428,7 +467,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setMissionInfos")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionInfosProxy>.set(index: kotlin.Int, value: ei.Ei.MissionInfo) {
       _builder.setMissionInfos(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -436,6 +476,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionInfosProxy>.clear() {
       _builder.clearMissionInfos()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -458,7 +500,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addMissionArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.add(value: ei.Ei.MissionInfo) {
       _builder.addMissionArchive(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
      * @param value The missionArchive to add.
      */
@@ -467,7 +510,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.plusAssign(value: ei.Ei.MissionInfo) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
      * @param values The missionArchive to add.
      */
@@ -475,7 +519,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllMissionArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.MissionInfo>) {
       _builder.addAllMissionArchive(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
      * @param values The missionArchive to add.
      */
@@ -484,7 +529,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.MissionInfo>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
      * @param index The index to set the value at.
      * @param value The missionArchive to set.
@@ -493,7 +539,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setMissionArchive")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.set(index: kotlin.Int, value: ei.Ei.MissionInfo) {
       _builder.setMissionArchive(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -501,6 +548,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.clear() {
       _builder.clearMissionArchive()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -523,7 +572,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addDiscoveredArtifactsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addDiscoveredArtifactsDEPRECATED(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
      * @param value The discoveredArtifactsDEPRECATED to add.
      */
@@ -532,7 +582,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
      * @param values The discoveredArtifactsDEPRECATED to add.
      */
@@ -540,7 +591,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllDiscoveredArtifactsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllDiscoveredArtifactsDEPRECATED(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
      * @param values The discoveredArtifactsDEPRECATED to add.
      */
@@ -549,7 +601,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
      * @param index The index to set the value at.
      * @param value The discoveredArtifactsDEPRECATED to set.
@@ -558,7 +611,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setDiscoveredArtifactsDEPRECATED")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setDiscoveredArtifactsDEPRECATED(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -566,6 +620,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, DiscoveredArtifactsDEPRECATEDProxy>.clear() {
       _builder.clearDiscoveredArtifactsDEPRECATED()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -588,7 +644,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addCraftableArtifactsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       _builder.addCraftableArtifactsDEPRECATED(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
      * @param value The craftableArtifactsDEPRECATED to add.
      */
@@ -597,7 +654,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
      * @param values The craftableArtifactsDEPRECATED to add.
      */
@@ -605,7 +663,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllCraftableArtifactsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       _builder.addAllCraftableArtifactsDEPRECATED(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
      * @param values The craftableArtifactsDEPRECATED to add.
      */
@@ -614,7 +673,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
      * @param index The index to set the value at.
      * @param value The craftableArtifactsDEPRECATED to set.
@@ -623,7 +683,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setCraftableArtifactsDEPRECATED")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       _builder.setCraftableArtifactsDEPRECATED(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -631,6 +692,8 @@ public object ArtifactsDBKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftableArtifactsDEPRECATEDProxy>.clear() {
       _builder.clearCraftableArtifactsDEPRECATED()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -653,7 +716,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addCraftingCountsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       _builder.addCraftingCountsDEPRECATED(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
      * @param value The craftingCountsDEPRECATED to add.
      */
@@ -662,7 +726,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
      * @param values The craftingCountsDEPRECATED to add.
      */
@@ -670,7 +735,8 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("addAllCraftingCountsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       _builder.addAllCraftingCountsDEPRECATED(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
      * @param values The craftingCountsDEPRECATED to add.
      */
@@ -679,7 +745,8 @@ public object ArtifactsDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
      * @param index The index to set the value at.
      * @param value The craftingCountsDEPRECATED to set.
@@ -688,15 +755,18 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("setCraftingCountsDEPRECATED")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
       _builder.setCraftingCountsDEPRECATED(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearCraftingCountsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.clear() {
       _builder.clearCraftingCountsDEPRECATED()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializeactiveArtifactSlot")
   public inline fun activeArtifactSlot(block: ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSlot =
     ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl._create(ei.Ei.ArtifactsDB.ActiveArtifactSlot.newBuilder()).apply { block() }._build()
   public object ActiveArtifactSlotKt {
@@ -764,7 +834,7 @@ public object ArtifactsDBKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeactiveArtifactSet")
   public inline fun activeArtifactSet(block: ei.ArtifactsDBKt.ActiveArtifactSetKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSet =
     ei.ArtifactsDBKt.ActiveArtifactSetKt.Dsl._create(ei.Ei.ArtifactsDB.ActiveArtifactSet.newBuilder()).apply { block() }._build()
   public object ActiveArtifactSetKt {
@@ -805,7 +875,8 @@ public object ArtifactsDBKt {
       @kotlin.jvm.JvmName("addSlots")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
         _builder.addSlots(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
        * @param value The slots to add.
        */
@@ -814,7 +885,8 @@ public object ArtifactsDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
        * @param values The slots to add.
        */
@@ -822,7 +894,8 @@ public object ArtifactsDBKt {
       @kotlin.jvm.JvmName("addAllSlots")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
         _builder.addAllSlots(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
        * @param values The slots to add.
        */
@@ -831,7 +904,8 @@ public object ArtifactsDBKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
        * @param index The index to set the value at.
        * @param value The slots to set.
@@ -840,16 +914,19 @@ public object ArtifactsDBKt {
       @kotlin.jvm.JvmName("setSlots")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
         _builder.setSlots(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearSlots")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.clear() {
         _builder.clearSlots()
-      }}
+      }
+
+    }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializecraftableArtifact")
   public inline fun craftableArtifact(block: ei.ArtifactsDBKt.CraftableArtifactKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.CraftableArtifact =
     ei.ArtifactsDBKt.CraftableArtifactKt.Dsl._create(ei.Ei.ArtifactsDB.CraftableArtifact.newBuilder()).apply { block() }._build()
   public object CraftableArtifactKt {
@@ -891,6 +968,8 @@ public object ArtifactsDBKt {
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
       }
+      public val CraftableArtifactKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
+        get() = _builder.specOrNull
 
       /**
        * <code>optional bool discovered = 6;</code>
@@ -1017,12 +1096,19 @@ public object ArtifactsDBKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsDB.copy(block: ei.ArtifactsDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB =
   ei.ArtifactsDBKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsDB.ActiveArtifactSlot.copy(block: ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSlot =
   ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsDB.ActiveArtifactSet.copy(block: ei.ArtifactsDBKt.ActiveArtifactSetKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSet =
   ei.ArtifactsDBKt.ActiveArtifactSetKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsDB.CraftableArtifact.copy(block: ei.ArtifactsDBKt.CraftableArtifactKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.CraftableArtifact =
   ei.ArtifactsDBKt.CraftableArtifactKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ArtifactsDB.CraftableArtifactOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpec()) getSpec() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializequeryCoopRequest")
 public inline fun queryCoopRequest(block: ei.QueryCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.QueryCoopRequest =
   ei.QueryCoopRequestKt.Dsl._create(ei.Ei.QueryCoopRequest.newBuilder()).apply { block() }._build()
 public object QueryCoopRequestKt {
@@ -45,6 +45,8 @@ public object QueryCoopRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val QueryCoopRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -146,3 +148,7 @@ public object QueryCoopRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.QueryCoopRequest.copy(block: ei.QueryCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.QueryCoopRequest =
   ei.QueryCoopRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.QueryCoopRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

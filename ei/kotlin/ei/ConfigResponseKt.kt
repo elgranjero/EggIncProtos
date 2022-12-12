@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeconfigResponse")
 public inline fun configResponse(block: ei.ConfigResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ConfigResponse =
   ei.ConfigResponseKt.Dsl._create(ei.Ei.ConfigResponse.newBuilder()).apply { block() }._build()
 public object ConfigResponseKt {
@@ -45,6 +45,8 @@ public object ConfigResponseKt {
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
     }
+    public val ConfigResponseKt.Dsl.liveConfigOrNull: ei.Ei.LiveConfig?
+      get() = _builder.liveConfigOrNull
 
     /**
      * <code>optional .ei.MailDB mail_bag = 2;</code>
@@ -69,6 +71,8 @@ public object ConfigResponseKt {
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
     }
+    public val ConfigResponseKt.Dsl.mailBagOrNull: ei.Ei.MailDB?
+      get() = _builder.mailBagOrNull
 
     /**
      * <code>optional .ei.DLCCatalog dlc_catalog = 3;</code>
@@ -93,8 +97,20 @@ public object ConfigResponseKt {
     public fun hasDlcCatalog(): kotlin.Boolean {
       return _builder.hasDlcCatalog()
     }
+    public val ConfigResponseKt.Dsl.dlcCatalogOrNull: ei.Ei.DLCCatalog?
+      get() = _builder.dlcCatalogOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ConfigResponse.copy(block: ei.ConfigResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ConfigResponse =
   ei.ConfigResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ConfigResponseOrBuilder.liveConfigOrNull: ei.Ei.LiveConfig?
+  get() = if (hasLiveConfig()) getLiveConfig() else null
+
+val ei.Ei.ConfigResponseOrBuilder.mailBagOrNull: ei.Ei.MailDB?
+  get() = if (hasMailBag()) getMailBag() else null
+
+val ei.Ei.ConfigResponseOrBuilder.dlcCatalogOrNull: ei.Ei.DLCCatalog?
+  get() = if (hasDlcCatalog()) getDlcCatalog() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemailDB")
 public inline fun mailDB(block: ei.MailDBKt.Dsl.() -> kotlin.Unit): ei.Ei.MailDB =
   ei.MailDBKt.Dsl._create(ei.Ei.MailDB.newBuilder()).apply { block() }._build()
 public object MailDBKt {
@@ -44,7 +44,8 @@ public object MailDBKt {
     @kotlin.jvm.JvmName("addMail")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.add(value: ei.Ei.InGameMail) {
       _builder.addMail(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param value The mail to add.
      */
@@ -53,7 +54,8 @@ public object MailDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.plusAssign(value: ei.Ei.InGameMail) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param values The mail to add.
      */
@@ -61,7 +63,8 @@ public object MailDBKt {
     @kotlin.jvm.JvmName("addAllMail")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.InGameMail>) {
       _builder.addAllMail(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param values The mail to add.
      */
@@ -70,7 +73,8 @@ public object MailDBKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.InGameMail>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param index The index to set the value at.
      * @param value The mail to set.
@@ -79,15 +83,19 @@ public object MailDBKt {
     @kotlin.jvm.JvmName("setMail")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.set(index: kotlin.Int, value: ei.Ei.InGameMail) {
       _builder.setMail(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.InGameMail mail = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearMail")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.clear() {
       _builder.clearMail()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MailDB.copy(block: ei.MailDBKt.Dsl.() -> kotlin.Unit): ei.Ei.MailDB =
   ei.MailDBKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

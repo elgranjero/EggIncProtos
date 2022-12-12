@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesalesInfoRequest")
 public inline fun salesInfoRequest(block: ei.SalesInfoRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SalesInfoRequest =
   ei.SalesInfoRequestKt.Dsl._create(ei.Ei.SalesInfoRequest.newBuilder()).apply { block() }._build()
 public object SalesInfoRequestKt {
@@ -194,3 +194,4 @@ public object SalesInfoRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.SalesInfoRequest.copy(block: ei.SalesInfoRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SalesInfoRequest =
   ei.SalesInfoRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

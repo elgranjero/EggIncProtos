@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeperiodicalsResponse")
 public inline fun periodicalsResponse(block: ei.PeriodicalsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.PeriodicalsResponse =
   ei.PeriodicalsResponseKt.Dsl._create(ei.Ei.PeriodicalsResponse.newBuilder()).apply { block() }._build()
 public object PeriodicalsResponseKt {
@@ -45,6 +45,8 @@ public object PeriodicalsResponseKt {
     public fun hasSales(): kotlin.Boolean {
       return _builder.hasSales()
     }
+    public val PeriodicalsResponseKt.Dsl.salesOrNull: ei.Ei.SalesInfo?
+      get() = _builder.salesOrNull
 
     /**
      * <code>optional .ei.EggIncCurrentEvents events = 2;</code>
@@ -69,6 +71,8 @@ public object PeriodicalsResponseKt {
     public fun hasEvents(): kotlin.Boolean {
       return _builder.hasEvents()
     }
+    public val PeriodicalsResponseKt.Dsl.eventsOrNull: ei.Ei.EggIncCurrentEvents?
+      get() = _builder.eventsOrNull
 
     /**
      * <code>optional .ei.ContractsResponse contracts = 3;</code>
@@ -93,6 +97,8 @@ public object PeriodicalsResponseKt {
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
     }
+    public val PeriodicalsResponseKt.Dsl.contractsOrNull: ei.Ei.ContractsResponse?
+      get() = _builder.contractsOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -116,7 +122,8 @@ public object PeriodicalsResponseKt {
     @kotlin.jvm.JvmName("addGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.add(value: ei.Ei.ServerGift) {
       _builder.addGifts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param value The gifts to add.
      */
@@ -125,7 +132,8 @@ public object PeriodicalsResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.plusAssign(value: ei.Ei.ServerGift) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param values The gifts to add.
      */
@@ -133,7 +141,8 @@ public object PeriodicalsResponseKt {
     @kotlin.jvm.JvmName("addAllGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ServerGift>) {
       _builder.addAllGifts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param values The gifts to add.
      */
@@ -142,7 +151,8 @@ public object PeriodicalsResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ServerGift>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param index The index to set the value at.
      * @param value The gifts to set.
@@ -151,7 +161,8 @@ public object PeriodicalsResponseKt {
     @kotlin.jvm.JvmName("setGifts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.set(index: kotlin.Int, value: ei.Ei.ServerGift) {
       _builder.setGifts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ServerGift gifts = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -159,6 +170,8 @@ public object PeriodicalsResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.clear() {
       _builder.clearGifts()
     }
+
+
     /**
      * <code>optional .ei.LiveConfig live_config = 5;</code>
      */
@@ -182,6 +195,8 @@ public object PeriodicalsResponseKt {
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
     }
+    public val PeriodicalsResponseKt.Dsl.liveConfigOrNull: ei.Ei.LiveConfig?
+      get() = _builder.liveConfigOrNull
 
     /**
      * <code>optional .ei.MailDB mail_bag = 6;</code>
@@ -206,8 +221,55 @@ public object PeriodicalsResponseKt {
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
     }
+    public val PeriodicalsResponseKt.Dsl.mailBagOrNull: ei.Ei.MailDB?
+      get() = _builder.mailBagOrNull
+
+    /**
+     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
+     */
+    public var contractPlayerInfo: ei.Ei.ContractPlayerInfo
+      @JvmName("getContractPlayerInfo")
+      get() = _builder.getContractPlayerInfo()
+      @JvmName("setContractPlayerInfo")
+      set(value) {
+        _builder.setContractPlayerInfo(value)
+      }
+    /**
+     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
+     */
+    public fun clearContractPlayerInfo() {
+      _builder.clearContractPlayerInfo()
+    }
+    /**
+     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
+     * @return Whether the contractPlayerInfo field is set.
+     */
+    public fun hasContractPlayerInfo(): kotlin.Boolean {
+      return _builder.hasContractPlayerInfo()
+    }
+    public val PeriodicalsResponseKt.Dsl.contractPlayerInfoOrNull: ei.Ei.ContractPlayerInfo?
+      get() = _builder.contractPlayerInfoOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.PeriodicalsResponse.copy(block: ei.PeriodicalsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.PeriodicalsResponse =
   ei.PeriodicalsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.PeriodicalsResponseOrBuilder.salesOrNull: ei.Ei.SalesInfo?
+  get() = if (hasSales()) getSales() else null
+
+val ei.Ei.PeriodicalsResponseOrBuilder.eventsOrNull: ei.Ei.EggIncCurrentEvents?
+  get() = if (hasEvents()) getEvents() else null
+
+val ei.Ei.PeriodicalsResponseOrBuilder.contractsOrNull: ei.Ei.ContractsResponse?
+  get() = if (hasContracts()) getContracts() else null
+
+val ei.Ei.PeriodicalsResponseOrBuilder.liveConfigOrNull: ei.Ei.LiveConfig?
+  get() = if (hasLiveConfig()) getLiveConfig() else null
+
+val ei.Ei.PeriodicalsResponseOrBuilder.mailBagOrNull: ei.Ei.MailDB?
+  get() = if (hasMailBag()) getMailBag() else null
+
+val ei.Ei.PeriodicalsResponseOrBuilder.contractPlayerInfoOrNull: ei.Ei.ContractPlayerInfo?
+  get() = if (hasContractPlayerInfo()) getContractPlayerInfo() else null
+

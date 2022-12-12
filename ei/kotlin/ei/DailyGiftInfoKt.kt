@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializedailyGiftInfo")
 public inline fun dailyGiftInfo(block: ei.DailyGiftInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.DailyGiftInfo =
   ei.DailyGiftInfoKt.Dsl._create(ei.Ei.DailyGiftInfo.newBuilder()).apply { block() }._build()
 public object DailyGiftInfoKt {
@@ -74,3 +74,4 @@ public object DailyGiftInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.DailyGiftInfo.copy(block: ei.DailyGiftInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.DailyGiftInfo =
   ei.DailyGiftInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

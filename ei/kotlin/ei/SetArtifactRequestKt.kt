@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesetArtifactRequest")
 public inline fun setArtifactRequest(block: ei.SetArtifactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SetArtifactRequest =
   ei.SetArtifactRequestKt.Dsl._create(ei.Ei.SetArtifactRequest.newBuilder()).apply { block() }._build()
 public object SetArtifactRequestKt {
@@ -45,6 +45,8 @@ public object SetArtifactRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val SetArtifactRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional .ei.ArtifactInventoryItem artifact = 2;</code>
@@ -69,6 +71,8 @@ public object SetArtifactRequestKt {
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
     }
+    public val SetArtifactRequestKt.Dsl.artifactOrNull: ei.Ei.ArtifactInventoryItem?
+      get() = _builder.artifactOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -92,7 +96,8 @@ public object SetArtifactRequestKt {
     @kotlin.jvm.JvmName("addStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addStones(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param value The stones to add.
      */
@@ -101,7 +106,8 @@ public object SetArtifactRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param values The stones to add.
      */
@@ -109,7 +115,8 @@ public object SetArtifactRequestKt {
     @kotlin.jvm.JvmName("addAllStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllStones(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param values The stones to add.
      */
@@ -118,7 +125,8 @@ public object SetArtifactRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param index The index to set the value at.
      * @param value The stones to set.
@@ -127,7 +135,8 @@ public object SetArtifactRequestKt {
     @kotlin.jvm.JvmName("setStones")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setStones(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -135,6 +144,8 @@ public object SetArtifactRequestKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.clear() {
       _builder.clearStones()
     }
+
+
     /**
      * <code>optional double gold_price_paid = 4;</code>
      */
@@ -163,3 +174,10 @@ public object SetArtifactRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.SetArtifactRequest.copy(block: ei.SetArtifactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SetArtifactRequest =
   ei.SetArtifactRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.SetArtifactRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
+val ei.Ei.SetArtifactRequestOrBuilder.artifactOrNull: ei.Ei.ArtifactInventoryItem?
+  get() = if (hasArtifact()) getArtifact() else null
+

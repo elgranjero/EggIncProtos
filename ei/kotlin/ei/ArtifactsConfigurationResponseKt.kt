@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeartifactsConfigurationResponse")
 public inline fun artifactsConfigurationResponse(block: ei.ArtifactsConfigurationResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse =
   ei.ArtifactsConfigurationResponseKt.Dsl._create(ei.Ei.ArtifactsConfigurationResponse.newBuilder()).apply { block() }._build()
 public object ArtifactsConfigurationResponseKt {
@@ -44,7 +44,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("addMissionParameters")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters, MissionParametersProxy>.add(value: ei.Ei.ArtifactsConfigurationResponse.MissionParameters) {
       _builder.addMissionParameters(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
      * @param value The missionParameters to add.
      */
@@ -53,7 +54,8 @@ public object ArtifactsConfigurationResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters, MissionParametersProxy>.plusAssign(value: ei.Ei.ArtifactsConfigurationResponse.MissionParameters) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
      * @param values The missionParameters to add.
      */
@@ -61,7 +63,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("addAllMissionParameters")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters, MissionParametersProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.MissionParameters>) {
       _builder.addAllMissionParameters(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
      * @param values The missionParameters to add.
      */
@@ -70,7 +73,8 @@ public object ArtifactsConfigurationResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters, MissionParametersProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.MissionParameters>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
      * @param index The index to set the value at.
      * @param value The missionParameters to set.
@@ -79,7 +83,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("setMissionParameters")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters, MissionParametersProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsConfigurationResponse.MissionParameters) {
       _builder.setMissionParameters(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -87,6 +92,8 @@ public object ArtifactsConfigurationResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters, MissionParametersProxy>.clear() {
       _builder.clearMissionParameters()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -109,7 +116,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("addArtifactParameters")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.add(value: ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters) {
       _builder.addArtifactParameters(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
      * @param value The artifactParameters to add.
      */
@@ -118,7 +126,8 @@ public object ArtifactsConfigurationResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.plusAssign(value: ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
      * @param values The artifactParameters to add.
      */
@@ -126,7 +135,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("addAllArtifactParameters")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters>) {
       _builder.addAllArtifactParameters(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
      * @param values The artifactParameters to add.
      */
@@ -135,7 +145,8 @@ public object ArtifactsConfigurationResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
      * @param index The index to set the value at.
      * @param value The artifactParameters to set.
@@ -144,7 +155,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("setArtifactParameters")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters) {
       _builder.setArtifactParameters(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -152,6 +164,8 @@ public object ArtifactsConfigurationResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters, ArtifactParametersProxy>.clear() {
       _builder.clearArtifactParameters()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -174,7 +188,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("addCraftingLevelInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.add(value: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo) {
       _builder.addCraftingLevelInfos(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
      * @param value The craftingLevelInfos to add.
      */
@@ -183,7 +198,8 @@ public object ArtifactsConfigurationResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.plusAssign(value: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
      * @param values The craftingLevelInfos to add.
      */
@@ -191,7 +207,8 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("addAllCraftingLevelInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo>) {
       _builder.addAllCraftingLevelInfos(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
      * @param values The craftingLevelInfos to add.
      */
@@ -200,7 +217,8 @@ public object ArtifactsConfigurationResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
      * @param index The index to set the value at.
      * @param value The craftingLevelInfos to set.
@@ -209,15 +227,18 @@ public object ArtifactsConfigurationResponseKt {
     @kotlin.jvm.JvmName("setCraftingLevelInfos")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo) {
       _builder.setCraftingLevelInfos(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearCraftingLevelInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo, CraftingLevelInfosProxy>.clear() {
       _builder.clearCraftingLevelInfos()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializemissionParameters")
   public inline fun missionParameters(block: ei.ArtifactsConfigurationResponseKt.MissionParametersKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.MissionParameters =
     ei.ArtifactsConfigurationResponseKt.MissionParametersKt.Dsl._create(ei.Ei.ArtifactsConfigurationResponse.MissionParameters.newBuilder()).apply { block() }._build()
   public object MissionParametersKt {
@@ -282,7 +303,8 @@ public object ArtifactsConfigurationResponseKt {
       @kotlin.jvm.JvmName("addDurations")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration, DurationsProxy>.add(value: ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration) {
         _builder.addDurations(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
        * @param value The durations to add.
        */
@@ -291,7 +313,8 @@ public object ArtifactsConfigurationResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration, DurationsProxy>.plusAssign(value: ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
        * @param values The durations to add.
        */
@@ -299,7 +322,8 @@ public object ArtifactsConfigurationResponseKt {
       @kotlin.jvm.JvmName("addAllDurations")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration, DurationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration>) {
         _builder.addAllDurations(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
        * @param values The durations to add.
        */
@@ -308,7 +332,8 @@ public object ArtifactsConfigurationResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration, DurationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
        * @param index The index to set the value at.
        * @param value The durations to set.
@@ -317,7 +342,8 @@ public object ArtifactsConfigurationResponseKt {
       @kotlin.jvm.JvmName("setDurations")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration, DurationsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration) {
         _builder.setDurations(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -325,6 +351,8 @@ public object ArtifactsConfigurationResponseKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration, DurationsProxy>.clear() {
         _builder.clearDurations()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -414,7 +442,7 @@ public object ArtifactsConfigurationResponseKt {
         return _builder.hasCapacityDEPRECATED()
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeduration")
     public inline fun duration(block: ei.ArtifactsConfigurationResponseKt.MissionParametersKt.DurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration =
       ei.ArtifactsConfigurationResponseKt.MissionParametersKt.DurationKt.Dsl._create(ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration.newBuilder()).apply { block() }._build()
     public object DurationKt {
@@ -627,7 +655,7 @@ public object ArtifactsConfigurationResponseKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeartifactParameters")
   public inline fun artifactParameters(block: ei.ArtifactsConfigurationResponseKt.ArtifactParametersKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters =
     ei.ArtifactsConfigurationResponseKt.ArtifactParametersKt.Dsl._create(ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters.newBuilder()).apply { block() }._build()
   public object ArtifactParametersKt {
@@ -669,6 +697,8 @@ public object ArtifactsConfigurationResponseKt {
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
       }
+      public val ArtifactParametersKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
+        get() = _builder.specOrNull
 
       /**
        * <code>optional double base_quality = 2;</code>
@@ -863,7 +893,7 @@ public object ArtifactsConfigurationResponseKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializecraftingLevelInfo")
   public inline fun craftingLevelInfo(block: ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo =
     ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl._create(ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.newBuilder()).apply { block() }._build()
   public object CraftingLevelInfoKt {
@@ -935,15 +965,23 @@ public object ArtifactsConfigurationResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationResponse.copy(block: ei.ArtifactsConfigurationResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse =
   ei.ArtifactsConfigurationResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationResponse.MissionParameters.copy(block: ei.ArtifactsConfigurationResponseKt.MissionParametersKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.MissionParameters =
   ei.ArtifactsConfigurationResponseKt.MissionParametersKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration.copy(block: ei.ArtifactsConfigurationResponseKt.MissionParametersKt.DurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration =
   ei.ArtifactsConfigurationResponseKt.MissionParametersKt.DurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters.copy(block: ei.ArtifactsConfigurationResponseKt.ArtifactParametersKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters =
   ei.ArtifactsConfigurationResponseKt.ArtifactParametersKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ArtifactsConfigurationResponse.ArtifactParametersOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpec()) getSpec() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.copy(block: ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo =
   ei.ArtifactsConfigurationResponseKt.CraftingLevelInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

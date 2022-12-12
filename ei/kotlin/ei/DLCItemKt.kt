@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializedLCItem")
 public inline fun dLCItem(block: ei.DLCItemKt.Dsl.() -> kotlin.Unit): ei.Ei.DLCItem =
   ei.DLCItemKt.Dsl._create(ei.Ei.DLCItem.newBuilder()).apply { block() }._build()
 public object DLCItemKt {
@@ -194,3 +194,4 @@ public object DLCItemKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.DLCItem.copy(block: ei.DLCItemKt.Dsl.() -> kotlin.Unit): ei.Ei.DLCItem =
   ei.DLCItemKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

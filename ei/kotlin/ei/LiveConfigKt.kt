@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeliveConfig")
 public inline fun liveConfig(block: ei.LiveConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig =
   ei.LiveConfigKt.Dsl._create(ei.Ei.LiveConfig.newBuilder()).apply { block() }._build()
 public object LiveConfigKt {
@@ -69,6 +69,8 @@ public object LiveConfigKt {
     public fun hasBoostsConfig(): kotlin.Boolean {
       return _builder.hasBoostsConfig()
     }
+    public val LiveConfigKt.Dsl.boostsConfigOrNull: ei.Ei.LiveConfig.BoostsConfig?
+      get() = _builder.boostsConfigOrNull
 
     /**
      * <code>optional .ei.LiveConfig.GiftConfig gift_config = 3;</code>
@@ -93,6 +95,8 @@ public object LiveConfigKt {
     public fun hasGiftConfig(): kotlin.Boolean {
       return _builder.hasGiftConfig()
     }
+    public val LiveConfigKt.Dsl.giftConfigOrNull: ei.Ei.LiveConfig.GiftConfig?
+      get() = _builder.giftConfigOrNull
 
     /**
      * <code>optional .ei.LiveConfig.MiscConfig misc_config = 4;</code>
@@ -117,8 +121,10 @@ public object LiveConfigKt {
     public fun hasMiscConfig(): kotlin.Boolean {
       return _builder.hasMiscConfig()
     }
+    public val LiveConfigKt.Dsl.miscConfigOrNull: ei.Ei.LiveConfig.MiscConfig?
+      get() = _builder.miscConfigOrNull
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeboostsConfig")
   public inline fun boostsConfig(block: ei.LiveConfigKt.BoostsConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.BoostsConfig =
     ei.LiveConfigKt.BoostsConfigKt.Dsl._create(ei.Ei.LiveConfig.BoostsConfig.newBuilder()).apply { block() }._build()
   public object BoostsConfigKt {
@@ -159,7 +165,8 @@ public object LiveConfigKt {
       @kotlin.jvm.JvmName("addItemConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.BoostsConfig.ItemConfig, ItemConfigsProxy>.add(value: ei.Ei.LiveConfig.BoostsConfig.ItemConfig) {
         _builder.addItemConfigs(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
        * @param value The itemConfigs to add.
        */
@@ -168,7 +175,8 @@ public object LiveConfigKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.BoostsConfig.ItemConfig, ItemConfigsProxy>.plusAssign(value: ei.Ei.LiveConfig.BoostsConfig.ItemConfig) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
        * @param values The itemConfigs to add.
        */
@@ -176,7 +184,8 @@ public object LiveConfigKt {
       @kotlin.jvm.JvmName("addAllItemConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.BoostsConfig.ItemConfig, ItemConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LiveConfig.BoostsConfig.ItemConfig>) {
         _builder.addAllItemConfigs(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
        * @param values The itemConfigs to add.
        */
@@ -185,7 +194,8 @@ public object LiveConfigKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.BoostsConfig.ItemConfig, ItemConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LiveConfig.BoostsConfig.ItemConfig>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
        * @param index The index to set the value at.
        * @param value The itemConfigs to set.
@@ -194,7 +204,8 @@ public object LiveConfigKt {
       @kotlin.jvm.JvmName("setItemConfigs")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.BoostsConfig.ItemConfig, ItemConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.LiveConfig.BoostsConfig.ItemConfig) {
         _builder.setItemConfigs(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -202,6 +213,8 @@ public object LiveConfigKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.BoostsConfig.ItemConfig, ItemConfigsProxy>.clear() {
         _builder.clearItemConfigs()
       }
+
+
       /**
        * <code>optional double cash_boost_cooloff_time = 2;</code>
        */
@@ -226,7 +239,7 @@ public object LiveConfigKt {
         return _builder.hasCashBoostCooloffTime()
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializeitemConfig")
     public inline fun itemConfig(block: ei.LiveConfigKt.BoostsConfigKt.ItemConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.BoostsConfig.ItemConfig =
       ei.LiveConfigKt.BoostsConfigKt.ItemConfigKt.Dsl._create(ei.Ei.LiveConfig.BoostsConfig.ItemConfig.newBuilder()).apply { block() }._build()
     public object ItemConfigKt {
@@ -343,7 +356,7 @@ public object LiveConfigKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializegiftConfig")
   public inline fun giftConfig(block: ei.LiveConfigKt.GiftConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.GiftConfig =
     ei.LiveConfigKt.GiftConfigKt.Dsl._create(ei.Ei.LiveConfig.GiftConfig.newBuilder()).apply { block() }._build()
   public object GiftConfigKt {
@@ -384,7 +397,8 @@ public object LiveConfigKt {
       @kotlin.jvm.JvmName("addGiftConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig, GiftConfigsProxy>.add(value: ei.Ei.LiveConfig.GiftConfig.GiftValueConfig) {
         _builder.addGiftConfigs(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
        * @param value The giftConfigs to add.
        */
@@ -393,7 +407,8 @@ public object LiveConfigKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig, GiftConfigsProxy>.plusAssign(value: ei.Ei.LiveConfig.GiftConfig.GiftValueConfig) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
        * @param values The giftConfigs to add.
        */
@@ -401,7 +416,8 @@ public object LiveConfigKt {
       @kotlin.jvm.JvmName("addAllGiftConfigs")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig, GiftConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig>) {
         _builder.addAllGiftConfigs(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
        * @param values The giftConfigs to add.
        */
@@ -410,7 +426,8 @@ public object LiveConfigKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig, GiftConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
        * @param index The index to set the value at.
        * @param value The giftConfigs to set.
@@ -419,7 +436,8 @@ public object LiveConfigKt {
       @kotlin.jvm.JvmName("setGiftConfigs")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig, GiftConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.LiveConfig.GiftConfig.GiftValueConfig) {
         _builder.setGiftConfigs(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -427,6 +445,8 @@ public object LiveConfigKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.GiftConfig.GiftValueConfig, GiftConfigsProxy>.clear() {
         _builder.clearGiftConfigs()
       }
+
+
       /**
        * <code>optional double gift_mu_min_spent = 10;</code>
        */
@@ -522,6 +542,8 @@ public object LiveConfigKt {
       public fun hasRandomGiftMuConfig(): kotlin.Boolean {
         return _builder.hasRandomGiftMuConfig()
       }
+      public val GiftConfigKt.Dsl.randomGiftMuConfigOrNull: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig?
+        get() = _builder.randomGiftMuConfigOrNull
 
       /**
        * <code>optional .ei.LiveConfig.GiftConfig.GiftMuConfig video_gift_mu_config = 16;</code>
@@ -546,6 +568,8 @@ public object LiveConfigKt {
       public fun hasVideoGiftMuConfig(): kotlin.Boolean {
         return _builder.hasVideoGiftMuConfig()
       }
+      public val GiftConfigKt.Dsl.videoGiftMuConfigOrNull: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig?
+        get() = _builder.videoGiftMuConfigOrNull
 
       /**
        * <code>optional double package_interval = 1;</code>
@@ -787,7 +811,7 @@ public object LiveConfigKt {
         return _builder.hasPackageResetOnIdle()
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializegiftValueConfig")
     public inline fun giftValueConfig(block: ei.LiveConfigKt.GiftConfigKt.GiftValueConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.GiftConfig.GiftValueConfig =
       ei.LiveConfigKt.GiftConfigKt.GiftValueConfigKt.Dsl._create(ei.Ei.LiveConfig.GiftConfig.GiftValueConfig.newBuilder()).apply { block() }._build()
     public object GiftValueConfigKt {
@@ -951,7 +975,7 @@ public object LiveConfigKt {
         }
       }
     }
-    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("-initializegiftMuConfig")
     public inline fun giftMuConfig(block: ei.LiveConfigKt.GiftConfigKt.GiftMuConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.GiftConfig.GiftMuConfig =
       ei.LiveConfigKt.GiftConfigKt.GiftMuConfigKt.Dsl._create(ei.Ei.LiveConfig.GiftConfig.GiftMuConfig.newBuilder()).apply { block() }._build()
     public object GiftMuConfigKt {
@@ -1044,7 +1068,7 @@ public object LiveConfigKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializemiscConfig")
   public inline fun miscConfig(block: ei.LiveConfigKt.MiscConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.MiscConfig =
     ei.LiveConfigKt.MiscConfigKt.Dsl._create(ei.Ei.LiveConfig.MiscConfig.newBuilder()).apply { block() }._build()
   public object MiscConfigKt {
@@ -1302,27 +1326,73 @@ public object LiveConfigKt {
       public fun hasContractsExpertLeagueMinSoulPower(): kotlin.Boolean {
         return _builder.hasContractsExpertLeagueMinSoulPower()
       }
+
+      /**
+       * <code>optional double new_player_event_duration = 11;</code>
+       */
+      public var newPlayerEventDuration: kotlin.Double
+        @JvmName("getNewPlayerEventDuration")
+        get() = _builder.getNewPlayerEventDuration()
+        @JvmName("setNewPlayerEventDuration")
+        set(value) {
+          _builder.setNewPlayerEventDuration(value)
+        }
+      /**
+       * <code>optional double new_player_event_duration = 11;</code>
+       */
+      public fun clearNewPlayerEventDuration() {
+        _builder.clearNewPlayerEventDuration()
+      }
+      /**
+       * <code>optional double new_player_event_duration = 11;</code>
+       * @return Whether the newPlayerEventDuration field is set.
+       */
+      public fun hasNewPlayerEventDuration(): kotlin.Boolean {
+        return _builder.hasNewPlayerEventDuration()
+      }
     }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.copy(block: ei.LiveConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig =
   ei.LiveConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.BoostsConfig.copy(block: ei.LiveConfigKt.BoostsConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.BoostsConfig =
   ei.LiveConfigKt.BoostsConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.BoostsConfig.ItemConfig.copy(block: ei.LiveConfigKt.BoostsConfigKt.ItemConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.BoostsConfig.ItemConfig =
   ei.LiveConfigKt.BoostsConfigKt.ItemConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.GiftConfig.copy(block: ei.LiveConfigKt.GiftConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.GiftConfig =
   ei.LiveConfigKt.GiftConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.GiftConfig.GiftValueConfig.copy(block: ei.LiveConfigKt.GiftConfigKt.GiftValueConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.GiftConfig.GiftValueConfig =
   ei.LiveConfigKt.GiftConfigKt.GiftValueConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.GiftConfig.GiftMuConfig.copy(block: ei.LiveConfigKt.GiftConfigKt.GiftMuConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.GiftConfig.GiftMuConfig =
   ei.LiveConfigKt.GiftConfigKt.GiftMuConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LiveConfig.GiftConfigOrBuilder.randomGiftMuConfigOrNull: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig?
+  get() = if (hasRandomGiftMuConfig()) getRandomGiftMuConfig() else null
+
+val ei.Ei.LiveConfig.GiftConfigOrBuilder.videoGiftMuConfigOrNull: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig?
+  get() = if (hasVideoGiftMuConfig()) getVideoGiftMuConfig() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.MiscConfig.copy(block: ei.LiveConfigKt.MiscConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.MiscConfig =
   ei.LiveConfigKt.MiscConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LiveConfigOrBuilder.boostsConfigOrNull: ei.Ei.LiveConfig.BoostsConfig?
+  get() = if (hasBoostsConfig()) getBoostsConfig() else null
+
+val ei.Ei.LiveConfigOrBuilder.giftConfigOrNull: ei.Ei.LiveConfig.GiftConfig?
+  get() = if (hasGiftConfig()) getGiftConfig() else null
+
+val ei.Ei.LiveConfigOrBuilder.miscConfigOrNull: ei.Ei.LiveConfig.MiscConfig?
+  get() = if (hasMiscConfig()) getMiscConfig() else null
+

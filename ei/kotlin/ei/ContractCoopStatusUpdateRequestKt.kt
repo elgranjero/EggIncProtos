@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontractCoopStatusUpdateRequest")
 public inline fun contractCoopStatusUpdateRequest(block: ei.ContractCoopStatusUpdateRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusUpdateRequest =
   ei.ContractCoopStatusUpdateRequestKt.Dsl._create(ei.Ei.ContractCoopStatusUpdateRequest.newBuilder()).apply { block() }._build()
 public object ContractCoopStatusUpdateRequestKt {
@@ -45,6 +45,8 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ContractCoopStatusUpdateRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string user_id = 1;</code>
@@ -333,6 +335,8 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasProductionParams(): kotlin.Boolean {
       return _builder.hasProductionParams()
     }
+    public val ContractCoopStatusUpdateRequestKt.Dsl.productionParamsOrNull: ei.Ei.FarmProductionParams?
+      get() = _builder.productionParamsOrNull
 
     /**
      * <code>optional .ei.PlayerFarmInfo farm_info = 16;</code>
@@ -357,6 +361,8 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasFarmInfo(): kotlin.Boolean {
       return _builder.hasFarmInfo()
     }
+    public val ContractCoopStatusUpdateRequestKt.Dsl.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
+      get() = _builder.farmInfoOrNull
 
     /**
      * <code>optional double egg_laying_rate_buff = 10 [default = 1];</code>
@@ -410,3 +416,13 @@ public object ContractCoopStatusUpdateRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusUpdateRequest.copy(block: ei.ContractCoopStatusUpdateRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusUpdateRequest =
   ei.ContractCoopStatusUpdateRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ContractCoopStatusUpdateRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
+val ei.Ei.ContractCoopStatusUpdateRequestOrBuilder.productionParamsOrNull: ei.Ei.FarmProductionParams?
+  get() = if (hasProductionParams()) getProductionParams() else null
+
+val ei.Ei.ContractCoopStatusUpdateRequestOrBuilder.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
+  get() = if (hasFarmInfo()) getFarmInfo() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeinventorySlot")
 public inline fun inventorySlot(block: ei.InventorySlotKt.Dsl.() -> kotlin.Unit): ei.Ei.InventorySlot =
   ei.InventorySlotKt.Dsl._create(ei.Ei.InventorySlot.newBuilder()).apply { block() }._build()
 public object InventorySlotKt {
@@ -74,3 +74,4 @@ public object InventorySlotKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.InventorySlot.copy(block: ei.InventorySlotKt.Dsl.() -> kotlin.Unit): ei.Ei.InventorySlot =
   ei.InventorySlotKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializequeryCoopResponse")
 public inline fun queryCoopResponse(block: ei.QueryCoopResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.QueryCoopResponse =
   ei.QueryCoopResponseKt.Dsl._create(ei.Ei.QueryCoopResponse.newBuilder()).apply { block() }._build()
 public object QueryCoopResponseKt {
@@ -146,3 +146,4 @@ public object QueryCoopResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.QueryCoopResponse.copy(block: ei.QueryCoopResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.QueryCoopResponse =
   ei.QueryCoopResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

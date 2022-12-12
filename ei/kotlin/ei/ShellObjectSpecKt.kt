@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeshellObjectSpec")
 public inline fun shellObjectSpec(block: ei.ShellObjectSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellObjectSpec =
   ei.ShellObjectSpecKt.Dsl._create(ei.Ei.ShellObjectSpec.newBuilder()).apply { block() }._build()
 public object ShellObjectSpecKt {
@@ -515,7 +515,8 @@ public object ShellObjectSpecKt {
     @kotlin.jvm.JvmName("addPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.add(value: ei.Ei.ShellObjectSpec.LODPiece) {
       _builder.addPieces(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param value The pieces to add.
      */
@@ -524,7 +525,8 @@ public object ShellObjectSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.plusAssign(value: ei.Ei.ShellObjectSpec.LODPiece) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param values The pieces to add.
      */
@@ -532,7 +534,8 @@ public object ShellObjectSpecKt {
     @kotlin.jvm.JvmName("addAllPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec.LODPiece>) {
       _builder.addAllPieces(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param values The pieces to add.
      */
@@ -541,7 +544,8 @@ public object ShellObjectSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec.LODPiece>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param index The index to set the value at.
      * @param value The pieces to set.
@@ -550,7 +554,8 @@ public object ShellObjectSpecKt {
     @kotlin.jvm.JvmName("setPieces")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.set(index: kotlin.Int, value: ei.Ei.ShellObjectSpec.LODPiece) {
       _builder.setPieces(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -558,6 +563,8 @@ public object ShellObjectSpecKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.clear() {
       _builder.clearPieces()
     }
+
+
     /**
      * <code>optional bool default_appearance = 9;</code>
      */
@@ -582,7 +589,7 @@ public object ShellObjectSpecKt {
       return _builder.hasDefaultAppearance()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializelODPiece")
   public inline fun lODPiece(block: ei.ShellObjectSpecKt.LODPieceKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellObjectSpec.LODPiece =
     ei.ShellObjectSpecKt.LODPieceKt.Dsl._create(ei.Ei.ShellObjectSpec.LODPiece.newBuilder()).apply { block() }._build()
   public object LODPieceKt {
@@ -624,6 +631,8 @@ public object ShellObjectSpecKt {
       public fun hasDlc(): kotlin.Boolean {
         return _builder.hasDlc()
       }
+      public val LODPieceKt.Dsl.dlcOrNull: ei.Ei.DLCItem?
+        get() = _builder.dlcOrNull
 
       /**
        * <code>optional uint32 lod = 2;</code>
@@ -654,6 +663,11 @@ public object ShellObjectSpecKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellObjectSpec.copy(block: ei.ShellObjectSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellObjectSpec =
   ei.ShellObjectSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellObjectSpec.LODPiece.copy(block: ei.ShellObjectSpecKt.LODPieceKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellObjectSpec.LODPiece =
   ei.ShellObjectSpecKt.LODPieceKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellObjectSpec.LODPieceOrBuilder.dlcOrNull: ei.Ei.DLCItem?
+  get() = if (hasDlc()) getDlc() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecleanAccountRequest")
 public inline fun cleanAccountRequest(block: ei.CleanAccountRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CleanAccountRequest =
   ei.CleanAccountRequestKt.Dsl._create(ei.Ei.CleanAccountRequest.newBuilder()).apply { block() }._build()
 public object CleanAccountRequestKt {
@@ -74,3 +74,4 @@ public object CleanAccountRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CleanAccountRequest.copy(block: ei.CleanAccountRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CleanAccountRequest =
   ei.CleanAccountRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

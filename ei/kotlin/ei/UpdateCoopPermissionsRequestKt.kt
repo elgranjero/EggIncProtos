@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeupdateCoopPermissionsRequest")
 public inline fun updateCoopPermissionsRequest(block: ei.UpdateCoopPermissionsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.UpdateCoopPermissionsRequest =
   ei.UpdateCoopPermissionsRequestKt.Dsl._create(ei.Ei.UpdateCoopPermissionsRequest.newBuilder()).apply { block() }._build()
 public object UpdateCoopPermissionsRequestKt {
@@ -45,6 +45,8 @@ public object UpdateCoopPermissionsRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val UpdateCoopPermissionsRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -170,3 +172,7 @@ public object UpdateCoopPermissionsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.UpdateCoopPermissionsRequest.copy(block: ei.UpdateCoopPermissionsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.UpdateCoopPermissionsRequest =
   ei.UpdateCoopPermissionsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.UpdateCoopPermissionsRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

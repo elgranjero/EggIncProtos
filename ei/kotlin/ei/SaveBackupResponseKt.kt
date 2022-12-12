@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializesaveBackupResponse")
 public inline fun saveBackupResponse(block: ei.SaveBackupResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.SaveBackupResponse =
   ei.SaveBackupResponseKt.Dsl._create(ei.Ei.SaveBackupResponse.newBuilder()).apply { block() }._build()
 public object SaveBackupResponseKt {
@@ -117,8 +117,14 @@ public object SaveBackupResponseKt {
     public fun hasExistingBackup(): kotlin.Boolean {
       return _builder.hasExistingBackup()
     }
+    public val SaveBackupResponseKt.Dsl.existingBackupOrNull: ei.Ei.Backup?
+      get() = _builder.existingBackupOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.SaveBackupResponse.copy(block: ei.SaveBackupResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.SaveBackupResponse =
   ei.SaveBackupResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.SaveBackupResponseOrBuilder.existingBackupOrNull: ei.Ei.Backup?
+  get() = if (hasExistingBackup()) getExistingBackup() else null
+

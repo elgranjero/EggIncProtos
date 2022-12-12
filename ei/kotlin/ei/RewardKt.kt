@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializereward")
 public inline fun reward(block: ei.RewardKt.Dsl.() -> kotlin.Unit): ei.Ei.Reward =
   ei.RewardKt.Dsl._create(ei.Ei.Reward.newBuilder()).apply { block() }._build()
 public object RewardKt {
@@ -98,3 +98,4 @@ public object RewardKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Reward.copy(block: ei.RewardKt.Dsl.() -> kotlin.Unit): ei.Ei.Reward =
   ei.RewardKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

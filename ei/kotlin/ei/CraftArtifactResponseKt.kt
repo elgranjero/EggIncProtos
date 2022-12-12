@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecraftArtifactResponse")
 public inline fun craftArtifactResponse(block: ei.CraftArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.CraftArtifactResponse =
   ei.CraftArtifactResponseKt.Dsl._create(ei.Ei.CraftArtifactResponse.newBuilder()).apply { block() }._build()
 public object CraftArtifactResponseKt {
@@ -122,3 +122,4 @@ public object CraftArtifactResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CraftArtifactResponse.copy(block: ei.CraftArtifactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.CraftArtifactResponse =
   ei.CraftArtifactResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

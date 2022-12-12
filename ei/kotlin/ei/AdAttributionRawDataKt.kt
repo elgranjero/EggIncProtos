@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeadAttributionRawData")
 public inline fun adAttributionRawData(block: ei.AdAttributionRawDataKt.Dsl.() -> kotlin.Unit): ei.Ei.AdAttributionRawData =
   ei.AdAttributionRawDataKt.Dsl._create(ei.Ei.AdAttributionRawData.newBuilder()).apply { block() }._build()
 public object AdAttributionRawDataKt {
@@ -122,3 +122,4 @@ public object AdAttributionRawDataKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AdAttributionRawData.copy(block: ei.AdAttributionRawDataKt.Dsl.() -> kotlin.Unit): ei.Ei.AdAttributionRawData =
   ei.AdAttributionRawDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

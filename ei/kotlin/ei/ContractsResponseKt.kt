@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontractsResponse")
 public inline fun contractsResponse(block: ei.ContractsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractsResponse =
   ei.ContractsResponseKt.Dsl._create(ei.Ei.ContractsResponse.newBuilder()).apply { block() }._build()
 public object ContractsResponseKt {
@@ -44,7 +44,8 @@ public object ContractsResponseKt {
     @kotlin.jvm.JvmName("addContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.add(value: ei.Ei.Contract) {
       _builder.addContracts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract contracts = 1;</code>
      * @param value The contracts to add.
      */
@@ -53,7 +54,8 @@ public object ContractsResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.plusAssign(value: ei.Ei.Contract) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract contracts = 1;</code>
      * @param values The contracts to add.
      */
@@ -61,7 +63,8 @@ public object ContractsResponseKt {
     @kotlin.jvm.JvmName("addAllContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract>) {
       _builder.addAllContracts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract contracts = 1;</code>
      * @param values The contracts to add.
      */
@@ -70,7 +73,8 @@ public object ContractsResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract contracts = 1;</code>
      * @param index The index to set the value at.
      * @param value The contracts to set.
@@ -79,7 +83,8 @@ public object ContractsResponseKt {
     @kotlin.jvm.JvmName("setContracts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract) {
       _builder.setContracts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract contracts = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -87,6 +92,8 @@ public object ContractsResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.clear() {
       _builder.clearContracts()
     }
+
+
     /**
      * <code>optional string warning_message = 4;</code>
      */
@@ -163,3 +170,4 @@ public object ContractsResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractsResponse.copy(block: ei.ContractsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractsResponse =
   ei.ContractsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

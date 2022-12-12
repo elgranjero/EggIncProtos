@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelogConsumeArtifactPayload")
 public inline fun logConsumeArtifactPayload(block: ei.LogConsumeArtifactPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogConsumeArtifactPayload =
   ei.LogConsumeArtifactPayloadKt.Dsl._create(ei.Ei.LogConsumeArtifactPayload.newBuilder()).apply { block() }._build()
 public object LogConsumeArtifactPayloadKt {
@@ -45,6 +45,8 @@ public object LogConsumeArtifactPayloadKt {
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
     }
+    public val LogConsumeArtifactPayloadKt.Dsl.reqOrNull: ei.Ei.ConsumeArtifactRequest?
+      get() = _builder.reqOrNull
 
     /**
      * <code>optional .ei.ConsumeArtifactResponse res = 2;</code>
@@ -69,8 +71,17 @@ public object LogConsumeArtifactPayloadKt {
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()
     }
+    public val LogConsumeArtifactPayloadKt.Dsl.resOrNull: ei.Ei.ConsumeArtifactResponse?
+      get() = _builder.resOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LogConsumeArtifactPayload.copy(block: ei.LogConsumeArtifactPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogConsumeArtifactPayload =
   ei.LogConsumeArtifactPayloadKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LogConsumeArtifactPayloadOrBuilder.reqOrNull: ei.Ei.ConsumeArtifactRequest?
+  get() = if (hasReq()) getReq() else null
+
+val ei.Ei.LogConsumeArtifactPayloadOrBuilder.resOrNull: ei.Ei.ConsumeArtifactResponse?
+  get() = if (hasRes()) getRes() else null
+

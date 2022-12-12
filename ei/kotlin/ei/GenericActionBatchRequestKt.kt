@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializegenericActionBatchRequest")
 public inline fun genericActionBatchRequest(block: ei.GenericActionBatchRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.GenericActionBatchRequest =
   ei.GenericActionBatchRequestKt.Dsl._create(ei.Ei.GenericActionBatchRequest.newBuilder()).apply { block() }._build()
 public object GenericActionBatchRequestKt {
@@ -45,6 +45,8 @@ public object GenericActionBatchRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val GenericActionBatchRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -68,7 +70,8 @@ public object GenericActionBatchRequestKt {
     @kotlin.jvm.JvmName("addActions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.GenericAction, ActionsProxy>.add(value: ei.Ei.GenericAction) {
       _builder.addActions(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.GenericAction actions = 2;</code>
      * @param value The actions to add.
      */
@@ -77,7 +80,8 @@ public object GenericActionBatchRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GenericAction, ActionsProxy>.plusAssign(value: ei.Ei.GenericAction) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.GenericAction actions = 2;</code>
      * @param values The actions to add.
      */
@@ -85,7 +89,8 @@ public object GenericActionBatchRequestKt {
     @kotlin.jvm.JvmName("addAllActions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.GenericAction, ActionsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.GenericAction>) {
       _builder.addAllActions(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.GenericAction actions = 2;</code>
      * @param values The actions to add.
      */
@@ -94,7 +99,8 @@ public object GenericActionBatchRequestKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GenericAction, ActionsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.GenericAction>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.GenericAction actions = 2;</code>
      * @param index The index to set the value at.
      * @param value The actions to set.
@@ -103,15 +109,22 @@ public object GenericActionBatchRequestKt {
     @kotlin.jvm.JvmName("setActions")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GenericAction, ActionsProxy>.set(index: kotlin.Int, value: ei.Ei.GenericAction) {
       _builder.setActions(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.GenericAction actions = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearActions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.GenericAction, ActionsProxy>.clear() {
       _builder.clearActions()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.GenericActionBatchRequest.copy(block: ei.GenericActionBatchRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.GenericActionBatchRequest =
   ei.GenericActionBatchRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.GenericActionBatchRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

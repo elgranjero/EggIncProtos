@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeupdateCoopPermissionsResponse")
 public inline fun updateCoopPermissionsResponse(block: ei.UpdateCoopPermissionsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.UpdateCoopPermissionsResponse =
   ei.UpdateCoopPermissionsResponseKt.Dsl._create(ei.Ei.UpdateCoopPermissionsResponse.newBuilder()).apply { block() }._build()
 public object UpdateCoopPermissionsResponseKt {
@@ -74,3 +74,4 @@ public object UpdateCoopPermissionsResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.UpdateCoopPermissionsResponse.copy(block: ei.UpdateCoopPermissionsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.UpdateCoopPermissionsResponse =
   ei.UpdateCoopPermissionsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

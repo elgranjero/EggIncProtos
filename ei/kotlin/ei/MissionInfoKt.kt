@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemissionInfo")
 public inline fun missionInfo(block: ei.MissionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionInfo =
   ei.MissionInfoKt.Dsl._create(ei.Ei.MissionInfo.newBuilder()).apply { block() }._build()
 public object MissionInfoKt {
@@ -116,7 +116,8 @@ public object MissionInfoKt {
     @kotlin.jvm.JvmName("addFuel")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.add(value: ei.Ei.MissionInfo.Fuel) {
       _builder.addFuel(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param value The fuel to add.
      */
@@ -125,7 +126,8 @@ public object MissionInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.plusAssign(value: ei.Ei.MissionInfo.Fuel) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param values The fuel to add.
      */
@@ -133,7 +135,8 @@ public object MissionInfoKt {
     @kotlin.jvm.JvmName("addAllFuel")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.MissionInfo.Fuel>) {
       _builder.addAllFuel(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param values The fuel to add.
      */
@@ -142,7 +145,8 @@ public object MissionInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.MissionInfo.Fuel>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param index The index to set the value at.
      * @param value The fuel to set.
@@ -151,7 +155,8 @@ public object MissionInfoKt {
     @kotlin.jvm.JvmName("setFuel")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.set(index: kotlin.Int, value: ei.Ei.MissionInfo.Fuel) {
       _builder.setFuel(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -159,6 +164,8 @@ public object MissionInfoKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.clear() {
       _builder.clearFuel()
     }
+
+
     /**
      * <code>optional uint32 level = 12;</code>
      */
@@ -351,7 +358,7 @@ public object MissionInfoKt {
       return _builder.hasIdentifier()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializefuel")
   public inline fun fuel(block: ei.MissionInfoKt.FuelKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionInfo.Fuel =
     ei.MissionInfoKt.FuelKt.Dsl._create(ei.Ei.MissionInfo.Fuel.newBuilder()).apply { block() }._build()
   public object FuelKt {
@@ -423,6 +430,8 @@ public object MissionInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MissionInfo.copy(block: ei.MissionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionInfo =
   ei.MissionInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MissionInfo.Fuel.copy(block: ei.MissionInfoKt.FuelKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionInfo.Fuel =
   ei.MissionInfoKt.FuelKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

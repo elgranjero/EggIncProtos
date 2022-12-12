@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeautoJoinCoopRequest")
 public inline fun autoJoinCoopRequest(block: ei.AutoJoinCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.AutoJoinCoopRequest =
   ei.AutoJoinCoopRequestKt.Dsl._create(ei.Ei.AutoJoinCoopRequest.newBuilder()).apply { block() }._build()
 public object AutoJoinCoopRequestKt {
@@ -45,6 +45,8 @@ public object AutoJoinCoopRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val AutoJoinCoopRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -266,3 +268,7 @@ public object AutoJoinCoopRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AutoJoinCoopRequest.copy(block: ei.AutoJoinCoopRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.AutoJoinCoopRequest =
   ei.AutoJoinCoopRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.AutoJoinCoopRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

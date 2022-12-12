@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelogCraftArtifactPayload")
 public inline fun logCraftArtifactPayload(block: ei.LogCraftArtifactPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogCraftArtifactPayload =
   ei.LogCraftArtifactPayloadKt.Dsl._create(ei.Ei.LogCraftArtifactPayload.newBuilder()).apply { block() }._build()
 public object LogCraftArtifactPayloadKt {
@@ -45,6 +45,8 @@ public object LogCraftArtifactPayloadKt {
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
     }
+    public val LogCraftArtifactPayloadKt.Dsl.reqOrNull: ei.Ei.CraftArtifactRequest?
+      get() = _builder.reqOrNull
 
     /**
      * <code>optional .ei.CraftArtifactResponse res = 2;</code>
@@ -69,8 +71,17 @@ public object LogCraftArtifactPayloadKt {
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()
     }
+    public val LogCraftArtifactPayloadKt.Dsl.resOrNull: ei.Ei.CraftArtifactResponse?
+      get() = _builder.resOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LogCraftArtifactPayload.copy(block: ei.LogCraftArtifactPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogCraftArtifactPayload =
   ei.LogCraftArtifactPayloadKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LogCraftArtifactPayloadOrBuilder.reqOrNull: ei.Ei.CraftArtifactRequest?
+  get() = if (hasReq()) getReq() else null
+
+val ei.Ei.LogCraftArtifactPayloadOrBuilder.resOrNull: ei.Ei.CraftArtifactResponse?
+  get() = if (hasRes()) getRes() else null
+

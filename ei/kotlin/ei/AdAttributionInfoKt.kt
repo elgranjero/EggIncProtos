@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeadAttributionInfo")
 public inline fun adAttributionInfo(block: ei.AdAttributionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.AdAttributionInfo =
   ei.AdAttributionInfoKt.Dsl._create(ei.Ei.AdAttributionInfo.newBuilder()).apply { block() }._build()
 public object AdAttributionInfoKt {
@@ -458,3 +458,4 @@ public object AdAttributionInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AdAttributionInfo.copy(block: ei.AdAttributionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.AdAttributionInfo =
   ei.AdAttributionInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

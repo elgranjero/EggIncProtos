@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecurrencyFlowLog")
 public inline fun currencyFlowLog(block: ei.CurrencyFlowLogKt.Dsl.() -> kotlin.Unit): ei.Ei.CurrencyFlowLog =
   ei.CurrencyFlowLogKt.Dsl._create(ei.Ei.CurrencyFlowLog.newBuilder()).apply { block() }._build()
 public object CurrencyFlowLogKt {
@@ -266,3 +266,4 @@ public object CurrencyFlowLogKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CurrencyFlowLog.copy(block: ei.CurrencyFlowLogKt.Dsl.() -> kotlin.Unit): ei.Ei.CurrencyFlowLog =
   ei.CurrencyFlowLogKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

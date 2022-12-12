@@ -391,6 +391,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.Contract.GradeSpec"><span class="badge">M</span>Contract.GradeSpec</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ContractCoopStatusRequest"><span class="badge">M</span>ContractCoopStatusRequest</a>
                 </li>
               
@@ -416,6 +420,38 @@
               
                 <li>
                   <a href="#ei.ContractCoopStatusUpdateResponse"><span class="badge">M</span>ContractCoopStatusUpdateResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractPlayerInfo"><span class="badge">M</span>ContractPlayerInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimConfig"><span class="badge">M</span>ContractSimConfig</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimConfig.ContractGradeSimConfig"><span class="badge">M</span>ContractSimConfig.ContractGradeSimConfig</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimConfig.ContractGradeSimConfig.GoalParams"><span class="badge">M</span>ContractSimConfig.ContractGradeSimConfig.GoalParams</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimPoll"><span class="badge">M</span>ContractSimPoll</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimPollResponse"><span class="badge">M</span>ContractSimPollResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimResultUpdate"><span class="badge">M</span>ContractSimResultUpdate</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSimResultUpdate.GoalInfo"><span class="badge">M</span>ContractSimResultUpdate.GoalInfo</a>
                 </li>
               
                 <li>
@@ -504,6 +540,10 @@
               
                 <li>
                   <a href="#ei.FarmProductionParams"><span class="badge">M</span>FarmProductionParams</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.GameModifier"><span class="badge">M</span>GameModifier</a>
                 </li>
               
                 <li>
@@ -792,6 +832,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.Contract.PlayerGrade"><span class="badge">E</span>Contract.PlayerGrade</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ContractCoopStatusResponse.MemberStatus"><span class="badge">E</span>ContractCoopStatusResponse.MemberStatus</a>
                 </li>
               
@@ -809,6 +853,10 @@
               
                 <li>
                   <a href="#ei.FarmType"><span class="badge">E</span>FarmType</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.GameDimension"><span class="badge">E</span>GameDimension</a>
                 </li>
               
                 <li>
@@ -4596,6 +4644,13 @@
                 </tr>
               
                 <tr>
+                  <td>grade_specs</td>
+                  <td><a href="#ei.Contract.GradeSpec">Contract.GradeSpec</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>coop_allowed</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -4679,6 +4734,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>key</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -4758,6 +4820,44 @@
                 <tr>
                   <td>goals</td>
                   <td><a href="#ei.Contract.Goal">Contract.Goal</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.Contract.GradeSpec">Contract.GradeSpec</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goals</td>
+                  <td><a href="#ei.Contract.Goal">Contract.Goal</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>modifiers</td>
+                  <td><a href="#ei.GameModifier">GameModifier</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -5318,6 +5418,254 @@
                 <tr>
                   <td>status</td>
                   <td><a href="#ei.ContractCoopStatusResponse.MemberStatus">ContractCoopStatusResponse.MemberStatus</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractPlayerInfo">ContractPlayerInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>total_cxp</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimConfig">ContractSimConfig</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>grade_configs</td>
+                  <td><a href="#ei.ContractSimConfig.ContractGradeSimConfig">ContractSimConfig.ContractGradeSimConfig</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimConfig.ContractGradeSimConfig">ContractSimConfig.ContractGradeSimConfig</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goal_params</td>
+                  <td><a href="#ei.ContractSimConfig.ContractGradeSimConfig.GoalParams">ContractSimConfig.ContractGradeSimConfig.GoalParams</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimConfig.ContractGradeSimConfig.GoalParams">ContractSimConfig.ContractGradeSimConfig.GoalParams</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>target_se</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cps_mult</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>earnings_mult</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimPoll">ContractSimPoll</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>client_version</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimPollResponse">ContractSimPollResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>contract_to_simulate</td>
+                  <td><a href="#ei.Contract">Contract</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sim_config</td>
+                  <td><a href="#ei.ContractSimConfig">ContractSimConfig</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimResultUpdate">ContractSimResultUpdate</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>contract_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goal_infos</td>
+                  <td><a href="#ei.ContractSimResultUpdate.GoalInfo">ContractSimResultUpdate.GoalInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSimResultUpdate.GoalInfo">ContractSimResultUpdate.GoalInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goal_index</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>projected_eggs_laid</td>
+                  <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -6434,6 +6782,44 @@
                 <tr>
                   <td>delivered</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.GameModifier">GameModifier</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>dimension</td>
+                  <td><a href="#ei.GameDimension">GameDimension</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value_modifier</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>description</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -7626,6 +8012,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>new_player_event_duration</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -7751,6 +8144,13 @@
                 <tr>
                   <td>league</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -8225,6 +8625,13 @@
                 <tr>
                   <td>mail_bag</td>
                   <td><a href="#ei.MailDB">MailDB</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>contract_player_info</td>
+                  <td><a href="#ei.ContractPlayerInfo">ContractPlayerInfo</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -9610,6 +10017,13 @@
                 </tr>
               
                 <tr>
+                  <td>required_parent_set</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>is_new</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -9835,6 +10249,13 @@
                 <tr>
                   <td>required_soul_eggs</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>required_parent_shell</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -10784,6 +11205,53 @@
           </tbody>
         </table>
       
+        <h3 id="ei.Contract.PlayerGrade">Contract.PlayerGrade</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>GRADE_UNSET</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>GRADE_C</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>GRADE_B</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>GRADE_A</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>GRADE_AA</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>GRADE_AAA</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="ei.ContractCoopStatusResponse.MemberStatus">ContractCoopStatusResponse.MemberStatus</h3>
         <p></p>
         <table class="enum-table">
@@ -11066,6 +11534,29 @@
             
               <tr>
                 <td>CONTRACT</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.GameDimension">GameDimension</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>EARNINGS</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AWAY_EARNINGS</td>
                 <td>3</td>
                 <td><p></p></td>
               </tr>

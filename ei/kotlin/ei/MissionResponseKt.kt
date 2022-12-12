@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemissionResponse")
 public inline fun missionResponse(block: ei.MissionResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionResponse =
   ei.MissionResponseKt.Dsl._create(ei.Ei.MissionResponse.newBuilder()).apply { block() }._build()
 public object MissionResponseKt {
@@ -69,8 +69,14 @@ public object MissionResponseKt {
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
     }
+    public val MissionResponseKt.Dsl.infoOrNull: ei.Ei.MissionInfo?
+      get() = _builder.infoOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MissionResponse.copy(block: ei.MissionResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionResponse =
   ei.MissionResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.MissionResponseOrBuilder.infoOrNull: ei.Ei.MissionInfo?
+  get() = if (hasInfo()) getInfo() else null
+

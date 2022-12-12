@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeshellGroupSpec")
 public inline fun shellGroupSpec(block: ei.ShellGroupSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellGroupSpec =
   ei.ShellGroupSpecKt.Dsl._create(ei.Ei.ShellGroupSpec.newBuilder()).apply { block() }._build()
 public object ShellGroupSpecKt {
@@ -192,3 +192,4 @@ public object ShellGroupSpecKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellGroupSpec.copy(block: ei.ShellGroupSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellGroupSpec =
   ei.ShellGroupSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

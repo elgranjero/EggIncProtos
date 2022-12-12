@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeiAPSaleEntry")
 public inline fun iAPSaleEntry(block: ei.IAPSaleEntryKt.Dsl.() -> kotlin.Unit): ei.Ei.IAPSaleEntry =
   ei.IAPSaleEntryKt.Dsl._create(ei.Ei.IAPSaleEntry.newBuilder()).apply { block() }._build()
 public object IAPSaleEntryKt {
@@ -122,3 +122,4 @@ public object IAPSaleEntryKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.IAPSaleEntry.copy(block: ei.IAPSaleEntryKt.Dsl.() -> kotlin.Unit): ei.Ei.IAPSaleEntry =
   ei.IAPSaleEntryKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

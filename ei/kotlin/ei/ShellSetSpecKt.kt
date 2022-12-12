@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeshellSetSpec")
 public inline fun shellSetSpec(block: ei.ShellSetSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec =
   ei.ShellSetSpecKt.Dsl._create(ei.Ei.ShellSetSpec.newBuilder()).apply { block() }._build()
 public object ShellSetSpecKt {
@@ -188,6 +188,30 @@ public object ShellSetSpecKt {
      */
     public fun hasRequiredSoulEggs(): kotlin.Boolean {
       return _builder.hasRequiredSoulEggs()
+    }
+
+    /**
+     * <code>optional string required_parent_set = 20;</code>
+     */
+    public var requiredParentSet: kotlin.String
+      @JvmName("getRequiredParentSet")
+      get() = _builder.getRequiredParentSet()
+      @JvmName("setRequiredParentSet")
+      set(value) {
+        _builder.setRequiredParentSet(value)
+      }
+    /**
+     * <code>optional string required_parent_set = 20;</code>
+     */
+    public fun clearRequiredParentSet() {
+      _builder.clearRequiredParentSet()
+    }
+    /**
+     * <code>optional string required_parent_set = 20;</code>
+     * @return Whether the requiredParentSet field is set.
+     */
+    public fun hasRequiredParentSet(): kotlin.Boolean {
+      return _builder.hasRequiredParentSet()
     }
 
     /**
@@ -404,7 +428,8 @@ public object ShellSetSpecKt {
     @kotlin.jvm.JvmName("addVariations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.add(value: ei.Ei.ShellSetSpec.VariationSpec) {
       _builder.addVariations(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param value The variations to add.
      */
@@ -413,7 +438,8 @@ public object ShellSetSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.plusAssign(value: ei.Ei.ShellSetSpec.VariationSpec) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param values The variations to add.
      */
@@ -421,7 +447,8 @@ public object ShellSetSpecKt {
     @kotlin.jvm.JvmName("addAllVariations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationSpec>) {
       _builder.addAllVariations(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param values The variations to add.
      */
@@ -430,7 +457,8 @@ public object ShellSetSpecKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationSpec>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param index The index to set the value at.
      * @param value The variations to set.
@@ -439,7 +467,8 @@ public object ShellSetSpecKt {
     @kotlin.jvm.JvmName("setVariations")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec.VariationSpec) {
       _builder.setVariations(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -447,6 +476,8 @@ public object ShellSetSpecKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.clear() {
       _builder.clearVariations()
     }
+
+
     /**
      * <code>optional .ei.DLCItem icon = 19;</code>
      */
@@ -470,6 +501,8 @@ public object ShellSetSpecKt {
     public fun hasIcon(): kotlin.Boolean {
       return _builder.hasIcon()
     }
+    public val ShellSetSpecKt.Dsl.iconOrNull: ei.Ei.DLCItem?
+      get() = _builder.iconOrNull
 
     /**
      * <code>optional bool default_appearance = 6;</code>
@@ -519,7 +552,7 @@ public object ShellSetSpecKt {
       return _builder.hasCustomAppearance()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializevariationSpec")
   public inline fun variationSpec(block: ei.ShellSetSpecKt.VariationSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationSpec =
     ei.ShellSetSpecKt.VariationSpecKt.Dsl._create(ei.Ei.ShellSetSpec.VariationSpec.newBuilder()).apply { block() }._build()
   public object VariationSpecKt {
@@ -687,6 +720,11 @@ public object ShellSetSpecKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellSetSpec.copy(block: ei.ShellSetSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec =
   ei.ShellSetSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellSetSpec.VariationSpec.copy(block: ei.ShellSetSpecKt.VariationSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellSetSpec.VariationSpec =
   ei.ShellSetSpecKt.VariationSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellSetSpecOrBuilder.iconOrNull: ei.Ei.DLCItem?
+  get() = if (hasIcon()) getIcon() else null
+

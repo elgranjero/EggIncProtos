@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontractCoopStatusResponse")
 public inline fun contractCoopStatusResponse(block: ei.ContractCoopStatusResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse =
   ei.ContractCoopStatusResponseKt.Dsl._create(ei.Ei.ContractCoopStatusResponse.newBuilder()).apply { block() }._build()
 public object ContractCoopStatusResponseKt {
@@ -116,7 +116,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("addContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.ContributionInfo) {
       _builder.addContributors(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param value The contributors to add.
      */
@@ -125,7 +126,8 @@ public object ContractCoopStatusResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.ContributionInfo) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param values The contributors to add.
      */
@@ -133,7 +135,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("addAllContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ContributionInfo>) {
       _builder.addAllContributors(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param values The contributors to add.
      */
@@ -142,7 +145,8 @@ public object ContractCoopStatusResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ContributionInfo>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param index The index to set the value at.
      * @param value The contributors to set.
@@ -151,7 +155,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("setContributors")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.ContributionInfo) {
       _builder.setContributors(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -159,6 +164,8 @@ public object ContractCoopStatusResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.clear() {
       _builder.clearContributors()
     }
+
+
     /**
      * <code>optional bool auto_generated = 8;</code>
      */
@@ -325,7 +332,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("addGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.CoopGift) {
       _builder.addGifts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param value The gifts to add.
      */
@@ -334,7 +342,8 @@ public object ContractCoopStatusResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.CoopGift) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param values The gifts to add.
      */
@@ -342,7 +351,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("addAllGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.CoopGift>) {
       _builder.addAllGifts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param values The gifts to add.
      */
@@ -351,7 +361,8 @@ public object ContractCoopStatusResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.CoopGift>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param index The index to set the value at.
      * @param value The gifts to set.
@@ -360,7 +371,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("setGifts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.CoopGift) {
       _builder.setGifts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -368,6 +380,8 @@ public object ContractCoopStatusResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.clear() {
       _builder.clearGifts()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -390,7 +404,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("addChickenRuns")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
       _builder.addChickenRuns(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param value The chickenRuns to add.
      */
@@ -399,7 +414,8 @@ public object ContractCoopStatusResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param values The chickenRuns to add.
      */
@@ -407,7 +423,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("addAllChickenRuns")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ChickenRun>) {
       _builder.addAllChickenRuns(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param values The chickenRuns to add.
      */
@@ -416,7 +433,8 @@ public object ContractCoopStatusResponseKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ChickenRun>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param index The index to set the value at.
      * @param value The chickenRuns to set.
@@ -425,7 +443,8 @@ public object ContractCoopStatusResponseKt {
     @kotlin.jvm.JvmName("setChickenRuns")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
       _builder.setChickenRuns(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -433,6 +452,8 @@ public object ContractCoopStatusResponseKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.clear() {
       _builder.clearChickenRuns()
     }
+
+
     /**
      * <code>optional double local_timestamp = 12;</code>
      */
@@ -457,7 +478,7 @@ public object ContractCoopStatusResponseKt {
       return _builder.hasLocalTimestamp()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializecontributionInfo")
   public inline fun contributionInfo(block: ei.ContractCoopStatusResponseKt.ContributionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ContributionInfo =
     ei.ContractCoopStatusResponseKt.ContributionInfoKt.Dsl._create(ei.Ei.ContractCoopStatusResponse.ContributionInfo.newBuilder()).apply { block() }._build()
   public object ContributionInfoKt {
@@ -643,6 +664,8 @@ public object ContractCoopStatusResponseKt {
       public fun hasProductionParams(): kotlin.Boolean {
         return _builder.hasProductionParams()
       }
+      public val ContributionInfoKt.Dsl.productionParamsOrNull: ei.Ei.FarmProductionParams?
+        get() = _builder.productionParamsOrNull
 
       /**
        * <code>optional .ei.PlayerFarmInfo farm_info = 18;</code>
@@ -667,6 +690,8 @@ public object ContractCoopStatusResponseKt {
       public fun hasFarmInfo(): kotlin.Boolean {
         return _builder.hasFarmInfo()
       }
+      public val ContributionInfoKt.Dsl.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
+        get() = _builder.farmInfoOrNull
 
       /**
        * <code>optional int32 rank_change = 8;</code>
@@ -930,7 +955,8 @@ public object ContractCoopStatusResponseKt {
       @kotlin.jvm.JvmName("addBuffHistory")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.add(value: ei.Ei.CoopBuffState) {
         _builder.addBuffHistory(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param value The buffHistory to add.
        */
@@ -939,7 +965,8 @@ public object ContractCoopStatusResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.plusAssign(value: ei.Ei.CoopBuffState) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param values The buffHistory to add.
        */
@@ -947,7 +974,8 @@ public object ContractCoopStatusResponseKt {
       @kotlin.jvm.JvmName("addAllBuffHistory")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
         _builder.addAllBuffHistory(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param values The buffHistory to add.
        */
@@ -956,7 +984,8 @@ public object ContractCoopStatusResponseKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param index The index to set the value at.
        * @param value The buffHistory to set.
@@ -965,7 +994,8 @@ public object ContractCoopStatusResponseKt {
       @kotlin.jvm.JvmName("setBuffHistory")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.set(index: kotlin.Int, value: ei.Ei.CoopBuffState) {
         _builder.setBuffHistory(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -973,6 +1003,8 @@ public object ContractCoopStatusResponseKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.clear() {
         _builder.clearBuffHistory()
       }
+
+
       /**
        * <code>optional double chicken_run_cooldown = 20;</code>
        */
@@ -998,7 +1030,7 @@ public object ContractCoopStatusResponseKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializecoopGift")
   public inline fun coopGift(block: ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.CoopGift =
     ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl._create(ei.Ei.ContractCoopStatusResponse.CoopGift.newBuilder()).apply { block() }._build()
   public object CoopGiftKt {
@@ -1090,7 +1122,7 @@ public object ContractCoopStatusResponseKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializechickenRun")
   public inline fun chickenRun(block: ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ChickenRun =
     ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl._create(ei.Ei.ContractCoopStatusResponse.ChickenRun.newBuilder()).apply { block() }._build()
   public object ChickenRunKt {
@@ -1186,12 +1218,22 @@ public object ContractCoopStatusResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.copy(block: ei.ContractCoopStatusResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse =
   ei.ContractCoopStatusResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.ContributionInfo.copy(block: ei.ContractCoopStatusResponseKt.ContributionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ContributionInfo =
   ei.ContractCoopStatusResponseKt.ContributionInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ContractCoopStatusResponse.ContributionInfoOrBuilder.productionParamsOrNull: ei.Ei.FarmProductionParams?
+  get() = if (hasProductionParams()) getProductionParams() else null
+
+val ei.Ei.ContractCoopStatusResponse.ContributionInfoOrBuilder.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
+  get() = if (hasFarmInfo()) getFarmInfo() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.CoopGift.copy(block: ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.CoopGift =
   ei.ContractCoopStatusResponseKt.CoopGiftKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.ChickenRun.copy(block: ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ChickenRun =
   ei.ContractCoopStatusResponseKt.ChickenRunKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

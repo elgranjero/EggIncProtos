@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializefarmProductionParams")
 public inline fun farmProductionParams(block: ei.FarmProductionParamsKt.Dsl.() -> kotlin.Unit): ei.Ei.FarmProductionParams =
   ei.FarmProductionParamsKt.Dsl._create(ei.Ei.FarmProductionParams.newBuilder()).apply { block() }._build()
 public object FarmProductionParamsKt {
@@ -170,3 +170,4 @@ public object FarmProductionParamsKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.FarmProductionParams.copy(block: ei.FarmProductionParamsKt.Dsl.() -> kotlin.Unit): ei.Ei.FarmProductionParams =
   ei.FarmProductionParamsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializegenericAction")
 public inline fun genericAction(block: ei.GenericActionKt.Dsl.() -> kotlin.Unit): ei.Ei.GenericAction =
   ei.GenericActionKt.Dsl._create(ei.Ei.GenericAction.newBuilder()).apply { block() }._build()
 public object GenericActionKt {
@@ -164,7 +164,8 @@ public object GenericActionKt {
     @kotlin.jvm.JvmName("addData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.add(value: ei.Ei.ActionKeyValuePair) {
       _builder.addData(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param value The data to add.
      */
@@ -173,7 +174,8 @@ public object GenericActionKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.plusAssign(value: ei.Ei.ActionKeyValuePair) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param values The data to add.
      */
@@ -181,7 +183,8 @@ public object GenericActionKt {
     @kotlin.jvm.JvmName("addAllData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ActionKeyValuePair>) {
       _builder.addAllData(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param values The data to add.
      */
@@ -190,7 +193,8 @@ public object GenericActionKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ActionKeyValuePair>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param index The index to set the value at.
      * @param value The data to set.
@@ -199,7 +203,8 @@ public object GenericActionKt {
     @kotlin.jvm.JvmName("setData")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.set(index: kotlin.Int, value: ei.Ei.ActionKeyValuePair) {
       _builder.setData(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -207,6 +212,8 @@ public object GenericActionKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.clear() {
       _builder.clearData()
     }
+
+
     /**
      * <code>optional .ei.AppInfo app = 5;</code>
      */
@@ -230,6 +237,8 @@ public object GenericActionKt {
     public fun hasApp(): kotlin.Boolean {
       return _builder.hasApp()
     }
+    public val GenericActionKt.Dsl.appOrNull: ei.Ei.AppInfo?
+      get() = _builder.appOrNull
 
     /**
      * <code>optional .ei.DeviceInfo device = 6;</code>
@@ -254,8 +263,17 @@ public object GenericActionKt {
     public fun hasDevice(): kotlin.Boolean {
       return _builder.hasDevice()
     }
+    public val GenericActionKt.Dsl.deviceOrNull: ei.Ei.DeviceInfo?
+      get() = _builder.deviceOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.GenericAction.copy(block: ei.GenericActionKt.Dsl.() -> kotlin.Unit): ei.Ei.GenericAction =
   ei.GenericActionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.GenericActionOrBuilder.appOrNull: ei.Ei.AppInfo?
+  get() = if (hasApp()) getApp() else null
+
+val ei.Ei.GenericActionOrBuilder.deviceOrNull: ei.Ei.DeviceInfo?
+  get() = if (hasDevice()) getDevice() else null
+

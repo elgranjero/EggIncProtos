@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeserverGift")
 public inline fun serverGift(block: ei.ServerGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ServerGift =
   ei.ServerGiftKt.Dsl._create(ei.Ei.ServerGift.newBuilder()).apply { block() }._build()
 public object ServerGiftKt {
@@ -122,3 +122,4 @@ public object ServerGiftKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ServerGift.copy(block: ei.ServerGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ServerGift =
   ei.ServerGiftKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

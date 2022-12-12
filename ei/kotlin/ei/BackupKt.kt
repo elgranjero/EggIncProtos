@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializebackup")
 public inline fun backup(block: ei.BackupKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup =
   ei.BackupKt.Dsl._create(ei.Ei.Backup.newBuilder()).apply { block() }._build()
 public object BackupKt {
@@ -261,6 +261,8 @@ public object BackupKt {
     public fun hasSettings(): kotlin.Boolean {
       return _builder.hasSettings()
     }
+    public val BackupKt.Dsl.settingsOrNull: ei.Ei.Backup.Settings?
+      get() = _builder.settingsOrNull
 
     /**
      * <code>optional .ei.Backup.Tutorial tutorial = 5;</code>
@@ -285,6 +287,8 @@ public object BackupKt {
     public fun hasTutorial(): kotlin.Boolean {
       return _builder.hasTutorial()
     }
+    public val BackupKt.Dsl.tutorialOrNull: ei.Ei.Backup.Tutorial?
+      get() = _builder.tutorialOrNull
 
     /**
      * <code>optional .ei.Backup.Stats stats = 6;</code>
@@ -309,6 +313,8 @@ public object BackupKt {
     public fun hasStats(): kotlin.Boolean {
       return _builder.hasStats()
     }
+    public val BackupKt.Dsl.statsOrNull: ei.Ei.Backup.Stats?
+      get() = _builder.statsOrNull
 
     /**
      * <code>optional .ei.Backup.Game game = 7;</code>
@@ -333,6 +339,8 @@ public object BackupKt {
     public fun hasGame(): kotlin.Boolean {
       return _builder.hasGame()
     }
+    public val BackupKt.Dsl.gameOrNull: ei.Ei.Backup.Game?
+      get() = _builder.gameOrNull
 
     /**
      * <code>optional .ei.Backup.Artifacts artifacts = 14;</code>
@@ -357,6 +365,8 @@ public object BackupKt {
     public fun hasArtifacts(): kotlin.Boolean {
       return _builder.hasArtifacts()
     }
+    public val BackupKt.Dsl.artifactsOrNull: ei.Ei.Backup.Artifacts?
+      get() = _builder.artifactsOrNull
 
     /**
      * <code>optional .ei.Backup.Shells shells = 25;</code>
@@ -381,6 +391,8 @@ public object BackupKt {
     public fun hasShells(): kotlin.Boolean {
       return _builder.hasShells()
     }
+    public val BackupKt.Dsl.shellsOrNull: ei.Ei.Backup.Shells?
+      get() = _builder.shellsOrNull
 
     /**
      * <code>optional .ei.Backup.Simulation sim = 8;</code>
@@ -405,6 +417,8 @@ public object BackupKt {
     public fun hasSim(): kotlin.Boolean {
       return _builder.hasSim()
     }
+    public val BackupKt.Dsl.simOrNull: ei.Ei.Backup.Simulation?
+      get() = _builder.simOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -428,7 +442,8 @@ public object BackupKt {
     @kotlin.jvm.JvmName("addFarms")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.Simulation, FarmsProxy>.add(value: ei.Ei.Backup.Simulation) {
       _builder.addFarms(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.Simulation farms = 12;</code>
      * @param value The farms to add.
      */
@@ -437,7 +452,8 @@ public object BackupKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.Simulation, FarmsProxy>.plusAssign(value: ei.Ei.Backup.Simulation) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.Simulation farms = 12;</code>
      * @param values The farms to add.
      */
@@ -445,7 +461,8 @@ public object BackupKt {
     @kotlin.jvm.JvmName("addAllFarms")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.Simulation, FarmsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.Simulation>) {
       _builder.addAllFarms(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.Simulation farms = 12;</code>
      * @param values The farms to add.
      */
@@ -454,7 +471,8 @@ public object BackupKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.Simulation, FarmsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.Simulation>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.Simulation farms = 12;</code>
      * @param index The index to set the value at.
      * @param value The farms to set.
@@ -463,7 +481,8 @@ public object BackupKt {
     @kotlin.jvm.JvmName("setFarms")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.Simulation, FarmsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.Simulation) {
       _builder.setFarms(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Backup.Simulation farms = 12;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -471,6 +490,8 @@ public object BackupKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.Simulation, FarmsProxy>.clear() {
       _builder.clearFarms()
     }
+
+
     /**
      * <code>optional .ei.Backup.Mission mission = 9;</code>
      */
@@ -494,6 +515,8 @@ public object BackupKt {
     public fun hasMission(): kotlin.Boolean {
       return _builder.hasMission()
     }
+    public val BackupKt.Dsl.missionOrNull: ei.Ei.Backup.Mission?
+      get() = _builder.missionOrNull
 
     /**
      * <code>optional .ei.Backup.Misc misc = 10;</code>
@@ -518,6 +541,8 @@ public object BackupKt {
     public fun hasMisc(): kotlin.Boolean {
       return _builder.hasMisc()
     }
+    public val BackupKt.Dsl.miscOrNull: ei.Ei.Backup.Misc?
+      get() = _builder.miscOrNull
 
     /**
      * <code>optional .ei.MyContracts contracts = 13;</code>
@@ -542,6 +567,8 @@ public object BackupKt {
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
     }
+    public val BackupKt.Dsl.contractsOrNull: ei.Ei.MyContracts?
+      get() = _builder.contractsOrNull
 
     /**
      * <code>optional .ei.ArtifactsDB artifacts_db = 15;</code>
@@ -566,6 +593,8 @@ public object BackupKt {
     public fun hasArtifactsDb(): kotlin.Boolean {
       return _builder.hasArtifactsDb()
     }
+    public val BackupKt.Dsl.artifactsDbOrNull: ei.Ei.ArtifactsDB?
+      get() = _builder.artifactsDbOrNull
 
     /**
      * <code>optional .ei.ShellDB shell_db = 24;</code>
@@ -590,6 +619,8 @@ public object BackupKt {
     public fun hasShellDb(): kotlin.Boolean {
       return _builder.hasShellDb()
     }
+    public val BackupKt.Dsl.shellDbOrNull: ei.Ei.ShellDB?
+      get() = _builder.shellDbOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -709,7 +740,7 @@ public object BackupKt {
       return _builder.hasSignature()
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializesettings")
   public inline fun settings(block: ei.BackupKt.SettingsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Settings =
     ei.BackupKt.SettingsKt.Dsl._create(ei.Ei.Backup.Settings.newBuilder()).apply { block() }._build()
   public object SettingsKt {
@@ -1329,7 +1360,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializetutorial")
   public inline fun tutorial(block: ei.BackupKt.TutorialKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Tutorial =
     ei.BackupKt.TutorialKt.Dsl._create(ei.Ei.Backup.Tutorial.newBuilder()).apply { block() }._build()
   public object TutorialKt {
@@ -1654,7 +1685,7 @@ public object BackupKt {
         _builder.clearTutorialShown()
       }}
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializestats")
   public inline fun stats(block: ei.BackupKt.StatsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Stats =
     ei.BackupKt.StatsKt.Dsl._create(ei.Ei.Backup.Stats.newBuilder()).apply { block() }._build()
   public object StatsKt {
@@ -2188,7 +2219,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializegame")
   public inline fun game(block: ei.BackupKt.GameKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Game =
     ei.BackupKt.GameKt.Dsl._create(ei.Ei.Backup.Game.newBuilder()).apply { block() }._build()
   public object GameKt {
@@ -2709,7 +2740,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addEpicResearch")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.add(value: ei.Ei.Backup.ResearchItem) {
         _builder.addEpicResearch(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
        * @param value The epicResearch to add.
        */
@@ -2718,7 +2750,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.plusAssign(value: ei.Ei.Backup.ResearchItem) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
        * @param values The epicResearch to add.
        */
@@ -2726,7 +2759,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllEpicResearch")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
         _builder.addAllEpicResearch(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
        * @param values The epicResearch to add.
        */
@@ -2735,7 +2769,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
        * @param index The index to set the value at.
        * @param value The epicResearch to set.
@@ -2744,7 +2779,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setEpicResearch")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ResearchItem) {
         _builder.setEpicResearch(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -2752,6 +2788,8 @@ public object BackupKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.clear() {
         _builder.clearEpicResearch()
       }
+
+
       /**
        * <code>optional bool hyperloop_station = 29;</code>
        */
@@ -2870,7 +2908,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addNews")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.NewsHeadline, NewsProxy>.add(value: ei.Ei.Backup.NewsHeadline) {
         _builder.addNews(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
        * @param value The news to add.
        */
@@ -2879,7 +2918,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.NewsHeadline, NewsProxy>.plusAssign(value: ei.Ei.Backup.NewsHeadline) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
        * @param values The news to add.
        */
@@ -2887,7 +2927,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllNews")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.NewsHeadline, NewsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.NewsHeadline>) {
         _builder.addAllNews(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
        * @param values The news to add.
        */
@@ -2896,7 +2937,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.NewsHeadline, NewsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.NewsHeadline>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
        * @param index The index to set the value at.
        * @param value The news to set.
@@ -2905,7 +2947,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setNews")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.NewsHeadline, NewsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.NewsHeadline) {
         _builder.setNews(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -2913,6 +2956,8 @@ public object BackupKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.NewsHeadline, NewsProxy>.clear() {
         _builder.clearNews()
       }
+
+
       /**
        * <code>optional double last_news_time = 12;</code>
        */
@@ -3007,7 +3052,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAchievements")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.AchievementInfo, AchievementsProxy>.add(value: ei.Ei.Backup.AchievementInfo) {
         _builder.addAchievements(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
        * @param value The achievements to add.
        */
@@ -3016,7 +3062,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.AchievementInfo, AchievementsProxy>.plusAssign(value: ei.Ei.Backup.AchievementInfo) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
        * @param values The achievements to add.
        */
@@ -3024,7 +3071,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllAchievements")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.AchievementInfo, AchievementsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.AchievementInfo>) {
         _builder.addAllAchievements(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
        * @param values The achievements to add.
        */
@@ -3033,7 +3081,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.AchievementInfo, AchievementsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.AchievementInfo>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
        * @param index The index to set the value at.
        * @param value The achievements to set.
@@ -3042,7 +3091,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setAchievements")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.AchievementInfo, AchievementsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.AchievementInfo) {
         _builder.setAchievements(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -3050,6 +3100,8 @@ public object BackupKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.AchievementInfo, AchievementsProxy>.clear() {
         _builder.clearAchievements()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -3274,7 +3326,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addBoosts")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.OwnedBoost, BoostsProxy>.add(value: ei.Ei.Backup.OwnedBoost) {
         _builder.addBoosts(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
        * @param value The boosts to add.
        */
@@ -3283,7 +3336,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.OwnedBoost, BoostsProxy>.plusAssign(value: ei.Ei.Backup.OwnedBoost) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
        * @param values The boosts to add.
        */
@@ -3291,7 +3345,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllBoosts")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.OwnedBoost, BoostsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.OwnedBoost>) {
         _builder.addAllBoosts(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
        * @param values The boosts to add.
        */
@@ -3300,7 +3355,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.OwnedBoost, BoostsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.OwnedBoost>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
        * @param index The index to set the value at.
        * @param value The boosts to set.
@@ -3309,7 +3365,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setBoosts")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.OwnedBoost, BoostsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.OwnedBoost) {
         _builder.setBoosts(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -3317,6 +3374,8 @@ public object BackupKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.OwnedBoost, BoostsProxy>.clear() {
         _builder.clearBoosts()
       }
+
+
       /**
        * <code>optional uint32 total_time_cheats_detected = 32;</code>
        */
@@ -3390,7 +3449,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeartifacts")
   public inline fun artifacts(block: ei.BackupKt.ArtifactsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Artifacts =
     ei.BackupKt.ArtifactsKt.Dsl._create(ei.Ei.Backup.Artifacts.newBuilder()).apply { block() }._build()
   public object ArtifactsKt {
@@ -3456,6 +3515,8 @@ public object BackupKt {
       public fun hasItemBeingInfused(): kotlin.Boolean {
         return _builder.hasItemBeingInfused()
       }
+      public val ArtifactsKt.Dsl.itemBeingInfusedOrNull: ei.Ei.ArtifactInventoryItem?
+        get() = _builder.itemBeingInfusedOrNull
 
       /**
        * <code>optional .ei.ArtifactSpec spec_being_infused = 13;</code>
@@ -3480,6 +3541,8 @@ public object BackupKt {
       public fun hasSpecBeingInfused(): kotlin.Boolean {
         return _builder.hasSpecBeingInfused()
       }
+      public val ArtifactsKt.Dsl.specBeingInfusedOrNull: ei.Ei.ArtifactSpec?
+        get() = _builder.specBeingInfusedOrNull
 
       /**
        * <code>optional .ei.Egg egg_type_infusing = 3;</code>
@@ -3859,7 +3922,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeshells")
   public inline fun shells(block: ei.BackupKt.ShellsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Shells =
     ei.BackupKt.ShellsKt.Dsl._create(ei.Ei.Backup.Shells.newBuilder()).apply { block() }._build()
   public object ShellsKt {
@@ -3992,7 +4055,7 @@ public object BackupKt {
         _builder.clearNumNew()
       }}
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializesimulation")
   public inline fun simulation(block: ei.BackupKt.SimulationKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Simulation =
     ei.BackupKt.SimulationKt.Dsl._create(ei.Ei.Backup.Simulation.newBuilder()).apply { block() }._build()
   public object SimulationKt {
@@ -4783,7 +4846,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addCommonResearch")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.add(value: ei.Ei.Backup.ResearchItem) {
         _builder.addCommonResearch(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
        * @param value The commonResearch to add.
        */
@@ -4792,7 +4856,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.plusAssign(value: ei.Ei.Backup.ResearchItem) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
        * @param values The commonResearch to add.
        */
@@ -4800,7 +4865,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllCommonResearch")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
         _builder.addAllCommonResearch(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
        * @param values The commonResearch to add.
        */
@@ -4809,7 +4875,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
        * @param index The index to set the value at.
        * @param value The commonResearch to set.
@@ -4818,7 +4885,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setCommonResearch")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ResearchItem) {
         _builder.setCommonResearch(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -4826,6 +4894,8 @@ public object BackupKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.clear() {
         _builder.clearCommonResearch()
       }
+
+
       /**
        * An uninstantiable, behaviorless type to represent the field in
        * generics.
@@ -4848,7 +4918,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addActiveBoosts")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.add(value: ei.Ei.Backup.ActiveBoost) {
         _builder.addActiveBoosts(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
        * @param value The activeBoosts to add.
        */
@@ -4857,7 +4928,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.plusAssign(value: ei.Ei.Backup.ActiveBoost) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
        * @param values The activeBoosts to add.
        */
@@ -4865,7 +4937,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllActiveBoosts")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ActiveBoost>) {
         _builder.addAllActiveBoosts(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
        * @param values The activeBoosts to add.
        */
@@ -4874,7 +4947,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ActiveBoost>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
        * @param index The index to set the value at.
        * @param value The activeBoosts to set.
@@ -4883,7 +4957,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setActiveBoosts")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ActiveBoost) {
         _builder.setActiveBoosts(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
        */
       @kotlin.jvm.JvmSynthetic
@@ -4891,6 +4966,8 @@ public object BackupKt {
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.clear() {
         _builder.clearActiveBoosts()
       }
+
+
       /**
        * <code>optional double last_cash_boost_time = 31;</code>
        */
@@ -5084,7 +5161,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializemission")
   public inline fun mission(block: ei.BackupKt.MissionKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Mission =
     ei.BackupKt.MissionKt.Dsl._create(ei.Ei.Backup.Mission.newBuilder()).apply { block() }._build()
   public object MissionKt {
@@ -5243,7 +5320,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addMissions")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.MissionInfo, MissionsProxy>.add(value: ei.Ei.Backup.MissionInfo) {
         _builder.addMissions(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
        * @param value The missions to add.
        */
@@ -5252,7 +5330,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.MissionInfo, MissionsProxy>.plusAssign(value: ei.Ei.Backup.MissionInfo) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
        * @param values The missions to add.
        */
@@ -5260,7 +5339,8 @@ public object BackupKt {
       @kotlin.jvm.JvmName("addAllMissions")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.MissionInfo, MissionsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.MissionInfo>) {
         _builder.addAllMissions(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
        * @param values The missions to add.
        */
@@ -5269,7 +5349,8 @@ public object BackupKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.MissionInfo, MissionsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.MissionInfo>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
        * @param index The index to set the value at.
        * @param value The missions to set.
@@ -5278,16 +5359,19 @@ public object BackupKt {
       @kotlin.jvm.JvmName("setMissions")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.MissionInfo, MissionsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.MissionInfo) {
         _builder.setMissions(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearMissions")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.MissionInfo, MissionsProxy>.clear() {
         _builder.clearMissions()
-      }}
+      }
+
+    }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializemisc")
   public inline fun misc(block: ei.BackupKt.MiscKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Misc =
     ei.BackupKt.MiscKt.Dsl._create(ei.Ei.Backup.Misc.newBuilder()).apply { block() }._build()
   public object MiscKt {
@@ -5787,7 +5871,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeresearchItem")
   public inline fun researchItem(block: ei.BackupKt.ResearchItemKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.ResearchItem =
     ei.BackupKt.ResearchItemKt.Dsl._create(ei.Ei.Backup.ResearchItem.newBuilder()).apply { block() }._build()
   public object ResearchItemKt {
@@ -5855,7 +5939,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializenewsHeadline")
   public inline fun newsHeadline(block: ei.BackupKt.NewsHeadlineKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.NewsHeadline =
     ei.BackupKt.NewsHeadlineKt.Dsl._create(ei.Ei.Backup.NewsHeadline.newBuilder()).apply { block() }._build()
   public object NewsHeadlineKt {
@@ -5923,7 +6007,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeachievementInfo")
   public inline fun achievementInfo(block: ei.BackupKt.AchievementInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.AchievementInfo =
     ei.BackupKt.AchievementInfoKt.Dsl._create(ei.Ei.Backup.AchievementInfo.newBuilder()).apply { block() }._build()
   public object AchievementInfoKt {
@@ -5991,7 +6075,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeactiveBoost")
   public inline fun activeBoost(block: ei.BackupKt.ActiveBoostKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.ActiveBoost =
     ei.BackupKt.ActiveBoostKt.Dsl._create(ei.Ei.Backup.ActiveBoost.newBuilder()).apply { block() }._build()
   public object ActiveBoostKt {
@@ -6083,7 +6167,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializeownedBoost")
   public inline fun ownedBoost(block: ei.BackupKt.OwnedBoostKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.OwnedBoost =
     ei.BackupKt.OwnedBoostKt.Dsl._create(ei.Ei.Backup.OwnedBoost.newBuilder()).apply { block() }._build()
   public object OwnedBoostKt {
@@ -6151,7 +6235,7 @@ public object BackupKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializemissionInfo")
   public inline fun missionInfo(block: ei.BackupKt.MissionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.MissionInfo =
     ei.BackupKt.MissionInfoKt.Dsl._create(ei.Ei.Backup.MissionInfo.newBuilder()).apply { block() }._build()
   public object MissionInfoKt {
@@ -6247,48 +6331,106 @@ public object BackupKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.copy(block: ei.BackupKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup =
   ei.BackupKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Settings.copy(block: ei.BackupKt.SettingsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Settings =
   ei.BackupKt.SettingsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Tutorial.copy(block: ei.BackupKt.TutorialKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Tutorial =
   ei.BackupKt.TutorialKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Stats.copy(block: ei.BackupKt.StatsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Stats =
   ei.BackupKt.StatsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Game.copy(block: ei.BackupKt.GameKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Game =
   ei.BackupKt.GameKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Artifacts.copy(block: ei.BackupKt.ArtifactsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Artifacts =
   ei.BackupKt.ArtifactsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.Backup.ArtifactsOrBuilder.itemBeingInfusedOrNull: ei.Ei.ArtifactInventoryItem?
+  get() = if (hasItemBeingInfused()) getItemBeingInfused() else null
+
+val ei.Ei.Backup.ArtifactsOrBuilder.specBeingInfusedOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpecBeingInfused()) getSpecBeingInfused() else null
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Shells.copy(block: ei.BackupKt.ShellsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Shells =
   ei.BackupKt.ShellsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Simulation.copy(block: ei.BackupKt.SimulationKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Simulation =
   ei.BackupKt.SimulationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Mission.copy(block: ei.BackupKt.MissionKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Mission =
   ei.BackupKt.MissionKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Misc.copy(block: ei.BackupKt.MiscKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Misc =
   ei.BackupKt.MiscKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.ResearchItem.copy(block: ei.BackupKt.ResearchItemKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.ResearchItem =
   ei.BackupKt.ResearchItemKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.NewsHeadline.copy(block: ei.BackupKt.NewsHeadlineKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.NewsHeadline =
   ei.BackupKt.NewsHeadlineKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.AchievementInfo.copy(block: ei.BackupKt.AchievementInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.AchievementInfo =
   ei.BackupKt.AchievementInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.ActiveBoost.copy(block: ei.BackupKt.ActiveBoostKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.ActiveBoost =
   ei.BackupKt.ActiveBoostKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.OwnedBoost.copy(block: ei.BackupKt.OwnedBoostKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.OwnedBoost =
   ei.BackupKt.OwnedBoostKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.MissionInfo.copy(block: ei.BackupKt.MissionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.MissionInfo =
   ei.BackupKt.MissionInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.BackupOrBuilder.settingsOrNull: ei.Ei.Backup.Settings?
+  get() = if (hasSettings()) getSettings() else null
+
+val ei.Ei.BackupOrBuilder.tutorialOrNull: ei.Ei.Backup.Tutorial?
+  get() = if (hasTutorial()) getTutorial() else null
+
+val ei.Ei.BackupOrBuilder.statsOrNull: ei.Ei.Backup.Stats?
+  get() = if (hasStats()) getStats() else null
+
+val ei.Ei.BackupOrBuilder.gameOrNull: ei.Ei.Backup.Game?
+  get() = if (hasGame()) getGame() else null
+
+val ei.Ei.BackupOrBuilder.artifactsOrNull: ei.Ei.Backup.Artifacts?
+  get() = if (hasArtifacts()) getArtifacts() else null
+
+val ei.Ei.BackupOrBuilder.shellsOrNull: ei.Ei.Backup.Shells?
+  get() = if (hasShells()) getShells() else null
+
+val ei.Ei.BackupOrBuilder.simOrNull: ei.Ei.Backup.Simulation?
+  get() = if (hasSim()) getSim() else null
+
+val ei.Ei.BackupOrBuilder.missionOrNull: ei.Ei.Backup.Mission?
+  get() = if (hasMission()) getMission() else null
+
+val ei.Ei.BackupOrBuilder.miscOrNull: ei.Ei.Backup.Misc?
+  get() = if (hasMisc()) getMisc() else null
+
+val ei.Ei.BackupOrBuilder.contractsOrNull: ei.Ei.MyContracts?
+  get() = if (hasContracts()) getContracts() else null
+
+val ei.Ei.BackupOrBuilder.artifactsDbOrNull: ei.Ei.ArtifactsDB?
+  get() = if (hasArtifactsDb()) getArtifactsDb() else null
+
+val ei.Ei.BackupOrBuilder.shellDbOrNull: ei.Ei.ShellDB?
+  get() = if (hasShellDb()) getShellDb() else null
+

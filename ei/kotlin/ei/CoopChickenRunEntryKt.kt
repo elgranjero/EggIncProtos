@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecoopChickenRunEntry")
 public inline fun coopChickenRunEntry(block: ei.CoopChickenRunEntryKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopChickenRunEntry =
   ei.CoopChickenRunEntryKt.Dsl._create(ei.Ei.CoopChickenRunEntry.newBuilder()).apply { block() }._build()
 public object CoopChickenRunEntryKt {
@@ -74,3 +74,4 @@ public object CoopChickenRunEntryKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CoopChickenRunEntry.copy(block: ei.CoopChickenRunEntryKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopChickenRunEntry =
   ei.CoopChickenRunEntryKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeeggIncFirstContactResponse")
 public inline fun eggIncFirstContactResponse(block: ei.EggIncFirstContactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncFirstContactResponse =
   ei.EggIncFirstContactResponseKt.Dsl._create(ei.Ei.EggIncFirstContactResponse.newBuilder()).apply { block() }._build()
 public object EggIncFirstContactResponseKt {
@@ -187,8 +187,14 @@ public object EggIncFirstContactResponseKt {
     public fun hasBackup(): kotlin.Boolean {
       return _builder.hasBackup()
     }
+    public val EggIncFirstContactResponseKt.Dsl.backupOrNull: ei.Ei.Backup?
+      get() = _builder.backupOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.EggIncFirstContactResponse.copy(block: ei.EggIncFirstContactResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.EggIncFirstContactResponse =
   ei.EggIncFirstContactResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.EggIncFirstContactResponseOrBuilder.backupOrNull: ei.Ei.Backup?
+  get() = if (hasBackup()) getBackup() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontractsRequest")
 public inline fun contractsRequest(block: ei.ContractsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractsRequest =
   ei.ContractsRequestKt.Dsl._create(ei.Ei.ContractsRequest.newBuilder()).apply { block() }._build()
 public object ContractsRequestKt {
@@ -74,3 +74,4 @@ public object ContractsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractsRequest.copy(block: ei.ContractsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractsRequest =
   ei.ContractsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

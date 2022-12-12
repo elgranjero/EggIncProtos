@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializegetPeriodicalsRequest")
 public inline fun getPeriodicalsRequest(block: ei.GetPeriodicalsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.GetPeriodicalsRequest =
   ei.GetPeriodicalsRequestKt.Dsl._create(ei.Ei.GetPeriodicalsRequest.newBuilder()).apply { block() }._build()
 public object GetPeriodicalsRequestKt {
@@ -45,6 +45,8 @@ public object GetPeriodicalsRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val GetPeriodicalsRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string user_id = 1;</code>
@@ -362,3 +364,7 @@ public object GetPeriodicalsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.GetPeriodicalsRequest.copy(block: ei.GetPeriodicalsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.GetPeriodicalsRequest =
   ei.GetPeriodicalsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.GetPeriodicalsRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

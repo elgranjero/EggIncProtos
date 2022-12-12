@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontract")
 public inline fun contract(block: ei.ContractKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract =
   ei.ContractKt.Dsl._create(ei.Ei.Contract.newBuilder()).apply { block() }._build()
 public object ContractKt {
@@ -140,7 +140,8 @@ public object ContractKt {
     @kotlin.jvm.JvmName("addGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.add(value: ei.Ei.Contract.Goal) {
       _builder.addGoals(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param value The goals to add.
      */
@@ -149,7 +150,8 @@ public object ContractKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(value: ei.Ei.Contract.Goal) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param values The goals to add.
      */
@@ -157,7 +159,8 @@ public object ContractKt {
     @kotlin.jvm.JvmName("addAllGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
       _builder.addAllGoals(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param values The goals to add.
      */
@@ -166,7 +169,8 @@ public object ContractKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param index The index to set the value at.
      * @param value The goals to set.
@@ -175,7 +179,8 @@ public object ContractKt {
     @kotlin.jvm.JvmName("setGoals")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.Goal) {
       _builder.setGoals(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.Goal goals = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -183,6 +188,8 @@ public object ContractKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.clear() {
       _builder.clearGoals()
     }
+
+
     /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
@@ -205,7 +212,8 @@ public object ContractKt {
     @kotlin.jvm.JvmName("addGoalSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.add(value: ei.Ei.Contract.GoalSet) {
       _builder.addGoalSets(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param value The goalSets to add.
      */
@@ -214,7 +222,8 @@ public object ContractKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.plusAssign(value: ei.Ei.Contract.GoalSet) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param values The goalSets to add.
      */
@@ -222,7 +231,8 @@ public object ContractKt {
     @kotlin.jvm.JvmName("addAllGoalSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.GoalSet>) {
       _builder.addAllGoalSets(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param values The goalSets to add.
      */
@@ -231,7 +241,8 @@ public object ContractKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.GoalSet>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param index The index to set the value at.
      * @param value The goalSets to set.
@@ -240,7 +251,8 @@ public object ContractKt {
     @kotlin.jvm.JvmName("setGoalSets")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.GoalSet) {
       _builder.setGoalSets(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      */
     @kotlin.jvm.JvmSynthetic
@@ -248,6 +260,80 @@ public object ContractKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.clear() {
       _builder.clearGoalSets()
     }
+
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class GradeSpecsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     */
+     public val gradeSpecs: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getGradeSpecsList()
+      )
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * @param value The gradeSpecs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addGradeSpecs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.add(value: ei.Ei.Contract.GradeSpec) {
+      _builder.addGradeSpecs(value)
+    }
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * @param value The gradeSpecs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignGradeSpecs")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.plusAssign(value: ei.Ei.Contract.GradeSpec) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * @param values The gradeSpecs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllGradeSpecs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.GradeSpec>) {
+      _builder.addAllGradeSpecs(values)
+    }
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * @param values The gradeSpecs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllGradeSpecs")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.GradeSpec>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * @param index The index to set the value at.
+     * @param value The gradeSpecs to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setGradeSpecs")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.GradeSpec) {
+      _builder.setGradeSpecs(index, value)
+    }
+    /**
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearGradeSpecs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.clear() {
+      _builder.clearGradeSpecs()
+    }
+
+
     /**
      * <code>optional bool coop_allowed = 4;</code>
      */
@@ -535,8 +621,32 @@ public object ContractKt {
     public fun hasDebug(): kotlin.Boolean {
       return _builder.hasDebug()
     }
+
+    /**
+     * <code>optional string key = 21;</code>
+     */
+    public var key: kotlin.String
+      @JvmName("getKey")
+      get() = _builder.getKey()
+      @JvmName("setKey")
+      set(value) {
+        _builder.setKey(value)
+      }
+    /**
+     * <code>optional string key = 21;</code>
+     */
+    public fun clearKey() {
+      _builder.clearKey()
+    }
+    /**
+     * <code>optional string key = 21;</code>
+     * @return Whether the key field is set.
+     */
+    public fun hasKey(): kotlin.Boolean {
+      return _builder.hasKey()
+    }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializegoal")
   public inline fun goal(block: ei.ContractKt.GoalKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract.Goal =
     ei.ContractKt.GoalKt.Dsl._create(ei.Ei.Contract.Goal.newBuilder()).apply { block() }._build()
   public object GoalKt {
@@ -700,7 +810,7 @@ public object ContractKt {
       }
     }
   }
-  @kotlin.jvm.JvmSynthetic
+  @kotlin.jvm.JvmName("-initializegoalSet")
   public inline fun goalSet(block: ei.ContractKt.GoalSetKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract.GoalSet =
     ei.ContractKt.GoalSetKt.Dsl._create(ei.Ei.Contract.GoalSet.newBuilder()).apply { block() }._build()
   public object GoalSetKt {
@@ -741,7 +851,8 @@ public object ContractKt {
       @kotlin.jvm.JvmName("addGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.add(value: ei.Ei.Contract.Goal) {
         _builder.addGoals(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param value The goals to add.
        */
@@ -750,7 +861,8 @@ public object ContractKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(value: ei.Ei.Contract.Goal) {
         add(value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param values The goals to add.
        */
@@ -758,7 +870,8 @@ public object ContractKt {
       @kotlin.jvm.JvmName("addAllGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
         _builder.addAllGoals(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param values The goals to add.
        */
@@ -767,7 +880,8 @@ public object ContractKt {
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
         addAll(values)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param index The index to set the value at.
        * @param value The goals to set.
@@ -776,22 +890,220 @@ public object ContractKt {
       @kotlin.jvm.JvmName("setGoals")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.Goal) {
         _builder.setGoals(index, value)
-      }/**
+      }
+      /**
        * <code>repeated .ei.Contract.Goal goals = 1;</code>
        */
       @kotlin.jvm.JvmSynthetic
       @kotlin.jvm.JvmName("clearGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.clear() {
         _builder.clearGoals()
-      }}
+      }
+
+    }
+  }
+  @kotlin.jvm.JvmName("-initializegradeSpec")
+  public inline fun gradeSpec(block: ei.ContractKt.GradeSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract.GradeSpec =
+    ei.ContractKt.GradeSpecKt.Dsl._create(ei.Ei.Contract.GradeSpec.newBuilder()).apply { block() }._build()
+  public object GradeSpecKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.Contract.GradeSpec.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.Contract.GradeSpec.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.Contract.GradeSpec = _builder.build()
+
+      /**
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       */
+      public var grade: ei.Ei.Contract.PlayerGrade
+        @JvmName("getGrade")
+        get() = _builder.getGrade()
+        @JvmName("setGrade")
+        set(value) {
+          _builder.setGrade(value)
+        }
+      /**
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       */
+      public fun clearGrade() {
+        _builder.clearGrade()
+      }
+      /**
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * @return Whether the grade field is set.
+       */
+      public fun hasGrade(): kotlin.Boolean {
+        return _builder.hasGrade()
+      }
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class GoalsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       */
+       public val goals: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>
+        @kotlin.jvm.JvmSynthetic
+        get() = com.google.protobuf.kotlin.DslList(
+          _builder.getGoalsList()
+        )
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * @param value The goals to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addGoals")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.add(value: ei.Ei.Contract.Goal) {
+        _builder.addGoals(value)
+      }
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * @param value The goals to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignGoals")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(value: ei.Ei.Contract.Goal) {
+        add(value)
+      }
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * @param values The goals to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addAllGoals")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
+        _builder.addAllGoals(values)
+      }
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * @param values The goals to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignAllGoals")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
+        addAll(values)
+      }
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The goals to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("setGoals")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.Goal) {
+        _builder.setGoals(index, value)
+      }
+      /**
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("clearGoals")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.clear() {
+        _builder.clearGoals()
+      }
+
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class ModifiersProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       */
+       public val modifiers: com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>
+        @kotlin.jvm.JvmSynthetic
+        get() = com.google.protobuf.kotlin.DslList(
+          _builder.getModifiersList()
+        )
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * @param value The modifiers to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addModifiers")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.add(value: ei.Ei.GameModifier) {
+        _builder.addModifiers(value)
+      }
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * @param value The modifiers to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignModifiers")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.plusAssign(value: ei.Ei.GameModifier) {
+        add(value)
+      }
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * @param values The modifiers to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addAllModifiers")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.GameModifier>) {
+        _builder.addAllModifiers(values)
+      }
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * @param values The modifiers to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignAllModifiers")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.GameModifier>) {
+        addAll(values)
+      }
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The modifiers to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("setModifiers")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.set(index: kotlin.Int, value: ei.Ei.GameModifier) {
+        _builder.setModifiers(index, value)
+      }
+      /**
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("clearModifiers")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.clear() {
+        _builder.clearModifiers()
+      }
+
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Contract.copy(block: ei.ContractKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract =
   ei.ContractKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Contract.Goal.copy(block: ei.ContractKt.GoalKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract.Goal =
   ei.ContractKt.GoalKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Contract.GoalSet.copy(block: ei.ContractKt.GoalSetKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract.GoalSet =
   ei.ContractKt.GoalSetKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.Contract.GradeSpec.copy(block: ei.ContractKt.GradeSpecKt.Dsl.() -> kotlin.Unit): ei.Ei.Contract.GradeSpec =
+  ei.ContractKt.GradeSpecKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

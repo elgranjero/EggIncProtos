@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecollectContractArtifactRewardsRequest")
 public inline fun collectContractArtifactRewardsRequest(block: ei.CollectContractArtifactRewardsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CollectContractArtifactRewardsRequest =
   ei.CollectContractArtifactRewardsRequestKt.Dsl._create(ei.Ei.CollectContractArtifactRewardsRequest.newBuilder()).apply { block() }._build()
 public object CollectContractArtifactRewardsRequestKt {
@@ -45,6 +45,8 @@ public object CollectContractArtifactRewardsRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val CollectContractArtifactRewardsRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 2;</code>
@@ -146,3 +148,7 @@ public object CollectContractArtifactRewardsRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CollectContractArtifactRewardsRequest.copy(block: ei.CollectContractArtifactRewardsRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.CollectContractArtifactRewardsRequest =
   ei.CollectContractArtifactRewardsRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.CollectContractArtifactRewardsRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

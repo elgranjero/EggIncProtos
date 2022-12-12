@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializelogCompleteMissionPayload")
 public inline fun logCompleteMissionPayload(block: ei.LogCompleteMissionPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogCompleteMissionPayload =
   ei.LogCompleteMissionPayloadKt.Dsl._create(ei.Ei.LogCompleteMissionPayload.newBuilder()).apply { block() }._build()
 public object LogCompleteMissionPayloadKt {
@@ -45,6 +45,8 @@ public object LogCompleteMissionPayloadKt {
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
     }
+    public val LogCompleteMissionPayloadKt.Dsl.reqOrNull: ei.Ei.MissionRequest?
+      get() = _builder.reqOrNull
 
     /**
      * <code>optional .ei.CompleteMissionResponse res = 2;</code>
@@ -69,8 +71,17 @@ public object LogCompleteMissionPayloadKt {
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()
     }
+    public val LogCompleteMissionPayloadKt.Dsl.resOrNull: ei.Ei.CompleteMissionResponse?
+      get() = _builder.resOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LogCompleteMissionPayload.copy(block: ei.LogCompleteMissionPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.LogCompleteMissionPayload =
   ei.LogCompleteMissionPayloadKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.LogCompleteMissionPayloadOrBuilder.reqOrNull: ei.Ei.MissionRequest?
+  get() = if (hasReq()) getReq() else null
+
+val ei.Ei.LogCompleteMissionPayloadOrBuilder.resOrNull: ei.Ei.CompleteMissionResponse?
+  get() = if (hasRes()) getRes() else null
+

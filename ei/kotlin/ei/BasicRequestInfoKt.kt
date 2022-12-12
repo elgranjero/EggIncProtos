@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializebasicRequestInfo")
 public inline fun basicRequestInfo(block: ei.BasicRequestInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.BasicRequestInfo =
   ei.BasicRequestInfoKt.Dsl._create(ei.Ei.BasicRequestInfo.newBuilder()).apply { block() }._build()
 public object BasicRequestInfoKt {
@@ -218,3 +218,4 @@ public object BasicRequestInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.BasicRequestInfo.copy(block: ei.BasicRequestInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.BasicRequestInfo =
   ei.BasicRequestInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

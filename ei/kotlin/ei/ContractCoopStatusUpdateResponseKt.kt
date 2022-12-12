@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontractCoopStatusUpdateResponse")
 public inline fun contractCoopStatusUpdateResponse(block: ei.ContractCoopStatusUpdateResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusUpdateResponse =
   ei.ContractCoopStatusUpdateResponseKt.Dsl._create(ei.Ei.ContractCoopStatusUpdateResponse.newBuilder()).apply { block() }._build()
 public object ContractCoopStatusUpdateResponseKt {
@@ -98,3 +98,4 @@ public object ContractCoopStatusUpdateResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusUpdateResponse.copy(block: ei.ContractCoopStatusUpdateResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusUpdateResponse =
   ei.ContractCoopStatusUpdateResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -113,6 +113,7 @@ proto.ei.ShellSpec.toObject = function(includeInstance, msg) {
     price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    requiredParentShell: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
     isNew: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
     expires: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
     secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
@@ -196,6 +197,10 @@ proto.ei.ShellSpec.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setRequiredSoulEggs(value);
+      break;
+    case 20:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRequiredParentShell(value);
       break;
     case 14:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -316,6 +321,13 @@ proto.ei.ShellSpec.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       6,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 20));
+  if (f != null) {
+    writer.writeString(
+      20,
       f
     );
   }
@@ -1020,6 +1032,42 @@ proto.ei.ShellSpec.prototype.clearRequiredSoulEggs = function() {
  */
 proto.ei.ShellSpec.prototype.hasRequiredSoulEggs = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string required_parent_shell = 20;
+ * @return {string}
+ */
+proto.ei.ShellSpec.prototype.getRequiredParentShell = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 20, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.setRequiredParentShell = function(value) {
+  return jspb.Message.setField(this, 20, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellSpec} returns this
+ */
+proto.ei.ShellSpec.prototype.clearRequiredParentShell = function() {
+  return jspb.Message.setField(this, 20, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellSpec.prototype.hasRequiredParentShell = function() {
+  return jspb.Message.getField(this, 20) != null;
 };
 
 

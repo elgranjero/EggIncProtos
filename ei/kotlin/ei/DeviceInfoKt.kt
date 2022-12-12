@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializedeviceInfo")
 public inline fun deviceInfo(block: ei.DeviceInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.DeviceInfo =
   ei.DeviceInfoKt.Dsl._create(ei.Ei.DeviceInfo.newBuilder()).apply { block() }._build()
 public object DeviceInfoKt {
@@ -338,3 +338,4 @@ public object DeviceInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.DeviceInfo.copy(block: ei.DeviceInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.DeviceInfo =
   ei.DeviceInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

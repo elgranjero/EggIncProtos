@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeappInfo")
 public inline fun appInfo(block: ei.AppInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.AppInfo =
   ei.AppInfoKt.Dsl._create(ei.Ei.AppInfo.newBuilder()).apply { block() }._build()
 public object AppInfoKt {
@@ -722,3 +722,4 @@ public object AppInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AppInfo.copy(block: ei.AppInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.AppInfo =
   ei.AppInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

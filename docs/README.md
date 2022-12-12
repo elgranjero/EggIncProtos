@@ -57,6 +57,7 @@
     - [Contract](#ei-Contract)
     - [Contract.Goal](#ei-Contract-Goal)
     - [Contract.GoalSet](#ei-Contract-GoalSet)
+    - [Contract.GradeSpec](#ei-Contract-GradeSpec)
     - [ContractCoopStatusRequest](#ei-ContractCoopStatusRequest)
     - [ContractCoopStatusResponse](#ei-ContractCoopStatusResponse)
     - [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun)
@@ -64,6 +65,14 @@
     - [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift)
     - [ContractCoopStatusUpdateRequest](#ei-ContractCoopStatusUpdateRequest)
     - [ContractCoopStatusUpdateResponse](#ei-ContractCoopStatusUpdateResponse)
+    - [ContractPlayerInfo](#ei-ContractPlayerInfo)
+    - [ContractSimConfig](#ei-ContractSimConfig)
+    - [ContractSimConfig.ContractGradeSimConfig](#ei-ContractSimConfig-ContractGradeSimConfig)
+    - [ContractSimConfig.ContractGradeSimConfig.GoalParams](#ei-ContractSimConfig-ContractGradeSimConfig-GoalParams)
+    - [ContractSimPoll](#ei-ContractSimPoll)
+    - [ContractSimPollResponse](#ei-ContractSimPollResponse)
+    - [ContractSimResultUpdate](#ei-ContractSimResultUpdate)
+    - [ContractSimResultUpdate.GoalInfo](#ei-ContractSimResultUpdate-GoalInfo)
     - [ContractsRequest](#ei-ContractsRequest)
     - [ContractsResponse](#ei-ContractsResponse)
     - [CoopBuffHistory](#ei-CoopBuffHistory)
@@ -86,6 +95,7 @@
     - [EggIncFirstContactRequest](#ei-EggIncFirstContactRequest)
     - [EggIncFirstContactResponse](#ei-EggIncFirstContactResponse)
     - [FarmProductionParams](#ei-FarmProductionParams)
+    - [GameModifier](#ei-GameModifier)
     - [GenericAction](#ei-GenericAction)
     - [GenericActionBatchRequest](#ei-GenericActionBatchRequest)
     - [GetPeriodicalsRequest](#ei-GetPeriodicalsRequest)
@@ -158,11 +168,13 @@
     - [ArtifactSpec.Name](#ei-ArtifactSpec-Name)
     - [ArtifactSpec.Rarity](#ei-ArtifactSpec-Rarity)
     - [ArtifactSpec.Type](#ei-ArtifactSpec-Type)
+    - [Contract.PlayerGrade](#ei-Contract-PlayerGrade)
     - [ContractCoopStatusResponse.MemberStatus](#ei-ContractCoopStatusResponse-MemberStatus)
     - [DeviceFormFactor](#ei-DeviceFormFactor)
     - [Egg](#ei-Egg)
     - [EggIncFirstContactResponse.ErrorCodes](#ei-EggIncFirstContactResponse-ErrorCodes)
     - [FarmType](#ei-FarmType)
+    - [GameDimension](#ei-GameDimension)
     - [GoalType](#ei-GoalType)
     - [KickPlayerCoopRequest.Reason](#ei-KickPlayerCoopRequest-Reason)
     - [MissionInfo.DurationType](#ei-MissionInfo-DurationType)
@@ -1303,6 +1315,7 @@
 | egg | [Egg](#ei-Egg) | optional |  |
 | goals | [Contract.Goal](#ei-Contract-Goal) | repeated |  |
 | goal_sets | [Contract.GoalSet](#ei-Contract-GoalSet) | repeated |  |
+| grade_specs | [Contract.GradeSpec](#ei-Contract-GradeSpec) | repeated |  |
 | coop_allowed | [bool](#bool) | optional |  |
 | max_coop_size | [uint32](#uint32) | optional |  |
 | max_boosts | [uint32](#uint32) | optional |  |
@@ -1315,6 +1328,7 @@
 | min_client_version | [uint32](#uint32) | optional |  |
 | leggacy | [bool](#bool) | optional |  |
 | debug | [bool](#bool) | optional |  |
+| key | [string](#string) | optional |  |
 
 
 
@@ -1350,6 +1364,23 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | goals | [Contract.Goal](#ei-Contract-Goal) | repeated |  |
+
+
+
+
+
+
+<a name="ei-Contract-GradeSpec"></a>
+
+### Contract.GradeSpec
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| goals | [Contract.Goal](#ei-Contract-Goal) | repeated |  |
+| modifiers | [GameModifier](#ei-GameModifier) | repeated |  |
 
 
 
@@ -1511,6 +1542,134 @@
 | finalized | [bool](#bool) | optional |  |
 | exists | [bool](#bool) | optional |  |
 | status | [ContractCoopStatusResponse.MemberStatus](#ei-ContractCoopStatusResponse-MemberStatus) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractPlayerInfo"></a>
+
+### ContractPlayerInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| total_cxp | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractSimConfig"></a>
+
+### ContractSimConfig
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| grade_configs | [ContractSimConfig.ContractGradeSimConfig](#ei-ContractSimConfig-ContractGradeSimConfig) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractSimConfig-ContractGradeSimConfig"></a>
+
+### ContractSimConfig.ContractGradeSimConfig
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| goal_params | [ContractSimConfig.ContractGradeSimConfig.GoalParams](#ei-ContractSimConfig-ContractGradeSimConfig-GoalParams) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractSimConfig-ContractGradeSimConfig-GoalParams"></a>
+
+### ContractSimConfig.ContractGradeSimConfig.GoalParams
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| target_se | [double](#double) | optional |  |
+| cps_mult | [double](#double) | optional |  |
+| earnings_mult | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractSimPoll"></a>
+
+### ContractSimPoll
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| client_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractSimPollResponse"></a>
+
+### ContractSimPollResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contract_to_simulate | [Contract](#ei-Contract) | optional |  |
+| sim_config | [ContractSimConfig](#ei-ContractSimConfig) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractSimResultUpdate"></a>
+
+### ContractSimResultUpdate
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contract_id | [string](#string) | optional |  |
+| goal_infos | [ContractSimResultUpdate.GoalInfo](#ei-ContractSimResultUpdate-GoalInfo) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractSimResultUpdate-GoalInfo"></a>
+
+### ContractSimResultUpdate.GoalInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| goal_index | [uint32](#uint32) | optional |  |
+| projected_eggs_laid | [double](#double) | optional |  |
 
 
 
@@ -1931,6 +2090,23 @@
 
 
 
+<a name="ei-GameModifier"></a>
+
+### GameModifier
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| dimension | [GameDimension](#ei-GameDimension) | optional |  |
+| value_modifier | [double](#double) | optional |  |
+| description | [string](#string) | optional |  |
+
+
+
+
+
+
 <a name="ei-GenericAction"></a>
 
 ### GenericAction
@@ -2303,6 +2479,7 @@
 | shells_max_free_chicken_configs | [uint32](#uint32) | optional |  |
 | shells_intro_alert_threshold | [uint32](#uint32) | optional |  |
 | contracts_expert_league_min_soul_power | [double](#double) | optional |  |
+| new_player_event_duration | [double](#double) | optional |  |
 
 
 
@@ -2333,6 +2510,7 @@
 | num_goals_achieved | [uint32](#uint32) | optional |  |
 | boosts_used | [uint32](#uint32) | optional |  |
 | league | [uint32](#uint32) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | last_nag_time | [double](#double) | optional |  |
 
 
@@ -2528,6 +2706,7 @@
 | gifts | [ServerGift](#ei-ServerGift) | repeated |  |
 | live_config | [LiveConfig](#ei-LiveConfig) | optional |  |
 | mail_bag | [MailDB](#ei-MailDB) | optional |  |
+| contract_player_info | [ContractPlayerInfo](#ei-ContractPlayerInfo) | optional |  |
 
 
 
@@ -3026,6 +3205,7 @@
 | discount | [double](#double) | optional |  |
 | required_eop | [uint32](#uint32) | optional |  |
 | required_soul_eggs | [double](#double) | optional |  |
+| required_parent_set | [string](#string) | optional |  |
 | is_new | [bool](#bool) | optional |  |
 | expires | [bool](#bool) | optional |  |
 | seconds_until_available | [double](#double) | optional |  |
@@ -3082,6 +3262,7 @@
 | price | [uint32](#uint32) | optional |  |
 | required_eop | [uint32](#uint32) | optional |  |
 | required_soul_eggs | [double](#double) | optional |  |
+| required_parent_shell | [string](#string) | optional |  |
 | is_new | [bool](#bool) | optional |  |
 | expires | [bool](#bool) | optional |  |
 | seconds_until_available | [double](#double) | optional |  |
@@ -3369,6 +3550,22 @@
 
 
 
+<a name="ei-Contract-PlayerGrade"></a>
+
+### Contract.PlayerGrade
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| GRADE_UNSET | 0 |  |
+| GRADE_C | 1 |  |
+| GRADE_B | 2 |  |
+| GRADE_A | 3 |  |
+| GRADE_AA | 4 |  |
+| GRADE_AAA | 5 |  |
+
+
+
 <a name="ei-ContractCoopStatusResponse-MemberStatus"></a>
 
 ### ContractCoopStatusResponse.MemberStatus
@@ -3455,6 +3652,18 @@
 | EMPTY | 1 |  |
 | HOME | 2 |  |
 | CONTRACT | 3 |  |
+
+
+
+<a name="ei-GameDimension"></a>
+
+### GameDimension
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| EARNINGS | 1 |  |
+| AWAY_EARNINGS | 3 |  |
 
 
 

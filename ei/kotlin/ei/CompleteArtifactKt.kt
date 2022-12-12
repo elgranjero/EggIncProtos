@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecompleteArtifact")
 public inline fun completeArtifact(block: ei.CompleteArtifactKt.Dsl.() -> kotlin.Unit): ei.Ei.CompleteArtifact =
   ei.CompleteArtifactKt.Dsl._create(ei.Ei.CompleteArtifact.newBuilder()).apply { block() }._build()
 public object CompleteArtifactKt {
@@ -45,6 +45,8 @@ public object CompleteArtifactKt {
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
     }
+    public val CompleteArtifactKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
+      get() = _builder.specOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -68,7 +70,8 @@ public object CompleteArtifactKt {
     @kotlin.jvm.JvmName("addStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addStones(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param value The stones to add.
      */
@@ -77,7 +80,8 @@ public object CompleteArtifactKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param values The stones to add.
      */
@@ -85,7 +89,8 @@ public object CompleteArtifactKt {
     @kotlin.jvm.JvmName("addAllStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllStones(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param values The stones to add.
      */
@@ -94,7 +99,8 @@ public object CompleteArtifactKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param index The index to set the value at.
      * @param value The stones to set.
@@ -103,15 +109,22 @@ public object CompleteArtifactKt {
     @kotlin.jvm.JvmName("setStones")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setStones(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.clear() {
       _builder.clearStones()
-    }}
+    }
+
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CompleteArtifact.copy(block: ei.CompleteArtifactKt.Dsl.() -> kotlin.Unit): ei.Ei.CompleteArtifact =
   ei.CompleteArtifactKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.CompleteArtifactOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpec()) getSpec() else null
+

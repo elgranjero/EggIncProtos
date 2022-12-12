@@ -2383,7 +2383,8 @@ proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
     shellsIntroTickets: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
     shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-    contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f
+    contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2459,6 +2460,10 @@ proto.ei.LiveConfig.MiscConfig.deserializeBinaryFromReader = function(msg, reade
     case 10:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setContractsExpertLeagueMinSoulPower(value);
+      break;
+    case 11:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setNewPlayerEventDuration(value);
       break;
     default:
       reader.skipField();
@@ -2556,6 +2561,13 @@ proto.ei.LiveConfig.MiscConfig.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeDouble(
       10,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 11));
+  if (f != null) {
+    writer.writeDouble(
+      11,
       f
     );
   }
@@ -2919,6 +2931,42 @@ proto.ei.LiveConfig.MiscConfig.prototype.clearContractsExpertLeagueMinSoulPower 
  */
 proto.ei.LiveConfig.MiscConfig.prototype.hasContractsExpertLeagueMinSoulPower = function() {
   return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional double new_player_event_duration = 11;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getNewPlayerEventDuration = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setNewPlayerEventDuration = function(value) {
+  return jspb.Message.setField(this, 11, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearNewPlayerEventDuration = function() {
+  return jspb.Message.setField(this, 11, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasNewPlayerEventDuration = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecreateCoopResponse")
 public inline fun createCoopResponse(block: ei.CreateCoopResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.CreateCoopResponse =
   ei.CreateCoopResponseKt.Dsl._create(ei.Ei.CreateCoopResponse.newBuilder()).apply { block() }._build()
 public object CreateCoopResponseKt {
@@ -74,3 +74,4 @@ public object CreateCoopResponseKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.CreateCoopResponse.copy(block: ei.CreateCoopResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.CreateCoopResponse =
   ei.CreateCoopResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializecontractCoopStatusRequest")
 public inline fun contractCoopStatusRequest(block: ei.ContractCoopStatusRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusRequest =
   ei.ContractCoopStatusRequestKt.Dsl._create(ei.Ei.ContractCoopStatusRequest.newBuilder()).apply { block() }._build()
 public object ContractCoopStatusRequestKt {
@@ -45,6 +45,8 @@ public object ContractCoopStatusRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ContractCoopStatusRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string contract_identifier = 1;</code>
@@ -146,3 +148,7 @@ public object ContractCoopStatusRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusRequest.copy(block: ei.ContractCoopStatusRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusRequest =
   ei.ContractCoopStatusRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ContractCoopStatusRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+

@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeartifactsClientInfo")
 public inline fun artifactsClientInfo(block: ei.ArtifactsClientInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsClientInfo =
   ei.ArtifactsClientInfoKt.Dsl._create(ei.Ei.ArtifactsClientInfo.newBuilder()).apply { block() }._build()
 public object ArtifactsClientInfoKt {
@@ -116,7 +116,8 @@ public object ArtifactsClientInfoKt {
     @kotlin.jvm.JvmName("addLaunchCounts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.add(value: ei.Ei.ArtifactsClientInfo.LaunchCount) {
       _builder.addLaunchCounts(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param value The launchCounts to add.
      */
@@ -125,7 +126,8 @@ public object ArtifactsClientInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.plusAssign(value: ei.Ei.ArtifactsClientInfo.LaunchCount) {
       add(value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param values The launchCounts to add.
      */
@@ -133,7 +135,8 @@ public object ArtifactsClientInfoKt {
     @kotlin.jvm.JvmName("addAllLaunchCounts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsClientInfo.LaunchCount>) {
       _builder.addAllLaunchCounts(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param values The launchCounts to add.
      */
@@ -142,7 +145,8 @@ public object ArtifactsClientInfoKt {
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsClientInfo.LaunchCount>) {
       addAll(values)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param index The index to set the value at.
      * @param value The launchCounts to set.
@@ -151,15 +155,18 @@ public object ArtifactsClientInfoKt {
     @kotlin.jvm.JvmName("setLaunchCounts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsClientInfo.LaunchCount) {
       _builder.setLaunchCounts(index, value)
-    }/**
+    }
+    /**
      * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearLaunchCounts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.clear() {
       _builder.clearLaunchCounts()
-    }}
-  @kotlin.jvm.JvmSynthetic
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializelaunchCount")
   public inline fun launchCount(block: ei.ArtifactsClientInfoKt.LaunchCountKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsClientInfo.LaunchCount =
     ei.ArtifactsClientInfoKt.LaunchCountKt.Dsl._create(ei.Ei.ArtifactsClientInfo.LaunchCount.newBuilder()).apply { block() }._build()
   public object LaunchCountKt {
@@ -255,6 +262,8 @@ public object ArtifactsClientInfoKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsClientInfo.copy(block: ei.ArtifactsClientInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsClientInfo =
   ei.ArtifactsClientInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsClientInfo.LaunchCount.copy(block: ei.ArtifactsClientInfoKt.LaunchCountKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsClientInfo.LaunchCount =
   ei.ArtifactsClientInfoKt.LaunchCountKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

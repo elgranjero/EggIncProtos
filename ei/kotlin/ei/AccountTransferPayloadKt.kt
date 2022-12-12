@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeaccountTransferPayload")
 public inline fun accountTransferPayload(block: ei.AccountTransferPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.AccountTransferPayload =
   ei.AccountTransferPayloadKt.Dsl._create(ei.Ei.AccountTransferPayload.newBuilder()).apply { block() }._build()
 public object AccountTransferPayloadKt {
@@ -74,3 +74,4 @@ public object AccountTransferPayloadKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.AccountTransferPayload.copy(block: ei.AccountTransferPayloadKt.Dsl.() -> kotlin.Unit): ei.Ei.AccountTransferPayload =
   ei.AccountTransferPayloadKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+

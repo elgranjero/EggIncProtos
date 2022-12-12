@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeverifyPurchaseRequest")
 public inline fun verifyPurchaseRequest(block: ei.VerifyPurchaseRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.VerifyPurchaseRequest =
   ei.VerifyPurchaseRequestKt.Dsl._create(ei.Ei.VerifyPurchaseRequest.newBuilder()).apply { block() }._build()
 public object VerifyPurchaseRequestKt {
@@ -45,6 +45,8 @@ public object VerifyPurchaseRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val VerifyPurchaseRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string sku = 1;</code>
@@ -189,8 +191,17 @@ public object VerifyPurchaseRequestKt {
     public fun hasLog(): kotlin.Boolean {
       return _builder.hasLog()
     }
+    public val VerifyPurchaseRequestKt.Dsl.logOrNull: ei.Ei.GenericAction?
+      get() = _builder.logOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.VerifyPurchaseRequest.copy(block: ei.VerifyPurchaseRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.VerifyPurchaseRequest =
   ei.VerifyPurchaseRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.VerifyPurchaseRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
+val ei.Ei.VerifyPurchaseRequestOrBuilder.logOrNull: ei.Ei.GenericAction?
+  get() = if (hasLog()) getLog() else null
+

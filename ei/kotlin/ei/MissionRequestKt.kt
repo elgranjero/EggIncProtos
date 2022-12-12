@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializemissionRequest")
 public inline fun missionRequest(block: ei.MissionRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionRequest =
   ei.MissionRequestKt.Dsl._create(ei.Ei.MissionRequest.newBuilder()).apply { block() }._build()
 public object MissionRequestKt {
@@ -45,6 +45,8 @@ public object MissionRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val MissionRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional uint32 client_version = 1;</code>
@@ -117,6 +119,8 @@ public object MissionRequestKt {
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
     }
+    public val MissionRequestKt.Dsl.infoOrNull: ei.Ei.MissionInfo?
+      get() = _builder.infoOrNull
 
     /**
      * <code>optional .ei.ArtifactsClientInfo client_info = 5;</code>
@@ -141,8 +145,20 @@ public object MissionRequestKt {
     public fun hasClientInfo(): kotlin.Boolean {
       return _builder.hasClientInfo()
     }
+    public val MissionRequestKt.Dsl.clientInfoOrNull: ei.Ei.ArtifactsClientInfo?
+      get() = _builder.clientInfoOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MissionRequest.copy(block: ei.MissionRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.MissionRequest =
   ei.MissionRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.MissionRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
+val ei.Ei.MissionRequestOrBuilder.infoOrNull: ei.Ei.MissionInfo?
+  get() = if (hasInfo()) getInfo() else null
+
+val ei.Ei.MissionRequestOrBuilder.clientInfoOrNull: ei.Ei.ArtifactsClientInfo?
+  get() = if (hasClientInfo()) getClientInfo() else null
+

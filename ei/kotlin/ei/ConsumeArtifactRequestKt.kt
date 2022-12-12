@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeconsumeArtifactRequest")
 public inline fun consumeArtifactRequest(block: ei.ConsumeArtifactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ConsumeArtifactRequest =
   ei.ConsumeArtifactRequestKt.Dsl._create(ei.Ei.ConsumeArtifactRequest.newBuilder()).apply { block() }._build()
 public object ConsumeArtifactRequestKt {
@@ -45,6 +45,8 @@ public object ConsumeArtifactRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val ConsumeArtifactRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string ei_user_id = 3;</code>
@@ -93,6 +95,8 @@ public object ConsumeArtifactRequestKt {
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
     }
+    public val ConsumeArtifactRequestKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
+      get() = _builder.specOrNull
 
     /**
      * <code>optional string artifact_server_id = 5;</code>
@@ -305,3 +309,10 @@ public object ConsumeArtifactRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ConsumeArtifactRequest.copy(block: ei.ConsumeArtifactRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.ConsumeArtifactRequest =
   ei.ConsumeArtifactRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ConsumeArtifactRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
+val ei.Ei.ConsumeArtifactRequestOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
+  get() = if (hasSpec()) getSpec() else null
+

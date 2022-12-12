@@ -3,7 +3,7 @@
 
 package ei;
 
-@kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("-initializeuserDataInfoRequest")
 public inline fun userDataInfoRequest(block: ei.UserDataInfoRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.UserDataInfoRequest =
   ei.UserDataInfoRequestKt.Dsl._create(ei.Ei.UserDataInfoRequest.newBuilder()).apply { block() }._build()
 public object UserDataInfoRequestKt {
@@ -45,6 +45,8 @@ public object UserDataInfoRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+    public val UserDataInfoRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
 
     /**
      * <code>optional string user_id = 1;</code>
@@ -122,3 +124,7 @@ public object UserDataInfoRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.UserDataInfoRequest.copy(block: ei.UserDataInfoRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.UserDataInfoRequest =
   ei.UserDataInfoRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.UserDataInfoRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
+
