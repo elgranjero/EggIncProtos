@@ -16,6 +16,7 @@ goog.provide('proto.ei.PeriodicalsResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ei.ContractEvaluation');
 goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.ContractsResponse');
 goog.require('proto.ei.EggIncCurrentEvents');
@@ -51,7 +52,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.PeriodicalsResponse.repeatedFields_ = [4];
+proto.ei.PeriodicalsResponse.repeatedFields_ = [8,4];
 
 
 
@@ -87,6 +88,8 @@ proto.ei.PeriodicalsResponse.toObject = function(includeInstance, msg) {
     sales: (f = msg.getSales()) && proto.ei.SalesInfo.toObject(includeInstance, f),
     events: (f = msg.getEvents()) && proto.ei.EggIncCurrentEvents.toObject(includeInstance, f),
     contracts: (f = msg.getContracts()) && proto.ei.ContractsResponse.toObject(includeInstance, f),
+    evaluationsList: jspb.Message.toObjectList(msg.getEvaluationsList(),
+    proto.ei.ContractEvaluation.toObject, includeInstance),
     giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
     proto.ei.ServerGift.toObject, includeInstance),
     liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
@@ -142,6 +145,11 @@ proto.ei.PeriodicalsResponse.deserializeBinaryFromReader = function(msg, reader)
       var value = new proto.ei.ContractsResponse;
       reader.readMessage(value,proto.ei.ContractsResponse.deserializeBinaryFromReader);
       msg.setContracts(value);
+      break;
+    case 8:
+      var value = new proto.ei.ContractEvaluation;
+      reader.readMessage(value,proto.ei.ContractEvaluation.deserializeBinaryFromReader);
+      msg.addEvaluations(value);
       break;
     case 4:
       var value = new proto.ei.ServerGift;
@@ -214,6 +222,14 @@ proto.ei.PeriodicalsResponse.serializeBinaryToWriter = function(message, writer)
       3,
       f,
       proto.ei.ContractsResponse.serializeBinaryToWriter
+    );
+  }
+  f = message.getEvaluationsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.ei.ContractEvaluation.serializeBinaryToWriter
     );
   }
   f = message.getGiftsList();
@@ -359,6 +375,44 @@ proto.ei.PeriodicalsResponse.prototype.clearContracts = function() {
  */
 proto.ei.PeriodicalsResponse.prototype.hasContracts = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * repeated ContractEvaluation evaluations = 8;
+ * @return {!Array<!proto.ei.ContractEvaluation>}
+ */
+proto.ei.PeriodicalsResponse.prototype.getEvaluationsList = function() {
+  return /** @type{!Array<!proto.ei.ContractEvaluation>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ContractEvaluation, 8));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ContractEvaluation>} value
+ * @return {!proto.ei.PeriodicalsResponse} returns this
+*/
+proto.ei.PeriodicalsResponse.prototype.setEvaluationsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.ei.ContractEvaluation=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ContractEvaluation}
+ */
+proto.ei.PeriodicalsResponse.prototype.addEvaluations = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.ei.ContractEvaluation, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.PeriodicalsResponse} returns this
+ */
+proto.ei.PeriodicalsResponse.prototype.clearEvaluationsList = function() {
+  return this.setEvaluationsList([]);
 };
 
 

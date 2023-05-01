@@ -2384,7 +2384,9 @@ proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
     shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-    newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f
+    newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    contractsClubAvailable: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
+    contractsBeta: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2464,6 +2466,14 @@ proto.ei.LiveConfig.MiscConfig.deserializeBinaryFromReader = function(msg, reade
     case 11:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setNewPlayerEventDuration(value);
+      break;
+    case 12:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setContractsClubAvailable(value);
+      break;
+    case 13:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setContractsBeta(value);
       break;
     default:
       reader.skipField();
@@ -2568,6 +2578,20 @@ proto.ei.LiveConfig.MiscConfig.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeDouble(
       11,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 12));
+  if (f != null) {
+    writer.writeBool(
+      12,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 13));
+  if (f != null) {
+    writer.writeBool(
+      13,
       f
     );
   }
@@ -2967,6 +2991,78 @@ proto.ei.LiveConfig.MiscConfig.prototype.clearNewPlayerEventDuration = function(
  */
 proto.ei.LiveConfig.MiscConfig.prototype.hasNewPlayerEventDuration = function() {
   return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional bool contracts_club_available = 12;
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getContractsClubAvailable = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 12, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setContractsClubAvailable = function(value) {
+  return jspb.Message.setField(this, 12, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearContractsClubAvailable = function() {
+  return jspb.Message.setField(this, 12, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasContractsClubAvailable = function() {
+  return jspb.Message.getField(this, 12) != null;
+};
+
+
+/**
+ * optional bool contracts_beta = 13;
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getContractsBeta = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 13, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setContractsBeta = function(value) {
+  return jspb.Message.setField(this, 13, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearContractsBeta = function() {
+  return jspb.Message.setField(this, 13, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasContractsBeta = function() {
+  return jspb.Message.getField(this, 13) != null;
 };
 
 

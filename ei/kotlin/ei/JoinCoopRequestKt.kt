@@ -217,6 +217,30 @@ public object JoinCoopRequestKt {
     }
 
     /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 13;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 13;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 13;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
+    }
+
+    /**
      * <code>optional .ei.Platform platform = 5;</code>
      */
     public var platform: ei.Ei.Platform

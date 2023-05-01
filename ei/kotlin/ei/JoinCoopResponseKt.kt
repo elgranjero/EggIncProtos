@@ -189,6 +189,78 @@ public object JoinCoopResponseKt {
     public fun hasNumMembers(): kotlin.Boolean {
       return _builder.hasNumMembers()
     }
+
+    /**
+     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
+     */
+    public var status: ei.Ei.ContractCoopStatusResponse.Status
+      @JvmName("getStatus")
+      get() = _builder.getStatus()
+      @JvmName("setStatus")
+      set(value) {
+        _builder.setStatus(value)
+      }
+    /**
+     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
+     */
+    public fun clearStatus() {
+      _builder.clearStatus()
+    }
+    /**
+     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
+     * @return Whether the status field is set.
+     */
+    public fun hasStatus(): kotlin.Boolean {
+      return _builder.hasStatus()
+    }
+
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
+    }
+
+    /**
+     * <code>optional bool can_start = 10;</code>
+     */
+    public var canStart: kotlin.Boolean
+      @JvmName("getCanStart")
+      get() = _builder.getCanStart()
+      @JvmName("setCanStart")
+      set(value) {
+        _builder.setCanStart(value)
+      }
+    /**
+     * <code>optional bool can_start = 10;</code>
+     */
+    public fun clearCanStart() {
+      _builder.clearCanStart()
+    }
+    /**
+     * <code>optional bool can_start = 10;</code>
+     * @return Whether the canStart field is set.
+     */
+    public fun hasCanStart(): kotlin.Boolean {
+      return _builder.hasCanStart()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

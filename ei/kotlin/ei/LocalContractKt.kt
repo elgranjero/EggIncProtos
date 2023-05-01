@@ -385,6 +385,30 @@ public object LocalContractKt {
     }
 
     /**
+     * <code>optional bool points_replay = 20;</code>
+     */
+    public var pointsReplay: kotlin.Boolean
+      @JvmName("getPointsReplay")
+      get() = _builder.getPointsReplay()
+      @JvmName("setPointsReplay")
+      set(value) {
+        _builder.setPointsReplay(value)
+      }
+    /**
+     * <code>optional bool points_replay = 20;</code>
+     */
+    public fun clearPointsReplay() {
+      _builder.clearPointsReplay()
+    }
+    /**
+     * <code>optional bool points_replay = 20;</code>
+     * @return Whether the pointsReplay field is set.
+     */
+    public fun hasPointsReplay(): kotlin.Boolean {
+      return _builder.hasPointsReplay()
+    }
+
+    /**
      * <code>optional uint32 league = 15;</code>
      */
     public var league: kotlin.Int
@@ -455,7 +479,103 @@ public object LocalContractKt {
     public fun hasLastNagTime(): kotlin.Boolean {
       return _builder.hasLastNagTime()
     }
-  }
+
+    /**
+     * <code>optional .ei.ContractEvaluation evaluation = 19;</code>
+     */
+    public var evaluation: ei.Ei.ContractEvaluation
+      @JvmName("getEvaluation")
+      get() = _builder.getEvaluation()
+      @JvmName("setEvaluation")
+      set(value) {
+        _builder.setEvaluation(value)
+      }
+    /**
+     * <code>optional .ei.ContractEvaluation evaluation = 19;</code>
+     */
+    public fun clearEvaluation() {
+      _builder.clearEvaluation()
+    }
+    /**
+     * <code>optional .ei.ContractEvaluation evaluation = 19;</code>
+     * @return Whether the evaluation field is set.
+     */
+    public fun hasEvaluation(): kotlin.Boolean {
+      return _builder.hasEvaluation()
+    }
+    public val LocalContractKt.Dsl.evaluationOrNull: ei.Ei.ContractEvaluation?
+      get() = _builder.evaluationOrNull
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ReportedUuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated string reported_uuids = 21;</code>
+     * @return A list containing the reportedUuids.
+     */
+    public val reportedUuids: com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getReportedUuidsList()
+      )
+    /**
+     * <code>repeated string reported_uuids = 21;</code>
+     * @param value The reportedUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addReportedUuids")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.add(value: kotlin.String) {
+      _builder.addReportedUuids(value)
+    }
+    /**
+     * <code>repeated string reported_uuids = 21;</code>
+     * @param value The reportedUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignReportedUuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.plusAssign(value: kotlin.String) {
+      add(value)
+    }
+    /**
+     * <code>repeated string reported_uuids = 21;</code>
+     * @param values The reportedUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllReportedUuids")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllReportedUuids(values)
+    }
+    /**
+     * <code>repeated string reported_uuids = 21;</code>
+     * @param values The reportedUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllReportedUuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated string reported_uuids = 21;</code>
+     * @param index The index to set the value at.
+     * @param value The reportedUuids to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setReportedUuids")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.set(index: kotlin.Int, value: kotlin.String) {
+      _builder.setReportedUuids(index, value)
+    }/**
+     * <code>repeated string reported_uuids = 21;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearReportedUuids")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.clear() {
+      _builder.clearReportedUuids()
+    }}
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LocalContract.copy(block: ei.LocalContractKt.Dsl.() -> kotlin.Unit): ei.Ei.LocalContract =
@@ -463,4 +583,7 @@ public inline fun ei.Ei.LocalContract.copy(block: ei.LocalContractKt.Dsl.() -> k
 
 val ei.Ei.LocalContractOrBuilder.contractOrNull: ei.Ei.Contract?
   get() = if (hasContract()) getContract() else null
+
+val ei.Ei.LocalContractOrBuilder.evaluationOrNull: ei.Ei.ContractEvaluation?
+  get() = if (hasEvaluation()) getEvaluation() else null
 

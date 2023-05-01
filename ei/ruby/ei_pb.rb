@@ -211,7 +211,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :trophy_alert, :bool, 11
       optional :ar_alert, :bool, 12
       optional :contracts_alert, :bool, 13
+      optional :contracts_alert_v2, :bool, 21
       optional :coop_alert, :bool, 14
+      optional :coop_alert_v2, :bool, 22
       optional :switch_alert, :bool, 15
       optional :egg_of_prophecy_alert, :bool, 16
       optional :boost_token_alert, :bool, 17
@@ -300,6 +302,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :subtitle, :string, 5
       optional :start_time, :double, 6
       optional :duration, :double, 7
+      optional :cc_only, :bool, 8
     end
     add_message "ei.EggIncCurrentEvents" do
       repeated :events, :message, 1, "ei.EggIncEvent"
@@ -372,6 +375,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :rinfo, :message, 6, "ei.BasicRequestInfo"
       optional :sku, :string, 1
       optional :transaction_id, :string, 2
+      optional :original_transaction_id, :string, 8
       optional :receipt, :string, 3
       optional :platform, :string, 4
       optional :sandbox, :bool, 7
@@ -403,9 +407,20 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :reward_amount, :double, 3
     end
     add_message "ei.GameModifier" do
-      optional :dimension, :enum, 1, "ei.GameDimension"
-      optional :value_modifier, :double, 2
+      optional :dimension, :enum, 1, "ei.GameModifier.GameDimension"
+      optional :value, :double, 2
       optional :description, :string, 3
+    end
+    add_enum "ei.GameModifier.GameDimension" do
+      value :EARNINGS, 1
+      value :AWAY_EARNINGS, 2
+      value :INTERNAL_HATCHERY_RATE, 3
+      value :EGG_LAYING_RATE, 4
+      value :SHIPPING_CAPACITY, 5
+      value :HAB_CAPACITY, 6
+      value :VEHICLE_COST, 7
+      value :HAB_COST, 8
+      value :RESEARCH_COST, 9
     end
     add_message "ei.Contract" do
       optional :identifier, :string, 1
@@ -415,17 +430,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :goals, :message, 3, "ei.Contract.Goal"
       repeated :goal_sets, :message, 16, "ei.Contract.GoalSet"
       repeated :grade_specs, :message, 20, "ei.Contract.GradeSpec"
+      optional :season_id, :string, 23
       optional :coop_allowed, :bool, 4
       optional :max_coop_size, :uint32, 5
       optional :max_boosts, :uint32, 12
       optional :minutes_per_token, :double, 15, default: 60
-      optional :chicken_run_cooldown_minutes, :double, 18, default: 60
+      optional :chicken_run_cooldown_minutes, :double, 18, default: 180
       optional :start_time, :double, 17
       optional :expiration_time, :double, 6
       optional :length_seconds, :double, 7
       optional :max_soul_eggs, :double, 13
       optional :min_client_version, :uint32, 14
       optional :leggacy, :bool, 19
+      optional :cc_only, :bool, 22
       optional :debug, :bool, 11
       optional :key, :string, 21
     end
@@ -444,6 +461,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :grade, :enum, 1, "ei.Contract.PlayerGrade"
       repeated :goals, :message, 2, "ei.Contract.Goal"
       repeated :modifiers, :message, 3, "ei.GameModifier"
+      optional :length_seconds, :double, 4
     end
     add_enum "ei.Contract.PlayerGrade" do
       value :GRADE_UNSET, 0
@@ -456,6 +474,94 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ContractPlayerInfo" do
       optional :grade, :enum, 1, "ei.Contract.PlayerGrade"
       optional :total_cxp, :double, 2
+      optional :season_cxp, :double, 13
+      optional :grade_score, :double, 7
+      optional :target_grade_score, :double, 9
+      optional :soul_power, :double, 10
+      optional :target_soul_power, :double, 8
+      optional :grade_progress, :double, 12
+      repeated :issues, :enum, 11, "ei.ContractEvaluation.PoorBehavior"
+      optional :issue_score, :double, 14
+      optional :status, :enum, 3, "ei.ContractPlayerInfo.Status"
+      optional :last_evaluation_time, :double, 4
+      optional :last_evaluation_version, :string, 5
+      repeated :unread_evaluations, :message, 6, "ei.ContractEvaluation"
+    end
+    add_enum "ei.ContractPlayerInfo.Status" do
+      value :UNKNOWN, 0
+      value :CALCULATING, 1
+      value :OUT_OF_DATE, 2
+      value :INCOMPLETE, 4
+      value :COMPLETE, 3
+    end
+    add_message "ei.ContractEvaluation" do
+      optional :contract_identifier, :string, 40
+      optional :coop_identifier, :string, 41
+      optional :cxp, :double, 1
+      optional :replay, :bool, 24
+      optional :cxp_change, :double, 25
+      optional :grade_performance, :int32, 2
+      optional :old_league, :int32, 9
+      optional :old_goals, :bool, 10
+      optional :grade, :enum, 3, "ei.Contract.PlayerGrade"
+      optional :contribution_ratio, :double, 4
+      optional :completion_percent, :double, 5
+      optional :original_length, :double, 11
+      optional :coop_size, :uint32, 18
+      optional :solo, :bool, 26
+      optional :soul_power, :double, 23
+      optional :last_contribution_time, :double, 22
+      optional :completion_time, :double, 6
+      optional :chicken_runs_sent, :uint32, 7
+      optional :gift_tokens_sent, :uint32, 8
+      optional :gift_tokens_received, :uint32, 15
+      optional :boost_token_allotment, :uint32, 16
+      optional :buff_time_value, :double, 17
+      optional :teamwork_score, :double, 13
+      optional :other_bonuses, :double, 14
+      optional :counted_in_season, :bool, 20
+      optional :season_id, :string, 21
+      repeated :issues, :enum, 19, "ei.ContractEvaluation.PoorBehavior"
+      repeated :notes, :string, 12
+      optional :version, :string, 50
+      optional :evaluation_start_time, :double, 51
+      optional :status, :enum, 52, "ei.ContractEvaluation.Status"
+    end
+    add_enum "ei.ContractEvaluation.PoorBehavior" do
+      value :NONE, 0
+      value :LOW_CONTRIBUTION, 1
+      value :BAD_CONTRIBUTION, 2
+      value :DISHONORABLY_DISCHARGED, 3
+      value :POOR_TEAMWORK, 4
+      value :ABANDONED_COOP, 5
+    end
+    add_enum "ei.ContractEvaluation.Status" do
+      value :UNKNOWN, 0
+      value :PENDING, 1
+      value :EVALUATING, 2
+      value :COMPLETE, 3
+    end
+    add_message "ei.ContractCitation" do
+      optional :issue, :enum, 1, "ei.ContractEvaluation.PoorBehavior"
+      optional :timestamp, :double, 2
+      optional :grade, :enum, 3, "ei.Contract.PlayerGrade"
+    end
+    add_message "ei.ContractEvaluationBatch" do
+      repeated :evals, :message, 1, "ei.ContractEvaluationBatch.Pair"
+    end
+    add_message "ei.ContractEvaluationBatch.Pair" do
+      optional :user_id, :string, 1
+      optional :cev, :message, 2, "ei.ContractEvaluation"
+    end
+    add_message "ei.CoopCompletionSnapshot" do
+      repeated :contributors, :message, 1, "ei.CoopCompletionSnapshot.ContributorSnapshot"
+    end
+    add_message "ei.CoopCompletionSnapshot.ContributorSnapshot" do
+      optional :contribution, :double, 1
+      optional :soul_power, :double, 2
+      optional :user_id, :string, 3
+      optional :tokens, :uint32, 4
+      optional :tokens_spent, :uint32, 5
     end
     add_message "ei.BasicRequestInfo" do
       optional :ei_user_id, :string, 1
@@ -478,6 +584,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :target_se, :double, 1
       optional :cps_mult, :double, 2
       optional :earnings_mult, :double, 3
+      optional :time_efficacy, :double, 4
     end
     add_message "ei.ContractSimPoll" do
       optional :client_version, :uint32, 1
@@ -498,6 +605,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ContractsRequest" do
       optional :soul_eggs, :double, 1
       optional :client_version, :uint32, 5
+      optional :user_id, :string, 2
     end
     add_message "ei.ContractsResponse" do
       repeated :contracts, :message, 1, "ei.Contract"
@@ -560,6 +668,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :local_timestamp, :double, 12
     end
     add_message "ei.ContractCoopStatusResponse.ContributionInfo" do
+      optional :uuid, :string, 21
       optional :user_id, :string, 1
       optional :user_name, :string, 2
       optional :contract_identifier, :string, 19
@@ -598,6 +707,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :KICKED_CHEATS, 3
       value :KICKED_LEECH, 4
     end
+    add_enum "ei.ContractCoopStatusResponse.Status" do
+      value :UNKNOWN, 0
+      value :LOBBY, 1
+      value :ACTIVE, 2
+      value :COMPLETE, 3
+      value :FINALIZED, 4
+    end
     add_message "ei.LocalContract" do
       optional :contract, :message, 1, "ei.Contract"
       optional :coop_identifier, :string, 2
@@ -614,21 +730,29 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :last_amount_when_reward_given, :double, 6
       optional :num_goals_achieved, :uint32, 14
       optional :boosts_used, :uint32, 12
+      optional :points_replay, :bool, 20
       optional :league, :uint32, 15
       optional :grade, :enum, 18, "ei.Contract.PlayerGrade"
       optional :last_nag_time, :double, 16
+      optional :evaluation, :message, 19, "ei.ContractEvaluation"
+      repeated :reported_uuids, :string, 21
     end
     add_message "ei.MyContracts" do
       repeated :contract_ids_seen, :string, 3
       repeated :contracts, :message, 1, "ei.LocalContract"
       repeated :archive, :message, 2, "ei.LocalContract"
       repeated :current_coop_statuses, :message, 4, "ei.ContractCoopStatusResponse"
+      optional :last_cpi, :message, 5, "ei.ContractPlayerInfo"
+      optional :initial_grade_revealed, :bool, 6
+      optional :last_grade_progress_shown, :double, 7
+      optional :show_advanced_evaluations, :bool, 8
     end
     add_message "ei.QueryCoopRequest" do
       optional :rinfo, :message, 5, "ei.BasicRequestInfo"
       optional :contract_identifier, :string, 1
       optional :coop_identifier, :string, 2
       optional :league, :uint32, 4
+      optional :grade, :enum, 6, "ei.Contract.PlayerGrade"
       optional :client_version, :uint32, 3
     end
     add_message "ei.QueryCoopResponse" do
@@ -636,18 +760,23 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :full, :bool, 2
       optional :expired, :bool, 5
       optional :different_league, :bool, 4
+      optional :different_grade, :bool, 6
+      optional :cc_only, :bool, 7
       optional :banned, :bool, 3
     end
     add_message "ei.CreateCoopRequest" do
       optional :rinfo, :message, 10, "ei.BasicRequestInfo"
       optional :contract_identifier, :string, 1
       optional :coop_identifier, :string, 2
+      optional :public, :bool, 13
+      optional :cc_only, :bool, 14
       optional :seconds_remaining, :double, 3
       optional :user_id, :string, 4
       optional :user_name, :string, 5
       optional :soul_power, :double, 8
       optional :eop, :double, 11
       optional :league, :uint32, 9
+      optional :grade, :enum, 12, "ei.Contract.PlayerGrade"
       optional :platform, :enum, 6, "ei.Platform"
       optional :client_version, :uint32, 7
     end
@@ -664,6 +793,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :soul_power, :double, 8
       optional :eop, :double, 12
       optional :league, :uint32, 9
+      optional :grade, :enum, 13, "ei.Contract.PlayerGrade"
       optional :platform, :enum, 5, "ei.Platform"
       optional :seconds_remaining, :double, 11
       optional :client_version, :uint32, 7
@@ -676,6 +806,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :seconds_remaining, :double, 3
       optional :match_percent, :double, 6
       optional :num_members, :uint32, 7
+      optional :status, :enum, 8, "ei.ContractCoopStatusResponse.Status"
+      optional :grade, :enum, 9, "ei.Contract.PlayerGrade"
+      optional :can_start, :bool, 10
     end
     add_message "ei.AutoJoinCoopRequest" do
       optional :rinfo, :message, 9, "ei.BasicRequestInfo"
@@ -685,6 +818,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :soul_power, :double, 4
       optional :eop, :double, 10
       optional :league, :uint32, 8
+      optional :grade, :enum, 12, "ei.Contract.PlayerGrade"
       optional :seconds_remaining, :double, 5
       optional :platform, :enum, 6, "ei.Platform"
       optional :client_version, :uint32, 7
@@ -727,6 +861,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :requesting_user_name, :string, 6
       optional :farm_pop, :uint64, 5
       optional :client_version, :uint32, 7
+    end
+    add_message "ei.ReportPlayerCoopRequest" do
+      optional :rinfo, :message, 1, "ei.BasicRequestInfo"
+      optional :contract_identifier, :string, 2
+      optional :coop_identifier, :string, 3
+      optional :user_id, :string, 4
+      optional :reason, :enum, 5, "ei.ReportPlayerCoopRequest.Reason"
+    end
+    add_enum "ei.ReportPlayerCoopRequest.Reason" do
+      value :UNKNOWN, 0
+      value :OFFENSIVE_NAME, 1
+      value :CHEATING, 2
+      value :LEECHING, 3
     end
     add_message "ei.KickPlayerCoopRequest" do
       optional :rinfo, :message, 8, "ei.BasicRequestInfo"
@@ -781,6 +928,70 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.CoopLastChickenRunTimes" do
       repeated :entries, :message, 3, "ei.CoopChickenRunEntry"
+    end
+    add_message "ei.LeaderboardAnalysis" do
+      repeated :chunks, :message, 1, "ei.LeaderboardAnalysis.Chunk"
+      optional :count, :uint32, 2
+      optional :high_score, :double, 3
+      optional :low_score, :double, 4
+    end
+    add_message "ei.LeaderboardAnalysis.Chunk" do
+      optional :start_index, :uint32, 1
+      optional :end_index, :uint32, 2
+      optional :high_score, :double, 3
+      optional :low_score, :double, 4
+      optional :start_cursor, :string, 5
+      optional :end_cursor, :string, 6
+    end
+    add_message "ei.LeaderboardInfo" do
+      repeated :seasons, :message, 1, "ei.LeaderboardInfo.Season"
+      optional :all_time_scope, :string, 2
+    end
+    add_message "ei.LeaderboardInfo.Season" do
+      optional :scope, :string, 1
+      optional :name, :string, 2
+    end
+    add_message "ei.LeaderboardRequest" do
+      optional :rinfo, :message, 1, "ei.BasicRequestInfo"
+      optional :scope, :string, 2
+      optional :grade, :enum, 3, "ei.Contract.PlayerGrade"
+    end
+    add_message "ei.LeaderboardResponse" do
+      optional :scope, :string, 1
+      optional :grade, :enum, 2, "ei.Contract.PlayerGrade"
+      repeated :top_entries, :message, 3, "ei.LeaderboardResponse.Entry"
+      optional :count, :uint32, 4
+      optional :rank, :uint32, 5
+      optional :score, :double, 6
+    end
+    add_message "ei.LeaderboardResponse.Entry" do
+      optional :rank, :uint32, 1
+      optional :alias, :string, 2
+      optional :score, :double, 3
+    end
+    add_message "ei.ContractsArchive" do
+      repeated :archive, :message, 1, "ei.LocalContract"
+    end
+    add_message "ei.ContractAction" do
+      optional :user_id, :string, 1
+      optional :action_name, :string, 2
+      optional :approx_time, :double, 3
+      optional :dest_user_id, :string, 4
+      optional :contract_id, :string, 5
+      optional :coop_id, :string, 6
+      optional :autojoin, :bool, 7
+      optional :grade, :uint32, 8
+      optional :replay, :bool, 9
+      optional :points_replay, :bool, 10
+      optional :reward_type, :uint32, 11
+      optional :reward_subtype, :string, 12
+      optional :reward_amount, :double, 13
+      optional :goal_index, :uint32, 14
+      optional :boost_id, :string, 15
+      optional :tokens, :uint32, 16
+      optional :kick_reason, :uint32, 17
+      optional :public, :bool, 18
+      optional :cc_only, :bool, 19
     end
     add_message "ei.UserDataInfoRequest" do
       optional :rinfo, :message, 4, "ei.BasicRequestInfo"
@@ -864,6 +1075,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :shells_intro_alert_threshold, :uint32, 9
       optional :contracts_expert_league_min_soul_power, :double, 10
       optional :new_player_event_duration, :double, 11
+      optional :contracts_club_available, :bool, 12
+      optional :contracts_beta, :bool, 13
     end
     add_message "ei.InGameMail" do
       optional :id, :string, 1
@@ -887,6 +1100,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :sales, :message, 1, "ei.SalesInfo"
       optional :events, :message, 2, "ei.EggIncCurrentEvents"
       optional :contracts, :message, 3, "ei.ContractsResponse"
+      repeated :evaluations, :message, 8, "ei.ContractEvaluation"
       repeated :gifts, :message, 4, "ei.ServerGift"
       optional :live_config, :message, 5, "ei.LiveConfig"
       optional :mail_bag, :message, 6, "ei.MailDB"
@@ -1173,6 +1387,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :rinfo, :message, 1, "ei.BasicRequestInfo"
       optional :contract_identifier, :string, 2
       optional :league, :uint32, 5
+      optional :grade, :enum, 6, "ei.Contract.PlayerGrade"
       optional :goal_index, :uint32, 3
       optional :best_ship, :enum, 4, "ei.MissionInfo.Spaceship"
     end
@@ -1599,6 +1814,85 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :tickets_spent, :uint64, 11
       optional :gold_spent, :uint64, 12
     end
+    add_message "ei.UserVerificationAnalysis" do
+      optional :overall_status, :enum, 1, "ei.UserVerificationAnalysis.Status"
+      optional :start_time, :double, 2
+      optional :completion_time, :double, 3
+      optional :num_prestiges, :double, 14
+      optional :soul_eggs, :double, 15
+      optional :eggs_of_prophecy, :uint32, 27
+      optional :iap_status, :enum, 18, "ei.UserVerificationAnalysis.Status"
+      optional :verified_pro_permit, :bool, 4
+      optional :verified_piggy_breaks, :uint32, 5
+      optional :verified_other_iap, :uint32, 6
+      optional :unverified_iap, :uint32, 7
+      optional :gold_earned, :double, 13
+      optional :regular_iap_buyer, :bool, 22
+      optional :regular_iap_cheater, :bool, 23
+      optional :artifacts_status, :enum, 19, "ei.UserVerificationAnalysis.Status"
+      optional :missions_completed, :uint32, 8
+      optional :artifacts_collected, :double, 9
+      optional :artifacts_consumed, :double, 10
+      optional :artifacts_in_inventory, :double, 11
+      optional :gold_spent_crafting, :double, 21
+      optional :excessive_consumes, :bool, 24
+      optional :excessive_inventory, :bool, 25
+      optional :excessive_spend, :bool, 26
+      optional :contracts_status, :enum, 20, "ei.UserVerificationAnalysis.Status"
+      optional :num_coop_memberships, :uint32, 12
+      optional :valid_contracts, :uint32, 16
+      repeated :invalid_contracts, :string, 17
+      optional :excessive_eop, :bool, 28
+      optional :excessive_invalid_contracts, :bool, 29
+      optional :verified, :bool, 30
+      optional :verification_override, :bool, 31
+      optional :verification_override_value, :bool, 32
+    end
+    add_enum "ei.UserVerificationAnalysis.Status" do
+      value :UNKNOWN, 0
+      value :PROCESSING, 1
+      value :COMPLETE, 2
+    end
+    add_message "ei.UserSubscriptionInfo" do
+      optional :subscription_level, :enum, 13, "ei.UserSubscriptionInfo.Level"
+      optional :next_subscription_level, :enum, 15, "ei.UserSubscriptionInfo.Level"
+      optional :lock_next_subscription_level, :bool, 18
+      optional :platform, :enum, 10, "ei.Platform"
+      optional :original_transaction_id, :string, 1
+      optional :linked_transaction_id, :string, 16
+      optional :acknowledged, :bool, 17
+      optional :first_subscribed, :double, 2
+      optional :period_end, :double, 4
+      optional :status, :enum, 5, "ei.UserSubscriptionInfo.Status"
+      optional :store_status, :string, 14
+      optional :auto_renew, :bool, 6
+      optional :sandbox, :bool, 19
+      optional :last_updated, :double, 7
+      repeated :history, :message, 9, "ei.UserSubscriptionInfo.HistoryEntry"
+      repeated :past_user_ids, :string, 11
+    end
+    add_message "ei.UserSubscriptionInfo.HistoryEntry" do
+      optional :timestamp, :double, 1
+      optional :message_id, :string, 2
+      optional :message, :string, 3
+    end
+    add_enum "ei.UserSubscriptionInfo.Level" do
+      value :STANDARD, 0
+      value :PRO, 1
+    end
+    add_enum "ei.UserSubscriptionInfo.Status" do
+      value :UNKNOWN, 0
+      value :ACTIVE, 1
+      value :EXPIRED, 2
+      value :REVOKED, 3
+      value :GRACE_PERIOD, 4
+      value :PAUSE_HOLD, 5
+    end
+    add_message "ei.SubscriptionChangeHintRequest" do
+      optional :rinfo, :message, 3, "ei.BasicRequestInfo"
+      optional :original_transaction_id, :string, 1
+      optional :next_subscription_level, :enum, 2, "ei.UserSubscriptionInfo.Level"
+    end
     add_enum "ei.Platform" do
       value :IOS, 1
       value :DROID, 2
@@ -1669,9 +1963,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :SHELL_SCRIPT, 14
       value :UNKNOWN_REWARD, 100
     end
-    add_enum "ei.GameDimension" do
-      value :EARNINGS, 1
-      value :AWAY_EARNINGS, 3
+    add_enum "ei.LeaderboardScope" do
+      value :ALL_TIME, 0
+      value :CURRENT_SEASON, 1
     end
   end
 end
@@ -1714,12 +2008,22 @@ module Ei
   CurrencyFlowBatchRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CurrencyFlowBatchRequest").msgclass
   Reward = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Reward").msgclass
   GameModifier = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameModifier").msgclass
+  GameModifier::GameDimension = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameModifier.GameDimension").enummodule
   Contract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract").msgclass
   Contract::Goal = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.Goal").msgclass
   Contract::GoalSet = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.GoalSet").msgclass
   Contract::GradeSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.GradeSpec").msgclass
   Contract::PlayerGrade = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.PlayerGrade").enummodule
   ContractPlayerInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractPlayerInfo").msgclass
+  ContractPlayerInfo::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractPlayerInfo.Status").enummodule
+  ContractEvaluation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractEvaluation").msgclass
+  ContractEvaluation::PoorBehavior = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractEvaluation.PoorBehavior").enummodule
+  ContractEvaluation::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractEvaluation.Status").enummodule
+  ContractCitation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCitation").msgclass
+  ContractEvaluationBatch = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractEvaluationBatch").msgclass
+  ContractEvaluationBatch::Pair = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractEvaluationBatch.Pair").msgclass
+  CoopCompletionSnapshot = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopCompletionSnapshot").msgclass
+  CoopCompletionSnapshot::ContributorSnapshot = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopCompletionSnapshot.ContributorSnapshot").msgclass
   BasicRequestInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.BasicRequestInfo").msgclass
   ContractSimConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimConfig").msgclass
   ContractSimConfig::ContractGradeSimConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractSimConfig.ContractGradeSimConfig").msgclass
@@ -1738,6 +2042,7 @@ module Ei
   ContractCoopStatusResponse::CoopGift = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.CoopGift").msgclass
   ContractCoopStatusResponse::ChickenRun = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.ChickenRun").msgclass
   ContractCoopStatusResponse::MemberStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.MemberStatus").enummodule
+  ContractCoopStatusResponse::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.Status").enummodule
   LocalContract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LocalContract").msgclass
   MyContracts = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MyContracts").msgclass
   QueryCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.QueryCoopRequest").msgclass
@@ -1752,6 +2057,8 @@ module Ei
   LeaveCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaveCoopRequest").msgclass
   GiftPlayerCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GiftPlayerCoopRequest").msgclass
   SendChickenRunCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SendChickenRunCoopRequest").msgclass
+  ReportPlayerCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ReportPlayerCoopRequest").msgclass
+  ReportPlayerCoopRequest::Reason = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ReportPlayerCoopRequest.Reason").enummodule
   KickPlayerCoopRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.KickPlayerCoopRequest").msgclass
   KickPlayerCoopRequest::Reason = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.KickPlayerCoopRequest.Reason").enummodule
   ContractCoopStatusUpdateRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusUpdateRequest").msgclass
@@ -1760,6 +2067,15 @@ module Ei
   CoopBuffHistory = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopBuffHistory").msgclass
   CoopChickenRunEntry = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopChickenRunEntry").msgclass
   CoopLastChickenRunTimes = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CoopLastChickenRunTimes").msgclass
+  LeaderboardAnalysis = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardAnalysis").msgclass
+  LeaderboardAnalysis::Chunk = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardAnalysis.Chunk").msgclass
+  LeaderboardInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardInfo").msgclass
+  LeaderboardInfo::Season = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardInfo.Season").msgclass
+  LeaderboardRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardRequest").msgclass
+  LeaderboardResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardResponse").msgclass
+  LeaderboardResponse::Entry = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardResponse.Entry").msgclass
+  ContractsArchive = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractsArchive").msgclass
+  ContractAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractAction").msgclass
   UserDataInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserDataInfoRequest").msgclass
   UserDataInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserDataInfoResponse").msgclass
   ClearAllUserDataRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ClearAllUserDataRequest").msgclass
@@ -1850,6 +2166,13 @@ module Ei
   ShellDB::ChickenConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ChickenConfig").msgclass
   ShellDB::FarmElement = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.FarmElement").enummodule
   ShellsActionLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellsActionLog").msgclass
+  UserVerificationAnalysis = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis").msgclass
+  UserVerificationAnalysis::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis.Status").enummodule
+  UserSubscriptionInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo").msgclass
+  UserSubscriptionInfo::HistoryEntry = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.HistoryEntry").msgclass
+  UserSubscriptionInfo::Level = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.Level").enummodule
+  UserSubscriptionInfo::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.Status").enummodule
+  SubscriptionChangeHintRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SubscriptionChangeHintRequest").msgclass
   Platform = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Platform").enummodule
   DeviceFormFactor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.DeviceFormFactor").enummodule
   AdNetwork = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.AdNetwork").enummodule
@@ -1857,5 +2180,5 @@ module Ei
   FarmType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.FarmType").enummodule
   GoalType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GoalType").enummodule
   RewardType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.RewardType").enummodule
-  GameDimension = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameDimension").enummodule
+  LeaderboardScope = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardScope").enummodule
 end

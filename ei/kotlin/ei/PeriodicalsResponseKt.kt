@@ -105,6 +105,78 @@ public object PeriodicalsResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class EvaluationsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     */
+     public val evaluations: com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getEvaluationsList()
+      )
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * @param value The evaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addEvaluations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.add(value: ei.Ei.ContractEvaluation) {
+      _builder.addEvaluations(value)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * @param value The evaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignEvaluations")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.plusAssign(value: ei.Ei.ContractEvaluation) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * @param values The evaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllEvaluations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation>) {
+      _builder.addAllEvaluations(values)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * @param values The evaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllEvaluations")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * @param index The index to set the value at.
+     * @param value The evaluations to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setEvaluations")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractEvaluation) {
+      _builder.setEvaluations(index, value)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearEvaluations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.clear() {
+      _builder.clearEvaluations()
+    }
+
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class GiftsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
      * <code>repeated .ei.ServerGift gifts = 4;</code>

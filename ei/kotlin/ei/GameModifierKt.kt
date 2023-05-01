@@ -23,9 +23,9 @@ public object GameModifierKt {
     internal fun _build(): ei.Ei.GameModifier = _builder.build()
 
     /**
-     * <code>optional .ei.GameDimension dimension = 1;</code>
+     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
      */
-    public var dimension: ei.Ei.GameDimension
+    public var dimension: ei.Ei.GameModifier.GameDimension
       @JvmName("getDimension")
       get() = _builder.getDimension()
       @JvmName("setDimension")
@@ -33,13 +33,13 @@ public object GameModifierKt {
         _builder.setDimension(value)
       }
     /**
-     * <code>optional .ei.GameDimension dimension = 1;</code>
+     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
      */
     public fun clearDimension() {
       _builder.clearDimension()
     }
     /**
-     * <code>optional .ei.GameDimension dimension = 1;</code>
+     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
      * @return Whether the dimension field is set.
      */
     public fun hasDimension(): kotlin.Boolean {
@@ -47,27 +47,27 @@ public object GameModifierKt {
     }
 
     /**
-     * <code>optional double value_modifier = 2;</code>
+     * <code>optional double value = 2;</code>
      */
-    public var valueModifier: kotlin.Double
-      @JvmName("getValueModifier")
-      get() = _builder.getValueModifier()
-      @JvmName("setValueModifier")
+    public var value: kotlin.Double
+      @JvmName("getValue")
+      get() = _builder.getValue()
+      @JvmName("setValue")
       set(value) {
-        _builder.setValueModifier(value)
+        _builder.setValue(value)
       }
     /**
-     * <code>optional double value_modifier = 2;</code>
+     * <code>optional double value = 2;</code>
      */
-    public fun clearValueModifier() {
-      _builder.clearValueModifier()
+    public fun clearValue() {
+      _builder.clearValue()
     }
     /**
-     * <code>optional double value_modifier = 2;</code>
-     * @return Whether the valueModifier field is set.
+     * <code>optional double value = 2;</code>
+     * @return Whether the value field is set.
      */
-    public fun hasValueModifier(): kotlin.Boolean {
-      return _builder.hasValueModifier()
+    public fun hasValue(): kotlin.Boolean {
+      return _builder.hasValue()
     }
 
     /**

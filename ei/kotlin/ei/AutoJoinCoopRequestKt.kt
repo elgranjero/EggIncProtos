@@ -193,6 +193,30 @@ public object AutoJoinCoopRequestKt {
     }
 
     /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
+    }
+
+    /**
      * <code>optional double seconds_remaining = 5;</code>
      */
     public var secondsRemaining: kotlin.Double

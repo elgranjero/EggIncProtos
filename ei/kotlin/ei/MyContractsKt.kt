@@ -307,9 +307,110 @@ public object MyContractsKt {
       _builder.clearCurrentCoopStatuses()
     }
 
+
+    /**
+     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
+     */
+    public var lastCpi: ei.Ei.ContractPlayerInfo
+      @JvmName("getLastCpi")
+      get() = _builder.getLastCpi()
+      @JvmName("setLastCpi")
+      set(value) {
+        _builder.setLastCpi(value)
+      }
+    /**
+     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
+     */
+    public fun clearLastCpi() {
+      _builder.clearLastCpi()
+    }
+    /**
+     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
+     * @return Whether the lastCpi field is set.
+     */
+    public fun hasLastCpi(): kotlin.Boolean {
+      return _builder.hasLastCpi()
+    }
+    public val MyContractsKt.Dsl.lastCpiOrNull: ei.Ei.ContractPlayerInfo?
+      get() = _builder.lastCpiOrNull
+
+    /**
+     * <code>optional bool initial_grade_revealed = 6;</code>
+     */
+    public var initialGradeRevealed: kotlin.Boolean
+      @JvmName("getInitialGradeRevealed")
+      get() = _builder.getInitialGradeRevealed()
+      @JvmName("setInitialGradeRevealed")
+      set(value) {
+        _builder.setInitialGradeRevealed(value)
+      }
+    /**
+     * <code>optional bool initial_grade_revealed = 6;</code>
+     */
+    public fun clearInitialGradeRevealed() {
+      _builder.clearInitialGradeRevealed()
+    }
+    /**
+     * <code>optional bool initial_grade_revealed = 6;</code>
+     * @return Whether the initialGradeRevealed field is set.
+     */
+    public fun hasInitialGradeRevealed(): kotlin.Boolean {
+      return _builder.hasInitialGradeRevealed()
+    }
+
+    /**
+     * <code>optional double last_grade_progress_shown = 7;</code>
+     */
+    public var lastGradeProgressShown: kotlin.Double
+      @JvmName("getLastGradeProgressShown")
+      get() = _builder.getLastGradeProgressShown()
+      @JvmName("setLastGradeProgressShown")
+      set(value) {
+        _builder.setLastGradeProgressShown(value)
+      }
+    /**
+     * <code>optional double last_grade_progress_shown = 7;</code>
+     */
+    public fun clearLastGradeProgressShown() {
+      _builder.clearLastGradeProgressShown()
+    }
+    /**
+     * <code>optional double last_grade_progress_shown = 7;</code>
+     * @return Whether the lastGradeProgressShown field is set.
+     */
+    public fun hasLastGradeProgressShown(): kotlin.Boolean {
+      return _builder.hasLastGradeProgressShown()
+    }
+
+    /**
+     * <code>optional bool show_advanced_evaluations = 8;</code>
+     */
+    public var showAdvancedEvaluations: kotlin.Boolean
+      @JvmName("getShowAdvancedEvaluations")
+      get() = _builder.getShowAdvancedEvaluations()
+      @JvmName("setShowAdvancedEvaluations")
+      set(value) {
+        _builder.setShowAdvancedEvaluations(value)
+      }
+    /**
+     * <code>optional bool show_advanced_evaluations = 8;</code>
+     */
+    public fun clearShowAdvancedEvaluations() {
+      _builder.clearShowAdvancedEvaluations()
+    }
+    /**
+     * <code>optional bool show_advanced_evaluations = 8;</code>
+     * @return Whether the showAdvancedEvaluations field is set.
+     */
+    public fun hasShowAdvancedEvaluations(): kotlin.Boolean {
+      return _builder.hasShowAdvancedEvaluations()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.MyContracts.copy(block: ei.MyContractsKt.Dsl.() -> kotlin.Unit): ei.Ei.MyContracts =
   ei.MyContractsKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.MyContractsOrBuilder.lastCpiOrNull: ei.Ei.ContractPlayerInfo?
+  get() = if (hasLastCpi()) getLastCpi() else null
 

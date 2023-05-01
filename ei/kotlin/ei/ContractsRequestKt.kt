@@ -69,6 +69,30 @@ public object ContractsRequestKt {
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
     }
+
+    /**
+     * <code>optional string user_id = 2;</code>
+     */
+    public var userId: kotlin.String
+      @JvmName("getUserId")
+      get() = _builder.getUserId()
+      @JvmName("setUserId")
+      set(value) {
+        _builder.setUserId(value)
+      }
+    /**
+     * <code>optional string user_id = 2;</code>
+     */
+    public fun clearUserId() {
+      _builder.clearUserId()
+    }
+    /**
+     * <code>optional string user_id = 2;</code>
+     * @return Whether the userId field is set.
+     */
+    public fun hasUserId(): kotlin.Boolean {
+      return _builder.hasUserId()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

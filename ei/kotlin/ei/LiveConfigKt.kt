@@ -1350,6 +1350,54 @@ public object LiveConfigKt {
       public fun hasNewPlayerEventDuration(): kotlin.Boolean {
         return _builder.hasNewPlayerEventDuration()
       }
+
+      /**
+       * <code>optional bool contracts_club_available = 12;</code>
+       */
+      public var contractsClubAvailable: kotlin.Boolean
+        @JvmName("getContractsClubAvailable")
+        get() = _builder.getContractsClubAvailable()
+        @JvmName("setContractsClubAvailable")
+        set(value) {
+          _builder.setContractsClubAvailable(value)
+        }
+      /**
+       * <code>optional bool contracts_club_available = 12;</code>
+       */
+      public fun clearContractsClubAvailable() {
+        _builder.clearContractsClubAvailable()
+      }
+      /**
+       * <code>optional bool contracts_club_available = 12;</code>
+       * @return Whether the contractsClubAvailable field is set.
+       */
+      public fun hasContractsClubAvailable(): kotlin.Boolean {
+        return _builder.hasContractsClubAvailable()
+      }
+
+      /**
+       * <code>optional bool contracts_beta = 13;</code>
+       */
+      public var contractsBeta: kotlin.Boolean
+        @JvmName("getContractsBeta")
+        get() = _builder.getContractsBeta()
+        @JvmName("setContractsBeta")
+        set(value) {
+          _builder.setContractsBeta(value)
+        }
+      /**
+       * <code>optional bool contracts_beta = 13;</code>
+       */
+      public fun clearContractsBeta() {
+        _builder.clearContractsBeta()
+      }
+      /**
+       * <code>optional bool contracts_beta = 13;</code>
+       * @return Whether the contractsBeta field is set.
+       */
+      public fun hasContractsBeta(): kotlin.Boolean {
+        return _builder.hasContractsBeta()
+      }
     }
   }
 }

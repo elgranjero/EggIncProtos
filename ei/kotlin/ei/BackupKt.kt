@@ -5727,6 +5727,30 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional bool contracts_alert_v2 = 21;</code>
+       */
+      public var contractsAlertV2: kotlin.Boolean
+        @JvmName("getContractsAlertV2")
+        get() = _builder.getContractsAlertV2()
+        @JvmName("setContractsAlertV2")
+        set(value) {
+          _builder.setContractsAlertV2(value)
+        }
+      /**
+       * <code>optional bool contracts_alert_v2 = 21;</code>
+       */
+      public fun clearContractsAlertV2() {
+        _builder.clearContractsAlertV2()
+      }
+      /**
+       * <code>optional bool contracts_alert_v2 = 21;</code>
+       * @return Whether the contractsAlertV2 field is set.
+       */
+      public fun hasContractsAlertV2(): kotlin.Boolean {
+        return _builder.hasContractsAlertV2()
+      }
+
+      /**
        * <code>optional bool coop_alert = 14;</code>
        */
       public var coopAlert: kotlin.Boolean
@@ -5748,6 +5772,30 @@ public object BackupKt {
        */
       public fun hasCoopAlert(): kotlin.Boolean {
         return _builder.hasCoopAlert()
+      }
+
+      /**
+       * <code>optional bool coop_alert_v2 = 22;</code>
+       */
+      public var coopAlertV2: kotlin.Boolean
+        @JvmName("getCoopAlertV2")
+        get() = _builder.getCoopAlertV2()
+        @JvmName("setCoopAlertV2")
+        set(value) {
+          _builder.setCoopAlertV2(value)
+        }
+      /**
+       * <code>optional bool coop_alert_v2 = 22;</code>
+       */
+      public fun clearCoopAlertV2() {
+        _builder.clearCoopAlertV2()
+      }
+      /**
+       * <code>optional bool coop_alert_v2 = 22;</code>
+       * @return Whether the coopAlertV2 field is set.
+       */
+      public fun hasCoopAlertV2(): kotlin.Boolean {
+        return _builder.hasCoopAlertV2()
       }
 
       /**

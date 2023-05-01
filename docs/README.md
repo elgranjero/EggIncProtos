@@ -58,6 +58,8 @@
     - [Contract.Goal](#ei-Contract-Goal)
     - [Contract.GoalSet](#ei-Contract-GoalSet)
     - [Contract.GradeSpec](#ei-Contract-GradeSpec)
+    - [ContractAction](#ei-ContractAction)
+    - [ContractCitation](#ei-ContractCitation)
     - [ContractCoopStatusRequest](#ei-ContractCoopStatusRequest)
     - [ContractCoopStatusResponse](#ei-ContractCoopStatusResponse)
     - [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun)
@@ -65,6 +67,9 @@
     - [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift)
     - [ContractCoopStatusUpdateRequest](#ei-ContractCoopStatusUpdateRequest)
     - [ContractCoopStatusUpdateResponse](#ei-ContractCoopStatusUpdateResponse)
+    - [ContractEvaluation](#ei-ContractEvaluation)
+    - [ContractEvaluationBatch](#ei-ContractEvaluationBatch)
+    - [ContractEvaluationBatch.Pair](#ei-ContractEvaluationBatch-Pair)
     - [ContractPlayerInfo](#ei-ContractPlayerInfo)
     - [ContractSimConfig](#ei-ContractSimConfig)
     - [ContractSimConfig.ContractGradeSimConfig](#ei-ContractSimConfig-ContractGradeSimConfig)
@@ -73,11 +78,14 @@
     - [ContractSimPollResponse](#ei-ContractSimPollResponse)
     - [ContractSimResultUpdate](#ei-ContractSimResultUpdate)
     - [ContractSimResultUpdate.GoalInfo](#ei-ContractSimResultUpdate-GoalInfo)
+    - [ContractsArchive](#ei-ContractsArchive)
     - [ContractsRequest](#ei-ContractsRequest)
     - [ContractsResponse](#ei-ContractsResponse)
     - [CoopBuffHistory](#ei-CoopBuffHistory)
     - [CoopBuffState](#ei-CoopBuffState)
     - [CoopChickenRunEntry](#ei-CoopChickenRunEntry)
+    - [CoopCompletionSnapshot](#ei-CoopCompletionSnapshot)
+    - [CoopCompletionSnapshot.ContributorSnapshot](#ei-CoopCompletionSnapshot-ContributorSnapshot)
     - [CoopLastChickenRunTimes](#ei-CoopLastChickenRunTimes)
     - [CraftArtifactRequest](#ei-CraftArtifactRequest)
     - [CraftArtifactResponse](#ei-CraftArtifactResponse)
@@ -106,6 +114,13 @@
     - [JoinCoopRequest](#ei-JoinCoopRequest)
     - [JoinCoopResponse](#ei-JoinCoopResponse)
     - [KickPlayerCoopRequest](#ei-KickPlayerCoopRequest)
+    - [LeaderboardAnalysis](#ei-LeaderboardAnalysis)
+    - [LeaderboardAnalysis.Chunk](#ei-LeaderboardAnalysis-Chunk)
+    - [LeaderboardInfo](#ei-LeaderboardInfo)
+    - [LeaderboardInfo.Season](#ei-LeaderboardInfo-Season)
+    - [LeaderboardRequest](#ei-LeaderboardRequest)
+    - [LeaderboardResponse](#ei-LeaderboardResponse)
+    - [LeaderboardResponse.Entry](#ei-LeaderboardResponse-Entry)
     - [LeaveCoopRequest](#ei-LeaveCoopRequest)
     - [LiveConfig](#ei-LiveConfig)
     - [LiveConfig.BoostsConfig](#ei-LiveConfig-BoostsConfig)
@@ -129,6 +144,7 @@
     - [PlayerFarmInfo](#ei-PlayerFarmInfo)
     - [QueryCoopRequest](#ei-QueryCoopRequest)
     - [QueryCoopResponse](#ei-QueryCoopResponse)
+    - [ReportPlayerCoopRequest](#ei-ReportPlayerCoopRequest)
     - [ReturnEDTPayload](#ei-ReturnEDTPayload)
     - [Reward](#ei-Reward)
     - [SalesInfo](#ei-SalesInfo)
@@ -156,10 +172,14 @@
     - [ShellSpec](#ei-ShellSpec)
     - [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece)
     - [ShellsActionLog](#ei-ShellsActionLog)
+    - [SubscriptionChangeHintRequest](#ei-SubscriptionChangeHintRequest)
     - [UpdateCoopPermissionsRequest](#ei-UpdateCoopPermissionsRequest)
     - [UpdateCoopPermissionsResponse](#ei-UpdateCoopPermissionsResponse)
     - [UserDataInfoRequest](#ei-UserDataInfoRequest)
     - [UserDataInfoResponse](#ei-UserDataInfoResponse)
+    - [UserSubscriptionInfo](#ei-UserSubscriptionInfo)
+    - [UserSubscriptionInfo.HistoryEntry](#ei-UserSubscriptionInfo-HistoryEntry)
+    - [UserVerificationAnalysis](#ei-UserVerificationAnalysis)
     - [VerifyPurchaseRequest](#ei-VerifyPurchaseRequest)
     - [VerifyPurchaseResponse](#ei-VerifyPurchaseResponse)
   
@@ -170,22 +190,31 @@
     - [ArtifactSpec.Type](#ei-ArtifactSpec-Type)
     - [Contract.PlayerGrade](#ei-Contract-PlayerGrade)
     - [ContractCoopStatusResponse.MemberStatus](#ei-ContractCoopStatusResponse-MemberStatus)
+    - [ContractCoopStatusResponse.Status](#ei-ContractCoopStatusResponse-Status)
+    - [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior)
+    - [ContractEvaluation.Status](#ei-ContractEvaluation-Status)
+    - [ContractPlayerInfo.Status](#ei-ContractPlayerInfo-Status)
     - [DeviceFormFactor](#ei-DeviceFormFactor)
     - [Egg](#ei-Egg)
     - [EggIncFirstContactResponse.ErrorCodes](#ei-EggIncFirstContactResponse-ErrorCodes)
     - [FarmType](#ei-FarmType)
-    - [GameDimension](#ei-GameDimension)
+    - [GameModifier.GameDimension](#ei-GameModifier-GameDimension)
     - [GoalType](#ei-GoalType)
     - [KickPlayerCoopRequest.Reason](#ei-KickPlayerCoopRequest-Reason)
+    - [LeaderboardScope](#ei-LeaderboardScope)
     - [MissionInfo.DurationType](#ei-MissionInfo-DurationType)
     - [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship)
     - [MissionInfo.Status](#ei-MissionInfo-Status)
     - [Platform](#ei-Platform)
+    - [ReportPlayerCoopRequest.Reason](#ei-ReportPlayerCoopRequest-Reason)
     - [RewardType](#ei-RewardType)
     - [SaveBackupResponse.ErrorCodes](#ei-SaveBackupResponse-ErrorCodes)
     - [ShellDB.FarmElement](#ei-ShellDB-FarmElement)
     - [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
+    - [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level)
+    - [UserSubscriptionInfo.Status](#ei-UserSubscriptionInfo-Status)
+    - [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -658,6 +687,7 @@
 | soul_power | [double](#double) | optional |  |
 | eop | [double](#double) | optional |  |
 | league | [uint32](#uint32) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
@@ -845,7 +875,9 @@
 | trophy_alert | [bool](#bool) | optional |  |
 | ar_alert | [bool](#bool) | optional |  |
 | contracts_alert | [bool](#bool) | optional |  |
+| contracts_alert_v2 | [bool](#bool) | optional |  |
 | coop_alert | [bool](#bool) | optional |  |
+| coop_alert_v2 | [bool](#bool) | optional |  |
 | switch_alert | [bool](#bool) | optional |  |
 | egg_of_prophecy_alert | [bool](#bool) | optional |  |
 | boost_token_alert | [bool](#bool) | optional |  |
@@ -1165,6 +1197,7 @@
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | contract_identifier | [string](#string) | optional |  |
 | league | [uint32](#uint32) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | goal_index | [uint32](#uint32) | optional |  |
 | best_ship | [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship) | optional |  |
 
@@ -1316,17 +1349,19 @@
 | goals | [Contract.Goal](#ei-Contract-Goal) | repeated |  |
 | goal_sets | [Contract.GoalSet](#ei-Contract-GoalSet) | repeated |  |
 | grade_specs | [Contract.GradeSpec](#ei-Contract-GradeSpec) | repeated |  |
+| season_id | [string](#string) | optional |  |
 | coop_allowed | [bool](#bool) | optional |  |
 | max_coop_size | [uint32](#uint32) | optional |  |
 | max_boosts | [uint32](#uint32) | optional |  |
 | minutes_per_token | [double](#double) | optional |  Default: 60 |
-| chicken_run_cooldown_minutes | [double](#double) | optional |  Default: 60 |
+| chicken_run_cooldown_minutes | [double](#double) | optional |  Default: 180 |
 | start_time | [double](#double) | optional |  |
 | expiration_time | [double](#double) | optional |  |
 | length_seconds | [double](#double) | optional |  |
 | max_soul_eggs | [double](#double) | optional |  |
 | min_client_version | [uint32](#uint32) | optional |  |
 | leggacy | [bool](#bool) | optional |  |
+| cc_only | [bool](#bool) | optional |  |
 | debug | [bool](#bool) | optional |  |
 | key | [string](#string) | optional |  |
 
@@ -1381,6 +1416,57 @@
 | grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | goals | [Contract.Goal](#ei-Contract-Goal) | repeated |  |
 | modifiers | [GameModifier](#ei-GameModifier) | repeated |  |
+| length_seconds | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractAction"></a>
+
+### ContractAction
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) | optional |  |
+| action_name | [string](#string) | optional |  |
+| approx_time | [double](#double) | optional |  |
+| dest_user_id | [string](#string) | optional |  |
+| contract_id | [string](#string) | optional |  |
+| coop_id | [string](#string) | optional |  |
+| autojoin | [bool](#bool) | optional |  |
+| grade | [uint32](#uint32) | optional |  |
+| replay | [bool](#bool) | optional |  |
+| points_replay | [bool](#bool) | optional |  |
+| reward_type | [uint32](#uint32) | optional |  |
+| reward_subtype | [string](#string) | optional |  |
+| reward_amount | [double](#double) | optional |  |
+| goal_index | [uint32](#uint32) | optional |  |
+| boost_id | [string](#string) | optional |  |
+| tokens | [uint32](#uint32) | optional |  |
+| kick_reason | [uint32](#uint32) | optional |  |
+| public | [bool](#bool) | optional |  |
+| cc_only | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractCitation"></a>
+
+### ContractCitation
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| issue | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | optional |  |
+| timestamp | [double](#double) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 
 
 
@@ -1458,6 +1544,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) | optional |  |
 | user_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
 | contract_identifier | [string](#string) | optional |  |
@@ -1548,6 +1635,82 @@
 
 
 
+<a name="ei-ContractEvaluation"></a>
+
+### ContractEvaluation
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contract_identifier | [string](#string) | optional |  |
+| coop_identifier | [string](#string) | optional |  |
+| cxp | [double](#double) | optional |  |
+| replay | [bool](#bool) | optional |  |
+| cxp_change | [double](#double) | optional |  |
+| grade_performance | [int32](#int32) | optional |  |
+| old_league | [int32](#int32) | optional |  |
+| old_goals | [bool](#bool) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| contribution_ratio | [double](#double) | optional |  |
+| completion_percent | [double](#double) | optional |  |
+| original_length | [double](#double) | optional |  |
+| coop_size | [uint32](#uint32) | optional |  |
+| solo | [bool](#bool) | optional |  |
+| soul_power | [double](#double) | optional |  |
+| last_contribution_time | [double](#double) | optional |  |
+| completion_time | [double](#double) | optional |  |
+| chicken_runs_sent | [uint32](#uint32) | optional |  |
+| gift_tokens_sent | [uint32](#uint32) | optional |  |
+| gift_tokens_received | [uint32](#uint32) | optional |  |
+| boost_token_allotment | [uint32](#uint32) | optional |  |
+| buff_time_value | [double](#double) | optional |  |
+| teamwork_score | [double](#double) | optional |  |
+| other_bonuses | [double](#double) | optional |  |
+| counted_in_season | [bool](#bool) | optional |  |
+| season_id | [string](#string) | optional |  |
+| issues | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | repeated |  |
+| notes | [string](#string) | repeated |  |
+| version | [string](#string) | optional |  |
+| evaluation_start_time | [double](#double) | optional |  |
+| status | [ContractEvaluation.Status](#ei-ContractEvaluation-Status) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractEvaluationBatch"></a>
+
+### ContractEvaluationBatch
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| evals | [ContractEvaluationBatch.Pair](#ei-ContractEvaluationBatch-Pair) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractEvaluationBatch-Pair"></a>
+
+### ContractEvaluationBatch.Pair
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) | optional |  |
+| cev | [ContractEvaluation](#ei-ContractEvaluation) | optional |  |
+
+
+
+
+
+
 <a name="ei-ContractPlayerInfo"></a>
 
 ### ContractPlayerInfo
@@ -1558,6 +1721,18 @@
 | ----- | ---- | ----- | ----------- |
 | grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | total_cxp | [double](#double) | optional |  |
+| season_cxp | [double](#double) | optional |  |
+| grade_score | [double](#double) | optional |  |
+| target_grade_score | [double](#double) | optional |  |
+| soul_power | [double](#double) | optional |  |
+| target_soul_power | [double](#double) | optional |  |
+| grade_progress | [double](#double) | optional |  |
+| issues | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | repeated |  |
+| issue_score | [double](#double) | optional |  |
+| status | [ContractPlayerInfo.Status](#ei-ContractPlayerInfo-Status) | optional |  |
+| last_evaluation_time | [double](#double) | optional |  |
+| last_evaluation_version | [string](#string) | optional |  |
+| unread_evaluations | [ContractEvaluation](#ei-ContractEvaluation) | repeated |  |
 
 
 
@@ -1606,6 +1781,7 @@
 | target_se | [double](#double) | optional |  |
 | cps_mult | [double](#double) | optional |  |
 | earnings_mult | [double](#double) | optional |  |
+| time_efficacy | [double](#double) | optional |  |
 
 
 
@@ -1676,6 +1852,21 @@
 
 
 
+<a name="ei-ContractsArchive"></a>
+
+### ContractsArchive
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| archive | [LocalContract](#ei-LocalContract) | repeated |  |
+
+
+
+
+
+
 <a name="ei-ContractsRequest"></a>
 
 ### ContractsRequest
@@ -1686,6 +1877,7 @@
 | ----- | ---- | ----- | ----------- |
 | soul_eggs | [double](#double) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
+| user_id | [string](#string) | optional |  |
 
 
 
@@ -1758,6 +1950,40 @@
 
 
 
+<a name="ei-CoopCompletionSnapshot"></a>
+
+### CoopCompletionSnapshot
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contributors | [CoopCompletionSnapshot.ContributorSnapshot](#ei-CoopCompletionSnapshot-ContributorSnapshot) | repeated |  |
+
+
+
+
+
+
+<a name="ei-CoopCompletionSnapshot-ContributorSnapshot"></a>
+
+### CoopCompletionSnapshot.ContributorSnapshot
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contribution | [double](#double) | optional |  |
+| soul_power | [double](#double) | optional |  |
+| user_id | [string](#string) | optional |  |
+| tokens | [uint32](#uint32) | optional |  |
+| tokens_spent | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
 <a name="ei-CoopLastChickenRunTimes"></a>
 
 ### CoopLastChickenRunTimes
@@ -1824,12 +2050,15 @@
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | contract_identifier | [string](#string) | optional |  |
 | coop_identifier | [string](#string) | optional |  |
+| public | [bool](#bool) | optional |  |
+| cc_only | [bool](#bool) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | user_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | eop | [double](#double) | optional |  |
 | league | [uint32](#uint32) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
 
@@ -2023,6 +2252,7 @@
 | subtitle | [string](#string) | optional |  |
 | start_time | [double](#double) | optional |  |
 | duration | [double](#double) | optional |  |
+| cc_only | [bool](#bool) | optional |  |
 
 
 
@@ -2098,8 +2328,8 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| dimension | [GameDimension](#ei-GameDimension) | optional |  |
-| value_modifier | [double](#double) | optional |  |
+| dimension | [GameModifier.GameDimension](#ei-GameModifier-GameDimension) | optional |  |
+| value | [double](#double) | optional |  |
 | description | [string](#string) | optional |  |
 
 
@@ -2272,6 +2502,7 @@
 | soul_power | [double](#double) | optional |  |
 | eop | [double](#double) | optional |  |
 | league | [uint32](#uint32) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
@@ -2296,6 +2527,9 @@
 | seconds_remaining | [double](#double) | optional |  |
 | match_percent | [double](#double) | optional |  |
 | num_members | [uint32](#uint32) | optional |  |
+| status | [ContractCoopStatusResponse.Status](#ei-ContractCoopStatusResponse-Status) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| can_start | [bool](#bool) | optional |  |
 
 
 
@@ -2317,6 +2551,130 @@
 | requesting_user_id | [string](#string) | optional |  |
 | reason | [KickPlayerCoopRequest.Reason](#ei-KickPlayerCoopRequest-Reason) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardAnalysis"></a>
+
+### LeaderboardAnalysis
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| chunks | [LeaderboardAnalysis.Chunk](#ei-LeaderboardAnalysis-Chunk) | repeated |  |
+| count | [uint32](#uint32) | optional |  |
+| high_score | [double](#double) | optional |  |
+| low_score | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardAnalysis-Chunk"></a>
+
+### LeaderboardAnalysis.Chunk
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| start_index | [uint32](#uint32) | optional |  |
+| end_index | [uint32](#uint32) | optional |  |
+| high_score | [double](#double) | optional |  |
+| low_score | [double](#double) | optional |  |
+| start_cursor | [string](#string) | optional |  |
+| end_cursor | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardInfo"></a>
+
+### LeaderboardInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| seasons | [LeaderboardInfo.Season](#ei-LeaderboardInfo-Season) | repeated |  |
+| all_time_scope | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardInfo-Season"></a>
+
+### LeaderboardInfo.Season
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| scope | [string](#string) | optional |  |
+| name | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardRequest"></a>
+
+### LeaderboardRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| scope | [string](#string) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardResponse"></a>
+
+### LeaderboardResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| scope | [string](#string) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| top_entries | [LeaderboardResponse.Entry](#ei-LeaderboardResponse-Entry) | repeated |  |
+| count | [uint32](#uint32) | optional |  |
+| rank | [uint32](#uint32) | optional |  |
+| score | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-LeaderboardResponse-Entry"></a>
+
+### LeaderboardResponse.Entry
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rank | [uint32](#uint32) | optional |  |
+| alias | [string](#string) | optional |  |
+| score | [double](#double) | optional |  |
 
 
 
@@ -2480,6 +2838,8 @@
 | shells_intro_alert_threshold | [uint32](#uint32) | optional |  |
 | contracts_expert_league_min_soul_power | [double](#double) | optional |  |
 | new_player_event_duration | [double](#double) | optional |  |
+| contracts_club_available | [bool](#bool) | optional |  |
+| contracts_beta | [bool](#bool) | optional |  |
 
 
 
@@ -2509,9 +2869,12 @@
 | last_amount_when_reward_given | [double](#double) | optional |  |
 | num_goals_achieved | [uint32](#uint32) | optional |  |
 | boosts_used | [uint32](#uint32) | optional |  |
+| points_replay | [bool](#bool) | optional |  |
 | league | [uint32](#uint32) | optional |  |
 | grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | last_nag_time | [double](#double) | optional |  |
+| evaluation | [ContractEvaluation](#ei-ContractEvaluation) | optional |  |
+| reported_uuids | [string](#string) | repeated |  |
 
 
 
@@ -2686,6 +3049,10 @@
 | contracts | [LocalContract](#ei-LocalContract) | repeated |  |
 | archive | [LocalContract](#ei-LocalContract) | repeated |  |
 | current_coop_statuses | [ContractCoopStatusResponse](#ei-ContractCoopStatusResponse) | repeated |  |
+| last_cpi | [ContractPlayerInfo](#ei-ContractPlayerInfo) | optional |  |
+| initial_grade_revealed | [bool](#bool) | optional |  |
+| last_grade_progress_shown | [double](#double) | optional |  |
+| show_advanced_evaluations | [bool](#bool) | optional |  |
 
 
 
@@ -2703,6 +3070,7 @@
 | sales | [SalesInfo](#ei-SalesInfo) | optional |  |
 | events | [EggIncCurrentEvents](#ei-EggIncCurrentEvents) | optional |  |
 | contracts | [ContractsResponse](#ei-ContractsResponse) | optional |  |
+| evaluations | [ContractEvaluation](#ei-ContractEvaluation) | repeated |  |
 | gifts | [ServerGift](#ei-ServerGift) | repeated |  |
 | live_config | [LiveConfig](#ei-LiveConfig) | optional |  |
 | mail_bag | [MailDB](#ei-MailDB) | optional |  |
@@ -2761,6 +3129,7 @@
 | contract_identifier | [string](#string) | optional |  |
 | coop_identifier | [string](#string) | optional |  |
 | league | [uint32](#uint32) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
 
 
@@ -2780,7 +3149,28 @@
 | full | [bool](#bool) | optional |  |
 | expired | [bool](#bool) | optional |  |
 | different_league | [bool](#bool) | optional |  |
+| different_grade | [bool](#bool) | optional |  |
+| cc_only | [bool](#bool) | optional |  |
 | banned | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-ReportPlayerCoopRequest"></a>
+
+### ReportPlayerCoopRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| contract_identifier | [string](#string) | optional |  |
+| coop_identifier | [string](#string) | optional |  |
+| user_id | [string](#string) | optional |  |
+| reason | [ReportPlayerCoopRequest.Reason](#ei-ReportPlayerCoopRequest-Reason) | optional |  |
 
 
 
@@ -3316,6 +3706,23 @@
 
 
 
+<a name="ei-SubscriptionChangeHintRequest"></a>
+
+### SubscriptionChangeHintRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| original_transaction_id | [string](#string) | optional |  |
+| next_subscription_level | [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level) | optional |  |
+
+
+
+
+
+
 <a name="ei-UpdateCoopPermissionsRequest"></a>
 
 ### UpdateCoopPermissionsRequest
@@ -3387,6 +3794,99 @@
 
 
 
+<a name="ei-UserSubscriptionInfo"></a>
+
+### UserSubscriptionInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| subscription_level | [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level) | optional |  |
+| next_subscription_level | [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level) | optional |  |
+| lock_next_subscription_level | [bool](#bool) | optional |  |
+| platform | [Platform](#ei-Platform) | optional |  |
+| original_transaction_id | [string](#string) | optional |  |
+| linked_transaction_id | [string](#string) | optional |  |
+| acknowledged | [bool](#bool) | optional |  |
+| first_subscribed | [double](#double) | optional |  |
+| period_end | [double](#double) | optional |  |
+| status | [UserSubscriptionInfo.Status](#ei-UserSubscriptionInfo-Status) | optional |  |
+| store_status | [string](#string) | optional |  |
+| auto_renew | [bool](#bool) | optional |  |
+| sandbox | [bool](#bool) | optional |  |
+| last_updated | [double](#double) | optional |  |
+| history | [UserSubscriptionInfo.HistoryEntry](#ei-UserSubscriptionInfo-HistoryEntry) | repeated |  |
+| past_user_ids | [string](#string) | repeated |  |
+
+
+
+
+
+
+<a name="ei-UserSubscriptionInfo-HistoryEntry"></a>
+
+### UserSubscriptionInfo.HistoryEntry
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| timestamp | [double](#double) | optional |  |
+| message_id | [string](#string) | optional |  |
+| message | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-UserVerificationAnalysis"></a>
+
+### UserVerificationAnalysis
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| overall_status | [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status) | optional |  |
+| start_time | [double](#double) | optional |  |
+| completion_time | [double](#double) | optional |  |
+| num_prestiges | [double](#double) | optional |  |
+| soul_eggs | [double](#double) | optional |  |
+| eggs_of_prophecy | [uint32](#uint32) | optional |  |
+| iap_status | [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status) | optional |  |
+| verified_pro_permit | [bool](#bool) | optional |  |
+| verified_piggy_breaks | [uint32](#uint32) | optional |  |
+| verified_other_iap | [uint32](#uint32) | optional |  |
+| unverified_iap | [uint32](#uint32) | optional |  |
+| gold_earned | [double](#double) | optional |  |
+| regular_iap_buyer | [bool](#bool) | optional |  |
+| regular_iap_cheater | [bool](#bool) | optional |  |
+| artifacts_status | [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status) | optional |  |
+| missions_completed | [uint32](#uint32) | optional |  |
+| artifacts_collected | [double](#double) | optional |  |
+| artifacts_consumed | [double](#double) | optional |  |
+| artifacts_in_inventory | [double](#double) | optional |  |
+| gold_spent_crafting | [double](#double) | optional |  |
+| excessive_consumes | [bool](#bool) | optional |  |
+| excessive_inventory | [bool](#bool) | optional |  |
+| excessive_spend | [bool](#bool) | optional |  |
+| contracts_status | [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status) | optional |  |
+| num_coop_memberships | [uint32](#uint32) | optional |  |
+| valid_contracts | [uint32](#uint32) | optional |  |
+| invalid_contracts | [string](#string) | repeated |  |
+| excessive_eop | [bool](#bool) | optional |  |
+| excessive_invalid_contracts | [bool](#bool) | optional |  |
+| verified | [bool](#bool) | optional |  |
+| verification_override | [bool](#bool) | optional |  |
+| verification_override_value | [bool](#bool) | optional |  |
+
+
+
+
+
+
 <a name="ei-VerifyPurchaseRequest"></a>
 
 ### VerifyPurchaseRequest
@@ -3398,6 +3898,7 @@
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | sku | [string](#string) | optional |  |
 | transaction_id | [string](#string) | optional |  |
+| original_transaction_id | [string](#string) | optional |  |
 | receipt | [string](#string) | optional |  |
 | platform | [string](#string) | optional |  |
 | sandbox | [bool](#bool) | optional |  |
@@ -3581,6 +4082,66 @@
 
 
 
+<a name="ei-ContractCoopStatusResponse-Status"></a>
+
+### ContractCoopStatusResponse.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| LOBBY | 1 |  |
+| ACTIVE | 2 |  |
+| COMPLETE | 3 |  |
+| FINALIZED | 4 |  |
+
+
+
+<a name="ei-ContractEvaluation-PoorBehavior"></a>
+
+### ContractEvaluation.PoorBehavior
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NONE | 0 |  |
+| LOW_CONTRIBUTION | 1 |  |
+| BAD_CONTRIBUTION | 2 |  |
+| DISHONORABLY_DISCHARGED | 3 |  |
+| POOR_TEAMWORK | 4 |  |
+| ABANDONED_COOP | 5 |  |
+
+
+
+<a name="ei-ContractEvaluation-Status"></a>
+
+### ContractEvaluation.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| PENDING | 1 |  |
+| EVALUATING | 2 |  |
+| COMPLETE | 3 |  |
+
+
+
+<a name="ei-ContractPlayerInfo-Status"></a>
+
+### ContractPlayerInfo.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| CALCULATING | 1 |  |
+| OUT_OF_DATE | 2 |  |
+| INCOMPLETE | 4 |  |
+| COMPLETE | 3 |  |
+
+
+
 <a name="ei-DeviceFormFactor"></a>
 
 ### DeviceFormFactor
@@ -3655,15 +4216,22 @@
 
 
 
-<a name="ei-GameDimension"></a>
+<a name="ei-GameModifier-GameDimension"></a>
 
-### GameDimension
+### GameModifier.GameDimension
 
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | EARNINGS | 1 |  |
-| AWAY_EARNINGS | 3 |  |
+| AWAY_EARNINGS | 2 |  |
+| INTERNAL_HATCHERY_RATE | 3 |  |
+| EGG_LAYING_RATE | 4 |  |
+| SHIPPING_CAPACITY | 5 |  |
+| HAB_CAPACITY | 6 |  |
+| VEHICLE_COST | 7 |  |
+| HAB_COST | 8 |  |
+| RESEARCH_COST | 9 |  |
 
 
 
@@ -3691,6 +4259,18 @@
 | IDLE | 2 |  |
 | LEECH | 3 |  |
 | PRIVATE | 4 |  |
+
+
+
+<a name="ei-LeaderboardScope"></a>
+
+### LeaderboardScope
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ALL_TIME | 0 |  |
+| CURRENT_SEASON | 1 |  |
 
 
 
@@ -3754,6 +4334,20 @@
 | ---- | ------ | ----------- |
 | IOS | 1 |  |
 | DROID | 2 |  |
+
+
+
+<a name="ei-ReportPlayerCoopRequest-Reason"></a>
+
+### ReportPlayerCoopRequest.Reason
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| OFFENSIVE_NAME | 1 |  |
+| CHEATING | 2 |  |
+| LEECHING | 3 |  |
 
 
 
@@ -3945,6 +4539,47 @@
 | CHICKEN | 1000 |  |
 | HAT | 1010 |  |
 | UNKNOWN | 9999 |  |
+
+
+
+<a name="ei-UserSubscriptionInfo-Level"></a>
+
+### UserSubscriptionInfo.Level
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| STANDARD | 0 |  |
+| PRO | 1 |  |
+
+
+
+<a name="ei-UserSubscriptionInfo-Status"></a>
+
+### UserSubscriptionInfo.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| ACTIVE | 1 |  |
+| EXPIRED | 2 |  |
+| REVOKED | 3 |  |
+| GRACE_PERIOD | 4 |  |
+| PAUSE_HOLD | 5 |  |
+
+
+
+<a name="ei-UserVerificationAnalysis-Status"></a>
+
+### UserVerificationAnalysis.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| PROCESSING | 1 |  |
+| COMPLETE | 2 |  |
 
 
  

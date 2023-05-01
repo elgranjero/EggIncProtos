@@ -32,6 +32,7 @@ goog.provide('proto.ei.ContractCoopStatusResponse.ChickenRun');
 goog.provide('proto.ei.ContractCoopStatusResponse.ContributionInfo');
 goog.provide('proto.ei.ContractCoopStatusResponse.CoopGift');
 goog.provide('proto.ei.ContractCoopStatusResponse.MemberStatus');
+goog.provide('proto.ei.ContractCoopStatusResponse.Status');
 goog.provide('proto.ei.MyContracts');
 goog.provide('proto.ei.PlayerFarmInfo');
 
@@ -42,6 +43,7 @@ goog.require('proto.ei.ArtifactInventoryItem');
 goog.require('proto.ei.ArtifactSpec');
 goog.require('proto.ei.ArtifactsDB');
 goog.require('proto.ei.CompleteArtifact');
+goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.CoopBuffState');
 goog.require('proto.ei.FarmProductionParams');
 goog.require('proto.ei.LocalContract');
@@ -9028,7 +9030,9 @@ proto.ei.Backup.Misc.toObject = function(includeInstance, msg) {
     trophyAlert: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     arAlert: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
     contractsAlert: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    contractsAlertV2: (f = jspb.Message.getBooleanField(msg, 21)) == null ? undefined : f,
     coopAlert: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    coopAlertV2: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     switchAlert: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
     eggOfProphecyAlert: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
     boostTokenAlert: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
@@ -9126,9 +9130,17 @@ proto.ei.Backup.Misc.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setContractsAlert(value);
       break;
+    case 21:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setContractsAlertV2(value);
+      break;
     case 14:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setCoopAlert(value);
+      break;
+    case 22:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCoopAlertV2(value);
       break;
     case 15:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -9277,10 +9289,24 @@ proto.ei.Backup.Misc.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 21));
+  if (f != null) {
+    writer.writeBool(
+      21,
+      f
+    );
+  }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 14));
   if (f != null) {
     writer.writeBool(
       14,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 22));
+  if (f != null) {
+    writer.writeBool(
+      22,
       f
     );
   }
@@ -9827,6 +9853,42 @@ proto.ei.Backup.Misc.prototype.hasContractsAlert = function() {
 
 
 /**
+ * optional bool contracts_alert_v2 = 21;
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.getContractsAlertV2 = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 21, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.setContractsAlertV2 = function(value) {
+  return jspb.Message.setField(this, 21, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.clearContractsAlertV2 = function() {
+  return jspb.Message.setField(this, 21, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.hasContractsAlertV2 = function() {
+  return jspb.Message.getField(this, 21) != null;
+};
+
+
+/**
  * optional bool coop_alert = 14;
  * @return {boolean}
  */
@@ -9859,6 +9921,42 @@ proto.ei.Backup.Misc.prototype.clearCoopAlert = function() {
  */
 proto.ei.Backup.Misc.prototype.hasCoopAlert = function() {
   return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
+ * optional bool coop_alert_v2 = 22;
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.getCoopAlertV2 = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 22, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.setCoopAlertV2 = function(value) {
+  return jspb.Message.setField(this, 22, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.clearCoopAlertV2 = function() {
+  return jspb.Message.setField(this, 22, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.hasCoopAlertV2 = function() {
+  return jspb.Message.getField(this, 22) != null;
 };
 
 
@@ -12512,6 +12610,17 @@ proto.ei.ContractCoopStatusResponse.MemberStatus = {
   KICKED_LEECH: 4
 };
 
+/**
+ * @enum {number}
+ */
+proto.ei.ContractCoopStatusResponse.Status = {
+  UNKNOWN: 0,
+  LOBBY: 1,
+  ACTIVE: 2,
+  COMPLETE: 3,
+  FINALIZED: 4
+};
+
 
 /**
  * List of repeated fields within this message type.
@@ -12551,6 +12660,7 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.toObject = functi
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
+    uuid: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     contractIdentifier: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
@@ -12608,6 +12718,10 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 21:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUuid(value);
+      break;
     case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.setUserId(value);
@@ -12720,6 +12834,13 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.serializeBinary =
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 21));
+  if (f != null) {
+    writer.writeString(
+      21,
+      f
+    );
+  }
   f = /** @type {string} */ (jspb.Message.getField(message, 1));
   if (f != null) {
     writer.writeString(
@@ -12863,6 +12984,42 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = f
       f
     );
   }
+};
+
+
+/**
+ * optional string uuid = 21;
+ * @return {string}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getUuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 21, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setUuid = function(value) {
+  return jspb.Message.setField(this, 21, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearUuid = function() {
+  return jspb.Message.setField(this, 21, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasUuid = function() {
+  return jspb.Message.getField(this, 21) != null;
 };
 
 
@@ -14597,7 +14754,11 @@ proto.ei.MyContracts.toObject = function(includeInstance, msg) {
     archiveList: jspb.Message.toObjectList(msg.getArchiveList(),
     proto.ei.LocalContract.toObject, includeInstance),
     currentCoopStatusesList: jspb.Message.toObjectList(msg.getCurrentCoopStatusesList(),
-    proto.ei.ContractCoopStatusResponse.toObject, includeInstance)
+    proto.ei.ContractCoopStatusResponse.toObject, includeInstance),
+    lastCpi: (f = msg.getLastCpi()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f),
+    initialGradeRevealed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    lastGradeProgressShown: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    showAdvancedEvaluations: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -14652,6 +14813,23 @@ proto.ei.MyContracts.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.ContractCoopStatusResponse;
       reader.readMessage(value,proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader);
       msg.addCurrentCoopStatuses(value);
+      break;
+    case 5:
+      var value = new proto.ei.ContractPlayerInfo;
+      reader.readMessage(value,proto.ei.ContractPlayerInfo.deserializeBinaryFromReader);
+      msg.setLastCpi(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setInitialGradeRevealed(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastGradeProgressShown(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setShowAdvancedEvaluations(value);
       break;
     default:
       reader.skipField();
@@ -14711,6 +14889,35 @@ proto.ei.MyContracts.serializeBinaryToWriter = function(message, writer) {
       4,
       f,
       proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter
+    );
+  }
+  f = message.getLastCpi();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.ei.ContractPlayerInfo.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeDouble(
+      7,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeBool(
+      8,
+      f
     );
   }
 };
@@ -14864,6 +15071,151 @@ proto.ei.MyContracts.prototype.addCurrentCoopStatuses = function(opt_value, opt_
  */
 proto.ei.MyContracts.prototype.clearCurrentCoopStatusesList = function() {
   return this.setCurrentCoopStatusesList([]);
+};
+
+
+/**
+ * optional ContractPlayerInfo last_cpi = 5;
+ * @return {?proto.ei.ContractPlayerInfo}
+ */
+proto.ei.MyContracts.prototype.getLastCpi = function() {
+  return /** @type{?proto.ei.ContractPlayerInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.ContractPlayerInfo, 5));
+};
+
+
+/**
+ * @param {?proto.ei.ContractPlayerInfo|undefined} value
+ * @return {!proto.ei.MyContracts} returns this
+*/
+proto.ei.MyContracts.prototype.setLastCpi = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.clearLastCpi = function() {
+  return this.setLastCpi(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MyContracts.prototype.hasLastCpi = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bool initial_grade_revealed = 6;
+ * @return {boolean}
+ */
+proto.ei.MyContracts.prototype.getInitialGradeRevealed = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.setInitialGradeRevealed = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.clearInitialGradeRevealed = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MyContracts.prototype.hasInitialGradeRevealed = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional double last_grade_progress_shown = 7;
+ * @return {number}
+ */
+proto.ei.MyContracts.prototype.getLastGradeProgressShown = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.setLastGradeProgressShown = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.clearLastGradeProgressShown = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MyContracts.prototype.hasLastGradeProgressShown = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional bool show_advanced_evaluations = 8;
+ * @return {boolean}
+ */
+proto.ei.MyContracts.prototype.getShowAdvancedEvaluations = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.setShowAdvancedEvaluations = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.clearShowAdvancedEvaluations = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MyContracts.prototype.hasShowAdvancedEvaluations = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

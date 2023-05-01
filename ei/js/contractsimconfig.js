@@ -373,7 +373,8 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.toObject = function
   var f, obj = {
     targetSe: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
     cpsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    earningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    earningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    timeEfficacy: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -422,6 +423,10 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.deserializeBinaryFr
       var value = /** @type {number} */ (reader.readDouble());
       msg.setEarningsMult(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setTimeEfficacy(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -469,6 +474,13 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.serializeBinaryToWr
   if (f != null) {
     writer.writeDouble(
       3,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeDouble(
+      4,
       f
     );
   }
@@ -580,6 +592,42 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.clearEarn
  */
 proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasEarningsMult = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional double time_efficacy = 4;
+ * @return {number}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.getTimeEfficacy = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.setTimeEfficacy = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.clearTimeEfficacy = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasTimeEfficacy = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

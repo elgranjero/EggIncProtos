@@ -71,7 +71,8 @@ proto.ei.ContractsRequest.prototype.toObject = function(opt_includeInstance) {
 proto.ei.ContractsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    clientVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+    clientVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -116,6 +117,10 @@ proto.ei.ContractsRequest.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {number} */ (reader.readUint32());
       msg.setClientVersion(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -156,6 +161,13 @@ proto.ei.ContractsRequest.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeUint32(
       5,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
       f
     );
   }
@@ -231,6 +243,42 @@ proto.ei.ContractsRequest.prototype.clearClientVersion = function() {
  */
 proto.ei.ContractsRequest.prototype.hasClientVersion = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional string user_id = 2;
+ * @return {string}
+ */
+proto.ei.ContractsRequest.prototype.getUserId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ContractsRequest} returns this
+ */
+proto.ei.ContractsRequest.prototype.setUserId = function(value) {
+  return jspb.Message.setField(this, 2, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractsRequest} returns this
+ */
+proto.ei.ContractsRequest.prototype.clearUserId = function() {
+  return jspb.Message.setField(this, 2, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractsRequest.prototype.hasUserId = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

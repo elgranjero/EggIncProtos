@@ -97,6 +97,30 @@ public object VerifyPurchaseRequestKt {
     }
 
     /**
+     * <code>optional string original_transaction_id = 8;</code>
+     */
+    public var originalTransactionId: kotlin.String
+      @JvmName("getOriginalTransactionId")
+      get() = _builder.getOriginalTransactionId()
+      @JvmName("setOriginalTransactionId")
+      set(value) {
+        _builder.setOriginalTransactionId(value)
+      }
+    /**
+     * <code>optional string original_transaction_id = 8;</code>
+     */
+    public fun clearOriginalTransactionId() {
+      _builder.clearOriginalTransactionId()
+    }
+    /**
+     * <code>optional string original_transaction_id = 8;</code>
+     * @return Whether the originalTransactionId field is set.
+     */
+    public fun hasOriginalTransactionId(): kotlin.Boolean {
+      return _builder.hasOriginalTransactionId()
+    }
+
+    /**
      * <code>optional string receipt = 3;</code>
      */
     public var receipt: kotlin.String

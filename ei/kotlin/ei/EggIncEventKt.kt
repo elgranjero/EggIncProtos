@@ -189,6 +189,30 @@ public object EggIncEventKt {
     public fun hasDuration(): kotlin.Boolean {
       return _builder.hasDuration()
     }
+
+    /**
+     * <code>optional bool cc_only = 8;</code>
+     */
+    public var ccOnly: kotlin.Boolean
+      @JvmName("getCcOnly")
+      get() = _builder.getCcOnly()
+      @JvmName("setCcOnly")
+      set(value) {
+        _builder.setCcOnly(value)
+      }
+    /**
+     * <code>optional bool cc_only = 8;</code>
+     */
+    public fun clearCcOnly() {
+      _builder.clearCcOnly()
+    }
+    /**
+     * <code>optional bool cc_only = 8;</code>
+     * @return Whether the ccOnly field is set.
+     */
+    public fun hasCcOnly(): kotlin.Boolean {
+      return _builder.hasCcOnly()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

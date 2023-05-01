@@ -76,7 +76,8 @@ proto.ei.EggIncEvent.toObject = function(includeInstance, msg) {
     multiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
     subtitle: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-    duration: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f
+    duration: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    ccOnly: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -140,6 +141,10 @@ proto.ei.EggIncEvent.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setDuration(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCcOnly(value);
       break;
     default:
       reader.skipField();
@@ -216,6 +221,13 @@ proto.ei.EggIncEvent.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       7,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeBool(
+      8,
       f
     );
   }
@@ -471,6 +483,42 @@ proto.ei.EggIncEvent.prototype.clearDuration = function() {
  */
 proto.ei.EggIncEvent.prototype.hasDuration = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional bool cc_only = 8;
+ * @return {boolean}
+ */
+proto.ei.EggIncEvent.prototype.getCcOnly = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.EggIncEvent} returns this
+ */
+proto.ei.EggIncEvent.prototype.setCcOnly = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.EggIncEvent} returns this
+ */
+proto.ei.EggIncEvent.prototype.clearCcOnly = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.EggIncEvent.prototype.hasCcOnly = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

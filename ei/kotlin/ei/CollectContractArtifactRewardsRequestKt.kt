@@ -97,6 +97,30 @@ public object CollectContractArtifactRewardsRequestKt {
     }
 
     /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
+    }
+
+    /**
      * <code>optional uint32 goal_index = 3;</code>
      */
     public var goalIndex: kotlin.Int

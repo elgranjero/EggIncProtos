@@ -75,6 +75,7 @@ proto.ei.VerifyPurchaseRequest.toObject = function(includeInstance, msg) {
     rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
     sku: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     transactionId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    originalTransactionId: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     receipt: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     platform: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     sandbox: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
@@ -127,6 +128,10 @@ proto.ei.VerifyPurchaseRequest.deserializeBinaryFromReader = function(msg, reade
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setTransactionId(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setOriginalTransactionId(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -193,6 +198,13 @@ proto.ei.VerifyPurchaseRequest.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeString(
       2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeString(
+      8,
       f
     );
   }
@@ -334,6 +346,42 @@ proto.ei.VerifyPurchaseRequest.prototype.clearTransactionId = function() {
  */
 proto.ei.VerifyPurchaseRequest.prototype.hasTransactionId = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string original_transaction_id = 8;
+ * @return {string}
+ */
+proto.ei.VerifyPurchaseRequest.prototype.getOriginalTransactionId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.VerifyPurchaseRequest} returns this
+ */
+proto.ei.VerifyPurchaseRequest.prototype.setOriginalTransactionId = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.VerifyPurchaseRequest} returns this
+ */
+proto.ei.VerifyPurchaseRequest.prototype.clearOriginalTransactionId = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.VerifyPurchaseRequest.prototype.hasOriginalTransactionId = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

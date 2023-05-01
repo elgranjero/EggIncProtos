@@ -119,6 +119,54 @@ public object QueryCoopResponseKt {
     }
 
     /**
+     * <code>optional bool different_grade = 6;</code>
+     */
+    public var differentGrade: kotlin.Boolean
+      @JvmName("getDifferentGrade")
+      get() = _builder.getDifferentGrade()
+      @JvmName("setDifferentGrade")
+      set(value) {
+        _builder.setDifferentGrade(value)
+      }
+    /**
+     * <code>optional bool different_grade = 6;</code>
+     */
+    public fun clearDifferentGrade() {
+      _builder.clearDifferentGrade()
+    }
+    /**
+     * <code>optional bool different_grade = 6;</code>
+     * @return Whether the differentGrade field is set.
+     */
+    public fun hasDifferentGrade(): kotlin.Boolean {
+      return _builder.hasDifferentGrade()
+    }
+
+    /**
+     * <code>optional bool cc_only = 7;</code>
+     */
+    public var ccOnly: kotlin.Boolean
+      @JvmName("getCcOnly")
+      get() = _builder.getCcOnly()
+      @JvmName("setCcOnly")
+      set(value) {
+        _builder.setCcOnly(value)
+      }
+    /**
+     * <code>optional bool cc_only = 7;</code>
+     */
+    public fun clearCcOnly() {
+      _builder.clearCcOnly()
+    }
+    /**
+     * <code>optional bool cc_only = 7;</code>
+     * @return Whether the ccOnly field is set.
+     */
+    public fun hasCcOnly(): kotlin.Boolean {
+      return _builder.hasCcOnly()
+    }
+
+    /**
      * <code>optional bool banned = 3;</code>
      */
     public var banned: kotlin.Boolean

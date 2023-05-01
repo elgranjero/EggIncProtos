@@ -17,6 +17,7 @@ goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.ei.Contract');
+goog.require('proto.ei.ContractEvaluation');
 
 goog.forwardDeclare('proto.ei.Contract.PlayerGrade');
 /**
@@ -30,7 +31,7 @@ goog.forwardDeclare('proto.ei.Contract.PlayerGrade');
  * @constructor
  */
 proto.ei.LocalContract = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ei.LocalContract.repeatedFields_, null);
 };
 goog.inherits(proto.ei.LocalContract, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -40,6 +41,13 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.ei.LocalContract.displayName = 'proto.ei.LocalContract';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ei.LocalContract.repeatedFields_ = [21];
 
 
 
@@ -87,9 +95,12 @@ proto.ei.LocalContract.toObject = function(includeInstance, msg) {
     lastAmountWhenRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     numGoalsAchieved: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     boostsUsed: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    pointsReplay: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     league: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
     grade: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
-    lastNagTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f
+    lastNagTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
+    evaluation: (f = msg.getEvaluation()) && proto.ei.ContractEvaluation.toObject(includeInstance, f),
+    reportedUuidsList: (f = jspb.Message.getRepeatedField(msg, 21)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -187,6 +198,10 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {number} */ (reader.readUint32());
       msg.setBoostsUsed(value);
       break;
+    case 20:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPointsReplay(value);
+      break;
     case 15:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setLeague(value);
@@ -198,6 +213,15 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
     case 16:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setLastNagTime(value);
+      break;
+    case 19:
+      var value = new proto.ei.ContractEvaluation;
+      reader.readMessage(value,proto.ei.ContractEvaluation.deserializeBinaryFromReader);
+      msg.setEvaluation(value);
+      break;
+    case 21:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addReportedUuids(value);
       break;
     default:
       reader.skipField();
@@ -334,6 +358,13 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 20));
+  if (f != null) {
+    writer.writeBool(
+      20,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 15));
   if (f != null) {
     writer.writeUint32(
@@ -352,6 +383,21 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       16,
+      f
+    );
+  }
+  f = message.getEvaluation();
+  if (f != null) {
+    writer.writeMessage(
+      19,
+      f,
+      proto.ei.ContractEvaluation.serializeBinaryToWriter
+    );
+  }
+  f = message.getReportedUuidsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      21,
       f
     );
   }
@@ -900,6 +946,42 @@ proto.ei.LocalContract.prototype.hasBoostsUsed = function() {
 
 
 /**
+ * optional bool points_replay = 20;
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.getPointsReplay = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 20, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setPointsReplay = function(value) {
+  return jspb.Message.setField(this, 20, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearPointsReplay = function() {
+  return jspb.Message.setField(this, 20, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasPointsReplay = function() {
+  return jspb.Message.getField(this, 20) != null;
+};
+
+
+/**
  * optional uint32 league = 15;
  * @return {number}
  */
@@ -1004,6 +1086,80 @@ proto.ei.LocalContract.prototype.clearLastNagTime = function() {
  */
 proto.ei.LocalContract.prototype.hasLastNagTime = function() {
   return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional ContractEvaluation evaluation = 19;
+ * @return {?proto.ei.ContractEvaluation}
+ */
+proto.ei.LocalContract.prototype.getEvaluation = function() {
+  return /** @type{?proto.ei.ContractEvaluation} */ (
+    jspb.Message.getWrapperField(this, proto.ei.ContractEvaluation, 19));
+};
+
+
+/**
+ * @param {?proto.ei.ContractEvaluation|undefined} value
+ * @return {!proto.ei.LocalContract} returns this
+*/
+proto.ei.LocalContract.prototype.setEvaluation = function(value) {
+  return jspb.Message.setWrapperField(this, 19, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearEvaluation = function() {
+  return this.setEvaluation(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasEvaluation = function() {
+  return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * repeated string reported_uuids = 21;
+ * @return {!Array<string>}
+ */
+proto.ei.LocalContract.prototype.getReportedUuidsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 21));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setReportedUuidsList = function(value) {
+  return jspb.Message.setField(this, 21, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.addReportedUuids = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 21, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearReportedUuidsList = function() {
+  return this.setReportedUuidsList([]);
 };
 
 

@@ -335,6 +335,30 @@ public object ContractKt {
 
 
     /**
+     * <code>optional string season_id = 23;</code>
+     */
+    public var seasonId: kotlin.String
+      @JvmName("getSeasonId")
+      get() = _builder.getSeasonId()
+      @JvmName("setSeasonId")
+      set(value) {
+        _builder.setSeasonId(value)
+      }
+    /**
+     * <code>optional string season_id = 23;</code>
+     */
+    public fun clearSeasonId() {
+      _builder.clearSeasonId()
+    }
+    /**
+     * <code>optional string season_id = 23;</code>
+     * @return Whether the seasonId field is set.
+     */
+    public fun hasSeasonId(): kotlin.Boolean {
+      return _builder.hasSeasonId()
+    }
+
+    /**
      * <code>optional bool coop_allowed = 4;</code>
      */
     public var coopAllowed: kotlin.Boolean
@@ -431,7 +455,7 @@ public object ContractKt {
     }
 
     /**
-     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 60];</code>
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
      */
     public var chickenRunCooldownMinutes: kotlin.Double
       @JvmName("getChickenRunCooldownMinutes")
@@ -441,13 +465,13 @@ public object ContractKt {
         _builder.setChickenRunCooldownMinutes(value)
       }
     /**
-     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 60];</code>
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
      */
     public fun clearChickenRunCooldownMinutes() {
       _builder.clearChickenRunCooldownMinutes()
     }
     /**
-     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 60];</code>
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
      * @return Whether the chickenRunCooldownMinutes field is set.
      */
     public fun hasChickenRunCooldownMinutes(): kotlin.Boolean {
@@ -596,6 +620,30 @@ public object ContractKt {
      */
     public fun hasLeggacy(): kotlin.Boolean {
       return _builder.hasLeggacy()
+    }
+
+    /**
+     * <code>optional bool cc_only = 22;</code>
+     */
+    public var ccOnly: kotlin.Boolean
+      @JvmName("getCcOnly")
+      get() = _builder.getCcOnly()
+      @JvmName("setCcOnly")
+      set(value) {
+        _builder.setCcOnly(value)
+      }
+    /**
+     * <code>optional bool cc_only = 22;</code>
+     */
+    public fun clearCcOnly() {
+      _builder.clearCcOnly()
+    }
+    /**
+     * <code>optional bool cc_only = 22;</code>
+     * @return Whether the ccOnly field is set.
+     */
+    public fun hasCcOnly(): kotlin.Boolean {
+      return _builder.hasCcOnly()
     }
 
     /**
@@ -1088,6 +1136,30 @@ public object ContractKt {
         _builder.clearModifiers()
       }
 
+
+      /**
+       * <code>optional double length_seconds = 4;</code>
+       */
+      public var lengthSeconds: kotlin.Double
+        @JvmName("getLengthSeconds")
+        get() = _builder.getLengthSeconds()
+        @JvmName("setLengthSeconds")
+        set(value) {
+          _builder.setLengthSeconds(value)
+        }
+      /**
+       * <code>optional double length_seconds = 4;</code>
+       */
+      public fun clearLengthSeconds() {
+        _builder.clearLengthSeconds()
+      }
+      /**
+       * <code>optional double length_seconds = 4;</code>
+       * @return Whether the lengthSeconds field is set.
+       */
+      public fun hasLengthSeconds(): kotlin.Boolean {
+        return _builder.hasLengthSeconds()
+      }
     }
   }
 }

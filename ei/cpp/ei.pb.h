@@ -199,6 +199,12 @@ extern ConsumeArtifactResponseDefaultTypeInternal _ConsumeArtifactResponse_defau
 class Contract;
 struct ContractDefaultTypeInternal;
 extern ContractDefaultTypeInternal _Contract_default_instance_;
+class ContractAction;
+struct ContractActionDefaultTypeInternal;
+extern ContractActionDefaultTypeInternal _ContractAction_default_instance_;
+class ContractCitation;
+struct ContractCitationDefaultTypeInternal;
+extern ContractCitationDefaultTypeInternal _ContractCitation_default_instance_;
 class ContractCoopStatusRequest;
 struct ContractCoopStatusRequestDefaultTypeInternal;
 extern ContractCoopStatusRequestDefaultTypeInternal _ContractCoopStatusRequest_default_instance_;
@@ -220,6 +226,15 @@ extern ContractCoopStatusUpdateRequestDefaultTypeInternal _ContractCoopStatusUpd
 class ContractCoopStatusUpdateResponse;
 struct ContractCoopStatusUpdateResponseDefaultTypeInternal;
 extern ContractCoopStatusUpdateResponseDefaultTypeInternal _ContractCoopStatusUpdateResponse_default_instance_;
+class ContractEvaluation;
+struct ContractEvaluationDefaultTypeInternal;
+extern ContractEvaluationDefaultTypeInternal _ContractEvaluation_default_instance_;
+class ContractEvaluationBatch;
+struct ContractEvaluationBatchDefaultTypeInternal;
+extern ContractEvaluationBatchDefaultTypeInternal _ContractEvaluationBatch_default_instance_;
+class ContractEvaluationBatch_Pair;
+struct ContractEvaluationBatch_PairDefaultTypeInternal;
+extern ContractEvaluationBatch_PairDefaultTypeInternal _ContractEvaluationBatch_Pair_default_instance_;
 class ContractPlayerInfo;
 struct ContractPlayerInfoDefaultTypeInternal;
 extern ContractPlayerInfoDefaultTypeInternal _ContractPlayerInfo_default_instance_;
@@ -253,6 +268,9 @@ extern Contract_GoalSetDefaultTypeInternal _Contract_GoalSet_default_instance_;
 class Contract_GradeSpec;
 struct Contract_GradeSpecDefaultTypeInternal;
 extern Contract_GradeSpecDefaultTypeInternal _Contract_GradeSpec_default_instance_;
+class ContractsArchive;
+struct ContractsArchiveDefaultTypeInternal;
+extern ContractsArchiveDefaultTypeInternal _ContractsArchive_default_instance_;
 class ContractsRequest;
 struct ContractsRequestDefaultTypeInternal;
 extern ContractsRequestDefaultTypeInternal _ContractsRequest_default_instance_;
@@ -268,6 +286,12 @@ extern CoopBuffStateDefaultTypeInternal _CoopBuffState_default_instance_;
 class CoopChickenRunEntry;
 struct CoopChickenRunEntryDefaultTypeInternal;
 extern CoopChickenRunEntryDefaultTypeInternal _CoopChickenRunEntry_default_instance_;
+class CoopCompletionSnapshot;
+struct CoopCompletionSnapshotDefaultTypeInternal;
+extern CoopCompletionSnapshotDefaultTypeInternal _CoopCompletionSnapshot_default_instance_;
+class CoopCompletionSnapshot_ContributorSnapshot;
+struct CoopCompletionSnapshot_ContributorSnapshotDefaultTypeInternal;
+extern CoopCompletionSnapshot_ContributorSnapshotDefaultTypeInternal _CoopCompletionSnapshot_ContributorSnapshot_default_instance_;
 class CoopLastChickenRunTimes;
 struct CoopLastChickenRunTimesDefaultTypeInternal;
 extern CoopLastChickenRunTimesDefaultTypeInternal _CoopLastChickenRunTimes_default_instance_;
@@ -352,6 +376,27 @@ extern JoinCoopResponseDefaultTypeInternal _JoinCoopResponse_default_instance_;
 class KickPlayerCoopRequest;
 struct KickPlayerCoopRequestDefaultTypeInternal;
 extern KickPlayerCoopRequestDefaultTypeInternal _KickPlayerCoopRequest_default_instance_;
+class LeaderboardAnalysis;
+struct LeaderboardAnalysisDefaultTypeInternal;
+extern LeaderboardAnalysisDefaultTypeInternal _LeaderboardAnalysis_default_instance_;
+class LeaderboardAnalysis_Chunk;
+struct LeaderboardAnalysis_ChunkDefaultTypeInternal;
+extern LeaderboardAnalysis_ChunkDefaultTypeInternal _LeaderboardAnalysis_Chunk_default_instance_;
+class LeaderboardInfo;
+struct LeaderboardInfoDefaultTypeInternal;
+extern LeaderboardInfoDefaultTypeInternal _LeaderboardInfo_default_instance_;
+class LeaderboardInfo_Season;
+struct LeaderboardInfo_SeasonDefaultTypeInternal;
+extern LeaderboardInfo_SeasonDefaultTypeInternal _LeaderboardInfo_Season_default_instance_;
+class LeaderboardRequest;
+struct LeaderboardRequestDefaultTypeInternal;
+extern LeaderboardRequestDefaultTypeInternal _LeaderboardRequest_default_instance_;
+class LeaderboardResponse;
+struct LeaderboardResponseDefaultTypeInternal;
+extern LeaderboardResponseDefaultTypeInternal _LeaderboardResponse_default_instance_;
+class LeaderboardResponse_Entry;
+struct LeaderboardResponse_EntryDefaultTypeInternal;
+extern LeaderboardResponse_EntryDefaultTypeInternal _LeaderboardResponse_Entry_default_instance_;
 class LeaveCoopRequest;
 struct LeaveCoopRequestDefaultTypeInternal;
 extern LeaveCoopRequestDefaultTypeInternal _LeaveCoopRequest_default_instance_;
@@ -421,6 +466,9 @@ extern QueryCoopRequestDefaultTypeInternal _QueryCoopRequest_default_instance_;
 class QueryCoopResponse;
 struct QueryCoopResponseDefaultTypeInternal;
 extern QueryCoopResponseDefaultTypeInternal _QueryCoopResponse_default_instance_;
+class ReportPlayerCoopRequest;
+struct ReportPlayerCoopRequestDefaultTypeInternal;
+extern ReportPlayerCoopRequestDefaultTypeInternal _ReportPlayerCoopRequest_default_instance_;
 class ReturnEDTPayload;
 struct ReturnEDTPayloadDefaultTypeInternal;
 extern ReturnEDTPayloadDefaultTypeInternal _ReturnEDTPayload_default_instance_;
@@ -502,6 +550,9 @@ extern ShellSpec_ShellPieceDefaultTypeInternal _ShellSpec_ShellPiece_default_ins
 class ShellsActionLog;
 struct ShellsActionLogDefaultTypeInternal;
 extern ShellsActionLogDefaultTypeInternal _ShellsActionLog_default_instance_;
+class SubscriptionChangeHintRequest;
+struct SubscriptionChangeHintRequestDefaultTypeInternal;
+extern SubscriptionChangeHintRequestDefaultTypeInternal _SubscriptionChangeHintRequest_default_instance_;
 class UpdateCoopPermissionsRequest;
 struct UpdateCoopPermissionsRequestDefaultTypeInternal;
 extern UpdateCoopPermissionsRequestDefaultTypeInternal _UpdateCoopPermissionsRequest_default_instance_;
@@ -514,6 +565,15 @@ extern UserDataInfoRequestDefaultTypeInternal _UserDataInfoRequest_default_insta
 class UserDataInfoResponse;
 struct UserDataInfoResponseDefaultTypeInternal;
 extern UserDataInfoResponseDefaultTypeInternal _UserDataInfoResponse_default_instance_;
+class UserSubscriptionInfo;
+struct UserSubscriptionInfoDefaultTypeInternal;
+extern UserSubscriptionInfoDefaultTypeInternal _UserSubscriptionInfo_default_instance_;
+class UserSubscriptionInfo_HistoryEntry;
+struct UserSubscriptionInfo_HistoryEntryDefaultTypeInternal;
+extern UserSubscriptionInfo_HistoryEntryDefaultTypeInternal _UserSubscriptionInfo_HistoryEntry_default_instance_;
+class UserVerificationAnalysis;
+struct UserVerificationAnalysisDefaultTypeInternal;
+extern UserVerificationAnalysisDefaultTypeInternal _UserVerificationAnalysis_default_instance_;
 class VerifyPurchaseRequest;
 struct VerifyPurchaseRequestDefaultTypeInternal;
 extern VerifyPurchaseRequestDefaultTypeInternal _VerifyPurchaseRequest_default_instance_;
@@ -573,6 +633,8 @@ template<> ::ei::ConfigResponse* Arena::CreateMaybeMessage<::ei::ConfigResponse>
 template<> ::ei::ConsumeArtifactRequest* Arena::CreateMaybeMessage<::ei::ConsumeArtifactRequest>(Arena*);
 template<> ::ei::ConsumeArtifactResponse* Arena::CreateMaybeMessage<::ei::ConsumeArtifactResponse>(Arena*);
 template<> ::ei::Contract* Arena::CreateMaybeMessage<::ei::Contract>(Arena*);
+template<> ::ei::ContractAction* Arena::CreateMaybeMessage<::ei::ContractAction>(Arena*);
+template<> ::ei::ContractCitation* Arena::CreateMaybeMessage<::ei::ContractCitation>(Arena*);
 template<> ::ei::ContractCoopStatusRequest* Arena::CreateMaybeMessage<::ei::ContractCoopStatusRequest>(Arena*);
 template<> ::ei::ContractCoopStatusResponse* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse>(Arena*);
 template<> ::ei::ContractCoopStatusResponse_ChickenRun* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse_ChickenRun>(Arena*);
@@ -580,6 +642,9 @@ template<> ::ei::ContractCoopStatusResponse_ContributionInfo* Arena::CreateMaybe
 template<> ::ei::ContractCoopStatusResponse_CoopGift* Arena::CreateMaybeMessage<::ei::ContractCoopStatusResponse_CoopGift>(Arena*);
 template<> ::ei::ContractCoopStatusUpdateRequest* Arena::CreateMaybeMessage<::ei::ContractCoopStatusUpdateRequest>(Arena*);
 template<> ::ei::ContractCoopStatusUpdateResponse* Arena::CreateMaybeMessage<::ei::ContractCoopStatusUpdateResponse>(Arena*);
+template<> ::ei::ContractEvaluation* Arena::CreateMaybeMessage<::ei::ContractEvaluation>(Arena*);
+template<> ::ei::ContractEvaluationBatch* Arena::CreateMaybeMessage<::ei::ContractEvaluationBatch>(Arena*);
+template<> ::ei::ContractEvaluationBatch_Pair* Arena::CreateMaybeMessage<::ei::ContractEvaluationBatch_Pair>(Arena*);
 template<> ::ei::ContractPlayerInfo* Arena::CreateMaybeMessage<::ei::ContractPlayerInfo>(Arena*);
 template<> ::ei::ContractSimConfig* Arena::CreateMaybeMessage<::ei::ContractSimConfig>(Arena*);
 template<> ::ei::ContractSimConfig_ContractGradeSimConfig* Arena::CreateMaybeMessage<::ei::ContractSimConfig_ContractGradeSimConfig>(Arena*);
@@ -591,11 +656,14 @@ template<> ::ei::ContractSimResultUpdate_GoalInfo* Arena::CreateMaybeMessage<::e
 template<> ::ei::Contract_Goal* Arena::CreateMaybeMessage<::ei::Contract_Goal>(Arena*);
 template<> ::ei::Contract_GoalSet* Arena::CreateMaybeMessage<::ei::Contract_GoalSet>(Arena*);
 template<> ::ei::Contract_GradeSpec* Arena::CreateMaybeMessage<::ei::Contract_GradeSpec>(Arena*);
+template<> ::ei::ContractsArchive* Arena::CreateMaybeMessage<::ei::ContractsArchive>(Arena*);
 template<> ::ei::ContractsRequest* Arena::CreateMaybeMessage<::ei::ContractsRequest>(Arena*);
 template<> ::ei::ContractsResponse* Arena::CreateMaybeMessage<::ei::ContractsResponse>(Arena*);
 template<> ::ei::CoopBuffHistory* Arena::CreateMaybeMessage<::ei::CoopBuffHistory>(Arena*);
 template<> ::ei::CoopBuffState* Arena::CreateMaybeMessage<::ei::CoopBuffState>(Arena*);
 template<> ::ei::CoopChickenRunEntry* Arena::CreateMaybeMessage<::ei::CoopChickenRunEntry>(Arena*);
+template<> ::ei::CoopCompletionSnapshot* Arena::CreateMaybeMessage<::ei::CoopCompletionSnapshot>(Arena*);
+template<> ::ei::CoopCompletionSnapshot_ContributorSnapshot* Arena::CreateMaybeMessage<::ei::CoopCompletionSnapshot_ContributorSnapshot>(Arena*);
 template<> ::ei::CoopLastChickenRunTimes* Arena::CreateMaybeMessage<::ei::CoopLastChickenRunTimes>(Arena*);
 template<> ::ei::CraftArtifactRequest* Arena::CreateMaybeMessage<::ei::CraftArtifactRequest>(Arena*);
 template<> ::ei::CraftArtifactResponse* Arena::CreateMaybeMessage<::ei::CraftArtifactResponse>(Arena*);
@@ -624,6 +692,13 @@ template<> ::ei::InventorySlot* Arena::CreateMaybeMessage<::ei::InventorySlot>(A
 template<> ::ei::JoinCoopRequest* Arena::CreateMaybeMessage<::ei::JoinCoopRequest>(Arena*);
 template<> ::ei::JoinCoopResponse* Arena::CreateMaybeMessage<::ei::JoinCoopResponse>(Arena*);
 template<> ::ei::KickPlayerCoopRequest* Arena::CreateMaybeMessage<::ei::KickPlayerCoopRequest>(Arena*);
+template<> ::ei::LeaderboardAnalysis* Arena::CreateMaybeMessage<::ei::LeaderboardAnalysis>(Arena*);
+template<> ::ei::LeaderboardAnalysis_Chunk* Arena::CreateMaybeMessage<::ei::LeaderboardAnalysis_Chunk>(Arena*);
+template<> ::ei::LeaderboardInfo* Arena::CreateMaybeMessage<::ei::LeaderboardInfo>(Arena*);
+template<> ::ei::LeaderboardInfo_Season* Arena::CreateMaybeMessage<::ei::LeaderboardInfo_Season>(Arena*);
+template<> ::ei::LeaderboardRequest* Arena::CreateMaybeMessage<::ei::LeaderboardRequest>(Arena*);
+template<> ::ei::LeaderboardResponse* Arena::CreateMaybeMessage<::ei::LeaderboardResponse>(Arena*);
+template<> ::ei::LeaderboardResponse_Entry* Arena::CreateMaybeMessage<::ei::LeaderboardResponse_Entry>(Arena*);
 template<> ::ei::LeaveCoopRequest* Arena::CreateMaybeMessage<::ei::LeaveCoopRequest>(Arena*);
 template<> ::ei::LiveConfig* Arena::CreateMaybeMessage<::ei::LiveConfig>(Arena*);
 template<> ::ei::LiveConfig_BoostsConfig* Arena::CreateMaybeMessage<::ei::LiveConfig_BoostsConfig>(Arena*);
@@ -647,6 +722,7 @@ template<> ::ei::PeriodicalsResponse* Arena::CreateMaybeMessage<::ei::Periodical
 template<> ::ei::PlayerFarmInfo* Arena::CreateMaybeMessage<::ei::PlayerFarmInfo>(Arena*);
 template<> ::ei::QueryCoopRequest* Arena::CreateMaybeMessage<::ei::QueryCoopRequest>(Arena*);
 template<> ::ei::QueryCoopResponse* Arena::CreateMaybeMessage<::ei::QueryCoopResponse>(Arena*);
+template<> ::ei::ReportPlayerCoopRequest* Arena::CreateMaybeMessage<::ei::ReportPlayerCoopRequest>(Arena*);
 template<> ::ei::ReturnEDTPayload* Arena::CreateMaybeMessage<::ei::ReturnEDTPayload>(Arena*);
 template<> ::ei::Reward* Arena::CreateMaybeMessage<::ei::Reward>(Arena*);
 template<> ::ei::SalesInfo* Arena::CreateMaybeMessage<::ei::SalesInfo>(Arena*);
@@ -674,10 +750,14 @@ template<> ::ei::ShellSetSpec_VariationSpec* Arena::CreateMaybeMessage<::ei::She
 template<> ::ei::ShellSpec* Arena::CreateMaybeMessage<::ei::ShellSpec>(Arena*);
 template<> ::ei::ShellSpec_ShellPiece* Arena::CreateMaybeMessage<::ei::ShellSpec_ShellPiece>(Arena*);
 template<> ::ei::ShellsActionLog* Arena::CreateMaybeMessage<::ei::ShellsActionLog>(Arena*);
+template<> ::ei::SubscriptionChangeHintRequest* Arena::CreateMaybeMessage<::ei::SubscriptionChangeHintRequest>(Arena*);
 template<> ::ei::UpdateCoopPermissionsRequest* Arena::CreateMaybeMessage<::ei::UpdateCoopPermissionsRequest>(Arena*);
 template<> ::ei::UpdateCoopPermissionsResponse* Arena::CreateMaybeMessage<::ei::UpdateCoopPermissionsResponse>(Arena*);
 template<> ::ei::UserDataInfoRequest* Arena::CreateMaybeMessage<::ei::UserDataInfoRequest>(Arena*);
 template<> ::ei::UserDataInfoResponse* Arena::CreateMaybeMessage<::ei::UserDataInfoResponse>(Arena*);
+template<> ::ei::UserSubscriptionInfo* Arena::CreateMaybeMessage<::ei::UserSubscriptionInfo>(Arena*);
+template<> ::ei::UserSubscriptionInfo_HistoryEntry* Arena::CreateMaybeMessage<::ei::UserSubscriptionInfo_HistoryEntry>(Arena*);
+template<> ::ei::UserVerificationAnalysis* Arena::CreateMaybeMessage<::ei::UserVerificationAnalysis>(Arena*);
 template<> ::ei::VerifyPurchaseRequest* Arena::CreateMaybeMessage<::ei::VerifyPurchaseRequest>(Arena*);
 template<> ::ei::VerifyPurchaseResponse* Arena::CreateMaybeMessage<::ei::VerifyPurchaseResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -708,6 +788,36 @@ inline bool EggIncFirstContactResponse_ErrorCodes_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<EggIncFirstContactResponse_ErrorCodes>(
     EggIncFirstContactResponse_ErrorCodes_descriptor(), name, value);
 }
+enum GameModifier_GameDimension : int {
+  GameModifier_GameDimension_EARNINGS = 1,
+  GameModifier_GameDimension_AWAY_EARNINGS = 2,
+  GameModifier_GameDimension_INTERNAL_HATCHERY_RATE = 3,
+  GameModifier_GameDimension_EGG_LAYING_RATE = 4,
+  GameModifier_GameDimension_SHIPPING_CAPACITY = 5,
+  GameModifier_GameDimension_HAB_CAPACITY = 6,
+  GameModifier_GameDimension_VEHICLE_COST = 7,
+  GameModifier_GameDimension_HAB_COST = 8,
+  GameModifier_GameDimension_RESEARCH_COST = 9
+};
+bool GameModifier_GameDimension_IsValid(int value);
+constexpr GameModifier_GameDimension GameModifier_GameDimension_GameDimension_MIN = GameModifier_GameDimension_EARNINGS;
+constexpr GameModifier_GameDimension GameModifier_GameDimension_GameDimension_MAX = GameModifier_GameDimension_RESEARCH_COST;
+constexpr int GameModifier_GameDimension_GameDimension_ARRAYSIZE = GameModifier_GameDimension_GameDimension_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GameModifier_GameDimension_descriptor();
+template<typename T>
+inline const std::string& GameModifier_GameDimension_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, GameModifier_GameDimension>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function GameModifier_GameDimension_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    GameModifier_GameDimension_descriptor(), enum_t_value);
+}
+inline bool GameModifier_GameDimension_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, GameModifier_GameDimension* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<GameModifier_GameDimension>(
+    GameModifier_GameDimension_descriptor(), name, value);
+}
 enum Contract_PlayerGrade : int {
   Contract_PlayerGrade_GRADE_UNSET = 0,
   Contract_PlayerGrade_GRADE_C = 1,
@@ -735,6 +845,84 @@ inline bool Contract_PlayerGrade_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Contract_PlayerGrade>(
     Contract_PlayerGrade_descriptor(), name, value);
 }
+enum ContractPlayerInfo_Status : int {
+  ContractPlayerInfo_Status_UNKNOWN = 0,
+  ContractPlayerInfo_Status_CALCULATING = 1,
+  ContractPlayerInfo_Status_OUT_OF_DATE = 2,
+  ContractPlayerInfo_Status_INCOMPLETE = 4,
+  ContractPlayerInfo_Status_COMPLETE = 3
+};
+bool ContractPlayerInfo_Status_IsValid(int value);
+constexpr ContractPlayerInfo_Status ContractPlayerInfo_Status_Status_MIN = ContractPlayerInfo_Status_UNKNOWN;
+constexpr ContractPlayerInfo_Status ContractPlayerInfo_Status_Status_MAX = ContractPlayerInfo_Status_INCOMPLETE;
+constexpr int ContractPlayerInfo_Status_Status_ARRAYSIZE = ContractPlayerInfo_Status_Status_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractPlayerInfo_Status_descriptor();
+template<typename T>
+inline const std::string& ContractPlayerInfo_Status_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ContractPlayerInfo_Status>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ContractPlayerInfo_Status_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ContractPlayerInfo_Status_descriptor(), enum_t_value);
+}
+inline bool ContractPlayerInfo_Status_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ContractPlayerInfo_Status* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ContractPlayerInfo_Status>(
+    ContractPlayerInfo_Status_descriptor(), name, value);
+}
+enum ContractEvaluation_PoorBehavior : int {
+  ContractEvaluation_PoorBehavior_NONE = 0,
+  ContractEvaluation_PoorBehavior_LOW_CONTRIBUTION = 1,
+  ContractEvaluation_PoorBehavior_BAD_CONTRIBUTION = 2,
+  ContractEvaluation_PoorBehavior_DISHONORABLY_DISCHARGED = 3,
+  ContractEvaluation_PoorBehavior_POOR_TEAMWORK = 4,
+  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5
+};
+bool ContractEvaluation_PoorBehavior_IsValid(int value);
+constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MIN = ContractEvaluation_PoorBehavior_NONE;
+constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+constexpr int ContractEvaluation_PoorBehavior_PoorBehavior_ARRAYSIZE = ContractEvaluation_PoorBehavior_PoorBehavior_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractEvaluation_PoorBehavior_descriptor();
+template<typename T>
+inline const std::string& ContractEvaluation_PoorBehavior_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ContractEvaluation_PoorBehavior>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ContractEvaluation_PoorBehavior_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ContractEvaluation_PoorBehavior_descriptor(), enum_t_value);
+}
+inline bool ContractEvaluation_PoorBehavior_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ContractEvaluation_PoorBehavior* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ContractEvaluation_PoorBehavior>(
+    ContractEvaluation_PoorBehavior_descriptor(), name, value);
+}
+enum ContractEvaluation_Status : int {
+  ContractEvaluation_Status_UNKNOWN = 0,
+  ContractEvaluation_Status_PENDING = 1,
+  ContractEvaluation_Status_EVALUATING = 2,
+  ContractEvaluation_Status_COMPLETE = 3
+};
+bool ContractEvaluation_Status_IsValid(int value);
+constexpr ContractEvaluation_Status ContractEvaluation_Status_Status_MIN = ContractEvaluation_Status_UNKNOWN;
+constexpr ContractEvaluation_Status ContractEvaluation_Status_Status_MAX = ContractEvaluation_Status_COMPLETE;
+constexpr int ContractEvaluation_Status_Status_ARRAYSIZE = ContractEvaluation_Status_Status_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractEvaluation_Status_descriptor();
+template<typename T>
+inline const std::string& ContractEvaluation_Status_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ContractEvaluation_Status>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ContractEvaluation_Status_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ContractEvaluation_Status_descriptor(), enum_t_value);
+}
+inline bool ContractEvaluation_Status_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ContractEvaluation_Status* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ContractEvaluation_Status>(
+    ContractEvaluation_Status_descriptor(), name, value);
+}
 enum ContractCoopStatusResponse_MemberStatus : int {
   ContractCoopStatusResponse_MemberStatus_VALID = 0,
   ContractCoopStatusResponse_MemberStatus_KICKED_INACTIVE = 1,
@@ -760,6 +948,57 @@ inline bool ContractCoopStatusResponse_MemberStatus_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ContractCoopStatusResponse_MemberStatus* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ContractCoopStatusResponse_MemberStatus>(
     ContractCoopStatusResponse_MemberStatus_descriptor(), name, value);
+}
+enum ContractCoopStatusResponse_Status : int {
+  ContractCoopStatusResponse_Status_UNKNOWN = 0,
+  ContractCoopStatusResponse_Status_LOBBY = 1,
+  ContractCoopStatusResponse_Status_ACTIVE = 2,
+  ContractCoopStatusResponse_Status_COMPLETE = 3,
+  ContractCoopStatusResponse_Status_FINALIZED = 4
+};
+bool ContractCoopStatusResponse_Status_IsValid(int value);
+constexpr ContractCoopStatusResponse_Status ContractCoopStatusResponse_Status_Status_MIN = ContractCoopStatusResponse_Status_UNKNOWN;
+constexpr ContractCoopStatusResponse_Status ContractCoopStatusResponse_Status_Status_MAX = ContractCoopStatusResponse_Status_FINALIZED;
+constexpr int ContractCoopStatusResponse_Status_Status_ARRAYSIZE = ContractCoopStatusResponse_Status_Status_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractCoopStatusResponse_Status_descriptor();
+template<typename T>
+inline const std::string& ContractCoopStatusResponse_Status_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ContractCoopStatusResponse_Status>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ContractCoopStatusResponse_Status_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ContractCoopStatusResponse_Status_descriptor(), enum_t_value);
+}
+inline bool ContractCoopStatusResponse_Status_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ContractCoopStatusResponse_Status* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ContractCoopStatusResponse_Status>(
+    ContractCoopStatusResponse_Status_descriptor(), name, value);
+}
+enum ReportPlayerCoopRequest_Reason : int {
+  ReportPlayerCoopRequest_Reason_UNKNOWN = 0,
+  ReportPlayerCoopRequest_Reason_OFFENSIVE_NAME = 1,
+  ReportPlayerCoopRequest_Reason_CHEATING = 2,
+  ReportPlayerCoopRequest_Reason_LEECHING = 3
+};
+bool ReportPlayerCoopRequest_Reason_IsValid(int value);
+constexpr ReportPlayerCoopRequest_Reason ReportPlayerCoopRequest_Reason_Reason_MIN = ReportPlayerCoopRequest_Reason_UNKNOWN;
+constexpr ReportPlayerCoopRequest_Reason ReportPlayerCoopRequest_Reason_Reason_MAX = ReportPlayerCoopRequest_Reason_LEECHING;
+constexpr int ReportPlayerCoopRequest_Reason_Reason_ARRAYSIZE = ReportPlayerCoopRequest_Reason_Reason_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ReportPlayerCoopRequest_Reason_descriptor();
+template<typename T>
+inline const std::string& ReportPlayerCoopRequest_Reason_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ReportPlayerCoopRequest_Reason>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ReportPlayerCoopRequest_Reason_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ReportPlayerCoopRequest_Reason_descriptor(), enum_t_value);
+}
+inline bool ReportPlayerCoopRequest_Reason_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ReportPlayerCoopRequest_Reason* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ReportPlayerCoopRequest_Reason>(
+    ReportPlayerCoopRequest_Reason_descriptor(), name, value);
 }
 enum KickPlayerCoopRequest_Reason : int {
   KickPlayerCoopRequest_Reason_INVALID = 0,
@@ -1232,6 +1471,80 @@ inline bool ShellDB_FarmElement_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ShellDB_FarmElement>(
     ShellDB_FarmElement_descriptor(), name, value);
 }
+enum UserVerificationAnalysis_Status : int {
+  UserVerificationAnalysis_Status_UNKNOWN = 0,
+  UserVerificationAnalysis_Status_PROCESSING = 1,
+  UserVerificationAnalysis_Status_COMPLETE = 2
+};
+bool UserVerificationAnalysis_Status_IsValid(int value);
+constexpr UserVerificationAnalysis_Status UserVerificationAnalysis_Status_Status_MIN = UserVerificationAnalysis_Status_UNKNOWN;
+constexpr UserVerificationAnalysis_Status UserVerificationAnalysis_Status_Status_MAX = UserVerificationAnalysis_Status_COMPLETE;
+constexpr int UserVerificationAnalysis_Status_Status_ARRAYSIZE = UserVerificationAnalysis_Status_Status_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserVerificationAnalysis_Status_descriptor();
+template<typename T>
+inline const std::string& UserVerificationAnalysis_Status_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, UserVerificationAnalysis_Status>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function UserVerificationAnalysis_Status_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    UserVerificationAnalysis_Status_descriptor(), enum_t_value);
+}
+inline bool UserVerificationAnalysis_Status_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, UserVerificationAnalysis_Status* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<UserVerificationAnalysis_Status>(
+    UserVerificationAnalysis_Status_descriptor(), name, value);
+}
+enum UserSubscriptionInfo_Level : int {
+  UserSubscriptionInfo_Level_STANDARD = 0,
+  UserSubscriptionInfo_Level_PRO = 1
+};
+bool UserSubscriptionInfo_Level_IsValid(int value);
+constexpr UserSubscriptionInfo_Level UserSubscriptionInfo_Level_Level_MIN = UserSubscriptionInfo_Level_STANDARD;
+constexpr UserSubscriptionInfo_Level UserSubscriptionInfo_Level_Level_MAX = UserSubscriptionInfo_Level_PRO;
+constexpr int UserSubscriptionInfo_Level_Level_ARRAYSIZE = UserSubscriptionInfo_Level_Level_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserSubscriptionInfo_Level_descriptor();
+template<typename T>
+inline const std::string& UserSubscriptionInfo_Level_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, UserSubscriptionInfo_Level>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function UserSubscriptionInfo_Level_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    UserSubscriptionInfo_Level_descriptor(), enum_t_value);
+}
+inline bool UserSubscriptionInfo_Level_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, UserSubscriptionInfo_Level* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<UserSubscriptionInfo_Level>(
+    UserSubscriptionInfo_Level_descriptor(), name, value);
+}
+enum UserSubscriptionInfo_Status : int {
+  UserSubscriptionInfo_Status_UNKNOWN = 0,
+  UserSubscriptionInfo_Status_ACTIVE = 1,
+  UserSubscriptionInfo_Status_EXPIRED = 2,
+  UserSubscriptionInfo_Status_REVOKED = 3,
+  UserSubscriptionInfo_Status_GRACE_PERIOD = 4,
+  UserSubscriptionInfo_Status_PAUSE_HOLD = 5
+};
+bool UserSubscriptionInfo_Status_IsValid(int value);
+constexpr UserSubscriptionInfo_Status UserSubscriptionInfo_Status_Status_MIN = UserSubscriptionInfo_Status_UNKNOWN;
+constexpr UserSubscriptionInfo_Status UserSubscriptionInfo_Status_Status_MAX = UserSubscriptionInfo_Status_PAUSE_HOLD;
+constexpr int UserSubscriptionInfo_Status_Status_ARRAYSIZE = UserSubscriptionInfo_Status_Status_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserSubscriptionInfo_Status_descriptor();
+template<typename T>
+inline const std::string& UserSubscriptionInfo_Status_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, UserSubscriptionInfo_Status>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function UserSubscriptionInfo_Status_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    UserSubscriptionInfo_Status_descriptor(), enum_t_value);
+}
+inline bool UserSubscriptionInfo_Status_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, UserSubscriptionInfo_Status* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<UserSubscriptionInfo_Status>(
+    UserSubscriptionInfo_Status_descriptor(), name, value);
+}
 enum Platform : int {
   IOS = 1,
   DROID = 2
@@ -1435,28 +1748,28 @@ inline bool RewardType_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<RewardType>(
     RewardType_descriptor(), name, value);
 }
-enum GameDimension : int {
-  EARNINGS = 1,
-  AWAY_EARNINGS = 3
+enum LeaderboardScope : int {
+  ALL_TIME = 0,
+  CURRENT_SEASON = 1
 };
-bool GameDimension_IsValid(int value);
-constexpr GameDimension GameDimension_MIN = EARNINGS;
-constexpr GameDimension GameDimension_MAX = AWAY_EARNINGS;
-constexpr int GameDimension_ARRAYSIZE = GameDimension_MAX + 1;
+bool LeaderboardScope_IsValid(int value);
+constexpr LeaderboardScope LeaderboardScope_MIN = ALL_TIME;
+constexpr LeaderboardScope LeaderboardScope_MAX = CURRENT_SEASON;
+constexpr int LeaderboardScope_ARRAYSIZE = LeaderboardScope_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GameDimension_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* LeaderboardScope_descriptor();
 template<typename T>
-inline const std::string& GameDimension_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, GameDimension>::value ||
+inline const std::string& LeaderboardScope_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, LeaderboardScope>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function GameDimension_Name.");
+    "Incorrect type passed to function LeaderboardScope_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    GameDimension_descriptor(), enum_t_value);
+    LeaderboardScope_descriptor(), enum_t_value);
 }
-inline bool GameDimension_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, GameDimension* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<GameDimension>(
-    GameDimension_descriptor(), name, value);
+inline bool LeaderboardScope_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, LeaderboardScope* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<LeaderboardScope>(
+    LeaderboardScope_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -5119,7 +5432,9 @@ class Backup_Misc final :
     kTrophyAlertFieldNumber = 11,
     kArAlertFieldNumber = 12,
     kContractsAlertFieldNumber = 13,
+    kContractsAlertV2FieldNumber = 21,
     kCoopAlertFieldNumber = 14,
+    kCoopAlertV2FieldNumber = 22,
     kSwitchAlertFieldNumber = 15,
     kEggOfProphecyAlertFieldNumber = 16,
     kBoostTokenAlertFieldNumber = 17,
@@ -5260,6 +5575,19 @@ class Backup_Misc final :
   void _internal_set_contracts_alert(bool value);
   public:
 
+  // optional bool contracts_alert_v2 = 21;
+  bool has_contracts_alert_v2() const;
+  private:
+  bool _internal_has_contracts_alert_v2() const;
+  public:
+  void clear_contracts_alert_v2();
+  bool contracts_alert_v2() const;
+  void set_contracts_alert_v2(bool value);
+  private:
+  bool _internal_contracts_alert_v2() const;
+  void _internal_set_contracts_alert_v2(bool value);
+  public:
+
   // optional bool coop_alert = 14;
   bool has_coop_alert() const;
   private:
@@ -5271,6 +5599,19 @@ class Backup_Misc final :
   private:
   bool _internal_coop_alert() const;
   void _internal_set_coop_alert(bool value);
+  public:
+
+  // optional bool coop_alert_v2 = 22;
+  bool has_coop_alert_v2() const;
+  private:
+  bool _internal_has_coop_alert_v2() const;
+  public:
+  void clear_coop_alert_v2();
+  bool coop_alert_v2() const;
+  void set_coop_alert_v2(bool value);
+  private:
+  bool _internal_coop_alert_v2() const;
+  void _internal_set_coop_alert_v2(bool value);
   public:
 
   // optional bool switch_alert = 15;
@@ -5409,7 +5750,9 @@ class Backup_Misc final :
   bool trophy_alert_;
   bool ar_alert_;
   bool contracts_alert_;
+  bool contracts_alert_v2_;
   bool coop_alert_;
+  bool coop_alert_v2_;
   bool switch_alert_;
   bool egg_of_prophecy_alert_;
   bool boost_token_alert_;
@@ -8790,6 +9133,7 @@ class EggIncEvent final :
     kMultiplierFieldNumber = 4,
     kStartTimeFieldNumber = 6,
     kDurationFieldNumber = 7,
+    kCcOnlyFieldNumber = 8,
   };
   // optional string identifier = 1;
   bool has_identifier() const;
@@ -8897,6 +9241,19 @@ class EggIncEvent final :
   void _internal_set_duration(double value);
   public:
 
+  // optional bool cc_only = 8;
+  bool has_cc_only() const;
+  private:
+  bool _internal_has_cc_only() const;
+  public:
+  void clear_cc_only();
+  bool cc_only() const;
+  void set_cc_only(bool value);
+  private:
+  bool _internal_cc_only() const;
+  void _internal_set_cc_only(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.EggIncEvent)
  private:
   class _Internal;
@@ -8913,6 +9270,7 @@ class EggIncEvent final :
   double multiplier_;
   double start_time_;
   double duration_;
+  bool cc_only_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -10834,6 +11192,7 @@ class VerifyPurchaseRequest final :
     kTransactionIdFieldNumber = 2,
     kReceiptFieldNumber = 3,
     kPlatformFieldNumber = 4,
+    kOriginalTransactionIdFieldNumber = 8,
     kLogFieldNumber = 5,
     kRinfoFieldNumber = 6,
     kSandboxFieldNumber = 7,
@@ -10910,6 +11269,24 @@ class VerifyPurchaseRequest final :
   std::string* _internal_mutable_platform();
   public:
 
+  // optional string original_transaction_id = 8;
+  bool has_original_transaction_id() const;
+  private:
+  bool _internal_has_original_transaction_id() const;
+  public:
+  void clear_original_transaction_id();
+  const std::string& original_transaction_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_original_transaction_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_original_transaction_id();
+  PROTOBUF_NODISCARD std::string* release_original_transaction_id();
+  void set_allocated_original_transaction_id(std::string* original_transaction_id);
+  private:
+  const std::string& _internal_original_transaction_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_original_transaction_id(const std::string& value);
+  std::string* _internal_mutable_original_transaction_id();
+  public:
+
   // optional .ei.GenericAction log = 5;
   bool has_log() const;
   private:
@@ -10972,6 +11349,7 @@ class VerifyPurchaseRequest final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr transaction_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr receipt_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr platform_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr original_transaction_id_;
   ::ei::GenericAction* log_;
   ::ei::BasicRequestInfo* rinfo_;
   bool sandbox_;
@@ -11957,11 +12335,55 @@ class GameModifier final :
 
   // nested types ----------------------------------------------------
 
+  typedef GameModifier_GameDimension GameDimension;
+  static constexpr GameDimension EARNINGS =
+    GameModifier_GameDimension_EARNINGS;
+  static constexpr GameDimension AWAY_EARNINGS =
+    GameModifier_GameDimension_AWAY_EARNINGS;
+  static constexpr GameDimension INTERNAL_HATCHERY_RATE =
+    GameModifier_GameDimension_INTERNAL_HATCHERY_RATE;
+  static constexpr GameDimension EGG_LAYING_RATE =
+    GameModifier_GameDimension_EGG_LAYING_RATE;
+  static constexpr GameDimension SHIPPING_CAPACITY =
+    GameModifier_GameDimension_SHIPPING_CAPACITY;
+  static constexpr GameDimension HAB_CAPACITY =
+    GameModifier_GameDimension_HAB_CAPACITY;
+  static constexpr GameDimension VEHICLE_COST =
+    GameModifier_GameDimension_VEHICLE_COST;
+  static constexpr GameDimension HAB_COST =
+    GameModifier_GameDimension_HAB_COST;
+  static constexpr GameDimension RESEARCH_COST =
+    GameModifier_GameDimension_RESEARCH_COST;
+  static inline bool GameDimension_IsValid(int value) {
+    return GameModifier_GameDimension_IsValid(value);
+  }
+  static constexpr GameDimension GameDimension_MIN =
+    GameModifier_GameDimension_GameDimension_MIN;
+  static constexpr GameDimension GameDimension_MAX =
+    GameModifier_GameDimension_GameDimension_MAX;
+  static constexpr int GameDimension_ARRAYSIZE =
+    GameModifier_GameDimension_GameDimension_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  GameDimension_descriptor() {
+    return GameModifier_GameDimension_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& GameDimension_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, GameDimension>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function GameDimension_Name.");
+    return GameModifier_GameDimension_Name(enum_t_value);
+  }
+  static inline bool GameDimension_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      GameDimension* value) {
+    return GameModifier_GameDimension_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
     kDescriptionFieldNumber = 3,
-    kValueModifierFieldNumber = 2,
+    kValueFieldNumber = 2,
     kDimensionFieldNumber = 1,
   };
   // optional string description = 3;
@@ -11982,30 +12404,30 @@ class GameModifier final :
   std::string* _internal_mutable_description();
   public:
 
-  // optional double value_modifier = 2;
-  bool has_value_modifier() const;
+  // optional double value = 2;
+  bool has_value() const;
   private:
-  bool _internal_has_value_modifier() const;
+  bool _internal_has_value() const;
   public:
-  void clear_value_modifier();
-  double value_modifier() const;
-  void set_value_modifier(double value);
+  void clear_value();
+  double value() const;
+  void set_value(double value);
   private:
-  double _internal_value_modifier() const;
-  void _internal_set_value_modifier(double value);
+  double _internal_value() const;
+  void _internal_set_value(double value);
   public:
 
-  // optional .ei.GameDimension dimension = 1;
+  // optional .ei.GameModifier.GameDimension dimension = 1;
   bool has_dimension() const;
   private:
   bool _internal_has_dimension() const;
   public:
   void clear_dimension();
-  ::ei::GameDimension dimension() const;
-  void set_dimension(::ei::GameDimension value);
+  ::ei::GameModifier_GameDimension dimension() const;
+  void set_dimension(::ei::GameModifier_GameDimension value);
   private:
-  ::ei::GameDimension _internal_dimension() const;
-  void _internal_set_dimension(::ei::GameDimension value);
+  ::ei::GameModifier_GameDimension _internal_dimension() const;
+  void _internal_set_dimension(::ei::GameModifier_GameDimension value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.GameModifier)
@@ -12018,7 +12440,7 @@ class GameModifier final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
-  double value_modifier_;
+  double value_;
   int dimension_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -12546,6 +12968,7 @@ class Contract_GradeSpec final :
   enum : int {
     kGoalsFieldNumber = 2,
     kModifiersFieldNumber = 3,
+    kLengthSecondsFieldNumber = 4,
     kGradeFieldNumber = 1,
   };
   // repeated .ei.Contract.Goal goals = 2;
@@ -12584,6 +13007,19 @@ class Contract_GradeSpec final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GameModifier >&
       modifiers() const;
 
+  // optional double length_seconds = 4;
+  bool has_length_seconds() const;
+  private:
+  bool _internal_has_length_seconds() const;
+  public:
+  void clear_length_seconds();
+  double length_seconds() const;
+  void set_length_seconds(double value);
+  private:
+  double _internal_length_seconds() const;
+  void _internal_set_length_seconds(double value);
+  public:
+
   // optional .ei.Contract.PlayerGrade grade = 1;
   bool has_grade() const;
   private:
@@ -12608,6 +13044,7 @@ class Contract_GradeSpec final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Contract_Goal > goals_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GameModifier > modifiers_;
+  double length_seconds_;
   int grade_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -12788,15 +13225,17 @@ class Contract final :
     kNameFieldNumber = 9,
     kDescriptionFieldNumber = 10,
     kKeyFieldNumber = 21,
+    kSeasonIdFieldNumber = 23,
     kExpirationTimeFieldNumber = 6,
     kLengthSecondsFieldNumber = 7,
     kMaxCoopSizeFieldNumber = 5,
+    kMaxBoostsFieldNumber = 12,
+    kMaxSoulEggsFieldNumber = 13,
+    kMinClientVersionFieldNumber = 14,
     kCoopAllowedFieldNumber = 4,
     kLeggacyFieldNumber = 19,
+    kCcOnlyFieldNumber = 22,
     kDebugFieldNumber = 11,
-    kMaxSoulEggsFieldNumber = 13,
-    kMaxBoostsFieldNumber = 12,
-    kMinClientVersionFieldNumber = 14,
     kStartTimeFieldNumber = 17,
     kEggFieldNumber = 2,
     kMinutesPerTokenFieldNumber = 15,
@@ -12928,6 +13367,24 @@ class Contract final :
   std::string* _internal_mutable_key();
   public:
 
+  // optional string season_id = 23;
+  bool has_season_id() const;
+  private:
+  bool _internal_has_season_id() const;
+  public:
+  void clear_season_id();
+  const std::string& season_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_season_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_season_id();
+  PROTOBUF_NODISCARD std::string* release_season_id();
+  void set_allocated_season_id(std::string* season_id);
+  private:
+  const std::string& _internal_season_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_season_id(const std::string& value);
+  std::string* _internal_mutable_season_id();
+  public:
+
   // optional double expiration_time = 6;
   bool has_expiration_time() const;
   private:
@@ -12967,6 +13424,45 @@ class Contract final :
   void _internal_set_max_coop_size(uint32_t value);
   public:
 
+  // optional uint32 max_boosts = 12;
+  bool has_max_boosts() const;
+  private:
+  bool _internal_has_max_boosts() const;
+  public:
+  void clear_max_boosts();
+  uint32_t max_boosts() const;
+  void set_max_boosts(uint32_t value);
+  private:
+  uint32_t _internal_max_boosts() const;
+  void _internal_set_max_boosts(uint32_t value);
+  public:
+
+  // optional double max_soul_eggs = 13;
+  bool has_max_soul_eggs() const;
+  private:
+  bool _internal_has_max_soul_eggs() const;
+  public:
+  void clear_max_soul_eggs();
+  double max_soul_eggs() const;
+  void set_max_soul_eggs(double value);
+  private:
+  double _internal_max_soul_eggs() const;
+  void _internal_set_max_soul_eggs(double value);
+  public:
+
+  // optional uint32 min_client_version = 14;
+  bool has_min_client_version() const;
+  private:
+  bool _internal_has_min_client_version() const;
+  public:
+  void clear_min_client_version();
+  uint32_t min_client_version() const;
+  void set_min_client_version(uint32_t value);
+  private:
+  uint32_t _internal_min_client_version() const;
+  void _internal_set_min_client_version(uint32_t value);
+  public:
+
   // optional bool coop_allowed = 4;
   bool has_coop_allowed() const;
   private:
@@ -12993,6 +13489,19 @@ class Contract final :
   void _internal_set_leggacy(bool value);
   public:
 
+  // optional bool cc_only = 22;
+  bool has_cc_only() const;
+  private:
+  bool _internal_has_cc_only() const;
+  public:
+  void clear_cc_only();
+  bool cc_only() const;
+  void set_cc_only(bool value);
+  private:
+  bool _internal_cc_only() const;
+  void _internal_set_cc_only(bool value);
+  public:
+
   // optional bool debug = 11;
   bool has_debug() const;
   private:
@@ -13004,45 +13513,6 @@ class Contract final :
   private:
   bool _internal_debug() const;
   void _internal_set_debug(bool value);
-  public:
-
-  // optional double max_soul_eggs = 13;
-  bool has_max_soul_eggs() const;
-  private:
-  bool _internal_has_max_soul_eggs() const;
-  public:
-  void clear_max_soul_eggs();
-  double max_soul_eggs() const;
-  void set_max_soul_eggs(double value);
-  private:
-  double _internal_max_soul_eggs() const;
-  void _internal_set_max_soul_eggs(double value);
-  public:
-
-  // optional uint32 max_boosts = 12;
-  bool has_max_boosts() const;
-  private:
-  bool _internal_has_max_boosts() const;
-  public:
-  void clear_max_boosts();
-  uint32_t max_boosts() const;
-  void set_max_boosts(uint32_t value);
-  private:
-  uint32_t _internal_max_boosts() const;
-  void _internal_set_max_boosts(uint32_t value);
-  public:
-
-  // optional uint32 min_client_version = 14;
-  bool has_min_client_version() const;
-  private:
-  bool _internal_has_min_client_version() const;
-  public:
-  void clear_min_client_version();
-  uint32_t min_client_version() const;
-  void set_min_client_version(uint32_t value);
-  private:
-  uint32_t _internal_min_client_version() const;
-  void _internal_set_min_client_version(uint32_t value);
   public:
 
   // optional double start_time = 17;
@@ -13084,7 +13554,7 @@ class Contract final :
   void _internal_set_minutes_per_token(double value);
   public:
 
-  // optional double chicken_run_cooldown_minutes = 18 [default = 60];
+  // optional double chicken_run_cooldown_minutes = 18 [default = 180];
   bool has_chicken_run_cooldown_minutes() const;
   private:
   bool _internal_has_chicken_run_cooldown_minutes() const;
@@ -13113,15 +13583,17 @@ class Contract final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr season_id_;
   double expiration_time_;
   double length_seconds_;
   uint32_t max_coop_size_;
+  uint32_t max_boosts_;
+  double max_soul_eggs_;
+  uint32_t min_client_version_;
   bool coop_allowed_;
   bool leggacy_;
+  bool cc_only_;
   bool debug_;
-  double max_soul_eggs_;
-  uint32_t max_boosts_;
-  uint32_t min_client_version_;
   double start_time_;
   int egg_;
   double minutes_per_token_;
@@ -13253,12 +13725,113 @@ class ContractPlayerInfo final :
 
   // nested types ----------------------------------------------------
 
+  typedef ContractPlayerInfo_Status Status;
+  static constexpr Status UNKNOWN =
+    ContractPlayerInfo_Status_UNKNOWN;
+  static constexpr Status CALCULATING =
+    ContractPlayerInfo_Status_CALCULATING;
+  static constexpr Status OUT_OF_DATE =
+    ContractPlayerInfo_Status_OUT_OF_DATE;
+  static constexpr Status INCOMPLETE =
+    ContractPlayerInfo_Status_INCOMPLETE;
+  static constexpr Status COMPLETE =
+    ContractPlayerInfo_Status_COMPLETE;
+  static inline bool Status_IsValid(int value) {
+    return ContractPlayerInfo_Status_IsValid(value);
+  }
+  static constexpr Status Status_MIN =
+    ContractPlayerInfo_Status_Status_MIN;
+  static constexpr Status Status_MAX =
+    ContractPlayerInfo_Status_Status_MAX;
+  static constexpr int Status_ARRAYSIZE =
+    ContractPlayerInfo_Status_Status_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Status_descriptor() {
+    return ContractPlayerInfo_Status_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Status_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Status>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Status_Name.");
+    return ContractPlayerInfo_Status_Name(enum_t_value);
+  }
+  static inline bool Status_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Status* value) {
+    return ContractPlayerInfo_Status_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
+    kUnreadEvaluationsFieldNumber = 6,
+    kIssuesFieldNumber = 11,
+    kLastEvaluationVersionFieldNumber = 5,
     kTotalCxpFieldNumber = 2,
     kGradeFieldNumber = 1,
+    kStatusFieldNumber = 3,
+    kLastEvaluationTimeFieldNumber = 4,
+    kGradeScoreFieldNumber = 7,
+    kTargetSoulPowerFieldNumber = 8,
+    kTargetGradeScoreFieldNumber = 9,
+    kSoulPowerFieldNumber = 10,
+    kGradeProgressFieldNumber = 12,
+    kSeasonCxpFieldNumber = 13,
+    kIssueScoreFieldNumber = 14,
   };
+  // repeated .ei.ContractEvaluation unread_evaluations = 6;
+  int unread_evaluations_size() const;
+  private:
+  int _internal_unread_evaluations_size() const;
+  public:
+  void clear_unread_evaluations();
+  ::ei::ContractEvaluation* mutable_unread_evaluations(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >*
+      mutable_unread_evaluations();
+  private:
+  const ::ei::ContractEvaluation& _internal_unread_evaluations(int index) const;
+  ::ei::ContractEvaluation* _internal_add_unread_evaluations();
+  public:
+  const ::ei::ContractEvaluation& unread_evaluations(int index) const;
+  ::ei::ContractEvaluation* add_unread_evaluations();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >&
+      unread_evaluations() const;
+
+  // repeated .ei.ContractEvaluation.PoorBehavior issues = 11;
+  int issues_size() const;
+  private:
+  int _internal_issues_size() const;
+  public:
+  void clear_issues();
+  private:
+  ::ei::ContractEvaluation_PoorBehavior _internal_issues(int index) const;
+  void _internal_add_issues(::ei::ContractEvaluation_PoorBehavior value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* _internal_mutable_issues();
+  public:
+  ::ei::ContractEvaluation_PoorBehavior issues(int index) const;
+  void set_issues(int index, ::ei::ContractEvaluation_PoorBehavior value);
+  void add_issues(::ei::ContractEvaluation_PoorBehavior value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>& issues() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* mutable_issues();
+
+  // optional string last_evaluation_version = 5;
+  bool has_last_evaluation_version() const;
+  private:
+  bool _internal_has_last_evaluation_version() const;
+  public:
+  void clear_last_evaluation_version();
+  const std::string& last_evaluation_version() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_last_evaluation_version(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_last_evaluation_version();
+  PROTOBUF_NODISCARD std::string* release_last_evaluation_version();
+  void set_allocated_last_evaluation_version(std::string* last_evaluation_version);
+  private:
+  const std::string& _internal_last_evaluation_version() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_last_evaluation_version(const std::string& value);
+  std::string* _internal_mutable_last_evaluation_version();
+  public:
+
   // optional double total_cxp = 2;
   bool has_total_cxp() const;
   private:
@@ -13285,6 +13858,123 @@ class ContractPlayerInfo final :
   void _internal_set_grade(::ei::Contract_PlayerGrade value);
   public:
 
+  // optional .ei.ContractPlayerInfo.Status status = 3;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::ContractPlayerInfo_Status status() const;
+  void set_status(::ei::ContractPlayerInfo_Status value);
+  private:
+  ::ei::ContractPlayerInfo_Status _internal_status() const;
+  void _internal_set_status(::ei::ContractPlayerInfo_Status value);
+  public:
+
+  // optional double last_evaluation_time = 4;
+  bool has_last_evaluation_time() const;
+  private:
+  bool _internal_has_last_evaluation_time() const;
+  public:
+  void clear_last_evaluation_time();
+  double last_evaluation_time() const;
+  void set_last_evaluation_time(double value);
+  private:
+  double _internal_last_evaluation_time() const;
+  void _internal_set_last_evaluation_time(double value);
+  public:
+
+  // optional double grade_score = 7;
+  bool has_grade_score() const;
+  private:
+  bool _internal_has_grade_score() const;
+  public:
+  void clear_grade_score();
+  double grade_score() const;
+  void set_grade_score(double value);
+  private:
+  double _internal_grade_score() const;
+  void _internal_set_grade_score(double value);
+  public:
+
+  // optional double target_soul_power = 8;
+  bool has_target_soul_power() const;
+  private:
+  bool _internal_has_target_soul_power() const;
+  public:
+  void clear_target_soul_power();
+  double target_soul_power() const;
+  void set_target_soul_power(double value);
+  private:
+  double _internal_target_soul_power() const;
+  void _internal_set_target_soul_power(double value);
+  public:
+
+  // optional double target_grade_score = 9;
+  bool has_target_grade_score() const;
+  private:
+  bool _internal_has_target_grade_score() const;
+  public:
+  void clear_target_grade_score();
+  double target_grade_score() const;
+  void set_target_grade_score(double value);
+  private:
+  double _internal_target_grade_score() const;
+  void _internal_set_target_grade_score(double value);
+  public:
+
+  // optional double soul_power = 10;
+  bool has_soul_power() const;
+  private:
+  bool _internal_has_soul_power() const;
+  public:
+  void clear_soul_power();
+  double soul_power() const;
+  void set_soul_power(double value);
+  private:
+  double _internal_soul_power() const;
+  void _internal_set_soul_power(double value);
+  public:
+
+  // optional double grade_progress = 12;
+  bool has_grade_progress() const;
+  private:
+  bool _internal_has_grade_progress() const;
+  public:
+  void clear_grade_progress();
+  double grade_progress() const;
+  void set_grade_progress(double value);
+  private:
+  double _internal_grade_progress() const;
+  void _internal_set_grade_progress(double value);
+  public:
+
+  // optional double season_cxp = 13;
+  bool has_season_cxp() const;
+  private:
+  bool _internal_has_season_cxp() const;
+  public:
+  void clear_season_cxp();
+  double season_cxp() const;
+  void set_season_cxp(double value);
+  private:
+  double _internal_season_cxp() const;
+  void _internal_set_season_cxp(double value);
+  public:
+
+  // optional double issue_score = 14;
+  bool has_issue_score() const;
+  private:
+  bool _internal_has_issue_score() const;
+  public:
+  void clear_issue_score();
+  double issue_score() const;
+  void set_issue_score(double value);
+  private:
+  double _internal_issue_score() const;
+  void _internal_set_issue_score(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ContractPlayerInfo)
  private:
   class _Internal;
@@ -13294,8 +13984,1639 @@ class ContractPlayerInfo final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation > unread_evaluations_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int> issues_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr last_evaluation_version_;
   double total_cxp_;
   int grade_;
+  int status_;
+  double last_evaluation_time_;
+  double grade_score_;
+  double target_soul_power_;
+  double target_grade_score_;
+  double soul_power_;
+  double grade_progress_;
+  double season_cxp_;
+  double issue_score_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractEvaluation final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractEvaluation) */ {
+ public:
+  inline ContractEvaluation() : ContractEvaluation(nullptr) {}
+  ~ContractEvaluation() override;
+  explicit PROTOBUF_CONSTEXPR ContractEvaluation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractEvaluation(const ContractEvaluation& from);
+  ContractEvaluation(ContractEvaluation&& from) noexcept
+    : ContractEvaluation() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractEvaluation& operator=(const ContractEvaluation& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractEvaluation& operator=(ContractEvaluation&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractEvaluation& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractEvaluation* internal_default_instance() {
+    return reinterpret_cast<const ContractEvaluation*>(
+               &_ContractEvaluation_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    41;
+
+  friend void swap(ContractEvaluation& a, ContractEvaluation& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractEvaluation* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractEvaluation* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractEvaluation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractEvaluation>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractEvaluation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractEvaluation& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractEvaluation* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractEvaluation";
+  }
+  protected:
+  explicit ContractEvaluation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ContractEvaluation_PoorBehavior PoorBehavior;
+  static constexpr PoorBehavior NONE =
+    ContractEvaluation_PoorBehavior_NONE;
+  static constexpr PoorBehavior LOW_CONTRIBUTION =
+    ContractEvaluation_PoorBehavior_LOW_CONTRIBUTION;
+  static constexpr PoorBehavior BAD_CONTRIBUTION =
+    ContractEvaluation_PoorBehavior_BAD_CONTRIBUTION;
+  static constexpr PoorBehavior DISHONORABLY_DISCHARGED =
+    ContractEvaluation_PoorBehavior_DISHONORABLY_DISCHARGED;
+  static constexpr PoorBehavior POOR_TEAMWORK =
+    ContractEvaluation_PoorBehavior_POOR_TEAMWORK;
+  static constexpr PoorBehavior ABANDONED_COOP =
+    ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+  static inline bool PoorBehavior_IsValid(int value) {
+    return ContractEvaluation_PoorBehavior_IsValid(value);
+  }
+  static constexpr PoorBehavior PoorBehavior_MIN =
+    ContractEvaluation_PoorBehavior_PoorBehavior_MIN;
+  static constexpr PoorBehavior PoorBehavior_MAX =
+    ContractEvaluation_PoorBehavior_PoorBehavior_MAX;
+  static constexpr int PoorBehavior_ARRAYSIZE =
+    ContractEvaluation_PoorBehavior_PoorBehavior_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  PoorBehavior_descriptor() {
+    return ContractEvaluation_PoorBehavior_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& PoorBehavior_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, PoorBehavior>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function PoorBehavior_Name.");
+    return ContractEvaluation_PoorBehavior_Name(enum_t_value);
+  }
+  static inline bool PoorBehavior_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      PoorBehavior* value) {
+    return ContractEvaluation_PoorBehavior_Parse(name, value);
+  }
+
+  typedef ContractEvaluation_Status Status;
+  static constexpr Status UNKNOWN =
+    ContractEvaluation_Status_UNKNOWN;
+  static constexpr Status PENDING =
+    ContractEvaluation_Status_PENDING;
+  static constexpr Status EVALUATING =
+    ContractEvaluation_Status_EVALUATING;
+  static constexpr Status COMPLETE =
+    ContractEvaluation_Status_COMPLETE;
+  static inline bool Status_IsValid(int value) {
+    return ContractEvaluation_Status_IsValid(value);
+  }
+  static constexpr Status Status_MIN =
+    ContractEvaluation_Status_Status_MIN;
+  static constexpr Status Status_MAX =
+    ContractEvaluation_Status_Status_MAX;
+  static constexpr int Status_ARRAYSIZE =
+    ContractEvaluation_Status_Status_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Status_descriptor() {
+    return ContractEvaluation_Status_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Status_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Status>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Status_Name.");
+    return ContractEvaluation_Status_Name(enum_t_value);
+  }
+  static inline bool Status_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Status* value) {
+    return ContractEvaluation_Status_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNotesFieldNumber = 12,
+    kIssuesFieldNumber = 19,
+    kSeasonIdFieldNumber = 21,
+    kContractIdentifierFieldNumber = 40,
+    kCoopIdentifierFieldNumber = 41,
+    kVersionFieldNumber = 50,
+    kCxpFieldNumber = 1,
+    kGradePerformanceFieldNumber = 2,
+    kGradeFieldNumber = 3,
+    kContributionRatioFieldNumber = 4,
+    kCompletionPercentFieldNumber = 5,
+    kCompletionTimeFieldNumber = 6,
+    kChickenRunsSentFieldNumber = 7,
+    kGiftTokensSentFieldNumber = 8,
+    kOriginalLengthFieldNumber = 11,
+    kOldLeagueFieldNumber = 9,
+    kGiftTokensReceivedFieldNumber = 15,
+    kTeamworkScoreFieldNumber = 13,
+    kOtherBonusesFieldNumber = 14,
+    kBuffTimeValueFieldNumber = 17,
+    kBoostTokenAllotmentFieldNumber = 16,
+    kCoopSizeFieldNumber = 18,
+    kLastContributionTimeFieldNumber = 22,
+    kSoulPowerFieldNumber = 23,
+    kCxpChangeFieldNumber = 25,
+    kReplayFieldNumber = 24,
+    kOldGoalsFieldNumber = 10,
+    kSoloFieldNumber = 26,
+    kCountedInSeasonFieldNumber = 20,
+    kStatusFieldNumber = 52,
+    kEvaluationStartTimeFieldNumber = 51,
+  };
+  // repeated string notes = 12;
+  int notes_size() const;
+  private:
+  int _internal_notes_size() const;
+  public:
+  void clear_notes();
+  const std::string& notes(int index) const;
+  std::string* mutable_notes(int index);
+  void set_notes(int index, const std::string& value);
+  void set_notes(int index, std::string&& value);
+  void set_notes(int index, const char* value);
+  void set_notes(int index, const char* value, size_t size);
+  std::string* add_notes();
+  void add_notes(const std::string& value);
+  void add_notes(std::string&& value);
+  void add_notes(const char* value);
+  void add_notes(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& notes() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_notes();
+  private:
+  const std::string& _internal_notes(int index) const;
+  std::string* _internal_add_notes();
+  public:
+
+  // repeated .ei.ContractEvaluation.PoorBehavior issues = 19;
+  int issues_size() const;
+  private:
+  int _internal_issues_size() const;
+  public:
+  void clear_issues();
+  private:
+  ::ei::ContractEvaluation_PoorBehavior _internal_issues(int index) const;
+  void _internal_add_issues(::ei::ContractEvaluation_PoorBehavior value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* _internal_mutable_issues();
+  public:
+  ::ei::ContractEvaluation_PoorBehavior issues(int index) const;
+  void set_issues(int index, ::ei::ContractEvaluation_PoorBehavior value);
+  void add_issues(::ei::ContractEvaluation_PoorBehavior value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>& issues() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* mutable_issues();
+
+  // optional string season_id = 21;
+  bool has_season_id() const;
+  private:
+  bool _internal_has_season_id() const;
+  public:
+  void clear_season_id();
+  const std::string& season_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_season_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_season_id();
+  PROTOBUF_NODISCARD std::string* release_season_id();
+  void set_allocated_season_id(std::string* season_id);
+  private:
+  const std::string& _internal_season_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_season_id(const std::string& value);
+  std::string* _internal_mutable_season_id();
+  public:
+
+  // optional string contract_identifier = 40;
+  bool has_contract_identifier() const;
+  private:
+  bool _internal_has_contract_identifier() const;
+  public:
+  void clear_contract_identifier();
+  const std::string& contract_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_contract_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_contract_identifier();
+  PROTOBUF_NODISCARD std::string* release_contract_identifier();
+  void set_allocated_contract_identifier(std::string* contract_identifier);
+  private:
+  const std::string& _internal_contract_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contract_identifier(const std::string& value);
+  std::string* _internal_mutable_contract_identifier();
+  public:
+
+  // optional string coop_identifier = 41;
+  bool has_coop_identifier() const;
+  private:
+  bool _internal_has_coop_identifier() const;
+  public:
+  void clear_coop_identifier();
+  const std::string& coop_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_coop_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_coop_identifier();
+  PROTOBUF_NODISCARD std::string* release_coop_identifier();
+  void set_allocated_coop_identifier(std::string* coop_identifier);
+  private:
+  const std::string& _internal_coop_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_coop_identifier(const std::string& value);
+  std::string* _internal_mutable_coop_identifier();
+  public:
+
+  // optional string version = 50;
+  bool has_version() const;
+  private:
+  bool _internal_has_version() const;
+  public:
+  void clear_version();
+  const std::string& version() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_version(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_version();
+  PROTOBUF_NODISCARD std::string* release_version();
+  void set_allocated_version(std::string* version);
+  private:
+  const std::string& _internal_version() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_version(const std::string& value);
+  std::string* _internal_mutable_version();
+  public:
+
+  // optional double cxp = 1;
+  bool has_cxp() const;
+  private:
+  bool _internal_has_cxp() const;
+  public:
+  void clear_cxp();
+  double cxp() const;
+  void set_cxp(double value);
+  private:
+  double _internal_cxp() const;
+  void _internal_set_cxp(double value);
+  public:
+
+  // optional int32 grade_performance = 2;
+  bool has_grade_performance() const;
+  private:
+  bool _internal_has_grade_performance() const;
+  public:
+  void clear_grade_performance();
+  int32_t grade_performance() const;
+  void set_grade_performance(int32_t value);
+  private:
+  int32_t _internal_grade_performance() const;
+  void _internal_set_grade_performance(int32_t value);
+  public:
+
+  // optional .ei.Contract.PlayerGrade grade = 3;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
+  // optional double contribution_ratio = 4;
+  bool has_contribution_ratio() const;
+  private:
+  bool _internal_has_contribution_ratio() const;
+  public:
+  void clear_contribution_ratio();
+  double contribution_ratio() const;
+  void set_contribution_ratio(double value);
+  private:
+  double _internal_contribution_ratio() const;
+  void _internal_set_contribution_ratio(double value);
+  public:
+
+  // optional double completion_percent = 5;
+  bool has_completion_percent() const;
+  private:
+  bool _internal_has_completion_percent() const;
+  public:
+  void clear_completion_percent();
+  double completion_percent() const;
+  void set_completion_percent(double value);
+  private:
+  double _internal_completion_percent() const;
+  void _internal_set_completion_percent(double value);
+  public:
+
+  // optional double completion_time = 6;
+  bool has_completion_time() const;
+  private:
+  bool _internal_has_completion_time() const;
+  public:
+  void clear_completion_time();
+  double completion_time() const;
+  void set_completion_time(double value);
+  private:
+  double _internal_completion_time() const;
+  void _internal_set_completion_time(double value);
+  public:
+
+  // optional uint32 chicken_runs_sent = 7;
+  bool has_chicken_runs_sent() const;
+  private:
+  bool _internal_has_chicken_runs_sent() const;
+  public:
+  void clear_chicken_runs_sent();
+  uint32_t chicken_runs_sent() const;
+  void set_chicken_runs_sent(uint32_t value);
+  private:
+  uint32_t _internal_chicken_runs_sent() const;
+  void _internal_set_chicken_runs_sent(uint32_t value);
+  public:
+
+  // optional uint32 gift_tokens_sent = 8;
+  bool has_gift_tokens_sent() const;
+  private:
+  bool _internal_has_gift_tokens_sent() const;
+  public:
+  void clear_gift_tokens_sent();
+  uint32_t gift_tokens_sent() const;
+  void set_gift_tokens_sent(uint32_t value);
+  private:
+  uint32_t _internal_gift_tokens_sent() const;
+  void _internal_set_gift_tokens_sent(uint32_t value);
+  public:
+
+  // optional double original_length = 11;
+  bool has_original_length() const;
+  private:
+  bool _internal_has_original_length() const;
+  public:
+  void clear_original_length();
+  double original_length() const;
+  void set_original_length(double value);
+  private:
+  double _internal_original_length() const;
+  void _internal_set_original_length(double value);
+  public:
+
+  // optional int32 old_league = 9;
+  bool has_old_league() const;
+  private:
+  bool _internal_has_old_league() const;
+  public:
+  void clear_old_league();
+  int32_t old_league() const;
+  void set_old_league(int32_t value);
+  private:
+  int32_t _internal_old_league() const;
+  void _internal_set_old_league(int32_t value);
+  public:
+
+  // optional uint32 gift_tokens_received = 15;
+  bool has_gift_tokens_received() const;
+  private:
+  bool _internal_has_gift_tokens_received() const;
+  public:
+  void clear_gift_tokens_received();
+  uint32_t gift_tokens_received() const;
+  void set_gift_tokens_received(uint32_t value);
+  private:
+  uint32_t _internal_gift_tokens_received() const;
+  void _internal_set_gift_tokens_received(uint32_t value);
+  public:
+
+  // optional double teamwork_score = 13;
+  bool has_teamwork_score() const;
+  private:
+  bool _internal_has_teamwork_score() const;
+  public:
+  void clear_teamwork_score();
+  double teamwork_score() const;
+  void set_teamwork_score(double value);
+  private:
+  double _internal_teamwork_score() const;
+  void _internal_set_teamwork_score(double value);
+  public:
+
+  // optional double other_bonuses = 14;
+  bool has_other_bonuses() const;
+  private:
+  bool _internal_has_other_bonuses() const;
+  public:
+  void clear_other_bonuses();
+  double other_bonuses() const;
+  void set_other_bonuses(double value);
+  private:
+  double _internal_other_bonuses() const;
+  void _internal_set_other_bonuses(double value);
+  public:
+
+  // optional double buff_time_value = 17;
+  bool has_buff_time_value() const;
+  private:
+  bool _internal_has_buff_time_value() const;
+  public:
+  void clear_buff_time_value();
+  double buff_time_value() const;
+  void set_buff_time_value(double value);
+  private:
+  double _internal_buff_time_value() const;
+  void _internal_set_buff_time_value(double value);
+  public:
+
+  // optional uint32 boost_token_allotment = 16;
+  bool has_boost_token_allotment() const;
+  private:
+  bool _internal_has_boost_token_allotment() const;
+  public:
+  void clear_boost_token_allotment();
+  uint32_t boost_token_allotment() const;
+  void set_boost_token_allotment(uint32_t value);
+  private:
+  uint32_t _internal_boost_token_allotment() const;
+  void _internal_set_boost_token_allotment(uint32_t value);
+  public:
+
+  // optional uint32 coop_size = 18;
+  bool has_coop_size() const;
+  private:
+  bool _internal_has_coop_size() const;
+  public:
+  void clear_coop_size();
+  uint32_t coop_size() const;
+  void set_coop_size(uint32_t value);
+  private:
+  uint32_t _internal_coop_size() const;
+  void _internal_set_coop_size(uint32_t value);
+  public:
+
+  // optional double last_contribution_time = 22;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
+  // optional double soul_power = 23;
+  bool has_soul_power() const;
+  private:
+  bool _internal_has_soul_power() const;
+  public:
+  void clear_soul_power();
+  double soul_power() const;
+  void set_soul_power(double value);
+  private:
+  double _internal_soul_power() const;
+  void _internal_set_soul_power(double value);
+  public:
+
+  // optional double cxp_change = 25;
+  bool has_cxp_change() const;
+  private:
+  bool _internal_has_cxp_change() const;
+  public:
+  void clear_cxp_change();
+  double cxp_change() const;
+  void set_cxp_change(double value);
+  private:
+  double _internal_cxp_change() const;
+  void _internal_set_cxp_change(double value);
+  public:
+
+  // optional bool replay = 24;
+  bool has_replay() const;
+  private:
+  bool _internal_has_replay() const;
+  public:
+  void clear_replay();
+  bool replay() const;
+  void set_replay(bool value);
+  private:
+  bool _internal_replay() const;
+  void _internal_set_replay(bool value);
+  public:
+
+  // optional bool old_goals = 10;
+  bool has_old_goals() const;
+  private:
+  bool _internal_has_old_goals() const;
+  public:
+  void clear_old_goals();
+  bool old_goals() const;
+  void set_old_goals(bool value);
+  private:
+  bool _internal_old_goals() const;
+  void _internal_set_old_goals(bool value);
+  public:
+
+  // optional bool solo = 26;
+  bool has_solo() const;
+  private:
+  bool _internal_has_solo() const;
+  public:
+  void clear_solo();
+  bool solo() const;
+  void set_solo(bool value);
+  private:
+  bool _internal_solo() const;
+  void _internal_set_solo(bool value);
+  public:
+
+  // optional bool counted_in_season = 20;
+  bool has_counted_in_season() const;
+  private:
+  bool _internal_has_counted_in_season() const;
+  public:
+  void clear_counted_in_season();
+  bool counted_in_season() const;
+  void set_counted_in_season(bool value);
+  private:
+  bool _internal_counted_in_season() const;
+  void _internal_set_counted_in_season(bool value);
+  public:
+
+  // optional .ei.ContractEvaluation.Status status = 52;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::ContractEvaluation_Status status() const;
+  void set_status(::ei::ContractEvaluation_Status value);
+  private:
+  ::ei::ContractEvaluation_Status _internal_status() const;
+  void _internal_set_status(::ei::ContractEvaluation_Status value);
+  public:
+
+  // optional double evaluation_start_time = 51;
+  bool has_evaluation_start_time() const;
+  private:
+  bool _internal_has_evaluation_start_time() const;
+  public:
+  void clear_evaluation_start_time();
+  double evaluation_start_time() const;
+  void set_evaluation_start_time(double value);
+  private:
+  double _internal_evaluation_start_time() const;
+  void _internal_set_evaluation_start_time(double value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ContractEvaluation)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> notes_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int> issues_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr season_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
+  double cxp_;
+  int32_t grade_performance_;
+  int grade_;
+  double contribution_ratio_;
+  double completion_percent_;
+  double completion_time_;
+  uint32_t chicken_runs_sent_;
+  uint32_t gift_tokens_sent_;
+  double original_length_;
+  int32_t old_league_;
+  uint32_t gift_tokens_received_;
+  double teamwork_score_;
+  double other_bonuses_;
+  double buff_time_value_;
+  uint32_t boost_token_allotment_;
+  uint32_t coop_size_;
+  double last_contribution_time_;
+  double soul_power_;
+  double cxp_change_;
+  bool replay_;
+  bool old_goals_;
+  bool solo_;
+  bool counted_in_season_;
+  int status_;
+  double evaluation_start_time_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractCitation final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractCitation) */ {
+ public:
+  inline ContractCitation() : ContractCitation(nullptr) {}
+  ~ContractCitation() override;
+  explicit PROTOBUF_CONSTEXPR ContractCitation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractCitation(const ContractCitation& from);
+  ContractCitation(ContractCitation&& from) noexcept
+    : ContractCitation() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractCitation& operator=(const ContractCitation& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractCitation& operator=(ContractCitation&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractCitation& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractCitation* internal_default_instance() {
+    return reinterpret_cast<const ContractCitation*>(
+               &_ContractCitation_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    42;
+
+  friend void swap(ContractCitation& a, ContractCitation& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractCitation* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractCitation* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractCitation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractCitation>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractCitation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractCitation& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractCitation* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractCitation";
+  }
+  protected:
+  explicit ContractCitation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTimestampFieldNumber = 2,
+    kIssueFieldNumber = 1,
+    kGradeFieldNumber = 3,
+  };
+  // optional double timestamp = 2;
+  bool has_timestamp() const;
+  private:
+  bool _internal_has_timestamp() const;
+  public:
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
+  // optional .ei.ContractEvaluation.PoorBehavior issue = 1;
+  bool has_issue() const;
+  private:
+  bool _internal_has_issue() const;
+  public:
+  void clear_issue();
+  ::ei::ContractEvaluation_PoorBehavior issue() const;
+  void set_issue(::ei::ContractEvaluation_PoorBehavior value);
+  private:
+  ::ei::ContractEvaluation_PoorBehavior _internal_issue() const;
+  void _internal_set_issue(::ei::ContractEvaluation_PoorBehavior value);
+  public:
+
+  // optional .ei.Contract.PlayerGrade grade = 3;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ContractCitation)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  double timestamp_;
+  int issue_;
+  int grade_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractEvaluationBatch_Pair final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractEvaluationBatch.Pair) */ {
+ public:
+  inline ContractEvaluationBatch_Pair() : ContractEvaluationBatch_Pair(nullptr) {}
+  ~ContractEvaluationBatch_Pair() override;
+  explicit PROTOBUF_CONSTEXPR ContractEvaluationBatch_Pair(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractEvaluationBatch_Pair(const ContractEvaluationBatch_Pair& from);
+  ContractEvaluationBatch_Pair(ContractEvaluationBatch_Pair&& from) noexcept
+    : ContractEvaluationBatch_Pair() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractEvaluationBatch_Pair& operator=(const ContractEvaluationBatch_Pair& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractEvaluationBatch_Pair& operator=(ContractEvaluationBatch_Pair&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractEvaluationBatch_Pair& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractEvaluationBatch_Pair* internal_default_instance() {
+    return reinterpret_cast<const ContractEvaluationBatch_Pair*>(
+               &_ContractEvaluationBatch_Pair_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    43;
+
+  friend void swap(ContractEvaluationBatch_Pair& a, ContractEvaluationBatch_Pair& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractEvaluationBatch_Pair* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractEvaluationBatch_Pair* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractEvaluationBatch_Pair* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractEvaluationBatch_Pair>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractEvaluationBatch_Pair& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractEvaluationBatch_Pair& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractEvaluationBatch_Pair* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractEvaluationBatch.Pair";
+  }
+  protected:
+  explicit ContractEvaluationBatch_Pair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kCevFieldNumber = 2,
+  };
+  // optional string user_id = 1;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional .ei.ContractEvaluation cev = 2;
+  bool has_cev() const;
+  private:
+  bool _internal_has_cev() const;
+  public:
+  void clear_cev();
+  const ::ei::ContractEvaluation& cev() const;
+  PROTOBUF_NODISCARD ::ei::ContractEvaluation* release_cev();
+  ::ei::ContractEvaluation* mutable_cev();
+  void set_allocated_cev(::ei::ContractEvaluation* cev);
+  private:
+  const ::ei::ContractEvaluation& _internal_cev() const;
+  ::ei::ContractEvaluation* _internal_mutable_cev();
+  public:
+  void unsafe_arena_set_allocated_cev(
+      ::ei::ContractEvaluation* cev);
+  ::ei::ContractEvaluation* unsafe_arena_release_cev();
+
+  // @@protoc_insertion_point(class_scope:ei.ContractEvaluationBatch.Pair)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::ei::ContractEvaluation* cev_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractEvaluationBatch final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractEvaluationBatch) */ {
+ public:
+  inline ContractEvaluationBatch() : ContractEvaluationBatch(nullptr) {}
+  ~ContractEvaluationBatch() override;
+  explicit PROTOBUF_CONSTEXPR ContractEvaluationBatch(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractEvaluationBatch(const ContractEvaluationBatch& from);
+  ContractEvaluationBatch(ContractEvaluationBatch&& from) noexcept
+    : ContractEvaluationBatch() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractEvaluationBatch& operator=(const ContractEvaluationBatch& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractEvaluationBatch& operator=(ContractEvaluationBatch&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractEvaluationBatch& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractEvaluationBatch* internal_default_instance() {
+    return reinterpret_cast<const ContractEvaluationBatch*>(
+               &_ContractEvaluationBatch_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    44;
+
+  friend void swap(ContractEvaluationBatch& a, ContractEvaluationBatch& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractEvaluationBatch* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractEvaluationBatch* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractEvaluationBatch* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractEvaluationBatch>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractEvaluationBatch& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractEvaluationBatch& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractEvaluationBatch* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractEvaluationBatch";
+  }
+  protected:
+  explicit ContractEvaluationBatch(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ContractEvaluationBatch_Pair Pair;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEvalsFieldNumber = 1,
+  };
+  // repeated .ei.ContractEvaluationBatch.Pair evals = 1;
+  int evals_size() const;
+  private:
+  int _internal_evals_size() const;
+  public:
+  void clear_evals();
+  ::ei::ContractEvaluationBatch_Pair* mutable_evals(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluationBatch_Pair >*
+      mutable_evals();
+  private:
+  const ::ei::ContractEvaluationBatch_Pair& _internal_evals(int index) const;
+  ::ei::ContractEvaluationBatch_Pair* _internal_add_evals();
+  public:
+  const ::ei::ContractEvaluationBatch_Pair& evals(int index) const;
+  ::ei::ContractEvaluationBatch_Pair* add_evals();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluationBatch_Pair >&
+      evals() const;
+
+  // @@protoc_insertion_point(class_scope:ei.ContractEvaluationBatch)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluationBatch_Pair > evals_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CoopCompletionSnapshot_ContributorSnapshot final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CoopCompletionSnapshot.ContributorSnapshot) */ {
+ public:
+  inline CoopCompletionSnapshot_ContributorSnapshot() : CoopCompletionSnapshot_ContributorSnapshot(nullptr) {}
+  ~CoopCompletionSnapshot_ContributorSnapshot() override;
+  explicit PROTOBUF_CONSTEXPR CoopCompletionSnapshot_ContributorSnapshot(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CoopCompletionSnapshot_ContributorSnapshot(const CoopCompletionSnapshot_ContributorSnapshot& from);
+  CoopCompletionSnapshot_ContributorSnapshot(CoopCompletionSnapshot_ContributorSnapshot&& from) noexcept
+    : CoopCompletionSnapshot_ContributorSnapshot() {
+    *this = ::std::move(from);
+  }
+
+  inline CoopCompletionSnapshot_ContributorSnapshot& operator=(const CoopCompletionSnapshot_ContributorSnapshot& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CoopCompletionSnapshot_ContributorSnapshot& operator=(CoopCompletionSnapshot_ContributorSnapshot&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CoopCompletionSnapshot_ContributorSnapshot& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CoopCompletionSnapshot_ContributorSnapshot* internal_default_instance() {
+    return reinterpret_cast<const CoopCompletionSnapshot_ContributorSnapshot*>(
+               &_CoopCompletionSnapshot_ContributorSnapshot_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    45;
+
+  friend void swap(CoopCompletionSnapshot_ContributorSnapshot& a, CoopCompletionSnapshot_ContributorSnapshot& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CoopCompletionSnapshot_ContributorSnapshot* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CoopCompletionSnapshot_ContributorSnapshot* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CoopCompletionSnapshot_ContributorSnapshot* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CoopCompletionSnapshot_ContributorSnapshot>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CoopCompletionSnapshot_ContributorSnapshot& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CoopCompletionSnapshot_ContributorSnapshot& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CoopCompletionSnapshot_ContributorSnapshot* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CoopCompletionSnapshot.ContributorSnapshot";
+  }
+  protected:
+  explicit CoopCompletionSnapshot_ContributorSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 3,
+    kContributionFieldNumber = 1,
+    kSoulPowerFieldNumber = 2,
+    kTokensFieldNumber = 4,
+    kTokensSpentFieldNumber = 5,
+  };
+  // optional string user_id = 3;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional double contribution = 1;
+  bool has_contribution() const;
+  private:
+  bool _internal_has_contribution() const;
+  public:
+  void clear_contribution();
+  double contribution() const;
+  void set_contribution(double value);
+  private:
+  double _internal_contribution() const;
+  void _internal_set_contribution(double value);
+  public:
+
+  // optional double soul_power = 2;
+  bool has_soul_power() const;
+  private:
+  bool _internal_has_soul_power() const;
+  public:
+  void clear_soul_power();
+  double soul_power() const;
+  void set_soul_power(double value);
+  private:
+  double _internal_soul_power() const;
+  void _internal_set_soul_power(double value);
+  public:
+
+  // optional uint32 tokens = 4;
+  bool has_tokens() const;
+  private:
+  bool _internal_has_tokens() const;
+  public:
+  void clear_tokens();
+  uint32_t tokens() const;
+  void set_tokens(uint32_t value);
+  private:
+  uint32_t _internal_tokens() const;
+  void _internal_set_tokens(uint32_t value);
+  public:
+
+  // optional uint32 tokens_spent = 5;
+  bool has_tokens_spent() const;
+  private:
+  bool _internal_has_tokens_spent() const;
+  public:
+  void clear_tokens_spent();
+  uint32_t tokens_spent() const;
+  void set_tokens_spent(uint32_t value);
+  private:
+  uint32_t _internal_tokens_spent() const;
+  void _internal_set_tokens_spent(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.CoopCompletionSnapshot.ContributorSnapshot)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  double contribution_;
+  double soul_power_;
+  uint32_t tokens_;
+  uint32_t tokens_spent_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CoopCompletionSnapshot final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CoopCompletionSnapshot) */ {
+ public:
+  inline CoopCompletionSnapshot() : CoopCompletionSnapshot(nullptr) {}
+  ~CoopCompletionSnapshot() override;
+  explicit PROTOBUF_CONSTEXPR CoopCompletionSnapshot(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CoopCompletionSnapshot(const CoopCompletionSnapshot& from);
+  CoopCompletionSnapshot(CoopCompletionSnapshot&& from) noexcept
+    : CoopCompletionSnapshot() {
+    *this = ::std::move(from);
+  }
+
+  inline CoopCompletionSnapshot& operator=(const CoopCompletionSnapshot& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CoopCompletionSnapshot& operator=(CoopCompletionSnapshot&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CoopCompletionSnapshot& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CoopCompletionSnapshot* internal_default_instance() {
+    return reinterpret_cast<const CoopCompletionSnapshot*>(
+               &_CoopCompletionSnapshot_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    46;
+
+  friend void swap(CoopCompletionSnapshot& a, CoopCompletionSnapshot& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CoopCompletionSnapshot* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CoopCompletionSnapshot* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CoopCompletionSnapshot* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CoopCompletionSnapshot>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CoopCompletionSnapshot& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CoopCompletionSnapshot& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CoopCompletionSnapshot* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CoopCompletionSnapshot";
+  }
+  protected:
+  explicit CoopCompletionSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef CoopCompletionSnapshot_ContributorSnapshot ContributorSnapshot;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kContributorsFieldNumber = 1,
+  };
+  // repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;
+  int contributors_size() const;
+  private:
+  int _internal_contributors_size() const;
+  public:
+  void clear_contributors();
+  ::ei::CoopCompletionSnapshot_ContributorSnapshot* mutable_contributors(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopCompletionSnapshot_ContributorSnapshot >*
+      mutable_contributors();
+  private:
+  const ::ei::CoopCompletionSnapshot_ContributorSnapshot& _internal_contributors(int index) const;
+  ::ei::CoopCompletionSnapshot_ContributorSnapshot* _internal_add_contributors();
+  public:
+  const ::ei::CoopCompletionSnapshot_ContributorSnapshot& contributors(int index) const;
+  ::ei::CoopCompletionSnapshot_ContributorSnapshot* add_contributors();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopCompletionSnapshot_ContributorSnapshot >&
+      contributors() const;
+
+  // @@protoc_insertion_point(class_scope:ei.CoopCompletionSnapshot)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopCompletionSnapshot_ContributorSnapshot > contributors_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -13355,7 +15676,7 @@ class BasicRequestInfo final :
                &_BasicRequestInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    47;
 
   friend void swap(BasicRequestInfo& a, BasicRequestInfo& b) {
     a.Swap(&b);
@@ -13645,7 +15966,7 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
                &_ContractSimConfig_ContractGradeSimConfig_GoalParams_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    48;
 
   friend void swap(ContractSimConfig_ContractGradeSimConfig_GoalParams& a, ContractSimConfig_ContractGradeSimConfig_GoalParams& b) {
     a.Swap(&b);
@@ -13719,6 +16040,7 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
     kTargetSeFieldNumber = 1,
     kCpsMultFieldNumber = 2,
     kEarningsMultFieldNumber = 3,
+    kTimeEfficacyFieldNumber = 4,
   };
   // optional double target_se = 1;
   bool has_target_se() const;
@@ -13759,6 +16081,19 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
   void _internal_set_earnings_mult(double value);
   public:
 
+  // optional double time_efficacy = 4;
+  bool has_time_efficacy() const;
+  private:
+  bool _internal_has_time_efficacy() const;
+  public:
+  void clear_time_efficacy();
+  double time_efficacy() const;
+  void set_time_efficacy(double value);
+  private:
+  double _internal_time_efficacy() const;
+  void _internal_set_time_efficacy(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams)
  private:
   class _Internal;
@@ -13771,6 +16106,7 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
   double target_se_;
   double cps_mult_;
   double earnings_mult_;
+  double time_efficacy_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -13830,7 +16166,7 @@ class ContractSimConfig_ContractGradeSimConfig final :
                &_ContractSimConfig_ContractGradeSimConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    49;
 
   friend void swap(ContractSimConfig_ContractGradeSimConfig& a, ContractSimConfig_ContractGradeSimConfig& b) {
     a.Swap(&b);
@@ -14007,7 +16343,7 @@ class ContractSimConfig final :
                &_ContractSimConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    50;
 
   friend void swap(ContractSimConfig& a, ContractSimConfig& b) {
     a.Swap(&b);
@@ -14168,7 +16504,7 @@ class ContractSimPoll final :
                &_ContractSimPoll_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    51;
 
   friend void swap(ContractSimPoll& a, ContractSimPoll& b) {
     a.Swap(&b);
@@ -14323,7 +16659,7 @@ class ContractSimPollResponse final :
                &_ContractSimPollResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    52;
 
   friend void swap(ContractSimPollResponse& a, ContractSimPollResponse& b) {
     a.Swap(&b);
@@ -14503,7 +16839,7 @@ class ContractSimResultUpdate_GoalInfo final :
                &_ContractSimResultUpdate_GoalInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    53;
 
   friend void swap(ContractSimResultUpdate_GoalInfo& a, ContractSimResultUpdate_GoalInfo& b) {
     a.Swap(&b);
@@ -14688,7 +17024,7 @@ class ContractSimResultUpdate final :
                &_ContractSimResultUpdate_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    54;
 
   friend void swap(ContractSimResultUpdate& a, ContractSimResultUpdate& b) {
     a.Swap(&b);
@@ -14870,7 +17206,7 @@ class ContractsRequest final :
                &_ContractsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    55;
 
   friend void swap(ContractsRequest& a, ContractsRequest& b) {
     a.Swap(&b);
@@ -14941,9 +17277,28 @@ class ContractsRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kUserIdFieldNumber = 2,
     kSoulEggsFieldNumber = 1,
     kClientVersionFieldNumber = 5,
   };
+  // optional string user_id = 2;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
   // optional double soul_eggs = 1;
   bool has_soul_eggs() const;
   private:
@@ -14979,6 +17334,7 @@ class ContractsRequest final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
   double soul_eggs_;
   uint32_t client_version_;
   friend struct ::TableStruct_ei_2eproto;
@@ -15040,7 +17396,7 @@ class ContractsResponse final :
                &_ContractsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    56;
 
   friend void swap(ContractsResponse& a, ContractsResponse& b) {
     a.Swap(&b);
@@ -15250,7 +17606,7 @@ class ContractCoopStatusRequest final :
                &_ContractCoopStatusRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    57;
 
   friend void swap(ContractCoopStatusRequest& a, ContractCoopStatusRequest& b) {
     a.Swap(&b);
@@ -15485,7 +17841,7 @@ class FarmProductionParams final :
                &_FarmProductionParams_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    58;
 
   friend void swap(FarmProductionParams& a, FarmProductionParams& b) {
     a.Swap(&b);
@@ -15715,7 +18071,7 @@ class PlayerFarmInfo final :
                &_PlayerFarmInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    59;
 
   friend void swap(PlayerFarmInfo& a, PlayerFarmInfo& b) {
     a.Swap(&b);
@@ -16264,7 +18620,7 @@ class ContractCoopStatusResponse_ContributionInfo final :
                &_ContractCoopStatusResponse_ContributionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    60;
 
   friend void swap(ContractCoopStatusResponse_ContributionInfo& a, ContractCoopStatusResponse_ContributionInfo& b) {
     a.Swap(&b);
@@ -16340,6 +18696,7 @@ class ContractCoopStatusResponse_ContributionInfo final :
     kUserNameFieldNumber = 2,
     kPushIdFieldNumber = 9,
     kContractIdentifierFieldNumber = 19,
+    kUuidFieldNumber = 21,
     kProductionParamsFieldNumber = 15,
     kFarmInfoFieldNumber = 18,
     kContributionAmountFieldNumber = 3,
@@ -16444,6 +18801,24 @@ class ContractCoopStatusResponse_ContributionInfo final :
   const std::string& _internal_contract_identifier() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_contract_identifier(const std::string& value);
   std::string* _internal_mutable_contract_identifier();
+  public:
+
+  // optional string uuid = 21;
+  bool has_uuid() const;
+  private:
+  bool _internal_has_uuid() const;
+  public:
+  void clear_uuid();
+  const std::string& uuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_uuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_uuid();
+  PROTOBUF_NODISCARD std::string* release_uuid();
+  void set_allocated_uuid(std::string* uuid);
+  private:
+  const std::string& _internal_uuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uuid(const std::string& value);
+  std::string* _internal_mutable_uuid();
   public:
 
   // optional .ei.FarmProductionParams production_params = 15;
@@ -16665,6 +19040,7 @@ class ContractCoopStatusResponse_ContributionInfo final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr push_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
   ::ei::FarmProductionParams* production_params_;
   ::ei::PlayerFarmInfo* farm_info_;
   double contribution_amount_;
@@ -16739,7 +19115,7 @@ class ContractCoopStatusResponse_CoopGift final :
                &_ContractCoopStatusResponse_CoopGift_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    61;
 
   friend void swap(ContractCoopStatusResponse_CoopGift& a, ContractCoopStatusResponse_CoopGift& b) {
     a.Swap(&b);
@@ -16934,7 +19310,7 @@ class ContractCoopStatusResponse_ChickenRun final :
                &_ContractCoopStatusResponse_ChickenRun_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    62;
 
   friend void swap(ContractCoopStatusResponse_ChickenRun& a, ContractCoopStatusResponse_ChickenRun& b) {
     a.Swap(&b);
@@ -17129,7 +19505,7 @@ class ContractCoopStatusResponse final :
                &_ContractCoopStatusResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    63;
 
   friend void swap(ContractCoopStatusResponse& a, ContractCoopStatusResponse& b) {
     a.Swap(&b);
@@ -17235,6 +19611,42 @@ class ContractCoopStatusResponse final :
   static inline bool MemberStatus_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
       MemberStatus* value) {
     return ContractCoopStatusResponse_MemberStatus_Parse(name, value);
+  }
+
+  typedef ContractCoopStatusResponse_Status Status;
+  static constexpr Status UNKNOWN =
+    ContractCoopStatusResponse_Status_UNKNOWN;
+  static constexpr Status LOBBY =
+    ContractCoopStatusResponse_Status_LOBBY;
+  static constexpr Status ACTIVE =
+    ContractCoopStatusResponse_Status_ACTIVE;
+  static constexpr Status COMPLETE =
+    ContractCoopStatusResponse_Status_COMPLETE;
+  static constexpr Status FINALIZED =
+    ContractCoopStatusResponse_Status_FINALIZED;
+  static inline bool Status_IsValid(int value) {
+    return ContractCoopStatusResponse_Status_IsValid(value);
+  }
+  static constexpr Status Status_MIN =
+    ContractCoopStatusResponse_Status_Status_MIN;
+  static constexpr Status Status_MAX =
+    ContractCoopStatusResponse_Status_Status_MAX;
+  static constexpr int Status_ARRAYSIZE =
+    ContractCoopStatusResponse_Status_Status_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Status_descriptor() {
+    return ContractCoopStatusResponse_Status_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Status_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Status>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Status_Name.");
+    return ContractCoopStatusResponse_Status_Name(enum_t_value);
+  }
+  static inline bool Status_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Status* value) {
+    return ContractCoopStatusResponse_Status_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
@@ -17534,7 +19946,7 @@ class LocalContract final :
                &_LocalContract_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    64;
 
   friend void swap(LocalContract& a, LocalContract& b) {
     a.Swap(&b);
@@ -17605,9 +20017,11 @@ class LocalContract final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kReportedUuidsFieldNumber = 21,
     kCoopIdentifierFieldNumber = 2,
     kCoopUserIdFieldNumber = 13,
     kContractFieldNumber = 1,
+    kEvaluationFieldNumber = 19,
     kTimeAcceptedFieldNumber = 3,
     kCoopSharedEndTimeFieldNumber = 5,
     kLastAmountWhenRewardGivenFieldNumber = 6,
@@ -17621,9 +20035,34 @@ class LocalContract final :
     kNumGoalsAchievedFieldNumber = 14,
     kLeagueFieldNumber = 15,
     kLastNagTimeFieldNumber = 16,
-    kCoopShareFarmFieldNumber = 17,
     kGradeFieldNumber = 18,
+    kCoopShareFarmFieldNumber = 17,
+    kPointsReplayFieldNumber = 20,
   };
+  // repeated string reported_uuids = 21;
+  int reported_uuids_size() const;
+  private:
+  int _internal_reported_uuids_size() const;
+  public:
+  void clear_reported_uuids();
+  const std::string& reported_uuids(int index) const;
+  std::string* mutable_reported_uuids(int index);
+  void set_reported_uuids(int index, const std::string& value);
+  void set_reported_uuids(int index, std::string&& value);
+  void set_reported_uuids(int index, const char* value);
+  void set_reported_uuids(int index, const char* value, size_t size);
+  std::string* add_reported_uuids();
+  void add_reported_uuids(const std::string& value);
+  void add_reported_uuids(std::string&& value);
+  void add_reported_uuids(const char* value);
+  void add_reported_uuids(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& reported_uuids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_reported_uuids();
+  private:
+  const std::string& _internal_reported_uuids(int index) const;
+  std::string* _internal_add_reported_uuids();
+  public:
+
   // optional string coop_identifier = 2;
   bool has_coop_identifier() const;
   private:
@@ -17677,6 +20116,24 @@ class LocalContract final :
   void unsafe_arena_set_allocated_contract(
       ::ei::Contract* contract);
   ::ei::Contract* unsafe_arena_release_contract();
+
+  // optional .ei.ContractEvaluation evaluation = 19;
+  bool has_evaluation() const;
+  private:
+  bool _internal_has_evaluation() const;
+  public:
+  void clear_evaluation();
+  const ::ei::ContractEvaluation& evaluation() const;
+  PROTOBUF_NODISCARD ::ei::ContractEvaluation* release_evaluation();
+  ::ei::ContractEvaluation* mutable_evaluation();
+  void set_allocated_evaluation(::ei::ContractEvaluation* evaluation);
+  private:
+  const ::ei::ContractEvaluation& _internal_evaluation() const;
+  ::ei::ContractEvaluation* _internal_mutable_evaluation();
+  public:
+  void unsafe_arena_set_allocated_evaluation(
+      ::ei::ContractEvaluation* evaluation);
+  ::ei::ContractEvaluation* unsafe_arena_release_evaluation();
 
   // optional double time_accepted = 3;
   bool has_time_accepted() const;
@@ -17847,19 +20304,6 @@ class LocalContract final :
   void _internal_set_last_nag_time(double value);
   public:
 
-  // optional bool coop_share_farm = 17;
-  bool has_coop_share_farm() const;
-  private:
-  bool _internal_has_coop_share_farm() const;
-  public:
-  void clear_coop_share_farm();
-  bool coop_share_farm() const;
-  void set_coop_share_farm(bool value);
-  private:
-  bool _internal_coop_share_farm() const;
-  void _internal_set_coop_share_farm(bool value);
-  public:
-
   // optional .ei.Contract.PlayerGrade grade = 18;
   bool has_grade() const;
   private:
@@ -17873,6 +20317,32 @@ class LocalContract final :
   void _internal_set_grade(::ei::Contract_PlayerGrade value);
   public:
 
+  // optional bool coop_share_farm = 17;
+  bool has_coop_share_farm() const;
+  private:
+  bool _internal_has_coop_share_farm() const;
+  public:
+  void clear_coop_share_farm();
+  bool coop_share_farm() const;
+  void set_coop_share_farm(bool value);
+  private:
+  bool _internal_coop_share_farm() const;
+  void _internal_set_coop_share_farm(bool value);
+  public:
+
+  // optional bool points_replay = 20;
+  bool has_points_replay() const;
+  private:
+  bool _internal_has_points_replay() const;
+  public:
+  void clear_points_replay();
+  bool points_replay() const;
+  void set_points_replay(bool value);
+  private:
+  bool _internal_points_replay() const;
+  void _internal_set_points_replay(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.LocalContract)
  private:
   class _Internal;
@@ -17882,9 +20352,11 @@ class LocalContract final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> reported_uuids_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_user_id_;
   ::ei::Contract* contract_;
+  ::ei::ContractEvaluation* evaluation_;
   double time_accepted_;
   double coop_shared_end_time_;
   double last_amount_when_reward_given_;
@@ -17898,8 +20370,9 @@ class LocalContract final :
   uint32_t num_goals_achieved_;
   uint32_t league_;
   double last_nag_time_;
-  bool coop_share_farm_;
   int grade_;
+  bool coop_share_farm_;
+  bool points_replay_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -17959,7 +20432,7 @@ class MyContracts final :
                &_MyContracts_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    65;
 
   friend void swap(MyContracts& a, MyContracts& b) {
     a.Swap(&b);
@@ -18034,6 +20507,10 @@ class MyContracts final :
     kArchiveFieldNumber = 2,
     kContractIdsSeenFieldNumber = 3,
     kCurrentCoopStatusesFieldNumber = 4,
+    kLastCpiFieldNumber = 5,
+    kLastGradeProgressShownFieldNumber = 7,
+    kInitialGradeRevealedFieldNumber = 6,
+    kShowAdvancedEvaluationsFieldNumber = 8,
   };
   // repeated .ei.LocalContract contracts = 1;
   int contracts_size() const;
@@ -18113,6 +20590,63 @@ class MyContracts final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse >&
       current_coop_statuses() const;
 
+  // optional .ei.ContractPlayerInfo last_cpi = 5;
+  bool has_last_cpi() const;
+  private:
+  bool _internal_has_last_cpi() const;
+  public:
+  void clear_last_cpi();
+  const ::ei::ContractPlayerInfo& last_cpi() const;
+  PROTOBUF_NODISCARD ::ei::ContractPlayerInfo* release_last_cpi();
+  ::ei::ContractPlayerInfo* mutable_last_cpi();
+  void set_allocated_last_cpi(::ei::ContractPlayerInfo* last_cpi);
+  private:
+  const ::ei::ContractPlayerInfo& _internal_last_cpi() const;
+  ::ei::ContractPlayerInfo* _internal_mutable_last_cpi();
+  public:
+  void unsafe_arena_set_allocated_last_cpi(
+      ::ei::ContractPlayerInfo* last_cpi);
+  ::ei::ContractPlayerInfo* unsafe_arena_release_last_cpi();
+
+  // optional double last_grade_progress_shown = 7;
+  bool has_last_grade_progress_shown() const;
+  private:
+  bool _internal_has_last_grade_progress_shown() const;
+  public:
+  void clear_last_grade_progress_shown();
+  double last_grade_progress_shown() const;
+  void set_last_grade_progress_shown(double value);
+  private:
+  double _internal_last_grade_progress_shown() const;
+  void _internal_set_last_grade_progress_shown(double value);
+  public:
+
+  // optional bool initial_grade_revealed = 6;
+  bool has_initial_grade_revealed() const;
+  private:
+  bool _internal_has_initial_grade_revealed() const;
+  public:
+  void clear_initial_grade_revealed();
+  bool initial_grade_revealed() const;
+  void set_initial_grade_revealed(bool value);
+  private:
+  bool _internal_initial_grade_revealed() const;
+  void _internal_set_initial_grade_revealed(bool value);
+  public:
+
+  // optional bool show_advanced_evaluations = 8;
+  bool has_show_advanced_evaluations() const;
+  private:
+  bool _internal_has_show_advanced_evaluations() const;
+  public:
+  void clear_show_advanced_evaluations();
+  bool show_advanced_evaluations() const;
+  void set_show_advanced_evaluations(bool value);
+  private:
+  bool _internal_show_advanced_evaluations() const;
+  void _internal_set_show_advanced_evaluations(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.MyContracts)
  private:
   class _Internal;
@@ -18120,11 +20654,16 @@ class MyContracts final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract > contracts_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract > archive_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> contract_ids_seen_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatusResponse > current_coop_statuses_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::ei::ContractPlayerInfo* last_cpi_;
+  double last_grade_progress_shown_;
+  bool initial_grade_revealed_;
+  bool show_advanced_evaluations_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -18184,7 +20723,7 @@ class QueryCoopRequest final :
                &_QueryCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    66;
 
   friend void swap(QueryCoopRequest& a, QueryCoopRequest& b) {
     a.Swap(&b);
@@ -18260,6 +20799,7 @@ class QueryCoopRequest final :
     kRinfoFieldNumber = 5,
     kClientVersionFieldNumber = 3,
     kLeagueFieldNumber = 4,
+    kGradeFieldNumber = 6,
   };
   // optional string contract_identifier = 1;
   bool has_contract_identifier() const;
@@ -18341,6 +20881,19 @@ class QueryCoopRequest final :
   void _internal_set_league(uint32_t value);
   public:
 
+  // optional .ei.Contract.PlayerGrade grade = 6;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.QueryCoopRequest)
  private:
   class _Internal;
@@ -18355,6 +20908,7 @@ class QueryCoopRequest final :
   ::ei::BasicRequestInfo* rinfo_;
   uint32_t client_version_;
   uint32_t league_;
+  int grade_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -18414,7 +20968,7 @@ class QueryCoopResponse final :
                &_QueryCoopResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    67;
 
   friend void swap(QueryCoopResponse& a, QueryCoopResponse& b) {
     a.Swap(&b);
@@ -18489,6 +21043,8 @@ class QueryCoopResponse final :
     kFullFieldNumber = 2,
     kExpiredFieldNumber = 5,
     kDifferentLeagueFieldNumber = 4,
+    kDifferentGradeFieldNumber = 6,
+    kCcOnlyFieldNumber = 7,
     kBannedFieldNumber = 3,
   };
   // optional bool exists = 1;
@@ -18543,6 +21099,32 @@ class QueryCoopResponse final :
   void _internal_set_different_league(bool value);
   public:
 
+  // optional bool different_grade = 6;
+  bool has_different_grade() const;
+  private:
+  bool _internal_has_different_grade() const;
+  public:
+  void clear_different_grade();
+  bool different_grade() const;
+  void set_different_grade(bool value);
+  private:
+  bool _internal_different_grade() const;
+  void _internal_set_different_grade(bool value);
+  public:
+
+  // optional bool cc_only = 7;
+  bool has_cc_only() const;
+  private:
+  bool _internal_has_cc_only() const;
+  public:
+  void clear_cc_only();
+  bool cc_only() const;
+  void set_cc_only(bool value);
+  private:
+  bool _internal_cc_only() const;
+  void _internal_set_cc_only(bool value);
+  public:
+
   // optional bool banned = 3;
   bool has_banned() const;
   private:
@@ -18569,6 +21151,8 @@ class QueryCoopResponse final :
   bool full_;
   bool expired_;
   bool different_league_;
+  bool different_grade_;
+  bool cc_only_;
   bool banned_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -18629,7 +21213,7 @@ class CreateCoopRequest final :
                &_CreateCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    68;
 
   friend void swap(CreateCoopRequest& a, CreateCoopRequest& b) {
     a.Swap(&b);
@@ -18710,6 +21294,9 @@ class CreateCoopRequest final :
     kClientVersionFieldNumber = 7,
     kLeagueFieldNumber = 9,
     kEopFieldNumber = 11,
+    kGradeFieldNumber = 12,
+    kPublicFieldNumber = 13,
+    kCcOnlyFieldNumber = 14,
     kPlatformFieldNumber = 6,
   };
   // optional string contract_identifier = 1;
@@ -18867,6 +21454,45 @@ class CreateCoopRequest final :
   void _internal_set_eop(double value);
   public:
 
+  // optional .ei.Contract.PlayerGrade grade = 12;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
+  // optional bool public = 13;
+  bool has_public_() const;
+  private:
+  bool _internal_has_public_() const;
+  public:
+  void clear_public_();
+  bool public_() const;
+  void set_public_(bool value);
+  private:
+  bool _internal_public_() const;
+  void _internal_set_public_(bool value);
+  public:
+
+  // optional bool cc_only = 14;
+  bool has_cc_only() const;
+  private:
+  bool _internal_has_cc_only() const;
+  public:
+  void clear_cc_only();
+  bool cc_only() const;
+  void set_cc_only(bool value);
+  private:
+  bool _internal_cc_only() const;
+  void _internal_set_cc_only(bool value);
+  public:
+
   // optional .ei.Platform platform = 6;
   bool has_platform() const;
   private:
@@ -18899,6 +21525,9 @@ class CreateCoopRequest final :
   uint32_t client_version_;
   uint32_t league_;
   double eop_;
+  int grade_;
+  bool public__;
+  bool cc_only_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -18959,7 +21588,7 @@ class CreateCoopResponse final :
                &_CreateCoopResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    69;
 
   friend void swap(CreateCoopResponse& a, CreateCoopResponse& b) {
     a.Swap(&b);
@@ -19134,7 +21763,7 @@ class JoinCoopRequest final :
                &_JoinCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    70;
 
   friend void swap(JoinCoopRequest& a, JoinCoopRequest& b) {
     a.Swap(&b);
@@ -19215,6 +21844,7 @@ class JoinCoopRequest final :
     kLeagueFieldNumber = 9,
     kSecondsRemainingFieldNumber = 11,
     kEopFieldNumber = 12,
+    kGradeFieldNumber = 13,
     kPlatformFieldNumber = 5,
   };
   // optional string contract_identifier = 1;
@@ -19372,6 +22002,19 @@ class JoinCoopRequest final :
   void _internal_set_eop(double value);
   public:
 
+  // optional .ei.Contract.PlayerGrade grade = 13;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
   // optional .ei.Platform platform = 5;
   bool has_platform() const;
   private:
@@ -19404,6 +22047,7 @@ class JoinCoopRequest final :
   uint32_t league_;
   double seconds_remaining_;
   double eop_;
+  int grade_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -19464,7 +22108,7 @@ class JoinCoopResponse final :
                &_JoinCoopResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    65;
+    71;
 
   friend void swap(JoinCoopResponse& a, JoinCoopResponse& b) {
     a.Swap(&b);
@@ -19540,8 +22184,11 @@ class JoinCoopResponse final :
     kSecondsRemainingFieldNumber = 3,
     kSuccessFieldNumber = 1,
     kBannedFieldNumber = 4,
+    kCanStartFieldNumber = 10,
     kNumMembersFieldNumber = 7,
     kMatchPercentFieldNumber = 6,
+    kStatusFieldNumber = 8,
+    kGradeFieldNumber = 9,
   };
   // optional string message = 2;
   bool has_message() const;
@@ -19618,6 +22265,19 @@ class JoinCoopResponse final :
   void _internal_set_banned(bool value);
   public:
 
+  // optional bool can_start = 10;
+  bool has_can_start() const;
+  private:
+  bool _internal_has_can_start() const;
+  public:
+  void clear_can_start();
+  bool can_start() const;
+  void set_can_start(bool value);
+  private:
+  bool _internal_can_start() const;
+  void _internal_set_can_start(bool value);
+  public:
+
   // optional uint32 num_members = 7;
   bool has_num_members() const;
   private:
@@ -19644,6 +22304,32 @@ class JoinCoopResponse final :
   void _internal_set_match_percent(double value);
   public:
 
+  // optional .ei.ContractCoopStatusResponse.Status status = 8;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::ContractCoopStatusResponse_Status status() const;
+  void set_status(::ei::ContractCoopStatusResponse_Status value);
+  private:
+  ::ei::ContractCoopStatusResponse_Status _internal_status() const;
+  void _internal_set_status(::ei::ContractCoopStatusResponse_Status value);
+  public:
+
+  // optional .ei.Contract.PlayerGrade grade = 9;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.JoinCoopResponse)
  private:
   class _Internal;
@@ -19658,8 +22344,11 @@ class JoinCoopResponse final :
   double seconds_remaining_;
   bool success_;
   bool banned_;
+  bool can_start_;
   uint32_t num_members_;
   double match_percent_;
+  int status_;
+  int grade_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -19719,7 +22408,7 @@ class AutoJoinCoopRequest final :
                &_AutoJoinCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    66;
+    72;
 
   friend void swap(AutoJoinCoopRequest& a, AutoJoinCoopRequest& b) {
     a.Swap(&b);
@@ -19799,6 +22488,7 @@ class AutoJoinCoopRequest final :
     kClientVersionFieldNumber = 7,
     kLeagueFieldNumber = 8,
     kEopFieldNumber = 10,
+    kGradeFieldNumber = 12,
     kPlatformFieldNumber = 6,
   };
   // optional string contract_identifier = 1;
@@ -19938,6 +22628,19 @@ class AutoJoinCoopRequest final :
   void _internal_set_eop(double value);
   public:
 
+  // optional .ei.Contract.PlayerGrade grade = 12;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
   // optional .ei.Platform platform = 6;
   bool has_platform() const;
   private:
@@ -19969,6 +22672,7 @@ class AutoJoinCoopRequest final :
   uint32_t client_version_;
   uint32_t league_;
   double eop_;
+  int grade_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -20029,7 +22733,7 @@ class UpdateCoopPermissionsRequest final :
                &_UpdateCoopPermissionsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    67;
+    73;
 
   friend void swap(UpdateCoopPermissionsRequest& a, UpdateCoopPermissionsRequest& b) {
     a.Swap(&b);
@@ -20279,7 +22983,7 @@ class UpdateCoopPermissionsResponse final :
                &_UpdateCoopPermissionsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    68;
+    74;
 
   friend void swap(UpdateCoopPermissionsResponse& a, UpdateCoopPermissionsResponse& b) {
     a.Swap(&b);
@@ -20454,7 +23158,7 @@ class LeaveCoopRequest final :
                &_LeaveCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    69;
+    75;
 
   friend void swap(LeaveCoopRequest& a, LeaveCoopRequest& b) {
     a.Swap(&b);
@@ -20689,7 +23393,7 @@ class GiftPlayerCoopRequest final :
                &_GiftPlayerCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    70;
+    76;
 
   friend void swap(GiftPlayerCoopRequest& a, GiftPlayerCoopRequest& b) {
     a.Swap(&b);
@@ -20979,7 +23683,7 @@ class SendChickenRunCoopRequest final :
                &_SendChickenRunCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    71;
+    77;
 
   friend void swap(SendChickenRunCoopRequest& a, SendChickenRunCoopRequest& b) {
     a.Swap(&b);
@@ -21214,6 +23918,275 @@ class SendChickenRunCoopRequest final :
 };
 // -------------------------------------------------------------------
 
+class ReportPlayerCoopRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ReportPlayerCoopRequest) */ {
+ public:
+  inline ReportPlayerCoopRequest() : ReportPlayerCoopRequest(nullptr) {}
+  ~ReportPlayerCoopRequest() override;
+  explicit PROTOBUF_CONSTEXPR ReportPlayerCoopRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ReportPlayerCoopRequest(const ReportPlayerCoopRequest& from);
+  ReportPlayerCoopRequest(ReportPlayerCoopRequest&& from) noexcept
+    : ReportPlayerCoopRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ReportPlayerCoopRequest& operator=(const ReportPlayerCoopRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ReportPlayerCoopRequest& operator=(ReportPlayerCoopRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ReportPlayerCoopRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ReportPlayerCoopRequest* internal_default_instance() {
+    return reinterpret_cast<const ReportPlayerCoopRequest*>(
+               &_ReportPlayerCoopRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    78;
+
+  friend void swap(ReportPlayerCoopRequest& a, ReportPlayerCoopRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ReportPlayerCoopRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ReportPlayerCoopRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ReportPlayerCoopRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ReportPlayerCoopRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ReportPlayerCoopRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ReportPlayerCoopRequest& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ReportPlayerCoopRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ReportPlayerCoopRequest";
+  }
+  protected:
+  explicit ReportPlayerCoopRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ReportPlayerCoopRequest_Reason Reason;
+  static constexpr Reason UNKNOWN =
+    ReportPlayerCoopRequest_Reason_UNKNOWN;
+  static constexpr Reason OFFENSIVE_NAME =
+    ReportPlayerCoopRequest_Reason_OFFENSIVE_NAME;
+  static constexpr Reason CHEATING =
+    ReportPlayerCoopRequest_Reason_CHEATING;
+  static constexpr Reason LEECHING =
+    ReportPlayerCoopRequest_Reason_LEECHING;
+  static inline bool Reason_IsValid(int value) {
+    return ReportPlayerCoopRequest_Reason_IsValid(value);
+  }
+  static constexpr Reason Reason_MIN =
+    ReportPlayerCoopRequest_Reason_Reason_MIN;
+  static constexpr Reason Reason_MAX =
+    ReportPlayerCoopRequest_Reason_Reason_MAX;
+  static constexpr int Reason_ARRAYSIZE =
+    ReportPlayerCoopRequest_Reason_Reason_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Reason_descriptor() {
+    return ReportPlayerCoopRequest_Reason_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Reason_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Reason>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Reason_Name.");
+    return ReportPlayerCoopRequest_Reason_Name(enum_t_value);
+  }
+  static inline bool Reason_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Reason* value) {
+    return ReportPlayerCoopRequest_Reason_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kContractIdentifierFieldNumber = 2,
+    kCoopIdentifierFieldNumber = 3,
+    kUserIdFieldNumber = 4,
+    kRinfoFieldNumber = 1,
+    kReasonFieldNumber = 5,
+  };
+  // optional string contract_identifier = 2;
+  bool has_contract_identifier() const;
+  private:
+  bool _internal_has_contract_identifier() const;
+  public:
+  void clear_contract_identifier();
+  const std::string& contract_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_contract_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_contract_identifier();
+  PROTOBUF_NODISCARD std::string* release_contract_identifier();
+  void set_allocated_contract_identifier(std::string* contract_identifier);
+  private:
+  const std::string& _internal_contract_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contract_identifier(const std::string& value);
+  std::string* _internal_mutable_contract_identifier();
+  public:
+
+  // optional string coop_identifier = 3;
+  bool has_coop_identifier() const;
+  private:
+  bool _internal_has_coop_identifier() const;
+  public:
+  void clear_coop_identifier();
+  const std::string& coop_identifier() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_coop_identifier(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_coop_identifier();
+  PROTOBUF_NODISCARD std::string* release_coop_identifier();
+  void set_allocated_coop_identifier(std::string* coop_identifier);
+  private:
+  const std::string& _internal_coop_identifier() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_coop_identifier(const std::string& value);
+  std::string* _internal_mutable_coop_identifier();
+  public:
+
+  // optional string user_id = 4;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional .ei.BasicRequestInfo rinfo = 1;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // optional .ei.ReportPlayerCoopRequest.Reason reason = 5;
+  bool has_reason() const;
+  private:
+  bool _internal_has_reason() const;
+  public:
+  void clear_reason();
+  ::ei::ReportPlayerCoopRequest_Reason reason() const;
+  void set_reason(::ei::ReportPlayerCoopRequest_Reason value);
+  private:
+  ::ei::ReportPlayerCoopRequest_Reason _internal_reason() const;
+  void _internal_set_reason(::ei::ReportPlayerCoopRequest_Reason value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ReportPlayerCoopRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_identifier_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::ei::BasicRequestInfo* rinfo_;
+  int reason_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class KickPlayerCoopRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.KickPlayerCoopRequest) */ {
  public:
@@ -21269,7 +24242,7 @@ class KickPlayerCoopRequest final :
                &_KickPlayerCoopRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    72;
+    79;
 
   friend void swap(KickPlayerCoopRequest& a, KickPlayerCoopRequest& b) {
     a.Swap(&b);
@@ -21575,7 +24548,7 @@ class ContractCoopStatusUpdateRequest final :
                &_ContractCoopStatusUpdateRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    73;
+    80;
 
   friend void swap(ContractCoopStatusUpdateRequest& a, ContractCoopStatusUpdateRequest& b) {
     a.Swap(&b);
@@ -21990,7 +24963,7 @@ class ContractCoopStatusUpdateResponse final :
                &_ContractCoopStatusUpdateResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    74;
+    81;
 
   friend void swap(ContractCoopStatusUpdateResponse& a, ContractCoopStatusUpdateResponse& b) {
     a.Swap(&b);
@@ -22175,7 +25148,7 @@ class CoopBuffState final :
                &_CoopBuffState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    75;
+    82;
 
   friend void swap(CoopBuffState& a, CoopBuffState& b) {
     a.Swap(&b);
@@ -22360,7 +25333,7 @@ class CoopBuffHistory final :
                &_CoopBuffHistory_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    76;
+    83;
 
   friend void swap(CoopBuffHistory& a, CoopBuffHistory& b) {
     a.Swap(&b);
@@ -22519,7 +25492,7 @@ class CoopChickenRunEntry final :
                &_CoopChickenRunEntry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    77;
+    84;
 
   friend void swap(CoopChickenRunEntry& a, CoopChickenRunEntry& b) {
     a.Swap(&b);
@@ -22694,7 +25667,7 @@ class CoopLastChickenRunTimes final :
                &_CoopLastChickenRunTimes_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    78;
+    85;
 
   friend void swap(CoopLastChickenRunTimes& a, CoopLastChickenRunTimes& b) {
     a.Swap(&b);
@@ -22798,6 +25771,2061 @@ class CoopLastChickenRunTimes final :
 };
 // -------------------------------------------------------------------
 
+class LeaderboardAnalysis_Chunk final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardAnalysis.Chunk) */ {
+ public:
+  inline LeaderboardAnalysis_Chunk() : LeaderboardAnalysis_Chunk(nullptr) {}
+  ~LeaderboardAnalysis_Chunk() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardAnalysis_Chunk(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardAnalysis_Chunk(const LeaderboardAnalysis_Chunk& from);
+  LeaderboardAnalysis_Chunk(LeaderboardAnalysis_Chunk&& from) noexcept
+    : LeaderboardAnalysis_Chunk() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardAnalysis_Chunk& operator=(const LeaderboardAnalysis_Chunk& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardAnalysis_Chunk& operator=(LeaderboardAnalysis_Chunk&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardAnalysis_Chunk& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardAnalysis_Chunk* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardAnalysis_Chunk*>(
+               &_LeaderboardAnalysis_Chunk_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    86;
+
+  friend void swap(LeaderboardAnalysis_Chunk& a, LeaderboardAnalysis_Chunk& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardAnalysis_Chunk* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardAnalysis_Chunk* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardAnalysis_Chunk* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardAnalysis_Chunk>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardAnalysis_Chunk& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardAnalysis_Chunk& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardAnalysis_Chunk* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardAnalysis.Chunk";
+  }
+  protected:
+  explicit LeaderboardAnalysis_Chunk(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kStartCursorFieldNumber = 5,
+    kEndCursorFieldNumber = 6,
+    kStartIndexFieldNumber = 1,
+    kEndIndexFieldNumber = 2,
+    kHighScoreFieldNumber = 3,
+    kLowScoreFieldNumber = 4,
+  };
+  // optional string start_cursor = 5;
+  bool has_start_cursor() const;
+  private:
+  bool _internal_has_start_cursor() const;
+  public:
+  void clear_start_cursor();
+  const std::string& start_cursor() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_start_cursor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_start_cursor();
+  PROTOBUF_NODISCARD std::string* release_start_cursor();
+  void set_allocated_start_cursor(std::string* start_cursor);
+  private:
+  const std::string& _internal_start_cursor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_start_cursor(const std::string& value);
+  std::string* _internal_mutable_start_cursor();
+  public:
+
+  // optional string end_cursor = 6;
+  bool has_end_cursor() const;
+  private:
+  bool _internal_has_end_cursor() const;
+  public:
+  void clear_end_cursor();
+  const std::string& end_cursor() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_end_cursor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_end_cursor();
+  PROTOBUF_NODISCARD std::string* release_end_cursor();
+  void set_allocated_end_cursor(std::string* end_cursor);
+  private:
+  const std::string& _internal_end_cursor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_end_cursor(const std::string& value);
+  std::string* _internal_mutable_end_cursor();
+  public:
+
+  // optional uint32 start_index = 1;
+  bool has_start_index() const;
+  private:
+  bool _internal_has_start_index() const;
+  public:
+  void clear_start_index();
+  uint32_t start_index() const;
+  void set_start_index(uint32_t value);
+  private:
+  uint32_t _internal_start_index() const;
+  void _internal_set_start_index(uint32_t value);
+  public:
+
+  // optional uint32 end_index = 2;
+  bool has_end_index() const;
+  private:
+  bool _internal_has_end_index() const;
+  public:
+  void clear_end_index();
+  uint32_t end_index() const;
+  void set_end_index(uint32_t value);
+  private:
+  uint32_t _internal_end_index() const;
+  void _internal_set_end_index(uint32_t value);
+  public:
+
+  // optional double high_score = 3;
+  bool has_high_score() const;
+  private:
+  bool _internal_has_high_score() const;
+  public:
+  void clear_high_score();
+  double high_score() const;
+  void set_high_score(double value);
+  private:
+  double _internal_high_score() const;
+  void _internal_set_high_score(double value);
+  public:
+
+  // optional double low_score = 4;
+  bool has_low_score() const;
+  private:
+  bool _internal_has_low_score() const;
+  public:
+  void clear_low_score();
+  double low_score() const;
+  void set_low_score(double value);
+  private:
+  double _internal_low_score() const;
+  void _internal_set_low_score(double value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardAnalysis.Chunk)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr start_cursor_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr end_cursor_;
+  uint32_t start_index_;
+  uint32_t end_index_;
+  double high_score_;
+  double low_score_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LeaderboardAnalysis final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardAnalysis) */ {
+ public:
+  inline LeaderboardAnalysis() : LeaderboardAnalysis(nullptr) {}
+  ~LeaderboardAnalysis() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardAnalysis(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardAnalysis(const LeaderboardAnalysis& from);
+  LeaderboardAnalysis(LeaderboardAnalysis&& from) noexcept
+    : LeaderboardAnalysis() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardAnalysis& operator=(const LeaderboardAnalysis& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardAnalysis& operator=(LeaderboardAnalysis&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardAnalysis& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardAnalysis* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardAnalysis*>(
+               &_LeaderboardAnalysis_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    87;
+
+  friend void swap(LeaderboardAnalysis& a, LeaderboardAnalysis& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardAnalysis* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardAnalysis* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardAnalysis* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardAnalysis>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardAnalysis& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardAnalysis& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardAnalysis* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardAnalysis";
+  }
+  protected:
+  explicit LeaderboardAnalysis(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef LeaderboardAnalysis_Chunk Chunk;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kChunksFieldNumber = 1,
+    kHighScoreFieldNumber = 3,
+    kLowScoreFieldNumber = 4,
+    kCountFieldNumber = 2,
+  };
+  // repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;
+  int chunks_size() const;
+  private:
+  int _internal_chunks_size() const;
+  public:
+  void clear_chunks();
+  ::ei::LeaderboardAnalysis_Chunk* mutable_chunks(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk >*
+      mutable_chunks();
+  private:
+  const ::ei::LeaderboardAnalysis_Chunk& _internal_chunks(int index) const;
+  ::ei::LeaderboardAnalysis_Chunk* _internal_add_chunks();
+  public:
+  const ::ei::LeaderboardAnalysis_Chunk& chunks(int index) const;
+  ::ei::LeaderboardAnalysis_Chunk* add_chunks();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk >&
+      chunks() const;
+
+  // optional double high_score = 3;
+  bool has_high_score() const;
+  private:
+  bool _internal_has_high_score() const;
+  public:
+  void clear_high_score();
+  double high_score() const;
+  void set_high_score(double value);
+  private:
+  double _internal_high_score() const;
+  void _internal_set_high_score(double value);
+  public:
+
+  // optional double low_score = 4;
+  bool has_low_score() const;
+  private:
+  bool _internal_has_low_score() const;
+  public:
+  void clear_low_score();
+  double low_score() const;
+  void set_low_score(double value);
+  private:
+  double _internal_low_score() const;
+  void _internal_set_low_score(double value);
+  public:
+
+  // optional uint32 count = 2;
+  bool has_count() const;
+  private:
+  bool _internal_has_count() const;
+  public:
+  void clear_count();
+  uint32_t count() const;
+  void set_count(uint32_t value);
+  private:
+  uint32_t _internal_count() const;
+  void _internal_set_count(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardAnalysis)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk > chunks_;
+  double high_score_;
+  double low_score_;
+  uint32_t count_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LeaderboardInfo_Season final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardInfo.Season) */ {
+ public:
+  inline LeaderboardInfo_Season() : LeaderboardInfo_Season(nullptr) {}
+  ~LeaderboardInfo_Season() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardInfo_Season(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardInfo_Season(const LeaderboardInfo_Season& from);
+  LeaderboardInfo_Season(LeaderboardInfo_Season&& from) noexcept
+    : LeaderboardInfo_Season() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardInfo_Season& operator=(const LeaderboardInfo_Season& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardInfo_Season& operator=(LeaderboardInfo_Season&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardInfo_Season& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardInfo_Season* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardInfo_Season*>(
+               &_LeaderboardInfo_Season_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    88;
+
+  friend void swap(LeaderboardInfo_Season& a, LeaderboardInfo_Season& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardInfo_Season* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardInfo_Season* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardInfo_Season* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardInfo_Season>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardInfo_Season& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardInfo_Season& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardInfo_Season* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardInfo.Season";
+  }
+  protected:
+  explicit LeaderboardInfo_Season(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kScopeFieldNumber = 1,
+    kNameFieldNumber = 2,
+  };
+  // optional string scope = 1;
+  bool has_scope() const;
+  private:
+  bool _internal_has_scope() const;
+  public:
+  void clear_scope();
+  const std::string& scope() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_scope(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_scope();
+  PROTOBUF_NODISCARD std::string* release_scope();
+  void set_allocated_scope(std::string* scope);
+  private:
+  const std::string& _internal_scope() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_scope(const std::string& value);
+  std::string* _internal_mutable_scope();
+  public:
+
+  // optional string name = 2;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardInfo.Season)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr scope_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LeaderboardInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardInfo) */ {
+ public:
+  inline LeaderboardInfo() : LeaderboardInfo(nullptr) {}
+  ~LeaderboardInfo() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardInfo(const LeaderboardInfo& from);
+  LeaderboardInfo(LeaderboardInfo&& from) noexcept
+    : LeaderboardInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardInfo& operator=(const LeaderboardInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardInfo& operator=(LeaderboardInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardInfo* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardInfo*>(
+               &_LeaderboardInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    89;
+
+  friend void swap(LeaderboardInfo& a, LeaderboardInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardInfo";
+  }
+  protected:
+  explicit LeaderboardInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef LeaderboardInfo_Season Season;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSeasonsFieldNumber = 1,
+    kAllTimeScopeFieldNumber = 2,
+  };
+  // repeated .ei.LeaderboardInfo.Season seasons = 1;
+  int seasons_size() const;
+  private:
+  int _internal_seasons_size() const;
+  public:
+  void clear_seasons();
+  ::ei::LeaderboardInfo_Season* mutable_seasons(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardInfo_Season >*
+      mutable_seasons();
+  private:
+  const ::ei::LeaderboardInfo_Season& _internal_seasons(int index) const;
+  ::ei::LeaderboardInfo_Season* _internal_add_seasons();
+  public:
+  const ::ei::LeaderboardInfo_Season& seasons(int index) const;
+  ::ei::LeaderboardInfo_Season* add_seasons();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardInfo_Season >&
+      seasons() const;
+
+  // optional string all_time_scope = 2;
+  bool has_all_time_scope() const;
+  private:
+  bool _internal_has_all_time_scope() const;
+  public:
+  void clear_all_time_scope();
+  const std::string& all_time_scope() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_all_time_scope(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_all_time_scope();
+  PROTOBUF_NODISCARD std::string* release_all_time_scope();
+  void set_allocated_all_time_scope(std::string* all_time_scope);
+  private:
+  const std::string& _internal_all_time_scope() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_all_time_scope(const std::string& value);
+  std::string* _internal_mutable_all_time_scope();
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardInfo_Season > seasons_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr all_time_scope_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LeaderboardRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardRequest) */ {
+ public:
+  inline LeaderboardRequest() : LeaderboardRequest(nullptr) {}
+  ~LeaderboardRequest() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardRequest(const LeaderboardRequest& from);
+  LeaderboardRequest(LeaderboardRequest&& from) noexcept
+    : LeaderboardRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardRequest& operator=(const LeaderboardRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardRequest& operator=(LeaderboardRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardRequest* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardRequest*>(
+               &_LeaderboardRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    90;
+
+  friend void swap(LeaderboardRequest& a, LeaderboardRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardRequest& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardRequest";
+  }
+  protected:
+  explicit LeaderboardRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kScopeFieldNumber = 2,
+    kRinfoFieldNumber = 1,
+    kGradeFieldNumber = 3,
+  };
+  // optional string scope = 2;
+  bool has_scope() const;
+  private:
+  bool _internal_has_scope() const;
+  public:
+  void clear_scope();
+  const std::string& scope() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_scope(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_scope();
+  PROTOBUF_NODISCARD std::string* release_scope();
+  void set_allocated_scope(std::string* scope);
+  private:
+  const std::string& _internal_scope() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_scope(const std::string& value);
+  std::string* _internal_mutable_scope();
+  public:
+
+  // optional .ei.BasicRequestInfo rinfo = 1;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // optional .ei.Contract.PlayerGrade grade = 3;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr scope_;
+  ::ei::BasicRequestInfo* rinfo_;
+  int grade_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LeaderboardResponse_Entry final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardResponse.Entry) */ {
+ public:
+  inline LeaderboardResponse_Entry() : LeaderboardResponse_Entry(nullptr) {}
+  ~LeaderboardResponse_Entry() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardResponse_Entry(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardResponse_Entry(const LeaderboardResponse_Entry& from);
+  LeaderboardResponse_Entry(LeaderboardResponse_Entry&& from) noexcept
+    : LeaderboardResponse_Entry() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardResponse_Entry& operator=(const LeaderboardResponse_Entry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardResponse_Entry& operator=(LeaderboardResponse_Entry&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardResponse_Entry& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardResponse_Entry* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardResponse_Entry*>(
+               &_LeaderboardResponse_Entry_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    91;
+
+  friend void swap(LeaderboardResponse_Entry& a, LeaderboardResponse_Entry& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardResponse_Entry* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardResponse_Entry* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardResponse_Entry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardResponse_Entry>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardResponse_Entry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardResponse_Entry& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardResponse_Entry* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardResponse.Entry";
+  }
+  protected:
+  explicit LeaderboardResponse_Entry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAliasFieldNumber = 2,
+    kScoreFieldNumber = 3,
+    kRankFieldNumber = 1,
+  };
+  // optional string alias = 2;
+  bool has_alias() const;
+  private:
+  bool _internal_has_alias() const;
+  public:
+  void clear_alias();
+  const std::string& alias() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_alias(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_alias();
+  PROTOBUF_NODISCARD std::string* release_alias();
+  void set_allocated_alias(std::string* alias);
+  private:
+  const std::string& _internal_alias() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_alias(const std::string& value);
+  std::string* _internal_mutable_alias();
+  public:
+
+  // optional double score = 3;
+  bool has_score() const;
+  private:
+  bool _internal_has_score() const;
+  public:
+  void clear_score();
+  double score() const;
+  void set_score(double value);
+  private:
+  double _internal_score() const;
+  void _internal_set_score(double value);
+  public:
+
+  // optional uint32 rank = 1;
+  bool has_rank() const;
+  private:
+  bool _internal_has_rank() const;
+  public:
+  void clear_rank();
+  uint32_t rank() const;
+  void set_rank(uint32_t value);
+  private:
+  uint32_t _internal_rank() const;
+  void _internal_set_rank(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardResponse.Entry)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr alias_;
+  double score_;
+  uint32_t rank_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LeaderboardResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.LeaderboardResponse) */ {
+ public:
+  inline LeaderboardResponse() : LeaderboardResponse(nullptr) {}
+  ~LeaderboardResponse() override;
+  explicit PROTOBUF_CONSTEXPR LeaderboardResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  LeaderboardResponse(const LeaderboardResponse& from);
+  LeaderboardResponse(LeaderboardResponse&& from) noexcept
+    : LeaderboardResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline LeaderboardResponse& operator=(const LeaderboardResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LeaderboardResponse& operator=(LeaderboardResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LeaderboardResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LeaderboardResponse* internal_default_instance() {
+    return reinterpret_cast<const LeaderboardResponse*>(
+               &_LeaderboardResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    92;
+
+  friend void swap(LeaderboardResponse& a, LeaderboardResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LeaderboardResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LeaderboardResponse* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LeaderboardResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LeaderboardResponse>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LeaderboardResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const LeaderboardResponse& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LeaderboardResponse* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.LeaderboardResponse";
+  }
+  protected:
+  explicit LeaderboardResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef LeaderboardResponse_Entry Entry;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTopEntriesFieldNumber = 3,
+    kScopeFieldNumber = 1,
+    kGradeFieldNumber = 2,
+    kCountFieldNumber = 4,
+    kScoreFieldNumber = 6,
+    kRankFieldNumber = 5,
+  };
+  // repeated .ei.LeaderboardResponse.Entry top_entries = 3;
+  int top_entries_size() const;
+  private:
+  int _internal_top_entries_size() const;
+  public:
+  void clear_top_entries();
+  ::ei::LeaderboardResponse_Entry* mutable_top_entries(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardResponse_Entry >*
+      mutable_top_entries();
+  private:
+  const ::ei::LeaderboardResponse_Entry& _internal_top_entries(int index) const;
+  ::ei::LeaderboardResponse_Entry* _internal_add_top_entries();
+  public:
+  const ::ei::LeaderboardResponse_Entry& top_entries(int index) const;
+  ::ei::LeaderboardResponse_Entry* add_top_entries();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardResponse_Entry >&
+      top_entries() const;
+
+  // optional string scope = 1;
+  bool has_scope() const;
+  private:
+  bool _internal_has_scope() const;
+  public:
+  void clear_scope();
+  const std::string& scope() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_scope(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_scope();
+  PROTOBUF_NODISCARD std::string* release_scope();
+  void set_allocated_scope(std::string* scope);
+  private:
+  const std::string& _internal_scope() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_scope(const std::string& value);
+  std::string* _internal_mutable_scope();
+  public:
+
+  // optional .ei.Contract.PlayerGrade grade = 2;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
+  // optional uint32 count = 4;
+  bool has_count() const;
+  private:
+  bool _internal_has_count() const;
+  public:
+  void clear_count();
+  uint32_t count() const;
+  void set_count(uint32_t value);
+  private:
+  uint32_t _internal_count() const;
+  void _internal_set_count(uint32_t value);
+  public:
+
+  // optional double score = 6;
+  bool has_score() const;
+  private:
+  bool _internal_has_score() const;
+  public:
+  void clear_score();
+  double score() const;
+  void set_score(double value);
+  private:
+  double _internal_score() const;
+  void _internal_set_score(double value);
+  public:
+
+  // optional uint32 rank = 5;
+  bool has_rank() const;
+  private:
+  bool _internal_has_rank() const;
+  public:
+  void clear_rank();
+  uint32_t rank() const;
+  void set_rank(uint32_t value);
+  private:
+  uint32_t _internal_rank() const;
+  void _internal_set_rank(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.LeaderboardResponse)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardResponse_Entry > top_entries_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr scope_;
+  int grade_;
+  uint32_t count_;
+  double score_;
+  uint32_t rank_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractsArchive final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractsArchive) */ {
+ public:
+  inline ContractsArchive() : ContractsArchive(nullptr) {}
+  ~ContractsArchive() override;
+  explicit PROTOBUF_CONSTEXPR ContractsArchive(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractsArchive(const ContractsArchive& from);
+  ContractsArchive(ContractsArchive&& from) noexcept
+    : ContractsArchive() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractsArchive& operator=(const ContractsArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractsArchive& operator=(ContractsArchive&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractsArchive& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractsArchive* internal_default_instance() {
+    return reinterpret_cast<const ContractsArchive*>(
+               &_ContractsArchive_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    93;
+
+  friend void swap(ContractsArchive& a, ContractsArchive& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractsArchive* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractsArchive* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractsArchive* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractsArchive>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractsArchive& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractsArchive& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractsArchive* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractsArchive";
+  }
+  protected:
+  explicit ContractsArchive(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kArchiveFieldNumber = 1,
+  };
+  // repeated .ei.LocalContract archive = 1;
+  int archive_size() const;
+  private:
+  int _internal_archive_size() const;
+  public:
+  void clear_archive();
+  ::ei::LocalContract* mutable_archive(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract >*
+      mutable_archive();
+  private:
+  const ::ei::LocalContract& _internal_archive(int index) const;
+  ::ei::LocalContract* _internal_add_archive();
+  public:
+  const ::ei::LocalContract& archive(int index) const;
+  ::ei::LocalContract* add_archive();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract >&
+      archive() const;
+
+  // @@protoc_insertion_point(class_scope:ei.ContractsArchive)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract > archive_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractAction final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ContractAction) */ {
+ public:
+  inline ContractAction() : ContractAction(nullptr) {}
+  ~ContractAction() override;
+  explicit PROTOBUF_CONSTEXPR ContractAction(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ContractAction(const ContractAction& from);
+  ContractAction(ContractAction&& from) noexcept
+    : ContractAction() {
+    *this = ::std::move(from);
+  }
+
+  inline ContractAction& operator=(const ContractAction& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractAction& operator=(ContractAction&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractAction& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractAction* internal_default_instance() {
+    return reinterpret_cast<const ContractAction*>(
+               &_ContractAction_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    94;
+
+  friend void swap(ContractAction& a, ContractAction& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContractAction* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractAction* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractAction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ContractAction>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ContractAction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ContractAction& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContractAction* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ContractAction";
+  }
+  protected:
+  explicit ContractAction(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kActionNameFieldNumber = 2,
+    kDestUserIdFieldNumber = 4,
+    kContractIdFieldNumber = 5,
+    kCoopIdFieldNumber = 6,
+    kRewardSubtypeFieldNumber = 12,
+    kBoostIdFieldNumber = 15,
+    kApproxTimeFieldNumber = 3,
+    kGradeFieldNumber = 8,
+    kRewardTypeFieldNumber = 11,
+    kAutojoinFieldNumber = 7,
+    kReplayFieldNumber = 9,
+    kPointsReplayFieldNumber = 10,
+    kPublicFieldNumber = 18,
+    kGoalIndexFieldNumber = 14,
+    kRewardAmountFieldNumber = 13,
+    kTokensFieldNumber = 16,
+    kKickReasonFieldNumber = 17,
+    kCcOnlyFieldNumber = 19,
+  };
+  // optional string user_id = 1;
+  bool has_user_id() const;
+  private:
+  bool _internal_has_user_id() const;
+  public:
+  void clear_user_id();
+  const std::string& user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* user_id);
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const std::string& value);
+  std::string* _internal_mutable_user_id();
+  public:
+
+  // optional string action_name = 2;
+  bool has_action_name() const;
+  private:
+  bool _internal_has_action_name() const;
+  public:
+  void clear_action_name();
+  const std::string& action_name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_action_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_action_name();
+  PROTOBUF_NODISCARD std::string* release_action_name();
+  void set_allocated_action_name(std::string* action_name);
+  private:
+  const std::string& _internal_action_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action_name(const std::string& value);
+  std::string* _internal_mutable_action_name();
+  public:
+
+  // optional string dest_user_id = 4;
+  bool has_dest_user_id() const;
+  private:
+  bool _internal_has_dest_user_id() const;
+  public:
+  void clear_dest_user_id();
+  const std::string& dest_user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_dest_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_dest_user_id();
+  PROTOBUF_NODISCARD std::string* release_dest_user_id();
+  void set_allocated_dest_user_id(std::string* dest_user_id);
+  private:
+  const std::string& _internal_dest_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dest_user_id(const std::string& value);
+  std::string* _internal_mutable_dest_user_id();
+  public:
+
+  // optional string contract_id = 5;
+  bool has_contract_id() const;
+  private:
+  bool _internal_has_contract_id() const;
+  public:
+  void clear_contract_id();
+  const std::string& contract_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_contract_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_contract_id();
+  PROTOBUF_NODISCARD std::string* release_contract_id();
+  void set_allocated_contract_id(std::string* contract_id);
+  private:
+  const std::string& _internal_contract_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contract_id(const std::string& value);
+  std::string* _internal_mutable_contract_id();
+  public:
+
+  // optional string coop_id = 6;
+  bool has_coop_id() const;
+  private:
+  bool _internal_has_coop_id() const;
+  public:
+  void clear_coop_id();
+  const std::string& coop_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_coop_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_coop_id();
+  PROTOBUF_NODISCARD std::string* release_coop_id();
+  void set_allocated_coop_id(std::string* coop_id);
+  private:
+  const std::string& _internal_coop_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_coop_id(const std::string& value);
+  std::string* _internal_mutable_coop_id();
+  public:
+
+  // optional string reward_subtype = 12;
+  bool has_reward_subtype() const;
+  private:
+  bool _internal_has_reward_subtype() const;
+  public:
+  void clear_reward_subtype();
+  const std::string& reward_subtype() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_reward_subtype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_reward_subtype();
+  PROTOBUF_NODISCARD std::string* release_reward_subtype();
+  void set_allocated_reward_subtype(std::string* reward_subtype);
+  private:
+  const std::string& _internal_reward_subtype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_reward_subtype(const std::string& value);
+  std::string* _internal_mutable_reward_subtype();
+  public:
+
+  // optional string boost_id = 15;
+  bool has_boost_id() const;
+  private:
+  bool _internal_has_boost_id() const;
+  public:
+  void clear_boost_id();
+  const std::string& boost_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_boost_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_boost_id();
+  PROTOBUF_NODISCARD std::string* release_boost_id();
+  void set_allocated_boost_id(std::string* boost_id);
+  private:
+  const std::string& _internal_boost_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_boost_id(const std::string& value);
+  std::string* _internal_mutable_boost_id();
+  public:
+
+  // optional double approx_time = 3;
+  bool has_approx_time() const;
+  private:
+  bool _internal_has_approx_time() const;
+  public:
+  void clear_approx_time();
+  double approx_time() const;
+  void set_approx_time(double value);
+  private:
+  double _internal_approx_time() const;
+  void _internal_set_approx_time(double value);
+  public:
+
+  // optional uint32 grade = 8;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  uint32_t grade() const;
+  void set_grade(uint32_t value);
+  private:
+  uint32_t _internal_grade() const;
+  void _internal_set_grade(uint32_t value);
+  public:
+
+  // optional uint32 reward_type = 11;
+  bool has_reward_type() const;
+  private:
+  bool _internal_has_reward_type() const;
+  public:
+  void clear_reward_type();
+  uint32_t reward_type() const;
+  void set_reward_type(uint32_t value);
+  private:
+  uint32_t _internal_reward_type() const;
+  void _internal_set_reward_type(uint32_t value);
+  public:
+
+  // optional bool autojoin = 7;
+  bool has_autojoin() const;
+  private:
+  bool _internal_has_autojoin() const;
+  public:
+  void clear_autojoin();
+  bool autojoin() const;
+  void set_autojoin(bool value);
+  private:
+  bool _internal_autojoin() const;
+  void _internal_set_autojoin(bool value);
+  public:
+
+  // optional bool replay = 9;
+  bool has_replay() const;
+  private:
+  bool _internal_has_replay() const;
+  public:
+  void clear_replay();
+  bool replay() const;
+  void set_replay(bool value);
+  private:
+  bool _internal_replay() const;
+  void _internal_set_replay(bool value);
+  public:
+
+  // optional bool points_replay = 10;
+  bool has_points_replay() const;
+  private:
+  bool _internal_has_points_replay() const;
+  public:
+  void clear_points_replay();
+  bool points_replay() const;
+  void set_points_replay(bool value);
+  private:
+  bool _internal_points_replay() const;
+  void _internal_set_points_replay(bool value);
+  public:
+
+  // optional bool public = 18;
+  bool has_public_() const;
+  private:
+  bool _internal_has_public_() const;
+  public:
+  void clear_public_();
+  bool public_() const;
+  void set_public_(bool value);
+  private:
+  bool _internal_public_() const;
+  void _internal_set_public_(bool value);
+  public:
+
+  // optional uint32 goal_index = 14;
+  bool has_goal_index() const;
+  private:
+  bool _internal_has_goal_index() const;
+  public:
+  void clear_goal_index();
+  uint32_t goal_index() const;
+  void set_goal_index(uint32_t value);
+  private:
+  uint32_t _internal_goal_index() const;
+  void _internal_set_goal_index(uint32_t value);
+  public:
+
+  // optional double reward_amount = 13;
+  bool has_reward_amount() const;
+  private:
+  bool _internal_has_reward_amount() const;
+  public:
+  void clear_reward_amount();
+  double reward_amount() const;
+  void set_reward_amount(double value);
+  private:
+  double _internal_reward_amount() const;
+  void _internal_set_reward_amount(double value);
+  public:
+
+  // optional uint32 tokens = 16;
+  bool has_tokens() const;
+  private:
+  bool _internal_has_tokens() const;
+  public:
+  void clear_tokens();
+  uint32_t tokens() const;
+  void set_tokens(uint32_t value);
+  private:
+  uint32_t _internal_tokens() const;
+  void _internal_set_tokens(uint32_t value);
+  public:
+
+  // optional uint32 kick_reason = 17;
+  bool has_kick_reason() const;
+  private:
+  bool _internal_has_kick_reason() const;
+  public:
+  void clear_kick_reason();
+  uint32_t kick_reason() const;
+  void set_kick_reason(uint32_t value);
+  private:
+  uint32_t _internal_kick_reason() const;
+  void _internal_set_kick_reason(uint32_t value);
+  public:
+
+  // optional bool cc_only = 19;
+  bool has_cc_only() const;
+  private:
+  bool _internal_has_cc_only() const;
+  public:
+  void clear_cc_only();
+  bool cc_only() const;
+  void set_cc_only(bool value);
+  private:
+  bool _internal_cc_only() const;
+  void _internal_set_cc_only(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ContractAction)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dest_user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contract_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr coop_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reward_subtype_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr boost_id_;
+  double approx_time_;
+  uint32_t grade_;
+  uint32_t reward_type_;
+  bool autojoin_;
+  bool replay_;
+  bool points_replay_;
+  bool public__;
+  uint32_t goal_index_;
+  double reward_amount_;
+  uint32_t tokens_;
+  uint32_t kick_reason_;
+  bool cc_only_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class UserDataInfoRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.UserDataInfoRequest) */ {
  public:
@@ -22853,7 +27881,7 @@ class UserDataInfoRequest final :
                &_UserDataInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    79;
+    95;
 
   friend void swap(UserDataInfoRequest& a, UserDataInfoRequest& b) {
     a.Swap(&b);
@@ -23068,7 +28096,7 @@ class UserDataInfoResponse final :
                &_UserDataInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    80;
+    96;
 
   friend void swap(UserDataInfoResponse& a, UserDataInfoResponse& b) {
     a.Swap(&b);
@@ -23264,7 +28292,7 @@ class ClearAllUserDataRequest final :
                &_ClearAllUserDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    81;
+    97;
 
   friend void swap(ClearAllUserDataRequest& a, ClearAllUserDataRequest& b) {
     a.Swap(&b);
@@ -23479,7 +28507,7 @@ class ServerGift final :
                &_ServerGift_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    82;
+    98;
 
   friend void swap(ServerGift& a, ServerGift& b) {
     a.Swap(&b);
@@ -23689,7 +28717,7 @@ class LiveConfig_BoostsConfig_ItemConfig final :
                &_LiveConfig_BoostsConfig_ItemConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    83;
+    99;
 
   friend void swap(LiveConfig_BoostsConfig_ItemConfig& a, LiveConfig_BoostsConfig_ItemConfig& b) {
     a.Swap(&b);
@@ -23894,7 +28922,7 @@ class LiveConfig_BoostsConfig final :
                &_LiveConfig_BoostsConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    84;
+    100;
 
   friend void swap(LiveConfig_BoostsConfig& a, LiveConfig_BoostsConfig& b) {
     a.Swap(&b);
@@ -24071,7 +29099,7 @@ class LiveConfig_GiftConfig_GiftValueConfig final :
                &_LiveConfig_GiftConfig_GiftValueConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    85;
+    101;
 
   friend void swap(LiveConfig_GiftConfig_GiftValueConfig& a, LiveConfig_GiftConfig_GiftValueConfig& b) {
     a.Swap(&b);
@@ -24306,7 +29334,7 @@ class LiveConfig_GiftConfig_GiftMuConfig final :
                &_LiveConfig_GiftConfig_GiftMuConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    86;
+    102;
 
   friend void swap(LiveConfig_GiftConfig_GiftMuConfig& a, LiveConfig_GiftConfig_GiftMuConfig& b) {
     a.Swap(&b);
@@ -24491,7 +29519,7 @@ class LiveConfig_GiftConfig final :
                &_LiveConfig_GiftConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    87;
+    103;
 
   friend void swap(LiveConfig_GiftConfig& a, LiveConfig_GiftConfig& b) {
     a.Swap(&b);
@@ -24889,7 +29917,7 @@ class LiveConfig_MiscConfig final :
                &_LiveConfig_MiscConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    88;
+    104;
 
   friend void swap(LiveConfig_MiscConfig& a, LiveConfig_MiscConfig& b) {
     a.Swap(&b);
@@ -24965,12 +29993,14 @@ class LiveConfig_MiscConfig final :
     kAskToTrackFieldNumber = 1,
     kAskToTrackShowPreDialogFieldNumber = 4,
     kAskToTrackAfterPrivacyFieldNumber = 5,
+    kContractsClubAvailableFieldNumber = 12,
     kShellsIntroTicketsFieldNumber = 7,
     kChickenRunBoostPercentageFieldNumber = 6,
     kShellsMaxFreeChickenConfigsFieldNumber = 8,
     kShellsIntroAlertThresholdFieldNumber = 9,
     kContractsExpertLeagueMinSoulPowerFieldNumber = 10,
     kNewPlayerEventDurationFieldNumber = 11,
+    kContractsBetaFieldNumber = 13,
   };
   // optional string ask_to_track_message = 3;
   bool has_ask_to_track_message() const;
@@ -25040,6 +30070,19 @@ class LiveConfig_MiscConfig final :
   private:
   bool _internal_ask_to_track_after_privacy() const;
   void _internal_set_ask_to_track_after_privacy(bool value);
+  public:
+
+  // optional bool contracts_club_available = 12;
+  bool has_contracts_club_available() const;
+  private:
+  bool _internal_has_contracts_club_available() const;
+  public:
+  void clear_contracts_club_available();
+  bool contracts_club_available() const;
+  void set_contracts_club_available(bool value);
+  private:
+  bool _internal_contracts_club_available() const;
+  void _internal_set_contracts_club_available(bool value);
   public:
 
   // optional uint32 shells_intro_tickets = 7;
@@ -25120,6 +30163,19 @@ class LiveConfig_MiscConfig final :
   void _internal_set_new_player_event_duration(double value);
   public:
 
+  // optional bool contracts_beta = 13;
+  bool has_contracts_beta() const;
+  private:
+  bool _internal_has_contracts_beta() const;
+  public:
+  void clear_contracts_beta();
+  bool contracts_beta() const;
+  void set_contracts_beta(bool value);
+  private:
+  bool _internal_contracts_beta() const;
+  void _internal_set_contracts_beta(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.LiveConfig.MiscConfig)
  private:
   class _Internal;
@@ -25134,12 +30190,14 @@ class LiveConfig_MiscConfig final :
   bool ask_to_track_;
   bool ask_to_track_show_pre_dialog_;
   bool ask_to_track_after_privacy_;
+  bool contracts_club_available_;
   uint32_t shells_intro_tickets_;
   double chicken_run_boost_percentage_;
   uint32_t shells_max_free_chicken_configs_;
   uint32_t shells_intro_alert_threshold_;
   double contracts_expert_league_min_soul_power_;
   double new_player_event_duration_;
+  bool contracts_beta_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -25199,7 +30257,7 @@ class LiveConfig final :
                &_LiveConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    89;
+    105;
 
   friend void swap(LiveConfig& a, LiveConfig& b) {
     a.Swap(&b);
@@ -25423,7 +30481,7 @@ class InGameMail final :
                &_InGameMail_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    90;
+    106;
 
   friend void swap(InGameMail& a, InGameMail& b) {
     a.Swap(&b);
@@ -25799,7 +30857,7 @@ class MailDB final :
                &_MailDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    91;
+    107;
 
   friend void swap(MailDB& a, MailDB& b) {
     a.Swap(&b);
@@ -25958,7 +31016,7 @@ class PeriodicalsResponse final :
                &_PeriodicalsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    92;
+    108;
 
   friend void swap(PeriodicalsResponse& a, PeriodicalsResponse& b) {
     a.Swap(&b);
@@ -26030,6 +31088,7 @@ class PeriodicalsResponse final :
 
   enum : int {
     kGiftsFieldNumber = 4,
+    kEvaluationsFieldNumber = 8,
     kSalesFieldNumber = 1,
     kEventsFieldNumber = 2,
     kContractsFieldNumber = 3,
@@ -26054,6 +31113,24 @@ class PeriodicalsResponse final :
   ::ei::ServerGift* add_gifts();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ServerGift >&
       gifts() const;
+
+  // repeated .ei.ContractEvaluation evaluations = 8;
+  int evaluations_size() const;
+  private:
+  int _internal_evaluations_size() const;
+  public:
+  void clear_evaluations();
+  ::ei::ContractEvaluation* mutable_evaluations(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >*
+      mutable_evaluations();
+  private:
+  const ::ei::ContractEvaluation& _internal_evaluations(int index) const;
+  ::ei::ContractEvaluation* _internal_add_evaluations();
+  public:
+  const ::ei::ContractEvaluation& evaluations(int index) const;
+  ::ei::ContractEvaluation* add_evaluations();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >&
+      evaluations() const;
 
   // optional .ei.SalesInfo sales = 1;
   bool has_sales() const;
@@ -26173,6 +31250,7 @@ class PeriodicalsResponse final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ServerGift > gifts_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation > evaluations_;
   ::ei::SalesInfo* sales_;
   ::ei::EggIncCurrentEvents* events_;
   ::ei::ContractsResponse* contracts_;
@@ -26238,7 +31316,7 @@ class GetPeriodicalsRequest final :
                &_GetPeriodicalsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    93;
+    109;
 
   friend void swap(GetPeriodicalsRequest& a, GetPeriodicalsRequest& b) {
     a.Swap(&b);
@@ -26598,7 +31676,7 @@ class ConfigRequest final :
                &_ConfigRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    94;
+    110;
 
   friend void swap(ConfigRequest& a, ConfigRequest& b) {
     a.Swap(&b);
@@ -26803,7 +31881,7 @@ class ConfigResponse final :
                &_ConfigResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    95;
+    111;
 
   friend void swap(ConfigResponse& a, ConfigResponse& b) {
     a.Swap(&b);
@@ -27003,7 +32081,7 @@ class AdAttributionRawData final :
                &_AdAttributionRawData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    96;
+    112;
 
   friend void swap(AdAttributionRawData& a, AdAttributionRawData& b) {
     a.Swap(&b);
@@ -27223,7 +32301,7 @@ class AdAttributionRow final :
                &_AdAttributionRow_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    97;
+    113;
 
   friend void swap(AdAttributionRow& a, AdAttributionRow& b) {
     a.Swap(&b);
@@ -27528,7 +32606,7 @@ class AdAttributionInfo final :
                &_AdAttributionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    98;
+    114;
 
   friend void swap(AdAttributionInfo& a, AdAttributionInfo& b) {
     a.Swap(&b);
@@ -28023,7 +33101,7 @@ class ArtifactsClientInfo_LaunchCount final :
                &_ArtifactsClientInfo_LaunchCount_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    99;
+    115;
 
   friend void swap(ArtifactsClientInfo_LaunchCount& a, ArtifactsClientInfo_LaunchCount& b) {
     a.Swap(&b);
@@ -28208,7 +33286,7 @@ class ArtifactsClientInfo final :
                &_ArtifactsClientInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    100;
+    116;
 
   friend void swap(ArtifactsClientInfo& a, ArtifactsClientInfo& b) {
     a.Swap(&b);
@@ -28415,7 +33493,7 @@ class MissionInfo_Fuel final :
                &_MissionInfo_Fuel_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    101;
+    117;
 
   friend void swap(MissionInfo_Fuel& a, MissionInfo_Fuel& b) {
     a.Swap(&b);
@@ -28585,7 +33663,7 @@ class MissionInfo final :
                &_MissionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    102;
+    118;
 
   friend void swap(MissionInfo& a, MissionInfo& b) {
     a.Swap(&b);
@@ -29042,7 +34120,7 @@ class ArtifactSpec final :
                &_ArtifactSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    103;
+    119;
 
   friend void swap(ArtifactSpec& a, ArtifactSpec& b) {
     a.Swap(&b);
@@ -29480,7 +34558,7 @@ class CompleteArtifact final :
                &_CompleteArtifact_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    104;
+    120;
 
   friend void swap(CompleteArtifact& a, CompleteArtifact& b) {
     a.Swap(&b);
@@ -29660,7 +34738,7 @@ class ArtifactInventoryItem final :
                &_ArtifactInventoryItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    105;
+    121;
 
   friend void swap(ArtifactInventoryItem& a, ArtifactInventoryItem& b) {
     a.Swap(&b);
@@ -29870,7 +34948,7 @@ class InventorySlot final :
                &_InventorySlot_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    106;
+    122;
 
   friend void swap(InventorySlot& a, InventorySlot& b) {
     a.Swap(&b);
@@ -30040,7 +35118,7 @@ class ArtifactsConfigurationRequest final :
                &_ArtifactsConfigurationRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    107;
+    123;
 
   friend void swap(ArtifactsConfigurationRequest& a, ArtifactsConfigurationRequest& b) {
     a.Swap(&b);
@@ -30215,7 +35293,7 @@ class ArtifactsConfigurationResponse_MissionParameters_Duration final :
                &_ArtifactsConfigurationResponse_MissionParameters_Duration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    108;
+    124;
 
   friend void swap(ArtifactsConfigurationResponse_MissionParameters_Duration& a, ArtifactsConfigurationResponse_MissionParameters_Duration& b) {
     a.Swap(&b);
@@ -30475,7 +35553,7 @@ class ArtifactsConfigurationResponse_MissionParameters final :
                &_ArtifactsConfigurationResponse_MissionParameters_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    109;
+    125;
 
   friend void swap(ArtifactsConfigurationResponse_MissionParameters& a, ArtifactsConfigurationResponse_MissionParameters& b) {
     a.Swap(&b);
@@ -30691,7 +35769,7 @@ class ArtifactsConfigurationResponse_ArtifactParameters final :
                &_ArtifactsConfigurationResponse_ArtifactParameters_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    110;
+    126;
 
   friend void swap(ArtifactsConfigurationResponse_ArtifactParameters& a, ArtifactsConfigurationResponse_ArtifactParameters& b) {
     a.Swap(&b);
@@ -30971,7 +36049,7 @@ class ArtifactsConfigurationResponse_CraftingLevelInfo final :
                &_ArtifactsConfigurationResponse_CraftingLevelInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    111;
+    127;
 
   friend void swap(ArtifactsConfigurationResponse_CraftingLevelInfo& a, ArtifactsConfigurationResponse_CraftingLevelInfo& b) {
     a.Swap(&b);
@@ -31141,7 +36219,7 @@ class ArtifactsConfigurationResponse final :
                &_ArtifactsConfigurationResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    112;
+    128;
 
   friend void swap(ArtifactsConfigurationResponse& a, ArtifactsConfigurationResponse& b) {
     a.Swap(&b);
@@ -31344,7 +36422,7 @@ class MissionRequest final :
                &_MissionRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    113;
+    129;
 
   friend void swap(MissionRequest& a, MissionRequest& b) {
     a.Swap(&b);
@@ -31579,7 +36657,7 @@ class MissionResponse final :
                &_MissionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    114;
+    130;
 
   friend void swap(MissionResponse& a, MissionResponse& b) {
     a.Swap(&b);
@@ -31754,7 +36832,7 @@ class CompleteMissionResponse_SecureArtifactSpec final :
                &_CompleteMissionResponse_SecureArtifactSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    115;
+    131;
 
   friend void swap(CompleteMissionResponse_SecureArtifactSpec& a, CompleteMissionResponse_SecureArtifactSpec& b) {
     a.Swap(&b);
@@ -31934,7 +37012,7 @@ class CompleteMissionResponse final :
                &_CompleteMissionResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    116;
+    132;
 
   friend void swap(CompleteMissionResponse& a, CompleteMissionResponse& b) {
     a.Swap(&b);
@@ -32171,7 +37249,7 @@ class CollectContractArtifactRewardsRequest final :
                &_CollectContractArtifactRewardsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    117;
+    133;
 
   friend void swap(CollectContractArtifactRewardsRequest& a, CollectContractArtifactRewardsRequest& b) {
     a.Swap(&b);
@@ -32247,6 +37325,7 @@ class CollectContractArtifactRewardsRequest final :
     kGoalIndexFieldNumber = 3,
     kBestShipFieldNumber = 4,
     kLeagueFieldNumber = 5,
+    kGradeFieldNumber = 6,
   };
   // optional string contract_identifier = 2;
   bool has_contract_identifier() const;
@@ -32323,6 +37402,19 @@ class CollectContractArtifactRewardsRequest final :
   void _internal_set_league(uint32_t value);
   public:
 
+  // optional .ei.Contract.PlayerGrade grade = 6;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.CollectContractArtifactRewardsRequest)
  private:
   class _Internal;
@@ -32337,6 +37429,7 @@ class CollectContractArtifactRewardsRequest final :
   uint32_t goal_index_;
   int best_ship_;
   uint32_t league_;
+  int grade_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -32396,7 +37489,7 @@ class CraftArtifactRequest final :
                &_CraftArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    118;
+    134;
 
   friend void swap(CraftArtifactRequest& a, CraftArtifactRequest& b) {
     a.Swap(&b);
@@ -32676,7 +37769,7 @@ class CraftArtifactResponse final :
                &_CraftArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    119;
+    135;
 
   friend void swap(CraftArtifactResponse& a, CraftArtifactResponse& b) {
     a.Swap(&b);
@@ -32886,7 +37979,7 @@ class ConsumeArtifactRequest final :
                &_ConsumeArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    120;
+    136;
 
   friend void swap(ConsumeArtifactRequest& a, ConsumeArtifactRequest& b) {
     a.Swap(&b);
@@ -33186,7 +38279,7 @@ class ConsumeArtifactResponse final :
                &_ConsumeArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    121;
+    137;
 
   friend void swap(ConsumeArtifactResponse& a, ConsumeArtifactResponse& b) {
     a.Swap(&b);
@@ -33440,7 +38533,7 @@ class AuthenticateArtifactResponse final :
                &_AuthenticateArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    122;
+    138;
 
   friend void swap(AuthenticateArtifactResponse& a, AuthenticateArtifactResponse& b) {
     a.Swap(&b);
@@ -33660,7 +38753,7 @@ class SetArtifactRequest final :
                &_SetArtifactRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    123;
+    139;
 
   friend void swap(SetArtifactRequest& a, SetArtifactRequest& b) {
     a.Swap(&b);
@@ -33875,7 +38968,7 @@ class SetArtifactResponse final :
                &_SetArtifactResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    124;
+    140;
 
   friend void swap(SetArtifactResponse& a, SetArtifactResponse& b) {
     a.Swap(&b);
@@ -34065,7 +39158,7 @@ class ArtifactsDB_ActiveArtifactSlot final :
                &_ArtifactsDB_ActiveArtifactSlot_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    125;
+    141;
 
   friend void swap(ArtifactsDB_ActiveArtifactSlot& a, ArtifactsDB_ActiveArtifactSlot& b) {
     a.Swap(&b);
@@ -34235,7 +39328,7 @@ class ArtifactsDB_ActiveArtifactSet final :
                &_ArtifactsDB_ActiveArtifactSet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    126;
+    142;
 
   friend void swap(ArtifactsDB_ActiveArtifactSet& a, ArtifactsDB_ActiveArtifactSet& b) {
     a.Swap(&b);
@@ -34394,7 +39487,7 @@ class ArtifactsDB_CraftableArtifact final :
                &_ArtifactsDB_CraftableArtifact_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    127;
+    143;
 
   friend void swap(ArtifactsDB_CraftableArtifact& a, ArtifactsDB_CraftableArtifact& b) {
     a.Swap(&b);
@@ -34629,7 +39722,7 @@ class ArtifactsDB final :
                &_ArtifactsDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    128;
+    144;
 
   friend void swap(ArtifactsDB& a, ArtifactsDB& b) {
     a.Swap(&b);
@@ -34988,7 +40081,7 @@ class AuthenticatedMessage final :
                &_AuthenticatedMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    129;
+    145;
 
   friend void swap(AuthenticatedMessage& a, AuthenticatedMessage& b) {
     a.Swap(&b);
@@ -35213,7 +40306,7 @@ class LogCompleteMissionPayload final :
                &_LogCompleteMissionPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    130;
+    146;
 
   friend void swap(LogCompleteMissionPayload& a, LogCompleteMissionPayload& b) {
     a.Swap(&b);
@@ -35393,7 +40486,7 @@ class LogCraftArtifactPayload final :
                &_LogCraftArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    131;
+    147;
 
   friend void swap(LogCraftArtifactPayload& a, LogCraftArtifactPayload& b) {
     a.Swap(&b);
@@ -35573,7 +40666,7 @@ class LogConsumeArtifactPayload final :
                &_LogConsumeArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    132;
+    148;
 
   friend void swap(LogConsumeArtifactPayload& a, LogConsumeArtifactPayload& b) {
     a.Swap(&b);
@@ -35753,7 +40846,7 @@ class LogSetArtifactPayload final :
                &_LogSetArtifactPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    133;
+    149;
 
   friend void swap(LogSetArtifactPayload& a, LogSetArtifactPayload& b) {
     a.Swap(&b);
@@ -35933,7 +41026,7 @@ class AccountTransferPayload final :
                &_AccountTransferPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    134;
+    150;
 
   friend void swap(AccountTransferPayload& a, AccountTransferPayload& b) {
     a.Swap(&b);
@@ -36113,7 +41206,7 @@ class SaveBackupResponse final :
                &_SaveBackupResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    135;
+    151;
 
   friend void swap(SaveBackupResponse& a, SaveBackupResponse& b) {
     a.Swap(&b);
@@ -36359,7 +41452,7 @@ class CleanAccountRequest final :
                &_CleanAccountRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    136;
+    152;
 
   friend void swap(CleanAccountRequest& a, CleanAccountRequest& b) {
     a.Swap(&b);
@@ -36539,7 +41632,7 @@ class ReturnEDTPayload final :
                &_ReturnEDTPayload_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    137;
+    153;
 
   friend void swap(ReturnEDTPayload& a, ReturnEDTPayload& b) {
     a.Swap(&b);
@@ -36699,7 +41792,7 @@ class DLCItem final :
                &_DLCItem_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    138;
+    154;
 
   friend void swap(DLCItem& a, DLCItem& b) {
     a.Swap(&b);
@@ -36969,7 +42062,7 @@ class ShellSpec_ShellPiece final :
                &_ShellSpec_ShellPiece_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    139;
+    155;
 
   friend void swap(ShellSpec_ShellPiece& a, ShellSpec_ShellPiece& b) {
     a.Swap(&b);
@@ -37144,7 +42237,7 @@ class ShellSpec final :
                &_ShellSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    140;
+    156;
 
   friend void swap(ShellSpec& a, ShellSpec& b) {
     a.Swap(&b);
@@ -37779,7 +42872,7 @@ class ShellSetSpec_VariationSpec final :
                &_ShellSetSpec_VariationSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    141;
+    157;
 
   friend void swap(ShellSetSpec_VariationSpec& a, ShellSetSpec_VariationSpec& b) {
     a.Swap(&b);
@@ -38019,7 +43112,7 @@ class ShellSetSpec final :
                &_ShellSetSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    142;
+    158;
 
   friend void swap(ShellSetSpec& a, ShellSetSpec& b) {
     a.Swap(&b);
@@ -38491,7 +43584,7 @@ class ShellObjectSpec_LODPiece final :
                &_ShellObjectSpec_LODPiece_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    143;
+    159;
 
   friend void swap(ShellObjectSpec_LODPiece& a, ShellObjectSpec_LODPiece& b) {
     a.Swap(&b);
@@ -38666,7 +43759,7 @@ class ShellObjectSpec final :
                &_ShellObjectSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    144;
+    160;
 
   friend void swap(ShellObjectSpec& a, ShellObjectSpec& b) {
     a.Swap(&b);
@@ -39162,7 +44255,7 @@ class ShellGroupSpec final :
                &_ShellGroupSpec_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    145;
+    161;
 
   friend void swap(ShellGroupSpec& a, ShellGroupSpec& b) {
     a.Swap(&b);
@@ -39398,7 +44491,7 @@ class DLCCatalog final :
                &_DLCCatalog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    146;
+    162;
 
   friend void swap(DLCCatalog& a, DLCCatalog& b) {
     a.Swap(&b);
@@ -39657,7 +44750,7 @@ class ShellDB_ShellStatus final :
                &_ShellDB_ShellStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    147;
+    163;
 
   friend void swap(ShellDB_ShellStatus& a, ShellDB_ShellStatus& b) {
     a.Swap(&b);
@@ -39832,7 +44925,7 @@ class ShellDB_ShellElementStatus final :
                &_ShellDB_ShellElementStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    148;
+    164;
 
   friend void swap(ShellDB_ShellElementStatus& a, ShellDB_ShellElementStatus& b) {
     a.Swap(&b);
@@ -40007,7 +45100,7 @@ class ShellDB_ShellSetVariationStatus final :
                &_ShellDB_ShellSetVariationStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    149;
+    165;
 
   friend void swap(ShellDB_ShellSetVariationStatus& a, ShellDB_ShellSetVariationStatus& b) {
     a.Swap(&b);
@@ -40193,7 +45286,7 @@ class ShellDB_FarmConfiguration final :
                &_ShellDB_FarmConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    150;
+    166;
 
   friend void swap(ShellDB_FarmConfiguration& a, ShellDB_FarmConfiguration& b) {
     a.Swap(&b);
@@ -40428,7 +45521,7 @@ class ShellDB_SavedFarmConfiguration final :
                &_ShellDB_SavedFarmConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    151;
+    167;
 
   friend void swap(ShellDB_SavedFarmConfiguration& a, ShellDB_SavedFarmConfiguration& b) {
     a.Swap(&b);
@@ -40623,7 +45716,7 @@ class ShellDB_ShellConfiguration final :
                &_ShellDB_ShellConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    152;
+    168;
 
   friend void swap(ShellDB_ShellConfiguration& a, ShellDB_ShellConfiguration& b) {
     a.Swap(&b);
@@ -40813,7 +45906,7 @@ class ShellDB_ShellSetConfiguration final :
                &_ShellDB_ShellSetConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    153;
+    169;
 
   friend void swap(ShellDB_ShellSetConfiguration& a, ShellDB_ShellSetConfiguration& b) {
     a.Swap(&b);
@@ -41043,7 +46136,7 @@ class ShellDB_ShellGroupConfiguration final :
                &_ShellDB_ShellGroupConfiguration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    154;
+    170;
 
   friend void swap(ShellDB_ShellGroupConfiguration& a, ShellDB_ShellGroupConfiguration& b) {
     a.Swap(&b);
@@ -41218,7 +46311,7 @@ class ShellDB_ChickenConfig final :
                &_ShellDB_ChickenConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    155;
+    171;
 
   friend void swap(ShellDB_ChickenConfig& a, ShellDB_ChickenConfig& b) {
     a.Swap(&b);
@@ -41398,7 +46491,7 @@ class ShellDB final :
                &_ShellDB_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    156;
+    172;
 
   friend void swap(ShellDB& a, ShellDB& b) {
     a.Swap(&b);
@@ -41797,7 +46890,7 @@ class ShellsActionLog final :
                &_ShellsActionLog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    157;
+    173;
 
   friend void swap(ShellsActionLog& a, ShellsActionLog& b) {
     a.Swap(&b);
@@ -42083,6 +47176,1540 @@ class ShellsActionLog final :
   uint64_t tickets_spent_;
   uint64_t gold_spent_;
   int farm_element_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class UserVerificationAnalysis final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.UserVerificationAnalysis) */ {
+ public:
+  inline UserVerificationAnalysis() : UserVerificationAnalysis(nullptr) {}
+  ~UserVerificationAnalysis() override;
+  explicit PROTOBUF_CONSTEXPR UserVerificationAnalysis(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  UserVerificationAnalysis(const UserVerificationAnalysis& from);
+  UserVerificationAnalysis(UserVerificationAnalysis&& from) noexcept
+    : UserVerificationAnalysis() {
+    *this = ::std::move(from);
+  }
+
+  inline UserVerificationAnalysis& operator=(const UserVerificationAnalysis& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserVerificationAnalysis& operator=(UserVerificationAnalysis&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const UserVerificationAnalysis& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const UserVerificationAnalysis* internal_default_instance() {
+    return reinterpret_cast<const UserVerificationAnalysis*>(
+               &_UserVerificationAnalysis_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    174;
+
+  friend void swap(UserVerificationAnalysis& a, UserVerificationAnalysis& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(UserVerificationAnalysis* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserVerificationAnalysis* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  UserVerificationAnalysis* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<UserVerificationAnalysis>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const UserVerificationAnalysis& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const UserVerificationAnalysis& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(UserVerificationAnalysis* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.UserVerificationAnalysis";
+  }
+  protected:
+  explicit UserVerificationAnalysis(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef UserVerificationAnalysis_Status Status;
+  static constexpr Status UNKNOWN =
+    UserVerificationAnalysis_Status_UNKNOWN;
+  static constexpr Status PROCESSING =
+    UserVerificationAnalysis_Status_PROCESSING;
+  static constexpr Status COMPLETE =
+    UserVerificationAnalysis_Status_COMPLETE;
+  static inline bool Status_IsValid(int value) {
+    return UserVerificationAnalysis_Status_IsValid(value);
+  }
+  static constexpr Status Status_MIN =
+    UserVerificationAnalysis_Status_Status_MIN;
+  static constexpr Status Status_MAX =
+    UserVerificationAnalysis_Status_Status_MAX;
+  static constexpr int Status_ARRAYSIZE =
+    UserVerificationAnalysis_Status_Status_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Status_descriptor() {
+    return UserVerificationAnalysis_Status_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Status_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Status>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Status_Name.");
+    return UserVerificationAnalysis_Status_Name(enum_t_value);
+  }
+  static inline bool Status_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Status* value) {
+    return UserVerificationAnalysis_Status_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kInvalidContractsFieldNumber = 17,
+    kStartTimeFieldNumber = 2,
+    kCompletionTimeFieldNumber = 3,
+    kOverallStatusFieldNumber = 1,
+    kVerifiedPiggyBreaksFieldNumber = 5,
+    kVerifiedOtherIapFieldNumber = 6,
+    kUnverifiedIapFieldNumber = 7,
+    kArtifactsCollectedFieldNumber = 9,
+    kArtifactsConsumedFieldNumber = 10,
+    kMissionsCompletedFieldNumber = 8,
+    kNumCoopMembershipsFieldNumber = 12,
+    kArtifactsInInventoryFieldNumber = 11,
+    kGoldEarnedFieldNumber = 13,
+    kNumPrestigesFieldNumber = 14,
+    kSoulEggsFieldNumber = 15,
+    kValidContractsFieldNumber = 16,
+    kIapStatusFieldNumber = 18,
+    kVerifiedProPermitFieldNumber = 4,
+    kRegularIapBuyerFieldNumber = 22,
+    kRegularIapCheaterFieldNumber = 23,
+    kExcessiveConsumesFieldNumber = 24,
+    kArtifactsStatusFieldNumber = 19,
+    kGoldSpentCraftingFieldNumber = 21,
+    kContractsStatusFieldNumber = 20,
+    kEggsOfProphecyFieldNumber = 27,
+    kExcessiveInventoryFieldNumber = 25,
+    kExcessiveSpendFieldNumber = 26,
+    kExcessiveEopFieldNumber = 28,
+    kExcessiveInvalidContractsFieldNumber = 29,
+    kVerifiedFieldNumber = 30,
+    kVerificationOverrideFieldNumber = 31,
+    kVerificationOverrideValueFieldNumber = 32,
+  };
+  // repeated string invalid_contracts = 17;
+  int invalid_contracts_size() const;
+  private:
+  int _internal_invalid_contracts_size() const;
+  public:
+  void clear_invalid_contracts();
+  const std::string& invalid_contracts(int index) const;
+  std::string* mutable_invalid_contracts(int index);
+  void set_invalid_contracts(int index, const std::string& value);
+  void set_invalid_contracts(int index, std::string&& value);
+  void set_invalid_contracts(int index, const char* value);
+  void set_invalid_contracts(int index, const char* value, size_t size);
+  std::string* add_invalid_contracts();
+  void add_invalid_contracts(const std::string& value);
+  void add_invalid_contracts(std::string&& value);
+  void add_invalid_contracts(const char* value);
+  void add_invalid_contracts(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& invalid_contracts() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_invalid_contracts();
+  private:
+  const std::string& _internal_invalid_contracts(int index) const;
+  std::string* _internal_add_invalid_contracts();
+  public:
+
+  // optional double start_time = 2;
+  bool has_start_time() const;
+  private:
+  bool _internal_has_start_time() const;
+  public:
+  void clear_start_time();
+  double start_time() const;
+  void set_start_time(double value);
+  private:
+  double _internal_start_time() const;
+  void _internal_set_start_time(double value);
+  public:
+
+  // optional double completion_time = 3;
+  bool has_completion_time() const;
+  private:
+  bool _internal_has_completion_time() const;
+  public:
+  void clear_completion_time();
+  double completion_time() const;
+  void set_completion_time(double value);
+  private:
+  double _internal_completion_time() const;
+  void _internal_set_completion_time(double value);
+  public:
+
+  // optional .ei.UserVerificationAnalysis.Status overall_status = 1;
+  bool has_overall_status() const;
+  private:
+  bool _internal_has_overall_status() const;
+  public:
+  void clear_overall_status();
+  ::ei::UserVerificationAnalysis_Status overall_status() const;
+  void set_overall_status(::ei::UserVerificationAnalysis_Status value);
+  private:
+  ::ei::UserVerificationAnalysis_Status _internal_overall_status() const;
+  void _internal_set_overall_status(::ei::UserVerificationAnalysis_Status value);
+  public:
+
+  // optional uint32 verified_piggy_breaks = 5;
+  bool has_verified_piggy_breaks() const;
+  private:
+  bool _internal_has_verified_piggy_breaks() const;
+  public:
+  void clear_verified_piggy_breaks();
+  uint32_t verified_piggy_breaks() const;
+  void set_verified_piggy_breaks(uint32_t value);
+  private:
+  uint32_t _internal_verified_piggy_breaks() const;
+  void _internal_set_verified_piggy_breaks(uint32_t value);
+  public:
+
+  // optional uint32 verified_other_iap = 6;
+  bool has_verified_other_iap() const;
+  private:
+  bool _internal_has_verified_other_iap() const;
+  public:
+  void clear_verified_other_iap();
+  uint32_t verified_other_iap() const;
+  void set_verified_other_iap(uint32_t value);
+  private:
+  uint32_t _internal_verified_other_iap() const;
+  void _internal_set_verified_other_iap(uint32_t value);
+  public:
+
+  // optional uint32 unverified_iap = 7;
+  bool has_unverified_iap() const;
+  private:
+  bool _internal_has_unverified_iap() const;
+  public:
+  void clear_unverified_iap();
+  uint32_t unverified_iap() const;
+  void set_unverified_iap(uint32_t value);
+  private:
+  uint32_t _internal_unverified_iap() const;
+  void _internal_set_unverified_iap(uint32_t value);
+  public:
+
+  // optional double artifacts_collected = 9;
+  bool has_artifacts_collected() const;
+  private:
+  bool _internal_has_artifacts_collected() const;
+  public:
+  void clear_artifacts_collected();
+  double artifacts_collected() const;
+  void set_artifacts_collected(double value);
+  private:
+  double _internal_artifacts_collected() const;
+  void _internal_set_artifacts_collected(double value);
+  public:
+
+  // optional double artifacts_consumed = 10;
+  bool has_artifacts_consumed() const;
+  private:
+  bool _internal_has_artifacts_consumed() const;
+  public:
+  void clear_artifacts_consumed();
+  double artifacts_consumed() const;
+  void set_artifacts_consumed(double value);
+  private:
+  double _internal_artifacts_consumed() const;
+  void _internal_set_artifacts_consumed(double value);
+  public:
+
+  // optional uint32 missions_completed = 8;
+  bool has_missions_completed() const;
+  private:
+  bool _internal_has_missions_completed() const;
+  public:
+  void clear_missions_completed();
+  uint32_t missions_completed() const;
+  void set_missions_completed(uint32_t value);
+  private:
+  uint32_t _internal_missions_completed() const;
+  void _internal_set_missions_completed(uint32_t value);
+  public:
+
+  // optional uint32 num_coop_memberships = 12;
+  bool has_num_coop_memberships() const;
+  private:
+  bool _internal_has_num_coop_memberships() const;
+  public:
+  void clear_num_coop_memberships();
+  uint32_t num_coop_memberships() const;
+  void set_num_coop_memberships(uint32_t value);
+  private:
+  uint32_t _internal_num_coop_memberships() const;
+  void _internal_set_num_coop_memberships(uint32_t value);
+  public:
+
+  // optional double artifacts_in_inventory = 11;
+  bool has_artifacts_in_inventory() const;
+  private:
+  bool _internal_has_artifacts_in_inventory() const;
+  public:
+  void clear_artifacts_in_inventory();
+  double artifacts_in_inventory() const;
+  void set_artifacts_in_inventory(double value);
+  private:
+  double _internal_artifacts_in_inventory() const;
+  void _internal_set_artifacts_in_inventory(double value);
+  public:
+
+  // optional double gold_earned = 13;
+  bool has_gold_earned() const;
+  private:
+  bool _internal_has_gold_earned() const;
+  public:
+  void clear_gold_earned();
+  double gold_earned() const;
+  void set_gold_earned(double value);
+  private:
+  double _internal_gold_earned() const;
+  void _internal_set_gold_earned(double value);
+  public:
+
+  // optional double num_prestiges = 14;
+  bool has_num_prestiges() const;
+  private:
+  bool _internal_has_num_prestiges() const;
+  public:
+  void clear_num_prestiges();
+  double num_prestiges() const;
+  void set_num_prestiges(double value);
+  private:
+  double _internal_num_prestiges() const;
+  void _internal_set_num_prestiges(double value);
+  public:
+
+  // optional double soul_eggs = 15;
+  bool has_soul_eggs() const;
+  private:
+  bool _internal_has_soul_eggs() const;
+  public:
+  void clear_soul_eggs();
+  double soul_eggs() const;
+  void set_soul_eggs(double value);
+  private:
+  double _internal_soul_eggs() const;
+  void _internal_set_soul_eggs(double value);
+  public:
+
+  // optional uint32 valid_contracts = 16;
+  bool has_valid_contracts() const;
+  private:
+  bool _internal_has_valid_contracts() const;
+  public:
+  void clear_valid_contracts();
+  uint32_t valid_contracts() const;
+  void set_valid_contracts(uint32_t value);
+  private:
+  uint32_t _internal_valid_contracts() const;
+  void _internal_set_valid_contracts(uint32_t value);
+  public:
+
+  // optional .ei.UserVerificationAnalysis.Status iap_status = 18;
+  bool has_iap_status() const;
+  private:
+  bool _internal_has_iap_status() const;
+  public:
+  void clear_iap_status();
+  ::ei::UserVerificationAnalysis_Status iap_status() const;
+  void set_iap_status(::ei::UserVerificationAnalysis_Status value);
+  private:
+  ::ei::UserVerificationAnalysis_Status _internal_iap_status() const;
+  void _internal_set_iap_status(::ei::UserVerificationAnalysis_Status value);
+  public:
+
+  // optional bool verified_pro_permit = 4;
+  bool has_verified_pro_permit() const;
+  private:
+  bool _internal_has_verified_pro_permit() const;
+  public:
+  void clear_verified_pro_permit();
+  bool verified_pro_permit() const;
+  void set_verified_pro_permit(bool value);
+  private:
+  bool _internal_verified_pro_permit() const;
+  void _internal_set_verified_pro_permit(bool value);
+  public:
+
+  // optional bool regular_iap_buyer = 22;
+  bool has_regular_iap_buyer() const;
+  private:
+  bool _internal_has_regular_iap_buyer() const;
+  public:
+  void clear_regular_iap_buyer();
+  bool regular_iap_buyer() const;
+  void set_regular_iap_buyer(bool value);
+  private:
+  bool _internal_regular_iap_buyer() const;
+  void _internal_set_regular_iap_buyer(bool value);
+  public:
+
+  // optional bool regular_iap_cheater = 23;
+  bool has_regular_iap_cheater() const;
+  private:
+  bool _internal_has_regular_iap_cheater() const;
+  public:
+  void clear_regular_iap_cheater();
+  bool regular_iap_cheater() const;
+  void set_regular_iap_cheater(bool value);
+  private:
+  bool _internal_regular_iap_cheater() const;
+  void _internal_set_regular_iap_cheater(bool value);
+  public:
+
+  // optional bool excessive_consumes = 24;
+  bool has_excessive_consumes() const;
+  private:
+  bool _internal_has_excessive_consumes() const;
+  public:
+  void clear_excessive_consumes();
+  bool excessive_consumes() const;
+  void set_excessive_consumes(bool value);
+  private:
+  bool _internal_excessive_consumes() const;
+  void _internal_set_excessive_consumes(bool value);
+  public:
+
+  // optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;
+  bool has_artifacts_status() const;
+  private:
+  bool _internal_has_artifacts_status() const;
+  public:
+  void clear_artifacts_status();
+  ::ei::UserVerificationAnalysis_Status artifacts_status() const;
+  void set_artifacts_status(::ei::UserVerificationAnalysis_Status value);
+  private:
+  ::ei::UserVerificationAnalysis_Status _internal_artifacts_status() const;
+  void _internal_set_artifacts_status(::ei::UserVerificationAnalysis_Status value);
+  public:
+
+  // optional double gold_spent_crafting = 21;
+  bool has_gold_spent_crafting() const;
+  private:
+  bool _internal_has_gold_spent_crafting() const;
+  public:
+  void clear_gold_spent_crafting();
+  double gold_spent_crafting() const;
+  void set_gold_spent_crafting(double value);
+  private:
+  double _internal_gold_spent_crafting() const;
+  void _internal_set_gold_spent_crafting(double value);
+  public:
+
+  // optional .ei.UserVerificationAnalysis.Status contracts_status = 20;
+  bool has_contracts_status() const;
+  private:
+  bool _internal_has_contracts_status() const;
+  public:
+  void clear_contracts_status();
+  ::ei::UserVerificationAnalysis_Status contracts_status() const;
+  void set_contracts_status(::ei::UserVerificationAnalysis_Status value);
+  private:
+  ::ei::UserVerificationAnalysis_Status _internal_contracts_status() const;
+  void _internal_set_contracts_status(::ei::UserVerificationAnalysis_Status value);
+  public:
+
+  // optional uint32 eggs_of_prophecy = 27;
+  bool has_eggs_of_prophecy() const;
+  private:
+  bool _internal_has_eggs_of_prophecy() const;
+  public:
+  void clear_eggs_of_prophecy();
+  uint32_t eggs_of_prophecy() const;
+  void set_eggs_of_prophecy(uint32_t value);
+  private:
+  uint32_t _internal_eggs_of_prophecy() const;
+  void _internal_set_eggs_of_prophecy(uint32_t value);
+  public:
+
+  // optional bool excessive_inventory = 25;
+  bool has_excessive_inventory() const;
+  private:
+  bool _internal_has_excessive_inventory() const;
+  public:
+  void clear_excessive_inventory();
+  bool excessive_inventory() const;
+  void set_excessive_inventory(bool value);
+  private:
+  bool _internal_excessive_inventory() const;
+  void _internal_set_excessive_inventory(bool value);
+  public:
+
+  // optional bool excessive_spend = 26;
+  bool has_excessive_spend() const;
+  private:
+  bool _internal_has_excessive_spend() const;
+  public:
+  void clear_excessive_spend();
+  bool excessive_spend() const;
+  void set_excessive_spend(bool value);
+  private:
+  bool _internal_excessive_spend() const;
+  void _internal_set_excessive_spend(bool value);
+  public:
+
+  // optional bool excessive_eop = 28;
+  bool has_excessive_eop() const;
+  private:
+  bool _internal_has_excessive_eop() const;
+  public:
+  void clear_excessive_eop();
+  bool excessive_eop() const;
+  void set_excessive_eop(bool value);
+  private:
+  bool _internal_excessive_eop() const;
+  void _internal_set_excessive_eop(bool value);
+  public:
+
+  // optional bool excessive_invalid_contracts = 29;
+  bool has_excessive_invalid_contracts() const;
+  private:
+  bool _internal_has_excessive_invalid_contracts() const;
+  public:
+  void clear_excessive_invalid_contracts();
+  bool excessive_invalid_contracts() const;
+  void set_excessive_invalid_contracts(bool value);
+  private:
+  bool _internal_excessive_invalid_contracts() const;
+  void _internal_set_excessive_invalid_contracts(bool value);
+  public:
+
+  // optional bool verified = 30;
+  bool has_verified() const;
+  private:
+  bool _internal_has_verified() const;
+  public:
+  void clear_verified();
+  bool verified() const;
+  void set_verified(bool value);
+  private:
+  bool _internal_verified() const;
+  void _internal_set_verified(bool value);
+  public:
+
+  // optional bool verification_override = 31;
+  bool has_verification_override() const;
+  private:
+  bool _internal_has_verification_override() const;
+  public:
+  void clear_verification_override();
+  bool verification_override() const;
+  void set_verification_override(bool value);
+  private:
+  bool _internal_verification_override() const;
+  void _internal_set_verification_override(bool value);
+  public:
+
+  // optional bool verification_override_value = 32;
+  bool has_verification_override_value() const;
+  private:
+  bool _internal_has_verification_override_value() const;
+  public:
+  void clear_verification_override_value();
+  bool verification_override_value() const;
+  void set_verification_override_value(bool value);
+  private:
+  bool _internal_verification_override_value() const;
+  void _internal_set_verification_override_value(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.UserVerificationAnalysis)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> invalid_contracts_;
+  double start_time_;
+  double completion_time_;
+  int overall_status_;
+  uint32_t verified_piggy_breaks_;
+  uint32_t verified_other_iap_;
+  uint32_t unverified_iap_;
+  double artifacts_collected_;
+  double artifacts_consumed_;
+  uint32_t missions_completed_;
+  uint32_t num_coop_memberships_;
+  double artifacts_in_inventory_;
+  double gold_earned_;
+  double num_prestiges_;
+  double soul_eggs_;
+  uint32_t valid_contracts_;
+  int iap_status_;
+  bool verified_pro_permit_;
+  bool regular_iap_buyer_;
+  bool regular_iap_cheater_;
+  bool excessive_consumes_;
+  int artifacts_status_;
+  double gold_spent_crafting_;
+  int contracts_status_;
+  uint32_t eggs_of_prophecy_;
+  bool excessive_inventory_;
+  bool excessive_spend_;
+  bool excessive_eop_;
+  bool excessive_invalid_contracts_;
+  bool verified_;
+  bool verification_override_;
+  bool verification_override_value_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class UserSubscriptionInfo_HistoryEntry final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.UserSubscriptionInfo.HistoryEntry) */ {
+ public:
+  inline UserSubscriptionInfo_HistoryEntry() : UserSubscriptionInfo_HistoryEntry(nullptr) {}
+  ~UserSubscriptionInfo_HistoryEntry() override;
+  explicit PROTOBUF_CONSTEXPR UserSubscriptionInfo_HistoryEntry(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  UserSubscriptionInfo_HistoryEntry(const UserSubscriptionInfo_HistoryEntry& from);
+  UserSubscriptionInfo_HistoryEntry(UserSubscriptionInfo_HistoryEntry&& from) noexcept
+    : UserSubscriptionInfo_HistoryEntry() {
+    *this = ::std::move(from);
+  }
+
+  inline UserSubscriptionInfo_HistoryEntry& operator=(const UserSubscriptionInfo_HistoryEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserSubscriptionInfo_HistoryEntry& operator=(UserSubscriptionInfo_HistoryEntry&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const UserSubscriptionInfo_HistoryEntry& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const UserSubscriptionInfo_HistoryEntry* internal_default_instance() {
+    return reinterpret_cast<const UserSubscriptionInfo_HistoryEntry*>(
+               &_UserSubscriptionInfo_HistoryEntry_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    175;
+
+  friend void swap(UserSubscriptionInfo_HistoryEntry& a, UserSubscriptionInfo_HistoryEntry& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(UserSubscriptionInfo_HistoryEntry* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserSubscriptionInfo_HistoryEntry* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  UserSubscriptionInfo_HistoryEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<UserSubscriptionInfo_HistoryEntry>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const UserSubscriptionInfo_HistoryEntry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const UserSubscriptionInfo_HistoryEntry& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(UserSubscriptionInfo_HistoryEntry* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.UserSubscriptionInfo.HistoryEntry";
+  }
+  protected:
+  explicit UserSubscriptionInfo_HistoryEntry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMessageIdFieldNumber = 2,
+    kMessageFieldNumber = 3,
+    kTimestampFieldNumber = 1,
+  };
+  // optional string message_id = 2;
+  bool has_message_id() const;
+  private:
+  bool _internal_has_message_id() const;
+  public:
+  void clear_message_id();
+  const std::string& message_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_message_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message_id();
+  PROTOBUF_NODISCARD std::string* release_message_id();
+  void set_allocated_message_id(std::string* message_id);
+  private:
+  const std::string& _internal_message_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message_id(const std::string& value);
+  std::string* _internal_mutable_message_id();
+  public:
+
+  // optional string message = 3;
+  bool has_message() const;
+  private:
+  bool _internal_has_message() const;
+  public:
+  void clear_message();
+  const std::string& message() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* message);
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
+  public:
+
+  // optional double timestamp = 1;
+  bool has_timestamp() const;
+  private:
+  bool _internal_has_timestamp() const;
+  public:
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.UserSubscriptionInfo.HistoryEntry)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+  double timestamp_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class UserSubscriptionInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.UserSubscriptionInfo) */ {
+ public:
+  inline UserSubscriptionInfo() : UserSubscriptionInfo(nullptr) {}
+  ~UserSubscriptionInfo() override;
+  explicit PROTOBUF_CONSTEXPR UserSubscriptionInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  UserSubscriptionInfo(const UserSubscriptionInfo& from);
+  UserSubscriptionInfo(UserSubscriptionInfo&& from) noexcept
+    : UserSubscriptionInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline UserSubscriptionInfo& operator=(const UserSubscriptionInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserSubscriptionInfo& operator=(UserSubscriptionInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const UserSubscriptionInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const UserSubscriptionInfo* internal_default_instance() {
+    return reinterpret_cast<const UserSubscriptionInfo*>(
+               &_UserSubscriptionInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    176;
+
+  friend void swap(UserSubscriptionInfo& a, UserSubscriptionInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(UserSubscriptionInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserSubscriptionInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  UserSubscriptionInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<UserSubscriptionInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const UserSubscriptionInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const UserSubscriptionInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(UserSubscriptionInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.UserSubscriptionInfo";
+  }
+  protected:
+  explicit UserSubscriptionInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef UserSubscriptionInfo_HistoryEntry HistoryEntry;
+
+  typedef UserSubscriptionInfo_Level Level;
+  static constexpr Level STANDARD =
+    UserSubscriptionInfo_Level_STANDARD;
+  static constexpr Level PRO =
+    UserSubscriptionInfo_Level_PRO;
+  static inline bool Level_IsValid(int value) {
+    return UserSubscriptionInfo_Level_IsValid(value);
+  }
+  static constexpr Level Level_MIN =
+    UserSubscriptionInfo_Level_Level_MIN;
+  static constexpr Level Level_MAX =
+    UserSubscriptionInfo_Level_Level_MAX;
+  static constexpr int Level_ARRAYSIZE =
+    UserSubscriptionInfo_Level_Level_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Level_descriptor() {
+    return UserSubscriptionInfo_Level_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Level_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Level>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Level_Name.");
+    return UserSubscriptionInfo_Level_Name(enum_t_value);
+  }
+  static inline bool Level_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Level* value) {
+    return UserSubscriptionInfo_Level_Parse(name, value);
+  }
+
+  typedef UserSubscriptionInfo_Status Status;
+  static constexpr Status UNKNOWN =
+    UserSubscriptionInfo_Status_UNKNOWN;
+  static constexpr Status ACTIVE =
+    UserSubscriptionInfo_Status_ACTIVE;
+  static constexpr Status EXPIRED =
+    UserSubscriptionInfo_Status_EXPIRED;
+  static constexpr Status REVOKED =
+    UserSubscriptionInfo_Status_REVOKED;
+  static constexpr Status GRACE_PERIOD =
+    UserSubscriptionInfo_Status_GRACE_PERIOD;
+  static constexpr Status PAUSE_HOLD =
+    UserSubscriptionInfo_Status_PAUSE_HOLD;
+  static inline bool Status_IsValid(int value) {
+    return UserSubscriptionInfo_Status_IsValid(value);
+  }
+  static constexpr Status Status_MIN =
+    UserSubscriptionInfo_Status_Status_MIN;
+  static constexpr Status Status_MAX =
+    UserSubscriptionInfo_Status_Status_MAX;
+  static constexpr int Status_ARRAYSIZE =
+    UserSubscriptionInfo_Status_Status_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Status_descriptor() {
+    return UserSubscriptionInfo_Status_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Status_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Status>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Status_Name.");
+    return UserSubscriptionInfo_Status_Name(enum_t_value);
+  }
+  static inline bool Status_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Status* value) {
+    return UserSubscriptionInfo_Status_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kHistoryFieldNumber = 9,
+    kPastUserIdsFieldNumber = 11,
+    kOriginalTransactionIdFieldNumber = 1,
+    kStoreStatusFieldNumber = 14,
+    kLinkedTransactionIdFieldNumber = 16,
+    kFirstSubscribedFieldNumber = 2,
+    kPeriodEndFieldNumber = 4,
+    kLastUpdatedFieldNumber = 7,
+    kStatusFieldNumber = 5,
+    kSubscriptionLevelFieldNumber = 13,
+    kNextSubscriptionLevelFieldNumber = 15,
+    kLockNextSubscriptionLevelFieldNumber = 18,
+    kAcknowledgedFieldNumber = 17,
+    kAutoRenewFieldNumber = 6,
+    kSandboxFieldNumber = 19,
+    kPlatformFieldNumber = 10,
+  };
+  // repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;
+  int history_size() const;
+  private:
+  int _internal_history_size() const;
+  public:
+  void clear_history();
+  ::ei::UserSubscriptionInfo_HistoryEntry* mutable_history(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::UserSubscriptionInfo_HistoryEntry >*
+      mutable_history();
+  private:
+  const ::ei::UserSubscriptionInfo_HistoryEntry& _internal_history(int index) const;
+  ::ei::UserSubscriptionInfo_HistoryEntry* _internal_add_history();
+  public:
+  const ::ei::UserSubscriptionInfo_HistoryEntry& history(int index) const;
+  ::ei::UserSubscriptionInfo_HistoryEntry* add_history();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::UserSubscriptionInfo_HistoryEntry >&
+      history() const;
+
+  // repeated string past_user_ids = 11;
+  int past_user_ids_size() const;
+  private:
+  int _internal_past_user_ids_size() const;
+  public:
+  void clear_past_user_ids();
+  const std::string& past_user_ids(int index) const;
+  std::string* mutable_past_user_ids(int index);
+  void set_past_user_ids(int index, const std::string& value);
+  void set_past_user_ids(int index, std::string&& value);
+  void set_past_user_ids(int index, const char* value);
+  void set_past_user_ids(int index, const char* value, size_t size);
+  std::string* add_past_user_ids();
+  void add_past_user_ids(const std::string& value);
+  void add_past_user_ids(std::string&& value);
+  void add_past_user_ids(const char* value);
+  void add_past_user_ids(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& past_user_ids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_past_user_ids();
+  private:
+  const std::string& _internal_past_user_ids(int index) const;
+  std::string* _internal_add_past_user_ids();
+  public:
+
+  // optional string original_transaction_id = 1;
+  bool has_original_transaction_id() const;
+  private:
+  bool _internal_has_original_transaction_id() const;
+  public:
+  void clear_original_transaction_id();
+  const std::string& original_transaction_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_original_transaction_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_original_transaction_id();
+  PROTOBUF_NODISCARD std::string* release_original_transaction_id();
+  void set_allocated_original_transaction_id(std::string* original_transaction_id);
+  private:
+  const std::string& _internal_original_transaction_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_original_transaction_id(const std::string& value);
+  std::string* _internal_mutable_original_transaction_id();
+  public:
+
+  // optional string store_status = 14;
+  bool has_store_status() const;
+  private:
+  bool _internal_has_store_status() const;
+  public:
+  void clear_store_status();
+  const std::string& store_status() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_store_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_store_status();
+  PROTOBUF_NODISCARD std::string* release_store_status();
+  void set_allocated_store_status(std::string* store_status);
+  private:
+  const std::string& _internal_store_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_store_status(const std::string& value);
+  std::string* _internal_mutable_store_status();
+  public:
+
+  // optional string linked_transaction_id = 16;
+  bool has_linked_transaction_id() const;
+  private:
+  bool _internal_has_linked_transaction_id() const;
+  public:
+  void clear_linked_transaction_id();
+  const std::string& linked_transaction_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_linked_transaction_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_linked_transaction_id();
+  PROTOBUF_NODISCARD std::string* release_linked_transaction_id();
+  void set_allocated_linked_transaction_id(std::string* linked_transaction_id);
+  private:
+  const std::string& _internal_linked_transaction_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_linked_transaction_id(const std::string& value);
+  std::string* _internal_mutable_linked_transaction_id();
+  public:
+
+  // optional double first_subscribed = 2;
+  bool has_first_subscribed() const;
+  private:
+  bool _internal_has_first_subscribed() const;
+  public:
+  void clear_first_subscribed();
+  double first_subscribed() const;
+  void set_first_subscribed(double value);
+  private:
+  double _internal_first_subscribed() const;
+  void _internal_set_first_subscribed(double value);
+  public:
+
+  // optional double period_end = 4;
+  bool has_period_end() const;
+  private:
+  bool _internal_has_period_end() const;
+  public:
+  void clear_period_end();
+  double period_end() const;
+  void set_period_end(double value);
+  private:
+  double _internal_period_end() const;
+  void _internal_set_period_end(double value);
+  public:
+
+  // optional double last_updated = 7;
+  bool has_last_updated() const;
+  private:
+  bool _internal_has_last_updated() const;
+  public:
+  void clear_last_updated();
+  double last_updated() const;
+  void set_last_updated(double value);
+  private:
+  double _internal_last_updated() const;
+  void _internal_set_last_updated(double value);
+  public:
+
+  // optional .ei.UserSubscriptionInfo.Status status = 5;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::UserSubscriptionInfo_Status status() const;
+  void set_status(::ei::UserSubscriptionInfo_Status value);
+  private:
+  ::ei::UserSubscriptionInfo_Status _internal_status() const;
+  void _internal_set_status(::ei::UserSubscriptionInfo_Status value);
+  public:
+
+  // optional .ei.UserSubscriptionInfo.Level subscription_level = 13;
+  bool has_subscription_level() const;
+  private:
+  bool _internal_has_subscription_level() const;
+  public:
+  void clear_subscription_level();
+  ::ei::UserSubscriptionInfo_Level subscription_level() const;
+  void set_subscription_level(::ei::UserSubscriptionInfo_Level value);
+  private:
+  ::ei::UserSubscriptionInfo_Level _internal_subscription_level() const;
+  void _internal_set_subscription_level(::ei::UserSubscriptionInfo_Level value);
+  public:
+
+  // optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;
+  bool has_next_subscription_level() const;
+  private:
+  bool _internal_has_next_subscription_level() const;
+  public:
+  void clear_next_subscription_level();
+  ::ei::UserSubscriptionInfo_Level next_subscription_level() const;
+  void set_next_subscription_level(::ei::UserSubscriptionInfo_Level value);
+  private:
+  ::ei::UserSubscriptionInfo_Level _internal_next_subscription_level() const;
+  void _internal_set_next_subscription_level(::ei::UserSubscriptionInfo_Level value);
+  public:
+
+  // optional bool lock_next_subscription_level = 18;
+  bool has_lock_next_subscription_level() const;
+  private:
+  bool _internal_has_lock_next_subscription_level() const;
+  public:
+  void clear_lock_next_subscription_level();
+  bool lock_next_subscription_level() const;
+  void set_lock_next_subscription_level(bool value);
+  private:
+  bool _internal_lock_next_subscription_level() const;
+  void _internal_set_lock_next_subscription_level(bool value);
+  public:
+
+  // optional bool acknowledged = 17;
+  bool has_acknowledged() const;
+  private:
+  bool _internal_has_acknowledged() const;
+  public:
+  void clear_acknowledged();
+  bool acknowledged() const;
+  void set_acknowledged(bool value);
+  private:
+  bool _internal_acknowledged() const;
+  void _internal_set_acknowledged(bool value);
+  public:
+
+  // optional bool auto_renew = 6;
+  bool has_auto_renew() const;
+  private:
+  bool _internal_has_auto_renew() const;
+  public:
+  void clear_auto_renew();
+  bool auto_renew() const;
+  void set_auto_renew(bool value);
+  private:
+  bool _internal_auto_renew() const;
+  void _internal_set_auto_renew(bool value);
+  public:
+
+  // optional bool sandbox = 19;
+  bool has_sandbox() const;
+  private:
+  bool _internal_has_sandbox() const;
+  public:
+  void clear_sandbox();
+  bool sandbox() const;
+  void set_sandbox(bool value);
+  private:
+  bool _internal_sandbox() const;
+  void _internal_set_sandbox(bool value);
+  public:
+
+  // optional .ei.Platform platform = 10;
+  bool has_platform() const;
+  private:
+  bool _internal_has_platform() const;
+  public:
+  void clear_platform();
+  ::ei::Platform platform() const;
+  void set_platform(::ei::Platform value);
+  private:
+  ::ei::Platform _internal_platform() const;
+  void _internal_set_platform(::ei::Platform value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.UserSubscriptionInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::UserSubscriptionInfo_HistoryEntry > history_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> past_user_ids_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr original_transaction_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr store_status_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr linked_transaction_id_;
+  double first_subscribed_;
+  double period_end_;
+  double last_updated_;
+  int status_;
+  int subscription_level_;
+  int next_subscription_level_;
+  bool lock_next_subscription_level_;
+  bool acknowledged_;
+  bool auto_renew_;
+  bool sandbox_;
+  int platform_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class SubscriptionChangeHintRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.SubscriptionChangeHintRequest) */ {
+ public:
+  inline SubscriptionChangeHintRequest() : SubscriptionChangeHintRequest(nullptr) {}
+  ~SubscriptionChangeHintRequest() override;
+  explicit PROTOBUF_CONSTEXPR SubscriptionChangeHintRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  SubscriptionChangeHintRequest(const SubscriptionChangeHintRequest& from);
+  SubscriptionChangeHintRequest(SubscriptionChangeHintRequest&& from) noexcept
+    : SubscriptionChangeHintRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline SubscriptionChangeHintRequest& operator=(const SubscriptionChangeHintRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SubscriptionChangeHintRequest& operator=(SubscriptionChangeHintRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const SubscriptionChangeHintRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const SubscriptionChangeHintRequest* internal_default_instance() {
+    return reinterpret_cast<const SubscriptionChangeHintRequest*>(
+               &_SubscriptionChangeHintRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    177;
+
+  friend void swap(SubscriptionChangeHintRequest& a, SubscriptionChangeHintRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SubscriptionChangeHintRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SubscriptionChangeHintRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  SubscriptionChangeHintRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SubscriptionChangeHintRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const SubscriptionChangeHintRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const SubscriptionChangeHintRequest& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SubscriptionChangeHintRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.SubscriptionChangeHintRequest";
+  }
+  protected:
+  explicit SubscriptionChangeHintRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kOriginalTransactionIdFieldNumber = 1,
+    kRinfoFieldNumber = 3,
+    kNextSubscriptionLevelFieldNumber = 2,
+  };
+  // optional string original_transaction_id = 1;
+  bool has_original_transaction_id() const;
+  private:
+  bool _internal_has_original_transaction_id() const;
+  public:
+  void clear_original_transaction_id();
+  const std::string& original_transaction_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_original_transaction_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_original_transaction_id();
+  PROTOBUF_NODISCARD std::string* release_original_transaction_id();
+  void set_allocated_original_transaction_id(std::string* original_transaction_id);
+  private:
+  const std::string& _internal_original_transaction_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_original_transaction_id(const std::string& value);
+  std::string* _internal_mutable_original_transaction_id();
+  public:
+
+  // optional .ei.BasicRequestInfo rinfo = 3;
+  bool has_rinfo() const;
+  private:
+  bool _internal_has_rinfo() const;
+  public:
+  void clear_rinfo();
+  const ::ei::BasicRequestInfo& rinfo() const;
+  PROTOBUF_NODISCARD ::ei::BasicRequestInfo* release_rinfo();
+  ::ei::BasicRequestInfo* mutable_rinfo();
+  void set_allocated_rinfo(::ei::BasicRequestInfo* rinfo);
+  private:
+  const ::ei::BasicRequestInfo& _internal_rinfo() const;
+  ::ei::BasicRequestInfo* _internal_mutable_rinfo();
+  public:
+  void unsafe_arena_set_allocated_rinfo(
+      ::ei::BasicRequestInfo* rinfo);
+  ::ei::BasicRequestInfo* unsafe_arena_release_rinfo();
+
+  // optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;
+  bool has_next_subscription_level() const;
+  private:
+  bool _internal_has_next_subscription_level() const;
+  public:
+  void clear_next_subscription_level();
+  ::ei::UserSubscriptionInfo_Level next_subscription_level() const;
+  void set_next_subscription_level(::ei::UserSubscriptionInfo_Level value);
+  private:
+  ::ei::UserSubscriptionInfo_Level _internal_next_subscription_level() const;
+  void _internal_set_next_subscription_level(::ei::UserSubscriptionInfo_Level value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.SubscriptionChangeHintRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr original_transaction_id_;
+  ::ei::BasicRequestInfo* rinfo_;
+  int next_subscription_level_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // ===================================================================
@@ -46917,7 +53544,7 @@ inline void Backup_Misc::set_free_hatchery_refill_given(bool value) {
 
 // optional double last_share_farm_value = 3 [default = 10000000];
 inline bool Backup_Misc::_internal_has_last_share_farm_value() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_share_farm_value() const {
@@ -46925,7 +53552,7 @@ inline bool Backup_Misc::has_last_share_farm_value() const {
 }
 inline void Backup_Misc::clear_last_share_farm_value() {
   last_share_farm_value_ = 10000000;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline double Backup_Misc::_internal_last_share_farm_value() const {
   return last_share_farm_value_;
@@ -46935,7 +53562,7 @@ inline double Backup_Misc::last_share_farm_value() const {
   return _internal_last_share_farm_value();
 }
 inline void Backup_Misc::_internal_set_last_share_farm_value(double value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00040000u;
   last_share_farm_value_ = value;
 }
 inline void Backup_Misc::set_last_share_farm_value(double value) {
@@ -46945,7 +53572,7 @@ inline void Backup_Misc::set_last_share_farm_value(double value) {
 
 // optional double last_share_swarm_farm_value = 4 [default = 10000000];
 inline bool Backup_Misc::_internal_has_last_share_swarm_farm_value() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_share_swarm_farm_value() const {
@@ -46953,7 +53580,7 @@ inline bool Backup_Misc::has_last_share_swarm_farm_value() const {
 }
 inline void Backup_Misc::clear_last_share_swarm_farm_value() {
   last_share_swarm_farm_value_ = 10000000;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline double Backup_Misc::_internal_last_share_swarm_farm_value() const {
   return last_share_swarm_farm_value_;
@@ -46963,7 +53590,7 @@ inline double Backup_Misc::last_share_swarm_farm_value() const {
   return _internal_last_share_swarm_farm_value();
 }
 inline void Backup_Misc::_internal_set_last_share_swarm_farm_value(double value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00080000u;
   last_share_swarm_farm_value_ = value;
 }
 inline void Backup_Misc::set_last_share_swarm_farm_value(double value) {
@@ -46973,7 +53600,7 @@ inline void Backup_Misc::set_last_share_swarm_farm_value(double value) {
 
 // optional double last_share_swarm_size = 5 [default = 140];
 inline bool Backup_Misc::_internal_has_last_share_swarm_size() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_share_swarm_size() const {
@@ -46981,7 +53608,7 @@ inline bool Backup_Misc::has_last_share_swarm_size() const {
 }
 inline void Backup_Misc::clear_last_share_swarm_size() {
   last_share_swarm_size_ = 140;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline double Backup_Misc::_internal_last_share_swarm_size() const {
   return last_share_swarm_size_;
@@ -46991,7 +53618,7 @@ inline double Backup_Misc::last_share_swarm_size() const {
   return _internal_last_share_swarm_size();
 }
 inline void Backup_Misc::_internal_set_last_share_swarm_size(double value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00100000u;
   last_share_swarm_size_ = value;
 }
 inline void Backup_Misc::set_last_share_swarm_size(double value) {
@@ -47001,7 +53628,7 @@ inline void Backup_Misc::set_last_share_swarm_size(double value) {
 
 // optional uint64 last_prestige_alert_soul_eggs_DEPRECATED = 10 [default = 45];
 inline bool Backup_Misc::_internal_has_last_prestige_alert_soul_eggs_deprecated() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_prestige_alert_soul_eggs_deprecated() const {
@@ -47009,7 +53636,7 @@ inline bool Backup_Misc::has_last_prestige_alert_soul_eggs_deprecated() const {
 }
 inline void Backup_Misc::clear_last_prestige_alert_soul_eggs_deprecated() {
   last_prestige_alert_soul_eggs_deprecated_ = uint64_t{45u};
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline uint64_t Backup_Misc::_internal_last_prestige_alert_soul_eggs_deprecated() const {
   return last_prestige_alert_soul_eggs_deprecated_;
@@ -47019,7 +53646,7 @@ inline uint64_t Backup_Misc::last_prestige_alert_soul_eggs_deprecated() const {
   return _internal_last_prestige_alert_soul_eggs_deprecated();
 }
 inline void Backup_Misc::_internal_set_last_prestige_alert_soul_eggs_deprecated(uint64_t value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00200000u;
   last_prestige_alert_soul_eggs_deprecated_ = value;
 }
 inline void Backup_Misc::set_last_prestige_alert_soul_eggs_deprecated(uint64_t value) {
@@ -47251,9 +53878,37 @@ inline void Backup_Misc::set_contracts_alert(bool value) {
   // @@protoc_insertion_point(field_set:ei.Backup.Misc.contracts_alert)
 }
 
+// optional bool contracts_alert_v2 = 21;
+inline bool Backup_Misc::_internal_has_contracts_alert_v2() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool Backup_Misc::has_contracts_alert_v2() const {
+  return _internal_has_contracts_alert_v2();
+}
+inline void Backup_Misc::clear_contracts_alert_v2() {
+  contracts_alert_v2_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool Backup_Misc::_internal_contracts_alert_v2() const {
+  return contracts_alert_v2_;
+}
+inline bool Backup_Misc::contracts_alert_v2() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Misc.contracts_alert_v2)
+  return _internal_contracts_alert_v2();
+}
+inline void Backup_Misc::_internal_set_contracts_alert_v2(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  contracts_alert_v2_ = value;
+}
+inline void Backup_Misc::set_contracts_alert_v2(bool value) {
+  _internal_set_contracts_alert_v2(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Misc.contracts_alert_v2)
+}
+
 // optional bool coop_alert = 14;
 inline bool Backup_Misc::_internal_has_coop_alert() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_coop_alert() const {
@@ -47261,7 +53916,7 @@ inline bool Backup_Misc::has_coop_alert() const {
 }
 inline void Backup_Misc::clear_coop_alert() {
   coop_alert_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool Backup_Misc::_internal_coop_alert() const {
   return coop_alert_;
@@ -47271,7 +53926,7 @@ inline bool Backup_Misc::coop_alert() const {
   return _internal_coop_alert();
 }
 inline void Backup_Misc::_internal_set_coop_alert(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   coop_alert_ = value;
 }
 inline void Backup_Misc::set_coop_alert(bool value) {
@@ -47279,9 +53934,37 @@ inline void Backup_Misc::set_coop_alert(bool value) {
   // @@protoc_insertion_point(field_set:ei.Backup.Misc.coop_alert)
 }
 
+// optional bool coop_alert_v2 = 22;
+inline bool Backup_Misc::_internal_has_coop_alert_v2() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool Backup_Misc::has_coop_alert_v2() const {
+  return _internal_has_coop_alert_v2();
+}
+inline void Backup_Misc::clear_coop_alert_v2() {
+  coop_alert_v2_ = false;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline bool Backup_Misc::_internal_coop_alert_v2() const {
+  return coop_alert_v2_;
+}
+inline bool Backup_Misc::coop_alert_v2() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Misc.coop_alert_v2)
+  return _internal_coop_alert_v2();
+}
+inline void Backup_Misc::_internal_set_coop_alert_v2(bool value) {
+  _has_bits_[0] |= 0x00001000u;
+  coop_alert_v2_ = value;
+}
+inline void Backup_Misc::set_coop_alert_v2(bool value) {
+  _internal_set_coop_alert_v2(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Misc.coop_alert_v2)
+}
+
 // optional bool switch_alert = 15;
 inline bool Backup_Misc::_internal_has_switch_alert() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_switch_alert() const {
@@ -47289,7 +53972,7 @@ inline bool Backup_Misc::has_switch_alert() const {
 }
 inline void Backup_Misc::clear_switch_alert() {
   switch_alert_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline bool Backup_Misc::_internal_switch_alert() const {
   return switch_alert_;
@@ -47299,7 +53982,7 @@ inline bool Backup_Misc::switch_alert() const {
   return _internal_switch_alert();
 }
 inline void Backup_Misc::_internal_set_switch_alert(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00002000u;
   switch_alert_ = value;
 }
 inline void Backup_Misc::set_switch_alert(bool value) {
@@ -47309,7 +53992,7 @@ inline void Backup_Misc::set_switch_alert(bool value) {
 
 // optional bool egg_of_prophecy_alert = 16;
 inline bool Backup_Misc::_internal_has_egg_of_prophecy_alert() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_egg_of_prophecy_alert() const {
@@ -47317,7 +54000,7 @@ inline bool Backup_Misc::has_egg_of_prophecy_alert() const {
 }
 inline void Backup_Misc::clear_egg_of_prophecy_alert() {
   egg_of_prophecy_alert_ = false;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool Backup_Misc::_internal_egg_of_prophecy_alert() const {
   return egg_of_prophecy_alert_;
@@ -47327,7 +54010,7 @@ inline bool Backup_Misc::egg_of_prophecy_alert() const {
   return _internal_egg_of_prophecy_alert();
 }
 inline void Backup_Misc::_internal_set_egg_of_prophecy_alert(bool value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00004000u;
   egg_of_prophecy_alert_ = value;
 }
 inline void Backup_Misc::set_egg_of_prophecy_alert(bool value) {
@@ -47337,7 +54020,7 @@ inline void Backup_Misc::set_egg_of_prophecy_alert(bool value) {
 
 // optional bool boost_token_alert = 17;
 inline bool Backup_Misc::_internal_has_boost_token_alert() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_boost_token_alert() const {
@@ -47345,7 +54028,7 @@ inline bool Backup_Misc::has_boost_token_alert() const {
 }
 inline void Backup_Misc::clear_boost_token_alert() {
   boost_token_alert_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline bool Backup_Misc::_internal_boost_token_alert() const {
   return boost_token_alert_;
@@ -47355,7 +54038,7 @@ inline bool Backup_Misc::boost_token_alert() const {
   return _internal_boost_token_alert();
 }
 inline void Backup_Misc::_internal_set_boost_token_alert(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00008000u;
   boost_token_alert_ = value;
 }
 inline void Backup_Misc::set_boost_token_alert(bool value) {
@@ -47365,7 +54048,7 @@ inline void Backup_Misc::set_boost_token_alert(bool value) {
 
 // optional bool soul_egg_alert = 18;
 inline bool Backup_Misc::_internal_has_soul_egg_alert() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_soul_egg_alert() const {
@@ -47373,7 +54056,7 @@ inline bool Backup_Misc::has_soul_egg_alert() const {
 }
 inline void Backup_Misc::clear_soul_egg_alert() {
   soul_egg_alert_ = false;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline bool Backup_Misc::_internal_soul_egg_alert() const {
   return soul_egg_alert_;
@@ -47383,7 +54066,7 @@ inline bool Backup_Misc::soul_egg_alert() const {
   return _internal_soul_egg_alert();
 }
 inline void Backup_Misc::_internal_set_soul_egg_alert(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00010000u;
   soul_egg_alert_ = value;
 }
 inline void Backup_Misc::set_soul_egg_alert(bool value) {
@@ -47393,7 +54076,7 @@ inline void Backup_Misc::set_soul_egg_alert(bool value) {
 
 // optional bool backup_reminder_alert = 19;
 inline bool Backup_Misc::_internal_has_backup_reminder_alert() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_backup_reminder_alert() const {
@@ -47401,7 +54084,7 @@ inline bool Backup_Misc::has_backup_reminder_alert() const {
 }
 inline void Backup_Misc::clear_backup_reminder_alert() {
   backup_reminder_alert_ = false;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline bool Backup_Misc::_internal_backup_reminder_alert() const {
   return backup_reminder_alert_;
@@ -47411,7 +54094,7 @@ inline bool Backup_Misc::backup_reminder_alert() const {
   return _internal_backup_reminder_alert();
 }
 inline void Backup_Misc::_internal_set_backup_reminder_alert(bool value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00020000u;
   backup_reminder_alert_ = value;
 }
 inline void Backup_Misc::set_backup_reminder_alert(bool value) {
@@ -51595,6 +58278,34 @@ inline void EggIncEvent::set_duration(double value) {
   // @@protoc_insertion_point(field_set:ei.EggIncEvent.duration)
 }
 
+// optional bool cc_only = 8;
+inline bool EggIncEvent::_internal_has_cc_only() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool EggIncEvent::has_cc_only() const {
+  return _internal_has_cc_only();
+}
+inline void EggIncEvent::clear_cc_only() {
+  cc_only_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool EggIncEvent::_internal_cc_only() const {
+  return cc_only_;
+}
+inline bool EggIncEvent::cc_only() const {
+  // @@protoc_insertion_point(field_get:ei.EggIncEvent.cc_only)
+  return _internal_cc_only();
+}
+inline void EggIncEvent::_internal_set_cc_only(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  cc_only_ = value;
+}
+inline void EggIncEvent::set_cc_only(bool value) {
+  _internal_set_cc_only(value);
+  // @@protoc_insertion_point(field_set:ei.EggIncEvent.cc_only)
+}
+
 // -------------------------------------------------------------------
 
 // EggIncCurrentEvents
@@ -54107,7 +60818,7 @@ GenericActionBatchRequest::actions() const {
 
 // optional .ei.BasicRequestInfo rinfo = 6;
 inline bool VerifyPurchaseRequest::_internal_has_rinfo() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
   return value;
 }
@@ -54116,7 +60827,7 @@ inline bool VerifyPurchaseRequest::has_rinfo() const {
 }
 inline void VerifyPurchaseRequest::clear_rinfo() {
   if (rinfo_ != nullptr) rinfo_->Clear();
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline const ::ei::BasicRequestInfo& VerifyPurchaseRequest::_internal_rinfo() const {
   const ::ei::BasicRequestInfo* p = rinfo_;
@@ -54134,14 +60845,14 @@ inline void VerifyPurchaseRequest::unsafe_arena_set_allocated_rinfo(
   }
   rinfo_ = rinfo;
   if (rinfo) {
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.VerifyPurchaseRequest.rinfo)
 }
 inline ::ei::BasicRequestInfo* VerifyPurchaseRequest::release_rinfo() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   ::ei::BasicRequestInfo* temp = rinfo_;
   rinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -54157,13 +60868,13 @@ inline ::ei::BasicRequestInfo* VerifyPurchaseRequest::release_rinfo() {
 }
 inline ::ei::BasicRequestInfo* VerifyPurchaseRequest::unsafe_arena_release_rinfo() {
   // @@protoc_insertion_point(field_release:ei.VerifyPurchaseRequest.rinfo)
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   ::ei::BasicRequestInfo* temp = rinfo_;
   rinfo_ = nullptr;
   return temp;
 }
 inline ::ei::BasicRequestInfo* VerifyPurchaseRequest::_internal_mutable_rinfo() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   if (rinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
     rinfo_ = p;
@@ -54187,9 +60898,9 @@ inline void VerifyPurchaseRequest::set_allocated_rinfo(::ei::BasicRequestInfo* r
       rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, rinfo, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   rinfo_ = rinfo;
   // @@protoc_insertion_point(field_set_allocated:ei.VerifyPurchaseRequest.rinfo)
@@ -54331,6 +61042,74 @@ inline void VerifyPurchaseRequest::set_allocated_transaction_id(std::string* tra
   // @@protoc_insertion_point(field_set_allocated:ei.VerifyPurchaseRequest.transaction_id)
 }
 
+// optional string original_transaction_id = 8;
+inline bool VerifyPurchaseRequest::_internal_has_original_transaction_id() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool VerifyPurchaseRequest::has_original_transaction_id() const {
+  return _internal_has_original_transaction_id();
+}
+inline void VerifyPurchaseRequest::clear_original_transaction_id() {
+  original_transaction_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& VerifyPurchaseRequest::original_transaction_id() const {
+  // @@protoc_insertion_point(field_get:ei.VerifyPurchaseRequest.original_transaction_id)
+  return _internal_original_transaction_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void VerifyPurchaseRequest::set_original_transaction_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ original_transaction_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.VerifyPurchaseRequest.original_transaction_id)
+}
+inline std::string* VerifyPurchaseRequest::mutable_original_transaction_id() {
+  std::string* _s = _internal_mutable_original_transaction_id();
+  // @@protoc_insertion_point(field_mutable:ei.VerifyPurchaseRequest.original_transaction_id)
+  return _s;
+}
+inline const std::string& VerifyPurchaseRequest::_internal_original_transaction_id() const {
+  return original_transaction_id_.Get();
+}
+inline void VerifyPurchaseRequest::_internal_set_original_transaction_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  original_transaction_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* VerifyPurchaseRequest::_internal_mutable_original_transaction_id() {
+  _has_bits_[0] |= 0x00000010u;
+  return original_transaction_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* VerifyPurchaseRequest::release_original_transaction_id() {
+  // @@protoc_insertion_point(field_release:ei.VerifyPurchaseRequest.original_transaction_id)
+  if (!_internal_has_original_transaction_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  auto* p = original_transaction_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (original_transaction_id_.IsDefault()) {
+    original_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void VerifyPurchaseRequest::set_allocated_original_transaction_id(std::string* original_transaction_id) {
+  if (original_transaction_id != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  original_transaction_id_.SetAllocated(original_transaction_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (original_transaction_id_.IsDefault()) {
+    original_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.VerifyPurchaseRequest.original_transaction_id)
+}
+
 // optional string receipt = 3;
 inline bool VerifyPurchaseRequest::_internal_has_receipt() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
@@ -54469,7 +61248,7 @@ inline void VerifyPurchaseRequest::set_allocated_platform(std::string* platform)
 
 // optional bool sandbox = 7;
 inline bool VerifyPurchaseRequest::_internal_has_sandbox() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool VerifyPurchaseRequest::has_sandbox() const {
@@ -54477,7 +61256,7 @@ inline bool VerifyPurchaseRequest::has_sandbox() const {
 }
 inline void VerifyPurchaseRequest::clear_sandbox() {
   sandbox_ = false;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline bool VerifyPurchaseRequest::_internal_sandbox() const {
   return sandbox_;
@@ -54487,7 +61266,7 @@ inline bool VerifyPurchaseRequest::sandbox() const {
   return _internal_sandbox();
 }
 inline void VerifyPurchaseRequest::_internal_set_sandbox(bool value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   sandbox_ = value;
 }
 inline void VerifyPurchaseRequest::set_sandbox(bool value) {
@@ -54497,7 +61276,7 @@ inline void VerifyPurchaseRequest::set_sandbox(bool value) {
 
 // optional .ei.GenericAction log = 5;
 inline bool VerifyPurchaseRequest::_internal_has_log() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   PROTOBUF_ASSUME(!value || log_ != nullptr);
   return value;
 }
@@ -54506,7 +61285,7 @@ inline bool VerifyPurchaseRequest::has_log() const {
 }
 inline void VerifyPurchaseRequest::clear_log() {
   if (log_ != nullptr) log_->Clear();
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline const ::ei::GenericAction& VerifyPurchaseRequest::_internal_log() const {
   const ::ei::GenericAction* p = log_;
@@ -54524,14 +61303,14 @@ inline void VerifyPurchaseRequest::unsafe_arena_set_allocated_log(
   }
   log_ = log;
   if (log) {
-    _has_bits_[0] |= 0x00000010u;
+    _has_bits_[0] |= 0x00000020u;
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    _has_bits_[0] &= ~0x00000020u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.VerifyPurchaseRequest.log)
 }
 inline ::ei::GenericAction* VerifyPurchaseRequest::release_log() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
   ::ei::GenericAction* temp = log_;
   log_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -54547,13 +61326,13 @@ inline ::ei::GenericAction* VerifyPurchaseRequest::release_log() {
 }
 inline ::ei::GenericAction* VerifyPurchaseRequest::unsafe_arena_release_log() {
   // @@protoc_insertion_point(field_release:ei.VerifyPurchaseRequest.log)
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
   ::ei::GenericAction* temp = log_;
   log_ = nullptr;
   return temp;
 }
 inline ::ei::GenericAction* VerifyPurchaseRequest::_internal_mutable_log() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   if (log_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::GenericAction>(GetArenaForAllocation());
     log_ = p;
@@ -54577,9 +61356,9 @@ inline void VerifyPurchaseRequest::set_allocated_log(::ei::GenericAction* log) {
       log = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, log, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000010u;
+    _has_bits_[0] |= 0x00000020u;
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    _has_bits_[0] &= ~0x00000020u;
   }
   log_ = log;
   // @@protoc_insertion_point(field_set_allocated:ei.VerifyPurchaseRequest.log)
@@ -55397,7 +62176,7 @@ inline void Reward::set_reward_amount(double value) {
 
 // GameModifier
 
-// optional .ei.GameDimension dimension = 1;
+// optional .ei.GameModifier.GameDimension dimension = 1;
 inline bool GameModifier::_internal_has_dimension() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -55409,49 +62188,49 @@ inline void GameModifier::clear_dimension() {
   dimension_ = 1;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline ::ei::GameDimension GameModifier::_internal_dimension() const {
-  return static_cast< ::ei::GameDimension >(dimension_);
+inline ::ei::GameModifier_GameDimension GameModifier::_internal_dimension() const {
+  return static_cast< ::ei::GameModifier_GameDimension >(dimension_);
 }
-inline ::ei::GameDimension GameModifier::dimension() const {
+inline ::ei::GameModifier_GameDimension GameModifier::dimension() const {
   // @@protoc_insertion_point(field_get:ei.GameModifier.dimension)
   return _internal_dimension();
 }
-inline void GameModifier::_internal_set_dimension(::ei::GameDimension value) {
-  assert(::ei::GameDimension_IsValid(value));
+inline void GameModifier::_internal_set_dimension(::ei::GameModifier_GameDimension value) {
+  assert(::ei::GameModifier_GameDimension_IsValid(value));
   _has_bits_[0] |= 0x00000004u;
   dimension_ = value;
 }
-inline void GameModifier::set_dimension(::ei::GameDimension value) {
+inline void GameModifier::set_dimension(::ei::GameModifier_GameDimension value) {
   _internal_set_dimension(value);
   // @@protoc_insertion_point(field_set:ei.GameModifier.dimension)
 }
 
-// optional double value_modifier = 2;
-inline bool GameModifier::_internal_has_value_modifier() const {
+// optional double value = 2;
+inline bool GameModifier::_internal_has_value() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool GameModifier::has_value_modifier() const {
-  return _internal_has_value_modifier();
+inline bool GameModifier::has_value() const {
+  return _internal_has_value();
 }
-inline void GameModifier::clear_value_modifier() {
-  value_modifier_ = 0;
+inline void GameModifier::clear_value() {
+  value_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline double GameModifier::_internal_value_modifier() const {
-  return value_modifier_;
+inline double GameModifier::_internal_value() const {
+  return value_;
 }
-inline double GameModifier::value_modifier() const {
-  // @@protoc_insertion_point(field_get:ei.GameModifier.value_modifier)
-  return _internal_value_modifier();
+inline double GameModifier::value() const {
+  // @@protoc_insertion_point(field_get:ei.GameModifier.value)
+  return _internal_value();
 }
-inline void GameModifier::_internal_set_value_modifier(double value) {
+inline void GameModifier::_internal_set_value(double value) {
   _has_bits_[0] |= 0x00000002u;
-  value_modifier_ = value;
+  value_ = value;
 }
-inline void GameModifier::set_value_modifier(double value) {
-  _internal_set_value_modifier(value);
-  // @@protoc_insertion_point(field_set:ei.GameModifier.value_modifier)
+inline void GameModifier::set_value(double value) {
+  _internal_set_value(value);
+  // @@protoc_insertion_point(field_set:ei.GameModifier.value)
 }
 
 // optional string description = 3;
@@ -55786,7 +62565,7 @@ Contract_GoalSet::goals() const {
 
 // optional .ei.Contract.PlayerGrade grade = 1;
 inline bool Contract_GradeSpec::_internal_has_grade() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Contract_GradeSpec::has_grade() const {
@@ -55794,7 +62573,7 @@ inline bool Contract_GradeSpec::has_grade() const {
 }
 inline void Contract_GradeSpec::clear_grade() {
   grade_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline ::ei::Contract_PlayerGrade Contract_GradeSpec::_internal_grade() const {
   return static_cast< ::ei::Contract_PlayerGrade >(grade_);
@@ -55805,7 +62584,7 @@ inline ::ei::Contract_PlayerGrade Contract_GradeSpec::grade() const {
 }
 inline void Contract_GradeSpec::_internal_set_grade(::ei::Contract_PlayerGrade value) {
   assert(::ei::Contract_PlayerGrade_IsValid(value));
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
   grade_ = value;
 }
 inline void Contract_GradeSpec::set_grade(::ei::Contract_PlayerGrade value) {
@@ -55891,6 +62670,34 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::GameModifier >&
 Contract_GradeSpec::modifiers() const {
   // @@protoc_insertion_point(field_list:ei.Contract.GradeSpec.modifiers)
   return modifiers_;
+}
+
+// optional double length_seconds = 4;
+inline bool Contract_GradeSpec::_internal_has_length_seconds() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Contract_GradeSpec::has_length_seconds() const {
+  return _internal_has_length_seconds();
+}
+inline void Contract_GradeSpec::clear_length_seconds() {
+  length_seconds_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline double Contract_GradeSpec::_internal_length_seconds() const {
+  return length_seconds_;
+}
+inline double Contract_GradeSpec::length_seconds() const {
+  // @@protoc_insertion_point(field_get:ei.Contract.GradeSpec.length_seconds)
+  return _internal_length_seconds();
+}
+inline void Contract_GradeSpec::_internal_set_length_seconds(double value) {
+  _has_bits_[0] |= 0x00000001u;
+  length_seconds_ = value;
+}
+inline void Contract_GradeSpec::set_length_seconds(double value) {
+  _internal_set_length_seconds(value);
+  // @@protoc_insertion_point(field_set:ei.Contract.GradeSpec.length_seconds)
 }
 
 // -------------------------------------------------------------------
@@ -56103,7 +62910,7 @@ inline void Contract::set_allocated_description(std::string* description) {
 
 // optional .ei.Egg egg = 2;
 inline bool Contract::_internal_has_egg() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool Contract::has_egg() const {
@@ -56111,7 +62918,7 @@ inline bool Contract::has_egg() const {
 }
 inline void Contract::clear_egg() {
   egg_ = 1;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline ::ei::Egg Contract::_internal_egg() const {
   return static_cast< ::ei::Egg >(egg_);
@@ -56122,7 +62929,7 @@ inline ::ei::Egg Contract::egg() const {
 }
 inline void Contract::_internal_set_egg(::ei::Egg value) {
   assert(::ei::Egg_IsValid(value));
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00010000u;
   egg_ = value;
 }
 inline void Contract::set_egg(::ei::Egg value) {
@@ -56250,9 +63057,77 @@ Contract::grade_specs() const {
   return grade_specs_;
 }
 
+// optional string season_id = 23;
+inline bool Contract::_internal_has_season_id() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Contract::has_season_id() const {
+  return _internal_has_season_id();
+}
+inline void Contract::clear_season_id() {
+  season_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& Contract::season_id() const {
+  // @@protoc_insertion_point(field_get:ei.Contract.season_id)
+  return _internal_season_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void Contract::set_season_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ season_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.Contract.season_id)
+}
+inline std::string* Contract::mutable_season_id() {
+  std::string* _s = _internal_mutable_season_id();
+  // @@protoc_insertion_point(field_mutable:ei.Contract.season_id)
+  return _s;
+}
+inline const std::string& Contract::_internal_season_id() const {
+  return season_id_.Get();
+}
+inline void Contract::_internal_set_season_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  season_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* Contract::_internal_mutable_season_id() {
+  _has_bits_[0] |= 0x00000010u;
+  return season_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* Contract::release_season_id() {
+  // @@protoc_insertion_point(field_release:ei.Contract.season_id)
+  if (!_internal_has_season_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  auto* p = season_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (season_id_.IsDefault()) {
+    season_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void Contract::set_allocated_season_id(std::string* season_id) {
+  if (season_id != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  season_id_.SetAllocated(season_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (season_id_.IsDefault()) {
+    season_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.Contract.season_id)
+}
+
 // optional bool coop_allowed = 4;
 inline bool Contract::_internal_has_coop_allowed() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Contract::has_coop_allowed() const {
@@ -56260,7 +63135,7 @@ inline bool Contract::has_coop_allowed() const {
 }
 inline void Contract::clear_coop_allowed() {
   coop_allowed_ = false;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool Contract::_internal_coop_allowed() const {
   return coop_allowed_;
@@ -56270,7 +63145,7 @@ inline bool Contract::coop_allowed() const {
   return _internal_coop_allowed();
 }
 inline void Contract::_internal_set_coop_allowed(bool value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000800u;
   coop_allowed_ = value;
 }
 inline void Contract::set_coop_allowed(bool value) {
@@ -56280,7 +63155,7 @@ inline void Contract::set_coop_allowed(bool value) {
 
 // optional uint32 max_coop_size = 5;
 inline bool Contract::_internal_has_max_coop_size() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool Contract::has_max_coop_size() const {
@@ -56288,7 +63163,7 @@ inline bool Contract::has_max_coop_size() const {
 }
 inline void Contract::clear_max_coop_size() {
   max_coop_size_ = 0u;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline uint32_t Contract::_internal_max_coop_size() const {
   return max_coop_size_;
@@ -56298,7 +63173,7 @@ inline uint32_t Contract::max_coop_size() const {
   return _internal_max_coop_size();
 }
 inline void Contract::_internal_set_max_coop_size(uint32_t value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   max_coop_size_ = value;
 }
 inline void Contract::set_max_coop_size(uint32_t value) {
@@ -56308,7 +63183,7 @@ inline void Contract::set_max_coop_size(uint32_t value) {
 
 // optional uint32 max_boosts = 12;
 inline bool Contract::_internal_has_max_boosts() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool Contract::has_max_boosts() const {
@@ -56316,7 +63191,7 @@ inline bool Contract::has_max_boosts() const {
 }
 inline void Contract::clear_max_boosts() {
   max_boosts_ = 0u;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline uint32_t Contract::_internal_max_boosts() const {
   return max_boosts_;
@@ -56326,7 +63201,7 @@ inline uint32_t Contract::max_boosts() const {
   return _internal_max_boosts();
 }
 inline void Contract::_internal_set_max_boosts(uint32_t value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000100u;
   max_boosts_ = value;
 }
 inline void Contract::set_max_boosts(uint32_t value) {
@@ -56336,7 +63211,7 @@ inline void Contract::set_max_boosts(uint32_t value) {
 
 // optional double minutes_per_token = 15 [default = 60];
 inline bool Contract::_internal_has_minutes_per_token() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool Contract::has_minutes_per_token() const {
@@ -56344,7 +63219,7 @@ inline bool Contract::has_minutes_per_token() const {
 }
 inline void Contract::clear_minutes_per_token() {
   minutes_per_token_ = 60;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline double Contract::_internal_minutes_per_token() const {
   return minutes_per_token_;
@@ -56354,7 +63229,7 @@ inline double Contract::minutes_per_token() const {
   return _internal_minutes_per_token();
 }
 inline void Contract::_internal_set_minutes_per_token(double value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00020000u;
   minutes_per_token_ = value;
 }
 inline void Contract::set_minutes_per_token(double value) {
@@ -56362,17 +63237,17 @@ inline void Contract::set_minutes_per_token(double value) {
   // @@protoc_insertion_point(field_set:ei.Contract.minutes_per_token)
 }
 
-// optional double chicken_run_cooldown_minutes = 18 [default = 60];
+// optional double chicken_run_cooldown_minutes = 18 [default = 180];
 inline bool Contract::_internal_has_chicken_run_cooldown_minutes() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool Contract::has_chicken_run_cooldown_minutes() const {
   return _internal_has_chicken_run_cooldown_minutes();
 }
 inline void Contract::clear_chicken_run_cooldown_minutes() {
-  chicken_run_cooldown_minutes_ = 60;
-  _has_bits_[0] &= ~0x00010000u;
+  chicken_run_cooldown_minutes_ = 180;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline double Contract::_internal_chicken_run_cooldown_minutes() const {
   return chicken_run_cooldown_minutes_;
@@ -56382,7 +63257,7 @@ inline double Contract::chicken_run_cooldown_minutes() const {
   return _internal_chicken_run_cooldown_minutes();
 }
 inline void Contract::_internal_set_chicken_run_cooldown_minutes(double value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00040000u;
   chicken_run_cooldown_minutes_ = value;
 }
 inline void Contract::set_chicken_run_cooldown_minutes(double value) {
@@ -56392,7 +63267,7 @@ inline void Contract::set_chicken_run_cooldown_minutes(double value) {
 
 // optional double start_time = 17;
 inline bool Contract::_internal_has_start_time() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool Contract::has_start_time() const {
@@ -56400,7 +63275,7 @@ inline bool Contract::has_start_time() const {
 }
 inline void Contract::clear_start_time() {
   start_time_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline double Contract::_internal_start_time() const {
   return start_time_;
@@ -56410,7 +63285,7 @@ inline double Contract::start_time() const {
   return _internal_start_time();
 }
 inline void Contract::_internal_set_start_time(double value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00008000u;
   start_time_ = value;
 }
 inline void Contract::set_start_time(double value) {
@@ -56420,7 +63295,7 @@ inline void Contract::set_start_time(double value) {
 
 // optional double expiration_time = 6;
 inline bool Contract::_internal_has_expiration_time() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Contract::has_expiration_time() const {
@@ -56428,7 +63303,7 @@ inline bool Contract::has_expiration_time() const {
 }
 inline void Contract::clear_expiration_time() {
   expiration_time_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline double Contract::_internal_expiration_time() const {
   return expiration_time_;
@@ -56438,7 +63313,7 @@ inline double Contract::expiration_time() const {
   return _internal_expiration_time();
 }
 inline void Contract::_internal_set_expiration_time(double value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   expiration_time_ = value;
 }
 inline void Contract::set_expiration_time(double value) {
@@ -56448,7 +63323,7 @@ inline void Contract::set_expiration_time(double value) {
 
 // optional double length_seconds = 7;
 inline bool Contract::_internal_has_length_seconds() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool Contract::has_length_seconds() const {
@@ -56456,7 +63331,7 @@ inline bool Contract::has_length_seconds() const {
 }
 inline void Contract::clear_length_seconds() {
   length_seconds_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline double Contract::_internal_length_seconds() const {
   return length_seconds_;
@@ -56466,7 +63341,7 @@ inline double Contract::length_seconds() const {
   return _internal_length_seconds();
 }
 inline void Contract::_internal_set_length_seconds(double value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   length_seconds_ = value;
 }
 inline void Contract::set_length_seconds(double value) {
@@ -56476,7 +63351,7 @@ inline void Contract::set_length_seconds(double value) {
 
 // optional double max_soul_eggs = 13;
 inline bool Contract::_internal_has_max_soul_eggs() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool Contract::has_max_soul_eggs() const {
@@ -56484,7 +63359,7 @@ inline bool Contract::has_max_soul_eggs() const {
 }
 inline void Contract::clear_max_soul_eggs() {
   max_soul_eggs_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline double Contract::_internal_max_soul_eggs() const {
   return max_soul_eggs_;
@@ -56494,7 +63369,7 @@ inline double Contract::max_soul_eggs() const {
   return _internal_max_soul_eggs();
 }
 inline void Contract::_internal_set_max_soul_eggs(double value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
   max_soul_eggs_ = value;
 }
 inline void Contract::set_max_soul_eggs(double value) {
@@ -56504,7 +63379,7 @@ inline void Contract::set_max_soul_eggs(double value) {
 
 // optional uint32 min_client_version = 14;
 inline bool Contract::_internal_has_min_client_version() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool Contract::has_min_client_version() const {
@@ -56512,7 +63387,7 @@ inline bool Contract::has_min_client_version() const {
 }
 inline void Contract::clear_min_client_version() {
   min_client_version_ = 0u;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t Contract::_internal_min_client_version() const {
   return min_client_version_;
@@ -56522,7 +63397,7 @@ inline uint32_t Contract::min_client_version() const {
   return _internal_min_client_version();
 }
 inline void Contract::_internal_set_min_client_version(uint32_t value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000400u;
   min_client_version_ = value;
 }
 inline void Contract::set_min_client_version(uint32_t value) {
@@ -56532,7 +63407,7 @@ inline void Contract::set_min_client_version(uint32_t value) {
 
 // optional bool leggacy = 19;
 inline bool Contract::_internal_has_leggacy() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool Contract::has_leggacy() const {
@@ -56540,7 +63415,7 @@ inline bool Contract::has_leggacy() const {
 }
 inline void Contract::clear_leggacy() {
   leggacy_ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline bool Contract::_internal_leggacy() const {
   return leggacy_;
@@ -56550,7 +63425,7 @@ inline bool Contract::leggacy() const {
   return _internal_leggacy();
 }
 inline void Contract::_internal_set_leggacy(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00001000u;
   leggacy_ = value;
 }
 inline void Contract::set_leggacy(bool value) {
@@ -56558,9 +63433,37 @@ inline void Contract::set_leggacy(bool value) {
   // @@protoc_insertion_point(field_set:ei.Contract.leggacy)
 }
 
+// optional bool cc_only = 22;
+inline bool Contract::_internal_has_cc_only() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool Contract::has_cc_only() const {
+  return _internal_has_cc_only();
+}
+inline void Contract::clear_cc_only() {
+  cc_only_ = false;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline bool Contract::_internal_cc_only() const {
+  return cc_only_;
+}
+inline bool Contract::cc_only() const {
+  // @@protoc_insertion_point(field_get:ei.Contract.cc_only)
+  return _internal_cc_only();
+}
+inline void Contract::_internal_set_cc_only(bool value) {
+  _has_bits_[0] |= 0x00002000u;
+  cc_only_ = value;
+}
+inline void Contract::set_cc_only(bool value) {
+  _internal_set_cc_only(value);
+  // @@protoc_insertion_point(field_set:ei.Contract.cc_only)
+}
+
 // optional bool debug = 11;
 inline bool Contract::_internal_has_debug() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool Contract::has_debug() const {
@@ -56568,7 +63471,7 @@ inline bool Contract::has_debug() const {
 }
 inline void Contract::clear_debug() {
   debug_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool Contract::_internal_debug() const {
   return debug_;
@@ -56578,7 +63481,7 @@ inline bool Contract::debug() const {
   return _internal_debug();
 }
 inline void Contract::_internal_set_debug(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00004000u;
   debug_ = value;
 }
 inline void Contract::set_debug(bool value) {
@@ -56660,7 +63563,7 @@ inline void Contract::set_allocated_key(std::string* key) {
 
 // optional .ei.Contract.PlayerGrade grade = 1;
 inline bool ContractPlayerInfo::_internal_has_grade() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool ContractPlayerInfo::has_grade() const {
@@ -56668,7 +63571,7 @@ inline bool ContractPlayerInfo::has_grade() const {
 }
 inline void ContractPlayerInfo::clear_grade() {
   grade_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline ::ei::Contract_PlayerGrade ContractPlayerInfo::_internal_grade() const {
   return static_cast< ::ei::Contract_PlayerGrade >(grade_);
@@ -56679,7 +63582,7 @@ inline ::ei::Contract_PlayerGrade ContractPlayerInfo::grade() const {
 }
 inline void ContractPlayerInfo::_internal_set_grade(::ei::Contract_PlayerGrade value) {
   assert(::ei::Contract_PlayerGrade_IsValid(value));
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
   grade_ = value;
 }
 inline void ContractPlayerInfo::set_grade(::ei::Contract_PlayerGrade value) {
@@ -56689,7 +63592,7 @@ inline void ContractPlayerInfo::set_grade(::ei::Contract_PlayerGrade value) {
 
 // optional double total_cxp = 2;
 inline bool ContractPlayerInfo::_internal_has_total_cxp() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool ContractPlayerInfo::has_total_cxp() const {
@@ -56697,7 +63600,7 @@ inline bool ContractPlayerInfo::has_total_cxp() const {
 }
 inline void ContractPlayerInfo::clear_total_cxp() {
   total_cxp_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline double ContractPlayerInfo::_internal_total_cxp() const {
   return total_cxp_;
@@ -56707,12 +63610,2040 @@ inline double ContractPlayerInfo::total_cxp() const {
   return _internal_total_cxp();
 }
 inline void ContractPlayerInfo::_internal_set_total_cxp(double value) {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
   total_cxp_ = value;
 }
 inline void ContractPlayerInfo::set_total_cxp(double value) {
   _internal_set_total_cxp(value);
   // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.total_cxp)
+}
+
+// optional double season_cxp = 13;
+inline bool ContractPlayerInfo::_internal_has_season_cxp() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_season_cxp() const {
+  return _internal_has_season_cxp();
+}
+inline void ContractPlayerInfo::clear_season_cxp() {
+  season_cxp_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline double ContractPlayerInfo::_internal_season_cxp() const {
+  return season_cxp_;
+}
+inline double ContractPlayerInfo::season_cxp() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.season_cxp)
+  return _internal_season_cxp();
+}
+inline void ContractPlayerInfo::_internal_set_season_cxp(double value) {
+  _has_bits_[0] |= 0x00000400u;
+  season_cxp_ = value;
+}
+inline void ContractPlayerInfo::set_season_cxp(double value) {
+  _internal_set_season_cxp(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.season_cxp)
+}
+
+// optional double grade_score = 7;
+inline bool ContractPlayerInfo::_internal_has_grade_score() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_grade_score() const {
+  return _internal_has_grade_score();
+}
+inline void ContractPlayerInfo::clear_grade_score() {
+  grade_score_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double ContractPlayerInfo::_internal_grade_score() const {
+  return grade_score_;
+}
+inline double ContractPlayerInfo::grade_score() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.grade_score)
+  return _internal_grade_score();
+}
+inline void ContractPlayerInfo::_internal_set_grade_score(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  grade_score_ = value;
+}
+inline void ContractPlayerInfo::set_grade_score(double value) {
+  _internal_set_grade_score(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.grade_score)
+}
+
+// optional double target_grade_score = 9;
+inline bool ContractPlayerInfo::_internal_has_target_grade_score() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_target_grade_score() const {
+  return _internal_has_target_grade_score();
+}
+inline void ContractPlayerInfo::clear_target_grade_score() {
+  target_grade_score_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline double ContractPlayerInfo::_internal_target_grade_score() const {
+  return target_grade_score_;
+}
+inline double ContractPlayerInfo::target_grade_score() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.target_grade_score)
+  return _internal_target_grade_score();
+}
+inline void ContractPlayerInfo::_internal_set_target_grade_score(double value) {
+  _has_bits_[0] |= 0x00000080u;
+  target_grade_score_ = value;
+}
+inline void ContractPlayerInfo::set_target_grade_score(double value) {
+  _internal_set_target_grade_score(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.target_grade_score)
+}
+
+// optional double soul_power = 10;
+inline bool ContractPlayerInfo::_internal_has_soul_power() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_soul_power() const {
+  return _internal_has_soul_power();
+}
+inline void ContractPlayerInfo::clear_soul_power() {
+  soul_power_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline double ContractPlayerInfo::_internal_soul_power() const {
+  return soul_power_;
+}
+inline double ContractPlayerInfo::soul_power() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.soul_power)
+  return _internal_soul_power();
+}
+inline void ContractPlayerInfo::_internal_set_soul_power(double value) {
+  _has_bits_[0] |= 0x00000100u;
+  soul_power_ = value;
+}
+inline void ContractPlayerInfo::set_soul_power(double value) {
+  _internal_set_soul_power(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.soul_power)
+}
+
+// optional double target_soul_power = 8;
+inline bool ContractPlayerInfo::_internal_has_target_soul_power() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_target_soul_power() const {
+  return _internal_has_target_soul_power();
+}
+inline void ContractPlayerInfo::clear_target_soul_power() {
+  target_soul_power_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline double ContractPlayerInfo::_internal_target_soul_power() const {
+  return target_soul_power_;
+}
+inline double ContractPlayerInfo::target_soul_power() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.target_soul_power)
+  return _internal_target_soul_power();
+}
+inline void ContractPlayerInfo::_internal_set_target_soul_power(double value) {
+  _has_bits_[0] |= 0x00000040u;
+  target_soul_power_ = value;
+}
+inline void ContractPlayerInfo::set_target_soul_power(double value) {
+  _internal_set_target_soul_power(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.target_soul_power)
+}
+
+// optional double grade_progress = 12;
+inline bool ContractPlayerInfo::_internal_has_grade_progress() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_grade_progress() const {
+  return _internal_has_grade_progress();
+}
+inline void ContractPlayerInfo::clear_grade_progress() {
+  grade_progress_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline double ContractPlayerInfo::_internal_grade_progress() const {
+  return grade_progress_;
+}
+inline double ContractPlayerInfo::grade_progress() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.grade_progress)
+  return _internal_grade_progress();
+}
+inline void ContractPlayerInfo::_internal_set_grade_progress(double value) {
+  _has_bits_[0] |= 0x00000200u;
+  grade_progress_ = value;
+}
+inline void ContractPlayerInfo::set_grade_progress(double value) {
+  _internal_set_grade_progress(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.grade_progress)
+}
+
+// repeated .ei.ContractEvaluation.PoorBehavior issues = 11;
+inline int ContractPlayerInfo::_internal_issues_size() const {
+  return issues_.size();
+}
+inline int ContractPlayerInfo::issues_size() const {
+  return _internal_issues_size();
+}
+inline void ContractPlayerInfo::clear_issues() {
+  issues_.Clear();
+}
+inline ::ei::ContractEvaluation_PoorBehavior ContractPlayerInfo::_internal_issues(int index) const {
+  return static_cast< ::ei::ContractEvaluation_PoorBehavior >(issues_.Get(index));
+}
+inline ::ei::ContractEvaluation_PoorBehavior ContractPlayerInfo::issues(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.issues)
+  return _internal_issues(index);
+}
+inline void ContractPlayerInfo::set_issues(int index, ::ei::ContractEvaluation_PoorBehavior value) {
+  assert(::ei::ContractEvaluation_PoorBehavior_IsValid(value));
+  issues_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.issues)
+}
+inline void ContractPlayerInfo::_internal_add_issues(::ei::ContractEvaluation_PoorBehavior value) {
+  assert(::ei::ContractEvaluation_PoorBehavior_IsValid(value));
+  issues_.Add(value);
+}
+inline void ContractPlayerInfo::add_issues(::ei::ContractEvaluation_PoorBehavior value) {
+  _internal_add_issues(value);
+  // @@protoc_insertion_point(field_add:ei.ContractPlayerInfo.issues)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>&
+ContractPlayerInfo::issues() const {
+  // @@protoc_insertion_point(field_list:ei.ContractPlayerInfo.issues)
+  return issues_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
+ContractPlayerInfo::_internal_mutable_issues() {
+  return &issues_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
+ContractPlayerInfo::mutable_issues() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractPlayerInfo.issues)
+  return _internal_mutable_issues();
+}
+
+// optional double issue_score = 14;
+inline bool ContractPlayerInfo::_internal_has_issue_score() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_issue_score() const {
+  return _internal_has_issue_score();
+}
+inline void ContractPlayerInfo::clear_issue_score() {
+  issue_score_ = 0;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline double ContractPlayerInfo::_internal_issue_score() const {
+  return issue_score_;
+}
+inline double ContractPlayerInfo::issue_score() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.issue_score)
+  return _internal_issue_score();
+}
+inline void ContractPlayerInfo::_internal_set_issue_score(double value) {
+  _has_bits_[0] |= 0x00000800u;
+  issue_score_ = value;
+}
+inline void ContractPlayerInfo::set_issue_score(double value) {
+  _internal_set_issue_score(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.issue_score)
+}
+
+// optional .ei.ContractPlayerInfo.Status status = 3;
+inline bool ContractPlayerInfo::_internal_has_status() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_status() const {
+  return _internal_has_status();
+}
+inline void ContractPlayerInfo::clear_status() {
+  status_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::ei::ContractPlayerInfo_Status ContractPlayerInfo::_internal_status() const {
+  return static_cast< ::ei::ContractPlayerInfo_Status >(status_);
+}
+inline ::ei::ContractPlayerInfo_Status ContractPlayerInfo::status() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.status)
+  return _internal_status();
+}
+inline void ContractPlayerInfo::_internal_set_status(::ei::ContractPlayerInfo_Status value) {
+  assert(::ei::ContractPlayerInfo_Status_IsValid(value));
+  _has_bits_[0] |= 0x00000008u;
+  status_ = value;
+}
+inline void ContractPlayerInfo::set_status(::ei::ContractPlayerInfo_Status value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.status)
+}
+
+// optional double last_evaluation_time = 4;
+inline bool ContractPlayerInfo::_internal_has_last_evaluation_time() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_last_evaluation_time() const {
+  return _internal_has_last_evaluation_time();
+}
+inline void ContractPlayerInfo::clear_last_evaluation_time() {
+  last_evaluation_time_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline double ContractPlayerInfo::_internal_last_evaluation_time() const {
+  return last_evaluation_time_;
+}
+inline double ContractPlayerInfo::last_evaluation_time() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.last_evaluation_time)
+  return _internal_last_evaluation_time();
+}
+inline void ContractPlayerInfo::_internal_set_last_evaluation_time(double value) {
+  _has_bits_[0] |= 0x00000010u;
+  last_evaluation_time_ = value;
+}
+inline void ContractPlayerInfo::set_last_evaluation_time(double value) {
+  _internal_set_last_evaluation_time(value);
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.last_evaluation_time)
+}
+
+// optional string last_evaluation_version = 5;
+inline bool ContractPlayerInfo::_internal_has_last_evaluation_version() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractPlayerInfo::has_last_evaluation_version() const {
+  return _internal_has_last_evaluation_version();
+}
+inline void ContractPlayerInfo::clear_last_evaluation_version() {
+  last_evaluation_version_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ContractPlayerInfo::last_evaluation_version() const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.last_evaluation_version)
+  return _internal_last_evaluation_version();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractPlayerInfo::set_last_evaluation_version(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ last_evaluation_version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractPlayerInfo.last_evaluation_version)
+}
+inline std::string* ContractPlayerInfo::mutable_last_evaluation_version() {
+  std::string* _s = _internal_mutable_last_evaluation_version();
+  // @@protoc_insertion_point(field_mutable:ei.ContractPlayerInfo.last_evaluation_version)
+  return _s;
+}
+inline const std::string& ContractPlayerInfo::_internal_last_evaluation_version() const {
+  return last_evaluation_version_.Get();
+}
+inline void ContractPlayerInfo::_internal_set_last_evaluation_version(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  last_evaluation_version_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractPlayerInfo::_internal_mutable_last_evaluation_version() {
+  _has_bits_[0] |= 0x00000001u;
+  return last_evaluation_version_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractPlayerInfo::release_last_evaluation_version() {
+  // @@protoc_insertion_point(field_release:ei.ContractPlayerInfo.last_evaluation_version)
+  if (!_internal_has_last_evaluation_version()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = last_evaluation_version_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (last_evaluation_version_.IsDefault()) {
+    last_evaluation_version_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractPlayerInfo::set_allocated_last_evaluation_version(std::string* last_evaluation_version) {
+  if (last_evaluation_version != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  last_evaluation_version_.SetAllocated(last_evaluation_version, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (last_evaluation_version_.IsDefault()) {
+    last_evaluation_version_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractPlayerInfo.last_evaluation_version)
+}
+
+// repeated .ei.ContractEvaluation unread_evaluations = 6;
+inline int ContractPlayerInfo::_internal_unread_evaluations_size() const {
+  return unread_evaluations_.size();
+}
+inline int ContractPlayerInfo::unread_evaluations_size() const {
+  return _internal_unread_evaluations_size();
+}
+inline void ContractPlayerInfo::clear_unread_evaluations() {
+  unread_evaluations_.Clear();
+}
+inline ::ei::ContractEvaluation* ContractPlayerInfo::mutable_unread_evaluations(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ContractPlayerInfo.unread_evaluations)
+  return unread_evaluations_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >*
+ContractPlayerInfo::mutable_unread_evaluations() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractPlayerInfo.unread_evaluations)
+  return &unread_evaluations_;
+}
+inline const ::ei::ContractEvaluation& ContractPlayerInfo::_internal_unread_evaluations(int index) const {
+  return unread_evaluations_.Get(index);
+}
+inline const ::ei::ContractEvaluation& ContractPlayerInfo::unread_evaluations(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractPlayerInfo.unread_evaluations)
+  return _internal_unread_evaluations(index);
+}
+inline ::ei::ContractEvaluation* ContractPlayerInfo::_internal_add_unread_evaluations() {
+  return unread_evaluations_.Add();
+}
+inline ::ei::ContractEvaluation* ContractPlayerInfo::add_unread_evaluations() {
+  ::ei::ContractEvaluation* _add = _internal_add_unread_evaluations();
+  // @@protoc_insertion_point(field_add:ei.ContractPlayerInfo.unread_evaluations)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >&
+ContractPlayerInfo::unread_evaluations() const {
+  // @@protoc_insertion_point(field_list:ei.ContractPlayerInfo.unread_evaluations)
+  return unread_evaluations_;
+}
+
+// -------------------------------------------------------------------
+
+// ContractEvaluation
+
+// optional string contract_identifier = 40;
+inline bool ContractEvaluation::_internal_has_contract_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_contract_identifier() const {
+  return _internal_has_contract_identifier();
+}
+inline void ContractEvaluation::clear_contract_identifier() {
+  contract_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ContractEvaluation::contract_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.contract_identifier)
+  return _internal_contract_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractEvaluation::set_contract_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ contract_identifier_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.contract_identifier)
+}
+inline std::string* ContractEvaluation::mutable_contract_identifier() {
+  std::string* _s = _internal_mutable_contract_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluation.contract_identifier)
+  return _s;
+}
+inline const std::string& ContractEvaluation::_internal_contract_identifier() const {
+  return contract_identifier_.Get();
+}
+inline void ContractEvaluation::_internal_set_contract_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  contract_identifier_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::_internal_mutable_contract_identifier() {
+  _has_bits_[0] |= 0x00000002u;
+  return contract_identifier_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::release_contract_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ContractEvaluation.contract_identifier)
+  if (!_internal_has_contract_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = contract_identifier_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault()) {
+    contract_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractEvaluation::set_allocated_contract_identifier(std::string* contract_identifier) {
+  if (contract_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  contract_identifier_.SetAllocated(contract_identifier, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault()) {
+    contract_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.contract_identifier)
+}
+
+// optional string coop_identifier = 41;
+inline bool ContractEvaluation::_internal_has_coop_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_coop_identifier() const {
+  return _internal_has_coop_identifier();
+}
+inline void ContractEvaluation::clear_coop_identifier() {
+  coop_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ContractEvaluation::coop_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.coop_identifier)
+  return _internal_coop_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractEvaluation::set_coop_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ coop_identifier_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.coop_identifier)
+}
+inline std::string* ContractEvaluation::mutable_coop_identifier() {
+  std::string* _s = _internal_mutable_coop_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluation.coop_identifier)
+  return _s;
+}
+inline const std::string& ContractEvaluation::_internal_coop_identifier() const {
+  return coop_identifier_.Get();
+}
+inline void ContractEvaluation::_internal_set_coop_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  coop_identifier_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::_internal_mutable_coop_identifier() {
+  _has_bits_[0] |= 0x00000004u;
+  return coop_identifier_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::release_coop_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ContractEvaluation.coop_identifier)
+  if (!_internal_has_coop_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = coop_identifier_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_identifier_.IsDefault()) {
+    coop_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractEvaluation::set_allocated_coop_identifier(std::string* coop_identifier) {
+  if (coop_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  coop_identifier_.SetAllocated(coop_identifier, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_identifier_.IsDefault()) {
+    coop_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.coop_identifier)
+}
+
+// optional double cxp = 1;
+inline bool ContractEvaluation::_internal_has_cxp() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_cxp() const {
+  return _internal_has_cxp();
+}
+inline void ContractEvaluation::clear_cxp() {
+  cxp_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline double ContractEvaluation::_internal_cxp() const {
+  return cxp_;
+}
+inline double ContractEvaluation::cxp() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.cxp)
+  return _internal_cxp();
+}
+inline void ContractEvaluation::_internal_set_cxp(double value) {
+  _has_bits_[0] |= 0x00000010u;
+  cxp_ = value;
+}
+inline void ContractEvaluation::set_cxp(double value) {
+  _internal_set_cxp(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.cxp)
+}
+
+// optional bool replay = 24;
+inline bool ContractEvaluation::_internal_has_replay() const {
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_replay() const {
+  return _internal_has_replay();
+}
+inline void ContractEvaluation::clear_replay() {
+  replay_ = false;
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline bool ContractEvaluation::_internal_replay() const {
+  return replay_;
+}
+inline bool ContractEvaluation::replay() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.replay)
+  return _internal_replay();
+}
+inline void ContractEvaluation::_internal_set_replay(bool value) {
+  _has_bits_[0] |= 0x00800000u;
+  replay_ = value;
+}
+inline void ContractEvaluation::set_replay(bool value) {
+  _internal_set_replay(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.replay)
+}
+
+// optional double cxp_change = 25;
+inline bool ContractEvaluation::_internal_has_cxp_change() const {
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_cxp_change() const {
+  return _internal_has_cxp_change();
+}
+inline void ContractEvaluation::clear_cxp_change() {
+  cxp_change_ = 0;
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline double ContractEvaluation::_internal_cxp_change() const {
+  return cxp_change_;
+}
+inline double ContractEvaluation::cxp_change() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.cxp_change)
+  return _internal_cxp_change();
+}
+inline void ContractEvaluation::_internal_set_cxp_change(double value) {
+  _has_bits_[0] |= 0x00400000u;
+  cxp_change_ = value;
+}
+inline void ContractEvaluation::set_cxp_change(double value) {
+  _internal_set_cxp_change(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.cxp_change)
+}
+
+// optional int32 grade_performance = 2;
+inline bool ContractEvaluation::_internal_has_grade_performance() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_grade_performance() const {
+  return _internal_has_grade_performance();
+}
+inline void ContractEvaluation::clear_grade_performance() {
+  grade_performance_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline int32_t ContractEvaluation::_internal_grade_performance() const {
+  return grade_performance_;
+}
+inline int32_t ContractEvaluation::grade_performance() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.grade_performance)
+  return _internal_grade_performance();
+}
+inline void ContractEvaluation::_internal_set_grade_performance(int32_t value) {
+  _has_bits_[0] |= 0x00000020u;
+  grade_performance_ = value;
+}
+inline void ContractEvaluation::set_grade_performance(int32_t value) {
+  _internal_set_grade_performance(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.grade_performance)
+}
+
+// optional int32 old_league = 9;
+inline bool ContractEvaluation::_internal_has_old_league() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_old_league() const {
+  return _internal_has_old_league();
+}
+inline void ContractEvaluation::clear_old_league() {
+  old_league_ = 0;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline int32_t ContractEvaluation::_internal_old_league() const {
+  return old_league_;
+}
+inline int32_t ContractEvaluation::old_league() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.old_league)
+  return _internal_old_league();
+}
+inline void ContractEvaluation::_internal_set_old_league(int32_t value) {
+  _has_bits_[0] |= 0x00002000u;
+  old_league_ = value;
+}
+inline void ContractEvaluation::set_old_league(int32_t value) {
+  _internal_set_old_league(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.old_league)
+}
+
+// optional bool old_goals = 10;
+inline bool ContractEvaluation::_internal_has_old_goals() const {
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_old_goals() const {
+  return _internal_has_old_goals();
+}
+inline void ContractEvaluation::clear_old_goals() {
+  old_goals_ = false;
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline bool ContractEvaluation::_internal_old_goals() const {
+  return old_goals_;
+}
+inline bool ContractEvaluation::old_goals() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.old_goals)
+  return _internal_old_goals();
+}
+inline void ContractEvaluation::_internal_set_old_goals(bool value) {
+  _has_bits_[0] |= 0x01000000u;
+  old_goals_ = value;
+}
+inline void ContractEvaluation::set_old_goals(bool value) {
+  _internal_set_old_goals(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.old_goals)
+}
+
+// optional .ei.Contract.PlayerGrade grade = 3;
+inline bool ContractEvaluation::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_grade() const {
+  return _internal_has_grade();
+}
+inline void ContractEvaluation::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline ::ei::Contract_PlayerGrade ContractEvaluation::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade ContractEvaluation::grade() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.grade)
+  return _internal_grade();
+}
+inline void ContractEvaluation::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000040u;
+  grade_ = value;
+}
+inline void ContractEvaluation::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.grade)
+}
+
+// optional double contribution_ratio = 4;
+inline bool ContractEvaluation::_internal_has_contribution_ratio() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_contribution_ratio() const {
+  return _internal_has_contribution_ratio();
+}
+inline void ContractEvaluation::clear_contribution_ratio() {
+  contribution_ratio_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline double ContractEvaluation::_internal_contribution_ratio() const {
+  return contribution_ratio_;
+}
+inline double ContractEvaluation::contribution_ratio() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.contribution_ratio)
+  return _internal_contribution_ratio();
+}
+inline void ContractEvaluation::_internal_set_contribution_ratio(double value) {
+  _has_bits_[0] |= 0x00000080u;
+  contribution_ratio_ = value;
+}
+inline void ContractEvaluation::set_contribution_ratio(double value) {
+  _internal_set_contribution_ratio(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.contribution_ratio)
+}
+
+// optional double completion_percent = 5;
+inline bool ContractEvaluation::_internal_has_completion_percent() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_completion_percent() const {
+  return _internal_has_completion_percent();
+}
+inline void ContractEvaluation::clear_completion_percent() {
+  completion_percent_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline double ContractEvaluation::_internal_completion_percent() const {
+  return completion_percent_;
+}
+inline double ContractEvaluation::completion_percent() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.completion_percent)
+  return _internal_completion_percent();
+}
+inline void ContractEvaluation::_internal_set_completion_percent(double value) {
+  _has_bits_[0] |= 0x00000100u;
+  completion_percent_ = value;
+}
+inline void ContractEvaluation::set_completion_percent(double value) {
+  _internal_set_completion_percent(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.completion_percent)
+}
+
+// optional double original_length = 11;
+inline bool ContractEvaluation::_internal_has_original_length() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_original_length() const {
+  return _internal_has_original_length();
+}
+inline void ContractEvaluation::clear_original_length() {
+  original_length_ = 0;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline double ContractEvaluation::_internal_original_length() const {
+  return original_length_;
+}
+inline double ContractEvaluation::original_length() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.original_length)
+  return _internal_original_length();
+}
+inline void ContractEvaluation::_internal_set_original_length(double value) {
+  _has_bits_[0] |= 0x00001000u;
+  original_length_ = value;
+}
+inline void ContractEvaluation::set_original_length(double value) {
+  _internal_set_original_length(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.original_length)
+}
+
+// optional uint32 coop_size = 18;
+inline bool ContractEvaluation::_internal_has_coop_size() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_coop_size() const {
+  return _internal_has_coop_size();
+}
+inline void ContractEvaluation::clear_coop_size() {
+  coop_size_ = 0u;
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline uint32_t ContractEvaluation::_internal_coop_size() const {
+  return coop_size_;
+}
+inline uint32_t ContractEvaluation::coop_size() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.coop_size)
+  return _internal_coop_size();
+}
+inline void ContractEvaluation::_internal_set_coop_size(uint32_t value) {
+  _has_bits_[0] |= 0x00080000u;
+  coop_size_ = value;
+}
+inline void ContractEvaluation::set_coop_size(uint32_t value) {
+  _internal_set_coop_size(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.coop_size)
+}
+
+// optional bool solo = 26;
+inline bool ContractEvaluation::_internal_has_solo() const {
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_solo() const {
+  return _internal_has_solo();
+}
+inline void ContractEvaluation::clear_solo() {
+  solo_ = false;
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline bool ContractEvaluation::_internal_solo() const {
+  return solo_;
+}
+inline bool ContractEvaluation::solo() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.solo)
+  return _internal_solo();
+}
+inline void ContractEvaluation::_internal_set_solo(bool value) {
+  _has_bits_[0] |= 0x02000000u;
+  solo_ = value;
+}
+inline void ContractEvaluation::set_solo(bool value) {
+  _internal_set_solo(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.solo)
+}
+
+// optional double soul_power = 23;
+inline bool ContractEvaluation::_internal_has_soul_power() const {
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_soul_power() const {
+  return _internal_has_soul_power();
+}
+inline void ContractEvaluation::clear_soul_power() {
+  soul_power_ = 0;
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline double ContractEvaluation::_internal_soul_power() const {
+  return soul_power_;
+}
+inline double ContractEvaluation::soul_power() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.soul_power)
+  return _internal_soul_power();
+}
+inline void ContractEvaluation::_internal_set_soul_power(double value) {
+  _has_bits_[0] |= 0x00200000u;
+  soul_power_ = value;
+}
+inline void ContractEvaluation::set_soul_power(double value) {
+  _internal_set_soul_power(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.soul_power)
+}
+
+// optional double last_contribution_time = 22;
+inline bool ContractEvaluation::_internal_has_last_contribution_time() const {
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_last_contribution_time() const {
+  return _internal_has_last_contribution_time();
+}
+inline void ContractEvaluation::clear_last_contribution_time() {
+  last_contribution_time_ = 0;
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline double ContractEvaluation::_internal_last_contribution_time() const {
+  return last_contribution_time_;
+}
+inline double ContractEvaluation::last_contribution_time() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.last_contribution_time)
+  return _internal_last_contribution_time();
+}
+inline void ContractEvaluation::_internal_set_last_contribution_time(double value) {
+  _has_bits_[0] |= 0x00100000u;
+  last_contribution_time_ = value;
+}
+inline void ContractEvaluation::set_last_contribution_time(double value) {
+  _internal_set_last_contribution_time(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.last_contribution_time)
+}
+
+// optional double completion_time = 6;
+inline bool ContractEvaluation::_internal_has_completion_time() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_completion_time() const {
+  return _internal_has_completion_time();
+}
+inline void ContractEvaluation::clear_completion_time() {
+  completion_time_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline double ContractEvaluation::_internal_completion_time() const {
+  return completion_time_;
+}
+inline double ContractEvaluation::completion_time() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.completion_time)
+  return _internal_completion_time();
+}
+inline void ContractEvaluation::_internal_set_completion_time(double value) {
+  _has_bits_[0] |= 0x00000200u;
+  completion_time_ = value;
+}
+inline void ContractEvaluation::set_completion_time(double value) {
+  _internal_set_completion_time(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.completion_time)
+}
+
+// optional uint32 chicken_runs_sent = 7;
+inline bool ContractEvaluation::_internal_has_chicken_runs_sent() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_chicken_runs_sent() const {
+  return _internal_has_chicken_runs_sent();
+}
+inline void ContractEvaluation::clear_chicken_runs_sent() {
+  chicken_runs_sent_ = 0u;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline uint32_t ContractEvaluation::_internal_chicken_runs_sent() const {
+  return chicken_runs_sent_;
+}
+inline uint32_t ContractEvaluation::chicken_runs_sent() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.chicken_runs_sent)
+  return _internal_chicken_runs_sent();
+}
+inline void ContractEvaluation::_internal_set_chicken_runs_sent(uint32_t value) {
+  _has_bits_[0] |= 0x00000400u;
+  chicken_runs_sent_ = value;
+}
+inline void ContractEvaluation::set_chicken_runs_sent(uint32_t value) {
+  _internal_set_chicken_runs_sent(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.chicken_runs_sent)
+}
+
+// optional uint32 gift_tokens_sent = 8;
+inline bool ContractEvaluation::_internal_has_gift_tokens_sent() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_gift_tokens_sent() const {
+  return _internal_has_gift_tokens_sent();
+}
+inline void ContractEvaluation::clear_gift_tokens_sent() {
+  gift_tokens_sent_ = 0u;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline uint32_t ContractEvaluation::_internal_gift_tokens_sent() const {
+  return gift_tokens_sent_;
+}
+inline uint32_t ContractEvaluation::gift_tokens_sent() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.gift_tokens_sent)
+  return _internal_gift_tokens_sent();
+}
+inline void ContractEvaluation::_internal_set_gift_tokens_sent(uint32_t value) {
+  _has_bits_[0] |= 0x00000800u;
+  gift_tokens_sent_ = value;
+}
+inline void ContractEvaluation::set_gift_tokens_sent(uint32_t value) {
+  _internal_set_gift_tokens_sent(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.gift_tokens_sent)
+}
+
+// optional uint32 gift_tokens_received = 15;
+inline bool ContractEvaluation::_internal_has_gift_tokens_received() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_gift_tokens_received() const {
+  return _internal_has_gift_tokens_received();
+}
+inline void ContractEvaluation::clear_gift_tokens_received() {
+  gift_tokens_received_ = 0u;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline uint32_t ContractEvaluation::_internal_gift_tokens_received() const {
+  return gift_tokens_received_;
+}
+inline uint32_t ContractEvaluation::gift_tokens_received() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.gift_tokens_received)
+  return _internal_gift_tokens_received();
+}
+inline void ContractEvaluation::_internal_set_gift_tokens_received(uint32_t value) {
+  _has_bits_[0] |= 0x00004000u;
+  gift_tokens_received_ = value;
+}
+inline void ContractEvaluation::set_gift_tokens_received(uint32_t value) {
+  _internal_set_gift_tokens_received(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.gift_tokens_received)
+}
+
+// optional uint32 boost_token_allotment = 16;
+inline bool ContractEvaluation::_internal_has_boost_token_allotment() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_boost_token_allotment() const {
+  return _internal_has_boost_token_allotment();
+}
+inline void ContractEvaluation::clear_boost_token_allotment() {
+  boost_token_allotment_ = 0u;
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline uint32_t ContractEvaluation::_internal_boost_token_allotment() const {
+  return boost_token_allotment_;
+}
+inline uint32_t ContractEvaluation::boost_token_allotment() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.boost_token_allotment)
+  return _internal_boost_token_allotment();
+}
+inline void ContractEvaluation::_internal_set_boost_token_allotment(uint32_t value) {
+  _has_bits_[0] |= 0x00040000u;
+  boost_token_allotment_ = value;
+}
+inline void ContractEvaluation::set_boost_token_allotment(uint32_t value) {
+  _internal_set_boost_token_allotment(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.boost_token_allotment)
+}
+
+// optional double buff_time_value = 17;
+inline bool ContractEvaluation::_internal_has_buff_time_value() const {
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_buff_time_value() const {
+  return _internal_has_buff_time_value();
+}
+inline void ContractEvaluation::clear_buff_time_value() {
+  buff_time_value_ = 0;
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline double ContractEvaluation::_internal_buff_time_value() const {
+  return buff_time_value_;
+}
+inline double ContractEvaluation::buff_time_value() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.buff_time_value)
+  return _internal_buff_time_value();
+}
+inline void ContractEvaluation::_internal_set_buff_time_value(double value) {
+  _has_bits_[0] |= 0x00020000u;
+  buff_time_value_ = value;
+}
+inline void ContractEvaluation::set_buff_time_value(double value) {
+  _internal_set_buff_time_value(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.buff_time_value)
+}
+
+// optional double teamwork_score = 13;
+inline bool ContractEvaluation::_internal_has_teamwork_score() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_teamwork_score() const {
+  return _internal_has_teamwork_score();
+}
+inline void ContractEvaluation::clear_teamwork_score() {
+  teamwork_score_ = 0;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline double ContractEvaluation::_internal_teamwork_score() const {
+  return teamwork_score_;
+}
+inline double ContractEvaluation::teamwork_score() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.teamwork_score)
+  return _internal_teamwork_score();
+}
+inline void ContractEvaluation::_internal_set_teamwork_score(double value) {
+  _has_bits_[0] |= 0x00008000u;
+  teamwork_score_ = value;
+}
+inline void ContractEvaluation::set_teamwork_score(double value) {
+  _internal_set_teamwork_score(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.teamwork_score)
+}
+
+// optional double other_bonuses = 14;
+inline bool ContractEvaluation::_internal_has_other_bonuses() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_other_bonuses() const {
+  return _internal_has_other_bonuses();
+}
+inline void ContractEvaluation::clear_other_bonuses() {
+  other_bonuses_ = 0;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline double ContractEvaluation::_internal_other_bonuses() const {
+  return other_bonuses_;
+}
+inline double ContractEvaluation::other_bonuses() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.other_bonuses)
+  return _internal_other_bonuses();
+}
+inline void ContractEvaluation::_internal_set_other_bonuses(double value) {
+  _has_bits_[0] |= 0x00010000u;
+  other_bonuses_ = value;
+}
+inline void ContractEvaluation::set_other_bonuses(double value) {
+  _internal_set_other_bonuses(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.other_bonuses)
+}
+
+// optional bool counted_in_season = 20;
+inline bool ContractEvaluation::_internal_has_counted_in_season() const {
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_counted_in_season() const {
+  return _internal_has_counted_in_season();
+}
+inline void ContractEvaluation::clear_counted_in_season() {
+  counted_in_season_ = false;
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline bool ContractEvaluation::_internal_counted_in_season() const {
+  return counted_in_season_;
+}
+inline bool ContractEvaluation::counted_in_season() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.counted_in_season)
+  return _internal_counted_in_season();
+}
+inline void ContractEvaluation::_internal_set_counted_in_season(bool value) {
+  _has_bits_[0] |= 0x04000000u;
+  counted_in_season_ = value;
+}
+inline void ContractEvaluation::set_counted_in_season(bool value) {
+  _internal_set_counted_in_season(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.counted_in_season)
+}
+
+// optional string season_id = 21;
+inline bool ContractEvaluation::_internal_has_season_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_season_id() const {
+  return _internal_has_season_id();
+}
+inline void ContractEvaluation::clear_season_id() {
+  season_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ContractEvaluation::season_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.season_id)
+  return _internal_season_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractEvaluation::set_season_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ season_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.season_id)
+}
+inline std::string* ContractEvaluation::mutable_season_id() {
+  std::string* _s = _internal_mutable_season_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluation.season_id)
+  return _s;
+}
+inline const std::string& ContractEvaluation::_internal_season_id() const {
+  return season_id_.Get();
+}
+inline void ContractEvaluation::_internal_set_season_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  season_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::_internal_mutable_season_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return season_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::release_season_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractEvaluation.season_id)
+  if (!_internal_has_season_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = season_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (season_id_.IsDefault()) {
+    season_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractEvaluation::set_allocated_season_id(std::string* season_id) {
+  if (season_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  season_id_.SetAllocated(season_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (season_id_.IsDefault()) {
+    season_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.season_id)
+}
+
+// repeated .ei.ContractEvaluation.PoorBehavior issues = 19;
+inline int ContractEvaluation::_internal_issues_size() const {
+  return issues_.size();
+}
+inline int ContractEvaluation::issues_size() const {
+  return _internal_issues_size();
+}
+inline void ContractEvaluation::clear_issues() {
+  issues_.Clear();
+}
+inline ::ei::ContractEvaluation_PoorBehavior ContractEvaluation::_internal_issues(int index) const {
+  return static_cast< ::ei::ContractEvaluation_PoorBehavior >(issues_.Get(index));
+}
+inline ::ei::ContractEvaluation_PoorBehavior ContractEvaluation::issues(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.issues)
+  return _internal_issues(index);
+}
+inline void ContractEvaluation::set_issues(int index, ::ei::ContractEvaluation_PoorBehavior value) {
+  assert(::ei::ContractEvaluation_PoorBehavior_IsValid(value));
+  issues_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.issues)
+}
+inline void ContractEvaluation::_internal_add_issues(::ei::ContractEvaluation_PoorBehavior value) {
+  assert(::ei::ContractEvaluation_PoorBehavior_IsValid(value));
+  issues_.Add(value);
+}
+inline void ContractEvaluation::add_issues(::ei::ContractEvaluation_PoorBehavior value) {
+  _internal_add_issues(value);
+  // @@protoc_insertion_point(field_add:ei.ContractEvaluation.issues)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>&
+ContractEvaluation::issues() const {
+  // @@protoc_insertion_point(field_list:ei.ContractEvaluation.issues)
+  return issues_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
+ContractEvaluation::_internal_mutable_issues() {
+  return &issues_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
+ContractEvaluation::mutable_issues() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractEvaluation.issues)
+  return _internal_mutable_issues();
+}
+
+// repeated string notes = 12;
+inline int ContractEvaluation::_internal_notes_size() const {
+  return notes_.size();
+}
+inline int ContractEvaluation::notes_size() const {
+  return _internal_notes_size();
+}
+inline void ContractEvaluation::clear_notes() {
+  notes_.Clear();
+}
+inline std::string* ContractEvaluation::add_notes() {
+  std::string* _s = _internal_add_notes();
+  // @@protoc_insertion_point(field_add_mutable:ei.ContractEvaluation.notes)
+  return _s;
+}
+inline const std::string& ContractEvaluation::_internal_notes(int index) const {
+  return notes_.Get(index);
+}
+inline const std::string& ContractEvaluation::notes(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.notes)
+  return _internal_notes(index);
+}
+inline std::string* ContractEvaluation::mutable_notes(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluation.notes)
+  return notes_.Mutable(index);
+}
+inline void ContractEvaluation::set_notes(int index, const std::string& value) {
+  notes_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.notes)
+}
+inline void ContractEvaluation::set_notes(int index, std::string&& value) {
+  notes_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.notes)
+}
+inline void ContractEvaluation::set_notes(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  notes_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.ContractEvaluation.notes)
+}
+inline void ContractEvaluation::set_notes(int index, const char* value, size_t size) {
+  notes_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.ContractEvaluation.notes)
+}
+inline std::string* ContractEvaluation::_internal_add_notes() {
+  return notes_.Add();
+}
+inline void ContractEvaluation::add_notes(const std::string& value) {
+  notes_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.ContractEvaluation.notes)
+}
+inline void ContractEvaluation::add_notes(std::string&& value) {
+  notes_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.ContractEvaluation.notes)
+}
+inline void ContractEvaluation::add_notes(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  notes_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.ContractEvaluation.notes)
+}
+inline void ContractEvaluation::add_notes(const char* value, size_t size) {
+  notes_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.ContractEvaluation.notes)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ContractEvaluation::notes() const {
+  // @@protoc_insertion_point(field_list:ei.ContractEvaluation.notes)
+  return notes_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ContractEvaluation::mutable_notes() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractEvaluation.notes)
+  return &notes_;
+}
+
+// optional string version = 50;
+inline bool ContractEvaluation::_internal_has_version() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_version() const {
+  return _internal_has_version();
+}
+inline void ContractEvaluation::clear_version() {
+  version_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& ContractEvaluation::version() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.version)
+  return _internal_version();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractEvaluation::set_version(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.version)
+}
+inline std::string* ContractEvaluation::mutable_version() {
+  std::string* _s = _internal_mutable_version();
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluation.version)
+  return _s;
+}
+inline const std::string& ContractEvaluation::_internal_version() const {
+  return version_.Get();
+}
+inline void ContractEvaluation::_internal_set_version(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  version_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::_internal_mutable_version() {
+  _has_bits_[0] |= 0x00000008u;
+  return version_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractEvaluation::release_version() {
+  // @@protoc_insertion_point(field_release:ei.ContractEvaluation.version)
+  if (!_internal_has_version()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  auto* p = version_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (version_.IsDefault()) {
+    version_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractEvaluation::set_allocated_version(std::string* version) {
+  if (version != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  version_.SetAllocated(version, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (version_.IsDefault()) {
+    version_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.version)
+}
+
+// optional double evaluation_start_time = 51;
+inline bool ContractEvaluation::_internal_has_evaluation_start_time() const {
+  bool value = (_has_bits_[0] & 0x10000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_evaluation_start_time() const {
+  return _internal_has_evaluation_start_time();
+}
+inline void ContractEvaluation::clear_evaluation_start_time() {
+  evaluation_start_time_ = 0;
+  _has_bits_[0] &= ~0x10000000u;
+}
+inline double ContractEvaluation::_internal_evaluation_start_time() const {
+  return evaluation_start_time_;
+}
+inline double ContractEvaluation::evaluation_start_time() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.evaluation_start_time)
+  return _internal_evaluation_start_time();
+}
+inline void ContractEvaluation::_internal_set_evaluation_start_time(double value) {
+  _has_bits_[0] |= 0x10000000u;
+  evaluation_start_time_ = value;
+}
+inline void ContractEvaluation::set_evaluation_start_time(double value) {
+  _internal_set_evaluation_start_time(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.evaluation_start_time)
+}
+
+// optional .ei.ContractEvaluation.Status status = 52;
+inline bool ContractEvaluation::_internal_has_status() const {
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_status() const {
+  return _internal_has_status();
+}
+inline void ContractEvaluation::clear_status() {
+  status_ = 0;
+  _has_bits_[0] &= ~0x08000000u;
+}
+inline ::ei::ContractEvaluation_Status ContractEvaluation::_internal_status() const {
+  return static_cast< ::ei::ContractEvaluation_Status >(status_);
+}
+inline ::ei::ContractEvaluation_Status ContractEvaluation::status() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.status)
+  return _internal_status();
+}
+inline void ContractEvaluation::_internal_set_status(::ei::ContractEvaluation_Status value) {
+  assert(::ei::ContractEvaluation_Status_IsValid(value));
+  _has_bits_[0] |= 0x08000000u;
+  status_ = value;
+}
+inline void ContractEvaluation::set_status(::ei::ContractEvaluation_Status value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.status)
+}
+
+// -------------------------------------------------------------------
+
+// ContractCitation
+
+// optional .ei.ContractEvaluation.PoorBehavior issue = 1;
+inline bool ContractCitation::_internal_has_issue() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ContractCitation::has_issue() const {
+  return _internal_has_issue();
+}
+inline void ContractCitation::clear_issue() {
+  issue_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::ei::ContractEvaluation_PoorBehavior ContractCitation::_internal_issue() const {
+  return static_cast< ::ei::ContractEvaluation_PoorBehavior >(issue_);
+}
+inline ::ei::ContractEvaluation_PoorBehavior ContractCitation::issue() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCitation.issue)
+  return _internal_issue();
+}
+inline void ContractCitation::_internal_set_issue(::ei::ContractEvaluation_PoorBehavior value) {
+  assert(::ei::ContractEvaluation_PoorBehavior_IsValid(value));
+  _has_bits_[0] |= 0x00000002u;
+  issue_ = value;
+}
+inline void ContractCitation::set_issue(::ei::ContractEvaluation_PoorBehavior value) {
+  _internal_set_issue(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCitation.issue)
+}
+
+// optional double timestamp = 2;
+inline bool ContractCitation::_internal_has_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractCitation::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline void ContractCitation::clear_timestamp() {
+  timestamp_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline double ContractCitation::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double ContractCitation::timestamp() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCitation.timestamp)
+  return _internal_timestamp();
+}
+inline void ContractCitation::_internal_set_timestamp(double value) {
+  _has_bits_[0] |= 0x00000001u;
+  timestamp_ = value;
+}
+inline void ContractCitation::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCitation.timestamp)
+}
+
+// optional .ei.Contract.PlayerGrade grade = 3;
+inline bool ContractCitation::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ContractCitation::has_grade() const {
+  return _internal_has_grade();
+}
+inline void ContractCitation::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::ei::Contract_PlayerGrade ContractCitation::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade ContractCitation::grade() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCitation.grade)
+  return _internal_grade();
+}
+inline void ContractCitation::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000004u;
+  grade_ = value;
+}
+inline void ContractCitation::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCitation.grade)
+}
+
+// -------------------------------------------------------------------
+
+// ContractEvaluationBatch_Pair
+
+// optional string user_id = 1;
+inline bool ContractEvaluationBatch_Pair::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractEvaluationBatch_Pair::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void ContractEvaluationBatch_Pair::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ContractEvaluationBatch_Pair::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluationBatch.Pair.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractEvaluationBatch_Pair::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluationBatch.Pair.user_id)
+}
+inline std::string* ContractEvaluationBatch_Pair::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluationBatch.Pair.user_id)
+  return _s;
+}
+inline const std::string& ContractEvaluationBatch_Pair::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void ContractEvaluationBatch_Pair::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractEvaluationBatch_Pair::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractEvaluationBatch_Pair::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractEvaluationBatch.Pair.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractEvaluationBatch_Pair::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluationBatch.Pair.user_id)
+}
+
+// optional .ei.ContractEvaluation cev = 2;
+inline bool ContractEvaluationBatch_Pair::_internal_has_cev() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || cev_ != nullptr);
+  return value;
+}
+inline bool ContractEvaluationBatch_Pair::has_cev() const {
+  return _internal_has_cev();
+}
+inline void ContractEvaluationBatch_Pair::clear_cev() {
+  if (cev_ != nullptr) cev_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::ei::ContractEvaluation& ContractEvaluationBatch_Pair::_internal_cev() const {
+  const ::ei::ContractEvaluation* p = cev_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::ContractEvaluation&>(
+      ::ei::_ContractEvaluation_default_instance_);
+}
+inline const ::ei::ContractEvaluation& ContractEvaluationBatch_Pair::cev() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluationBatch.Pair.cev)
+  return _internal_cev();
+}
+inline void ContractEvaluationBatch_Pair::unsafe_arena_set_allocated_cev(
+    ::ei::ContractEvaluation* cev) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cev_);
+  }
+  cev_ = cev;
+  if (cev) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ContractEvaluationBatch.Pair.cev)
+}
+inline ::ei::ContractEvaluation* ContractEvaluationBatch_Pair::release_cev() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::ContractEvaluation* temp = cev_;
+  cev_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::ContractEvaluation* ContractEvaluationBatch_Pair::unsafe_arena_release_cev() {
+  // @@protoc_insertion_point(field_release:ei.ContractEvaluationBatch.Pair.cev)
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::ContractEvaluation* temp = cev_;
+  cev_ = nullptr;
+  return temp;
+}
+inline ::ei::ContractEvaluation* ContractEvaluationBatch_Pair::_internal_mutable_cev() {
+  _has_bits_[0] |= 0x00000002u;
+  if (cev_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::ContractEvaluation>(GetArenaForAllocation());
+    cev_ = p;
+  }
+  return cev_;
+}
+inline ::ei::ContractEvaluation* ContractEvaluationBatch_Pair::mutable_cev() {
+  ::ei::ContractEvaluation* _msg = _internal_mutable_cev();
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluationBatch.Pair.cev)
+  return _msg;
+}
+inline void ContractEvaluationBatch_Pair::set_allocated_cev(::ei::ContractEvaluation* cev) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete cev_;
+  }
+  if (cev) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(cev);
+    if (message_arena != submessage_arena) {
+      cev = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, cev, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  cev_ = cev;
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluationBatch.Pair.cev)
+}
+
+// -------------------------------------------------------------------
+
+// ContractEvaluationBatch
+
+// repeated .ei.ContractEvaluationBatch.Pair evals = 1;
+inline int ContractEvaluationBatch::_internal_evals_size() const {
+  return evals_.size();
+}
+inline int ContractEvaluationBatch::evals_size() const {
+  return _internal_evals_size();
+}
+inline void ContractEvaluationBatch::clear_evals() {
+  evals_.Clear();
+}
+inline ::ei::ContractEvaluationBatch_Pair* ContractEvaluationBatch::mutable_evals(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ContractEvaluationBatch.evals)
+  return evals_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluationBatch_Pair >*
+ContractEvaluationBatch::mutable_evals() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractEvaluationBatch.evals)
+  return &evals_;
+}
+inline const ::ei::ContractEvaluationBatch_Pair& ContractEvaluationBatch::_internal_evals(int index) const {
+  return evals_.Get(index);
+}
+inline const ::ei::ContractEvaluationBatch_Pair& ContractEvaluationBatch::evals(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluationBatch.evals)
+  return _internal_evals(index);
+}
+inline ::ei::ContractEvaluationBatch_Pair* ContractEvaluationBatch::_internal_add_evals() {
+  return evals_.Add();
+}
+inline ::ei::ContractEvaluationBatch_Pair* ContractEvaluationBatch::add_evals() {
+  ::ei::ContractEvaluationBatch_Pair* _add = _internal_add_evals();
+  // @@protoc_insertion_point(field_add:ei.ContractEvaluationBatch.evals)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluationBatch_Pair >&
+ContractEvaluationBatch::evals() const {
+  // @@protoc_insertion_point(field_list:ei.ContractEvaluationBatch.evals)
+  return evals_;
+}
+
+// -------------------------------------------------------------------
+
+// CoopCompletionSnapshot_ContributorSnapshot
+
+// optional double contribution = 1;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_contribution() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_contribution() const {
+  return _internal_has_contribution();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_contribution() {
+  contribution_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::_internal_contribution() const {
+  return contribution_;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::contribution() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.contribution)
+  return _internal_contribution();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_contribution(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  contribution_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_contribution(double value) {
+  _internal_set_contribution(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.contribution)
+}
+
+// optional double soul_power = 2;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_soul_power() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_soul_power() const {
+  return _internal_has_soul_power();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_soul_power() {
+  soul_power_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::_internal_soul_power() const {
+  return soul_power_;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::soul_power() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.soul_power)
+  return _internal_soul_power();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_soul_power(double value) {
+  _has_bits_[0] |= 0x00000004u;
+  soul_power_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_soul_power(double value) {
+  _internal_set_soul_power(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.soul_power)
+}
+
+// optional string user_id = 3;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CoopCompletionSnapshot_ContributorSnapshot::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CoopCompletionSnapshot_ContributorSnapshot::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.user_id)
+}
+inline std::string* CoopCompletionSnapshot_ContributorSnapshot::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.CoopCompletionSnapshot.ContributorSnapshot.user_id)
+  return _s;
+}
+inline const std::string& CoopCompletionSnapshot_ContributorSnapshot::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CoopCompletionSnapshot_ContributorSnapshot::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CoopCompletionSnapshot_ContributorSnapshot::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.CoopCompletionSnapshot.ContributorSnapshot.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CoopCompletionSnapshot.ContributorSnapshot.user_id)
+}
+
+// optional uint32 tokens = 4;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_tokens() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_tokens() const {
+  return _internal_has_tokens();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_tokens() {
+  tokens_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t CoopCompletionSnapshot_ContributorSnapshot::_internal_tokens() const {
+  return tokens_;
+}
+inline uint32_t CoopCompletionSnapshot_ContributorSnapshot::tokens() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.tokens)
+  return _internal_tokens();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_tokens(uint32_t value) {
+  _has_bits_[0] |= 0x00000008u;
+  tokens_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_tokens(uint32_t value) {
+  _internal_set_tokens(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.tokens)
+}
+
+// optional uint32 tokens_spent = 5;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_tokens_spent() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_tokens_spent() const {
+  return _internal_has_tokens_spent();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_tokens_spent() {
+  tokens_spent_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline uint32_t CoopCompletionSnapshot_ContributorSnapshot::_internal_tokens_spent() const {
+  return tokens_spent_;
+}
+inline uint32_t CoopCompletionSnapshot_ContributorSnapshot::tokens_spent() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.tokens_spent)
+  return _internal_tokens_spent();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_tokens_spent(uint32_t value) {
+  _has_bits_[0] |= 0x00000010u;
+  tokens_spent_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_tokens_spent(uint32_t value) {
+  _internal_set_tokens_spent(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.tokens_spent)
+}
+
+// -------------------------------------------------------------------
+
+// CoopCompletionSnapshot
+
+// repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;
+inline int CoopCompletionSnapshot::_internal_contributors_size() const {
+  return contributors_.size();
+}
+inline int CoopCompletionSnapshot::contributors_size() const {
+  return _internal_contributors_size();
+}
+inline void CoopCompletionSnapshot::clear_contributors() {
+  contributors_.Clear();
+}
+inline ::ei::CoopCompletionSnapshot_ContributorSnapshot* CoopCompletionSnapshot::mutable_contributors(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.CoopCompletionSnapshot.contributors)
+  return contributors_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopCompletionSnapshot_ContributorSnapshot >*
+CoopCompletionSnapshot::mutable_contributors() {
+  // @@protoc_insertion_point(field_mutable_list:ei.CoopCompletionSnapshot.contributors)
+  return &contributors_;
+}
+inline const ::ei::CoopCompletionSnapshot_ContributorSnapshot& CoopCompletionSnapshot::_internal_contributors(int index) const {
+  return contributors_.Get(index);
+}
+inline const ::ei::CoopCompletionSnapshot_ContributorSnapshot& CoopCompletionSnapshot::contributors(int index) const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.contributors)
+  return _internal_contributors(index);
+}
+inline ::ei::CoopCompletionSnapshot_ContributorSnapshot* CoopCompletionSnapshot::_internal_add_contributors() {
+  return contributors_.Add();
+}
+inline ::ei::CoopCompletionSnapshot_ContributorSnapshot* CoopCompletionSnapshot::add_contributors() {
+  ::ei::CoopCompletionSnapshot_ContributorSnapshot* _add = _internal_add_contributors();
+  // @@protoc_insertion_point(field_add:ei.CoopCompletionSnapshot.contributors)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopCompletionSnapshot_ContributorSnapshot >&
+CoopCompletionSnapshot::contributors() const {
+  // @@protoc_insertion_point(field_list:ei.CoopCompletionSnapshot.contributors)
+  return contributors_;
 }
 
 // -------------------------------------------------------------------
@@ -57271,6 +66202,34 @@ inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_earnings_mu
   // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.earnings_mult)
 }
 
+// optional double time_efficacy = 4;
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_has_time_efficacy() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::has_time_efficacy() const {
+  return _internal_has_time_efficacy();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::clear_time_efficacy() {
+  time_efficacy_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_time_efficacy() const {
+  return time_efficacy_;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::time_efficacy() const {
+  // @@protoc_insertion_point(field_get:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.time_efficacy)
+  return _internal_time_efficacy();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_set_time_efficacy(double value) {
+  _has_bits_[0] |= 0x00000008u;
+  time_efficacy_ = value;
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_time_efficacy(double value) {
+  _internal_set_time_efficacy(value);
+  // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.time_efficacy)
+}
+
 // -------------------------------------------------------------------
 
 // ContractSimConfig_ContractGradeSimConfig
@@ -57811,7 +66770,7 @@ ContractSimResultUpdate::goal_infos() const {
 
 // optional double soul_eggs = 1;
 inline bool ContractsRequest::_internal_has_soul_eggs() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool ContractsRequest::has_soul_eggs() const {
@@ -57819,7 +66778,7 @@ inline bool ContractsRequest::has_soul_eggs() const {
 }
 inline void ContractsRequest::clear_soul_eggs() {
   soul_eggs_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline double ContractsRequest::_internal_soul_eggs() const {
   return soul_eggs_;
@@ -57829,7 +66788,7 @@ inline double ContractsRequest::soul_eggs() const {
   return _internal_soul_eggs();
 }
 inline void ContractsRequest::_internal_set_soul_eggs(double value) {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
   soul_eggs_ = value;
 }
 inline void ContractsRequest::set_soul_eggs(double value) {
@@ -57839,7 +66798,7 @@ inline void ContractsRequest::set_soul_eggs(double value) {
 
 // optional uint32 client_version = 5;
 inline bool ContractsRequest::_internal_has_client_version() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool ContractsRequest::has_client_version() const {
@@ -57847,7 +66806,7 @@ inline bool ContractsRequest::has_client_version() const {
 }
 inline void ContractsRequest::clear_client_version() {
   client_version_ = 0u;
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t ContractsRequest::_internal_client_version() const {
   return client_version_;
@@ -57857,12 +66816,80 @@ inline uint32_t ContractsRequest::client_version() const {
   return _internal_client_version();
 }
 inline void ContractsRequest::_internal_set_client_version(uint32_t value) {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
   client_version_ = value;
 }
 inline void ContractsRequest::set_client_version(uint32_t value) {
   _internal_set_client_version(value);
   // @@protoc_insertion_point(field_set:ei.ContractsRequest.client_version)
+}
+
+// optional string user_id = 2;
+inline bool ContractsRequest::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractsRequest::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void ContractsRequest::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ContractsRequest::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractsRequest.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractsRequest::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractsRequest.user_id)
+}
+inline std::string* ContractsRequest::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractsRequest.user_id)
+  return _s;
+}
+inline const std::string& ContractsRequest::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void ContractsRequest::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractsRequest::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractsRequest::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractsRequest.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractsRequest::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractsRequest.user_id)
 }
 
 // -------------------------------------------------------------------
@@ -59380,6 +68407,74 @@ inline void PlayerFarmInfo::set_timestamp(double value) {
 
 // ContractCoopStatusResponse_ContributionInfo
 
+// optional string uuid = 21;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_uuid() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_uuid() const {
+  return _internal_has_uuid();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_uuid() {
+  uuid_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& ContractCoopStatusResponse_ContributionInfo::uuid() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.uuid)
+  return _internal_uuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractCoopStatusResponse_ContributionInfo::set_uuid(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ uuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.uuid)
+}
+inline std::string* ContractCoopStatusResponse_ContributionInfo::mutable_uuid() {
+  std::string* _s = _internal_mutable_uuid();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.ContributionInfo.uuid)
+  return _s;
+}
+inline const std::string& ContractCoopStatusResponse_ContributionInfo::_internal_uuid() const {
+  return uuid_.Get();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_uuid(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  uuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ContributionInfo::_internal_mutable_uuid() {
+  _has_bits_[0] |= 0x00000010u;
+  return uuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_ContributionInfo::release_uuid() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ContributionInfo.uuid)
+  if (!_internal_has_uuid()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  auto* p = uuid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (uuid_.IsDefault()) {
+    uuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_uuid(std::string* uuid) {
+  if (uuid != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  uuid_.SetAllocated(uuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (uuid_.IsDefault()) {
+    uuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.uuid)
+}
+
 // optional string user_id = 1;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_user_id() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
@@ -59586,7 +68681,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_contract_
 
 // optional double contribution_amount = 3;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_contribution_amount() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_amount() const {
@@ -59594,7 +68689,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_amount
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_contribution_amount() {
   contribution_amount_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_contribution_amount() const {
   return contribution_amount_;
@@ -59604,7 +68699,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::contribution_amount()
   return _internal_contribution_amount();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_contribution_amount(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   contribution_amount_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_amount(double value) {
@@ -59614,7 +68709,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_amount
 
 // optional double contribution_rate = 6;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_contribution_rate() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_rate() const {
@@ -59622,7 +68717,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_contribution_rate()
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_contribution_rate() {
   contribution_rate_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_contribution_rate() const {
   return contribution_rate_;
@@ -59632,7 +68727,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::contribution_rate() c
   return _internal_contribution_rate();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_contribution_rate(double value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   contribution_rate_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_rate(double value) {
@@ -59642,7 +68737,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_contribution_rate(d
 
 // optional double soul_power = 11;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_soul_power() const {
@@ -59650,7 +68745,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_soul_power() const 
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_soul_power() {
   soul_power_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_soul_power() const {
   return soul_power_;
@@ -59660,7 +68755,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::soul_power() const {
   return _internal_soul_power();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_soul_power(double value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   soul_power_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_soul_power(double value) {
@@ -59670,7 +68765,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_soul_power(double v
 
 // optional .ei.FarmProductionParams production_params = 15;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_production_params() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   PROTOBUF_ASSUME(!value || production_params_ != nullptr);
   return value;
 }
@@ -59679,7 +68774,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_production_params()
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_production_params() {
   if (production_params_ != nullptr) production_params_->Clear();
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline const ::ei::FarmProductionParams& ContractCoopStatusResponse_ContributionInfo::_internal_production_params() const {
   const ::ei::FarmProductionParams* p = production_params_;
@@ -59697,14 +68792,14 @@ inline void ContractCoopStatusResponse_ContributionInfo::unsafe_arena_set_alloca
   }
   production_params_ = production_params;
   if (production_params) {
-    _has_bits_[0] |= 0x00000010u;
+    _has_bits_[0] |= 0x00000020u;
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    _has_bits_[0] &= ~0x00000020u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.production_params)
 }
 inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::release_production_params() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
   ::ei::FarmProductionParams* temp = production_params_;
   production_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -59720,13 +68815,13 @@ inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::
 }
 inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::unsafe_arena_release_production_params() {
   // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ContributionInfo.production_params)
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
   ::ei::FarmProductionParams* temp = production_params_;
   production_params_ = nullptr;
   return temp;
 }
 inline ::ei::FarmProductionParams* ContractCoopStatusResponse_ContributionInfo::_internal_mutable_production_params() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   if (production_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::FarmProductionParams>(GetArenaForAllocation());
     production_params_ = p;
@@ -59750,9 +68845,9 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_productio
       production_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, production_params, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000010u;
+    _has_bits_[0] |= 0x00000020u;
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    _has_bits_[0] &= ~0x00000020u;
   }
   production_params_ = production_params;
   // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.production_params)
@@ -59760,7 +68855,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_productio
 
 // optional .ei.PlayerFarmInfo farm_info = 18;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_farm_info() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   PROTOBUF_ASSUME(!value || farm_info_ != nullptr);
   return value;
 }
@@ -59769,7 +68864,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_farm_info() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_farm_info() {
   if (farm_info_ != nullptr) farm_info_->Clear();
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline const ::ei::PlayerFarmInfo& ContractCoopStatusResponse_ContributionInfo::_internal_farm_info() const {
   const ::ei::PlayerFarmInfo* p = farm_info_;
@@ -59787,14 +68882,14 @@ inline void ContractCoopStatusResponse_ContributionInfo::unsafe_arena_set_alloca
   }
   farm_info_ = farm_info;
   if (farm_info) {
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
 }
 inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::release_farm_info() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   ::ei::PlayerFarmInfo* temp = farm_info_;
   farm_info_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -59810,13 +68905,13 @@ inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::releas
 }
 inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::unsafe_arena_release_farm_info() {
   // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   ::ei::PlayerFarmInfo* temp = farm_info_;
   farm_info_ = nullptr;
   return temp;
 }
 inline ::ei::PlayerFarmInfo* ContractCoopStatusResponse_ContributionInfo::_internal_mutable_farm_info() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   if (farm_info_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::PlayerFarmInfo>(GetArenaForAllocation());
     farm_info_ = p;
@@ -59840,9 +68935,9 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_farm_info
       farm_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, farm_info, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   farm_info_ = farm_info;
   // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.ContributionInfo.farm_info)
@@ -59850,7 +68945,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_farm_info
 
 // optional int32 rank_change = 8;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_rank_change() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_rank_change() const {
@@ -59858,7 +68953,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_rank_change() const
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_rank_change() {
   rank_change_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline int32_t ContractCoopStatusResponse_ContributionInfo::_internal_rank_change() const {
   return rank_change_;
@@ -59868,7 +68963,7 @@ inline int32_t ContractCoopStatusResponse_ContributionInfo::rank_change() const 
   return _internal_rank_change();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_rank_change(int32_t value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   rank_change_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_rank_change(int32_t value) {
@@ -59878,7 +68973,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_rank_change(int32_t
 
 // optional bool active = 4;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_active() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
@@ -59886,7 +68981,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_active() {
   active_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_active() const {
   return active_;
@@ -59896,7 +68991,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::active() const {
   return _internal_active();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_active(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   active_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) {
@@ -59906,7 +69001,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) 
 
 // optional bool leech = 16;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_leech() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
@@ -59914,7 +69009,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_leech() {
   leech_ = false;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_leech() const {
   return leech_;
@@ -59924,7 +69019,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::leech() const {
   return _internal_leech();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_leech(bool value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   leech_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
@@ -59934,7 +69029,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
 
 // optional bool time_cheat_detected = 7;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_time_cheat_detected() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected() const {
@@ -59942,7 +69037,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_time_cheat_detected() {
   time_cheat_detected_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_time_cheat_detected() const {
   return time_cheat_detected_;
@@ -59952,7 +69047,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::time_cheat_detected() c
   return _internal_time_cheat_detected();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_time_cheat_detected(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   time_cheat_detected_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected(bool value) {
@@ -59962,7 +69057,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected
 
 // optional .ei.Platform platform = 5;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
@@ -59970,7 +69065,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -59981,7 +69076,7 @@ inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::platform() co
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
   platform_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_platform(::ei::Platform value) {
@@ -60059,7 +69154,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_allocated_push_id(s
 
 // optional uint32 ban_votes = 10;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_ban_votes() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_ban_votes() const {
@@ -60067,7 +69162,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_ban_votes() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_ban_votes() {
   ban_votes_ = 0u;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_ban_votes() const {
   return ban_votes_;
@@ -60077,7 +69172,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::ban_votes() const {
   return _internal_ban_votes();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_ban_votes(uint32_t value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   ban_votes_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_ban_votes(uint32_t value) {
@@ -60087,7 +69182,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_ban_votes(uint32_t 
 
 // optional bool autojoined = 17;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_autojoined() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const {
@@ -60095,7 +69190,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const 
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_autojoined() {
   autojoined_ = false;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_autojoined() const {
   return autojoined_;
@@ -60105,7 +69200,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::autojoined() const {
   return _internal_autojoined();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_autojoined(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   autojoined_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool value) {
@@ -60115,7 +69210,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool val
 
 // optional uint32 boost_tokens = 12;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens() const {
@@ -60123,7 +69218,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens() cons
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens() {
   boost_tokens_ = 0u;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens() const {
   return boost_tokens_;
@@ -60133,7 +69228,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens() cons
   return _internal_boost_tokens();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens(uint32_t value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
   boost_tokens_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32_t value) {
@@ -60143,7 +69238,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32
 
 // optional uint32 boost_tokens_spent = 14;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens_spent() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent() const {
@@ -60151,7 +69246,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent(
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens_spent() {
   boost_tokens_spent_ = 0u;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens_spent() const {
   return boost_tokens_spent_;
@@ -60161,7 +69256,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens_spent(
   return _internal_boost_tokens_spent();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens_spent(uint32_t value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
   boost_tokens_spent_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens_spent(uint32_t value) {
@@ -60211,7 +69306,7 @@ ContractCoopStatusResponse_ContributionInfo::buff_history() const {
 
 // optional double chicken_run_cooldown = 20;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_chicken_run_cooldown() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldown() const {
@@ -60219,7 +69314,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldow
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_chicken_run_cooldown() {
   chicken_run_cooldown_ = 0;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_chicken_run_cooldown() const {
   return chicken_run_cooldown_;
@@ -60229,7 +69324,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::chicken_run_cooldown(
   return _internal_chicken_run_cooldown();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_chicken_run_cooldown(double value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
   chicken_run_cooldown_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_chicken_run_cooldown(double value) {
@@ -61261,7 +70356,7 @@ inline void LocalContract::set_allocated_coop_identifier(std::string* coop_ident
 
 // optional bool accepted = 7;
 inline bool LocalContract::_internal_has_accepted() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool LocalContract::has_accepted() const {
@@ -61269,7 +70364,7 @@ inline bool LocalContract::has_accepted() const {
 }
 inline void LocalContract::clear_accepted() {
   accepted_ = false;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline bool LocalContract::_internal_accepted() const {
   return accepted_;
@@ -61279,7 +70374,7 @@ inline bool LocalContract::accepted() const {
   return _internal_accepted();
 }
 inline void LocalContract::_internal_set_accepted(bool value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   accepted_ = value;
 }
 inline void LocalContract::set_accepted(bool value) {
@@ -61289,7 +70384,7 @@ inline void LocalContract::set_accepted(bool value) {
 
 // optional double time_accepted = 3;
 inline bool LocalContract::_internal_has_time_accepted() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool LocalContract::has_time_accepted() const {
@@ -61297,7 +70392,7 @@ inline bool LocalContract::has_time_accepted() const {
 }
 inline void LocalContract::clear_time_accepted() {
   time_accepted_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline double LocalContract::_internal_time_accepted() const {
   return time_accepted_;
@@ -61307,7 +70402,7 @@ inline double LocalContract::time_accepted() const {
   return _internal_time_accepted();
 }
 inline void LocalContract::_internal_set_time_accepted(double value) {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
   time_accepted_ = value;
 }
 inline void LocalContract::set_time_accepted(double value) {
@@ -61317,7 +70412,7 @@ inline void LocalContract::set_time_accepted(double value) {
 
 // optional bool cancelled = 4;
 inline bool LocalContract::_internal_has_cancelled() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool LocalContract::has_cancelled() const {
@@ -61325,7 +70420,7 @@ inline bool LocalContract::has_cancelled() const {
 }
 inline void LocalContract::clear_cancelled() {
   cancelled_ = false;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool LocalContract::_internal_cancelled() const {
   return cancelled_;
@@ -61335,7 +70430,7 @@ inline bool LocalContract::cancelled() const {
   return _internal_cancelled();
 }
 inline void LocalContract::_internal_set_cancelled(bool value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   cancelled_ = value;
 }
 inline void LocalContract::set_cancelled(bool value) {
@@ -61345,7 +70440,7 @@ inline void LocalContract::set_cancelled(bool value) {
 
 // optional bool new = 8;
 inline bool LocalContract::_internal_has_new_() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool LocalContract::has_new_() const {
@@ -61353,7 +70448,7 @@ inline bool LocalContract::has_new_() const {
 }
 inline void LocalContract::clear_new_() {
   new__ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool LocalContract::_internal_new_() const {
   return new__;
@@ -61363,7 +70458,7 @@ inline bool LocalContract::new_() const {
   return _internal_new_();
 }
 inline void LocalContract::_internal_set_new_(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   new__ = value;
 }
 inline void LocalContract::set_new_(bool value) {
@@ -61373,7 +70468,7 @@ inline void LocalContract::set_new_(bool value) {
 
 // optional double coop_shared_end_time = 5;
 inline bool LocalContract::_internal_has_coop_shared_end_time() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool LocalContract::has_coop_shared_end_time() const {
@@ -61381,7 +70476,7 @@ inline bool LocalContract::has_coop_shared_end_time() const {
 }
 inline void LocalContract::clear_coop_shared_end_time() {
   coop_shared_end_time_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline double LocalContract::_internal_coop_shared_end_time() const {
   return coop_shared_end_time_;
@@ -61391,7 +70486,7 @@ inline double LocalContract::coop_shared_end_time() const {
   return _internal_coop_shared_end_time();
 }
 inline void LocalContract::_internal_set_coop_shared_end_time(double value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   coop_shared_end_time_ = value;
 }
 inline void LocalContract::set_coop_shared_end_time(double value) {
@@ -61401,7 +70496,7 @@ inline void LocalContract::set_coop_shared_end_time(double value) {
 
 // optional double coop_grace_period_end_time = 9;
 inline bool LocalContract::_internal_has_coop_grace_period_end_time() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool LocalContract::has_coop_grace_period_end_time() const {
@@ -61409,7 +70504,7 @@ inline bool LocalContract::has_coop_grace_period_end_time() const {
 }
 inline void LocalContract::clear_coop_grace_period_end_time() {
   coop_grace_period_end_time_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline double LocalContract::_internal_coop_grace_period_end_time() const {
   return coop_grace_period_end_time_;
@@ -61419,7 +70514,7 @@ inline double LocalContract::coop_grace_period_end_time() const {
   return _internal_coop_grace_period_end_time();
 }
 inline void LocalContract::_internal_set_coop_grace_period_end_time(double value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   coop_grace_period_end_time_ = value;
 }
 inline void LocalContract::set_coop_grace_period_end_time(double value) {
@@ -61429,7 +70524,7 @@ inline void LocalContract::set_coop_grace_period_end_time(double value) {
 
 // optional bool coop_contribution_finalized = 10;
 inline bool LocalContract::_internal_has_coop_contribution_finalized() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool LocalContract::has_coop_contribution_finalized() const {
@@ -61437,7 +70532,7 @@ inline bool LocalContract::has_coop_contribution_finalized() const {
 }
 inline void LocalContract::clear_coop_contribution_finalized() {
   coop_contribution_finalized_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline bool LocalContract::_internal_coop_contribution_finalized() const {
   return coop_contribution_finalized_;
@@ -61447,7 +70542,7 @@ inline bool LocalContract::coop_contribution_finalized() const {
   return _internal_coop_contribution_finalized();
 }
 inline void LocalContract::_internal_set_coop_contribution_finalized(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   coop_contribution_finalized_ = value;
 }
 inline void LocalContract::set_coop_contribution_finalized(bool value) {
@@ -61457,7 +70552,7 @@ inline void LocalContract::set_coop_contribution_finalized(bool value) {
 
 // optional double coop_last_uploaded_contribution = 11;
 inline bool LocalContract::_internal_has_coop_last_uploaded_contribution() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool LocalContract::has_coop_last_uploaded_contribution() const {
@@ -61465,7 +70560,7 @@ inline bool LocalContract::has_coop_last_uploaded_contribution() const {
 }
 inline void LocalContract::clear_coop_last_uploaded_contribution() {
   coop_last_uploaded_contribution_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline double LocalContract::_internal_coop_last_uploaded_contribution() const {
   return coop_last_uploaded_contribution_;
@@ -61475,7 +70570,7 @@ inline double LocalContract::coop_last_uploaded_contribution() const {
   return _internal_coop_last_uploaded_contribution();
 }
 inline void LocalContract::_internal_set_coop_last_uploaded_contribution(double value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   coop_last_uploaded_contribution_ = value;
 }
 inline void LocalContract::set_coop_last_uploaded_contribution(double value) {
@@ -61553,7 +70648,7 @@ inline void LocalContract::set_allocated_coop_user_id(std::string* coop_user_id)
 
 // optional bool coop_share_farm = 17;
 inline bool LocalContract::_internal_has_coop_share_farm() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool LocalContract::has_coop_share_farm() const {
@@ -61561,7 +70656,7 @@ inline bool LocalContract::has_coop_share_farm() const {
 }
 inline void LocalContract::clear_coop_share_farm() {
   coop_share_farm_ = false;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline bool LocalContract::_internal_coop_share_farm() const {
   return coop_share_farm_;
@@ -61571,7 +70666,7 @@ inline bool LocalContract::coop_share_farm() const {
   return _internal_coop_share_farm();
 }
 inline void LocalContract::_internal_set_coop_share_farm(bool value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00040000u;
   coop_share_farm_ = value;
 }
 inline void LocalContract::set_coop_share_farm(bool value) {
@@ -61581,7 +70676,7 @@ inline void LocalContract::set_coop_share_farm(bool value) {
 
 // optional double last_amount_when_reward_given = 6;
 inline bool LocalContract::_internal_has_last_amount_when_reward_given() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool LocalContract::has_last_amount_when_reward_given() const {
@@ -61589,7 +70684,7 @@ inline bool LocalContract::has_last_amount_when_reward_given() const {
 }
 inline void LocalContract::clear_last_amount_when_reward_given() {
   last_amount_when_reward_given_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline double LocalContract::_internal_last_amount_when_reward_given() const {
   return last_amount_when_reward_given_;
@@ -61599,7 +70694,7 @@ inline double LocalContract::last_amount_when_reward_given() const {
   return _internal_last_amount_when_reward_given();
 }
 inline void LocalContract::_internal_set_last_amount_when_reward_given(double value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   last_amount_when_reward_given_ = value;
 }
 inline void LocalContract::set_last_amount_when_reward_given(double value) {
@@ -61609,7 +70704,7 @@ inline void LocalContract::set_last_amount_when_reward_given(double value) {
 
 // optional uint32 num_goals_achieved = 14;
 inline bool LocalContract::_internal_has_num_goals_achieved() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool LocalContract::has_num_goals_achieved() const {
@@ -61617,7 +70712,7 @@ inline bool LocalContract::has_num_goals_achieved() const {
 }
 inline void LocalContract::clear_num_goals_achieved() {
   num_goals_achieved_ = 0u;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline uint32_t LocalContract::_internal_num_goals_achieved() const {
   return num_goals_achieved_;
@@ -61627,7 +70722,7 @@ inline uint32_t LocalContract::num_goals_achieved() const {
   return _internal_num_goals_achieved();
 }
 inline void LocalContract::_internal_set_num_goals_achieved(uint32_t value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   num_goals_achieved_ = value;
 }
 inline void LocalContract::set_num_goals_achieved(uint32_t value) {
@@ -61637,7 +70732,7 @@ inline void LocalContract::set_num_goals_achieved(uint32_t value) {
 
 // optional uint32 boosts_used = 12;
 inline bool LocalContract::_internal_has_boosts_used() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool LocalContract::has_boosts_used() const {
@@ -61645,7 +70740,7 @@ inline bool LocalContract::has_boosts_used() const {
 }
 inline void LocalContract::clear_boosts_used() {
   boosts_used_ = 0u;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline uint32_t LocalContract::_internal_boosts_used() const {
   return boosts_used_;
@@ -61655,7 +70750,7 @@ inline uint32_t LocalContract::boosts_used() const {
   return _internal_boosts_used();
 }
 inline void LocalContract::_internal_set_boosts_used(uint32_t value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   boosts_used_ = value;
 }
 inline void LocalContract::set_boosts_used(uint32_t value) {
@@ -61663,9 +70758,37 @@ inline void LocalContract::set_boosts_used(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.LocalContract.boosts_used)
 }
 
+// optional bool points_replay = 20;
+inline bool LocalContract::_internal_has_points_replay() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool LocalContract::has_points_replay() const {
+  return _internal_has_points_replay();
+}
+inline void LocalContract::clear_points_replay() {
+  points_replay_ = false;
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline bool LocalContract::_internal_points_replay() const {
+  return points_replay_;
+}
+inline bool LocalContract::points_replay() const {
+  // @@protoc_insertion_point(field_get:ei.LocalContract.points_replay)
+  return _internal_points_replay();
+}
+inline void LocalContract::_internal_set_points_replay(bool value) {
+  _has_bits_[0] |= 0x00080000u;
+  points_replay_ = value;
+}
+inline void LocalContract::set_points_replay(bool value) {
+  _internal_set_points_replay(value);
+  // @@protoc_insertion_point(field_set:ei.LocalContract.points_replay)
+}
+
 // optional uint32 league = 15;
 inline bool LocalContract::_internal_has_league() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool LocalContract::has_league() const {
@@ -61673,7 +70796,7 @@ inline bool LocalContract::has_league() const {
 }
 inline void LocalContract::clear_league() {
   league_ = 0u;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline uint32_t LocalContract::_internal_league() const {
   return league_;
@@ -61683,7 +70806,7 @@ inline uint32_t LocalContract::league() const {
   return _internal_league();
 }
 inline void LocalContract::_internal_set_league(uint32_t value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   league_ = value;
 }
 inline void LocalContract::set_league(uint32_t value) {
@@ -61722,7 +70845,7 @@ inline void LocalContract::set_grade(::ei::Contract_PlayerGrade value) {
 
 // optional double last_nag_time = 16;
 inline bool LocalContract::_internal_has_last_nag_time() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool LocalContract::has_last_nag_time() const {
@@ -61730,7 +70853,7 @@ inline bool LocalContract::has_last_nag_time() const {
 }
 inline void LocalContract::clear_last_nag_time() {
   last_nag_time_ = 0;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline double LocalContract::_internal_last_nag_time() const {
   return last_nag_time_;
@@ -61740,12 +70863,177 @@ inline double LocalContract::last_nag_time() const {
   return _internal_last_nag_time();
 }
 inline void LocalContract::_internal_set_last_nag_time(double value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
   last_nag_time_ = value;
 }
 inline void LocalContract::set_last_nag_time(double value) {
   _internal_set_last_nag_time(value);
   // @@protoc_insertion_point(field_set:ei.LocalContract.last_nag_time)
+}
+
+// optional .ei.ContractEvaluation evaluation = 19;
+inline bool LocalContract::_internal_has_evaluation() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || evaluation_ != nullptr);
+  return value;
+}
+inline bool LocalContract::has_evaluation() const {
+  return _internal_has_evaluation();
+}
+inline void LocalContract::clear_evaluation() {
+  if (evaluation_ != nullptr) evaluation_->Clear();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const ::ei::ContractEvaluation& LocalContract::_internal_evaluation() const {
+  const ::ei::ContractEvaluation* p = evaluation_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::ContractEvaluation&>(
+      ::ei::_ContractEvaluation_default_instance_);
+}
+inline const ::ei::ContractEvaluation& LocalContract::evaluation() const {
+  // @@protoc_insertion_point(field_get:ei.LocalContract.evaluation)
+  return _internal_evaluation();
+}
+inline void LocalContract::unsafe_arena_set_allocated_evaluation(
+    ::ei::ContractEvaluation* evaluation) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(evaluation_);
+  }
+  evaluation_ = evaluation;
+  if (evaluation) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.LocalContract.evaluation)
+}
+inline ::ei::ContractEvaluation* LocalContract::release_evaluation() {
+  _has_bits_[0] &= ~0x00000008u;
+  ::ei::ContractEvaluation* temp = evaluation_;
+  evaluation_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::ContractEvaluation* LocalContract::unsafe_arena_release_evaluation() {
+  // @@protoc_insertion_point(field_release:ei.LocalContract.evaluation)
+  _has_bits_[0] &= ~0x00000008u;
+  ::ei::ContractEvaluation* temp = evaluation_;
+  evaluation_ = nullptr;
+  return temp;
+}
+inline ::ei::ContractEvaluation* LocalContract::_internal_mutable_evaluation() {
+  _has_bits_[0] |= 0x00000008u;
+  if (evaluation_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::ContractEvaluation>(GetArenaForAllocation());
+    evaluation_ = p;
+  }
+  return evaluation_;
+}
+inline ::ei::ContractEvaluation* LocalContract::mutable_evaluation() {
+  ::ei::ContractEvaluation* _msg = _internal_mutable_evaluation();
+  // @@protoc_insertion_point(field_mutable:ei.LocalContract.evaluation)
+  return _msg;
+}
+inline void LocalContract::set_allocated_evaluation(::ei::ContractEvaluation* evaluation) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete evaluation_;
+  }
+  if (evaluation) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(evaluation);
+    if (message_arena != submessage_arena) {
+      evaluation = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, evaluation, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  evaluation_ = evaluation;
+  // @@protoc_insertion_point(field_set_allocated:ei.LocalContract.evaluation)
+}
+
+// repeated string reported_uuids = 21;
+inline int LocalContract::_internal_reported_uuids_size() const {
+  return reported_uuids_.size();
+}
+inline int LocalContract::reported_uuids_size() const {
+  return _internal_reported_uuids_size();
+}
+inline void LocalContract::clear_reported_uuids() {
+  reported_uuids_.Clear();
+}
+inline std::string* LocalContract::add_reported_uuids() {
+  std::string* _s = _internal_add_reported_uuids();
+  // @@protoc_insertion_point(field_add_mutable:ei.LocalContract.reported_uuids)
+  return _s;
+}
+inline const std::string& LocalContract::_internal_reported_uuids(int index) const {
+  return reported_uuids_.Get(index);
+}
+inline const std::string& LocalContract::reported_uuids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.LocalContract.reported_uuids)
+  return _internal_reported_uuids(index);
+}
+inline std::string* LocalContract::mutable_reported_uuids(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.LocalContract.reported_uuids)
+  return reported_uuids_.Mutable(index);
+}
+inline void LocalContract::set_reported_uuids(int index, const std::string& value) {
+  reported_uuids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.LocalContract.reported_uuids)
+}
+inline void LocalContract::set_reported_uuids(int index, std::string&& value) {
+  reported_uuids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.LocalContract.reported_uuids)
+}
+inline void LocalContract::set_reported_uuids(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  reported_uuids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.LocalContract.reported_uuids)
+}
+inline void LocalContract::set_reported_uuids(int index, const char* value, size_t size) {
+  reported_uuids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.LocalContract.reported_uuids)
+}
+inline std::string* LocalContract::_internal_add_reported_uuids() {
+  return reported_uuids_.Add();
+}
+inline void LocalContract::add_reported_uuids(const std::string& value) {
+  reported_uuids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.LocalContract.reported_uuids)
+}
+inline void LocalContract::add_reported_uuids(std::string&& value) {
+  reported_uuids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.LocalContract.reported_uuids)
+}
+inline void LocalContract::add_reported_uuids(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  reported_uuids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.LocalContract.reported_uuids)
+}
+inline void LocalContract::add_reported_uuids(const char* value, size_t size) {
+  reported_uuids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.LocalContract.reported_uuids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+LocalContract::reported_uuids() const {
+  // @@protoc_insertion_point(field_list:ei.LocalContract.reported_uuids)
+  return reported_uuids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+LocalContract::mutable_reported_uuids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.LocalContract.reported_uuids)
+  return &reported_uuids_;
 }
 
 // -------------------------------------------------------------------
@@ -61945,6 +71233,180 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractCoopStatus
 MyContracts::current_coop_statuses() const {
   // @@protoc_insertion_point(field_list:ei.MyContracts.current_coop_statuses)
   return current_coop_statuses_;
+}
+
+// optional .ei.ContractPlayerInfo last_cpi = 5;
+inline bool MyContracts::_internal_has_last_cpi() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || last_cpi_ != nullptr);
+  return value;
+}
+inline bool MyContracts::has_last_cpi() const {
+  return _internal_has_last_cpi();
+}
+inline void MyContracts::clear_last_cpi() {
+  if (last_cpi_ != nullptr) last_cpi_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::ei::ContractPlayerInfo& MyContracts::_internal_last_cpi() const {
+  const ::ei::ContractPlayerInfo* p = last_cpi_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::ContractPlayerInfo&>(
+      ::ei::_ContractPlayerInfo_default_instance_);
+}
+inline const ::ei::ContractPlayerInfo& MyContracts::last_cpi() const {
+  // @@protoc_insertion_point(field_get:ei.MyContracts.last_cpi)
+  return _internal_last_cpi();
+}
+inline void MyContracts::unsafe_arena_set_allocated_last_cpi(
+    ::ei::ContractPlayerInfo* last_cpi) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(last_cpi_);
+  }
+  last_cpi_ = last_cpi;
+  if (last_cpi) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.MyContracts.last_cpi)
+}
+inline ::ei::ContractPlayerInfo* MyContracts::release_last_cpi() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::ContractPlayerInfo* temp = last_cpi_;
+  last_cpi_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::ContractPlayerInfo* MyContracts::unsafe_arena_release_last_cpi() {
+  // @@protoc_insertion_point(field_release:ei.MyContracts.last_cpi)
+  _has_bits_[0] &= ~0x00000001u;
+  ::ei::ContractPlayerInfo* temp = last_cpi_;
+  last_cpi_ = nullptr;
+  return temp;
+}
+inline ::ei::ContractPlayerInfo* MyContracts::_internal_mutable_last_cpi() {
+  _has_bits_[0] |= 0x00000001u;
+  if (last_cpi_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::ContractPlayerInfo>(GetArenaForAllocation());
+    last_cpi_ = p;
+  }
+  return last_cpi_;
+}
+inline ::ei::ContractPlayerInfo* MyContracts::mutable_last_cpi() {
+  ::ei::ContractPlayerInfo* _msg = _internal_mutable_last_cpi();
+  // @@protoc_insertion_point(field_mutable:ei.MyContracts.last_cpi)
+  return _msg;
+}
+inline void MyContracts::set_allocated_last_cpi(::ei::ContractPlayerInfo* last_cpi) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete last_cpi_;
+  }
+  if (last_cpi) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(last_cpi);
+    if (message_arena != submessage_arena) {
+      last_cpi = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, last_cpi, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  last_cpi_ = last_cpi;
+  // @@protoc_insertion_point(field_set_allocated:ei.MyContracts.last_cpi)
+}
+
+// optional bool initial_grade_revealed = 6;
+inline bool MyContracts::_internal_has_initial_grade_revealed() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool MyContracts::has_initial_grade_revealed() const {
+  return _internal_has_initial_grade_revealed();
+}
+inline void MyContracts::clear_initial_grade_revealed() {
+  initial_grade_revealed_ = false;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline bool MyContracts::_internal_initial_grade_revealed() const {
+  return initial_grade_revealed_;
+}
+inline bool MyContracts::initial_grade_revealed() const {
+  // @@protoc_insertion_point(field_get:ei.MyContracts.initial_grade_revealed)
+  return _internal_initial_grade_revealed();
+}
+inline void MyContracts::_internal_set_initial_grade_revealed(bool value) {
+  _has_bits_[0] |= 0x00000004u;
+  initial_grade_revealed_ = value;
+}
+inline void MyContracts::set_initial_grade_revealed(bool value) {
+  _internal_set_initial_grade_revealed(value);
+  // @@protoc_insertion_point(field_set:ei.MyContracts.initial_grade_revealed)
+}
+
+// optional double last_grade_progress_shown = 7;
+inline bool MyContracts::_internal_has_last_grade_progress_shown() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool MyContracts::has_last_grade_progress_shown() const {
+  return _internal_has_last_grade_progress_shown();
+}
+inline void MyContracts::clear_last_grade_progress_shown() {
+  last_grade_progress_shown_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double MyContracts::_internal_last_grade_progress_shown() const {
+  return last_grade_progress_shown_;
+}
+inline double MyContracts::last_grade_progress_shown() const {
+  // @@protoc_insertion_point(field_get:ei.MyContracts.last_grade_progress_shown)
+  return _internal_last_grade_progress_shown();
+}
+inline void MyContracts::_internal_set_last_grade_progress_shown(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  last_grade_progress_shown_ = value;
+}
+inline void MyContracts::set_last_grade_progress_shown(double value) {
+  _internal_set_last_grade_progress_shown(value);
+  // @@protoc_insertion_point(field_set:ei.MyContracts.last_grade_progress_shown)
+}
+
+// optional bool show_advanced_evaluations = 8;
+inline bool MyContracts::_internal_has_show_advanced_evaluations() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool MyContracts::has_show_advanced_evaluations() const {
+  return _internal_has_show_advanced_evaluations();
+}
+inline void MyContracts::clear_show_advanced_evaluations() {
+  show_advanced_evaluations_ = false;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline bool MyContracts::_internal_show_advanced_evaluations() const {
+  return show_advanced_evaluations_;
+}
+inline bool MyContracts::show_advanced_evaluations() const {
+  // @@protoc_insertion_point(field_get:ei.MyContracts.show_advanced_evaluations)
+  return _internal_show_advanced_evaluations();
+}
+inline void MyContracts::_internal_set_show_advanced_evaluations(bool value) {
+  _has_bits_[0] |= 0x00000008u;
+  show_advanced_evaluations_ = value;
+}
+inline void MyContracts::set_show_advanced_evaluations(bool value) {
+  _internal_set_show_advanced_evaluations(value);
+  // @@protoc_insertion_point(field_set:ei.MyContracts.show_advanced_evaluations)
 }
 
 // -------------------------------------------------------------------
@@ -62205,6 +71667,35 @@ inline void QueryCoopRequest::set_league(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.QueryCoopRequest.league)
 }
 
+// optional .ei.Contract.PlayerGrade grade = 6;
+inline bool QueryCoopRequest::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool QueryCoopRequest::has_grade() const {
+  return _internal_has_grade();
+}
+inline void QueryCoopRequest::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::ei::Contract_PlayerGrade QueryCoopRequest::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade QueryCoopRequest::grade() const {
+  // @@protoc_insertion_point(field_get:ei.QueryCoopRequest.grade)
+  return _internal_grade();
+}
+inline void QueryCoopRequest::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000020u;
+  grade_ = value;
+}
+inline void QueryCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.QueryCoopRequest.grade)
+}
+
 // optional uint32 client_version = 3;
 inline bool QueryCoopRequest::_internal_has_client_version() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
@@ -62349,9 +71840,65 @@ inline void QueryCoopResponse::set_different_league(bool value) {
   // @@protoc_insertion_point(field_set:ei.QueryCoopResponse.different_league)
 }
 
+// optional bool different_grade = 6;
+inline bool QueryCoopResponse::_internal_has_different_grade() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool QueryCoopResponse::has_different_grade() const {
+  return _internal_has_different_grade();
+}
+inline void QueryCoopResponse::clear_different_grade() {
+  different_grade_ = false;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline bool QueryCoopResponse::_internal_different_grade() const {
+  return different_grade_;
+}
+inline bool QueryCoopResponse::different_grade() const {
+  // @@protoc_insertion_point(field_get:ei.QueryCoopResponse.different_grade)
+  return _internal_different_grade();
+}
+inline void QueryCoopResponse::_internal_set_different_grade(bool value) {
+  _has_bits_[0] |= 0x00000010u;
+  different_grade_ = value;
+}
+inline void QueryCoopResponse::set_different_grade(bool value) {
+  _internal_set_different_grade(value);
+  // @@protoc_insertion_point(field_set:ei.QueryCoopResponse.different_grade)
+}
+
+// optional bool cc_only = 7;
+inline bool QueryCoopResponse::_internal_has_cc_only() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool QueryCoopResponse::has_cc_only() const {
+  return _internal_has_cc_only();
+}
+inline void QueryCoopResponse::clear_cc_only() {
+  cc_only_ = false;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline bool QueryCoopResponse::_internal_cc_only() const {
+  return cc_only_;
+}
+inline bool QueryCoopResponse::cc_only() const {
+  // @@protoc_insertion_point(field_get:ei.QueryCoopResponse.cc_only)
+  return _internal_cc_only();
+}
+inline void QueryCoopResponse::_internal_set_cc_only(bool value) {
+  _has_bits_[0] |= 0x00000020u;
+  cc_only_ = value;
+}
+inline void QueryCoopResponse::set_cc_only(bool value) {
+  _internal_set_cc_only(value);
+  // @@protoc_insertion_point(field_set:ei.QueryCoopResponse.cc_only)
+}
+
 // optional bool banned = 3;
 inline bool QueryCoopResponse::_internal_has_banned() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool QueryCoopResponse::has_banned() const {
@@ -62359,7 +71906,7 @@ inline bool QueryCoopResponse::has_banned() const {
 }
 inline void QueryCoopResponse::clear_banned() {
   banned_ = false;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline bool QueryCoopResponse::_internal_banned() const {
   return banned_;
@@ -62369,7 +71916,7 @@ inline bool QueryCoopResponse::banned() const {
   return _internal_banned();
 }
 inline void QueryCoopResponse::_internal_set_banned(bool value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000040u;
   banned_ = value;
 }
 inline void QueryCoopResponse::set_banned(bool value) {
@@ -62605,6 +72152,62 @@ inline void CreateCoopRequest::set_allocated_coop_identifier(std::string* coop_i
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.CreateCoopRequest.coop_identifier)
+}
+
+// optional bool public = 13;
+inline bool CreateCoopRequest::_internal_has_public_() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool CreateCoopRequest::has_public_() const {
+  return _internal_has_public_();
+}
+inline void CreateCoopRequest::clear_public_() {
+  public__ = false;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline bool CreateCoopRequest::_internal_public_() const {
+  return public__;
+}
+inline bool CreateCoopRequest::public_() const {
+  // @@protoc_insertion_point(field_get:ei.CreateCoopRequest.public)
+  return _internal_public_();
+}
+inline void CreateCoopRequest::_internal_set_public_(bool value) {
+  _has_bits_[0] |= 0x00000800u;
+  public__ = value;
+}
+inline void CreateCoopRequest::set_public_(bool value) {
+  _internal_set_public_(value);
+  // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.public)
+}
+
+// optional bool cc_only = 14;
+inline bool CreateCoopRequest::_internal_has_cc_only() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool CreateCoopRequest::has_cc_only() const {
+  return _internal_has_cc_only();
+}
+inline void CreateCoopRequest::clear_cc_only() {
+  cc_only_ = false;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline bool CreateCoopRequest::_internal_cc_only() const {
+  return cc_only_;
+}
+inline bool CreateCoopRequest::cc_only() const {
+  // @@protoc_insertion_point(field_get:ei.CreateCoopRequest.cc_only)
+  return _internal_cc_only();
+}
+inline void CreateCoopRequest::_internal_set_cc_only(bool value) {
+  _has_bits_[0] |= 0x00001000u;
+  cc_only_ = value;
+}
+inline void CreateCoopRequest::set_cc_only(bool value) {
+  _internal_set_cc_only(value);
+  // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.cc_only)
 }
 
 // optional double seconds_remaining = 3;
@@ -62855,9 +72458,38 @@ inline void CreateCoopRequest::set_league(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.league)
 }
 
+// optional .ei.Contract.PlayerGrade grade = 12;
+inline bool CreateCoopRequest::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool CreateCoopRequest::has_grade() const {
+  return _internal_has_grade();
+}
+inline void CreateCoopRequest::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline ::ei::Contract_PlayerGrade CreateCoopRequest::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade CreateCoopRequest::grade() const {
+  // @@protoc_insertion_point(field_get:ei.CreateCoopRequest.grade)
+  return _internal_grade();
+}
+inline void CreateCoopRequest::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000400u;
+  grade_ = value;
+}
+inline void CreateCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.grade)
+}
+
 // optional .ei.Platform platform = 6;
 inline bool CreateCoopRequest::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool CreateCoopRequest::has_platform() const {
@@ -62865,7 +72497,7 @@ inline bool CreateCoopRequest::has_platform() const {
 }
 inline void CreateCoopRequest::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::ei::Platform CreateCoopRequest::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -62876,7 +72508,7 @@ inline ::ei::Platform CreateCoopRequest::platform() const {
 }
 inline void CreateCoopRequest::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00002000u;
   platform_ = value;
 }
 inline void CreateCoopRequest::set_platform(::ei::Platform value) {
@@ -63462,9 +73094,38 @@ inline void JoinCoopRequest::set_league(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.JoinCoopRequest.league)
 }
 
+// optional .ei.Contract.PlayerGrade grade = 13;
+inline bool JoinCoopRequest::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool JoinCoopRequest::has_grade() const {
+  return _internal_has_grade();
+}
+inline void JoinCoopRequest::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline ::ei::Contract_PlayerGrade JoinCoopRequest::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade JoinCoopRequest::grade() const {
+  // @@protoc_insertion_point(field_get:ei.JoinCoopRequest.grade)
+  return _internal_grade();
+}
+inline void JoinCoopRequest::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000400u;
+  grade_ = value;
+}
+inline void JoinCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.JoinCoopRequest.grade)
+}
+
 // optional .ei.Platform platform = 5;
 inline bool JoinCoopRequest::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool JoinCoopRequest::has_platform() const {
@@ -63472,7 +73133,7 @@ inline bool JoinCoopRequest::has_platform() const {
 }
 inline void JoinCoopRequest::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::ei::Platform JoinCoopRequest::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -63483,7 +73144,7 @@ inline ::ei::Platform JoinCoopRequest::platform() const {
 }
 inline void JoinCoopRequest::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   platform_ = value;
 }
 inline void JoinCoopRequest::set_platform(::ei::Platform value) {
@@ -63773,7 +73434,7 @@ inline void JoinCoopResponse::set_seconds_remaining(double value) {
 
 // optional double match_percent = 6;
 inline bool JoinCoopResponse::_internal_has_match_percent() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool JoinCoopResponse::has_match_percent() const {
@@ -63781,7 +73442,7 @@ inline bool JoinCoopResponse::has_match_percent() const {
 }
 inline void JoinCoopResponse::clear_match_percent() {
   match_percent_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline double JoinCoopResponse::_internal_match_percent() const {
   return match_percent_;
@@ -63791,7 +73452,7 @@ inline double JoinCoopResponse::match_percent() const {
   return _internal_match_percent();
 }
 inline void JoinCoopResponse::_internal_set_match_percent(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   match_percent_ = value;
 }
 inline void JoinCoopResponse::set_match_percent(double value) {
@@ -63801,7 +73462,7 @@ inline void JoinCoopResponse::set_match_percent(double value) {
 
 // optional uint32 num_members = 7;
 inline bool JoinCoopResponse::_internal_has_num_members() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool JoinCoopResponse::has_num_members() const {
@@ -63809,7 +73470,7 @@ inline bool JoinCoopResponse::has_num_members() const {
 }
 inline void JoinCoopResponse::clear_num_members() {
   num_members_ = 0u;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t JoinCoopResponse::_internal_num_members() const {
   return num_members_;
@@ -63819,12 +73480,98 @@ inline uint32_t JoinCoopResponse::num_members() const {
   return _internal_num_members();
 }
 inline void JoinCoopResponse::_internal_set_num_members(uint32_t value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   num_members_ = value;
 }
 inline void JoinCoopResponse::set_num_members(uint32_t value) {
   _internal_set_num_members(value);
   // @@protoc_insertion_point(field_set:ei.JoinCoopResponse.num_members)
+}
+
+// optional .ei.ContractCoopStatusResponse.Status status = 8;
+inline bool JoinCoopResponse::_internal_has_status() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool JoinCoopResponse::has_status() const {
+  return _internal_has_status();
+}
+inline void JoinCoopResponse::clear_status() {
+  status_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline ::ei::ContractCoopStatusResponse_Status JoinCoopResponse::_internal_status() const {
+  return static_cast< ::ei::ContractCoopStatusResponse_Status >(status_);
+}
+inline ::ei::ContractCoopStatusResponse_Status JoinCoopResponse::status() const {
+  // @@protoc_insertion_point(field_get:ei.JoinCoopResponse.status)
+  return _internal_status();
+}
+inline void JoinCoopResponse::_internal_set_status(::ei::ContractCoopStatusResponse_Status value) {
+  assert(::ei::ContractCoopStatusResponse_Status_IsValid(value));
+  _has_bits_[0] |= 0x00000100u;
+  status_ = value;
+}
+inline void JoinCoopResponse::set_status(::ei::ContractCoopStatusResponse_Status value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:ei.JoinCoopResponse.status)
+}
+
+// optional .ei.Contract.PlayerGrade grade = 9;
+inline bool JoinCoopResponse::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool JoinCoopResponse::has_grade() const {
+  return _internal_has_grade();
+}
+inline void JoinCoopResponse::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline ::ei::Contract_PlayerGrade JoinCoopResponse::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade JoinCoopResponse::grade() const {
+  // @@protoc_insertion_point(field_get:ei.JoinCoopResponse.grade)
+  return _internal_grade();
+}
+inline void JoinCoopResponse::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000200u;
+  grade_ = value;
+}
+inline void JoinCoopResponse::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.JoinCoopResponse.grade)
+}
+
+// optional bool can_start = 10;
+inline bool JoinCoopResponse::_internal_has_can_start() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool JoinCoopResponse::has_can_start() const {
+  return _internal_has_can_start();
+}
+inline void JoinCoopResponse::clear_can_start() {
+  can_start_ = false;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline bool JoinCoopResponse::_internal_can_start() const {
+  return can_start_;
+}
+inline bool JoinCoopResponse::can_start() const {
+  // @@protoc_insertion_point(field_get:ei.JoinCoopResponse.can_start)
+  return _internal_can_start();
+}
+inline void JoinCoopResponse::_internal_set_can_start(bool value) {
+  _has_bits_[0] |= 0x00000020u;
+  can_start_ = value;
+}
+inline void JoinCoopResponse::set_can_start(bool value) {
+  _internal_set_can_start(value);
+  // @@protoc_insertion_point(field_set:ei.JoinCoopResponse.can_start)
 }
 
 // -------------------------------------------------------------------
@@ -64209,6 +73956,35 @@ inline void AutoJoinCoopRequest::set_league(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.AutoJoinCoopRequest.league)
 }
 
+// optional .ei.Contract.PlayerGrade grade = 12;
+inline bool AutoJoinCoopRequest::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool AutoJoinCoopRequest::has_grade() const {
+  return _internal_has_grade();
+}
+inline void AutoJoinCoopRequest::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline ::ei::Contract_PlayerGrade AutoJoinCoopRequest::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade AutoJoinCoopRequest::grade() const {
+  // @@protoc_insertion_point(field_get:ei.AutoJoinCoopRequest.grade)
+  return _internal_grade();
+}
+inline void AutoJoinCoopRequest::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000200u;
+  grade_ = value;
+}
+inline void AutoJoinCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.AutoJoinCoopRequest.grade)
+}
+
 // optional double seconds_remaining = 5;
 inline bool AutoJoinCoopRequest::_internal_has_seconds_remaining() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
@@ -64239,7 +74015,7 @@ inline void AutoJoinCoopRequest::set_seconds_remaining(double value) {
 
 // optional .ei.Platform platform = 6;
 inline bool AutoJoinCoopRequest::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool AutoJoinCoopRequest::has_platform() const {
@@ -64247,7 +74023,7 @@ inline bool AutoJoinCoopRequest::has_platform() const {
 }
 inline void AutoJoinCoopRequest::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline ::ei::Platform AutoJoinCoopRequest::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -64258,7 +74034,7 @@ inline ::ei::Platform AutoJoinCoopRequest::platform() const {
 }
 inline void AutoJoinCoopRequest::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   platform_ = value;
 }
 inline void AutoJoinCoopRequest::set_platform(::ei::Platform value) {
@@ -66056,6 +75832,333 @@ inline void SendChickenRunCoopRequest::set_client_version(uint32_t value) {
 
 // -------------------------------------------------------------------
 
+// ReportPlayerCoopRequest
+
+// optional .ei.BasicRequestInfo rinfo = 1;
+inline bool ReportPlayerCoopRequest::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool ReportPlayerCoopRequest::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void ReportPlayerCoopRequest::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const ::ei::BasicRequestInfo& ReportPlayerCoopRequest::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& ReportPlayerCoopRequest::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.ReportPlayerCoopRequest.rinfo)
+  return _internal_rinfo();
+}
+inline void ReportPlayerCoopRequest::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.ReportPlayerCoopRequest.rinfo)
+}
+inline ::ei::BasicRequestInfo* ReportPlayerCoopRequest::release_rinfo() {
+  _has_bits_[0] &= ~0x00000008u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* ReportPlayerCoopRequest::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.ReportPlayerCoopRequest.rinfo)
+  _has_bits_[0] &= ~0x00000008u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* ReportPlayerCoopRequest::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000008u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* ReportPlayerCoopRequest::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.ReportPlayerCoopRequest.rinfo)
+  return _msg;
+}
+inline void ReportPlayerCoopRequest::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.ReportPlayerCoopRequest.rinfo)
+}
+
+// optional string contract_identifier = 2;
+inline bool ReportPlayerCoopRequest::_internal_has_contract_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ReportPlayerCoopRequest::has_contract_identifier() const {
+  return _internal_has_contract_identifier();
+}
+inline void ReportPlayerCoopRequest::clear_contract_identifier() {
+  contract_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ReportPlayerCoopRequest::contract_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ReportPlayerCoopRequest.contract_identifier)
+  return _internal_contract_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ReportPlayerCoopRequest::set_contract_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ contract_identifier_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ReportPlayerCoopRequest.contract_identifier)
+}
+inline std::string* ReportPlayerCoopRequest::mutable_contract_identifier() {
+  std::string* _s = _internal_mutable_contract_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ReportPlayerCoopRequest.contract_identifier)
+  return _s;
+}
+inline const std::string& ReportPlayerCoopRequest::_internal_contract_identifier() const {
+  return contract_identifier_.Get();
+}
+inline void ReportPlayerCoopRequest::_internal_set_contract_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  contract_identifier_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ReportPlayerCoopRequest::_internal_mutable_contract_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+  return contract_identifier_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ReportPlayerCoopRequest::release_contract_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ReportPlayerCoopRequest.contract_identifier)
+  if (!_internal_has_contract_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = contract_identifier_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault()) {
+    contract_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ReportPlayerCoopRequest::set_allocated_contract_identifier(std::string* contract_identifier) {
+  if (contract_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  contract_identifier_.SetAllocated(contract_identifier, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_identifier_.IsDefault()) {
+    contract_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ReportPlayerCoopRequest.contract_identifier)
+}
+
+// optional string coop_identifier = 3;
+inline bool ReportPlayerCoopRequest::_internal_has_coop_identifier() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ReportPlayerCoopRequest::has_coop_identifier() const {
+  return _internal_has_coop_identifier();
+}
+inline void ReportPlayerCoopRequest::clear_coop_identifier() {
+  coop_identifier_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ReportPlayerCoopRequest::coop_identifier() const {
+  // @@protoc_insertion_point(field_get:ei.ReportPlayerCoopRequest.coop_identifier)
+  return _internal_coop_identifier();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ReportPlayerCoopRequest::set_coop_identifier(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ coop_identifier_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ReportPlayerCoopRequest.coop_identifier)
+}
+inline std::string* ReportPlayerCoopRequest::mutable_coop_identifier() {
+  std::string* _s = _internal_mutable_coop_identifier();
+  // @@protoc_insertion_point(field_mutable:ei.ReportPlayerCoopRequest.coop_identifier)
+  return _s;
+}
+inline const std::string& ReportPlayerCoopRequest::_internal_coop_identifier() const {
+  return coop_identifier_.Get();
+}
+inline void ReportPlayerCoopRequest::_internal_set_coop_identifier(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  coop_identifier_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ReportPlayerCoopRequest::_internal_mutable_coop_identifier() {
+  _has_bits_[0] |= 0x00000002u;
+  return coop_identifier_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ReportPlayerCoopRequest::release_coop_identifier() {
+  // @@protoc_insertion_point(field_release:ei.ReportPlayerCoopRequest.coop_identifier)
+  if (!_internal_has_coop_identifier()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = coop_identifier_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_identifier_.IsDefault()) {
+    coop_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ReportPlayerCoopRequest::set_allocated_coop_identifier(std::string* coop_identifier) {
+  if (coop_identifier != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  coop_identifier_.SetAllocated(coop_identifier, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_identifier_.IsDefault()) {
+    coop_identifier_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ReportPlayerCoopRequest.coop_identifier)
+}
+
+// optional string user_id = 4;
+inline bool ReportPlayerCoopRequest::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ReportPlayerCoopRequest::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void ReportPlayerCoopRequest::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ReportPlayerCoopRequest::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ReportPlayerCoopRequest.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ReportPlayerCoopRequest::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ReportPlayerCoopRequest.user_id)
+}
+inline std::string* ReportPlayerCoopRequest::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ReportPlayerCoopRequest.user_id)
+  return _s;
+}
+inline const std::string& ReportPlayerCoopRequest::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void ReportPlayerCoopRequest::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ReportPlayerCoopRequest::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000004u;
+  return user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ReportPlayerCoopRequest::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ReportPlayerCoopRequest.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ReportPlayerCoopRequest::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  user_id_.SetAllocated(user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ReportPlayerCoopRequest.user_id)
+}
+
+// optional .ei.ReportPlayerCoopRequest.Reason reason = 5;
+inline bool ReportPlayerCoopRequest::_internal_has_reason() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ReportPlayerCoopRequest::has_reason() const {
+  return _internal_has_reason();
+}
+inline void ReportPlayerCoopRequest::clear_reason() {
+  reason_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::ei::ReportPlayerCoopRequest_Reason ReportPlayerCoopRequest::_internal_reason() const {
+  return static_cast< ::ei::ReportPlayerCoopRequest_Reason >(reason_);
+}
+inline ::ei::ReportPlayerCoopRequest_Reason ReportPlayerCoopRequest::reason() const {
+  // @@protoc_insertion_point(field_get:ei.ReportPlayerCoopRequest.reason)
+  return _internal_reason();
+}
+inline void ReportPlayerCoopRequest::_internal_set_reason(::ei::ReportPlayerCoopRequest_Reason value) {
+  assert(::ei::ReportPlayerCoopRequest_Reason_IsValid(value));
+  _has_bits_[0] |= 0x00000010u;
+  reason_ = value;
+}
+inline void ReportPlayerCoopRequest::set_reason(::ei::ReportPlayerCoopRequest_Reason value) {
+  _internal_set_reason(value);
+  // @@protoc_insertion_point(field_set:ei.ReportPlayerCoopRequest.reason)
+}
+
+// -------------------------------------------------------------------
+
 // KickPlayerCoopRequest
 
 // optional .ei.BasicRequestInfo rinfo = 8;
@@ -67638,6 +77741,2042 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CoopChickenRunEntr
 CoopLastChickenRunTimes::entries() const {
   // @@protoc_insertion_point(field_list:ei.CoopLastChickenRunTimes.entries)
   return entries_;
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardAnalysis_Chunk
+
+// optional uint32 start_index = 1;
+inline bool LeaderboardAnalysis_Chunk::_internal_has_start_index() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis_Chunk::has_start_index() const {
+  return _internal_has_start_index();
+}
+inline void LeaderboardAnalysis_Chunk::clear_start_index() {
+  start_index_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t LeaderboardAnalysis_Chunk::_internal_start_index() const {
+  return start_index_;
+}
+inline uint32_t LeaderboardAnalysis_Chunk::start_index() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.Chunk.start_index)
+  return _internal_start_index();
+}
+inline void LeaderboardAnalysis_Chunk::_internal_set_start_index(uint32_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  start_index_ = value;
+}
+inline void LeaderboardAnalysis_Chunk::set_start_index(uint32_t value) {
+  _internal_set_start_index(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.Chunk.start_index)
+}
+
+// optional uint32 end_index = 2;
+inline bool LeaderboardAnalysis_Chunk::_internal_has_end_index() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis_Chunk::has_end_index() const {
+  return _internal_has_end_index();
+}
+inline void LeaderboardAnalysis_Chunk::clear_end_index() {
+  end_index_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t LeaderboardAnalysis_Chunk::_internal_end_index() const {
+  return end_index_;
+}
+inline uint32_t LeaderboardAnalysis_Chunk::end_index() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.Chunk.end_index)
+  return _internal_end_index();
+}
+inline void LeaderboardAnalysis_Chunk::_internal_set_end_index(uint32_t value) {
+  _has_bits_[0] |= 0x00000008u;
+  end_index_ = value;
+}
+inline void LeaderboardAnalysis_Chunk::set_end_index(uint32_t value) {
+  _internal_set_end_index(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.Chunk.end_index)
+}
+
+// optional double high_score = 3;
+inline bool LeaderboardAnalysis_Chunk::_internal_has_high_score() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis_Chunk::has_high_score() const {
+  return _internal_has_high_score();
+}
+inline void LeaderboardAnalysis_Chunk::clear_high_score() {
+  high_score_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline double LeaderboardAnalysis_Chunk::_internal_high_score() const {
+  return high_score_;
+}
+inline double LeaderboardAnalysis_Chunk::high_score() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.Chunk.high_score)
+  return _internal_high_score();
+}
+inline void LeaderboardAnalysis_Chunk::_internal_set_high_score(double value) {
+  _has_bits_[0] |= 0x00000010u;
+  high_score_ = value;
+}
+inline void LeaderboardAnalysis_Chunk::set_high_score(double value) {
+  _internal_set_high_score(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.Chunk.high_score)
+}
+
+// optional double low_score = 4;
+inline bool LeaderboardAnalysis_Chunk::_internal_has_low_score() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis_Chunk::has_low_score() const {
+  return _internal_has_low_score();
+}
+inline void LeaderboardAnalysis_Chunk::clear_low_score() {
+  low_score_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double LeaderboardAnalysis_Chunk::_internal_low_score() const {
+  return low_score_;
+}
+inline double LeaderboardAnalysis_Chunk::low_score() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.Chunk.low_score)
+  return _internal_low_score();
+}
+inline void LeaderboardAnalysis_Chunk::_internal_set_low_score(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  low_score_ = value;
+}
+inline void LeaderboardAnalysis_Chunk::set_low_score(double value) {
+  _internal_set_low_score(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.Chunk.low_score)
+}
+
+// optional string start_cursor = 5;
+inline bool LeaderboardAnalysis_Chunk::_internal_has_start_cursor() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis_Chunk::has_start_cursor() const {
+  return _internal_has_start_cursor();
+}
+inline void LeaderboardAnalysis_Chunk::clear_start_cursor() {
+  start_cursor_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardAnalysis_Chunk::start_cursor() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.Chunk.start_cursor)
+  return _internal_start_cursor();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardAnalysis_Chunk::set_start_cursor(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ start_cursor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.Chunk.start_cursor)
+}
+inline std::string* LeaderboardAnalysis_Chunk::mutable_start_cursor() {
+  std::string* _s = _internal_mutable_start_cursor();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardAnalysis.Chunk.start_cursor)
+  return _s;
+}
+inline const std::string& LeaderboardAnalysis_Chunk::_internal_start_cursor() const {
+  return start_cursor_.Get();
+}
+inline void LeaderboardAnalysis_Chunk::_internal_set_start_cursor(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  start_cursor_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardAnalysis_Chunk::_internal_mutable_start_cursor() {
+  _has_bits_[0] |= 0x00000001u;
+  return start_cursor_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardAnalysis_Chunk::release_start_cursor() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardAnalysis.Chunk.start_cursor)
+  if (!_internal_has_start_cursor()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = start_cursor_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (start_cursor_.IsDefault()) {
+    start_cursor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardAnalysis_Chunk::set_allocated_start_cursor(std::string* start_cursor) {
+  if (start_cursor != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  start_cursor_.SetAllocated(start_cursor, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (start_cursor_.IsDefault()) {
+    start_cursor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardAnalysis.Chunk.start_cursor)
+}
+
+// optional string end_cursor = 6;
+inline bool LeaderboardAnalysis_Chunk::_internal_has_end_cursor() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis_Chunk::has_end_cursor() const {
+  return _internal_has_end_cursor();
+}
+inline void LeaderboardAnalysis_Chunk::clear_end_cursor() {
+  end_cursor_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& LeaderboardAnalysis_Chunk::end_cursor() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.Chunk.end_cursor)
+  return _internal_end_cursor();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardAnalysis_Chunk::set_end_cursor(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ end_cursor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.Chunk.end_cursor)
+}
+inline std::string* LeaderboardAnalysis_Chunk::mutable_end_cursor() {
+  std::string* _s = _internal_mutable_end_cursor();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardAnalysis.Chunk.end_cursor)
+  return _s;
+}
+inline const std::string& LeaderboardAnalysis_Chunk::_internal_end_cursor() const {
+  return end_cursor_.Get();
+}
+inline void LeaderboardAnalysis_Chunk::_internal_set_end_cursor(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  end_cursor_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardAnalysis_Chunk::_internal_mutable_end_cursor() {
+  _has_bits_[0] |= 0x00000002u;
+  return end_cursor_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardAnalysis_Chunk::release_end_cursor() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardAnalysis.Chunk.end_cursor)
+  if (!_internal_has_end_cursor()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = end_cursor_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (end_cursor_.IsDefault()) {
+    end_cursor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardAnalysis_Chunk::set_allocated_end_cursor(std::string* end_cursor) {
+  if (end_cursor != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  end_cursor_.SetAllocated(end_cursor, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (end_cursor_.IsDefault()) {
+    end_cursor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardAnalysis.Chunk.end_cursor)
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardAnalysis
+
+// repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;
+inline int LeaderboardAnalysis::_internal_chunks_size() const {
+  return chunks_.size();
+}
+inline int LeaderboardAnalysis::chunks_size() const {
+  return _internal_chunks_size();
+}
+inline void LeaderboardAnalysis::clear_chunks() {
+  chunks_.Clear();
+}
+inline ::ei::LeaderboardAnalysis_Chunk* LeaderboardAnalysis::mutable_chunks(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardAnalysis.chunks)
+  return chunks_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk >*
+LeaderboardAnalysis::mutable_chunks() {
+  // @@protoc_insertion_point(field_mutable_list:ei.LeaderboardAnalysis.chunks)
+  return &chunks_;
+}
+inline const ::ei::LeaderboardAnalysis_Chunk& LeaderboardAnalysis::_internal_chunks(int index) const {
+  return chunks_.Get(index);
+}
+inline const ::ei::LeaderboardAnalysis_Chunk& LeaderboardAnalysis::chunks(int index) const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.chunks)
+  return _internal_chunks(index);
+}
+inline ::ei::LeaderboardAnalysis_Chunk* LeaderboardAnalysis::_internal_add_chunks() {
+  return chunks_.Add();
+}
+inline ::ei::LeaderboardAnalysis_Chunk* LeaderboardAnalysis::add_chunks() {
+  ::ei::LeaderboardAnalysis_Chunk* _add = _internal_add_chunks();
+  // @@protoc_insertion_point(field_add:ei.LeaderboardAnalysis.chunks)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk >&
+LeaderboardAnalysis::chunks() const {
+  // @@protoc_insertion_point(field_list:ei.LeaderboardAnalysis.chunks)
+  return chunks_;
+}
+
+// optional uint32 count = 2;
+inline bool LeaderboardAnalysis::_internal_has_count() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis::has_count() const {
+  return _internal_has_count();
+}
+inline void LeaderboardAnalysis::clear_count() {
+  count_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t LeaderboardAnalysis::_internal_count() const {
+  return count_;
+}
+inline uint32_t LeaderboardAnalysis::count() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.count)
+  return _internal_count();
+}
+inline void LeaderboardAnalysis::_internal_set_count(uint32_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  count_ = value;
+}
+inline void LeaderboardAnalysis::set_count(uint32_t value) {
+  _internal_set_count(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.count)
+}
+
+// optional double high_score = 3;
+inline bool LeaderboardAnalysis::_internal_has_high_score() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis::has_high_score() const {
+  return _internal_has_high_score();
+}
+inline void LeaderboardAnalysis::clear_high_score() {
+  high_score_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline double LeaderboardAnalysis::_internal_high_score() const {
+  return high_score_;
+}
+inline double LeaderboardAnalysis::high_score() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.high_score)
+  return _internal_high_score();
+}
+inline void LeaderboardAnalysis::_internal_set_high_score(double value) {
+  _has_bits_[0] |= 0x00000001u;
+  high_score_ = value;
+}
+inline void LeaderboardAnalysis::set_high_score(double value) {
+  _internal_set_high_score(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.high_score)
+}
+
+// optional double low_score = 4;
+inline bool LeaderboardAnalysis::_internal_has_low_score() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis::has_low_score() const {
+  return _internal_has_low_score();
+}
+inline void LeaderboardAnalysis::clear_low_score() {
+  low_score_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double LeaderboardAnalysis::_internal_low_score() const {
+  return low_score_;
+}
+inline double LeaderboardAnalysis::low_score() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.low_score)
+  return _internal_low_score();
+}
+inline void LeaderboardAnalysis::_internal_set_low_score(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  low_score_ = value;
+}
+inline void LeaderboardAnalysis::set_low_score(double value) {
+  _internal_set_low_score(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.low_score)
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardInfo_Season
+
+// optional string scope = 1;
+inline bool LeaderboardInfo_Season::_internal_has_scope() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardInfo_Season::has_scope() const {
+  return _internal_has_scope();
+}
+inline void LeaderboardInfo_Season::clear_scope() {
+  scope_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardInfo_Season::scope() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardInfo.Season.scope)
+  return _internal_scope();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardInfo_Season::set_scope(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardInfo.Season.scope)
+}
+inline std::string* LeaderboardInfo_Season::mutable_scope() {
+  std::string* _s = _internal_mutable_scope();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardInfo.Season.scope)
+  return _s;
+}
+inline const std::string& LeaderboardInfo_Season::_internal_scope() const {
+  return scope_.Get();
+}
+inline void LeaderboardInfo_Season::_internal_set_scope(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  scope_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardInfo_Season::_internal_mutable_scope() {
+  _has_bits_[0] |= 0x00000001u;
+  return scope_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardInfo_Season::release_scope() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardInfo.Season.scope)
+  if (!_internal_has_scope()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = scope_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (scope_.IsDefault()) {
+    scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardInfo_Season::set_allocated_scope(std::string* scope) {
+  if (scope != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  scope_.SetAllocated(scope, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (scope_.IsDefault()) {
+    scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardInfo.Season.scope)
+}
+
+// optional string name = 2;
+inline bool LeaderboardInfo_Season::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LeaderboardInfo_Season::has_name() const {
+  return _internal_has_name();
+}
+inline void LeaderboardInfo_Season::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& LeaderboardInfo_Season::name() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardInfo.Season.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardInfo_Season::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardInfo.Season.name)
+}
+inline std::string* LeaderboardInfo_Season::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardInfo.Season.name)
+  return _s;
+}
+inline const std::string& LeaderboardInfo_Season::_internal_name() const {
+  return name_.Get();
+}
+inline void LeaderboardInfo_Season::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  name_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardInfo_Season::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000002u;
+  return name_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardInfo_Season::release_name() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardInfo.Season.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault()) {
+    name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardInfo_Season::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  name_.SetAllocated(name, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (name_.IsDefault()) {
+    name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardInfo.Season.name)
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardInfo
+
+// repeated .ei.LeaderboardInfo.Season seasons = 1;
+inline int LeaderboardInfo::_internal_seasons_size() const {
+  return seasons_.size();
+}
+inline int LeaderboardInfo::seasons_size() const {
+  return _internal_seasons_size();
+}
+inline void LeaderboardInfo::clear_seasons() {
+  seasons_.Clear();
+}
+inline ::ei::LeaderboardInfo_Season* LeaderboardInfo::mutable_seasons(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardInfo.seasons)
+  return seasons_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardInfo_Season >*
+LeaderboardInfo::mutable_seasons() {
+  // @@protoc_insertion_point(field_mutable_list:ei.LeaderboardInfo.seasons)
+  return &seasons_;
+}
+inline const ::ei::LeaderboardInfo_Season& LeaderboardInfo::_internal_seasons(int index) const {
+  return seasons_.Get(index);
+}
+inline const ::ei::LeaderboardInfo_Season& LeaderboardInfo::seasons(int index) const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardInfo.seasons)
+  return _internal_seasons(index);
+}
+inline ::ei::LeaderboardInfo_Season* LeaderboardInfo::_internal_add_seasons() {
+  return seasons_.Add();
+}
+inline ::ei::LeaderboardInfo_Season* LeaderboardInfo::add_seasons() {
+  ::ei::LeaderboardInfo_Season* _add = _internal_add_seasons();
+  // @@protoc_insertion_point(field_add:ei.LeaderboardInfo.seasons)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardInfo_Season >&
+LeaderboardInfo::seasons() const {
+  // @@protoc_insertion_point(field_list:ei.LeaderboardInfo.seasons)
+  return seasons_;
+}
+
+// optional string all_time_scope = 2;
+inline bool LeaderboardInfo::_internal_has_all_time_scope() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardInfo::has_all_time_scope() const {
+  return _internal_has_all_time_scope();
+}
+inline void LeaderboardInfo::clear_all_time_scope() {
+  all_time_scope_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardInfo::all_time_scope() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardInfo.all_time_scope)
+  return _internal_all_time_scope();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardInfo::set_all_time_scope(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ all_time_scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardInfo.all_time_scope)
+}
+inline std::string* LeaderboardInfo::mutable_all_time_scope() {
+  std::string* _s = _internal_mutable_all_time_scope();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardInfo.all_time_scope)
+  return _s;
+}
+inline const std::string& LeaderboardInfo::_internal_all_time_scope() const {
+  return all_time_scope_.Get();
+}
+inline void LeaderboardInfo::_internal_set_all_time_scope(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  all_time_scope_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardInfo::_internal_mutable_all_time_scope() {
+  _has_bits_[0] |= 0x00000001u;
+  return all_time_scope_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardInfo::release_all_time_scope() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardInfo.all_time_scope)
+  if (!_internal_has_all_time_scope()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = all_time_scope_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (all_time_scope_.IsDefault()) {
+    all_time_scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardInfo::set_allocated_all_time_scope(std::string* all_time_scope) {
+  if (all_time_scope != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  all_time_scope_.SetAllocated(all_time_scope, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (all_time_scope_.IsDefault()) {
+    all_time_scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardInfo.all_time_scope)
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardRequest
+
+// optional .ei.BasicRequestInfo rinfo = 1;
+inline bool LeaderboardRequest::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool LeaderboardRequest::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void LeaderboardRequest::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::ei::BasicRequestInfo& LeaderboardRequest::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& LeaderboardRequest::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardRequest.rinfo)
+  return _internal_rinfo();
+}
+inline void LeaderboardRequest::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.LeaderboardRequest.rinfo)
+}
+inline ::ei::BasicRequestInfo* LeaderboardRequest::release_rinfo() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* LeaderboardRequest::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardRequest.rinfo)
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* LeaderboardRequest::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000002u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* LeaderboardRequest::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardRequest.rinfo)
+  return _msg;
+}
+inline void LeaderboardRequest::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardRequest.rinfo)
+}
+
+// optional string scope = 2;
+inline bool LeaderboardRequest::_internal_has_scope() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardRequest::has_scope() const {
+  return _internal_has_scope();
+}
+inline void LeaderboardRequest::clear_scope() {
+  scope_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardRequest::scope() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardRequest.scope)
+  return _internal_scope();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardRequest::set_scope(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardRequest.scope)
+}
+inline std::string* LeaderboardRequest::mutable_scope() {
+  std::string* _s = _internal_mutable_scope();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardRequest.scope)
+  return _s;
+}
+inline const std::string& LeaderboardRequest::_internal_scope() const {
+  return scope_.Get();
+}
+inline void LeaderboardRequest::_internal_set_scope(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  scope_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardRequest::_internal_mutable_scope() {
+  _has_bits_[0] |= 0x00000001u;
+  return scope_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardRequest::release_scope() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardRequest.scope)
+  if (!_internal_has_scope()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = scope_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (scope_.IsDefault()) {
+    scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardRequest::set_allocated_scope(std::string* scope) {
+  if (scope != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  scope_.SetAllocated(scope, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (scope_.IsDefault()) {
+    scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardRequest.scope)
+}
+
+// optional .ei.Contract.PlayerGrade grade = 3;
+inline bool LeaderboardRequest::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LeaderboardRequest::has_grade() const {
+  return _internal_has_grade();
+}
+inline void LeaderboardRequest::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::ei::Contract_PlayerGrade LeaderboardRequest::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade LeaderboardRequest::grade() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardRequest.grade)
+  return _internal_grade();
+}
+inline void LeaderboardRequest::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000004u;
+  grade_ = value;
+}
+inline void LeaderboardRequest::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardRequest.grade)
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardResponse_Entry
+
+// optional uint32 rank = 1;
+inline bool LeaderboardResponse_Entry::_internal_has_rank() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse_Entry::has_rank() const {
+  return _internal_has_rank();
+}
+inline void LeaderboardResponse_Entry::clear_rank() {
+  rank_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t LeaderboardResponse_Entry::_internal_rank() const {
+  return rank_;
+}
+inline uint32_t LeaderboardResponse_Entry::rank() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.Entry.rank)
+  return _internal_rank();
+}
+inline void LeaderboardResponse_Entry::_internal_set_rank(uint32_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  rank_ = value;
+}
+inline void LeaderboardResponse_Entry::set_rank(uint32_t value) {
+  _internal_set_rank(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.Entry.rank)
+}
+
+// optional string alias = 2;
+inline bool LeaderboardResponse_Entry::_internal_has_alias() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse_Entry::has_alias() const {
+  return _internal_has_alias();
+}
+inline void LeaderboardResponse_Entry::clear_alias() {
+  alias_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardResponse_Entry::alias() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.Entry.alias)
+  return _internal_alias();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardResponse_Entry::set_alias(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ alias_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.Entry.alias)
+}
+inline std::string* LeaderboardResponse_Entry::mutable_alias() {
+  std::string* _s = _internal_mutable_alias();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardResponse.Entry.alias)
+  return _s;
+}
+inline const std::string& LeaderboardResponse_Entry::_internal_alias() const {
+  return alias_.Get();
+}
+inline void LeaderboardResponse_Entry::_internal_set_alias(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  alias_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardResponse_Entry::_internal_mutable_alias() {
+  _has_bits_[0] |= 0x00000001u;
+  return alias_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardResponse_Entry::release_alias() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardResponse.Entry.alias)
+  if (!_internal_has_alias()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = alias_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (alias_.IsDefault()) {
+    alias_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardResponse_Entry::set_allocated_alias(std::string* alias) {
+  if (alias != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  alias_.SetAllocated(alias, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (alias_.IsDefault()) {
+    alias_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardResponse.Entry.alias)
+}
+
+// optional double score = 3;
+inline bool LeaderboardResponse_Entry::_internal_has_score() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse_Entry::has_score() const {
+  return _internal_has_score();
+}
+inline void LeaderboardResponse_Entry::clear_score() {
+  score_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double LeaderboardResponse_Entry::_internal_score() const {
+  return score_;
+}
+inline double LeaderboardResponse_Entry::score() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.Entry.score)
+  return _internal_score();
+}
+inline void LeaderboardResponse_Entry::_internal_set_score(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  score_ = value;
+}
+inline void LeaderboardResponse_Entry::set_score(double value) {
+  _internal_set_score(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.Entry.score)
+}
+
+// -------------------------------------------------------------------
+
+// LeaderboardResponse
+
+// optional string scope = 1;
+inline bool LeaderboardResponse::_internal_has_scope() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse::has_scope() const {
+  return _internal_has_scope();
+}
+inline void LeaderboardResponse::clear_scope() {
+  scope_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardResponse::scope() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.scope)
+  return _internal_scope();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardResponse::set_scope(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.scope)
+}
+inline std::string* LeaderboardResponse::mutable_scope() {
+  std::string* _s = _internal_mutable_scope();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardResponse.scope)
+  return _s;
+}
+inline const std::string& LeaderboardResponse::_internal_scope() const {
+  return scope_.Get();
+}
+inline void LeaderboardResponse::_internal_set_scope(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  scope_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardResponse::_internal_mutable_scope() {
+  _has_bits_[0] |= 0x00000001u;
+  return scope_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardResponse::release_scope() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardResponse.scope)
+  if (!_internal_has_scope()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = scope_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (scope_.IsDefault()) {
+    scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardResponse::set_allocated_scope(std::string* scope) {
+  if (scope != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  scope_.SetAllocated(scope, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (scope_.IsDefault()) {
+    scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardResponse.scope)
+}
+
+// optional .ei.Contract.PlayerGrade grade = 2;
+inline bool LeaderboardResponse::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse::has_grade() const {
+  return _internal_has_grade();
+}
+inline void LeaderboardResponse::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::ei::Contract_PlayerGrade LeaderboardResponse::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade LeaderboardResponse::grade() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.grade)
+  return _internal_grade();
+}
+inline void LeaderboardResponse::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000002u;
+  grade_ = value;
+}
+inline void LeaderboardResponse::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.grade)
+}
+
+// repeated .ei.LeaderboardResponse.Entry top_entries = 3;
+inline int LeaderboardResponse::_internal_top_entries_size() const {
+  return top_entries_.size();
+}
+inline int LeaderboardResponse::top_entries_size() const {
+  return _internal_top_entries_size();
+}
+inline void LeaderboardResponse::clear_top_entries() {
+  top_entries_.Clear();
+}
+inline ::ei::LeaderboardResponse_Entry* LeaderboardResponse::mutable_top_entries(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardResponse.top_entries)
+  return top_entries_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardResponse_Entry >*
+LeaderboardResponse::mutable_top_entries() {
+  // @@protoc_insertion_point(field_mutable_list:ei.LeaderboardResponse.top_entries)
+  return &top_entries_;
+}
+inline const ::ei::LeaderboardResponse_Entry& LeaderboardResponse::_internal_top_entries(int index) const {
+  return top_entries_.Get(index);
+}
+inline const ::ei::LeaderboardResponse_Entry& LeaderboardResponse::top_entries(int index) const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.top_entries)
+  return _internal_top_entries(index);
+}
+inline ::ei::LeaderboardResponse_Entry* LeaderboardResponse::_internal_add_top_entries() {
+  return top_entries_.Add();
+}
+inline ::ei::LeaderboardResponse_Entry* LeaderboardResponse::add_top_entries() {
+  ::ei::LeaderboardResponse_Entry* _add = _internal_add_top_entries();
+  // @@protoc_insertion_point(field_add:ei.LeaderboardResponse.top_entries)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardResponse_Entry >&
+LeaderboardResponse::top_entries() const {
+  // @@protoc_insertion_point(field_list:ei.LeaderboardResponse.top_entries)
+  return top_entries_;
+}
+
+// optional uint32 count = 4;
+inline bool LeaderboardResponse::_internal_has_count() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse::has_count() const {
+  return _internal_has_count();
+}
+inline void LeaderboardResponse::clear_count() {
+  count_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint32_t LeaderboardResponse::_internal_count() const {
+  return count_;
+}
+inline uint32_t LeaderboardResponse::count() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.count)
+  return _internal_count();
+}
+inline void LeaderboardResponse::_internal_set_count(uint32_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  count_ = value;
+}
+inline void LeaderboardResponse::set_count(uint32_t value) {
+  _internal_set_count(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.count)
+}
+
+// optional uint32 rank = 5;
+inline bool LeaderboardResponse::_internal_has_rank() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse::has_rank() const {
+  return _internal_has_rank();
+}
+inline void LeaderboardResponse::clear_rank() {
+  rank_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline uint32_t LeaderboardResponse::_internal_rank() const {
+  return rank_;
+}
+inline uint32_t LeaderboardResponse::rank() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.rank)
+  return _internal_rank();
+}
+inline void LeaderboardResponse::_internal_set_rank(uint32_t value) {
+  _has_bits_[0] |= 0x00000010u;
+  rank_ = value;
+}
+inline void LeaderboardResponse::set_rank(uint32_t value) {
+  _internal_set_rank(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.rank)
+}
+
+// optional double score = 6;
+inline bool LeaderboardResponse::_internal_has_score() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool LeaderboardResponse::has_score() const {
+  return _internal_has_score();
+}
+inline void LeaderboardResponse::clear_score() {
+  score_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline double LeaderboardResponse::_internal_score() const {
+  return score_;
+}
+inline double LeaderboardResponse::score() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardResponse.score)
+  return _internal_score();
+}
+inline void LeaderboardResponse::_internal_set_score(double value) {
+  _has_bits_[0] |= 0x00000008u;
+  score_ = value;
+}
+inline void LeaderboardResponse::set_score(double value) {
+  _internal_set_score(value);
+  // @@protoc_insertion_point(field_set:ei.LeaderboardResponse.score)
+}
+
+// -------------------------------------------------------------------
+
+// ContractsArchive
+
+// repeated .ei.LocalContract archive = 1;
+inline int ContractsArchive::_internal_archive_size() const {
+  return archive_.size();
+}
+inline int ContractsArchive::archive_size() const {
+  return _internal_archive_size();
+}
+inline void ContractsArchive::clear_archive() {
+  archive_.Clear();
+}
+inline ::ei::LocalContract* ContractsArchive::mutable_archive(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ContractsArchive.archive)
+  return archive_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract >*
+ContractsArchive::mutable_archive() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ContractsArchive.archive)
+  return &archive_;
+}
+inline const ::ei::LocalContract& ContractsArchive::_internal_archive(int index) const {
+  return archive_.Get(index);
+}
+inline const ::ei::LocalContract& ContractsArchive::archive(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ContractsArchive.archive)
+  return _internal_archive(index);
+}
+inline ::ei::LocalContract* ContractsArchive::_internal_add_archive() {
+  return archive_.Add();
+}
+inline ::ei::LocalContract* ContractsArchive::add_archive() {
+  ::ei::LocalContract* _add = _internal_add_archive();
+  // @@protoc_insertion_point(field_add:ei.ContractsArchive.archive)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LocalContract >&
+ContractsArchive::archive() const {
+  // @@protoc_insertion_point(field_list:ei.ContractsArchive.archive)
+  return archive_;
+}
+
+// -------------------------------------------------------------------
+
+// ContractAction
+
+// optional string user_id = 1;
+inline bool ContractAction::_internal_has_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContractAction::has_user_id() const {
+  return _internal_has_user_id();
+}
+inline void ContractAction::clear_user_id() {
+  user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ContractAction::user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.user_id)
+  return _internal_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.user_id)
+}
+inline std::string* ContractAction::mutable_user_id() {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.user_id)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_user_id() const {
+  return user_id_.Get();
+}
+inline void ContractAction::_internal_set_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_user_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.user_id)
+  if (!_internal_has_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_user_id(std::string* user_id) {
+  if (user_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  user_id_.SetAllocated(user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (user_id_.IsDefault()) {
+    user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.user_id)
+}
+
+// optional string action_name = 2;
+inline bool ContractAction::_internal_has_action_name() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ContractAction::has_action_name() const {
+  return _internal_has_action_name();
+}
+inline void ContractAction::clear_action_name() {
+  action_name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ContractAction::action_name() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.action_name)
+  return _internal_action_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_action_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ action_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.action_name)
+}
+inline std::string* ContractAction::mutable_action_name() {
+  std::string* _s = _internal_mutable_action_name();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.action_name)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_action_name() const {
+  return action_name_.Get();
+}
+inline void ContractAction::_internal_set_action_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  action_name_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_action_name() {
+  _has_bits_[0] |= 0x00000002u;
+  return action_name_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_action_name() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.action_name)
+  if (!_internal_has_action_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = action_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (action_name_.IsDefault()) {
+    action_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_action_name(std::string* action_name) {
+  if (action_name != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  action_name_.SetAllocated(action_name, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (action_name_.IsDefault()) {
+    action_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.action_name)
+}
+
+// optional double approx_time = 3;
+inline bool ContractAction::_internal_has_approx_time() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ContractAction::has_approx_time() const {
+  return _internal_has_approx_time();
+}
+inline void ContractAction::clear_approx_time() {
+  approx_time_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline double ContractAction::_internal_approx_time() const {
+  return approx_time_;
+}
+inline double ContractAction::approx_time() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.approx_time)
+  return _internal_approx_time();
+}
+inline void ContractAction::_internal_set_approx_time(double value) {
+  _has_bits_[0] |= 0x00000080u;
+  approx_time_ = value;
+}
+inline void ContractAction::set_approx_time(double value) {
+  _internal_set_approx_time(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.approx_time)
+}
+
+// optional string dest_user_id = 4;
+inline bool ContractAction::_internal_has_dest_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ContractAction::has_dest_user_id() const {
+  return _internal_has_dest_user_id();
+}
+inline void ContractAction::clear_dest_user_id() {
+  dest_user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ContractAction::dest_user_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.dest_user_id)
+  return _internal_dest_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_dest_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ dest_user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.dest_user_id)
+}
+inline std::string* ContractAction::mutable_dest_user_id() {
+  std::string* _s = _internal_mutable_dest_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.dest_user_id)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_dest_user_id() const {
+  return dest_user_id_.Get();
+}
+inline void ContractAction::_internal_set_dest_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  dest_user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_dest_user_id() {
+  _has_bits_[0] |= 0x00000004u;
+  return dest_user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_dest_user_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.dest_user_id)
+  if (!_internal_has_dest_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = dest_user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (dest_user_id_.IsDefault()) {
+    dest_user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_dest_user_id(std::string* dest_user_id) {
+  if (dest_user_id != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  dest_user_id_.SetAllocated(dest_user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (dest_user_id_.IsDefault()) {
+    dest_user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.dest_user_id)
+}
+
+// optional string contract_id = 5;
+inline bool ContractAction::_internal_has_contract_id() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ContractAction::has_contract_id() const {
+  return _internal_has_contract_id();
+}
+inline void ContractAction::clear_contract_id() {
+  contract_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& ContractAction::contract_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.contract_id)
+  return _internal_contract_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_contract_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ contract_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.contract_id)
+}
+inline std::string* ContractAction::mutable_contract_id() {
+  std::string* _s = _internal_mutable_contract_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.contract_id)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_contract_id() const {
+  return contract_id_.Get();
+}
+inline void ContractAction::_internal_set_contract_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  contract_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_contract_id() {
+  _has_bits_[0] |= 0x00000008u;
+  return contract_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_contract_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.contract_id)
+  if (!_internal_has_contract_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  auto* p = contract_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_id_.IsDefault()) {
+    contract_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_contract_id(std::string* contract_id) {
+  if (contract_id != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  contract_id_.SetAllocated(contract_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (contract_id_.IsDefault()) {
+    contract_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.contract_id)
+}
+
+// optional string coop_id = 6;
+inline bool ContractAction::_internal_has_coop_id() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ContractAction::has_coop_id() const {
+  return _internal_has_coop_id();
+}
+inline void ContractAction::clear_coop_id() {
+  coop_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& ContractAction::coop_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.coop_id)
+  return _internal_coop_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_coop_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ coop_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.coop_id)
+}
+inline std::string* ContractAction::mutable_coop_id() {
+  std::string* _s = _internal_mutable_coop_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.coop_id)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_coop_id() const {
+  return coop_id_.Get();
+}
+inline void ContractAction::_internal_set_coop_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  coop_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_coop_id() {
+  _has_bits_[0] |= 0x00000010u;
+  return coop_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_coop_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.coop_id)
+  if (!_internal_has_coop_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  auto* p = coop_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_id_.IsDefault()) {
+    coop_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_coop_id(std::string* coop_id) {
+  if (coop_id != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  coop_id_.SetAllocated(coop_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (coop_id_.IsDefault()) {
+    coop_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.coop_id)
+}
+
+// optional bool autojoin = 7;
+inline bool ContractAction::_internal_has_autojoin() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ContractAction::has_autojoin() const {
+  return _internal_has_autojoin();
+}
+inline void ContractAction::clear_autojoin() {
+  autojoin_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool ContractAction::_internal_autojoin() const {
+  return autojoin_;
+}
+inline bool ContractAction::autojoin() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.autojoin)
+  return _internal_autojoin();
+}
+inline void ContractAction::_internal_set_autojoin(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  autojoin_ = value;
+}
+inline void ContractAction::set_autojoin(bool value) {
+  _internal_set_autojoin(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.autojoin)
+}
+
+// optional uint32 grade = 8;
+inline bool ContractAction::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ContractAction::has_grade() const {
+  return _internal_has_grade();
+}
+inline void ContractAction::clear_grade() {
+  grade_ = 0u;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline uint32_t ContractAction::_internal_grade() const {
+  return grade_;
+}
+inline uint32_t ContractAction::grade() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.grade)
+  return _internal_grade();
+}
+inline void ContractAction::_internal_set_grade(uint32_t value) {
+  _has_bits_[0] |= 0x00000100u;
+  grade_ = value;
+}
+inline void ContractAction::set_grade(uint32_t value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.grade)
+}
+
+// optional bool replay = 9;
+inline bool ContractAction::_internal_has_replay() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool ContractAction::has_replay() const {
+  return _internal_has_replay();
+}
+inline void ContractAction::clear_replay() {
+  replay_ = false;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline bool ContractAction::_internal_replay() const {
+  return replay_;
+}
+inline bool ContractAction::replay() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.replay)
+  return _internal_replay();
+}
+inline void ContractAction::_internal_set_replay(bool value) {
+  _has_bits_[0] |= 0x00000800u;
+  replay_ = value;
+}
+inline void ContractAction::set_replay(bool value) {
+  _internal_set_replay(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.replay)
+}
+
+// optional bool points_replay = 10;
+inline bool ContractAction::_internal_has_points_replay() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_points_replay() const {
+  return _internal_has_points_replay();
+}
+inline void ContractAction::clear_points_replay() {
+  points_replay_ = false;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline bool ContractAction::_internal_points_replay() const {
+  return points_replay_;
+}
+inline bool ContractAction::points_replay() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.points_replay)
+  return _internal_points_replay();
+}
+inline void ContractAction::_internal_set_points_replay(bool value) {
+  _has_bits_[0] |= 0x00001000u;
+  points_replay_ = value;
+}
+inline void ContractAction::set_points_replay(bool value) {
+  _internal_set_points_replay(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.points_replay)
+}
+
+// optional uint32 reward_type = 11;
+inline bool ContractAction::_internal_has_reward_type() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ContractAction::has_reward_type() const {
+  return _internal_has_reward_type();
+}
+inline void ContractAction::clear_reward_type() {
+  reward_type_ = 0u;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline uint32_t ContractAction::_internal_reward_type() const {
+  return reward_type_;
+}
+inline uint32_t ContractAction::reward_type() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.reward_type)
+  return _internal_reward_type();
+}
+inline void ContractAction::_internal_set_reward_type(uint32_t value) {
+  _has_bits_[0] |= 0x00000200u;
+  reward_type_ = value;
+}
+inline void ContractAction::set_reward_type(uint32_t value) {
+  _internal_set_reward_type(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.reward_type)
+}
+
+// optional string reward_subtype = 12;
+inline bool ContractAction::_internal_has_reward_subtype() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ContractAction::has_reward_subtype() const {
+  return _internal_has_reward_subtype();
+}
+inline void ContractAction::clear_reward_subtype() {
+  reward_subtype_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const std::string& ContractAction::reward_subtype() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.reward_subtype)
+  return _internal_reward_subtype();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_reward_subtype(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000020u;
+ reward_subtype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.reward_subtype)
+}
+inline std::string* ContractAction::mutable_reward_subtype() {
+  std::string* _s = _internal_mutable_reward_subtype();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.reward_subtype)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_reward_subtype() const {
+  return reward_subtype_.Get();
+}
+inline void ContractAction::_internal_set_reward_subtype(const std::string& value) {
+  _has_bits_[0] |= 0x00000020u;
+  reward_subtype_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_reward_subtype() {
+  _has_bits_[0] |= 0x00000020u;
+  return reward_subtype_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_reward_subtype() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.reward_subtype)
+  if (!_internal_has_reward_subtype()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000020u;
+  auto* p = reward_subtype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (reward_subtype_.IsDefault()) {
+    reward_subtype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_reward_subtype(std::string* reward_subtype) {
+  if (reward_subtype != nullptr) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  reward_subtype_.SetAllocated(reward_subtype, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (reward_subtype_.IsDefault()) {
+    reward_subtype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.reward_subtype)
+}
+
+// optional double reward_amount = 13;
+inline bool ContractAction::_internal_has_reward_amount() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_reward_amount() const {
+  return _internal_has_reward_amount();
+}
+inline void ContractAction::clear_reward_amount() {
+  reward_amount_ = 0;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline double ContractAction::_internal_reward_amount() const {
+  return reward_amount_;
+}
+inline double ContractAction::reward_amount() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.reward_amount)
+  return _internal_reward_amount();
+}
+inline void ContractAction::_internal_set_reward_amount(double value) {
+  _has_bits_[0] |= 0x00008000u;
+  reward_amount_ = value;
+}
+inline void ContractAction::set_reward_amount(double value) {
+  _internal_set_reward_amount(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.reward_amount)
+}
+
+// optional uint32 goal_index = 14;
+inline bool ContractAction::_internal_has_goal_index() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_goal_index() const {
+  return _internal_has_goal_index();
+}
+inline void ContractAction::clear_goal_index() {
+  goal_index_ = 0u;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline uint32_t ContractAction::_internal_goal_index() const {
+  return goal_index_;
+}
+inline uint32_t ContractAction::goal_index() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.goal_index)
+  return _internal_goal_index();
+}
+inline void ContractAction::_internal_set_goal_index(uint32_t value) {
+  _has_bits_[0] |= 0x00004000u;
+  goal_index_ = value;
+}
+inline void ContractAction::set_goal_index(uint32_t value) {
+  _internal_set_goal_index(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.goal_index)
+}
+
+// optional string boost_id = 15;
+inline bool ContractAction::_internal_has_boost_id() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ContractAction::has_boost_id() const {
+  return _internal_has_boost_id();
+}
+inline void ContractAction::clear_boost_id() {
+  boost_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline const std::string& ContractAction::boost_id() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.boost_id)
+  return _internal_boost_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractAction::set_boost_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000040u;
+ boost_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractAction.boost_id)
+}
+inline std::string* ContractAction::mutable_boost_id() {
+  std::string* _s = _internal_mutable_boost_id();
+  // @@protoc_insertion_point(field_mutable:ei.ContractAction.boost_id)
+  return _s;
+}
+inline const std::string& ContractAction::_internal_boost_id() const {
+  return boost_id_.Get();
+}
+inline void ContractAction::_internal_set_boost_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000040u;
+  boost_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractAction::_internal_mutable_boost_id() {
+  _has_bits_[0] |= 0x00000040u;
+  return boost_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractAction::release_boost_id() {
+  // @@protoc_insertion_point(field_release:ei.ContractAction.boost_id)
+  if (!_internal_has_boost_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000040u;
+  auto* p = boost_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (boost_id_.IsDefault()) {
+    boost_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractAction::set_allocated_boost_id(std::string* boost_id) {
+  if (boost_id != nullptr) {
+    _has_bits_[0] |= 0x00000040u;
+  } else {
+    _has_bits_[0] &= ~0x00000040u;
+  }
+  boost_id_.SetAllocated(boost_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (boost_id_.IsDefault()) {
+    boost_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractAction.boost_id)
+}
+
+// optional uint32 tokens = 16;
+inline bool ContractAction::_internal_has_tokens() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_tokens() const {
+  return _internal_has_tokens();
+}
+inline void ContractAction::clear_tokens() {
+  tokens_ = 0u;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline uint32_t ContractAction::_internal_tokens() const {
+  return tokens_;
+}
+inline uint32_t ContractAction::tokens() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.tokens)
+  return _internal_tokens();
+}
+inline void ContractAction::_internal_set_tokens(uint32_t value) {
+  _has_bits_[0] |= 0x00010000u;
+  tokens_ = value;
+}
+inline void ContractAction::set_tokens(uint32_t value) {
+  _internal_set_tokens(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.tokens)
+}
+
+// optional uint32 kick_reason = 17;
+inline bool ContractAction::_internal_has_kick_reason() const {
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_kick_reason() const {
+  return _internal_has_kick_reason();
+}
+inline void ContractAction::clear_kick_reason() {
+  kick_reason_ = 0u;
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline uint32_t ContractAction::_internal_kick_reason() const {
+  return kick_reason_;
+}
+inline uint32_t ContractAction::kick_reason() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.kick_reason)
+  return _internal_kick_reason();
+}
+inline void ContractAction::_internal_set_kick_reason(uint32_t value) {
+  _has_bits_[0] |= 0x00020000u;
+  kick_reason_ = value;
+}
+inline void ContractAction::set_kick_reason(uint32_t value) {
+  _internal_set_kick_reason(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.kick_reason)
+}
+
+// optional bool public = 18;
+inline bool ContractAction::_internal_has_public_() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_public_() const {
+  return _internal_has_public_();
+}
+inline void ContractAction::clear_public_() {
+  public__ = false;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline bool ContractAction::_internal_public_() const {
+  return public__;
+}
+inline bool ContractAction::public_() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.public)
+  return _internal_public_();
+}
+inline void ContractAction::_internal_set_public_(bool value) {
+  _has_bits_[0] |= 0x00002000u;
+  public__ = value;
+}
+inline void ContractAction::set_public_(bool value) {
+  _internal_set_public_(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.public)
+}
+
+// optional bool cc_only = 19;
+inline bool ContractAction::_internal_has_cc_only() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool ContractAction::has_cc_only() const {
+  return _internal_has_cc_only();
+}
+inline void ContractAction::clear_cc_only() {
+  cc_only_ = false;
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline bool ContractAction::_internal_cc_only() const {
+  return cc_only_;
+}
+inline bool ContractAction::cc_only() const {
+  // @@protoc_insertion_point(field_get:ei.ContractAction.cc_only)
+  return _internal_cc_only();
+}
+inline void ContractAction::_internal_set_cc_only(bool value) {
+  _has_bits_[0] |= 0x00040000u;
+  cc_only_ = value;
+}
+inline void ContractAction::set_cc_only(bool value) {
+  _internal_set_cc_only(value);
+  // @@protoc_insertion_point(field_set:ei.ContractAction.cc_only)
 }
 
 // -------------------------------------------------------------------
@@ -69790,7 +81929,7 @@ inline void LiveConfig_MiscConfig::set_ask_to_track_after_privacy(bool value) {
 
 // optional double chicken_run_boost_percentage = 6;
 inline bool LiveConfig_MiscConfig::_internal_has_chicken_run_boost_percentage() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool LiveConfig_MiscConfig::has_chicken_run_boost_percentage() const {
@@ -69798,7 +81937,7 @@ inline bool LiveConfig_MiscConfig::has_chicken_run_boost_percentage() const {
 }
 inline void LiveConfig_MiscConfig::clear_chicken_run_boost_percentage() {
   chicken_run_boost_percentage_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline double LiveConfig_MiscConfig::_internal_chicken_run_boost_percentage() const {
   return chicken_run_boost_percentage_;
@@ -69808,7 +81947,7 @@ inline double LiveConfig_MiscConfig::chicken_run_boost_percentage() const {
   return _internal_chicken_run_boost_percentage();
 }
 inline void LiveConfig_MiscConfig::_internal_set_chicken_run_boost_percentage(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   chicken_run_boost_percentage_ = value;
 }
 inline void LiveConfig_MiscConfig::set_chicken_run_boost_percentage(double value) {
@@ -69818,7 +81957,7 @@ inline void LiveConfig_MiscConfig::set_chicken_run_boost_percentage(double value
 
 // optional uint32 shells_intro_tickets = 7;
 inline bool LiveConfig_MiscConfig::_internal_has_shells_intro_tickets() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool LiveConfig_MiscConfig::has_shells_intro_tickets() const {
@@ -69826,7 +81965,7 @@ inline bool LiveConfig_MiscConfig::has_shells_intro_tickets() const {
 }
 inline void LiveConfig_MiscConfig::clear_shells_intro_tickets() {
   shells_intro_tickets_ = 0u;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t LiveConfig_MiscConfig::_internal_shells_intro_tickets() const {
   return shells_intro_tickets_;
@@ -69836,7 +81975,7 @@ inline uint32_t LiveConfig_MiscConfig::shells_intro_tickets() const {
   return _internal_shells_intro_tickets();
 }
 inline void LiveConfig_MiscConfig::_internal_set_shells_intro_tickets(uint32_t value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   shells_intro_tickets_ = value;
 }
 inline void LiveConfig_MiscConfig::set_shells_intro_tickets(uint32_t value) {
@@ -69846,7 +81985,7 @@ inline void LiveConfig_MiscConfig::set_shells_intro_tickets(uint32_t value) {
 
 // optional uint32 shells_max_free_chicken_configs = 8;
 inline bool LiveConfig_MiscConfig::_internal_has_shells_max_free_chicken_configs() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool LiveConfig_MiscConfig::has_shells_max_free_chicken_configs() const {
@@ -69854,7 +81993,7 @@ inline bool LiveConfig_MiscConfig::has_shells_max_free_chicken_configs() const {
 }
 inline void LiveConfig_MiscConfig::clear_shells_max_free_chicken_configs() {
   shells_max_free_chicken_configs_ = 0u;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline uint32_t LiveConfig_MiscConfig::_internal_shells_max_free_chicken_configs() const {
   return shells_max_free_chicken_configs_;
@@ -69864,7 +82003,7 @@ inline uint32_t LiveConfig_MiscConfig::shells_max_free_chicken_configs() const {
   return _internal_shells_max_free_chicken_configs();
 }
 inline void LiveConfig_MiscConfig::_internal_set_shells_max_free_chicken_configs(uint32_t value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   shells_max_free_chicken_configs_ = value;
 }
 inline void LiveConfig_MiscConfig::set_shells_max_free_chicken_configs(uint32_t value) {
@@ -69874,7 +82013,7 @@ inline void LiveConfig_MiscConfig::set_shells_max_free_chicken_configs(uint32_t 
 
 // optional uint32 shells_intro_alert_threshold = 9;
 inline bool LiveConfig_MiscConfig::_internal_has_shells_intro_alert_threshold() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool LiveConfig_MiscConfig::has_shells_intro_alert_threshold() const {
@@ -69882,7 +82021,7 @@ inline bool LiveConfig_MiscConfig::has_shells_intro_alert_threshold() const {
 }
 inline void LiveConfig_MiscConfig::clear_shells_intro_alert_threshold() {
   shells_intro_alert_threshold_ = 0u;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline uint32_t LiveConfig_MiscConfig::_internal_shells_intro_alert_threshold() const {
   return shells_intro_alert_threshold_;
@@ -69892,7 +82031,7 @@ inline uint32_t LiveConfig_MiscConfig::shells_intro_alert_threshold() const {
   return _internal_shells_intro_alert_threshold();
 }
 inline void LiveConfig_MiscConfig::_internal_set_shells_intro_alert_threshold(uint32_t value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   shells_intro_alert_threshold_ = value;
 }
 inline void LiveConfig_MiscConfig::set_shells_intro_alert_threshold(uint32_t value) {
@@ -69902,7 +82041,7 @@ inline void LiveConfig_MiscConfig::set_shells_intro_alert_threshold(uint32_t val
 
 // optional double contracts_expert_league_min_soul_power = 10;
 inline bool LiveConfig_MiscConfig::_internal_has_contracts_expert_league_min_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool LiveConfig_MiscConfig::has_contracts_expert_league_min_soul_power() const {
@@ -69910,7 +82049,7 @@ inline bool LiveConfig_MiscConfig::has_contracts_expert_league_min_soul_power() 
 }
 inline void LiveConfig_MiscConfig::clear_contracts_expert_league_min_soul_power() {
   contracts_expert_league_min_soul_power_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline double LiveConfig_MiscConfig::_internal_contracts_expert_league_min_soul_power() const {
   return contracts_expert_league_min_soul_power_;
@@ -69920,7 +82059,7 @@ inline double LiveConfig_MiscConfig::contracts_expert_league_min_soul_power() co
   return _internal_contracts_expert_league_min_soul_power();
 }
 inline void LiveConfig_MiscConfig::_internal_set_contracts_expert_league_min_soul_power(double value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   contracts_expert_league_min_soul_power_ = value;
 }
 inline void LiveConfig_MiscConfig::set_contracts_expert_league_min_soul_power(double value) {
@@ -69930,7 +82069,7 @@ inline void LiveConfig_MiscConfig::set_contracts_expert_league_min_soul_power(do
 
 // optional double new_player_event_duration = 11;
 inline bool LiveConfig_MiscConfig::_internal_has_new_player_event_duration() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool LiveConfig_MiscConfig::has_new_player_event_duration() const {
@@ -69938,7 +82077,7 @@ inline bool LiveConfig_MiscConfig::has_new_player_event_duration() const {
 }
 inline void LiveConfig_MiscConfig::clear_new_player_event_duration() {
   new_player_event_duration_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline double LiveConfig_MiscConfig::_internal_new_player_event_duration() const {
   return new_player_event_duration_;
@@ -69948,12 +82087,68 @@ inline double LiveConfig_MiscConfig::new_player_event_duration() const {
   return _internal_new_player_event_duration();
 }
 inline void LiveConfig_MiscConfig::_internal_set_new_player_event_duration(double value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   new_player_event_duration_ = value;
 }
 inline void LiveConfig_MiscConfig::set_new_player_event_duration(double value) {
   _internal_set_new_player_event_duration(value);
   // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.new_player_event_duration)
+}
+
+// optional bool contracts_club_available = 12;
+inline bool LiveConfig_MiscConfig::_internal_has_contracts_club_available() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_contracts_club_available() const {
+  return _internal_has_contracts_club_available();
+}
+inline void LiveConfig_MiscConfig::clear_contracts_club_available() {
+  contracts_club_available_ = false;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline bool LiveConfig_MiscConfig::_internal_contracts_club_available() const {
+  return contracts_club_available_;
+}
+inline bool LiveConfig_MiscConfig::contracts_club_available() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.contracts_club_available)
+  return _internal_contracts_club_available();
+}
+inline void LiveConfig_MiscConfig::_internal_set_contracts_club_available(bool value) {
+  _has_bits_[0] |= 0x00000020u;
+  contracts_club_available_ = value;
+}
+inline void LiveConfig_MiscConfig::set_contracts_club_available(bool value) {
+  _internal_set_contracts_club_available(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.contracts_club_available)
+}
+
+// optional bool contracts_beta = 13;
+inline bool LiveConfig_MiscConfig::_internal_has_contracts_beta() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool LiveConfig_MiscConfig::has_contracts_beta() const {
+  return _internal_has_contracts_beta();
+}
+inline void LiveConfig_MiscConfig::clear_contracts_beta() {
+  contracts_beta_ = false;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline bool LiveConfig_MiscConfig::_internal_contracts_beta() const {
+  return contracts_beta_;
+}
+inline bool LiveConfig_MiscConfig::contracts_beta() const {
+  // @@protoc_insertion_point(field_get:ei.LiveConfig.MiscConfig.contracts_beta)
+  return _internal_contracts_beta();
+}
+inline void LiveConfig_MiscConfig::_internal_set_contracts_beta(bool value) {
+  _has_bits_[0] |= 0x00001000u;
+  contracts_beta_ = value;
+}
+inline void LiveConfig_MiscConfig::set_contracts_beta(bool value) {
+  _internal_set_contracts_beta(value);
+  // @@protoc_insertion_point(field_set:ei.LiveConfig.MiscConfig.contracts_beta)
 }
 
 // -------------------------------------------------------------------
@@ -71269,6 +83464,46 @@ inline void PeriodicalsResponse::set_allocated_contracts(::ei::ContractsResponse
   }
   contracts_ = contracts;
   // @@protoc_insertion_point(field_set_allocated:ei.PeriodicalsResponse.contracts)
+}
+
+// repeated .ei.ContractEvaluation evaluations = 8;
+inline int PeriodicalsResponse::_internal_evaluations_size() const {
+  return evaluations_.size();
+}
+inline int PeriodicalsResponse::evaluations_size() const {
+  return _internal_evaluations_size();
+}
+inline void PeriodicalsResponse::clear_evaluations() {
+  evaluations_.Clear();
+}
+inline ::ei::ContractEvaluation* PeriodicalsResponse::mutable_evaluations(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.PeriodicalsResponse.evaluations)
+  return evaluations_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >*
+PeriodicalsResponse::mutable_evaluations() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PeriodicalsResponse.evaluations)
+  return &evaluations_;
+}
+inline const ::ei::ContractEvaluation& PeriodicalsResponse::_internal_evaluations(int index) const {
+  return evaluations_.Get(index);
+}
+inline const ::ei::ContractEvaluation& PeriodicalsResponse::evaluations(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PeriodicalsResponse.evaluations)
+  return _internal_evaluations(index);
+}
+inline ::ei::ContractEvaluation* PeriodicalsResponse::_internal_add_evaluations() {
+  return evaluations_.Add();
+}
+inline ::ei::ContractEvaluation* PeriodicalsResponse::add_evaluations() {
+  ::ei::ContractEvaluation* _add = _internal_add_evaluations();
+  // @@protoc_insertion_point(field_add:ei.PeriodicalsResponse.evaluations)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >&
+PeriodicalsResponse::evaluations() const {
+  // @@protoc_insertion_point(field_list:ei.PeriodicalsResponse.evaluations)
+  return evaluations_;
 }
 
 // repeated .ei.ServerGift gifts = 4;
@@ -77849,6 +90084,35 @@ inline void CollectContractArtifactRewardsRequest::_internal_set_league(uint32_t
 inline void CollectContractArtifactRewardsRequest::set_league(uint32_t value) {
   _internal_set_league(value);
   // @@protoc_insertion_point(field_set:ei.CollectContractArtifactRewardsRequest.league)
+}
+
+// optional .ei.Contract.PlayerGrade grade = 6;
+inline bool CollectContractArtifactRewardsRequest::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool CollectContractArtifactRewardsRequest::has_grade() const {
+  return _internal_has_grade();
+}
+inline void CollectContractArtifactRewardsRequest::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::ei::Contract_PlayerGrade CollectContractArtifactRewardsRequest::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade CollectContractArtifactRewardsRequest::grade() const {
+  // @@protoc_insertion_point(field_get:ei.CollectContractArtifactRewardsRequest.grade)
+  return _internal_grade();
+}
+inline void CollectContractArtifactRewardsRequest::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00000020u;
+  grade_ = value;
+}
+inline void CollectContractArtifactRewardsRequest::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.CollectContractArtifactRewardsRequest.grade)
 }
 
 // optional uint32 goal_index = 3;
@@ -88105,9 +100369,1994 @@ inline void ShellsActionLog::set_gold_spent(uint64_t value) {
   // @@protoc_insertion_point(field_set:ei.ShellsActionLog.gold_spent)
 }
 
+// -------------------------------------------------------------------
+
+// UserVerificationAnalysis
+
+// optional .ei.UserVerificationAnalysis.Status overall_status = 1;
+inline bool UserVerificationAnalysis::_internal_has_overall_status() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_overall_status() const {
+  return _internal_has_overall_status();
+}
+inline void UserVerificationAnalysis::clear_overall_status() {
+  overall_status_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::_internal_overall_status() const {
+  return static_cast< ::ei::UserVerificationAnalysis_Status >(overall_status_);
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::overall_status() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.overall_status)
+  return _internal_overall_status();
+}
+inline void UserVerificationAnalysis::_internal_set_overall_status(::ei::UserVerificationAnalysis_Status value) {
+  assert(::ei::UserVerificationAnalysis_Status_IsValid(value));
+  _has_bits_[0] |= 0x00000004u;
+  overall_status_ = value;
+}
+inline void UserVerificationAnalysis::set_overall_status(::ei::UserVerificationAnalysis_Status value) {
+  _internal_set_overall_status(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.overall_status)
+}
+
+// optional double start_time = 2;
+inline bool UserVerificationAnalysis::_internal_has_start_time() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_start_time() const {
+  return _internal_has_start_time();
+}
+inline void UserVerificationAnalysis::clear_start_time() {
+  start_time_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline double UserVerificationAnalysis::_internal_start_time() const {
+  return start_time_;
+}
+inline double UserVerificationAnalysis::start_time() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.start_time)
+  return _internal_start_time();
+}
+inline void UserVerificationAnalysis::_internal_set_start_time(double value) {
+  _has_bits_[0] |= 0x00000001u;
+  start_time_ = value;
+}
+inline void UserVerificationAnalysis::set_start_time(double value) {
+  _internal_set_start_time(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.start_time)
+}
+
+// optional double completion_time = 3;
+inline bool UserVerificationAnalysis::_internal_has_completion_time() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_completion_time() const {
+  return _internal_has_completion_time();
+}
+inline void UserVerificationAnalysis::clear_completion_time() {
+  completion_time_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline double UserVerificationAnalysis::_internal_completion_time() const {
+  return completion_time_;
+}
+inline double UserVerificationAnalysis::completion_time() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.completion_time)
+  return _internal_completion_time();
+}
+inline void UserVerificationAnalysis::_internal_set_completion_time(double value) {
+  _has_bits_[0] |= 0x00000002u;
+  completion_time_ = value;
+}
+inline void UserVerificationAnalysis::set_completion_time(double value) {
+  _internal_set_completion_time(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.completion_time)
+}
+
+// optional double num_prestiges = 14;
+inline bool UserVerificationAnalysis::_internal_has_num_prestiges() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_num_prestiges() const {
+  return _internal_has_num_prestiges();
+}
+inline void UserVerificationAnalysis::clear_num_prestiges() {
+  num_prestiges_ = 0;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline double UserVerificationAnalysis::_internal_num_prestiges() const {
+  return num_prestiges_;
+}
+inline double UserVerificationAnalysis::num_prestiges() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.num_prestiges)
+  return _internal_num_prestiges();
+}
+inline void UserVerificationAnalysis::_internal_set_num_prestiges(double value) {
+  _has_bits_[0] |= 0x00001000u;
+  num_prestiges_ = value;
+}
+inline void UserVerificationAnalysis::set_num_prestiges(double value) {
+  _internal_set_num_prestiges(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.num_prestiges)
+}
+
+// optional double soul_eggs = 15;
+inline bool UserVerificationAnalysis::_internal_has_soul_eggs() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_soul_eggs() const {
+  return _internal_has_soul_eggs();
+}
+inline void UserVerificationAnalysis::clear_soul_eggs() {
+  soul_eggs_ = 0;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline double UserVerificationAnalysis::_internal_soul_eggs() const {
+  return soul_eggs_;
+}
+inline double UserVerificationAnalysis::soul_eggs() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.soul_eggs)
+  return _internal_soul_eggs();
+}
+inline void UserVerificationAnalysis::_internal_set_soul_eggs(double value) {
+  _has_bits_[0] |= 0x00002000u;
+  soul_eggs_ = value;
+}
+inline void UserVerificationAnalysis::set_soul_eggs(double value) {
+  _internal_set_soul_eggs(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.soul_eggs)
+}
+
+// optional uint32 eggs_of_prophecy = 27;
+inline bool UserVerificationAnalysis::_internal_has_eggs_of_prophecy() const {
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_eggs_of_prophecy() const {
+  return _internal_has_eggs_of_prophecy();
+}
+inline void UserVerificationAnalysis::clear_eggs_of_prophecy() {
+  eggs_of_prophecy_ = 0u;
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_eggs_of_prophecy() const {
+  return eggs_of_prophecy_;
+}
+inline uint32_t UserVerificationAnalysis::eggs_of_prophecy() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.eggs_of_prophecy)
+  return _internal_eggs_of_prophecy();
+}
+inline void UserVerificationAnalysis::_internal_set_eggs_of_prophecy(uint32_t value) {
+  _has_bits_[0] |= 0x00800000u;
+  eggs_of_prophecy_ = value;
+}
+inline void UserVerificationAnalysis::set_eggs_of_prophecy(uint32_t value) {
+  _internal_set_eggs_of_prophecy(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.eggs_of_prophecy)
+}
+
+// optional .ei.UserVerificationAnalysis.Status iap_status = 18;
+inline bool UserVerificationAnalysis::_internal_has_iap_status() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_iap_status() const {
+  return _internal_has_iap_status();
+}
+inline void UserVerificationAnalysis::clear_iap_status() {
+  iap_status_ = 0;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::_internal_iap_status() const {
+  return static_cast< ::ei::UserVerificationAnalysis_Status >(iap_status_);
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::iap_status() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.iap_status)
+  return _internal_iap_status();
+}
+inline void UserVerificationAnalysis::_internal_set_iap_status(::ei::UserVerificationAnalysis_Status value) {
+  assert(::ei::UserVerificationAnalysis_Status_IsValid(value));
+  _has_bits_[0] |= 0x00008000u;
+  iap_status_ = value;
+}
+inline void UserVerificationAnalysis::set_iap_status(::ei::UserVerificationAnalysis_Status value) {
+  _internal_set_iap_status(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.iap_status)
+}
+
+// optional bool verified_pro_permit = 4;
+inline bool UserVerificationAnalysis::_internal_has_verified_pro_permit() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_verified_pro_permit() const {
+  return _internal_has_verified_pro_permit();
+}
+inline void UserVerificationAnalysis::clear_verified_pro_permit() {
+  verified_pro_permit_ = false;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline bool UserVerificationAnalysis::_internal_verified_pro_permit() const {
+  return verified_pro_permit_;
+}
+inline bool UserVerificationAnalysis::verified_pro_permit() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.verified_pro_permit)
+  return _internal_verified_pro_permit();
+}
+inline void UserVerificationAnalysis::_internal_set_verified_pro_permit(bool value) {
+  _has_bits_[0] |= 0x00010000u;
+  verified_pro_permit_ = value;
+}
+inline void UserVerificationAnalysis::set_verified_pro_permit(bool value) {
+  _internal_set_verified_pro_permit(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.verified_pro_permit)
+}
+
+// optional uint32 verified_piggy_breaks = 5;
+inline bool UserVerificationAnalysis::_internal_has_verified_piggy_breaks() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_verified_piggy_breaks() const {
+  return _internal_has_verified_piggy_breaks();
+}
+inline void UserVerificationAnalysis::clear_verified_piggy_breaks() {
+  verified_piggy_breaks_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_verified_piggy_breaks() const {
+  return verified_piggy_breaks_;
+}
+inline uint32_t UserVerificationAnalysis::verified_piggy_breaks() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.verified_piggy_breaks)
+  return _internal_verified_piggy_breaks();
+}
+inline void UserVerificationAnalysis::_internal_set_verified_piggy_breaks(uint32_t value) {
+  _has_bits_[0] |= 0x00000008u;
+  verified_piggy_breaks_ = value;
+}
+inline void UserVerificationAnalysis::set_verified_piggy_breaks(uint32_t value) {
+  _internal_set_verified_piggy_breaks(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.verified_piggy_breaks)
+}
+
+// optional uint32 verified_other_iap = 6;
+inline bool UserVerificationAnalysis::_internal_has_verified_other_iap() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_verified_other_iap() const {
+  return _internal_has_verified_other_iap();
+}
+inline void UserVerificationAnalysis::clear_verified_other_iap() {
+  verified_other_iap_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_verified_other_iap() const {
+  return verified_other_iap_;
+}
+inline uint32_t UserVerificationAnalysis::verified_other_iap() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.verified_other_iap)
+  return _internal_verified_other_iap();
+}
+inline void UserVerificationAnalysis::_internal_set_verified_other_iap(uint32_t value) {
+  _has_bits_[0] |= 0x00000010u;
+  verified_other_iap_ = value;
+}
+inline void UserVerificationAnalysis::set_verified_other_iap(uint32_t value) {
+  _internal_set_verified_other_iap(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.verified_other_iap)
+}
+
+// optional uint32 unverified_iap = 7;
+inline bool UserVerificationAnalysis::_internal_has_unverified_iap() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_unverified_iap() const {
+  return _internal_has_unverified_iap();
+}
+inline void UserVerificationAnalysis::clear_unverified_iap() {
+  unverified_iap_ = 0u;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_unverified_iap() const {
+  return unverified_iap_;
+}
+inline uint32_t UserVerificationAnalysis::unverified_iap() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.unverified_iap)
+  return _internal_unverified_iap();
+}
+inline void UserVerificationAnalysis::_internal_set_unverified_iap(uint32_t value) {
+  _has_bits_[0] |= 0x00000020u;
+  unverified_iap_ = value;
+}
+inline void UserVerificationAnalysis::set_unverified_iap(uint32_t value) {
+  _internal_set_unverified_iap(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.unverified_iap)
+}
+
+// optional double gold_earned = 13;
+inline bool UserVerificationAnalysis::_internal_has_gold_earned() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_gold_earned() const {
+  return _internal_has_gold_earned();
+}
+inline void UserVerificationAnalysis::clear_gold_earned() {
+  gold_earned_ = 0;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline double UserVerificationAnalysis::_internal_gold_earned() const {
+  return gold_earned_;
+}
+inline double UserVerificationAnalysis::gold_earned() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.gold_earned)
+  return _internal_gold_earned();
+}
+inline void UserVerificationAnalysis::_internal_set_gold_earned(double value) {
+  _has_bits_[0] |= 0x00000800u;
+  gold_earned_ = value;
+}
+inline void UserVerificationAnalysis::set_gold_earned(double value) {
+  _internal_set_gold_earned(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.gold_earned)
+}
+
+// optional bool regular_iap_buyer = 22;
+inline bool UserVerificationAnalysis::_internal_has_regular_iap_buyer() const {
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_regular_iap_buyer() const {
+  return _internal_has_regular_iap_buyer();
+}
+inline void UserVerificationAnalysis::clear_regular_iap_buyer() {
+  regular_iap_buyer_ = false;
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline bool UserVerificationAnalysis::_internal_regular_iap_buyer() const {
+  return regular_iap_buyer_;
+}
+inline bool UserVerificationAnalysis::regular_iap_buyer() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.regular_iap_buyer)
+  return _internal_regular_iap_buyer();
+}
+inline void UserVerificationAnalysis::_internal_set_regular_iap_buyer(bool value) {
+  _has_bits_[0] |= 0x00020000u;
+  regular_iap_buyer_ = value;
+}
+inline void UserVerificationAnalysis::set_regular_iap_buyer(bool value) {
+  _internal_set_regular_iap_buyer(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.regular_iap_buyer)
+}
+
+// optional bool regular_iap_cheater = 23;
+inline bool UserVerificationAnalysis::_internal_has_regular_iap_cheater() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_regular_iap_cheater() const {
+  return _internal_has_regular_iap_cheater();
+}
+inline void UserVerificationAnalysis::clear_regular_iap_cheater() {
+  regular_iap_cheater_ = false;
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline bool UserVerificationAnalysis::_internal_regular_iap_cheater() const {
+  return regular_iap_cheater_;
+}
+inline bool UserVerificationAnalysis::regular_iap_cheater() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.regular_iap_cheater)
+  return _internal_regular_iap_cheater();
+}
+inline void UserVerificationAnalysis::_internal_set_regular_iap_cheater(bool value) {
+  _has_bits_[0] |= 0x00040000u;
+  regular_iap_cheater_ = value;
+}
+inline void UserVerificationAnalysis::set_regular_iap_cheater(bool value) {
+  _internal_set_regular_iap_cheater(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.regular_iap_cheater)
+}
+
+// optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;
+inline bool UserVerificationAnalysis::_internal_has_artifacts_status() const {
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_artifacts_status() const {
+  return _internal_has_artifacts_status();
+}
+inline void UserVerificationAnalysis::clear_artifacts_status() {
+  artifacts_status_ = 0;
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::_internal_artifacts_status() const {
+  return static_cast< ::ei::UserVerificationAnalysis_Status >(artifacts_status_);
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::artifacts_status() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.artifacts_status)
+  return _internal_artifacts_status();
+}
+inline void UserVerificationAnalysis::_internal_set_artifacts_status(::ei::UserVerificationAnalysis_Status value) {
+  assert(::ei::UserVerificationAnalysis_Status_IsValid(value));
+  _has_bits_[0] |= 0x00100000u;
+  artifacts_status_ = value;
+}
+inline void UserVerificationAnalysis::set_artifacts_status(::ei::UserVerificationAnalysis_Status value) {
+  _internal_set_artifacts_status(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.artifacts_status)
+}
+
+// optional uint32 missions_completed = 8;
+inline bool UserVerificationAnalysis::_internal_has_missions_completed() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_missions_completed() const {
+  return _internal_has_missions_completed();
+}
+inline void UserVerificationAnalysis::clear_missions_completed() {
+  missions_completed_ = 0u;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_missions_completed() const {
+  return missions_completed_;
+}
+inline uint32_t UserVerificationAnalysis::missions_completed() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.missions_completed)
+  return _internal_missions_completed();
+}
+inline void UserVerificationAnalysis::_internal_set_missions_completed(uint32_t value) {
+  _has_bits_[0] |= 0x00000100u;
+  missions_completed_ = value;
+}
+inline void UserVerificationAnalysis::set_missions_completed(uint32_t value) {
+  _internal_set_missions_completed(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.missions_completed)
+}
+
+// optional double artifacts_collected = 9;
+inline bool UserVerificationAnalysis::_internal_has_artifacts_collected() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_artifacts_collected() const {
+  return _internal_has_artifacts_collected();
+}
+inline void UserVerificationAnalysis::clear_artifacts_collected() {
+  artifacts_collected_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline double UserVerificationAnalysis::_internal_artifacts_collected() const {
+  return artifacts_collected_;
+}
+inline double UserVerificationAnalysis::artifacts_collected() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.artifacts_collected)
+  return _internal_artifacts_collected();
+}
+inline void UserVerificationAnalysis::_internal_set_artifacts_collected(double value) {
+  _has_bits_[0] |= 0x00000040u;
+  artifacts_collected_ = value;
+}
+inline void UserVerificationAnalysis::set_artifacts_collected(double value) {
+  _internal_set_artifacts_collected(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.artifacts_collected)
+}
+
+// optional double artifacts_consumed = 10;
+inline bool UserVerificationAnalysis::_internal_has_artifacts_consumed() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_artifacts_consumed() const {
+  return _internal_has_artifacts_consumed();
+}
+inline void UserVerificationAnalysis::clear_artifacts_consumed() {
+  artifacts_consumed_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline double UserVerificationAnalysis::_internal_artifacts_consumed() const {
+  return artifacts_consumed_;
+}
+inline double UserVerificationAnalysis::artifacts_consumed() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.artifacts_consumed)
+  return _internal_artifacts_consumed();
+}
+inline void UserVerificationAnalysis::_internal_set_artifacts_consumed(double value) {
+  _has_bits_[0] |= 0x00000080u;
+  artifacts_consumed_ = value;
+}
+inline void UserVerificationAnalysis::set_artifacts_consumed(double value) {
+  _internal_set_artifacts_consumed(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.artifacts_consumed)
+}
+
+// optional double artifacts_in_inventory = 11;
+inline bool UserVerificationAnalysis::_internal_has_artifacts_in_inventory() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_artifacts_in_inventory() const {
+  return _internal_has_artifacts_in_inventory();
+}
+inline void UserVerificationAnalysis::clear_artifacts_in_inventory() {
+  artifacts_in_inventory_ = 0;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline double UserVerificationAnalysis::_internal_artifacts_in_inventory() const {
+  return artifacts_in_inventory_;
+}
+inline double UserVerificationAnalysis::artifacts_in_inventory() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.artifacts_in_inventory)
+  return _internal_artifacts_in_inventory();
+}
+inline void UserVerificationAnalysis::_internal_set_artifacts_in_inventory(double value) {
+  _has_bits_[0] |= 0x00000400u;
+  artifacts_in_inventory_ = value;
+}
+inline void UserVerificationAnalysis::set_artifacts_in_inventory(double value) {
+  _internal_set_artifacts_in_inventory(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.artifacts_in_inventory)
+}
+
+// optional double gold_spent_crafting = 21;
+inline bool UserVerificationAnalysis::_internal_has_gold_spent_crafting() const {
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_gold_spent_crafting() const {
+  return _internal_has_gold_spent_crafting();
+}
+inline void UserVerificationAnalysis::clear_gold_spent_crafting() {
+  gold_spent_crafting_ = 0;
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline double UserVerificationAnalysis::_internal_gold_spent_crafting() const {
+  return gold_spent_crafting_;
+}
+inline double UserVerificationAnalysis::gold_spent_crafting() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.gold_spent_crafting)
+  return _internal_gold_spent_crafting();
+}
+inline void UserVerificationAnalysis::_internal_set_gold_spent_crafting(double value) {
+  _has_bits_[0] |= 0x00200000u;
+  gold_spent_crafting_ = value;
+}
+inline void UserVerificationAnalysis::set_gold_spent_crafting(double value) {
+  _internal_set_gold_spent_crafting(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.gold_spent_crafting)
+}
+
+// optional bool excessive_consumes = 24;
+inline bool UserVerificationAnalysis::_internal_has_excessive_consumes() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_excessive_consumes() const {
+  return _internal_has_excessive_consumes();
+}
+inline void UserVerificationAnalysis::clear_excessive_consumes() {
+  excessive_consumes_ = false;
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline bool UserVerificationAnalysis::_internal_excessive_consumes() const {
+  return excessive_consumes_;
+}
+inline bool UserVerificationAnalysis::excessive_consumes() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.excessive_consumes)
+  return _internal_excessive_consumes();
+}
+inline void UserVerificationAnalysis::_internal_set_excessive_consumes(bool value) {
+  _has_bits_[0] |= 0x00080000u;
+  excessive_consumes_ = value;
+}
+inline void UserVerificationAnalysis::set_excessive_consumes(bool value) {
+  _internal_set_excessive_consumes(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.excessive_consumes)
+}
+
+// optional bool excessive_inventory = 25;
+inline bool UserVerificationAnalysis::_internal_has_excessive_inventory() const {
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_excessive_inventory() const {
+  return _internal_has_excessive_inventory();
+}
+inline void UserVerificationAnalysis::clear_excessive_inventory() {
+  excessive_inventory_ = false;
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline bool UserVerificationAnalysis::_internal_excessive_inventory() const {
+  return excessive_inventory_;
+}
+inline bool UserVerificationAnalysis::excessive_inventory() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.excessive_inventory)
+  return _internal_excessive_inventory();
+}
+inline void UserVerificationAnalysis::_internal_set_excessive_inventory(bool value) {
+  _has_bits_[0] |= 0x01000000u;
+  excessive_inventory_ = value;
+}
+inline void UserVerificationAnalysis::set_excessive_inventory(bool value) {
+  _internal_set_excessive_inventory(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.excessive_inventory)
+}
+
+// optional bool excessive_spend = 26;
+inline bool UserVerificationAnalysis::_internal_has_excessive_spend() const {
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_excessive_spend() const {
+  return _internal_has_excessive_spend();
+}
+inline void UserVerificationAnalysis::clear_excessive_spend() {
+  excessive_spend_ = false;
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline bool UserVerificationAnalysis::_internal_excessive_spend() const {
+  return excessive_spend_;
+}
+inline bool UserVerificationAnalysis::excessive_spend() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.excessive_spend)
+  return _internal_excessive_spend();
+}
+inline void UserVerificationAnalysis::_internal_set_excessive_spend(bool value) {
+  _has_bits_[0] |= 0x02000000u;
+  excessive_spend_ = value;
+}
+inline void UserVerificationAnalysis::set_excessive_spend(bool value) {
+  _internal_set_excessive_spend(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.excessive_spend)
+}
+
+// optional .ei.UserVerificationAnalysis.Status contracts_status = 20;
+inline bool UserVerificationAnalysis::_internal_has_contracts_status() const {
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_contracts_status() const {
+  return _internal_has_contracts_status();
+}
+inline void UserVerificationAnalysis::clear_contracts_status() {
+  contracts_status_ = 0;
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::_internal_contracts_status() const {
+  return static_cast< ::ei::UserVerificationAnalysis_Status >(contracts_status_);
+}
+inline ::ei::UserVerificationAnalysis_Status UserVerificationAnalysis::contracts_status() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.contracts_status)
+  return _internal_contracts_status();
+}
+inline void UserVerificationAnalysis::_internal_set_contracts_status(::ei::UserVerificationAnalysis_Status value) {
+  assert(::ei::UserVerificationAnalysis_Status_IsValid(value));
+  _has_bits_[0] |= 0x00400000u;
+  contracts_status_ = value;
+}
+inline void UserVerificationAnalysis::set_contracts_status(::ei::UserVerificationAnalysis_Status value) {
+  _internal_set_contracts_status(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.contracts_status)
+}
+
+// optional uint32 num_coop_memberships = 12;
+inline bool UserVerificationAnalysis::_internal_has_num_coop_memberships() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_num_coop_memberships() const {
+  return _internal_has_num_coop_memberships();
+}
+inline void UserVerificationAnalysis::clear_num_coop_memberships() {
+  num_coop_memberships_ = 0u;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_num_coop_memberships() const {
+  return num_coop_memberships_;
+}
+inline uint32_t UserVerificationAnalysis::num_coop_memberships() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.num_coop_memberships)
+  return _internal_num_coop_memberships();
+}
+inline void UserVerificationAnalysis::_internal_set_num_coop_memberships(uint32_t value) {
+  _has_bits_[0] |= 0x00000200u;
+  num_coop_memberships_ = value;
+}
+inline void UserVerificationAnalysis::set_num_coop_memberships(uint32_t value) {
+  _internal_set_num_coop_memberships(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.num_coop_memberships)
+}
+
+// optional uint32 valid_contracts = 16;
+inline bool UserVerificationAnalysis::_internal_has_valid_contracts() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_valid_contracts() const {
+  return _internal_has_valid_contracts();
+}
+inline void UserVerificationAnalysis::clear_valid_contracts() {
+  valid_contracts_ = 0u;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline uint32_t UserVerificationAnalysis::_internal_valid_contracts() const {
+  return valid_contracts_;
+}
+inline uint32_t UserVerificationAnalysis::valid_contracts() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.valid_contracts)
+  return _internal_valid_contracts();
+}
+inline void UserVerificationAnalysis::_internal_set_valid_contracts(uint32_t value) {
+  _has_bits_[0] |= 0x00004000u;
+  valid_contracts_ = value;
+}
+inline void UserVerificationAnalysis::set_valid_contracts(uint32_t value) {
+  _internal_set_valid_contracts(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.valid_contracts)
+}
+
+// repeated string invalid_contracts = 17;
+inline int UserVerificationAnalysis::_internal_invalid_contracts_size() const {
+  return invalid_contracts_.size();
+}
+inline int UserVerificationAnalysis::invalid_contracts_size() const {
+  return _internal_invalid_contracts_size();
+}
+inline void UserVerificationAnalysis::clear_invalid_contracts() {
+  invalid_contracts_.Clear();
+}
+inline std::string* UserVerificationAnalysis::add_invalid_contracts() {
+  std::string* _s = _internal_add_invalid_contracts();
+  // @@protoc_insertion_point(field_add_mutable:ei.UserVerificationAnalysis.invalid_contracts)
+  return _s;
+}
+inline const std::string& UserVerificationAnalysis::_internal_invalid_contracts(int index) const {
+  return invalid_contracts_.Get(index);
+}
+inline const std::string& UserVerificationAnalysis::invalid_contracts(int index) const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.invalid_contracts)
+  return _internal_invalid_contracts(index);
+}
+inline std::string* UserVerificationAnalysis::mutable_invalid_contracts(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.UserVerificationAnalysis.invalid_contracts)
+  return invalid_contracts_.Mutable(index);
+}
+inline void UserVerificationAnalysis::set_invalid_contracts(int index, const std::string& value) {
+  invalid_contracts_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline void UserVerificationAnalysis::set_invalid_contracts(int index, std::string&& value) {
+  invalid_contracts_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline void UserVerificationAnalysis::set_invalid_contracts(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  invalid_contracts_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline void UserVerificationAnalysis::set_invalid_contracts(int index, const char* value, size_t size) {
+  invalid_contracts_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline std::string* UserVerificationAnalysis::_internal_add_invalid_contracts() {
+  return invalid_contracts_.Add();
+}
+inline void UserVerificationAnalysis::add_invalid_contracts(const std::string& value) {
+  invalid_contracts_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline void UserVerificationAnalysis::add_invalid_contracts(std::string&& value) {
+  invalid_contracts_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline void UserVerificationAnalysis::add_invalid_contracts(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  invalid_contracts_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline void UserVerificationAnalysis::add_invalid_contracts(const char* value, size_t size) {
+  invalid_contracts_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.UserVerificationAnalysis.invalid_contracts)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+UserVerificationAnalysis::invalid_contracts() const {
+  // @@protoc_insertion_point(field_list:ei.UserVerificationAnalysis.invalid_contracts)
+  return invalid_contracts_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+UserVerificationAnalysis::mutable_invalid_contracts() {
+  // @@protoc_insertion_point(field_mutable_list:ei.UserVerificationAnalysis.invalid_contracts)
+  return &invalid_contracts_;
+}
+
+// optional bool excessive_eop = 28;
+inline bool UserVerificationAnalysis::_internal_has_excessive_eop() const {
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_excessive_eop() const {
+  return _internal_has_excessive_eop();
+}
+inline void UserVerificationAnalysis::clear_excessive_eop() {
+  excessive_eop_ = false;
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline bool UserVerificationAnalysis::_internal_excessive_eop() const {
+  return excessive_eop_;
+}
+inline bool UserVerificationAnalysis::excessive_eop() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.excessive_eop)
+  return _internal_excessive_eop();
+}
+inline void UserVerificationAnalysis::_internal_set_excessive_eop(bool value) {
+  _has_bits_[0] |= 0x04000000u;
+  excessive_eop_ = value;
+}
+inline void UserVerificationAnalysis::set_excessive_eop(bool value) {
+  _internal_set_excessive_eop(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.excessive_eop)
+}
+
+// optional bool excessive_invalid_contracts = 29;
+inline bool UserVerificationAnalysis::_internal_has_excessive_invalid_contracts() const {
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_excessive_invalid_contracts() const {
+  return _internal_has_excessive_invalid_contracts();
+}
+inline void UserVerificationAnalysis::clear_excessive_invalid_contracts() {
+  excessive_invalid_contracts_ = false;
+  _has_bits_[0] &= ~0x08000000u;
+}
+inline bool UserVerificationAnalysis::_internal_excessive_invalid_contracts() const {
+  return excessive_invalid_contracts_;
+}
+inline bool UserVerificationAnalysis::excessive_invalid_contracts() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.excessive_invalid_contracts)
+  return _internal_excessive_invalid_contracts();
+}
+inline void UserVerificationAnalysis::_internal_set_excessive_invalid_contracts(bool value) {
+  _has_bits_[0] |= 0x08000000u;
+  excessive_invalid_contracts_ = value;
+}
+inline void UserVerificationAnalysis::set_excessive_invalid_contracts(bool value) {
+  _internal_set_excessive_invalid_contracts(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.excessive_invalid_contracts)
+}
+
+// optional bool verified = 30;
+inline bool UserVerificationAnalysis::_internal_has_verified() const {
+  bool value = (_has_bits_[0] & 0x10000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_verified() const {
+  return _internal_has_verified();
+}
+inline void UserVerificationAnalysis::clear_verified() {
+  verified_ = false;
+  _has_bits_[0] &= ~0x10000000u;
+}
+inline bool UserVerificationAnalysis::_internal_verified() const {
+  return verified_;
+}
+inline bool UserVerificationAnalysis::verified() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.verified)
+  return _internal_verified();
+}
+inline void UserVerificationAnalysis::_internal_set_verified(bool value) {
+  _has_bits_[0] |= 0x10000000u;
+  verified_ = value;
+}
+inline void UserVerificationAnalysis::set_verified(bool value) {
+  _internal_set_verified(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.verified)
+}
+
+// optional bool verification_override = 31;
+inline bool UserVerificationAnalysis::_internal_has_verification_override() const {
+  bool value = (_has_bits_[0] & 0x20000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_verification_override() const {
+  return _internal_has_verification_override();
+}
+inline void UserVerificationAnalysis::clear_verification_override() {
+  verification_override_ = false;
+  _has_bits_[0] &= ~0x20000000u;
+}
+inline bool UserVerificationAnalysis::_internal_verification_override() const {
+  return verification_override_;
+}
+inline bool UserVerificationAnalysis::verification_override() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.verification_override)
+  return _internal_verification_override();
+}
+inline void UserVerificationAnalysis::_internal_set_verification_override(bool value) {
+  _has_bits_[0] |= 0x20000000u;
+  verification_override_ = value;
+}
+inline void UserVerificationAnalysis::set_verification_override(bool value) {
+  _internal_set_verification_override(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.verification_override)
+}
+
+// optional bool verification_override_value = 32;
+inline bool UserVerificationAnalysis::_internal_has_verification_override_value() const {
+  bool value = (_has_bits_[0] & 0x40000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_verification_override_value() const {
+  return _internal_has_verification_override_value();
+}
+inline void UserVerificationAnalysis::clear_verification_override_value() {
+  verification_override_value_ = false;
+  _has_bits_[0] &= ~0x40000000u;
+}
+inline bool UserVerificationAnalysis::_internal_verification_override_value() const {
+  return verification_override_value_;
+}
+inline bool UserVerificationAnalysis::verification_override_value() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.verification_override_value)
+  return _internal_verification_override_value();
+}
+inline void UserVerificationAnalysis::_internal_set_verification_override_value(bool value) {
+  _has_bits_[0] |= 0x40000000u;
+  verification_override_value_ = value;
+}
+inline void UserVerificationAnalysis::set_verification_override_value(bool value) {
+  _internal_set_verification_override_value(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.verification_override_value)
+}
+
+// -------------------------------------------------------------------
+
+// UserSubscriptionInfo_HistoryEntry
+
+// optional double timestamp = 1;
+inline bool UserSubscriptionInfo_HistoryEntry::_internal_has_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo_HistoryEntry::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline void UserSubscriptionInfo_HistoryEntry::clear_timestamp() {
+  timestamp_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline double UserSubscriptionInfo_HistoryEntry::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double UserSubscriptionInfo_HistoryEntry::timestamp() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.HistoryEntry.timestamp)
+  return _internal_timestamp();
+}
+inline void UserSubscriptionInfo_HistoryEntry::_internal_set_timestamp(double value) {
+  _has_bits_[0] |= 0x00000004u;
+  timestamp_ = value;
+}
+inline void UserSubscriptionInfo_HistoryEntry::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.HistoryEntry.timestamp)
+}
+
+// optional string message_id = 2;
+inline bool UserSubscriptionInfo_HistoryEntry::_internal_has_message_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo_HistoryEntry::has_message_id() const {
+  return _internal_has_message_id();
+}
+inline void UserSubscriptionInfo_HistoryEntry::clear_message_id() {
+  message_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& UserSubscriptionInfo_HistoryEntry::message_id() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.HistoryEntry.message_id)
+  return _internal_message_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserSubscriptionInfo_HistoryEntry::set_message_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ message_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.HistoryEntry.message_id)
+}
+inline std::string* UserSubscriptionInfo_HistoryEntry::mutable_message_id() {
+  std::string* _s = _internal_mutable_message_id();
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.HistoryEntry.message_id)
+  return _s;
+}
+inline const std::string& UserSubscriptionInfo_HistoryEntry::_internal_message_id() const {
+  return message_id_.Get();
+}
+inline void UserSubscriptionInfo_HistoryEntry::_internal_set_message_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  message_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo_HistoryEntry::_internal_mutable_message_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return message_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo_HistoryEntry::release_message_id() {
+  // @@protoc_insertion_point(field_release:ei.UserSubscriptionInfo.HistoryEntry.message_id)
+  if (!_internal_has_message_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = message_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (message_id_.IsDefault()) {
+    message_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void UserSubscriptionInfo_HistoryEntry::set_allocated_message_id(std::string* message_id) {
+  if (message_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  message_id_.SetAllocated(message_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (message_id_.IsDefault()) {
+    message_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.UserSubscriptionInfo.HistoryEntry.message_id)
+}
+
+// optional string message = 3;
+inline bool UserSubscriptionInfo_HistoryEntry::_internal_has_message() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo_HistoryEntry::has_message() const {
+  return _internal_has_message();
+}
+inline void UserSubscriptionInfo_HistoryEntry::clear_message() {
+  message_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& UserSubscriptionInfo_HistoryEntry::message() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.HistoryEntry.message)
+  return _internal_message();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserSubscriptionInfo_HistoryEntry::set_message(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.HistoryEntry.message)
+}
+inline std::string* UserSubscriptionInfo_HistoryEntry::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.HistoryEntry.message)
+  return _s;
+}
+inline const std::string& UserSubscriptionInfo_HistoryEntry::_internal_message() const {
+  return message_.Get();
+}
+inline void UserSubscriptionInfo_HistoryEntry::_internal_set_message(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  message_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo_HistoryEntry::_internal_mutable_message() {
+  _has_bits_[0] |= 0x00000002u;
+  return message_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo_HistoryEntry::release_message() {
+  // @@protoc_insertion_point(field_release:ei.UserSubscriptionInfo.HistoryEntry.message)
+  if (!_internal_has_message()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = message_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (message_.IsDefault()) {
+    message_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void UserSubscriptionInfo_HistoryEntry::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  message_.SetAllocated(message, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (message_.IsDefault()) {
+    message_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.UserSubscriptionInfo.HistoryEntry.message)
+}
+
+// -------------------------------------------------------------------
+
+// UserSubscriptionInfo
+
+// optional .ei.UserSubscriptionInfo.Level subscription_level = 13;
+inline bool UserSubscriptionInfo::_internal_has_subscription_level() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_subscription_level() const {
+  return _internal_has_subscription_level();
+}
+inline void UserSubscriptionInfo::clear_subscription_level() {
+  subscription_level_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline ::ei::UserSubscriptionInfo_Level UserSubscriptionInfo::_internal_subscription_level() const {
+  return static_cast< ::ei::UserSubscriptionInfo_Level >(subscription_level_);
+}
+inline ::ei::UserSubscriptionInfo_Level UserSubscriptionInfo::subscription_level() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.subscription_level)
+  return _internal_subscription_level();
+}
+inline void UserSubscriptionInfo::_internal_set_subscription_level(::ei::UserSubscriptionInfo_Level value) {
+  assert(::ei::UserSubscriptionInfo_Level_IsValid(value));
+  _has_bits_[0] |= 0x00000080u;
+  subscription_level_ = value;
+}
+inline void UserSubscriptionInfo::set_subscription_level(::ei::UserSubscriptionInfo_Level value) {
+  _internal_set_subscription_level(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.subscription_level)
+}
+
+// optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;
+inline bool UserSubscriptionInfo::_internal_has_next_subscription_level() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_next_subscription_level() const {
+  return _internal_has_next_subscription_level();
+}
+inline void UserSubscriptionInfo::clear_next_subscription_level() {
+  next_subscription_level_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline ::ei::UserSubscriptionInfo_Level UserSubscriptionInfo::_internal_next_subscription_level() const {
+  return static_cast< ::ei::UserSubscriptionInfo_Level >(next_subscription_level_);
+}
+inline ::ei::UserSubscriptionInfo_Level UserSubscriptionInfo::next_subscription_level() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.next_subscription_level)
+  return _internal_next_subscription_level();
+}
+inline void UserSubscriptionInfo::_internal_set_next_subscription_level(::ei::UserSubscriptionInfo_Level value) {
+  assert(::ei::UserSubscriptionInfo_Level_IsValid(value));
+  _has_bits_[0] |= 0x00000100u;
+  next_subscription_level_ = value;
+}
+inline void UserSubscriptionInfo::set_next_subscription_level(::ei::UserSubscriptionInfo_Level value) {
+  _internal_set_next_subscription_level(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.next_subscription_level)
+}
+
+// optional bool lock_next_subscription_level = 18;
+inline bool UserSubscriptionInfo::_internal_has_lock_next_subscription_level() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_lock_next_subscription_level() const {
+  return _internal_has_lock_next_subscription_level();
+}
+inline void UserSubscriptionInfo::clear_lock_next_subscription_level() {
+  lock_next_subscription_level_ = false;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline bool UserSubscriptionInfo::_internal_lock_next_subscription_level() const {
+  return lock_next_subscription_level_;
+}
+inline bool UserSubscriptionInfo::lock_next_subscription_level() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.lock_next_subscription_level)
+  return _internal_lock_next_subscription_level();
+}
+inline void UserSubscriptionInfo::_internal_set_lock_next_subscription_level(bool value) {
+  _has_bits_[0] |= 0x00000200u;
+  lock_next_subscription_level_ = value;
+}
+inline void UserSubscriptionInfo::set_lock_next_subscription_level(bool value) {
+  _internal_set_lock_next_subscription_level(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.lock_next_subscription_level)
+}
+
+// optional .ei.Platform platform = 10;
+inline bool UserSubscriptionInfo::_internal_has_platform() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_platform() const {
+  return _internal_has_platform();
+}
+inline void UserSubscriptionInfo::clear_platform() {
+  platform_ = 1;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline ::ei::Platform UserSubscriptionInfo::_internal_platform() const {
+  return static_cast< ::ei::Platform >(platform_);
+}
+inline ::ei::Platform UserSubscriptionInfo::platform() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.platform)
+  return _internal_platform();
+}
+inline void UserSubscriptionInfo::_internal_set_platform(::ei::Platform value) {
+  assert(::ei::Platform_IsValid(value));
+  _has_bits_[0] |= 0x00002000u;
+  platform_ = value;
+}
+inline void UserSubscriptionInfo::set_platform(::ei::Platform value) {
+  _internal_set_platform(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.platform)
+}
+
+// optional string original_transaction_id = 1;
+inline bool UserSubscriptionInfo::_internal_has_original_transaction_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_original_transaction_id() const {
+  return _internal_has_original_transaction_id();
+}
+inline void UserSubscriptionInfo::clear_original_transaction_id() {
+  original_transaction_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& UserSubscriptionInfo::original_transaction_id() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.original_transaction_id)
+  return _internal_original_transaction_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserSubscriptionInfo::set_original_transaction_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ original_transaction_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.original_transaction_id)
+}
+inline std::string* UserSubscriptionInfo::mutable_original_transaction_id() {
+  std::string* _s = _internal_mutable_original_transaction_id();
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.original_transaction_id)
+  return _s;
+}
+inline const std::string& UserSubscriptionInfo::_internal_original_transaction_id() const {
+  return original_transaction_id_.Get();
+}
+inline void UserSubscriptionInfo::_internal_set_original_transaction_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  original_transaction_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo::_internal_mutable_original_transaction_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return original_transaction_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo::release_original_transaction_id() {
+  // @@protoc_insertion_point(field_release:ei.UserSubscriptionInfo.original_transaction_id)
+  if (!_internal_has_original_transaction_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = original_transaction_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (original_transaction_id_.IsDefault()) {
+    original_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void UserSubscriptionInfo::set_allocated_original_transaction_id(std::string* original_transaction_id) {
+  if (original_transaction_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  original_transaction_id_.SetAllocated(original_transaction_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (original_transaction_id_.IsDefault()) {
+    original_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.UserSubscriptionInfo.original_transaction_id)
+}
+
+// optional string linked_transaction_id = 16;
+inline bool UserSubscriptionInfo::_internal_has_linked_transaction_id() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_linked_transaction_id() const {
+  return _internal_has_linked_transaction_id();
+}
+inline void UserSubscriptionInfo::clear_linked_transaction_id() {
+  linked_transaction_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& UserSubscriptionInfo::linked_transaction_id() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.linked_transaction_id)
+  return _internal_linked_transaction_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserSubscriptionInfo::set_linked_transaction_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ linked_transaction_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.linked_transaction_id)
+}
+inline std::string* UserSubscriptionInfo::mutable_linked_transaction_id() {
+  std::string* _s = _internal_mutable_linked_transaction_id();
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.linked_transaction_id)
+  return _s;
+}
+inline const std::string& UserSubscriptionInfo::_internal_linked_transaction_id() const {
+  return linked_transaction_id_.Get();
+}
+inline void UserSubscriptionInfo::_internal_set_linked_transaction_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  linked_transaction_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo::_internal_mutable_linked_transaction_id() {
+  _has_bits_[0] |= 0x00000004u;
+  return linked_transaction_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo::release_linked_transaction_id() {
+  // @@protoc_insertion_point(field_release:ei.UserSubscriptionInfo.linked_transaction_id)
+  if (!_internal_has_linked_transaction_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = linked_transaction_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (linked_transaction_id_.IsDefault()) {
+    linked_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void UserSubscriptionInfo::set_allocated_linked_transaction_id(std::string* linked_transaction_id) {
+  if (linked_transaction_id != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  linked_transaction_id_.SetAllocated(linked_transaction_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (linked_transaction_id_.IsDefault()) {
+    linked_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.UserSubscriptionInfo.linked_transaction_id)
+}
+
+// optional bool acknowledged = 17;
+inline bool UserSubscriptionInfo::_internal_has_acknowledged() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_acknowledged() const {
+  return _internal_has_acknowledged();
+}
+inline void UserSubscriptionInfo::clear_acknowledged() {
+  acknowledged_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool UserSubscriptionInfo::_internal_acknowledged() const {
+  return acknowledged_;
+}
+inline bool UserSubscriptionInfo::acknowledged() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.acknowledged)
+  return _internal_acknowledged();
+}
+inline void UserSubscriptionInfo::_internal_set_acknowledged(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  acknowledged_ = value;
+}
+inline void UserSubscriptionInfo::set_acknowledged(bool value) {
+  _internal_set_acknowledged(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.acknowledged)
+}
+
+// optional double first_subscribed = 2;
+inline bool UserSubscriptionInfo::_internal_has_first_subscribed() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_first_subscribed() const {
+  return _internal_has_first_subscribed();
+}
+inline void UserSubscriptionInfo::clear_first_subscribed() {
+  first_subscribed_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline double UserSubscriptionInfo::_internal_first_subscribed() const {
+  return first_subscribed_;
+}
+inline double UserSubscriptionInfo::first_subscribed() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.first_subscribed)
+  return _internal_first_subscribed();
+}
+inline void UserSubscriptionInfo::_internal_set_first_subscribed(double value) {
+  _has_bits_[0] |= 0x00000008u;
+  first_subscribed_ = value;
+}
+inline void UserSubscriptionInfo::set_first_subscribed(double value) {
+  _internal_set_first_subscribed(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.first_subscribed)
+}
+
+// optional double period_end = 4;
+inline bool UserSubscriptionInfo::_internal_has_period_end() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_period_end() const {
+  return _internal_has_period_end();
+}
+inline void UserSubscriptionInfo::clear_period_end() {
+  period_end_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline double UserSubscriptionInfo::_internal_period_end() const {
+  return period_end_;
+}
+inline double UserSubscriptionInfo::period_end() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.period_end)
+  return _internal_period_end();
+}
+inline void UserSubscriptionInfo::_internal_set_period_end(double value) {
+  _has_bits_[0] |= 0x00000010u;
+  period_end_ = value;
+}
+inline void UserSubscriptionInfo::set_period_end(double value) {
+  _internal_set_period_end(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.period_end)
+}
+
+// optional .ei.UserSubscriptionInfo.Status status = 5;
+inline bool UserSubscriptionInfo::_internal_has_status() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_status() const {
+  return _internal_has_status();
+}
+inline void UserSubscriptionInfo::clear_status() {
+  status_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline ::ei::UserSubscriptionInfo_Status UserSubscriptionInfo::_internal_status() const {
+  return static_cast< ::ei::UserSubscriptionInfo_Status >(status_);
+}
+inline ::ei::UserSubscriptionInfo_Status UserSubscriptionInfo::status() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.status)
+  return _internal_status();
+}
+inline void UserSubscriptionInfo::_internal_set_status(::ei::UserSubscriptionInfo_Status value) {
+  assert(::ei::UserSubscriptionInfo_Status_IsValid(value));
+  _has_bits_[0] |= 0x00000040u;
+  status_ = value;
+}
+inline void UserSubscriptionInfo::set_status(::ei::UserSubscriptionInfo_Status value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.status)
+}
+
+// optional string store_status = 14;
+inline bool UserSubscriptionInfo::_internal_has_store_status() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_store_status() const {
+  return _internal_has_store_status();
+}
+inline void UserSubscriptionInfo::clear_store_status() {
+  store_status_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& UserSubscriptionInfo::store_status() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.store_status)
+  return _internal_store_status();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UserSubscriptionInfo::set_store_status(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ store_status_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.store_status)
+}
+inline std::string* UserSubscriptionInfo::mutable_store_status() {
+  std::string* _s = _internal_mutable_store_status();
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.store_status)
+  return _s;
+}
+inline const std::string& UserSubscriptionInfo::_internal_store_status() const {
+  return store_status_.Get();
+}
+inline void UserSubscriptionInfo::_internal_set_store_status(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  store_status_.Set(value, GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo::_internal_mutable_store_status() {
+  _has_bits_[0] |= 0x00000002u;
+  return store_status_.Mutable(GetArenaForAllocation());
+}
+inline std::string* UserSubscriptionInfo::release_store_status() {
+  // @@protoc_insertion_point(field_release:ei.UserSubscriptionInfo.store_status)
+  if (!_internal_has_store_status()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = store_status_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (store_status_.IsDefault()) {
+    store_status_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void UserSubscriptionInfo::set_allocated_store_status(std::string* store_status) {
+  if (store_status != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  store_status_.SetAllocated(store_status, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (store_status_.IsDefault()) {
+    store_status_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.UserSubscriptionInfo.store_status)
+}
+
+// optional bool auto_renew = 6;
+inline bool UserSubscriptionInfo::_internal_has_auto_renew() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_auto_renew() const {
+  return _internal_has_auto_renew();
+}
+inline void UserSubscriptionInfo::clear_auto_renew() {
+  auto_renew_ = false;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline bool UserSubscriptionInfo::_internal_auto_renew() const {
+  return auto_renew_;
+}
+inline bool UserSubscriptionInfo::auto_renew() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.auto_renew)
+  return _internal_auto_renew();
+}
+inline void UserSubscriptionInfo::_internal_set_auto_renew(bool value) {
+  _has_bits_[0] |= 0x00000800u;
+  auto_renew_ = value;
+}
+inline void UserSubscriptionInfo::set_auto_renew(bool value) {
+  _internal_set_auto_renew(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.auto_renew)
+}
+
+// optional bool sandbox = 19;
+inline bool UserSubscriptionInfo::_internal_has_sandbox() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_sandbox() const {
+  return _internal_has_sandbox();
+}
+inline void UserSubscriptionInfo::clear_sandbox() {
+  sandbox_ = false;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline bool UserSubscriptionInfo::_internal_sandbox() const {
+  return sandbox_;
+}
+inline bool UserSubscriptionInfo::sandbox() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.sandbox)
+  return _internal_sandbox();
+}
+inline void UserSubscriptionInfo::_internal_set_sandbox(bool value) {
+  _has_bits_[0] |= 0x00001000u;
+  sandbox_ = value;
+}
+inline void UserSubscriptionInfo::set_sandbox(bool value) {
+  _internal_set_sandbox(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.sandbox)
+}
+
+// optional double last_updated = 7;
+inline bool UserSubscriptionInfo::_internal_has_last_updated() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool UserSubscriptionInfo::has_last_updated() const {
+  return _internal_has_last_updated();
+}
+inline void UserSubscriptionInfo::clear_last_updated() {
+  last_updated_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double UserSubscriptionInfo::_internal_last_updated() const {
+  return last_updated_;
+}
+inline double UserSubscriptionInfo::last_updated() const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.last_updated)
+  return _internal_last_updated();
+}
+inline void UserSubscriptionInfo::_internal_set_last_updated(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  last_updated_ = value;
+}
+inline void UserSubscriptionInfo::set_last_updated(double value) {
+  _internal_set_last_updated(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.last_updated)
+}
+
+// repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;
+inline int UserSubscriptionInfo::_internal_history_size() const {
+  return history_.size();
+}
+inline int UserSubscriptionInfo::history_size() const {
+  return _internal_history_size();
+}
+inline void UserSubscriptionInfo::clear_history() {
+  history_.Clear();
+}
+inline ::ei::UserSubscriptionInfo_HistoryEntry* UserSubscriptionInfo::mutable_history(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.history)
+  return history_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::UserSubscriptionInfo_HistoryEntry >*
+UserSubscriptionInfo::mutable_history() {
+  // @@protoc_insertion_point(field_mutable_list:ei.UserSubscriptionInfo.history)
+  return &history_;
+}
+inline const ::ei::UserSubscriptionInfo_HistoryEntry& UserSubscriptionInfo::_internal_history(int index) const {
+  return history_.Get(index);
+}
+inline const ::ei::UserSubscriptionInfo_HistoryEntry& UserSubscriptionInfo::history(int index) const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.history)
+  return _internal_history(index);
+}
+inline ::ei::UserSubscriptionInfo_HistoryEntry* UserSubscriptionInfo::_internal_add_history() {
+  return history_.Add();
+}
+inline ::ei::UserSubscriptionInfo_HistoryEntry* UserSubscriptionInfo::add_history() {
+  ::ei::UserSubscriptionInfo_HistoryEntry* _add = _internal_add_history();
+  // @@protoc_insertion_point(field_add:ei.UserSubscriptionInfo.history)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::UserSubscriptionInfo_HistoryEntry >&
+UserSubscriptionInfo::history() const {
+  // @@protoc_insertion_point(field_list:ei.UserSubscriptionInfo.history)
+  return history_;
+}
+
+// repeated string past_user_ids = 11;
+inline int UserSubscriptionInfo::_internal_past_user_ids_size() const {
+  return past_user_ids_.size();
+}
+inline int UserSubscriptionInfo::past_user_ids_size() const {
+  return _internal_past_user_ids_size();
+}
+inline void UserSubscriptionInfo::clear_past_user_ids() {
+  past_user_ids_.Clear();
+}
+inline std::string* UserSubscriptionInfo::add_past_user_ids() {
+  std::string* _s = _internal_add_past_user_ids();
+  // @@protoc_insertion_point(field_add_mutable:ei.UserSubscriptionInfo.past_user_ids)
+  return _s;
+}
+inline const std::string& UserSubscriptionInfo::_internal_past_user_ids(int index) const {
+  return past_user_ids_.Get(index);
+}
+inline const std::string& UserSubscriptionInfo::past_user_ids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.UserSubscriptionInfo.past_user_ids)
+  return _internal_past_user_ids(index);
+}
+inline std::string* UserSubscriptionInfo::mutable_past_user_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.UserSubscriptionInfo.past_user_ids)
+  return past_user_ids_.Mutable(index);
+}
+inline void UserSubscriptionInfo::set_past_user_ids(int index, const std::string& value) {
+  past_user_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline void UserSubscriptionInfo::set_past_user_ids(int index, std::string&& value) {
+  past_user_ids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline void UserSubscriptionInfo::set_past_user_ids(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  past_user_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline void UserSubscriptionInfo::set_past_user_ids(int index, const char* value, size_t size) {
+  past_user_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline std::string* UserSubscriptionInfo::_internal_add_past_user_ids() {
+  return past_user_ids_.Add();
+}
+inline void UserSubscriptionInfo::add_past_user_ids(const std::string& value) {
+  past_user_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline void UserSubscriptionInfo::add_past_user_ids(std::string&& value) {
+  past_user_ids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline void UserSubscriptionInfo::add_past_user_ids(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  past_user_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline void UserSubscriptionInfo::add_past_user_ids(const char* value, size_t size) {
+  past_user_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.UserSubscriptionInfo.past_user_ids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+UserSubscriptionInfo::past_user_ids() const {
+  // @@protoc_insertion_point(field_list:ei.UserSubscriptionInfo.past_user_ids)
+  return past_user_ids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+UserSubscriptionInfo::mutable_past_user_ids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.UserSubscriptionInfo.past_user_ids)
+  return &past_user_ids_;
+}
+
+// -------------------------------------------------------------------
+
+// SubscriptionChangeHintRequest
+
+// optional .ei.BasicRequestInfo rinfo = 3;
+inline bool SubscriptionChangeHintRequest::_internal_has_rinfo() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || rinfo_ != nullptr);
+  return value;
+}
+inline bool SubscriptionChangeHintRequest::has_rinfo() const {
+  return _internal_has_rinfo();
+}
+inline void SubscriptionChangeHintRequest::clear_rinfo() {
+  if (rinfo_ != nullptr) rinfo_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::ei::BasicRequestInfo& SubscriptionChangeHintRequest::_internal_rinfo() const {
+  const ::ei::BasicRequestInfo* p = rinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::BasicRequestInfo&>(
+      ::ei::_BasicRequestInfo_default_instance_);
+}
+inline const ::ei::BasicRequestInfo& SubscriptionChangeHintRequest::rinfo() const {
+  // @@protoc_insertion_point(field_get:ei.SubscriptionChangeHintRequest.rinfo)
+  return _internal_rinfo();
+}
+inline void SubscriptionChangeHintRequest::unsafe_arena_set_allocated_rinfo(
+    ::ei::BasicRequestInfo* rinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rinfo_);
+  }
+  rinfo_ = rinfo;
+  if (rinfo) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.SubscriptionChangeHintRequest.rinfo)
+}
+inline ::ei::BasicRequestInfo* SubscriptionChangeHintRequest::release_rinfo() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::BasicRequestInfo* SubscriptionChangeHintRequest::unsafe_arena_release_rinfo() {
+  // @@protoc_insertion_point(field_release:ei.SubscriptionChangeHintRequest.rinfo)
+  _has_bits_[0] &= ~0x00000002u;
+  ::ei::BasicRequestInfo* temp = rinfo_;
+  rinfo_ = nullptr;
+  return temp;
+}
+inline ::ei::BasicRequestInfo* SubscriptionChangeHintRequest::_internal_mutable_rinfo() {
+  _has_bits_[0] |= 0x00000002u;
+  if (rinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::BasicRequestInfo>(GetArenaForAllocation());
+    rinfo_ = p;
+  }
+  return rinfo_;
+}
+inline ::ei::BasicRequestInfo* SubscriptionChangeHintRequest::mutable_rinfo() {
+  ::ei::BasicRequestInfo* _msg = _internal_mutable_rinfo();
+  // @@protoc_insertion_point(field_mutable:ei.SubscriptionChangeHintRequest.rinfo)
+  return _msg;
+}
+inline void SubscriptionChangeHintRequest::set_allocated_rinfo(::ei::BasicRequestInfo* rinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rinfo_;
+  }
+  if (rinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(rinfo);
+    if (message_arena != submessage_arena) {
+      rinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  rinfo_ = rinfo;
+  // @@protoc_insertion_point(field_set_allocated:ei.SubscriptionChangeHintRequest.rinfo)
+}
+
+// optional string original_transaction_id = 1;
+inline bool SubscriptionChangeHintRequest::_internal_has_original_transaction_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SubscriptionChangeHintRequest::has_original_transaction_id() const {
+  return _internal_has_original_transaction_id();
+}
+inline void SubscriptionChangeHintRequest::clear_original_transaction_id() {
+  original_transaction_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& SubscriptionChangeHintRequest::original_transaction_id() const {
+  // @@protoc_insertion_point(field_get:ei.SubscriptionChangeHintRequest.original_transaction_id)
+  return _internal_original_transaction_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SubscriptionChangeHintRequest::set_original_transaction_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ original_transaction_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.SubscriptionChangeHintRequest.original_transaction_id)
+}
+inline std::string* SubscriptionChangeHintRequest::mutable_original_transaction_id() {
+  std::string* _s = _internal_mutable_original_transaction_id();
+  // @@protoc_insertion_point(field_mutable:ei.SubscriptionChangeHintRequest.original_transaction_id)
+  return _s;
+}
+inline const std::string& SubscriptionChangeHintRequest::_internal_original_transaction_id() const {
+  return original_transaction_id_.Get();
+}
+inline void SubscriptionChangeHintRequest::_internal_set_original_transaction_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  original_transaction_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SubscriptionChangeHintRequest::_internal_mutable_original_transaction_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return original_transaction_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SubscriptionChangeHintRequest::release_original_transaction_id() {
+  // @@protoc_insertion_point(field_release:ei.SubscriptionChangeHintRequest.original_transaction_id)
+  if (!_internal_has_original_transaction_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = original_transaction_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (original_transaction_id_.IsDefault()) {
+    original_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SubscriptionChangeHintRequest::set_allocated_original_transaction_id(std::string* original_transaction_id) {
+  if (original_transaction_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  original_transaction_id_.SetAllocated(original_transaction_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (original_transaction_id_.IsDefault()) {
+    original_transaction_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.SubscriptionChangeHintRequest.original_transaction_id)
+}
+
+// optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;
+inline bool SubscriptionChangeHintRequest::_internal_has_next_subscription_level() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool SubscriptionChangeHintRequest::has_next_subscription_level() const {
+  return _internal_has_next_subscription_level();
+}
+inline void SubscriptionChangeHintRequest::clear_next_subscription_level() {
+  next_subscription_level_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::ei::UserSubscriptionInfo_Level SubscriptionChangeHintRequest::_internal_next_subscription_level() const {
+  return static_cast< ::ei::UserSubscriptionInfo_Level >(next_subscription_level_);
+}
+inline ::ei::UserSubscriptionInfo_Level SubscriptionChangeHintRequest::next_subscription_level() const {
+  // @@protoc_insertion_point(field_get:ei.SubscriptionChangeHintRequest.next_subscription_level)
+  return _internal_next_subscription_level();
+}
+inline void SubscriptionChangeHintRequest::_internal_set_next_subscription_level(::ei::UserSubscriptionInfo_Level value) {
+  assert(::ei::UserSubscriptionInfo_Level_IsValid(value));
+  _has_bits_[0] |= 0x00000004u;
+  next_subscription_level_ = value;
+}
+inline void SubscriptionChangeHintRequest::set_next_subscription_level(::ei::UserSubscriptionInfo_Level value) {
+  _internal_set_next_subscription_level(value);
+  // @@protoc_insertion_point(field_set:ei.SubscriptionChangeHintRequest.next_subscription_level)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -88434,15 +102683,45 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::EggIncFirstContactResponse_ErrorCodes>() {
   return ::ei::EggIncFirstContactResponse_ErrorCodes_descriptor();
 }
+template <> struct is_proto_enum< ::ei::GameModifier_GameDimension> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::GameModifier_GameDimension>() {
+  return ::ei::GameModifier_GameDimension_descriptor();
+}
 template <> struct is_proto_enum< ::ei::Contract_PlayerGrade> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::Contract_PlayerGrade>() {
   return ::ei::Contract_PlayerGrade_descriptor();
 }
+template <> struct is_proto_enum< ::ei::ContractPlayerInfo_Status> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ContractPlayerInfo_Status>() {
+  return ::ei::ContractPlayerInfo_Status_descriptor();
+}
+template <> struct is_proto_enum< ::ei::ContractEvaluation_PoorBehavior> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ContractEvaluation_PoorBehavior>() {
+  return ::ei::ContractEvaluation_PoorBehavior_descriptor();
+}
+template <> struct is_proto_enum< ::ei::ContractEvaluation_Status> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ContractEvaluation_Status>() {
+  return ::ei::ContractEvaluation_Status_descriptor();
+}
 template <> struct is_proto_enum< ::ei::ContractCoopStatusResponse_MemberStatus> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::ContractCoopStatusResponse_MemberStatus>() {
   return ::ei::ContractCoopStatusResponse_MemberStatus_descriptor();
+}
+template <> struct is_proto_enum< ::ei::ContractCoopStatusResponse_Status> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ContractCoopStatusResponse_Status>() {
+  return ::ei::ContractCoopStatusResponse_Status_descriptor();
+}
+template <> struct is_proto_enum< ::ei::ReportPlayerCoopRequest_Reason> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::ReportPlayerCoopRequest_Reason>() {
+  return ::ei::ReportPlayerCoopRequest_Reason_descriptor();
 }
 template <> struct is_proto_enum< ::ei::KickPlayerCoopRequest_Reason> : ::std::true_type {};
 template <>
@@ -88504,6 +102783,21 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::ShellDB_FarmElement>() {
   return ::ei::ShellDB_FarmElement_descriptor();
 }
+template <> struct is_proto_enum< ::ei::UserVerificationAnalysis_Status> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::UserVerificationAnalysis_Status>() {
+  return ::ei::UserVerificationAnalysis_Status_descriptor();
+}
+template <> struct is_proto_enum< ::ei::UserSubscriptionInfo_Level> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::UserSubscriptionInfo_Level>() {
+  return ::ei::UserSubscriptionInfo_Level_descriptor();
+}
+template <> struct is_proto_enum< ::ei::UserSubscriptionInfo_Status> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::UserSubscriptionInfo_Status>() {
+  return ::ei::UserSubscriptionInfo_Status_descriptor();
+}
 template <> struct is_proto_enum< ::ei::Platform> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::Platform>() {
@@ -88539,10 +102833,10 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::RewardType>() {
   return ::ei::RewardType_descriptor();
 }
-template <> struct is_proto_enum< ::ei::GameDimension> : ::std::true_type {};
+template <> struct is_proto_enum< ::ei::LeaderboardScope> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ei::GameDimension>() {
-  return ::ei::GameDimension_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::LeaderboardScope>() {
+  return ::ei::LeaderboardScope_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

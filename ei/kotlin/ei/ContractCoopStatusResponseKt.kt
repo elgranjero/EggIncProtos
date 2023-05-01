@@ -498,6 +498,30 @@ public object ContractCoopStatusResponseKt {
       internal fun _build(): ei.Ei.ContractCoopStatusResponse.ContributionInfo = _builder.build()
 
       /**
+       * <code>optional string uuid = 21;</code>
+       */
+      public var uuid: kotlin.String
+        @JvmName("getUuid")
+        get() = _builder.getUuid()
+        @JvmName("setUuid")
+        set(value) {
+          _builder.setUuid(value)
+        }
+      /**
+       * <code>optional string uuid = 21;</code>
+       */
+      public fun clearUuid() {
+        _builder.clearUuid()
+      }
+      /**
+       * <code>optional string uuid = 21;</code>
+       * @return Whether the uuid field is set.
+       */
+      public fun hasUuid(): kotlin.Boolean {
+        return _builder.hasUuid()
+      }
+
+      /**
        * <code>optional string user_id = 1;</code>
        */
       public var userId: kotlin.String

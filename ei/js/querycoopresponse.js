@@ -74,6 +74,8 @@ proto.ei.QueryCoopResponse.toObject = function(includeInstance, msg) {
     full: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
     expired: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
     differentLeague: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    differentGrade: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    ccOnly: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     banned: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f
   };
 
@@ -126,6 +128,14 @@ proto.ei.QueryCoopResponse.deserializeBinaryFromReader = function(msg, reader) {
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setDifferentLeague(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setDifferentGrade(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCcOnly(value);
       break;
     case 3:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -185,6 +195,20 @@ proto.ei.QueryCoopResponse.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       4,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeBool(
+      7,
       f
     );
   }
@@ -339,6 +363,78 @@ proto.ei.QueryCoopResponse.prototype.clearDifferentLeague = function() {
  */
 proto.ei.QueryCoopResponse.prototype.hasDifferentLeague = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool different_grade = 6;
+ * @return {boolean}
+ */
+proto.ei.QueryCoopResponse.prototype.getDifferentGrade = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.QueryCoopResponse} returns this
+ */
+proto.ei.QueryCoopResponse.prototype.setDifferentGrade = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.QueryCoopResponse} returns this
+ */
+proto.ei.QueryCoopResponse.prototype.clearDifferentGrade = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.QueryCoopResponse.prototype.hasDifferentGrade = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool cc_only = 7;
+ * @return {boolean}
+ */
+proto.ei.QueryCoopResponse.prototype.getCcOnly = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.QueryCoopResponse} returns this
+ */
+proto.ei.QueryCoopResponse.prototype.setCcOnly = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.QueryCoopResponse} returns this
+ */
+proto.ei.QueryCoopResponse.prototype.clearCcOnly = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.QueryCoopResponse.prototype.hasCcOnly = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

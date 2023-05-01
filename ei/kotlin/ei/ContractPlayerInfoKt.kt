@@ -69,6 +69,383 @@ public object ContractPlayerInfoKt {
     public fun hasTotalCxp(): kotlin.Boolean {
       return _builder.hasTotalCxp()
     }
+
+    /**
+     * <code>optional double season_cxp = 13;</code>
+     */
+    public var seasonCxp: kotlin.Double
+      @JvmName("getSeasonCxp")
+      get() = _builder.getSeasonCxp()
+      @JvmName("setSeasonCxp")
+      set(value) {
+        _builder.setSeasonCxp(value)
+      }
+    /**
+     * <code>optional double season_cxp = 13;</code>
+     */
+    public fun clearSeasonCxp() {
+      _builder.clearSeasonCxp()
+    }
+    /**
+     * <code>optional double season_cxp = 13;</code>
+     * @return Whether the seasonCxp field is set.
+     */
+    public fun hasSeasonCxp(): kotlin.Boolean {
+      return _builder.hasSeasonCxp()
+    }
+
+    /**
+     * <code>optional double grade_score = 7;</code>
+     */
+    public var gradeScore: kotlin.Double
+      @JvmName("getGradeScore")
+      get() = _builder.getGradeScore()
+      @JvmName("setGradeScore")
+      set(value) {
+        _builder.setGradeScore(value)
+      }
+    /**
+     * <code>optional double grade_score = 7;</code>
+     */
+    public fun clearGradeScore() {
+      _builder.clearGradeScore()
+    }
+    /**
+     * <code>optional double grade_score = 7;</code>
+     * @return Whether the gradeScore field is set.
+     */
+    public fun hasGradeScore(): kotlin.Boolean {
+      return _builder.hasGradeScore()
+    }
+
+    /**
+     * <code>optional double target_grade_score = 9;</code>
+     */
+    public var targetGradeScore: kotlin.Double
+      @JvmName("getTargetGradeScore")
+      get() = _builder.getTargetGradeScore()
+      @JvmName("setTargetGradeScore")
+      set(value) {
+        _builder.setTargetGradeScore(value)
+      }
+    /**
+     * <code>optional double target_grade_score = 9;</code>
+     */
+    public fun clearTargetGradeScore() {
+      _builder.clearTargetGradeScore()
+    }
+    /**
+     * <code>optional double target_grade_score = 9;</code>
+     * @return Whether the targetGradeScore field is set.
+     */
+    public fun hasTargetGradeScore(): kotlin.Boolean {
+      return _builder.hasTargetGradeScore()
+    }
+
+    /**
+     * <code>optional double soul_power = 10;</code>
+     */
+    public var soulPower: kotlin.Double
+      @JvmName("getSoulPower")
+      get() = _builder.getSoulPower()
+      @JvmName("setSoulPower")
+      set(value) {
+        _builder.setSoulPower(value)
+      }
+    /**
+     * <code>optional double soul_power = 10;</code>
+     */
+    public fun clearSoulPower() {
+      _builder.clearSoulPower()
+    }
+    /**
+     * <code>optional double soul_power = 10;</code>
+     * @return Whether the soulPower field is set.
+     */
+    public fun hasSoulPower(): kotlin.Boolean {
+      return _builder.hasSoulPower()
+    }
+
+    /**
+     * <code>optional double target_soul_power = 8;</code>
+     */
+    public var targetSoulPower: kotlin.Double
+      @JvmName("getTargetSoulPower")
+      get() = _builder.getTargetSoulPower()
+      @JvmName("setTargetSoulPower")
+      set(value) {
+        _builder.setTargetSoulPower(value)
+      }
+    /**
+     * <code>optional double target_soul_power = 8;</code>
+     */
+    public fun clearTargetSoulPower() {
+      _builder.clearTargetSoulPower()
+    }
+    /**
+     * <code>optional double target_soul_power = 8;</code>
+     * @return Whether the targetSoulPower field is set.
+     */
+    public fun hasTargetSoulPower(): kotlin.Boolean {
+      return _builder.hasTargetSoulPower()
+    }
+
+    /**
+     * <code>optional double grade_progress = 12;</code>
+     */
+    public var gradeProgress: kotlin.Double
+      @JvmName("getGradeProgress")
+      get() = _builder.getGradeProgress()
+      @JvmName("setGradeProgress")
+      set(value) {
+        _builder.setGradeProgress(value)
+      }
+    /**
+     * <code>optional double grade_progress = 12;</code>
+     */
+    public fun clearGradeProgress() {
+      _builder.clearGradeProgress()
+    }
+    /**
+     * <code>optional double grade_progress = 12;</code>
+     * @return Whether the gradeProgress field is set.
+     */
+    public fun hasGradeProgress(): kotlin.Boolean {
+      return _builder.hasGradeProgress()
+    }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class IssuesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     */
+     public val issues: com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getIssuesList()
+      )
+    /**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     * @param value The issues to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addIssues")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.add(value: ei.Ei.ContractEvaluation.PoorBehavior) {
+      _builder.addIssues(value)
+    }/**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     * @param value The issues to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignIssues")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.plusAssign(value: ei.Ei.ContractEvaluation.PoorBehavior) {
+      add(value)
+    }/**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     * @param values The issues to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllIssues")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation.PoorBehavior>) {
+      _builder.addAllIssues(values)
+    }/**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     * @param values The issues to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllIssues")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation.PoorBehavior>) {
+      addAll(values)
+    }/**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     * @param index The index to set the value at.
+     * @param value The issues to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setIssues")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.set(index: kotlin.Int, value: ei.Ei.ContractEvaluation.PoorBehavior) {
+      _builder.setIssues(index, value)
+    }/**
+     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 11;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearIssues")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.clear() {
+      _builder.clearIssues()
+    }
+    /**
+     * <code>optional double issue_score = 14;</code>
+     */
+    public var issueScore: kotlin.Double
+      @JvmName("getIssueScore")
+      get() = _builder.getIssueScore()
+      @JvmName("setIssueScore")
+      set(value) {
+        _builder.setIssueScore(value)
+      }
+    /**
+     * <code>optional double issue_score = 14;</code>
+     */
+    public fun clearIssueScore() {
+      _builder.clearIssueScore()
+    }
+    /**
+     * <code>optional double issue_score = 14;</code>
+     * @return Whether the issueScore field is set.
+     */
+    public fun hasIssueScore(): kotlin.Boolean {
+      return _builder.hasIssueScore()
+    }
+
+    /**
+     * <code>optional .ei.ContractPlayerInfo.Status status = 3;</code>
+     */
+    public var status: ei.Ei.ContractPlayerInfo.Status
+      @JvmName("getStatus")
+      get() = _builder.getStatus()
+      @JvmName("setStatus")
+      set(value) {
+        _builder.setStatus(value)
+      }
+    /**
+     * <code>optional .ei.ContractPlayerInfo.Status status = 3;</code>
+     */
+    public fun clearStatus() {
+      _builder.clearStatus()
+    }
+    /**
+     * <code>optional .ei.ContractPlayerInfo.Status status = 3;</code>
+     * @return Whether the status field is set.
+     */
+    public fun hasStatus(): kotlin.Boolean {
+      return _builder.hasStatus()
+    }
+
+    /**
+     * <code>optional double last_evaluation_time = 4;</code>
+     */
+    public var lastEvaluationTime: kotlin.Double
+      @JvmName("getLastEvaluationTime")
+      get() = _builder.getLastEvaluationTime()
+      @JvmName("setLastEvaluationTime")
+      set(value) {
+        _builder.setLastEvaluationTime(value)
+      }
+    /**
+     * <code>optional double last_evaluation_time = 4;</code>
+     */
+    public fun clearLastEvaluationTime() {
+      _builder.clearLastEvaluationTime()
+    }
+    /**
+     * <code>optional double last_evaluation_time = 4;</code>
+     * @return Whether the lastEvaluationTime field is set.
+     */
+    public fun hasLastEvaluationTime(): kotlin.Boolean {
+      return _builder.hasLastEvaluationTime()
+    }
+
+    /**
+     * <code>optional string last_evaluation_version = 5;</code>
+     */
+    public var lastEvaluationVersion: kotlin.String
+      @JvmName("getLastEvaluationVersion")
+      get() = _builder.getLastEvaluationVersion()
+      @JvmName("setLastEvaluationVersion")
+      set(value) {
+        _builder.setLastEvaluationVersion(value)
+      }
+    /**
+     * <code>optional string last_evaluation_version = 5;</code>
+     */
+    public fun clearLastEvaluationVersion() {
+      _builder.clearLastEvaluationVersion()
+    }
+    /**
+     * <code>optional string last_evaluation_version = 5;</code>
+     * @return Whether the lastEvaluationVersion field is set.
+     */
+    public fun hasLastEvaluationVersion(): kotlin.Boolean {
+      return _builder.hasLastEvaluationVersion()
+    }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class UnreadEvaluationsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     */
+     public val unreadEvaluations: com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getUnreadEvaluationsList()
+      )
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     * @param value The unreadEvaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addUnreadEvaluations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>.add(value: ei.Ei.ContractEvaluation) {
+      _builder.addUnreadEvaluations(value)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     * @param value The unreadEvaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignUnreadEvaluations")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>.plusAssign(value: ei.Ei.ContractEvaluation) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     * @param values The unreadEvaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllUnreadEvaluations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation>) {
+      _builder.addAllUnreadEvaluations(values)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     * @param values The unreadEvaluations to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllUnreadEvaluations")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     * @param index The index to set the value at.
+     * @param value The unreadEvaluations to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setUnreadEvaluations")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractEvaluation) {
+      _builder.setUnreadEvaluations(index, value)
+    }
+    /**
+     * <code>repeated .ei.ContractEvaluation unread_evaluations = 6;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearUnreadEvaluations")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, UnreadEvaluationsProxy>.clear() {
+      _builder.clearUnreadEvaluations()
+    }
+
   }
 }
 @kotlin.jvm.JvmSynthetic

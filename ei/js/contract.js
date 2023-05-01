@@ -158,17 +158,19 @@ proto.ei.Contract.toObject = function(includeInstance, msg) {
     proto.ei.Contract.GoalSet.toObject, includeInstance),
     gradeSpecsList: jspb.Message.toObjectList(msg.getGradeSpecsList(),
     proto.ei.Contract.GradeSpec.toObject, includeInstance),
+    seasonId: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
     coopAllowed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
     maxCoopSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     maxBoosts: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     minutesPerToken: jspb.Message.getFloatingPointFieldWithDefault(msg, 15, 60.0),
-    chickenRunCooldownMinutes: jspb.Message.getFloatingPointFieldWithDefault(msg, 18, 60.0),
+    chickenRunCooldownMinutes: jspb.Message.getFloatingPointFieldWithDefault(msg, 18, 180.0),
     startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
     expirationTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
     maxSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
     minClientVersion: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     leggacy: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
+    ccOnly: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     key: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f
   };
@@ -238,6 +240,10 @@ proto.ei.Contract.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,proto.ei.Contract.GradeSpec.deserializeBinaryFromReader);
       msg.addGradeSpecs(value);
       break;
+    case 23:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSeasonId(value);
+      break;
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setCoopAllowed(value);
@@ -281,6 +287,10 @@ proto.ei.Contract.deserializeBinaryFromReader = function(msg, reader) {
     case 19:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLeggacy(value);
+      break;
+    case 22:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCcOnly(value);
       break;
     case 11:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -371,6 +381,13 @@ proto.ei.Contract.serializeBinaryToWriter = function(message, writer) {
       proto.ei.Contract.GradeSpec.serializeBinaryToWriter
     );
   }
+  f = /** @type {string} */ (jspb.Message.getField(message, 23));
+  if (f != null) {
+    writer.writeString(
+      23,
+      f
+    );
+  }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 4));
   if (f != null) {
     writer.writeBool(
@@ -445,6 +462,13 @@ proto.ei.Contract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       19,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 22));
+  if (f != null) {
+    writer.writeBool(
+      22,
       f
     );
   }
@@ -1068,7 +1092,8 @@ proto.ei.Contract.GradeSpec.toObject = function(includeInstance, msg) {
     goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
     proto.ei.Contract.Goal.toObject, includeInstance),
     modifiersList: jspb.Message.toObjectList(msg.getModifiersList(),
-    proto.ei.GameModifier.toObject, includeInstance)
+    proto.ei.GameModifier.toObject, includeInstance),
+    lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1118,6 +1143,10 @@ proto.ei.Contract.GradeSpec.deserializeBinaryFromReader = function(msg, reader) 
       var value = new proto.ei.GameModifier;
       reader.readMessage(value,proto.ei.GameModifier.deserializeBinaryFromReader);
       msg.addModifiers(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLengthSeconds(value);
       break;
     default:
       reader.skipField();
@@ -1169,6 +1198,13 @@ proto.ei.Contract.GradeSpec.serializeBinaryToWriter = function(message, writer) 
       3,
       f,
       proto.ei.GameModifier.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeDouble(
+      4,
+      f
     );
   }
 };
@@ -1283,6 +1319,42 @@ proto.ei.Contract.GradeSpec.prototype.addModifiers = function(opt_value, opt_ind
  */
 proto.ei.Contract.GradeSpec.prototype.clearModifiersList = function() {
   return this.setModifiersList([]);
+};
+
+
+/**
+ * optional double length_seconds = 4;
+ * @return {number}
+ */
+proto.ei.Contract.GradeSpec.prototype.getLengthSeconds = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Contract.GradeSpec} returns this
+ */
+proto.ei.Contract.GradeSpec.prototype.setLengthSeconds = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Contract.GradeSpec} returns this
+ */
+proto.ei.Contract.GradeSpec.prototype.clearLengthSeconds = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Contract.GradeSpec.prototype.hasLengthSeconds = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
@@ -1545,6 +1617,42 @@ proto.ei.Contract.prototype.clearGradeSpecsList = function() {
 
 
 /**
+ * optional string season_id = 23;
+ * @return {string}
+ */
+proto.ei.Contract.prototype.getSeasonId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 23, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.setSeasonId = function(value) {
+  return jspb.Message.setField(this, 23, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.clearSeasonId = function() {
+  return jspb.Message.setField(this, 23, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.hasSeasonId = function() {
+  return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
  * optional bool coop_allowed = 4;
  * @return {boolean}
  */
@@ -1693,7 +1801,7 @@ proto.ei.Contract.prototype.hasMinutesPerToken = function() {
  * @return {number}
  */
 proto.ei.Contract.prototype.getChickenRunCooldownMinutes = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 18, 60.0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 18, 180.0));
 };
 
 
@@ -1937,6 +2045,42 @@ proto.ei.Contract.prototype.clearLeggacy = function() {
  */
 proto.ei.Contract.prototype.hasLeggacy = function() {
   return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * optional bool cc_only = 22;
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.getCcOnly = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 22, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.setCcOnly = function(value) {
+  return jspb.Message.setField(this, 22, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.clearCcOnly = function() {
+  return jspb.Message.setField(this, 22, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.hasCcOnly = function() {
+  return jspb.Message.getField(this, 22) != null;
 };
 
 

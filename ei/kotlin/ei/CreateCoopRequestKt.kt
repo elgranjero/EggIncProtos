@@ -97,6 +97,54 @@ public object CreateCoopRequestKt {
     }
 
     /**
+     * <code>optional bool public = 13;</code>
+     */
+    public var public: kotlin.Boolean
+      @JvmName("getPublic")
+      get() = _builder.getPublic()
+      @JvmName("setPublic")
+      set(value) {
+        _builder.setPublic(value)
+      }
+    /**
+     * <code>optional bool public = 13;</code>
+     */
+    public fun clearPublic() {
+      _builder.clearPublic()
+    }
+    /**
+     * <code>optional bool public = 13;</code>
+     * @return Whether the public field is set.
+     */
+    public fun hasPublic(): kotlin.Boolean {
+      return _builder.hasPublic()
+    }
+
+    /**
+     * <code>optional bool cc_only = 14;</code>
+     */
+    public var ccOnly: kotlin.Boolean
+      @JvmName("getCcOnly")
+      get() = _builder.getCcOnly()
+      @JvmName("setCcOnly")
+      set(value) {
+        _builder.setCcOnly(value)
+      }
+    /**
+     * <code>optional bool cc_only = 14;</code>
+     */
+    public fun clearCcOnly() {
+      _builder.clearCcOnly()
+    }
+    /**
+     * <code>optional bool cc_only = 14;</code>
+     * @return Whether the ccOnly field is set.
+     */
+    public fun hasCcOnly(): kotlin.Boolean {
+      return _builder.hasCcOnly()
+    }
+
+    /**
      * <code>optional double seconds_remaining = 3;</code>
      */
     public var secondsRemaining: kotlin.Double
@@ -238,6 +286,30 @@ public object CreateCoopRequestKt {
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
+    }
+
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
     }
 
     /**

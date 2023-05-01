@@ -299,6 +299,30 @@ public object ContractSimConfigKt {
         public fun hasEarningsMult(): kotlin.Boolean {
           return _builder.hasEarningsMult()
         }
+
+        /**
+         * <code>optional double time_efficacy = 4;</code>
+         */
+        public var timeEfficacy: kotlin.Double
+          @JvmName("getTimeEfficacy")
+          get() = _builder.getTimeEfficacy()
+          @JvmName("setTimeEfficacy")
+          set(value) {
+            _builder.setTimeEfficacy(value)
+          }
+        /**
+         * <code>optional double time_efficacy = 4;</code>
+         */
+        public fun clearTimeEfficacy() {
+          _builder.clearTimeEfficacy()
+        }
+        /**
+         * <code>optional double time_efficacy = 4;</code>
+         * @return Whether the timeEfficacy field is set.
+         */
+        public fun hasTimeEfficacy(): kotlin.Boolean {
+          return _builder.hasTimeEfficacy()
+        }
       }
     }
   }
