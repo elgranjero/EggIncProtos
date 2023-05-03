@@ -521,6 +521,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :other_bonuses, :double, 14
       optional :counted_in_season, :bool, 20
       optional :season_id, :string, 21
+      optional :time_cheats, :uint32, 27
       repeated :issues, :enum, 19, "ei.ContractEvaluation.PoorBehavior"
       repeated :notes, :string, 12
       optional :version, :string, 50
@@ -534,6 +535,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :DISHONORABLY_DISCHARGED, 3
       value :POOR_TEAMWORK, 4
       value :ABANDONED_COOP, 5
+      value :TIME_CHEAT, 6
     end
     add_enum "ei.ContractEvaluation.Status" do
       value :UNKNOWN, 0
@@ -558,6 +560,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.CoopCompletionSnapshot.ContributorSnapshot" do
       optional :contribution, :double, 1
+      optional :last_contribution_time, :double, 6
       optional :soul_power, :double, 2
       optional :user_id, :string, 3
       optional :tokens, :uint32, 4

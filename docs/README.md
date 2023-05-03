@@ -1669,6 +1669,7 @@
 | other_bonuses | [double](#double) | optional |  |
 | counted_in_season | [bool](#bool) | optional |  |
 | season_id | [string](#string) | optional |  |
+| time_cheats | [uint32](#uint32) | optional |  |
 | issues | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | repeated |  |
 | notes | [string](#string) | repeated |  |
 | version | [string](#string) | optional |  |
@@ -1974,6 +1975,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | contribution | [double](#double) | optional |  |
+| last_contribution_time | [double](#double) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | user_id | [string](#string) | optional |  |
 | tokens | [uint32](#uint32) | optional |  |
@@ -4110,6 +4112,7 @@
 | DISHONORABLY_DISCHARGED | 3 |  |
 | POOR_TEAMWORK | 4 |  |
 | ABANDONED_COOP | 5 |  |
+| TIME_CHEAT | 6 |  |
 
 
 

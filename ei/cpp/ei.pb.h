@@ -877,11 +877,12 @@ enum ContractEvaluation_PoorBehavior : int {
   ContractEvaluation_PoorBehavior_BAD_CONTRIBUTION = 2,
   ContractEvaluation_PoorBehavior_DISHONORABLY_DISCHARGED = 3,
   ContractEvaluation_PoorBehavior_POOR_TEAMWORK = 4,
-  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5
+  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5,
+  ContractEvaluation_PoorBehavior_TIME_CHEAT = 6
 };
 bool ContractEvaluation_PoorBehavior_IsValid(int value);
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MIN = ContractEvaluation_PoorBehavior_NONE;
-constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_TIME_CHEAT;
 constexpr int ContractEvaluation_PoorBehavior_PoorBehavior_ARRAYSIZE = ContractEvaluation_PoorBehavior_PoorBehavior_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractEvaluation_PoorBehavior_descriptor();
@@ -14138,6 +14139,8 @@ class ContractEvaluation final :
     ContractEvaluation_PoorBehavior_POOR_TEAMWORK;
   static constexpr PoorBehavior ABANDONED_COOP =
     ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+  static constexpr PoorBehavior TIME_CHEAT =
+    ContractEvaluation_PoorBehavior_TIME_CHEAT;
   static inline bool PoorBehavior_IsValid(int value) {
     return ContractEvaluation_PoorBehavior_IsValid(value);
   }
@@ -14222,15 +14225,16 @@ class ContractEvaluation final :
     kBuffTimeValueFieldNumber = 17,
     kBoostTokenAllotmentFieldNumber = 16,
     kCoopSizeFieldNumber = 18,
-    kLastContributionTimeFieldNumber = 22,
-    kSoulPowerFieldNumber = 23,
-    kCxpChangeFieldNumber = 25,
     kReplayFieldNumber = 24,
     kOldGoalsFieldNumber = 10,
     kSoloFieldNumber = 26,
     kCountedInSeasonFieldNumber = 20,
-    kStatusFieldNumber = 52,
+    kTimeCheatsFieldNumber = 27,
+    kLastContributionTimeFieldNumber = 22,
+    kSoulPowerFieldNumber = 23,
+    kCxpChangeFieldNumber = 25,
     kEvaluationStartTimeFieldNumber = 51,
+    kStatusFieldNumber = 52,
   };
   // repeated string notes = 12;
   int notes_size() const;
@@ -14553,45 +14557,6 @@ class ContractEvaluation final :
   void _internal_set_coop_size(uint32_t value);
   public:
 
-  // optional double last_contribution_time = 22;
-  bool has_last_contribution_time() const;
-  private:
-  bool _internal_has_last_contribution_time() const;
-  public:
-  void clear_last_contribution_time();
-  double last_contribution_time() const;
-  void set_last_contribution_time(double value);
-  private:
-  double _internal_last_contribution_time() const;
-  void _internal_set_last_contribution_time(double value);
-  public:
-
-  // optional double soul_power = 23;
-  bool has_soul_power() const;
-  private:
-  bool _internal_has_soul_power() const;
-  public:
-  void clear_soul_power();
-  double soul_power() const;
-  void set_soul_power(double value);
-  private:
-  double _internal_soul_power() const;
-  void _internal_set_soul_power(double value);
-  public:
-
-  // optional double cxp_change = 25;
-  bool has_cxp_change() const;
-  private:
-  bool _internal_has_cxp_change() const;
-  public:
-  void clear_cxp_change();
-  double cxp_change() const;
-  void set_cxp_change(double value);
-  private:
-  double _internal_cxp_change() const;
-  void _internal_set_cxp_change(double value);
-  public:
-
   // optional bool replay = 24;
   bool has_replay() const;
   private:
@@ -14644,17 +14609,56 @@ class ContractEvaluation final :
   void _internal_set_counted_in_season(bool value);
   public:
 
-  // optional .ei.ContractEvaluation.Status status = 52;
-  bool has_status() const;
+  // optional uint32 time_cheats = 27;
+  bool has_time_cheats() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_time_cheats() const;
   public:
-  void clear_status();
-  ::ei::ContractEvaluation_Status status() const;
-  void set_status(::ei::ContractEvaluation_Status value);
+  void clear_time_cheats();
+  uint32_t time_cheats() const;
+  void set_time_cheats(uint32_t value);
   private:
-  ::ei::ContractEvaluation_Status _internal_status() const;
-  void _internal_set_status(::ei::ContractEvaluation_Status value);
+  uint32_t _internal_time_cheats() const;
+  void _internal_set_time_cheats(uint32_t value);
+  public:
+
+  // optional double last_contribution_time = 22;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
+  // optional double soul_power = 23;
+  bool has_soul_power() const;
+  private:
+  bool _internal_has_soul_power() const;
+  public:
+  void clear_soul_power();
+  double soul_power() const;
+  void set_soul_power(double value);
+  private:
+  double _internal_soul_power() const;
+  void _internal_set_soul_power(double value);
+  public:
+
+  // optional double cxp_change = 25;
+  bool has_cxp_change() const;
+  private:
+  bool _internal_has_cxp_change() const;
+  public:
+  void clear_cxp_change();
+  double cxp_change() const;
+  void set_cxp_change(double value);
+  private:
+  double _internal_cxp_change() const;
+  void _internal_set_cxp_change(double value);
   public:
 
   // optional double evaluation_start_time = 51;
@@ -14668,6 +14672,19 @@ class ContractEvaluation final :
   private:
   double _internal_evaluation_start_time() const;
   void _internal_set_evaluation_start_time(double value);
+  public:
+
+  // optional .ei.ContractEvaluation.Status status = 52;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::ContractEvaluation_Status status() const;
+  void set_status(::ei::ContractEvaluation_Status value);
+  private:
+  ::ei::ContractEvaluation_Status _internal_status() const;
+  void _internal_set_status(::ei::ContractEvaluation_Status value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.ContractEvaluation)
@@ -14701,15 +14718,16 @@ class ContractEvaluation final :
   double buff_time_value_;
   uint32_t boost_token_allotment_;
   uint32_t coop_size_;
-  double last_contribution_time_;
-  double soul_power_;
-  double cxp_change_;
   bool replay_;
   bool old_goals_;
   bool solo_;
   bool counted_in_season_;
-  int status_;
+  uint32_t time_cheats_;
+  double last_contribution_time_;
+  double soul_power_;
+  double cxp_change_;
   double evaluation_start_time_;
+  int status_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -15371,6 +15389,7 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
     kSoulPowerFieldNumber = 2,
     kTokensFieldNumber = 4,
     kTokensSpentFieldNumber = 5,
+    kLastContributionTimeFieldNumber = 6,
   };
   // optional string user_id = 3;
   bool has_user_id() const;
@@ -15442,6 +15461,19 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
   void _internal_set_tokens_spent(uint32_t value);
   public:
 
+  // optional double last_contribution_time = 6;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.CoopCompletionSnapshot.ContributorSnapshot)
  private:
   class _Internal;
@@ -15456,6 +15488,7 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
   double soul_power_;
   uint32_t tokens_;
   uint32_t tokens_spent_;
+  double last_contribution_time_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -64194,7 +64227,7 @@ inline void ContractEvaluation::set_cxp(double value) {
 
 // optional bool replay = 24;
 inline bool ContractEvaluation::_internal_has_replay() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_replay() const {
@@ -64202,7 +64235,7 @@ inline bool ContractEvaluation::has_replay() const {
 }
 inline void ContractEvaluation::clear_replay() {
   replay_ = false;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool ContractEvaluation::_internal_replay() const {
   return replay_;
@@ -64212,7 +64245,7 @@ inline bool ContractEvaluation::replay() const {
   return _internal_replay();
 }
 inline void ContractEvaluation::_internal_set_replay(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x00100000u;
   replay_ = value;
 }
 inline void ContractEvaluation::set_replay(bool value) {
@@ -64222,7 +64255,7 @@ inline void ContractEvaluation::set_replay(bool value) {
 
 // optional double cxp_change = 25;
 inline bool ContractEvaluation::_internal_has_cxp_change() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_cxp_change() const {
@@ -64230,7 +64263,7 @@ inline bool ContractEvaluation::has_cxp_change() const {
 }
 inline void ContractEvaluation::clear_cxp_change() {
   cxp_change_ = 0;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline double ContractEvaluation::_internal_cxp_change() const {
   return cxp_change_;
@@ -64240,7 +64273,7 @@ inline double ContractEvaluation::cxp_change() const {
   return _internal_cxp_change();
 }
 inline void ContractEvaluation::_internal_set_cxp_change(double value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x08000000u;
   cxp_change_ = value;
 }
 inline void ContractEvaluation::set_cxp_change(double value) {
@@ -64306,7 +64339,7 @@ inline void ContractEvaluation::set_old_league(int32_t value) {
 
 // optional bool old_goals = 10;
 inline bool ContractEvaluation::_internal_has_old_goals() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_old_goals() const {
@@ -64314,7 +64347,7 @@ inline bool ContractEvaluation::has_old_goals() const {
 }
 inline void ContractEvaluation::clear_old_goals() {
   old_goals_ = false;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool ContractEvaluation::_internal_old_goals() const {
   return old_goals_;
@@ -64324,7 +64357,7 @@ inline bool ContractEvaluation::old_goals() const {
   return _internal_old_goals();
 }
 inline void ContractEvaluation::_internal_set_old_goals(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x00200000u;
   old_goals_ = value;
 }
 inline void ContractEvaluation::set_old_goals(bool value) {
@@ -64475,7 +64508,7 @@ inline void ContractEvaluation::set_coop_size(uint32_t value) {
 
 // optional bool solo = 26;
 inline bool ContractEvaluation::_internal_has_solo() const {
-  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_solo() const {
@@ -64483,7 +64516,7 @@ inline bool ContractEvaluation::has_solo() const {
 }
 inline void ContractEvaluation::clear_solo() {
   solo_ = false;
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool ContractEvaluation::_internal_solo() const {
   return solo_;
@@ -64493,7 +64526,7 @@ inline bool ContractEvaluation::solo() const {
   return _internal_solo();
 }
 inline void ContractEvaluation::_internal_set_solo(bool value) {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x00400000u;
   solo_ = value;
 }
 inline void ContractEvaluation::set_solo(bool value) {
@@ -64503,7 +64536,7 @@ inline void ContractEvaluation::set_solo(bool value) {
 
 // optional double soul_power = 23;
 inline bool ContractEvaluation::_internal_has_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_soul_power() const {
@@ -64511,7 +64544,7 @@ inline bool ContractEvaluation::has_soul_power() const {
 }
 inline void ContractEvaluation::clear_soul_power() {
   soul_power_ = 0;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline double ContractEvaluation::_internal_soul_power() const {
   return soul_power_;
@@ -64521,7 +64554,7 @@ inline double ContractEvaluation::soul_power() const {
   return _internal_soul_power();
 }
 inline void ContractEvaluation::_internal_set_soul_power(double value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x04000000u;
   soul_power_ = value;
 }
 inline void ContractEvaluation::set_soul_power(double value) {
@@ -64531,7 +64564,7 @@ inline void ContractEvaluation::set_soul_power(double value) {
 
 // optional double last_contribution_time = 22;
 inline bool ContractEvaluation::_internal_has_last_contribution_time() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_last_contribution_time() const {
@@ -64539,7 +64572,7 @@ inline bool ContractEvaluation::has_last_contribution_time() const {
 }
 inline void ContractEvaluation::clear_last_contribution_time() {
   last_contribution_time_ = 0;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline double ContractEvaluation::_internal_last_contribution_time() const {
   return last_contribution_time_;
@@ -64549,7 +64582,7 @@ inline double ContractEvaluation::last_contribution_time() const {
   return _internal_last_contribution_time();
 }
 inline void ContractEvaluation::_internal_set_last_contribution_time(double value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x02000000u;
   last_contribution_time_ = value;
 }
 inline void ContractEvaluation::set_last_contribution_time(double value) {
@@ -64783,7 +64816,7 @@ inline void ContractEvaluation::set_other_bonuses(double value) {
 
 // optional bool counted_in_season = 20;
 inline bool ContractEvaluation::_internal_has_counted_in_season() const {
-  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_counted_in_season() const {
@@ -64791,7 +64824,7 @@ inline bool ContractEvaluation::has_counted_in_season() const {
 }
 inline void ContractEvaluation::clear_counted_in_season() {
   counted_in_season_ = false;
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline bool ContractEvaluation::_internal_counted_in_season() const {
   return counted_in_season_;
@@ -64801,7 +64834,7 @@ inline bool ContractEvaluation::counted_in_season() const {
   return _internal_counted_in_season();
 }
 inline void ContractEvaluation::_internal_set_counted_in_season(bool value) {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x00800000u;
   counted_in_season_ = value;
 }
 inline void ContractEvaluation::set_counted_in_season(bool value) {
@@ -64875,6 +64908,34 @@ inline void ContractEvaluation::set_allocated_season_id(std::string* season_id) 
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.season_id)
+}
+
+// optional uint32 time_cheats = 27;
+inline bool ContractEvaluation::_internal_has_time_cheats() const {
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_time_cheats() const {
+  return _internal_has_time_cheats();
+}
+inline void ContractEvaluation::clear_time_cheats() {
+  time_cheats_ = 0u;
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline uint32_t ContractEvaluation::_internal_time_cheats() const {
+  return time_cheats_;
+}
+inline uint32_t ContractEvaluation::time_cheats() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.time_cheats)
+  return _internal_time_cheats();
+}
+inline void ContractEvaluation::_internal_set_time_cheats(uint32_t value) {
+  _has_bits_[0] |= 0x01000000u;
+  time_cheats_ = value;
+}
+inline void ContractEvaluation::set_time_cheats(uint32_t value) {
+  _internal_set_time_cheats(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.time_cheats)
 }
 
 // repeated .ei.ContractEvaluation.PoorBehavior issues = 19;
@@ -65095,7 +65156,7 @@ inline void ContractEvaluation::set_evaluation_start_time(double value) {
 
 // optional .ei.ContractEvaluation.Status status = 52;
 inline bool ContractEvaluation::_internal_has_status() const {
-  bool value = (_has_bits_[0] & 0x08000000u) != 0;
+  bool value = (_has_bits_[0] & 0x20000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_status() const {
@@ -65103,7 +65164,7 @@ inline bool ContractEvaluation::has_status() const {
 }
 inline void ContractEvaluation::clear_status() {
   status_ = 0;
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x20000000u;
 }
 inline ::ei::ContractEvaluation_Status ContractEvaluation::_internal_status() const {
   return static_cast< ::ei::ContractEvaluation_Status >(status_);
@@ -65114,7 +65175,7 @@ inline ::ei::ContractEvaluation_Status ContractEvaluation::status() const {
 }
 inline void ContractEvaluation::_internal_set_status(::ei::ContractEvaluation_Status value) {
   assert(::ei::ContractEvaluation_Status_IsValid(value));
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x20000000u;
   status_ = value;
 }
 inline void ContractEvaluation::set_status(::ei::ContractEvaluation_Status value) {
@@ -65448,6 +65509,34 @@ inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_contributi
 inline void CoopCompletionSnapshot_ContributorSnapshot::set_contribution(double value) {
   _internal_set_contribution(value);
   // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.contribution)
+}
+
+// optional double last_contribution_time = 6;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_last_contribution_time() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_last_contribution_time() const {
+  return _internal_has_last_contribution_time();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_last_contribution_time() {
+  last_contribution_time_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::_internal_last_contribution_time() const {
+  return last_contribution_time_;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::last_contribution_time() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.last_contribution_time)
+  return _internal_last_contribution_time();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_last_contribution_time(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  last_contribution_time_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_last_contribution_time(double value) {
+  _internal_set_last_contribution_time(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.last_contribution_time)
 }
 
 // optional double soul_power = 2;
