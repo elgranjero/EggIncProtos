@@ -3564,6 +3564,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_GiftsArray = 11,
   ContractCoopStatusResponse_FieldNumber_LocalTimestamp = 12,
   ContractCoopStatusResponse_FieldNumber_ChickenRunsArray = 13,
+  ContractCoopStatusResponse_FieldNumber_AllGoalsAchieved = 14,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
@@ -3596,6 +3597,9 @@ GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
+@property(nonatomic, readwrite) BOOL allGoalsAchieved;
+
+@property(nonatomic, readwrite) BOOL hasAllGoalsAchieved;
 @property(nonatomic, readwrite) BOOL allMembersReporting;
 
 @property(nonatomic, readwrite) BOOL hasAllMembersReporting;
@@ -7841,6 +7845,24 @@ GPB_FINAL @interface SubscriptionChangeHintRequest : GPBMessage
 @property(nonatomic, readwrite) UserSubscriptionInfo_Level nextSubscriptionLevel;
 
 @property(nonatomic, readwrite) BOOL hasNextSubscriptionLevel;
+@end
+
+#pragma mark - CXPEvalRolloutInfo
+
+typedef GPB_ENUM(CXPEvalRolloutInfo_FieldNumber) {
+  CXPEvalRolloutInfo_FieldNumber_CurrentId = 1,
+  CXPEvalRolloutInfo_FieldNumber_BasisPoints = 2,
+};
+
+GPB_FINAL @interface CXPEvalRolloutInfo : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *currentId;
+/** Test to see if @c currentId has been set. */
+@property(nonatomic, readwrite) BOOL hasCurrentId;
+
+@property(nonatomic, readwrite) uint32_t basisPoints;
+
+@property(nonatomic, readwrite) BOOL hasBasisPoints;
 @end
 
 NS_ASSUME_NONNULL_END

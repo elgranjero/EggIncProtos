@@ -263,6 +263,30 @@ public object ContractCoopStatusResponseKt {
     }
 
     /**
+     * <code>optional bool all_goals_achieved = 14;</code>
+     */
+    public var allGoalsAchieved: kotlin.Boolean
+      @JvmName("getAllGoalsAchieved")
+      get() = _builder.getAllGoalsAchieved()
+      @JvmName("setAllGoalsAchieved")
+      set(value) {
+        _builder.setAllGoalsAchieved(value)
+      }
+    /**
+     * <code>optional bool all_goals_achieved = 14;</code>
+     */
+    public fun clearAllGoalsAchieved() {
+      _builder.clearAllGoalsAchieved()
+    }
+    /**
+     * <code>optional bool all_goals_achieved = 14;</code>
+     * @return Whether the allGoalsAchieved field is set.
+     */
+    public fun hasAllGoalsAchieved(): kotlin.Boolean {
+      return _builder.hasAllGoalsAchieved()
+    }
+
+    /**
      * <code>optional bool all_members_reporting = 6;</code>
      */
     public var allMembersReporting: kotlin.Boolean

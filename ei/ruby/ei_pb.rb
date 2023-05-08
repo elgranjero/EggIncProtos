@@ -664,6 +664,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :public, :bool, 10
       optional :creator_id, :string, 9
       optional :seconds_remaining, :double, 5
+      optional :all_goals_achieved, :bool, 14
       optional :all_members_reporting, :bool, 6
       optional :grace_period_seconds_remaining, :double, 7
       repeated :gifts, :message, 11, "ei.ContractCoopStatusResponse.CoopGift"
@@ -1896,6 +1897,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :original_transaction_id, :string, 1
       optional :next_subscription_level, :enum, 2, "ei.UserSubscriptionInfo.Level"
     end
+    add_message "ei.CXPEvalRolloutInfo" do
+      optional :current_id, :string, 1
+      optional :basis_points, :uint32, 2
+    end
     add_enum "ei.Platform" do
       value :IOS, 1
       value :DROID, 2
@@ -2176,6 +2181,7 @@ module Ei
   UserSubscriptionInfo::Level = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.Level").enummodule
   UserSubscriptionInfo::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.Status").enummodule
   SubscriptionChangeHintRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SubscriptionChangeHintRequest").msgclass
+  CXPEvalRolloutInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CXPEvalRolloutInfo").msgclass
   Platform = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Platform").enummodule
   DeviceFormFactor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.DeviceFormFactor").enummodule
   AdNetwork = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.AdNetwork").enummodule

@@ -8340,6 +8340,7 @@ typedef struct PlayerFarmInfo__storage_ {
 @dynamic hasPublic_p, public_p;
 @dynamic hasCreatorId, creatorId;
 @dynamic hasSecondsRemaining, secondsRemaining;
+@dynamic hasAllGoalsAchieved, allGoalsAchieved;
 @dynamic hasAllMembersReporting, allMembersReporting;
 @dynamic hasGracePeriodSecondsRemaining, gracePeriodSecondsRemaining;
 @dynamic giftsArray, giftsArray_Count;
@@ -8415,8 +8416,8 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .name = "allMembersReporting",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_FieldNumber_AllMembersReporting,
-        .hasIndex = 9,
-        .offset = 10,  // Stored in _has_storage_ to save space.
+        .hasIndex = 11,
+        .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -8424,7 +8425,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .name = "gracePeriodSecondsRemaining",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_FieldNumber_GracePeriodSecondsRemaining,
-        .hasIndex = 11,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, gracePeriodSecondsRemaining),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -8469,7 +8470,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .name = "localTimestamp",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_FieldNumber_LocalTimestamp,
-        .hasIndex = 12,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, localTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -8482,6 +8483,15 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, chickenRunsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "allGoalsAchieved",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_FieldNumber_AllGoalsAchieved,
+        .hasIndex = 9,
+        .offset = 10,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -21550,6 +21560,62 @@ typedef struct SubscriptionChangeHintRequest__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SubscriptionChangeHintRequest__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - CXPEvalRolloutInfo
+
+@implementation CXPEvalRolloutInfo
+
+@dynamic hasCurrentId, currentId;
+@dynamic hasBasisPoints, basisPoints;
+
+typedef struct CXPEvalRolloutInfo__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t basisPoints;
+  NSString *currentId;
+} CXPEvalRolloutInfo__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "currentId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CXPEvalRolloutInfo_FieldNumber_CurrentId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CXPEvalRolloutInfo__storage_, currentId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "basisPoints",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CXPEvalRolloutInfo_FieldNumber_BasisPoints,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CXPEvalRolloutInfo__storage_, basisPoints),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CXPEvalRolloutInfo class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CXPEvalRolloutInfo__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");

@@ -774,6 +774,7 @@ message ContractCoopStatusResponse {
     optional bool public = 10;
     optional string creator_id = 9;
     optional double seconds_remaining = 5;
+    optional bool all_goals_achieved = 14;
     optional bool all_members_reporting = 6;
     optional double grace_period_seconds_remaining = 7;
     
@@ -2129,6 +2130,11 @@ message SubscriptionChangeHintRequest {
     optional BasicRequestInfo rinfo = 3;
     optional string original_transaction_id = 1;
     optional UserSubscriptionInfo.Level next_subscription_level = 2;
+}
+
+message CXPEvalRolloutInfo {
+    optional string current_id = 1;
+    optional uint32 basis_points = 2;
 }
 
 enum Egg {

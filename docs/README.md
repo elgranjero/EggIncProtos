@@ -44,6 +44,7 @@
     - [Backup.Stats](#ei-Backup-Stats)
     - [Backup.Tutorial](#ei-Backup-Tutorial)
     - [BasicRequestInfo](#ei-BasicRequestInfo)
+    - [CXPEvalRolloutInfo](#ei-CXPEvalRolloutInfo)
     - [CleanAccountRequest](#ei-CleanAccountRequest)
     - [ClearAllUserDataRequest](#ei-ClearAllUserDataRequest)
     - [CollectContractArtifactRewardsRequest](#ei-CollectContractArtifactRewardsRequest)
@@ -1152,6 +1153,22 @@
 
 
 
+<a name="ei-CXPEvalRolloutInfo"></a>
+
+### CXPEvalRolloutInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| current_id | [string](#string) | optional |  |
+| basis_points | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
 <a name="ei-CleanAccountRequest"></a>
 
 ### CleanAccountRequest
@@ -1508,6 +1525,7 @@
 | public | [bool](#bool) | optional |  |
 | creator_id | [string](#string) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
+| all_goals_achieved | [bool](#bool) | optional |  |
 | all_members_reporting | [bool](#bool) | optional |  |
 | grace_period_seconds_remaining | [double](#double) | optional |  |
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
