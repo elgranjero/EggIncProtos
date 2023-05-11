@@ -12375,6 +12375,7 @@ proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
     pb_public: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
     creatorId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    allGoalsAchieved: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
     allMembersReporting: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
     gracePeriodSecondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
     giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
@@ -12450,6 +12451,10 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
     case 5:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSecondsRemaining(value);
+      break;
+    case 14:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAllGoalsAchieved(value);
       break;
     case 6:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -12556,6 +12561,13 @@ proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeDouble(
       5,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeBool(
+      14,
       f
     );
   }
@@ -14522,6 +14534,42 @@ proto.ei.ContractCoopStatusResponse.prototype.clearSecondsRemaining = function()
  */
 proto.ei.ContractCoopStatusResponse.prototype.hasSecondsRemaining = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bool all_goals_achieved = 14;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getAllGoalsAchieved = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setAllGoalsAchieved = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearAllGoalsAchieved = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasAllGoalsAchieved = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 

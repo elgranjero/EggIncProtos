@@ -44,6 +44,7 @@
     - [Backup.Stats](#ei-Backup-Stats)
     - [Backup.Tutorial](#ei-Backup-Tutorial)
     - [BasicRequestInfo](#ei-BasicRequestInfo)
+    - [CXPEvalRolloutInfo](#ei-CXPEvalRolloutInfo)
     - [CleanAccountRequest](#ei-CleanAccountRequest)
     - [ClearAllUserDataRequest](#ei-ClearAllUserDataRequest)
     - [CollectContractArtifactRewardsRequest](#ei-CollectContractArtifactRewardsRequest)
@@ -1152,6 +1153,22 @@
 
 
 
+<a name="ei-CXPEvalRolloutInfo"></a>
+
+### CXPEvalRolloutInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| current_id | [string](#string) | optional |  |
+| basis_points | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
 <a name="ei-CleanAccountRequest"></a>
 
 ### CleanAccountRequest
@@ -1508,6 +1525,7 @@
 | public | [bool](#bool) | optional |  |
 | creator_id | [string](#string) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
+| all_goals_achieved | [bool](#bool) | optional |  |
 | all_members_reporting | [bool](#bool) | optional |  |
 | grace_period_seconds_remaining | [double](#double) | optional |  |
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
@@ -1669,6 +1687,7 @@
 | other_bonuses | [double](#double) | optional |  |
 | counted_in_season | [bool](#bool) | optional |  |
 | season_id | [string](#string) | optional |  |
+| time_cheats | [uint32](#uint32) | optional |  |
 | issues | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | repeated |  |
 | notes | [string](#string) | repeated |  |
 | version | [string](#string) | optional |  |
@@ -1974,6 +1993,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | contribution | [double](#double) | optional |  |
+| last_contribution_time | [double](#double) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | user_id | [string](#string) | optional |  |
 | tokens | [uint32](#uint32) | optional |  |
@@ -4110,6 +4130,7 @@
 | DISHONORABLY_DISCHARGED | 3 |  |
 | POOR_TEAMWORK | 4 |  |
 | ABANDONED_COOP | 5 |  |
+| TIME_CHEAT | 6 |  |
 
 
 

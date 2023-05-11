@@ -887,16 +887,17 @@ PROTOBUF_CONSTEXPR ContractEvaluation::ContractEvaluation(
   , buff_time_value_(0)
   , boost_token_allotment_(0u)
   , coop_size_(0u)
-  , last_contribution_time_(0)
-  , soul_power_(0)
-  , cxp_change_(0)
   , replay_(false)
   , old_goals_(false)
   , solo_(false)
   , counted_in_season_(false)
+  , time_cheats_(0u)
+  , last_contribution_time_(0)
+  , soul_power_(0)
+  , cxp_change_(0)
+  , evaluation_start_time_(0)
   , status_(0)
-
-  , evaluation_start_time_(0){}
+{}
 struct ContractEvaluationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ContractEvaluationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -953,7 +954,8 @@ PROTOBUF_CONSTEXPR CoopCompletionSnapshot_ContributorSnapshot::CoopCompletionSna
   , contribution_(0)
   , soul_power_(0)
   , tokens_(0u)
-  , tokens_spent_(0u){}
+  , tokens_spent_(0u)
+  , last_contribution_time_(0){}
 struct CoopCompletionSnapshot_ContributorSnapshotDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CoopCompletionSnapshot_ContributorSnapshotDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -1259,6 +1261,7 @@ PROTOBUF_CONSTEXPR ContractCoopStatusResponse::ContractCoopStatusResponse(
   , local_timestamp_(0)
   , auto_generated_(false)
   , public__(false)
+  , all_goals_achieved_(false)
   , all_members_reporting_(false){}
 struct ContractCoopStatusResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ContractCoopStatusResponseDefaultTypeInternal()
@@ -3256,8 +3259,21 @@ struct SubscriptionChangeHintRequestDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubscriptionChangeHintRequestDefaultTypeInternal _SubscriptionChangeHintRequest_default_instance_;
+PROTOBUF_CONSTEXPR CXPEvalRolloutInfo::CXPEvalRolloutInfo(
+    ::_pbi::ConstantInitialized)
+  : current_id_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , basis_points_(0u){}
+struct CXPEvalRolloutInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CXPEvalRolloutInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CXPEvalRolloutInfoDefaultTypeInternal() {}
+  union {
+    CXPEvalRolloutInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CXPEvalRolloutInfoDefaultTypeInternal _CXPEvalRolloutInfo_default_instance_;
 }  // namespace ei
-static ::_pb::Metadata file_level_metadata_ei_2eproto[178];
+static ::_pb::Metadata file_level_metadata_ei_2eproto[179];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_ei_2eproto[32];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ei_2eproto = nullptr;
 
@@ -4286,6 +4302,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, other_bonuses_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, counted_in_season_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, season_id_),
+  PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, time_cheats_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, issues_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, notes_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractEvaluation, version_),
@@ -4294,19 +4311,19 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   1,
   2,
   4,
-  23,
-  22,
+  20,
+  27,
   5,
   13,
-  24,
+  21,
   6,
   7,
   8,
   12,
   19,
+  22,
+  26,
   25,
-  21,
-  20,
   9,
   10,
   11,
@@ -4315,13 +4332,14 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   17,
   15,
   16,
-  26,
+  23,
   0,
+  24,
   ~0u,
   ~0u,
   3,
   28,
-  27,
+  29,
   PROTOBUF_FIELD_OFFSET(::ei::ContractCitation, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractCitation, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -4358,11 +4376,13 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::ei::CoopCompletionSnapshot_ContributorSnapshot, contribution_),
+  PROTOBUF_FIELD_OFFSET(::ei::CoopCompletionSnapshot_ContributorSnapshot, last_contribution_time_),
   PROTOBUF_FIELD_OFFSET(::ei::CoopCompletionSnapshot_ContributorSnapshot, soul_power_),
   PROTOBUF_FIELD_OFFSET(::ei::CoopCompletionSnapshot_ContributorSnapshot, user_id_),
   PROTOBUF_FIELD_OFFSET(::ei::CoopCompletionSnapshot_ContributorSnapshot, tokens_),
   PROTOBUF_FIELD_OFFSET(::ei::CoopCompletionSnapshot_ContributorSnapshot, tokens_spent_),
   1,
+  5,
   2,
   0,
   3,
@@ -4663,6 +4683,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, public__),
   PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, creator_id_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, seconds_remaining_),
+  PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, all_goals_achieved_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, all_members_reporting_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, grace_period_seconds_remaining_),
   PROTOBUF_FIELD_OFFSET(::ei::ContractCoopStatusResponse, gifts_),
@@ -4677,6 +4698,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   2,
   4,
   9,
+  10,
   5,
   ~0u,
   ~0u,
@@ -6712,6 +6734,16 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   1,
   0,
   2,
+  PROTOBUF_FIELD_OFFSET(::ei::CXPEvalRolloutInfo, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ei::CXPEvalRolloutInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ei::CXPEvalRolloutInfo, current_id_),
+  PROTOBUF_FIELD_OFFSET(::ei::CXPEvalRolloutInfo, basis_points_),
+  0,
+  1,
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 31, -1, sizeof(::ei::Backup_Settings)},
@@ -6755,143 +6787,144 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 894, 904, -1, sizeof(::ei::Contract_GradeSpec)},
   { 908, 936, -1, sizeof(::ei::Contract)},
   { 958, 978, -1, sizeof(::ei::ContractPlayerInfo)},
-  { 992, 1029, -1, sizeof(::ei::ContractEvaluation)},
-  { 1060, 1069, -1, sizeof(::ei::ContractCitation)},
-  { 1072, 1080, -1, sizeof(::ei::ContractEvaluationBatch_Pair)},
-  { 1082, -1, -1, sizeof(::ei::ContractEvaluationBatch)},
-  { 1089, 1100, -1, sizeof(::ei::CoopCompletionSnapshot_ContributorSnapshot)},
-  { 1105, -1, -1, sizeof(::ei::CoopCompletionSnapshot)},
-  { 1112, 1126, -1, sizeof(::ei::BasicRequestInfo)},
-  { 1134, 1144, -1, sizeof(::ei::ContractSimConfig_ContractGradeSimConfig_GoalParams)},
-  { 1148, 1156, -1, sizeof(::ei::ContractSimConfig_ContractGradeSimConfig)},
-  { 1158, -1, -1, sizeof(::ei::ContractSimConfig)},
-  { 1165, 1172, -1, sizeof(::ei::ContractSimPoll)},
-  { 1173, 1181, -1, sizeof(::ei::ContractSimPollResponse)},
-  { 1183, 1192, -1, sizeof(::ei::ContractSimResultUpdate_GoalInfo)},
-  { 1195, 1203, -1, sizeof(::ei::ContractSimResultUpdate)},
-  { 1205, 1214, -1, sizeof(::ei::ContractsRequest)},
-  { 1217, 1227, -1, sizeof(::ei::ContractsResponse)},
-  { 1231, 1242, -1, sizeof(::ei::ContractCoopStatusRequest)},
-  { 1247, 1259, -1, sizeof(::ei::FarmProductionParams)},
-  { 1265, 1293, -1, sizeof(::ei::PlayerFarmInfo)},
-  { 1315, 1342, -1, sizeof(::ei::ContractCoopStatusResponse_ContributionInfo)},
-  { 1363, 1372, -1, sizeof(::ei::ContractCoopStatusResponse_CoopGift)},
-  { 1375, 1384, -1, sizeof(::ei::ContractCoopStatusResponse_ChickenRun)},
-  { 1387, 1406, -1, sizeof(::ei::ContractCoopStatusResponse)},
-  { 1419, 1446, -1, sizeof(::ei::LocalContract)},
-  { 1467, 1481, -1, sizeof(::ei::MyContracts)},
-  { 1489, 1501, -1, sizeof(::ei::QueryCoopRequest)},
-  { 1507, 1520, -1, sizeof(::ei::QueryCoopResponse)},
-  { 1527, 1547, -1, sizeof(::ei::CreateCoopRequest)},
-  { 1561, 1569, -1, sizeof(::ei::CreateCoopResponse)},
-  { 1571, 1589, -1, sizeof(::ei::JoinCoopRequest)},
-  { 1601, 1617, -1, sizeof(::ei::JoinCoopResponse)},
-  { 1627, 1644, -1, sizeof(::ei::AutoJoinCoopRequest)},
-  { 1655, 1667, -1, sizeof(::ei::UpdateCoopPermissionsRequest)},
-  { 1673, 1681, -1, sizeof(::ei::UpdateCoopPermissionsResponse)},
-  { 1683, 1694, -1, sizeof(::ei::LeaveCoopRequest)},
-  { 1699, 1713, -1, sizeof(::ei::GiftPlayerCoopRequest)},
-  { 1721, 1735, -1, sizeof(::ei::SendChickenRunCoopRequest)},
-  { 1743, 1754, -1, sizeof(::ei::ReportPlayerCoopRequest)},
-  { 1759, 1772, -1, sizeof(::ei::KickPlayerCoopRequest)},
-  { 1779, 1801, -1, sizeof(::ei::ContractCoopStatusUpdateRequest)},
-  { 1817, 1826, -1, sizeof(::ei::ContractCoopStatusUpdateResponse)},
-  { 1829, 1838, -1, sizeof(::ei::CoopBuffState)},
-  { 1841, -1, -1, sizeof(::ei::CoopBuffHistory)},
-  { 1848, 1856, -1, sizeof(::ei::CoopChickenRunEntry)},
-  { 1858, -1, -1, sizeof(::ei::CoopLastChickenRunTimes)},
-  { 1865, 1877, -1, sizeof(::ei::LeaderboardAnalysis_Chunk)},
-  { 1883, 1893, -1, sizeof(::ei::LeaderboardAnalysis)},
-  { 1897, 1905, -1, sizeof(::ei::LeaderboardInfo_Season)},
-  { 1907, 1915, -1, sizeof(::ei::LeaderboardInfo)},
-  { 1917, 1926, -1, sizeof(::ei::LeaderboardRequest)},
-  { 1929, 1938, -1, sizeof(::ei::LeaderboardResponse_Entry)},
-  { 1941, 1953, -1, sizeof(::ei::LeaderboardResponse)},
-  { 1959, -1, -1, sizeof(::ei::ContractsArchive)},
-  { 1966, 1991, -1, sizeof(::ei::ContractAction)},
-  { 2010, 2020, -1, sizeof(::ei::UserDataInfoRequest)},
-  { 2024, 2033, -1, sizeof(::ei::UserDataInfoResponse)},
-  { 2036, 2046, -1, sizeof(::ei::ClearAllUserDataRequest)},
-  { 2050, 2060, -1, sizeof(::ei::ServerGift)},
-  { 2064, 2074, -1, sizeof(::ei::LiveConfig_BoostsConfig_ItemConfig)},
-  { 2078, 2086, -1, sizeof(::ei::LiveConfig_BoostsConfig)},
-  { 2088, 2100, -1, sizeof(::ei::LiveConfig_GiftConfig_GiftValueConfig)},
-  { 2106, 2115, -1, sizeof(::ei::LiveConfig_GiftConfig_GiftMuConfig)},
-  { 2118, 2140, -1, sizeof(::ei::LiveConfig_GiftConfig)},
-  { 2156, 2175, -1, sizeof(::ei::LiveConfig_MiscConfig)},
-  { 2188, 2198, -1, sizeof(::ei::LiveConfig)},
-  { 2202, 2221, -1, sizeof(::ei::InGameMail)},
-  { 2234, -1, -1, sizeof(::ei::MailDB)},
-  { 2241, 2255, -1, sizeof(::ei::PeriodicalsResponse)},
-  { 2263, 2283, -1, sizeof(::ei::GetPeriodicalsRequest)},
-  { 2297, 2307, -1, sizeof(::ei::ConfigRequest)},
-  { 2311, 2320, -1, sizeof(::ei::ConfigResponse)},
-  { 2323, 2333, -1, sizeof(::ei::AdAttributionRawData)},
-  { 2337, 2352, -1, sizeof(::ei::AdAttributionRow)},
-  { 2361, 2385, -1, sizeof(::ei::AdAttributionInfo)},
-  { 2403, 2412, -1, sizeof(::ei::ArtifactsClientInfo_LaunchCount)},
-  { 2415, 2425, -1, sizeof(::ei::ArtifactsClientInfo)},
-  { 2429, 2437, -1, sizeof(::ei::MissionInfo_Fuel)},
-  { 2439, 2457, -1, sizeof(::ei::MissionInfo)},
-  { 2469, 2479, -1, sizeof(::ei::ArtifactSpec)},
-  { 2483, 2491, -1, sizeof(::ei::CompleteArtifact)},
-  { 2493, 2503, -1, sizeof(::ei::ArtifactInventoryItem)},
-  { 2507, 2515, -1, sizeof(::ei::InventorySlot)},
-  { 2517, 2525, -1, sizeof(::ei::ArtifactsConfigurationRequest)},
-  { 2527, 2541, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters_Duration)},
-  { 2549, 2559, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters)},
-  { 2563, 2578, -1, sizeof(::ei::ArtifactsConfigurationResponse_ArtifactParameters)},
-  { 2587, 2595, -1, sizeof(::ei::ArtifactsConfigurationResponse_CraftingLevelInfo)},
-  { 2597, -1, -1, sizeof(::ei::ArtifactsConfigurationResponse)},
-  { 2606, 2617, -1, sizeof(::ei::MissionRequest)},
-  { 2622, 2630, -1, sizeof(::ei::MissionResponse)},
-  { 2632, 2640, -1, sizeof(::ei::CompleteMissionResponse_SecureArtifactSpec)},
-  { 2642, 2653, -1, sizeof(::ei::CompleteMissionResponse)},
-  { 2658, 2670, -1, sizeof(::ei::CollectContractArtifactRewardsRequest)},
-  { 2676, 2690, -1, sizeof(::ei::CraftArtifactRequest)},
-  { 2698, 2708, -1, sizeof(::ei::CraftArtifactResponse)},
-  { 2712, 2726, -1, sizeof(::ei::ConsumeArtifactRequest)},
-  { 2734, 2746, -1, sizeof(::ei::ConsumeArtifactResponse)},
-  { 2752, 2763, -1, sizeof(::ei::AuthenticateArtifactResponse)},
-  { 2768, 2778, -1, sizeof(::ei::SetArtifactRequest)},
-  { 2782, 2791, -1, sizeof(::ei::SetArtifactResponse)},
-  { 2794, 2802, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSlot)},
-  { 2804, -1, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSet)},
-  { 2811, 2823, -1, sizeof(::ei::ArtifactsDB_CraftableArtifact)},
-  { 2829, 2846, -1, sizeof(::ei::ArtifactsDB)},
-  { 2857, 2868, -1, sizeof(::ei::AuthenticatedMessage)},
-  { 2873, 2881, -1, sizeof(::ei::LogCompleteMissionPayload)},
-  { 2883, 2891, -1, sizeof(::ei::LogCraftArtifactPayload)},
-  { 2893, 2901, -1, sizeof(::ei::LogConsumeArtifactPayload)},
-  { 2903, 2911, -1, sizeof(::ei::LogSetArtifactPayload)},
-  { 2913, 2921, -1, sizeof(::ei::AccountTransferPayload)},
-  { 2923, 2933, -1, sizeof(::ei::SaveBackupResponse)},
-  { 2937, 2945, -1, sizeof(::ei::CleanAccountRequest)},
-  { 2947, 2954, -1, sizeof(::ei::ReturnEDTPayload)},
-  { 2955, 2968, -1, sizeof(::ei::DLCItem)},
-  { 2975, 2983, -1, sizeof(::ei::ShellSpec_ShellPiece)},
-  { 2985, 3007, -1, sizeof(::ei::ShellSpec)},
-  { 3023, 3035, -1, sizeof(::ei::ShellSetSpec_VariationSpec)},
-  { 3041, 3067, -1, sizeof(::ei::ShellSetSpec)},
-  { 3087, 3095, -1, sizeof(::ei::ShellObjectSpec_LODPiece)},
-  { 3097, 3121, -1, sizeof(::ei::ShellObjectSpec)},
-  { 3139, 3150, -1, sizeof(::ei::ShellGroupSpec)},
-  { 3155, -1, -1, sizeof(::ei::DLCCatalog)},
-  { 3167, 3175, -1, sizeof(::ei::ShellDB_ShellStatus)},
-  { 3177, 3185, -1, sizeof(::ei::ShellDB_ShellElementStatus)},
-  { 3187, 3195, -1, sizeof(::ei::ShellDB_ShellSetVariationStatus)},
-  { 3197, 3208, -1, sizeof(::ei::ShellDB_FarmConfiguration)},
-  { 3213, 3222, -1, sizeof(::ei::ShellDB_SavedFarmConfiguration)},
-  { 3225, 3234, -1, sizeof(::ei::ShellDB_ShellConfiguration)},
-  { 3237, 3248, -1, sizeof(::ei::ShellDB_ShellSetConfiguration)},
-  { 3253, 3261, -1, sizeof(::ei::ShellDB_ShellGroupConfiguration)},
-  { 3263, 3271, -1, sizeof(::ei::ShellDB_ChickenConfig)},
-  { 3273, -1, -1, sizeof(::ei::ShellDB)},
-  { 3288, 3306, -1, sizeof(::ei::ShellsActionLog)},
-  { 3318, 3356, -1, sizeof(::ei::UserVerificationAnalysis)},
-  { 3388, 3397, -1, sizeof(::ei::UserSubscriptionInfo_HistoryEntry)},
-  { 3400, 3422, -1, sizeof(::ei::UserSubscriptionInfo)},
-  { 3438, 3447, -1, sizeof(::ei::SubscriptionChangeHintRequest)},
+  { 992, 1030, -1, sizeof(::ei::ContractEvaluation)},
+  { 1062, 1071, -1, sizeof(::ei::ContractCitation)},
+  { 1074, 1082, -1, sizeof(::ei::ContractEvaluationBatch_Pair)},
+  { 1084, -1, -1, sizeof(::ei::ContractEvaluationBatch)},
+  { 1091, 1103, -1, sizeof(::ei::CoopCompletionSnapshot_ContributorSnapshot)},
+  { 1109, -1, -1, sizeof(::ei::CoopCompletionSnapshot)},
+  { 1116, 1130, -1, sizeof(::ei::BasicRequestInfo)},
+  { 1138, 1148, -1, sizeof(::ei::ContractSimConfig_ContractGradeSimConfig_GoalParams)},
+  { 1152, 1160, -1, sizeof(::ei::ContractSimConfig_ContractGradeSimConfig)},
+  { 1162, -1, -1, sizeof(::ei::ContractSimConfig)},
+  { 1169, 1176, -1, sizeof(::ei::ContractSimPoll)},
+  { 1177, 1185, -1, sizeof(::ei::ContractSimPollResponse)},
+  { 1187, 1196, -1, sizeof(::ei::ContractSimResultUpdate_GoalInfo)},
+  { 1199, 1207, -1, sizeof(::ei::ContractSimResultUpdate)},
+  { 1209, 1218, -1, sizeof(::ei::ContractsRequest)},
+  { 1221, 1231, -1, sizeof(::ei::ContractsResponse)},
+  { 1235, 1246, -1, sizeof(::ei::ContractCoopStatusRequest)},
+  { 1251, 1263, -1, sizeof(::ei::FarmProductionParams)},
+  { 1269, 1297, -1, sizeof(::ei::PlayerFarmInfo)},
+  { 1319, 1346, -1, sizeof(::ei::ContractCoopStatusResponse_ContributionInfo)},
+  { 1367, 1376, -1, sizeof(::ei::ContractCoopStatusResponse_CoopGift)},
+  { 1379, 1388, -1, sizeof(::ei::ContractCoopStatusResponse_ChickenRun)},
+  { 1391, 1411, -1, sizeof(::ei::ContractCoopStatusResponse)},
+  { 1425, 1452, -1, sizeof(::ei::LocalContract)},
+  { 1473, 1487, -1, sizeof(::ei::MyContracts)},
+  { 1495, 1507, -1, sizeof(::ei::QueryCoopRequest)},
+  { 1513, 1526, -1, sizeof(::ei::QueryCoopResponse)},
+  { 1533, 1553, -1, sizeof(::ei::CreateCoopRequest)},
+  { 1567, 1575, -1, sizeof(::ei::CreateCoopResponse)},
+  { 1577, 1595, -1, sizeof(::ei::JoinCoopRequest)},
+  { 1607, 1623, -1, sizeof(::ei::JoinCoopResponse)},
+  { 1633, 1650, -1, sizeof(::ei::AutoJoinCoopRequest)},
+  { 1661, 1673, -1, sizeof(::ei::UpdateCoopPermissionsRequest)},
+  { 1679, 1687, -1, sizeof(::ei::UpdateCoopPermissionsResponse)},
+  { 1689, 1700, -1, sizeof(::ei::LeaveCoopRequest)},
+  { 1705, 1719, -1, sizeof(::ei::GiftPlayerCoopRequest)},
+  { 1727, 1741, -1, sizeof(::ei::SendChickenRunCoopRequest)},
+  { 1749, 1760, -1, sizeof(::ei::ReportPlayerCoopRequest)},
+  { 1765, 1778, -1, sizeof(::ei::KickPlayerCoopRequest)},
+  { 1785, 1807, -1, sizeof(::ei::ContractCoopStatusUpdateRequest)},
+  { 1823, 1832, -1, sizeof(::ei::ContractCoopStatusUpdateResponse)},
+  { 1835, 1844, -1, sizeof(::ei::CoopBuffState)},
+  { 1847, -1, -1, sizeof(::ei::CoopBuffHistory)},
+  { 1854, 1862, -1, sizeof(::ei::CoopChickenRunEntry)},
+  { 1864, -1, -1, sizeof(::ei::CoopLastChickenRunTimes)},
+  { 1871, 1883, -1, sizeof(::ei::LeaderboardAnalysis_Chunk)},
+  { 1889, 1899, -1, sizeof(::ei::LeaderboardAnalysis)},
+  { 1903, 1911, -1, sizeof(::ei::LeaderboardInfo_Season)},
+  { 1913, 1921, -1, sizeof(::ei::LeaderboardInfo)},
+  { 1923, 1932, -1, sizeof(::ei::LeaderboardRequest)},
+  { 1935, 1944, -1, sizeof(::ei::LeaderboardResponse_Entry)},
+  { 1947, 1959, -1, sizeof(::ei::LeaderboardResponse)},
+  { 1965, -1, -1, sizeof(::ei::ContractsArchive)},
+  { 1972, 1997, -1, sizeof(::ei::ContractAction)},
+  { 2016, 2026, -1, sizeof(::ei::UserDataInfoRequest)},
+  { 2030, 2039, -1, sizeof(::ei::UserDataInfoResponse)},
+  { 2042, 2052, -1, sizeof(::ei::ClearAllUserDataRequest)},
+  { 2056, 2066, -1, sizeof(::ei::ServerGift)},
+  { 2070, 2080, -1, sizeof(::ei::LiveConfig_BoostsConfig_ItemConfig)},
+  { 2084, 2092, -1, sizeof(::ei::LiveConfig_BoostsConfig)},
+  { 2094, 2106, -1, sizeof(::ei::LiveConfig_GiftConfig_GiftValueConfig)},
+  { 2112, 2121, -1, sizeof(::ei::LiveConfig_GiftConfig_GiftMuConfig)},
+  { 2124, 2146, -1, sizeof(::ei::LiveConfig_GiftConfig)},
+  { 2162, 2181, -1, sizeof(::ei::LiveConfig_MiscConfig)},
+  { 2194, 2204, -1, sizeof(::ei::LiveConfig)},
+  { 2208, 2227, -1, sizeof(::ei::InGameMail)},
+  { 2240, -1, -1, sizeof(::ei::MailDB)},
+  { 2247, 2261, -1, sizeof(::ei::PeriodicalsResponse)},
+  { 2269, 2289, -1, sizeof(::ei::GetPeriodicalsRequest)},
+  { 2303, 2313, -1, sizeof(::ei::ConfigRequest)},
+  { 2317, 2326, -1, sizeof(::ei::ConfigResponse)},
+  { 2329, 2339, -1, sizeof(::ei::AdAttributionRawData)},
+  { 2343, 2358, -1, sizeof(::ei::AdAttributionRow)},
+  { 2367, 2391, -1, sizeof(::ei::AdAttributionInfo)},
+  { 2409, 2418, -1, sizeof(::ei::ArtifactsClientInfo_LaunchCount)},
+  { 2421, 2431, -1, sizeof(::ei::ArtifactsClientInfo)},
+  { 2435, 2443, -1, sizeof(::ei::MissionInfo_Fuel)},
+  { 2445, 2463, -1, sizeof(::ei::MissionInfo)},
+  { 2475, 2485, -1, sizeof(::ei::ArtifactSpec)},
+  { 2489, 2497, -1, sizeof(::ei::CompleteArtifact)},
+  { 2499, 2509, -1, sizeof(::ei::ArtifactInventoryItem)},
+  { 2513, 2521, -1, sizeof(::ei::InventorySlot)},
+  { 2523, 2531, -1, sizeof(::ei::ArtifactsConfigurationRequest)},
+  { 2533, 2547, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters_Duration)},
+  { 2555, 2565, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters)},
+  { 2569, 2584, -1, sizeof(::ei::ArtifactsConfigurationResponse_ArtifactParameters)},
+  { 2593, 2601, -1, sizeof(::ei::ArtifactsConfigurationResponse_CraftingLevelInfo)},
+  { 2603, -1, -1, sizeof(::ei::ArtifactsConfigurationResponse)},
+  { 2612, 2623, -1, sizeof(::ei::MissionRequest)},
+  { 2628, 2636, -1, sizeof(::ei::MissionResponse)},
+  { 2638, 2646, -1, sizeof(::ei::CompleteMissionResponse_SecureArtifactSpec)},
+  { 2648, 2659, -1, sizeof(::ei::CompleteMissionResponse)},
+  { 2664, 2676, -1, sizeof(::ei::CollectContractArtifactRewardsRequest)},
+  { 2682, 2696, -1, sizeof(::ei::CraftArtifactRequest)},
+  { 2704, 2714, -1, sizeof(::ei::CraftArtifactResponse)},
+  { 2718, 2732, -1, sizeof(::ei::ConsumeArtifactRequest)},
+  { 2740, 2752, -1, sizeof(::ei::ConsumeArtifactResponse)},
+  { 2758, 2769, -1, sizeof(::ei::AuthenticateArtifactResponse)},
+  { 2774, 2784, -1, sizeof(::ei::SetArtifactRequest)},
+  { 2788, 2797, -1, sizeof(::ei::SetArtifactResponse)},
+  { 2800, 2808, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSlot)},
+  { 2810, -1, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSet)},
+  { 2817, 2829, -1, sizeof(::ei::ArtifactsDB_CraftableArtifact)},
+  { 2835, 2852, -1, sizeof(::ei::ArtifactsDB)},
+  { 2863, 2874, -1, sizeof(::ei::AuthenticatedMessage)},
+  { 2879, 2887, -1, sizeof(::ei::LogCompleteMissionPayload)},
+  { 2889, 2897, -1, sizeof(::ei::LogCraftArtifactPayload)},
+  { 2899, 2907, -1, sizeof(::ei::LogConsumeArtifactPayload)},
+  { 2909, 2917, -1, sizeof(::ei::LogSetArtifactPayload)},
+  { 2919, 2927, -1, sizeof(::ei::AccountTransferPayload)},
+  { 2929, 2939, -1, sizeof(::ei::SaveBackupResponse)},
+  { 2943, 2951, -1, sizeof(::ei::CleanAccountRequest)},
+  { 2953, 2960, -1, sizeof(::ei::ReturnEDTPayload)},
+  { 2961, 2974, -1, sizeof(::ei::DLCItem)},
+  { 2981, 2989, -1, sizeof(::ei::ShellSpec_ShellPiece)},
+  { 2991, 3013, -1, sizeof(::ei::ShellSpec)},
+  { 3029, 3041, -1, sizeof(::ei::ShellSetSpec_VariationSpec)},
+  { 3047, 3073, -1, sizeof(::ei::ShellSetSpec)},
+  { 3093, 3101, -1, sizeof(::ei::ShellObjectSpec_LODPiece)},
+  { 3103, 3127, -1, sizeof(::ei::ShellObjectSpec)},
+  { 3145, 3156, -1, sizeof(::ei::ShellGroupSpec)},
+  { 3161, -1, -1, sizeof(::ei::DLCCatalog)},
+  { 3173, 3181, -1, sizeof(::ei::ShellDB_ShellStatus)},
+  { 3183, 3191, -1, sizeof(::ei::ShellDB_ShellElementStatus)},
+  { 3193, 3201, -1, sizeof(::ei::ShellDB_ShellSetVariationStatus)},
+  { 3203, 3214, -1, sizeof(::ei::ShellDB_FarmConfiguration)},
+  { 3219, 3228, -1, sizeof(::ei::ShellDB_SavedFarmConfiguration)},
+  { 3231, 3240, -1, sizeof(::ei::ShellDB_ShellConfiguration)},
+  { 3243, 3254, -1, sizeof(::ei::ShellDB_ShellSetConfiguration)},
+  { 3259, 3267, -1, sizeof(::ei::ShellDB_ShellGroupConfiguration)},
+  { 3269, 3277, -1, sizeof(::ei::ShellDB_ChickenConfig)},
+  { 3279, -1, -1, sizeof(::ei::ShellDB)},
+  { 3294, 3312, -1, sizeof(::ei::ShellsActionLog)},
+  { 3324, 3362, -1, sizeof(::ei::UserVerificationAnalysis)},
+  { 3394, 3403, -1, sizeof(::ei::UserSubscriptionInfo_HistoryEntry)},
+  { 3406, 3428, -1, sizeof(::ei::UserSubscriptionInfo)},
+  { 3444, 3453, -1, sizeof(::ei::SubscriptionChangeHintRequest)},
+  { 3456, 3464, -1, sizeof(::ei::CXPEvalRolloutInfo)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -7073,6 +7106,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::ei::_UserSubscriptionInfo_HistoryEntry_default_instance_._instance,
   &::ei::_UserSubscriptionInfo_default_instance_._instance,
   &::ei::_SubscriptionChangeHintRequest_default_instance_._instance,
+  &::ei::_CXPEvalRolloutInfo_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_ei_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -7356,7 +7390,7 @@ const char descriptor_table_protodef_ei_2eproto[] PROTOBUF_SECTION_VARIABLE(prot
   "(\t\0222\n\022unread_evaluations\030\006 \003(\0132\026.ei.Cont"
   "ractEvaluation\"U\n\006Status\022\013\n\007UNKNOWN\020\000\022\017\n"
   "\013CALCULATING\020\001\022\017\n\013OUT_OF_DATE\020\002\022\016\n\nINCOM"
-  "PLETE\020\004\022\014\n\010COMPLETE\020\003\"\375\007\n\022ContractEvalua"
+  "PLETE\020\004\022\014\n\010COMPLETE\020\003\"\242\010\n\022ContractEvalua"
   "tion\022\033\n\023contract_identifier\030( \001(\t\022\027\n\017coo"
   "p_identifier\030) \001(\t\022\013\n\003cxp\030\001 \001(\001\022\016\n\006repla"
   "y\030\030 \001(\010\022\022\n\ncxp_change\030\031 \001(\001\022\031\n\021grade_per"
@@ -7372,801 +7406,805 @@ const char descriptor_table_protodef_ei_2eproto[] PROTOBUF_SECTION_VARIABLE(prot
   "ed\030\017 \001(\r\022\035\n\025boost_token_allotment\030\020 \001(\r\022"
   "\027\n\017buff_time_value\030\021 \001(\001\022\026\n\016teamwork_sco"
   "re\030\r \001(\001\022\025\n\rother_bonuses\030\016 \001(\001\022\031\n\021count"
-  "ed_in_season\030\024 \001(\010\022\021\n\tseason_id\030\025 \001(\t\0223\n"
-  "\006issues\030\023 \003(\0162#.ei.ContractEvaluation.Po"
-  "orBehavior\022\r\n\005notes\030\014 \003(\t\022\017\n\007version\0302 \001"
-  "(\t\022\035\n\025evaluation_start_time\0303 \001(\001\022-\n\006sta"
-  "tus\0304 \001(\0162\035.ei.ContractEvaluation.Status"
-  "\"\210\001\n\014PoorBehavior\022\010\n\004NONE\020\000\022\024\n\020LOW_CONTR"
-  "IBUTION\020\001\022\024\n\020BAD_CONTRIBUTION\020\002\022\033\n\027DISHO"
-  "NORABLY_DISCHARGED\020\003\022\021\n\rPOOR_TEAMWORK\020\004\022"
-  "\022\n\016ABANDONED_COOP\020\005\"@\n\006Status\022\013\n\007UNKNOWN"
-  "\020\000\022\013\n\007PENDING\020\001\022\016\n\nEVALUATING\020\002\022\014\n\010COMPL"
-  "ETE\020\003\"\202\001\n\020ContractCitation\0222\n\005issue\030\001 \001("
-  "\0162#.ei.ContractEvaluation.PoorBehavior\022\021"
-  "\n\ttimestamp\030\002 \001(\001\022\'\n\005grade\030\003 \001(\0162\030.ei.Co"
-  "ntract.PlayerGrade\"\210\001\n\027ContractEvaluatio"
-  "nBatch\022/\n\005evals\030\001 \003(\0132 .ei.ContractEvalu"
-  "ationBatch.Pair\032<\n\004Pair\022\017\n\007user_id\030\001 \001(\t"
-  "\022#\n\003cev\030\002 \001(\0132\026.ei.ContractEvaluation\"\326\001"
-  "\n\026CoopCompletionSnapshot\022D\n\014contributors"
-  "\030\001 \003(\0132..ei.CoopCompletionSnapshot.Contr"
-  "ibutorSnapshot\032v\n\023ContributorSnapshot\022\024\n"
-  "\014contribution\030\001 \001(\001\022\022\n\nsoul_power\030\002 \001(\001\022"
-  "\017\n\007user_id\030\003 \001(\t\022\016\n\006tokens\030\004 \001(\r\022\024\n\014toke"
-  "ns_spent\030\005 \001(\r\"\242\001\n\020BasicRequestInfo\022\022\n\ne"
-  "i_user_id\030\001 \001(\t\022\026\n\016client_version\030\002 \001(\r\022"
-  "\017\n\007version\030\003 \001(\t\022\r\n\005build\030\004 \001(\t\022\020\n\010platf"
-  "orm\030\005 \001(\t\022\017\n\007country\030\006 \001(\t\022\020\n\010language\030\007"
-  " \001(\t\022\r\n\005debug\030\010 \001(\010\"\313\002\n\021ContractSimConfi"
-  "g\022C\n\rgrade_configs\030\001 \003(\0132,.ei.ContractSi"
-  "mConfig.ContractGradeSimConfig\032\360\001\n\026Contr"
-  "actGradeSimConfig\022\'\n\005grade\030\001 \001(\0162\030.ei.Co"
-  "ntract.PlayerGrade\022L\n\013goal_params\030\002 \003(\0132"
-  "7.ei.ContractSimConfig.ContractGradeSimC"
-  "onfig.GoalParams\032_\n\nGoalParams\022\021\n\ttarget"
-  "_se\030\001 \001(\001\022\020\n\010cps_mult\030\002 \001(\001\022\025\n\rearnings_"
-  "mult\030\003 \001(\001\022\025\n\rtime_efficacy\030\004 \001(\001\")\n\017Con"
-  "tractSimPoll\022\026\n\016client_version\030\001 \001(\r\"p\n\027"
-  "ContractSimPollResponse\022*\n\024contract_to_s"
-  "imulate\030\001 \001(\0132\014.ei.Contract\022)\n\nsim_confi"
-  "g\030\002 \001(\0132\025.ei.ContractSimConfig\"\316\001\n\027Contr"
-  "actSimResultUpdate\022\023\n\013contract_id\030\001 \001(\t\022"
-  "8\n\ngoal_infos\030\002 \003(\0132$.ei.ContractSimResu"
-  "ltUpdate.GoalInfo\032d\n\010GoalInfo\022\'\n\005grade\030\001"
-  " \001(\0162\030.ei.Contract.PlayerGrade\022\022\n\ngoal_i"
-  "ndex\030\002 \001(\r\022\033\n\023projected_eggs_laid\030\003 \001(\001\""
-  "N\n\020ContractsRequest\022\021\n\tsoul_eggs\030\001 \001(\001\022\026"
-  "\n\016client_version\030\005 \001(\r\022\017\n\007user_id\030\002 \001(\t\""
-  "y\n\021ContractsResponse\022\037\n\tcontracts\030\001 \003(\0132"
-  "\014.ei.Contract\022\027\n\017warning_message\030\004 \001(\t\022\023"
-  "\n\013server_time\030\002 \001(\001\022\025\n\007max_eop\030\003 \001(\r:\00410"
-  "00\"\237\001\n\031ContractCoopStatusRequest\022#\n\005rinf"
-  "o\030\005 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contrac"
-  "t_identifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 "
-  "\001(\t\022\017\n\007user_id\030\003 \001(\t\022\026\n\016client_version\030\004"
-  " \001(\r\"\177\n\024FarmProductionParams\022\027\n\017farm_pop"
-  "ulation\030\001 \001(\001\022\025\n\rfarm_capacity\030\002 \001(\001\022\013\n\003"
-  "elr\030\003 \001(\001\022\013\n\003ihr\030\004 \001(\001\022\n\n\002sr\030\005 \001(\001\022\021\n\tde"
-  "livered\030\006 \001(\001\"\227\005\n\016PlayerFarmInfo\022\026\n\016clie"
-  "nt_version\030\024 \001(\r\022\021\n\tsoul_eggs\030\001 \001(\001\022\030\n\020e"
-  "ggs_of_prophecy\030\002 \001(\004\022\024\n\014permit_level\030\003 "
-  "\001(\r\022\031\n\021hyperloop_station\030\004 \001(\010\022\027\n\017egg_me"
-  "dal_level\030\005 \003(\r\022.\n\repic_research\030\006 \003(\0132\027"
-  ".ei.Backup.ResearchItem\022\031\n\010egg_type\030\007 \001("
-  "\0162\007.ei.Egg\022\024\n\014cash_on_hand\030\010 \001(\001\022\014\n\004habs"
-  "\030\t \003(\r\022\026\n\016hab_population\030\n \003(\004\022\024\n\014hab_ca"
-  "pacity\030\025 \003(\004\022\020\n\010vehicles\030\013 \003(\r\022\024\n\014train_"
-  "length\030\014 \003(\r\022\023\n\013silos_owned\030\r \001(\r\0220\n\017com"
-  "mon_research\030\016 \003(\0132\027.ei.Backup.ResearchI"
-  "tem\022-\n\ractive_boosts\030\017 \003(\0132\026.ei.Backup.A"
-  "ctiveBoost\022\034\n\024boost_tokens_on_hand\030\020 \001(\r"
-  "\0220\n\022equipped_artifacts\030\021 \003(\0132\024.ei.Comple"
-  "teArtifact\022 \n\030artifact_inventory_score\030\022"
-  " \001(\004\0226\n\017farm_appearance\030\023 \001(\0132\035.ei.Shell"
-  "DB.FarmConfiguration\022\021\n\ttimestamp\030\026 \001(\001\""
-  "\303\n\n\032ContractCoopStatusResponse\022\033\n\023contra"
-  "ct_identifier\030\001 \001(\t\022\024\n\014total_amount\030\002 \001("
-  "\001\022\027\n\017coop_identifier\030\003 \001(\t\022E\n\014contributo"
-  "rs\030\004 \003(\0132/.ei.ContractCoopStatusResponse"
-  ".ContributionInfo\022\026\n\016auto_generated\030\010 \001("
-  "\010\022\016\n\006public\030\n \001(\010\022\022\n\ncreator_id\030\t \001(\t\022\031\n"
-  "\021seconds_remaining\030\005 \001(\001\022\035\n\025all_members_"
-  "reporting\030\006 \001(\010\022&\n\036grace_period_seconds_"
-  "remaining\030\007 \001(\001\0226\n\005gifts\030\013 \003(\0132\'.ei.Cont"
-  "ractCoopStatusResponse.CoopGift\022\?\n\014chick"
-  "en_runs\030\r \003(\0132).ei.ContractCoopStatusRes"
-  "ponse.ChickenRun\022\027\n\017local_timestamp\030\014 \001("
-  "\001\032\253\004\n\020ContributionInfo\022\014\n\004uuid\030\025 \001(\t\022\017\n\007"
-  "user_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\022\033\n\023cont"
-  "ract_identifier\030\023 \001(\t\022\033\n\023contribution_am"
-  "ount\030\003 \001(\001\022\031\n\021contribution_rate\030\006 \001(\001\022\022\n"
-  "\nsoul_power\030\013 \001(\001\0223\n\021production_params\030\017"
-  " \001(\0132\030.ei.FarmProductionParams\022%\n\tfarm_i"
-  "nfo\030\022 \001(\0132\022.ei.PlayerFarmInfo\022\023\n\013rank_ch"
-  "ange\030\010 \001(\005\022\016\n\006active\030\004 \001(\010\022\r\n\005leech\030\020 \001("
-  "\010\022\033\n\023time_cheat_detected\030\007 \001(\010\022\036\n\010platfo"
-  "rm\030\005 \001(\0162\014.ei.Platform\022\017\n\007push_id\030\t \001(\t\022"
-  "\021\n\tban_votes\030\n \001(\r\022\022\n\nautojoined\030\021 \001(\010\022\024"
-  "\n\014boost_tokens\030\014 \001(\r\022\032\n\022boost_tokens_spe"
-  "nt\030\016 \001(\r\022\'\n\014buff_history\030\r \003(\0132\021.ei.Coop"
-  "BuffState\022\034\n\024chicken_run_cooldown\030\024 \001(\001\032"
-  ">\n\010CoopGift\022\017\n\007user_id\030\001 \001(\t\022\021\n\tuser_nam"
-  "e\030\003 \001(\t\022\016\n\006amount\030\002 \001(\r\032@\n\nChickenRun\022\017\n"
-  "\007user_id\030\001 \001(\t\022\021\n\tuser_name\030\003 \001(\t\022\016\n\006amo"
-  "unt\030\002 \001(\004\"g\n\014MemberStatus\022\t\n\005VALID\020\000\022\023\n\017"
-  "KICKED_INACTIVE\020\001\022\022\n\016KICKED_PRIVATE\020\002\022\021\n"
-  "\rKICKED_CHEATS\020\003\022\020\n\014KICKED_LEECH\020\004\"I\n\006St"
-  "atus\022\013\n\007UNKNOWN\020\000\022\t\n\005LOBBY\020\001\022\n\n\006ACTIVE\020\002"
-  "\022\014\n\010COMPLETE\020\003\022\r\n\tFINALIZED\020\004\"\323\004\n\rLocalC"
-  "ontract\022\036\n\010contract\030\001 \001(\0132\014.ei.Contract\022"
-  "\027\n\017coop_identifier\030\002 \001(\t\022\020\n\010accepted\030\007 \001"
-  "(\010\022\025\n\rtime_accepted\030\003 \001(\001\022\021\n\tcancelled\030\004"
-  " \001(\010\022\013\n\003new\030\010 \001(\010\022\034\n\024coop_shared_end_tim"
-  "e\030\005 \001(\001\022\"\n\032coop_grace_period_end_time\030\t "
-  "\001(\001\022#\n\033coop_contribution_finalized\030\n \001(\010"
-  "\022\'\n\037coop_last_uploaded_contribution\030\013 \001("
-  "\001\022\024\n\014coop_user_id\030\r \001(\t\022\027\n\017coop_share_fa"
-  "rm\030\021 \001(\010\022%\n\035last_amount_when_reward_give"
-  "n\030\006 \001(\001\022\032\n\022num_goals_achieved\030\016 \001(\r\022\023\n\013b"
-  "oosts_used\030\014 \001(\r\022\025\n\rpoints_replay\030\024 \001(\010\022"
-  "\016\n\006league\030\017 \001(\r\022\'\n\005grade\030\022 \001(\0162\030.ei.Cont"
-  "ract.PlayerGrade\022\025\n\rlast_nag_time\030\020 \001(\001\022"
-  "*\n\nevaluation\030\023 \001(\0132\026.ei.ContractEvaluat"
-  "ion\022\026\n\016reported_uuids\030\025 \003(\t\"\301\002\n\013MyContra"
-  "cts\022\031\n\021contract_ids_seen\030\003 \003(\t\022$\n\tcontra"
-  "cts\030\001 \003(\0132\021.ei.LocalContract\022\"\n\007archive\030"
-  "\002 \003(\0132\021.ei.LocalContract\022=\n\025current_coop"
-  "_statuses\030\004 \003(\0132\036.ei.ContractCoopStatusR"
-  "esponse\022(\n\010last_cpi\030\005 \001(\0132\026.ei.ContractP"
-  "layerInfo\022\036\n\026initial_grade_revealed\030\006 \001("
-  "\010\022!\n\031last_grade_progress_shown\030\007 \001(\001\022!\n\031"
-  "show_advanced_evaluations\030\010 \001(\010\"\276\001\n\020Quer"
-  "yCoopRequest\022#\n\005rinfo\030\005 \001(\0132\024.ei.BasicRe"
-  "questInfo\022\033\n\023contract_identifier\030\001 \001(\t\022\027"
-  "\n\017coop_identifier\030\002 \001(\t\022\016\n\006league\030\004 \001(\r\022"
-  "\'\n\005grade\030\006 \001(\0162\030.ei.Contract.PlayerGrade"
-  "\022\026\n\016client_version\030\003 \001(\r\"\226\001\n\021QueryCoopRe"
-  "sponse\022\016\n\006exists\030\001 \001(\010\022\014\n\004full\030\002 \001(\010\022\017\n\007"
-  "expired\030\005 \001(\010\022\030\n\020different_league\030\004 \001(\010\022"
-  "\027\n\017different_grade\030\006 \001(\010\022\017\n\007cc_only\030\007 \001("
-  "\010\022\016\n\006banned\030\003 \001(\010\"\340\002\n\021CreateCoopRequest\022"
-  "#\n\005rinfo\030\n \001(\0132\024.ei.BasicRequestInfo\022\033\n\023"
-  "contract_identifier\030\001 \001(\t\022\027\n\017coop_identi"
-  "fier\030\002 \001(\t\022\016\n\006public\030\r \001(\010\022\017\n\007cc_only\030\016 "
-  "\001(\010\022\031\n\021seconds_remaining\030\003 \001(\001\022\017\n\007user_i"
-  "d\030\004 \001(\t\022\021\n\tuser_name\030\005 \001(\t\022\022\n\nsoul_power"
-  "\030\010 \001(\001\022\013\n\003eop\030\013 \001(\001\022\016\n\006league\030\t \001(\r\022\'\n\005g"
-  "rade\030\014 \001(\0162\030.ei.Contract.PlayerGrade\022\036\n\010"
-  "platform\030\006 \001(\0162\014.ei.Platform\022\026\n\016client_v"
-  "ersion\030\007 \001(\r\"6\n\022CreateCoopResponse\022\017\n\007su"
-  "ccess\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\275\002\n\017JoinCoo"
-  "pRequest\022#\n\005rinfo\030\n \001(\0132\024.ei.BasicReques"
-  "tInfo\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017co"
-  "op_identifier\030\002 \001(\t\022\017\n\007user_id\030\003 \001(\t\022\021\n\t"
-  "user_name\030\004 \001(\t\022\022\n\nsoul_power\030\010 \001(\001\022\013\n\003e"
-  "op\030\014 \001(\001\022\016\n\006league\030\t \001(\r\022\'\n\005grade\030\r \001(\0162"
-  "\030.ei.Contract.PlayerGrade\022\036\n\010platform\030\005 "
-  "\001(\0162\014.ei.Platform\022\031\n\021seconds_remaining\030\013"
-  " \001(\001\022\026\n\016client_version\030\007 \001(\r\"\227\002\n\020JoinCoo"
-  "pResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007message\030\002 "
-  "\001(\t\022\016\n\006banned\030\004 \001(\010\022\027\n\017coop_identifier\030\005"
-  " \001(\t\022\031\n\021seconds_remaining\030\003 \001(\001\022\025\n\rmatch"
-  "_percent\030\006 \001(\001\022\023\n\013num_members\030\007 \001(\r\0225\n\006s"
-  "tatus\030\010 \001(\0162%.ei.ContractCoopStatusRespo"
-  "nse.Status\022\'\n\005grade\030\t \001(\0162\030.ei.Contract."
-  "PlayerGrade\022\021\n\tcan_start\030\n \001(\010\"\250\002\n\023AutoJ"
-  "oinCoopRequest\022#\n\005rinfo\030\t \001(\0132\024.ei.Basic"
-  "RequestInfo\022\033\n\023contract_identifier\030\001 \001(\t"
-  "\022\017\n\007user_id\030\002 \001(\t\022\021\n\tuser_name\030\003 \001(\t\022\022\n\n"
-  "soul_power\030\004 \001(\001\022\013\n\003eop\030\n \001(\001\022\016\n\006league\030"
-  "\010 \001(\r\022\'\n\005grade\030\014 \001(\0162\030.ei.Contract.Playe"
-  "rGrade\022\031\n\021seconds_remaining\030\005 \001(\001\022\036\n\010pla"
-  "tform\030\006 \001(\0162\014.ei.Platform\022\026\n\016client_vers"
-  "ion\030\007 \001(\r\"\275\001\n\034UpdateCoopPermissionsReque"
-  "st\022#\n\005rinfo\030\006 \001(\0132\024.ei.BasicRequestInfo\022"
-  "\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017coop_ide"
-  "ntifier\030\002 \001(\t\022\032\n\022requesting_user_id\030\003 \001("
-  "\t\022\016\n\006public\030\004 \001(\010\022\026\n\016client_version\030\005 \001("
-  "\r\"A\n\035UpdateCoopPermissionsResponse\022\017\n\007su"
-  "ccess\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\240\001\n\020LeaveCo"
-  "opRequest\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicReque"
-  "stInfo\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017c"
-  "oop_identifier\030\002 \001(\t\022\031\n\021player_identifie"
-  "r\030\003 \001(\t\022\026\n\016client_version\030\007 \001(\r\"\357\001\n\025Gift"
-  "PlayerCoopRequest\022#\n\005rinfo\030\010 \001(\0132\024.ei.Ba"
+  "ed_in_season\030\024 \001(\010\022\021\n\tseason_id\030\025 \001(\t\022\023\n"
+  "\013time_cheats\030\033 \001(\r\0223\n\006issues\030\023 \003(\0162#.ei."
+  "ContractEvaluation.PoorBehavior\022\r\n\005notes"
+  "\030\014 \003(\t\022\017\n\007version\0302 \001(\t\022\035\n\025evaluation_st"
+  "art_time\0303 \001(\001\022-\n\006status\0304 \001(\0162\035.ei.Cont"
+  "ractEvaluation.Status\"\230\001\n\014PoorBehavior\022\010"
+  "\n\004NONE\020\000\022\024\n\020LOW_CONTRIBUTION\020\001\022\024\n\020BAD_CO"
+  "NTRIBUTION\020\002\022\033\n\027DISHONORABLY_DISCHARGED\020"
+  "\003\022\021\n\rPOOR_TEAMWORK\020\004\022\022\n\016ABANDONED_COOP\020\005"
+  "\022\016\n\nTIME_CHEAT\020\006\"@\n\006Status\022\013\n\007UNKNOWN\020\000\022"
+  "\013\n\007PENDING\020\001\022\016\n\nEVALUATING\020\002\022\014\n\010COMPLETE"
+  "\020\003\"\202\001\n\020ContractCitation\0222\n\005issue\030\001 \001(\0162#"
+  ".ei.ContractEvaluation.PoorBehavior\022\021\n\tt"
+  "imestamp\030\002 \001(\001\022\'\n\005grade\030\003 \001(\0162\030.ei.Contr"
+  "act.PlayerGrade\"\210\001\n\027ContractEvaluationBa"
+  "tch\022/\n\005evals\030\001 \003(\0132 .ei.ContractEvaluati"
+  "onBatch.Pair\032<\n\004Pair\022\017\n\007user_id\030\001 \001(\t\022#\n"
+  "\003cev\030\002 \001(\0132\026.ei.ContractEvaluation\"\367\001\n\026C"
+  "oopCompletionSnapshot\022D\n\014contributors\030\001 "
+  "\003(\0132..ei.CoopCompletionSnapshot.Contribu"
+  "torSnapshot\032\226\001\n\023ContributorSnapshot\022\024\n\014c"
+  "ontribution\030\001 \001(\001\022\036\n\026last_contribution_t"
+  "ime\030\006 \001(\001\022\022\n\nsoul_power\030\002 \001(\001\022\017\n\007user_id"
+  "\030\003 \001(\t\022\016\n\006tokens\030\004 \001(\r\022\024\n\014tokens_spent\030\005"
+  " \001(\r\"\242\001\n\020BasicRequestInfo\022\022\n\nei_user_id\030"
+  "\001 \001(\t\022\026\n\016client_version\030\002 \001(\r\022\017\n\007version"
+  "\030\003 \001(\t\022\r\n\005build\030\004 \001(\t\022\020\n\010platform\030\005 \001(\t\022"
+  "\017\n\007country\030\006 \001(\t\022\020\n\010language\030\007 \001(\t\022\r\n\005de"
+  "bug\030\010 \001(\010\"\313\002\n\021ContractSimConfig\022C\n\rgrade"
+  "_configs\030\001 \003(\0132,.ei.ContractSimConfig.Co"
+  "ntractGradeSimConfig\032\360\001\n\026ContractGradeSi"
+  "mConfig\022\'\n\005grade\030\001 \001(\0162\030.ei.Contract.Pla"
+  "yerGrade\022L\n\013goal_params\030\002 \003(\01327.ei.Contr"
+  "actSimConfig.ContractGradeSimConfig.Goal"
+  "Params\032_\n\nGoalParams\022\021\n\ttarget_se\030\001 \001(\001\022"
+  "\020\n\010cps_mult\030\002 \001(\001\022\025\n\rearnings_mult\030\003 \001(\001"
+  "\022\025\n\rtime_efficacy\030\004 \001(\001\")\n\017ContractSimPo"
+  "ll\022\026\n\016client_version\030\001 \001(\r\"p\n\027ContractSi"
+  "mPollResponse\022*\n\024contract_to_simulate\030\001 "
+  "\001(\0132\014.ei.Contract\022)\n\nsim_config\030\002 \001(\0132\025."
+  "ei.ContractSimConfig\"\316\001\n\027ContractSimResu"
+  "ltUpdate\022\023\n\013contract_id\030\001 \001(\t\0228\n\ngoal_in"
+  "fos\030\002 \003(\0132$.ei.ContractSimResultUpdate.G"
+  "oalInfo\032d\n\010GoalInfo\022\'\n\005grade\030\001 \001(\0162\030.ei."
+  "Contract.PlayerGrade\022\022\n\ngoal_index\030\002 \001(\r"
+  "\022\033\n\023projected_eggs_laid\030\003 \001(\001\"N\n\020Contrac"
+  "tsRequest\022\021\n\tsoul_eggs\030\001 \001(\001\022\026\n\016client_v"
+  "ersion\030\005 \001(\r\022\017\n\007user_id\030\002 \001(\t\"y\n\021Contrac"
+  "tsResponse\022\037\n\tcontracts\030\001 \003(\0132\014.ei.Contr"
+  "act\022\027\n\017warning_message\030\004 \001(\t\022\023\n\013server_t"
+  "ime\030\002 \001(\001\022\025\n\007max_eop\030\003 \001(\r:\0041000\"\237\001\n\031Con"
+  "tractCoopStatusRequest\022#\n\005rinfo\030\005 \001(\0132\024."
+  "ei.BasicRequestInfo\022\033\n\023contract_identifi"
+  "er\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\017\n\007use"
+  "r_id\030\003 \001(\t\022\026\n\016client_version\030\004 \001(\r\"\177\n\024Fa"
+  "rmProductionParams\022\027\n\017farm_population\030\001 "
+  "\001(\001\022\025\n\rfarm_capacity\030\002 \001(\001\022\013\n\003elr\030\003 \001(\001\022"
+  "\013\n\003ihr\030\004 \001(\001\022\n\n\002sr\030\005 \001(\001\022\021\n\tdelivered\030\006 "
+  "\001(\001\"\227\005\n\016PlayerFarmInfo\022\026\n\016client_version"
+  "\030\024 \001(\r\022\021\n\tsoul_eggs\030\001 \001(\001\022\030\n\020eggs_of_pro"
+  "phecy\030\002 \001(\004\022\024\n\014permit_level\030\003 \001(\r\022\031\n\021hyp"
+  "erloop_station\030\004 \001(\010\022\027\n\017egg_medal_level\030"
+  "\005 \003(\r\022.\n\repic_research\030\006 \003(\0132\027.ei.Backup"
+  ".ResearchItem\022\031\n\010egg_type\030\007 \001(\0162\007.ei.Egg"
+  "\022\024\n\014cash_on_hand\030\010 \001(\001\022\014\n\004habs\030\t \003(\r\022\026\n\016"
+  "hab_population\030\n \003(\004\022\024\n\014hab_capacity\030\025 \003"
+  "(\004\022\020\n\010vehicles\030\013 \003(\r\022\024\n\014train_length\030\014 \003"
+  "(\r\022\023\n\013silos_owned\030\r \001(\r\0220\n\017common_resear"
+  "ch\030\016 \003(\0132\027.ei.Backup.ResearchItem\022-\n\ract"
+  "ive_boosts\030\017 \003(\0132\026.ei.Backup.ActiveBoost"
+  "\022\034\n\024boost_tokens_on_hand\030\020 \001(\r\0220\n\022equipp"
+  "ed_artifacts\030\021 \003(\0132\024.ei.CompleteArtifact"
+  "\022 \n\030artifact_inventory_score\030\022 \001(\004\0226\n\017fa"
+  "rm_appearance\030\023 \001(\0132\035.ei.ShellDB.FarmCon"
+  "figuration\022\021\n\ttimestamp\030\026 \001(\001\"\337\n\n\032Contra"
+  "ctCoopStatusResponse\022\033\n\023contract_identif"
+  "ier\030\001 \001(\t\022\024\n\014total_amount\030\002 \001(\001\022\027\n\017coop_"
+  "identifier\030\003 \001(\t\022E\n\014contributors\030\004 \003(\0132/"
+  ".ei.ContractCoopStatusResponse.Contribut"
+  "ionInfo\022\026\n\016auto_generated\030\010 \001(\010\022\016\n\006publi"
+  "c\030\n \001(\010\022\022\n\ncreator_id\030\t \001(\t\022\031\n\021seconds_r"
+  "emaining\030\005 \001(\001\022\032\n\022all_goals_achieved\030\016 \001"
+  "(\010\022\035\n\025all_members_reporting\030\006 \001(\010\022&\n\036gra"
+  "ce_period_seconds_remaining\030\007 \001(\001\0226\n\005gif"
+  "ts\030\013 \003(\0132\'.ei.ContractCoopStatusResponse"
+  ".CoopGift\022\?\n\014chicken_runs\030\r \003(\0132).ei.Con"
+  "tractCoopStatusResponse.ChickenRun\022\027\n\017lo"
+  "cal_timestamp\030\014 \001(\001\032\253\004\n\020ContributionInfo"
+  "\022\014\n\004uuid\030\025 \001(\t\022\017\n\007user_id\030\001 \001(\t\022\021\n\tuser_"
+  "name\030\002 \001(\t\022\033\n\023contract_identifier\030\023 \001(\t\022"
+  "\033\n\023contribution_amount\030\003 \001(\001\022\031\n\021contribu"
+  "tion_rate\030\006 \001(\001\022\022\n\nsoul_power\030\013 \001(\001\0223\n\021p"
+  "roduction_params\030\017 \001(\0132\030.ei.FarmProducti"
+  "onParams\022%\n\tfarm_info\030\022 \001(\0132\022.ei.PlayerF"
+  "armInfo\022\023\n\013rank_change\030\010 \001(\005\022\016\n\006active\030\004"
+  " \001(\010\022\r\n\005leech\030\020 \001(\010\022\033\n\023time_cheat_detect"
+  "ed\030\007 \001(\010\022\036\n\010platform\030\005 \001(\0162\014.ei.Platform"
+  "\022\017\n\007push_id\030\t \001(\t\022\021\n\tban_votes\030\n \001(\r\022\022\n\n"
+  "autojoined\030\021 \001(\010\022\024\n\014boost_tokens\030\014 \001(\r\022\032"
+  "\n\022boost_tokens_spent\030\016 \001(\r\022\'\n\014buff_histo"
+  "ry\030\r \003(\0132\021.ei.CoopBuffState\022\034\n\024chicken_r"
+  "un_cooldown\030\024 \001(\001\032>\n\010CoopGift\022\017\n\007user_id"
+  "\030\001 \001(\t\022\021\n\tuser_name\030\003 \001(\t\022\016\n\006amount\030\002 \001("
+  "\r\032@\n\nChickenRun\022\017\n\007user_id\030\001 \001(\t\022\021\n\tuser"
+  "_name\030\003 \001(\t\022\016\n\006amount\030\002 \001(\004\"g\n\014MemberSta"
+  "tus\022\t\n\005VALID\020\000\022\023\n\017KICKED_INACTIVE\020\001\022\022\n\016K"
+  "ICKED_PRIVATE\020\002\022\021\n\rKICKED_CHEATS\020\003\022\020\n\014KI"
+  "CKED_LEECH\020\004\"I\n\006Status\022\013\n\007UNKNOWN\020\000\022\t\n\005L"
+  "OBBY\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010COMPLETE\020\003\022\r\n\tFINA"
+  "LIZED\020\004\"\323\004\n\rLocalContract\022\036\n\010contract\030\001 "
+  "\001(\0132\014.ei.Contract\022\027\n\017coop_identifier\030\002 \001"
+  "(\t\022\020\n\010accepted\030\007 \001(\010\022\025\n\rtime_accepted\030\003 "
+  "\001(\001\022\021\n\tcancelled\030\004 \001(\010\022\013\n\003new\030\010 \001(\010\022\034\n\024c"
+  "oop_shared_end_time\030\005 \001(\001\022\"\n\032coop_grace_"
+  "period_end_time\030\t \001(\001\022#\n\033coop_contributi"
+  "on_finalized\030\n \001(\010\022\'\n\037coop_last_uploaded"
+  "_contribution\030\013 \001(\001\022\024\n\014coop_user_id\030\r \001("
+  "\t\022\027\n\017coop_share_farm\030\021 \001(\010\022%\n\035last_amoun"
+  "t_when_reward_given\030\006 \001(\001\022\032\n\022num_goals_a"
+  "chieved\030\016 \001(\r\022\023\n\013boosts_used\030\014 \001(\r\022\025\n\rpo"
+  "ints_replay\030\024 \001(\010\022\016\n\006league\030\017 \001(\r\022\'\n\005gra"
+  "de\030\022 \001(\0162\030.ei.Contract.PlayerGrade\022\025\n\rla"
+  "st_nag_time\030\020 \001(\001\022*\n\nevaluation\030\023 \001(\0132\026."
+  "ei.ContractEvaluation\022\026\n\016reported_uuids\030"
+  "\025 \003(\t\"\301\002\n\013MyContracts\022\031\n\021contract_ids_se"
+  "en\030\003 \003(\t\022$\n\tcontracts\030\001 \003(\0132\021.ei.LocalCo"
+  "ntract\022\"\n\007archive\030\002 \003(\0132\021.ei.LocalContra"
+  "ct\022=\n\025current_coop_statuses\030\004 \003(\0132\036.ei.C"
+  "ontractCoopStatusResponse\022(\n\010last_cpi\030\005 "
+  "\001(\0132\026.ei.ContractPlayerInfo\022\036\n\026initial_g"
+  "rade_revealed\030\006 \001(\010\022!\n\031last_grade_progre"
+  "ss_shown\030\007 \001(\001\022!\n\031show_advanced_evaluati"
+  "ons\030\010 \001(\010\"\276\001\n\020QueryCoopRequest\022#\n\005rinfo\030"
+  "\005 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contract_"
+  "identifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001("
+  "\t\022\016\n\006league\030\004 \001(\r\022\'\n\005grade\030\006 \001(\0162\030.ei.Co"
+  "ntract.PlayerGrade\022\026\n\016client_version\030\003 \001"
+  "(\r\"\226\001\n\021QueryCoopResponse\022\016\n\006exists\030\001 \001(\010"
+  "\022\014\n\004full\030\002 \001(\010\022\017\n\007expired\030\005 \001(\010\022\030\n\020diffe"
+  "rent_league\030\004 \001(\010\022\027\n\017different_grade\030\006 \001"
+  "(\010\022\017\n\007cc_only\030\007 \001(\010\022\016\n\006banned\030\003 \001(\010\"\340\002\n\021"
+  "CreateCoopRequest\022#\n\005rinfo\030\n \001(\0132\024.ei.Ba"
   "sicRequestInfo\022\033\n\023contract_identifier\030\001 "
-  "\001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\031\n\021player_i"
-  "dentifier\030\003 \001(\t\022\032\n\022requesting_user_id\030\004 "
-  "\001(\t\022\034\n\024requesting_user_name\030\006 \001(\t\022\016\n\006amo"
-  "unt\030\005 \001(\r\022\026\n\016client_version\030\007 \001(\r\"\365\001\n\031Se"
-  "ndChickenRunCoopRequest\022#\n\005rinfo\030\010 \001(\0132\024"
-  ".ei.BasicRequestInfo\022\033\n\023contract_identif"
-  "ier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\031\n\021pl"
-  "ayer_identifier\030\003 \001(\t\022\032\n\022requesting_user"
-  "_id\030\004 \001(\t\022\034\n\024requesting_user_name\030\006 \001(\t\022"
-  "\020\n\010farm_pop\030\005 \001(\004\022\026\n\016client_version\030\007 \001("
-  "\r\"\200\002\n\027ReportPlayerCoopRequest\022#\n\005rinfo\030\001"
-  " \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contract_i"
-  "dentifier\030\002 \001(\t\022\027\n\017coop_identifier\030\003 \001(\t"
-  "\022\017\n\007user_id\030\004 \001(\t\0222\n\006reason\030\005 \001(\0162\".ei.R"
-  "eportPlayerCoopRequest.Reason\"E\n\006Reason\022"
-  "\013\n\007UNKNOWN\020\000\022\022\n\016OFFENSIVE_NAME\020\001\022\014\n\010CHEA"
-  "TING\020\002\022\014\n\010LEECHING\020\003\"\271\002\n\025KickPlayerCoopR"
-  "equest\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequestI"
-  "nfo\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017coop"
-  "_identifier\030\002 \001(\t\022\031\n\021player_identifier\030\003"
-  " \001(\t\022\032\n\022requesting_user_id\030\004 \001(\t\0220\n\006reas"
-  "on\030\t \001(\0162 .ei.KickPlayerCoopRequest.Reas"
-  "on\022\026\n\016client_version\030\007 \001(\r\"D\n\006Reason\022\013\n\007"
-  "INVALID\020\000\022\013\n\007CHEATER\020\001\022\010\n\004IDLE\020\002\022\t\n\005LEEC"
-  "H\020\003\022\013\n\007PRIVATE\020\004\"\311\003\n\037ContractCoopStatusU"
-  "pdateRequest\022#\n\005rinfo\030\014 \001(\0132\024.ei.BasicRe"
-  "questInfo\022\017\n\007user_id\030\001 \001(\t\022\033\n\023contract_i"
-  "dentifier\030\002 \001(\t\022\027\n\017coop_identifier\030\003 \001(\t"
-  "\022\024\n\014push_user_id\030\010 \001(\t\022\016\n\006amount\030\004 \001(\001\022\014"
-  "\n\004rate\030\005 \001(\001\022\034\n\024time_cheats_detected\030\006 \001"
-  "(\r\022\022\n\nsoul_power\030\007 \001(\001\022\013\n\003eop\030\017 \001(\r\022\024\n\014b"
-  "oost_tokens\030\t \001(\r\022\032\n\022boost_tokens_spent\030"
-  "\r \001(\r\0223\n\021production_params\030\016 \001(\0132\030.ei.Fa"
-  "rmProductionParams\022%\n\tfarm_info\030\020 \001(\0132\022."
-  "ei.PlayerFarmInfo\022\037\n\024egg_laying_rate_buf"
-  "f\030\n \001(\001:\0011\022\030\n\rearnings_buff\030\013 \001(\001:\0011\"\202\001\n"
-  " ContractCoopStatusUpdateResponse\022\021\n\tfin"
-  "alized\030\001 \001(\010\022\016\n\006exists\030\002 \001(\010\022;\n\006status\030\003"
-  " \001(\0162+.ei.ContractCoopStatusResponse.Mem"
-  "berStatus\"Z\n\rCoopBuffState\022\032\n\017egg_laying"
-  "_rate\030\001 \001(\001:\0011\022\023\n\010earnings\030\002 \001(\001:\0011\022\030\n\020s"
-  "erver_timestamp\030\003 \001(\001\"5\n\017CoopBuffHistory"
-  "\022\"\n\007history\030\001 \003(\0132\021.ei.CoopBuffState\"@\n\023"
-  "CoopChickenRunEntry\022\017\n\007user_id\030\001 \001(\t\022\030\n\020"
-  "server_timestamp\030\002 \001(\001\"C\n\027CoopLastChicke"
-  "nRunTimes\022(\n\007entries\030\003 \003(\0132\027.ei.CoopChic"
-  "kenRunEntry\"\375\001\n\023LeaderboardAnalysis\022-\n\006c"
-  "hunks\030\001 \003(\0132\035.ei.LeaderboardAnalysis.Chu"
-  "nk\022\r\n\005count\030\002 \001(\r\022\022\n\nhigh_score\030\003 \001(\001\022\021\n"
-  "\tlow_score\030\004 \001(\001\032\200\001\n\005Chunk\022\023\n\013start_inde"
-  "x\030\001 \001(\r\022\021\n\tend_index\030\002 \001(\r\022\022\n\nhigh_score"
-  "\030\003 \001(\001\022\021\n\tlow_score\030\004 \001(\001\022\024\n\014start_curso"
-  "r\030\005 \001(\t\022\022\n\nend_cursor\030\006 \001(\t\"}\n\017Leaderboa"
-  "rdInfo\022+\n\007seasons\030\001 \003(\0132\032.ei.Leaderboard"
-  "Info.Season\022\026\n\016all_time_scope\030\002 \001(\t\032%\n\006S"
-  "eason\022\r\n\005scope\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"q\n\022Le"
-  "aderboardRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.Bas"
-  "icRequestInfo\022\r\n\005scope\030\002 \001(\t\022\'\n\005grade\030\003 "
-  "\001(\0162\030.ei.Contract.PlayerGrade\"\342\001\n\023Leader"
-  "boardResponse\022\r\n\005scope\030\001 \001(\t\022\'\n\005grade\030\002 "
-  "\001(\0162\030.ei.Contract.PlayerGrade\0222\n\013top_ent"
-  "ries\030\003 \003(\0132\035.ei.LeaderboardResponse.Entr"
-  "y\022\r\n\005count\030\004 \001(\r\022\014\n\004rank\030\005 \001(\r\022\r\n\005score\030"
-  "\006 \001(\001\0323\n\005Entry\022\014\n\004rank\030\001 \001(\r\022\r\n\005alias\030\002 "
-  "\001(\t\022\r\n\005score\030\003 \001(\001\"6\n\020ContractsArchive\022\""
-  "\n\007archive\030\001 \003(\0132\021.ei.LocalContract\"\377\002\n\016C"
-  "ontractAction\022\017\n\007user_id\030\001 \001(\t\022\023\n\013action"
-  "_name\030\002 \001(\t\022\023\n\013approx_time\030\003 \001(\001\022\024\n\014dest"
-  "_user_id\030\004 \001(\t\022\023\n\013contract_id\030\005 \001(\t\022\017\n\007c"
-  "oop_id\030\006 \001(\t\022\020\n\010autojoin\030\007 \001(\010\022\r\n\005grade\030"
-  "\010 \001(\r\022\016\n\006replay\030\t \001(\010\022\025\n\rpoints_replay\030\n"
-  " \001(\010\022\023\n\013reward_type\030\013 \001(\r\022\026\n\016reward_subt"
-  "ype\030\014 \001(\t\022\025\n\rreward_amount\030\r \001(\001\022\022\n\ngoal"
-  "_index\030\016 \001(\r\022\020\n\010boost_id\030\017 \001(\t\022\016\n\006tokens"
-  "\030\020 \001(\r\022\023\n\013kick_reason\030\021 \001(\r\022\016\n\006public\030\022 "
-  "\001(\010\022\017\n\007cc_only\030\023 \001(\010\"w\n\023UserDataInfoRequ"
-  "est\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicRequestInfo"
-  "\022\017\n\007user_id\030\001 \001(\t\022\021\n\tdevice_id\030\002 \001(\t\022\027\n\017"
-  "backup_checksum\030\003 \001(\004\"d\n\024UserDataInfoRes"
-  "ponse\022\027\n\017backup_checksum\030\001 \001(\004\022\031\n\021backup"
-  "_total_cash\030\002 \001(\001\022\030\n\020coop_memberships\030\003 "
-  "\003(\t\"{\n\027ClearAllUserDataRequest\022#\n\005rinfo\030"
-  "\004 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user_id\030\001"
-  " \001(\t\022\021\n\tdevice_id\030\002 \001(\t\022\027\n\017backup_checks"
-  "um\030\003 \001(\004\"r\n\nServerGift\022\017\n\007user_id\030\001 \001(\t\022"
-  "#\n\013reward_type\030\003 \001(\0162\016.ei.RewardType\022\027\n\017"
-  "reward_sub_type\030\004 \001(\t\022\025\n\rreward_amount\030\005"
-  " \001(\001\"\256\r\n\nLiveConfig\022\021\n\tconfig_id\030\001 \001(\t\0222"
-  "\n\rboosts_config\030\002 \001(\0132\033.ei.LiveConfig.Bo"
-  "ostsConfig\022.\n\013gift_config\030\003 \001(\0132\031.ei.Liv"
-  "eConfig.GiftConfig\022.\n\013misc_config\030\004 \001(\0132"
-  "\031.ei.LiveConfig.MiscConfig\032\306\001\n\014BoostsCon"
-  "fig\022<\n\014item_configs\030\001 \003(\0132&.ei.LiveConfi"
-  "g.BoostsConfig.ItemConfig\022\037\n\027cash_boost_"
-  "cooloff_time\030\002 \001(\001\032W\n\nItemConfig\022\020\n\010boos"
-  "t_id\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\023\n\013token_price"
-  "\030\003 \001(\r\022\023\n\013se_required\030\004 \001(\001\032\336\006\n\nGiftConf"
-  "ig\022\?\n\014gift_configs\030\t \003(\0132).ei.LiveConfig"
-  ".GiftConfig.GiftValueConfig\022\031\n\021gift_mu_m"
-  "in_spent\030\n \001(\001\022\031\n\021gift_mu_max_spent\030\013 \001("
-  "\001\022\034\n\024gift_mu_overall_mult\030\014 \001(\001\022E\n\025rando"
-  "m_gift_mu_config\030\017 \001(\0132&.ei.LiveConfig.G"
-  "iftConfig.GiftMuConfig\022D\n\024video_gift_mu_"
-  "config\030\020 \001(\0132&.ei.LiveConfig.GiftConfig."
-  "GiftMuConfig\022\030\n\020package_interval\030\001 \001(\001\022\034"
-  "\n\024video_offer_interval\030\002 \001(\001\022%\n\035video_of"
-  "fer_interval_contract\030\003 \001(\001\022\'\n\037video_off"
-  "er_interval_piggy_full\030\004 \001(\001\022-\n%video_of"
-  "fer_interval_piggy_extra_full\030\005 \001(\001\022\033\n\023v"
-  "ideo_reset_on_idle\030\016 \001(\010\022!\n\031package_inte"
-  "rval_contract\030\006 \001(\001\022#\n\033package_interval_"
-  "piggy_full\030\007 \001(\001\022)\n!package_interval_pig"
-  "gy_extra_full\030\010 \001(\001\022\035\n\025package_reset_on_"
-  "idle\030\r \001(\010\032|\n\017GiftValueConfig\022\017\n\007gift_id"
-  "\030\001 \001(\t\022\016\n\006amount\030\004 \001(\001\022\020\n\010rand_min\030\002 \001(\001"
-  "\022\020\n\010rand_max\030\003 \001(\001\022\021\n\tvideo_min\030\005 \001(\001\022\021\n"
-  "\tvideo_max\030\006 \001(\001\032J\n\014GiftMuConfig\022\021\n\tmin_"
-  "spent\030\001 \001(\001\022\021\n\tmax_spent\030\002 \001(\001\022\024\n\014overal"
-  "l_mult\030\003 \001(\001\032\316\003\n\nMiscConfig\022\024\n\014ask_to_tr"
-  "ack\030\001 \001(\010\022\"\n\032ask_to_track_min_soul_eggs\030"
-  "\002 \001(\001\022\034\n\024ask_to_track_message\030\003 \001(\t\022$\n\034a"
-  "sk_to_track_show_pre_dialog\030\004 \001(\010\022\"\n\032ask"
-  "_to_track_after_privacy\030\005 \001(\010\022$\n\034chicken"
-  "_run_boost_percentage\030\006 \001(\001\022\034\n\024shells_in"
-  "tro_tickets\030\007 \001(\r\022\'\n\037shells_max_free_chi"
-  "cken_configs\030\010 \001(\r\022$\n\034shells_intro_alert"
-  "_threshold\030\t \001(\r\022.\n&contracts_expert_lea"
-  "gue_min_soul_power\030\n \001(\001\022!\n\031new_player_e"
-  "vent_duration\030\013 \001(\001\022 \n\030contracts_club_av"
-  "ailable\030\014 \001(\010\022\026\n\016contracts_beta\030\r \001(\010\"\202\002"
-  "\n\nInGameMail\022\n\n\002id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022"
-  "\014\n\004date\030\010 \001(\t\022\017\n\007message\030\003 \001(\t\022\016\n\006action"
-  "\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022\020\n\010platform\030\007 \001(\r\022\016\n"
-  "\006builds\030\t \003(\t\022\032\n\022min_client_version\030\n \001("
-  "\r\022\032\n\022max_client_version\030\014 \001(\r\022\025\n\rmin_sou"
-  "l_eggs\030\013 \001(\001\022\032\n\022min_mystical_bonus\030\r \001(\001"
-  "\022\020\n\010gold_tip\030\006 \001(\001\"&\n\006MailDB\022\034\n\004mail\030\001 \003"
-  "(\0132\016.ei.InGameMail\"\313\002\n\023PeriodicalsRespon"
-  "se\022\034\n\005sales\030\001 \001(\0132\r.ei.SalesInfo\022\'\n\006even"
-  "ts\030\002 \001(\0132\027.ei.EggIncCurrentEvents\022(\n\tcon"
-  "tracts\030\003 \001(\0132\025.ei.ContractsResponse\022+\n\013e"
-  "valuations\030\010 \003(\0132\026.ei.ContractEvaluation"
-  "\022\035\n\005gifts\030\004 \003(\0132\016.ei.ServerGift\022#\n\013live_"
-  "config\030\005 \001(\0132\016.ei.LiveConfig\022\034\n\010mail_bag"
-  "\030\006 \001(\0132\n.ei.MailDB\0224\n\024contract_player_in"
-  "fo\030\007 \001(\0132\026.ei.ContractPlayerInfo\"\371\002\n\025Get"
-  "PeriodicalsRequest\022#\n\005rinfo\030\014 \001(\0132\024.ei.B"
-  "asicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\022\n\npigg"
-  "y_full\030\002 \001(\010\022\030\n\020piggy_found_full\030\003 \001(\010\022\035"
-  "\n\025seconds_full_realtime\030\004 \001(\001\022\035\n\025seconds"
-  "_full_gametime\030\005 \001(\001\022\027\n\017lost_increments\030"
-  "\007 \001(\r\022\021\n\tsoul_eggs\030\010 \001(\001\022\036\n\026mystical_ear"
-  "nings_mult\030\r \001(\001\022\013\n\003eop\030\016 \001(\r\022\032\n\022contrac"
-  "ts_unlocked\030\017 \001(\010\022\032\n\022artifacts_unlocked\030"
-  "\020 \001(\010\022\036\n\026current_client_version\030\n \001(\r\022\r\n"
-  "\005debug\030\013 \001(\010\"~\n\rConfigRequest\022#\n\005rinfo\030\001"
-  " \001(\0132\024.ei.BasicRequestInfo\022\021\n\tsoul_eggs\030"
-  "\002 \001(\001\022\031\n\021artifacts_enabled\030\003 \001(\010\022\032\n\022fuel"
-  "_tank_unlocked\030\004 \001(\010\"x\n\016ConfigResponse\022#"
-  "\n\013live_config\030\001 \001(\0132\016.ei.LiveConfig\022\034\n\010m"
-  "ail_bag\030\002 \001(\0132\n.ei.MailDB\022#\n\013dlc_catalog"
-  "\030\003 \001(\0132\016.ei.DLCCatalog\"d\n\024AdAttributionR"
-  "awData\022\024\n\014device_ad_id\030\001 \001(\t\022\017\n\007user_id\030"
-  "\004 \001(\t\022\022\n\nad_network\030\002 \001(\t\022\021\n\tjson_data\030\003"
-  " \001(\t\"\270\001\n\020AdAttributionRow\022\017\n\007user_id\030\001 \001"
-  "(\t\022\r\n\005ad_id\030\002 \001(\t\022\022\n\nad_network\030\003 \001(\t\022\020\n"
-  "\010campaign\030\004 \001(\t\022\017\n\007keyword\030\005 \001(\t\022\r\n\005extr"
-  "a\030\006 \001(\t\022\022\n\nclick_date\030\007 \001(\002\022\025\n\rdownload_"
-  "date\030\010 \001(\002\022\023\n\013approx_time\030\t \001(\002\"\215\003\n\021AdAt"
-  "tributionInfo\022\024\n\014device_ad_id\030\001 \001(\t\022\024\n\014n"
-  "etwork_name\030\002 \001(\t\022\023\n\013attribution\030\003 \001(\010\022\020"
-  "\n\010org_name\030\004 \001(\t\022\016\n\006org_id\030\005 \001(\t\022\025\n\rcamp"
-  "aign_name\030\006 \001(\t\022\023\n\013campaign_id\030\007 \001(\t\022\022\n\n"
-  "click_date\030\010 \001(\t\022\027\n\017conversion_date\030\t \001("
-  "\t\022\027\n\017conversion_type\030\n \001(\t\022\013\n\003geo\030\013 \001(\t\022"
-  "\024\n\014adgroup_name\030\014 \001(\t\022\022\n\nadgroup_id\030\r \001("
-  "\t\022\017\n\007keyword\030\016 \001(\t\022\022\n\nkeyword_id\030\017 \001(\t\022\025"
-  "\n\rkeyword_extra\030\020 \001(\t\022\030\n\020creativeset_nam"
-  "e\030\021 \001(\t\022\026\n\016creativeset_id\030\022 \001(\t\"\227\002\n\023Arti"
-  "factsClientInfo\022\035\n\025mission_capacity_mult"
-  "\030\001 \001(\001\022\035\n\025mission_duration_mult\030\002 \001(\001\022!\n"
-  "\031mission_ftl_duration_mult\030\004 \001(\001\022:\n\rlaun"
-  "ch_counts\030\003 \003(\0132#.ei.ArtifactsClientInfo"
-  ".LaunchCount\032c\n\013LaunchCount\022\'\n\004ship\030\001 \001("
-  "\0162\031.ei.MissionInfo.Spaceship\022\024\n\014num_laun"
-  "ches\030\002 \001(\r\022\025\n\rlaunch_points\030\003 \001(\001\"\204\006\n\013Mi"
-  "ssionInfo\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionInfo"
-  ".Spaceship\022&\n\006status\030\002 \001(\0162\026.ei.MissionI"
-  "nfo.Status\0223\n\rduration_type\030\003 \001(\0162\034.ei.M"
-  "issionInfo.DurationType\022\"\n\004fuel\030\004 \003(\0132\024."
-  "ei.MissionInfo.Fuel\022\r\n\005level\030\014 \001(\r\022\030\n\020du"
-  "ration_seconds\030\005 \001(\001\022\020\n\010capacity\030\t \001(\r\022\024"
-  "\n\014quality_bump\030\013 \001(\001\022\031\n\021seconds_remainin"
-  "g\030\006 \001(\001\022\032\n\022start_time_derived\030\010 \001(\001\022\023\n\013m"
-  "ission_log\030\n \001(\t\022\022\n\nidentifier\030\007 \001(\t\032,\n\004"
-  "Fuel\022\024\n\003egg\030\001 \001(\0162\007.ei.Egg\022\016\n\006amount\030\002 \001"
-  "(\001\"\270\001\n\tSpaceship\022\017\n\013CHICKEN_ONE\020\000\022\020\n\014CHI"
-  "CKEN_NINE\020\001\022\021\n\rCHICKEN_HEAVY\020\002\022\007\n\003BCR\020\003\022"
-  "\025\n\021MILLENIUM_CHICKEN\020\004\022\027\n\023CORELLIHEN_COR"
-  "VETTE\020\005\022\016\n\nGALEGGTICA\020\006\022\016\n\nCHICKFIANT\020\007\022"
-  "\014\n\010VOYEGGER\020\010\022\016\n\nHENERPRISE\020\t\"t\n\006Status\022"
-  "\013\n\007FUELING\020\000\022\025\n\021PREPARE_TO_LAUNCH\020\005\022\r\n\tE"
-  "XPLORING\020\n\022\014\n\010RETURNED\020\017\022\r\n\tANALYZING\020\020\022"
-  "\014\n\010COMPLETE\020\024\022\014\n\010ARCHIVED\020\031\";\n\014DurationT"
-  "ype\022\t\n\005SHORT\020\000\022\010\n\004LONG\020\001\022\010\n\004EPIC\020\002\022\014\n\010TU"
-  "TORIAL\020\003\"\360\013\n\014ArtifactSpec\022#\n\004name\030\001 \001(\0162"
-  "\025.ei.ArtifactSpec.Name\022%\n\005level\030\002 \001(\0162\026."
-  "ei.ArtifactSpec.Level\022\'\n\006rarity\030\003 \001(\0162\027."
-  "ei.ArtifactSpec.Rarity\022\024\n\003egg\030\004 \001(\0162\007.ei"
-  ".Egg\"\212\t\n\004Name\022\017\n\013LUNAR_TOTEM\020\000\022\027\n\023NEODYM"
-  "IUM_MEDALLION\020\003\022\021\n\rBEAK_OF_MIDAS\020\004\022\025\n\021LI"
-  "GHT_OF_EGGENDIL\020\005\022\025\n\021DEMETERS_NECKLACE\020\006"
-  "\022\025\n\021VIAL_MARTIAN_DUST\020\007\022\021\n\rORNATE_GUSSET"
-  "\020\010\022\017\n\013THE_CHALICE\020\t\022\021\n\rBOOK_OF_BASAN\020\n\022\023"
-  "\n\017PHOENIX_FEATHER\020\013\022\021\n\rTUNGSTEN_ANKH\020\014\022\023"
-  "\n\017AURELIAN_BROOCH\020\025\022\024\n\020CARVED_RAINSTICK\020"
-  "\026\022\017\n\013PUZZLE_CUBE\020\027\022\025\n\021QUANTUM_METRONOME\020"
-  "\030\022\024\n\020SHIP_IN_A_BOTTLE\020\031\022\025\n\021TACHYON_DEFLE"
-  "CTOR\020\032\022\030\n\024INTERSTELLAR_COMPASS\020\033\022\025\n\021DILI"
-  "THIUM_MONOCLE\020\034\022\025\n\021TITANIUM_ACTUATOR\020\035\022\021"
-  "\n\rMERCURYS_LENS\020\036\022\021\n\rTACHYON_STONE\020\001\022\023\n\017"
-  "DILITHIUM_STONE\020\037\022\017\n\013SHELL_STONE\020 \022\017\n\013LU"
-  "NAR_STONE\020!\022\016\n\nSOUL_STONE\020\"\022\022\n\016PROPHECY_"
-  "STONE\020\'\022\021\n\rQUANTUM_STONE\020$\022\017\n\013TERRA_STON"
-  "E\020%\022\016\n\nLIFE_STONE\020&\022\021\n\rCLARITY_STONE\020(\022\035"
-  "\n\031EXTRATERRESTRIAL_ALUMINUM\020\r\022\024\n\020ANCIENT"
-  "_TUNGSTEN\020\016\022\017\n\013SPACE_ROCKS\020\017\022\016\n\nALIEN_WO"
-  "OD\020\020\022\022\n\016GOLD_METEORITE\020\021\022\022\n\016TAU_CETI_GEO"
-  "DE\020\022\022\024\n\020CENTAURIAN_STEEL\020\023\022\023\n\017ERIDANI_FE"
-  "ATHER\020\024\022\017\n\013DRONE_PARTS\020#\022\024\n\020CELESTIAL_BR"
-  "ONZE\020)\022\020\n\014LALANDE_HIDE\020*\022\022\n\016SOLAR_TITANI"
-  "UM\020+\022\032\n\026TACHYON_STONE_FRAGMENT\020\002\022\034\n\030DILI"
-  "THIUM_STONE_FRAGMENT\020,\022\030\n\024SHELL_STONE_FR"
-  "AGMENT\020-\022\030\n\024LUNAR_STONE_FRAGMENT\020.\022\027\n\023SO"
-  "UL_STONE_FRAGMENT\020/\022\033\n\027PROPHECY_STONE_FR"
-  "AGMENT\0200\022\032\n\026QUANTUM_STONE_FRAGMENT\0201\022\030\n\024"
-  "TERRA_STONE_FRAGMENT\0202\022\027\n\023LIFE_STONE_FRA"
-  "GMENT\0203\022\032\n\026CLARITY_STONE_FRAGMENT\0204\022\014\n\007U"
-  "NKNOWN\020\220N\"H\n\005Level\022\014\n\010INFERIOR\020\000\022\n\n\006LESS"
-  "ER\020\001\022\n\n\006NORMAL\020\002\022\013\n\007GREATER\020\003\022\014\n\010SUPERIO"
-  "R\020\004\"7\n\006Rarity\022\n\n\006COMMON\020\000\022\010\n\004RARE\020\001\022\010\n\004E"
-  "PIC\020\002\022\r\n\tLEGENDARY\020\003\"E\n\004Type\022\014\n\010ARTIFACT"
-  "\020\000\022\t\n\005STONE\020\001\022\016\n\nINGREDIENT\020\002\022\024\n\020STONE_I"
-  "NGREDIENT\020\003\"T\n\020CompleteArtifact\022\036\n\004spec\030"
-  "\001 \001(\0132\020.ei.ArtifactSpec\022 \n\006stones\030\002 \003(\0132"
-  "\020.ei.ArtifactSpec\"u\n\025ArtifactInventoryIt"
-  "em\022\017\n\007item_id\030\001 \001(\004\022&\n\010artifact\030\002 \001(\0132\024."
-  "ei.CompleteArtifact\022\020\n\010quantity\030\003 \001(\001\022\021\n"
-  "\tserver_id\030\004 \001(\t\"2\n\rInventorySlot\022\020\n\010occ"
-  "upied\030\001 \001(\010\022\017\n\007item_id\030\002 \001(\r\"\\\n\035Artifact"
-  "sConfigurationRequest\022#\n\005rinfo\030\002 \001(\0132\024.e"
-  "i.BasicRequestInfo\022\026\n\016client_version\030\001 \001"
-  "(\r\"\377\007\n\036ArtifactsConfigurationResponse\022P\n"
-  "\022mission_parameters\030\001 \003(\01324.ei.Artifacts"
-  "ConfigurationResponse.MissionParameters\022"
-  "R\n\023artifact_parameters\030\002 \003(\01325.ei.Artifa"
-  "ctsConfigurationResponse.ArtifactParamet"
-  "ers\022R\n\024crafting_level_infos\030\003 \003(\01324.ei.A"
-  "rtifactsConfigurationResponse.CraftingLe"
-  "velInfo\032\250\003\n\021MissionParameters\022\'\n\004ship\030\001 "
-  "\001(\0162\031.ei.MissionInfo.Spaceship\022P\n\tdurati"
-  "ons\030\003 \003(\0132=.ei.ArtifactsConfigurationRes"
-  "ponse.MissionParameters.Duration\022\"\n\032leve"
-  "l_mission_requirements\030\004 \003(\r\022\033\n\023capacity"
-  "_DEPRECATED\030\002 \001(\r\032\326\001\n\010Duration\0223\n\rdurati"
-  "on_type\030\001 \001(\0162\034.ei.MissionInfo.DurationT"
-  "ype\022\017\n\007seconds\030\002 \001(\001\022\017\n\007quality\030\003 \001(\002\022\023\n"
-  "\013min_quality\030\004 \001(\002\022\023\n\013max_quality\030\005 \001(\002\022"
-  "\020\n\010capacity\030\006 \001(\r\022\033\n\023level_capacity_bump"
-  "\030\007 \001(\r\022\032\n\022level_quality_bump\030\010 \001(\002\032\370\001\n\022A"
-  "rtifactParameters\022\036\n\004spec\030\001 \001(\0132\020.ei.Art"
-  "ifactSpec\022\024\n\014base_quality\030\002 \001(\001\022\027\n\017odds_"
-  "multiplier\030\004 \001(\001\022\r\n\005value\030\003 \001(\001\022\026\n\016craft"
-  "ing_price\030\005 \001(\001\022\032\n\022crafting_price_low\030\006 "
-  "\001(\001\022\035\n\025crafting_price_domain\030\007 \001(\r\022\034\n\024cr"
-  "afting_price_curve\030\010 \001(\001\022\023\n\013crafting_xp\030"
-  "\t \001(\004\032=\n\021CraftingLevelInfo\022\023\n\013xp_require"
-  "d\030\001 \001(\001\022\023\n\013rarity_mult\030\002 \001(\002\"\256\001\n\016Mission"
-  "Request\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicRequest"
-  "Info\022\026\n\016client_version\030\001 \001(\r\022\022\n\nei_user_"
-  "id\030\003 \001(\t\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\022"
-  ",\n\013client_info\030\005 \001(\0132\027.ei.ArtifactsClien"
-  "tInfo\"A\n\017MissionResponse\022\017\n\007success\030\001 \001("
-  "\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\"\214\002\n\027Com"
-  "pleteMissionResponse\022\017\n\007success\030\001 \001(\010\022\035\n"
-  "\004info\030\002 \001(\0132\017.ei.MissionInfo\022A\n\tartifact"
-  "s\030\003 \003(\0132..ei.CompleteMissionResponse.Sec"
-  "ureArtifactSpec\022!\n\rother_rewards\030\004 \003(\0132\n"
-  ".ei.Reward\022\022\n\nei_user_id\030\005 \001(\t\032G\n\022Secure"
-  "ArtifactSpec\022\036\n\004spec\030\001 \001(\0132\020.ei.Artifact"
-  "Spec\022\021\n\tserver_id\030\002 \001(\t\"\344\001\n%CollectContr"
-  "actArtifactRewardsRequest\022#\n\005rinfo\030\001 \001(\013"
-  "2\024.ei.BasicRequestInfo\022\033\n\023contract_ident"
-  "ifier\030\002 \001(\t\022\016\n\006league\030\005 \001(\r\022\'\n\005grade\030\006 \001"
-  "(\0162\030.ei.Contract.PlayerGrade\022\022\n\ngoal_ind"
-  "ex\030\003 \001(\r\022,\n\tbest_ship\030\004 \001(\0162\031.ei.Mission"
-  "Info.Spaceship\"\366\001\n\024CraftArtifactRequest\022"
-  "#\n\005rinfo\030\005 \001(\0132\024.ei.BasicRequestInfo\022\022\n\n"
-  "ei_user_id\030\001 \001(\t\022\036\n\004spec\030\002 \001(\0132\020.ei.Arti"
-  "factSpec\022\017\n\007item_id\030\003 \001(\004\022\027\n\017gold_price_"
-  "paid\030\006 \001(\001\022\026\n\016crafting_count\030\007 \001(\r\022\023\n\013cr"
-  "afting_xp\030\010 \001(\001\022.\n\013ingredients\030\004 \003(\0132\031.e"
-  "i.ArtifactInventoryItem\"\211\001\n\025CraftArtifac"
-  "tResponse\022\017\n\007item_id\030\001 \001(\004\022\022\n\nei_user_id"
-  "\030\005 \001(\t\0228\n\017rarity_achieved\030\002 \001(\0162\027.ei.Art"
-  "ifactSpec.Rarity:\006COMMON\022\021\n\tserver_id\030\003 "
-  "\001(\t\"\365\001\n\026ConsumeArtifactRequest\022#\n\005rinfo\030"
-  "\004 \001(\0132\024.ei.BasicRequestInfo\022\022\n\nei_user_i"
-  "d\030\003 \001(\t\022\036\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpec\022"
-  "\032\n\022artifact_server_id\030\005 \001(\t\022\030\n\020original_"
-  "item_id\030\002 \001(\004\022\035\n\025additional_server_ids\030\007"
-  " \003(\t\022\033\n\023additional_item_ids\030\010 \003(\004\022\020\n\010qua"
-  "ntity\030\006 \001(\r\"\276\001\n\027ConsumeArtifactResponse\022"
-  "\017\n\007success\030\001 \001(\010\022\030\n\020original_item_id\030\002 \001"
-  "(\004\022\033\n\023additional_item_ids\030\006 \003(\004\022$\n\nbypro"
-  "ducts\030\003 \003(\0132\020.ei.ArtifactSpec\022!\n\rother_r"
-  "ewards\030\004 \003(\0132\n.ei.Reward\022\022\n\nei_user_id\030\005"
-  " \001(\t\"}\n\034AuthenticateArtifactResponse\022\017\n\007"
-  "success\030\001 \001(\010\022\030\n\020original_item_id\030\002 \001(\004\022"
-  "\016\n\006demote\030\003 \001(\010\022\016\n\006delete\030\004 \001(\010\022\022\n\nei_us"
-  "er_id\030\005 \001(\t\"\241\001\n\022SetArtifactRequest\022#\n\005ri"
-  "nfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022+\n\010artif"
-  "act\030\002 \001(\0132\031.ei.ArtifactInventoryItem\022 \n\006"
-  "stones\030\003 \003(\0132\020.ei.ArtifactSpec\022\027\n\017gold_p"
-  "rice_paid\030\004 \001(\001\"T\n\023SetArtifactResponse\022\017"
-  "\n\007success\030\001 \001(\010\022\030\n\020original_item_id\030\002 \001("
-  "\004\022\022\n\nei_user_id\030\005 \001(\t\"\364\006\n\013ArtifactsDB\0222\n"
-  "\017inventory_items\030\001 \003(\0132\031.ei.ArtifactInve"
-  "ntoryItem\022\025\n\ritem_sequence\030\002 \001(\004\022*\n\017inve"
-  "ntory_slots\030\003 \003(\0132\021.ei.InventorySlot\022<\n\020"
-  "active_artifacts\030\007 \003(\0132\".ei.ArtifactsDB."
-  "ActiveArtifactSlot\022\?\n\024active_artifact_se"
-  "ts\030\013 \003(\0132!.ei.ArtifactsDB.ActiveArtifact"
-  "Set\022:\n\017artifact_status\030\014 \003(\0132!.ei.Artifa"
-  "ctsDB.CraftableArtifact\022&\n\rmission_infos"
-  "\030\004 \003(\0132\017.ei.MissionInfo\022(\n\017mission_archi"
-  "ve\030\005 \003(\0132\017.ei.MissionInfo\0229\n\037discovered_"
-  "artifacts_DEPRECATED\030\010 \003(\0132\020.ei.Artifact"
-  "Spec\022I\n\036craftable_artifacts_DEPRECATED\030\t"
-  " \003(\0132!.ei.ArtifactsDB.CraftableArtifact\022"
-  "E\n\032crafting_counts_DEPRECATED\030\n \003(\0132!.ei"
-  ".ArtifactsDB.CraftableArtifact\0327\n\022Active"
-  "ArtifactSlot\022\020\n\010occupied\030\001 \001(\010\022\017\n\007item_i"
-  "d\030\002 \001(\004\032F\n\021ActiveArtifactSet\0221\n\005slots\030\001 "
-  "\003(\0132\".ei.ArtifactsDB.ActiveArtifactSlot\032"
-  "\222\001\n\021CraftableArtifact\022\036\n\004spec\030\001 \001(\0132\020.ei"
-  ".ArtifactSpec\022\022\n\ndiscovered\030\006 \001(\010\022\021\n\tcra"
-  "ftable\030\004 \001(\010\022\031\n\021recipe_discovered\030\005 \001(\010\022"
-  "\014\n\004seen\030\002 \001(\010\022\r\n\005count\030\003 \001(\r\"q\n\024Authenti"
-  "catedMessage\022\017\n\007message\030\001 \001(\014\022\017\n\007version"
-  "\030\003 \001(\r\022\014\n\004code\030\002 \001(\t\022\022\n\ncompressed\030\004 \001(\010"
-  "\022\025\n\roriginal_size\030\005 \001(\r\"f\n\031LogCompleteMi"
-  "ssionPayload\022\037\n\003req\030\001 \001(\0132\022.ei.MissionRe"
-  "quest\022(\n\003res\030\002 \001(\0132\033.ei.CompleteMissionR"
-  "esponse\"h\n\027LogCraftArtifactPayload\022%\n\003re"
-  "q\030\001 \001(\0132\030.ei.CraftArtifactRequest\022&\n\003res"
-  "\030\002 \001(\0132\031.ei.CraftArtifactResponse\"n\n\031Log"
-  "ConsumeArtifactPayload\022\'\n\003req\030\001 \001(\0132\032.ei"
-  ".ConsumeArtifactRequest\022(\n\003res\030\002 \001(\0132\033.e"
-  "i.ConsumeArtifactResponse\"b\n\025LogSetArtif"
-  "actPayload\022#\n\003req\030\001 \001(\0132\026.ei.SetArtifact"
-  "Request\022$\n\003res\030\002 \001(\0132\027.ei.SetArtifactRes"
-  "ponse\"@\n\026AccountTransferPayload\022\017\n\007from_"
-  "id\030\001 \001(\t\022\025\n\rto_ei_user_id\030\002 \001(\t\"\335\001\n\022Save"
-  "BackupResponse\022\017\n\007success\030\001 \001(\010\022\022\n\nerror"
-  "_code\030\002 \001(\r\022\017\n\007message\030\003 \001(\t\022#\n\017existing"
-  "_backup\030\004 \001(\0132\n.ei.Backup\"l\n\nErrorCodes\022"
-  "\014\n\010NO_ERROR\020\000\022\022\n\016USER_NOT_FOUND\020\001\022\027\n\023COU"
-  "LD_NOT_OVERWRITE\020\002\022\022\n\016BACKUP_OFFERED\020\003\022\017"
-  "\n\013BAD_USER_ID\020\004\"K\n\023CleanAccountRequest\022\032"
-  "\n\022ei_user_id_to_keep\030\001 \001(\t\022\030\n\020game_servi"
-  "ces_id\030\002 \001(\t\"&\n\020ReturnEDTPayload\022\022\n\nei_u"
-  "ser_id\030\001 \001(\t\"\201\001\n\007DLCItem\022\014\n\004name\030\001 \001(\t\022\021"
-  "\n\tdirectory\030\002 \001(\t\022\013\n\003ext\030\003 \001(\t\022\022\n\ncompre"
-  "ssed\030\006 \001(\010\022\025\n\roriginal_size\030\007 \001(\004\022\013\n\003url"
-  "\030\004 \001(\t\022\020\n\010checksum\030\005 \001(\t\"\301\022\n\tShellSpec\022\022"
-  "\n\nidentifier\030\001 \001(\t\022/\n\rprimary_piece\030\014 \001("
-  "\0132\030.ei.ShellSpec.ShellPiece\022(\n\006pieces\030\013 "
-  "\003(\0132\030.ei.ShellSpec.ShellPiece\022\037\n\nalt_ass"
-  "ets\030\022 \003(\0132\013.ei.DLCItem\022\014\n\004name\030\003 \001(\t\022\026\n\016"
-  "set_identifier\030\r \001(\t\022\031\n\021modified_geometr"
-  "y\030\023 \001(\010\022\r\n\005price\030\004 \001(\r\022\024\n\014required_eop\030\005"
-  " \001(\r\022\032\n\022required_soul_eggs\030\006 \001(\001\022\035\n\025requ"
-  "ired_parent_shell\030\024 \001(\t\022\016\n\006is_new\030\016 \001(\010\022"
-  "\017\n\007expires\030\017 \001(\010\022\037\n\027seconds_until_availa"
-  "ble\030\021 \001(\001\022\031\n\021seconds_remaining\030\020 \001(\001\022\032\n\022"
-  "default_appearance\030\010 \001(\010\032S\n\nShellPiece\022+"
-  "\n\nasset_type\030\001 \001(\0162\027.ei.ShellSpec.AssetT"
-  "ype\022\030\n\003dlc\030\002 \001(\0132\013.ei.DLCItem\"\264\016\n\tAssetT"
-  "ype\022\010\n\004COOP\020\001\022\t\n\005SHACK\020\002\022\017\n\013SUPER_SHACK\020"
-  "\003\022\017\n\013SHORT_HOUSE\020\004\022\020\n\014THE_STANDARD\020\005\022\016\n\n"
-  "LONG_HOUSE\020\006\022\021\n\rDOUBLE_DECKER\020\007\022\r\n\tWAREH"
-  "OUSE\020\010\022\n\n\006CENTER\020\t\022\n\n\006BUNKER\020\n\022\n\n\006EGGKEA"
-  "\020\013\022\n\n\006HAB_1K\020\014\022\n\n\006HANGAR\020\r\022\t\n\005TOWER\020\016\022\013\n"
-  "\007HAB_10K\020\017\022\014\n\010EGGTOPIA\020\020\022\014\n\010MONOLITH\020\021\022\021"
-  "\n\rPLANET_PORTAL\020\022\022\024\n\020CHICKEN_UNIVERSE\020\023\022"
-  "\020\n\014SILO_0_SMALL\0202\022\016\n\nSILO_0_MED\0203\022\020\n\014SIL"
-  "O_0_LARGE\0204\022\020\n\014SILO_1_SMALL\0205\022\016\n\nSILO_1_"
-  "MED\0206\022\020\n\014SILO_1_LARGE\0207\022\014\n\010SILO_ALL\020;\022\013\n"
-  "\007MAILBOX\020F\022\017\n\013TROPHY_CASE\020G\022\n\n\006GROUND\020H\022"
-  "\r\n\tHARDSCAPE\020I\022\r\n\tHYPERLOOP\020J\022\013\n\007DEPOT_1"
-  "\020d\022\013\n\007DEPOT_2\020e\022\013\n\007DEPOT_3\020f\022\013\n\007DEPOT_4\020"
-  "g\022\013\n\007DEPOT_5\020h\022\013\n\007DEPOT_6\020i\022\013\n\007DEPOT_7\020j"
-  "\022\t\n\005LAB_1\020n\022\t\n\005LAB_2\020o\022\t\n\005LAB_3\020p\022\t\n\005LAB"
-  "_4\020q\022\t\n\005LAB_5\020r\022\t\n\005LAB_6\020s\022\023\n\017HATCHERY_E"
-  "DIBLE\020x\022\026\n\022HATCHERY_SUPERFOOD\020y\022\024\n\020HATCH"
-  "ERY_MEDICAL\020z\022\030\n\024HATCHERY_ROCKET_FUEL\020{\022"
-  "\032\n\026HATCHERY_SUPERMATERIAL\020|\022\023\n\017HATCHERY_"
-  "FUSION\020}\022\024\n\020HATCHERY_QUANTUM\020~\022\030\n\024HATCHE"
-  "RY_IMMORTALITY\020\177\022\025\n\020HATCHERY_TACHYON\020\200\001\022"
-  "\026\n\021HATCHERY_GRAVITON\020\201\001\022\027\n\022HATCHERY_DILI"
-  "THIUM\020\202\001\022\025\n\020HATCHERY_PRODIGY\020\203\001\022\027\n\022HATCH"
-  "ERY_TERRAFORM\020\204\001\022\030\n\023HATCHERY_ANTIMATTER\020"
-  "\205\001\022\031\n\024HATCHERY_DARK_MATTER\020\206\001\022\020\n\013HATCHER"
-  "Y_AI\020\207\001\022\024\n\017HATCHERY_NEBULA\020\210\001\022\026\n\021HATCHER"
-  "Y_UNIVERSE\020\211\001\022\033\n\026HATCHERY_ENLIGHTENMENT\020"
-  "\212\001\022\027\n\022HATCHERY_CHOCOLATE\020\213\001\022\024\n\017HATCHERY_"
-  "EASTER\020\214\001\022\032\n\025HATCHERY_WATERBALLOON\020\215\001\022\026\n"
-  "\021HATCHERY_FIREWORK\020\216\001\022\025\n\020HATCHERY_PUMPKI"
-  "N\020\217\001\022\n\n\005HOA_1\020\252\001\022\n\n\005HOA_2\020\253\001\022\n\n\005HOA_3\020\254\001"
-  "\022\026\n\021MISSION_CONTROL_1\020\264\001\022\026\n\021MISSION_CONT"
-  "ROL_2\020\265\001\022\026\n\021MISSION_CONTROL_3\020\266\001\022\020\n\013FUEL"
-  "_TANK_1\020\310\001\022\020\n\013FUEL_TANK_2\020\311\001\022\020\n\013FUEL_TAN"
-  "K_3\020\312\001\022\020\n\013FUEL_TANK_4\020\313\001\022\032\n\025HATCHERY_GRA"
-  "VITON_TOP\020\364\003\022\033\n\026HATCHERY_NEBULA_MIDDLE\020\365"
-  "\003\022\030\n\023HATCHERY_NEBULA_TOP\020\366\003\022 \n\033HATCHERY_"
-  "DARK_MATTER_RING_1\020\371\003\022 \n\033HATCHERY_DARK_M"
-  "ATTER_RING_2\020\372\003\022 \n\033HATCHERY_DARK_MATTER_"
-  "RING_3\020\373\003\022\026\n\021HATCHERY_AI_TOP_1\020\376\003\022\026\n\021HAT"
-  "CHERY_AI_TOP_2\020\377\003\022\026\n\021HATCHERY_AI_TOP_3\020\200"
-  "\004\022\026\n\021HATCHERY_AI_TOP_4\020\201\004\022\034\n\027HATCHERY_UN"
-  "IVERSE_PROBE\020\203\004\022\033\n\026HATCHERY_UNIVERSE_BOL"
-  "T\020\204\004\022\037\n\032HATCHERY_ENLIGHTENMENT_ORB\020\210\004\022\024\n"
-  "\017HYPERLOOP_TRACK\020\272\004\022\021\n\014MAILBOX_FULL\020\330\004\022\014"
-  "\n\007CHICKEN\020\350\007\022\010\n\003HAT\020\362\007\022\014\n\007UNKNOWN\020\217N\"\226\005\n"
-  "\014ShellSetSpec\022\022\n\nidentifier\030\001 \001(\t\022\014\n\004nam"
-  "e\030\002 \001(\t\022\r\n\005price\030\003 \001(\r\022 \n\025price_mult_DEP"
-  "RECATED\030\010 \001(\001:\0011\022\020\n\010discount\030\021 \001(\001\022\024\n\014re"
-  "quired_eop\030\004 \001(\r\022\032\n\022required_soul_eggs\030\005"
-  " \001(\001\022\033\n\023required_parent_set\030\024 \001(\t\022\016\n\006is_"
-  "new\030\t \001(\010\022\017\n\007expires\030\n \001(\010\022\037\n\027seconds_un"
-  "til_available\030\022 \001(\001\022\031\n\021seconds_remaining"
-  "\030\013 \001(\001\022\021\n\tdecorator\030\016 \001(\010\022\031\n\021modified_ge"
-  "ometry\030\r \001(\010\022\023\n\013element_set\030\007 \001(\010\022\026\n\016hex"
-  "_base_color\030\020 \001(\t\0222\n\nvariations\030\017 \003(\0132\036."
-  "ei.ShellSetSpec.VariationSpec\022\031\n\004icon\030\023 "
-  "\001(\0132\013.ei.DLCItem\022\032\n\022default_appearance\030\006"
-  " \001(\010\022\031\n\021custom_appearance\030\014 \001(\010\032\223\001\n\rVari"
-  "ationSpec\022\022\n\nidentifier\030\001 \001(\t\022\021\n\thex_col"
-  "or\030\002 \001(\t\022\r\n\005price\030\003 \001(\r\022\025\n\rsort_priority"
-  "\030\006 \001(\005\022\032\n\022default_appearance\030\004 \001(\010\022\031\n\021cu"
-  "stom_appearance\030\005 \001(\010\"\301\005\n\017ShellObjectSpe"
-  "c\022\022\n\nidentifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\na"
-  "sset_type\030\003 \001(\0162\027.ei.ShellSpec.AssetType"
-  "\022\024\n\014object_class\030\016 \001(\t\022\023\n\013icon_colors\030\017 "
-  "\003(\t\022\r\n\005price\030\004 \001(\r\022\024\n\014required_eop\030\005 \001(\r"
-  "\022\032\n\022required_soul_eggs\030\006 \001(\001\022\016\n\006is_new\030\n"
-  " \001(\010\022\017\n\007expires\030\013 \001(\010\022\037\n\027seconds_until_a"
-  "vailable\030\022 \001(\001\022\031\n\021seconds_remaining\030\014 \001("
-  "\001\022\020\n\010metadata\030\007 \003(\001\022\017\n\007no_hats\030\r \001(\010\022\?\n\021"
-  "chicken_animation\030\020 \001(\0162$.ei.ShellObject"
-  "Spec.ChickenAnimation\022\025\n\rsort_priority\030\021"
-  " \001(\005\022,\n\006pieces\030\010 \003(\0132\034.ei.ShellObjectSpe"
-  "c.LODPiece\022\032\n\022default_appearance\030\t \001(\010\0321"
-  "\n\010LODPiece\022\030\n\003dlc\030\001 \001(\0132\013.ei.DLCItem\022\013\n\003"
-  "lod\030\002 \001(\r\"\235\001\n\020ChickenAnimation\022\020\n\014STANDA"
-  "RD_RUN\020\000\022\n\n\006SLOWMO\020\007\022\n\n\006WOBBLE\020\001\022\017\n\013WOBB"
-  "LE_LEAN\020\005\022\n\n\006SMOOTH\020\002\022\017\n\013SMOOTH_LEAN\020\006\022\t"
-  "\n\005HOVER\020\003\022\023\n\017SIDEWAYS_SMOOTH\020\004\022\021\n\rSIDEWA"
-  "YS_LEAN\020\010\"\222\001\n\016ShellGroupSpec\022\022\n\nidentifi"
-  "er\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasset_type\030\005 \001"
-  "(\0162\027.ei.ShellSpec.AssetType\022\022\n\nmember_id"
-  "s\030\003 \003(\t\022\035\n\025price_mult_DEPRECATED\030\004 \001(\001\"\351"
-  "\001\n\nDLCCatalog\022\032\n\005items\030\001 \003(\0132\013.ei.DLCIte"
-  "m\022\035\n\006shells\030\002 \003(\0132\r.ei.ShellSpec\022$\n\nshel"
-  "l_sets\030\003 \003(\0132\020.ei.ShellSetSpec\022$\n\ndecora"
-  "tors\030\006 \003(\0132\020.ei.ShellSetSpec\022*\n\rshell_ob"
-  "jects\030\004 \003(\0132\023.ei.ShellObjectSpec\022(\n\014shel"
-  "l_groups\030\005 \003(\0132\022.ei.ShellGroupSpec\"\346\r\n\007S"
-  "hellDB\0220\n\017shell_inventory\030\001 \003(\0132\027.ei.She"
-  "llDB.ShellStatus\022\?\n\027shell_element_invent"
-  "ory\030\005 \003(\0132\036.ei.ShellDB.ShellElementStatu"
-  "s\022F\n\031shell_variation_inventory\030\010 \003(\0132#.e"
-  "i.ShellDB.ShellSetVariationStatus\0224\n\023she"
-  "ll_set_inventory\030\002 \003(\0132\027.ei.ShellDB.Shel"
-  "lStatus\0227\n\026shell_object_inventory\030\004 \003(\0132"
-  "\027.ei.ShellDB.ShellStatus\0223\n\014farm_configs"
-  "\030\003 \003(\0132\035.ei.ShellDB.FarmConfiguration\0229\n"
-  "\rsaved_configs\030\t \003(\0132\".ei.ShellDB.SavedF"
-  "armConfiguration\022\035\n\025new_shells_downloade"
-  "d\030\006 \003(\t\022\027\n\017new_shells_seen\030\007 \003(\t\0320\n\013Shel"
-  "lStatus\022\022\n\nidentifier\030\001 \001(\t\022\r\n\005owned\030\002 \001"
-  "(\010\032V\n\022ShellElementStatus\022(\n\007element\030\001 \001("
-  "\0162\027.ei.ShellDB.FarmElement\022\026\n\016set_identi"
-  "fier\030\002 \001(\t\032K\n\027ShellSetVariationStatus\022\026\n"
-  "\016set_identifier\030\001 \001(\t\022\030\n\020owned_variation"
-  "s\030\002 \003(\t\032\235\002\n\021FarmConfiguration\0225\n\rshell_c"
-  "onfigs\030\001 \003(\0132\036.ei.ShellDB.ShellConfigura"
-  "tion\022<\n\021shell_set_configs\030\002 \003(\0132!.ei.She"
-  "llDB.ShellSetConfiguration\022#\n\033configure_"
-  "chickens_by_group\030\007 \001(\010\022:\n\rgroup_configs"
-  "\030\010 \003(\0132#.ei.ShellDB.ShellGroupConfigurat"
-  "ion\0222\n\017chicken_configs\030\t \003(\0132\031.ei.ShellD"
-  "B.ChickenConfig\032o\n\026SavedFarmConfiguratio"
-  "n\022\014\n\004name\030\001 \001(\t\022-\n\006config\030\002 \001(\0132\035.ei.She"
-  "llDB.FarmConfiguration\022\030\n\020client_save_ti"
-  "me\030\003 \001(\001\032j\n\022ShellConfiguration\022+\n\nasset_"
-  "type\030\001 \001(\0162\027.ei.ShellSpec.AssetType\022\r\n\005i"
-  "ndex\030\002 \001(\r\022\030\n\020shell_identifier\030\003 \001(\t\032\252\001\n"
-  "\025ShellSetConfiguration\022(\n\007element\030\001 \001(\0162"
-  "\027.ei.ShellDB.FarmElement\022\r\n\005index\030\002 \001(\r\022"
-  "\034\n\024shell_set_identifier\030\003 \001(\t\022\034\n\024variati"
-  "on_identifier\030\004 \001(\t\022\034\n\024decorator_identif"
-  "ier\030\005 \001(\t\032`\n\027ShellGroupConfiguration\022+\n\n"
-  "asset_type\030\001 \001(\0162\027.ei.ShellSpec.AssetTyp"
-  "e\022\030\n\020group_identifier\030\002 \001(\t\032C\n\rChickenCo"
-  "nfig\022\032\n\022chicken_identifier\030\001 \001(\t\022\026\n\016hat_"
-  "identifier\030\002 \001(\t\"\340\001\n\013FarmElement\022\r\n\tHEN_"
-  "HOUSE\020\001\022\010\n\004SILO\020\002\022\013\n\007MAILBOX\020\003\022\017\n\013TROPHY"
-  "_CASE\020\004\022\n\n\006GROUND\020\005\022\r\n\tHARDSCAPE\020\006\022\r\n\tHY"
-  "PERLOOP\020\007\022\t\n\005DEPOT\020\010\022\007\n\003LAB\020\t\022\014\n\010HATCHER"
-  "Y\020\n\022\007\n\003HOA\020\013\022\023\n\017MISSION_CONTROL\020\014\022\r\n\tFUE"
-  "L_TANK\020\r\022\013\n\007CHICKEN\020\016\022\007\n\003HAT\020\017\022\013\n\007UNKNOW"
-  "N\020c\"\234\002\n\017ShellsActionLog\022#\n\005rinfo\030\010 \001(\0132\024"
-  ".ei.BasicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\016\n"
-  "\006action\030\002 \001(\t\022\016\n\006sub_id\030\003 \001(\t\022-\n\014farm_el"
-  "ement\030\t \001(\0162\027.ei.ShellDB.FarmElement\022\014\n\004"
-  "cost\030\004 \001(\r\022\023\n\013approx_time\030\005 \001(\001\022\017\n\007versi"
-  "on\030\006 \001(\t\022\022\n\nfarm_index\030\007 \001(\005\022\021\n\tsoul_egg"
-  "s\030\n \001(\001\022\025\n\rtickets_spent\030\013 \001(\004\022\022\n\ngold_s"
-  "pent\030\014 \001(\004\"\271\010\n\030UserVerificationAnalysis\022"
-  ";\n\016overall_status\030\001 \001(\0162#.ei.UserVerific"
-  "ationAnalysis.Status\022\022\n\nstart_time\030\002 \001(\001"
-  "\022\027\n\017completion_time\030\003 \001(\001\022\025\n\rnum_prestig"
-  "es\030\016 \001(\001\022\021\n\tsoul_eggs\030\017 \001(\001\022\030\n\020eggs_of_p"
-  "rophecy\030\033 \001(\r\0227\n\niap_status\030\022 \001(\0162#.ei.U"
-  "serVerificationAnalysis.Status\022\033\n\023verifi"
-  "ed_pro_permit\030\004 \001(\010\022\035\n\025verified_piggy_br"
-  "eaks\030\005 \001(\r\022\032\n\022verified_other_iap\030\006 \001(\r\022\026"
-  "\n\016unverified_iap\030\007 \001(\r\022\023\n\013gold_earned\030\r "
-  "\001(\001\022\031\n\021regular_iap_buyer\030\026 \001(\010\022\033\n\023regula"
-  "r_iap_cheater\030\027 \001(\010\022=\n\020artifacts_status\030"
-  "\023 \001(\0162#.ei.UserVerificationAnalysis.Stat"
-  "us\022\032\n\022missions_completed\030\010 \001(\r\022\033\n\023artifa"
-  "cts_collected\030\t \001(\001\022\032\n\022artifacts_consume"
-  "d\030\n \001(\001\022\036\n\026artifacts_in_inventory\030\013 \001(\001\022"
-  "\033\n\023gold_spent_crafting\030\025 \001(\001\022\032\n\022excessiv"
-  "e_consumes\030\030 \001(\010\022\033\n\023excessive_inventory\030"
-  "\031 \001(\010\022\027\n\017excessive_spend\030\032 \001(\010\022=\n\020contra"
-  "cts_status\030\024 \001(\0162#.ei.UserVerificationAn"
-  "alysis.Status\022\034\n\024num_coop_memberships\030\014 "
-  "\001(\r\022\027\n\017valid_contracts\030\020 \001(\r\022\031\n\021invalid_"
-  "contracts\030\021 \003(\t\022\025\n\rexcessive_eop\030\034 \001(\010\022#"
-  "\n\033excessive_invalid_contracts\030\035 \001(\010\022\020\n\010v"
-  "erified\030\036 \001(\010\022\035\n\025verification_override\030\037"
-  " \001(\010\022#\n\033verification_override_value\030  \001("
-  "\010\"3\n\006Status\022\013\n\007UNKNOWN\020\000\022\016\n\nPROCESSING\020\001"
-  "\022\014\n\010COMPLETE\020\002\"\365\005\n\024UserSubscriptionInfo\022"
-  ":\n\022subscription_level\030\r \001(\0162\036.ei.UserSub"
-  "scriptionInfo.Level\022\?\n\027next_subscription"
-  "_level\030\017 \001(\0162\036.ei.UserSubscriptionInfo.L"
-  "evel\022$\n\034lock_next_subscription_level\030\022 \001"
-  "(\010\022\036\n\010platform\030\n \001(\0162\014.ei.Platform\022\037\n\027or"
-  "iginal_transaction_id\030\001 \001(\t\022\035\n\025linked_tr"
-  "ansaction_id\030\020 \001(\t\022\024\n\014acknowledged\030\021 \001(\010"
-  "\022\030\n\020first_subscribed\030\002 \001(\001\022\022\n\nperiod_end"
-  "\030\004 \001(\001\022/\n\006status\030\005 \001(\0162\037.ei.UserSubscrip"
-  "tionInfo.Status\022\024\n\014store_status\030\016 \001(\t\022\022\n"
-  "\nauto_renew\030\006 \001(\010\022\017\n\007sandbox\030\023 \001(\010\022\024\n\014la"
-  "st_updated\030\007 \001(\001\0226\n\007history\030\t \003(\0132%.ei.U"
-  "serSubscriptionInfo.HistoryEntry\022\025\n\rpast"
-  "_user_ids\030\013 \003(\t\032F\n\014HistoryEntry\022\021\n\ttimes"
-  "tamp\030\001 \001(\001\022\022\n\nmessage_id\030\002 \001(\t\022\017\n\007messag"
-  "e\030\003 \001(\t\"\036\n\005Level\022\014\n\010STANDARD\020\000\022\007\n\003PRO\020\001\""
-  "]\n\006Status\022\013\n\007UNKNOWN\020\000\022\n\n\006ACTIVE\020\001\022\013\n\007EX"
-  "PIRED\020\002\022\013\n\007REVOKED\020\003\022\020\n\014GRACE_PERIOD\020\004\022\016"
-  "\n\nPAUSE_HOLD\020\005\"\246\001\n\035SubscriptionChangeHin"
-  "tRequest\022#\n\005rinfo\030\003 \001(\0132\024.ei.BasicReques"
-  "tInfo\022\037\n\027original_transaction_id\030\001 \001(\t\022\?"
-  "\n\027next_subscription_level\030\002 \001(\0162\036.ei.Use"
-  "rSubscriptionInfo.Level*\036\n\010Platform\022\007\n\003I"
-  "OS\020\001\022\t\n\005DROID\020\002*)\n\020DeviceFormFactor\022\t\n\005P"
-  "HONE\020\001\022\n\n\006TABLET\020\002*k\n\tAdNetwork\022\n\n\006VUNGL"
-  "E\020\000\022\016\n\nCHARTBOOST\020\001\022\r\n\tAD_COLONY\020\002\022\014\n\010HY"
-  "PER_MX\020\003\022\t\n\005UNITY\020\004\022\014\n\010FACEBOOK\020\005\022\014\n\010APP"
-  "LOVIN\020\006*\356\002\n\003Egg\022\n\n\006EDIBLE\020\001\022\r\n\tSUPERFOOD"
-  "\020\002\022\013\n\007MEDICAL\020\003\022\017\n\013ROCKET_FUEL\020\004\022\022\n\016SUPE"
-  "R_MATERIAL\020\005\022\n\n\006FUSION\020\006\022\013\n\007QUANTUM\020\007\022\017\n"
-  "\013IMMORTALITY\020\010\022\013\n\007TACHYON\020\t\022\014\n\010GRAVITON\020"
-  "\n\022\r\n\tDILITHIUM\020\013\022\013\n\007PRODIGY\020\014\022\r\n\tTERRAFO"
-  "RM\020\r\022\016\n\nANTIMATTER\020\016\022\017\n\013DARK_MATTER\020\017\022\006\n"
-  "\002AI\020\020\022\n\n\006NEBULA\020\021\022\014\n\010UNIVERSE\020\022\022\021\n\rENLIG"
-  "HTENMENT\020\023\022\r\n\tCHOCOLATE\020d\022\n\n\006EASTER\020e\022\020\n"
-  "\014WATERBALLOON\020f\022\014\n\010FIREWORK\020g\022\013\n\007PUMPKIN"
-  "\020h\022\014\n\007UNKNOWN\020\350\007*-\n\010FarmType\022\t\n\005EMPTY\020\001\022"
-  "\010\n\004HOME\020\002\022\014\n\010CONTRACT\020\003*+\n\010GoalType\022\r\n\tE"
-  "GGS_LAID\020\001\022\020\n\014UNKNOWN_GOAL\020d*\211\002\n\nRewardT"
-  "ype\022\010\n\004CASH\020\001\022\010\n\004GOLD\020\002\022\r\n\tSOUL_EGGS\020\003\022\024"
-  "\n\020EGGS_OF_PROPHECY\020\004\022\026\n\022EPIC_RESEARCH_IT"
-  "EM\020\005\022\016\n\nPIGGY_FILL\020\006\022\024\n\020PIGGY_MULTIPLIER"
-  "\020\007\022\024\n\020PIGGY_LEVEL_BUMP\020\010\022\t\n\005BOOST\020\t\022\017\n\013B"
-  "OOST_TOKEN\020\n\022\014\n\010ARTIFACT\020\013\022\021\n\rARTIFACT_C"
-  "ASE\020\014\022\013\n\007CHICKEN\020\r\022\020\n\014SHELL_SCRIPT\020\016\022\022\n\016"
-  "UNKNOWN_REWARD\020d*4\n\020LeaderboardScope\022\014\n\010"
-  "ALL_TIME\020\000\022\022\n\016CURRENT_SEASON\020\001"
+  "\001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\016\n\006public\030\r"
+  " \001(\010\022\017\n\007cc_only\030\016 \001(\010\022\031\n\021seconds_remaini"
+  "ng\030\003 \001(\001\022\017\n\007user_id\030\004 \001(\t\022\021\n\tuser_name\030\005"
+  " \001(\t\022\022\n\nsoul_power\030\010 \001(\001\022\013\n\003eop\030\013 \001(\001\022\016\n"
+  "\006league\030\t \001(\r\022\'\n\005grade\030\014 \001(\0162\030.ei.Contra"
+  "ct.PlayerGrade\022\036\n\010platform\030\006 \001(\0162\014.ei.Pl"
+  "atform\022\026\n\016client_version\030\007 \001(\r\"6\n\022Create"
+  "CoopResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007message"
+  "\030\002 \001(\t\"\275\002\n\017JoinCoopRequest\022#\n\005rinfo\030\n \001("
+  "\0132\024.ei.BasicRequestInfo\022\033\n\023contract_iden"
+  "tifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\017\n"
+  "\007user_id\030\003 \001(\t\022\021\n\tuser_name\030\004 \001(\t\022\022\n\nsou"
+  "l_power\030\010 \001(\001\022\013\n\003eop\030\014 \001(\001\022\016\n\006league\030\t \001"
+  "(\r\022\'\n\005grade\030\r \001(\0162\030.ei.Contract.PlayerGr"
+  "ade\022\036\n\010platform\030\005 \001(\0162\014.ei.Platform\022\031\n\021s"
+  "econds_remaining\030\013 \001(\001\022\026\n\016client_version"
+  "\030\007 \001(\r\"\227\002\n\020JoinCoopResponse\022\017\n\007success\030\001"
+  " \001(\010\022\017\n\007message\030\002 \001(\t\022\016\n\006banned\030\004 \001(\010\022\027\n"
+  "\017coop_identifier\030\005 \001(\t\022\031\n\021seconds_remain"
+  "ing\030\003 \001(\001\022\025\n\rmatch_percent\030\006 \001(\001\022\023\n\013num_"
+  "members\030\007 \001(\r\0225\n\006status\030\010 \001(\0162%.ei.Contr"
+  "actCoopStatusResponse.Status\022\'\n\005grade\030\t "
+  "\001(\0162\030.ei.Contract.PlayerGrade\022\021\n\tcan_sta"
+  "rt\030\n \001(\010\"\250\002\n\023AutoJoinCoopRequest\022#\n\005rinf"
+  "o\030\t \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contrac"
+  "t_identifier\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\021\n\tu"
+  "ser_name\030\003 \001(\t\022\022\n\nsoul_power\030\004 \001(\001\022\013\n\003eo"
+  "p\030\n \001(\001\022\016\n\006league\030\010 \001(\r\022\'\n\005grade\030\014 \001(\0162\030"
+  ".ei.Contract.PlayerGrade\022\031\n\021seconds_rema"
+  "ining\030\005 \001(\001\022\036\n\010platform\030\006 \001(\0162\014.ei.Platf"
+  "orm\022\026\n\016client_version\030\007 \001(\r\"\275\001\n\034UpdateCo"
+  "opPermissionsRequest\022#\n\005rinfo\030\006 \001(\0132\024.ei"
+  ".BasicRequestInfo\022\033\n\023contract_identifier"
+  "\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\032\n\022reque"
+  "sting_user_id\030\003 \001(\t\022\016\n\006public\030\004 \001(\010\022\026\n\016c"
+  "lient_version\030\005 \001(\r\"A\n\035UpdateCoopPermiss"
+  "ionsResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007message"
+  "\030\002 \001(\t\"\240\001\n\020LeaveCoopRequest\022#\n\005rinfo\030\010 \001"
+  "(\0132\024.ei.BasicRequestInfo\022\033\n\023contract_ide"
+  "ntifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\031"
+  "\n\021player_identifier\030\003 \001(\t\022\026\n\016client_vers"
+  "ion\030\007 \001(\r\"\357\001\n\025GiftPlayerCoopRequest\022#\n\005r"
+  "info\030\010 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023cont"
+  "ract_identifier\030\001 \001(\t\022\027\n\017coop_identifier"
+  "\030\002 \001(\t\022\031\n\021player_identifier\030\003 \001(\t\022\032\n\022req"
+  "uesting_user_id\030\004 \001(\t\022\034\n\024requesting_user"
+  "_name\030\006 \001(\t\022\016\n\006amount\030\005 \001(\r\022\026\n\016client_ve"
+  "rsion\030\007 \001(\r\"\365\001\n\031SendChickenRunCoopReques"
+  "t\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequestInfo\022\033"
+  "\n\023contract_identifier\030\001 \001(\t\022\027\n\017coop_iden"
+  "tifier\030\002 \001(\t\022\031\n\021player_identifier\030\003 \001(\t\022"
+  "\032\n\022requesting_user_id\030\004 \001(\t\022\034\n\024requestin"
+  "g_user_name\030\006 \001(\t\022\020\n\010farm_pop\030\005 \001(\004\022\026\n\016c"
+  "lient_version\030\007 \001(\r\"\200\002\n\027ReportPlayerCoop"
+  "Request\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequest"
+  "Info\022\033\n\023contract_identifier\030\002 \001(\t\022\027\n\017coo"
+  "p_identifier\030\003 \001(\t\022\017\n\007user_id\030\004 \001(\t\0222\n\006r"
+  "eason\030\005 \001(\0162\".ei.ReportPlayerCoopRequest"
+  ".Reason\"E\n\006Reason\022\013\n\007UNKNOWN\020\000\022\022\n\016OFFENS"
+  "IVE_NAME\020\001\022\014\n\010CHEATING\020\002\022\014\n\010LEECHING\020\003\"\271"
+  "\002\n\025KickPlayerCoopRequest\022#\n\005rinfo\030\010 \001(\0132"
+  "\024.ei.BasicRequestInfo\022\033\n\023contract_identi"
+  "fier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\031\n\021p"
+  "layer_identifier\030\003 \001(\t\022\032\n\022requesting_use"
+  "r_id\030\004 \001(\t\0220\n\006reason\030\t \001(\0162 .ei.KickPlay"
+  "erCoopRequest.Reason\022\026\n\016client_version\030\007"
+  " \001(\r\"D\n\006Reason\022\013\n\007INVALID\020\000\022\013\n\007CHEATER\020\001"
+  "\022\010\n\004IDLE\020\002\022\t\n\005LEECH\020\003\022\013\n\007PRIVATE\020\004\"\311\003\n\037C"
+  "ontractCoopStatusUpdateRequest\022#\n\005rinfo\030"
+  "\014 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user_id\030\001"
+  " \001(\t\022\033\n\023contract_identifier\030\002 \001(\t\022\027\n\017coo"
+  "p_identifier\030\003 \001(\t\022\024\n\014push_user_id\030\010 \001(\t"
+  "\022\016\n\006amount\030\004 \001(\001\022\014\n\004rate\030\005 \001(\001\022\034\n\024time_c"
+  "heats_detected\030\006 \001(\r\022\022\n\nsoul_power\030\007 \001(\001"
+  "\022\013\n\003eop\030\017 \001(\r\022\024\n\014boost_tokens\030\t \001(\r\022\032\n\022b"
+  "oost_tokens_spent\030\r \001(\r\0223\n\021production_pa"
+  "rams\030\016 \001(\0132\030.ei.FarmProductionParams\022%\n\t"
+  "farm_info\030\020 \001(\0132\022.ei.PlayerFarmInfo\022\037\n\024e"
+  "gg_laying_rate_buff\030\n \001(\001:\0011\022\030\n\rearnings"
+  "_buff\030\013 \001(\001:\0011\"\202\001\n ContractCoopStatusUpd"
+  "ateResponse\022\021\n\tfinalized\030\001 \001(\010\022\016\n\006exists"
+  "\030\002 \001(\010\022;\n\006status\030\003 \001(\0162+.ei.ContractCoop"
+  "StatusResponse.MemberStatus\"Z\n\rCoopBuffS"
+  "tate\022\032\n\017egg_laying_rate\030\001 \001(\001:\0011\022\023\n\010earn"
+  "ings\030\002 \001(\001:\0011\022\030\n\020server_timestamp\030\003 \001(\001\""
+  "5\n\017CoopBuffHistory\022\"\n\007history\030\001 \003(\0132\021.ei"
+  ".CoopBuffState\"@\n\023CoopChickenRunEntry\022\017\n"
+  "\007user_id\030\001 \001(\t\022\030\n\020server_timestamp\030\002 \001(\001"
+  "\"C\n\027CoopLastChickenRunTimes\022(\n\007entries\030\003"
+  " \003(\0132\027.ei.CoopChickenRunEntry\"\375\001\n\023Leader"
+  "boardAnalysis\022-\n\006chunks\030\001 \003(\0132\035.ei.Leade"
+  "rboardAnalysis.Chunk\022\r\n\005count\030\002 \001(\r\022\022\n\nh"
+  "igh_score\030\003 \001(\001\022\021\n\tlow_score\030\004 \001(\001\032\200\001\n\005C"
+  "hunk\022\023\n\013start_index\030\001 \001(\r\022\021\n\tend_index\030\002"
+  " \001(\r\022\022\n\nhigh_score\030\003 \001(\001\022\021\n\tlow_score\030\004 "
+  "\001(\001\022\024\n\014start_cursor\030\005 \001(\t\022\022\n\nend_cursor\030"
+  "\006 \001(\t\"}\n\017LeaderboardInfo\022+\n\007seasons\030\001 \003("
+  "\0132\032.ei.LeaderboardInfo.Season\022\026\n\016all_tim"
+  "e_scope\030\002 \001(\t\032%\n\006Season\022\r\n\005scope\030\001 \001(\t\022\014"
+  "\n\004name\030\002 \001(\t\"q\n\022LeaderboardRequest\022#\n\005ri"
+  "nfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022\r\n\005scope"
+  "\030\002 \001(\t\022\'\n\005grade\030\003 \001(\0162\030.ei.Contract.Play"
+  "erGrade\"\342\001\n\023LeaderboardResponse\022\r\n\005scope"
+  "\030\001 \001(\t\022\'\n\005grade\030\002 \001(\0162\030.ei.Contract.Play"
+  "erGrade\0222\n\013top_entries\030\003 \003(\0132\035.ei.Leader"
+  "boardResponse.Entry\022\r\n\005count\030\004 \001(\r\022\014\n\004ra"
+  "nk\030\005 \001(\r\022\r\n\005score\030\006 \001(\001\0323\n\005Entry\022\014\n\004rank"
+  "\030\001 \001(\r\022\r\n\005alias\030\002 \001(\t\022\r\n\005score\030\003 \001(\001\"6\n\020"
+  "ContractsArchive\022\"\n\007archive\030\001 \003(\0132\021.ei.L"
+  "ocalContract\"\377\002\n\016ContractAction\022\017\n\007user_"
+  "id\030\001 \001(\t\022\023\n\013action_name\030\002 \001(\t\022\023\n\013approx_"
+  "time\030\003 \001(\001\022\024\n\014dest_user_id\030\004 \001(\t\022\023\n\013cont"
+  "ract_id\030\005 \001(\t\022\017\n\007coop_id\030\006 \001(\t\022\020\n\010autojo"
+  "in\030\007 \001(\010\022\r\n\005grade\030\010 \001(\r\022\016\n\006replay\030\t \001(\010\022"
+  "\025\n\rpoints_replay\030\n \001(\010\022\023\n\013reward_type\030\013 "
+  "\001(\r\022\026\n\016reward_subtype\030\014 \001(\t\022\025\n\rreward_am"
+  "ount\030\r \001(\001\022\022\n\ngoal_index\030\016 \001(\r\022\020\n\010boost_"
+  "id\030\017 \001(\t\022\016\n\006tokens\030\020 \001(\r\022\023\n\013kick_reason\030"
+  "\021 \001(\r\022\016\n\006public\030\022 \001(\010\022\017\n\007cc_only\030\023 \001(\010\"w"
+  "\n\023UserDataInfoRequest\022#\n\005rinfo\030\004 \001(\0132\024.e"
+  "i.BasicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\021\n\td"
+  "evice_id\030\002 \001(\t\022\027\n\017backup_checksum\030\003 \001(\004\""
+  "d\n\024UserDataInfoResponse\022\027\n\017backup_checks"
+  "um\030\001 \001(\004\022\031\n\021backup_total_cash\030\002 \001(\001\022\030\n\020c"
+  "oop_memberships\030\003 \003(\t\"{\n\027ClearAllUserDat"
+  "aRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicReques"
+  "tInfo\022\017\n\007user_id\030\001 \001(\t\022\021\n\tdevice_id\030\002 \001("
+  "\t\022\027\n\017backup_checksum\030\003 \001(\004\"r\n\nServerGift"
+  "\022\017\n\007user_id\030\001 \001(\t\022#\n\013reward_type\030\003 \001(\0162\016"
+  ".ei.RewardType\022\027\n\017reward_sub_type\030\004 \001(\t\022"
+  "\025\n\rreward_amount\030\005 \001(\001\"\256\r\n\nLiveConfig\022\021\n"
+  "\tconfig_id\030\001 \001(\t\0222\n\rboosts_config\030\002 \001(\0132"
+  "\033.ei.LiveConfig.BoostsConfig\022.\n\013gift_con"
+  "fig\030\003 \001(\0132\031.ei.LiveConfig.GiftConfig\022.\n\013"
+  "misc_config\030\004 \001(\0132\031.ei.LiveConfig.MiscCo"
+  "nfig\032\306\001\n\014BoostsConfig\022<\n\014item_configs\030\001 "
+  "\003(\0132&.ei.LiveConfig.BoostsConfig.ItemCon"
+  "fig\022\037\n\027cash_boost_cooloff_time\030\002 \001(\001\032W\n\n"
+  "ItemConfig\022\020\n\010boost_id\030\001 \001(\t\022\r\n\005price\030\002 "
+  "\001(\r\022\023\n\013token_price\030\003 \001(\r\022\023\n\013se_required\030"
+  "\004 \001(\001\032\336\006\n\nGiftConfig\022\?\n\014gift_configs\030\t \003"
+  "(\0132).ei.LiveConfig.GiftConfig.GiftValueC"
+  "onfig\022\031\n\021gift_mu_min_spent\030\n \001(\001\022\031\n\021gift"
+  "_mu_max_spent\030\013 \001(\001\022\034\n\024gift_mu_overall_m"
+  "ult\030\014 \001(\001\022E\n\025random_gift_mu_config\030\017 \001(\013"
+  "2&.ei.LiveConfig.GiftConfig.GiftMuConfig"
+  "\022D\n\024video_gift_mu_config\030\020 \001(\0132&.ei.Live"
+  "Config.GiftConfig.GiftMuConfig\022\030\n\020packag"
+  "e_interval\030\001 \001(\001\022\034\n\024video_offer_interval"
+  "\030\002 \001(\001\022%\n\035video_offer_interval_contract\030"
+  "\003 \001(\001\022\'\n\037video_offer_interval_piggy_full"
+  "\030\004 \001(\001\022-\n%video_offer_interval_piggy_ext"
+  "ra_full\030\005 \001(\001\022\033\n\023video_reset_on_idle\030\016 \001"
+  "(\010\022!\n\031package_interval_contract\030\006 \001(\001\022#\n"
+  "\033package_interval_piggy_full\030\007 \001(\001\022)\n!pa"
+  "ckage_interval_piggy_extra_full\030\010 \001(\001\022\035\n"
+  "\025package_reset_on_idle\030\r \001(\010\032|\n\017GiftValu"
+  "eConfig\022\017\n\007gift_id\030\001 \001(\t\022\016\n\006amount\030\004 \001(\001"
+  "\022\020\n\010rand_min\030\002 \001(\001\022\020\n\010rand_max\030\003 \001(\001\022\021\n\t"
+  "video_min\030\005 \001(\001\022\021\n\tvideo_max\030\006 \001(\001\032J\n\014Gi"
+  "ftMuConfig\022\021\n\tmin_spent\030\001 \001(\001\022\021\n\tmax_spe"
+  "nt\030\002 \001(\001\022\024\n\014overall_mult\030\003 \001(\001\032\316\003\n\nMiscC"
+  "onfig\022\024\n\014ask_to_track\030\001 \001(\010\022\"\n\032ask_to_tr"
+  "ack_min_soul_eggs\030\002 \001(\001\022\034\n\024ask_to_track_"
+  "message\030\003 \001(\t\022$\n\034ask_to_track_show_pre_d"
+  "ialog\030\004 \001(\010\022\"\n\032ask_to_track_after_privac"
+  "y\030\005 \001(\010\022$\n\034chicken_run_boost_percentage\030"
+  "\006 \001(\001\022\034\n\024shells_intro_tickets\030\007 \001(\r\022\'\n\037s"
+  "hells_max_free_chicken_configs\030\010 \001(\r\022$\n\034"
+  "shells_intro_alert_threshold\030\t \001(\r\022.\n&co"
+  "ntracts_expert_league_min_soul_power\030\n \001"
+  "(\001\022!\n\031new_player_event_duration\030\013 \001(\001\022 \n"
+  "\030contracts_club_available\030\014 \001(\010\022\026\n\016contr"
+  "acts_beta\030\r \001(\010\"\202\002\n\nInGameMail\022\n\n\002id\030\001 \001"
+  "(\t\022\r\n\005title\030\002 \001(\t\022\014\n\004date\030\010 \001(\t\022\017\n\007messa"
+  "ge\030\003 \001(\t\022\016\n\006action\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022\020\n"
+  "\010platform\030\007 \001(\r\022\016\n\006builds\030\t \003(\t\022\032\n\022min_c"
+  "lient_version\030\n \001(\r\022\032\n\022max_client_versio"
+  "n\030\014 \001(\r\022\025\n\rmin_soul_eggs\030\013 \001(\001\022\032\n\022min_my"
+  "stical_bonus\030\r \001(\001\022\020\n\010gold_tip\030\006 \001(\001\"&\n\006"
+  "MailDB\022\034\n\004mail\030\001 \003(\0132\016.ei.InGameMail\"\313\002\n"
+  "\023PeriodicalsResponse\022\034\n\005sales\030\001 \001(\0132\r.ei"
+  ".SalesInfo\022\'\n\006events\030\002 \001(\0132\027.ei.EggIncCu"
+  "rrentEvents\022(\n\tcontracts\030\003 \001(\0132\025.ei.Cont"
+  "ractsResponse\022+\n\013evaluations\030\010 \003(\0132\026.ei."
+  "ContractEvaluation\022\035\n\005gifts\030\004 \003(\0132\016.ei.S"
+  "erverGift\022#\n\013live_config\030\005 \001(\0132\016.ei.Live"
+  "Config\022\034\n\010mail_bag\030\006 \001(\0132\n.ei.MailDB\0224\n\024"
+  "contract_player_info\030\007 \001(\0132\026.ei.Contract"
+  "PlayerInfo\"\371\002\n\025GetPeriodicalsRequest\022#\n\005"
+  "rinfo\030\014 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007use"
+  "r_id\030\001 \001(\t\022\022\n\npiggy_full\030\002 \001(\010\022\030\n\020piggy_"
+  "found_full\030\003 \001(\010\022\035\n\025seconds_full_realtim"
+  "e\030\004 \001(\001\022\035\n\025seconds_full_gametime\030\005 \001(\001\022\027"
+  "\n\017lost_increments\030\007 \001(\r\022\021\n\tsoul_eggs\030\010 \001"
+  "(\001\022\036\n\026mystical_earnings_mult\030\r \001(\001\022\013\n\003eo"
+  "p\030\016 \001(\r\022\032\n\022contracts_unlocked\030\017 \001(\010\022\032\n\022a"
+  "rtifacts_unlocked\030\020 \001(\010\022\036\n\026current_clien"
+  "t_version\030\n \001(\r\022\r\n\005debug\030\013 \001(\010\"~\n\rConfig"
+  "Request\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequest"
+  "Info\022\021\n\tsoul_eggs\030\002 \001(\001\022\031\n\021artifacts_ena"
+  "bled\030\003 \001(\010\022\032\n\022fuel_tank_unlocked\030\004 \001(\010\"x"
+  "\n\016ConfigResponse\022#\n\013live_config\030\001 \001(\0132\016."
+  "ei.LiveConfig\022\034\n\010mail_bag\030\002 \001(\0132\n.ei.Mai"
+  "lDB\022#\n\013dlc_catalog\030\003 \001(\0132\016.ei.DLCCatalog"
+  "\"d\n\024AdAttributionRawData\022\024\n\014device_ad_id"
+  "\030\001 \001(\t\022\017\n\007user_id\030\004 \001(\t\022\022\n\nad_network\030\002 "
+  "\001(\t\022\021\n\tjson_data\030\003 \001(\t\"\270\001\n\020AdAttribution"
+  "Row\022\017\n\007user_id\030\001 \001(\t\022\r\n\005ad_id\030\002 \001(\t\022\022\n\na"
+  "d_network\030\003 \001(\t\022\020\n\010campaign\030\004 \001(\t\022\017\n\007key"
+  "word\030\005 \001(\t\022\r\n\005extra\030\006 \001(\t\022\022\n\nclick_date\030"
+  "\007 \001(\002\022\025\n\rdownload_date\030\010 \001(\002\022\023\n\013approx_t"
+  "ime\030\t \001(\002\"\215\003\n\021AdAttributionInfo\022\024\n\014devic"
+  "e_ad_id\030\001 \001(\t\022\024\n\014network_name\030\002 \001(\t\022\023\n\013a"
+  "ttribution\030\003 \001(\010\022\020\n\010org_name\030\004 \001(\t\022\016\n\006or"
+  "g_id\030\005 \001(\t\022\025\n\rcampaign_name\030\006 \001(\t\022\023\n\013cam"
+  "paign_id\030\007 \001(\t\022\022\n\nclick_date\030\010 \001(\t\022\027\n\017co"
+  "nversion_date\030\t \001(\t\022\027\n\017conversion_type\030\n"
+  " \001(\t\022\013\n\003geo\030\013 \001(\t\022\024\n\014adgroup_name\030\014 \001(\t\022"
+  "\022\n\nadgroup_id\030\r \001(\t\022\017\n\007keyword\030\016 \001(\t\022\022\n\n"
+  "keyword_id\030\017 \001(\t\022\025\n\rkeyword_extra\030\020 \001(\t\022"
+  "\030\n\020creativeset_name\030\021 \001(\t\022\026\n\016creativeset"
+  "_id\030\022 \001(\t\"\227\002\n\023ArtifactsClientInfo\022\035\n\025mis"
+  "sion_capacity_mult\030\001 \001(\001\022\035\n\025mission_dura"
+  "tion_mult\030\002 \001(\001\022!\n\031mission_ftl_duration_"
+  "mult\030\004 \001(\001\022:\n\rlaunch_counts\030\003 \003(\0132#.ei.A"
+  "rtifactsClientInfo.LaunchCount\032c\n\013Launch"
+  "Count\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionInfo.Spa"
+  "ceship\022\024\n\014num_launches\030\002 \001(\r\022\025\n\rlaunch_p"
+  "oints\030\003 \001(\001\"\204\006\n\013MissionInfo\022\'\n\004ship\030\001 \001("
+  "\0162\031.ei.MissionInfo.Spaceship\022&\n\006status\030\002"
+  " \001(\0162\026.ei.MissionInfo.Status\0223\n\rduration"
+  "_type\030\003 \001(\0162\034.ei.MissionInfo.DurationTyp"
+  "e\022\"\n\004fuel\030\004 \003(\0132\024.ei.MissionInfo.Fuel\022\r\n"
+  "\005level\030\014 \001(\r\022\030\n\020duration_seconds\030\005 \001(\001\022\020"
+  "\n\010capacity\030\t \001(\r\022\024\n\014quality_bump\030\013 \001(\001\022\031"
+  "\n\021seconds_remaining\030\006 \001(\001\022\032\n\022start_time_"
+  "derived\030\010 \001(\001\022\023\n\013mission_log\030\n \001(\t\022\022\n\nid"
+  "entifier\030\007 \001(\t\032,\n\004Fuel\022\024\n\003egg\030\001 \001(\0162\007.ei"
+  ".Egg\022\016\n\006amount\030\002 \001(\001\"\270\001\n\tSpaceship\022\017\n\013CH"
+  "ICKEN_ONE\020\000\022\020\n\014CHICKEN_NINE\020\001\022\021\n\rCHICKEN"
+  "_HEAVY\020\002\022\007\n\003BCR\020\003\022\025\n\021MILLENIUM_CHICKEN\020\004"
+  "\022\027\n\023CORELLIHEN_CORVETTE\020\005\022\016\n\nGALEGGTICA\020"
+  "\006\022\016\n\nCHICKFIANT\020\007\022\014\n\010VOYEGGER\020\010\022\016\n\nHENER"
+  "PRISE\020\t\"t\n\006Status\022\013\n\007FUELING\020\000\022\025\n\021PREPAR"
+  "E_TO_LAUNCH\020\005\022\r\n\tEXPLORING\020\n\022\014\n\010RETURNED"
+  "\020\017\022\r\n\tANALYZING\020\020\022\014\n\010COMPLETE\020\024\022\014\n\010ARCHI"
+  "VED\020\031\";\n\014DurationType\022\t\n\005SHORT\020\000\022\010\n\004LONG"
+  "\020\001\022\010\n\004EPIC\020\002\022\014\n\010TUTORIAL\020\003\"\360\013\n\014ArtifactS"
+  "pec\022#\n\004name\030\001 \001(\0162\025.ei.ArtifactSpec.Name"
+  "\022%\n\005level\030\002 \001(\0162\026.ei.ArtifactSpec.Level\022"
+  "\'\n\006rarity\030\003 \001(\0162\027.ei.ArtifactSpec.Rarity"
+  "\022\024\n\003egg\030\004 \001(\0162\007.ei.Egg\"\212\t\n\004Name\022\017\n\013LUNAR"
+  "_TOTEM\020\000\022\027\n\023NEODYMIUM_MEDALLION\020\003\022\021\n\rBEA"
+  "K_OF_MIDAS\020\004\022\025\n\021LIGHT_OF_EGGENDIL\020\005\022\025\n\021D"
+  "EMETERS_NECKLACE\020\006\022\025\n\021VIAL_MARTIAN_DUST\020"
+  "\007\022\021\n\rORNATE_GUSSET\020\010\022\017\n\013THE_CHALICE\020\t\022\021\n"
+  "\rBOOK_OF_BASAN\020\n\022\023\n\017PHOENIX_FEATHER\020\013\022\021\n"
+  "\rTUNGSTEN_ANKH\020\014\022\023\n\017AURELIAN_BROOCH\020\025\022\024\n"
+  "\020CARVED_RAINSTICK\020\026\022\017\n\013PUZZLE_CUBE\020\027\022\025\n\021"
+  "QUANTUM_METRONOME\020\030\022\024\n\020SHIP_IN_A_BOTTLE\020"
+  "\031\022\025\n\021TACHYON_DEFLECTOR\020\032\022\030\n\024INTERSTELLAR"
+  "_COMPASS\020\033\022\025\n\021DILITHIUM_MONOCLE\020\034\022\025\n\021TIT"
+  "ANIUM_ACTUATOR\020\035\022\021\n\rMERCURYS_LENS\020\036\022\021\n\rT"
+  "ACHYON_STONE\020\001\022\023\n\017DILITHIUM_STONE\020\037\022\017\n\013S"
+  "HELL_STONE\020 \022\017\n\013LUNAR_STONE\020!\022\016\n\nSOUL_ST"
+  "ONE\020\"\022\022\n\016PROPHECY_STONE\020\'\022\021\n\rQUANTUM_STO"
+  "NE\020$\022\017\n\013TERRA_STONE\020%\022\016\n\nLIFE_STONE\020&\022\021\n"
+  "\rCLARITY_STONE\020(\022\035\n\031EXTRATERRESTRIAL_ALU"
+  "MINUM\020\r\022\024\n\020ANCIENT_TUNGSTEN\020\016\022\017\n\013SPACE_R"
+  "OCKS\020\017\022\016\n\nALIEN_WOOD\020\020\022\022\n\016GOLD_METEORITE"
+  "\020\021\022\022\n\016TAU_CETI_GEODE\020\022\022\024\n\020CENTAURIAN_STE"
+  "EL\020\023\022\023\n\017ERIDANI_FEATHER\020\024\022\017\n\013DRONE_PARTS"
+  "\020#\022\024\n\020CELESTIAL_BRONZE\020)\022\020\n\014LALANDE_HIDE"
+  "\020*\022\022\n\016SOLAR_TITANIUM\020+\022\032\n\026TACHYON_STONE_"
+  "FRAGMENT\020\002\022\034\n\030DILITHIUM_STONE_FRAGMENT\020,"
+  "\022\030\n\024SHELL_STONE_FRAGMENT\020-\022\030\n\024LUNAR_STON"
+  "E_FRAGMENT\020.\022\027\n\023SOUL_STONE_FRAGMENT\020/\022\033\n"
+  "\027PROPHECY_STONE_FRAGMENT\0200\022\032\n\026QUANTUM_ST"
+  "ONE_FRAGMENT\0201\022\030\n\024TERRA_STONE_FRAGMENT\0202"
+  "\022\027\n\023LIFE_STONE_FRAGMENT\0203\022\032\n\026CLARITY_STO"
+  "NE_FRAGMENT\0204\022\014\n\007UNKNOWN\020\220N\"H\n\005Level\022\014\n\010"
+  "INFERIOR\020\000\022\n\n\006LESSER\020\001\022\n\n\006NORMAL\020\002\022\013\n\007GR"
+  "EATER\020\003\022\014\n\010SUPERIOR\020\004\"7\n\006Rarity\022\n\n\006COMMO"
+  "N\020\000\022\010\n\004RARE\020\001\022\010\n\004EPIC\020\002\022\r\n\tLEGENDARY\020\003\"E"
+  "\n\004Type\022\014\n\010ARTIFACT\020\000\022\t\n\005STONE\020\001\022\016\n\nINGRE"
+  "DIENT\020\002\022\024\n\020STONE_INGREDIENT\020\003\"T\n\020Complet"
+  "eArtifact\022\036\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpe"
+  "c\022 \n\006stones\030\002 \003(\0132\020.ei.ArtifactSpec\"u\n\025A"
+  "rtifactInventoryItem\022\017\n\007item_id\030\001 \001(\004\022&\n"
+  "\010artifact\030\002 \001(\0132\024.ei.CompleteArtifact\022\020\n"
+  "\010quantity\030\003 \001(\001\022\021\n\tserver_id\030\004 \001(\t\"2\n\rIn"
+  "ventorySlot\022\020\n\010occupied\030\001 \001(\010\022\017\n\007item_id"
+  "\030\002 \001(\r\"\\\n\035ArtifactsConfigurationRequest\022"
+  "#\n\005rinfo\030\002 \001(\0132\024.ei.BasicRequestInfo\022\026\n\016"
+  "client_version\030\001 \001(\r\"\377\007\n\036ArtifactsConfig"
+  "urationResponse\022P\n\022mission_parameters\030\001 "
+  "\003(\01324.ei.ArtifactsConfigurationResponse."
+  "MissionParameters\022R\n\023artifact_parameters"
+  "\030\002 \003(\01325.ei.ArtifactsConfigurationRespon"
+  "se.ArtifactParameters\022R\n\024crafting_level_"
+  "infos\030\003 \003(\01324.ei.ArtifactsConfigurationR"
+  "esponse.CraftingLevelInfo\032\250\003\n\021MissionPar"
+  "ameters\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionInfo.S"
+  "paceship\022P\n\tdurations\030\003 \003(\0132=.ei.Artifac"
+  "tsConfigurationResponse.MissionParameter"
+  "s.Duration\022\"\n\032level_mission_requirements"
+  "\030\004 \003(\r\022\033\n\023capacity_DEPRECATED\030\002 \001(\r\032\326\001\n\010"
+  "Duration\0223\n\rduration_type\030\001 \001(\0162\034.ei.Mis"
+  "sionInfo.DurationType\022\017\n\007seconds\030\002 \001(\001\022\017"
+  "\n\007quality\030\003 \001(\002\022\023\n\013min_quality\030\004 \001(\002\022\023\n\013"
+  "max_quality\030\005 \001(\002\022\020\n\010capacity\030\006 \001(\r\022\033\n\023l"
+  "evel_capacity_bump\030\007 \001(\r\022\032\n\022level_qualit"
+  "y_bump\030\010 \001(\002\032\370\001\n\022ArtifactParameters\022\036\n\004s"
+  "pec\030\001 \001(\0132\020.ei.ArtifactSpec\022\024\n\014base_qual"
+  "ity\030\002 \001(\001\022\027\n\017odds_multiplier\030\004 \001(\001\022\r\n\005va"
+  "lue\030\003 \001(\001\022\026\n\016crafting_price\030\005 \001(\001\022\032\n\022cra"
+  "fting_price_low\030\006 \001(\001\022\035\n\025crafting_price_"
+  "domain\030\007 \001(\r\022\034\n\024crafting_price_curve\030\010 \001"
+  "(\001\022\023\n\013crafting_xp\030\t \001(\004\032=\n\021CraftingLevel"
+  "Info\022\023\n\013xp_required\030\001 \001(\001\022\023\n\013rarity_mult"
+  "\030\002 \001(\002\"\256\001\n\016MissionRequest\022#\n\005rinfo\030\004 \001(\013"
+  "2\024.ei.BasicRequestInfo\022\026\n\016client_version"
+  "\030\001 \001(\r\022\022\n\nei_user_id\030\003 \001(\t\022\035\n\004info\030\002 \001(\013"
+  "2\017.ei.MissionInfo\022,\n\013client_info\030\005 \001(\0132\027"
+  ".ei.ArtifactsClientInfo\"A\n\017MissionRespon"
+  "se\022\017\n\007success\030\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.M"
+  "issionInfo\"\214\002\n\027CompleteMissionResponse\022\017"
+  "\n\007success\030\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.Missi"
+  "onInfo\022A\n\tartifacts\030\003 \003(\0132..ei.CompleteM"
+  "issionResponse.SecureArtifactSpec\022!\n\roth"
+  "er_rewards\030\004 \003(\0132\n.ei.Reward\022\022\n\nei_user_"
+  "id\030\005 \001(\t\032G\n\022SecureArtifactSpec\022\036\n\004spec\030\001"
+  " \001(\0132\020.ei.ArtifactSpec\022\021\n\tserver_id\030\002 \001("
+  "\t\"\344\001\n%CollectContractArtifactRewardsRequ"
+  "est\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo"
+  "\022\033\n\023contract_identifier\030\002 \001(\t\022\016\n\006league\030"
+  "\005 \001(\r\022\'\n\005grade\030\006 \001(\0162\030.ei.Contract.Playe"
+  "rGrade\022\022\n\ngoal_index\030\003 \001(\r\022,\n\tbest_ship\030"
+  "\004 \001(\0162\031.ei.MissionInfo.Spaceship\"\366\001\n\024Cra"
+  "ftArtifactRequest\022#\n\005rinfo\030\005 \001(\0132\024.ei.Ba"
+  "sicRequestInfo\022\022\n\nei_user_id\030\001 \001(\t\022\036\n\004sp"
+  "ec\030\002 \001(\0132\020.ei.ArtifactSpec\022\017\n\007item_id\030\003 "
+  "\001(\004\022\027\n\017gold_price_paid\030\006 \001(\001\022\026\n\016crafting"
+  "_count\030\007 \001(\r\022\023\n\013crafting_xp\030\010 \001(\001\022.\n\013ing"
+  "redients\030\004 \003(\0132\031.ei.ArtifactInventoryIte"
+  "m\"\211\001\n\025CraftArtifactResponse\022\017\n\007item_id\030\001"
+  " \001(\004\022\022\n\nei_user_id\030\005 \001(\t\0228\n\017rarity_achie"
+  "ved\030\002 \001(\0162\027.ei.ArtifactSpec.Rarity:\006COMM"
+  "ON\022\021\n\tserver_id\030\003 \001(\t\"\365\001\n\026ConsumeArtifac"
+  "tRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicReques"
+  "tInfo\022\022\n\nei_user_id\030\003 \001(\t\022\036\n\004spec\030\001 \001(\0132"
+  "\020.ei.ArtifactSpec\022\032\n\022artifact_server_id\030"
+  "\005 \001(\t\022\030\n\020original_item_id\030\002 \001(\004\022\035\n\025addit"
+  "ional_server_ids\030\007 \003(\t\022\033\n\023additional_ite"
+  "m_ids\030\010 \003(\004\022\020\n\010quantity\030\006 \001(\r\"\276\001\n\027Consum"
+  "eArtifactResponse\022\017\n\007success\030\001 \001(\010\022\030\n\020or"
+  "iginal_item_id\030\002 \001(\004\022\033\n\023additional_item_"
+  "ids\030\006 \003(\004\022$\n\nbyproducts\030\003 \003(\0132\020.ei.Artif"
+  "actSpec\022!\n\rother_rewards\030\004 \003(\0132\n.ei.Rewa"
+  "rd\022\022\n\nei_user_id\030\005 \001(\t\"}\n\034AuthenticateAr"
+  "tifactResponse\022\017\n\007success\030\001 \001(\010\022\030\n\020origi"
+  "nal_item_id\030\002 \001(\004\022\016\n\006demote\030\003 \001(\010\022\016\n\006del"
+  "ete\030\004 \001(\010\022\022\n\nei_user_id\030\005 \001(\t\"\241\001\n\022SetArt"
+  "ifactRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRe"
+  "questInfo\022+\n\010artifact\030\002 \001(\0132\031.ei.Artifac"
+  "tInventoryItem\022 \n\006stones\030\003 \003(\0132\020.ei.Arti"
+  "factSpec\022\027\n\017gold_price_paid\030\004 \001(\001\"T\n\023Set"
+  "ArtifactResponse\022\017\n\007success\030\001 \001(\010\022\030\n\020ori"
+  "ginal_item_id\030\002 \001(\004\022\022\n\nei_user_id\030\005 \001(\t\""
+  "\364\006\n\013ArtifactsDB\0222\n\017inventory_items\030\001 \003(\013"
+  "2\031.ei.ArtifactInventoryItem\022\025\n\ritem_sequ"
+  "ence\030\002 \001(\004\022*\n\017inventory_slots\030\003 \003(\0132\021.ei"
+  ".InventorySlot\022<\n\020active_artifacts\030\007 \003(\013"
+  "2\".ei.ArtifactsDB.ActiveArtifactSlot\022\?\n\024"
+  "active_artifact_sets\030\013 \003(\0132!.ei.Artifact"
+  "sDB.ActiveArtifactSet\022:\n\017artifact_status"
+  "\030\014 \003(\0132!.ei.ArtifactsDB.CraftableArtifac"
+  "t\022&\n\rmission_infos\030\004 \003(\0132\017.ei.MissionInf"
+  "o\022(\n\017mission_archive\030\005 \003(\0132\017.ei.MissionI"
+  "nfo\0229\n\037discovered_artifacts_DEPRECATED\030\010"
+  " \003(\0132\020.ei.ArtifactSpec\022I\n\036craftable_arti"
+  "facts_DEPRECATED\030\t \003(\0132!.ei.ArtifactsDB."
+  "CraftableArtifact\022E\n\032crafting_counts_DEP"
+  "RECATED\030\n \003(\0132!.ei.ArtifactsDB.Craftable"
+  "Artifact\0327\n\022ActiveArtifactSlot\022\020\n\010occupi"
+  "ed\030\001 \001(\010\022\017\n\007item_id\030\002 \001(\004\032F\n\021ActiveArtif"
+  "actSet\0221\n\005slots\030\001 \003(\0132\".ei.ArtifactsDB.A"
+  "ctiveArtifactSlot\032\222\001\n\021CraftableArtifact\022"
+  "\036\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpec\022\022\n\ndisco"
+  "vered\030\006 \001(\010\022\021\n\tcraftable\030\004 \001(\010\022\031\n\021recipe"
+  "_discovered\030\005 \001(\010\022\014\n\004seen\030\002 \001(\010\022\r\n\005count"
+  "\030\003 \001(\r\"q\n\024AuthenticatedMessage\022\017\n\007messag"
+  "e\030\001 \001(\014\022\017\n\007version\030\003 \001(\r\022\014\n\004code\030\002 \001(\t\022\022"
+  "\n\ncompressed\030\004 \001(\010\022\025\n\roriginal_size\030\005 \001("
+  "\r\"f\n\031LogCompleteMissionPayload\022\037\n\003req\030\001 "
+  "\001(\0132\022.ei.MissionRequest\022(\n\003res\030\002 \001(\0132\033.e"
+  "i.CompleteMissionResponse\"h\n\027LogCraftArt"
+  "ifactPayload\022%\n\003req\030\001 \001(\0132\030.ei.CraftArti"
+  "factRequest\022&\n\003res\030\002 \001(\0132\031.ei.CraftArtif"
+  "actResponse\"n\n\031LogConsumeArtifactPayload"
+  "\022\'\n\003req\030\001 \001(\0132\032.ei.ConsumeArtifactReques"
+  "t\022(\n\003res\030\002 \001(\0132\033.ei.ConsumeArtifactRespo"
+  "nse\"b\n\025LogSetArtifactPayload\022#\n\003req\030\001 \001("
+  "\0132\026.ei.SetArtifactRequest\022$\n\003res\030\002 \001(\0132\027"
+  ".ei.SetArtifactResponse\"@\n\026AccountTransf"
+  "erPayload\022\017\n\007from_id\030\001 \001(\t\022\025\n\rto_ei_user"
+  "_id\030\002 \001(\t\"\335\001\n\022SaveBackupResponse\022\017\n\007succ"
+  "ess\030\001 \001(\010\022\022\n\nerror_code\030\002 \001(\r\022\017\n\007message"
+  "\030\003 \001(\t\022#\n\017existing_backup\030\004 \001(\0132\n.ei.Bac"
+  "kup\"l\n\nErrorCodes\022\014\n\010NO_ERROR\020\000\022\022\n\016USER_"
+  "NOT_FOUND\020\001\022\027\n\023COULD_NOT_OVERWRITE\020\002\022\022\n\016"
+  "BACKUP_OFFERED\020\003\022\017\n\013BAD_USER_ID\020\004\"K\n\023Cle"
+  "anAccountRequest\022\032\n\022ei_user_id_to_keep\030\001"
+  " \001(\t\022\030\n\020game_services_id\030\002 \001(\t\"&\n\020Return"
+  "EDTPayload\022\022\n\nei_user_id\030\001 \001(\t\"\201\001\n\007DLCIt"
+  "em\022\014\n\004name\030\001 \001(\t\022\021\n\tdirectory\030\002 \001(\t\022\013\n\003e"
+  "xt\030\003 \001(\t\022\022\n\ncompressed\030\006 \001(\010\022\025\n\roriginal"
+  "_size\030\007 \001(\004\022\013\n\003url\030\004 \001(\t\022\020\n\010checksum\030\005 \001"
+  "(\t\"\301\022\n\tShellSpec\022\022\n\nidentifier\030\001 \001(\t\022/\n\r"
+  "primary_piece\030\014 \001(\0132\030.ei.ShellSpec.Shell"
+  "Piece\022(\n\006pieces\030\013 \003(\0132\030.ei.ShellSpec.She"
+  "llPiece\022\037\n\nalt_assets\030\022 \003(\0132\013.ei.DLCItem"
+  "\022\014\n\004name\030\003 \001(\t\022\026\n\016set_identifier\030\r \001(\t\022\031"
+  "\n\021modified_geometry\030\023 \001(\010\022\r\n\005price\030\004 \001(\r"
+  "\022\024\n\014required_eop\030\005 \001(\r\022\032\n\022required_soul_"
+  "eggs\030\006 \001(\001\022\035\n\025required_parent_shell\030\024 \001("
+  "\t\022\016\n\006is_new\030\016 \001(\010\022\017\n\007expires\030\017 \001(\010\022\037\n\027se"
+  "conds_until_available\030\021 \001(\001\022\031\n\021seconds_r"
+  "emaining\030\020 \001(\001\022\032\n\022default_appearance\030\010 \001"
+  "(\010\032S\n\nShellPiece\022+\n\nasset_type\030\001 \001(\0162\027.e"
+  "i.ShellSpec.AssetType\022\030\n\003dlc\030\002 \001(\0132\013.ei."
+  "DLCItem\"\264\016\n\tAssetType\022\010\n\004COOP\020\001\022\t\n\005SHACK"
+  "\020\002\022\017\n\013SUPER_SHACK\020\003\022\017\n\013SHORT_HOUSE\020\004\022\020\n\014"
+  "THE_STANDARD\020\005\022\016\n\nLONG_HOUSE\020\006\022\021\n\rDOUBLE"
+  "_DECKER\020\007\022\r\n\tWAREHOUSE\020\010\022\n\n\006CENTER\020\t\022\n\n\006"
+  "BUNKER\020\n\022\n\n\006EGGKEA\020\013\022\n\n\006HAB_1K\020\014\022\n\n\006HANG"
+  "AR\020\r\022\t\n\005TOWER\020\016\022\013\n\007HAB_10K\020\017\022\014\n\010EGGTOPIA"
+  "\020\020\022\014\n\010MONOLITH\020\021\022\021\n\rPLANET_PORTAL\020\022\022\024\n\020C"
+  "HICKEN_UNIVERSE\020\023\022\020\n\014SILO_0_SMALL\0202\022\016\n\nS"
+  "ILO_0_MED\0203\022\020\n\014SILO_0_LARGE\0204\022\020\n\014SILO_1_"
+  "SMALL\0205\022\016\n\nSILO_1_MED\0206\022\020\n\014SILO_1_LARGE\020"
+  "7\022\014\n\010SILO_ALL\020;\022\013\n\007MAILBOX\020F\022\017\n\013TROPHY_C"
+  "ASE\020G\022\n\n\006GROUND\020H\022\r\n\tHARDSCAPE\020I\022\r\n\tHYPE"
+  "RLOOP\020J\022\013\n\007DEPOT_1\020d\022\013\n\007DEPOT_2\020e\022\013\n\007DEP"
+  "OT_3\020f\022\013\n\007DEPOT_4\020g\022\013\n\007DEPOT_5\020h\022\013\n\007DEPO"
+  "T_6\020i\022\013\n\007DEPOT_7\020j\022\t\n\005LAB_1\020n\022\t\n\005LAB_2\020o"
+  "\022\t\n\005LAB_3\020p\022\t\n\005LAB_4\020q\022\t\n\005LAB_5\020r\022\t\n\005LAB"
+  "_6\020s\022\023\n\017HATCHERY_EDIBLE\020x\022\026\n\022HATCHERY_SU"
+  "PERFOOD\020y\022\024\n\020HATCHERY_MEDICAL\020z\022\030\n\024HATCH"
+  "ERY_ROCKET_FUEL\020{\022\032\n\026HATCHERY_SUPERMATER"
+  "IAL\020|\022\023\n\017HATCHERY_FUSION\020}\022\024\n\020HATCHERY_Q"
+  "UANTUM\020~\022\030\n\024HATCHERY_IMMORTALITY\020\177\022\025\n\020HA"
+  "TCHERY_TACHYON\020\200\001\022\026\n\021HATCHERY_GRAVITON\020\201"
+  "\001\022\027\n\022HATCHERY_DILITHIUM\020\202\001\022\025\n\020HATCHERY_P"
+  "RODIGY\020\203\001\022\027\n\022HATCHERY_TERRAFORM\020\204\001\022\030\n\023HA"
+  "TCHERY_ANTIMATTER\020\205\001\022\031\n\024HATCHERY_DARK_MA"
+  "TTER\020\206\001\022\020\n\013HATCHERY_AI\020\207\001\022\024\n\017HATCHERY_NE"
+  "BULA\020\210\001\022\026\n\021HATCHERY_UNIVERSE\020\211\001\022\033\n\026HATCH"
+  "ERY_ENLIGHTENMENT\020\212\001\022\027\n\022HATCHERY_CHOCOLA"
+  "TE\020\213\001\022\024\n\017HATCHERY_EASTER\020\214\001\022\032\n\025HATCHERY_"
+  "WATERBALLOON\020\215\001\022\026\n\021HATCHERY_FIREWORK\020\216\001\022"
+  "\025\n\020HATCHERY_PUMPKIN\020\217\001\022\n\n\005HOA_1\020\252\001\022\n\n\005HO"
+  "A_2\020\253\001\022\n\n\005HOA_3\020\254\001\022\026\n\021MISSION_CONTROL_1\020"
+  "\264\001\022\026\n\021MISSION_CONTROL_2\020\265\001\022\026\n\021MISSION_CO"
+  "NTROL_3\020\266\001\022\020\n\013FUEL_TANK_1\020\310\001\022\020\n\013FUEL_TAN"
+  "K_2\020\311\001\022\020\n\013FUEL_TANK_3\020\312\001\022\020\n\013FUEL_TANK_4\020"
+  "\313\001\022\032\n\025HATCHERY_GRAVITON_TOP\020\364\003\022\033\n\026HATCHE"
+  "RY_NEBULA_MIDDLE\020\365\003\022\030\n\023HATCHERY_NEBULA_T"
+  "OP\020\366\003\022 \n\033HATCHERY_DARK_MATTER_RING_1\020\371\003\022"
+  " \n\033HATCHERY_DARK_MATTER_RING_2\020\372\003\022 \n\033HAT"
+  "CHERY_DARK_MATTER_RING_3\020\373\003\022\026\n\021HATCHERY_"
+  "AI_TOP_1\020\376\003\022\026\n\021HATCHERY_AI_TOP_2\020\377\003\022\026\n\021H"
+  "ATCHERY_AI_TOP_3\020\200\004\022\026\n\021HATCHERY_AI_TOP_4"
+  "\020\201\004\022\034\n\027HATCHERY_UNIVERSE_PROBE\020\203\004\022\033\n\026HAT"
+  "CHERY_UNIVERSE_BOLT\020\204\004\022\037\n\032HATCHERY_ENLIG"
+  "HTENMENT_ORB\020\210\004\022\024\n\017HYPERLOOP_TRACK\020\272\004\022\021\n"
+  "\014MAILBOX_FULL\020\330\004\022\014\n\007CHICKEN\020\350\007\022\010\n\003HAT\020\362\007"
+  "\022\014\n\007UNKNOWN\020\217N\"\226\005\n\014ShellSetSpec\022\022\n\nident"
+  "ifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 \001(\r"
+  "\022 \n\025price_mult_DEPRECATED\030\010 \001(\001:\0011\022\020\n\010di"
+  "scount\030\021 \001(\001\022\024\n\014required_eop\030\004 \001(\r\022\032\n\022re"
+  "quired_soul_eggs\030\005 \001(\001\022\033\n\023required_paren"
+  "t_set\030\024 \001(\t\022\016\n\006is_new\030\t \001(\010\022\017\n\007expires\030\n"
+  " \001(\010\022\037\n\027seconds_until_available\030\022 \001(\001\022\031\n"
+  "\021seconds_remaining\030\013 \001(\001\022\021\n\tdecorator\030\016 "
+  "\001(\010\022\031\n\021modified_geometry\030\r \001(\010\022\023\n\013elemen"
+  "t_set\030\007 \001(\010\022\026\n\016hex_base_color\030\020 \001(\t\0222\n\nv"
+  "ariations\030\017 \003(\0132\036.ei.ShellSetSpec.Variat"
+  "ionSpec\022\031\n\004icon\030\023 \001(\0132\013.ei.DLCItem\022\032\n\022de"
+  "fault_appearance\030\006 \001(\010\022\031\n\021custom_appeara"
+  "nce\030\014 \001(\010\032\223\001\n\rVariationSpec\022\022\n\nidentifie"
+  "r\030\001 \001(\t\022\021\n\thex_color\030\002 \001(\t\022\r\n\005price\030\003 \001("
+  "\r\022\025\n\rsort_priority\030\006 \001(\005\022\032\n\022default_appe"
+  "arance\030\004 \001(\010\022\031\n\021custom_appearance\030\005 \001(\010\""
+  "\301\005\n\017ShellObjectSpec\022\022\n\nidentifier\030\001 \001(\t\022"
+  "\014\n\004name\030\002 \001(\t\022+\n\nasset_type\030\003 \001(\0162\027.ei.S"
+  "hellSpec.AssetType\022\024\n\014object_class\030\016 \001(\t"
+  "\022\023\n\013icon_colors\030\017 \003(\t\022\r\n\005price\030\004 \001(\r\022\024\n\014"
+  "required_eop\030\005 \001(\r\022\032\n\022required_soul_eggs"
+  "\030\006 \001(\001\022\016\n\006is_new\030\n \001(\010\022\017\n\007expires\030\013 \001(\010\022"
+  "\037\n\027seconds_until_available\030\022 \001(\001\022\031\n\021seco"
+  "nds_remaining\030\014 \001(\001\022\020\n\010metadata\030\007 \003(\001\022\017\n"
+  "\007no_hats\030\r \001(\010\022\?\n\021chicken_animation\030\020 \001("
+  "\0162$.ei.ShellObjectSpec.ChickenAnimation\022"
+  "\025\n\rsort_priority\030\021 \001(\005\022,\n\006pieces\030\010 \003(\0132\034"
+  ".ei.ShellObjectSpec.LODPiece\022\032\n\022default_"
+  "appearance\030\t \001(\010\0321\n\010LODPiece\022\030\n\003dlc\030\001 \001("
+  "\0132\013.ei.DLCItem\022\013\n\003lod\030\002 \001(\r\"\235\001\n\020ChickenA"
+  "nimation\022\020\n\014STANDARD_RUN\020\000\022\n\n\006SLOWMO\020\007\022\n"
+  "\n\006WOBBLE\020\001\022\017\n\013WOBBLE_LEAN\020\005\022\n\n\006SMOOTH\020\002\022"
+  "\017\n\013SMOOTH_LEAN\020\006\022\t\n\005HOVER\020\003\022\023\n\017SIDEWAYS_"
+  "SMOOTH\020\004\022\021\n\rSIDEWAYS_LEAN\020\010\"\222\001\n\016ShellGro"
+  "upSpec\022\022\n\nidentifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t"
+  "\022+\n\nasset_type\030\005 \001(\0162\027.ei.ShellSpec.Asse"
+  "tType\022\022\n\nmember_ids\030\003 \003(\t\022\035\n\025price_mult_"
+  "DEPRECATED\030\004 \001(\001\"\351\001\n\nDLCCatalog\022\032\n\005items"
+  "\030\001 \003(\0132\013.ei.DLCItem\022\035\n\006shells\030\002 \003(\0132\r.ei"
+  ".ShellSpec\022$\n\nshell_sets\030\003 \003(\0132\020.ei.Shel"
+  "lSetSpec\022$\n\ndecorators\030\006 \003(\0132\020.ei.ShellS"
+  "etSpec\022*\n\rshell_objects\030\004 \003(\0132\023.ei.Shell"
+  "ObjectSpec\022(\n\014shell_groups\030\005 \003(\0132\022.ei.Sh"
+  "ellGroupSpec\"\346\r\n\007ShellDB\0220\n\017shell_invent"
+  "ory\030\001 \003(\0132\027.ei.ShellDB.ShellStatus\022\?\n\027sh"
+  "ell_element_inventory\030\005 \003(\0132\036.ei.ShellDB"
+  ".ShellElementStatus\022F\n\031shell_variation_i"
+  "nventory\030\010 \003(\0132#.ei.ShellDB.ShellSetVari"
+  "ationStatus\0224\n\023shell_set_inventory\030\002 \003(\013"
+  "2\027.ei.ShellDB.ShellStatus\0227\n\026shell_objec"
+  "t_inventory\030\004 \003(\0132\027.ei.ShellDB.ShellStat"
+  "us\0223\n\014farm_configs\030\003 \003(\0132\035.ei.ShellDB.Fa"
+  "rmConfiguration\0229\n\rsaved_configs\030\t \003(\0132\""
+  ".ei.ShellDB.SavedFarmConfiguration\022\035\n\025ne"
+  "w_shells_downloaded\030\006 \003(\t\022\027\n\017new_shells_"
+  "seen\030\007 \003(\t\0320\n\013ShellStatus\022\022\n\nidentifier\030"
+  "\001 \001(\t\022\r\n\005owned\030\002 \001(\010\032V\n\022ShellElementStat"
+  "us\022(\n\007element\030\001 \001(\0162\027.ei.ShellDB.FarmEle"
+  "ment\022\026\n\016set_identifier\030\002 \001(\t\032K\n\027ShellSet"
+  "VariationStatus\022\026\n\016set_identifier\030\001 \001(\t\022"
+  "\030\n\020owned_variations\030\002 \003(\t\032\235\002\n\021FarmConfig"
+  "uration\0225\n\rshell_configs\030\001 \003(\0132\036.ei.Shel"
+  "lDB.ShellConfiguration\022<\n\021shell_set_conf"
+  "igs\030\002 \003(\0132!.ei.ShellDB.ShellSetConfigura"
+  "tion\022#\n\033configure_chickens_by_group\030\007 \001("
+  "\010\022:\n\rgroup_configs\030\010 \003(\0132#.ei.ShellDB.Sh"
+  "ellGroupConfiguration\0222\n\017chicken_configs"
+  "\030\t \003(\0132\031.ei.ShellDB.ChickenConfig\032o\n\026Sav"
+  "edFarmConfiguration\022\014\n\004name\030\001 \001(\t\022-\n\006con"
+  "fig\030\002 \001(\0132\035.ei.ShellDB.FarmConfiguration"
+  "\022\030\n\020client_save_time\030\003 \001(\001\032j\n\022ShellConfi"
+  "guration\022+\n\nasset_type\030\001 \001(\0162\027.ei.ShellS"
+  "pec.AssetType\022\r\n\005index\030\002 \001(\r\022\030\n\020shell_id"
+  "entifier\030\003 \001(\t\032\252\001\n\025ShellSetConfiguration"
+  "\022(\n\007element\030\001 \001(\0162\027.ei.ShellDB.FarmEleme"
+  "nt\022\r\n\005index\030\002 \001(\r\022\034\n\024shell_set_identifie"
+  "r\030\003 \001(\t\022\034\n\024variation_identifier\030\004 \001(\t\022\034\n"
+  "\024decorator_identifier\030\005 \001(\t\032`\n\027ShellGrou"
+  "pConfiguration\022+\n\nasset_type\030\001 \001(\0162\027.ei."
+  "ShellSpec.AssetType\022\030\n\020group_identifier\030"
+  "\002 \001(\t\032C\n\rChickenConfig\022\032\n\022chicken_identi"
+  "fier\030\001 \001(\t\022\026\n\016hat_identifier\030\002 \001(\t\"\340\001\n\013F"
+  "armElement\022\r\n\tHEN_HOUSE\020\001\022\010\n\004SILO\020\002\022\013\n\007M"
+  "AILBOX\020\003\022\017\n\013TROPHY_CASE\020\004\022\n\n\006GROUND\020\005\022\r\n"
+  "\tHARDSCAPE\020\006\022\r\n\tHYPERLOOP\020\007\022\t\n\005DEPOT\020\010\022\007"
+  "\n\003LAB\020\t\022\014\n\010HATCHERY\020\n\022\007\n\003HOA\020\013\022\023\n\017MISSIO"
+  "N_CONTROL\020\014\022\r\n\tFUEL_TANK\020\r\022\013\n\007CHICKEN\020\016\022"
+  "\007\n\003HAT\020\017\022\013\n\007UNKNOWN\020c\"\234\002\n\017ShellsActionLo"
+  "g\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequestInfo\022\017"
+  "\n\007user_id\030\001 \001(\t\022\016\n\006action\030\002 \001(\t\022\016\n\006sub_i"
+  "d\030\003 \001(\t\022-\n\014farm_element\030\t \001(\0162\027.ei.Shell"
+  "DB.FarmElement\022\014\n\004cost\030\004 \001(\r\022\023\n\013approx_t"
+  "ime\030\005 \001(\001\022\017\n\007version\030\006 \001(\t\022\022\n\nfarm_index"
+  "\030\007 \001(\005\022\021\n\tsoul_eggs\030\n \001(\001\022\025\n\rtickets_spe"
+  "nt\030\013 \001(\004\022\022\n\ngold_spent\030\014 \001(\004\"\271\010\n\030UserVer"
+  "ificationAnalysis\022;\n\016overall_status\030\001 \001("
+  "\0162#.ei.UserVerificationAnalysis.Status\022\022"
+  "\n\nstart_time\030\002 \001(\001\022\027\n\017completion_time\030\003 "
+  "\001(\001\022\025\n\rnum_prestiges\030\016 \001(\001\022\021\n\tsoul_eggs\030"
+  "\017 \001(\001\022\030\n\020eggs_of_prophecy\030\033 \001(\r\0227\n\niap_s"
+  "tatus\030\022 \001(\0162#.ei.UserVerificationAnalysi"
+  "s.Status\022\033\n\023verified_pro_permit\030\004 \001(\010\022\035\n"
+  "\025verified_piggy_breaks\030\005 \001(\r\022\032\n\022verified"
+  "_other_iap\030\006 \001(\r\022\026\n\016unverified_iap\030\007 \001(\r"
+  "\022\023\n\013gold_earned\030\r \001(\001\022\031\n\021regular_iap_buy"
+  "er\030\026 \001(\010\022\033\n\023regular_iap_cheater\030\027 \001(\010\022=\n"
+  "\020artifacts_status\030\023 \001(\0162#.ei.UserVerific"
+  "ationAnalysis.Status\022\032\n\022missions_complet"
+  "ed\030\010 \001(\r\022\033\n\023artifacts_collected\030\t \001(\001\022\032\n"
+  "\022artifacts_consumed\030\n \001(\001\022\036\n\026artifacts_i"
+  "n_inventory\030\013 \001(\001\022\033\n\023gold_spent_crafting"
+  "\030\025 \001(\001\022\032\n\022excessive_consumes\030\030 \001(\010\022\033\n\023ex"
+  "cessive_inventory\030\031 \001(\010\022\027\n\017excessive_spe"
+  "nd\030\032 \001(\010\022=\n\020contracts_status\030\024 \001(\0162#.ei."
+  "UserVerificationAnalysis.Status\022\034\n\024num_c"
+  "oop_memberships\030\014 \001(\r\022\027\n\017valid_contracts"
+  "\030\020 \001(\r\022\031\n\021invalid_contracts\030\021 \003(\t\022\025\n\rexc"
+  "essive_eop\030\034 \001(\010\022#\n\033excessive_invalid_co"
+  "ntracts\030\035 \001(\010\022\020\n\010verified\030\036 \001(\010\022\035\n\025verif"
+  "ication_override\030\037 \001(\010\022#\n\033verification_o"
+  "verride_value\030  \001(\010\"3\n\006Status\022\013\n\007UNKNOWN"
+  "\020\000\022\016\n\nPROCESSING\020\001\022\014\n\010COMPLETE\020\002\"\365\005\n\024Use"
+  "rSubscriptionInfo\022:\n\022subscription_level\030"
+  "\r \001(\0162\036.ei.UserSubscriptionInfo.Level\022\?\n"
+  "\027next_subscription_level\030\017 \001(\0162\036.ei.User"
+  "SubscriptionInfo.Level\022$\n\034lock_next_subs"
+  "cription_level\030\022 \001(\010\022\036\n\010platform\030\n \001(\0162\014"
+  ".ei.Platform\022\037\n\027original_transaction_id\030"
+  "\001 \001(\t\022\035\n\025linked_transaction_id\030\020 \001(\t\022\024\n\014"
+  "acknowledged\030\021 \001(\010\022\030\n\020first_subscribed\030\002"
+  " \001(\001\022\022\n\nperiod_end\030\004 \001(\001\022/\n\006status\030\005 \001(\016"
+  "2\037.ei.UserSubscriptionInfo.Status\022\024\n\014sto"
+  "re_status\030\016 \001(\t\022\022\n\nauto_renew\030\006 \001(\010\022\017\n\007s"
+  "andbox\030\023 \001(\010\022\024\n\014last_updated\030\007 \001(\001\0226\n\007hi"
+  "story\030\t \003(\0132%.ei.UserSubscriptionInfo.Hi"
+  "storyEntry\022\025\n\rpast_user_ids\030\013 \003(\t\032F\n\014His"
+  "toryEntry\022\021\n\ttimestamp\030\001 \001(\001\022\022\n\nmessage_"
+  "id\030\002 \001(\t\022\017\n\007message\030\003 \001(\t\"\036\n\005Level\022\014\n\010ST"
+  "ANDARD\020\000\022\007\n\003PRO\020\001\"]\n\006Status\022\013\n\007UNKNOWN\020\000"
+  "\022\n\n\006ACTIVE\020\001\022\013\n\007EXPIRED\020\002\022\013\n\007REVOKED\020\003\022\020"
+  "\n\014GRACE_PERIOD\020\004\022\016\n\nPAUSE_HOLD\020\005\"\246\001\n\035Sub"
+  "scriptionChangeHintRequest\022#\n\005rinfo\030\003 \001("
+  "\0132\024.ei.BasicRequestInfo\022\037\n\027original_tran"
+  "saction_id\030\001 \001(\t\022\?\n\027next_subscription_le"
+  "vel\030\002 \001(\0162\036.ei.UserSubscriptionInfo.Leve"
+  "l\">\n\022CXPEvalRolloutInfo\022\022\n\ncurrent_id\030\001 "
+  "\001(\t\022\024\n\014basis_points\030\002 \001(\r*\036\n\010Platform\022\007\n"
+  "\003IOS\020\001\022\t\n\005DROID\020\002*)\n\020DeviceFormFactor\022\t\n"
+  "\005PHONE\020\001\022\n\n\006TABLET\020\002*k\n\tAdNetwork\022\n\n\006VUN"
+  "GLE\020\000\022\016\n\nCHARTBOOST\020\001\022\r\n\tAD_COLONY\020\002\022\014\n\010"
+  "HYPER_MX\020\003\022\t\n\005UNITY\020\004\022\014\n\010FACEBOOK\020\005\022\014\n\010A"
+  "PPLOVIN\020\006*\356\002\n\003Egg\022\n\n\006EDIBLE\020\001\022\r\n\tSUPERFO"
+  "OD\020\002\022\013\n\007MEDICAL\020\003\022\017\n\013ROCKET_FUEL\020\004\022\022\n\016SU"
+  "PER_MATERIAL\020\005\022\n\n\006FUSION\020\006\022\013\n\007QUANTUM\020\007\022"
+  "\017\n\013IMMORTALITY\020\010\022\013\n\007TACHYON\020\t\022\014\n\010GRAVITO"
+  "N\020\n\022\r\n\tDILITHIUM\020\013\022\013\n\007PRODIGY\020\014\022\r\n\tTERRA"
+  "FORM\020\r\022\016\n\nANTIMATTER\020\016\022\017\n\013DARK_MATTER\020\017\022"
+  "\006\n\002AI\020\020\022\n\n\006NEBULA\020\021\022\014\n\010UNIVERSE\020\022\022\021\n\rENL"
+  "IGHTENMENT\020\023\022\r\n\tCHOCOLATE\020d\022\n\n\006EASTER\020e\022"
+  "\020\n\014WATERBALLOON\020f\022\014\n\010FIREWORK\020g\022\013\n\007PUMPK"
+  "IN\020h\022\014\n\007UNKNOWN\020\350\007*-\n\010FarmType\022\t\n\005EMPTY\020"
+  "\001\022\010\n\004HOME\020\002\022\014\n\010CONTRACT\020\003*+\n\010GoalType\022\r\n"
+  "\tEGGS_LAID\020\001\022\020\n\014UNKNOWN_GOAL\020d*\211\002\n\nRewar"
+  "dType\022\010\n\004CASH\020\001\022\010\n\004GOLD\020\002\022\r\n\tSOUL_EGGS\020\003"
+  "\022\024\n\020EGGS_OF_PROPHECY\020\004\022\026\n\022EPIC_RESEARCH_"
+  "ITEM\020\005\022\016\n\nPIGGY_FILL\020\006\022\024\n\020PIGGY_MULTIPLI"
+  "ER\020\007\022\024\n\020PIGGY_LEVEL_BUMP\020\010\022\t\n\005BOOST\020\t\022\017\n"
+  "\013BOOST_TOKEN\020\n\022\014\n\010ARTIFACT\020\013\022\021\n\rARTIFACT"
+  "_CASE\020\014\022\013\n\007CHICKEN\020\r\022\020\n\014SHELL_SCRIPT\020\016\022\022"
+  "\n\016UNKNOWN_REWARD\020d*4\n\020LeaderboardScope\022\014"
+  "\n\010ALL_TIME\020\000\022\022\n\016CURRENT_SEASON\020\001"
   ;
 static ::_pbi::once_flag descriptor_table_ei_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_ei_2eproto = {
-    false, false, 43390, descriptor_table_protodef_ei_2eproto,
+    false, false, 43552, descriptor_table_protodef_ei_2eproto,
     "ei.proto",
-    &descriptor_table_ei_2eproto_once, nullptr, 0, 178,
+    &descriptor_table_ei_2eproto_once, nullptr, 0, 179,
     schemas, file_default_instances, TableStruct_ei_2eproto::offsets,
     file_level_metadata_ei_2eproto, file_level_enum_descriptors_ei_2eproto,
     file_level_service_descriptors_ei_2eproto,
@@ -8306,6 +8344,7 @@ bool ContractEvaluation_PoorBehavior_IsValid(int value) {
     case 3:
     case 4:
     case 5:
+    case 6:
       return true;
     default:
       return false;
@@ -8319,6 +8358,7 @@ constexpr ContractEvaluation_PoorBehavior ContractEvaluation::BAD_CONTRIBUTION;
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation::DISHONORABLY_DISCHARGED;
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation::POOR_TEAMWORK;
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation::ABANDONED_COOP;
+constexpr ContractEvaluation_PoorBehavior ContractEvaluation::TIME_CHEAT;
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation::PoorBehavior_MIN;
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation::PoorBehavior_MAX;
 constexpr int ContractEvaluation::PoorBehavior_ARRAYSIZE;
@@ -29159,10 +29199,10 @@ class ContractEvaluation::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static void set_has_replay(HasBits* has_bits) {
-    (*has_bits)[0] |= 8388608u;
+    (*has_bits)[0] |= 1048576u;
   }
   static void set_has_cxp_change(HasBits* has_bits) {
-    (*has_bits)[0] |= 4194304u;
+    (*has_bits)[0] |= 134217728u;
   }
   static void set_has_grade_performance(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
@@ -29171,7 +29211,7 @@ class ContractEvaluation::_Internal {
     (*has_bits)[0] |= 8192u;
   }
   static void set_has_old_goals(HasBits* has_bits) {
-    (*has_bits)[0] |= 16777216u;
+    (*has_bits)[0] |= 2097152u;
   }
   static void set_has_grade(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
@@ -29189,13 +29229,13 @@ class ContractEvaluation::_Internal {
     (*has_bits)[0] |= 524288u;
   }
   static void set_has_solo(HasBits* has_bits) {
-    (*has_bits)[0] |= 33554432u;
+    (*has_bits)[0] |= 4194304u;
   }
   static void set_has_soul_power(HasBits* has_bits) {
-    (*has_bits)[0] |= 2097152u;
+    (*has_bits)[0] |= 67108864u;
   }
   static void set_has_last_contribution_time(HasBits* has_bits) {
-    (*has_bits)[0] |= 1048576u;
+    (*has_bits)[0] |= 33554432u;
   }
   static void set_has_completion_time(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
@@ -29222,10 +29262,13 @@ class ContractEvaluation::_Internal {
     (*has_bits)[0] |= 65536u;
   }
   static void set_has_counted_in_season(HasBits* has_bits) {
-    (*has_bits)[0] |= 67108864u;
+    (*has_bits)[0] |= 8388608u;
   }
   static void set_has_season_id(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_time_cheats(HasBits* has_bits) {
+    (*has_bits)[0] |= 16777216u;
   }
   static void set_has_version(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
@@ -29234,7 +29277,7 @@ class ContractEvaluation::_Internal {
     (*has_bits)[0] |= 268435456u;
   }
   static void set_has_status(HasBits* has_bits) {
-    (*has_bits)[0] |= 134217728u;
+    (*has_bits)[0] |= 536870912u;
   }
 };
 
@@ -29285,8 +29328,8 @@ ContractEvaluation::ContractEvaluation(const ContractEvaluation& from)
       GetArenaForAllocation());
   }
   ::memcpy(&cxp_, &from.cxp_,
-    static_cast<size_t>(reinterpret_cast<char*>(&evaluation_start_time_) -
-    reinterpret_cast<char*>(&cxp_)) + sizeof(evaluation_start_time_));
+    static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+    reinterpret_cast<char*>(&cxp_)) + sizeof(status_));
   // @@protoc_insertion_point(copy_constructor:ei.ContractEvaluation)
 }
 
@@ -29309,8 +29352,8 @@ version_.InitDefault();
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&cxp_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&evaluation_start_time_) -
-    reinterpret_cast<char*>(&cxp_)) + sizeof(evaluation_start_time_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+    reinterpret_cast<char*>(&cxp_)) + sizeof(status_));
 }
 
 ContractEvaluation::~ContractEvaluation() {
@@ -29369,13 +29412,13 @@ void ContractEvaluation::Clear() {
   }
   if (cached_has_bits & 0x00ff0000u) {
     ::memset(&other_bonuses_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&replay_) -
-        reinterpret_cast<char*>(&other_bonuses_)) + sizeof(replay_));
+        reinterpret_cast<char*>(&counted_in_season_) -
+        reinterpret_cast<char*>(&other_bonuses_)) + sizeof(counted_in_season_));
   }
-  if (cached_has_bits & 0x1f000000u) {
-    ::memset(&old_goals_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&evaluation_start_time_) -
-        reinterpret_cast<char*>(&old_goals_)) + sizeof(evaluation_start_time_));
+  if (cached_has_bits & 0x3f000000u) {
+    ::memset(&time_cheats_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&status_) -
+        reinterpret_cast<char*>(&time_cheats_)) + sizeof(status_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -29649,6 +29692,15 @@ const char* ContractEvaluation::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
+      // optional uint32 time_cheats = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 216)) {
+          _Internal::set_has_time_cheats(&has_bits);
+          time_cheats_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       // optional string contract_identifier = 40;
       case 40:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
@@ -29794,7 +29846,7 @@ uint8_t* ContractEvaluation::_InternalSerialize(
   }
 
   // optional bool old_goals = 10;
-  if (cached_has_bits & 0x01000000u) {
+  if (cached_has_bits & 0x00200000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(10, this->_internal_old_goals(), target);
   }
@@ -29859,7 +29911,7 @@ uint8_t* ContractEvaluation::_InternalSerialize(
   }
 
   // optional bool counted_in_season = 20;
-  if (cached_has_bits & 0x04000000u) {
+  if (cached_has_bits & 0x00800000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(20, this->_internal_counted_in_season(), target);
   }
@@ -29875,33 +29927,39 @@ uint8_t* ContractEvaluation::_InternalSerialize(
   }
 
   // optional double last_contribution_time = 22;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x02000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(22, this->_internal_last_contribution_time(), target);
   }
 
   // optional double soul_power = 23;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x04000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(23, this->_internal_soul_power(), target);
   }
 
   // optional bool replay = 24;
-  if (cached_has_bits & 0x00800000u) {
+  if (cached_has_bits & 0x00100000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(24, this->_internal_replay(), target);
   }
 
   // optional double cxp_change = 25;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x08000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(25, this->_internal_cxp_change(), target);
   }
 
   // optional bool solo = 26;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x00400000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(26, this->_internal_solo(), target);
+  }
+
+  // optional uint32 time_cheats = 27;
+  if (cached_has_bits & 0x01000000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(27, this->_internal_time_cheats(), target);
   }
 
   // optional string contract_identifier = 40;
@@ -29941,7 +29999,7 @@ uint8_t* ContractEvaluation::_InternalSerialize(
   }
 
   // optional .ei.ContractEvaluation.Status status = 52;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x20000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       52, this->_internal_status(), target);
@@ -30100,52 +30158,59 @@ size_t ContractEvaluation::ByteSizeLong() const {
           this->_internal_coop_size());
     }
 
-    // optional double last_contribution_time = 22;
-    if (cached_has_bits & 0x00100000u) {
-      total_size += 2 + 8;
-    }
-
-    // optional double soul_power = 23;
-    if (cached_has_bits & 0x00200000u) {
-      total_size += 2 + 8;
-    }
-
-    // optional double cxp_change = 25;
-    if (cached_has_bits & 0x00400000u) {
-      total_size += 2 + 8;
-    }
-
     // optional bool replay = 24;
+    if (cached_has_bits & 0x00100000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool old_goals = 10;
+    if (cached_has_bits & 0x00200000u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool solo = 26;
+    if (cached_has_bits & 0x00400000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool counted_in_season = 20;
     if (cached_has_bits & 0x00800000u) {
       total_size += 2 + 1;
     }
 
   }
-  if (cached_has_bits & 0x1f000000u) {
-    // optional bool old_goals = 10;
+  if (cached_has_bits & 0x3f000000u) {
+    // optional uint32 time_cheats = 27;
     if (cached_has_bits & 0x01000000u) {
-      total_size += 1 + 1;
-    }
-
-    // optional bool solo = 26;
-    if (cached_has_bits & 0x02000000u) {
-      total_size += 2 + 1;
-    }
-
-    // optional bool counted_in_season = 20;
-    if (cached_has_bits & 0x04000000u) {
-      total_size += 2 + 1;
-    }
-
-    // optional .ei.ContractEvaluation.Status status = 52;
-    if (cached_has_bits & 0x08000000u) {
       total_size += 2 +
-        ::_pbi::WireFormatLite::EnumSize(this->_internal_status());
+        ::_pbi::WireFormatLite::UInt32Size(
+          this->_internal_time_cheats());
+    }
+
+    // optional double last_contribution_time = 22;
+    if (cached_has_bits & 0x02000000u) {
+      total_size += 2 + 8;
+    }
+
+    // optional double soul_power = 23;
+    if (cached_has_bits & 0x04000000u) {
+      total_size += 2 + 8;
+    }
+
+    // optional double cxp_change = 25;
+    if (cached_has_bits & 0x08000000u) {
+      total_size += 2 + 8;
     }
 
     // optional double evaluation_start_time = 51;
     if (cached_has_bits & 0x10000000u) {
       total_size += 2 + 8;
+    }
+
+    // optional .ei.ContractEvaluation.Status status = 52;
+    if (cached_has_bits & 0x20000000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_status());
     }
 
   }
@@ -30242,34 +30307,37 @@ void ContractEvaluation::MergeFrom(const ContractEvaluation& from) {
       coop_size_ = from.coop_size_;
     }
     if (cached_has_bits & 0x00100000u) {
-      last_contribution_time_ = from.last_contribution_time_;
+      replay_ = from.replay_;
     }
     if (cached_has_bits & 0x00200000u) {
-      soul_power_ = from.soul_power_;
+      old_goals_ = from.old_goals_;
     }
     if (cached_has_bits & 0x00400000u) {
-      cxp_change_ = from.cxp_change_;
+      solo_ = from.solo_;
     }
     if (cached_has_bits & 0x00800000u) {
-      replay_ = from.replay_;
+      counted_in_season_ = from.counted_in_season_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x1f000000u) {
+  if (cached_has_bits & 0x3f000000u) {
     if (cached_has_bits & 0x01000000u) {
-      old_goals_ = from.old_goals_;
+      time_cheats_ = from.time_cheats_;
     }
     if (cached_has_bits & 0x02000000u) {
-      solo_ = from.solo_;
+      last_contribution_time_ = from.last_contribution_time_;
     }
     if (cached_has_bits & 0x04000000u) {
-      counted_in_season_ = from.counted_in_season_;
+      soul_power_ = from.soul_power_;
     }
     if (cached_has_bits & 0x08000000u) {
-      status_ = from.status_;
+      cxp_change_ = from.cxp_change_;
     }
     if (cached_has_bits & 0x10000000u) {
       evaluation_start_time_ = from.evaluation_start_time_;
+    }
+    if (cached_has_bits & 0x20000000u) {
+      status_ = from.status_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -30312,8 +30380,8 @@ void ContractEvaluation::InternalSwap(ContractEvaluation* other) {
       &other->version_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractEvaluation, evaluation_start_time_)
-      + sizeof(ContractEvaluation::evaluation_start_time_)
+      PROTOBUF_FIELD_OFFSET(ContractEvaluation, status_)
+      + sizeof(ContractEvaluation::status_)
       - PROTOBUF_FIELD_OFFSET(ContractEvaluation, cxp_)>(
           reinterpret_cast<char*>(&cxp_),
           reinterpret_cast<char*>(&other->cxp_));
@@ -31042,6 +31110,9 @@ class CoopCompletionSnapshot_ContributorSnapshot::_Internal {
   static void set_has_contribution(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
+  static void set_has_last_contribution_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
   static void set_has_soul_power(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
@@ -31075,8 +31146,8 @@ CoopCompletionSnapshot_ContributorSnapshot::CoopCompletionSnapshot_ContributorSn
       GetArenaForAllocation());
   }
   ::memcpy(&contribution_, &from.contribution_,
-    static_cast<size_t>(reinterpret_cast<char*>(&tokens_spent_) -
-    reinterpret_cast<char*>(&contribution_)) + sizeof(tokens_spent_));
+    static_cast<size_t>(reinterpret_cast<char*>(&last_contribution_time_) -
+    reinterpret_cast<char*>(&contribution_)) + sizeof(last_contribution_time_));
   // @@protoc_insertion_point(copy_constructor:ei.CoopCompletionSnapshot.ContributorSnapshot)
 }
 
@@ -31087,8 +31158,8 @@ user_id_.InitDefault();
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&contribution_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&tokens_spent_) -
-    reinterpret_cast<char*>(&contribution_)) + sizeof(tokens_spent_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&last_contribution_time_) -
+    reinterpret_cast<char*>(&contribution_)) + sizeof(last_contribution_time_));
 }
 
 CoopCompletionSnapshot_ContributorSnapshot::~CoopCompletionSnapshot_ContributorSnapshot() {
@@ -31119,10 +31190,10 @@ void CoopCompletionSnapshot_ContributorSnapshot::Clear() {
   if (cached_has_bits & 0x00000001u) {
     user_id_.ClearNonDefaultToEmpty();
   }
-  if (cached_has_bits & 0x0000001eu) {
+  if (cached_has_bits & 0x0000003eu) {
     ::memset(&contribution_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&tokens_spent_) -
-        reinterpret_cast<char*>(&contribution_)) + sizeof(tokens_spent_));
+        reinterpret_cast<char*>(&last_contribution_time_) -
+        reinterpret_cast<char*>(&contribution_)) + sizeof(last_contribution_time_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -31180,6 +31251,15 @@ const char* CoopCompletionSnapshot_ContributorSnapshot::_InternalParse(const cha
           _Internal::set_has_tokens_spent(&has_bits);
           tokens_spent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional double last_contribution_time = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
+          _Internal::set_has_last_contribution_time(&has_bits);
+          last_contribution_time_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
@@ -31248,6 +31328,12 @@ uint8_t* CoopCompletionSnapshot_ContributorSnapshot::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_tokens_spent(), target);
   }
 
+  // optional double last_contribution_time = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_last_contribution_time(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -31265,7 +31351,7 @@ size_t CoopCompletionSnapshot_ContributorSnapshot::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
+  if (cached_has_bits & 0x0000003fu) {
     // optional string user_id = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -31293,6 +31379,11 @@ size_t CoopCompletionSnapshot_ContributorSnapshot::ByteSizeLong() const {
       total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_tokens_spent());
     }
 
+    // optional double last_contribution_time = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 8;
+    }
+
   }
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
@@ -31317,7 +31408,7 @@ void CoopCompletionSnapshot_ContributorSnapshot::MergeFrom(const CoopCompletionS
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
+  if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
       _internal_set_user_id(from._internal_user_id());
     }
@@ -31332,6 +31423,9 @@ void CoopCompletionSnapshot_ContributorSnapshot::MergeFrom(const CoopCompletionS
     }
     if (cached_has_bits & 0x00000010u) {
       tokens_spent_ = from.tokens_spent_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      last_contribution_time_ = from.last_contribution_time_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -31360,8 +31454,8 @@ void CoopCompletionSnapshot_ContributorSnapshot::InternalSwap(CoopCompletionSnap
       &other->user_id_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CoopCompletionSnapshot_ContributorSnapshot, tokens_spent_)
-      + sizeof(CoopCompletionSnapshot_ContributorSnapshot::tokens_spent_)
+      PROTOBUF_FIELD_OFFSET(CoopCompletionSnapshot_ContributorSnapshot, last_contribution_time_)
+      + sizeof(CoopCompletionSnapshot_ContributorSnapshot::last_contribution_time_)
       - PROTOBUF_FIELD_OFFSET(CoopCompletionSnapshot_ContributorSnapshot, contribution_)>(
           reinterpret_cast<char*>(&contribution_),
           reinterpret_cast<char*>(&other->contribution_));
@@ -37540,8 +37634,11 @@ class ContractCoopStatusResponse::_Internal {
   static void set_has_seconds_remaining(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_all_members_reporting(HasBits* has_bits) {
+  static void set_has_all_goals_achieved(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
+  }
+  static void set_has_all_members_reporting(HasBits* has_bits) {
+    (*has_bits)[0] |= 1024u;
   }
   static void set_has_grace_period_seconds_remaining(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
@@ -37662,7 +37759,7 @@ void ContractCoopStatusResponse::Clear() {
         reinterpret_cast<char*>(&auto_generated_) -
         reinterpret_cast<char*>(&total_amount_)) + sizeof(auto_generated_));
   }
-  if (cached_has_bits & 0x00000300u) {
+  if (cached_has_bits & 0x00000700u) {
     ::memset(&public__, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&all_members_reporting_) -
         reinterpret_cast<char*>(&public__)) + sizeof(all_members_reporting_));
@@ -37816,6 +37913,15 @@ const char* ContractCoopStatusResponse::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
+      // optional bool all_goals_achieved = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
+          _Internal::set_has_all_goals_achieved(&has_bits);
+          all_goals_achieved_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -37888,7 +37994,7 @@ uint8_t* ContractCoopStatusResponse::_InternalSerialize(
   }
 
   // optional bool all_members_reporting = 6;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_all_members_reporting(), target);
   }
@@ -37941,6 +38047,12 @@ uint8_t* ContractCoopStatusResponse::_InternalSerialize(
     const auto& repfield = this->_internal_chicken_runs(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(13, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  // optional bool all_goals_achieved = 14;
+  if (cached_has_bits & 0x00000200u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(14, this->_internal_all_goals_achieved(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -38029,14 +38141,19 @@ size_t ContractCoopStatusResponse::ByteSizeLong() const {
     }
 
   }
-  if (cached_has_bits & 0x00000300u) {
+  if (cached_has_bits & 0x00000700u) {
     // optional bool public = 10;
     if (cached_has_bits & 0x00000100u) {
       total_size += 1 + 1;
     }
 
-    // optional bool all_members_reporting = 6;
+    // optional bool all_goals_achieved = 14;
     if (cached_has_bits & 0x00000200u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool all_members_reporting = 6;
+    if (cached_has_bits & 0x00000400u) {
       total_size += 1 + 1;
     }
 
@@ -38094,11 +38211,14 @@ void ContractCoopStatusResponse::MergeFrom(const ContractCoopStatusResponse& fro
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x00000300u) {
+  if (cached_has_bits & 0x00000700u) {
     if (cached_has_bits & 0x00000100u) {
       public__ = from.public__;
     }
     if (cached_has_bits & 0x00000200u) {
+      all_goals_achieved_ = from.all_goals_achieved_;
+    }
+    if (cached_has_bits & 0x00000400u) {
       all_members_reporting_ = from.all_members_reporting_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -82969,6 +83089,253 @@ void SubscriptionChangeHintRequest::InternalSwap(SubscriptionChangeHintRequest* 
       file_level_metadata_ei_2eproto[177]);
 }
 
+// ===================================================================
+
+class CXPEvalRolloutInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<CXPEvalRolloutInfo>()._has_bits_);
+  static void set_has_current_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_basis_points(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+};
+
+CXPEvalRolloutInfo::CXPEvalRolloutInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:ei.CXPEvalRolloutInfo)
+}
+CXPEvalRolloutInfo::CXPEvalRolloutInfo(const CXPEvalRolloutInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  current_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    current_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_current_id()) {
+    current_id_.Set(from._internal_current_id(), 
+      GetArenaForAllocation());
+  }
+  basis_points_ = from.basis_points_;
+  // @@protoc_insertion_point(copy_constructor:ei.CXPEvalRolloutInfo)
+}
+
+inline void CXPEvalRolloutInfo::SharedCtor() {
+current_id_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  current_id_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+basis_points_ = 0u;
+}
+
+CXPEvalRolloutInfo::~CXPEvalRolloutInfo() {
+  // @@protoc_insertion_point(destructor:ei.CXPEvalRolloutInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void CXPEvalRolloutInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  current_id_.Destroy();
+}
+
+void CXPEvalRolloutInfo::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void CXPEvalRolloutInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:ei.CXPEvalRolloutInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    current_id_.ClearNonDefaultToEmpty();
+  }
+  basis_points_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* CXPEvalRolloutInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional string current_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_current_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "ei.CXPEvalRolloutInfo.current_id");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional uint32 basis_points = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_basis_points(&has_bits);
+          basis_points_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* CXPEvalRolloutInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ei.CXPEvalRolloutInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional string current_id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_current_id().data(), static_cast<int>(this->_internal_current_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "ei.CXPEvalRolloutInfo.current_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_current_id(), target);
+  }
+
+  // optional uint32 basis_points = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_basis_points(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ei.CXPEvalRolloutInfo)
+  return target;
+}
+
+size_t CXPEvalRolloutInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ei.CXPEvalRolloutInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string current_id = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_current_id());
+    }
+
+    // optional uint32 basis_points = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_basis_points());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CXPEvalRolloutInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CXPEvalRolloutInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CXPEvalRolloutInfo::GetClassData() const { return &_class_data_; }
+
+void CXPEvalRolloutInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<CXPEvalRolloutInfo *>(to)->MergeFrom(
+      static_cast<const CXPEvalRolloutInfo &>(from));
+}
+
+
+void CXPEvalRolloutInfo::MergeFrom(const CXPEvalRolloutInfo& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ei.CXPEvalRolloutInfo)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_current_id(from._internal_current_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      basis_points_ = from.basis_points_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CXPEvalRolloutInfo::CopyFrom(const CXPEvalRolloutInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ei.CXPEvalRolloutInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CXPEvalRolloutInfo::IsInitialized() const {
+  return true;
+}
+
+void CXPEvalRolloutInfo::InternalSwap(CXPEvalRolloutInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &current_id_, lhs_arena,
+      &other->current_id_, rhs_arena
+  );
+  swap(basis_points_, other->basis_points_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CXPEvalRolloutInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
+      file_level_metadata_ei_2eproto[178]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace ei
 PROTOBUF_NAMESPACE_OPEN
@@ -83683,6 +84050,10 @@ Arena::CreateMaybeMessage< ::ei::UserSubscriptionInfo >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::ei::SubscriptionChangeHintRequest*
 Arena::CreateMaybeMessage< ::ei::SubscriptionChangeHintRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::ei::SubscriptionChangeHintRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ei::CXPEvalRolloutInfo*
+Arena::CreateMaybeMessage< ::ei::CXPEvalRolloutInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ei::CXPEvalRolloutInfo >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

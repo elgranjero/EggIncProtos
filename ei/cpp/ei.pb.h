@@ -166,6 +166,9 @@ extern Backup_TutorialDefaultTypeInternal _Backup_Tutorial_default_instance_;
 class BasicRequestInfo;
 struct BasicRequestInfoDefaultTypeInternal;
 extern BasicRequestInfoDefaultTypeInternal _BasicRequestInfo_default_instance_;
+class CXPEvalRolloutInfo;
+struct CXPEvalRolloutInfoDefaultTypeInternal;
+extern CXPEvalRolloutInfoDefaultTypeInternal _CXPEvalRolloutInfo_default_instance_;
 class CleanAccountRequest;
 struct CleanAccountRequestDefaultTypeInternal;
 extern CleanAccountRequestDefaultTypeInternal _CleanAccountRequest_default_instance_;
@@ -622,6 +625,7 @@ template<> ::ei::Backup_Simulation* Arena::CreateMaybeMessage<::ei::Backup_Simul
 template<> ::ei::Backup_Stats* Arena::CreateMaybeMessage<::ei::Backup_Stats>(Arena*);
 template<> ::ei::Backup_Tutorial* Arena::CreateMaybeMessage<::ei::Backup_Tutorial>(Arena*);
 template<> ::ei::BasicRequestInfo* Arena::CreateMaybeMessage<::ei::BasicRequestInfo>(Arena*);
+template<> ::ei::CXPEvalRolloutInfo* Arena::CreateMaybeMessage<::ei::CXPEvalRolloutInfo>(Arena*);
 template<> ::ei::CleanAccountRequest* Arena::CreateMaybeMessage<::ei::CleanAccountRequest>(Arena*);
 template<> ::ei::ClearAllUserDataRequest* Arena::CreateMaybeMessage<::ei::ClearAllUserDataRequest>(Arena*);
 template<> ::ei::CollectContractArtifactRewardsRequest* Arena::CreateMaybeMessage<::ei::CollectContractArtifactRewardsRequest>(Arena*);
@@ -877,11 +881,12 @@ enum ContractEvaluation_PoorBehavior : int {
   ContractEvaluation_PoorBehavior_BAD_CONTRIBUTION = 2,
   ContractEvaluation_PoorBehavior_DISHONORABLY_DISCHARGED = 3,
   ContractEvaluation_PoorBehavior_POOR_TEAMWORK = 4,
-  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5
+  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5,
+  ContractEvaluation_PoorBehavior_TIME_CHEAT = 6
 };
 bool ContractEvaluation_PoorBehavior_IsValid(int value);
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MIN = ContractEvaluation_PoorBehavior_NONE;
-constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_TIME_CHEAT;
 constexpr int ContractEvaluation_PoorBehavior_PoorBehavior_ARRAYSIZE = ContractEvaluation_PoorBehavior_PoorBehavior_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractEvaluation_PoorBehavior_descriptor();
@@ -14138,6 +14143,8 @@ class ContractEvaluation final :
     ContractEvaluation_PoorBehavior_POOR_TEAMWORK;
   static constexpr PoorBehavior ABANDONED_COOP =
     ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+  static constexpr PoorBehavior TIME_CHEAT =
+    ContractEvaluation_PoorBehavior_TIME_CHEAT;
   static inline bool PoorBehavior_IsValid(int value) {
     return ContractEvaluation_PoorBehavior_IsValid(value);
   }
@@ -14222,15 +14229,16 @@ class ContractEvaluation final :
     kBuffTimeValueFieldNumber = 17,
     kBoostTokenAllotmentFieldNumber = 16,
     kCoopSizeFieldNumber = 18,
-    kLastContributionTimeFieldNumber = 22,
-    kSoulPowerFieldNumber = 23,
-    kCxpChangeFieldNumber = 25,
     kReplayFieldNumber = 24,
     kOldGoalsFieldNumber = 10,
     kSoloFieldNumber = 26,
     kCountedInSeasonFieldNumber = 20,
-    kStatusFieldNumber = 52,
+    kTimeCheatsFieldNumber = 27,
+    kLastContributionTimeFieldNumber = 22,
+    kSoulPowerFieldNumber = 23,
+    kCxpChangeFieldNumber = 25,
     kEvaluationStartTimeFieldNumber = 51,
+    kStatusFieldNumber = 52,
   };
   // repeated string notes = 12;
   int notes_size() const;
@@ -14553,45 +14561,6 @@ class ContractEvaluation final :
   void _internal_set_coop_size(uint32_t value);
   public:
 
-  // optional double last_contribution_time = 22;
-  bool has_last_contribution_time() const;
-  private:
-  bool _internal_has_last_contribution_time() const;
-  public:
-  void clear_last_contribution_time();
-  double last_contribution_time() const;
-  void set_last_contribution_time(double value);
-  private:
-  double _internal_last_contribution_time() const;
-  void _internal_set_last_contribution_time(double value);
-  public:
-
-  // optional double soul_power = 23;
-  bool has_soul_power() const;
-  private:
-  bool _internal_has_soul_power() const;
-  public:
-  void clear_soul_power();
-  double soul_power() const;
-  void set_soul_power(double value);
-  private:
-  double _internal_soul_power() const;
-  void _internal_set_soul_power(double value);
-  public:
-
-  // optional double cxp_change = 25;
-  bool has_cxp_change() const;
-  private:
-  bool _internal_has_cxp_change() const;
-  public:
-  void clear_cxp_change();
-  double cxp_change() const;
-  void set_cxp_change(double value);
-  private:
-  double _internal_cxp_change() const;
-  void _internal_set_cxp_change(double value);
-  public:
-
   // optional bool replay = 24;
   bool has_replay() const;
   private:
@@ -14644,17 +14613,56 @@ class ContractEvaluation final :
   void _internal_set_counted_in_season(bool value);
   public:
 
-  // optional .ei.ContractEvaluation.Status status = 52;
-  bool has_status() const;
+  // optional uint32 time_cheats = 27;
+  bool has_time_cheats() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_time_cheats() const;
   public:
-  void clear_status();
-  ::ei::ContractEvaluation_Status status() const;
-  void set_status(::ei::ContractEvaluation_Status value);
+  void clear_time_cheats();
+  uint32_t time_cheats() const;
+  void set_time_cheats(uint32_t value);
   private:
-  ::ei::ContractEvaluation_Status _internal_status() const;
-  void _internal_set_status(::ei::ContractEvaluation_Status value);
+  uint32_t _internal_time_cheats() const;
+  void _internal_set_time_cheats(uint32_t value);
+  public:
+
+  // optional double last_contribution_time = 22;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
+  // optional double soul_power = 23;
+  bool has_soul_power() const;
+  private:
+  bool _internal_has_soul_power() const;
+  public:
+  void clear_soul_power();
+  double soul_power() const;
+  void set_soul_power(double value);
+  private:
+  double _internal_soul_power() const;
+  void _internal_set_soul_power(double value);
+  public:
+
+  // optional double cxp_change = 25;
+  bool has_cxp_change() const;
+  private:
+  bool _internal_has_cxp_change() const;
+  public:
+  void clear_cxp_change();
+  double cxp_change() const;
+  void set_cxp_change(double value);
+  private:
+  double _internal_cxp_change() const;
+  void _internal_set_cxp_change(double value);
   public:
 
   // optional double evaluation_start_time = 51;
@@ -14668,6 +14676,19 @@ class ContractEvaluation final :
   private:
   double _internal_evaluation_start_time() const;
   void _internal_set_evaluation_start_time(double value);
+  public:
+
+  // optional .ei.ContractEvaluation.Status status = 52;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::ContractEvaluation_Status status() const;
+  void set_status(::ei::ContractEvaluation_Status value);
+  private:
+  ::ei::ContractEvaluation_Status _internal_status() const;
+  void _internal_set_status(::ei::ContractEvaluation_Status value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.ContractEvaluation)
@@ -14701,15 +14722,16 @@ class ContractEvaluation final :
   double buff_time_value_;
   uint32_t boost_token_allotment_;
   uint32_t coop_size_;
-  double last_contribution_time_;
-  double soul_power_;
-  double cxp_change_;
   bool replay_;
   bool old_goals_;
   bool solo_;
   bool counted_in_season_;
-  int status_;
+  uint32_t time_cheats_;
+  double last_contribution_time_;
+  double soul_power_;
+  double cxp_change_;
   double evaluation_start_time_;
+  int status_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -15371,6 +15393,7 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
     kSoulPowerFieldNumber = 2,
     kTokensFieldNumber = 4,
     kTokensSpentFieldNumber = 5,
+    kLastContributionTimeFieldNumber = 6,
   };
   // optional string user_id = 3;
   bool has_user_id() const;
@@ -15442,6 +15465,19 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
   void _internal_set_tokens_spent(uint32_t value);
   public:
 
+  // optional double last_contribution_time = 6;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.CoopCompletionSnapshot.ContributorSnapshot)
  private:
   class _Internal;
@@ -15456,6 +15492,7 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
   double soul_power_;
   uint32_t tokens_;
   uint32_t tokens_spent_;
+  double last_contribution_time_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -19664,6 +19701,7 @@ class ContractCoopStatusResponse final :
     kLocalTimestampFieldNumber = 12,
     kAutoGeneratedFieldNumber = 8,
     kPublicFieldNumber = 10,
+    kAllGoalsAchievedFieldNumber = 14,
     kAllMembersReportingFieldNumber = 6,
   };
   // repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;
@@ -19852,6 +19890,19 @@ class ContractCoopStatusResponse final :
   void _internal_set_public_(bool value);
   public:
 
+  // optional bool all_goals_achieved = 14;
+  bool has_all_goals_achieved() const;
+  private:
+  bool _internal_has_all_goals_achieved() const;
+  public:
+  void clear_all_goals_achieved();
+  bool all_goals_achieved() const;
+  void set_all_goals_achieved(bool value);
+  private:
+  bool _internal_all_goals_achieved() const;
+  void _internal_set_all_goals_achieved(bool value);
+  public:
+
   // optional bool all_members_reporting = 6;
   bool has_all_members_reporting() const;
   private:
@@ -19886,6 +19937,7 @@ class ContractCoopStatusResponse final :
   double local_timestamp_;
   bool auto_generated_;
   bool public__;
+  bool all_goals_achieved_;
   bool all_members_reporting_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -48712,6 +48764,181 @@ class SubscriptionChangeHintRequest final :
   int next_subscription_level_;
   friend struct ::TableStruct_ei_2eproto;
 };
+// -------------------------------------------------------------------
+
+class CXPEvalRolloutInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CXPEvalRolloutInfo) */ {
+ public:
+  inline CXPEvalRolloutInfo() : CXPEvalRolloutInfo(nullptr) {}
+  ~CXPEvalRolloutInfo() override;
+  explicit PROTOBUF_CONSTEXPR CXPEvalRolloutInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CXPEvalRolloutInfo(const CXPEvalRolloutInfo& from);
+  CXPEvalRolloutInfo(CXPEvalRolloutInfo&& from) noexcept
+    : CXPEvalRolloutInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline CXPEvalRolloutInfo& operator=(const CXPEvalRolloutInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CXPEvalRolloutInfo& operator=(CXPEvalRolloutInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CXPEvalRolloutInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CXPEvalRolloutInfo* internal_default_instance() {
+    return reinterpret_cast<const CXPEvalRolloutInfo*>(
+               &_CXPEvalRolloutInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    178;
+
+  friend void swap(CXPEvalRolloutInfo& a, CXPEvalRolloutInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CXPEvalRolloutInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CXPEvalRolloutInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CXPEvalRolloutInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CXPEvalRolloutInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CXPEvalRolloutInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CXPEvalRolloutInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CXPEvalRolloutInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CXPEvalRolloutInfo";
+  }
+  protected:
+  explicit CXPEvalRolloutInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCurrentIdFieldNumber = 1,
+    kBasisPointsFieldNumber = 2,
+  };
+  // optional string current_id = 1;
+  bool has_current_id() const;
+  private:
+  bool _internal_has_current_id() const;
+  public:
+  void clear_current_id();
+  const std::string& current_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_current_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_current_id();
+  PROTOBUF_NODISCARD std::string* release_current_id();
+  void set_allocated_current_id(std::string* current_id);
+  private:
+  const std::string& _internal_current_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_current_id(const std::string& value);
+  std::string* _internal_mutable_current_id();
+  public:
+
+  // optional uint32 basis_points = 2;
+  bool has_basis_points() const;
+  private:
+  bool _internal_has_basis_points() const;
+  public:
+  void clear_basis_points();
+  uint32_t basis_points() const;
+  void set_basis_points(uint32_t value);
+  private:
+  uint32_t _internal_basis_points() const;
+  void _internal_set_basis_points(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.CXPEvalRolloutInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr current_id_;
+  uint32_t basis_points_;
+  friend struct ::TableStruct_ei_2eproto;
+};
 // ===================================================================
 
 
@@ -64194,7 +64421,7 @@ inline void ContractEvaluation::set_cxp(double value) {
 
 // optional bool replay = 24;
 inline bool ContractEvaluation::_internal_has_replay() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_replay() const {
@@ -64202,7 +64429,7 @@ inline bool ContractEvaluation::has_replay() const {
 }
 inline void ContractEvaluation::clear_replay() {
   replay_ = false;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool ContractEvaluation::_internal_replay() const {
   return replay_;
@@ -64212,7 +64439,7 @@ inline bool ContractEvaluation::replay() const {
   return _internal_replay();
 }
 inline void ContractEvaluation::_internal_set_replay(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x00100000u;
   replay_ = value;
 }
 inline void ContractEvaluation::set_replay(bool value) {
@@ -64222,7 +64449,7 @@ inline void ContractEvaluation::set_replay(bool value) {
 
 // optional double cxp_change = 25;
 inline bool ContractEvaluation::_internal_has_cxp_change() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_cxp_change() const {
@@ -64230,7 +64457,7 @@ inline bool ContractEvaluation::has_cxp_change() const {
 }
 inline void ContractEvaluation::clear_cxp_change() {
   cxp_change_ = 0;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline double ContractEvaluation::_internal_cxp_change() const {
   return cxp_change_;
@@ -64240,7 +64467,7 @@ inline double ContractEvaluation::cxp_change() const {
   return _internal_cxp_change();
 }
 inline void ContractEvaluation::_internal_set_cxp_change(double value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x08000000u;
   cxp_change_ = value;
 }
 inline void ContractEvaluation::set_cxp_change(double value) {
@@ -64306,7 +64533,7 @@ inline void ContractEvaluation::set_old_league(int32_t value) {
 
 // optional bool old_goals = 10;
 inline bool ContractEvaluation::_internal_has_old_goals() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_old_goals() const {
@@ -64314,7 +64541,7 @@ inline bool ContractEvaluation::has_old_goals() const {
 }
 inline void ContractEvaluation::clear_old_goals() {
   old_goals_ = false;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool ContractEvaluation::_internal_old_goals() const {
   return old_goals_;
@@ -64324,7 +64551,7 @@ inline bool ContractEvaluation::old_goals() const {
   return _internal_old_goals();
 }
 inline void ContractEvaluation::_internal_set_old_goals(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x00200000u;
   old_goals_ = value;
 }
 inline void ContractEvaluation::set_old_goals(bool value) {
@@ -64475,7 +64702,7 @@ inline void ContractEvaluation::set_coop_size(uint32_t value) {
 
 // optional bool solo = 26;
 inline bool ContractEvaluation::_internal_has_solo() const {
-  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_solo() const {
@@ -64483,7 +64710,7 @@ inline bool ContractEvaluation::has_solo() const {
 }
 inline void ContractEvaluation::clear_solo() {
   solo_ = false;
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool ContractEvaluation::_internal_solo() const {
   return solo_;
@@ -64493,7 +64720,7 @@ inline bool ContractEvaluation::solo() const {
   return _internal_solo();
 }
 inline void ContractEvaluation::_internal_set_solo(bool value) {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x00400000u;
   solo_ = value;
 }
 inline void ContractEvaluation::set_solo(bool value) {
@@ -64503,7 +64730,7 @@ inline void ContractEvaluation::set_solo(bool value) {
 
 // optional double soul_power = 23;
 inline bool ContractEvaluation::_internal_has_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_soul_power() const {
@@ -64511,7 +64738,7 @@ inline bool ContractEvaluation::has_soul_power() const {
 }
 inline void ContractEvaluation::clear_soul_power() {
   soul_power_ = 0;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline double ContractEvaluation::_internal_soul_power() const {
   return soul_power_;
@@ -64521,7 +64748,7 @@ inline double ContractEvaluation::soul_power() const {
   return _internal_soul_power();
 }
 inline void ContractEvaluation::_internal_set_soul_power(double value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x04000000u;
   soul_power_ = value;
 }
 inline void ContractEvaluation::set_soul_power(double value) {
@@ -64531,7 +64758,7 @@ inline void ContractEvaluation::set_soul_power(double value) {
 
 // optional double last_contribution_time = 22;
 inline bool ContractEvaluation::_internal_has_last_contribution_time() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_last_contribution_time() const {
@@ -64539,7 +64766,7 @@ inline bool ContractEvaluation::has_last_contribution_time() const {
 }
 inline void ContractEvaluation::clear_last_contribution_time() {
   last_contribution_time_ = 0;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline double ContractEvaluation::_internal_last_contribution_time() const {
   return last_contribution_time_;
@@ -64549,7 +64776,7 @@ inline double ContractEvaluation::last_contribution_time() const {
   return _internal_last_contribution_time();
 }
 inline void ContractEvaluation::_internal_set_last_contribution_time(double value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x02000000u;
   last_contribution_time_ = value;
 }
 inline void ContractEvaluation::set_last_contribution_time(double value) {
@@ -64783,7 +65010,7 @@ inline void ContractEvaluation::set_other_bonuses(double value) {
 
 // optional bool counted_in_season = 20;
 inline bool ContractEvaluation::_internal_has_counted_in_season() const {
-  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_counted_in_season() const {
@@ -64791,7 +65018,7 @@ inline bool ContractEvaluation::has_counted_in_season() const {
 }
 inline void ContractEvaluation::clear_counted_in_season() {
   counted_in_season_ = false;
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline bool ContractEvaluation::_internal_counted_in_season() const {
   return counted_in_season_;
@@ -64801,7 +65028,7 @@ inline bool ContractEvaluation::counted_in_season() const {
   return _internal_counted_in_season();
 }
 inline void ContractEvaluation::_internal_set_counted_in_season(bool value) {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x00800000u;
   counted_in_season_ = value;
 }
 inline void ContractEvaluation::set_counted_in_season(bool value) {
@@ -64875,6 +65102,34 @@ inline void ContractEvaluation::set_allocated_season_id(std::string* season_id) 
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.season_id)
+}
+
+// optional uint32 time_cheats = 27;
+inline bool ContractEvaluation::_internal_has_time_cheats() const {
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_time_cheats() const {
+  return _internal_has_time_cheats();
+}
+inline void ContractEvaluation::clear_time_cheats() {
+  time_cheats_ = 0u;
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline uint32_t ContractEvaluation::_internal_time_cheats() const {
+  return time_cheats_;
+}
+inline uint32_t ContractEvaluation::time_cheats() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.time_cheats)
+  return _internal_time_cheats();
+}
+inline void ContractEvaluation::_internal_set_time_cheats(uint32_t value) {
+  _has_bits_[0] |= 0x01000000u;
+  time_cheats_ = value;
+}
+inline void ContractEvaluation::set_time_cheats(uint32_t value) {
+  _internal_set_time_cheats(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.time_cheats)
 }
 
 // repeated .ei.ContractEvaluation.PoorBehavior issues = 19;
@@ -65095,7 +65350,7 @@ inline void ContractEvaluation::set_evaluation_start_time(double value) {
 
 // optional .ei.ContractEvaluation.Status status = 52;
 inline bool ContractEvaluation::_internal_has_status() const {
-  bool value = (_has_bits_[0] & 0x08000000u) != 0;
+  bool value = (_has_bits_[0] & 0x20000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_status() const {
@@ -65103,7 +65358,7 @@ inline bool ContractEvaluation::has_status() const {
 }
 inline void ContractEvaluation::clear_status() {
   status_ = 0;
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x20000000u;
 }
 inline ::ei::ContractEvaluation_Status ContractEvaluation::_internal_status() const {
   return static_cast< ::ei::ContractEvaluation_Status >(status_);
@@ -65114,7 +65369,7 @@ inline ::ei::ContractEvaluation_Status ContractEvaluation::status() const {
 }
 inline void ContractEvaluation::_internal_set_status(::ei::ContractEvaluation_Status value) {
   assert(::ei::ContractEvaluation_Status_IsValid(value));
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x20000000u;
   status_ = value;
 }
 inline void ContractEvaluation::set_status(::ei::ContractEvaluation_Status value) {
@@ -65448,6 +65703,34 @@ inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_contributi
 inline void CoopCompletionSnapshot_ContributorSnapshot::set_contribution(double value) {
   _internal_set_contribution(value);
   // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.contribution)
+}
+
+// optional double last_contribution_time = 6;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_last_contribution_time() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_last_contribution_time() const {
+  return _internal_has_last_contribution_time();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_last_contribution_time() {
+  last_contribution_time_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::_internal_last_contribution_time() const {
+  return last_contribution_time_;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::last_contribution_time() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.last_contribution_time)
+  return _internal_last_contribution_time();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_last_contribution_time(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  last_contribution_time_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_last_contribution_time(double value) {
+  _internal_set_last_contribution_time(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.last_contribution_time)
 }
 
 // optional double soul_power = 2;
@@ -70028,9 +70311,37 @@ inline void ContractCoopStatusResponse::set_seconds_remaining(double value) {
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.seconds_remaining)
 }
 
+// optional bool all_goals_achieved = 14;
+inline bool ContractCoopStatusResponse::_internal_has_all_goals_achieved() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse::has_all_goals_achieved() const {
+  return _internal_has_all_goals_achieved();
+}
+inline void ContractCoopStatusResponse::clear_all_goals_achieved() {
+  all_goals_achieved_ = false;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline bool ContractCoopStatusResponse::_internal_all_goals_achieved() const {
+  return all_goals_achieved_;
+}
+inline bool ContractCoopStatusResponse::all_goals_achieved() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.all_goals_achieved)
+  return _internal_all_goals_achieved();
+}
+inline void ContractCoopStatusResponse::_internal_set_all_goals_achieved(bool value) {
+  _has_bits_[0] |= 0x00000200u;
+  all_goals_achieved_ = value;
+}
+inline void ContractCoopStatusResponse::set_all_goals_achieved(bool value) {
+  _internal_set_all_goals_achieved(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.all_goals_achieved)
+}
+
 // optional bool all_members_reporting = 6;
 inline bool ContractCoopStatusResponse::_internal_has_all_members_reporting() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse::has_all_members_reporting() const {
@@ -70038,7 +70349,7 @@ inline bool ContractCoopStatusResponse::has_all_members_reporting() const {
 }
 inline void ContractCoopStatusResponse::clear_all_members_reporting() {
   all_members_reporting_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline bool ContractCoopStatusResponse::_internal_all_members_reporting() const {
   return all_members_reporting_;
@@ -70048,7 +70359,7 @@ inline bool ContractCoopStatusResponse::all_members_reporting() const {
   return _internal_all_members_reporting();
 }
 inline void ContractCoopStatusResponse::_internal_set_all_members_reporting(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   all_members_reporting_ = value;
 }
 inline void ContractCoopStatusResponse::set_all_members_reporting(bool value) {
@@ -102314,9 +102625,111 @@ inline void SubscriptionChangeHintRequest::set_next_subscription_level(::ei::Use
   // @@protoc_insertion_point(field_set:ei.SubscriptionChangeHintRequest.next_subscription_level)
 }
 
+// -------------------------------------------------------------------
+
+// CXPEvalRolloutInfo
+
+// optional string current_id = 1;
+inline bool CXPEvalRolloutInfo::_internal_has_current_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CXPEvalRolloutInfo::has_current_id() const {
+  return _internal_has_current_id();
+}
+inline void CXPEvalRolloutInfo::clear_current_id() {
+  current_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CXPEvalRolloutInfo::current_id() const {
+  // @@protoc_insertion_point(field_get:ei.CXPEvalRolloutInfo.current_id)
+  return _internal_current_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CXPEvalRolloutInfo::set_current_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ current_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CXPEvalRolloutInfo.current_id)
+}
+inline std::string* CXPEvalRolloutInfo::mutable_current_id() {
+  std::string* _s = _internal_mutable_current_id();
+  // @@protoc_insertion_point(field_mutable:ei.CXPEvalRolloutInfo.current_id)
+  return _s;
+}
+inline const std::string& CXPEvalRolloutInfo::_internal_current_id() const {
+  return current_id_.Get();
+}
+inline void CXPEvalRolloutInfo::_internal_set_current_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  current_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CXPEvalRolloutInfo::_internal_mutable_current_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return current_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CXPEvalRolloutInfo::release_current_id() {
+  // @@protoc_insertion_point(field_release:ei.CXPEvalRolloutInfo.current_id)
+  if (!_internal_has_current_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = current_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (current_id_.IsDefault()) {
+    current_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CXPEvalRolloutInfo::set_allocated_current_id(std::string* current_id) {
+  if (current_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  current_id_.SetAllocated(current_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (current_id_.IsDefault()) {
+    current_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CXPEvalRolloutInfo.current_id)
+}
+
+// optional uint32 basis_points = 2;
+inline bool CXPEvalRolloutInfo::_internal_has_basis_points() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CXPEvalRolloutInfo::has_basis_points() const {
+  return _internal_has_basis_points();
+}
+inline void CXPEvalRolloutInfo::clear_basis_points() {
+  basis_points_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline uint32_t CXPEvalRolloutInfo::_internal_basis_points() const {
+  return basis_points_;
+}
+inline uint32_t CXPEvalRolloutInfo::basis_points() const {
+  // @@protoc_insertion_point(field_get:ei.CXPEvalRolloutInfo.basis_points)
+  return _internal_basis_points();
+}
+inline void CXPEvalRolloutInfo::_internal_set_basis_points(uint32_t value) {
+  _has_bits_[0] |= 0x00000002u;
+  basis_points_ = value;
+}
+inline void CXPEvalRolloutInfo::set_basis_points(uint32_t value) {
+  _internal_set_basis_points(value);
+  // @@protoc_insertion_point(field_set:ei.CXPEvalRolloutInfo.basis_points)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
