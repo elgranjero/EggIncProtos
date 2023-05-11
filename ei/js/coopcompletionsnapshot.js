@@ -215,7 +215,6 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.toObject = functio
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
     contribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    lastContributionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     tokens: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
@@ -259,10 +258,6 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.deserializeBinaryFromReader 
     case 1:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setContribution(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setLastContributionTime(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
@@ -313,13 +308,6 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.serializeBinaryToWriter = fu
   if (f != null) {
     writer.writeDouble(
       1,
-      f
-    );
-  }
-  f = /** @type {number} */ (jspb.Message.getField(message, 6));
-  if (f != null) {
-    writer.writeDouble(
-      6,
       f
     );
   }
@@ -387,42 +375,6 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearContribution 
  */
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasContribution = function() {
   return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional double last_contribution_time = 6;
- * @return {number}
- */
-proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.getLastContributionTime = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
- */
-proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.setLastContributionTime = function(value) {
-  return jspb.Message.setField(this, 6, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
- */
-proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearLastContributionTime = function() {
-  return jspb.Message.setField(this, 6, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasLastContributionTime = function() {
-  return jspb.Message.getField(this, 6) != null;
 };
 
 

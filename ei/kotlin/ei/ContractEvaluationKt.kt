@@ -647,30 +647,6 @@ public object ContractEvaluationKt {
     }
 
     /**
-     * <code>optional uint32 time_cheats = 27;</code>
-     */
-    public var timeCheats: kotlin.Int
-      @JvmName("getTimeCheats")
-      get() = _builder.getTimeCheats()
-      @JvmName("setTimeCheats")
-      set(value) {
-        _builder.setTimeCheats(value)
-      }
-    /**
-     * <code>optional uint32 time_cheats = 27;</code>
-     */
-    public fun clearTimeCheats() {
-      _builder.clearTimeCheats()
-    }
-    /**
-     * <code>optional uint32 time_cheats = 27;</code>
-     * @return Whether the timeCheats field is set.
-     */
-    public fun hasTimeCheats(): kotlin.Boolean {
-      return _builder.hasTimeCheats()
-    }
-
-    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */

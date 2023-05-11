@@ -386,7 +386,6 @@ typedef GPB_ENUM(ContractEvaluation_PoorBehavior) {
   ContractEvaluation_PoorBehavior_DishonorablyDischarged = 3,
   ContractEvaluation_PoorBehavior_PoorTeamwork = 4,
   ContractEvaluation_PoorBehavior_AbandonedCoop = 5,
-  ContractEvaluation_PoorBehavior_TimeCheat = 6,
 };
 
 GPBEnumDescriptor *ContractEvaluation_PoorBehavior_EnumDescriptor(void);
@@ -2932,7 +2931,6 @@ typedef GPB_ENUM(ContractEvaluation_FieldNumber) {
   ContractEvaluation_FieldNumber_Replay = 24,
   ContractEvaluation_FieldNumber_CxpChange = 25,
   ContractEvaluation_FieldNumber_Solo = 26,
-  ContractEvaluation_FieldNumber_TimeCheats = 27,
   ContractEvaluation_FieldNumber_ContractIdentifier = 40,
   ContractEvaluation_FieldNumber_CoopIdentifier = 41,
   ContractEvaluation_FieldNumber_Version = 50,
@@ -3023,9 +3021,6 @@ GPB_FINAL @interface ContractEvaluation : GPBMessage
 /** Test to see if @c seasonId has been set. */
 @property(nonatomic, readwrite) BOOL hasSeasonId;
 
-@property(nonatomic, readwrite) uint32_t timeCheats;
-
-@property(nonatomic, readwrite) BOOL hasTimeCheats;
 // |issuesArray| contains |ContractEvaluation_PoorBehavior|
 @property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *issuesArray;
 /** The number of items in @c issuesArray without causing the array to be created. */
@@ -3123,7 +3118,6 @@ typedef GPB_ENUM(CoopCompletionSnapshot_ContributorSnapshot_FieldNumber) {
   CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_UserId = 3,
   CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_Tokens = 4,
   CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_TokensSpent = 5,
-  CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_LastContributionTime = 6,
 };
 
 GPB_FINAL @interface CoopCompletionSnapshot_ContributorSnapshot : GPBMessage
@@ -3131,9 +3125,6 @@ GPB_FINAL @interface CoopCompletionSnapshot_ContributorSnapshot : GPBMessage
 @property(nonatomic, readwrite) double contribution;
 
 @property(nonatomic, readwrite) BOOL hasContribution;
-@property(nonatomic, readwrite) double lastContributionTime;
-
-@property(nonatomic, readwrite) BOOL hasLastContributionTime;
 @property(nonatomic, readwrite) double soulPower;
 
 @property(nonatomic, readwrite) BOOL hasSoulPower;
@@ -3564,7 +3555,6 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_GiftsArray = 11,
   ContractCoopStatusResponse_FieldNumber_LocalTimestamp = 12,
   ContractCoopStatusResponse_FieldNumber_ChickenRunsArray = 13,
-  ContractCoopStatusResponse_FieldNumber_AllGoalsAchieved = 14,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
@@ -3597,9 +3587,6 @@ GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
-@property(nonatomic, readwrite) BOOL allGoalsAchieved;
-
-@property(nonatomic, readwrite) BOOL hasAllGoalsAchieved;
 @property(nonatomic, readwrite) BOOL allMembersReporting;
 
 @property(nonatomic, readwrite) BOOL hasAllMembersReporting;
@@ -7845,24 +7832,6 @@ GPB_FINAL @interface SubscriptionChangeHintRequest : GPBMessage
 @property(nonatomic, readwrite) UserSubscriptionInfo_Level nextSubscriptionLevel;
 
 @property(nonatomic, readwrite) BOOL hasNextSubscriptionLevel;
-@end
-
-#pragma mark - CXPEvalRolloutInfo
-
-typedef GPB_ENUM(CXPEvalRolloutInfo_FieldNumber) {
-  CXPEvalRolloutInfo_FieldNumber_CurrentId = 1,
-  CXPEvalRolloutInfo_FieldNumber_BasisPoints = 2,
-};
-
-GPB_FINAL @interface CXPEvalRolloutInfo : GPBMessage
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *currentId;
-/** Test to see if @c currentId has been set. */
-@property(nonatomic, readwrite) BOOL hasCurrentId;
-
-@property(nonatomic, readwrite) uint32_t basisPoints;
-
-@property(nonatomic, readwrite) BOOL hasBasisPoints;
 @end
 
 NS_ASSUME_NONNULL_END

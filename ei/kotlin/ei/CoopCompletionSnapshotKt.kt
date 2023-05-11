@@ -138,30 +138,6 @@ public object CoopCompletionSnapshotKt {
       }
 
       /**
-       * <code>optional double last_contribution_time = 6;</code>
-       */
-      public var lastContributionTime: kotlin.Double
-        @JvmName("getLastContributionTime")
-        get() = _builder.getLastContributionTime()
-        @JvmName("setLastContributionTime")
-        set(value) {
-          _builder.setLastContributionTime(value)
-        }
-      /**
-       * <code>optional double last_contribution_time = 6;</code>
-       */
-      public fun clearLastContributionTime() {
-        _builder.clearLastContributionTime()
-      }
-      /**
-       * <code>optional double last_contribution_time = 6;</code>
-       * @return Whether the lastContributionTime field is set.
-       */
-      public fun hasLastContributionTime(): kotlin.Boolean {
-        return _builder.hasLastContributionTime()
-      }
-
-      /**
        * <code>optional double soul_power = 2;</code>
        */
       public var soulPower: kotlin.Double
