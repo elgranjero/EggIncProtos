@@ -6413,7 +6413,6 @@ BOOL ContractPlayerInfo_Status_IsValidValue(int32_t value__) {
 @dynamic hasOtherBonuses, otherBonuses;
 @dynamic hasCountedInSeason, countedInSeason;
 @dynamic hasSeasonId, seasonId;
-@dynamic hasTimeCheats, timeCheats;
 @dynamic issuesArray, issuesArray_Count;
 @dynamic notesArray, notesArray_Count;
 @dynamic hasVersion, version;
@@ -6430,7 +6429,6 @@ typedef struct ContractEvaluation__storage_ {
   uint32_t giftTokensReceived;
   uint32_t boostTokenAllotment;
   uint32_t coopSize;
-  uint32_t timeCheats;
   ContractEvaluation_Status status;
   NSMutableArray *notesArray;
   GPBEnumArray *issuesArray;
@@ -6693,15 +6691,6 @@ typedef struct ContractEvaluation__storage_ {
         .dataType = GPBDataTypeBool,
       },
       {
-        .name = "timeCheats",
-        .dataTypeSpecific.clazz = Nil,
-        .number = ContractEvaluation_FieldNumber_TimeCheats,
-        .hasIndex = 30,
-        .offset = (uint32_t)offsetof(ContractEvaluation__storage_, timeCheats),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeUInt32,
-      },
-      {
         .name = "contractIdentifier",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractEvaluation_FieldNumber_ContractIdentifier,
@@ -6723,7 +6712,7 @@ typedef struct ContractEvaluation__storage_ {
         .name = "version",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractEvaluation_FieldNumber_Version,
-        .hasIndex = 31,
+        .hasIndex = 30,
         .offset = (uint32_t)offsetof(ContractEvaluation__storage_, version),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -6732,7 +6721,7 @@ typedef struct ContractEvaluation__storage_ {
         .name = "evaluationStartTime",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractEvaluation_FieldNumber_EvaluationStartTime,
-        .hasIndex = 32,
+        .hasIndex = 31,
         .offset = (uint32_t)offsetof(ContractEvaluation__storage_, evaluationStartTime),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -6741,7 +6730,7 @@ typedef struct ContractEvaluation__storage_ {
         .name = "status",
         .dataTypeSpecific.enumDescFunc = ContractEvaluation_Status_EnumDescriptor,
         .number = ContractEvaluation_FieldNumber_Status,
-        .hasIndex = 33,
+        .hasIndex = 32,
         .offset = (uint32_t)offsetof(ContractEvaluation__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -6773,7 +6762,7 @@ GPBEnumDescriptor *ContractEvaluation_PoorBehavior_EnumDescriptor(void) {
     static const char *valueNames =
         "None\000LowContribution\000BadContribution\000Dis"
         "honorablyDischarged\000PoorTeamwork\000Abandon"
-        "edCoop\000TimeCheat\000";
+        "edCoop\000";
     static const int32_t values[] = {
         ContractEvaluation_PoorBehavior_None,
         ContractEvaluation_PoorBehavior_LowContribution,
@@ -6781,7 +6770,6 @@ GPBEnumDescriptor *ContractEvaluation_PoorBehavior_EnumDescriptor(void) {
         ContractEvaluation_PoorBehavior_DishonorablyDischarged,
         ContractEvaluation_PoorBehavior_PoorTeamwork,
         ContractEvaluation_PoorBehavior_AbandonedCoop,
-        ContractEvaluation_PoorBehavior_TimeCheat,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ContractEvaluation_PoorBehavior)
@@ -6805,7 +6793,6 @@ BOOL ContractEvaluation_PoorBehavior_IsValidValue(int32_t value__) {
     case ContractEvaluation_PoorBehavior_DishonorablyDischarged:
     case ContractEvaluation_PoorBehavior_PoorTeamwork:
     case ContractEvaluation_PoorBehavior_AbandonedCoop:
-    case ContractEvaluation_PoorBehavior_TimeCheat:
       return YES;
     default:
       return NO;
@@ -7070,7 +7057,6 @@ typedef struct CoopCompletionSnapshot__storage_ {
 @implementation CoopCompletionSnapshot_ContributorSnapshot
 
 @dynamic hasContribution, contribution;
-@dynamic hasLastContributionTime, lastContributionTime;
 @dynamic hasSoulPower, soulPower;
 @dynamic hasUserId, userId;
 @dynamic hasTokens, tokens;
@@ -7083,7 +7069,6 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
   NSString *userId;
   double contribution;
   double soulPower;
-  double lastContributionTime;
 } CoopCompletionSnapshot_ContributorSnapshot__storage_;
 
 // This method is threadsafe because it is initially called
@@ -7105,7 +7090,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "soulPower",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_SoulPower,
-        .hasIndex = 2,
+        .hasIndex = 1,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, soulPower),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -7114,7 +7099,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "userId",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_UserId,
-        .hasIndex = 3,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, userId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -7123,7 +7108,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "tokens",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_Tokens,
-        .hasIndex = 4,
+        .hasIndex = 3,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, tokens),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -7132,19 +7117,10 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "tokensSpent",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_TokensSpent,
-        .hasIndex = 5,
+        .hasIndex = 4,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, tokensSpent),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
-      },
-      {
-        .name = "lastContributionTime",
-        .dataTypeSpecific.clazz = Nil,
-        .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_LastContributionTime,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, lastContributionTime),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -8340,7 +8316,6 @@ typedef struct PlayerFarmInfo__storage_ {
 @dynamic hasPublic_p, public_p;
 @dynamic hasCreatorId, creatorId;
 @dynamic hasSecondsRemaining, secondsRemaining;
-@dynamic hasAllGoalsAchieved, allGoalsAchieved;
 @dynamic hasAllMembersReporting, allMembersReporting;
 @dynamic hasGracePeriodSecondsRemaining, gracePeriodSecondsRemaining;
 @dynamic giftsArray, giftsArray_Count;
@@ -8416,8 +8391,8 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .name = "allMembersReporting",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_FieldNumber_AllMembersReporting,
-        .hasIndex = 11,
-        .offset = 12,  // Stored in _has_storage_ to save space.
+        .hasIndex = 9,
+        .offset = 10,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -8425,7 +8400,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .name = "gracePeriodSecondsRemaining",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_FieldNumber_GracePeriodSecondsRemaining,
-        .hasIndex = 13,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, gracePeriodSecondsRemaining),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -8470,7 +8445,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .name = "localTimestamp",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_FieldNumber_LocalTimestamp,
-        .hasIndex = 14,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, localTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -8483,15 +8458,6 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, chickenRunsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "allGoalsAchieved",
-        .dataTypeSpecific.clazz = Nil,
-        .number = ContractCoopStatusResponse_FieldNumber_AllGoalsAchieved,
-        .hasIndex = 9,
-        .offset = 10,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -21560,62 +21526,6 @@ typedef struct SubscriptionChangeHintRequest__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SubscriptionChangeHintRequest__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
-#pragma mark - CXPEvalRolloutInfo
-
-@implementation CXPEvalRolloutInfo
-
-@dynamic hasCurrentId, currentId;
-@dynamic hasBasisPoints, basisPoints;
-
-typedef struct CXPEvalRolloutInfo__storage_ {
-  uint32_t _has_storage_[1];
-  uint32_t basisPoints;
-  NSString *currentId;
-} CXPEvalRolloutInfo__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "currentId",
-        .dataTypeSpecific.clazz = Nil,
-        .number = CXPEvalRolloutInfo_FieldNumber_CurrentId,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(CXPEvalRolloutInfo__storage_, currentId),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "basisPoints",
-        .dataTypeSpecific.clazz = Nil,
-        .number = CXPEvalRolloutInfo_FieldNumber_BasisPoints,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(CXPEvalRolloutInfo__storage_, basisPoints),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeUInt32,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[CXPEvalRolloutInfo class]
-                                     rootClass:[EiRoot class]
-                                          file:EiRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(CXPEvalRolloutInfo__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
