@@ -241,6 +241,30 @@ public object JoinCoopRequestKt {
     }
 
     /**
+     * <code>optional bool points_replay = 14;</code>
+     */
+    public var pointsReplay: kotlin.Boolean
+      @JvmName("getPointsReplay")
+      get() = _builder.getPointsReplay()
+      @JvmName("setPointsReplay")
+      set(value) {
+        _builder.setPointsReplay(value)
+      }
+    /**
+     * <code>optional bool points_replay = 14;</code>
+     */
+    public fun clearPointsReplay() {
+      _builder.clearPointsReplay()
+    }
+    /**
+     * <code>optional bool points_replay = 14;</code>
+     * @return Whether the pointsReplay field is set.
+     */
+    public fun hasPointsReplay(): kotlin.Boolean {
+      return _builder.hasPointsReplay()
+    }
+
+    /**
      * <code>optional .ei.Platform platform = 5;</code>
      */
     public var platform: ei.Ei.Platform

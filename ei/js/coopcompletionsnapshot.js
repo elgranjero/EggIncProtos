@@ -215,6 +215,8 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.toObject = functio
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
     contribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    lastContributionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    finalized: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     tokens: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
@@ -258,6 +260,14 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.deserializeBinaryFromReader 
     case 1:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setContribution(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastContributionTime(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setFinalized(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
@@ -308,6 +318,20 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.serializeBinaryToWriter = fu
   if (f != null) {
     writer.writeDouble(
       1,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeDouble(
+      6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeBool(
+      7,
       f
     );
   }
@@ -375,6 +399,78 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearContribution 
  */
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasContribution = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional double last_contribution_time = 6;
+ * @return {number}
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.getLastContributionTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.setLastContributionTime = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearLastContributionTime = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasLastContributionTime = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool finalized = 7;
+ * @return {boolean}
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.getFinalized = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.setFinalized = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearFinalized = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasFinalized = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

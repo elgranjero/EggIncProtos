@@ -114,7 +114,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.ArtifactsDB.repeatedFields_ = [1,3,7,11,12,4,5,8,9,10];
+proto.ei.ArtifactsDB.repeatedFields_ = [1,3,7,11,13,12,4,5,8,9,10];
 
 
 
@@ -152,9 +152,11 @@ proto.ei.ArtifactsDB.toObject = function(includeInstance, msg) {
     itemSequence: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     inventorySlotsList: jspb.Message.toObjectList(msg.getInventorySlotsList(),
     proto.ei.InventorySlot.toObject, includeInstance),
-    activeArtifactsList: jspb.Message.toObjectList(msg.getActiveArtifactsList(),
+    activeArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getActiveArtifactsDeprecatedList(),
     proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject, includeInstance),
     activeArtifactSetsList: jspb.Message.toObjectList(msg.getActiveArtifactSetsList(),
+    proto.ei.ArtifactsDB.ActiveArtifactSet.toObject, includeInstance),
+    savedArtifactSetsList: jspb.Message.toObjectList(msg.getSavedArtifactSetsList(),
     proto.ei.ArtifactsDB.ActiveArtifactSet.toObject, includeInstance),
     artifactStatusList: jspb.Message.toObjectList(msg.getArtifactStatusList(),
     proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
@@ -221,12 +223,17 @@ proto.ei.ArtifactsDB.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = new proto.ei.ArtifactsDB.ActiveArtifactSlot;
       reader.readMessage(value,proto.ei.ArtifactsDB.ActiveArtifactSlot.deserializeBinaryFromReader);
-      msg.addActiveArtifacts(value);
+      msg.addActiveArtifactsDeprecated(value);
       break;
     case 11:
       var value = new proto.ei.ArtifactsDB.ActiveArtifactSet;
       reader.readMessage(value,proto.ei.ArtifactsDB.ActiveArtifactSet.deserializeBinaryFromReader);
       msg.addActiveArtifactSets(value);
+      break;
+    case 13:
+      var value = new proto.ei.ArtifactsDB.ActiveArtifactSet;
+      reader.readMessage(value,proto.ei.ArtifactsDB.ActiveArtifactSet.deserializeBinaryFromReader);
+      msg.addSavedArtifactSets(value);
       break;
     case 12:
       var value = new proto.ei.ArtifactsDB.CraftableArtifact;
@@ -310,7 +317,7 @@ proto.ei.ArtifactsDB.serializeBinaryToWriter = function(message, writer) {
       proto.ei.InventorySlot.serializeBinaryToWriter
     );
   }
-  f = message.getActiveArtifactsList();
+  f = message.getActiveArtifactsDeprecatedList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       7,
@@ -322,6 +329,14 @@ proto.ei.ArtifactsDB.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       11,
+      f,
+      proto.ei.ArtifactsDB.ActiveArtifactSet.serializeBinaryToWriter
+    );
+  }
+  f = message.getSavedArtifactSetsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      13,
       f,
       proto.ei.ArtifactsDB.ActiveArtifactSet.serializeBinaryToWriter
     );
@@ -613,7 +628,8 @@ proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.toObject = function(opt_include
 proto.ei.ArtifactsDB.ActiveArtifactSet.toObject = function(includeInstance, msg) {
   var f, obj = {
     slotsList: jspb.Message.toObjectList(msg.getSlotsList(),
-    proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject, includeInstance)
+    proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject, includeInstance),
+    uid: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -655,6 +671,10 @@ proto.ei.ArtifactsDB.ActiveArtifactSet.deserializeBinaryFromReader = function(ms
       reader.readMessage(value,proto.ei.ArtifactsDB.ActiveArtifactSlot.deserializeBinaryFromReader);
       msg.addSlots(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setUid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -690,6 +710,13 @@ proto.ei.ArtifactsDB.ActiveArtifactSet.serializeBinaryToWriter = function(messag
       1,
       f,
       proto.ei.ArtifactsDB.ActiveArtifactSlot.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeUint32(
+      2,
+      f
     );
   }
 };
@@ -730,6 +757,42 @@ proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.addSlots = function(opt_value, 
  */
 proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.clearSlotsList = function() {
   return this.setSlotsList([]);
+};
+
+
+/**
+ * optional uint32 uid = 2;
+ * @return {number}
+ */
+proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.getUid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ArtifactsDB.ActiveArtifactSet} returns this
+ */
+proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.setUid = function(value) {
+  return jspb.Message.setField(this, 2, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ArtifactsDB.ActiveArtifactSet} returns this
+ */
+proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.clearUid = function() {
+  return jspb.Message.setField(this, 2, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.hasUid = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -1237,10 +1300,10 @@ proto.ei.ArtifactsDB.prototype.clearInventorySlotsList = function() {
 
 
 /**
- * repeated ActiveArtifactSlot active_artifacts = 7;
+ * repeated ActiveArtifactSlot active_artifacts_DEPRECATED = 7;
  * @return {!Array<!proto.ei.ArtifactsDB.ActiveArtifactSlot>}
  */
-proto.ei.ArtifactsDB.prototype.getActiveArtifactsList = function() {
+proto.ei.ArtifactsDB.prototype.getActiveArtifactsDeprecatedList = function() {
   return /** @type{!Array<!proto.ei.ArtifactsDB.ActiveArtifactSlot>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.ActiveArtifactSlot, 7));
 };
@@ -1250,7 +1313,7 @@ proto.ei.ArtifactsDB.prototype.getActiveArtifactsList = function() {
  * @param {!Array<!proto.ei.ArtifactsDB.ActiveArtifactSlot>} value
  * @return {!proto.ei.ArtifactsDB} returns this
 */
-proto.ei.ArtifactsDB.prototype.setActiveArtifactsList = function(value) {
+proto.ei.ArtifactsDB.prototype.setActiveArtifactsDeprecatedList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
 
@@ -1260,7 +1323,7 @@ proto.ei.ArtifactsDB.prototype.setActiveArtifactsList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ei.ArtifactsDB.ActiveArtifactSlot}
  */
-proto.ei.ArtifactsDB.prototype.addActiveArtifacts = function(opt_value, opt_index) {
+proto.ei.ArtifactsDB.prototype.addActiveArtifactsDeprecated = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.ei.ArtifactsDB.ActiveArtifactSlot, opt_index);
 };
 
@@ -1269,8 +1332,8 @@ proto.ei.ArtifactsDB.prototype.addActiveArtifacts = function(opt_value, opt_inde
  * Clears the list making it empty but non-null.
  * @return {!proto.ei.ArtifactsDB} returns this
  */
-proto.ei.ArtifactsDB.prototype.clearActiveArtifactsList = function() {
-  return this.setActiveArtifactsList([]);
+proto.ei.ArtifactsDB.prototype.clearActiveArtifactsDeprecatedList = function() {
+  return this.setActiveArtifactsDeprecatedList([]);
 };
 
 
@@ -1309,6 +1372,44 @@ proto.ei.ArtifactsDB.prototype.addActiveArtifactSets = function(opt_value, opt_i
  */
 proto.ei.ArtifactsDB.prototype.clearActiveArtifactSetsList = function() {
   return this.setActiveArtifactSetsList([]);
+};
+
+
+/**
+ * repeated ActiveArtifactSet saved_artifact_sets = 13;
+ * @return {!Array<!proto.ei.ArtifactsDB.ActiveArtifactSet>}
+ */
+proto.ei.ArtifactsDB.prototype.getSavedArtifactSetsList = function() {
+  return /** @type{!Array<!proto.ei.ArtifactsDB.ActiveArtifactSet>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ArtifactsDB.ActiveArtifactSet, 13));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ArtifactsDB.ActiveArtifactSet>} value
+ * @return {!proto.ei.ArtifactsDB} returns this
+*/
+proto.ei.ArtifactsDB.prototype.setSavedArtifactSetsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 13, value);
+};
+
+
+/**
+ * @param {!proto.ei.ArtifactsDB.ActiveArtifactSet=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ArtifactsDB.ActiveArtifactSet}
+ */
+proto.ei.ArtifactsDB.prototype.addSavedArtifactSets = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.ei.ArtifactsDB.ActiveArtifactSet, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ArtifactsDB} returns this
+ */
+proto.ei.ArtifactsDB.prototype.clearSavedArtifactSetsList = function() {
+  return this.setSavedArtifactSetsList([]);
 };
 
 

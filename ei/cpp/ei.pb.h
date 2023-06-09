@@ -166,6 +166,9 @@ extern Backup_TutorialDefaultTypeInternal _Backup_Tutorial_default_instance_;
 class BasicRequestInfo;
 struct BasicRequestInfoDefaultTypeInternal;
 extern BasicRequestInfoDefaultTypeInternal _BasicRequestInfo_default_instance_;
+class CXPEvalRolloutInfo;
+struct CXPEvalRolloutInfoDefaultTypeInternal;
+extern CXPEvalRolloutInfoDefaultTypeInternal _CXPEvalRolloutInfo_default_instance_;
 class CleanAccountRequest;
 struct CleanAccountRequestDefaultTypeInternal;
 extern CleanAccountRequestDefaultTypeInternal _CleanAccountRequest_default_instance_;
@@ -622,6 +625,7 @@ template<> ::ei::Backup_Simulation* Arena::CreateMaybeMessage<::ei::Backup_Simul
 template<> ::ei::Backup_Stats* Arena::CreateMaybeMessage<::ei::Backup_Stats>(Arena*);
 template<> ::ei::Backup_Tutorial* Arena::CreateMaybeMessage<::ei::Backup_Tutorial>(Arena*);
 template<> ::ei::BasicRequestInfo* Arena::CreateMaybeMessage<::ei::BasicRequestInfo>(Arena*);
+template<> ::ei::CXPEvalRolloutInfo* Arena::CreateMaybeMessage<::ei::CXPEvalRolloutInfo>(Arena*);
 template<> ::ei::CleanAccountRequest* Arena::CreateMaybeMessage<::ei::CleanAccountRequest>(Arena*);
 template<> ::ei::ClearAllUserDataRequest* Arena::CreateMaybeMessage<::ei::ClearAllUserDataRequest>(Arena*);
 template<> ::ei::CollectContractArtifactRewardsRequest* Arena::CreateMaybeMessage<::ei::CollectContractArtifactRewardsRequest>(Arena*);
@@ -877,11 +881,12 @@ enum ContractEvaluation_PoorBehavior : int {
   ContractEvaluation_PoorBehavior_BAD_CONTRIBUTION = 2,
   ContractEvaluation_PoorBehavior_DISHONORABLY_DISCHARGED = 3,
   ContractEvaluation_PoorBehavior_POOR_TEAMWORK = 4,
-  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5
+  ContractEvaluation_PoorBehavior_ABANDONED_COOP = 5,
+  ContractEvaluation_PoorBehavior_TIME_CHEAT = 6
 };
 bool ContractEvaluation_PoorBehavior_IsValid(int value);
 constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MIN = ContractEvaluation_PoorBehavior_NONE;
-constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+constexpr ContractEvaluation_PoorBehavior ContractEvaluation_PoorBehavior_PoorBehavior_MAX = ContractEvaluation_PoorBehavior_TIME_CHEAT;
 constexpr int ContractEvaluation_PoorBehavior_PoorBehavior_ARRAYSIZE = ContractEvaluation_PoorBehavior_PoorBehavior_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ContractEvaluation_PoorBehavior_descriptor();
@@ -1907,18 +1912,19 @@ class Backup_Settings final :
     kNotificationsQueriedFieldNumber = 5,
     kNotificationsOnFieldNumber = 6,
     kNotifyDailyGiftFieldNumber = 11,
-    kCoppaQueriedFieldNumber = 7,
     kCoppaRestrictedFieldNumber = 8,
     kGdprConsentQueriedFieldNumber = 12,
     kGdprAgeRestrictedFieldNumber = 16,
-    kLastDayAgeQueriedFieldNumber = 17,
     kGdprConsentGivenFieldNumber = 13,
+    kLastDayAgeQueriedFieldNumber = 17,
+    kLowPerformanceFieldNumber = 10,
+    kAutoStopFuelingFieldNumber = 25,
+    kMaxEnabledFieldNumber = 26,
+    kCoppaQueriedFieldNumber = 7,
     kAgeQueriedFieldNumber = 18,
     kAgeRestrictedFieldNumber = 19,
     kDataCollectionConsentQueriedFieldNumber = 20,
     kDataCollectionConsentGivenFieldNumber = 21,
-    kLowPerformanceFieldNumber = 10,
-    kAutoStopFuelingFieldNumber = 25,
     kLastBackupTimeFieldNumber = 24,
     kUserAdsEnabledFieldNumber = 14,
     kUserCloudEnabledFieldNumber = 15,
@@ -2029,19 +2035,6 @@ class Backup_Settings final :
   void _internal_set_notify_daily_gift(bool value);
   public:
 
-  // optional bool coppa_queried = 7;
-  bool has_coppa_queried() const;
-  private:
-  bool _internal_has_coppa_queried() const;
-  public:
-  void clear_coppa_queried();
-  bool coppa_queried() const;
-  void set_coppa_queried(bool value);
-  private:
-  bool _internal_coppa_queried() const;
-  void _internal_set_coppa_queried(bool value);
-  public:
-
   // optional bool coppa_restricted = 8;
   bool has_coppa_restricted() const;
   private:
@@ -2081,6 +2074,19 @@ class Backup_Settings final :
   void _internal_set_gdpr_age_restricted(bool value);
   public:
 
+  // optional bool gdpr_consent_given = 13;
+  bool has_gdpr_consent_given() const;
+  private:
+  bool _internal_has_gdpr_consent_given() const;
+  public:
+  void clear_gdpr_consent_given();
+  bool gdpr_consent_given() const;
+  void set_gdpr_consent_given(bool value);
+  private:
+  bool _internal_gdpr_consent_given() const;
+  void _internal_set_gdpr_consent_given(bool value);
+  public:
+
   // optional uint32 last_day_age_queried = 17;
   bool has_last_day_age_queried() const;
   private:
@@ -2094,17 +2100,56 @@ class Backup_Settings final :
   void _internal_set_last_day_age_queried(uint32_t value);
   public:
 
-  // optional bool gdpr_consent_given = 13;
-  bool has_gdpr_consent_given() const;
+  // optional bool low_performance = 10;
+  bool has_low_performance() const;
   private:
-  bool _internal_has_gdpr_consent_given() const;
+  bool _internal_has_low_performance() const;
   public:
-  void clear_gdpr_consent_given();
-  bool gdpr_consent_given() const;
-  void set_gdpr_consent_given(bool value);
+  void clear_low_performance();
+  bool low_performance() const;
+  void set_low_performance(bool value);
   private:
-  bool _internal_gdpr_consent_given() const;
-  void _internal_set_gdpr_consent_given(bool value);
+  bool _internal_low_performance() const;
+  void _internal_set_low_performance(bool value);
+  public:
+
+  // optional bool auto_stop_fueling = 25;
+  bool has_auto_stop_fueling() const;
+  private:
+  bool _internal_has_auto_stop_fueling() const;
+  public:
+  void clear_auto_stop_fueling();
+  bool auto_stop_fueling() const;
+  void set_auto_stop_fueling(bool value);
+  private:
+  bool _internal_auto_stop_fueling() const;
+  void _internal_set_auto_stop_fueling(bool value);
+  public:
+
+  // optional bool max_enabled = 26;
+  bool has_max_enabled() const;
+  private:
+  bool _internal_has_max_enabled() const;
+  public:
+  void clear_max_enabled();
+  bool max_enabled() const;
+  void set_max_enabled(bool value);
+  private:
+  bool _internal_max_enabled() const;
+  void _internal_set_max_enabled(bool value);
+  public:
+
+  // optional bool coppa_queried = 7;
+  bool has_coppa_queried() const;
+  private:
+  bool _internal_has_coppa_queried() const;
+  public:
+  void clear_coppa_queried();
+  bool coppa_queried() const;
+  void set_coppa_queried(bool value);
+  private:
+  bool _internal_coppa_queried() const;
+  void _internal_set_coppa_queried(bool value);
   public:
 
   // optional bool age_queried = 18;
@@ -2157,32 +2202,6 @@ class Backup_Settings final :
   private:
   bool _internal_data_collection_consent_given() const;
   void _internal_set_data_collection_consent_given(bool value);
-  public:
-
-  // optional bool low_performance = 10;
-  bool has_low_performance() const;
-  private:
-  bool _internal_has_low_performance() const;
-  public:
-  void clear_low_performance();
-  bool low_performance() const;
-  void set_low_performance(bool value);
-  private:
-  bool _internal_low_performance() const;
-  void _internal_set_low_performance(bool value);
-  public:
-
-  // optional bool auto_stop_fueling = 25;
-  bool has_auto_stop_fueling() const;
-  private:
-  bool _internal_has_auto_stop_fueling() const;
-  public:
-  void clear_auto_stop_fueling();
-  bool auto_stop_fueling() const;
-  void set_auto_stop_fueling(bool value);
-  private:
-  bool _internal_auto_stop_fueling() const;
-  void _internal_set_auto_stop_fueling(bool value);
   public:
 
   // optional double last_backup_time = 24;
@@ -2267,18 +2286,19 @@ class Backup_Settings final :
   bool notifications_queried_;
   bool notifications_on_;
   bool notify_daily_gift_;
-  bool coppa_queried_;
   bool coppa_restricted_;
   bool gdpr_consent_queried_;
   bool gdpr_age_restricted_;
-  uint32_t last_day_age_queried_;
   bool gdpr_consent_given_;
+  uint32_t last_day_age_queried_;
+  bool low_performance_;
+  bool auto_stop_fueling_;
+  bool max_enabled_;
+  bool coppa_queried_;
   bool age_queried_;
   bool age_restricted_;
   bool data_collection_consent_queried_;
   bool data_collection_consent_given_;
-  bool low_performance_;
-  bool auto_stop_fueling_;
   double last_backup_time_;
   bool user_ads_enabled_;
   bool user_cloud_enabled_;
@@ -5440,6 +5460,8 @@ class Backup_Misc final :
     kBoostTokenAlertFieldNumber = 17,
     kSoulEggAlertFieldNumber = 18,
     kBackupReminderAlertFieldNumber = 19,
+    kMaxButtonAlertFieldNumber = 23,
+    kMissionTargetAlertFieldNumber = 24,
     kLastShareFarmValueFieldNumber = 3,
     kLastShareSwarmFarmValueFieldNumber = 4,
     kLastShareSwarmSizeFieldNumber = 5,
@@ -5679,6 +5701,32 @@ class Backup_Misc final :
   void _internal_set_backup_reminder_alert(bool value);
   public:
 
+  // optional bool max_button_alert = 23;
+  bool has_max_button_alert() const;
+  private:
+  bool _internal_has_max_button_alert() const;
+  public:
+  void clear_max_button_alert();
+  bool max_button_alert() const;
+  void set_max_button_alert(bool value);
+  private:
+  bool _internal_max_button_alert() const;
+  void _internal_set_max_button_alert(bool value);
+  public:
+
+  // optional bool mission_target_alert = 24;
+  bool has_mission_target_alert() const;
+  private:
+  bool _internal_has_mission_target_alert() const;
+  public:
+  void clear_mission_target_alert();
+  bool mission_target_alert() const;
+  void set_mission_target_alert(bool value);
+  private:
+  bool _internal_mission_target_alert() const;
+  void _internal_set_mission_target_alert(bool value);
+  public:
+
   // optional double last_share_farm_value = 3 [default = 10000000];
   bool has_last_share_farm_value() const;
   private:
@@ -5758,6 +5806,8 @@ class Backup_Misc final :
   bool boost_token_alert_;
   bool soul_egg_alert_;
   bool backup_reminder_alert_;
+  bool max_button_alert_;
+  bool mission_target_alert_;
   double last_share_farm_value_;
   double last_share_swarm_farm_value_;
   double last_share_swarm_size_;
@@ -14138,6 +14188,8 @@ class ContractEvaluation final :
     ContractEvaluation_PoorBehavior_POOR_TEAMWORK;
   static constexpr PoorBehavior ABANDONED_COOP =
     ContractEvaluation_PoorBehavior_ABANDONED_COOP;
+  static constexpr PoorBehavior TIME_CHEAT =
+    ContractEvaluation_PoorBehavior_TIME_CHEAT;
   static inline bool PoorBehavior_IsValid(int value) {
     return ContractEvaluation_PoorBehavior_IsValid(value);
   }
@@ -14222,15 +14274,18 @@ class ContractEvaluation final :
     kBuffTimeValueFieldNumber = 17,
     kBoostTokenAllotmentFieldNumber = 16,
     kCoopSizeFieldNumber = 18,
-    kLastContributionTimeFieldNumber = 22,
-    kSoulPowerFieldNumber = 23,
-    kCxpChangeFieldNumber = 25,
     kReplayFieldNumber = 24,
     kOldGoalsFieldNumber = 10,
     kSoloFieldNumber = 26,
     kCountedInSeasonFieldNumber = 20,
-    kStatusFieldNumber = 52,
+    kTimeCheatsFieldNumber = 27,
+    kLastContributionTimeFieldNumber = 22,
+    kSoulPowerFieldNumber = 23,
+    kCxpChangeFieldNumber = 25,
+    kGiftTokenValueSentFieldNumber = 28,
+    kGiftTokenValueReceivedFieldNumber = 29,
     kEvaluationStartTimeFieldNumber = 51,
+    kStatusFieldNumber = 52,
   };
   // repeated string notes = 12;
   int notes_size() const;
@@ -14553,45 +14608,6 @@ class ContractEvaluation final :
   void _internal_set_coop_size(uint32_t value);
   public:
 
-  // optional double last_contribution_time = 22;
-  bool has_last_contribution_time() const;
-  private:
-  bool _internal_has_last_contribution_time() const;
-  public:
-  void clear_last_contribution_time();
-  double last_contribution_time() const;
-  void set_last_contribution_time(double value);
-  private:
-  double _internal_last_contribution_time() const;
-  void _internal_set_last_contribution_time(double value);
-  public:
-
-  // optional double soul_power = 23;
-  bool has_soul_power() const;
-  private:
-  bool _internal_has_soul_power() const;
-  public:
-  void clear_soul_power();
-  double soul_power() const;
-  void set_soul_power(double value);
-  private:
-  double _internal_soul_power() const;
-  void _internal_set_soul_power(double value);
-  public:
-
-  // optional double cxp_change = 25;
-  bool has_cxp_change() const;
-  private:
-  bool _internal_has_cxp_change() const;
-  public:
-  void clear_cxp_change();
-  double cxp_change() const;
-  void set_cxp_change(double value);
-  private:
-  double _internal_cxp_change() const;
-  void _internal_set_cxp_change(double value);
-  public:
-
   // optional bool replay = 24;
   bool has_replay() const;
   private:
@@ -14644,17 +14660,82 @@ class ContractEvaluation final :
   void _internal_set_counted_in_season(bool value);
   public:
 
-  // optional .ei.ContractEvaluation.Status status = 52;
-  bool has_status() const;
+  // optional uint32 time_cheats = 27;
+  bool has_time_cheats() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_time_cheats() const;
   public:
-  void clear_status();
-  ::ei::ContractEvaluation_Status status() const;
-  void set_status(::ei::ContractEvaluation_Status value);
+  void clear_time_cheats();
+  uint32_t time_cheats() const;
+  void set_time_cheats(uint32_t value);
   private:
-  ::ei::ContractEvaluation_Status _internal_status() const;
-  void _internal_set_status(::ei::ContractEvaluation_Status value);
+  uint32_t _internal_time_cheats() const;
+  void _internal_set_time_cheats(uint32_t value);
+  public:
+
+  // optional double last_contribution_time = 22;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
+  // optional double soul_power = 23;
+  bool has_soul_power() const;
+  private:
+  bool _internal_has_soul_power() const;
+  public:
+  void clear_soul_power();
+  double soul_power() const;
+  void set_soul_power(double value);
+  private:
+  double _internal_soul_power() const;
+  void _internal_set_soul_power(double value);
+  public:
+
+  // optional double cxp_change = 25;
+  bool has_cxp_change() const;
+  private:
+  bool _internal_has_cxp_change() const;
+  public:
+  void clear_cxp_change();
+  double cxp_change() const;
+  void set_cxp_change(double value);
+  private:
+  double _internal_cxp_change() const;
+  void _internal_set_cxp_change(double value);
+  public:
+
+  // optional double gift_token_value_sent = 28;
+  bool has_gift_token_value_sent() const;
+  private:
+  bool _internal_has_gift_token_value_sent() const;
+  public:
+  void clear_gift_token_value_sent();
+  double gift_token_value_sent() const;
+  void set_gift_token_value_sent(double value);
+  private:
+  double _internal_gift_token_value_sent() const;
+  void _internal_set_gift_token_value_sent(double value);
+  public:
+
+  // optional double gift_token_value_received = 29;
+  bool has_gift_token_value_received() const;
+  private:
+  bool _internal_has_gift_token_value_received() const;
+  public:
+  void clear_gift_token_value_received();
+  double gift_token_value_received() const;
+  void set_gift_token_value_received(double value);
+  private:
+  double _internal_gift_token_value_received() const;
+  void _internal_set_gift_token_value_received(double value);
   public:
 
   // optional double evaluation_start_time = 51;
@@ -14668,6 +14749,19 @@ class ContractEvaluation final :
   private:
   double _internal_evaluation_start_time() const;
   void _internal_set_evaluation_start_time(double value);
+  public:
+
+  // optional .ei.ContractEvaluation.Status status = 52;
+  bool has_status() const;
+  private:
+  bool _internal_has_status() const;
+  public:
+  void clear_status();
+  ::ei::ContractEvaluation_Status status() const;
+  void set_status(::ei::ContractEvaluation_Status value);
+  private:
+  ::ei::ContractEvaluation_Status _internal_status() const;
+  void _internal_set_status(::ei::ContractEvaluation_Status value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.ContractEvaluation)
@@ -14701,15 +14795,18 @@ class ContractEvaluation final :
   double buff_time_value_;
   uint32_t boost_token_allotment_;
   uint32_t coop_size_;
-  double last_contribution_time_;
-  double soul_power_;
-  double cxp_change_;
   bool replay_;
   bool old_goals_;
   bool solo_;
   bool counted_in_season_;
-  int status_;
+  uint32_t time_cheats_;
+  double last_contribution_time_;
+  double soul_power_;
+  double cxp_change_;
+  double gift_token_value_sent_;
+  double gift_token_value_received_;
   double evaluation_start_time_;
+  int status_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -15371,6 +15468,8 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
     kSoulPowerFieldNumber = 2,
     kTokensFieldNumber = 4,
     kTokensSpentFieldNumber = 5,
+    kLastContributionTimeFieldNumber = 6,
+    kFinalizedFieldNumber = 7,
   };
   // optional string user_id = 3;
   bool has_user_id() const;
@@ -15442,6 +15541,32 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
   void _internal_set_tokens_spent(uint32_t value);
   public:
 
+  // optional double last_contribution_time = 6;
+  bool has_last_contribution_time() const;
+  private:
+  bool _internal_has_last_contribution_time() const;
+  public:
+  void clear_last_contribution_time();
+  double last_contribution_time() const;
+  void set_last_contribution_time(double value);
+  private:
+  double _internal_last_contribution_time() const;
+  void _internal_set_last_contribution_time(double value);
+  public:
+
+  // optional bool finalized = 7;
+  bool has_finalized() const;
+  private:
+  bool _internal_has_finalized() const;
+  public:
+  void clear_finalized();
+  bool finalized() const;
+  void set_finalized(bool value);
+  private:
+  bool _internal_finalized() const;
+  void _internal_set_finalized(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.CoopCompletionSnapshot.ContributorSnapshot)
  private:
   class _Internal;
@@ -15456,6 +15581,8 @@ class CoopCompletionSnapshot_ContributorSnapshot final :
   double soul_power_;
   uint32_t tokens_;
   uint32_t tokens_spent_;
+  double last_contribution_time_;
+  bool finalized_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -16041,6 +16168,9 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
     kCpsMultFieldNumber = 2,
     kEarningsMultFieldNumber = 3,
     kTimeEfficacyFieldNumber = 4,
+    kHabCapacityMultFieldNumber = 5,
+    kEpicResearchBudgetFieldNumber = 6,
+    kElrMultFieldNumber = 7,
   };
   // optional double target_se = 1;
   bool has_target_se() const;
@@ -16094,6 +16224,45 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
   void _internal_set_time_efficacy(double value);
   public:
 
+  // optional double hab_capacity_mult = 5;
+  bool has_hab_capacity_mult() const;
+  private:
+  bool _internal_has_hab_capacity_mult() const;
+  public:
+  void clear_hab_capacity_mult();
+  double hab_capacity_mult() const;
+  void set_hab_capacity_mult(double value);
+  private:
+  double _internal_hab_capacity_mult() const;
+  void _internal_set_hab_capacity_mult(double value);
+  public:
+
+  // optional double epic_research_budget = 6;
+  bool has_epic_research_budget() const;
+  private:
+  bool _internal_has_epic_research_budget() const;
+  public:
+  void clear_epic_research_budget();
+  double epic_research_budget() const;
+  void set_epic_research_budget(double value);
+  private:
+  double _internal_epic_research_budget() const;
+  void _internal_set_epic_research_budget(double value);
+  public:
+
+  // optional double elr_mult = 7;
+  bool has_elr_mult() const;
+  private:
+  bool _internal_has_elr_mult() const;
+  public:
+  void clear_elr_mult();
+  double elr_mult() const;
+  void set_elr_mult(double value);
+  private:
+  double _internal_elr_mult() const;
+  void _internal_set_elr_mult(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams)
  private:
   class _Internal;
@@ -16107,6 +16276,9 @@ class ContractSimConfig_ContractGradeSimConfig_GoalParams final :
   double cps_mult_;
   double earnings_mult_;
   double time_efficacy_;
+  double hab_capacity_mult_;
+  double epic_research_budget_;
+  double elr_mult_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -18704,13 +18876,15 @@ class ContractCoopStatusResponse_ContributionInfo final :
     kRankChangeFieldNumber = 8,
     kBanVotesFieldNumber = 10,
     kSoulPowerFieldNumber = 11,
-    kActiveFieldNumber = 4,
-    kLeechFieldNumber = 16,
+    kBoostTokensFieldNumber = 12,
     kTimeCheatDetectedFieldNumber = 7,
     kAutojoinedFieldNumber = 17,
-    kBoostTokensFieldNumber = 12,
-    kChickenRunCooldownFieldNumber = 20,
     kBoostTokensSpentFieldNumber = 14,
+    kRecentlyActiveFieldNumber = 23,
+    kActiveFieldNumber = 4,
+    kLeechFieldNumber = 16,
+    kFinalizedFieldNumber = 22,
+    kChickenRunCooldownFieldNumber = 20,
     kPlatformFieldNumber = 5,
   };
   // repeated .ei.CoopBuffState buff_history = 13;
@@ -18922,30 +19096,17 @@ class ContractCoopStatusResponse_ContributionInfo final :
   void _internal_set_soul_power(double value);
   public:
 
-  // optional bool active = 4;
-  bool has_active() const;
+  // optional uint32 boost_tokens = 12;
+  bool has_boost_tokens() const;
   private:
-  bool _internal_has_active() const;
+  bool _internal_has_boost_tokens() const;
   public:
-  void clear_active();
-  bool active() const;
-  void set_active(bool value);
+  void clear_boost_tokens();
+  uint32_t boost_tokens() const;
+  void set_boost_tokens(uint32_t value);
   private:
-  bool _internal_active() const;
-  void _internal_set_active(bool value);
-  public:
-
-  // optional bool leech = 16;
-  bool has_leech() const;
-  private:
-  bool _internal_has_leech() const;
-  public:
-  void clear_leech();
-  bool leech() const;
-  void set_leech(bool value);
-  private:
-  bool _internal_leech() const;
-  void _internal_set_leech(bool value);
+  uint32_t _internal_boost_tokens() const;
+  void _internal_set_boost_tokens(uint32_t value);
   public:
 
   // optional bool time_cheat_detected = 7;
@@ -18974,17 +19135,69 @@ class ContractCoopStatusResponse_ContributionInfo final :
   void _internal_set_autojoined(bool value);
   public:
 
-  // optional uint32 boost_tokens = 12;
-  bool has_boost_tokens() const;
+  // optional uint32 boost_tokens_spent = 14;
+  bool has_boost_tokens_spent() const;
   private:
-  bool _internal_has_boost_tokens() const;
+  bool _internal_has_boost_tokens_spent() const;
   public:
-  void clear_boost_tokens();
-  uint32_t boost_tokens() const;
-  void set_boost_tokens(uint32_t value);
+  void clear_boost_tokens_spent();
+  uint32_t boost_tokens_spent() const;
+  void set_boost_tokens_spent(uint32_t value);
   private:
-  uint32_t _internal_boost_tokens() const;
-  void _internal_set_boost_tokens(uint32_t value);
+  uint32_t _internal_boost_tokens_spent() const;
+  void _internal_set_boost_tokens_spent(uint32_t value);
+  public:
+
+  // optional bool recently_active = 23;
+  bool has_recently_active() const;
+  private:
+  bool _internal_has_recently_active() const;
+  public:
+  void clear_recently_active();
+  bool recently_active() const;
+  void set_recently_active(bool value);
+  private:
+  bool _internal_recently_active() const;
+  void _internal_set_recently_active(bool value);
+  public:
+
+  // optional bool active = 4;
+  bool has_active() const;
+  private:
+  bool _internal_has_active() const;
+  public:
+  void clear_active();
+  bool active() const;
+  void set_active(bool value);
+  private:
+  bool _internal_active() const;
+  void _internal_set_active(bool value);
+  public:
+
+  // optional bool leech = 16;
+  bool has_leech() const;
+  private:
+  bool _internal_has_leech() const;
+  public:
+  void clear_leech();
+  bool leech() const;
+  void set_leech(bool value);
+  private:
+  bool _internal_leech() const;
+  void _internal_set_leech(bool value);
+  public:
+
+  // optional bool finalized = 22;
+  bool has_finalized() const;
+  private:
+  bool _internal_has_finalized() const;
+  public:
+  void clear_finalized();
+  bool finalized() const;
+  void set_finalized(bool value);
+  private:
+  bool _internal_finalized() const;
+  void _internal_set_finalized(bool value);
   public:
 
   // optional double chicken_run_cooldown = 20;
@@ -18998,19 +19211,6 @@ class ContractCoopStatusResponse_ContributionInfo final :
   private:
   double _internal_chicken_run_cooldown() const;
   void _internal_set_chicken_run_cooldown(double value);
-  public:
-
-  // optional uint32 boost_tokens_spent = 14;
-  bool has_boost_tokens_spent() const;
-  private:
-  bool _internal_has_boost_tokens_spent() const;
-  public:
-  void clear_boost_tokens_spent();
-  uint32_t boost_tokens_spent() const;
-  void set_boost_tokens_spent(uint32_t value);
-  private:
-  uint32_t _internal_boost_tokens_spent() const;
-  void _internal_set_boost_tokens_spent(uint32_t value);
   public:
 
   // optional .ei.Platform platform = 5;
@@ -19048,13 +19248,15 @@ class ContractCoopStatusResponse_ContributionInfo final :
   int32_t rank_change_;
   uint32_t ban_votes_;
   double soul_power_;
-  bool active_;
-  bool leech_;
+  uint32_t boost_tokens_;
   bool time_cheat_detected_;
   bool autojoined_;
-  uint32_t boost_tokens_;
-  double chicken_run_cooldown_;
   uint32_t boost_tokens_spent_;
+  bool recently_active_;
+  bool active_;
+  bool leech_;
+  bool finalized_;
+  double chicken_run_cooldown_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -19661,10 +19863,14 @@ class ContractCoopStatusResponse final :
     kTotalAmountFieldNumber = 2,
     kSecondsRemainingFieldNumber = 5,
     kGracePeriodSecondsRemainingFieldNumber = 7,
-    kLocalTimestampFieldNumber = 12,
     kAutoGeneratedFieldNumber = 8,
     kPublicFieldNumber = 10,
+    kAllGoalsAchievedFieldNumber = 14,
     kAllMembersReportingFieldNumber = 6,
+    kClearedForExitFieldNumber = 15,
+    kLocalTimestampFieldNumber = 12,
+    kSecondsSinceAllGoalsAchievedFieldNumber = 16,
+    kGradeFieldNumber = 17,
   };
   // repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;
   int contributors_size() const;
@@ -19813,19 +20019,6 @@ class ContractCoopStatusResponse final :
   void _internal_set_grace_period_seconds_remaining(double value);
   public:
 
-  // optional double local_timestamp = 12;
-  bool has_local_timestamp() const;
-  private:
-  bool _internal_has_local_timestamp() const;
-  public:
-  void clear_local_timestamp();
-  double local_timestamp() const;
-  void set_local_timestamp(double value);
-  private:
-  double _internal_local_timestamp() const;
-  void _internal_set_local_timestamp(double value);
-  public:
-
   // optional bool auto_generated = 8;
   bool has_auto_generated() const;
   private:
@@ -19852,6 +20045,19 @@ class ContractCoopStatusResponse final :
   void _internal_set_public_(bool value);
   public:
 
+  // optional bool all_goals_achieved = 14;
+  bool has_all_goals_achieved() const;
+  private:
+  bool _internal_has_all_goals_achieved() const;
+  public:
+  void clear_all_goals_achieved();
+  bool all_goals_achieved() const;
+  void set_all_goals_achieved(bool value);
+  private:
+  bool _internal_all_goals_achieved() const;
+  void _internal_set_all_goals_achieved(bool value);
+  public:
+
   // optional bool all_members_reporting = 6;
   bool has_all_members_reporting() const;
   private:
@@ -19863,6 +20069,58 @@ class ContractCoopStatusResponse final :
   private:
   bool _internal_all_members_reporting() const;
   void _internal_set_all_members_reporting(bool value);
+  public:
+
+  // optional bool cleared_for_exit = 15;
+  bool has_cleared_for_exit() const;
+  private:
+  bool _internal_has_cleared_for_exit() const;
+  public:
+  void clear_cleared_for_exit();
+  bool cleared_for_exit() const;
+  void set_cleared_for_exit(bool value);
+  private:
+  bool _internal_cleared_for_exit() const;
+  void _internal_set_cleared_for_exit(bool value);
+  public:
+
+  // optional double local_timestamp = 12;
+  bool has_local_timestamp() const;
+  private:
+  bool _internal_has_local_timestamp() const;
+  public:
+  void clear_local_timestamp();
+  double local_timestamp() const;
+  void set_local_timestamp(double value);
+  private:
+  double _internal_local_timestamp() const;
+  void _internal_set_local_timestamp(double value);
+  public:
+
+  // optional double seconds_since_all_goals_achieved = 16;
+  bool has_seconds_since_all_goals_achieved() const;
+  private:
+  bool _internal_has_seconds_since_all_goals_achieved() const;
+  public:
+  void clear_seconds_since_all_goals_achieved();
+  double seconds_since_all_goals_achieved() const;
+  void set_seconds_since_all_goals_achieved(double value);
+  private:
+  double _internal_seconds_since_all_goals_achieved() const;
+  void _internal_set_seconds_since_all_goals_achieved(double value);
+  public:
+
+  // optional .ei.Contract.PlayerGrade grade = 17;
+  bool has_grade() const;
+  private:
+  bool _internal_has_grade() const;
+  public:
+  void clear_grade();
+  ::ei::Contract_PlayerGrade grade() const;
+  void set_grade(::ei::Contract_PlayerGrade value);
+  private:
+  ::ei::Contract_PlayerGrade _internal_grade() const;
+  void _internal_set_grade(::ei::Contract_PlayerGrade value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.ContractCoopStatusResponse)
@@ -19883,10 +20141,14 @@ class ContractCoopStatusResponse final :
   double total_amount_;
   double seconds_remaining_;
   double grace_period_seconds_remaining_;
-  double local_timestamp_;
   bool auto_generated_;
   bool public__;
+  bool all_goals_achieved_;
   bool all_members_reporting_;
+  bool cleared_for_exit_;
+  double local_timestamp_;
+  double seconds_since_all_goals_achieved_;
+  int grade_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -20038,6 +20300,7 @@ class LocalContract final :
     kGradeFieldNumber = 18,
     kCoopShareFarmFieldNumber = 17,
     kPointsReplayFieldNumber = 20,
+    kCoopSimulationEndTimeFieldNumber = 22,
   };
   // repeated string reported_uuids = 21;
   int reported_uuids_size() const;
@@ -20343,6 +20606,19 @@ class LocalContract final :
   void _internal_set_points_replay(bool value);
   public:
 
+  // optional double coop_simulation_end_time = 22;
+  bool has_coop_simulation_end_time() const;
+  private:
+  bool _internal_has_coop_simulation_end_time() const;
+  public:
+  void clear_coop_simulation_end_time();
+  double coop_simulation_end_time() const;
+  void set_coop_simulation_end_time(double value);
+  private:
+  double _internal_coop_simulation_end_time() const;
+  void _internal_set_coop_simulation_end_time(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.LocalContract)
  private:
   class _Internal;
@@ -20373,6 +20649,7 @@ class LocalContract final :
   int grade_;
   bool coop_share_farm_;
   bool points_replay_;
+  double coop_simulation_end_time_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -21297,6 +21574,8 @@ class CreateCoopRequest final :
     kGradeFieldNumber = 12,
     kPublicFieldNumber = 13,
     kCcOnlyFieldNumber = 14,
+    kAllowAllGradesFieldNumber = 16,
+    kPointsReplayFieldNumber = 15,
     kPlatformFieldNumber = 6,
   };
   // optional string contract_identifier = 1;
@@ -21493,6 +21772,32 @@ class CreateCoopRequest final :
   void _internal_set_cc_only(bool value);
   public:
 
+  // optional bool allow_all_grades = 16;
+  bool has_allow_all_grades() const;
+  private:
+  bool _internal_has_allow_all_grades() const;
+  public:
+  void clear_allow_all_grades();
+  bool allow_all_grades() const;
+  void set_allow_all_grades(bool value);
+  private:
+  bool _internal_allow_all_grades() const;
+  void _internal_set_allow_all_grades(bool value);
+  public:
+
+  // optional bool points_replay = 15;
+  bool has_points_replay() const;
+  private:
+  bool _internal_has_points_replay() const;
+  public:
+  void clear_points_replay();
+  bool points_replay() const;
+  void set_points_replay(bool value);
+  private:
+  bool _internal_points_replay() const;
+  void _internal_set_points_replay(bool value);
+  public:
+
   // optional .ei.Platform platform = 6;
   bool has_platform() const;
   private:
@@ -21528,6 +21833,8 @@ class CreateCoopRequest final :
   int grade_;
   bool public__;
   bool cc_only_;
+  bool allow_all_grades_;
+  bool points_replay_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -21845,6 +22152,7 @@ class JoinCoopRequest final :
     kSecondsRemainingFieldNumber = 11,
     kEopFieldNumber = 12,
     kGradeFieldNumber = 13,
+    kPointsReplayFieldNumber = 14,
     kPlatformFieldNumber = 5,
   };
   // optional string contract_identifier = 1;
@@ -22015,6 +22323,19 @@ class JoinCoopRequest final :
   void _internal_set_grade(::ei::Contract_PlayerGrade value);
   public:
 
+  // optional bool points_replay = 14;
+  bool has_points_replay() const;
+  private:
+  bool _internal_has_points_replay() const;
+  public:
+  void clear_points_replay();
+  bool points_replay() const;
+  void set_points_replay(bool value);
+  private:
+  bool _internal_points_replay() const;
+  void _internal_set_points_replay(bool value);
+  public:
+
   // optional .ei.Platform platform = 5;
   bool has_platform() const;
   private:
@@ -22048,6 +22369,7 @@ class JoinCoopRequest final :
   double seconds_remaining_;
   double eop_;
   int grade_;
+  bool points_replay_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -22489,6 +22811,7 @@ class AutoJoinCoopRequest final :
     kLeagueFieldNumber = 8,
     kEopFieldNumber = 10,
     kGradeFieldNumber = 12,
+    kPointsReplayFieldNumber = 14,
     kPlatformFieldNumber = 6,
   };
   // optional string contract_identifier = 1;
@@ -22641,6 +22964,19 @@ class AutoJoinCoopRequest final :
   void _internal_set_grade(::ei::Contract_PlayerGrade value);
   public:
 
+  // optional bool points_replay = 14;
+  bool has_points_replay() const;
+  private:
+  bool _internal_has_points_replay() const;
+  public:
+  void clear_points_replay();
+  bool points_replay() const;
+  void set_points_replay(bool value);
+  private:
+  bool _internal_points_replay() const;
+  void _internal_set_points_replay(bool value);
+  public:
+
   // optional .ei.Platform platform = 6;
   bool has_platform() const;
   private:
@@ -22673,6 +23009,7 @@ class AutoJoinCoopRequest final :
   uint32_t league_;
   double eop_;
   int grade_;
+  bool points_replay_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -26140,6 +26477,7 @@ class LeaderboardAnalysis final :
 
   enum : int {
     kChunksFieldNumber = 1,
+    kCursorFieldNumber = 5,
     kHighScoreFieldNumber = 3,
     kLowScoreFieldNumber = 4,
     kCountFieldNumber = 2,
@@ -26161,6 +26499,24 @@ class LeaderboardAnalysis final :
   ::ei::LeaderboardAnalysis_Chunk* add_chunks();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk >&
       chunks() const;
+
+  // optional string cursor = 5;
+  bool has_cursor() const;
+  private:
+  bool _internal_has_cursor() const;
+  public:
+  void clear_cursor();
+  const std::string& cursor() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_cursor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_cursor();
+  PROTOBUF_NODISCARD std::string* release_cursor();
+  void set_allocated_cursor(std::string* cursor);
+  private:
+  const std::string& _internal_cursor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cursor(const std::string& value);
+  std::string* _internal_mutable_cursor();
+  public:
 
   // optional double high_score = 3;
   bool has_high_score() const;
@@ -26211,6 +26567,7 @@ class LeaderboardAnalysis final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::LeaderboardAnalysis_Chunk > chunks_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cursor_;
   double high_score_;
   double low_score_;
   uint32_t count_;
@@ -33868,6 +34225,7 @@ class MissionInfo final :
     kStartTimeDerivedFieldNumber = 8,
     kQualityBumpFieldNumber = 11,
     kLevelFieldNumber = 12,
+    kTargetArtifactFieldNumber = 13,
   };
   // repeated .ei.MissionInfo.Fuel fuel = 4;
   int fuel_size() const;
@@ -34040,6 +34398,19 @@ class MissionInfo final :
   void _internal_set_level(uint32_t value);
   public:
 
+  // optional .ei.ArtifactSpec.Name target_artifact = 13;
+  bool has_target_artifact() const;
+  private:
+  bool _internal_has_target_artifact() const;
+  public:
+  void clear_target_artifact();
+  ::ei::ArtifactSpec_Name target_artifact() const;
+  void set_target_artifact(::ei::ArtifactSpec_Name value);
+  private:
+  ::ei::ArtifactSpec_Name _internal_target_artifact() const;
+  void _internal_set_target_artifact(::ei::ArtifactSpec_Name value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.MissionInfo)
  private:
   class _Internal;
@@ -34061,6 +34432,7 @@ class MissionInfo final :
   double start_time_derived_;
   double quality_bump_;
   uint32_t level_;
+  int target_artifact_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -39400,6 +39772,7 @@ class ArtifactsDB_ActiveArtifactSet final :
 
   enum : int {
     kSlotsFieldNumber = 1,
+    kUidFieldNumber = 2,
   };
   // repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;
   int slots_size() const;
@@ -39419,6 +39792,19 @@ class ArtifactsDB_ActiveArtifactSet final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot >&
       slots() const;
 
+  // optional uint32 uid = 2;
+  bool has_uid() const;
+  private:
+  bool _internal_has_uid() const;
+  public:
+  void clear_uid();
+  uint32_t uid() const;
+  void set_uid(uint32_t value);
+  private:
+  uint32_t _internal_uid() const;
+  void _internal_set_uid(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ArtifactsDB.ActiveArtifactSet)
  private:
   class _Internal;
@@ -39426,8 +39812,10 @@ class ArtifactsDB_ActiveArtifactSet final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot > slots_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot > slots_;
+  uint32_t uid_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -39801,12 +40189,13 @@ class ArtifactsDB final :
     kInventorySlotsFieldNumber = 3,
     kMissionInfosFieldNumber = 4,
     kMissionArchiveFieldNumber = 5,
-    kActiveArtifactsFieldNumber = 7,
+    kActiveArtifactsDEPRECATEDFieldNumber = 7,
     kDiscoveredArtifactsDEPRECATEDFieldNumber = 8,
     kCraftableArtifactsDEPRECATEDFieldNumber = 9,
     kCraftingCountsDEPRECATEDFieldNumber = 10,
     kActiveArtifactSetsFieldNumber = 11,
     kArtifactStatusFieldNumber = 12,
+    kSavedArtifactSetsFieldNumber = 13,
     kItemSequenceFieldNumber = 2,
   };
   // repeated .ei.ArtifactInventoryItem inventory_items = 1;
@@ -39881,23 +40270,23 @@ class ArtifactsDB final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::MissionInfo >&
       mission_archive() const;
 
-  // repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;
-  int active_artifacts_size() const;
+  // repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;
+  int active_artifacts_deprecated_size() const;
   private:
-  int _internal_active_artifacts_size() const;
+  int _internal_active_artifacts_deprecated_size() const;
   public:
-  void clear_active_artifacts();
-  ::ei::ArtifactsDB_ActiveArtifactSlot* mutable_active_artifacts(int index);
+  void clear_active_artifacts_deprecated();
+  ::ei::ArtifactsDB_ActiveArtifactSlot* mutable_active_artifacts_deprecated(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot >*
-      mutable_active_artifacts();
+      mutable_active_artifacts_deprecated();
   private:
-  const ::ei::ArtifactsDB_ActiveArtifactSlot& _internal_active_artifacts(int index) const;
-  ::ei::ArtifactsDB_ActiveArtifactSlot* _internal_add_active_artifacts();
+  const ::ei::ArtifactsDB_ActiveArtifactSlot& _internal_active_artifacts_deprecated(int index) const;
+  ::ei::ArtifactsDB_ActiveArtifactSlot* _internal_add_active_artifacts_deprecated();
   public:
-  const ::ei::ArtifactsDB_ActiveArtifactSlot& active_artifacts(int index) const;
-  ::ei::ArtifactsDB_ActiveArtifactSlot* add_active_artifacts();
+  const ::ei::ArtifactsDB_ActiveArtifactSlot& active_artifacts_deprecated(int index) const;
+  ::ei::ArtifactsDB_ActiveArtifactSlot* add_active_artifacts_deprecated();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot >&
-      active_artifacts() const;
+      active_artifacts_deprecated() const;
 
   // repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;
   int discovered_artifacts_deprecated_size() const;
@@ -39989,6 +40378,24 @@ class ArtifactsDB final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact >&
       artifact_status() const;
 
+  // repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;
+  int saved_artifact_sets_size() const;
+  private:
+  int _internal_saved_artifact_sets_size() const;
+  public:
+  void clear_saved_artifact_sets();
+  ::ei::ArtifactsDB_ActiveArtifactSet* mutable_saved_artifact_sets(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet >*
+      mutable_saved_artifact_sets();
+  private:
+  const ::ei::ArtifactsDB_ActiveArtifactSet& _internal_saved_artifact_sets(int index) const;
+  ::ei::ArtifactsDB_ActiveArtifactSet* _internal_add_saved_artifact_sets();
+  public:
+  const ::ei::ArtifactsDB_ActiveArtifactSet& saved_artifact_sets(int index) const;
+  ::ei::ArtifactsDB_ActiveArtifactSet* add_saved_artifact_sets();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet >&
+      saved_artifact_sets() const;
+
   // optional uint64 item_sequence = 2;
   bool has_item_sequence() const;
   private:
@@ -40015,12 +40422,13 @@ class ArtifactsDB final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::InventorySlot > inventory_slots_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::MissionInfo > mission_infos_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::MissionInfo > mission_archive_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot > active_artifacts_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot > active_artifacts_deprecated_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactSpec > discovered_artifacts_deprecated_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > craftable_artifacts_deprecated_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > crafting_counts_deprecated_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet > active_artifact_sets_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_CraftableArtifact > artifact_status_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet > saved_artifact_sets_;
   uint64_t item_sequence_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -48712,6 +49120,181 @@ class SubscriptionChangeHintRequest final :
   int next_subscription_level_;
   friend struct ::TableStruct_ei_2eproto;
 };
+// -------------------------------------------------------------------
+
+class CXPEvalRolloutInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.CXPEvalRolloutInfo) */ {
+ public:
+  inline CXPEvalRolloutInfo() : CXPEvalRolloutInfo(nullptr) {}
+  ~CXPEvalRolloutInfo() override;
+  explicit PROTOBUF_CONSTEXPR CXPEvalRolloutInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  CXPEvalRolloutInfo(const CXPEvalRolloutInfo& from);
+  CXPEvalRolloutInfo(CXPEvalRolloutInfo&& from) noexcept
+    : CXPEvalRolloutInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline CXPEvalRolloutInfo& operator=(const CXPEvalRolloutInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CXPEvalRolloutInfo& operator=(CXPEvalRolloutInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CXPEvalRolloutInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CXPEvalRolloutInfo* internal_default_instance() {
+    return reinterpret_cast<const CXPEvalRolloutInfo*>(
+               &_CXPEvalRolloutInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    178;
+
+  friend void swap(CXPEvalRolloutInfo& a, CXPEvalRolloutInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CXPEvalRolloutInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CXPEvalRolloutInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CXPEvalRolloutInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CXPEvalRolloutInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const CXPEvalRolloutInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const CXPEvalRolloutInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CXPEvalRolloutInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.CXPEvalRolloutInfo";
+  }
+  protected:
+  explicit CXPEvalRolloutInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCurrentIdFieldNumber = 1,
+    kBasisPointsFieldNumber = 2,
+  };
+  // optional string current_id = 1;
+  bool has_current_id() const;
+  private:
+  bool _internal_has_current_id() const;
+  public:
+  void clear_current_id();
+  const std::string& current_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_current_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_current_id();
+  PROTOBUF_NODISCARD std::string* release_current_id();
+  void set_allocated_current_id(std::string* current_id);
+  private:
+  const std::string& _internal_current_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_current_id(const std::string& value);
+  std::string* _internal_mutable_current_id();
+  public:
+
+  // optional uint32 basis_points = 2;
+  bool has_basis_points() const;
+  private:
+  bool _internal_has_basis_points() const;
+  public:
+  void clear_basis_points();
+  uint32_t basis_points() const;
+  void set_basis_points(uint32_t value);
+  private:
+  uint32_t _internal_basis_points() const;
+  void _internal_set_basis_points(uint32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.CXPEvalRolloutInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr current_id_;
+  uint32_t basis_points_;
+  friend struct ::TableStruct_ei_2eproto;
+};
 // ===================================================================
 
 
@@ -48947,9 +49530,121 @@ inline void Backup_Settings::set_notify_daily_gift(bool value) {
   // @@protoc_insertion_point(field_set:ei.Backup.Settings.notify_daily_gift)
 }
 
+// optional bool low_performance = 10;
+inline bool Backup_Settings::_internal_has_low_performance() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_low_performance() const {
+  return _internal_has_low_performance();
+}
+inline void Backup_Settings::clear_low_performance() {
+  low_performance_ = false;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline bool Backup_Settings::_internal_low_performance() const {
+  return low_performance_;
+}
+inline bool Backup_Settings::low_performance() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.low_performance)
+  return _internal_low_performance();
+}
+inline void Backup_Settings::_internal_set_low_performance(bool value) {
+  _has_bits_[0] |= 0x00002000u;
+  low_performance_ = value;
+}
+inline void Backup_Settings::set_low_performance(bool value) {
+  _internal_set_low_performance(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.low_performance)
+}
+
+// optional bool auto_stop_fueling = 25;
+inline bool Backup_Settings::_internal_has_auto_stop_fueling() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_auto_stop_fueling() const {
+  return _internal_has_auto_stop_fueling();
+}
+inline void Backup_Settings::clear_auto_stop_fueling() {
+  auto_stop_fueling_ = false;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline bool Backup_Settings::_internal_auto_stop_fueling() const {
+  return auto_stop_fueling_;
+}
+inline bool Backup_Settings::auto_stop_fueling() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.auto_stop_fueling)
+  return _internal_auto_stop_fueling();
+}
+inline void Backup_Settings::_internal_set_auto_stop_fueling(bool value) {
+  _has_bits_[0] |= 0x00004000u;
+  auto_stop_fueling_ = value;
+}
+inline void Backup_Settings::set_auto_stop_fueling(bool value) {
+  _internal_set_auto_stop_fueling(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.auto_stop_fueling)
+}
+
+// optional bool max_enabled = 26;
+inline bool Backup_Settings::_internal_has_max_enabled() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_max_enabled() const {
+  return _internal_has_max_enabled();
+}
+inline void Backup_Settings::clear_max_enabled() {
+  max_enabled_ = false;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline bool Backup_Settings::_internal_max_enabled() const {
+  return max_enabled_;
+}
+inline bool Backup_Settings::max_enabled() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.max_enabled)
+  return _internal_max_enabled();
+}
+inline void Backup_Settings::_internal_set_max_enabled(bool value) {
+  _has_bits_[0] |= 0x00008000u;
+  max_enabled_ = value;
+}
+inline void Backup_Settings::set_max_enabled(bool value) {
+  _internal_set_max_enabled(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.max_enabled)
+}
+
+// optional double last_backup_time = 24;
+inline bool Backup_Settings::_internal_has_last_backup_time() const {
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_last_backup_time() const {
+  return _internal_has_last_backup_time();
+}
+inline void Backup_Settings::clear_last_backup_time() {
+  last_backup_time_ = 0;
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline double Backup_Settings::_internal_last_backup_time() const {
+  return last_backup_time_;
+}
+inline double Backup_Settings::last_backup_time() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.last_backup_time)
+  return _internal_last_backup_time();
+}
+inline void Backup_Settings::_internal_set_last_backup_time(double value) {
+  _has_bits_[0] |= 0x00200000u;
+  last_backup_time_ = value;
+}
+inline void Backup_Settings::set_last_backup_time(double value) {
+  _internal_set_last_backup_time(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.last_backup_time)
+}
+
 // optional bool coppa_queried = 7;
 inline bool Backup_Settings::_internal_has_coppa_queried() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_coppa_queried() const {
@@ -48957,7 +49652,7 @@ inline bool Backup_Settings::has_coppa_queried() const {
 }
 inline void Backup_Settings::clear_coppa_queried() {
   coppa_queried_ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline bool Backup_Settings::_internal_coppa_queried() const {
   return coppa_queried_;
@@ -48967,7 +49662,7 @@ inline bool Backup_Settings::coppa_queried() const {
   return _internal_coppa_queried();
 }
 inline void Backup_Settings::_internal_set_coppa_queried(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00010000u;
   coppa_queried_ = value;
 }
 inline void Backup_Settings::set_coppa_queried(bool value) {
@@ -48977,7 +49672,7 @@ inline void Backup_Settings::set_coppa_queried(bool value) {
 
 // optional bool coppa_restricted = 8;
 inline bool Backup_Settings::_internal_has_coppa_restricted() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_coppa_restricted() const {
@@ -48985,7 +49680,7 @@ inline bool Backup_Settings::has_coppa_restricted() const {
 }
 inline void Backup_Settings::clear_coppa_restricted() {
   coppa_restricted_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool Backup_Settings::_internal_coppa_restricted() const {
   return coppa_restricted_;
@@ -48995,7 +49690,7 @@ inline bool Backup_Settings::coppa_restricted() const {
   return _internal_coppa_restricted();
 }
 inline void Backup_Settings::_internal_set_coppa_restricted(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
   coppa_restricted_ = value;
 }
 inline void Backup_Settings::set_coppa_restricted(bool value) {
@@ -49005,7 +49700,7 @@ inline void Backup_Settings::set_coppa_restricted(bool value) {
 
 // optional bool gdpr_consent_queried = 12;
 inline bool Backup_Settings::_internal_has_gdpr_consent_queried() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_consent_queried() const {
@@ -49013,7 +49708,7 @@ inline bool Backup_Settings::has_gdpr_consent_queried() const {
 }
 inline void Backup_Settings::clear_gdpr_consent_queried() {
   gdpr_consent_queried_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool Backup_Settings::_internal_gdpr_consent_queried() const {
   return gdpr_consent_queried_;
@@ -49023,7 +49718,7 @@ inline bool Backup_Settings::gdpr_consent_queried() const {
   return _internal_gdpr_consent_queried();
 }
 inline void Backup_Settings::_internal_set_gdpr_consent_queried(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
   gdpr_consent_queried_ = value;
 }
 inline void Backup_Settings::set_gdpr_consent_queried(bool value) {
@@ -49033,7 +49728,7 @@ inline void Backup_Settings::set_gdpr_consent_queried(bool value) {
 
 // optional bool gdpr_age_restricted = 16;
 inline bool Backup_Settings::_internal_has_gdpr_age_restricted() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_age_restricted() const {
@@ -49041,7 +49736,7 @@ inline bool Backup_Settings::has_gdpr_age_restricted() const {
 }
 inline void Backup_Settings::clear_gdpr_age_restricted() {
   gdpr_age_restricted_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline bool Backup_Settings::_internal_gdpr_age_restricted() const {
   return gdpr_age_restricted_;
@@ -49051,7 +49746,7 @@ inline bool Backup_Settings::gdpr_age_restricted() const {
   return _internal_gdpr_age_restricted();
 }
 inline void Backup_Settings::_internal_set_gdpr_age_restricted(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000400u;
   gdpr_age_restricted_ = value;
 }
 inline void Backup_Settings::set_gdpr_age_restricted(bool value) {
@@ -49061,7 +49756,7 @@ inline void Backup_Settings::set_gdpr_age_restricted(bool value) {
 
 // optional bool gdpr_consent_given = 13;
 inline bool Backup_Settings::_internal_has_gdpr_consent_given() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_consent_given() const {
@@ -49069,7 +49764,7 @@ inline bool Backup_Settings::has_gdpr_consent_given() const {
 }
 inline void Backup_Settings::clear_gdpr_consent_given() {
   gdpr_consent_given_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool Backup_Settings::_internal_gdpr_consent_given() const {
   return gdpr_consent_given_;
@@ -49079,7 +49774,7 @@ inline bool Backup_Settings::gdpr_consent_given() const {
   return _internal_gdpr_consent_given();
 }
 inline void Backup_Settings::_internal_set_gdpr_consent_given(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000800u;
   gdpr_consent_given_ = value;
 }
 inline void Backup_Settings::set_gdpr_consent_given(bool value) {
@@ -49089,7 +49784,7 @@ inline void Backup_Settings::set_gdpr_consent_given(bool value) {
 
 // optional bool age_queried = 18;
 inline bool Backup_Settings::_internal_has_age_queried() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_age_queried() const {
@@ -49097,7 +49792,7 @@ inline bool Backup_Settings::has_age_queried() const {
 }
 inline void Backup_Settings::clear_age_queried() {
   age_queried_ = false;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline bool Backup_Settings::_internal_age_queried() const {
   return age_queried_;
@@ -49107,7 +49802,7 @@ inline bool Backup_Settings::age_queried() const {
   return _internal_age_queried();
 }
 inline void Backup_Settings::_internal_set_age_queried(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00020000u;
   age_queried_ = value;
 }
 inline void Backup_Settings::set_age_queried(bool value) {
@@ -49117,7 +49812,7 @@ inline void Backup_Settings::set_age_queried(bool value) {
 
 // optional bool age_restricted = 19 [default = false];
 inline bool Backup_Settings::_internal_has_age_restricted() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_age_restricted() const {
@@ -49125,7 +49820,7 @@ inline bool Backup_Settings::has_age_restricted() const {
 }
 inline void Backup_Settings::clear_age_restricted() {
   age_restricted_ = false;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline bool Backup_Settings::_internal_age_restricted() const {
   return age_restricted_;
@@ -49135,7 +49830,7 @@ inline bool Backup_Settings::age_restricted() const {
   return _internal_age_restricted();
 }
 inline void Backup_Settings::_internal_set_age_restricted(bool value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00040000u;
   age_restricted_ = value;
 }
 inline void Backup_Settings::set_age_restricted(bool value) {
@@ -49145,7 +49840,7 @@ inline void Backup_Settings::set_age_restricted(bool value) {
 
 // optional bool data_collection_consent_queried = 20;
 inline bool Backup_Settings::_internal_has_data_collection_consent_queried() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_data_collection_consent_queried() const {
@@ -49153,7 +49848,7 @@ inline bool Backup_Settings::has_data_collection_consent_queried() const {
 }
 inline void Backup_Settings::clear_data_collection_consent_queried() {
   data_collection_consent_queried_ = false;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline bool Backup_Settings::_internal_data_collection_consent_queried() const {
   return data_collection_consent_queried_;
@@ -49163,7 +49858,7 @@ inline bool Backup_Settings::data_collection_consent_queried() const {
   return _internal_data_collection_consent_queried();
 }
 inline void Backup_Settings::_internal_set_data_collection_consent_queried(bool value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00080000u;
   data_collection_consent_queried_ = value;
 }
 inline void Backup_Settings::set_data_collection_consent_queried(bool value) {
@@ -49173,7 +49868,7 @@ inline void Backup_Settings::set_data_collection_consent_queried(bool value) {
 
 // optional bool data_collection_consent_given = 21;
 inline bool Backup_Settings::_internal_has_data_collection_consent_given() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_data_collection_consent_given() const {
@@ -49181,7 +49876,7 @@ inline bool Backup_Settings::has_data_collection_consent_given() const {
 }
 inline void Backup_Settings::clear_data_collection_consent_given() {
   data_collection_consent_given_ = false;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool Backup_Settings::_internal_data_collection_consent_given() const {
   return data_collection_consent_given_;
@@ -49191,7 +49886,7 @@ inline bool Backup_Settings::data_collection_consent_given() const {
   return _internal_data_collection_consent_given();
 }
 inline void Backup_Settings::_internal_set_data_collection_consent_given(bool value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00100000u;
   data_collection_consent_given_ = value;
 }
 inline void Backup_Settings::set_data_collection_consent_given(bool value) {
@@ -49229,7 +49924,7 @@ inline void Backup_Settings::set_last_day_age_queried(uint32_t value) {
 
 // optional bool user_ads_enabled = 14 [default = true];
 inline bool Backup_Settings::_internal_has_user_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_ads_enabled() const {
@@ -49237,7 +49932,7 @@ inline bool Backup_Settings::has_user_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_ads_enabled() {
   user_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool Backup_Settings::_internal_user_ads_enabled() const {
   return user_ads_enabled_;
@@ -49247,7 +49942,7 @@ inline bool Backup_Settings::user_ads_enabled() const {
   return _internal_user_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
   user_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_ads_enabled(bool value) {
@@ -49257,7 +49952,7 @@ inline void Backup_Settings::set_user_ads_enabled(bool value) {
 
 // optional bool user_cloud_enabled = 15 [default = true];
 inline bool Backup_Settings::_internal_has_user_cloud_enabled() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_cloud_enabled() const {
@@ -49265,7 +49960,7 @@ inline bool Backup_Settings::has_user_cloud_enabled() const {
 }
 inline void Backup_Settings::clear_user_cloud_enabled() {
   user_cloud_enabled_ = true;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline bool Backup_Settings::_internal_user_cloud_enabled() const {
   return user_cloud_enabled_;
@@ -49275,7 +49970,7 @@ inline bool Backup_Settings::user_cloud_enabled() const {
   return _internal_user_cloud_enabled();
 }
 inline void Backup_Settings::_internal_set_user_cloud_enabled(bool value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
   user_cloud_enabled_ = value;
 }
 inline void Backup_Settings::set_user_cloud_enabled(bool value) {
@@ -49285,7 +49980,7 @@ inline void Backup_Settings::set_user_cloud_enabled(bool value) {
 
 // optional bool user_analytics_enabled = 22 [default = true];
 inline bool Backup_Settings::_internal_has_user_analytics_enabled() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_analytics_enabled() const {
@@ -49293,7 +49988,7 @@ inline bool Backup_Settings::has_user_analytics_enabled() const {
 }
 inline void Backup_Settings::clear_user_analytics_enabled() {
   user_analytics_enabled_ = true;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline bool Backup_Settings::_internal_user_analytics_enabled() const {
   return user_analytics_enabled_;
@@ -49303,7 +49998,7 @@ inline bool Backup_Settings::user_analytics_enabled() const {
   return _internal_user_analytics_enabled();
 }
 inline void Backup_Settings::_internal_set_user_analytics_enabled(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
   user_analytics_enabled_ = value;
 }
 inline void Backup_Settings::set_user_analytics_enabled(bool value) {
@@ -49313,7 +50008,7 @@ inline void Backup_Settings::set_user_analytics_enabled(bool value) {
 
 // optional bool user_personalized_ads_enabled = 23 [default = true];
 inline bool Backup_Settings::_internal_has_user_personalized_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
@@ -49321,7 +50016,7 @@ inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_personalized_ads_enabled() {
   user_personalized_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline bool Backup_Settings::_internal_user_personalized_ads_enabled() const {
   return user_personalized_ads_enabled_;
@@ -49331,96 +50026,12 @@ inline bool Backup_Settings::user_personalized_ads_enabled() const {
   return _internal_user_personalized_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_personalized_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
   user_personalized_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_personalized_ads_enabled(bool value) {
   _internal_set_user_personalized_ads_enabled(value);
   // @@protoc_insertion_point(field_set:ei.Backup.Settings.user_personalized_ads_enabled)
-}
-
-// optional bool low_performance = 10;
-inline bool Backup_Settings::_internal_has_low_performance() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
-  return value;
-}
-inline bool Backup_Settings::has_low_performance() const {
-  return _internal_has_low_performance();
-}
-inline void Backup_Settings::clear_low_performance() {
-  low_performance_ = false;
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline bool Backup_Settings::_internal_low_performance() const {
-  return low_performance_;
-}
-inline bool Backup_Settings::low_performance() const {
-  // @@protoc_insertion_point(field_get:ei.Backup.Settings.low_performance)
-  return _internal_low_performance();
-}
-inline void Backup_Settings::_internal_set_low_performance(bool value) {
-  _has_bits_[0] |= 0x00040000u;
-  low_performance_ = value;
-}
-inline void Backup_Settings::set_low_performance(bool value) {
-  _internal_set_low_performance(value);
-  // @@protoc_insertion_point(field_set:ei.Backup.Settings.low_performance)
-}
-
-// optional bool auto_stop_fueling = 25;
-inline bool Backup_Settings::_internal_has_auto_stop_fueling() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
-  return value;
-}
-inline bool Backup_Settings::has_auto_stop_fueling() const {
-  return _internal_has_auto_stop_fueling();
-}
-inline void Backup_Settings::clear_auto_stop_fueling() {
-  auto_stop_fueling_ = false;
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline bool Backup_Settings::_internal_auto_stop_fueling() const {
-  return auto_stop_fueling_;
-}
-inline bool Backup_Settings::auto_stop_fueling() const {
-  // @@protoc_insertion_point(field_get:ei.Backup.Settings.auto_stop_fueling)
-  return _internal_auto_stop_fueling();
-}
-inline void Backup_Settings::_internal_set_auto_stop_fueling(bool value) {
-  _has_bits_[0] |= 0x00080000u;
-  auto_stop_fueling_ = value;
-}
-inline void Backup_Settings::set_auto_stop_fueling(bool value) {
-  _internal_set_auto_stop_fueling(value);
-  // @@protoc_insertion_point(field_set:ei.Backup.Settings.auto_stop_fueling)
-}
-
-// optional double last_backup_time = 24;
-inline bool Backup_Settings::_internal_has_last_backup_time() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
-  return value;
-}
-inline bool Backup_Settings::has_last_backup_time() const {
-  return _internal_has_last_backup_time();
-}
-inline void Backup_Settings::clear_last_backup_time() {
-  last_backup_time_ = 0;
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline double Backup_Settings::_internal_last_backup_time() const {
-  return last_backup_time_;
-}
-inline double Backup_Settings::last_backup_time() const {
-  // @@protoc_insertion_point(field_get:ei.Backup.Settings.last_backup_time)
-  return _internal_last_backup_time();
-}
-inline void Backup_Settings::_internal_set_last_backup_time(double value) {
-  _has_bits_[0] |= 0x00100000u;
-  last_backup_time_ = value;
-}
-inline void Backup_Settings::set_last_backup_time(double value) {
-  _internal_set_last_backup_time(value);
-  // @@protoc_insertion_point(field_set:ei.Backup.Settings.last_backup_time)
 }
 
 // -------------------------------------------------------------------
@@ -53544,7 +54155,7 @@ inline void Backup_Misc::set_free_hatchery_refill_given(bool value) {
 
 // optional double last_share_farm_value = 3 [default = 10000000];
 inline bool Backup_Misc::_internal_has_last_share_farm_value() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_share_farm_value() const {
@@ -53552,7 +54163,7 @@ inline bool Backup_Misc::has_last_share_farm_value() const {
 }
 inline void Backup_Misc::clear_last_share_farm_value() {
   last_share_farm_value_ = 10000000;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline double Backup_Misc::_internal_last_share_farm_value() const {
   return last_share_farm_value_;
@@ -53562,7 +54173,7 @@ inline double Backup_Misc::last_share_farm_value() const {
   return _internal_last_share_farm_value();
 }
 inline void Backup_Misc::_internal_set_last_share_farm_value(double value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00100000u;
   last_share_farm_value_ = value;
 }
 inline void Backup_Misc::set_last_share_farm_value(double value) {
@@ -53572,7 +54183,7 @@ inline void Backup_Misc::set_last_share_farm_value(double value) {
 
 // optional double last_share_swarm_farm_value = 4 [default = 10000000];
 inline bool Backup_Misc::_internal_has_last_share_swarm_farm_value() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_share_swarm_farm_value() const {
@@ -53580,7 +54191,7 @@ inline bool Backup_Misc::has_last_share_swarm_farm_value() const {
 }
 inline void Backup_Misc::clear_last_share_swarm_farm_value() {
   last_share_swarm_farm_value_ = 10000000;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline double Backup_Misc::_internal_last_share_swarm_farm_value() const {
   return last_share_swarm_farm_value_;
@@ -53590,7 +54201,7 @@ inline double Backup_Misc::last_share_swarm_farm_value() const {
   return _internal_last_share_swarm_farm_value();
 }
 inline void Backup_Misc::_internal_set_last_share_swarm_farm_value(double value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00200000u;
   last_share_swarm_farm_value_ = value;
 }
 inline void Backup_Misc::set_last_share_swarm_farm_value(double value) {
@@ -53600,7 +54211,7 @@ inline void Backup_Misc::set_last_share_swarm_farm_value(double value) {
 
 // optional double last_share_swarm_size = 5 [default = 140];
 inline bool Backup_Misc::_internal_has_last_share_swarm_size() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_share_swarm_size() const {
@@ -53608,7 +54219,7 @@ inline bool Backup_Misc::has_last_share_swarm_size() const {
 }
 inline void Backup_Misc::clear_last_share_swarm_size() {
   last_share_swarm_size_ = 140;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline double Backup_Misc::_internal_last_share_swarm_size() const {
   return last_share_swarm_size_;
@@ -53618,7 +54229,7 @@ inline double Backup_Misc::last_share_swarm_size() const {
   return _internal_last_share_swarm_size();
 }
 inline void Backup_Misc::_internal_set_last_share_swarm_size(double value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00400000u;
   last_share_swarm_size_ = value;
 }
 inline void Backup_Misc::set_last_share_swarm_size(double value) {
@@ -53628,7 +54239,7 @@ inline void Backup_Misc::set_last_share_swarm_size(double value) {
 
 // optional uint64 last_prestige_alert_soul_eggs_DEPRECATED = 10 [default = 45];
 inline bool Backup_Misc::_internal_has_last_prestige_alert_soul_eggs_deprecated() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool Backup_Misc::has_last_prestige_alert_soul_eggs_deprecated() const {
@@ -53636,7 +54247,7 @@ inline bool Backup_Misc::has_last_prestige_alert_soul_eggs_deprecated() const {
 }
 inline void Backup_Misc::clear_last_prestige_alert_soul_eggs_deprecated() {
   last_prestige_alert_soul_eggs_deprecated_ = uint64_t{45u};
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline uint64_t Backup_Misc::_internal_last_prestige_alert_soul_eggs_deprecated() const {
   return last_prestige_alert_soul_eggs_deprecated_;
@@ -53646,7 +54257,7 @@ inline uint64_t Backup_Misc::last_prestige_alert_soul_eggs_deprecated() const {
   return _internal_last_prestige_alert_soul_eggs_deprecated();
 }
 inline void Backup_Misc::_internal_set_last_prestige_alert_soul_eggs_deprecated(uint64_t value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00800000u;
   last_prestige_alert_soul_eggs_deprecated_ = value;
 }
 inline void Backup_Misc::set_last_prestige_alert_soul_eggs_deprecated(uint64_t value) {
@@ -54100,6 +54711,62 @@ inline void Backup_Misc::_internal_set_backup_reminder_alert(bool value) {
 inline void Backup_Misc::set_backup_reminder_alert(bool value) {
   _internal_set_backup_reminder_alert(value);
   // @@protoc_insertion_point(field_set:ei.Backup.Misc.backup_reminder_alert)
+}
+
+// optional bool max_button_alert = 23;
+inline bool Backup_Misc::_internal_has_max_button_alert() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool Backup_Misc::has_max_button_alert() const {
+  return _internal_has_max_button_alert();
+}
+inline void Backup_Misc::clear_max_button_alert() {
+  max_button_alert_ = false;
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline bool Backup_Misc::_internal_max_button_alert() const {
+  return max_button_alert_;
+}
+inline bool Backup_Misc::max_button_alert() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Misc.max_button_alert)
+  return _internal_max_button_alert();
+}
+inline void Backup_Misc::_internal_set_max_button_alert(bool value) {
+  _has_bits_[0] |= 0x00040000u;
+  max_button_alert_ = value;
+}
+inline void Backup_Misc::set_max_button_alert(bool value) {
+  _internal_set_max_button_alert(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Misc.max_button_alert)
+}
+
+// optional bool mission_target_alert = 24;
+inline bool Backup_Misc::_internal_has_mission_target_alert() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool Backup_Misc::has_mission_target_alert() const {
+  return _internal_has_mission_target_alert();
+}
+inline void Backup_Misc::clear_mission_target_alert() {
+  mission_target_alert_ = false;
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline bool Backup_Misc::_internal_mission_target_alert() const {
+  return mission_target_alert_;
+}
+inline bool Backup_Misc::mission_target_alert() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Misc.mission_target_alert)
+  return _internal_mission_target_alert();
+}
+inline void Backup_Misc::_internal_set_mission_target_alert(bool value) {
+  _has_bits_[0] |= 0x00080000u;
+  mission_target_alert_ = value;
+}
+inline void Backup_Misc::set_mission_target_alert(bool value) {
+  _internal_set_mission_target_alert(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Misc.mission_target_alert)
 }
 
 // -------------------------------------------------------------------
@@ -64194,7 +64861,7 @@ inline void ContractEvaluation::set_cxp(double value) {
 
 // optional bool replay = 24;
 inline bool ContractEvaluation::_internal_has_replay() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_replay() const {
@@ -64202,7 +64869,7 @@ inline bool ContractEvaluation::has_replay() const {
 }
 inline void ContractEvaluation::clear_replay() {
   replay_ = false;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool ContractEvaluation::_internal_replay() const {
   return replay_;
@@ -64212,7 +64879,7 @@ inline bool ContractEvaluation::replay() const {
   return _internal_replay();
 }
 inline void ContractEvaluation::_internal_set_replay(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x00100000u;
   replay_ = value;
 }
 inline void ContractEvaluation::set_replay(bool value) {
@@ -64222,7 +64889,7 @@ inline void ContractEvaluation::set_replay(bool value) {
 
 // optional double cxp_change = 25;
 inline bool ContractEvaluation::_internal_has_cxp_change() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_cxp_change() const {
@@ -64230,7 +64897,7 @@ inline bool ContractEvaluation::has_cxp_change() const {
 }
 inline void ContractEvaluation::clear_cxp_change() {
   cxp_change_ = 0;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline double ContractEvaluation::_internal_cxp_change() const {
   return cxp_change_;
@@ -64240,7 +64907,7 @@ inline double ContractEvaluation::cxp_change() const {
   return _internal_cxp_change();
 }
 inline void ContractEvaluation::_internal_set_cxp_change(double value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x08000000u;
   cxp_change_ = value;
 }
 inline void ContractEvaluation::set_cxp_change(double value) {
@@ -64306,7 +64973,7 @@ inline void ContractEvaluation::set_old_league(int32_t value) {
 
 // optional bool old_goals = 10;
 inline bool ContractEvaluation::_internal_has_old_goals() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_old_goals() const {
@@ -64314,7 +64981,7 @@ inline bool ContractEvaluation::has_old_goals() const {
 }
 inline void ContractEvaluation::clear_old_goals() {
   old_goals_ = false;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool ContractEvaluation::_internal_old_goals() const {
   return old_goals_;
@@ -64324,7 +64991,7 @@ inline bool ContractEvaluation::old_goals() const {
   return _internal_old_goals();
 }
 inline void ContractEvaluation::_internal_set_old_goals(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x00200000u;
   old_goals_ = value;
 }
 inline void ContractEvaluation::set_old_goals(bool value) {
@@ -64475,7 +65142,7 @@ inline void ContractEvaluation::set_coop_size(uint32_t value) {
 
 // optional bool solo = 26;
 inline bool ContractEvaluation::_internal_has_solo() const {
-  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_solo() const {
@@ -64483,7 +65150,7 @@ inline bool ContractEvaluation::has_solo() const {
 }
 inline void ContractEvaluation::clear_solo() {
   solo_ = false;
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool ContractEvaluation::_internal_solo() const {
   return solo_;
@@ -64493,7 +65160,7 @@ inline bool ContractEvaluation::solo() const {
   return _internal_solo();
 }
 inline void ContractEvaluation::_internal_set_solo(bool value) {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x00400000u;
   solo_ = value;
 }
 inline void ContractEvaluation::set_solo(bool value) {
@@ -64503,7 +65170,7 @@ inline void ContractEvaluation::set_solo(bool value) {
 
 // optional double soul_power = 23;
 inline bool ContractEvaluation::_internal_has_soul_power() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_soul_power() const {
@@ -64511,7 +65178,7 @@ inline bool ContractEvaluation::has_soul_power() const {
 }
 inline void ContractEvaluation::clear_soul_power() {
   soul_power_ = 0;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline double ContractEvaluation::_internal_soul_power() const {
   return soul_power_;
@@ -64521,7 +65188,7 @@ inline double ContractEvaluation::soul_power() const {
   return _internal_soul_power();
 }
 inline void ContractEvaluation::_internal_set_soul_power(double value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x04000000u;
   soul_power_ = value;
 }
 inline void ContractEvaluation::set_soul_power(double value) {
@@ -64531,7 +65198,7 @@ inline void ContractEvaluation::set_soul_power(double value) {
 
 // optional double last_contribution_time = 22;
 inline bool ContractEvaluation::_internal_has_last_contribution_time() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_last_contribution_time() const {
@@ -64539,7 +65206,7 @@ inline bool ContractEvaluation::has_last_contribution_time() const {
 }
 inline void ContractEvaluation::clear_last_contribution_time() {
   last_contribution_time_ = 0;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline double ContractEvaluation::_internal_last_contribution_time() const {
   return last_contribution_time_;
@@ -64549,7 +65216,7 @@ inline double ContractEvaluation::last_contribution_time() const {
   return _internal_last_contribution_time();
 }
 inline void ContractEvaluation::_internal_set_last_contribution_time(double value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x02000000u;
   last_contribution_time_ = value;
 }
 inline void ContractEvaluation::set_last_contribution_time(double value) {
@@ -64669,6 +65336,62 @@ inline void ContractEvaluation::set_gift_tokens_received(uint32_t value) {
   // @@protoc_insertion_point(field_set:ei.ContractEvaluation.gift_tokens_received)
 }
 
+// optional double gift_token_value_sent = 28;
+inline bool ContractEvaluation::_internal_has_gift_token_value_sent() const {
+  bool value = (_has_bits_[0] & 0x10000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_gift_token_value_sent() const {
+  return _internal_has_gift_token_value_sent();
+}
+inline void ContractEvaluation::clear_gift_token_value_sent() {
+  gift_token_value_sent_ = 0;
+  _has_bits_[0] &= ~0x10000000u;
+}
+inline double ContractEvaluation::_internal_gift_token_value_sent() const {
+  return gift_token_value_sent_;
+}
+inline double ContractEvaluation::gift_token_value_sent() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.gift_token_value_sent)
+  return _internal_gift_token_value_sent();
+}
+inline void ContractEvaluation::_internal_set_gift_token_value_sent(double value) {
+  _has_bits_[0] |= 0x10000000u;
+  gift_token_value_sent_ = value;
+}
+inline void ContractEvaluation::set_gift_token_value_sent(double value) {
+  _internal_set_gift_token_value_sent(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.gift_token_value_sent)
+}
+
+// optional double gift_token_value_received = 29;
+inline bool ContractEvaluation::_internal_has_gift_token_value_received() const {
+  bool value = (_has_bits_[0] & 0x20000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_gift_token_value_received() const {
+  return _internal_has_gift_token_value_received();
+}
+inline void ContractEvaluation::clear_gift_token_value_received() {
+  gift_token_value_received_ = 0;
+  _has_bits_[0] &= ~0x20000000u;
+}
+inline double ContractEvaluation::_internal_gift_token_value_received() const {
+  return gift_token_value_received_;
+}
+inline double ContractEvaluation::gift_token_value_received() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.gift_token_value_received)
+  return _internal_gift_token_value_received();
+}
+inline void ContractEvaluation::_internal_set_gift_token_value_received(double value) {
+  _has_bits_[0] |= 0x20000000u;
+  gift_token_value_received_ = value;
+}
+inline void ContractEvaluation::set_gift_token_value_received(double value) {
+  _internal_set_gift_token_value_received(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.gift_token_value_received)
+}
+
 // optional uint32 boost_token_allotment = 16;
 inline bool ContractEvaluation::_internal_has_boost_token_allotment() const {
   bool value = (_has_bits_[0] & 0x00040000u) != 0;
@@ -64783,7 +65506,7 @@ inline void ContractEvaluation::set_other_bonuses(double value) {
 
 // optional bool counted_in_season = 20;
 inline bool ContractEvaluation::_internal_has_counted_in_season() const {
-  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_counted_in_season() const {
@@ -64791,7 +65514,7 @@ inline bool ContractEvaluation::has_counted_in_season() const {
 }
 inline void ContractEvaluation::clear_counted_in_season() {
   counted_in_season_ = false;
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline bool ContractEvaluation::_internal_counted_in_season() const {
   return counted_in_season_;
@@ -64801,7 +65524,7 @@ inline bool ContractEvaluation::counted_in_season() const {
   return _internal_counted_in_season();
 }
 inline void ContractEvaluation::_internal_set_counted_in_season(bool value) {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x00800000u;
   counted_in_season_ = value;
 }
 inline void ContractEvaluation::set_counted_in_season(bool value) {
@@ -64875,6 +65598,34 @@ inline void ContractEvaluation::set_allocated_season_id(std::string* season_id) 
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:ei.ContractEvaluation.season_id)
+}
+
+// optional uint32 time_cheats = 27;
+inline bool ContractEvaluation::_internal_has_time_cheats() const {
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  return value;
+}
+inline bool ContractEvaluation::has_time_cheats() const {
+  return _internal_has_time_cheats();
+}
+inline void ContractEvaluation::clear_time_cheats() {
+  time_cheats_ = 0u;
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline uint32_t ContractEvaluation::_internal_time_cheats() const {
+  return time_cheats_;
+}
+inline uint32_t ContractEvaluation::time_cheats() const {
+  // @@protoc_insertion_point(field_get:ei.ContractEvaluation.time_cheats)
+  return _internal_time_cheats();
+}
+inline void ContractEvaluation::_internal_set_time_cheats(uint32_t value) {
+  _has_bits_[0] |= 0x01000000u;
+  time_cheats_ = value;
+}
+inline void ContractEvaluation::set_time_cheats(uint32_t value) {
+  _internal_set_time_cheats(value);
+  // @@protoc_insertion_point(field_set:ei.ContractEvaluation.time_cheats)
 }
 
 // repeated .ei.ContractEvaluation.PoorBehavior issues = 19;
@@ -65067,7 +65818,7 @@ inline void ContractEvaluation::set_allocated_version(std::string* version) {
 
 // optional double evaluation_start_time = 51;
 inline bool ContractEvaluation::_internal_has_evaluation_start_time() const {
-  bool value = (_has_bits_[0] & 0x10000000u) != 0;
+  bool value = (_has_bits_[0] & 0x40000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_evaluation_start_time() const {
@@ -65075,7 +65826,7 @@ inline bool ContractEvaluation::has_evaluation_start_time() const {
 }
 inline void ContractEvaluation::clear_evaluation_start_time() {
   evaluation_start_time_ = 0;
-  _has_bits_[0] &= ~0x10000000u;
+  _has_bits_[0] &= ~0x40000000u;
 }
 inline double ContractEvaluation::_internal_evaluation_start_time() const {
   return evaluation_start_time_;
@@ -65085,7 +65836,7 @@ inline double ContractEvaluation::evaluation_start_time() const {
   return _internal_evaluation_start_time();
 }
 inline void ContractEvaluation::_internal_set_evaluation_start_time(double value) {
-  _has_bits_[0] |= 0x10000000u;
+  _has_bits_[0] |= 0x40000000u;
   evaluation_start_time_ = value;
 }
 inline void ContractEvaluation::set_evaluation_start_time(double value) {
@@ -65095,7 +65846,7 @@ inline void ContractEvaluation::set_evaluation_start_time(double value) {
 
 // optional .ei.ContractEvaluation.Status status = 52;
 inline bool ContractEvaluation::_internal_has_status() const {
-  bool value = (_has_bits_[0] & 0x08000000u) != 0;
+  bool value = (_has_bits_[0] & 0x80000000u) != 0;
   return value;
 }
 inline bool ContractEvaluation::has_status() const {
@@ -65103,7 +65854,7 @@ inline bool ContractEvaluation::has_status() const {
 }
 inline void ContractEvaluation::clear_status() {
   status_ = 0;
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x80000000u;
 }
 inline ::ei::ContractEvaluation_Status ContractEvaluation::_internal_status() const {
   return static_cast< ::ei::ContractEvaluation_Status >(status_);
@@ -65114,7 +65865,7 @@ inline ::ei::ContractEvaluation_Status ContractEvaluation::status() const {
 }
 inline void ContractEvaluation::_internal_set_status(::ei::ContractEvaluation_Status value) {
   assert(::ei::ContractEvaluation_Status_IsValid(value));
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x80000000u;
   status_ = value;
 }
 inline void ContractEvaluation::set_status(::ei::ContractEvaluation_Status value) {
@@ -65448,6 +66199,62 @@ inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_contributi
 inline void CoopCompletionSnapshot_ContributorSnapshot::set_contribution(double value) {
   _internal_set_contribution(value);
   // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.contribution)
+}
+
+// optional double last_contribution_time = 6;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_last_contribution_time() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_last_contribution_time() const {
+  return _internal_has_last_contribution_time();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_last_contribution_time() {
+  last_contribution_time_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::_internal_last_contribution_time() const {
+  return last_contribution_time_;
+}
+inline double CoopCompletionSnapshot_ContributorSnapshot::last_contribution_time() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.last_contribution_time)
+  return _internal_last_contribution_time();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_last_contribution_time(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  last_contribution_time_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_last_contribution_time(double value) {
+  _internal_set_last_contribution_time(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.last_contribution_time)
+}
+
+// optional bool finalized = 7;
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_has_finalized() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::has_finalized() const {
+  return _internal_has_finalized();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::clear_finalized() {
+  finalized_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::_internal_finalized() const {
+  return finalized_;
+}
+inline bool CoopCompletionSnapshot_ContributorSnapshot::finalized() const {
+  // @@protoc_insertion_point(field_get:ei.CoopCompletionSnapshot.ContributorSnapshot.finalized)
+  return _internal_finalized();
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::_internal_set_finalized(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  finalized_ = value;
+}
+inline void CoopCompletionSnapshot_ContributorSnapshot::set_finalized(bool value) {
+  _internal_set_finalized(value);
+  // @@protoc_insertion_point(field_set:ei.CoopCompletionSnapshot.ContributorSnapshot.finalized)
 }
 
 // optional double soul_power = 2;
@@ -66174,6 +66981,34 @@ inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_cps_mult(do
   // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.cps_mult)
 }
 
+// optional double elr_mult = 7;
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_has_elr_mult() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::has_elr_mult() const {
+  return _internal_has_elr_mult();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::clear_elr_mult() {
+  elr_mult_ = 0;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_elr_mult() const {
+  return elr_mult_;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::elr_mult() const {
+  // @@protoc_insertion_point(field_get:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.elr_mult)
+  return _internal_elr_mult();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_set_elr_mult(double value) {
+  _has_bits_[0] |= 0x00000040u;
+  elr_mult_ = value;
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_elr_mult(double value) {
+  _internal_set_elr_mult(value);
+  // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.elr_mult)
+}
+
 // optional double earnings_mult = 3;
 inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_has_earnings_mult() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
@@ -66228,6 +67063,62 @@ inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_set_t
 inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_time_efficacy(double value) {
   _internal_set_time_efficacy(value);
   // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.time_efficacy)
+}
+
+// optional double hab_capacity_mult = 5;
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_has_hab_capacity_mult() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::has_hab_capacity_mult() const {
+  return _internal_has_hab_capacity_mult();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::clear_hab_capacity_mult() {
+  hab_capacity_mult_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_hab_capacity_mult() const {
+  return hab_capacity_mult_;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::hab_capacity_mult() const {
+  // @@protoc_insertion_point(field_get:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.hab_capacity_mult)
+  return _internal_hab_capacity_mult();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_set_hab_capacity_mult(double value) {
+  _has_bits_[0] |= 0x00000010u;
+  hab_capacity_mult_ = value;
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_hab_capacity_mult(double value) {
+  _internal_set_hab_capacity_mult(value);
+  // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.hab_capacity_mult)
+}
+
+// optional double epic_research_budget = 6;
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_has_epic_research_budget() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ContractSimConfig_ContractGradeSimConfig_GoalParams::has_epic_research_budget() const {
+  return _internal_has_epic_research_budget();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::clear_epic_research_budget() {
+  epic_research_budget_ = 0;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_epic_research_budget() const {
+  return epic_research_budget_;
+}
+inline double ContractSimConfig_ContractGradeSimConfig_GoalParams::epic_research_budget() const {
+  // @@protoc_insertion_point(field_get:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.epic_research_budget)
+  return _internal_epic_research_budget();
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::_internal_set_epic_research_budget(double value) {
+  _has_bits_[0] |= 0x00000020u;
+  epic_research_budget_ = value;
+}
+inline void ContractSimConfig_ContractGradeSimConfig_GoalParams::set_epic_research_budget(double value) {
+  _internal_set_epic_research_budget(value);
+  // @@protoc_insertion_point(field_set:ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.epic_research_budget)
 }
 
 // -------------------------------------------------------------------
@@ -68971,9 +69862,37 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_rank_change(int32_t
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.rank_change)
 }
 
+// optional bool recently_active = 23;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_recently_active() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_recently_active() const {
+  return _internal_has_recently_active();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_recently_active() {
+  recently_active_ = false;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_recently_active() const {
+  return recently_active_;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::recently_active() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.recently_active)
+  return _internal_recently_active();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_recently_active(bool value) {
+  _has_bits_[0] |= 0x00010000u;
+  recently_active_ = value;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_recently_active(bool value) {
+  _internal_set_recently_active(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.recently_active)
+}
+
 // optional bool active = 4;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_active() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
@@ -68981,7 +69900,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_active() {
   active_ = false;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_active() const {
   return active_;
@@ -68991,7 +69910,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::active() const {
   return _internal_active();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_active(bool value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00020000u;
   active_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) {
@@ -69001,7 +69920,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) 
 
 // optional bool leech = 16;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_leech() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
@@ -69009,7 +69928,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_leech() {
   leech_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_leech() const {
   return leech_;
@@ -69019,7 +69938,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::leech() const {
   return _internal_leech();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_leech(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00040000u;
   leech_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
@@ -69027,9 +69946,37 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.leech)
 }
 
+// optional bool finalized = 22;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_finalized() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_finalized() const {
+  return _internal_has_finalized();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_finalized() {
+  finalized_ = false;
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_finalized() const {
+  return finalized_;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::finalized() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.finalized)
+  return _internal_finalized();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_finalized(bool value) {
+  _has_bits_[0] |= 0x00080000u;
+  finalized_ = value;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_finalized(bool value) {
+  _internal_set_finalized(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.finalized)
+}
+
 // optional bool time_cheat_detected = 7;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_time_cheat_detected() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected() const {
@@ -69037,7 +69984,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_time_cheat_detected() {
   time_cheat_detected_ = false;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_time_cheat_detected() const {
   return time_cheat_detected_;
@@ -69047,7 +69994,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::time_cheat_detected() c
   return _internal_time_cheat_detected();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_time_cheat_detected(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00002000u;
   time_cheat_detected_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected(bool value) {
@@ -69057,7 +70004,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected
 
 // optional .ei.Platform platform = 5;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
@@ -69065,7 +70012,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -69076,7 +70023,7 @@ inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::platform() co
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00200000u;
   platform_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_platform(::ei::Platform value) {
@@ -69182,7 +70129,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_ban_votes(uint32_t 
 
 // optional bool autojoined = 17;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_autojoined() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const {
@@ -69190,7 +70137,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const 
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_autojoined() {
   autojoined_ = false;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_autojoined() const {
   return autojoined_;
@@ -69200,7 +70147,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::autojoined() const {
   return _internal_autojoined();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_autojoined(bool value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00004000u;
   autojoined_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool value) {
@@ -69210,7 +70157,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool val
 
 // optional uint32 boost_tokens = 12;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens() const {
@@ -69218,7 +70165,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens() cons
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens() {
   boost_tokens_ = 0u;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens() const {
   return boost_tokens_;
@@ -69228,7 +70175,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens() cons
   return _internal_boost_tokens();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens(uint32_t value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00001000u;
   boost_tokens_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32_t value) {
@@ -69238,7 +70185,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32
 
 // optional uint32 boost_tokens_spent = 14;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens_spent() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent() const {
@@ -69246,7 +70193,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent(
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens_spent() {
   boost_tokens_spent_ = 0u;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens_spent() const {
   return boost_tokens_spent_;
@@ -69256,7 +70203,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens_spent(
   return _internal_boost_tokens_spent();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens_spent(uint32_t value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00008000u;
   boost_tokens_spent_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens_spent(uint32_t value) {
@@ -69306,7 +70253,7 @@ ContractCoopStatusResponse_ContributionInfo::buff_history() const {
 
 // optional double chicken_run_cooldown = 20;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_chicken_run_cooldown() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldown() const {
@@ -69314,7 +70261,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldow
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_chicken_run_cooldown() {
   chicken_run_cooldown_ = 0;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_chicken_run_cooldown() const {
   return chicken_run_cooldown_;
@@ -69324,7 +70271,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::chicken_run_cooldown(
   return _internal_chicken_run_cooldown();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_chicken_run_cooldown(double value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00100000u;
   chicken_run_cooldown_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_chicken_run_cooldown(double value) {
@@ -69836,6 +70783,35 @@ inline void ContractCoopStatusResponse::set_allocated_coop_identifier(std::strin
   // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.coop_identifier)
 }
 
+// optional .ei.Contract.PlayerGrade grade = 17;
+inline bool ContractCoopStatusResponse::_internal_has_grade() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse::has_grade() const {
+  return _internal_has_grade();
+}
+inline void ContractCoopStatusResponse::clear_grade() {
+  grade_ = 0;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline ::ei::Contract_PlayerGrade ContractCoopStatusResponse::_internal_grade() const {
+  return static_cast< ::ei::Contract_PlayerGrade >(grade_);
+}
+inline ::ei::Contract_PlayerGrade ContractCoopStatusResponse::grade() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.grade)
+  return _internal_grade();
+}
+inline void ContractCoopStatusResponse::_internal_set_grade(::ei::Contract_PlayerGrade value) {
+  assert(::ei::Contract_PlayerGrade_IsValid(value));
+  _has_bits_[0] |= 0x00002000u;
+  grade_ = value;
+}
+inline void ContractCoopStatusResponse::set_grade(::ei::Contract_PlayerGrade value) {
+  _internal_set_grade(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.grade)
+}
+
 // repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;
 inline int ContractCoopStatusResponse::_internal_contributors_size() const {
   return contributors_.size();
@@ -69878,7 +70854,7 @@ ContractCoopStatusResponse::contributors() const {
 
 // optional bool auto_generated = 8;
 inline bool ContractCoopStatusResponse::_internal_has_auto_generated() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse::has_auto_generated() const {
@@ -69886,7 +70862,7 @@ inline bool ContractCoopStatusResponse::has_auto_generated() const {
 }
 inline void ContractCoopStatusResponse::clear_auto_generated() {
   auto_generated_ = false;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline bool ContractCoopStatusResponse::_internal_auto_generated() const {
   return auto_generated_;
@@ -69896,7 +70872,7 @@ inline bool ContractCoopStatusResponse::auto_generated() const {
   return _internal_auto_generated();
 }
 inline void ContractCoopStatusResponse::_internal_set_auto_generated(bool value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
   auto_generated_ = value;
 }
 inline void ContractCoopStatusResponse::set_auto_generated(bool value) {
@@ -69906,7 +70882,7 @@ inline void ContractCoopStatusResponse::set_auto_generated(bool value) {
 
 // optional bool public = 10;
 inline bool ContractCoopStatusResponse::_internal_has_public_() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse::has_public_() const {
@@ -69914,7 +70890,7 @@ inline bool ContractCoopStatusResponse::has_public_() const {
 }
 inline void ContractCoopStatusResponse::clear_public_() {
   public__ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline bool ContractCoopStatusResponse::_internal_public_() const {
   return public__;
@@ -69924,7 +70900,7 @@ inline bool ContractCoopStatusResponse::public_() const {
   return _internal_public_();
 }
 inline void ContractCoopStatusResponse::_internal_set_public_(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
   public__ = value;
 }
 inline void ContractCoopStatusResponse::set_public_(bool value) {
@@ -70028,6 +71004,62 @@ inline void ContractCoopStatusResponse::set_seconds_remaining(double value) {
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.seconds_remaining)
 }
 
+// optional double seconds_since_all_goals_achieved = 16;
+inline bool ContractCoopStatusResponse::_internal_has_seconds_since_all_goals_achieved() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse::has_seconds_since_all_goals_achieved() const {
+  return _internal_has_seconds_since_all_goals_achieved();
+}
+inline void ContractCoopStatusResponse::clear_seconds_since_all_goals_achieved() {
+  seconds_since_all_goals_achieved_ = 0;
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline double ContractCoopStatusResponse::_internal_seconds_since_all_goals_achieved() const {
+  return seconds_since_all_goals_achieved_;
+}
+inline double ContractCoopStatusResponse::seconds_since_all_goals_achieved() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.seconds_since_all_goals_achieved)
+  return _internal_seconds_since_all_goals_achieved();
+}
+inline void ContractCoopStatusResponse::_internal_set_seconds_since_all_goals_achieved(double value) {
+  _has_bits_[0] |= 0x00001000u;
+  seconds_since_all_goals_achieved_ = value;
+}
+inline void ContractCoopStatusResponse::set_seconds_since_all_goals_achieved(double value) {
+  _internal_set_seconds_since_all_goals_achieved(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.seconds_since_all_goals_achieved)
+}
+
+// optional bool all_goals_achieved = 14;
+inline bool ContractCoopStatusResponse::_internal_has_all_goals_achieved() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse::has_all_goals_achieved() const {
+  return _internal_has_all_goals_achieved();
+}
+inline void ContractCoopStatusResponse::clear_all_goals_achieved() {
+  all_goals_achieved_ = false;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline bool ContractCoopStatusResponse::_internal_all_goals_achieved() const {
+  return all_goals_achieved_;
+}
+inline bool ContractCoopStatusResponse::all_goals_achieved() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.all_goals_achieved)
+  return _internal_all_goals_achieved();
+}
+inline void ContractCoopStatusResponse::_internal_set_all_goals_achieved(bool value) {
+  _has_bits_[0] |= 0x00000100u;
+  all_goals_achieved_ = value;
+}
+inline void ContractCoopStatusResponse::set_all_goals_achieved(bool value) {
+  _internal_set_all_goals_achieved(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.all_goals_achieved)
+}
+
 // optional bool all_members_reporting = 6;
 inline bool ContractCoopStatusResponse::_internal_has_all_members_reporting() const {
   bool value = (_has_bits_[0] & 0x00000200u) != 0;
@@ -70082,6 +71114,34 @@ inline void ContractCoopStatusResponse::_internal_set_grace_period_seconds_remai
 inline void ContractCoopStatusResponse::set_grace_period_seconds_remaining(double value) {
   _internal_set_grace_period_seconds_remaining(value);
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.grace_period_seconds_remaining)
+}
+
+// optional bool cleared_for_exit = 15;
+inline bool ContractCoopStatusResponse::_internal_has_cleared_for_exit() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse::has_cleared_for_exit() const {
+  return _internal_has_cleared_for_exit();
+}
+inline void ContractCoopStatusResponse::clear_cleared_for_exit() {
+  cleared_for_exit_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool ContractCoopStatusResponse::_internal_cleared_for_exit() const {
+  return cleared_for_exit_;
+}
+inline bool ContractCoopStatusResponse::cleared_for_exit() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.cleared_for_exit)
+  return _internal_cleared_for_exit();
+}
+inline void ContractCoopStatusResponse::_internal_set_cleared_for_exit(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  cleared_for_exit_ = value;
+}
+inline void ContractCoopStatusResponse::set_cleared_for_exit(bool value) {
+  _internal_set_cleared_for_exit(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.cleared_for_exit)
 }
 
 // repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;
@@ -70166,7 +71226,7 @@ ContractCoopStatusResponse::chicken_runs() const {
 
 // optional double local_timestamp = 12;
 inline bool ContractCoopStatusResponse::_internal_has_local_timestamp() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse::has_local_timestamp() const {
@@ -70174,7 +71234,7 @@ inline bool ContractCoopStatusResponse::has_local_timestamp() const {
 }
 inline void ContractCoopStatusResponse::clear_local_timestamp() {
   local_timestamp_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline double ContractCoopStatusResponse::_internal_local_timestamp() const {
   return local_timestamp_;
@@ -70184,7 +71244,7 @@ inline double ContractCoopStatusResponse::local_timestamp() const {
   return _internal_local_timestamp();
 }
 inline void ContractCoopStatusResponse::_internal_set_local_timestamp(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000800u;
   local_timestamp_ = value;
 }
 inline void ContractCoopStatusResponse::set_local_timestamp(double value) {
@@ -70492,6 +71552,34 @@ inline void LocalContract::_internal_set_coop_shared_end_time(double value) {
 inline void LocalContract::set_coop_shared_end_time(double value) {
   _internal_set_coop_shared_end_time(value);
   // @@protoc_insertion_point(field_set:ei.LocalContract.coop_shared_end_time)
+}
+
+// optional double coop_simulation_end_time = 22;
+inline bool LocalContract::_internal_has_coop_simulation_end_time() const {
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  return value;
+}
+inline bool LocalContract::has_coop_simulation_end_time() const {
+  return _internal_has_coop_simulation_end_time();
+}
+inline void LocalContract::clear_coop_simulation_end_time() {
+  coop_simulation_end_time_ = 0;
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline double LocalContract::_internal_coop_simulation_end_time() const {
+  return coop_simulation_end_time_;
+}
+inline double LocalContract::coop_simulation_end_time() const {
+  // @@protoc_insertion_point(field_get:ei.LocalContract.coop_simulation_end_time)
+  return _internal_coop_simulation_end_time();
+}
+inline void LocalContract::_internal_set_coop_simulation_end_time(double value) {
+  _has_bits_[0] |= 0x00100000u;
+  coop_simulation_end_time_ = value;
+}
+inline void LocalContract::set_coop_simulation_end_time(double value) {
+  _internal_set_coop_simulation_end_time(value);
+  // @@protoc_insertion_point(field_set:ei.LocalContract.coop_simulation_end_time)
 }
 
 // optional double coop_grace_period_end_time = 9;
@@ -72210,6 +73298,34 @@ inline void CreateCoopRequest::set_cc_only(bool value) {
   // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.cc_only)
 }
 
+// optional bool allow_all_grades = 16;
+inline bool CreateCoopRequest::_internal_has_allow_all_grades() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool CreateCoopRequest::has_allow_all_grades() const {
+  return _internal_has_allow_all_grades();
+}
+inline void CreateCoopRequest::clear_allow_all_grades() {
+  allow_all_grades_ = false;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline bool CreateCoopRequest::_internal_allow_all_grades() const {
+  return allow_all_grades_;
+}
+inline bool CreateCoopRequest::allow_all_grades() const {
+  // @@protoc_insertion_point(field_get:ei.CreateCoopRequest.allow_all_grades)
+  return _internal_allow_all_grades();
+}
+inline void CreateCoopRequest::_internal_set_allow_all_grades(bool value) {
+  _has_bits_[0] |= 0x00002000u;
+  allow_all_grades_ = value;
+}
+inline void CreateCoopRequest::set_allow_all_grades(bool value) {
+  _internal_set_allow_all_grades(value);
+  // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.allow_all_grades)
+}
+
 // optional double seconds_remaining = 3;
 inline bool CreateCoopRequest::_internal_has_seconds_remaining() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
@@ -72487,9 +73603,37 @@ inline void CreateCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
   // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.grade)
 }
 
+// optional bool points_replay = 15;
+inline bool CreateCoopRequest::_internal_has_points_replay() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool CreateCoopRequest::has_points_replay() const {
+  return _internal_has_points_replay();
+}
+inline void CreateCoopRequest::clear_points_replay() {
+  points_replay_ = false;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline bool CreateCoopRequest::_internal_points_replay() const {
+  return points_replay_;
+}
+inline bool CreateCoopRequest::points_replay() const {
+  // @@protoc_insertion_point(field_get:ei.CreateCoopRequest.points_replay)
+  return _internal_points_replay();
+}
+inline void CreateCoopRequest::_internal_set_points_replay(bool value) {
+  _has_bits_[0] |= 0x00004000u;
+  points_replay_ = value;
+}
+inline void CreateCoopRequest::set_points_replay(bool value) {
+  _internal_set_points_replay(value);
+  // @@protoc_insertion_point(field_set:ei.CreateCoopRequest.points_replay)
+}
+
 // optional .ei.Platform platform = 6;
 inline bool CreateCoopRequest::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool CreateCoopRequest::has_platform() const {
@@ -72497,7 +73641,7 @@ inline bool CreateCoopRequest::has_platform() const {
 }
 inline void CreateCoopRequest::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline ::ei::Platform CreateCoopRequest::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -72508,7 +73652,7 @@ inline ::ei::Platform CreateCoopRequest::platform() const {
 }
 inline void CreateCoopRequest::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00008000u;
   platform_ = value;
 }
 inline void CreateCoopRequest::set_platform(::ei::Platform value) {
@@ -73123,9 +74267,37 @@ inline void JoinCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
   // @@protoc_insertion_point(field_set:ei.JoinCoopRequest.grade)
 }
 
+// optional bool points_replay = 14;
+inline bool JoinCoopRequest::_internal_has_points_replay() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool JoinCoopRequest::has_points_replay() const {
+  return _internal_has_points_replay();
+}
+inline void JoinCoopRequest::clear_points_replay() {
+  points_replay_ = false;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline bool JoinCoopRequest::_internal_points_replay() const {
+  return points_replay_;
+}
+inline bool JoinCoopRequest::points_replay() const {
+  // @@protoc_insertion_point(field_get:ei.JoinCoopRequest.points_replay)
+  return _internal_points_replay();
+}
+inline void JoinCoopRequest::_internal_set_points_replay(bool value) {
+  _has_bits_[0] |= 0x00000800u;
+  points_replay_ = value;
+}
+inline void JoinCoopRequest::set_points_replay(bool value) {
+  _internal_set_points_replay(value);
+  // @@protoc_insertion_point(field_set:ei.JoinCoopRequest.points_replay)
+}
+
 // optional .ei.Platform platform = 5;
 inline bool JoinCoopRequest::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool JoinCoopRequest::has_platform() const {
@@ -73133,7 +74305,7 @@ inline bool JoinCoopRequest::has_platform() const {
 }
 inline void JoinCoopRequest::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline ::ei::Platform JoinCoopRequest::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -73144,7 +74316,7 @@ inline ::ei::Platform JoinCoopRequest::platform() const {
 }
 inline void JoinCoopRequest::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   platform_ = value;
 }
 inline void JoinCoopRequest::set_platform(::ei::Platform value) {
@@ -73985,6 +75157,34 @@ inline void AutoJoinCoopRequest::set_grade(::ei::Contract_PlayerGrade value) {
   // @@protoc_insertion_point(field_set:ei.AutoJoinCoopRequest.grade)
 }
 
+// optional bool points_replay = 14;
+inline bool AutoJoinCoopRequest::_internal_has_points_replay() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool AutoJoinCoopRequest::has_points_replay() const {
+  return _internal_has_points_replay();
+}
+inline void AutoJoinCoopRequest::clear_points_replay() {
+  points_replay_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool AutoJoinCoopRequest::_internal_points_replay() const {
+  return points_replay_;
+}
+inline bool AutoJoinCoopRequest::points_replay() const {
+  // @@protoc_insertion_point(field_get:ei.AutoJoinCoopRequest.points_replay)
+  return _internal_points_replay();
+}
+inline void AutoJoinCoopRequest::_internal_set_points_replay(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  points_replay_ = value;
+}
+inline void AutoJoinCoopRequest::set_points_replay(bool value) {
+  _internal_set_points_replay(value);
+  // @@protoc_insertion_point(field_set:ei.AutoJoinCoopRequest.points_replay)
+}
+
 // optional double seconds_remaining = 5;
 inline bool AutoJoinCoopRequest::_internal_has_seconds_remaining() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
@@ -74015,7 +75215,7 @@ inline void AutoJoinCoopRequest::set_seconds_remaining(double value) {
 
 // optional .ei.Platform platform = 6;
 inline bool AutoJoinCoopRequest::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool AutoJoinCoopRequest::has_platform() const {
@@ -74023,7 +75223,7 @@ inline bool AutoJoinCoopRequest::has_platform() const {
 }
 inline void AutoJoinCoopRequest::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::ei::Platform AutoJoinCoopRequest::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -74034,7 +75234,7 @@ inline ::ei::Platform AutoJoinCoopRequest::platform() const {
 }
 inline void AutoJoinCoopRequest::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   platform_ = value;
 }
 inline void AutoJoinCoopRequest::set_platform(::ei::Platform value) {
@@ -78041,7 +79241,7 @@ LeaderboardAnalysis::chunks() const {
 
 // optional uint32 count = 2;
 inline bool LeaderboardAnalysis::_internal_has_count() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool LeaderboardAnalysis::has_count() const {
@@ -78049,7 +79249,7 @@ inline bool LeaderboardAnalysis::has_count() const {
 }
 inline void LeaderboardAnalysis::clear_count() {
   count_ = 0u;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t LeaderboardAnalysis::_internal_count() const {
   return count_;
@@ -78059,7 +79259,7 @@ inline uint32_t LeaderboardAnalysis::count() const {
   return _internal_count();
 }
 inline void LeaderboardAnalysis::_internal_set_count(uint32_t value) {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
   count_ = value;
 }
 inline void LeaderboardAnalysis::set_count(uint32_t value) {
@@ -78069,7 +79269,7 @@ inline void LeaderboardAnalysis::set_count(uint32_t value) {
 
 // optional double high_score = 3;
 inline bool LeaderboardAnalysis::_internal_has_high_score() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool LeaderboardAnalysis::has_high_score() const {
@@ -78077,7 +79277,7 @@ inline bool LeaderboardAnalysis::has_high_score() const {
 }
 inline void LeaderboardAnalysis::clear_high_score() {
   high_score_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline double LeaderboardAnalysis::_internal_high_score() const {
   return high_score_;
@@ -78087,7 +79287,7 @@ inline double LeaderboardAnalysis::high_score() const {
   return _internal_high_score();
 }
 inline void LeaderboardAnalysis::_internal_set_high_score(double value) {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
   high_score_ = value;
 }
 inline void LeaderboardAnalysis::set_high_score(double value) {
@@ -78097,7 +79297,7 @@ inline void LeaderboardAnalysis::set_high_score(double value) {
 
 // optional double low_score = 4;
 inline bool LeaderboardAnalysis::_internal_has_low_score() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool LeaderboardAnalysis::has_low_score() const {
@@ -78105,7 +79305,7 @@ inline bool LeaderboardAnalysis::has_low_score() const {
 }
 inline void LeaderboardAnalysis::clear_low_score() {
   low_score_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline double LeaderboardAnalysis::_internal_low_score() const {
   return low_score_;
@@ -78115,12 +79315,80 @@ inline double LeaderboardAnalysis::low_score() const {
   return _internal_low_score();
 }
 inline void LeaderboardAnalysis::_internal_set_low_score(double value) {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
   low_score_ = value;
 }
 inline void LeaderboardAnalysis::set_low_score(double value) {
   _internal_set_low_score(value);
   // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.low_score)
+}
+
+// optional string cursor = 5;
+inline bool LeaderboardAnalysis::_internal_has_cursor() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LeaderboardAnalysis::has_cursor() const {
+  return _internal_has_cursor();
+}
+inline void LeaderboardAnalysis::clear_cursor() {
+  cursor_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& LeaderboardAnalysis::cursor() const {
+  // @@protoc_insertion_point(field_get:ei.LeaderboardAnalysis.cursor)
+  return _internal_cursor();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LeaderboardAnalysis::set_cursor(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ cursor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.LeaderboardAnalysis.cursor)
+}
+inline std::string* LeaderboardAnalysis::mutable_cursor() {
+  std::string* _s = _internal_mutable_cursor();
+  // @@protoc_insertion_point(field_mutable:ei.LeaderboardAnalysis.cursor)
+  return _s;
+}
+inline const std::string& LeaderboardAnalysis::_internal_cursor() const {
+  return cursor_.Get();
+}
+inline void LeaderboardAnalysis::_internal_set_cursor(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  cursor_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LeaderboardAnalysis::_internal_mutable_cursor() {
+  _has_bits_[0] |= 0x00000001u;
+  return cursor_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LeaderboardAnalysis::release_cursor() {
+  // @@protoc_insertion_point(field_release:ei.LeaderboardAnalysis.cursor)
+  if (!_internal_has_cursor()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = cursor_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (cursor_.IsDefault()) {
+    cursor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void LeaderboardAnalysis::set_allocated_cursor(std::string* cursor) {
+  if (cursor != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  cursor_.SetAllocated(cursor, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (cursor_.IsDefault()) {
+    cursor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.LeaderboardAnalysis.cursor)
 }
 
 // -------------------------------------------------------------------
@@ -87247,6 +88515,35 @@ inline void MissionInfo::set_quality_bump(double value) {
   // @@protoc_insertion_point(field_set:ei.MissionInfo.quality_bump)
 }
 
+// optional .ei.ArtifactSpec.Name target_artifact = 13;
+inline bool MissionInfo::_internal_has_target_artifact() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool MissionInfo::has_target_artifact() const {
+  return _internal_has_target_artifact();
+}
+inline void MissionInfo::clear_target_artifact() {
+  target_artifact_ = 0;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline ::ei::ArtifactSpec_Name MissionInfo::_internal_target_artifact() const {
+  return static_cast< ::ei::ArtifactSpec_Name >(target_artifact_);
+}
+inline ::ei::ArtifactSpec_Name MissionInfo::target_artifact() const {
+  // @@protoc_insertion_point(field_get:ei.MissionInfo.target_artifact)
+  return _internal_target_artifact();
+}
+inline void MissionInfo::_internal_set_target_artifact(::ei::ArtifactSpec_Name value) {
+  assert(::ei::ArtifactSpec_Name_IsValid(value));
+  _has_bits_[0] |= 0x00000800u;
+  target_artifact_ = value;
+}
+inline void MissionInfo::set_target_artifact(::ei::ArtifactSpec_Name value) {
+  _internal_set_target_artifact(value);
+  // @@protoc_insertion_point(field_set:ei.MissionInfo.target_artifact)
+}
+
 // optional double seconds_remaining = 6;
 inline bool MissionInfo::_internal_has_seconds_remaining() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
@@ -92194,6 +93491,34 @@ ArtifactsDB_ActiveArtifactSet::slots() const {
   return slots_;
 }
 
+// optional uint32 uid = 2;
+inline bool ArtifactsDB_ActiveArtifactSet::_internal_has_uid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ArtifactsDB_ActiveArtifactSet::has_uid() const {
+  return _internal_has_uid();
+}
+inline void ArtifactsDB_ActiveArtifactSet::clear_uid() {
+  uid_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline uint32_t ArtifactsDB_ActiveArtifactSet::_internal_uid() const {
+  return uid_;
+}
+inline uint32_t ArtifactsDB_ActiveArtifactSet::uid() const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.ActiveArtifactSet.uid)
+  return _internal_uid();
+}
+inline void ArtifactsDB_ActiveArtifactSet::_internal_set_uid(uint32_t value) {
+  _has_bits_[0] |= 0x00000001u;
+  uid_ = value;
+}
+inline void ArtifactsDB_ActiveArtifactSet::set_uid(uint32_t value) {
+  _internal_set_uid(value);
+  // @@protoc_insertion_point(field_set:ei.ArtifactsDB.ActiveArtifactSet.uid)
+}
+
 // -------------------------------------------------------------------
 
 // ArtifactsDB_CraftableArtifact
@@ -92540,44 +93865,44 @@ ArtifactsDB::inventory_slots() const {
   return inventory_slots_;
 }
 
-// repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;
-inline int ArtifactsDB::_internal_active_artifacts_size() const {
-  return active_artifacts_.size();
+// repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;
+inline int ArtifactsDB::_internal_active_artifacts_deprecated_size() const {
+  return active_artifacts_deprecated_.size();
 }
-inline int ArtifactsDB::active_artifacts_size() const {
-  return _internal_active_artifacts_size();
+inline int ArtifactsDB::active_artifacts_deprecated_size() const {
+  return _internal_active_artifacts_deprecated_size();
 }
-inline void ArtifactsDB::clear_active_artifacts() {
-  active_artifacts_.Clear();
+inline void ArtifactsDB::clear_active_artifacts_deprecated() {
+  active_artifacts_deprecated_.Clear();
 }
-inline ::ei::ArtifactsDB_ActiveArtifactSlot* ArtifactsDB::mutable_active_artifacts(int index) {
-  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.active_artifacts)
-  return active_artifacts_.Mutable(index);
+inline ::ei::ArtifactsDB_ActiveArtifactSlot* ArtifactsDB::mutable_active_artifacts_deprecated(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.active_artifacts_DEPRECATED)
+  return active_artifacts_deprecated_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot >*
-ArtifactsDB::mutable_active_artifacts() {
-  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.active_artifacts)
-  return &active_artifacts_;
+ArtifactsDB::mutable_active_artifacts_deprecated() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.active_artifacts_DEPRECATED)
+  return &active_artifacts_deprecated_;
 }
-inline const ::ei::ArtifactsDB_ActiveArtifactSlot& ArtifactsDB::_internal_active_artifacts(int index) const {
-  return active_artifacts_.Get(index);
+inline const ::ei::ArtifactsDB_ActiveArtifactSlot& ArtifactsDB::_internal_active_artifacts_deprecated(int index) const {
+  return active_artifacts_deprecated_.Get(index);
 }
-inline const ::ei::ArtifactsDB_ActiveArtifactSlot& ArtifactsDB::active_artifacts(int index) const {
-  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.active_artifacts)
-  return _internal_active_artifacts(index);
+inline const ::ei::ArtifactsDB_ActiveArtifactSlot& ArtifactsDB::active_artifacts_deprecated(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.active_artifacts_DEPRECATED)
+  return _internal_active_artifacts_deprecated(index);
 }
-inline ::ei::ArtifactsDB_ActiveArtifactSlot* ArtifactsDB::_internal_add_active_artifacts() {
-  return active_artifacts_.Add();
+inline ::ei::ArtifactsDB_ActiveArtifactSlot* ArtifactsDB::_internal_add_active_artifacts_deprecated() {
+  return active_artifacts_deprecated_.Add();
 }
-inline ::ei::ArtifactsDB_ActiveArtifactSlot* ArtifactsDB::add_active_artifacts() {
-  ::ei::ArtifactsDB_ActiveArtifactSlot* _add = _internal_add_active_artifacts();
-  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.active_artifacts)
+inline ::ei::ArtifactsDB_ActiveArtifactSlot* ArtifactsDB::add_active_artifacts_deprecated() {
+  ::ei::ArtifactsDB_ActiveArtifactSlot* _add = _internal_add_active_artifacts_deprecated();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.active_artifacts_DEPRECATED)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSlot >&
-ArtifactsDB::active_artifacts() const {
-  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.active_artifacts)
-  return active_artifacts_;
+ArtifactsDB::active_artifacts_deprecated() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.active_artifacts_DEPRECATED)
+  return active_artifacts_deprecated_;
 }
 
 // repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;
@@ -92618,6 +93943,46 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_Active
 ArtifactsDB::active_artifact_sets() const {
   // @@protoc_insertion_point(field_list:ei.ArtifactsDB.active_artifact_sets)
   return active_artifact_sets_;
+}
+
+// repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;
+inline int ArtifactsDB::_internal_saved_artifact_sets_size() const {
+  return saved_artifact_sets_.size();
+}
+inline int ArtifactsDB::saved_artifact_sets_size() const {
+  return _internal_saved_artifact_sets_size();
+}
+inline void ArtifactsDB::clear_saved_artifact_sets() {
+  saved_artifact_sets_.Clear();
+}
+inline ::ei::ArtifactsDB_ActiveArtifactSet* ArtifactsDB::mutable_saved_artifact_sets(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ArtifactsDB.saved_artifact_sets)
+  return saved_artifact_sets_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet >*
+ArtifactsDB::mutable_saved_artifact_sets() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ArtifactsDB.saved_artifact_sets)
+  return &saved_artifact_sets_;
+}
+inline const ::ei::ArtifactsDB_ActiveArtifactSet& ArtifactsDB::_internal_saved_artifact_sets(int index) const {
+  return saved_artifact_sets_.Get(index);
+}
+inline const ::ei::ArtifactsDB_ActiveArtifactSet& ArtifactsDB::saved_artifact_sets(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ArtifactsDB.saved_artifact_sets)
+  return _internal_saved_artifact_sets(index);
+}
+inline ::ei::ArtifactsDB_ActiveArtifactSet* ArtifactsDB::_internal_add_saved_artifact_sets() {
+  return saved_artifact_sets_.Add();
+}
+inline ::ei::ArtifactsDB_ActiveArtifactSet* ArtifactsDB::add_saved_artifact_sets() {
+  ::ei::ArtifactsDB_ActiveArtifactSet* _add = _internal_add_saved_artifact_sets();
+  // @@protoc_insertion_point(field_add:ei.ArtifactsDB.saved_artifact_sets)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ArtifactsDB_ActiveArtifactSet >&
+ArtifactsDB::saved_artifact_sets() const {
+  // @@protoc_insertion_point(field_list:ei.ArtifactsDB.saved_artifact_sets)
+  return saved_artifact_sets_;
 }
 
 // repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;
@@ -102314,9 +103679,111 @@ inline void SubscriptionChangeHintRequest::set_next_subscription_level(::ei::Use
   // @@protoc_insertion_point(field_set:ei.SubscriptionChangeHintRequest.next_subscription_level)
 }
 
+// -------------------------------------------------------------------
+
+// CXPEvalRolloutInfo
+
+// optional string current_id = 1;
+inline bool CXPEvalRolloutInfo::_internal_has_current_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CXPEvalRolloutInfo::has_current_id() const {
+  return _internal_has_current_id();
+}
+inline void CXPEvalRolloutInfo::clear_current_id() {
+  current_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& CXPEvalRolloutInfo::current_id() const {
+  // @@protoc_insertion_point(field_get:ei.CXPEvalRolloutInfo.current_id)
+  return _internal_current_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void CXPEvalRolloutInfo::set_current_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ current_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.CXPEvalRolloutInfo.current_id)
+}
+inline std::string* CXPEvalRolloutInfo::mutable_current_id() {
+  std::string* _s = _internal_mutable_current_id();
+  // @@protoc_insertion_point(field_mutable:ei.CXPEvalRolloutInfo.current_id)
+  return _s;
+}
+inline const std::string& CXPEvalRolloutInfo::_internal_current_id() const {
+  return current_id_.Get();
+}
+inline void CXPEvalRolloutInfo::_internal_set_current_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  current_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* CXPEvalRolloutInfo::_internal_mutable_current_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return current_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* CXPEvalRolloutInfo::release_current_id() {
+  // @@protoc_insertion_point(field_release:ei.CXPEvalRolloutInfo.current_id)
+  if (!_internal_has_current_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = current_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (current_id_.IsDefault()) {
+    current_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void CXPEvalRolloutInfo::set_allocated_current_id(std::string* current_id) {
+  if (current_id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  current_id_.SetAllocated(current_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (current_id_.IsDefault()) {
+    current_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.CXPEvalRolloutInfo.current_id)
+}
+
+// optional uint32 basis_points = 2;
+inline bool CXPEvalRolloutInfo::_internal_has_basis_points() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CXPEvalRolloutInfo::has_basis_points() const {
+  return _internal_has_basis_points();
+}
+inline void CXPEvalRolloutInfo::clear_basis_points() {
+  basis_points_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline uint32_t CXPEvalRolloutInfo::_internal_basis_points() const {
+  return basis_points_;
+}
+inline uint32_t CXPEvalRolloutInfo::basis_points() const {
+  // @@protoc_insertion_point(field_get:ei.CXPEvalRolloutInfo.basis_points)
+  return _internal_basis_points();
+}
+inline void CXPEvalRolloutInfo::_internal_set_basis_points(uint32_t value) {
+  _has_bits_[0] |= 0x00000002u;
+  basis_points_ = value;
+}
+inline void CXPEvalRolloutInfo::set_basis_points(uint32_t value) {
+  _internal_set_basis_points(value);
+  // @@protoc_insertion_point(field_set:ei.CXPEvalRolloutInfo.basis_points)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

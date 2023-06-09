@@ -41,6 +41,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :notifications_queried, :bool, 5
       optional :notifications_on, :bool, 6
       optional :notify_daily_gift, :bool, 11
+      optional :low_performance, :bool, 10
+      optional :auto_stop_fueling, :bool, 25
+      optional :max_enabled, :bool, 26
+      optional :last_backup_time, :double, 24
       optional :coppa_queried, :bool, 7
       optional :coppa_restricted, :bool, 8
       optional :gdpr_consent_queried, :bool, 12
@@ -55,9 +59,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :user_cloud_enabled, :bool, 15, default: true
       optional :user_analytics_enabled, :bool, 22, default: true
       optional :user_personalized_ads_enabled, :bool, 23, default: true
-      optional :low_performance, :bool, 10
-      optional :auto_stop_fueling, :bool, 25
-      optional :last_backup_time, :double, 24
     end
     add_message "ei.Backup.Tutorial" do
       optional :intro_shown, :bool, 1
@@ -219,6 +220,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :boost_token_alert, :bool, 17
       optional :soul_egg_alert, :bool, 18
       optional :backup_reminder_alert, :bool, 19
+      optional :max_button_alert, :bool, 23
+      optional :mission_target_alert, :bool, 24
     end
     add_message "ei.Backup.ResearchItem" do
       optional :id, :string, 1
@@ -515,12 +518,15 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :chicken_runs_sent, :uint32, 7
       optional :gift_tokens_sent, :uint32, 8
       optional :gift_tokens_received, :uint32, 15
+      optional :gift_token_value_sent, :double, 28
+      optional :gift_token_value_received, :double, 29
       optional :boost_token_allotment, :uint32, 16
       optional :buff_time_value, :double, 17
       optional :teamwork_score, :double, 13
       optional :other_bonuses, :double, 14
       optional :counted_in_season, :bool, 20
       optional :season_id, :string, 21
+      optional :time_cheats, :uint32, 27
       repeated :issues, :enum, 19, "ei.ContractEvaluation.PoorBehavior"
       repeated :notes, :string, 12
       optional :version, :string, 50
@@ -534,6 +540,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :DISHONORABLY_DISCHARGED, 3
       value :POOR_TEAMWORK, 4
       value :ABANDONED_COOP, 5
+      value :TIME_CHEAT, 6
     end
     add_enum "ei.ContractEvaluation.Status" do
       value :UNKNOWN, 0
@@ -558,6 +565,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.CoopCompletionSnapshot.ContributorSnapshot" do
       optional :contribution, :double, 1
+      optional :last_contribution_time, :double, 6
+      optional :finalized, :bool, 7
       optional :soul_power, :double, 2
       optional :user_id, :string, 3
       optional :tokens, :uint32, 4
@@ -583,8 +592,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ContractSimConfig.ContractGradeSimConfig.GoalParams" do
       optional :target_se, :double, 1
       optional :cps_mult, :double, 2
+      optional :elr_mult, :double, 7
       optional :earnings_mult, :double, 3
       optional :time_efficacy, :double, 4
+      optional :hab_capacity_mult, :double, 5
+      optional :epic_research_budget, :double, 6
     end
     add_message "ei.ContractSimPoll" do
       optional :client_version, :uint32, 1
@@ -656,13 +668,17 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :contract_identifier, :string, 1
       optional :total_amount, :double, 2
       optional :coop_identifier, :string, 3
+      optional :grade, :enum, 17, "ei.Contract.PlayerGrade"
       repeated :contributors, :message, 4, "ei.ContractCoopStatusResponse.ContributionInfo"
       optional :auto_generated, :bool, 8
       optional :public, :bool, 10
       optional :creator_id, :string, 9
       optional :seconds_remaining, :double, 5
+      optional :seconds_since_all_goals_achieved, :double, 16
+      optional :all_goals_achieved, :bool, 14
       optional :all_members_reporting, :bool, 6
       optional :grace_period_seconds_remaining, :double, 7
+      optional :cleared_for_exit, :bool, 15
       repeated :gifts, :message, 11, "ei.ContractCoopStatusResponse.CoopGift"
       repeated :chicken_runs, :message, 13, "ei.ContractCoopStatusResponse.ChickenRun"
       optional :local_timestamp, :double, 12
@@ -678,8 +694,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :production_params, :message, 15, "ei.FarmProductionParams"
       optional :farm_info, :message, 18, "ei.PlayerFarmInfo"
       optional :rank_change, :int32, 8
+      optional :recently_active, :bool, 23
       optional :active, :bool, 4
       optional :leech, :bool, 16
+      optional :finalized, :bool, 22
       optional :time_cheat_detected, :bool, 7
       optional :platform, :enum, 5, "ei.Platform"
       optional :push_id, :string, 9
@@ -722,6 +740,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :cancelled, :bool, 4
       optional :new, :bool, 8
       optional :coop_shared_end_time, :double, 5
+      optional :coop_simulation_end_time, :double, 22
       optional :coop_grace_period_end_time, :double, 9
       optional :coop_contribution_finalized, :bool, 10
       optional :coop_last_uploaded_contribution, :double, 11
@@ -770,6 +789,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :coop_identifier, :string, 2
       optional :public, :bool, 13
       optional :cc_only, :bool, 14
+      optional :allow_all_grades, :bool, 16
       optional :seconds_remaining, :double, 3
       optional :user_id, :string, 4
       optional :user_name, :string, 5
@@ -777,6 +797,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :eop, :double, 11
       optional :league, :uint32, 9
       optional :grade, :enum, 12, "ei.Contract.PlayerGrade"
+      optional :points_replay, :bool, 15
       optional :platform, :enum, 6, "ei.Platform"
       optional :client_version, :uint32, 7
     end
@@ -794,6 +815,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :eop, :double, 12
       optional :league, :uint32, 9
       optional :grade, :enum, 13, "ei.Contract.PlayerGrade"
+      optional :points_replay, :bool, 14
       optional :platform, :enum, 5, "ei.Platform"
       optional :seconds_remaining, :double, 11
       optional :client_version, :uint32, 7
@@ -819,6 +841,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :eop, :double, 10
       optional :league, :uint32, 8
       optional :grade, :enum, 12, "ei.Contract.PlayerGrade"
+      optional :points_replay, :bool, 14
       optional :seconds_remaining, :double, 5
       optional :platform, :enum, 6, "ei.Platform"
       optional :client_version, :uint32, 7
@@ -934,6 +957,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :count, :uint32, 2
       optional :high_score, :double, 3
       optional :low_score, :double, 4
+      optional :cursor, :string, 5
     end
     add_message "ei.LeaderboardAnalysis.Chunk" do
       optional :start_index, :uint32, 1
@@ -1190,6 +1214,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :duration_seconds, :double, 5
       optional :capacity, :uint32, 9
       optional :quality_bump, :double, 11
+      optional :target_artifact, :enum, 13, "ei.ArtifactSpec.Name"
       optional :seconds_remaining, :double, 6
       optional :start_time_derived, :double, 8
       optional :mission_log, :string, 10
@@ -1447,8 +1472,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :inventory_items, :message, 1, "ei.ArtifactInventoryItem"
       optional :item_sequence, :uint64, 2
       repeated :inventory_slots, :message, 3, "ei.InventorySlot"
-      repeated :active_artifacts, :message, 7, "ei.ArtifactsDB.ActiveArtifactSlot"
+      repeated :active_artifacts_DEPRECATED, :message, 7, "ei.ArtifactsDB.ActiveArtifactSlot"
       repeated :active_artifact_sets, :message, 11, "ei.ArtifactsDB.ActiveArtifactSet"
+      repeated :saved_artifact_sets, :message, 13, "ei.ArtifactsDB.ActiveArtifactSet"
       repeated :artifact_status, :message, 12, "ei.ArtifactsDB.CraftableArtifact"
       repeated :mission_infos, :message, 4, "ei.MissionInfo"
       repeated :mission_archive, :message, 5, "ei.MissionInfo"
@@ -1462,6 +1488,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.ArtifactsDB.ActiveArtifactSet" do
       repeated :slots, :message, 1, "ei.ArtifactsDB.ActiveArtifactSlot"
+      optional :uid, :uint32, 2
     end
     add_message "ei.ArtifactsDB.CraftableArtifact" do
       optional :spec, :message, 1, "ei.ArtifactSpec"
@@ -1893,6 +1920,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :original_transaction_id, :string, 1
       optional :next_subscription_level, :enum, 2, "ei.UserSubscriptionInfo.Level"
     end
+    add_message "ei.CXPEvalRolloutInfo" do
+      optional :current_id, :string, 1
+      optional :basis_points, :uint32, 2
+    end
     add_enum "ei.Platform" do
       value :IOS, 1
       value :DROID, 2
@@ -2173,6 +2204,7 @@ module Ei
   UserSubscriptionInfo::Level = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.Level").enummodule
   UserSubscriptionInfo::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo.Status").enummodule
   SubscriptionChangeHintRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SubscriptionChangeHintRequest").msgclass
+  CXPEvalRolloutInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CXPEvalRolloutInfo").msgclass
   Platform = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Platform").enummodule
   DeviceFormFactor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.DeviceFormFactor").enummodule
   AdNetwork = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.AdNetwork").enummodule

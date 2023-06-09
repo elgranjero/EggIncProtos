@@ -277,6 +277,30 @@ public object ContractSimConfigKt {
         }
 
         /**
+         * <code>optional double elr_mult = 7;</code>
+         */
+        public var elrMult: kotlin.Double
+          @JvmName("getElrMult")
+          get() = _builder.getElrMult()
+          @JvmName("setElrMult")
+          set(value) {
+            _builder.setElrMult(value)
+          }
+        /**
+         * <code>optional double elr_mult = 7;</code>
+         */
+        public fun clearElrMult() {
+          _builder.clearElrMult()
+        }
+        /**
+         * <code>optional double elr_mult = 7;</code>
+         * @return Whether the elrMult field is set.
+         */
+        public fun hasElrMult(): kotlin.Boolean {
+          return _builder.hasElrMult()
+        }
+
+        /**
          * <code>optional double earnings_mult = 3;</code>
          */
         public var earningsMult: kotlin.Double
@@ -322,6 +346,54 @@ public object ContractSimConfigKt {
          */
         public fun hasTimeEfficacy(): kotlin.Boolean {
           return _builder.hasTimeEfficacy()
+        }
+
+        /**
+         * <code>optional double hab_capacity_mult = 5;</code>
+         */
+        public var habCapacityMult: kotlin.Double
+          @JvmName("getHabCapacityMult")
+          get() = _builder.getHabCapacityMult()
+          @JvmName("setHabCapacityMult")
+          set(value) {
+            _builder.setHabCapacityMult(value)
+          }
+        /**
+         * <code>optional double hab_capacity_mult = 5;</code>
+         */
+        public fun clearHabCapacityMult() {
+          _builder.clearHabCapacityMult()
+        }
+        /**
+         * <code>optional double hab_capacity_mult = 5;</code>
+         * @return Whether the habCapacityMult field is set.
+         */
+        public fun hasHabCapacityMult(): kotlin.Boolean {
+          return _builder.hasHabCapacityMult()
+        }
+
+        /**
+         * <code>optional double epic_research_budget = 6;</code>
+         */
+        public var epicResearchBudget: kotlin.Double
+          @JvmName("getEpicResearchBudget")
+          get() = _builder.getEpicResearchBudget()
+          @JvmName("setEpicResearchBudget")
+          set(value) {
+            _builder.setEpicResearchBudget(value)
+          }
+        /**
+         * <code>optional double epic_research_budget = 6;</code>
+         */
+        public fun clearEpicResearchBudget() {
+          _builder.clearEpicResearchBudget()
+        }
+        /**
+         * <code>optional double epic_research_budget = 6;</code>
+         * @return Whether the epicResearchBudget field is set.
+         */
+        public fun hasEpicResearchBudget(): kotlin.Boolean {
+          return _builder.hasEpicResearchBudget()
         }
       }
     }

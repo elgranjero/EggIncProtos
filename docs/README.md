@@ -44,6 +44,7 @@
     - [Backup.Stats](#ei-Backup-Stats)
     - [Backup.Tutorial](#ei-Backup-Tutorial)
     - [BasicRequestInfo](#ei-BasicRequestInfo)
+    - [CXPEvalRolloutInfo](#ei-CXPEvalRolloutInfo)
     - [CleanAccountRequest](#ei-CleanAccountRequest)
     - [ClearAllUserDataRequest](#ei-ClearAllUserDataRequest)
     - [CollectContractArtifactRewardsRequest](#ei-CollectContractArtifactRewardsRequest)
@@ -569,8 +570,9 @@
 | inventory_items | [ArtifactInventoryItem](#ei-ArtifactInventoryItem) | repeated |  |
 | item_sequence | [uint64](#uint64) | optional |  |
 | inventory_slots | [InventorySlot](#ei-InventorySlot) | repeated |  |
-| active_artifacts | [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot) | repeated |  |
+| active_artifacts_DEPRECATED | [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot) | repeated |  |
 | active_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
+| saved_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
 | artifact_status | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
 | mission_infos | [MissionInfo](#ei-MissionInfo) | repeated |  |
 | mission_archive | [MissionInfo](#ei-MissionInfo) | repeated |  |
@@ -592,6 +594,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | slots | [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot) | repeated |  |
+| uid | [uint32](#uint32) | optional |  |
 
 
 
@@ -688,6 +691,7 @@
 | eop | [double](#double) | optional |  |
 | league | [uint32](#uint32) | optional |  |
 | grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| points_replay | [bool](#bool) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
@@ -883,6 +887,8 @@
 | boost_token_alert | [bool](#bool) | optional |  |
 | soul_egg_alert | [bool](#bool) | optional |  |
 | backup_reminder_alert | [bool](#bool) | optional |  |
+| max_button_alert | [bool](#bool) | optional |  |
+| mission_target_alert | [bool](#bool) | optional |  |
 
 
 
@@ -988,6 +994,10 @@
 | notifications_queried | [bool](#bool) | optional |  |
 | notifications_on | [bool](#bool) | optional |  |
 | notify_daily_gift | [bool](#bool) | optional |  |
+| low_performance | [bool](#bool) | optional |  |
+| auto_stop_fueling | [bool](#bool) | optional |  |
+| max_enabled | [bool](#bool) | optional |  |
+| last_backup_time | [double](#double) | optional |  |
 | coppa_queried | [bool](#bool) | optional |  |
 | coppa_restricted | [bool](#bool) | optional |  |
 | gdpr_consent_queried | [bool](#bool) | optional |  |
@@ -1002,9 +1012,6 @@
 | user_cloud_enabled | [bool](#bool) | optional |  Default: true |
 | user_analytics_enabled | [bool](#bool) | optional |  Default: true |
 | user_personalized_ads_enabled | [bool](#bool) | optional |  Default: true |
-| low_performance | [bool](#bool) | optional |  |
-| auto_stop_fueling | [bool](#bool) | optional |  |
-| last_backup_time | [double](#double) | optional |  |
 
 
 
@@ -1146,6 +1153,22 @@
 | country | [string](#string) | optional |  |
 | language | [string](#string) | optional |  |
 | debug | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-CXPEvalRolloutInfo"></a>
+
+### CXPEvalRolloutInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| current_id | [string](#string) | optional |  |
+| basis_points | [uint32](#uint32) | optional |  |
 
 
 
@@ -1503,13 +1526,17 @@
 | contract_identifier | [string](#string) | optional |  |
 | total_amount | [double](#double) | optional |  |
 | coop_identifier | [string](#string) | optional |  |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | contributors | [ContractCoopStatusResponse.ContributionInfo](#ei-ContractCoopStatusResponse-ContributionInfo) | repeated |  |
 | auto_generated | [bool](#bool) | optional |  |
 | public | [bool](#bool) | optional |  |
 | creator_id | [string](#string) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
+| seconds_since_all_goals_achieved | [double](#double) | optional |  |
+| all_goals_achieved | [bool](#bool) | optional |  |
 | all_members_reporting | [bool](#bool) | optional |  |
 | grace_period_seconds_remaining | [double](#double) | optional |  |
+| cleared_for_exit | [bool](#bool) | optional |  |
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
 | chicken_runs | [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun) | repeated |  |
 | local_timestamp | [double](#double) | optional |  |
@@ -1554,8 +1581,10 @@
 | production_params | [FarmProductionParams](#ei-FarmProductionParams) | optional |  |
 | farm_info | [PlayerFarmInfo](#ei-PlayerFarmInfo) | optional |  |
 | rank_change | [int32](#int32) | optional |  |
+| recently_active | [bool](#bool) | optional |  |
 | active | [bool](#bool) | optional |  |
 | leech | [bool](#bool) | optional |  |
+| finalized | [bool](#bool) | optional |  |
 | time_cheat_detected | [bool](#bool) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | push_id | [string](#string) | optional |  |
@@ -1663,12 +1692,15 @@
 | chicken_runs_sent | [uint32](#uint32) | optional |  |
 | gift_tokens_sent | [uint32](#uint32) | optional |  |
 | gift_tokens_received | [uint32](#uint32) | optional |  |
+| gift_token_value_sent | [double](#double) | optional |  |
+| gift_token_value_received | [double](#double) | optional |  |
 | boost_token_allotment | [uint32](#uint32) | optional |  |
 | buff_time_value | [double](#double) | optional |  |
 | teamwork_score | [double](#double) | optional |  |
 | other_bonuses | [double](#double) | optional |  |
 | counted_in_season | [bool](#bool) | optional |  |
 | season_id | [string](#string) | optional |  |
+| time_cheats | [uint32](#uint32) | optional |  |
 | issues | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | repeated |  |
 | notes | [string](#string) | repeated |  |
 | version | [string](#string) | optional |  |
@@ -1780,8 +1812,11 @@
 | ----- | ---- | ----- | ----------- |
 | target_se | [double](#double) | optional |  |
 | cps_mult | [double](#double) | optional |  |
+| elr_mult | [double](#double) | optional |  |
 | earnings_mult | [double](#double) | optional |  |
 | time_efficacy | [double](#double) | optional |  |
+| hab_capacity_mult | [double](#double) | optional |  |
+| epic_research_budget | [double](#double) | optional |  |
 
 
 
@@ -1974,6 +2009,8 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | contribution | [double](#double) | optional |  |
+| last_contribution_time | [double](#double) | optional |  |
+| finalized | [bool](#bool) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | user_id | [string](#string) | optional |  |
 | tokens | [uint32](#uint32) | optional |  |
@@ -2052,6 +2089,7 @@
 | coop_identifier | [string](#string) | optional |  |
 | public | [bool](#bool) | optional |  |
 | cc_only | [bool](#bool) | optional |  |
+| allow_all_grades | [bool](#bool) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | user_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
@@ -2059,6 +2097,7 @@
 | eop | [double](#double) | optional |  |
 | league | [uint32](#uint32) | optional |  |
 | grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| points_replay | [bool](#bool) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
 
@@ -2503,6 +2542,7 @@
 | eop | [double](#double) | optional |  |
 | league | [uint32](#uint32) | optional |  |
 | grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| points_replay | [bool](#bool) | optional |  |
 | platform | [Platform](#ei-Platform) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
@@ -2569,6 +2609,7 @@
 | count | [uint32](#uint32) | optional |  |
 | high_score | [double](#double) | optional |  |
 | low_score | [double](#double) | optional |  |
+| cursor | [string](#string) | optional |  |
 
 
 
@@ -2861,6 +2902,7 @@
 | cancelled | [bool](#bool) | optional |  |
 | new | [bool](#bool) | optional |  |
 | coop_shared_end_time | [double](#double) | optional |  |
+| coop_simulation_end_time | [double](#double) | optional |  |
 | coop_grace_period_end_time | [double](#double) | optional |  |
 | coop_contribution_finalized | [bool](#bool) | optional |  |
 | coop_last_uploaded_contribution | [double](#double) | optional |  |
@@ -2976,6 +3018,7 @@
 | duration_seconds | [double](#double) | optional |  |
 | capacity | [uint32](#uint32) | optional |  |
 | quality_bump | [double](#double) | optional |  |
+| target_artifact | [ArtifactSpec.Name](#ei-ArtifactSpec-Name) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
 | start_time_derived | [double](#double) | optional |  |
 | mission_log | [string](#string) | optional |  |
@@ -4110,6 +4153,7 @@
 | DISHONORABLY_DISCHARGED | 3 |  |
 | POOR_TEAMWORK | 4 |  |
 | ABANDONED_COOP | 5 |  |
+| TIME_CHEAT | 6 |  |
 
 
 

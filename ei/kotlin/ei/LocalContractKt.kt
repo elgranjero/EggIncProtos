@@ -193,6 +193,30 @@ public object LocalContractKt {
     }
 
     /**
+     * <code>optional double coop_simulation_end_time = 22;</code>
+     */
+    public var coopSimulationEndTime: kotlin.Double
+      @JvmName("getCoopSimulationEndTime")
+      get() = _builder.getCoopSimulationEndTime()
+      @JvmName("setCoopSimulationEndTime")
+      set(value) {
+        _builder.setCoopSimulationEndTime(value)
+      }
+    /**
+     * <code>optional double coop_simulation_end_time = 22;</code>
+     */
+    public fun clearCoopSimulationEndTime() {
+      _builder.clearCoopSimulationEndTime()
+    }
+    /**
+     * <code>optional double coop_simulation_end_time = 22;</code>
+     * @return Whether the coopSimulationEndTime field is set.
+     */
+    public fun hasCoopSimulationEndTime(): kotlin.Boolean {
+      return _builder.hasCoopSimulationEndTime()
+    }
+
+    /**
      * <code>optional double coop_grace_period_end_time = 9;</code>
      */
     public var coopGracePeriodEndTime: kotlin.Double

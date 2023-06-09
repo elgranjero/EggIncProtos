@@ -100,12 +100,15 @@ proto.ei.ContractEvaluation.toObject = function(includeInstance, msg) {
     chickenRunsSent: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
     giftTokensSent: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     giftTokensReceived: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+    giftTokenValueSent: (f = jspb.Message.getOptionalFloatingPointField(msg, 28)) == null ? undefined : f,
+    giftTokenValueReceived: (f = jspb.Message.getOptionalFloatingPointField(msg, 29)) == null ? undefined : f,
     boostTokenAllotment: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
     buffTimeValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
     teamworkScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
     otherBonuses: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
     countedInSeason: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     seasonId: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
+    timeCheats: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
     issuesList: (f = jspb.Message.getRepeatedField(msg, 19)) == null ? undefined : f,
     notesList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
     version: (f = jspb.Message.getField(msg, 50)) == null ? undefined : f,
@@ -227,6 +230,14 @@ proto.ei.ContractEvaluation.deserializeBinaryFromReader = function(msg, reader) 
       var value = /** @type {number} */ (reader.readUint32());
       msg.setGiftTokensReceived(value);
       break;
+    case 28:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setGiftTokenValueSent(value);
+      break;
+    case 29:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setGiftTokenValueReceived(value);
+      break;
     case 16:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setBoostTokenAllotment(value);
@@ -250,6 +261,10 @@ proto.ei.ContractEvaluation.deserializeBinaryFromReader = function(msg, reader) 
     case 21:
       var value = /** @type {string} */ (reader.readString());
       msg.setSeasonId(value);
+      break;
+    case 27:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setTimeCheats(value);
       break;
     case 19:
       var values = /** @type {!Array<!proto.ei.ContractEvaluation.PoorBehavior>} */ (reader.isDelimited() ? reader.readPackedEnum() : [reader.readEnum()]);
@@ -442,6 +457,20 @@ proto.ei.ContractEvaluation.serializeBinaryToWriter = function(message, writer) 
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 28));
+  if (f != null) {
+    writer.writeDouble(
+      28,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 29));
+  if (f != null) {
+    writer.writeDouble(
+      29,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 16));
   if (f != null) {
     writer.writeUint32(
@@ -481,6 +510,13 @@ proto.ei.ContractEvaluation.serializeBinaryToWriter = function(message, writer) 
   if (f != null) {
     writer.writeString(
       21,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 27));
+  if (f != null) {
+    writer.writeUint32(
+      27,
       f
     );
   }
@@ -531,7 +567,8 @@ proto.ei.ContractEvaluation.PoorBehavior = {
   BAD_CONTRIBUTION: 2,
   DISHONORABLY_DISCHARGED: 3,
   POOR_TEAMWORK: 4,
-  ABANDONED_COOP: 5
+  ABANDONED_COOP: 5,
+  TIME_CHEAT: 6
 };
 
 /**
@@ -1265,6 +1302,78 @@ proto.ei.ContractEvaluation.prototype.hasGiftTokensReceived = function() {
 
 
 /**
+ * optional double gift_token_value_sent = 28;
+ * @return {number}
+ */
+proto.ei.ContractEvaluation.prototype.getGiftTokenValueSent = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 28, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.setGiftTokenValueSent = function(value) {
+  return jspb.Message.setField(this, 28, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.clearGiftTokenValueSent = function() {
+  return jspb.Message.setField(this, 28, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractEvaluation.prototype.hasGiftTokenValueSent = function() {
+  return jspb.Message.getField(this, 28) != null;
+};
+
+
+/**
+ * optional double gift_token_value_received = 29;
+ * @return {number}
+ */
+proto.ei.ContractEvaluation.prototype.getGiftTokenValueReceived = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 29, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.setGiftTokenValueReceived = function(value) {
+  return jspb.Message.setField(this, 29, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.clearGiftTokenValueReceived = function() {
+  return jspb.Message.setField(this, 29, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractEvaluation.prototype.hasGiftTokenValueReceived = function() {
+  return jspb.Message.getField(this, 29) != null;
+};
+
+
+/**
  * optional uint32 boost_token_allotment = 16;
  * @return {number}
  */
@@ -1477,6 +1586,42 @@ proto.ei.ContractEvaluation.prototype.clearSeasonId = function() {
  */
 proto.ei.ContractEvaluation.prototype.hasSeasonId = function() {
   return jspb.Message.getField(this, 21) != null;
+};
+
+
+/**
+ * optional uint32 time_cheats = 27;
+ * @return {number}
+ */
+proto.ei.ContractEvaluation.prototype.getTimeCheats = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 27, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.setTimeCheats = function(value) {
+  return jspb.Message.setField(this, 27, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.clearTimeCheats = function() {
+  return jspb.Message.setField(this, 27, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractEvaluation.prototype.hasTimeCheats = function() {
+  return jspb.Message.getField(this, 27) != null;
 };
 
 

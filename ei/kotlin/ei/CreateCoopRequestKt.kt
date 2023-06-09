@@ -145,6 +145,30 @@ public object CreateCoopRequestKt {
     }
 
     /**
+     * <code>optional bool allow_all_grades = 16;</code>
+     */
+    public var allowAllGrades: kotlin.Boolean
+      @JvmName("getAllowAllGrades")
+      get() = _builder.getAllowAllGrades()
+      @JvmName("setAllowAllGrades")
+      set(value) {
+        _builder.setAllowAllGrades(value)
+      }
+    /**
+     * <code>optional bool allow_all_grades = 16;</code>
+     */
+    public fun clearAllowAllGrades() {
+      _builder.clearAllowAllGrades()
+    }
+    /**
+     * <code>optional bool allow_all_grades = 16;</code>
+     * @return Whether the allowAllGrades field is set.
+     */
+    public fun hasAllowAllGrades(): kotlin.Boolean {
+      return _builder.hasAllowAllGrades()
+    }
+
+    /**
      * <code>optional double seconds_remaining = 3;</code>
      */
     public var secondsRemaining: kotlin.Double
@@ -310,6 +334,30 @@ public object CreateCoopRequestKt {
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
+    }
+
+    /**
+     * <code>optional bool points_replay = 15;</code>
+     */
+    public var pointsReplay: kotlin.Boolean
+      @JvmName("getPointsReplay")
+      get() = _builder.getPointsReplay()
+      @JvmName("setPointsReplay")
+      set(value) {
+        _builder.setPointsReplay(value)
+      }
+    /**
+     * <code>optional bool points_replay = 15;</code>
+     */
+    public fun clearPointsReplay() {
+      _builder.clearPointsReplay()
+    }
+    /**
+     * <code>optional bool points_replay = 15;</code>
+     * @return Whether the pointsReplay field is set.
+     */
+    public fun hasPointsReplay(): kotlin.Boolean {
+      return _builder.hasPointsReplay()
     }
 
     /**

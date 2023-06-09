@@ -503,6 +503,54 @@ public object ContractEvaluationKt {
     }
 
     /**
+     * <code>optional double gift_token_value_sent = 28;</code>
+     */
+    public var giftTokenValueSent: kotlin.Double
+      @JvmName("getGiftTokenValueSent")
+      get() = _builder.getGiftTokenValueSent()
+      @JvmName("setGiftTokenValueSent")
+      set(value) {
+        _builder.setGiftTokenValueSent(value)
+      }
+    /**
+     * <code>optional double gift_token_value_sent = 28;</code>
+     */
+    public fun clearGiftTokenValueSent() {
+      _builder.clearGiftTokenValueSent()
+    }
+    /**
+     * <code>optional double gift_token_value_sent = 28;</code>
+     * @return Whether the giftTokenValueSent field is set.
+     */
+    public fun hasGiftTokenValueSent(): kotlin.Boolean {
+      return _builder.hasGiftTokenValueSent()
+    }
+
+    /**
+     * <code>optional double gift_token_value_received = 29;</code>
+     */
+    public var giftTokenValueReceived: kotlin.Double
+      @JvmName("getGiftTokenValueReceived")
+      get() = _builder.getGiftTokenValueReceived()
+      @JvmName("setGiftTokenValueReceived")
+      set(value) {
+        _builder.setGiftTokenValueReceived(value)
+      }
+    /**
+     * <code>optional double gift_token_value_received = 29;</code>
+     */
+    public fun clearGiftTokenValueReceived() {
+      _builder.clearGiftTokenValueReceived()
+    }
+    /**
+     * <code>optional double gift_token_value_received = 29;</code>
+     * @return Whether the giftTokenValueReceived field is set.
+     */
+    public fun hasGiftTokenValueReceived(): kotlin.Boolean {
+      return _builder.hasGiftTokenValueReceived()
+    }
+
+    /**
      * <code>optional uint32 boost_token_allotment = 16;</code>
      */
     public var boostTokenAllotment: kotlin.Int
@@ -644,6 +692,30 @@ public object ContractEvaluationKt {
      */
     public fun hasSeasonId(): kotlin.Boolean {
       return _builder.hasSeasonId()
+    }
+
+    /**
+     * <code>optional uint32 time_cheats = 27;</code>
+     */
+    public var timeCheats: kotlin.Int
+      @JvmName("getTimeCheats")
+      get() = _builder.getTimeCheats()
+      @JvmName("setTimeCheats")
+      set(value) {
+        _builder.setTimeCheats(value)
+      }
+    /**
+     * <code>optional uint32 time_cheats = 27;</code>
+     */
+    public fun clearTimeCheats() {
+      _builder.clearTimeCheats()
+    }
+    /**
+     * <code>optional uint32 time_cheats = 27;</code>
+     * @return Whether the timeCheats field is set.
+     */
+    public fun hasTimeCheats(): kotlin.Boolean {
+      return _builder.hasTimeCheats()
     }
 
     /**

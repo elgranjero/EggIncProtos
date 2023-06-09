@@ -50,6 +50,7 @@ goog.require('proto.ei.LocalContract');
 goog.require('proto.ei.ShellDB');
 goog.require('proto.ei.ShellDB.FarmConfiguration');
 
+goog.forwardDeclare('proto.ei.Contract.PlayerGrade');
 goog.forwardDeclare('proto.ei.Egg');
 goog.forwardDeclare('proto.ei.FarmType');
 goog.forwardDeclare('proto.ei.MissionInfo.Spaceship');
@@ -990,6 +991,10 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     notificationsQueried: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
     notificationsOn: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
     notifyDailyGift: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    lowPerformance: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    autoStopFueling: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
+    maxEnabled: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
+    lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
     coppaQueried: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     coppaRestricted: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
     gdprConsentQueried: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
@@ -1003,10 +1008,7 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     userAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 14, true),
     userCloudEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 15, true),
     userAnalyticsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 22, true),
-    userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true),
-    lowPerformance: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-    autoStopFueling: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
-    lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f
+    userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true)
   };
 
   if (includeInstance) {
@@ -1075,6 +1077,22 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setNotifyDailyGift(value);
       break;
+    case 10:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLowPerformance(value);
+      break;
+    case 25:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAutoStopFueling(value);
+      break;
+    case 26:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setMaxEnabled(value);
+      break;
+    case 24:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastBackupTime(value);
+      break;
     case 7:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setCoppaQueried(value);
@@ -1130,18 +1148,6 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 23:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUserPersonalizedAdsEnabled(value);
-      break;
-    case 10:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setLowPerformance(value);
-      break;
-    case 25:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAutoStopFueling(value);
-      break;
-    case 24:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setLastBackupTime(value);
       break;
     default:
       reader.skipField();
@@ -1225,6 +1231,34 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       11,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
+    writer.writeBool(
+      10,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 25));
+  if (f != null) {
+    writer.writeBool(
+      25,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 26));
+  if (f != null) {
+    writer.writeBool(
+      26,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 24));
+  if (f != null) {
+    writer.writeDouble(
+      24,
       f
     );
   }
@@ -1323,27 +1357,6 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       23,
-      f
-    );
-  }
-  f = /** @type {boolean} */ (jspb.Message.getField(message, 10));
-  if (f != null) {
-    writer.writeBool(
-      10,
-      f
-    );
-  }
-  f = /** @type {boolean} */ (jspb.Message.getField(message, 25));
-  if (f != null) {
-    writer.writeBool(
-      25,
-      f
-    );
-  }
-  f = /** @type {number} */ (jspb.Message.getField(message, 24));
-  if (f != null) {
-    writer.writeDouble(
-      24,
       f
     );
   }
@@ -1635,6 +1648,150 @@ proto.ei.Backup.Settings.prototype.clearNotifyDailyGift = function() {
  */
 proto.ei.Backup.Settings.prototype.hasNotifyDailyGift = function() {
   return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional bool low_performance = 10;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getLowPerformance = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setLowPerformance = function(value) {
+  return jspb.Message.setField(this, 10, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearLowPerformance = function() {
+  return jspb.Message.setField(this, 10, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasLowPerformance = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional bool auto_stop_fueling = 25;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getAutoStopFueling = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 25, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setAutoStopFueling = function(value) {
+  return jspb.Message.setField(this, 25, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearAutoStopFueling = function() {
+  return jspb.Message.setField(this, 25, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasAutoStopFueling = function() {
+  return jspb.Message.getField(this, 25) != null;
+};
+
+
+/**
+ * optional bool max_enabled = 26;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getMaxEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 26, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setMaxEnabled = function(value) {
+  return jspb.Message.setField(this, 26, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearMaxEnabled = function() {
+  return jspb.Message.setField(this, 26, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasMaxEnabled = function() {
+  return jspb.Message.getField(this, 26) != null;
+};
+
+
+/**
+ * optional double last_backup_time = 24;
+ * @return {number}
+ */
+proto.ei.Backup.Settings.prototype.getLastBackupTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 24, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setLastBackupTime = function(value) {
+  return jspb.Message.setField(this, 24, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearLastBackupTime = function() {
+  return jspb.Message.setField(this, 24, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasLastBackupTime = function() {
+  return jspb.Message.getField(this, 24) != null;
 };
 
 
@@ -2139,114 +2296,6 @@ proto.ei.Backup.Settings.prototype.clearUserPersonalizedAdsEnabled = function() 
  */
 proto.ei.Backup.Settings.prototype.hasUserPersonalizedAdsEnabled = function() {
   return jspb.Message.getField(this, 23) != null;
-};
-
-
-/**
- * optional bool low_performance = 10;
- * @return {boolean}
- */
-proto.ei.Backup.Settings.prototype.getLowPerformance = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.ei.Backup.Settings} returns this
- */
-proto.ei.Backup.Settings.prototype.setLowPerformance = function(value) {
-  return jspb.Message.setField(this, 10, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.ei.Backup.Settings} returns this
- */
-proto.ei.Backup.Settings.prototype.clearLowPerformance = function() {
-  return jspb.Message.setField(this, 10, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ei.Backup.Settings.prototype.hasLowPerformance = function() {
-  return jspb.Message.getField(this, 10) != null;
-};
-
-
-/**
- * optional bool auto_stop_fueling = 25;
- * @return {boolean}
- */
-proto.ei.Backup.Settings.prototype.getAutoStopFueling = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 25, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.ei.Backup.Settings} returns this
- */
-proto.ei.Backup.Settings.prototype.setAutoStopFueling = function(value) {
-  return jspb.Message.setField(this, 25, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.ei.Backup.Settings} returns this
- */
-proto.ei.Backup.Settings.prototype.clearAutoStopFueling = function() {
-  return jspb.Message.setField(this, 25, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ei.Backup.Settings.prototype.hasAutoStopFueling = function() {
-  return jspb.Message.getField(this, 25) != null;
-};
-
-
-/**
- * optional double last_backup_time = 24;
- * @return {number}
- */
-proto.ei.Backup.Settings.prototype.getLastBackupTime = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 24, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ei.Backup.Settings} returns this
- */
-proto.ei.Backup.Settings.prototype.setLastBackupTime = function(value) {
-  return jspb.Message.setField(this, 24, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.ei.Backup.Settings} returns this
- */
-proto.ei.Backup.Settings.prototype.clearLastBackupTime = function() {
-  return jspb.Message.setField(this, 24, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ei.Backup.Settings.prototype.hasLastBackupTime = function() {
-  return jspb.Message.getField(this, 24) != null;
 };
 
 
@@ -9037,7 +9086,9 @@ proto.ei.Backup.Misc.toObject = function(includeInstance, msg) {
     eggOfProphecyAlert: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
     boostTokenAlert: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
     soulEggAlert: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
-    backupReminderAlert: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f
+    backupReminderAlert: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
+    maxButtonAlert: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
+    missionTargetAlert: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -9161,6 +9212,14 @@ proto.ei.Backup.Misc.deserializeBinaryFromReader = function(msg, reader) {
     case 19:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setBackupReminderAlert(value);
+      break;
+    case 23:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setMaxButtonAlert(value);
+      break;
+    case 24:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setMissionTargetAlert(value);
       break;
     default:
       reader.skipField();
@@ -9342,6 +9401,20 @@ proto.ei.Backup.Misc.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       19,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 23));
+  if (f != null) {
+    writer.writeBool(
+      23,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 24));
+  if (f != null) {
+    writer.writeBool(
+      24,
       f
     );
   }
@@ -10137,6 +10210,78 @@ proto.ei.Backup.Misc.prototype.clearBackupReminderAlert = function() {
  */
 proto.ei.Backup.Misc.prototype.hasBackupReminderAlert = function() {
   return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * optional bool max_button_alert = 23;
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.getMaxButtonAlert = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 23, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.setMaxButtonAlert = function(value) {
+  return jspb.Message.setField(this, 23, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.clearMaxButtonAlert = function() {
+  return jspb.Message.setField(this, 23, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.hasMaxButtonAlert = function() {
+  return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
+ * optional bool mission_target_alert = 24;
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.getMissionTargetAlert = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 24, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.setMissionTargetAlert = function(value) {
+  return jspb.Message.setField(this, 24, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.clearMissionTargetAlert = function() {
+  return jspb.Message.setField(this, 24, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.hasMissionTargetAlert = function() {
+  return jspb.Message.getField(this, 24) != null;
 };
 
 
@@ -12369,14 +12514,18 @@ proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
     contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     totalAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
     contributorsList: jspb.Message.toObjectList(msg.getContributorsList(),
     proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject, includeInstance),
     autoGenerated: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
     pb_public: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
     creatorId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    secondsSinceAllGoalsAchieved: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
+    allGoalsAchieved: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
     allMembersReporting: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
     gracePeriodSecondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    clearedForExit: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
     giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
     proto.ei.ContractCoopStatusResponse.CoopGift.toObject, includeInstance),
     chickenRunsList: jspb.Message.toObjectList(msg.getChickenRunsList(),
@@ -12430,6 +12579,10 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
       var value = /** @type {string} */ (reader.readString());
       msg.setCoopIdentifier(value);
       break;
+    case 17:
+      var value = /** @type {!proto.ei.Contract.PlayerGrade} */ (reader.readEnum());
+      msg.setGrade(value);
+      break;
     case 4:
       var value = new proto.ei.ContractCoopStatusResponse.ContributionInfo;
       reader.readMessage(value,proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader);
@@ -12451,6 +12604,14 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSecondsRemaining(value);
       break;
+    case 16:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setSecondsSinceAllGoalsAchieved(value);
+      break;
+    case 14:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAllGoalsAchieved(value);
+      break;
     case 6:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setAllMembersReporting(value);
@@ -12458,6 +12619,10 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
     case 7:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setGracePeriodSecondsRemaining(value);
+      break;
+    case 15:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setClearedForExit(value);
       break;
     case 11:
       var value = new proto.ei.ContractCoopStatusResponse.CoopGift;
@@ -12523,6 +12688,13 @@ proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, 
       f
     );
   }
+  f = /** @type {!proto.ei.Contract.PlayerGrade} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
+    writer.writeEnum(
+      17,
+      f
+    );
+  }
   f = message.getContributorsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
@@ -12559,6 +12731,20 @@ proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, 
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 16));
+  if (f != null) {
+    writer.writeDouble(
+      16,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeBool(
+      14,
+      f
+    );
+  }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
   if (f != null) {
     writer.writeBool(
@@ -12570,6 +12756,13 @@ proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeDouble(
       7,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 15));
+  if (f != null) {
+    writer.writeBool(
+      15,
       f
     );
   }
@@ -12670,8 +12863,10 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject = function(include
     productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
     farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
     rankChange: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    recentlyActive: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
     active: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
     leech: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
+    finalized: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     timeCheatDetected: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     pushId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
@@ -12760,6 +12955,10 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader
       var value = /** @type {number} */ (reader.readInt32());
       msg.setRankChange(value);
       break;
+    case 23:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setRecentlyActive(value);
+      break;
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setActive(value);
@@ -12767,6 +12966,10 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader
     case 16:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLeech(value);
+      break;
+    case 22:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setFinalized(value);
       break;
     case 7:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -12906,6 +13109,13 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = f
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 23));
+  if (f != null) {
+    writer.writeBool(
+      23,
+      f
+    );
+  }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 4));
   if (f != null) {
     writer.writeBool(
@@ -12917,6 +13127,13 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = f
   if (f != null) {
     writer.writeBool(
       16,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 22));
+  if (f != null) {
+    writer.writeBool(
+      22,
       f
     );
   }
@@ -13350,6 +13567,42 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasRankChange = f
 
 
 /**
+ * optional bool recently_active = 23;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getRecentlyActive = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 23, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setRecentlyActive = function(value) {
+  return jspb.Message.setField(this, 23, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearRecentlyActive = function() {
+  return jspb.Message.setField(this, 23, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasRecentlyActive = function() {
+  return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
  * optional bool active = 4;
  * @return {boolean}
  */
@@ -13418,6 +13671,42 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearLeech = func
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasLeech = function() {
   return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional bool finalized = 22;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getFinalized = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 22, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setFinalized = function(value) {
+  return jspb.Message.setField(this, 22, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearFinalized = function() {
+  return jspb.Message.setField(this, 22, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasFinalized = function() {
+  return jspb.Message.getField(this, 22) != null;
 };
 
 
@@ -14344,6 +14633,42 @@ proto.ei.ContractCoopStatusResponse.prototype.hasCoopIdentifier = function() {
 
 
 /**
+ * optional Contract.PlayerGrade grade = 17;
+ * @return {!proto.ei.Contract.PlayerGrade}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getGrade = function() {
+  return /** @type {!proto.ei.Contract.PlayerGrade} */ (jspb.Message.getFieldWithDefault(this, 17, 0));
+};
+
+
+/**
+ * @param {!proto.ei.Contract.PlayerGrade} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setGrade = function(value) {
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearGrade = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasGrade = function() {
+  return jspb.Message.getField(this, 17) != null;
+};
+
+
+/**
  * repeated ContributionInfo contributors = 4;
  * @return {!Array<!proto.ei.ContractCoopStatusResponse.ContributionInfo>}
  */
@@ -14526,6 +14851,78 @@ proto.ei.ContractCoopStatusResponse.prototype.hasSecondsRemaining = function() {
 
 
 /**
+ * optional double seconds_since_all_goals_achieved = 16;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getSecondsSinceAllGoalsAchieved = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 16, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setSecondsSinceAllGoalsAchieved = function(value) {
+  return jspb.Message.setField(this, 16, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearSecondsSinceAllGoalsAchieved = function() {
+  return jspb.Message.setField(this, 16, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasSecondsSinceAllGoalsAchieved = function() {
+  return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional bool all_goals_achieved = 14;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getAllGoalsAchieved = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setAllGoalsAchieved = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearAllGoalsAchieved = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasAllGoalsAchieved = function() {
+  return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
  * optional bool all_members_reporting = 6;
  * @return {boolean}
  */
@@ -14594,6 +14991,42 @@ proto.ei.ContractCoopStatusResponse.prototype.clearGracePeriodSecondsRemaining =
  */
 proto.ei.ContractCoopStatusResponse.prototype.hasGracePeriodSecondsRemaining = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional bool cleared_for_exit = 15;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getClearedForExit = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setClearedForExit = function(value) {
+  return jspb.Message.setField(this, 15, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearClearedForExit = function() {
+  return jspb.Message.setField(this, 15, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasClearedForExit = function() {
+  return jspb.Message.getField(this, 15) != null;
 };
 
 

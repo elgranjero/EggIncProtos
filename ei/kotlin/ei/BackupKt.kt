@@ -952,6 +952,102 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional bool low_performance = 10;</code>
+       */
+      public var lowPerformance: kotlin.Boolean
+        @JvmName("getLowPerformance")
+        get() = _builder.getLowPerformance()
+        @JvmName("setLowPerformance")
+        set(value) {
+          _builder.setLowPerformance(value)
+        }
+      /**
+       * <code>optional bool low_performance = 10;</code>
+       */
+      public fun clearLowPerformance() {
+        _builder.clearLowPerformance()
+      }
+      /**
+       * <code>optional bool low_performance = 10;</code>
+       * @return Whether the lowPerformance field is set.
+       */
+      public fun hasLowPerformance(): kotlin.Boolean {
+        return _builder.hasLowPerformance()
+      }
+
+      /**
+       * <code>optional bool auto_stop_fueling = 25;</code>
+       */
+      public var autoStopFueling: kotlin.Boolean
+        @JvmName("getAutoStopFueling")
+        get() = _builder.getAutoStopFueling()
+        @JvmName("setAutoStopFueling")
+        set(value) {
+          _builder.setAutoStopFueling(value)
+        }
+      /**
+       * <code>optional bool auto_stop_fueling = 25;</code>
+       */
+      public fun clearAutoStopFueling() {
+        _builder.clearAutoStopFueling()
+      }
+      /**
+       * <code>optional bool auto_stop_fueling = 25;</code>
+       * @return Whether the autoStopFueling field is set.
+       */
+      public fun hasAutoStopFueling(): kotlin.Boolean {
+        return _builder.hasAutoStopFueling()
+      }
+
+      /**
+       * <code>optional bool max_enabled = 26;</code>
+       */
+      public var maxEnabled: kotlin.Boolean
+        @JvmName("getMaxEnabled")
+        get() = _builder.getMaxEnabled()
+        @JvmName("setMaxEnabled")
+        set(value) {
+          _builder.setMaxEnabled(value)
+        }
+      /**
+       * <code>optional bool max_enabled = 26;</code>
+       */
+      public fun clearMaxEnabled() {
+        _builder.clearMaxEnabled()
+      }
+      /**
+       * <code>optional bool max_enabled = 26;</code>
+       * @return Whether the maxEnabled field is set.
+       */
+      public fun hasMaxEnabled(): kotlin.Boolean {
+        return _builder.hasMaxEnabled()
+      }
+
+      /**
+       * <code>optional double last_backup_time = 24;</code>
+       */
+      public var lastBackupTime: kotlin.Double
+        @JvmName("getLastBackupTime")
+        get() = _builder.getLastBackupTime()
+        @JvmName("setLastBackupTime")
+        set(value) {
+          _builder.setLastBackupTime(value)
+        }
+      /**
+       * <code>optional double last_backup_time = 24;</code>
+       */
+      public fun clearLastBackupTime() {
+        _builder.clearLastBackupTime()
+      }
+      /**
+       * <code>optional double last_backup_time = 24;</code>
+       * @return Whether the lastBackupTime field is set.
+       */
+      public fun hasLastBackupTime(): kotlin.Boolean {
+        return _builder.hasLastBackupTime()
+      }
+
+      /**
        * <code>optional bool coppa_queried = 7;</code>
        */
       public var coppaQueried: kotlin.Boolean
@@ -1285,78 +1381,6 @@ public object BackupKt {
        */
       public fun hasUserPersonalizedAdsEnabled(): kotlin.Boolean {
         return _builder.hasUserPersonalizedAdsEnabled()
-      }
-
-      /**
-       * <code>optional bool low_performance = 10;</code>
-       */
-      public var lowPerformance: kotlin.Boolean
-        @JvmName("getLowPerformance")
-        get() = _builder.getLowPerformance()
-        @JvmName("setLowPerformance")
-        set(value) {
-          _builder.setLowPerformance(value)
-        }
-      /**
-       * <code>optional bool low_performance = 10;</code>
-       */
-      public fun clearLowPerformance() {
-        _builder.clearLowPerformance()
-      }
-      /**
-       * <code>optional bool low_performance = 10;</code>
-       * @return Whether the lowPerformance field is set.
-       */
-      public fun hasLowPerformance(): kotlin.Boolean {
-        return _builder.hasLowPerformance()
-      }
-
-      /**
-       * <code>optional bool auto_stop_fueling = 25;</code>
-       */
-      public var autoStopFueling: kotlin.Boolean
-        @JvmName("getAutoStopFueling")
-        get() = _builder.getAutoStopFueling()
-        @JvmName("setAutoStopFueling")
-        set(value) {
-          _builder.setAutoStopFueling(value)
-        }
-      /**
-       * <code>optional bool auto_stop_fueling = 25;</code>
-       */
-      public fun clearAutoStopFueling() {
-        _builder.clearAutoStopFueling()
-      }
-      /**
-       * <code>optional bool auto_stop_fueling = 25;</code>
-       * @return Whether the autoStopFueling field is set.
-       */
-      public fun hasAutoStopFueling(): kotlin.Boolean {
-        return _builder.hasAutoStopFueling()
-      }
-
-      /**
-       * <code>optional double last_backup_time = 24;</code>
-       */
-      public var lastBackupTime: kotlin.Double
-        @JvmName("getLastBackupTime")
-        get() = _builder.getLastBackupTime()
-        @JvmName("setLastBackupTime")
-        set(value) {
-          _builder.setLastBackupTime(value)
-        }
-      /**
-       * <code>optional double last_backup_time = 24;</code>
-       */
-      public fun clearLastBackupTime() {
-        _builder.clearLastBackupTime()
-      }
-      /**
-       * <code>optional double last_backup_time = 24;</code>
-       * @return Whether the lastBackupTime field is set.
-       */
-      public fun hasLastBackupTime(): kotlin.Boolean {
-        return _builder.hasLastBackupTime()
       }
     }
   }
@@ -5916,6 +5940,54 @@ public object BackupKt {
        */
       public fun hasBackupReminderAlert(): kotlin.Boolean {
         return _builder.hasBackupReminderAlert()
+      }
+
+      /**
+       * <code>optional bool max_button_alert = 23;</code>
+       */
+      public var maxButtonAlert: kotlin.Boolean
+        @JvmName("getMaxButtonAlert")
+        get() = _builder.getMaxButtonAlert()
+        @JvmName("setMaxButtonAlert")
+        set(value) {
+          _builder.setMaxButtonAlert(value)
+        }
+      /**
+       * <code>optional bool max_button_alert = 23;</code>
+       */
+      public fun clearMaxButtonAlert() {
+        _builder.clearMaxButtonAlert()
+      }
+      /**
+       * <code>optional bool max_button_alert = 23;</code>
+       * @return Whether the maxButtonAlert field is set.
+       */
+      public fun hasMaxButtonAlert(): kotlin.Boolean {
+        return _builder.hasMaxButtonAlert()
+      }
+
+      /**
+       * <code>optional bool mission_target_alert = 24;</code>
+       */
+      public var missionTargetAlert: kotlin.Boolean
+        @JvmName("getMissionTargetAlert")
+        get() = _builder.getMissionTargetAlert()
+        @JvmName("setMissionTargetAlert")
+        set(value) {
+          _builder.setMissionTargetAlert(value)
+        }
+      /**
+       * <code>optional bool mission_target_alert = 24;</code>
+       */
+      public fun clearMissionTargetAlert() {
+        _builder.clearMissionTargetAlert()
+      }
+      /**
+       * <code>optional bool mission_target_alert = 24;</code>
+       * @return Whether the missionTargetAlert field is set.
+       */
+      public fun hasMissionTargetAlert(): kotlin.Boolean {
+        return _builder.hasMissionTargetAlert()
       }
     }
   }

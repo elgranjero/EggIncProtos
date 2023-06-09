@@ -78,6 +78,7 @@ proto.ei.CreateCoopRequest.toObject = function(includeInstance, msg) {
     coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     pb_public: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
     ccOnly: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    allowAllGrades: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     userName: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
@@ -85,6 +86,7 @@ proto.ei.CreateCoopRequest.toObject = function(includeInstance, msg) {
     eop: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
     league: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     grade: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    pointsReplay: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
     platform: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
     clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
   };
@@ -144,6 +146,10 @@ proto.ei.CreateCoopRequest.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setCcOnly(value);
       break;
+    case 16:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAllowAllGrades(value);
+      break;
     case 3:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSecondsRemaining(value);
@@ -171,6 +177,10 @@ proto.ei.CreateCoopRequest.deserializeBinaryFromReader = function(msg, reader) {
     case 12:
       var value = /** @type {!proto.ei.Contract.PlayerGrade} */ (reader.readEnum());
       msg.setGrade(value);
+      break;
+    case 15:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPointsReplay(value);
       break;
     case 6:
       var value = /** @type {!proto.ei.Platform} */ (reader.readEnum());
@@ -245,6 +255,13 @@ proto.ei.CreateCoopRequest.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 16));
+  if (f != null) {
+    writer.writeBool(
+      16,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 3));
   if (f != null) {
     writer.writeDouble(
@@ -291,6 +308,13 @@ proto.ei.CreateCoopRequest.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeEnum(
       12,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 15));
+  if (f != null) {
+    writer.writeBool(
+      15,
       f
     );
   }
@@ -489,6 +513,42 @@ proto.ei.CreateCoopRequest.prototype.clearCcOnly = function() {
  */
 proto.ei.CreateCoopRequest.prototype.hasCcOnly = function() {
   return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
+ * optional bool allow_all_grades = 16;
+ * @return {boolean}
+ */
+proto.ei.CreateCoopRequest.prototype.getAllowAllGrades = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 16, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.CreateCoopRequest} returns this
+ */
+proto.ei.CreateCoopRequest.prototype.setAllowAllGrades = function(value) {
+  return jspb.Message.setField(this, 16, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CreateCoopRequest} returns this
+ */
+proto.ei.CreateCoopRequest.prototype.clearAllowAllGrades = function() {
+  return jspb.Message.setField(this, 16, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CreateCoopRequest.prototype.hasAllowAllGrades = function() {
+  return jspb.Message.getField(this, 16) != null;
 };
 
 
@@ -741,6 +801,42 @@ proto.ei.CreateCoopRequest.prototype.clearGrade = function() {
  */
 proto.ei.CreateCoopRequest.prototype.hasGrade = function() {
   return jspb.Message.getField(this, 12) != null;
+};
+
+
+/**
+ * optional bool points_replay = 15;
+ * @return {boolean}
+ */
+proto.ei.CreateCoopRequest.prototype.getPointsReplay = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.CreateCoopRequest} returns this
+ */
+proto.ei.CreateCoopRequest.prototype.setPointsReplay = function(value) {
+  return jspb.Message.setField(this, 15, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CreateCoopRequest} returns this
+ */
+proto.ei.CreateCoopRequest.prototype.clearPointsReplay = function() {
+  return jspb.Message.setField(this, 15, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CreateCoopRequest.prototype.hasPointsReplay = function() {
+  return jspb.Message.getField(this, 15) != null;
 };
 
 

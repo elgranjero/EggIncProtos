@@ -263,6 +263,30 @@ public object MissionInfoKt {
     }
 
     /**
+     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
+     */
+    public var targetArtifact: ei.Ei.ArtifactSpec.Name
+      @JvmName("getTargetArtifact")
+      get() = _builder.getTargetArtifact()
+      @JvmName("setTargetArtifact")
+      set(value) {
+        _builder.setTargetArtifact(value)
+      }
+    /**
+     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
+     */
+    public fun clearTargetArtifact() {
+      _builder.clearTargetArtifact()
+    }
+    /**
+     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
+     * @return Whether the targetArtifact field is set.
+     */
+    public fun hasTargetArtifact(): kotlin.Boolean {
+      return _builder.hasTargetArtifact()
+    }
+
+    /**
      * <code>optional double seconds_remaining = 6;</code>
      */
     public var secondsRemaining: kotlin.Double

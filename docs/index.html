@@ -339,6 +339,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.CXPEvalRolloutInfo"><span class="badge">M</span>CXPEvalRolloutInfo</a>
+                </li>
+              
+                <li>
                   <a href="#ei.CleanAccountRequest"><span class="badge">M</span>CleanAccountRequest</a>
                 </li>
               
@@ -2089,7 +2093,7 @@
                 </tr>
               
                 <tr>
-                  <td>active_artifacts</td>
+                  <td>active_artifacts_DEPRECATED</td>
                   <td><a href="#ei.ArtifactsDB.ActiveArtifactSlot">ArtifactsDB.ActiveArtifactSlot</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
@@ -2097,6 +2101,13 @@
               
                 <tr>
                   <td>active_artifact_sets</td>
+                  <td><a href="#ei.ArtifactsDB.ActiveArtifactSet">ArtifactsDB.ActiveArtifactSet</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>saved_artifact_sets</td>
                   <td><a href="#ei.ArtifactsDB.ActiveArtifactSet">ArtifactsDB.ActiveArtifactSet</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
@@ -2165,6 +2176,13 @@
                   <td>slots</td>
                   <td><a href="#ei.ArtifactsDB.ActiveArtifactSlot">ArtifactsDB.ActiveArtifactSlot</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>uid</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -2431,6 +2449,13 @@
                 <tr>
                   <td>grade</td>
                   <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>points_replay</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -3314,6 +3339,20 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>max_button_alert</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>mission_target_alert</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -3564,6 +3603,34 @@
                 </tr>
               
                 <tr>
+                  <td>low_performance</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>auto_stop_fueling</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>max_enabled</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>last_backup_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>coppa_queried</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -3659,27 +3726,6 @@
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> Default: true</p></td>
-                </tr>
-              
-                <tr>
-                  <td>low_performance</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>auto_stop_fueling</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>last_backup_time</td>
-                  <td><a href="#double">double</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
                 </tr>
               
             </tbody>
@@ -4260,6 +4306,37 @@
                 <tr>
                   <td>debug</td>
                   <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.CXPEvalRolloutInfo">CXPEvalRolloutInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>current_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>basis_points</td>
+                  <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -5306,6 +5383,13 @@
                 </tr>
               
                 <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>contributors</td>
                   <td><a href="#ei.ContractCoopStatusResponse.ContributionInfo">ContractCoopStatusResponse.ContributionInfo</a></td>
                   <td>repeated</td>
@@ -5341,6 +5425,20 @@
                 </tr>
               
                 <tr>
+                  <td>seconds_since_all_goals_achieved</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>all_goals_achieved</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>all_members_reporting</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -5350,6 +5448,13 @@
                 <tr>
                   <td>grace_period_seconds_remaining</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cleared_for_exit</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -5501,6 +5606,13 @@
                 </tr>
               
                 <tr>
+                  <td>recently_active</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>active</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -5509,6 +5621,13 @@
               
                 <tr>
                   <td>leech</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>finalized</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -5940,6 +6059,20 @@
                 </tr>
               
                 <tr>
+                  <td>gift_token_value_sent</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gift_token_value_received</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>boost_token_allotment</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -5977,6 +6110,13 @@
                 <tr>
                   <td>season_id</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>time_cheats</td>
+                  <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -6273,6 +6413,13 @@
                 </tr>
               
                 <tr>
+                  <td>elr_mult</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>earnings_mult</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
@@ -6281,6 +6428,20 @@
               
                 <tr>
                   <td>time_efficacy</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>hab_capacity_mult</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>epic_research_budget</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -6659,6 +6820,20 @@
                 </tr>
               
                 <tr>
+                  <td>last_contribution_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>finalized</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>soul_power</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
@@ -6881,6 +7056,13 @@
                 </tr>
               
                 <tr>
+                  <td>allow_all_grades</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>seconds_remaining</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
@@ -6925,6 +7107,13 @@
                 <tr>
                   <td>grade</td>
                   <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>points_replay</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -8256,6 +8445,13 @@
                 </tr>
               
                 <tr>
+                  <td>points_replay</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>platform</td>
                   <td><a href="#ei.Platform">Platform</a></td>
                   <td>optional</td>
@@ -8470,6 +8666,13 @@
                 <tr>
                   <td>low_score</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cursor</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -9304,6 +9507,13 @@
                 </tr>
               
                 <tr>
+                  <td>coop_simulation_end_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>coop_grace_period_end_time</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
@@ -9618,6 +9828,13 @@
                 <tr>
                   <td>quality_bump</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>target_artifact</td>
+                  <td><a href="#ei.ArtifactSpec.Name">ArtifactSpec.Name</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -13175,6 +13392,12 @@
               <tr>
                 <td>ABANDONED_COOP</td>
                 <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TIME_CHEAT</td>
+                <td>6</td>
                 <td><p></p></td>
               </tr>
             

@@ -87,6 +87,7 @@ proto.ei.LocalContract.toObject = function(includeInstance, msg) {
     cancelled: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
     pb_new: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
     coopSharedEndTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    coopSimulationEndTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 22)) == null ? undefined : f,
     coopGracePeriodEndTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
     coopContributionFinalized: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
     coopLastUploadedContribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
@@ -165,6 +166,10 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
     case 5:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setCoopSharedEndTime(value);
+      break;
+    case 22:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setCoopSimulationEndTime(value);
       break;
     case 9:
       var value = /** @type {number} */ (reader.readDouble());
@@ -299,6 +304,13 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       5,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 22));
+  if (f != null) {
+    writer.writeDouble(
+      22,
       f
     );
   }
@@ -654,6 +666,42 @@ proto.ei.LocalContract.prototype.clearCoopSharedEndTime = function() {
  */
 proto.ei.LocalContract.prototype.hasCoopSharedEndTime = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional double coop_simulation_end_time = 22;
+ * @return {number}
+ */
+proto.ei.LocalContract.prototype.getCoopSimulationEndTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 22, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setCoopSimulationEndTime = function(value) {
+  return jspb.Message.setField(this, 22, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearCoopSimulationEndTime = function() {
+  return jspb.Message.setField(this, 22, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasCoopSimulationEndTime = function() {
+  return jspb.Message.getField(this, 22) != null;
 };
 
 

@@ -103,7 +103,8 @@ proto.ei.LeaderboardAnalysis.toObject = function(includeInstance, msg) {
     proto.ei.LeaderboardAnalysis.Chunk.toObject, includeInstance),
     count: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     highScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    lowScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+    lowScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    cursor: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -156,6 +157,10 @@ proto.ei.LeaderboardAnalysis.deserializeBinaryFromReader = function(msg, reader)
     case 4:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setLowScore(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCursor(value);
       break;
     default:
       reader.skipField();
@@ -212,6 +217,13 @@ proto.ei.LeaderboardAnalysis.serializeBinaryToWriter = function(message, writer)
   if (f != null) {
     writer.writeDouble(
       4,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -749,6 +761,42 @@ proto.ei.LeaderboardAnalysis.prototype.clearLowScore = function() {
  */
 proto.ei.LeaderboardAnalysis.prototype.hasLowScore = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string cursor = 5;
+ * @return {string}
+ */
+proto.ei.LeaderboardAnalysis.prototype.getCursor = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.LeaderboardAnalysis} returns this
+ */
+proto.ei.LeaderboardAnalysis.prototype.setCursor = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LeaderboardAnalysis} returns this
+ */
+proto.ei.LeaderboardAnalysis.prototype.clearCursor = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LeaderboardAnalysis.prototype.hasCursor = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

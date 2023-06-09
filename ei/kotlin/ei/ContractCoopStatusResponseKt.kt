@@ -95,6 +95,30 @@ public object ContractCoopStatusResponseKt {
     }
 
     /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 17;</code>
+     */
+    public var grade: ei.Ei.Contract.PlayerGrade
+      @JvmName("getGrade")
+      get() = _builder.getGrade()
+      @JvmName("setGrade")
+      set(value) {
+        _builder.setGrade(value)
+      }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 17;</code>
+     */
+    public fun clearGrade() {
+      _builder.clearGrade()
+    }
+    /**
+     * <code>optional .ei.Contract.PlayerGrade grade = 17;</code>
+     * @return Whether the grade field is set.
+     */
+    public fun hasGrade(): kotlin.Boolean {
+      return _builder.hasGrade()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */
@@ -263,6 +287,54 @@ public object ContractCoopStatusResponseKt {
     }
 
     /**
+     * <code>optional double seconds_since_all_goals_achieved = 16;</code>
+     */
+    public var secondsSinceAllGoalsAchieved: kotlin.Double
+      @JvmName("getSecondsSinceAllGoalsAchieved")
+      get() = _builder.getSecondsSinceAllGoalsAchieved()
+      @JvmName("setSecondsSinceAllGoalsAchieved")
+      set(value) {
+        _builder.setSecondsSinceAllGoalsAchieved(value)
+      }
+    /**
+     * <code>optional double seconds_since_all_goals_achieved = 16;</code>
+     */
+    public fun clearSecondsSinceAllGoalsAchieved() {
+      _builder.clearSecondsSinceAllGoalsAchieved()
+    }
+    /**
+     * <code>optional double seconds_since_all_goals_achieved = 16;</code>
+     * @return Whether the secondsSinceAllGoalsAchieved field is set.
+     */
+    public fun hasSecondsSinceAllGoalsAchieved(): kotlin.Boolean {
+      return _builder.hasSecondsSinceAllGoalsAchieved()
+    }
+
+    /**
+     * <code>optional bool all_goals_achieved = 14;</code>
+     */
+    public var allGoalsAchieved: kotlin.Boolean
+      @JvmName("getAllGoalsAchieved")
+      get() = _builder.getAllGoalsAchieved()
+      @JvmName("setAllGoalsAchieved")
+      set(value) {
+        _builder.setAllGoalsAchieved(value)
+      }
+    /**
+     * <code>optional bool all_goals_achieved = 14;</code>
+     */
+    public fun clearAllGoalsAchieved() {
+      _builder.clearAllGoalsAchieved()
+    }
+    /**
+     * <code>optional bool all_goals_achieved = 14;</code>
+     * @return Whether the allGoalsAchieved field is set.
+     */
+    public fun hasAllGoalsAchieved(): kotlin.Boolean {
+      return _builder.hasAllGoalsAchieved()
+    }
+
+    /**
      * <code>optional bool all_members_reporting = 6;</code>
      */
     public var allMembersReporting: kotlin.Boolean
@@ -308,6 +380,30 @@ public object ContractCoopStatusResponseKt {
      */
     public fun hasGracePeriodSecondsRemaining(): kotlin.Boolean {
       return _builder.hasGracePeriodSecondsRemaining()
+    }
+
+    /**
+     * <code>optional bool cleared_for_exit = 15;</code>
+     */
+    public var clearedForExit: kotlin.Boolean
+      @JvmName("getClearedForExit")
+      get() = _builder.getClearedForExit()
+      @JvmName("setClearedForExit")
+      set(value) {
+        _builder.setClearedForExit(value)
+      }
+    /**
+     * <code>optional bool cleared_for_exit = 15;</code>
+     */
+    public fun clearClearedForExit() {
+      _builder.clearClearedForExit()
+    }
+    /**
+     * <code>optional bool cleared_for_exit = 15;</code>
+     * @return Whether the clearedForExit field is set.
+     */
+    public fun hasClearedForExit(): kotlin.Boolean {
+      return _builder.hasClearedForExit()
     }
 
     /**
@@ -742,6 +838,30 @@ public object ContractCoopStatusResponseKt {
       }
 
       /**
+       * <code>optional bool recently_active = 23;</code>
+       */
+      public var recentlyActive: kotlin.Boolean
+        @JvmName("getRecentlyActive")
+        get() = _builder.getRecentlyActive()
+        @JvmName("setRecentlyActive")
+        set(value) {
+          _builder.setRecentlyActive(value)
+        }
+      /**
+       * <code>optional bool recently_active = 23;</code>
+       */
+      public fun clearRecentlyActive() {
+        _builder.clearRecentlyActive()
+      }
+      /**
+       * <code>optional bool recently_active = 23;</code>
+       * @return Whether the recentlyActive field is set.
+       */
+      public fun hasRecentlyActive(): kotlin.Boolean {
+        return _builder.hasRecentlyActive()
+      }
+
+      /**
        * <code>optional bool active = 4;</code>
        */
       public var active: kotlin.Boolean
@@ -787,6 +907,30 @@ public object ContractCoopStatusResponseKt {
        */
       public fun hasLeech(): kotlin.Boolean {
         return _builder.hasLeech()
+      }
+
+      /**
+       * <code>optional bool finalized = 22;</code>
+       */
+      public var finalized: kotlin.Boolean
+        @JvmName("getFinalized")
+        get() = _builder.getFinalized()
+        @JvmName("setFinalized")
+        set(value) {
+          _builder.setFinalized(value)
+        }
+      /**
+       * <code>optional bool finalized = 22;</code>
+       */
+      public fun clearFinalized() {
+        _builder.clearFinalized()
+      }
+      /**
+       * <code>optional bool finalized = 22;</code>
+       * @return Whether the finalized field is set.
+       */
+      public fun hasFinalized(): kotlin.Boolean {
+        return _builder.hasFinalized()
       }
 
       /**

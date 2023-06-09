@@ -373,8 +373,11 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.toObject = function
   var f, obj = {
     targetSe: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
     cpsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    elrMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
     earningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    timeEfficacy: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+    timeEfficacy: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    habCapacityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    epicResearchBudget: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -419,6 +422,10 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.deserializeBinaryFr
       var value = /** @type {number} */ (reader.readDouble());
       msg.setCpsMult(value);
       break;
+    case 7:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setElrMult(value);
+      break;
     case 3:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setEarningsMult(value);
@@ -426,6 +433,14 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.deserializeBinaryFr
     case 4:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setTimeEfficacy(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setHabCapacityMult(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setEpicResearchBudget(value);
       break;
     default:
       reader.skipField();
@@ -470,6 +485,13 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.serializeBinaryToWr
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeDouble(
+      7,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 3));
   if (f != null) {
     writer.writeDouble(
@@ -481,6 +503,20 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.serializeBinaryToWr
   if (f != null) {
     writer.writeDouble(
       4,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeDouble(
+      5,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeDouble(
+      6,
       f
     );
   }
@@ -560,6 +596,42 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasCpsMul
 
 
 /**
+ * optional double elr_mult = 7;
+ * @return {number}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.getElrMult = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.setElrMult = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.clearElrMult = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasElrMult = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
  * optional double earnings_mult = 3;
  * @return {number}
  */
@@ -628,6 +700,78 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.clearTime
  */
 proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasTimeEfficacy = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional double hab_capacity_mult = 5;
+ * @return {number}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.getHabCapacityMult = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.setHabCapacityMult = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.clearHabCapacityMult = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasHabCapacityMult = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional double epic_research_budget = 6;
+ * @return {number}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.getEpicResearchBudget = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.setEpicResearchBudget = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams} returns this
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.clearEpicResearchBudget = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.hasEpicResearchBudget = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

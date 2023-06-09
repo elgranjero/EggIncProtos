@@ -43,6 +43,10 @@ message Backup {
         optional bool notifications_queried = 5;
         optional bool notifications_on = 6;
         optional bool notify_daily_gift = 11;
+        optional bool low_performance = 10;
+        optional bool auto_stop_fueling = 25;
+        optional bool max_enabled = 26;
+        optional double last_backup_time = 24;
         optional bool coppa_queried = 7;
         optional bool coppa_restricted = 8;
         optional bool gdpr_consent_queried = 12;
@@ -57,9 +61,6 @@ message Backup {
         optional bool user_cloud_enabled = 15 [default = true];
         optional bool user_analytics_enabled = 22 [default = true];
         optional bool user_personalized_ads_enabled = 23 [default = true];
-        optional bool low_performance = 10;
-        optional bool auto_stop_fueling = 25;
-        optional double last_backup_time = 24;
     }
     
     optional Tutorial tutorial = 5;
@@ -239,6 +240,8 @@ message Backup {
         optional bool boost_token_alert = 17;
         optional bool soul_egg_alert = 18;
         optional bool backup_reminder_alert = 19;
+        optional bool max_button_alert = 23;
+        optional bool mission_target_alert = 24;
     }
     
     optional MyContracts contracts = 13;
@@ -581,12 +584,15 @@ message ContractEvaluation {
     optional uint32 chicken_runs_sent = 7;
     optional uint32 gift_tokens_sent = 8;
     optional uint32 gift_tokens_received = 15;
+    optional double gift_token_value_sent = 28;
+    optional double gift_token_value_received = 29;
     optional uint32 boost_token_allotment = 16;
     optional double buff_time_value = 17;
     optional double teamwork_score = 13;
     optional double other_bonuses = 14;
     optional bool counted_in_season = 20;
     optional string season_id = 21;
+    optional uint32 time_cheats = 27;
     
     repeated PoorBehavior issues = 19;
     enum PoorBehavior {
@@ -596,6 +602,7 @@ message ContractEvaluation {
         DISHONORABLY_DISCHARGED = 3;
         POOR_TEAMWORK = 4;
         ABANDONED_COOP = 5;
+        TIME_CHEAT = 6;
     }
     
     repeated string notes = 12;
@@ -629,6 +636,8 @@ message CoopCompletionSnapshot {
     repeated ContributorSnapshot contributors = 1;
     message ContributorSnapshot {
         optional double contribution = 1;
+        optional double last_contribution_time = 6;
+        optional bool finalized = 7;
         optional double soul_power = 2;
         optional string user_id = 3;
         optional uint32 tokens = 4;
@@ -656,8 +665,11 @@ message ContractSimConfig {
         message GoalParams {
             optional double target_se = 1;
             optional double cps_mult = 2;
+            optional double elr_mult = 7;
             optional double earnings_mult = 3;
             optional double time_efficacy = 4;
+            optional double hab_capacity_mult = 5;
+            optional double epic_research_budget = 6;
         }
     }
 }
@@ -741,6 +753,7 @@ message ContractCoopStatusResponse {
     optional string contract_identifier = 1;
     optional double total_amount = 2;
     optional string coop_identifier = 3;
+    optional Contract.PlayerGrade grade = 17;
     
     repeated ContributionInfo contributors = 4;
     message ContributionInfo {
@@ -754,8 +767,10 @@ message ContractCoopStatusResponse {
         optional FarmProductionParams production_params = 15;
         optional PlayerFarmInfo farm_info = 18;
         optional int32 rank_change = 8;
+        optional bool recently_active = 23;
         optional bool active = 4;
         optional bool leech = 16;
+        optional bool finalized = 22;
         optional bool time_cheat_detected = 7;
         optional Platform platform = 5;
         optional string push_id = 9;
@@ -771,8 +786,11 @@ message ContractCoopStatusResponse {
     optional bool public = 10;
     optional string creator_id = 9;
     optional double seconds_remaining = 5;
+    optional double seconds_since_all_goals_achieved = 16;
+    optional bool all_goals_achieved = 14;
     optional bool all_members_reporting = 6;
     optional double grace_period_seconds_remaining = 7;
+    optional bool cleared_for_exit = 15;
     
     repeated CoopGift gifts = 11;
     message CoopGift {
@@ -815,6 +833,7 @@ message LocalContract {
     optional bool cancelled = 4;
     optional bool new = 8;
     optional double coop_shared_end_time = 5;
+    optional double coop_simulation_end_time = 22;
     optional double coop_grace_period_end_time = 9;
     optional bool coop_contribution_finalized = 10;
     optional double coop_last_uploaded_contribution = 11;
@@ -867,6 +886,7 @@ message CreateCoopRequest {
     optional string coop_identifier = 2;
     optional bool public = 13;
     optional bool cc_only = 14;
+    optional bool allow_all_grades = 16;
     optional double seconds_remaining = 3;
     optional string user_id = 4;
     optional string user_name = 5;
@@ -874,6 +894,7 @@ message CreateCoopRequest {
     optional double eop = 11;
     optional uint32 league = 9;
     optional Contract.PlayerGrade grade = 12;
+    optional bool points_replay = 15;
     optional Platform platform = 6;
     optional uint32 client_version = 7;
 }
@@ -893,6 +914,7 @@ message JoinCoopRequest {
     optional double eop = 12;
     optional uint32 league = 9;
     optional Contract.PlayerGrade grade = 13;
+    optional bool points_replay = 14;
     optional Platform platform = 5;
     optional double seconds_remaining = 11;
     optional uint32 client_version = 7;
@@ -920,6 +942,7 @@ message AutoJoinCoopRequest {
     optional double eop = 10;
     optional uint32 league = 8;
     optional Contract.PlayerGrade grade = 12;
+    optional bool points_replay = 14;
     optional double seconds_remaining = 5;
     optional Platform platform = 6;
     optional uint32 client_version = 7;
@@ -1061,6 +1084,7 @@ message LeaderboardAnalysis {
     optional uint32 count = 2;
     optional double high_score = 3;
     optional double low_score = 4;
+    optional string cursor = 5;
 }
 
 message LeaderboardInfo {
@@ -1376,6 +1400,7 @@ message MissionInfo {
     optional double duration_seconds = 5;
     optional uint32 capacity = 9;
     optional double quality_bump = 11;
+    optional ArtifactSpec.Name target_artifact = 13;
     optional double seconds_remaining = 6;
     optional double start_time_derived = 8;
     optional string mission_log = 10;
@@ -1631,7 +1656,7 @@ message ArtifactsDB {
     optional uint64 item_sequence = 2;
     repeated InventorySlot inventory_slots = 3;
     
-    repeated ActiveArtifactSlot active_artifacts = 7;
+    repeated ActiveArtifactSlot active_artifacts_DEPRECATED = 7;
     message ActiveArtifactSlot {
         optional bool occupied = 1;
         optional uint64 item_id = 2;
@@ -1640,7 +1665,10 @@ message ArtifactsDB {
     repeated ActiveArtifactSet active_artifact_sets = 11;
     message ActiveArtifactSet {
         repeated ActiveArtifactSlot slots = 1;
+        optional uint32 uid = 2;
     }
+    
+    repeated ActiveArtifactSet saved_artifact_sets = 13;
     
     repeated CraftableArtifact artifact_status = 12;
     message CraftableArtifact {
@@ -2126,6 +2154,11 @@ message SubscriptionChangeHintRequest {
     optional BasicRequestInfo rinfo = 3;
     optional string original_transaction_id = 1;
     optional UserSubscriptionInfo.Level next_subscription_level = 2;
+}
+
+message CXPEvalRolloutInfo {
+    optional string current_id = 1;
+    optional uint32 basis_points = 2;
 }
 
 enum Egg {

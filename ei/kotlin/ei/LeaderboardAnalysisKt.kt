@@ -165,6 +165,30 @@ public object LeaderboardAnalysisKt {
     public fun hasLowScore(): kotlin.Boolean {
       return _builder.hasLowScore()
     }
+
+    /**
+     * <code>optional string cursor = 5;</code>
+     */
+    public var cursor: kotlin.String
+      @JvmName("getCursor")
+      get() = _builder.getCursor()
+      @JvmName("setCursor")
+      set(value) {
+        _builder.setCursor(value)
+      }
+    /**
+     * <code>optional string cursor = 5;</code>
+     */
+    public fun clearCursor() {
+      _builder.clearCursor()
+    }
+    /**
+     * <code>optional string cursor = 5;</code>
+     * @return Whether the cursor field is set.
+     */
+    public fun hasCursor(): kotlin.Boolean {
+      return _builder.hasCursor()
+    }
   }
   @kotlin.jvm.JvmName("-initializechunk")
   public inline fun chunk(block: ei.LeaderboardAnalysisKt.ChunkKt.Dsl.() -> kotlin.Unit): ei.Ei.LeaderboardAnalysis.Chunk =

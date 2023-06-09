@@ -82,6 +82,7 @@ proto.ei.JoinCoopRequest.toObject = function(includeInstance, msg) {
     eop: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
     league: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     grade: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    pointsReplay: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
     platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
     clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
@@ -157,6 +158,10 @@ proto.ei.JoinCoopRequest.deserializeBinaryFromReader = function(msg, reader) {
     case 13:
       var value = /** @type {!proto.ei.Contract.PlayerGrade} */ (reader.readEnum());
       msg.setGrade(value);
+      break;
+    case 14:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPointsReplay(value);
       break;
     case 5:
       var value = /** @type {!proto.ei.Platform} */ (reader.readEnum());
@@ -260,6 +265,13 @@ proto.ei.JoinCoopRequest.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeEnum(
       13,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeBool(
+      14,
       f
     );
   }
@@ -609,6 +621,42 @@ proto.ei.JoinCoopRequest.prototype.clearGrade = function() {
  */
 proto.ei.JoinCoopRequest.prototype.hasGrade = function() {
   return jspb.Message.getField(this, 13) != null;
+};
+
+
+/**
+ * optional bool points_replay = 14;
+ * @return {boolean}
+ */
+proto.ei.JoinCoopRequest.prototype.getPointsReplay = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.JoinCoopRequest} returns this
+ */
+proto.ei.JoinCoopRequest.prototype.setPointsReplay = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.JoinCoopRequest} returns this
+ */
+proto.ei.JoinCoopRequest.prototype.clearPointsReplay = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.JoinCoopRequest.prototype.hasPointsReplay = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 

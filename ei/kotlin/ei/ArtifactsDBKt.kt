@@ -195,70 +195,70 @@ public object ArtifactsDBKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class ActiveArtifactsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class ActiveArtifactsDEPRECATEDProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
      */
-     public val activeArtifacts: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>
+     public val activeArtifactsDEPRECATED: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
-        _builder.getActiveArtifactsList()
+        _builder.getActiveArtifactsDEPRECATEDList()
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
-     * @param value The activeArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * @param value The activeArtifactsDEPRECATED to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addActiveArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
-      _builder.addActiveArtifacts(value)
+    @kotlin.jvm.JvmName("addActiveArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+      _builder.addActiveArtifactsDEPRECATED(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
-     * @param value The activeArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * @param value The activeArtifactsDEPRECATED to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignActiveArtifacts")
+    @kotlin.jvm.JvmName("plusAssignActiveArtifactsDEPRECATED")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
-     * @param values The activeArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * @param values The activeArtifactsDEPRECATED to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllActiveArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
-      _builder.addAllActiveArtifacts(values)
+    @kotlin.jvm.JvmName("addAllActiveArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
+      _builder.addAllActiveArtifactsDEPRECATED(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
-     * @param values The activeArtifacts to add.
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * @param values The activeArtifactsDEPRECATED to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllActiveArtifacts")
+    @kotlin.jvm.JvmName("plusAssignAllActiveArtifactsDEPRECATED")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
      * @param index The index to set the value at.
-     * @param value The activeArtifacts to set.
+     * @param value The activeArtifactsDEPRECATED to set.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setActiveArtifacts")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
-      _builder.setActiveArtifacts(index, value)
+    @kotlin.jvm.JvmName("setActiveArtifactsDEPRECATED")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+      _builder.setActiveArtifactsDEPRECATED(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts = 7;</code>
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearActiveArtifacts")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsProxy>.clear() {
-      _builder.clearActiveArtifacts()
+    @kotlin.jvm.JvmName("clearActiveArtifactsDEPRECATED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.clear() {
+      _builder.clearActiveArtifactsDEPRECATED()
     }
 
 
@@ -331,6 +331,78 @@ public object ArtifactsDBKt {
     @kotlin.jvm.JvmName("clearActiveArtifactSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, ActiveArtifactSetsProxy>.clear() {
       _builder.clearActiveArtifactSets()
+    }
+
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class SavedArtifactSetsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     */
+     public val savedArtifactSets: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getSavedArtifactSetsList()
+      )
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * @param value The savedArtifactSets to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addSavedArtifactSets")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSet) {
+      _builder.addSavedArtifactSets(value)
+    }
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * @param value The savedArtifactSets to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignSavedArtifactSets")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSet) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * @param values The savedArtifactSets to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllSavedArtifactSets")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSet>) {
+      _builder.addAllSavedArtifactSets(values)
+    }
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * @param values The savedArtifactSets to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllSavedArtifactSets")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSet>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * @param index The index to set the value at.
+     * @param value The savedArtifactSets to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setSavedArtifactSets")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSet) {
+      _builder.setSavedArtifactSets(index, value)
+    }
+    /**
+     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearSavedArtifactSets")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSet, SavedArtifactSetsProxy>.clear() {
+      _builder.clearSavedArtifactSets()
     }
 
 
@@ -924,6 +996,30 @@ public object ArtifactsDBKt {
         _builder.clearSlots()
       }
 
+
+      /**
+       * <code>optional uint32 uid = 2;</code>
+       */
+      public var uid: kotlin.Int
+        @JvmName("getUid")
+        get() = _builder.getUid()
+        @JvmName("setUid")
+        set(value) {
+          _builder.setUid(value)
+        }
+      /**
+       * <code>optional uint32 uid = 2;</code>
+       */
+      public fun clearUid() {
+        _builder.clearUid()
+      }
+      /**
+       * <code>optional uint32 uid = 2;</code>
+       * @return Whether the uid field is set.
+       */
+      public fun hasUid(): kotlin.Boolean {
+        return _builder.hasUid()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializecraftableArtifact")
