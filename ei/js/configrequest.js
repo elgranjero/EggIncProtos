@@ -73,8 +73,11 @@ proto.ei.ConfigRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
     soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    artifactsEnabled: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-    fuelTankUnlocked: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f
+    contractsUnlocked: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    artifactsUnlocked: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+    fuelTankUnlocked: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    proPermit: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    ultra: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -120,13 +123,25 @@ proto.ei.ConfigRequest.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSoulEggs(value);
       break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setContractsUnlocked(value);
+      break;
     case 3:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setArtifactsEnabled(value);
+      msg.setArtifactsUnlocked(value);
       break;
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setFuelTankUnlocked(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setProPermit(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setUltra(value);
       break;
     default:
       reader.skipField();
@@ -172,6 +187,13 @@ proto.ei.ConfigRequest.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 3));
   if (f != null) {
     writer.writeBool(
@@ -183,6 +205,20 @@ proto.ei.ConfigRequest.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       4,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeBool(
+      7,
       f
     );
   }
@@ -263,10 +299,46 @@ proto.ei.ConfigRequest.prototype.hasSoulEggs = function() {
 
 
 /**
- * optional bool artifacts_enabled = 3;
+ * optional bool contracts_unlocked = 5;
  * @return {boolean}
  */
-proto.ei.ConfigRequest.prototype.getArtifactsEnabled = function() {
+proto.ei.ConfigRequest.prototype.getContractsUnlocked = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.setContractsUnlocked = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.clearContractsUnlocked = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.hasContractsUnlocked = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bool artifacts_unlocked = 3;
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.getArtifactsUnlocked = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
@@ -275,7 +347,7 @@ proto.ei.ConfigRequest.prototype.getArtifactsEnabled = function() {
  * @param {boolean} value
  * @return {!proto.ei.ConfigRequest} returns this
  */
-proto.ei.ConfigRequest.prototype.setArtifactsEnabled = function(value) {
+proto.ei.ConfigRequest.prototype.setArtifactsUnlocked = function(value) {
   return jspb.Message.setField(this, 3, value);
 };
 
@@ -284,7 +356,7 @@ proto.ei.ConfigRequest.prototype.setArtifactsEnabled = function(value) {
  * Clears the field making it undefined.
  * @return {!proto.ei.ConfigRequest} returns this
  */
-proto.ei.ConfigRequest.prototype.clearArtifactsEnabled = function() {
+proto.ei.ConfigRequest.prototype.clearArtifactsUnlocked = function() {
   return jspb.Message.setField(this, 3, undefined);
 };
 
@@ -293,7 +365,7 @@ proto.ei.ConfigRequest.prototype.clearArtifactsEnabled = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ConfigRequest.prototype.hasArtifactsEnabled = function() {
+proto.ei.ConfigRequest.prototype.hasArtifactsUnlocked = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -331,6 +403,78 @@ proto.ei.ConfigRequest.prototype.clearFuelTankUnlocked = function() {
  */
 proto.ei.ConfigRequest.prototype.hasFuelTankUnlocked = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool pro_permit = 6;
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.getProPermit = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.setProPermit = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.clearProPermit = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.hasProPermit = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool ultra = 7;
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.getUltra = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.setUltra = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.clearUltra = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.hasUltra = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

@@ -538,6 +538,12 @@ extern ShellObjectSpecDefaultTypeInternal _ShellObjectSpec_default_instance_;
 class ShellObjectSpec_LODPiece;
 struct ShellObjectSpec_LODPieceDefaultTypeInternal;
 extern ShellObjectSpec_LODPieceDefaultTypeInternal _ShellObjectSpec_LODPiece_default_instance_;
+class ShellPopularityStats;
+struct ShellPopularityStatsDefaultTypeInternal;
+extern ShellPopularityStatsDefaultTypeInternal _ShellPopularityStats_default_instance_;
+class ShellPopularityStats_Entry;
+struct ShellPopularityStats_EntryDefaultTypeInternal;
+extern ShellPopularityStats_EntryDefaultTypeInternal _ShellPopularityStats_Entry_default_instance_;
 class ShellSetSpec;
 struct ShellSetSpecDefaultTypeInternal;
 extern ShellSetSpecDefaultTypeInternal _ShellSetSpec_default_instance_;
@@ -749,6 +755,8 @@ template<> ::ei::ShellDB_ShellStatus* Arena::CreateMaybeMessage<::ei::ShellDB_Sh
 template<> ::ei::ShellGroupSpec* Arena::CreateMaybeMessage<::ei::ShellGroupSpec>(Arena*);
 template<> ::ei::ShellObjectSpec* Arena::CreateMaybeMessage<::ei::ShellObjectSpec>(Arena*);
 template<> ::ei::ShellObjectSpec_LODPiece* Arena::CreateMaybeMessage<::ei::ShellObjectSpec_LODPiece>(Arena*);
+template<> ::ei::ShellPopularityStats* Arena::CreateMaybeMessage<::ei::ShellPopularityStats>(Arena*);
+template<> ::ei::ShellPopularityStats_Entry* Arena::CreateMaybeMessage<::ei::ShellPopularityStats_Entry>(Arena*);
 template<> ::ei::ShellSetSpec* Arena::CreateMaybeMessage<::ei::ShellSetSpec>(Arena*);
 template<> ::ei::ShellSetSpec_VariationSpec* Arena::CreateMaybeMessage<::ei::ShellSetSpec_VariationSpec>(Arena*);
 template<> ::ei::ShellSpec* Arena::CreateMaybeMessage<::ei::ShellSpec>(Arena*);
@@ -1753,6 +1761,68 @@ inline bool RewardType_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<RewardType>(
     RewardType_descriptor(), name, value);
 }
+enum UILocation : int {
+  NONE = 0,
+  SHOP = 1,
+  BOOST_SHOP = 2,
+  PIGGY = 3,
+  PRO_PERMIT = 4,
+  ULTRA_SHOP = 10,
+  SHELLS = 5,
+  SHELL_SETS = 6,
+  CHICKENS = 7,
+  CHICKEN_HATS = 11,
+  EPIC_RESEARCH = 8,
+  SETTINGS = 9
+};
+bool UILocation_IsValid(int value);
+constexpr UILocation UILocation_MIN = NONE;
+constexpr UILocation UILocation_MAX = CHICKEN_HATS;
+constexpr int UILocation_ARRAYSIZE = UILocation_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UILocation_descriptor();
+template<typename T>
+inline const std::string& UILocation_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, UILocation>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function UILocation_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    UILocation_descriptor(), enum_t_value);
+}
+inline bool UILocation_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, UILocation* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<UILocation>(
+    UILocation_descriptor(), name, value);
+}
+enum UserType : int {
+  ALL_USERS = 0,
+  CONTRACTS_UNLOCKED = 1,
+  ARTIFACTS_UNLOCKED = 3,
+  FUEL_TANK_UNLOCKED = 4,
+  PRO_PERMIT_ACTIVE = 5,
+  ULTRA_ACTIVE = 6,
+  NO_PRO_PERMIT = 7,
+  NO_ULTRA = 8
+};
+bool UserType_IsValid(int value);
+constexpr UserType UserType_MIN = ALL_USERS;
+constexpr UserType UserType_MAX = NO_ULTRA;
+constexpr int UserType_ARRAYSIZE = UserType_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserType_descriptor();
+template<typename T>
+inline const std::string& UserType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, UserType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function UserType_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    UserType_descriptor(), enum_t_value);
+}
+inline bool UserType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, UserType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<UserType>(
+    UserType_descriptor(), name, value);
+}
 enum LeaderboardScope : int {
   ALL_TIME = 0,
   CURRENT_SEASON = 1
@@ -1926,6 +1996,7 @@ class Backup_Settings final :
     kDataCollectionConsentQueriedFieldNumber = 20,
     kDataCollectionConsentGivenFieldNumber = 21,
     kLastBackupTimeFieldNumber = 24,
+    kLastNotificationQueryTimeFieldNumber = 27,
     kUserAdsEnabledFieldNumber = 14,
     kUserCloudEnabledFieldNumber = 15,
     kUserAnalyticsEnabledFieldNumber = 22,
@@ -2217,6 +2288,19 @@ class Backup_Settings final :
   void _internal_set_last_backup_time(double value);
   public:
 
+  // optional double last_notification_query_time = 27;
+  bool has_last_notification_query_time() const;
+  private:
+  bool _internal_has_last_notification_query_time() const;
+  public:
+  void clear_last_notification_query_time();
+  double last_notification_query_time() const;
+  void set_last_notification_query_time(double value);
+  private:
+  double _internal_last_notification_query_time() const;
+  void _internal_set_last_notification_query_time(double value);
+  public:
+
   // optional bool user_ads_enabled = 14 [default = true];
   bool has_user_ads_enabled() const;
   private:
@@ -2300,6 +2384,7 @@ class Backup_Settings final :
   bool data_collection_consent_queried_;
   bool data_collection_consent_given_;
   double last_backup_time_;
+  double last_notification_query_time_;
   bool user_ads_enabled_;
   bool user_cloud_enabled_;
   bool user_analytics_enabled_;
@@ -19390,6 +19475,7 @@ class ContractCoopStatusResponse_CoopGift final :
   enum : int {
     kUserIdFieldNumber = 1,
     kUserNameFieldNumber = 3,
+    kTrackingFieldNumber = 4,
     kAmountFieldNumber = 2,
   };
   // optional string user_id = 1;
@@ -19428,6 +19514,24 @@ class ContractCoopStatusResponse_CoopGift final :
   std::string* _internal_mutable_user_name();
   public:
 
+  // optional string tracking = 4;
+  bool has_tracking() const;
+  private:
+  bool _internal_has_tracking() const;
+  public:
+  void clear_tracking();
+  const std::string& tracking() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_tracking(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_tracking();
+  PROTOBUF_NODISCARD std::string* release_tracking();
+  void set_allocated_tracking(std::string* tracking);
+  private:
+  const std::string& _internal_tracking() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_tracking(const std::string& value);
+  std::string* _internal_mutable_tracking();
+  public:
+
   // optional uint32 amount = 2;
   bool has_amount() const;
   private:
@@ -19452,6 +19556,7 @@ class ContractCoopStatusResponse_CoopGift final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tracking_;
   uint32_t amount_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -30916,12 +31021,19 @@ class InGameMail final :
     kActionFieldNumber = 4,
     kUrlFieldNumber = 5,
     kDateFieldNumber = 8,
+    kAppLinkExtraFieldNumber = 15,
+    kImageFieldNumber = 16,
     kGoldTipFieldNumber = 6,
     kPlatformFieldNumber = 7,
     kMinClientVersionFieldNumber = 10,
     kMinSoulEggsFieldNumber = 11,
     kMinMysticalBonusFieldNumber = 13,
     kMaxClientVersionFieldNumber = 12,
+    kAppLinkFieldNumber = 14,
+    kUserTypeFieldNumber = 17,
+    kMinPiggyBreaksFieldNumber = 20,
+    kImageWidthFieldNumber = 21,
+    kImageHeightFieldNumber = 22,
   };
   // repeated string builds = 9;
   int builds_size() const;
@@ -31055,6 +31167,42 @@ class InGameMail final :
   std::string* _internal_mutable_date();
   public:
 
+  // optional string app_link_extra = 15;
+  bool has_app_link_extra() const;
+  private:
+  bool _internal_has_app_link_extra() const;
+  public:
+  void clear_app_link_extra();
+  const std::string& app_link_extra() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_app_link_extra(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_app_link_extra();
+  PROTOBUF_NODISCARD std::string* release_app_link_extra();
+  void set_allocated_app_link_extra(std::string* app_link_extra);
+  private:
+  const std::string& _internal_app_link_extra() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_app_link_extra(const std::string& value);
+  std::string* _internal_mutable_app_link_extra();
+  public:
+
+  // optional .ei.DLCItem image = 16;
+  bool has_image() const;
+  private:
+  bool _internal_has_image() const;
+  public:
+  void clear_image();
+  const ::ei::DLCItem& image() const;
+  PROTOBUF_NODISCARD ::ei::DLCItem* release_image();
+  ::ei::DLCItem* mutable_image();
+  void set_allocated_image(::ei::DLCItem* image);
+  private:
+  const ::ei::DLCItem& _internal_image() const;
+  ::ei::DLCItem* _internal_mutable_image();
+  public:
+  void unsafe_arena_set_allocated_image(
+      ::ei::DLCItem* image);
+  ::ei::DLCItem* unsafe_arena_release_image();
+
   // optional double gold_tip = 6;
   bool has_gold_tip() const;
   private:
@@ -31133,6 +31281,71 @@ class InGameMail final :
   void _internal_set_max_client_version(uint32_t value);
   public:
 
+  // optional .ei.UILocation app_link = 14;
+  bool has_app_link() const;
+  private:
+  bool _internal_has_app_link() const;
+  public:
+  void clear_app_link();
+  ::ei::UILocation app_link() const;
+  void set_app_link(::ei::UILocation value);
+  private:
+  ::ei::UILocation _internal_app_link() const;
+  void _internal_set_app_link(::ei::UILocation value);
+  public:
+
+  // optional .ei.UserType user_type = 17;
+  bool has_user_type() const;
+  private:
+  bool _internal_has_user_type() const;
+  public:
+  void clear_user_type();
+  ::ei::UserType user_type() const;
+  void set_user_type(::ei::UserType value);
+  private:
+  ::ei::UserType _internal_user_type() const;
+  void _internal_set_user_type(::ei::UserType value);
+  public:
+
+  // optional uint32 min_piggy_breaks = 20;
+  bool has_min_piggy_breaks() const;
+  private:
+  bool _internal_has_min_piggy_breaks() const;
+  public:
+  void clear_min_piggy_breaks();
+  uint32_t min_piggy_breaks() const;
+  void set_min_piggy_breaks(uint32_t value);
+  private:
+  uint32_t _internal_min_piggy_breaks() const;
+  void _internal_set_min_piggy_breaks(uint32_t value);
+  public:
+
+  // optional double image_width = 21;
+  bool has_image_width() const;
+  private:
+  bool _internal_has_image_width() const;
+  public:
+  void clear_image_width();
+  double image_width() const;
+  void set_image_width(double value);
+  private:
+  double _internal_image_width() const;
+  void _internal_set_image_width(double value);
+  public:
+
+  // optional double image_height = 22;
+  bool has_image_height() const;
+  private:
+  bool _internal_has_image_height() const;
+  public:
+  void clear_image_height();
+  double image_height() const;
+  void set_image_height(double value);
+  private:
+  double _internal_image_height() const;
+  void _internal_set_image_height(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.InGameMail)
  private:
   class _Internal;
@@ -31149,12 +31362,19 @@ class InGameMail final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr app_link_extra_;
+  ::ei::DLCItem* image_;
   double gold_tip_;
   uint32_t platform_;
   uint32_t min_client_version_;
   double min_soul_eggs_;
   double min_mystical_bonus_;
   uint32_t max_client_version_;
+  int app_link_;
+  int user_type_;
+  uint32_t min_piggy_breaks_;
+  double image_width_;
+  double image_height_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -32106,8 +32326,11 @@ class ConfigRequest final :
   enum : int {
     kRinfoFieldNumber = 1,
     kSoulEggsFieldNumber = 2,
-    kArtifactsEnabledFieldNumber = 3,
+    kContractsUnlockedFieldNumber = 5,
+    kArtifactsUnlockedFieldNumber = 3,
     kFuelTankUnlockedFieldNumber = 4,
+    kProPermitFieldNumber = 6,
+    kUltraFieldNumber = 7,
   };
   // optional .ei.BasicRequestInfo rinfo = 1;
   bool has_rinfo() const;
@@ -32140,17 +32363,30 @@ class ConfigRequest final :
   void _internal_set_soul_eggs(double value);
   public:
 
-  // optional bool artifacts_enabled = 3;
-  bool has_artifacts_enabled() const;
+  // optional bool contracts_unlocked = 5;
+  bool has_contracts_unlocked() const;
   private:
-  bool _internal_has_artifacts_enabled() const;
+  bool _internal_has_contracts_unlocked() const;
   public:
-  void clear_artifacts_enabled();
-  bool artifacts_enabled() const;
-  void set_artifacts_enabled(bool value);
+  void clear_contracts_unlocked();
+  bool contracts_unlocked() const;
+  void set_contracts_unlocked(bool value);
   private:
-  bool _internal_artifacts_enabled() const;
-  void _internal_set_artifacts_enabled(bool value);
+  bool _internal_contracts_unlocked() const;
+  void _internal_set_contracts_unlocked(bool value);
+  public:
+
+  // optional bool artifacts_unlocked = 3;
+  bool has_artifacts_unlocked() const;
+  private:
+  bool _internal_has_artifacts_unlocked() const;
+  public:
+  void clear_artifacts_unlocked();
+  bool artifacts_unlocked() const;
+  void set_artifacts_unlocked(bool value);
+  private:
+  bool _internal_artifacts_unlocked() const;
+  void _internal_set_artifacts_unlocked(bool value);
   public:
 
   // optional bool fuel_tank_unlocked = 4;
@@ -32166,6 +32402,32 @@ class ConfigRequest final :
   void _internal_set_fuel_tank_unlocked(bool value);
   public:
 
+  // optional bool pro_permit = 6;
+  bool has_pro_permit() const;
+  private:
+  bool _internal_has_pro_permit() const;
+  public:
+  void clear_pro_permit();
+  bool pro_permit() const;
+  void set_pro_permit(bool value);
+  private:
+  bool _internal_pro_permit() const;
+  void _internal_set_pro_permit(bool value);
+  public:
+
+  // optional bool ultra = 7;
+  bool has_ultra() const;
+  private:
+  bool _internal_has_ultra() const;
+  public:
+  void clear_ultra();
+  bool ultra() const;
+  void set_ultra(bool value);
+  private:
+  bool _internal_ultra() const;
+  void _internal_set_ultra(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.ConfigRequest)
  private:
   class _Internal;
@@ -32177,8 +32439,11 @@ class ConfigRequest final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::ei::BasicRequestInfo* rinfo_;
   double soul_eggs_;
-  bool artifacts_enabled_;
+  bool contracts_unlocked_;
+  bool artifacts_unlocked_;
   bool fuel_tank_unlocked_;
+  bool pro_permit_;
+  bool ultra_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -42948,6 +43213,7 @@ class ShellSpec final :
     kRequiredSoulEggsFieldNumber = 6,
     kSecondsRemainingFieldNumber = 16,
     kSecondsUntilAvailableFieldNumber = 17,
+    kPopularityFieldNumber = 21,
     kModifiedGeometryFieldNumber = 19,
     kIsNewFieldNumber = 14,
     kExpiresFieldNumber = 15,
@@ -43144,6 +43410,19 @@ class ShellSpec final :
   void _internal_set_seconds_until_available(double value);
   public:
 
+  // optional uint64 popularity = 21;
+  bool has_popularity() const;
+  private:
+  bool _internal_has_popularity() const;
+  public:
+  void clear_popularity();
+  uint64_t popularity() const;
+  void set_popularity(uint64_t value);
+  private:
+  uint64_t _internal_popularity() const;
+  void _internal_set_popularity(uint64_t value);
+  public:
+
   // optional bool modified_geometry = 19;
   bool has_modified_geometry() const;
   private:
@@ -43217,6 +43496,7 @@ class ShellSpec final :
   double required_soul_eggs_;
   double seconds_remaining_;
   double seconds_until_available_;
+  uint64_t popularity_;
   bool modified_geometry_;
   bool is_new_;
   bool expires_;
@@ -43612,6 +43892,7 @@ class ShellSetSpec final :
     kSecondsRemainingFieldNumber = 11,
     kDiscountFieldNumber = 17,
     kSecondsUntilAvailableFieldNumber = 18,
+    kPopularityFieldNumber = 21,
     kPriceMultDEPRECATEDFieldNumber = 8,
   };
   // repeated .ei.ShellSetSpec.VariationSpec variations = 15;
@@ -43891,6 +44172,19 @@ class ShellSetSpec final :
   void _internal_set_seconds_until_available(double value);
   public:
 
+  // optional uint64 popularity = 21;
+  bool has_popularity() const;
+  private:
+  bool _internal_has_popularity() const;
+  public:
+  void clear_popularity();
+  uint64_t popularity() const;
+  void set_popularity(uint64_t value);
+  private:
+  uint64_t _internal_popularity() const;
+  void _internal_set_popularity(uint64_t value);
+  public:
+
   // optional double price_mult_DEPRECATED = 8 [default = 1];
   bool has_price_mult_deprecated() const;
   private:
@@ -43932,6 +44226,7 @@ class ShellSetSpec final :
   double seconds_remaining_;
   double discount_;
   double seconds_until_available_;
+  uint64_t popularity_;
   double price_mult_deprecated_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -44300,6 +44595,7 @@ class ShellObjectSpec final :
     kChickenAnimationFieldNumber = 16,
     kSecondsRemainingFieldNumber = 12,
     kSecondsUntilAvailableFieldNumber = 18,
+    kPopularityFieldNumber = 19,
     kSortPriorityFieldNumber = 17,
     kAssetTypeFieldNumber = 3,
   };
@@ -44551,6 +44847,19 @@ class ShellObjectSpec final :
   void _internal_set_seconds_until_available(double value);
   public:
 
+  // optional uint64 popularity = 19;
+  bool has_popularity() const;
+  private:
+  bool _internal_has_popularity() const;
+  public:
+  void clear_popularity();
+  uint64_t popularity() const;
+  void set_popularity(uint64_t value);
+  private:
+  uint64_t _internal_popularity() const;
+  void _internal_set_popularity(uint64_t value);
+  public:
+
   // optional int32 sort_priority = 17;
   bool has_sort_priority() const;
   private:
@@ -44602,6 +44911,7 @@ class ShellObjectSpec final :
   int chicken_animation_;
   double seconds_remaining_;
   double seconds_until_available_;
+  uint64_t popularity_;
   int32_t sort_priority_;
   int asset_type_;
   friend struct ::TableStruct_ei_2eproto;
@@ -47243,6 +47553,372 @@ class ShellDB final :
 };
 // -------------------------------------------------------------------
 
+class ShellPopularityStats_Entry final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellPopularityStats.Entry) */ {
+ public:
+  inline ShellPopularityStats_Entry() : ShellPopularityStats_Entry(nullptr) {}
+  ~ShellPopularityStats_Entry() override;
+  explicit PROTOBUF_CONSTEXPR ShellPopularityStats_Entry(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellPopularityStats_Entry(const ShellPopularityStats_Entry& from);
+  ShellPopularityStats_Entry(ShellPopularityStats_Entry&& from) noexcept
+    : ShellPopularityStats_Entry() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellPopularityStats_Entry& operator=(const ShellPopularityStats_Entry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellPopularityStats_Entry& operator=(ShellPopularityStats_Entry&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellPopularityStats_Entry& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellPopularityStats_Entry* internal_default_instance() {
+    return reinterpret_cast<const ShellPopularityStats_Entry*>(
+               &_ShellPopularityStats_Entry_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    173;
+
+  friend void swap(ShellPopularityStats_Entry& a, ShellPopularityStats_Entry& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellPopularityStats_Entry* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellPopularityStats_Entry* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellPopularityStats_Entry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellPopularityStats_Entry>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellPopularityStats_Entry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellPopularityStats_Entry& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellPopularityStats_Entry* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellPopularityStats.Entry";
+  }
+  protected:
+  explicit ShellPopularityStats_Entry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIdFieldNumber = 1,
+    kSpentFieldNumber = 3,
+    kCountFieldNumber = 4,
+    kElementFieldNumber = 2,
+  };
+  // optional string id = 1;
+  bool has_id() const;
+  private:
+  bool _internal_has_id() const;
+  public:
+  void clear_id();
+  const std::string& id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_id();
+  PROTOBUF_NODISCARD std::string* release_id();
+  void set_allocated_id(std::string* id);
+  private:
+  const std::string& _internal_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
+  std::string* _internal_mutable_id();
+  public:
+
+  // optional uint64 spent = 3;
+  bool has_spent() const;
+  private:
+  bool _internal_has_spent() const;
+  public:
+  void clear_spent();
+  uint64_t spent() const;
+  void set_spent(uint64_t value);
+  private:
+  uint64_t _internal_spent() const;
+  void _internal_set_spent(uint64_t value);
+  public:
+
+  // optional uint64 count = 4;
+  bool has_count() const;
+  private:
+  bool _internal_has_count() const;
+  public:
+  void clear_count();
+  uint64_t count() const;
+  void set_count(uint64_t value);
+  private:
+  uint64_t _internal_count() const;
+  void _internal_set_count(uint64_t value);
+  public:
+
+  // optional .ei.ShellDB.FarmElement element = 2;
+  bool has_element() const;
+  private:
+  bool _internal_has_element() const;
+  public:
+  void clear_element();
+  ::ei::ShellDB_FarmElement element() const;
+  void set_element(::ei::ShellDB_FarmElement value);
+  private:
+  ::ei::ShellDB_FarmElement _internal_element() const;
+  void _internal_set_element(::ei::ShellDB_FarmElement value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ei.ShellPopularityStats.Entry)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
+  uint64_t spent_;
+  uint64_t count_;
+  int element_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShellPopularityStats final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellPopularityStats) */ {
+ public:
+  inline ShellPopularityStats() : ShellPopularityStats(nullptr) {}
+  ~ShellPopularityStats() override;
+  explicit PROTOBUF_CONSTEXPR ShellPopularityStats(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ShellPopularityStats(const ShellPopularityStats& from);
+  ShellPopularityStats(ShellPopularityStats&& from) noexcept
+    : ShellPopularityStats() {
+    *this = ::std::move(from);
+  }
+
+  inline ShellPopularityStats& operator=(const ShellPopularityStats& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShellPopularityStats& operator=(ShellPopularityStats&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ShellPopularityStats& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ShellPopularityStats* internal_default_instance() {
+    return reinterpret_cast<const ShellPopularityStats*>(
+               &_ShellPopularityStats_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    174;
+
+  friend void swap(ShellPopularityStats& a, ShellPopularityStats& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShellPopularityStats* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ShellPopularityStats* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ShellPopularityStats* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShellPopularityStats>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ShellPopularityStats& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ShellPopularityStats& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShellPopularityStats* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ei.ShellPopularityStats";
+  }
+  protected:
+  explicit ShellPopularityStats(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ShellPopularityStats_Entry Entry;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kDataFieldNumber = 1,
+  };
+  // repeated .ei.ShellPopularityStats.Entry data = 1;
+  int data_size() const;
+  private:
+  int _internal_data_size() const;
+  public:
+  void clear_data();
+  ::ei::ShellPopularityStats_Entry* mutable_data(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellPopularityStats_Entry >*
+      mutable_data();
+  private:
+  const ::ei::ShellPopularityStats_Entry& _internal_data(int index) const;
+  ::ei::ShellPopularityStats_Entry* _internal_add_data();
+  public:
+  const ::ei::ShellPopularityStats_Entry& data(int index) const;
+  ::ei::ShellPopularityStats_Entry* add_data();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellPopularityStats_Entry >&
+      data() const;
+
+  // @@protoc_insertion_point(class_scope:ei.ShellPopularityStats)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellPopularityStats_Entry > data_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ShellsActionLog final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ei.ShellsActionLog) */ {
  public:
@@ -47298,7 +47974,7 @@ class ShellsActionLog final :
                &_ShellsActionLog_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    173;
+    175;
 
   friend void swap(ShellsActionLog& a, ShellsActionLog& b) {
     a.Swap(&b);
@@ -47643,7 +48319,7 @@ class UserVerificationAnalysis final :
                &_UserVerificationAnalysis_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    174;
+    176;
 
   friend void swap(UserVerificationAnalysis& a, UserVerificationAnalysis& b) {
     a.Swap(&b);
@@ -48306,7 +48982,7 @@ class UserSubscriptionInfo_HistoryEntry final :
                &_UserSubscriptionInfo_HistoryEntry_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    175;
+    177;
 
   friend void swap(UserSubscriptionInfo_HistoryEntry& a, UserSubscriptionInfo_HistoryEntry& b) {
     a.Swap(&b);
@@ -48501,7 +49177,7 @@ class UserSubscriptionInfo final :
                &_UserSubscriptionInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    176;
+    178;
 
   friend void swap(UserSubscriptionInfo& a, UserSubscriptionInfo& b) {
     a.Swap(&b);
@@ -48982,7 +49658,7 @@ class SubscriptionChangeHintRequest final :
                &_SubscriptionChangeHintRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    177;
+    179;
 
   friend void swap(SubscriptionChangeHintRequest& a, SubscriptionChangeHintRequest& b) {
     a.Swap(&b);
@@ -49177,7 +49853,7 @@ class CXPEvalRolloutInfo final :
                &_CXPEvalRolloutInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    178;
+    180;
 
   friend void swap(CXPEvalRolloutInfo& a, CXPEvalRolloutInfo& b) {
     a.Swap(&b);
@@ -49472,6 +50148,34 @@ inline void Backup_Settings::_internal_set_notifications_queried(bool value) {
 inline void Backup_Settings::set_notifications_queried(bool value) {
   _internal_set_notifications_queried(value);
   // @@protoc_insertion_point(field_set:ei.Backup.Settings.notifications_queried)
+}
+
+// optional double last_notification_query_time = 27;
+inline bool Backup_Settings::_internal_has_last_notification_query_time() const {
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_last_notification_query_time() const {
+  return _internal_has_last_notification_query_time();
+}
+inline void Backup_Settings::clear_last_notification_query_time() {
+  last_notification_query_time_ = 0;
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline double Backup_Settings::_internal_last_notification_query_time() const {
+  return last_notification_query_time_;
+}
+inline double Backup_Settings::last_notification_query_time() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.last_notification_query_time)
+  return _internal_last_notification_query_time();
+}
+inline void Backup_Settings::_internal_set_last_notification_query_time(double value) {
+  _has_bits_[0] |= 0x00400000u;
+  last_notification_query_time_ = value;
+}
+inline void Backup_Settings::set_last_notification_query_time(double value) {
+  _internal_set_last_notification_query_time(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.last_notification_query_time)
 }
 
 // optional bool notifications_on = 6;
@@ -49924,7 +50628,7 @@ inline void Backup_Settings::set_last_day_age_queried(uint32_t value) {
 
 // optional bool user_ads_enabled = 14 [default = true];
 inline bool Backup_Settings::_internal_has_user_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_ads_enabled() const {
@@ -49932,7 +50636,7 @@ inline bool Backup_Settings::has_user_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_ads_enabled() {
   user_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline bool Backup_Settings::_internal_user_ads_enabled() const {
   return user_ads_enabled_;
@@ -49942,7 +50646,7 @@ inline bool Backup_Settings::user_ads_enabled() const {
   return _internal_user_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
   user_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_ads_enabled(bool value) {
@@ -49952,7 +50656,7 @@ inline void Backup_Settings::set_user_ads_enabled(bool value) {
 
 // optional bool user_cloud_enabled = 15 [default = true];
 inline bool Backup_Settings::_internal_has_user_cloud_enabled() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_cloud_enabled() const {
@@ -49960,7 +50664,7 @@ inline bool Backup_Settings::has_user_cloud_enabled() const {
 }
 inline void Backup_Settings::clear_user_cloud_enabled() {
   user_cloud_enabled_ = true;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline bool Backup_Settings::_internal_user_cloud_enabled() const {
   return user_cloud_enabled_;
@@ -49970,7 +50674,7 @@ inline bool Backup_Settings::user_cloud_enabled() const {
   return _internal_user_cloud_enabled();
 }
 inline void Backup_Settings::_internal_set_user_cloud_enabled(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
   user_cloud_enabled_ = value;
 }
 inline void Backup_Settings::set_user_cloud_enabled(bool value) {
@@ -49980,7 +50684,7 @@ inline void Backup_Settings::set_user_cloud_enabled(bool value) {
 
 // optional bool user_analytics_enabled = 22 [default = true];
 inline bool Backup_Settings::_internal_has_user_analytics_enabled() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_analytics_enabled() const {
@@ -49988,7 +50692,7 @@ inline bool Backup_Settings::has_user_analytics_enabled() const {
 }
 inline void Backup_Settings::clear_user_analytics_enabled() {
   user_analytics_enabled_ = true;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline bool Backup_Settings::_internal_user_analytics_enabled() const {
   return user_analytics_enabled_;
@@ -49998,7 +50702,7 @@ inline bool Backup_Settings::user_analytics_enabled() const {
   return _internal_user_analytics_enabled();
 }
 inline void Backup_Settings::_internal_set_user_analytics_enabled(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
   user_analytics_enabled_ = value;
 }
 inline void Backup_Settings::set_user_analytics_enabled(bool value) {
@@ -50008,7 +50712,7 @@ inline void Backup_Settings::set_user_analytics_enabled(bool value) {
 
 // optional bool user_personalized_ads_enabled = 23 [default = true];
 inline bool Backup_Settings::_internal_has_user_personalized_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
@@ -50016,7 +50720,7 @@ inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_personalized_ads_enabled() {
   user_personalized_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline bool Backup_Settings::_internal_user_personalized_ads_enabled() const {
   return user_personalized_ads_enabled_;
@@ -50026,7 +50730,7 @@ inline bool Backup_Settings::user_personalized_ads_enabled() const {
   return _internal_user_personalized_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_personalized_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x04000000u;
   user_personalized_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_personalized_ads_enabled(bool value) {
@@ -70421,7 +71125,7 @@ inline void ContractCoopStatusResponse_CoopGift::set_allocated_user_name(std::st
 
 // optional uint32 amount = 2;
 inline bool ContractCoopStatusResponse_CoopGift::_internal_has_amount() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_CoopGift::has_amount() const {
@@ -70429,7 +71133,7 @@ inline bool ContractCoopStatusResponse_CoopGift::has_amount() const {
 }
 inline void ContractCoopStatusResponse_CoopGift::clear_amount() {
   amount_ = 0u;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t ContractCoopStatusResponse_CoopGift::_internal_amount() const {
   return amount_;
@@ -70439,12 +71143,80 @@ inline uint32_t ContractCoopStatusResponse_CoopGift::amount() const {
   return _internal_amount();
 }
 inline void ContractCoopStatusResponse_CoopGift::_internal_set_amount(uint32_t value) {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
   amount_ = value;
 }
 inline void ContractCoopStatusResponse_CoopGift::set_amount(uint32_t value) {
   _internal_set_amount(value);
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.CoopGift.amount)
+}
+
+// optional string tracking = 4;
+inline bool ContractCoopStatusResponse_CoopGift::_internal_has_tracking() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_CoopGift::has_tracking() const {
+  return _internal_has_tracking();
+}
+inline void ContractCoopStatusResponse_CoopGift::clear_tracking() {
+  tracking_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ContractCoopStatusResponse_CoopGift::tracking() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.CoopGift.tracking)
+  return _internal_tracking();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ContractCoopStatusResponse_CoopGift::set_tracking(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ tracking_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.CoopGift.tracking)
+}
+inline std::string* ContractCoopStatusResponse_CoopGift::mutable_tracking() {
+  std::string* _s = _internal_mutable_tracking();
+  // @@protoc_insertion_point(field_mutable:ei.ContractCoopStatusResponse.CoopGift.tracking)
+  return _s;
+}
+inline const std::string& ContractCoopStatusResponse_CoopGift::_internal_tracking() const {
+  return tracking_.Get();
+}
+inline void ContractCoopStatusResponse_CoopGift::_internal_set_tracking(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  tracking_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_CoopGift::_internal_mutable_tracking() {
+  _has_bits_[0] |= 0x00000004u;
+  return tracking_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ContractCoopStatusResponse_CoopGift::release_tracking() {
+  // @@protoc_insertion_point(field_release:ei.ContractCoopStatusResponse.CoopGift.tracking)
+  if (!_internal_has_tracking()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = tracking_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (tracking_.IsDefault()) {
+    tracking_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ContractCoopStatusResponse_CoopGift::set_allocated_tracking(std::string* tracking) {
+  if (tracking != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  tracking_.SetAllocated(tracking, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (tracking_.IsDefault()) {
+    tracking_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ContractCoopStatusResponse.CoopGift.tracking)
 }
 
 // -------------------------------------------------------------------
@@ -84173,9 +84945,252 @@ inline void InGameMail::set_allocated_url(std::string* url) {
   // @@protoc_insertion_point(field_set_allocated:ei.InGameMail.url)
 }
 
+// optional .ei.UILocation app_link = 14;
+inline bool InGameMail::_internal_has_app_link() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool InGameMail::has_app_link() const {
+  return _internal_has_app_link();
+}
+inline void InGameMail::clear_app_link() {
+  app_link_ = 0;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline ::ei::UILocation InGameMail::_internal_app_link() const {
+  return static_cast< ::ei::UILocation >(app_link_);
+}
+inline ::ei::UILocation InGameMail::app_link() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.app_link)
+  return _internal_app_link();
+}
+inline void InGameMail::_internal_set_app_link(::ei::UILocation value) {
+  assert(::ei::UILocation_IsValid(value));
+  _has_bits_[0] |= 0x00004000u;
+  app_link_ = value;
+}
+inline void InGameMail::set_app_link(::ei::UILocation value) {
+  _internal_set_app_link(value);
+  // @@protoc_insertion_point(field_set:ei.InGameMail.app_link)
+}
+
+// optional string app_link_extra = 15;
+inline bool InGameMail::_internal_has_app_link_extra() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool InGameMail::has_app_link_extra() const {
+  return _internal_has_app_link_extra();
+}
+inline void InGameMail::clear_app_link_extra() {
+  app_link_extra_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline const std::string& InGameMail::app_link_extra() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.app_link_extra)
+  return _internal_app_link_extra();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void InGameMail::set_app_link_extra(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000040u;
+ app_link_extra_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.InGameMail.app_link_extra)
+}
+inline std::string* InGameMail::mutable_app_link_extra() {
+  std::string* _s = _internal_mutable_app_link_extra();
+  // @@protoc_insertion_point(field_mutable:ei.InGameMail.app_link_extra)
+  return _s;
+}
+inline const std::string& InGameMail::_internal_app_link_extra() const {
+  return app_link_extra_.Get();
+}
+inline void InGameMail::_internal_set_app_link_extra(const std::string& value) {
+  _has_bits_[0] |= 0x00000040u;
+  app_link_extra_.Set(value, GetArenaForAllocation());
+}
+inline std::string* InGameMail::_internal_mutable_app_link_extra() {
+  _has_bits_[0] |= 0x00000040u;
+  return app_link_extra_.Mutable(GetArenaForAllocation());
+}
+inline std::string* InGameMail::release_app_link_extra() {
+  // @@protoc_insertion_point(field_release:ei.InGameMail.app_link_extra)
+  if (!_internal_has_app_link_extra()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000040u;
+  auto* p = app_link_extra_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (app_link_extra_.IsDefault()) {
+    app_link_extra_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void InGameMail::set_allocated_app_link_extra(std::string* app_link_extra) {
+  if (app_link_extra != nullptr) {
+    _has_bits_[0] |= 0x00000040u;
+  } else {
+    _has_bits_[0] &= ~0x00000040u;
+  }
+  app_link_extra_.SetAllocated(app_link_extra, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (app_link_extra_.IsDefault()) {
+    app_link_extra_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.InGameMail.app_link_extra)
+}
+
+// optional .ei.DLCItem image = 16;
+inline bool InGameMail::_internal_has_image() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  PROTOBUF_ASSUME(!value || image_ != nullptr);
+  return value;
+}
+inline bool InGameMail::has_image() const {
+  return _internal_has_image();
+}
+inline void InGameMail::clear_image() {
+  if (image_ != nullptr) image_->Clear();
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline const ::ei::DLCItem& InGameMail::_internal_image() const {
+  const ::ei::DLCItem* p = image_;
+  return p != nullptr ? *p : reinterpret_cast<const ::ei::DLCItem&>(
+      ::ei::_DLCItem_default_instance_);
+}
+inline const ::ei::DLCItem& InGameMail::image() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.image)
+  return _internal_image();
+}
+inline void InGameMail::unsafe_arena_set_allocated_image(
+    ::ei::DLCItem* image) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(image_);
+  }
+  image_ = image;
+  if (image) {
+    _has_bits_[0] |= 0x00000080u;
+  } else {
+    _has_bits_[0] &= ~0x00000080u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.InGameMail.image)
+}
+inline ::ei::DLCItem* InGameMail::release_image() {
+  _has_bits_[0] &= ~0x00000080u;
+  ::ei::DLCItem* temp = image_;
+  image_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::ei::DLCItem* InGameMail::unsafe_arena_release_image() {
+  // @@protoc_insertion_point(field_release:ei.InGameMail.image)
+  _has_bits_[0] &= ~0x00000080u;
+  ::ei::DLCItem* temp = image_;
+  image_ = nullptr;
+  return temp;
+}
+inline ::ei::DLCItem* InGameMail::_internal_mutable_image() {
+  _has_bits_[0] |= 0x00000080u;
+  if (image_ == nullptr) {
+    auto* p = CreateMaybeMessage<::ei::DLCItem>(GetArenaForAllocation());
+    image_ = p;
+  }
+  return image_;
+}
+inline ::ei::DLCItem* InGameMail::mutable_image() {
+  ::ei::DLCItem* _msg = _internal_mutable_image();
+  // @@protoc_insertion_point(field_mutable:ei.InGameMail.image)
+  return _msg;
+}
+inline void InGameMail::set_allocated_image(::ei::DLCItem* image) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete image_;
+  }
+  if (image) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(image);
+    if (message_arena != submessage_arena) {
+      image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, image, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000080u;
+  } else {
+    _has_bits_[0] &= ~0x00000080u;
+  }
+  image_ = image;
+  // @@protoc_insertion_point(field_set_allocated:ei.InGameMail.image)
+}
+
+// optional double image_width = 21;
+inline bool InGameMail::_internal_has_image_width() const {
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  return value;
+}
+inline bool InGameMail::has_image_width() const {
+  return _internal_has_image_width();
+}
+inline void InGameMail::clear_image_width() {
+  image_width_ = 0;
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline double InGameMail::_internal_image_width() const {
+  return image_width_;
+}
+inline double InGameMail::image_width() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.image_width)
+  return _internal_image_width();
+}
+inline void InGameMail::_internal_set_image_width(double value) {
+  _has_bits_[0] |= 0x00020000u;
+  image_width_ = value;
+}
+inline void InGameMail::set_image_width(double value) {
+  _internal_set_image_width(value);
+  // @@protoc_insertion_point(field_set:ei.InGameMail.image_width)
+}
+
+// optional double image_height = 22;
+inline bool InGameMail::_internal_has_image_height() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool InGameMail::has_image_height() const {
+  return _internal_has_image_height();
+}
+inline void InGameMail::clear_image_height() {
+  image_height_ = 0;
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline double InGameMail::_internal_image_height() const {
+  return image_height_;
+}
+inline double InGameMail::image_height() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.image_height)
+  return _internal_image_height();
+}
+inline void InGameMail::_internal_set_image_height(double value) {
+  _has_bits_[0] |= 0x00040000u;
+  image_height_ = value;
+}
+inline void InGameMail::set_image_height(double value) {
+  _internal_set_image_height(value);
+  // @@protoc_insertion_point(field_set:ei.InGameMail.image_height)
+}
+
 // optional uint32 platform = 7;
 inline bool InGameMail::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool InGameMail::has_platform() const {
@@ -84183,7 +85198,7 @@ inline bool InGameMail::has_platform() const {
 }
 inline void InGameMail::clear_platform() {
   platform_ = 0u;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline uint32_t InGameMail::_internal_platform() const {
   return platform_;
@@ -84193,7 +85208,7 @@ inline uint32_t InGameMail::platform() const {
   return _internal_platform();
 }
 inline void InGameMail::_internal_set_platform(uint32_t value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000200u;
   platform_ = value;
 }
 inline void InGameMail::set_platform(uint32_t value) {
@@ -84278,7 +85293,7 @@ InGameMail::mutable_builds() {
 
 // optional uint32 min_client_version = 10;
 inline bool InGameMail::_internal_has_min_client_version() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool InGameMail::has_min_client_version() const {
@@ -84286,7 +85301,7 @@ inline bool InGameMail::has_min_client_version() const {
 }
 inline void InGameMail::clear_min_client_version() {
   min_client_version_ = 0u;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t InGameMail::_internal_min_client_version() const {
   return min_client_version_;
@@ -84296,7 +85311,7 @@ inline uint32_t InGameMail::min_client_version() const {
   return _internal_min_client_version();
 }
 inline void InGameMail::_internal_set_min_client_version(uint32_t value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000400u;
   min_client_version_ = value;
 }
 inline void InGameMail::set_min_client_version(uint32_t value) {
@@ -84306,7 +85321,7 @@ inline void InGameMail::set_min_client_version(uint32_t value) {
 
 // optional uint32 max_client_version = 12;
 inline bool InGameMail::_internal_has_max_client_version() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool InGameMail::has_max_client_version() const {
@@ -84314,7 +85329,7 @@ inline bool InGameMail::has_max_client_version() const {
 }
 inline void InGameMail::clear_max_client_version() {
   max_client_version_ = 0u;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline uint32_t InGameMail::_internal_max_client_version() const {
   return max_client_version_;
@@ -84324,7 +85339,7 @@ inline uint32_t InGameMail::max_client_version() const {
   return _internal_max_client_version();
 }
 inline void InGameMail::_internal_set_max_client_version(uint32_t value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00002000u;
   max_client_version_ = value;
 }
 inline void InGameMail::set_max_client_version(uint32_t value) {
@@ -84334,7 +85349,7 @@ inline void InGameMail::set_max_client_version(uint32_t value) {
 
 // optional double min_soul_eggs = 11;
 inline bool InGameMail::_internal_has_min_soul_eggs() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool InGameMail::has_min_soul_eggs() const {
@@ -84342,7 +85357,7 @@ inline bool InGameMail::has_min_soul_eggs() const {
 }
 inline void InGameMail::clear_min_soul_eggs() {
   min_soul_eggs_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline double InGameMail::_internal_min_soul_eggs() const {
   return min_soul_eggs_;
@@ -84352,7 +85367,7 @@ inline double InGameMail::min_soul_eggs() const {
   return _internal_min_soul_eggs();
 }
 inline void InGameMail::_internal_set_min_soul_eggs(double value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000800u;
   min_soul_eggs_ = value;
 }
 inline void InGameMail::set_min_soul_eggs(double value) {
@@ -84362,7 +85377,7 @@ inline void InGameMail::set_min_soul_eggs(double value) {
 
 // optional double min_mystical_bonus = 13;
 inline bool InGameMail::_internal_has_min_mystical_bonus() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool InGameMail::has_min_mystical_bonus() const {
@@ -84370,7 +85385,7 @@ inline bool InGameMail::has_min_mystical_bonus() const {
 }
 inline void InGameMail::clear_min_mystical_bonus() {
   min_mystical_bonus_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline double InGameMail::_internal_min_mystical_bonus() const {
   return min_mystical_bonus_;
@@ -84380,7 +85395,7 @@ inline double InGameMail::min_mystical_bonus() const {
   return _internal_min_mystical_bonus();
 }
 inline void InGameMail::_internal_set_min_mystical_bonus(double value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00001000u;
   min_mystical_bonus_ = value;
 }
 inline void InGameMail::set_min_mystical_bonus(double value) {
@@ -84388,9 +85403,66 @@ inline void InGameMail::set_min_mystical_bonus(double value) {
   // @@protoc_insertion_point(field_set:ei.InGameMail.min_mystical_bonus)
 }
 
+// optional .ei.UserType user_type = 17;
+inline bool InGameMail::_internal_has_user_type() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool InGameMail::has_user_type() const {
+  return _internal_has_user_type();
+}
+inline void InGameMail::clear_user_type() {
+  user_type_ = 0;
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline ::ei::UserType InGameMail::_internal_user_type() const {
+  return static_cast< ::ei::UserType >(user_type_);
+}
+inline ::ei::UserType InGameMail::user_type() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.user_type)
+  return _internal_user_type();
+}
+inline void InGameMail::_internal_set_user_type(::ei::UserType value) {
+  assert(::ei::UserType_IsValid(value));
+  _has_bits_[0] |= 0x00008000u;
+  user_type_ = value;
+}
+inline void InGameMail::set_user_type(::ei::UserType value) {
+  _internal_set_user_type(value);
+  // @@protoc_insertion_point(field_set:ei.InGameMail.user_type)
+}
+
+// optional uint32 min_piggy_breaks = 20;
+inline bool InGameMail::_internal_has_min_piggy_breaks() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool InGameMail::has_min_piggy_breaks() const {
+  return _internal_has_min_piggy_breaks();
+}
+inline void InGameMail::clear_min_piggy_breaks() {
+  min_piggy_breaks_ = 0u;
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline uint32_t InGameMail::_internal_min_piggy_breaks() const {
+  return min_piggy_breaks_;
+}
+inline uint32_t InGameMail::min_piggy_breaks() const {
+  // @@protoc_insertion_point(field_get:ei.InGameMail.min_piggy_breaks)
+  return _internal_min_piggy_breaks();
+}
+inline void InGameMail::_internal_set_min_piggy_breaks(uint32_t value) {
+  _has_bits_[0] |= 0x00010000u;
+  min_piggy_breaks_ = value;
+}
+inline void InGameMail::set_min_piggy_breaks(uint32_t value) {
+  _internal_set_min_piggy_breaks(value);
+  // @@protoc_insertion_point(field_set:ei.InGameMail.min_piggy_breaks)
+}
+
 // optional double gold_tip = 6;
 inline bool InGameMail::_internal_has_gold_tip() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool InGameMail::has_gold_tip() const {
@@ -84398,7 +85470,7 @@ inline bool InGameMail::has_gold_tip() const {
 }
 inline void InGameMail::clear_gold_tip() {
   gold_tip_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline double InGameMail::_internal_gold_tip() const {
   return gold_tip_;
@@ -84408,7 +85480,7 @@ inline double InGameMail::gold_tip() const {
   return _internal_gold_tip();
 }
 inline void InGameMail::_internal_set_gold_tip(double value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000100u;
   gold_tip_ = value;
 }
 inline void InGameMail::set_gold_tip(double value) {
@@ -85704,37 +86776,65 @@ inline void ConfigRequest::set_soul_eggs(double value) {
   // @@protoc_insertion_point(field_set:ei.ConfigRequest.soul_eggs)
 }
 
-// optional bool artifacts_enabled = 3;
-inline bool ConfigRequest::_internal_has_artifacts_enabled() const {
+// optional bool contracts_unlocked = 5;
+inline bool ConfigRequest::_internal_has_contracts_unlocked() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ConfigRequest::has_artifacts_enabled() const {
-  return _internal_has_artifacts_enabled();
+inline bool ConfigRequest::has_contracts_unlocked() const {
+  return _internal_has_contracts_unlocked();
 }
-inline void ConfigRequest::clear_artifacts_enabled() {
-  artifacts_enabled_ = false;
+inline void ConfigRequest::clear_contracts_unlocked() {
+  contracts_unlocked_ = false;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline bool ConfigRequest::_internal_artifacts_enabled() const {
-  return artifacts_enabled_;
+inline bool ConfigRequest::_internal_contracts_unlocked() const {
+  return contracts_unlocked_;
 }
-inline bool ConfigRequest::artifacts_enabled() const {
-  // @@protoc_insertion_point(field_get:ei.ConfigRequest.artifacts_enabled)
-  return _internal_artifacts_enabled();
+inline bool ConfigRequest::contracts_unlocked() const {
+  // @@protoc_insertion_point(field_get:ei.ConfigRequest.contracts_unlocked)
+  return _internal_contracts_unlocked();
 }
-inline void ConfigRequest::_internal_set_artifacts_enabled(bool value) {
+inline void ConfigRequest::_internal_set_contracts_unlocked(bool value) {
   _has_bits_[0] |= 0x00000004u;
-  artifacts_enabled_ = value;
+  contracts_unlocked_ = value;
 }
-inline void ConfigRequest::set_artifacts_enabled(bool value) {
-  _internal_set_artifacts_enabled(value);
-  // @@protoc_insertion_point(field_set:ei.ConfigRequest.artifacts_enabled)
+inline void ConfigRequest::set_contracts_unlocked(bool value) {
+  _internal_set_contracts_unlocked(value);
+  // @@protoc_insertion_point(field_set:ei.ConfigRequest.contracts_unlocked)
+}
+
+// optional bool artifacts_unlocked = 3;
+inline bool ConfigRequest::_internal_has_artifacts_unlocked() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ConfigRequest::has_artifacts_unlocked() const {
+  return _internal_has_artifacts_unlocked();
+}
+inline void ConfigRequest::clear_artifacts_unlocked() {
+  artifacts_unlocked_ = false;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline bool ConfigRequest::_internal_artifacts_unlocked() const {
+  return artifacts_unlocked_;
+}
+inline bool ConfigRequest::artifacts_unlocked() const {
+  // @@protoc_insertion_point(field_get:ei.ConfigRequest.artifacts_unlocked)
+  return _internal_artifacts_unlocked();
+}
+inline void ConfigRequest::_internal_set_artifacts_unlocked(bool value) {
+  _has_bits_[0] |= 0x00000008u;
+  artifacts_unlocked_ = value;
+}
+inline void ConfigRequest::set_artifacts_unlocked(bool value) {
+  _internal_set_artifacts_unlocked(value);
+  // @@protoc_insertion_point(field_set:ei.ConfigRequest.artifacts_unlocked)
 }
 
 // optional bool fuel_tank_unlocked = 4;
 inline bool ConfigRequest::_internal_has_fuel_tank_unlocked() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool ConfigRequest::has_fuel_tank_unlocked() const {
@@ -85742,7 +86842,7 @@ inline bool ConfigRequest::has_fuel_tank_unlocked() const {
 }
 inline void ConfigRequest::clear_fuel_tank_unlocked() {
   fuel_tank_unlocked_ = false;
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline bool ConfigRequest::_internal_fuel_tank_unlocked() const {
   return fuel_tank_unlocked_;
@@ -85752,12 +86852,68 @@ inline bool ConfigRequest::fuel_tank_unlocked() const {
   return _internal_fuel_tank_unlocked();
 }
 inline void ConfigRequest::_internal_set_fuel_tank_unlocked(bool value) {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
   fuel_tank_unlocked_ = value;
 }
 inline void ConfigRequest::set_fuel_tank_unlocked(bool value) {
   _internal_set_fuel_tank_unlocked(value);
   // @@protoc_insertion_point(field_set:ei.ConfigRequest.fuel_tank_unlocked)
+}
+
+// optional bool pro_permit = 6;
+inline bool ConfigRequest::_internal_has_pro_permit() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ConfigRequest::has_pro_permit() const {
+  return _internal_has_pro_permit();
+}
+inline void ConfigRequest::clear_pro_permit() {
+  pro_permit_ = false;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline bool ConfigRequest::_internal_pro_permit() const {
+  return pro_permit_;
+}
+inline bool ConfigRequest::pro_permit() const {
+  // @@protoc_insertion_point(field_get:ei.ConfigRequest.pro_permit)
+  return _internal_pro_permit();
+}
+inline void ConfigRequest::_internal_set_pro_permit(bool value) {
+  _has_bits_[0] |= 0x00000020u;
+  pro_permit_ = value;
+}
+inline void ConfigRequest::set_pro_permit(bool value) {
+  _internal_set_pro_permit(value);
+  // @@protoc_insertion_point(field_set:ei.ConfigRequest.pro_permit)
+}
+
+// optional bool ultra = 7;
+inline bool ConfigRequest::_internal_has_ultra() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ConfigRequest::has_ultra() const {
+  return _internal_has_ultra();
+}
+inline void ConfigRequest::clear_ultra() {
+  ultra_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool ConfigRequest::_internal_ultra() const {
+  return ultra_;
+}
+inline bool ConfigRequest::ultra() const {
+  // @@protoc_insertion_point(field_get:ei.ConfigRequest.ultra)
+  return _internal_ultra();
+}
+inline void ConfigRequest::_internal_set_ultra(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  ultra_ = value;
+}
+inline void ConfigRequest::set_ultra(bool value) {
+  _internal_set_ultra(value);
+  // @@protoc_insertion_point(field_set:ei.ConfigRequest.ultra)
 }
 
 // -------------------------------------------------------------------
@@ -96658,7 +97814,7 @@ inline void ShellSpec::set_allocated_set_identifier(std::string* set_identifier)
 
 // optional bool modified_geometry = 19;
 inline bool ShellSpec::_internal_has_modified_geometry() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool ShellSpec::has_modified_geometry() const {
@@ -96666,7 +97822,7 @@ inline bool ShellSpec::has_modified_geometry() const {
 }
 inline void ShellSpec::clear_modified_geometry() {
   modified_geometry_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool ShellSpec::_internal_modified_geometry() const {
   return modified_geometry_;
@@ -96676,7 +97832,7 @@ inline bool ShellSpec::modified_geometry() const {
   return _internal_modified_geometry();
 }
 inline void ShellSpec::_internal_set_modified_geometry(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   modified_geometry_ = value;
 }
 inline void ShellSpec::set_modified_geometry(bool value) {
@@ -96838,7 +97994,7 @@ inline void ShellSpec::set_allocated_required_parent_shell(std::string* required
 
 // optional bool is_new = 14;
 inline bool ShellSpec::_internal_has_is_new() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool ShellSpec::has_is_new() const {
@@ -96846,7 +98002,7 @@ inline bool ShellSpec::has_is_new() const {
 }
 inline void ShellSpec::clear_is_new() {
   is_new_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline bool ShellSpec::_internal_is_new() const {
   return is_new_;
@@ -96856,7 +98012,7 @@ inline bool ShellSpec::is_new() const {
   return _internal_is_new();
 }
 inline void ShellSpec::_internal_set_is_new(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   is_new_ = value;
 }
 inline void ShellSpec::set_is_new(bool value) {
@@ -96866,7 +98022,7 @@ inline void ShellSpec::set_is_new(bool value) {
 
 // optional bool expires = 15;
 inline bool ShellSpec::_internal_has_expires() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ShellSpec::has_expires() const {
@@ -96874,7 +98030,7 @@ inline bool ShellSpec::has_expires() const {
 }
 inline void ShellSpec::clear_expires() {
   expires_ = false;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline bool ShellSpec::_internal_expires() const {
   return expires_;
@@ -96884,7 +98040,7 @@ inline bool ShellSpec::expires() const {
   return _internal_expires();
 }
 inline void ShellSpec::_internal_set_expires(bool value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   expires_ = value;
 }
 inline void ShellSpec::set_expires(bool value) {
@@ -96948,9 +98104,37 @@ inline void ShellSpec::set_seconds_remaining(double value) {
   // @@protoc_insertion_point(field_set:ei.ShellSpec.seconds_remaining)
 }
 
+// optional uint64 popularity = 21;
+inline bool ShellSpec::_internal_has_popularity() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ShellSpec::has_popularity() const {
+  return _internal_has_popularity();
+}
+inline void ShellSpec::clear_popularity() {
+  popularity_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline uint64_t ShellSpec::_internal_popularity() const {
+  return popularity_;
+}
+inline uint64_t ShellSpec::popularity() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSpec.popularity)
+  return _internal_popularity();
+}
+inline void ShellSpec::_internal_set_popularity(uint64_t value) {
+  _has_bits_[0] |= 0x00000400u;
+  popularity_ = value;
+}
+inline void ShellSpec::set_popularity(uint64_t value) {
+  _internal_set_popularity(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSpec.popularity)
+}
+
 // optional bool default_appearance = 8;
 inline bool ShellSpec::_internal_has_default_appearance() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ShellSpec::has_default_appearance() const {
@@ -96958,7 +98142,7 @@ inline bool ShellSpec::has_default_appearance() const {
 }
 inline void ShellSpec::clear_default_appearance() {
   default_appearance_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool ShellSpec::_internal_default_appearance() const {
   return default_appearance_;
@@ -96968,7 +98152,7 @@ inline bool ShellSpec::default_appearance() const {
   return _internal_default_appearance();
 }
 inline void ShellSpec::_internal_set_default_appearance(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   default_appearance_ = value;
 }
 inline void ShellSpec::set_default_appearance(bool value) {
@@ -97398,7 +98582,7 @@ inline void ShellSetSpec::set_price(uint32_t value) {
 
 // optional double price_mult_DEPRECATED = 8 [default = 1];
 inline bool ShellSetSpec::_internal_has_price_mult_deprecated() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool ShellSetSpec::has_price_mult_deprecated() const {
@@ -97406,7 +98590,7 @@ inline bool ShellSetSpec::has_price_mult_deprecated() const {
 }
 inline void ShellSetSpec::clear_price_mult_deprecated() {
   price_mult_deprecated_ = 1;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline double ShellSetSpec::_internal_price_mult_deprecated() const {
   return price_mult_deprecated_;
@@ -97416,7 +98600,7 @@ inline double ShellSetSpec::price_mult_deprecated() const {
   return _internal_price_mult_deprecated();
 }
 inline void ShellSetSpec::_internal_set_price_mult_deprecated(double value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
   price_mult_deprecated_ = value;
 }
 inline void ShellSetSpec::set_price_mult_deprecated(double value) {
@@ -97686,6 +98870,34 @@ inline void ShellSetSpec::_internal_set_seconds_remaining(double value) {
 inline void ShellSetSpec::set_seconds_remaining(double value) {
   _internal_set_seconds_remaining(value);
   // @@protoc_insertion_point(field_set:ei.ShellSetSpec.seconds_remaining)
+}
+
+// optional uint64 popularity = 21;
+inline bool ShellSetSpec::_internal_has_popularity() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool ShellSetSpec::has_popularity() const {
+  return _internal_has_popularity();
+}
+inline void ShellSetSpec::clear_popularity() {
+  popularity_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline uint64_t ShellSetSpec::_internal_popularity() const {
+  return popularity_;
+}
+inline uint64_t ShellSetSpec::popularity() const {
+  // @@protoc_insertion_point(field_get:ei.ShellSetSpec.popularity)
+  return _internal_popularity();
+}
+inline void ShellSetSpec::_internal_set_popularity(uint64_t value) {
+  _has_bits_[0] |= 0x00040000u;
+  popularity_ = value;
+}
+inline void ShellSetSpec::set_popularity(uint64_t value) {
+  _internal_set_popularity(value);
+  // @@protoc_insertion_point(field_set:ei.ShellSetSpec.popularity)
 }
 
 // optional bool decorator = 14;
@@ -98290,7 +99502,7 @@ inline void ShellObjectSpec::set_allocated_name(std::string* name) {
 
 // optional .ei.ShellSpec.AssetType asset_type = 3;
 inline bool ShellObjectSpec::_internal_has_asset_type() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_asset_type() const {
@@ -98298,7 +99510,7 @@ inline bool ShellObjectSpec::has_asset_type() const {
 }
 inline void ShellObjectSpec::clear_asset_type() {
   asset_type_ = 1;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline ::ei::ShellSpec_AssetType ShellObjectSpec::_internal_asset_type() const {
   return static_cast< ::ei::ShellSpec_AssetType >(asset_type_);
@@ -98309,7 +99521,7 @@ inline ::ei::ShellSpec_AssetType ShellObjectSpec::asset_type() const {
 }
 inline void ShellObjectSpec::_internal_set_asset_type(::ei::ShellSpec_AssetType value) {
   assert(::ei::ShellSpec_AssetType_IsValid(value));
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   asset_type_ = value;
 }
 inline void ShellObjectSpec::set_asset_type(::ei::ShellSpec_AssetType value) {
@@ -98656,6 +99868,34 @@ inline void ShellObjectSpec::set_seconds_remaining(double value) {
   // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.seconds_remaining)
 }
 
+// optional uint64 popularity = 19;
+inline bool ShellObjectSpec::_internal_has_popularity() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool ShellObjectSpec::has_popularity() const {
+  return _internal_has_popularity();
+}
+inline void ShellObjectSpec::clear_popularity() {
+  popularity_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline uint64_t ShellObjectSpec::_internal_popularity() const {
+  return popularity_;
+}
+inline uint64_t ShellObjectSpec::popularity() const {
+  // @@protoc_insertion_point(field_get:ei.ShellObjectSpec.popularity)
+  return _internal_popularity();
+}
+inline void ShellObjectSpec::_internal_set_popularity(uint64_t value) {
+  _has_bits_[0] |= 0x00002000u;
+  popularity_ = value;
+}
+inline void ShellObjectSpec::set_popularity(uint64_t value) {
+  _internal_set_popularity(value);
+  // @@protoc_insertion_point(field_set:ei.ShellObjectSpec.popularity)
+}
+
 // repeated double metadata = 7;
 inline int ShellObjectSpec::_internal_metadata_size() const {
   return metadata_.size();
@@ -98762,7 +100002,7 @@ inline void ShellObjectSpec::set_chicken_animation(::ei::ShellObjectSpec_Chicken
 
 // optional int32 sort_priority = 17;
 inline bool ShellObjectSpec::_internal_has_sort_priority() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ShellObjectSpec::has_sort_priority() const {
@@ -98770,7 +100010,7 @@ inline bool ShellObjectSpec::has_sort_priority() const {
 }
 inline void ShellObjectSpec::clear_sort_priority() {
   sort_priority_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline int32_t ShellObjectSpec::_internal_sort_priority() const {
   return sort_priority_;
@@ -98780,7 +100020,7 @@ inline int32_t ShellObjectSpec::sort_priority() const {
   return _internal_sort_priority();
 }
 inline void ShellObjectSpec::_internal_set_sort_priority(int32_t value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   sort_priority_ = value;
 }
 inline void ShellObjectSpec::set_sort_priority(int32_t value) {
@@ -101169,6 +102409,207 @@ inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 ShellDB::mutable_new_shells_seen() {
   // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.new_shells_seen)
   return &new_shells_seen_;
+}
+
+// -------------------------------------------------------------------
+
+// ShellPopularityStats_Entry
+
+// optional string id = 1;
+inline bool ShellPopularityStats_Entry::_internal_has_id() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShellPopularityStats_Entry::has_id() const {
+  return _internal_has_id();
+}
+inline void ShellPopularityStats_Entry::clear_id() {
+  id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ShellPopularityStats_Entry::id() const {
+  // @@protoc_insertion_point(field_get:ei.ShellPopularityStats.Entry.id)
+  return _internal_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ShellPopularityStats_Entry::set_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.ShellPopularityStats.Entry.id)
+}
+inline std::string* ShellPopularityStats_Entry::mutable_id() {
+  std::string* _s = _internal_mutable_id();
+  // @@protoc_insertion_point(field_mutable:ei.ShellPopularityStats.Entry.id)
+  return _s;
+}
+inline const std::string& ShellPopularityStats_Entry::_internal_id() const {
+  return id_.Get();
+}
+inline void ShellPopularityStats_Entry::_internal_set_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* ShellPopularityStats_Entry::_internal_mutable_id() {
+  _has_bits_[0] |= 0x00000001u;
+  return id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* ShellPopularityStats_Entry::release_id() {
+  // @@protoc_insertion_point(field_release:ei.ShellPopularityStats.Entry.id)
+  if (!_internal_has_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (id_.IsDefault()) {
+    id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ShellPopularityStats_Entry::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  id_.SetAllocated(id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (id_.IsDefault()) {
+    id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.ShellPopularityStats.Entry.id)
+}
+
+// optional .ei.ShellDB.FarmElement element = 2;
+inline bool ShellPopularityStats_Entry::_internal_has_element() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ShellPopularityStats_Entry::has_element() const {
+  return _internal_has_element();
+}
+inline void ShellPopularityStats_Entry::clear_element() {
+  element_ = 1;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::ei::ShellDB_FarmElement ShellPopularityStats_Entry::_internal_element() const {
+  return static_cast< ::ei::ShellDB_FarmElement >(element_);
+}
+inline ::ei::ShellDB_FarmElement ShellPopularityStats_Entry::element() const {
+  // @@protoc_insertion_point(field_get:ei.ShellPopularityStats.Entry.element)
+  return _internal_element();
+}
+inline void ShellPopularityStats_Entry::_internal_set_element(::ei::ShellDB_FarmElement value) {
+  assert(::ei::ShellDB_FarmElement_IsValid(value));
+  _has_bits_[0] |= 0x00000008u;
+  element_ = value;
+}
+inline void ShellPopularityStats_Entry::set_element(::ei::ShellDB_FarmElement value) {
+  _internal_set_element(value);
+  // @@protoc_insertion_point(field_set:ei.ShellPopularityStats.Entry.element)
+}
+
+// optional uint64 spent = 3;
+inline bool ShellPopularityStats_Entry::_internal_has_spent() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShellPopularityStats_Entry::has_spent() const {
+  return _internal_has_spent();
+}
+inline void ShellPopularityStats_Entry::clear_spent() {
+  spent_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline uint64_t ShellPopularityStats_Entry::_internal_spent() const {
+  return spent_;
+}
+inline uint64_t ShellPopularityStats_Entry::spent() const {
+  // @@protoc_insertion_point(field_get:ei.ShellPopularityStats.Entry.spent)
+  return _internal_spent();
+}
+inline void ShellPopularityStats_Entry::_internal_set_spent(uint64_t value) {
+  _has_bits_[0] |= 0x00000002u;
+  spent_ = value;
+}
+inline void ShellPopularityStats_Entry::set_spent(uint64_t value) {
+  _internal_set_spent(value);
+  // @@protoc_insertion_point(field_set:ei.ShellPopularityStats.Entry.spent)
+}
+
+// optional uint64 count = 4;
+inline bool ShellPopularityStats_Entry::_internal_has_count() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShellPopularityStats_Entry::has_count() const {
+  return _internal_has_count();
+}
+inline void ShellPopularityStats_Entry::clear_count() {
+  count_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline uint64_t ShellPopularityStats_Entry::_internal_count() const {
+  return count_;
+}
+inline uint64_t ShellPopularityStats_Entry::count() const {
+  // @@protoc_insertion_point(field_get:ei.ShellPopularityStats.Entry.count)
+  return _internal_count();
+}
+inline void ShellPopularityStats_Entry::_internal_set_count(uint64_t value) {
+  _has_bits_[0] |= 0x00000004u;
+  count_ = value;
+}
+inline void ShellPopularityStats_Entry::set_count(uint64_t value) {
+  _internal_set_count(value);
+  // @@protoc_insertion_point(field_set:ei.ShellPopularityStats.Entry.count)
+}
+
+// -------------------------------------------------------------------
+
+// ShellPopularityStats
+
+// repeated .ei.ShellPopularityStats.Entry data = 1;
+inline int ShellPopularityStats::_internal_data_size() const {
+  return data_.size();
+}
+inline int ShellPopularityStats::data_size() const {
+  return _internal_data_size();
+}
+inline void ShellPopularityStats::clear_data() {
+  data_.Clear();
+}
+inline ::ei::ShellPopularityStats_Entry* ShellPopularityStats::mutable_data(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.ShellPopularityStats.data)
+  return data_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellPopularityStats_Entry >*
+ShellPopularityStats::mutable_data() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellPopularityStats.data)
+  return &data_;
+}
+inline const ::ei::ShellPopularityStats_Entry& ShellPopularityStats::_internal_data(int index) const {
+  return data_.Get(index);
+}
+inline const ::ei::ShellPopularityStats_Entry& ShellPopularityStats::data(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellPopularityStats.data)
+  return _internal_data(index);
+}
+inline ::ei::ShellPopularityStats_Entry* ShellPopularityStats::_internal_add_data() {
+  return data_.Add();
+}
+inline ::ei::ShellPopularityStats_Entry* ShellPopularityStats::add_data() {
+  ::ei::ShellPopularityStats_Entry* _add = _internal_add_data();
+  // @@protoc_insertion_point(field_add:ei.ShellPopularityStats.data)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellPopularityStats_Entry >&
+ShellPopularityStats::data() const {
+  // @@protoc_insertion_point(field_list:ei.ShellPopularityStats.data)
+  return data_;
 }
 
 // -------------------------------------------------------------------
@@ -104138,6 +105579,10 @@ inline void CXPEvalRolloutInfo::set_basis_points(uint32_t value) {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -104299,6 +105744,16 @@ template <> struct is_proto_enum< ::ei::RewardType> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ei::RewardType>() {
   return ::ei::RewardType_descriptor();
+}
+template <> struct is_proto_enum< ::ei::UILocation> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::UILocation>() {
+  return ::ei::UILocation_descriptor();
+}
+template <> struct is_proto_enum< ::ei::UserType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ei::UserType>() {
+  return ::ei::UserType_descriptor();
 }
 template <> struct is_proto_enum< ::ei::LeaderboardScope> : ::std::true_type {};
 template <>

@@ -168,6 +168,8 @@
     - [ShellGroupSpec](#ei-ShellGroupSpec)
     - [ShellObjectSpec](#ei-ShellObjectSpec)
     - [ShellObjectSpec.LODPiece](#ei-ShellObjectSpec-LODPiece)
+    - [ShellPopularityStats](#ei-ShellPopularityStats)
+    - [ShellPopularityStats.Entry](#ei-ShellPopularityStats-Entry)
     - [ShellSetSpec](#ei-ShellSetSpec)
     - [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec)
     - [ShellSpec](#ei-ShellSpec)
@@ -213,8 +215,10 @@
     - [ShellDB.FarmElement](#ei-ShellDB-FarmElement)
     - [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
+    - [UILocation](#ei-UILocation)
     - [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level)
     - [UserSubscriptionInfo.Status](#ei-UserSubscriptionInfo-Status)
+    - [UserType](#ei-UserType)
     - [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status)
   
 - [Scalar Value Types](#scalar-value-types)
@@ -992,6 +996,7 @@
 | low_performance_mode | [bool](#bool) | optional |  |
 | force_touch_chicken_btn | [bool](#bool) | optional |  |
 | notifications_queried | [bool](#bool) | optional |  |
+| last_notification_query_time | [double](#double) | optional |  |
 | notifications_on | [bool](#bool) | optional |  |
 | notify_daily_gift | [bool](#bool) | optional |  |
 | low_performance | [bool](#bool) | optional |  |
@@ -1290,8 +1295,11 @@
 | ----- | ---- | ----- | ----------- |
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | soul_eggs | [double](#double) | optional |  |
-| artifacts_enabled | [bool](#bool) | optional |  |
+| contracts_unlocked | [bool](#bool) | optional |  |
+| artifacts_unlocked | [bool](#bool) | optional |  |
 | fuel_tank_unlocked | [bool](#bool) | optional |  |
+| pro_permit | [bool](#bool) | optional |  |
+| ultra | [bool](#bool) | optional |  |
 
 
 
@@ -1611,6 +1619,7 @@
 | user_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
 | amount | [uint32](#uint32) | optional |  |
+| tracking | [string](#string) | optional |  |
 
 
 
@@ -2496,12 +2505,19 @@
 | message | [string](#string) | optional |  |
 | action | [string](#string) | optional |  |
 | url | [string](#string) | optional |  |
+| app_link | [UILocation](#ei-UILocation) | optional |  |
+| app_link_extra | [string](#string) | optional |  |
+| image | [DLCItem](#ei-DLCItem) | optional |  |
+| image_width | [double](#double) | optional |  |
+| image_height | [double](#double) | optional |  |
 | platform | [uint32](#uint32) | optional |  |
 | builds | [string](#string) | repeated |  |
 | min_client_version | [uint32](#uint32) | optional |  |
 | max_client_version | [uint32](#uint32) | optional |  |
 | min_soul_eggs | [double](#double) | optional |  |
 | min_mystical_bonus | [double](#double) | optional |  |
+| user_type | [UserType](#ei-UserType) | optional |  |
+| min_piggy_breaks | [uint32](#uint32) | optional |  |
 | gold_tip | [double](#double) | optional |  |
 
 
@@ -3595,6 +3611,7 @@
 | expires | [bool](#bool) | optional |  |
 | seconds_until_available | [double](#double) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
+| popularity | [uint64](#uint64) | optional |  |
 | metadata | [double](#double) | repeated |  |
 | no_hats | [bool](#bool) | optional |  |
 | chicken_animation | [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation) | optional |  |
@@ -3623,6 +3640,39 @@
 
 
 
+<a name="ei-ShellPopularityStats"></a>
+
+### ShellPopularityStats
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| data | [ShellPopularityStats.Entry](#ei-ShellPopularityStats-Entry) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ShellPopularityStats-Entry"></a>
+
+### ShellPopularityStats.Entry
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) | optional |  |
+| element | [ShellDB.FarmElement](#ei-ShellDB-FarmElement) | optional |  |
+| spent | [uint64](#uint64) | optional |  |
+| count | [uint64](#uint64) | optional |  |
+
+
+
+
+
+
 <a name="ei-ShellSetSpec"></a>
 
 ### ShellSetSpec
@@ -3643,6 +3693,7 @@
 | expires | [bool](#bool) | optional |  |
 | seconds_until_available | [double](#double) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
+| popularity | [uint64](#uint64) | optional |  |
 | decorator | [bool](#bool) | optional |  |
 | modified_geometry | [bool](#bool) | optional |  |
 | element_set | [bool](#bool) | optional |  |
@@ -3700,6 +3751,7 @@
 | expires | [bool](#bool) | optional |  |
 | seconds_until_available | [double](#double) | optional |  |
 | seconds_remaining | [double](#double) | optional |  |
+| popularity | [uint64](#uint64) | optional |  |
 | default_appearance | [bool](#bool) | optional |  |
 
 
@@ -4586,6 +4638,28 @@
 
 
 
+<a name="ei-UILocation"></a>
+
+### UILocation
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NONE | 0 |  |
+| SHOP | 1 |  |
+| BOOST_SHOP | 2 |  |
+| PIGGY | 3 |  |
+| PRO_PERMIT | 4 |  |
+| ULTRA_SHOP | 10 |  |
+| SHELLS | 5 |  |
+| SHELL_SETS | 6 |  |
+| CHICKENS | 7 |  |
+| CHICKEN_HATS | 11 |  |
+| EPIC_RESEARCH | 8 |  |
+| SETTINGS | 9 |  |
+
+
+
 <a name="ei-UserSubscriptionInfo-Level"></a>
 
 ### UserSubscriptionInfo.Level
@@ -4611,6 +4685,24 @@
 | REVOKED | 3 |  |
 | GRACE_PERIOD | 4 |  |
 | PAUSE_HOLD | 5 |  |
+
+
+
+<a name="ei-UserType"></a>
+
+### UserType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ALL_USERS | 0 |  |
+| CONTRACTS_UNLOCKED | 1 |  |
+| ARTIFACTS_UNLOCKED | 3 |  |
+| FUEL_TANK_UNLOCKED | 4 |  |
+| PRO_PERMIT_ACTIVE | 5 |  |
+| ULTRA_ACTIVE | 6 |  |
+| NO_PRO_PERMIT | 7 |  |
+| NO_ULTRA | 8 |  |
 
 
 

@@ -167,6 +167,128 @@ public object InGameMailKt {
     }
 
     /**
+     * <code>optional .ei.UILocation app_link = 14;</code>
+     */
+    public var appLink: ei.Ei.UILocation
+      @JvmName("getAppLink")
+      get() = _builder.getAppLink()
+      @JvmName("setAppLink")
+      set(value) {
+        _builder.setAppLink(value)
+      }
+    /**
+     * <code>optional .ei.UILocation app_link = 14;</code>
+     */
+    public fun clearAppLink() {
+      _builder.clearAppLink()
+    }
+    /**
+     * <code>optional .ei.UILocation app_link = 14;</code>
+     * @return Whether the appLink field is set.
+     */
+    public fun hasAppLink(): kotlin.Boolean {
+      return _builder.hasAppLink()
+    }
+
+    /**
+     * <code>optional string app_link_extra = 15;</code>
+     */
+    public var appLinkExtra: kotlin.String
+      @JvmName("getAppLinkExtra")
+      get() = _builder.getAppLinkExtra()
+      @JvmName("setAppLinkExtra")
+      set(value) {
+        _builder.setAppLinkExtra(value)
+      }
+    /**
+     * <code>optional string app_link_extra = 15;</code>
+     */
+    public fun clearAppLinkExtra() {
+      _builder.clearAppLinkExtra()
+    }
+    /**
+     * <code>optional string app_link_extra = 15;</code>
+     * @return Whether the appLinkExtra field is set.
+     */
+    public fun hasAppLinkExtra(): kotlin.Boolean {
+      return _builder.hasAppLinkExtra()
+    }
+
+    /**
+     * <code>optional .ei.DLCItem image = 16;</code>
+     */
+    public var image: ei.Ei.DLCItem
+      @JvmName("getImage")
+      get() = _builder.getImage()
+      @JvmName("setImage")
+      set(value) {
+        _builder.setImage(value)
+      }
+    /**
+     * <code>optional .ei.DLCItem image = 16;</code>
+     */
+    public fun clearImage() {
+      _builder.clearImage()
+    }
+    /**
+     * <code>optional .ei.DLCItem image = 16;</code>
+     * @return Whether the image field is set.
+     */
+    public fun hasImage(): kotlin.Boolean {
+      return _builder.hasImage()
+    }
+    public val InGameMailKt.Dsl.imageOrNull: ei.Ei.DLCItem?
+      get() = _builder.imageOrNull
+
+    /**
+     * <code>optional double image_width = 21;</code>
+     */
+    public var imageWidth: kotlin.Double
+      @JvmName("getImageWidth")
+      get() = _builder.getImageWidth()
+      @JvmName("setImageWidth")
+      set(value) {
+        _builder.setImageWidth(value)
+      }
+    /**
+     * <code>optional double image_width = 21;</code>
+     */
+    public fun clearImageWidth() {
+      _builder.clearImageWidth()
+    }
+    /**
+     * <code>optional double image_width = 21;</code>
+     * @return Whether the imageWidth field is set.
+     */
+    public fun hasImageWidth(): kotlin.Boolean {
+      return _builder.hasImageWidth()
+    }
+
+    /**
+     * <code>optional double image_height = 22;</code>
+     */
+    public var imageHeight: kotlin.Double
+      @JvmName("getImageHeight")
+      get() = _builder.getImageHeight()
+      @JvmName("setImageHeight")
+      set(value) {
+        _builder.setImageHeight(value)
+      }
+    /**
+     * <code>optional double image_height = 22;</code>
+     */
+    public fun clearImageHeight() {
+      _builder.clearImageHeight()
+    }
+    /**
+     * <code>optional double image_height = 22;</code>
+     * @return Whether the imageHeight field is set.
+     */
+    public fun hasImageHeight(): kotlin.Boolean {
+      return _builder.hasImageHeight()
+    }
+
+    /**
      * <code>optional uint32 platform = 7;</code>
      */
     public var platform: kotlin.Int
@@ -357,6 +479,54 @@ public object InGameMailKt {
     }
 
     /**
+     * <code>optional .ei.UserType user_type = 17;</code>
+     */
+    public var userType: ei.Ei.UserType
+      @JvmName("getUserType")
+      get() = _builder.getUserType()
+      @JvmName("setUserType")
+      set(value) {
+        _builder.setUserType(value)
+      }
+    /**
+     * <code>optional .ei.UserType user_type = 17;</code>
+     */
+    public fun clearUserType() {
+      _builder.clearUserType()
+    }
+    /**
+     * <code>optional .ei.UserType user_type = 17;</code>
+     * @return Whether the userType field is set.
+     */
+    public fun hasUserType(): kotlin.Boolean {
+      return _builder.hasUserType()
+    }
+
+    /**
+     * <code>optional uint32 min_piggy_breaks = 20;</code>
+     */
+    public var minPiggyBreaks: kotlin.Int
+      @JvmName("getMinPiggyBreaks")
+      get() = _builder.getMinPiggyBreaks()
+      @JvmName("setMinPiggyBreaks")
+      set(value) {
+        _builder.setMinPiggyBreaks(value)
+      }
+    /**
+     * <code>optional uint32 min_piggy_breaks = 20;</code>
+     */
+    public fun clearMinPiggyBreaks() {
+      _builder.clearMinPiggyBreaks()
+    }
+    /**
+     * <code>optional uint32 min_piggy_breaks = 20;</code>
+     * @return Whether the minPiggyBreaks field is set.
+     */
+    public fun hasMinPiggyBreaks(): kotlin.Boolean {
+      return _builder.hasMinPiggyBreaks()
+    }
+
+    /**
      * <code>optional double gold_tip = 6;</code>
      */
     public var goldTip: kotlin.Double
@@ -384,4 +554,7 @@ public object InGameMailKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.InGameMail.copy(block: ei.InGameMailKt.Dsl.() -> kotlin.Unit): ei.Ei.InGameMail =
   ei.InGameMailKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.InGameMailOrBuilder.imageOrNull: ei.Ei.DLCItem?
+  get() = if (hasImage()) getImage() else null
 

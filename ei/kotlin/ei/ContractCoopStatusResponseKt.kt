@@ -1288,6 +1288,30 @@ public object ContractCoopStatusResponseKt {
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()
       }
+
+      /**
+       * <code>optional string tracking = 4;</code>
+       */
+      public var tracking: kotlin.String
+        @JvmName("getTracking")
+        get() = _builder.getTracking()
+        @JvmName("setTracking")
+        set(value) {
+          _builder.setTracking(value)
+        }
+      /**
+       * <code>optional string tracking = 4;</code>
+       */
+      public fun clearTracking() {
+        _builder.clearTracking()
+      }
+      /**
+       * <code>optional string tracking = 4;</code>
+       * @return Whether the tracking field is set.
+       */
+      public fun hasTracking(): kotlin.Boolean {
+        return _builder.hasTracking()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializechickenRun")

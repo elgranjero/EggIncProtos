@@ -137,6 +137,8 @@ GPBObjCClassDeclaration(ShellDB_ShellStatus);
 GPBObjCClassDeclaration(ShellGroupSpec);
 GPBObjCClassDeclaration(ShellObjectSpec);
 GPBObjCClassDeclaration(ShellObjectSpec_LODPiece);
+GPBObjCClassDeclaration(ShellPopularityStats);
+GPBObjCClassDeclaration(ShellPopularityStats_Entry);
 GPBObjCClassDeclaration(ShellSetSpec);
 GPBObjCClassDeclaration(ShellSetSpec_VariationSpec);
 GPBObjCClassDeclaration(ShellSpec);
@@ -506,6 +508,112 @@ BOOL RewardType_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Enum UILocation
+
+GPBEnumDescriptor *UILocation_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "None\000Shop\000BoostShop\000Piggy\000ProPermit\000Ultr"
+        "aShop\000Shells\000ShellSets\000Chickens\000ChickenH"
+        "ats\000EpicResearch\000Settings\000";
+    static const int32_t values[] = {
+        UILocation_None,
+        UILocation_Shop,
+        UILocation_BoostShop,
+        UILocation_Piggy,
+        UILocation_ProPermit,
+        UILocation_UltraShop,
+        UILocation_Shells,
+        UILocation_ShellSets,
+        UILocation_Chickens,
+        UILocation_ChickenHats,
+        UILocation_EpicResearch,
+        UILocation_Settings,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(UILocation)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:UILocation_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL UILocation_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case UILocation_None:
+    case UILocation_Shop:
+    case UILocation_BoostShop:
+    case UILocation_Piggy:
+    case UILocation_ProPermit:
+    case UILocation_UltraShop:
+    case UILocation_Shells:
+    case UILocation_ShellSets:
+    case UILocation_Chickens:
+    case UILocation_ChickenHats:
+    case UILocation_EpicResearch:
+    case UILocation_Settings:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum UserType
+
+GPBEnumDescriptor *UserType_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "AllUsers\000ContractsUnlocked\000ArtifactsUnlo"
+        "cked\000FuelTankUnlocked\000ProPermitActive\000Ul"
+        "traActive\000NoProPermit\000NoUltra\000";
+    static const int32_t values[] = {
+        UserType_AllUsers,
+        UserType_ContractsUnlocked,
+        UserType_ArtifactsUnlocked,
+        UserType_FuelTankUnlocked,
+        UserType_ProPermitActive,
+        UserType_UltraActive,
+        UserType_NoProPermit,
+        UserType_NoUltra,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(UserType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:UserType_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL UserType_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case UserType_AllUsers:
+    case UserType_ContractsUnlocked:
+    case UserType_ArtifactsUnlocked:
+    case UserType_FuelTankUnlocked:
+    case UserType_ProPermitActive:
+    case UserType_UltraActive:
+    case UserType_NoProPermit:
+    case UserType_NoUltra:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - Enum LeaderboardScope
 
 GPBEnumDescriptor *LeaderboardScope_EnumDescriptor(void) {
@@ -858,6 +966,7 @@ typedef struct Backup__storage_ {
 @dynamic hasLowPerformanceMode, lowPerformanceMode;
 @dynamic hasForceTouchChickenBtn, forceTouchChickenBtn;
 @dynamic hasNotificationsQueried, notificationsQueried;
+@dynamic hasLastNotificationQueryTime, lastNotificationQueryTime;
 @dynamic hasNotificationsOn, notificationsOn;
 @dynamic hasNotifyDailyGift, notifyDailyGift;
 @dynamic hasLowPerformance, lowPerformance;
@@ -883,6 +992,7 @@ typedef struct Backup_Settings__storage_ {
   uint32_t _has_storage_[2];
   uint32_t lastDayAgeQueried;
   double lastBackupTime;
+  double lastNotificationQueryTime;
 } Backup_Settings__storage_;
 
 // This method is threadsafe because it is initially called
@@ -946,8 +1056,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "notificationsOn",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_NotificationsOn,
-        .core.hasIndex = 12,
-        .core.offset = 13,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 13,
+        .core.offset = 14,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -956,8 +1066,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "coppaQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_CoppaQueried,
-        .core.hasIndex = 23,
-        .core.offset = 24,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 24,
+        .core.offset = 25,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -966,8 +1076,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "coppaRestricted",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_CoppaRestricted,
-        .core.hasIndex = 25,
-        .core.offset = 26,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 26,
+        .core.offset = 27,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -986,8 +1096,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "lowPerformance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_LowPerformance,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -996,8 +1106,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "notifyDailyGift",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_NotifyDailyGift,
-        .core.hasIndex = 14,
-        .core.offset = 15,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 15,
+        .core.offset = 16,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1006,8 +1116,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "gdprConsentQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_GdprConsentQueried,
-        .core.hasIndex = 27,
-        .core.offset = 28,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 28,
+        .core.offset = 29,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1016,8 +1126,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "gdprConsentGiven",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_GdprConsentGiven,
-        .core.hasIndex = 31,
-        .core.offset = 32,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 32,
+        .core.offset = 33,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1026,8 +1136,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userAdsEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserAdsEnabled,
-        .core.hasIndex = 42,
-        .core.offset = 43,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 43,
+        .core.offset = 44,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1036,8 +1146,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userCloudEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserCloudEnabled,
-        .core.hasIndex = 44,
-        .core.offset = 45,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 45,
+        .core.offset = 46,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1046,8 +1156,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "gdprAgeRestricted",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_GdprAgeRestricted,
-        .core.hasIndex = 29,
-        .core.offset = 30,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 30,
+        .core.offset = 31,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1056,7 +1166,7 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "lastDayAgeQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_LastDayAgeQueried,
-        .core.hasIndex = 41,
+        .core.hasIndex = 42,
         .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, lastDayAgeQueried),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -1066,8 +1176,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "ageQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_AgeQueried,
-        .core.hasIndex = 33,
-        .core.offset = 34,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 34,
+        .core.offset = 35,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1076,8 +1186,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "ageRestricted",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_AgeRestricted,
-        .core.hasIndex = 35,
-        .core.offset = 36,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 36,
+        .core.offset = 37,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1086,8 +1196,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "dataCollectionConsentQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_DataCollectionConsentQueried,
-        .core.hasIndex = 37,
-        .core.offset = 38,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 38,
+        .core.offset = 39,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1096,8 +1206,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "dataCollectionConsentGiven",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_DataCollectionConsentGiven,
-        .core.hasIndex = 39,
-        .core.offset = 40,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 40,
+        .core.offset = 41,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1106,8 +1216,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userAnalyticsEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserAnalyticsEnabled,
-        .core.hasIndex = 46,
-        .core.offset = 47,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 47,
+        .core.offset = 48,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1116,8 +1226,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userPersonalizedAdsEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserPersonalizedAdsEnabled,
-        .core.hasIndex = 48,
-        .core.offset = 49,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 49,
+        .core.offset = 50,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1126,7 +1236,7 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "lastBackupTime",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_LastBackupTime,
-        .core.hasIndex = 22,
+        .core.hasIndex = 23,
         .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, lastBackupTime),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -1136,8 +1246,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "autoStopFueling",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_AutoStopFueling,
-        .core.hasIndex = 18,
-        .core.offset = 19,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 19,
+        .core.offset = 20,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1146,10 +1256,20 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "maxEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_MaxEnabled,
-        .core.hasIndex = 20,
-        .core.offset = 21,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 21,
+        .core.offset = 22,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "lastNotificationQueryTime",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Settings_FieldNumber_LastNotificationQueryTime,
+        .core.hasIndex = 12,
+        .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, lastNotificationQueryTime),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -9037,12 +9157,14 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
 @dynamic hasUserId, userId;
 @dynamic hasUserName, userName;
 @dynamic hasAmount, amount;
+@dynamic hasTracking, tracking;
 
 typedef struct ContractCoopStatusResponse_CoopGift__storage_ {
   uint32_t _has_storage_[1];
   uint32_t amount;
   NSString *userId;
   NSString *userName;
+  NSString *tracking;
 } ContractCoopStatusResponse_CoopGift__storage_;
 
 // This method is threadsafe because it is initially called
@@ -9075,6 +9197,15 @@ typedef struct ContractCoopStatusResponse_CoopGift__storage_ {
         .number = ContractCoopStatusResponse_CoopGift_FieldNumber_UserName,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_CoopGift__storage_, userName),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "tracking",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_CoopGift_FieldNumber_Tracking,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_CoopGift__storage_, tracking),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
@@ -13719,12 +13850,19 @@ typedef struct LiveConfig_MiscConfig__storage_ {
 @dynamic hasMessage, message;
 @dynamic hasAction, action;
 @dynamic hasURL, URL;
+@dynamic hasAppLink, appLink;
+@dynamic hasAppLinkExtra, appLinkExtra;
+@dynamic hasImage, image;
+@dynamic hasImageWidth, imageWidth;
+@dynamic hasImageHeight, imageHeight;
 @dynamic hasPlatform, platform;
 @dynamic buildsArray, buildsArray_Count;
 @dynamic hasMinClientVersion, minClientVersion;
 @dynamic hasMaxClientVersion, maxClientVersion;
 @dynamic hasMinSoulEggs, minSoulEggs;
 @dynamic hasMinMysticalBonus, minMysticalBonus;
+@dynamic hasUserType, userType;
+@dynamic hasMinPiggyBreaks, minPiggyBreaks;
 @dynamic hasGoldTip, goldTip;
 
 typedef struct InGameMail__storage_ {
@@ -13732,6 +13870,9 @@ typedef struct InGameMail__storage_ {
   uint32_t platform;
   uint32_t minClientVersion;
   uint32_t maxClientVersion;
+  UILocation appLink;
+  UserType userType;
+  uint32_t minPiggyBreaks;
   NSString *id_p;
   NSString *title;
   NSString *message;
@@ -13739,9 +13880,13 @@ typedef struct InGameMail__storage_ {
   NSString *URL;
   NSString *date;
   NSMutableArray *buildsArray;
+  NSString *appLinkExtra;
+  DLCItem *image;
   double goldTip;
   double minSoulEggs;
   double minMysticalBonus;
+  double imageWidth;
+  double imageHeight;
 } InGameMail__storage_;
 
 // This method is threadsafe because it is initially called
@@ -13799,7 +13944,7 @@ typedef struct InGameMail__storage_ {
         .name = "goldTip",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_GoldTip,
-        .hasIndex = 11,
+        .hasIndex = 18,
         .offset = (uint32_t)offsetof(InGameMail__storage_, goldTip),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13808,7 +13953,7 @@ typedef struct InGameMail__storage_ {
         .name = "platform",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_Platform,
-        .hasIndex = 6,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(InGameMail__storage_, platform),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -13835,7 +13980,7 @@ typedef struct InGameMail__storage_ {
         .name = "minClientVersion",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MinClientVersion,
-        .hasIndex = 7,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(InGameMail__storage_, minClientVersion),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -13844,7 +13989,7 @@ typedef struct InGameMail__storage_ {
         .name = "minSoulEggs",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MinSoulEggs,
-        .hasIndex = 9,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(InGameMail__storage_, minSoulEggs),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13853,7 +13998,7 @@ typedef struct InGameMail__storage_ {
         .name = "maxClientVersion",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MaxClientVersion,
-        .hasIndex = 8,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(InGameMail__storage_, maxClientVersion),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -13862,8 +14007,71 @@ typedef struct InGameMail__storage_ {
         .name = "minMysticalBonus",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MinMysticalBonus,
-        .hasIndex = 10,
+        .hasIndex = 15,
         .offset = (uint32_t)offsetof(InGameMail__storage_, minMysticalBonus),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "appLink",
+        .dataTypeSpecific.enumDescFunc = UILocation_EnumDescriptor,
+        .number = InGameMail_FieldNumber_AppLink,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, appLink),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "appLinkExtra",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_AppLinkExtra,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, appLinkExtra),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "image",
+        .dataTypeSpecific.clazz = GPBObjCClass(DLCItem),
+        .number = InGameMail_FieldNumber_Image,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, image),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "userType",
+        .dataTypeSpecific.enumDescFunc = UserType_EnumDescriptor,
+        .number = InGameMail_FieldNumber_UserType,
+        .hasIndex = 16,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, userType),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "minPiggyBreaks",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_MinPiggyBreaks,
+        .hasIndex = 17,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, minPiggyBreaks),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "imageWidth",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_ImageWidth,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, imageWidth),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "imageHeight",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_ImageHeight,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, imageHeight),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -14247,8 +14455,11 @@ typedef struct GetPeriodicalsRequest__storage_ {
 
 @dynamic hasRinfo, rinfo;
 @dynamic hasSoulEggs, soulEggs;
-@dynamic hasArtifactsEnabled, artifactsEnabled;
+@dynamic hasContractsUnlocked, contractsUnlocked;
+@dynamic hasArtifactsUnlocked, artifactsUnlocked;
 @dynamic hasFuelTankUnlocked, fuelTankUnlocked;
+@dynamic hasProPermit, proPermit;
+@dynamic hasUltra, ultra;
 
 typedef struct ConfigRequest__storage_ {
   uint32_t _has_storage_[1];
@@ -14281,11 +14492,11 @@ typedef struct ConfigRequest__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "artifactsEnabled",
+        .name = "artifactsUnlocked",
         .dataTypeSpecific.clazz = Nil,
-        .number = ConfigRequest_FieldNumber_ArtifactsEnabled,
-        .hasIndex = 2,
-        .offset = 3,  // Stored in _has_storage_ to save space.
+        .number = ConfigRequest_FieldNumber_ArtifactsUnlocked,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -14293,8 +14504,35 @@ typedef struct ConfigRequest__storage_ {
         .name = "fuelTankUnlocked",
         .dataTypeSpecific.clazz = Nil,
         .number = ConfigRequest_FieldNumber_FuelTankUnlocked,
-        .hasIndex = 4,
-        .offset = 5,  // Stored in _has_storage_ to save space.
+        .hasIndex = 6,
+        .offset = 7,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "contractsUnlocked",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConfigRequest_FieldNumber_ContractsUnlocked,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "proPermit",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConfigRequest_FieldNumber_ProPermit,
+        .hasIndex = 8,
+        .offset = 9,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "ultra",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConfigRequest_FieldNumber_Ultra,
+        .hasIndex = 10,
+        .offset = 11,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -18563,6 +18801,7 @@ typedef struct DLCItem__storage_ {
 @dynamic hasExpires, expires;
 @dynamic hasSecondsUntilAvailable, secondsUntilAvailable;
 @dynamic hasSecondsRemaining, secondsRemaining;
+@dynamic hasPopularity, popularity;
 @dynamic hasDefaultAppearance, defaultAppearance;
 
 typedef struct ShellSpec__storage_ {
@@ -18579,6 +18818,7 @@ typedef struct ShellSpec__storage_ {
   double requiredSoulEggs;
   double secondsRemaining;
   double secondsUntilAvailable;
+  uint64_t popularity;
 } ShellSpec__storage_;
 
 // This method is threadsafe because it is initially called
@@ -18636,8 +18876,8 @@ typedef struct ShellSpec__storage_ {
         .name = "defaultAppearance",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellSpec_FieldNumber_DefaultAppearance,
-        .hasIndex = 16,
-        .offset = 17,  // Stored in _has_storage_ to save space.
+        .hasIndex = 17,
+        .offset = 18,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -18730,6 +18970,15 @@ typedef struct ShellSpec__storage_ {
         .offset = (uint32_t)offsetof(ShellSpec__storage_, requiredParentShell),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "popularity",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellSpec_FieldNumber_Popularity,
+        .hasIndex = 16,
+        .offset = (uint32_t)offsetof(ShellSpec__storage_, popularity),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -19079,6 +19328,7 @@ typedef struct ShellSpec_ShellPiece__storage_ {
 @dynamic hasExpires, expires;
 @dynamic hasSecondsUntilAvailable, secondsUntilAvailable;
 @dynamic hasSecondsRemaining, secondsRemaining;
+@dynamic hasPopularity, popularity;
 @dynamic hasDecorator, decorator;
 @dynamic hasModifiedGeometry, modifiedGeometry;
 @dynamic hasElementSet, elementSet;
@@ -19103,6 +19353,7 @@ typedef struct ShellSetSpec__storage_ {
   double secondsRemaining;
   double discount;
   double secondsUntilAvailable;
+  uint64_t popularity;
 } ShellSetSpec__storage_;
 
 // This method is threadsafe because it is initially called
@@ -19166,8 +19417,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "defaultAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_DefaultAppearance,
-        .core.hasIndex = 22,
-        .core.offset = 23,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 23,
+        .core.offset = 24,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19176,8 +19427,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "elementSet",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_ElementSet,
-        .core.hasIndex = 18,
-        .core.offset = 19,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 19,
+        .core.offset = 20,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19226,8 +19477,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "customAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_CustomAppearance,
-        .core.hasIndex = 24,
-        .core.offset = 25,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 25,
+        .core.offset = 26,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19236,8 +19487,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "modifiedGeometry",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_ModifiedGeometry,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19246,8 +19497,8 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "decorator",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_Decorator,
-        .core.hasIndex = 14,
-        .core.offset = 15,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 15,
+        .core.offset = 16,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19266,7 +19517,7 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "hexBaseColor",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellSetSpec_FieldNumber_HexBaseColor,
-        .core.hasIndex = 20,
+        .core.hasIndex = 21,
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, hexBaseColor),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
@@ -19296,7 +19547,7 @@ typedef struct ShellSetSpec__storage_ {
         .core.name = "icon",
         .core.dataTypeSpecific.clazz = GPBObjCClass(DLCItem),
         .core.number = ShellSetSpec_FieldNumber_Icon,
-        .core.hasIndex = 21,
+        .core.hasIndex = 22,
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, icon),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeMessage,
@@ -19310,6 +19561,16 @@ typedef struct ShellSetSpec__storage_ {
         .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, requiredParentSet),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "popularity",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellSetSpec_FieldNumber_Popularity,
+        .core.hasIndex = 14,
+        .core.offset = (uint32_t)offsetof(ShellSetSpec__storage_, popularity),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -19450,6 +19711,7 @@ typedef struct ShellSetSpec_VariationSpec__storage_ {
 @dynamic hasExpires, expires;
 @dynamic hasSecondsUntilAvailable, secondsUntilAvailable;
 @dynamic hasSecondsRemaining, secondsRemaining;
+@dynamic hasPopularity, popularity;
 @dynamic metadataArray, metadataArray_Count;
 @dynamic hasNoHats, noHats;
 @dynamic hasChickenAnimation, chickenAnimation;
@@ -19473,6 +19735,7 @@ typedef struct ShellObjectSpec__storage_ {
   double requiredSoulEggs;
   double secondsRemaining;
   double secondsUntilAvailable;
+  uint64_t popularity;
 } ShellObjectSpec__storage_;
 
 // This method is threadsafe because it is initially called
@@ -19566,8 +19829,8 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "defaultAppearance",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_DefaultAppearance,
-        .core.hasIndex = 17,
-        .core.offset = 18,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 18,
+        .core.offset = 19,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19606,8 +19869,8 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "noHats",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_NoHats,
-        .core.hasIndex = 13,
-        .core.offset = 14,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 14,
+        .core.offset = 15,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -19636,7 +19899,7 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "chickenAnimation",
         .core.dataTypeSpecific.enumDescFunc = ShellObjectSpec_ChickenAnimation_EnumDescriptor,
         .core.number = ShellObjectSpec_FieldNumber_ChickenAnimation,
-        .core.hasIndex = 15,
+        .core.hasIndex = 16,
         .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, chickenAnimation),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .core.dataType = GPBDataTypeEnum,
@@ -19646,7 +19909,7 @@ typedef struct ShellObjectSpec__storage_ {
         .core.name = "sortPriority",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ShellObjectSpec_FieldNumber_SortPriority,
-        .core.hasIndex = 16,
+        .core.hasIndex = 17,
         .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, sortPriority),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeInt32,
@@ -19660,6 +19923,16 @@ typedef struct ShellObjectSpec__storage_ {
         .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, secondsUntilAvailable),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "popularity",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellObjectSpec_FieldNumber_Popularity,
+        .core.hasIndex = 13,
+        .core.offset = (uint32_t)offsetof(ShellObjectSpec__storage_, popularity),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -20787,6 +21060,134 @@ typedef struct ShellDB_ChickenConfig__storage_ {
                                    storageSize:sizeof(ShellDB_ChickenConfig__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     [localDescriptor setupContainingMessageClass:GPBObjCClass(ShellDB)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellPopularityStats
+
+@implementation ShellPopularityStats
+
+@dynamic dataArray, dataArray_Count;
+
+typedef struct ShellPopularityStats__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *dataArray;
+} ShellPopularityStats__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "dataArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellPopularityStats_Entry),
+        .number = ShellPopularityStats_FieldNumber_DataArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellPopularityStats__storage_, dataArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellPopularityStats class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellPopularityStats__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellPopularityStats_Entry
+
+@implementation ShellPopularityStats_Entry
+
+@dynamic hasId_p, id_p;
+@dynamic hasElement, element;
+@dynamic hasSpent, spent;
+@dynamic hasCount, count;
+
+typedef struct ShellPopularityStats_Entry__storage_ {
+  uint32_t _has_storage_[1];
+  ShellDB_FarmElement element;
+  NSString *id_p;
+  uint64_t spent;
+  uint64_t count;
+} ShellPopularityStats_Entry__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescriptionWithDefault fields[] = {
+      {
+        .defaultValue.valueString = nil,
+        .core.name = "id_p",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellPopularityStats_Entry_FieldNumber_Id_p,
+        .core.hasIndex = 0,
+        .core.offset = (uint32_t)offsetof(ShellPopularityStats_Entry__storage_, id_p),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeString,
+      },
+      {
+        .defaultValue.valueEnum = ShellDB_FarmElement_HenHouse,
+        .core.name = "element",
+        .core.dataTypeSpecific.enumDescFunc = ShellDB_FarmElement_EnumDescriptor,
+        .core.number = ShellPopularityStats_Entry_FieldNumber_Element,
+        .core.hasIndex = 1,
+        .core.offset = (uint32_t)offsetof(ShellPopularityStats_Entry__storage_, element),
+        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .core.dataType = GPBDataTypeEnum,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "spent",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellPopularityStats_Entry_FieldNumber_Spent,
+        .core.hasIndex = 2,
+        .core.offset = (uint32_t)offsetof(ShellPopularityStats_Entry__storage_, spent),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
+      },
+      {
+        .defaultValue.valueUInt64 = 0ULL,
+        .core.name = "count",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ShellPopularityStats_Entry_FieldNumber_Count,
+        .core.hasIndex = 3,
+        .core.offset = (uint32_t)offsetof(ShellPopularityStats_Entry__storage_, count),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt64,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellPopularityStats_Entry class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                   storageSize:sizeof(ShellPopularityStats_Entry__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(ShellPopularityStats)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG

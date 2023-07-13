@@ -114,6 +114,7 @@ proto.ei.ShellObjectSpec.toObject = function(includeInstance, msg) {
     expires: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f,
     secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    popularity: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
     metadataList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f,
     noHats: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
     chickenAnimation: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
@@ -204,6 +205,10 @@ proto.ei.ShellObjectSpec.deserializeBinaryFromReader = function(msg, reader) {
     case 12:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSecondsRemaining(value);
+      break;
+    case 19:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setPopularity(value);
       break;
     case 7:
       var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedDouble() : [reader.readDouble()]);
@@ -342,6 +347,13 @@ proto.ei.ShellObjectSpec.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       12,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 19));
+  if (f != null) {
+    writer.writeUint64(
+      19,
       f
     );
   }
@@ -1035,6 +1047,42 @@ proto.ei.ShellObjectSpec.prototype.clearSecondsRemaining = function() {
  */
 proto.ei.ShellObjectSpec.prototype.hasSecondsRemaining = function() {
   return jspb.Message.getField(this, 12) != null;
+};
+
+
+/**
+ * optional uint64 popularity = 19;
+ * @return {number}
+ */
+proto.ei.ShellObjectSpec.prototype.getPopularity = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 19, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.setPopularity = function(value) {
+  return jspb.Message.setField(this, 19, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellObjectSpec} returns this
+ */
+proto.ei.ShellObjectSpec.prototype.clearPopularity = function() {
+  return jspb.Message.setField(this, 19, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellObjectSpec.prototype.hasPopularity = function() {
+  return jspb.Message.getField(this, 19) != null;
 };
 
 

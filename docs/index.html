@@ -835,6 +835,14 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ShellPopularityStats"><span class="badge">M</span>ShellPopularityStats</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShellPopularityStats.Entry"><span class="badge">M</span>ShellPopularityStats.Entry</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ShellSetSpec"><span class="badge">M</span>ShellSetSpec</a>
                 </li>
               
@@ -1012,11 +1020,19 @@
                 </li>
               
                 <li>
+                  <a href="#ei.UILocation"><span class="badge">E</span>UILocation</a>
+                </li>
+              
+                <li>
                   <a href="#ei.UserSubscriptionInfo.Level"><span class="badge">E</span>UserSubscriptionInfo.Level</a>
                 </li>
               
                 <li>
                   <a href="#ei.UserSubscriptionInfo.Status"><span class="badge">E</span>UserSubscriptionInfo.Status</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.UserType"><span class="badge">E</span>UserType</a>
                 </li>
               
                 <li>
@@ -3589,6 +3605,13 @@
                 </tr>
               
                 <tr>
+                  <td>last_notification_query_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>notifications_on</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -4622,7 +4645,14 @@
                 </tr>
               
                 <tr>
-                  <td>artifacts_enabled</td>
+                  <td>contracts_unlocked</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>artifacts_unlocked</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -4630,6 +4660,20 @@
               
                 <tr>
                   <td>fuel_tank_unlocked</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>pro_permit</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ultra</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -5730,6 +5774,13 @@
                 <tr>
                   <td>amount</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tracking</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -8285,6 +8336,41 @@
                 </tr>
               
                 <tr>
+                  <td>app_link</td>
+                  <td><a href="#ei.UILocation">UILocation</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>app_link_extra</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>image</td>
+                  <td><a href="#ei.DLCItem">DLCItem</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>image_width</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>image_height</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>platform</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -8322,6 +8408,20 @@
                 <tr>
                   <td>min_mystical_bonus</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>user_type</td>
+                  <td><a href="#ei.UserType">UserType</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>min_piggy_breaks</td>
+                  <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -11442,6 +11542,13 @@
                 </tr>
               
                 <tr>
+                  <td>popularity</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>metadata</td>
                   <td><a href="#double">double</a></td>
                   <td>repeated</td>
@@ -11510,6 +11617,75 @@
                 <tr>
                   <td>lod</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellPopularityStats">ShellPopularityStats</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>data</td>
+                  <td><a href="#ei.ShellPopularityStats.Entry">ShellPopularityStats.Entry</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellPopularityStats.Entry">ShellPopularityStats.Entry</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>element</td>
+                  <td><a href="#ei.ShellDB.FarmElement">ShellDB.FarmElement</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>spent</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>count</td>
+                  <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -11611,6 +11787,13 @@
                 <tr>
                   <td>seconds_remaining</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>popularity</td>
+                  <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -11848,6 +12031,13 @@
                 <tr>
                   <td>seconds_remaining</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>popularity</td>
+                  <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -14998,6 +15188,89 @@
           </tbody>
         </table>
       
+        <h3 id="ei.UILocation">UILocation</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NONE</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SHOP</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>BOOST_SHOP</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PIGGY</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PRO_PERMIT</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ULTRA_SHOP</td>
+                <td>10</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SHELLS</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SHELL_SETS</td>
+                <td>6</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CHICKENS</td>
+                <td>7</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CHICKEN_HATS</td>
+                <td>11</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>EPIC_RESEARCH</td>
+                <td>8</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SETTINGS</td>
+                <td>9</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="ei.UserSubscriptionInfo.Level">UserSubscriptionInfo.Level</h3>
         <p></p>
         <table class="enum-table">
@@ -15062,6 +15335,65 @@
               <tr>
                 <td>PAUSE_HOLD</td>
                 <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.UserType">UserType</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>ALL_USERS</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CONTRACTS_UNLOCKED</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ARTIFACTS_UNLOCKED</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>FUEL_TANK_UNLOCKED</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PRO_PERMIT_ACTIVE</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ULTRA_ACTIVE</td>
+                <td>6</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>NO_PRO_PERMIT</td>
+                <td>7</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>NO_ULTRA</td>
+                <td>8</td>
                 <td><p></p></td>
               </tr>
             

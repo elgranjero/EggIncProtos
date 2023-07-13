@@ -989,6 +989,7 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     lowPerformanceMode: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
     forceTouchChickenBtn: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
     notificationsQueried: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    lastNotificationQueryTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 27)) == null ? undefined : f,
     notificationsOn: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
     notifyDailyGift: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     lowPerformance: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
@@ -1068,6 +1069,10 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setNotificationsQueried(value);
+      break;
+    case 27:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastNotificationQueryTime(value);
       break;
     case 6:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -1217,6 +1222,13 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       5,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 27));
+  if (f != null) {
+    writer.writeDouble(
+      27,
       f
     );
   }
@@ -1576,6 +1588,42 @@ proto.ei.Backup.Settings.prototype.clearNotificationsQueried = function() {
  */
 proto.ei.Backup.Settings.prototype.hasNotificationsQueried = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional double last_notification_query_time = 27;
+ * @return {number}
+ */
+proto.ei.Backup.Settings.prototype.getLastNotificationQueryTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 27, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setLastNotificationQueryTime = function(value) {
+  return jspb.Message.setField(this, 27, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearLastNotificationQueryTime = function() {
+  return jspb.Message.setField(this, 27, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasLastNotificationQueryTime = function() {
+  return jspb.Message.getField(this, 27) != null;
 };
 
 
@@ -14070,7 +14118,8 @@ proto.ei.ContractCoopStatusResponse.CoopGift.toObject = function(includeInstance
   var f, obj = {
     userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    tracking: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -14119,6 +14168,10 @@ proto.ei.ContractCoopStatusResponse.CoopGift.deserializeBinaryFromReader = funct
       var value = /** @type {number} */ (reader.readUint32());
       msg.setAmount(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTracking(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -14166,6 +14219,13 @@ proto.ei.ContractCoopStatusResponse.CoopGift.serializeBinaryToWriter = function(
   if (f != null) {
     writer.writeUint32(
       2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -14277,6 +14337,42 @@ proto.ei.ContractCoopStatusResponse.CoopGift.prototype.clearAmount = function() 
  */
 proto.ei.ContractCoopStatusResponse.CoopGift.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string tracking = 4;
+ * @return {string}
+ */
+proto.ei.ContractCoopStatusResponse.CoopGift.prototype.getTracking = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ContractCoopStatusResponse.CoopGift} returns this
+ */
+proto.ei.ContractCoopStatusResponse.CoopGift.prototype.setTracking = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.CoopGift} returns this
+ */
+proto.ei.ContractCoopStatusResponse.CoopGift.prototype.clearTracking = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.CoopGift.prototype.hasTracking = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

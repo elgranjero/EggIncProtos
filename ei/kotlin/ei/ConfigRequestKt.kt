@@ -73,27 +73,51 @@ public object ConfigRequestKt {
     }
 
     /**
-     * <code>optional bool artifacts_enabled = 3;</code>
+     * <code>optional bool contracts_unlocked = 5;</code>
      */
-    public var artifactsEnabled: kotlin.Boolean
-      @JvmName("getArtifactsEnabled")
-      get() = _builder.getArtifactsEnabled()
-      @JvmName("setArtifactsEnabled")
+    public var contractsUnlocked: kotlin.Boolean
+      @JvmName("getContractsUnlocked")
+      get() = _builder.getContractsUnlocked()
+      @JvmName("setContractsUnlocked")
       set(value) {
-        _builder.setArtifactsEnabled(value)
+        _builder.setContractsUnlocked(value)
       }
     /**
-     * <code>optional bool artifacts_enabled = 3;</code>
+     * <code>optional bool contracts_unlocked = 5;</code>
      */
-    public fun clearArtifactsEnabled() {
-      _builder.clearArtifactsEnabled()
+    public fun clearContractsUnlocked() {
+      _builder.clearContractsUnlocked()
     }
     /**
-     * <code>optional bool artifacts_enabled = 3;</code>
-     * @return Whether the artifactsEnabled field is set.
+     * <code>optional bool contracts_unlocked = 5;</code>
+     * @return Whether the contractsUnlocked field is set.
      */
-    public fun hasArtifactsEnabled(): kotlin.Boolean {
-      return _builder.hasArtifactsEnabled()
+    public fun hasContractsUnlocked(): kotlin.Boolean {
+      return _builder.hasContractsUnlocked()
+    }
+
+    /**
+     * <code>optional bool artifacts_unlocked = 3;</code>
+     */
+    public var artifactsUnlocked: kotlin.Boolean
+      @JvmName("getArtifactsUnlocked")
+      get() = _builder.getArtifactsUnlocked()
+      @JvmName("setArtifactsUnlocked")
+      set(value) {
+        _builder.setArtifactsUnlocked(value)
+      }
+    /**
+     * <code>optional bool artifacts_unlocked = 3;</code>
+     */
+    public fun clearArtifactsUnlocked() {
+      _builder.clearArtifactsUnlocked()
+    }
+    /**
+     * <code>optional bool artifacts_unlocked = 3;</code>
+     * @return Whether the artifactsUnlocked field is set.
+     */
+    public fun hasArtifactsUnlocked(): kotlin.Boolean {
+      return _builder.hasArtifactsUnlocked()
     }
 
     /**
@@ -118,6 +142,54 @@ public object ConfigRequestKt {
      */
     public fun hasFuelTankUnlocked(): kotlin.Boolean {
       return _builder.hasFuelTankUnlocked()
+    }
+
+    /**
+     * <code>optional bool pro_permit = 6;</code>
+     */
+    public var proPermit: kotlin.Boolean
+      @JvmName("getProPermit")
+      get() = _builder.getProPermit()
+      @JvmName("setProPermit")
+      set(value) {
+        _builder.setProPermit(value)
+      }
+    /**
+     * <code>optional bool pro_permit = 6;</code>
+     */
+    public fun clearProPermit() {
+      _builder.clearProPermit()
+    }
+    /**
+     * <code>optional bool pro_permit = 6;</code>
+     * @return Whether the proPermit field is set.
+     */
+    public fun hasProPermit(): kotlin.Boolean {
+      return _builder.hasProPermit()
+    }
+
+    /**
+     * <code>optional bool ultra = 7;</code>
+     */
+    public var ultra: kotlin.Boolean
+      @JvmName("getUltra")
+      get() = _builder.getUltra()
+      @JvmName("setUltra")
+      set(value) {
+        _builder.setUltra(value)
+      }
+    /**
+     * <code>optional bool ultra = 7;</code>
+     */
+    public fun clearUltra() {
+      _builder.clearUltra()
+    }
+    /**
+     * <code>optional bool ultra = 7;</code>
+     * @return Whether the ultra field is set.
+     */
+    public fun hasUltra(): kotlin.Boolean {
+      return _builder.hasUltra()
     }
   }
 }

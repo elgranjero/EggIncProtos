@@ -131,6 +131,7 @@ CF_EXTERN_C_BEGIN
 @class ShellGroupSpec;
 @class ShellObjectSpec;
 @class ShellObjectSpec_LODPiece;
+@class ShellPopularityStats_Entry;
 @class ShellSetSpec;
 @class ShellSetSpec_VariationSpec;
 @class ShellSpec;
@@ -285,6 +286,52 @@ GPBEnumDescriptor *RewardType_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL RewardType_IsValidValue(int32_t value);
+
+#pragma mark - Enum UILocation
+
+typedef GPB_ENUM(UILocation) {
+  UILocation_None = 0,
+  UILocation_Shop = 1,
+  UILocation_BoostShop = 2,
+  UILocation_Piggy = 3,
+  UILocation_ProPermit = 4,
+  UILocation_UltraShop = 10,
+  UILocation_Shells = 5,
+  UILocation_ShellSets = 6,
+  UILocation_Chickens = 7,
+  UILocation_ChickenHats = 11,
+  UILocation_EpicResearch = 8,
+  UILocation_Settings = 9,
+};
+
+GPBEnumDescriptor *UILocation_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL UILocation_IsValidValue(int32_t value);
+
+#pragma mark - Enum UserType
+
+typedef GPB_ENUM(UserType) {
+  UserType_AllUsers = 0,
+  UserType_ContractsUnlocked = 1,
+  UserType_ArtifactsUnlocked = 3,
+  UserType_FuelTankUnlocked = 4,
+  UserType_ProPermitActive = 5,
+  UserType_UltraActive = 6,
+  UserType_NoProPermit = 7,
+  UserType_NoUltra = 8,
+};
+
+GPBEnumDescriptor *UserType_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL UserType_IsValidValue(int32_t value);
 
 #pragma mark - Enum LeaderboardScope
 
@@ -1065,6 +1112,7 @@ typedef GPB_ENUM(Backup_Settings_FieldNumber) {
   Backup_Settings_FieldNumber_LastBackupTime = 24,
   Backup_Settings_FieldNumber_AutoStopFueling = 25,
   Backup_Settings_FieldNumber_MaxEnabled = 26,
+  Backup_Settings_FieldNumber_LastNotificationQueryTime = 27,
 };
 
 GPB_FINAL @interface Backup_Settings : GPBMessage
@@ -1087,6 +1135,9 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 @property(nonatomic, readwrite) BOOL notificationsQueried;
 
 @property(nonatomic, readwrite) BOOL hasNotificationsQueried;
+@property(nonatomic, readwrite) double lastNotificationQueryTime;
+
+@property(nonatomic, readwrite) BOOL hasLastNotificationQueryTime;
 @property(nonatomic, readwrite) BOOL notificationsOn;
 
 @property(nonatomic, readwrite) BOOL hasNotificationsOn;
@@ -3782,6 +3833,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_CoopGift_FieldNumber) {
   ContractCoopStatusResponse_CoopGift_FieldNumber_UserId = 1,
   ContractCoopStatusResponse_CoopGift_FieldNumber_Amount = 2,
   ContractCoopStatusResponse_CoopGift_FieldNumber_UserName = 3,
+  ContractCoopStatusResponse_CoopGift_FieldNumber_Tracking = 4,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse_CoopGift : GPBMessage
@@ -3797,6 +3849,10 @@ GPB_FINAL @interface ContractCoopStatusResponse_CoopGift : GPBMessage
 @property(nonatomic, readwrite) uint32_t amount;
 
 @property(nonatomic, readwrite) BOOL hasAmount;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *tracking;
+/** Test to see if @c tracking has been set. */
+@property(nonatomic, readwrite) BOOL hasTracking;
+
 @end
 
 #pragma mark - ContractCoopStatusResponse_ChickenRun
@@ -5419,6 +5475,13 @@ typedef GPB_ENUM(InGameMail_FieldNumber) {
   InGameMail_FieldNumber_MinSoulEggs = 11,
   InGameMail_FieldNumber_MaxClientVersion = 12,
   InGameMail_FieldNumber_MinMysticalBonus = 13,
+  InGameMail_FieldNumber_AppLink = 14,
+  InGameMail_FieldNumber_AppLinkExtra = 15,
+  InGameMail_FieldNumber_Image = 16,
+  InGameMail_FieldNumber_UserType = 17,
+  InGameMail_FieldNumber_MinPiggyBreaks = 20,
+  InGameMail_FieldNumber_ImageWidth = 21,
+  InGameMail_FieldNumber_ImageHeight = 22,
 };
 
 GPB_FINAL @interface InGameMail : GPBMessage
@@ -5447,6 +5510,23 @@ GPB_FINAL @interface InGameMail : GPBMessage
 /** Test to see if @c URL has been set. */
 @property(nonatomic, readwrite) BOOL hasURL;
 
+@property(nonatomic, readwrite) UILocation appLink;
+
+@property(nonatomic, readwrite) BOOL hasAppLink;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *appLinkExtra;
+/** Test to see if @c appLinkExtra has been set. */
+@property(nonatomic, readwrite) BOOL hasAppLinkExtra;
+
+@property(nonatomic, readwrite, strong, null_resettable) DLCItem *image;
+/** Test to see if @c image has been set. */
+@property(nonatomic, readwrite) BOOL hasImage;
+
+@property(nonatomic, readwrite) double imageWidth;
+
+@property(nonatomic, readwrite) BOOL hasImageWidth;
+@property(nonatomic, readwrite) double imageHeight;
+
+@property(nonatomic, readwrite) BOOL hasImageHeight;
 @property(nonatomic, readwrite) uint32_t platform;
 
 @property(nonatomic, readwrite) BOOL hasPlatform;
@@ -5466,6 +5546,12 @@ GPB_FINAL @interface InGameMail : GPBMessage
 @property(nonatomic, readwrite) double minMysticalBonus;
 
 @property(nonatomic, readwrite) BOOL hasMinMysticalBonus;
+@property(nonatomic, readwrite) UserType userType;
+
+@property(nonatomic, readwrite) BOOL hasUserType;
+@property(nonatomic, readwrite) uint32_t minPiggyBreaks;
+
+@property(nonatomic, readwrite) BOOL hasMinPiggyBreaks;
 @property(nonatomic, readwrite) double goldTip;
 
 @property(nonatomic, readwrite) BOOL hasGoldTip;
@@ -5606,8 +5692,11 @@ GPB_FINAL @interface GetPeriodicalsRequest : GPBMessage
 typedef GPB_ENUM(ConfigRequest_FieldNumber) {
   ConfigRequest_FieldNumber_Rinfo = 1,
   ConfigRequest_FieldNumber_SoulEggs = 2,
-  ConfigRequest_FieldNumber_ArtifactsEnabled = 3,
+  ConfigRequest_FieldNumber_ArtifactsUnlocked = 3,
   ConfigRequest_FieldNumber_FuelTankUnlocked = 4,
+  ConfigRequest_FieldNumber_ContractsUnlocked = 5,
+  ConfigRequest_FieldNumber_ProPermit = 6,
+  ConfigRequest_FieldNumber_Ultra = 7,
 };
 
 GPB_FINAL @interface ConfigRequest : GPBMessage
@@ -5619,12 +5708,21 @@ GPB_FINAL @interface ConfigRequest : GPBMessage
 @property(nonatomic, readwrite) double soulEggs;
 
 @property(nonatomic, readwrite) BOOL hasSoulEggs;
-@property(nonatomic, readwrite) BOOL artifactsEnabled;
+@property(nonatomic, readwrite) BOOL contractsUnlocked;
 
-@property(nonatomic, readwrite) BOOL hasArtifactsEnabled;
+@property(nonatomic, readwrite) BOOL hasContractsUnlocked;
+@property(nonatomic, readwrite) BOOL artifactsUnlocked;
+
+@property(nonatomic, readwrite) BOOL hasArtifactsUnlocked;
 @property(nonatomic, readwrite) BOOL fuelTankUnlocked;
 
 @property(nonatomic, readwrite) BOOL hasFuelTankUnlocked;
+@property(nonatomic, readwrite) BOOL proPermit;
+
+@property(nonatomic, readwrite) BOOL hasProPermit;
+@property(nonatomic, readwrite) BOOL ultra;
+
+@property(nonatomic, readwrite) BOOL hasUltra;
 @end
 
 #pragma mark - ConfigResponse
@@ -6976,6 +7074,7 @@ typedef GPB_ENUM(ShellSpec_FieldNumber) {
   ShellSpec_FieldNumber_AltAssetsArray = 18,
   ShellSpec_FieldNumber_ModifiedGeometry = 19,
   ShellSpec_FieldNumber_RequiredParentShell = 20,
+  ShellSpec_FieldNumber_Popularity = 21,
 };
 
 GPB_FINAL @interface ShellSpec : GPBMessage
@@ -7032,6 +7131,9 @@ GPB_FINAL @interface ShellSpec : GPBMessage
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
+@property(nonatomic, readwrite) uint64_t popularity;
+
+@property(nonatomic, readwrite) BOOL hasPopularity;
 @property(nonatomic, readwrite) BOOL defaultAppearance;
 
 @property(nonatomic, readwrite) BOOL hasDefaultAppearance;
@@ -7078,6 +7180,7 @@ typedef GPB_ENUM(ShellSetSpec_FieldNumber) {
   ShellSetSpec_FieldNumber_SecondsUntilAvailable = 18,
   ShellSetSpec_FieldNumber_Icon = 19,
   ShellSetSpec_FieldNumber_RequiredParentSet = 20,
+  ShellSetSpec_FieldNumber_Popularity = 21,
 };
 
 GPB_FINAL @interface ShellSetSpec : GPBMessage
@@ -7121,6 +7224,9 @@ GPB_FINAL @interface ShellSetSpec : GPBMessage
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
+@property(nonatomic, readwrite) uint64_t popularity;
+
+@property(nonatomic, readwrite) BOOL hasPopularity;
 @property(nonatomic, readwrite) BOOL decorator;
 
 @property(nonatomic, readwrite) BOOL hasDecorator;
@@ -7206,6 +7312,7 @@ typedef GPB_ENUM(ShellObjectSpec_FieldNumber) {
   ShellObjectSpec_FieldNumber_ChickenAnimation = 16,
   ShellObjectSpec_FieldNumber_SortPriority = 17,
   ShellObjectSpec_FieldNumber_SecondsUntilAvailable = 18,
+  ShellObjectSpec_FieldNumber_Popularity = 19,
 };
 
 GPB_FINAL @interface ShellObjectSpec : GPBMessage
@@ -7250,6 +7357,9 @@ GPB_FINAL @interface ShellObjectSpec : GPBMessage
 @property(nonatomic, readwrite) double secondsRemaining;
 
 @property(nonatomic, readwrite) BOOL hasSecondsRemaining;
+@property(nonatomic, readwrite) uint64_t popularity;
+
+@property(nonatomic, readwrite) BOOL hasPopularity;
 @property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *metadataArray;
 /** The number of items in @c metadataArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger metadataArray_Count;
@@ -7615,6 +7725,46 @@ GPB_FINAL @interface ShellDB_ChickenConfig : GPBMessage
 /** Test to see if @c hatIdentifier has been set. */
 @property(nonatomic, readwrite) BOOL hasHatIdentifier;
 
+@end
+
+#pragma mark - ShellPopularityStats
+
+typedef GPB_ENUM(ShellPopularityStats_FieldNumber) {
+  ShellPopularityStats_FieldNumber_DataArray = 1,
+};
+
+GPB_FINAL @interface ShellPopularityStats : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellPopularityStats_Entry*> *dataArray;
+/** The number of items in @c dataArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger dataArray_Count;
+
+@end
+
+#pragma mark - ShellPopularityStats_Entry
+
+typedef GPB_ENUM(ShellPopularityStats_Entry_FieldNumber) {
+  ShellPopularityStats_Entry_FieldNumber_Id_p = 1,
+  ShellPopularityStats_Entry_FieldNumber_Element = 2,
+  ShellPopularityStats_Entry_FieldNumber_Spent = 3,
+  ShellPopularityStats_Entry_FieldNumber_Count = 4,
+};
+
+GPB_FINAL @interface ShellPopularityStats_Entry : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *id_p;
+/** Test to see if @c id_p has been set. */
+@property(nonatomic, readwrite) BOOL hasId_p;
+
+@property(nonatomic, readwrite) ShellDB_FarmElement element;
+
+@property(nonatomic, readwrite) BOOL hasElement;
+@property(nonatomic, readwrite) uint64_t spent;
+
+@property(nonatomic, readwrite) BOOL hasSpent;
+@property(nonatomic, readwrite) uint64_t count;
+
+@property(nonatomic, readwrite) BOOL hasCount;
 @end
 
 #pragma mark - ShellsActionLog

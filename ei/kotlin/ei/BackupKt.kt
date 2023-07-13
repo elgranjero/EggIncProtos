@@ -904,6 +904,30 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional double last_notification_query_time = 27;</code>
+       */
+      public var lastNotificationQueryTime: kotlin.Double
+        @JvmName("getLastNotificationQueryTime")
+        get() = _builder.getLastNotificationQueryTime()
+        @JvmName("setLastNotificationQueryTime")
+        set(value) {
+          _builder.setLastNotificationQueryTime(value)
+        }
+      /**
+       * <code>optional double last_notification_query_time = 27;</code>
+       */
+      public fun clearLastNotificationQueryTime() {
+        _builder.clearLastNotificationQueryTime()
+      }
+      /**
+       * <code>optional double last_notification_query_time = 27;</code>
+       * @return Whether the lastNotificationQueryTime field is set.
+       */
+      public fun hasLastNotificationQueryTime(): kotlin.Boolean {
+        return _builder.hasLastNotificationQueryTime()
+      }
+
+      /**
        * <code>optional bool notifications_on = 6;</code>
        */
       public var notificationsOn: kotlin.Boolean

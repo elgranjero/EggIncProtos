@@ -481,6 +481,30 @@ public object ShellSpecKt {
     }
 
     /**
+     * <code>optional uint64 popularity = 21;</code>
+     */
+    public var popularity: kotlin.Long
+      @JvmName("getPopularity")
+      get() = _builder.getPopularity()
+      @JvmName("setPopularity")
+      set(value) {
+        _builder.setPopularity(value)
+      }
+    /**
+     * <code>optional uint64 popularity = 21;</code>
+     */
+    public fun clearPopularity() {
+      _builder.clearPopularity()
+    }
+    /**
+     * <code>optional uint64 popularity = 21;</code>
+     * @return Whether the popularity field is set.
+     */
+    public fun hasPopularity(): kotlin.Boolean {
+      return _builder.hasPopularity()
+    }
+
+    /**
      * <code>optional bool default_appearance = 8;</code>
      */
     public var defaultAppearance: kotlin.Boolean

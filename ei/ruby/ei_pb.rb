@@ -39,6 +39,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :low_performance_mode, :bool, 4
       optional :force_touch_chicken_btn, :bool, 9
       optional :notifications_queried, :bool, 5
+      optional :last_notification_query_time, :double, 27
       optional :notifications_on, :bool, 6
       optional :notify_daily_gift, :bool, 11
       optional :low_performance, :bool, 10
@@ -712,6 +713,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :user_id, :string, 1
       optional :user_name, :string, 3
       optional :amount, :uint32, 2
+      optional :tracking, :string, 4
     end
     add_message "ei.ContractCoopStatusResponse.ChickenRun" do
       optional :user_id, :string, 1
@@ -1109,12 +1111,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :message, :string, 3
       optional :action, :string, 4
       optional :url, :string, 5
+      optional :app_link, :enum, 14, "ei.UILocation"
+      optional :app_link_extra, :string, 15
+      optional :image, :message, 16, "ei.DLCItem"
+      optional :image_width, :double, 21
+      optional :image_height, :double, 22
       optional :platform, :uint32, 7
       repeated :builds, :string, 9
       optional :min_client_version, :uint32, 10
       optional :max_client_version, :uint32, 12
       optional :min_soul_eggs, :double, 11
       optional :min_mystical_bonus, :double, 13
+      optional :user_type, :enum, 17, "ei.UserType"
+      optional :min_piggy_breaks, :uint32, 20
       optional :gold_tip, :double, 6
     end
     add_message "ei.MailDB" do
@@ -1149,8 +1158,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ConfigRequest" do
       optional :rinfo, :message, 1, "ei.BasicRequestInfo"
       optional :soul_eggs, :double, 2
-      optional :artifacts_enabled, :bool, 3
+      optional :contracts_unlocked, :bool, 5
+      optional :artifacts_unlocked, :bool, 3
       optional :fuel_tank_unlocked, :bool, 4
+      optional :pro_permit, :bool, 6
+      optional :ultra, :bool, 7
     end
     add_message "ei.ConfigResponse" do
       optional :live_config, :message, 1, "ei.LiveConfig"
@@ -1570,6 +1582,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :expires, :bool, 15
       optional :seconds_until_available, :double, 17
       optional :seconds_remaining, :double, 16
+      optional :popularity, :uint64, 21
       optional :default_appearance, :bool, 8
     end
     add_message "ei.ShellSpec.ShellPiece" do
@@ -1687,6 +1700,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :expires, :bool, 10
       optional :seconds_until_available, :double, 18
       optional :seconds_remaining, :double, 11
+      optional :popularity, :uint64, 21
       optional :decorator, :bool, 14
       optional :modified_geometry, :bool, 13
       optional :element_set, :bool, 7
@@ -1717,6 +1731,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :expires, :bool, 11
       optional :seconds_until_available, :double, 18
       optional :seconds_remaining, :double, 12
+      optional :popularity, :uint64, 19
       repeated :metadata, :double, 7
       optional :no_hats, :bool, 13
       optional :chicken_animation, :enum, 16, "ei.ShellObjectSpec.ChickenAnimation"
@@ -1826,6 +1841,15 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :CHICKEN, 14
       value :HAT, 15
       value :UNKNOWN, 99
+    end
+    add_message "ei.ShellPopularityStats" do
+      repeated :data, :message, 1, "ei.ShellPopularityStats.Entry"
+    end
+    add_message "ei.ShellPopularityStats.Entry" do
+      optional :id, :string, 1
+      optional :element, :enum, 2, "ei.ShellDB.FarmElement"
+      optional :spent, :uint64, 3
+      optional :count, :uint64, 4
     end
     add_message "ei.ShellsActionLog" do
       optional :rinfo, :message, 8, "ei.BasicRequestInfo"
@@ -1993,6 +2017,30 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :CHICKEN, 13
       value :SHELL_SCRIPT, 14
       value :UNKNOWN_REWARD, 100
+    end
+    add_enum "ei.UILocation" do
+      value :NONE, 0
+      value :SHOP, 1
+      value :BOOST_SHOP, 2
+      value :PIGGY, 3
+      value :PRO_PERMIT, 4
+      value :ULTRA_SHOP, 10
+      value :SHELLS, 5
+      value :SHELL_SETS, 6
+      value :CHICKENS, 7
+      value :CHICKEN_HATS, 11
+      value :EPIC_RESEARCH, 8
+      value :SETTINGS, 9
+    end
+    add_enum "ei.UserType" do
+      value :ALL_USERS, 0
+      value :CONTRACTS_UNLOCKED, 1
+      value :ARTIFACTS_UNLOCKED, 3
+      value :FUEL_TANK_UNLOCKED, 4
+      value :PRO_PERMIT_ACTIVE, 5
+      value :ULTRA_ACTIVE, 6
+      value :NO_PRO_PERMIT, 7
+      value :NO_ULTRA, 8
     end
     add_enum "ei.LeaderboardScope" do
       value :ALL_TIME, 0
@@ -2196,6 +2244,8 @@ module Ei
   ShellDB::ShellGroupConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellGroupConfiguration").msgclass
   ShellDB::ChickenConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ChickenConfig").msgclass
   ShellDB::FarmElement = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.FarmElement").enummodule
+  ShellPopularityStats = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellPopularityStats").msgclass
+  ShellPopularityStats::Entry = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellPopularityStats.Entry").msgclass
   ShellsActionLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellsActionLog").msgclass
   UserVerificationAnalysis = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis").msgclass
   UserVerificationAnalysis::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis.Status").enummodule
@@ -2212,5 +2262,7 @@ module Ei
   FarmType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.FarmType").enummodule
   GoalType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GoalType").enummodule
   RewardType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.RewardType").enummodule
+  UILocation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UILocation").enummodule
+  UserType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserType").enummodule
   LeaderboardScope = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LeaderboardScope").enummodule
 end
