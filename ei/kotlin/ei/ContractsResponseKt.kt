@@ -119,6 +119,30 @@ public object ContractsResponseKt {
     }
 
     /**
+     * <code>optional double total_eop = 5;</code>
+     */
+    public var totalEop: kotlin.Double
+      @JvmName("getTotalEop")
+      get() = _builder.getTotalEop()
+      @JvmName("setTotalEop")
+      set(value) {
+        _builder.setTotalEop(value)
+      }
+    /**
+     * <code>optional double total_eop = 5;</code>
+     */
+    public fun clearTotalEop() {
+      _builder.clearTotalEop()
+    }
+    /**
+     * <code>optional double total_eop = 5;</code>
+     * @return Whether the totalEop field is set.
+     */
+    public fun hasTotalEop(): kotlin.Boolean {
+      return _builder.hasTotalEop()
+    }
+
+    /**
      * <code>optional double server_time = 2;</code>
      */
     public var serverTime: kotlin.Double

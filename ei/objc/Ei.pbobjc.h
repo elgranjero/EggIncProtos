@@ -980,6 +980,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_ReadMailIdsArray = 23,
   Backup_FieldNumber_ShellDb = 24,
   Backup_FieldNumber_Shells = 25,
+  Backup_FieldNumber_PushUserId = 26,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -997,6 +998,10 @@ GPB_FINAL @interface Backup : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesId;
 /** Test to see if @c gameServicesId has been set. */
 @property(nonatomic, readwrite) BOOL hasGameServicesId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *pushUserId;
+/** Test to see if @c pushUserId has been set. */
+@property(nonatomic, readwrite) BOOL hasPushUserId;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceId;
 /** Test to see if @c deviceId has been set. */
@@ -2480,6 +2485,7 @@ typedef GPB_ENUM(GenericAction_FieldNumber) {
   GenericAction_FieldNumber_Device = 6,
   GenericAction_FieldNumber_AdvertisingId = 7,
   GenericAction_FieldNumber_ApproxTime = 8,
+  GenericAction_FieldNumber_CcUser = 9,
 };
 
 GPB_FINAL @interface GenericAction : GPBMessage
@@ -2488,6 +2494,9 @@ GPB_FINAL @interface GenericAction : GPBMessage
 /** Test to see if @c userId has been set. */
 @property(nonatomic, readwrite) BOOL hasUserId;
 
+@property(nonatomic, readwrite) BOOL ccUser;
+
+@property(nonatomic, readwrite) BOOL hasCcUser;
 @property(nonatomic, readwrite, copy, null_resettable) NSString *advertisingId;
 /** Test to see if @c advertisingId has been set. */
 @property(nonatomic, readwrite) BOOL hasAdvertisingId;
@@ -3441,6 +3450,7 @@ typedef GPB_ENUM(ContractsResponse_FieldNumber) {
   ContractsResponse_FieldNumber_ServerTime = 2,
   ContractsResponse_FieldNumber_MaxEop = 3,
   ContractsResponse_FieldNumber_WarningMessage = 4,
+  ContractsResponse_FieldNumber_TotalEop = 5,
 };
 
 GPB_FINAL @interface ContractsResponse : GPBMessage
@@ -3453,6 +3463,9 @@ GPB_FINAL @interface ContractsResponse : GPBMessage
 /** Test to see if @c warningMessage has been set. */
 @property(nonatomic, readwrite) BOOL hasWarningMessage;
 
+@property(nonatomic, readwrite) double totalEop;
+
+@property(nonatomic, readwrite) BOOL hasTotalEop;
 @property(nonatomic, readwrite) double serverTime;
 
 @property(nonatomic, readwrite) BOOL hasServerTime;
@@ -3744,6 +3757,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_ContributionInfo_FieldNumber) {
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_Uuid = 21,
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_Finalized = 22,
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_RecentlyActive = 23,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_CcMember = 24,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
@@ -3790,6 +3804,9 @@ GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
 @property(nonatomic, readwrite) BOOL active;
 
 @property(nonatomic, readwrite) BOOL hasActive;
+@property(nonatomic, readwrite) BOOL ccMember;
+
+@property(nonatomic, readwrite) BOOL hasCcMember;
 @property(nonatomic, readwrite) BOOL leech;
 
 @property(nonatomic, readwrite) BOOL hasLeech;

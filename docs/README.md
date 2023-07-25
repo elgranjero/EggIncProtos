@@ -716,6 +716,7 @@
 | user_id | [string](#string) | optional |  |
 | ei_user_id | [string](#string) | optional |  |
 | game_services_id | [string](#string) | optional |  |
+| push_user_id | [string](#string) | optional |  |
 | device_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
 | approx_time | [double](#double) | optional |  |
@@ -1591,6 +1592,7 @@
 | rank_change | [int32](#int32) | optional |  |
 | recently_active | [bool](#bool) | optional |  |
 | active | [bool](#bool) | optional |  |
+| cc_member | [bool](#bool) | optional |  |
 | leech | [bool](#bool) | optional |  |
 | finalized | [bool](#bool) | optional |  |
 | time_cheat_detected | [bool](#bool) | optional |  |
@@ -1938,6 +1940,7 @@
 | ----- | ---- | ----- | ----------- |
 | contracts | [Contract](#ei-Contract) | repeated |  |
 | warning_message | [string](#string) | optional |  |
+| total_eop | [double](#double) | optional |  |
 | server_time | [double](#double) | optional |  |
 | max_eop | [uint32](#uint32) | optional |  Default: 1000 |
 
@@ -2394,6 +2397,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | user_id | [string](#string) | optional |  |
+| cc_user | [bool](#bool) | optional |  |
 | advertising_id | [string](#string) | optional |  |
 | approx_time_DEP | [float](#float) | optional |  |
 | approx_time | [double](#double) | optional |  |

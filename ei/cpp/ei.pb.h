@@ -7130,6 +7130,7 @@ class Backup final :
     kGameServicesIdFieldNumber = 16,
     kDeviceIdFieldNumber = 17,
     kEiUserIdFieldNumber = 18,
+    kPushUserIdFieldNumber = 26,
     kSignatureFieldNumber = 101,
     kSettingsFieldNumber = 4,
     kTutorialFieldNumber = 5,
@@ -7279,6 +7280,24 @@ class Backup final :
   const std::string& _internal_ei_user_id() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_ei_user_id(const std::string& value);
   std::string* _internal_mutable_ei_user_id();
+  public:
+
+  // optional string push_user_id = 26;
+  bool has_push_user_id() const;
+  private:
+  bool _internal_has_push_user_id() const;
+  public:
+  void clear_push_user_id();
+  const std::string& push_user_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_push_user_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_push_user_id();
+  PROTOBUF_NODISCARD std::string* release_push_user_id();
+  void set_allocated_push_user_id(std::string* push_user_id);
+  private:
+  const std::string& _internal_push_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_push_user_id(const std::string& value);
+  std::string* _internal_mutable_push_user_id();
   public:
 
   // optional string signature = 101;
@@ -7596,6 +7615,7 @@ class Backup final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr game_services_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr device_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ei_user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr push_user_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr signature_;
   ::ei::Backup_Settings* settings_;
   ::ei::Backup_Tutorial* tutorial_;
@@ -10859,8 +10879,9 @@ class GenericAction final :
     kAdvertisingIdFieldNumber = 7,
     kAppFieldNumber = 5,
     kDeviceFieldNumber = 6,
-    kApproxTimeFieldNumber = 8,
     kApproxTimeDEPFieldNumber = 2,
+    kCcUserFieldNumber = 9,
+    kApproxTimeFieldNumber = 8,
   };
   // repeated .ei.ActionKeyValuePair data = 4;
   int data_size() const;
@@ -10970,19 +10991,6 @@ class GenericAction final :
       ::ei::DeviceInfo* device);
   ::ei::DeviceInfo* unsafe_arena_release_device();
 
-  // optional double approx_time = 8;
-  bool has_approx_time() const;
-  private:
-  bool _internal_has_approx_time() const;
-  public:
-  void clear_approx_time();
-  double approx_time() const;
-  void set_approx_time(double value);
-  private:
-  double _internal_approx_time() const;
-  void _internal_set_approx_time(double value);
-  public:
-
   // optional float approx_time_DEP = 2;
   bool has_approx_time_dep() const;
   private:
@@ -10994,6 +11002,32 @@ class GenericAction final :
   private:
   float _internal_approx_time_dep() const;
   void _internal_set_approx_time_dep(float value);
+  public:
+
+  // optional bool cc_user = 9;
+  bool has_cc_user() const;
+  private:
+  bool _internal_has_cc_user() const;
+  public:
+  void clear_cc_user();
+  bool cc_user() const;
+  void set_cc_user(bool value);
+  private:
+  bool _internal_cc_user() const;
+  void _internal_set_cc_user(bool value);
+  public:
+
+  // optional double approx_time = 8;
+  bool has_approx_time() const;
+  private:
+  bool _internal_has_approx_time() const;
+  public:
+  void clear_approx_time();
+  double approx_time() const;
+  void set_approx_time(double value);
+  private:
+  double _internal_approx_time() const;
+  void _internal_set_approx_time(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:ei.GenericAction)
@@ -11011,8 +11045,9 @@ class GenericAction final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr advertising_id_;
   ::ei::AppInfo* app_;
   ::ei::DeviceInfo* device_;
-  double approx_time_;
   float approx_time_dep_;
+  bool cc_user_;
+  double approx_time_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -17727,6 +17762,7 @@ class ContractsResponse final :
     kContractsFieldNumber = 1,
     kWarningMessageFieldNumber = 4,
     kServerTimeFieldNumber = 2,
+    kTotalEopFieldNumber = 5,
     kMaxEopFieldNumber = 3,
   };
   // repeated .ei.Contract contracts = 1;
@@ -17778,6 +17814,19 @@ class ContractsResponse final :
   void _internal_set_server_time(double value);
   public:
 
+  // optional double total_eop = 5;
+  bool has_total_eop() const;
+  private:
+  bool _internal_has_total_eop() const;
+  public:
+  void clear_total_eop();
+  double total_eop() const;
+  void set_total_eop(double value);
+  private:
+  double _internal_total_eop() const;
+  void _internal_set_total_eop(double value);
+  public:
+
   // optional uint32 max_eop = 3 [default = 1000];
   bool has_max_eop() const;
   private:
@@ -17803,6 +17852,7 @@ class ContractsResponse final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Contract > contracts_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr warning_message_;
   double server_time_;
+  double total_eop_;
   uint32_t max_eop_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -18962,13 +19012,14 @@ class ContractCoopStatusResponse_ContributionInfo final :
     kBanVotesFieldNumber = 10,
     kSoulPowerFieldNumber = 11,
     kBoostTokensFieldNumber = 12,
+    kBoostTokensSpentFieldNumber = 14,
+    kFinalizedFieldNumber = 22,
     kTimeCheatDetectedFieldNumber = 7,
     kAutojoinedFieldNumber = 17,
-    kBoostTokensSpentFieldNumber = 14,
     kRecentlyActiveFieldNumber = 23,
     kActiveFieldNumber = 4,
+    kCcMemberFieldNumber = 24,
     kLeechFieldNumber = 16,
-    kFinalizedFieldNumber = 22,
     kChickenRunCooldownFieldNumber = 20,
     kPlatformFieldNumber = 5,
   };
@@ -19194,6 +19245,32 @@ class ContractCoopStatusResponse_ContributionInfo final :
   void _internal_set_boost_tokens(uint32_t value);
   public:
 
+  // optional uint32 boost_tokens_spent = 14;
+  bool has_boost_tokens_spent() const;
+  private:
+  bool _internal_has_boost_tokens_spent() const;
+  public:
+  void clear_boost_tokens_spent();
+  uint32_t boost_tokens_spent() const;
+  void set_boost_tokens_spent(uint32_t value);
+  private:
+  uint32_t _internal_boost_tokens_spent() const;
+  void _internal_set_boost_tokens_spent(uint32_t value);
+  public:
+
+  // optional bool finalized = 22;
+  bool has_finalized() const;
+  private:
+  bool _internal_has_finalized() const;
+  public:
+  void clear_finalized();
+  bool finalized() const;
+  void set_finalized(bool value);
+  private:
+  bool _internal_finalized() const;
+  void _internal_set_finalized(bool value);
+  public:
+
   // optional bool time_cheat_detected = 7;
   bool has_time_cheat_detected() const;
   private:
@@ -19218,19 +19295,6 @@ class ContractCoopStatusResponse_ContributionInfo final :
   private:
   bool _internal_autojoined() const;
   void _internal_set_autojoined(bool value);
-  public:
-
-  // optional uint32 boost_tokens_spent = 14;
-  bool has_boost_tokens_spent() const;
-  private:
-  bool _internal_has_boost_tokens_spent() const;
-  public:
-  void clear_boost_tokens_spent();
-  uint32_t boost_tokens_spent() const;
-  void set_boost_tokens_spent(uint32_t value);
-  private:
-  uint32_t _internal_boost_tokens_spent() const;
-  void _internal_set_boost_tokens_spent(uint32_t value);
   public:
 
   // optional bool recently_active = 23;
@@ -19259,6 +19323,19 @@ class ContractCoopStatusResponse_ContributionInfo final :
   void _internal_set_active(bool value);
   public:
 
+  // optional bool cc_member = 24;
+  bool has_cc_member() const;
+  private:
+  bool _internal_has_cc_member() const;
+  public:
+  void clear_cc_member();
+  bool cc_member() const;
+  void set_cc_member(bool value);
+  private:
+  bool _internal_cc_member() const;
+  void _internal_set_cc_member(bool value);
+  public:
+
   // optional bool leech = 16;
   bool has_leech() const;
   private:
@@ -19270,19 +19347,6 @@ class ContractCoopStatusResponse_ContributionInfo final :
   private:
   bool _internal_leech() const;
   void _internal_set_leech(bool value);
-  public:
-
-  // optional bool finalized = 22;
-  bool has_finalized() const;
-  private:
-  bool _internal_has_finalized() const;
-  public:
-  void clear_finalized();
-  bool finalized() const;
-  void set_finalized(bool value);
-  private:
-  bool _internal_finalized() const;
-  void _internal_set_finalized(bool value);
   public:
 
   // optional double chicken_run_cooldown = 20;
@@ -19334,13 +19398,14 @@ class ContractCoopStatusResponse_ContributionInfo final :
   uint32_t ban_votes_;
   double soul_power_;
   uint32_t boost_tokens_;
+  uint32_t boost_tokens_spent_;
+  bool finalized_;
   bool time_cheat_detected_;
   bool autojoined_;
-  uint32_t boost_tokens_spent_;
   bool recently_active_;
   bool active_;
+  bool cc_member_;
   bool leech_;
-  bool finalized_;
   double chicken_run_cooldown_;
   int platform_;
   friend struct ::TableStruct_ei_2eproto;
@@ -56337,6 +56402,74 @@ inline void Backup::set_allocated_game_services_id(std::string* game_services_id
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.game_services_id)
 }
 
+// optional string push_user_id = 26;
+inline bool Backup::_internal_has_push_user_id() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Backup::has_push_user_id() const {
+  return _internal_has_push_user_id();
+}
+inline void Backup::clear_push_user_id() {
+  push_user_id_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const std::string& Backup::push_user_id() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.push_user_id)
+  return _internal_push_user_id();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void Backup::set_push_user_id(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000020u;
+ push_user_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ei.Backup.push_user_id)
+}
+inline std::string* Backup::mutable_push_user_id() {
+  std::string* _s = _internal_mutable_push_user_id();
+  // @@protoc_insertion_point(field_mutable:ei.Backup.push_user_id)
+  return _s;
+}
+inline const std::string& Backup::_internal_push_user_id() const {
+  return push_user_id_.Get();
+}
+inline void Backup::_internal_set_push_user_id(const std::string& value) {
+  _has_bits_[0] |= 0x00000020u;
+  push_user_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* Backup::_internal_mutable_push_user_id() {
+  _has_bits_[0] |= 0x00000020u;
+  return push_user_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* Backup::release_push_user_id() {
+  // @@protoc_insertion_point(field_release:ei.Backup.push_user_id)
+  if (!_internal_has_push_user_id()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000020u;
+  auto* p = push_user_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (push_user_id_.IsDefault()) {
+    push_user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void Backup::set_allocated_push_user_id(std::string* push_user_id) {
+  if (push_user_id != nullptr) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  push_user_id_.SetAllocated(push_user_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (push_user_id_.IsDefault()) {
+    push_user_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ei.Backup.push_user_id)
+}
+
 // optional string device_id = 17;
 inline bool Backup::_internal_has_device_id() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
@@ -56475,7 +56608,7 @@ inline void Backup::set_allocated_user_name(std::string* user_name) {
 
 // optional double approx_time = 3;
 inline bool Backup::_internal_has_approx_time() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool Backup::has_approx_time() const {
@@ -56483,7 +56616,7 @@ inline bool Backup::has_approx_time() const {
 }
 inline void Backup::clear_approx_time() {
   approx_time_ = 0;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline double Backup::_internal_approx_time() const {
   return approx_time_;
@@ -56493,7 +56626,7 @@ inline double Backup::approx_time() const {
   return _internal_approx_time();
 }
 inline void Backup::_internal_set_approx_time(double value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
   approx_time_ = value;
 }
 inline void Backup::set_approx_time(double value) {
@@ -56503,7 +56636,7 @@ inline void Backup::set_approx_time(double value) {
 
 // optional uint32 version = 21 [default = 0];
 inline bool Backup::_internal_has_version() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup::has_version() const {
@@ -56511,7 +56644,7 @@ inline bool Backup::has_version() const {
 }
 inline void Backup::clear_version() {
   version_ = 0u;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline uint32_t Backup::_internal_version() const {
   return version_;
@@ -56521,7 +56654,7 @@ inline uint32_t Backup::version() const {
   return _internal_version();
 }
 inline void Backup::_internal_set_version(uint32_t value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
   version_ = value;
 }
 inline void Backup::set_version(uint32_t value) {
@@ -56531,7 +56664,7 @@ inline void Backup::set_version(uint32_t value) {
 
 // optional bool force_offer_backup = 20;
 inline bool Backup::_internal_has_force_offer_backup() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool Backup::has_force_offer_backup() const {
@@ -56539,7 +56672,7 @@ inline bool Backup::has_force_offer_backup() const {
 }
 inline void Backup::clear_force_offer_backup() {
   force_offer_backup_ = false;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool Backup::_internal_force_offer_backup() const {
   return force_offer_backup_;
@@ -56549,7 +56682,7 @@ inline bool Backup::force_offer_backup() const {
   return _internal_force_offer_backup();
 }
 inline void Backup::_internal_set_force_offer_backup(bool value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
   force_offer_backup_ = value;
 }
 inline void Backup::set_force_offer_backup(bool value) {
@@ -56559,7 +56692,7 @@ inline void Backup::set_force_offer_backup(bool value) {
 
 // optional bool force_backup = 22;
 inline bool Backup::_internal_has_force_backup() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool Backup::has_force_backup() const {
@@ -56567,7 +56700,7 @@ inline bool Backup::has_force_backup() const {
 }
 inline void Backup::clear_force_backup() {
   force_backup_ = false;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool Backup::_internal_force_backup() const {
   return force_backup_;
@@ -56577,7 +56710,7 @@ inline bool Backup::force_backup() const {
   return _internal_force_backup();
 }
 inline void Backup::_internal_set_force_backup(bool value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
   force_backup_ = value;
 }
 inline void Backup::set_force_backup(bool value) {
@@ -56587,7 +56720,7 @@ inline void Backup::set_force_backup(bool value) {
 
 // optional .ei.Backup.Settings settings = 4;
 inline bool Backup::_internal_has_settings() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   PROTOBUF_ASSUME(!value || settings_ != nullptr);
   return value;
 }
@@ -56596,7 +56729,7 @@ inline bool Backup::has_settings() const {
 }
 inline void Backup::clear_settings() {
   if (settings_ != nullptr) settings_->Clear();
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline const ::ei::Backup_Settings& Backup::_internal_settings() const {
   const ::ei::Backup_Settings* p = settings_;
@@ -56614,14 +56747,14 @@ inline void Backup::unsafe_arena_set_allocated_settings(
   }
   settings_ = settings;
   if (settings) {
-    _has_bits_[0] |= 0x00000040u;
+    _has_bits_[0] |= 0x00000080u;
   } else {
-    _has_bits_[0] &= ~0x00000040u;
+    _has_bits_[0] &= ~0x00000080u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.settings)
 }
 inline ::ei::Backup_Settings* Backup::release_settings() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
   ::ei::Backup_Settings* temp = settings_;
   settings_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -56637,13 +56770,13 @@ inline ::ei::Backup_Settings* Backup::release_settings() {
 }
 inline ::ei::Backup_Settings* Backup::unsafe_arena_release_settings() {
   // @@protoc_insertion_point(field_release:ei.Backup.settings)
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
   ::ei::Backup_Settings* temp = settings_;
   settings_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Settings* Backup::_internal_mutable_settings() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   if (settings_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Settings>(GetArenaForAllocation());
     settings_ = p;
@@ -56667,9 +56800,9 @@ inline void Backup::set_allocated_settings(::ei::Backup_Settings* settings) {
       settings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, settings, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000040u;
+    _has_bits_[0] |= 0x00000080u;
   } else {
-    _has_bits_[0] &= ~0x00000040u;
+    _has_bits_[0] &= ~0x00000080u;
   }
   settings_ = settings;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.settings)
@@ -56677,7 +56810,7 @@ inline void Backup::set_allocated_settings(::ei::Backup_Settings* settings) {
 
 // optional .ei.Backup.Tutorial tutorial = 5;
 inline bool Backup::_internal_has_tutorial() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   PROTOBUF_ASSUME(!value || tutorial_ != nullptr);
   return value;
 }
@@ -56686,7 +56819,7 @@ inline bool Backup::has_tutorial() const {
 }
 inline void Backup::clear_tutorial() {
   if (tutorial_ != nullptr) tutorial_->Clear();
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline const ::ei::Backup_Tutorial& Backup::_internal_tutorial() const {
   const ::ei::Backup_Tutorial* p = tutorial_;
@@ -56704,14 +56837,14 @@ inline void Backup::unsafe_arena_set_allocated_tutorial(
   }
   tutorial_ = tutorial;
   if (tutorial) {
-    _has_bits_[0] |= 0x00000080u;
+    _has_bits_[0] |= 0x00000100u;
   } else {
-    _has_bits_[0] &= ~0x00000080u;
+    _has_bits_[0] &= ~0x00000100u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.tutorial)
 }
 inline ::ei::Backup_Tutorial* Backup::release_tutorial() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
   ::ei::Backup_Tutorial* temp = tutorial_;
   tutorial_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -56727,13 +56860,13 @@ inline ::ei::Backup_Tutorial* Backup::release_tutorial() {
 }
 inline ::ei::Backup_Tutorial* Backup::unsafe_arena_release_tutorial() {
   // @@protoc_insertion_point(field_release:ei.Backup.tutorial)
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
   ::ei::Backup_Tutorial* temp = tutorial_;
   tutorial_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Tutorial* Backup::_internal_mutable_tutorial() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   if (tutorial_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Tutorial>(GetArenaForAllocation());
     tutorial_ = p;
@@ -56757,9 +56890,9 @@ inline void Backup::set_allocated_tutorial(::ei::Backup_Tutorial* tutorial) {
       tutorial = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, tutorial, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000080u;
+    _has_bits_[0] |= 0x00000100u;
   } else {
-    _has_bits_[0] &= ~0x00000080u;
+    _has_bits_[0] &= ~0x00000100u;
   }
   tutorial_ = tutorial;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.tutorial)
@@ -56767,7 +56900,7 @@ inline void Backup::set_allocated_tutorial(::ei::Backup_Tutorial* tutorial) {
 
 // optional .ei.Backup.Stats stats = 6;
 inline bool Backup::_internal_has_stats() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   PROTOBUF_ASSUME(!value || stats_ != nullptr);
   return value;
 }
@@ -56776,7 +56909,7 @@ inline bool Backup::has_stats() const {
 }
 inline void Backup::clear_stats() {
   if (stats_ != nullptr) stats_->Clear();
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline const ::ei::Backup_Stats& Backup::_internal_stats() const {
   const ::ei::Backup_Stats* p = stats_;
@@ -56794,14 +56927,14 @@ inline void Backup::unsafe_arena_set_allocated_stats(
   }
   stats_ = stats;
   if (stats) {
-    _has_bits_[0] |= 0x00000100u;
+    _has_bits_[0] |= 0x00000200u;
   } else {
-    _has_bits_[0] &= ~0x00000100u;
+    _has_bits_[0] &= ~0x00000200u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.stats)
 }
 inline ::ei::Backup_Stats* Backup::release_stats() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
   ::ei::Backup_Stats* temp = stats_;
   stats_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -56817,13 +56950,13 @@ inline ::ei::Backup_Stats* Backup::release_stats() {
 }
 inline ::ei::Backup_Stats* Backup::unsafe_arena_release_stats() {
   // @@protoc_insertion_point(field_release:ei.Backup.stats)
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
   ::ei::Backup_Stats* temp = stats_;
   stats_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Stats* Backup::_internal_mutable_stats() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   if (stats_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Stats>(GetArenaForAllocation());
     stats_ = p;
@@ -56847,9 +56980,9 @@ inline void Backup::set_allocated_stats(::ei::Backup_Stats* stats) {
       stats = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, stats, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000100u;
+    _has_bits_[0] |= 0x00000200u;
   } else {
-    _has_bits_[0] &= ~0x00000100u;
+    _has_bits_[0] &= ~0x00000200u;
   }
   stats_ = stats;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.stats)
@@ -56857,7 +56990,7 @@ inline void Backup::set_allocated_stats(::ei::Backup_Stats* stats) {
 
 // optional .ei.Backup.Game game = 7;
 inline bool Backup::_internal_has_game() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   PROTOBUF_ASSUME(!value || game_ != nullptr);
   return value;
 }
@@ -56866,7 +56999,7 @@ inline bool Backup::has_game() const {
 }
 inline void Backup::clear_game() {
   if (game_ != nullptr) game_->Clear();
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline const ::ei::Backup_Game& Backup::_internal_game() const {
   const ::ei::Backup_Game* p = game_;
@@ -56884,14 +57017,14 @@ inline void Backup::unsafe_arena_set_allocated_game(
   }
   game_ = game;
   if (game) {
-    _has_bits_[0] |= 0x00000200u;
+    _has_bits_[0] |= 0x00000400u;
   } else {
-    _has_bits_[0] &= ~0x00000200u;
+    _has_bits_[0] &= ~0x00000400u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.game)
 }
 inline ::ei::Backup_Game* Backup::release_game() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
   ::ei::Backup_Game* temp = game_;
   game_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -56907,13 +57040,13 @@ inline ::ei::Backup_Game* Backup::release_game() {
 }
 inline ::ei::Backup_Game* Backup::unsafe_arena_release_game() {
   // @@protoc_insertion_point(field_release:ei.Backup.game)
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
   ::ei::Backup_Game* temp = game_;
   game_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Game* Backup::_internal_mutable_game() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   if (game_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Game>(GetArenaForAllocation());
     game_ = p;
@@ -56937,9 +57070,9 @@ inline void Backup::set_allocated_game(::ei::Backup_Game* game) {
       game = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, game, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000200u;
+    _has_bits_[0] |= 0x00000400u;
   } else {
-    _has_bits_[0] &= ~0x00000200u;
+    _has_bits_[0] &= ~0x00000400u;
   }
   game_ = game;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.game)
@@ -56947,7 +57080,7 @@ inline void Backup::set_allocated_game(::ei::Backup_Game* game) {
 
 // optional .ei.Backup.Artifacts artifacts = 14;
 inline bool Backup::_internal_has_artifacts() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   PROTOBUF_ASSUME(!value || artifacts_ != nullptr);
   return value;
 }
@@ -56956,7 +57089,7 @@ inline bool Backup::has_artifacts() const {
 }
 inline void Backup::clear_artifacts() {
   if (artifacts_ != nullptr) artifacts_->Clear();
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline const ::ei::Backup_Artifacts& Backup::_internal_artifacts() const {
   const ::ei::Backup_Artifacts* p = artifacts_;
@@ -56974,14 +57107,14 @@ inline void Backup::unsafe_arena_set_allocated_artifacts(
   }
   artifacts_ = artifacts;
   if (artifacts) {
-    _has_bits_[0] |= 0x00004000u;
+    _has_bits_[0] |= 0x00008000u;
   } else {
-    _has_bits_[0] &= ~0x00004000u;
+    _has_bits_[0] &= ~0x00008000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.artifacts)
 }
 inline ::ei::Backup_Artifacts* Backup::release_artifacts() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
   ::ei::Backup_Artifacts* temp = artifacts_;
   artifacts_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -56997,13 +57130,13 @@ inline ::ei::Backup_Artifacts* Backup::release_artifacts() {
 }
 inline ::ei::Backup_Artifacts* Backup::unsafe_arena_release_artifacts() {
   // @@protoc_insertion_point(field_release:ei.Backup.artifacts)
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
   ::ei::Backup_Artifacts* temp = artifacts_;
   artifacts_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Artifacts* Backup::_internal_mutable_artifacts() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   if (artifacts_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Artifacts>(GetArenaForAllocation());
     artifacts_ = p;
@@ -57027,9 +57160,9 @@ inline void Backup::set_allocated_artifacts(::ei::Backup_Artifacts* artifacts) {
       artifacts = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, artifacts, submessage_arena);
     }
-    _has_bits_[0] |= 0x00004000u;
+    _has_bits_[0] |= 0x00008000u;
   } else {
-    _has_bits_[0] &= ~0x00004000u;
+    _has_bits_[0] &= ~0x00008000u;
   }
   artifacts_ = artifacts;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.artifacts)
@@ -57037,7 +57170,7 @@ inline void Backup::set_allocated_artifacts(::ei::Backup_Artifacts* artifacts) {
 
 // optional .ei.Backup.Shells shells = 25;
 inline bool Backup::_internal_has_shells() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   PROTOBUF_ASSUME(!value || shells_ != nullptr);
   return value;
 }
@@ -57046,7 +57179,7 @@ inline bool Backup::has_shells() const {
 }
 inline void Backup::clear_shells() {
   if (shells_ != nullptr) shells_->Clear();
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline const ::ei::Backup_Shells& Backup::_internal_shells() const {
   const ::ei::Backup_Shells* p = shells_;
@@ -57064,14 +57197,14 @@ inline void Backup::unsafe_arena_set_allocated_shells(
   }
   shells_ = shells;
   if (shells) {
-    _has_bits_[0] |= 0x00020000u;
+    _has_bits_[0] |= 0x00040000u;
   } else {
-    _has_bits_[0] &= ~0x00020000u;
+    _has_bits_[0] &= ~0x00040000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.shells)
 }
 inline ::ei::Backup_Shells* Backup::release_shells() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
   ::ei::Backup_Shells* temp = shells_;
   shells_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57087,13 +57220,13 @@ inline ::ei::Backup_Shells* Backup::release_shells() {
 }
 inline ::ei::Backup_Shells* Backup::unsafe_arena_release_shells() {
   // @@protoc_insertion_point(field_release:ei.Backup.shells)
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
   ::ei::Backup_Shells* temp = shells_;
   shells_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Shells* Backup::_internal_mutable_shells() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
   if (shells_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Shells>(GetArenaForAllocation());
     shells_ = p;
@@ -57117,9 +57250,9 @@ inline void Backup::set_allocated_shells(::ei::Backup_Shells* shells) {
       shells = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, shells, submessage_arena);
     }
-    _has_bits_[0] |= 0x00020000u;
+    _has_bits_[0] |= 0x00040000u;
   } else {
-    _has_bits_[0] &= ~0x00020000u;
+    _has_bits_[0] &= ~0x00040000u;
   }
   shells_ = shells;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.shells)
@@ -57127,7 +57260,7 @@ inline void Backup::set_allocated_shells(::ei::Backup_Shells* shells) {
 
 // optional .ei.Backup.Simulation sim = 8;
 inline bool Backup::_internal_has_sim() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   PROTOBUF_ASSUME(!value || sim_ != nullptr);
   return value;
 }
@@ -57136,7 +57269,7 @@ inline bool Backup::has_sim() const {
 }
 inline void Backup::clear_sim() {
   if (sim_ != nullptr) sim_->Clear();
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline const ::ei::Backup_Simulation& Backup::_internal_sim() const {
   const ::ei::Backup_Simulation* p = sim_;
@@ -57154,14 +57287,14 @@ inline void Backup::unsafe_arena_set_allocated_sim(
   }
   sim_ = sim;
   if (sim) {
-    _has_bits_[0] |= 0x00000400u;
+    _has_bits_[0] |= 0x00000800u;
   } else {
-    _has_bits_[0] &= ~0x00000400u;
+    _has_bits_[0] &= ~0x00000800u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.sim)
 }
 inline ::ei::Backup_Simulation* Backup::release_sim() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
   ::ei::Backup_Simulation* temp = sim_;
   sim_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57177,13 +57310,13 @@ inline ::ei::Backup_Simulation* Backup::release_sim() {
 }
 inline ::ei::Backup_Simulation* Backup::unsafe_arena_release_sim() {
   // @@protoc_insertion_point(field_release:ei.Backup.sim)
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
   ::ei::Backup_Simulation* temp = sim_;
   sim_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Simulation* Backup::_internal_mutable_sim() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   if (sim_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Simulation>(GetArenaForAllocation());
     sim_ = p;
@@ -57207,9 +57340,9 @@ inline void Backup::set_allocated_sim(::ei::Backup_Simulation* sim) {
       sim = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, sim, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000400u;
+    _has_bits_[0] |= 0x00000800u;
   } else {
-    _has_bits_[0] &= ~0x00000400u;
+    _has_bits_[0] &= ~0x00000800u;
   }
   sim_ = sim;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.sim)
@@ -57257,7 +57390,7 @@ Backup::farms() const {
 
 // optional .ei.Backup.Mission mission = 9;
 inline bool Backup::_internal_has_mission() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   PROTOBUF_ASSUME(!value || mission_ != nullptr);
   return value;
 }
@@ -57266,7 +57399,7 @@ inline bool Backup::has_mission() const {
 }
 inline void Backup::clear_mission() {
   if (mission_ != nullptr) mission_->Clear();
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline const ::ei::Backup_Mission& Backup::_internal_mission() const {
   const ::ei::Backup_Mission* p = mission_;
@@ -57284,14 +57417,14 @@ inline void Backup::unsafe_arena_set_allocated_mission(
   }
   mission_ = mission;
   if (mission) {
-    _has_bits_[0] |= 0x00000800u;
+    _has_bits_[0] |= 0x00001000u;
   } else {
-    _has_bits_[0] &= ~0x00000800u;
+    _has_bits_[0] &= ~0x00001000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.mission)
 }
 inline ::ei::Backup_Mission* Backup::release_mission() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
   ::ei::Backup_Mission* temp = mission_;
   mission_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57307,13 +57440,13 @@ inline ::ei::Backup_Mission* Backup::release_mission() {
 }
 inline ::ei::Backup_Mission* Backup::unsafe_arena_release_mission() {
   // @@protoc_insertion_point(field_release:ei.Backup.mission)
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
   ::ei::Backup_Mission* temp = mission_;
   mission_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Mission* Backup::_internal_mutable_mission() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   if (mission_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Mission>(GetArenaForAllocation());
     mission_ = p;
@@ -57337,9 +57470,9 @@ inline void Backup::set_allocated_mission(::ei::Backup_Mission* mission) {
       mission = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, mission, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000800u;
+    _has_bits_[0] |= 0x00001000u;
   } else {
-    _has_bits_[0] &= ~0x00000800u;
+    _has_bits_[0] &= ~0x00001000u;
   }
   mission_ = mission;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.mission)
@@ -57347,7 +57480,7 @@ inline void Backup::set_allocated_mission(::ei::Backup_Mission* mission) {
 
 // optional .ei.Backup.Misc misc = 10;
 inline bool Backup::_internal_has_misc() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   PROTOBUF_ASSUME(!value || misc_ != nullptr);
   return value;
 }
@@ -57356,7 +57489,7 @@ inline bool Backup::has_misc() const {
 }
 inline void Backup::clear_misc() {
   if (misc_ != nullptr) misc_->Clear();
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline const ::ei::Backup_Misc& Backup::_internal_misc() const {
   const ::ei::Backup_Misc* p = misc_;
@@ -57374,14 +57507,14 @@ inline void Backup::unsafe_arena_set_allocated_misc(
   }
   misc_ = misc;
   if (misc) {
-    _has_bits_[0] |= 0x00001000u;
+    _has_bits_[0] |= 0x00002000u;
   } else {
-    _has_bits_[0] &= ~0x00001000u;
+    _has_bits_[0] &= ~0x00002000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.misc)
 }
 inline ::ei::Backup_Misc* Backup::release_misc() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
   ::ei::Backup_Misc* temp = misc_;
   misc_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57397,13 +57530,13 @@ inline ::ei::Backup_Misc* Backup::release_misc() {
 }
 inline ::ei::Backup_Misc* Backup::unsafe_arena_release_misc() {
   // @@protoc_insertion_point(field_release:ei.Backup.misc)
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
   ::ei::Backup_Misc* temp = misc_;
   misc_ = nullptr;
   return temp;
 }
 inline ::ei::Backup_Misc* Backup::_internal_mutable_misc() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   if (misc_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::Backup_Misc>(GetArenaForAllocation());
     misc_ = p;
@@ -57427,9 +57560,9 @@ inline void Backup::set_allocated_misc(::ei::Backup_Misc* misc) {
       misc = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, misc, submessage_arena);
     }
-    _has_bits_[0] |= 0x00001000u;
+    _has_bits_[0] |= 0x00002000u;
   } else {
-    _has_bits_[0] &= ~0x00001000u;
+    _has_bits_[0] &= ~0x00002000u;
   }
   misc_ = misc;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.misc)
@@ -57437,7 +57570,7 @@ inline void Backup::set_allocated_misc(::ei::Backup_Misc* misc) {
 
 // optional .ei.MyContracts contracts = 13;
 inline bool Backup::_internal_has_contracts() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   PROTOBUF_ASSUME(!value || contracts_ != nullptr);
   return value;
 }
@@ -57446,7 +57579,7 @@ inline bool Backup::has_contracts() const {
 }
 inline void Backup::clear_contracts() {
   if (contracts_ != nullptr) contracts_->Clear();
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline const ::ei::MyContracts& Backup::_internal_contracts() const {
   const ::ei::MyContracts* p = contracts_;
@@ -57464,14 +57597,14 @@ inline void Backup::unsafe_arena_set_allocated_contracts(
   }
   contracts_ = contracts;
   if (contracts) {
-    _has_bits_[0] |= 0x00002000u;
+    _has_bits_[0] |= 0x00004000u;
   } else {
-    _has_bits_[0] &= ~0x00002000u;
+    _has_bits_[0] &= ~0x00004000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.contracts)
 }
 inline ::ei::MyContracts* Backup::release_contracts() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
   ::ei::MyContracts* temp = contracts_;
   contracts_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57487,13 +57620,13 @@ inline ::ei::MyContracts* Backup::release_contracts() {
 }
 inline ::ei::MyContracts* Backup::unsafe_arena_release_contracts() {
   // @@protoc_insertion_point(field_release:ei.Backup.contracts)
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
   ::ei::MyContracts* temp = contracts_;
   contracts_ = nullptr;
   return temp;
 }
 inline ::ei::MyContracts* Backup::_internal_mutable_contracts() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   if (contracts_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::MyContracts>(GetArenaForAllocation());
     contracts_ = p;
@@ -57517,9 +57650,9 @@ inline void Backup::set_allocated_contracts(::ei::MyContracts* contracts) {
       contracts = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, contracts, submessage_arena);
     }
-    _has_bits_[0] |= 0x00002000u;
+    _has_bits_[0] |= 0x00004000u;
   } else {
-    _has_bits_[0] &= ~0x00002000u;
+    _has_bits_[0] &= ~0x00004000u;
   }
   contracts_ = contracts;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.contracts)
@@ -57527,7 +57660,7 @@ inline void Backup::set_allocated_contracts(::ei::MyContracts* contracts) {
 
 // optional .ei.ArtifactsDB artifacts_db = 15;
 inline bool Backup::_internal_has_artifacts_db() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   PROTOBUF_ASSUME(!value || artifacts_db_ != nullptr);
   return value;
 }
@@ -57536,7 +57669,7 @@ inline bool Backup::has_artifacts_db() const {
 }
 inline void Backup::clear_artifacts_db() {
   if (artifacts_db_ != nullptr) artifacts_db_->Clear();
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline const ::ei::ArtifactsDB& Backup::_internal_artifacts_db() const {
   const ::ei::ArtifactsDB* p = artifacts_db_;
@@ -57554,14 +57687,14 @@ inline void Backup::unsafe_arena_set_allocated_artifacts_db(
   }
   artifacts_db_ = artifacts_db;
   if (artifacts_db) {
-    _has_bits_[0] |= 0x00008000u;
+    _has_bits_[0] |= 0x00010000u;
   } else {
-    _has_bits_[0] &= ~0x00008000u;
+    _has_bits_[0] &= ~0x00010000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.artifacts_db)
 }
 inline ::ei::ArtifactsDB* Backup::release_artifacts_db() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
   ::ei::ArtifactsDB* temp = artifacts_db_;
   artifacts_db_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57577,13 +57710,13 @@ inline ::ei::ArtifactsDB* Backup::release_artifacts_db() {
 }
 inline ::ei::ArtifactsDB* Backup::unsafe_arena_release_artifacts_db() {
   // @@protoc_insertion_point(field_release:ei.Backup.artifacts_db)
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
   ::ei::ArtifactsDB* temp = artifacts_db_;
   artifacts_db_ = nullptr;
   return temp;
 }
 inline ::ei::ArtifactsDB* Backup::_internal_mutable_artifacts_db() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
   if (artifacts_db_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::ArtifactsDB>(GetArenaForAllocation());
     artifacts_db_ = p;
@@ -57607,9 +57740,9 @@ inline void Backup::set_allocated_artifacts_db(::ei::ArtifactsDB* artifacts_db) 
       artifacts_db = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, artifacts_db, submessage_arena);
     }
-    _has_bits_[0] |= 0x00008000u;
+    _has_bits_[0] |= 0x00010000u;
   } else {
-    _has_bits_[0] &= ~0x00008000u;
+    _has_bits_[0] &= ~0x00010000u;
   }
   artifacts_db_ = artifacts_db;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.artifacts_db)
@@ -57617,7 +57750,7 @@ inline void Backup::set_allocated_artifacts_db(::ei::ArtifactsDB* artifacts_db) 
 
 // optional .ei.ShellDB shell_db = 24;
 inline bool Backup::_internal_has_shell_db() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   PROTOBUF_ASSUME(!value || shell_db_ != nullptr);
   return value;
 }
@@ -57626,7 +57759,7 @@ inline bool Backup::has_shell_db() const {
 }
 inline void Backup::clear_shell_db() {
   if (shell_db_ != nullptr) shell_db_->Clear();
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline const ::ei::ShellDB& Backup::_internal_shell_db() const {
   const ::ei::ShellDB* p = shell_db_;
@@ -57644,14 +57777,14 @@ inline void Backup::unsafe_arena_set_allocated_shell_db(
   }
   shell_db_ = shell_db;
   if (shell_db) {
-    _has_bits_[0] |= 0x00010000u;
+    _has_bits_[0] |= 0x00020000u;
   } else {
-    _has_bits_[0] &= ~0x00010000u;
+    _has_bits_[0] &= ~0x00020000u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.shell_db)
 }
 inline ::ei::ShellDB* Backup::release_shell_db() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
   ::ei::ShellDB* temp = shell_db_;
   shell_db_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -57667,13 +57800,13 @@ inline ::ei::ShellDB* Backup::release_shell_db() {
 }
 inline ::ei::ShellDB* Backup::unsafe_arena_release_shell_db() {
   // @@protoc_insertion_point(field_release:ei.Backup.shell_db)
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
   ::ei::ShellDB* temp = shell_db_;
   shell_db_ = nullptr;
   return temp;
 }
 inline ::ei::ShellDB* Backup::_internal_mutable_shell_db() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
   if (shell_db_ == nullptr) {
     auto* p = CreateMaybeMessage<::ei::ShellDB>(GetArenaForAllocation());
     shell_db_ = p;
@@ -57697,9 +57830,9 @@ inline void Backup::set_allocated_shell_db(::ei::ShellDB* shell_db) {
       shell_db = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, shell_db, submessage_arena);
     }
-    _has_bits_[0] |= 0x00010000u;
+    _has_bits_[0] |= 0x00020000u;
   } else {
-    _has_bits_[0] &= ~0x00010000u;
+    _has_bits_[0] &= ~0x00020000u;
   }
   shell_db_ = shell_db;
   // @@protoc_insertion_point(field_set_allocated:ei.Backup.shell_db)
@@ -57782,7 +57915,7 @@ Backup::mutable_read_mail_ids() {
 
 // optional uint64 checksum = 100;
 inline bool Backup::_internal_has_checksum() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool Backup::has_checksum() const {
@@ -57790,7 +57923,7 @@ inline bool Backup::has_checksum() const {
 }
 inline void Backup::clear_checksum() {
   checksum_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline uint64_t Backup::_internal_checksum() const {
   return checksum_;
@@ -57800,7 +57933,7 @@ inline uint64_t Backup::checksum() const {
   return _internal_checksum();
 }
 inline void Backup::_internal_set_checksum(uint64_t value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
   checksum_ = value;
 }
 inline void Backup::set_checksum(uint64_t value) {
@@ -57810,7 +57943,7 @@ inline void Backup::set_checksum(uint64_t value) {
 
 // optional string signature = 101;
 inline bool Backup::_internal_has_signature() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool Backup::has_signature() const {
@@ -57818,7 +57951,7 @@ inline bool Backup::has_signature() const {
 }
 inline void Backup::clear_signature() {
   signature_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline const std::string& Backup::signature() const {
   // @@protoc_insertion_point(field_get:ei.Backup.signature)
@@ -57827,7 +57960,7 @@ inline const std::string& Backup::signature() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Backup::set_signature(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000020u;
+ _has_bits_[0] |= 0x00000040u;
  signature_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ei.Backup.signature)
 }
@@ -57840,11 +57973,11 @@ inline const std::string& Backup::_internal_signature() const {
   return signature_.Get();
 }
 inline void Backup::_internal_set_signature(const std::string& value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   signature_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Backup::_internal_mutable_signature() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   return signature_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Backup::release_signature() {
@@ -57852,7 +57985,7 @@ inline std::string* Backup::release_signature() {
   if (!_internal_has_signature()) {
     return nullptr;
   }
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   auto* p = signature_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (signature_.IsDefault()) {
@@ -57863,9 +57996,9 @@ inline std::string* Backup::release_signature() {
 }
 inline void Backup::set_allocated_signature(std::string* signature) {
   if (signature != nullptr) {
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   signature_.SetAllocated(signature, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -61637,6 +61770,34 @@ inline void GenericAction::set_allocated_user_id(std::string* user_id) {
   // @@protoc_insertion_point(field_set_allocated:ei.GenericAction.user_id)
 }
 
+// optional bool cc_user = 9;
+inline bool GenericAction::_internal_has_cc_user() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool GenericAction::has_cc_user() const {
+  return _internal_has_cc_user();
+}
+inline void GenericAction::clear_cc_user() {
+  cc_user_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool GenericAction::_internal_cc_user() const {
+  return cc_user_;
+}
+inline bool GenericAction::cc_user() const {
+  // @@protoc_insertion_point(field_get:ei.GenericAction.cc_user)
+  return _internal_cc_user();
+}
+inline void GenericAction::_internal_set_cc_user(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  cc_user_ = value;
+}
+inline void GenericAction::set_cc_user(bool value) {
+  _internal_set_cc_user(value);
+  // @@protoc_insertion_point(field_set:ei.GenericAction.cc_user)
+}
+
 // optional string advertising_id = 7;
 inline bool GenericAction::_internal_has_advertising_id() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
@@ -61707,7 +61868,7 @@ inline void GenericAction::set_allocated_advertising_id(std::string* advertising
 
 // optional float approx_time_DEP = 2;
 inline bool GenericAction::_internal_has_approx_time_dep() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool GenericAction::has_approx_time_dep() const {
@@ -61715,7 +61876,7 @@ inline bool GenericAction::has_approx_time_dep() const {
 }
 inline void GenericAction::clear_approx_time_dep() {
   approx_time_dep_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline float GenericAction::_internal_approx_time_dep() const {
   return approx_time_dep_;
@@ -61725,7 +61886,7 @@ inline float GenericAction::approx_time_dep() const {
   return _internal_approx_time_dep();
 }
 inline void GenericAction::_internal_set_approx_time_dep(float value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000020u;
   approx_time_dep_ = value;
 }
 inline void GenericAction::set_approx_time_dep(float value) {
@@ -61735,7 +61896,7 @@ inline void GenericAction::set_approx_time_dep(float value) {
 
 // optional double approx_time = 8;
 inline bool GenericAction::_internal_has_approx_time() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool GenericAction::has_approx_time() const {
@@ -61743,7 +61904,7 @@ inline bool GenericAction::has_approx_time() const {
 }
 inline void GenericAction::clear_approx_time() {
   approx_time_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline double GenericAction::_internal_approx_time() const {
   return approx_time_;
@@ -61753,7 +61914,7 @@ inline double GenericAction::approx_time() const {
   return _internal_approx_time();
 }
 inline void GenericAction::_internal_set_approx_time(double value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000080u;
   approx_time_ = value;
 }
 inline void GenericAction::set_approx_time(double value) {
@@ -68599,6 +68760,34 @@ inline void ContractsResponse::set_allocated_warning_message(std::string* warnin
   // @@protoc_insertion_point(field_set_allocated:ei.ContractsResponse.warning_message)
 }
 
+// optional double total_eop = 5;
+inline bool ContractsResponse::_internal_has_total_eop() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ContractsResponse::has_total_eop() const {
+  return _internal_has_total_eop();
+}
+inline void ContractsResponse::clear_total_eop() {
+  total_eop_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline double ContractsResponse::_internal_total_eop() const {
+  return total_eop_;
+}
+inline double ContractsResponse::total_eop() const {
+  // @@protoc_insertion_point(field_get:ei.ContractsResponse.total_eop)
+  return _internal_total_eop();
+}
+inline void ContractsResponse::_internal_set_total_eop(double value) {
+  _has_bits_[0] |= 0x00000004u;
+  total_eop_ = value;
+}
+inline void ContractsResponse::set_total_eop(double value) {
+  _internal_set_total_eop(value);
+  // @@protoc_insertion_point(field_set:ei.ContractsResponse.total_eop)
+}
+
 // optional double server_time = 2;
 inline bool ContractsResponse::_internal_has_server_time() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
@@ -68629,7 +68818,7 @@ inline void ContractsResponse::set_server_time(double value) {
 
 // optional uint32 max_eop = 3 [default = 1000];
 inline bool ContractsResponse::_internal_has_max_eop() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool ContractsResponse::has_max_eop() const {
@@ -68637,7 +68826,7 @@ inline bool ContractsResponse::has_max_eop() const {
 }
 inline void ContractsResponse::clear_max_eop() {
   max_eop_ = 1000u;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t ContractsResponse::_internal_max_eop() const {
   return max_eop_;
@@ -68647,7 +68836,7 @@ inline uint32_t ContractsResponse::max_eop() const {
   return _internal_max_eop();
 }
 inline void ContractsResponse::_internal_set_max_eop(uint32_t value) {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
   max_eop_ = value;
 }
 inline void ContractsResponse::set_max_eop(uint32_t value) {
@@ -70568,7 +70757,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_rank_change(int32_t
 
 // optional bool recently_active = 23;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_recently_active() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_recently_active() const {
@@ -70576,7 +70765,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_recently_active() c
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_recently_active() {
   recently_active_ = false;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_recently_active() const {
   return recently_active_;
@@ -70586,7 +70775,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::recently_active() const
   return _internal_recently_active();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_recently_active(bool value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
   recently_active_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_recently_active(bool value) {
@@ -70596,7 +70785,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_recently_active(boo
 
 // optional bool active = 4;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_active() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
@@ -70604,7 +70793,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_active() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_active() {
   active_ = false;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_active() const {
   return active_;
@@ -70614,7 +70803,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::active() const {
   return _internal_active();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_active(bool value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
   active_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) {
@@ -70622,9 +70811,37 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_active(bool value) 
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.active)
 }
 
+// optional bool cc_member = 24;
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_cc_member() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::has_cc_member() const {
+  return _internal_has_cc_member();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::clear_cc_member() {
+  cc_member_ = false;
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::_internal_cc_member() const {
+  return cc_member_;
+}
+inline bool ContractCoopStatusResponse_ContributionInfo::cc_member() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.ContributionInfo.cc_member)
+  return _internal_cc_member();
+}
+inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_cc_member(bool value) {
+  _has_bits_[0] |= 0x00080000u;
+  cc_member_ = value;
+}
+inline void ContractCoopStatusResponse_ContributionInfo::set_cc_member(bool value) {
+  _internal_set_cc_member(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.ContributionInfo.cc_member)
+}
+
 // optional bool leech = 16;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_leech() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
@@ -70632,7 +70849,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_leech() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_leech() {
   leech_ = false;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_leech() const {
   return leech_;
@@ -70642,7 +70859,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::leech() const {
   return _internal_leech();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_leech(bool value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00100000u;
   leech_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
@@ -70652,7 +70869,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_leech(bool value) {
 
 // optional bool finalized = 22;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_finalized() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_finalized() const {
@@ -70660,7 +70877,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_finalized() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_finalized() {
   finalized_ = false;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_finalized() const {
   return finalized_;
@@ -70670,7 +70887,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::finalized() const {
   return _internal_finalized();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_finalized(bool value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00004000u;
   finalized_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_finalized(bool value) {
@@ -70680,7 +70897,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_finalized(bool valu
 
 // optional bool time_cheat_detected = 7;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_time_cheat_detected() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected() const {
@@ -70688,7 +70905,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_time_cheat_detected
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_time_cheat_detected() {
   time_cheat_detected_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_time_cheat_detected() const {
   return time_cheat_detected_;
@@ -70698,7 +70915,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::time_cheat_detected() c
   return _internal_time_cheat_detected();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_time_cheat_detected(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00008000u;
   time_cheat_detected_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected(bool value) {
@@ -70708,7 +70925,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_time_cheat_detected
 
 // optional .ei.Platform platform = 5;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_platform() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
@@ -70716,7 +70933,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_platform() const {
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_platform() {
   platform_ = 1;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::_internal_platform() const {
   return static_cast< ::ei::Platform >(platform_);
@@ -70727,7 +70944,7 @@ inline ::ei::Platform ContractCoopStatusResponse_ContributionInfo::platform() co
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_platform(::ei::Platform value) {
   assert(::ei::Platform_IsValid(value));
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
   platform_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_platform(::ei::Platform value) {
@@ -70833,7 +71050,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_ban_votes(uint32_t 
 
 // optional bool autojoined = 17;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_autojoined() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const {
@@ -70841,7 +71058,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_autojoined() const 
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_autojoined() {
   autojoined_ = false;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_autojoined() const {
   return autojoined_;
@@ -70851,7 +71068,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::autojoined() const {
   return _internal_autojoined();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_autojoined(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00010000u;
   autojoined_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_autojoined(bool value) {
@@ -70889,7 +71106,7 @@ inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens(uint32
 
 // optional uint32 boost_tokens_spent = 14;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_boost_tokens_spent() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent() const {
@@ -70897,7 +71114,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_boost_tokens_spent(
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_boost_tokens_spent() {
   boost_tokens_spent_ = 0u;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline uint32_t ContractCoopStatusResponse_ContributionInfo::_internal_boost_tokens_spent() const {
   return boost_tokens_spent_;
@@ -70907,7 +71124,7 @@ inline uint32_t ContractCoopStatusResponse_ContributionInfo::boost_tokens_spent(
   return _internal_boost_tokens_spent();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_boost_tokens_spent(uint32_t value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00002000u;
   boost_tokens_spent_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_boost_tokens_spent(uint32_t value) {
@@ -70957,7 +71174,7 @@ ContractCoopStatusResponse_ContributionInfo::buff_history() const {
 
 // optional double chicken_run_cooldown = 20;
 inline bool ContractCoopStatusResponse_ContributionInfo::_internal_has_chicken_run_cooldown() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldown() const {
@@ -70965,7 +71182,7 @@ inline bool ContractCoopStatusResponse_ContributionInfo::has_chicken_run_cooldow
 }
 inline void ContractCoopStatusResponse_ContributionInfo::clear_chicken_run_cooldown() {
   chicken_run_cooldown_ = 0;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline double ContractCoopStatusResponse_ContributionInfo::_internal_chicken_run_cooldown() const {
   return chicken_run_cooldown_;
@@ -70975,7 +71192,7 @@ inline double ContractCoopStatusResponse_ContributionInfo::chicken_run_cooldown(
   return _internal_chicken_run_cooldown();
 }
 inline void ContractCoopStatusResponse_ContributionInfo::_internal_set_chicken_run_cooldown(double value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
   chicken_run_cooldown_ = value;
 }
 inline void ContractCoopStatusResponse_ContributionInfo::set_chicken_run_cooldown(double value) {

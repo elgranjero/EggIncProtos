@@ -886,6 +886,30 @@ public object ContractCoopStatusResponseKt {
       }
 
       /**
+       * <code>optional bool cc_member = 24;</code>
+       */
+      public var ccMember: kotlin.Boolean
+        @JvmName("getCcMember")
+        get() = _builder.getCcMember()
+        @JvmName("setCcMember")
+        set(value) {
+          _builder.setCcMember(value)
+        }
+      /**
+       * <code>optional bool cc_member = 24;</code>
+       */
+      public fun clearCcMember() {
+        _builder.clearCcMember()
+      }
+      /**
+       * <code>optional bool cc_member = 24;</code>
+       * @return Whether the ccMember field is set.
+       */
+      public fun hasCcMember(): kotlin.Boolean {
+        return _builder.hasCcMember()
+      }
+
+      /**
        * <code>optional bool leech = 16;</code>
        */
       public var leech: kotlin.Boolean

@@ -9,6 +9,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :user_id, :string, 1
       optional :ei_user_id, :string, 18
       optional :game_services_id, :string, 16
+      optional :push_user_id, :string, 26
       optional :device_id, :string, 17
       optional :user_name, :string, 2
       optional :approx_time, :double, 3
@@ -363,6 +364,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.GenericAction" do
       optional :user_id, :string, 1
+      optional :cc_user, :bool, 9
       optional :advertising_id, :string, 7
       optional :approx_time_DEP, :float, 2
       optional :approx_time, :double, 8
@@ -623,6 +625,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ContractsResponse" do
       repeated :contracts, :message, 1, "ei.Contract"
       optional :warning_message, :string, 4
+      optional :total_eop, :double, 5
       optional :server_time, :double, 2
       optional :max_eop, :uint32, 3, default: 1000
     end
@@ -697,6 +700,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :rank_change, :int32, 8
       optional :recently_active, :bool, 23
       optional :active, :bool, 4
+      optional :cc_member, :bool, 24
       optional :leech, :bool, 16
       optional :finalized, :bool, 22
       optional :time_cheat_detected, :bool, 7

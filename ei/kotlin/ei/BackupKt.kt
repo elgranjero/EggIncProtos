@@ -95,6 +95,30 @@ public object BackupKt {
     }
 
     /**
+     * <code>optional string push_user_id = 26;</code>
+     */
+    public var pushUserId: kotlin.String
+      @JvmName("getPushUserId")
+      get() = _builder.getPushUserId()
+      @JvmName("setPushUserId")
+      set(value) {
+        _builder.setPushUserId(value)
+      }
+    /**
+     * <code>optional string push_user_id = 26;</code>
+     */
+    public fun clearPushUserId() {
+      _builder.clearPushUserId()
+    }
+    /**
+     * <code>optional string push_user_id = 26;</code>
+     * @return Whether the pushUserId field is set.
+     */
+    public fun hasPushUserId(): kotlin.Boolean {
+      return _builder.hasPushUserId()
+    }
+
+    /**
      * <code>optional string device_id = 17;</code>
      */
     public var deviceId: kotlin.String

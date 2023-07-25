@@ -559,6 +559,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     eiUserId: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
     gameServicesId: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    pushUserId: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
     deviceId: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
     userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
@@ -629,6 +630,10 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
     case 16:
       var value = /** @type {string} */ (reader.readString());
       msg.setGameServicesId(value);
+      break;
+    case 26:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPushUserId(value);
       break;
     case 17:
       var value = /** @type {string} */ (reader.readString());
@@ -778,6 +783,13 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       16,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 26));
+  if (f != null) {
+    writer.writeString(
+      26,
       f
     );
   }
@@ -11714,6 +11726,42 @@ proto.ei.Backup.prototype.hasGameServicesId = function() {
 
 
 /**
+ * optional string push_user_id = 26;
+ * @return {string}
+ */
+proto.ei.Backup.prototype.getPushUserId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 26, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.setPushUserId = function(value) {
+  return jspb.Message.setField(this, 26, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearPushUserId = function() {
+  return jspb.Message.setField(this, 26, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasPushUserId = function() {
+  return jspb.Message.getField(this, 26) != null;
+};
+
+
+/**
  * optional string device_id = 17;
  * @return {string}
  */
@@ -12913,6 +12961,7 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject = function(include
     rankChange: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     recentlyActive: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
     active: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    ccMember: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
     leech: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
     finalized: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     timeCheatDetected: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
@@ -13010,6 +13059,10 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setActive(value);
+      break;
+    case 24:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCcMember(value);
       break;
     case 16:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -13168,6 +13221,13 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = f
   if (f != null) {
     writer.writeBool(
       4,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 24));
+  if (f != null) {
+    writer.writeBool(
+      24,
       f
     );
   }
@@ -13683,6 +13743,42 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearActive = fun
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasActive = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool cc_member = 24;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getCcMember = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 24, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setCcMember = function(value) {
+  return jspb.Message.setField(this, 24, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearCcMember = function() {
+  return jspb.Message.setField(this, 24, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasCcMember = function() {
+  return jspb.Message.getField(this, 24) != null;
 };
 
 

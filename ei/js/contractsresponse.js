@@ -81,6 +81,7 @@ proto.ei.ContractsResponse.toObject = function(includeInstance, msg) {
     contractsList: jspb.Message.toObjectList(msg.getContractsList(),
     proto.ei.Contract.toObject, includeInstance),
     warningMessage: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    totalEop: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
     serverTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     maxEop: jspb.Message.getFieldWithDefault(msg, 3, 1000)
   };
@@ -127,6 +128,10 @@ proto.ei.ContractsResponse.deserializeBinaryFromReader = function(msg, reader) {
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setWarningMessage(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setTotalEop(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
@@ -177,6 +182,13 @@ proto.ei.ContractsResponse.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeDouble(
+      5,
       f
     );
   }
@@ -268,6 +280,42 @@ proto.ei.ContractsResponse.prototype.clearWarningMessage = function() {
  */
 proto.ei.ContractsResponse.prototype.hasWarningMessage = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional double total_eop = 5;
+ * @return {number}
+ */
+proto.ei.ContractsResponse.prototype.getTotalEop = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractsResponse} returns this
+ */
+proto.ei.ContractsResponse.prototype.setTotalEop = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractsResponse} returns this
+ */
+proto.ei.ContractsResponse.prototype.clearTotalEop = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractsResponse.prototype.hasTotalEop = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

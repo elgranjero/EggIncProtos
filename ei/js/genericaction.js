@@ -81,6 +81,7 @@ proto.ei.GenericAction.prototype.toObject = function(opt_includeInstance) {
 proto.ei.GenericAction.toObject = function(includeInstance, msg) {
   var f, obj = {
     userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    ccUser: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
     advertisingId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
     approxTimeDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
@@ -128,6 +129,10 @@ proto.ei.GenericAction.deserializeBinaryFromReader = function(msg, reader) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.setUserId(value);
+      break;
+    case 9:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCcUser(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
@@ -193,6 +198,13 @@ proto.ei.GenericAction.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       1,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
+    writer.writeBool(
+      9,
       f
     );
   }
@@ -284,6 +296,42 @@ proto.ei.GenericAction.prototype.clearUserId = function() {
  */
 proto.ei.GenericAction.prototype.hasUserId = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bool cc_user = 9;
+ * @return {boolean}
+ */
+proto.ei.GenericAction.prototype.getCcUser = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.GenericAction} returns this
+ */
+proto.ei.GenericAction.prototype.setCcUser = function(value) {
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.GenericAction} returns this
+ */
+proto.ei.GenericAction.prototype.clearCcUser = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.GenericAction.prototype.hasCcUser = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 

@@ -47,6 +47,30 @@ public object GenericActionKt {
     }
 
     /**
+     * <code>optional bool cc_user = 9;</code>
+     */
+    public var ccUser: kotlin.Boolean
+      @JvmName("getCcUser")
+      get() = _builder.getCcUser()
+      @JvmName("setCcUser")
+      set(value) {
+        _builder.setCcUser(value)
+      }
+    /**
+     * <code>optional bool cc_user = 9;</code>
+     */
+    public fun clearCcUser() {
+      _builder.clearCcUser()
+    }
+    /**
+     * <code>optional bool cc_user = 9;</code>
+     * @return Whether the ccUser field is set.
+     */
+    public fun hasCcUser(): kotlin.Boolean {
+      return _builder.hasCcUser()
+    }
+
+    /**
      * <code>optional string advertising_id = 7;</code>
      */
     public var advertisingId: kotlin.String

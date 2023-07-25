@@ -26,6 +26,7 @@ message Backup {
     optional string user_id = 1;
     optional string ei_user_id = 18;
     optional string game_services_id = 16;
+    optional string push_user_id = 26;
     optional string device_id = 17;
     optional string user_name = 2;
     optional double approx_time = 3;
@@ -411,6 +412,7 @@ message ActionKeyValuePair {
 
 message GenericAction {
     optional string user_id = 1;
+    optional bool cc_user = 9;
     optional string advertising_id = 7;
     optional float approx_time_DEP = 2;
     optional double approx_time = 8;
@@ -704,6 +706,7 @@ message ContractsRequest {
 message ContractsResponse {
     repeated Contract contracts = 1;
     optional string warning_message = 4;
+    optional double total_eop = 5;
     optional double server_time = 2;
     optional uint32 max_eop = 3 [default = 1000];
 }
@@ -770,6 +773,7 @@ message ContractCoopStatusResponse {
         optional int32 rank_change = 8;
         optional bool recently_active = 23;
         optional bool active = 4;
+        optional bool cc_member = 24;
         optional bool leech = 16;
         optional bool finalized = 22;
         optional bool time_cheat_detected = 7;
