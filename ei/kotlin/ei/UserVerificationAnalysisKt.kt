@@ -479,6 +479,102 @@ public object UserVerificationAnalysisKt {
     }
 
     /**
+     * <code>optional uint64 rare_artifacts_in_inventory = 33;</code>
+     */
+    public var rareArtifactsInInventory: kotlin.Long
+      @JvmName("getRareArtifactsInInventory")
+      get() = _builder.getRareArtifactsInInventory()
+      @JvmName("setRareArtifactsInInventory")
+      set(value) {
+        _builder.setRareArtifactsInInventory(value)
+      }
+    /**
+     * <code>optional uint64 rare_artifacts_in_inventory = 33;</code>
+     */
+    public fun clearRareArtifactsInInventory() {
+      _builder.clearRareArtifactsInInventory()
+    }
+    /**
+     * <code>optional uint64 rare_artifacts_in_inventory = 33;</code>
+     * @return Whether the rareArtifactsInInventory field is set.
+     */
+    public fun hasRareArtifactsInInventory(): kotlin.Boolean {
+      return _builder.hasRareArtifactsInInventory()
+    }
+
+    /**
+     * <code>optional uint64 rare_artifacts_on_server = 34;</code>
+     */
+    public var rareArtifactsOnServer: kotlin.Long
+      @JvmName("getRareArtifactsOnServer")
+      get() = _builder.getRareArtifactsOnServer()
+      @JvmName("setRareArtifactsOnServer")
+      set(value) {
+        _builder.setRareArtifactsOnServer(value)
+      }
+    /**
+     * <code>optional uint64 rare_artifacts_on_server = 34;</code>
+     */
+    public fun clearRareArtifactsOnServer() {
+      _builder.clearRareArtifactsOnServer()
+    }
+    /**
+     * <code>optional uint64 rare_artifacts_on_server = 34;</code>
+     * @return Whether the rareArtifactsOnServer field is set.
+     */
+    public fun hasRareArtifactsOnServer(): kotlin.Boolean {
+      return _builder.hasRareArtifactsOnServer()
+    }
+
+    /**
+     * <code>optional uint64 legendary_artifacts_in_inventory = 35;</code>
+     */
+    public var legendaryArtifactsInInventory: kotlin.Long
+      @JvmName("getLegendaryArtifactsInInventory")
+      get() = _builder.getLegendaryArtifactsInInventory()
+      @JvmName("setLegendaryArtifactsInInventory")
+      set(value) {
+        _builder.setLegendaryArtifactsInInventory(value)
+      }
+    /**
+     * <code>optional uint64 legendary_artifacts_in_inventory = 35;</code>
+     */
+    public fun clearLegendaryArtifactsInInventory() {
+      _builder.clearLegendaryArtifactsInInventory()
+    }
+    /**
+     * <code>optional uint64 legendary_artifacts_in_inventory = 35;</code>
+     * @return Whether the legendaryArtifactsInInventory field is set.
+     */
+    public fun hasLegendaryArtifactsInInventory(): kotlin.Boolean {
+      return _builder.hasLegendaryArtifactsInInventory()
+    }
+
+    /**
+     * <code>optional uint64 legendary_artifacts_on_server = 36;</code>
+     */
+    public var legendaryArtifactsOnServer: kotlin.Long
+      @JvmName("getLegendaryArtifactsOnServer")
+      get() = _builder.getLegendaryArtifactsOnServer()
+      @JvmName("setLegendaryArtifactsOnServer")
+      set(value) {
+        _builder.setLegendaryArtifactsOnServer(value)
+      }
+    /**
+     * <code>optional uint64 legendary_artifacts_on_server = 36;</code>
+     */
+    public fun clearLegendaryArtifactsOnServer() {
+      _builder.clearLegendaryArtifactsOnServer()
+    }
+    /**
+     * <code>optional uint64 legendary_artifacts_on_server = 36;</code>
+     * @return Whether the legendaryArtifactsOnServer field is set.
+     */
+    public fun hasLegendaryArtifactsOnServer(): kotlin.Boolean {
+      return _builder.hasLegendaryArtifactsOnServer()
+    }
+
+    /**
      * <code>optional double gold_spent_crafting = 21;</code>
      */
     public var goldSpentCrafting: kotlin.Double

@@ -1118,6 +1118,7 @@ typedef GPB_ENUM(Backup_Settings_FieldNumber) {
   Backup_Settings_FieldNumber_AutoStopFueling = 25,
   Backup_Settings_FieldNumber_MaxEnabled = 26,
   Backup_Settings_FieldNumber_LastNotificationQueryTime = 27,
+  Backup_Settings_FieldNumber_HideCcStatus = 28,
 };
 
 GPB_FINAL @interface Backup_Settings : GPBMessage
@@ -1158,6 +1159,9 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 @property(nonatomic, readwrite) BOOL maxEnabled;
 
 @property(nonatomic, readwrite) BOOL hasMaxEnabled;
+@property(nonatomic, readwrite) BOOL hideCcStatus;
+
+@property(nonatomic, readwrite) BOOL hasHideCcStatus;
 @property(nonatomic, readwrite) double lastBackupTime;
 
 @property(nonatomic, readwrite) BOOL hasLastBackupTime;
@@ -2751,6 +2755,7 @@ typedef GPB_ENUM(Contract_FieldNumber) {
   Contract_FieldNumber_Key = 21,
   Contract_FieldNumber_CcOnly = 22,
   Contract_FieldNumber_SeasonId = 23,
+  Contract_FieldNumber_DefaultShellIdsArray = 24,
 };
 
 GPB_FINAL @interface Contract : GPBMessage
@@ -2822,6 +2827,10 @@ GPB_FINAL @interface Contract : GPBMessage
 @property(nonatomic, readwrite) BOOL ccOnly;
 
 @property(nonatomic, readwrite) BOOL hasCcOnly;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *defaultShellIdsArray;
+/** The number of items in @c defaultShellIdsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger defaultShellIdsArray_Count;
+
 @property(nonatomic, readwrite) BOOL debug;
 
 @property(nonatomic, readwrite) BOOL hasDebug;
@@ -4666,6 +4675,7 @@ typedef GPB_ENUM(ContractCoopStatusUpdateRequest_FieldNumber) {
   ContractCoopStatusUpdateRequest_FieldNumber_ProductionParams = 14,
   ContractCoopStatusUpdateRequest_FieldNumber_Eop = 15,
   ContractCoopStatusUpdateRequest_FieldNumber_FarmInfo = 16,
+  ContractCoopStatusUpdateRequest_FieldNumber_HideCcStatus = 17,
 };
 
 GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
@@ -4711,6 +4721,9 @@ GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
 @property(nonatomic, readwrite) uint32_t boostTokensSpent;
 
 @property(nonatomic, readwrite) BOOL hasBoostTokensSpent;
+@property(nonatomic, readwrite) BOOL hideCcStatus;
+
+@property(nonatomic, readwrite) BOOL hasHideCcStatus;
 @property(nonatomic, readwrite, strong, null_resettable) FarmProductionParams *productionParams;
 /** Test to see if @c productionParams has been set. */
 @property(nonatomic, readwrite) BOOL hasProductionParams;
@@ -5599,6 +5612,7 @@ typedef GPB_ENUM(PeriodicalsResponse_FieldNumber) {
   PeriodicalsResponse_FieldNumber_MailBag = 6,
   PeriodicalsResponse_FieldNumber_ContractPlayerInfo = 7,
   PeriodicalsResponse_FieldNumber_EvaluationsArray = 8,
+  PeriodicalsResponse_FieldNumber_ArtifactCasesArray = 9,
 };
 
 GPB_FINAL @interface PeriodicalsResponse : GPBMessage
@@ -5622,6 +5636,10 @@ GPB_FINAL @interface PeriodicalsResponse : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ServerGift*> *giftsArray;
 /** The number of items in @c giftsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger giftsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CompleteMissionResponse*> *artifactCasesArray;
+/** The number of items in @c artifactCasesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger artifactCasesArray_Count;
 
 @property(nonatomic, readwrite, strong, null_resettable) LiveConfig *liveConfig;
 /** Test to see if @c liveConfig has been set. */
@@ -7605,9 +7623,15 @@ typedef GPB_ENUM(ShellDB_FarmConfiguration_FieldNumber) {
   ShellDB_FarmConfiguration_FieldNumber_ConfigureChickensByGroup = 7,
   ShellDB_FarmConfiguration_FieldNumber_GroupConfigsArray = 8,
   ShellDB_FarmConfiguration_FieldNumber_ChickenConfigsArray = 9,
+  ShellDB_FarmConfiguration_FieldNumber_LockedElementsArray = 10,
 };
 
 GPB_FINAL @interface ShellDB_FarmConfiguration : GPBMessage
+
+// |lockedElementsArray| contains |ShellDB_FarmElement|
+@property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *lockedElementsArray;
+/** The number of items in @c lockedElementsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger lockedElementsArray_Count;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellDB_ShellConfiguration*> *shellConfigsArray;
 /** The number of items in @c shellConfigsArray without causing the array to be created. */
@@ -7881,6 +7905,10 @@ typedef GPB_ENUM(UserVerificationAnalysis_FieldNumber) {
   UserVerificationAnalysis_FieldNumber_Verified = 30,
   UserVerificationAnalysis_FieldNumber_VerificationOverride = 31,
   UserVerificationAnalysis_FieldNumber_VerificationOverrideValue = 32,
+  UserVerificationAnalysis_FieldNumber_RareArtifactsInInventory = 33,
+  UserVerificationAnalysis_FieldNumber_RareArtifactsOnServer = 34,
+  UserVerificationAnalysis_FieldNumber_LegendaryArtifactsInInventory = 35,
+  UserVerificationAnalysis_FieldNumber_LegendaryArtifactsOnServer = 36,
 };
 
 GPB_FINAL @interface UserVerificationAnalysis : GPBMessage
@@ -7942,6 +7970,18 @@ GPB_FINAL @interface UserVerificationAnalysis : GPBMessage
 @property(nonatomic, readwrite) double artifactsInInventory;
 
 @property(nonatomic, readwrite) BOOL hasArtifactsInInventory;
+@property(nonatomic, readwrite) uint64_t rareArtifactsInInventory;
+
+@property(nonatomic, readwrite) BOOL hasRareArtifactsInInventory;
+@property(nonatomic, readwrite) uint64_t rareArtifactsOnServer;
+
+@property(nonatomic, readwrite) BOOL hasRareArtifactsOnServer;
+@property(nonatomic, readwrite) uint64_t legendaryArtifactsInInventory;
+
+@property(nonatomic, readwrite) BOOL hasLegendaryArtifactsInInventory;
+@property(nonatomic, readwrite) uint64_t legendaryArtifactsOnServer;
+
+@property(nonatomic, readwrite) BOOL hasLegendaryArtifactsOnServer;
 @property(nonatomic, readwrite) double goldSpentCrafting;
 
 @property(nonatomic, readwrite) BOOL hasGoldSpentCrafting;

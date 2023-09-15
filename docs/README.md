@@ -1003,6 +1003,7 @@
 | low_performance | [bool](#bool) | optional |  |
 | auto_stop_fueling | [bool](#bool) | optional |  |
 | max_enabled | [bool](#bool) | optional |  |
+| hide_cc_status | [bool](#bool) | optional |  |
 | last_backup_time | [double](#double) | optional |  |
 | coppa_queried | [bool](#bool) | optional |  |
 | coppa_restricted | [bool](#bool) | optional |  |
@@ -1394,6 +1395,7 @@
 | min_client_version | [uint32](#uint32) | optional |  |
 | leggacy | [bool](#bool) | optional |  |
 | cc_only | [bool](#bool) | optional |  |
+| default_shell_ids | [string](#string) | repeated |  |
 | debug | [bool](#bool) | optional |  |
 | key | [string](#string) | optional |  |
 
@@ -1648,6 +1650,7 @@
 | eop | [uint32](#uint32) | optional |  |
 | boost_tokens | [uint32](#uint32) | optional |  |
 | boost_tokens_spent | [uint32](#uint32) | optional |  |
+| hide_cc_status | [bool](#bool) | optional |  |
 | production_params | [FarmProductionParams](#ei-FarmProductionParams) | optional |  |
 | farm_info | [PlayerFarmInfo](#ei-PlayerFarmInfo) | optional |  |
 | egg_laying_rate_buff | [double](#double) | optional |  Default: 1 |
@@ -3135,6 +3138,7 @@
 | contracts | [ContractsResponse](#ei-ContractsResponse) | optional |  |
 | evaluations | [ContractEvaluation](#ei-ContractEvaluation) | repeated |  |
 | gifts | [ServerGift](#ei-ServerGift) | repeated |  |
+| artifact_cases | [CompleteMissionResponse](#ei-CompleteMissionResponse) | repeated |  |
 | live_config | [LiveConfig](#ei-LiveConfig) | optional |  |
 | mail_bag | [MailDB](#ei-MailDB) | optional |  |
 | contract_player_info | [ContractPlayerInfo](#ei-ContractPlayerInfo) | optional |  |
@@ -3448,6 +3452,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
+| locked_elements | [ShellDB.FarmElement](#ei-ShellDB-FarmElement) | repeated |  |
 | shell_configs | [ShellDB.ShellConfiguration](#ei-ShellDB-ShellConfiguration) | repeated |  |
 | shell_set_configs | [ShellDB.ShellSetConfiguration](#ei-ShellDB-ShellSetConfiguration) | repeated |  |
 | configure_chickens_by_group | [bool](#bool) | optional |  |
@@ -3967,6 +3972,10 @@
 | artifacts_collected | [double](#double) | optional |  |
 | artifacts_consumed | [double](#double) | optional |  |
 | artifacts_in_inventory | [double](#double) | optional |  |
+| rare_artifacts_in_inventory | [uint64](#uint64) | optional |  |
+| rare_artifacts_on_server | [uint64](#uint64) | optional |  |
+| legendary_artifacts_in_inventory | [uint64](#uint64) | optional |  |
+| legendary_artifacts_on_server | [uint64](#uint64) | optional |  |
 | gold_spent_crafting | [double](#double) | optional |  |
 | excessive_consumes | [bool](#bool) | optional |  |
 | excessive_inventory | [bool](#bool) | optional |  |

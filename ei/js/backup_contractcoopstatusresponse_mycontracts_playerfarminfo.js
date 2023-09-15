@@ -1007,6 +1007,7 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     lowPerformance: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
     autoStopFueling: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
     maxEnabled: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
+    hideCcStatus: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
     lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
     coppaQueried: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     coppaRestricted: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
@@ -1105,6 +1106,10 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 26:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setMaxEnabled(value);
+      break;
+    case 28:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHideCcStatus(value);
       break;
     case 24:
       var value = /** @type {number} */ (reader.readDouble());
@@ -1276,6 +1281,13 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       26,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 28));
+  if (f != null) {
+    writer.writeBool(
+      28,
       f
     );
   }
@@ -1816,6 +1828,42 @@ proto.ei.Backup.Settings.prototype.clearMaxEnabled = function() {
  */
 proto.ei.Backup.Settings.prototype.hasMaxEnabled = function() {
   return jspb.Message.getField(this, 26) != null;
+};
+
+
+/**
+ * optional bool hide_cc_status = 28;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getHideCcStatus = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 28, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setHideCcStatus = function(value) {
+  return jspb.Message.setField(this, 28, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearHideCcStatus = function() {
+  return jspb.Message.setField(this, 28, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasHideCcStatus = function() {
+  return jspb.Message.getField(this, 28) != null;
 };
 
 

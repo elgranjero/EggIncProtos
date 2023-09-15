@@ -647,6 +647,76 @@ public object ContractKt {
     }
 
     /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class DefaultShellIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @return A list containing the defaultShellIds.
+     */
+    public val defaultShellIds: com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getDefaultShellIdsList()
+      )
+    /**
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @param value The defaultShellIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addDefaultShellIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.add(value: kotlin.String) {
+      _builder.addDefaultShellIds(value)
+    }
+    /**
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @param value The defaultShellIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignDefaultShellIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.plusAssign(value: kotlin.String) {
+      add(value)
+    }
+    /**
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @param values The defaultShellIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllDefaultShellIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
+      _builder.addAllDefaultShellIds(values)
+    }
+    /**
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @param values The defaultShellIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllDefaultShellIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @param index The index to set the value at.
+     * @param value The defaultShellIds to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setDefaultShellIds")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
+      _builder.setDefaultShellIds(index, value)
+    }/**
+     * <code>repeated string default_shell_ids = 24;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearDefaultShellIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.clear() {
+      _builder.clearDefaultShellIds()
+    }
+    /**
      * <code>optional bool debug = 11;</code>
      */
     public var debug: kotlin.Boolean

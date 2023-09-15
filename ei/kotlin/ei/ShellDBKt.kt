@@ -940,6 +940,71 @@ public object ShellDBKt {
        * generics.
        */
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class LockedElementsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       */
+       public val lockedElements: com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>
+        @kotlin.jvm.JvmSynthetic
+        get() = com.google.protobuf.kotlin.DslList(
+          _builder.getLockedElementsList()
+        )
+      /**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * @param value The lockedElements to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addLockedElements")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.add(value: ei.Ei.ShellDB.FarmElement) {
+        _builder.addLockedElements(value)
+      }/**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * @param value The lockedElements to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignLockedElements")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.plusAssign(value: ei.Ei.ShellDB.FarmElement) {
+        add(value)
+      }/**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * @param values The lockedElements to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addAllLockedElements")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.FarmElement>) {
+        _builder.addAllLockedElements(values)
+      }/**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * @param values The lockedElements to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignAllLockedElements")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.FarmElement>) {
+        addAll(values)
+      }/**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The lockedElements to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("setLockedElements")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.FarmElement) {
+        _builder.setLockedElements(index, value)
+      }/**
+       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("clearLockedElements")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.clear() {
+        _builder.clearLockedElements()
+      }
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class ShellConfigsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
        * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>

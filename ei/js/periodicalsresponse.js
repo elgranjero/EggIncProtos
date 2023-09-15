@@ -16,6 +16,7 @@ goog.provide('proto.ei.PeriodicalsResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ei.CompleteMissionResponse');
 goog.require('proto.ei.ContractEvaluation');
 goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.ContractsResponse');
@@ -52,7 +53,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.PeriodicalsResponse.repeatedFields_ = [8,4];
+proto.ei.PeriodicalsResponse.repeatedFields_ = [8,4,9];
 
 
 
@@ -92,6 +93,8 @@ proto.ei.PeriodicalsResponse.toObject = function(includeInstance, msg) {
     proto.ei.ContractEvaluation.toObject, includeInstance),
     giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
     proto.ei.ServerGift.toObject, includeInstance),
+    artifactCasesList: jspb.Message.toObjectList(msg.getArtifactCasesList(),
+    proto.ei.CompleteMissionResponse.toObject, includeInstance),
     liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
     mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
     contractPlayerInfo: (f = msg.getContractPlayerInfo()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f)
@@ -155,6 +158,11 @@ proto.ei.PeriodicalsResponse.deserializeBinaryFromReader = function(msg, reader)
       var value = new proto.ei.ServerGift;
       reader.readMessage(value,proto.ei.ServerGift.deserializeBinaryFromReader);
       msg.addGifts(value);
+      break;
+    case 9:
+      var value = new proto.ei.CompleteMissionResponse;
+      reader.readMessage(value,proto.ei.CompleteMissionResponse.deserializeBinaryFromReader);
+      msg.addArtifactCases(value);
       break;
     case 5:
       var value = new proto.ei.LiveConfig;
@@ -238,6 +246,14 @@ proto.ei.PeriodicalsResponse.serializeBinaryToWriter = function(message, writer)
       4,
       f,
       proto.ei.ServerGift.serializeBinaryToWriter
+    );
+  }
+  f = message.getArtifactCasesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.ei.CompleteMissionResponse.serializeBinaryToWriter
     );
   }
   f = message.getLiveConfig();
@@ -451,6 +467,44 @@ proto.ei.PeriodicalsResponse.prototype.addGifts = function(opt_value, opt_index)
  */
 proto.ei.PeriodicalsResponse.prototype.clearGiftsList = function() {
   return this.setGiftsList([]);
+};
+
+
+/**
+ * repeated CompleteMissionResponse artifact_cases = 9;
+ * @return {!Array<!proto.ei.CompleteMissionResponse>}
+ */
+proto.ei.PeriodicalsResponse.prototype.getArtifactCasesList = function() {
+  return /** @type{!Array<!proto.ei.CompleteMissionResponse>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.CompleteMissionResponse, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.CompleteMissionResponse>} value
+ * @return {!proto.ei.PeriodicalsResponse} returns this
+*/
+proto.ei.PeriodicalsResponse.prototype.setArtifactCasesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.ei.CompleteMissionResponse=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.CompleteMissionResponse}
+ */
+proto.ei.PeriodicalsResponse.prototype.addArtifactCases = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.ei.CompleteMissionResponse, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.PeriodicalsResponse} returns this
+ */
+proto.ei.PeriodicalsResponse.prototype.clearArtifactCasesList = function() {
+  return this.setArtifactCasesList([]);
 };
 
 

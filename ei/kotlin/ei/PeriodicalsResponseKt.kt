@@ -245,6 +245,78 @@ public object PeriodicalsResponseKt {
 
 
     /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ArtifactCasesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     */
+     public val artifactCases: com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getArtifactCasesList()
+      )
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * @param value The artifactCases to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addArtifactCases")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.add(value: ei.Ei.CompleteMissionResponse) {
+      _builder.addArtifactCases(value)
+    }
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * @param value The artifactCases to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignArtifactCases")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.plusAssign(value: ei.Ei.CompleteMissionResponse) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * @param values The artifactCases to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllArtifactCases")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse>) {
+      _builder.addAllArtifactCases(values)
+    }
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * @param values The artifactCases to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllArtifactCases")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * @param index The index to set the value at.
+     * @param value The artifactCases to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setArtifactCases")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.set(index: kotlin.Int, value: ei.Ei.CompleteMissionResponse) {
+      _builder.setArtifactCases(index, value)
+    }
+    /**
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearArtifactCases")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.clear() {
+      _builder.clearArtifactCases()
+    }
+
+
+    /**
      * <code>optional .ei.LiveConfig live_config = 5;</code>
      */
     public var liveConfig: ei.Ei.LiveConfig

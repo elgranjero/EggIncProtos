@@ -1098,7 +1098,7 @@ proto.ei.ShellDB.ShellSetVariationStatus.prototype.clearOwnedVariationsList = fu
  * @private {!Array<number>}
  * @const
  */
-proto.ei.ShellDB.FarmConfiguration.repeatedFields_ = [1,2,8,9];
+proto.ei.ShellDB.FarmConfiguration.repeatedFields_ = [10,1,2,8,9];
 
 
 
@@ -1131,6 +1131,7 @@ proto.ei.ShellDB.FarmConfiguration.prototype.toObject = function(opt_includeInst
  */
 proto.ei.ShellDB.FarmConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
+    lockedElementsList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f,
     shellConfigsList: jspb.Message.toObjectList(msg.getShellConfigsList(),
     proto.ei.ShellDB.ShellConfiguration.toObject, includeInstance),
     shellSetConfigsList: jspb.Message.toObjectList(msg.getShellSetConfigsList(),
@@ -1176,6 +1177,12 @@ proto.ei.ShellDB.FarmConfiguration.deserializeBinaryFromReader = function(msg, r
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 10:
+      var values = /** @type {!Array<!proto.ei.ShellDB.FarmElement>} */ (reader.isDelimited() ? reader.readPackedEnum() : [reader.readEnum()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addLockedElements(values[i]);
+      }
+      break;
     case 1:
       var value = new proto.ei.ShellDB.ShellConfiguration;
       reader.readMessage(value,proto.ei.ShellDB.ShellConfiguration.deserializeBinaryFromReader);
@@ -1229,6 +1236,13 @@ proto.ei.ShellDB.FarmConfiguration.prototype.serializeBinary = function() {
  */
 proto.ei.ShellDB.FarmConfiguration.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getLockedElementsList();
+  if (f.length > 0) {
+    writer.writeRepeatedEnum(
+      10,
+      f
+    );
+  }
   f = message.getShellConfigsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
@@ -1268,6 +1282,43 @@ proto.ei.ShellDB.FarmConfiguration.serializeBinaryToWriter = function(message, w
       proto.ei.ShellDB.ChickenConfig.serializeBinaryToWriter
     );
   }
+};
+
+
+/**
+ * repeated FarmElement locked_elements = 10;
+ * @return {!Array<!proto.ei.ShellDB.FarmElement>}
+ */
+proto.ei.ShellDB.FarmConfiguration.prototype.getLockedElementsList = function() {
+  return /** @type {!Array<!proto.ei.ShellDB.FarmElement>} */ (jspb.Message.getRepeatedField(this, 10));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ShellDB.FarmElement>} value
+ * @return {!proto.ei.ShellDB.FarmConfiguration} returns this
+ */
+proto.ei.ShellDB.FarmConfiguration.prototype.setLockedElementsList = function(value) {
+  return jspb.Message.setField(this, 10, value || []);
+};
+
+
+/**
+ * @param {!proto.ei.ShellDB.FarmElement} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ShellDB.FarmConfiguration} returns this
+ */
+proto.ei.ShellDB.FarmConfiguration.prototype.addLockedElements = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 10, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ShellDB.FarmConfiguration} returns this
+ */
+proto.ei.ShellDB.FarmConfiguration.prototype.clearLockedElementsList = function() {
+  return this.setLockedElementsList([]);
 };
 
 

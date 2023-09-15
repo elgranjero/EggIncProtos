@@ -85,6 +85,7 @@ proto.ei.ContractCoopStatusUpdateRequest.toObject = function(includeInstance, ms
     eop: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
     boostTokens: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     boostTokensSpent: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    hideCcStatus: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
     productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
     farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
     eggLayingRateBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 1.0),
@@ -173,6 +174,10 @@ proto.ei.ContractCoopStatusUpdateRequest.deserializeBinaryFromReader = function(
     case 13:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setBoostTokensSpent(value);
+      break;
+    case 17:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setHideCcStatus(value);
       break;
     case 14:
       var value = new proto.ei.FarmProductionParams;
@@ -303,6 +308,13 @@ proto.ei.ContractCoopStatusUpdateRequest.serializeBinaryToWriter = function(mess
   if (f != null) {
     writer.writeUint32(
       13,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
+    writer.writeBool(
+      17,
       f
     );
   }
@@ -769,6 +781,42 @@ proto.ei.ContractCoopStatusUpdateRequest.prototype.clearBoostTokensSpent = funct
  */
 proto.ei.ContractCoopStatusUpdateRequest.prototype.hasBoostTokensSpent = function() {
   return jspb.Message.getField(this, 13) != null;
+};
+
+
+/**
+ * optional bool hide_cc_status = 17;
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.getHideCcStatus = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 17, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.setHideCcStatus = function(value) {
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.clearHideCcStatus = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.hasHideCcStatus = function() {
+  return jspb.Message.getField(this, 17) != null;
 };
 
 

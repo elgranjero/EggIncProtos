@@ -1982,21 +1982,22 @@ class Backup_Settings final :
     kNotificationsQueriedFieldNumber = 5,
     kNotificationsOnFieldNumber = 6,
     kNotifyDailyGiftFieldNumber = 11,
+    kCoppaQueriedFieldNumber = 7,
     kCoppaRestrictedFieldNumber = 8,
     kGdprConsentQueriedFieldNumber = 12,
     kGdprAgeRestrictedFieldNumber = 16,
-    kGdprConsentGivenFieldNumber = 13,
     kLastDayAgeQueriedFieldNumber = 17,
-    kLowPerformanceFieldNumber = 10,
-    kAutoStopFuelingFieldNumber = 25,
-    kMaxEnabledFieldNumber = 26,
-    kCoppaQueriedFieldNumber = 7,
+    kGdprConsentGivenFieldNumber = 13,
     kAgeQueriedFieldNumber = 18,
     kAgeRestrictedFieldNumber = 19,
     kDataCollectionConsentQueriedFieldNumber = 20,
     kDataCollectionConsentGivenFieldNumber = 21,
     kLastBackupTimeFieldNumber = 24,
     kLastNotificationQueryTimeFieldNumber = 27,
+    kLowPerformanceFieldNumber = 10,
+    kAutoStopFuelingFieldNumber = 25,
+    kMaxEnabledFieldNumber = 26,
+    kHideCcStatusFieldNumber = 28,
     kUserAdsEnabledFieldNumber = 14,
     kUserCloudEnabledFieldNumber = 15,
     kUserAnalyticsEnabledFieldNumber = 22,
@@ -2106,6 +2107,19 @@ class Backup_Settings final :
   void _internal_set_notify_daily_gift(bool value);
   public:
 
+  // optional bool coppa_queried = 7;
+  bool has_coppa_queried() const;
+  private:
+  bool _internal_has_coppa_queried() const;
+  public:
+  void clear_coppa_queried();
+  bool coppa_queried() const;
+  void set_coppa_queried(bool value);
+  private:
+  bool _internal_coppa_queried() const;
+  void _internal_set_coppa_queried(bool value);
+  public:
+
   // optional bool coppa_restricted = 8;
   bool has_coppa_restricted() const;
   private:
@@ -2145,19 +2159,6 @@ class Backup_Settings final :
   void _internal_set_gdpr_age_restricted(bool value);
   public:
 
-  // optional bool gdpr_consent_given = 13;
-  bool has_gdpr_consent_given() const;
-  private:
-  bool _internal_has_gdpr_consent_given() const;
-  public:
-  void clear_gdpr_consent_given();
-  bool gdpr_consent_given() const;
-  void set_gdpr_consent_given(bool value);
-  private:
-  bool _internal_gdpr_consent_given() const;
-  void _internal_set_gdpr_consent_given(bool value);
-  public:
-
   // optional uint32 last_day_age_queried = 17;
   bool has_last_day_age_queried() const;
   private:
@@ -2171,56 +2172,17 @@ class Backup_Settings final :
   void _internal_set_last_day_age_queried(uint32_t value);
   public:
 
-  // optional bool low_performance = 10;
-  bool has_low_performance() const;
+  // optional bool gdpr_consent_given = 13;
+  bool has_gdpr_consent_given() const;
   private:
-  bool _internal_has_low_performance() const;
+  bool _internal_has_gdpr_consent_given() const;
   public:
-  void clear_low_performance();
-  bool low_performance() const;
-  void set_low_performance(bool value);
+  void clear_gdpr_consent_given();
+  bool gdpr_consent_given() const;
+  void set_gdpr_consent_given(bool value);
   private:
-  bool _internal_low_performance() const;
-  void _internal_set_low_performance(bool value);
-  public:
-
-  // optional bool auto_stop_fueling = 25;
-  bool has_auto_stop_fueling() const;
-  private:
-  bool _internal_has_auto_stop_fueling() const;
-  public:
-  void clear_auto_stop_fueling();
-  bool auto_stop_fueling() const;
-  void set_auto_stop_fueling(bool value);
-  private:
-  bool _internal_auto_stop_fueling() const;
-  void _internal_set_auto_stop_fueling(bool value);
-  public:
-
-  // optional bool max_enabled = 26;
-  bool has_max_enabled() const;
-  private:
-  bool _internal_has_max_enabled() const;
-  public:
-  void clear_max_enabled();
-  bool max_enabled() const;
-  void set_max_enabled(bool value);
-  private:
-  bool _internal_max_enabled() const;
-  void _internal_set_max_enabled(bool value);
-  public:
-
-  // optional bool coppa_queried = 7;
-  bool has_coppa_queried() const;
-  private:
-  bool _internal_has_coppa_queried() const;
-  public:
-  void clear_coppa_queried();
-  bool coppa_queried() const;
-  void set_coppa_queried(bool value);
-  private:
-  bool _internal_coppa_queried() const;
-  void _internal_set_coppa_queried(bool value);
+  bool _internal_gdpr_consent_given() const;
+  void _internal_set_gdpr_consent_given(bool value);
   public:
 
   // optional bool age_queried = 18;
@@ -2301,6 +2263,58 @@ class Backup_Settings final :
   void _internal_set_last_notification_query_time(double value);
   public:
 
+  // optional bool low_performance = 10;
+  bool has_low_performance() const;
+  private:
+  bool _internal_has_low_performance() const;
+  public:
+  void clear_low_performance();
+  bool low_performance() const;
+  void set_low_performance(bool value);
+  private:
+  bool _internal_low_performance() const;
+  void _internal_set_low_performance(bool value);
+  public:
+
+  // optional bool auto_stop_fueling = 25;
+  bool has_auto_stop_fueling() const;
+  private:
+  bool _internal_has_auto_stop_fueling() const;
+  public:
+  void clear_auto_stop_fueling();
+  bool auto_stop_fueling() const;
+  void set_auto_stop_fueling(bool value);
+  private:
+  bool _internal_auto_stop_fueling() const;
+  void _internal_set_auto_stop_fueling(bool value);
+  public:
+
+  // optional bool max_enabled = 26;
+  bool has_max_enabled() const;
+  private:
+  bool _internal_has_max_enabled() const;
+  public:
+  void clear_max_enabled();
+  bool max_enabled() const;
+  void set_max_enabled(bool value);
+  private:
+  bool _internal_max_enabled() const;
+  void _internal_set_max_enabled(bool value);
+  public:
+
+  // optional bool hide_cc_status = 28;
+  bool has_hide_cc_status() const;
+  private:
+  bool _internal_has_hide_cc_status() const;
+  public:
+  void clear_hide_cc_status();
+  bool hide_cc_status() const;
+  void set_hide_cc_status(bool value);
+  private:
+  bool _internal_hide_cc_status() const;
+  void _internal_set_hide_cc_status(bool value);
+  public:
+
   // optional bool user_ads_enabled = 14 [default = true];
   bool has_user_ads_enabled() const;
   private:
@@ -2370,21 +2384,22 @@ class Backup_Settings final :
   bool notifications_queried_;
   bool notifications_on_;
   bool notify_daily_gift_;
+  bool coppa_queried_;
   bool coppa_restricted_;
   bool gdpr_consent_queried_;
   bool gdpr_age_restricted_;
-  bool gdpr_consent_given_;
   uint32_t last_day_age_queried_;
-  bool low_performance_;
-  bool auto_stop_fueling_;
-  bool max_enabled_;
-  bool coppa_queried_;
+  bool gdpr_consent_given_;
   bool age_queried_;
   bool age_restricted_;
   bool data_collection_consent_queried_;
   bool data_collection_consent_given_;
   double last_backup_time_;
   double last_notification_query_time_;
+  bool low_performance_;
+  bool auto_stop_fueling_;
+  bool max_enabled_;
+  bool hide_cc_status_;
   bool user_ads_enabled_;
   bool user_cloud_enabled_;
   bool user_analytics_enabled_;
@@ -13391,6 +13406,7 @@ class Contract final :
     kGoalsFieldNumber = 3,
     kGoalSetsFieldNumber = 16,
     kGradeSpecsFieldNumber = 20,
+    kDefaultShellIdsFieldNumber = 24,
     kIdentifierFieldNumber = 1,
     kNameFieldNumber = 9,
     kDescriptionFieldNumber = 10,
@@ -13464,6 +13480,30 @@ class Contract final :
   ::ei::Contract_GradeSpec* add_grade_specs();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Contract_GradeSpec >&
       grade_specs() const;
+
+  // repeated string default_shell_ids = 24;
+  int default_shell_ids_size() const;
+  private:
+  int _internal_default_shell_ids_size() const;
+  public:
+  void clear_default_shell_ids();
+  const std::string& default_shell_ids(int index) const;
+  std::string* mutable_default_shell_ids(int index);
+  void set_default_shell_ids(int index, const std::string& value);
+  void set_default_shell_ids(int index, std::string&& value);
+  void set_default_shell_ids(int index, const char* value);
+  void set_default_shell_ids(int index, const char* value, size_t size);
+  std::string* add_default_shell_ids();
+  void add_default_shell_ids(const std::string& value);
+  void add_default_shell_ids(std::string&& value);
+  void add_default_shell_ids(const char* value);
+  void add_default_shell_ids(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& default_shell_ids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_default_shell_ids();
+  private:
+  const std::string& _internal_default_shell_ids(int index) const;
+  std::string* _internal_add_default_shell_ids();
+  public:
 
   // optional string identifier = 1;
   bool has_identifier() const;
@@ -13749,6 +13789,7 @@ class Contract final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Contract_Goal > goals_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Contract_GoalSet > goal_sets_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::Contract_GradeSpec > grade_specs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> default_shell_ids_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
@@ -25140,6 +25181,7 @@ class ContractCoopStatusUpdateRequest final :
     kBoostTokensFieldNumber = 9,
     kBoostTokensSpentFieldNumber = 13,
     kEopFieldNumber = 15,
+    kHideCcStatusFieldNumber = 17,
     kEggLayingRateBuffFieldNumber = 10,
     kEarningsBuffFieldNumber = 11,
   };
@@ -25360,6 +25402,19 @@ class ContractCoopStatusUpdateRequest final :
   void _internal_set_eop(uint32_t value);
   public:
 
+  // optional bool hide_cc_status = 17;
+  bool has_hide_cc_status() const;
+  private:
+  bool _internal_has_hide_cc_status() const;
+  public:
+  void clear_hide_cc_status();
+  bool hide_cc_status() const;
+  void set_hide_cc_status(bool value);
+  private:
+  bool _internal_hide_cc_status() const;
+  void _internal_set_hide_cc_status(bool value);
+  public:
+
   // optional double egg_laying_rate_buff = 10 [default = 1];
   bool has_egg_laying_rate_buff() const;
   private:
@@ -25409,6 +25464,7 @@ class ContractCoopStatusUpdateRequest final :
   uint32_t boost_tokens_;
   uint32_t boost_tokens_spent_;
   uint32_t eop_;
+  bool hide_cc_status_;
   double egg_laying_rate_buff_;
   double earnings_buff_;
   friend struct ::TableStruct_ei_2eproto;
@@ -31731,6 +31787,7 @@ class PeriodicalsResponse final :
   enum : int {
     kGiftsFieldNumber = 4,
     kEvaluationsFieldNumber = 8,
+    kArtifactCasesFieldNumber = 9,
     kSalesFieldNumber = 1,
     kEventsFieldNumber = 2,
     kContractsFieldNumber = 3,
@@ -31773,6 +31830,24 @@ class PeriodicalsResponse final :
   ::ei::ContractEvaluation* add_evaluations();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation >&
       evaluations() const;
+
+  // repeated .ei.CompleteMissionResponse artifact_cases = 9;
+  int artifact_cases_size() const;
+  private:
+  int _internal_artifact_cases_size() const;
+  public:
+  void clear_artifact_cases();
+  ::ei::CompleteMissionResponse* mutable_artifact_cases(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteMissionResponse >*
+      mutable_artifact_cases();
+  private:
+  const ::ei::CompleteMissionResponse& _internal_artifact_cases(int index) const;
+  ::ei::CompleteMissionResponse* _internal_add_artifact_cases();
+  public:
+  const ::ei::CompleteMissionResponse& artifact_cases(int index) const;
+  ::ei::CompleteMissionResponse* add_artifact_cases();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteMissionResponse >&
+      artifact_cases() const;
 
   // optional .ei.SalesInfo sales = 1;
   bool has_sales() const;
@@ -31893,6 +31968,7 @@ class PeriodicalsResponse final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ServerGift > gifts_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ContractEvaluation > evaluations_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteMissionResponse > artifact_cases_;
   ::ei::SalesInfo* sales_;
   ::ei::EggIncCurrentEvents* events_;
   ::ei::ContractsResponse* contracts_;
@@ -46144,6 +46220,7 @@ class ShellDB_FarmConfiguration final :
     kShellSetConfigsFieldNumber = 2,
     kGroupConfigsFieldNumber = 8,
     kChickenConfigsFieldNumber = 9,
+    kLockedElementsFieldNumber = 10,
     kConfigureChickensByGroupFieldNumber = 7,
   };
   // repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;
@@ -46218,6 +46295,23 @@ class ShellDB_FarmConfiguration final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig >&
       chicken_configs() const;
 
+  // repeated .ei.ShellDB.FarmElement locked_elements = 10;
+  int locked_elements_size() const;
+  private:
+  int _internal_locked_elements_size() const;
+  public:
+  void clear_locked_elements();
+  private:
+  ::ei::ShellDB_FarmElement _internal_locked_elements(int index) const;
+  void _internal_add_locked_elements(::ei::ShellDB_FarmElement value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* _internal_mutable_locked_elements();
+  public:
+  ::ei::ShellDB_FarmElement locked_elements(int index) const;
+  void set_locked_elements(int index, ::ei::ShellDB_FarmElement value);
+  void add_locked_elements(::ei::ShellDB_FarmElement value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>& locked_elements() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* mutable_locked_elements();
+
   // optional bool configure_chickens_by_group = 7;
   bool has_configure_chickens_by_group() const;
   private:
@@ -46244,6 +46338,7 @@ class ShellDB_FarmConfiguration final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellSetConfiguration > shell_set_configs_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ShellGroupConfiguration > group_configs_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ShellDB_ChickenConfig > chicken_configs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int> locked_elements_;
   bool configure_chickens_by_group_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -48519,6 +48614,10 @@ class UserVerificationAnalysis final :
     kVerifiedFieldNumber = 30,
     kVerificationOverrideFieldNumber = 31,
     kVerificationOverrideValueFieldNumber = 32,
+    kRareArtifactsInInventoryFieldNumber = 33,
+    kRareArtifactsOnServerFieldNumber = 34,
+    kLegendaryArtifactsInInventoryFieldNumber = 35,
+    kLegendaryArtifactsOnServerFieldNumber = 36,
   };
   // repeated string invalid_contracts = 17;
   int invalid_contracts_size() const;
@@ -48947,6 +49046,58 @@ class UserVerificationAnalysis final :
   void _internal_set_verification_override_value(bool value);
   public:
 
+  // optional uint64 rare_artifacts_in_inventory = 33;
+  bool has_rare_artifacts_in_inventory() const;
+  private:
+  bool _internal_has_rare_artifacts_in_inventory() const;
+  public:
+  void clear_rare_artifacts_in_inventory();
+  uint64_t rare_artifacts_in_inventory() const;
+  void set_rare_artifacts_in_inventory(uint64_t value);
+  private:
+  uint64_t _internal_rare_artifacts_in_inventory() const;
+  void _internal_set_rare_artifacts_in_inventory(uint64_t value);
+  public:
+
+  // optional uint64 rare_artifacts_on_server = 34;
+  bool has_rare_artifacts_on_server() const;
+  private:
+  bool _internal_has_rare_artifacts_on_server() const;
+  public:
+  void clear_rare_artifacts_on_server();
+  uint64_t rare_artifacts_on_server() const;
+  void set_rare_artifacts_on_server(uint64_t value);
+  private:
+  uint64_t _internal_rare_artifacts_on_server() const;
+  void _internal_set_rare_artifacts_on_server(uint64_t value);
+  public:
+
+  // optional uint64 legendary_artifacts_in_inventory = 35;
+  bool has_legendary_artifacts_in_inventory() const;
+  private:
+  bool _internal_has_legendary_artifacts_in_inventory() const;
+  public:
+  void clear_legendary_artifacts_in_inventory();
+  uint64_t legendary_artifacts_in_inventory() const;
+  void set_legendary_artifacts_in_inventory(uint64_t value);
+  private:
+  uint64_t _internal_legendary_artifacts_in_inventory() const;
+  void _internal_set_legendary_artifacts_in_inventory(uint64_t value);
+  public:
+
+  // optional uint64 legendary_artifacts_on_server = 36;
+  bool has_legendary_artifacts_on_server() const;
+  private:
+  bool _internal_has_legendary_artifacts_on_server() const;
+  public:
+  void clear_legendary_artifacts_on_server();
+  uint64_t legendary_artifacts_on_server() const;
+  void set_legendary_artifacts_on_server(uint64_t value);
+  private:
+  uint64_t _internal_legendary_artifacts_on_server() const;
+  void _internal_set_legendary_artifacts_on_server(uint64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ei.UserVerificationAnalysis)
  private:
   class _Internal;
@@ -48954,7 +49105,7 @@ class UserVerificationAnalysis final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<2> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> invalid_contracts_;
   double start_time_;
@@ -48988,6 +49139,10 @@ class UserVerificationAnalysis final :
   bool verified_;
   bool verification_override_;
   bool verification_override_value_;
+  uint64_t rare_artifacts_in_inventory_;
+  uint64_t rare_artifacts_on_server_;
+  uint64_t legendary_artifacts_in_inventory_;
+  uint64_t legendary_artifacts_on_server_;
   friend struct ::TableStruct_ei_2eproto;
 };
 // -------------------------------------------------------------------
@@ -50217,7 +50372,7 @@ inline void Backup_Settings::set_notifications_queried(bool value) {
 
 // optional double last_notification_query_time = 27;
 inline bool Backup_Settings::_internal_has_last_notification_query_time() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_last_notification_query_time() const {
@@ -50225,7 +50380,7 @@ inline bool Backup_Settings::has_last_notification_query_time() const {
 }
 inline void Backup_Settings::clear_last_notification_query_time() {
   last_notification_query_time_ = 0;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline double Backup_Settings::_internal_last_notification_query_time() const {
   return last_notification_query_time_;
@@ -50235,7 +50390,7 @@ inline double Backup_Settings::last_notification_query_time() const {
   return _internal_last_notification_query_time();
 }
 inline void Backup_Settings::_internal_set_last_notification_query_time(double value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00080000u;
   last_notification_query_time_ = value;
 }
 inline void Backup_Settings::set_last_notification_query_time(double value) {
@@ -50301,7 +50456,7 @@ inline void Backup_Settings::set_notify_daily_gift(bool value) {
 
 // optional bool low_performance = 10;
 inline bool Backup_Settings::_internal_has_low_performance() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_low_performance() const {
@@ -50309,7 +50464,7 @@ inline bool Backup_Settings::has_low_performance() const {
 }
 inline void Backup_Settings::clear_low_performance() {
   low_performance_ = false;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline bool Backup_Settings::_internal_low_performance() const {
   return low_performance_;
@@ -50319,7 +50474,7 @@ inline bool Backup_Settings::low_performance() const {
   return _internal_low_performance();
 }
 inline void Backup_Settings::_internal_set_low_performance(bool value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00100000u;
   low_performance_ = value;
 }
 inline void Backup_Settings::set_low_performance(bool value) {
@@ -50329,7 +50484,7 @@ inline void Backup_Settings::set_low_performance(bool value) {
 
 // optional bool auto_stop_fueling = 25;
 inline bool Backup_Settings::_internal_has_auto_stop_fueling() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_auto_stop_fueling() const {
@@ -50337,7 +50492,7 @@ inline bool Backup_Settings::has_auto_stop_fueling() const {
 }
 inline void Backup_Settings::clear_auto_stop_fueling() {
   auto_stop_fueling_ = false;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool Backup_Settings::_internal_auto_stop_fueling() const {
   return auto_stop_fueling_;
@@ -50347,7 +50502,7 @@ inline bool Backup_Settings::auto_stop_fueling() const {
   return _internal_auto_stop_fueling();
 }
 inline void Backup_Settings::_internal_set_auto_stop_fueling(bool value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00200000u;
   auto_stop_fueling_ = value;
 }
 inline void Backup_Settings::set_auto_stop_fueling(bool value) {
@@ -50357,7 +50512,7 @@ inline void Backup_Settings::set_auto_stop_fueling(bool value) {
 
 // optional bool max_enabled = 26;
 inline bool Backup_Settings::_internal_has_max_enabled() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_max_enabled() const {
@@ -50365,7 +50520,7 @@ inline bool Backup_Settings::has_max_enabled() const {
 }
 inline void Backup_Settings::clear_max_enabled() {
   max_enabled_ = false;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool Backup_Settings::_internal_max_enabled() const {
   return max_enabled_;
@@ -50375,7 +50530,7 @@ inline bool Backup_Settings::max_enabled() const {
   return _internal_max_enabled();
 }
 inline void Backup_Settings::_internal_set_max_enabled(bool value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00400000u;
   max_enabled_ = value;
 }
 inline void Backup_Settings::set_max_enabled(bool value) {
@@ -50383,9 +50538,37 @@ inline void Backup_Settings::set_max_enabled(bool value) {
   // @@protoc_insertion_point(field_set:ei.Backup.Settings.max_enabled)
 }
 
+// optional bool hide_cc_status = 28;
+inline bool Backup_Settings::_internal_has_hide_cc_status() const {
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_hide_cc_status() const {
+  return _internal_has_hide_cc_status();
+}
+inline void Backup_Settings::clear_hide_cc_status() {
+  hide_cc_status_ = false;
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline bool Backup_Settings::_internal_hide_cc_status() const {
+  return hide_cc_status_;
+}
+inline bool Backup_Settings::hide_cc_status() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.hide_cc_status)
+  return _internal_hide_cc_status();
+}
+inline void Backup_Settings::_internal_set_hide_cc_status(bool value) {
+  _has_bits_[0] |= 0x00800000u;
+  hide_cc_status_ = value;
+}
+inline void Backup_Settings::set_hide_cc_status(bool value) {
+  _internal_set_hide_cc_status(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.hide_cc_status)
+}
+
 // optional double last_backup_time = 24;
 inline bool Backup_Settings::_internal_has_last_backup_time() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_last_backup_time() const {
@@ -50393,7 +50576,7 @@ inline bool Backup_Settings::has_last_backup_time() const {
 }
 inline void Backup_Settings::clear_last_backup_time() {
   last_backup_time_ = 0;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline double Backup_Settings::_internal_last_backup_time() const {
   return last_backup_time_;
@@ -50403,7 +50586,7 @@ inline double Backup_Settings::last_backup_time() const {
   return _internal_last_backup_time();
 }
 inline void Backup_Settings::_internal_set_last_backup_time(double value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00040000u;
   last_backup_time_ = value;
 }
 inline void Backup_Settings::set_last_backup_time(double value) {
@@ -50413,7 +50596,7 @@ inline void Backup_Settings::set_last_backup_time(double value) {
 
 // optional bool coppa_queried = 7;
 inline bool Backup_Settings::_internal_has_coppa_queried() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_coppa_queried() const {
@@ -50421,7 +50604,7 @@ inline bool Backup_Settings::has_coppa_queried() const {
 }
 inline void Backup_Settings::clear_coppa_queried() {
   coppa_queried_ = false;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline bool Backup_Settings::_internal_coppa_queried() const {
   return coppa_queried_;
@@ -50431,7 +50614,7 @@ inline bool Backup_Settings::coppa_queried() const {
   return _internal_coppa_queried();
 }
 inline void Backup_Settings::_internal_set_coppa_queried(bool value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00000100u;
   coppa_queried_ = value;
 }
 inline void Backup_Settings::set_coppa_queried(bool value) {
@@ -50441,7 +50624,7 @@ inline void Backup_Settings::set_coppa_queried(bool value) {
 
 // optional bool coppa_restricted = 8;
 inline bool Backup_Settings::_internal_has_coppa_restricted() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_coppa_restricted() const {
@@ -50449,7 +50632,7 @@ inline bool Backup_Settings::has_coppa_restricted() const {
 }
 inline void Backup_Settings::clear_coppa_restricted() {
   coppa_restricted_ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool Backup_Settings::_internal_coppa_restricted() const {
   return coppa_restricted_;
@@ -50459,7 +50642,7 @@ inline bool Backup_Settings::coppa_restricted() const {
   return _internal_coppa_restricted();
 }
 inline void Backup_Settings::_internal_set_coppa_restricted(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   coppa_restricted_ = value;
 }
 inline void Backup_Settings::set_coppa_restricted(bool value) {
@@ -50469,7 +50652,7 @@ inline void Backup_Settings::set_coppa_restricted(bool value) {
 
 // optional bool gdpr_consent_queried = 12;
 inline bool Backup_Settings::_internal_has_gdpr_consent_queried() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_consent_queried() const {
@@ -50477,7 +50660,7 @@ inline bool Backup_Settings::has_gdpr_consent_queried() const {
 }
 inline void Backup_Settings::clear_gdpr_consent_queried() {
   gdpr_consent_queried_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline bool Backup_Settings::_internal_gdpr_consent_queried() const {
   return gdpr_consent_queried_;
@@ -50487,7 +50670,7 @@ inline bool Backup_Settings::gdpr_consent_queried() const {
   return _internal_gdpr_consent_queried();
 }
 inline void Backup_Settings::_internal_set_gdpr_consent_queried(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   gdpr_consent_queried_ = value;
 }
 inline void Backup_Settings::set_gdpr_consent_queried(bool value) {
@@ -50497,7 +50680,7 @@ inline void Backup_Settings::set_gdpr_consent_queried(bool value) {
 
 // optional bool gdpr_age_restricted = 16;
 inline bool Backup_Settings::_internal_has_gdpr_age_restricted() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_age_restricted() const {
@@ -50505,7 +50688,7 @@ inline bool Backup_Settings::has_gdpr_age_restricted() const {
 }
 inline void Backup_Settings::clear_gdpr_age_restricted() {
   gdpr_age_restricted_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool Backup_Settings::_internal_gdpr_age_restricted() const {
   return gdpr_age_restricted_;
@@ -50515,7 +50698,7 @@ inline bool Backup_Settings::gdpr_age_restricted() const {
   return _internal_gdpr_age_restricted();
 }
 inline void Backup_Settings::_internal_set_gdpr_age_restricted(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   gdpr_age_restricted_ = value;
 }
 inline void Backup_Settings::set_gdpr_age_restricted(bool value) {
@@ -50525,7 +50708,7 @@ inline void Backup_Settings::set_gdpr_age_restricted(bool value) {
 
 // optional bool gdpr_consent_given = 13;
 inline bool Backup_Settings::_internal_has_gdpr_consent_given() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_consent_given() const {
@@ -50533,7 +50716,7 @@ inline bool Backup_Settings::has_gdpr_consent_given() const {
 }
 inline void Backup_Settings::clear_gdpr_consent_given() {
   gdpr_consent_given_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline bool Backup_Settings::_internal_gdpr_consent_given() const {
   return gdpr_consent_given_;
@@ -50543,7 +50726,7 @@ inline bool Backup_Settings::gdpr_consent_given() const {
   return _internal_gdpr_consent_given();
 }
 inline void Backup_Settings::_internal_set_gdpr_consent_given(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00002000u;
   gdpr_consent_given_ = value;
 }
 inline void Backup_Settings::set_gdpr_consent_given(bool value) {
@@ -50553,7 +50736,7 @@ inline void Backup_Settings::set_gdpr_consent_given(bool value) {
 
 // optional bool age_queried = 18;
 inline bool Backup_Settings::_internal_has_age_queried() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_age_queried() const {
@@ -50561,7 +50744,7 @@ inline bool Backup_Settings::has_age_queried() const {
 }
 inline void Backup_Settings::clear_age_queried() {
   age_queried_ = false;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline bool Backup_Settings::_internal_age_queried() const {
   return age_queried_;
@@ -50571,7 +50754,7 @@ inline bool Backup_Settings::age_queried() const {
   return _internal_age_queried();
 }
 inline void Backup_Settings::_internal_set_age_queried(bool value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00004000u;
   age_queried_ = value;
 }
 inline void Backup_Settings::set_age_queried(bool value) {
@@ -50581,7 +50764,7 @@ inline void Backup_Settings::set_age_queried(bool value) {
 
 // optional bool age_restricted = 19 [default = false];
 inline bool Backup_Settings::_internal_has_age_restricted() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_age_restricted() const {
@@ -50589,7 +50772,7 @@ inline bool Backup_Settings::has_age_restricted() const {
 }
 inline void Backup_Settings::clear_age_restricted() {
   age_restricted_ = false;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline bool Backup_Settings::_internal_age_restricted() const {
   return age_restricted_;
@@ -50599,7 +50782,7 @@ inline bool Backup_Settings::age_restricted() const {
   return _internal_age_restricted();
 }
 inline void Backup_Settings::_internal_set_age_restricted(bool value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00008000u;
   age_restricted_ = value;
 }
 inline void Backup_Settings::set_age_restricted(bool value) {
@@ -50609,7 +50792,7 @@ inline void Backup_Settings::set_age_restricted(bool value) {
 
 // optional bool data_collection_consent_queried = 20;
 inline bool Backup_Settings::_internal_has_data_collection_consent_queried() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_data_collection_consent_queried() const {
@@ -50617,7 +50800,7 @@ inline bool Backup_Settings::has_data_collection_consent_queried() const {
 }
 inline void Backup_Settings::clear_data_collection_consent_queried() {
   data_collection_consent_queried_ = false;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline bool Backup_Settings::_internal_data_collection_consent_queried() const {
   return data_collection_consent_queried_;
@@ -50627,7 +50810,7 @@ inline bool Backup_Settings::data_collection_consent_queried() const {
   return _internal_data_collection_consent_queried();
 }
 inline void Backup_Settings::_internal_set_data_collection_consent_queried(bool value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00010000u;
   data_collection_consent_queried_ = value;
 }
 inline void Backup_Settings::set_data_collection_consent_queried(bool value) {
@@ -50637,7 +50820,7 @@ inline void Backup_Settings::set_data_collection_consent_queried(bool value) {
 
 // optional bool data_collection_consent_given = 21;
 inline bool Backup_Settings::_internal_has_data_collection_consent_given() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_data_collection_consent_given() const {
@@ -50645,7 +50828,7 @@ inline bool Backup_Settings::has_data_collection_consent_given() const {
 }
 inline void Backup_Settings::clear_data_collection_consent_given() {
   data_collection_consent_given_ = false;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline bool Backup_Settings::_internal_data_collection_consent_given() const {
   return data_collection_consent_given_;
@@ -50655,7 +50838,7 @@ inline bool Backup_Settings::data_collection_consent_given() const {
   return _internal_data_collection_consent_given();
 }
 inline void Backup_Settings::_internal_set_data_collection_consent_given(bool value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00020000u;
   data_collection_consent_given_ = value;
 }
 inline void Backup_Settings::set_data_collection_consent_given(bool value) {
@@ -50693,7 +50876,7 @@ inline void Backup_Settings::set_last_day_age_queried(uint32_t value) {
 
 // optional bool user_ads_enabled = 14 [default = true];
 inline bool Backup_Settings::_internal_has_user_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_ads_enabled() const {
@@ -50701,7 +50884,7 @@ inline bool Backup_Settings::has_user_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_ads_enabled() {
   user_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline bool Backup_Settings::_internal_user_ads_enabled() const {
   return user_ads_enabled_;
@@ -50711,7 +50894,7 @@ inline bool Backup_Settings::user_ads_enabled() const {
   return _internal_user_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
   user_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_ads_enabled(bool value) {
@@ -50721,7 +50904,7 @@ inline void Backup_Settings::set_user_ads_enabled(bool value) {
 
 // optional bool user_cloud_enabled = 15 [default = true];
 inline bool Backup_Settings::_internal_has_user_cloud_enabled() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_cloud_enabled() const {
@@ -50729,7 +50912,7 @@ inline bool Backup_Settings::has_user_cloud_enabled() const {
 }
 inline void Backup_Settings::clear_user_cloud_enabled() {
   user_cloud_enabled_ = true;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline bool Backup_Settings::_internal_user_cloud_enabled() const {
   return user_cloud_enabled_;
@@ -50739,7 +50922,7 @@ inline bool Backup_Settings::user_cloud_enabled() const {
   return _internal_user_cloud_enabled();
 }
 inline void Backup_Settings::_internal_set_user_cloud_enabled(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
   user_cloud_enabled_ = value;
 }
 inline void Backup_Settings::set_user_cloud_enabled(bool value) {
@@ -50749,7 +50932,7 @@ inline void Backup_Settings::set_user_cloud_enabled(bool value) {
 
 // optional bool user_analytics_enabled = 22 [default = true];
 inline bool Backup_Settings::_internal_has_user_analytics_enabled() const {
-  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_analytics_enabled() const {
@@ -50757,7 +50940,7 @@ inline bool Backup_Settings::has_user_analytics_enabled() const {
 }
 inline void Backup_Settings::clear_user_analytics_enabled() {
   user_analytics_enabled_ = true;
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline bool Backup_Settings::_internal_user_analytics_enabled() const {
   return user_analytics_enabled_;
@@ -50767,7 +50950,7 @@ inline bool Backup_Settings::user_analytics_enabled() const {
   return _internal_user_analytics_enabled();
 }
 inline void Backup_Settings::_internal_set_user_analytics_enabled(bool value) {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x04000000u;
   user_analytics_enabled_ = value;
 }
 inline void Backup_Settings::set_user_analytics_enabled(bool value) {
@@ -50777,7 +50960,7 @@ inline void Backup_Settings::set_user_analytics_enabled(bool value) {
 
 // optional bool user_personalized_ads_enabled = 23 [default = true];
 inline bool Backup_Settings::_internal_has_user_personalized_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
@@ -50785,7 +50968,7 @@ inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_personalized_ads_enabled() {
   user_personalized_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline bool Backup_Settings::_internal_user_personalized_ads_enabled() const {
   return user_personalized_ads_enabled_;
@@ -50795,7 +50978,7 @@ inline bool Backup_Settings::user_personalized_ads_enabled() const {
   return _internal_user_personalized_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_personalized_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x08000000u;
   user_personalized_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_personalized_ads_enabled(bool value) {
@@ -64991,6 +65174,81 @@ inline void Contract::_internal_set_cc_only(bool value) {
 inline void Contract::set_cc_only(bool value) {
   _internal_set_cc_only(value);
   // @@protoc_insertion_point(field_set:ei.Contract.cc_only)
+}
+
+// repeated string default_shell_ids = 24;
+inline int Contract::_internal_default_shell_ids_size() const {
+  return default_shell_ids_.size();
+}
+inline int Contract::default_shell_ids_size() const {
+  return _internal_default_shell_ids_size();
+}
+inline void Contract::clear_default_shell_ids() {
+  default_shell_ids_.Clear();
+}
+inline std::string* Contract::add_default_shell_ids() {
+  std::string* _s = _internal_add_default_shell_ids();
+  // @@protoc_insertion_point(field_add_mutable:ei.Contract.default_shell_ids)
+  return _s;
+}
+inline const std::string& Contract::_internal_default_shell_ids(int index) const {
+  return default_shell_ids_.Get(index);
+}
+inline const std::string& Contract::default_shell_ids(int index) const {
+  // @@protoc_insertion_point(field_get:ei.Contract.default_shell_ids)
+  return _internal_default_shell_ids(index);
+}
+inline std::string* Contract::mutable_default_shell_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.Contract.default_shell_ids)
+  return default_shell_ids_.Mutable(index);
+}
+inline void Contract::set_default_shell_ids(int index, const std::string& value) {
+  default_shell_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ei.Contract.default_shell_ids)
+}
+inline void Contract::set_default_shell_ids(int index, std::string&& value) {
+  default_shell_ids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ei.Contract.default_shell_ids)
+}
+inline void Contract::set_default_shell_ids(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  default_shell_ids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ei.Contract.default_shell_ids)
+}
+inline void Contract::set_default_shell_ids(int index, const char* value, size_t size) {
+  default_shell_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ei.Contract.default_shell_ids)
+}
+inline std::string* Contract::_internal_add_default_shell_ids() {
+  return default_shell_ids_.Add();
+}
+inline void Contract::add_default_shell_ids(const std::string& value) {
+  default_shell_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ei.Contract.default_shell_ids)
+}
+inline void Contract::add_default_shell_ids(std::string&& value) {
+  default_shell_ids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ei.Contract.default_shell_ids)
+}
+inline void Contract::add_default_shell_ids(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  default_shell_ids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ei.Contract.default_shell_ids)
+}
+inline void Contract::add_default_shell_ids(const char* value, size_t size) {
+  default_shell_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ei.Contract.default_shell_ids)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+Contract::default_shell_ids() const {
+  // @@protoc_insertion_point(field_list:ei.Contract.default_shell_ids)
+  return default_shell_ids_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+Contract::mutable_default_shell_ids() {
+  // @@protoc_insertion_point(field_mutable_list:ei.Contract.default_shell_ids)
+  return &default_shell_ids_;
 }
 
 // optional bool debug = 11;
@@ -79331,6 +79589,34 @@ inline void ContractCoopStatusUpdateRequest::set_boost_tokens_spent(uint32_t val
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusUpdateRequest.boost_tokens_spent)
 }
 
+// optional bool hide_cc_status = 17;
+inline bool ContractCoopStatusUpdateRequest::_internal_has_hide_cc_status() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusUpdateRequest::has_hide_cc_status() const {
+  return _internal_has_hide_cc_status();
+}
+inline void ContractCoopStatusUpdateRequest::clear_hide_cc_status() {
+  hide_cc_status_ = false;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline bool ContractCoopStatusUpdateRequest::_internal_hide_cc_status() const {
+  return hide_cc_status_;
+}
+inline bool ContractCoopStatusUpdateRequest::hide_cc_status() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusUpdateRequest.hide_cc_status)
+  return _internal_hide_cc_status();
+}
+inline void ContractCoopStatusUpdateRequest::_internal_set_hide_cc_status(bool value) {
+  _has_bits_[0] |= 0x00004000u;
+  hide_cc_status_ = value;
+}
+inline void ContractCoopStatusUpdateRequest::set_hide_cc_status(bool value) {
+  _internal_set_hide_cc_status(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusUpdateRequest.hide_cc_status)
+}
+
 // optional .ei.FarmProductionParams production_params = 14;
 inline bool ContractCoopStatusUpdateRequest::_internal_has_production_params() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
@@ -79513,7 +79799,7 @@ inline void ContractCoopStatusUpdateRequest::set_allocated_farm_info(::ei::Playe
 
 // optional double egg_laying_rate_buff = 10 [default = 1];
 inline bool ContractCoopStatusUpdateRequest::_internal_has_egg_laying_rate_buff() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_egg_laying_rate_buff() const {
@@ -79521,7 +79807,7 @@ inline bool ContractCoopStatusUpdateRequest::has_egg_laying_rate_buff() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_egg_laying_rate_buff() {
   egg_laying_rate_buff_ = 1;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_egg_laying_rate_buff() const {
   return egg_laying_rate_buff_;
@@ -79531,7 +79817,7 @@ inline double ContractCoopStatusUpdateRequest::egg_laying_rate_buff() const {
   return _internal_egg_laying_rate_buff();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_egg_laying_rate_buff(double value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   egg_laying_rate_buff_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_egg_laying_rate_buff(double value) {
@@ -79541,7 +79827,7 @@ inline void ContractCoopStatusUpdateRequest::set_egg_laying_rate_buff(double val
 
 // optional double earnings_buff = 11 [default = 1];
 inline bool ContractCoopStatusUpdateRequest::_internal_has_earnings_buff() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusUpdateRequest::has_earnings_buff() const {
@@ -79549,7 +79835,7 @@ inline bool ContractCoopStatusUpdateRequest::has_earnings_buff() const {
 }
 inline void ContractCoopStatusUpdateRequest::clear_earnings_buff() {
   earnings_buff_ = 1;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline double ContractCoopStatusUpdateRequest::_internal_earnings_buff() const {
   return earnings_buff_;
@@ -79559,7 +79845,7 @@ inline double ContractCoopStatusUpdateRequest::earnings_buff() const {
   return _internal_earnings_buff();
 }
 inline void ContractCoopStatusUpdateRequest::_internal_set_earnings_buff(double value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
   earnings_buff_ = value;
 }
 inline void ContractCoopStatusUpdateRequest::set_earnings_buff(double value) {
@@ -86101,6 +86387,46 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::ServerGift >&
 PeriodicalsResponse::gifts() const {
   // @@protoc_insertion_point(field_list:ei.PeriodicalsResponse.gifts)
   return gifts_;
+}
+
+// repeated .ei.CompleteMissionResponse artifact_cases = 9;
+inline int PeriodicalsResponse::_internal_artifact_cases_size() const {
+  return artifact_cases_.size();
+}
+inline int PeriodicalsResponse::artifact_cases_size() const {
+  return _internal_artifact_cases_size();
+}
+inline void PeriodicalsResponse::clear_artifact_cases() {
+  artifact_cases_.Clear();
+}
+inline ::ei::CompleteMissionResponse* PeriodicalsResponse::mutable_artifact_cases(int index) {
+  // @@protoc_insertion_point(field_mutable:ei.PeriodicalsResponse.artifact_cases)
+  return artifact_cases_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteMissionResponse >*
+PeriodicalsResponse::mutable_artifact_cases() {
+  // @@protoc_insertion_point(field_mutable_list:ei.PeriodicalsResponse.artifact_cases)
+  return &artifact_cases_;
+}
+inline const ::ei::CompleteMissionResponse& PeriodicalsResponse::_internal_artifact_cases(int index) const {
+  return artifact_cases_.Get(index);
+}
+inline const ::ei::CompleteMissionResponse& PeriodicalsResponse::artifact_cases(int index) const {
+  // @@protoc_insertion_point(field_get:ei.PeriodicalsResponse.artifact_cases)
+  return _internal_artifact_cases(index);
+}
+inline ::ei::CompleteMissionResponse* PeriodicalsResponse::_internal_add_artifact_cases() {
+  return artifact_cases_.Add();
+}
+inline ::ei::CompleteMissionResponse* PeriodicalsResponse::add_artifact_cases() {
+  ::ei::CompleteMissionResponse* _add = _internal_add_artifact_cases();
+  // @@protoc_insertion_point(field_add:ei.PeriodicalsResponse.artifact_cases)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ei::CompleteMissionResponse >&
+PeriodicalsResponse::artifact_cases() const {
+  // @@protoc_insertion_point(field_list:ei.PeriodicalsResponse.artifact_cases)
+  return artifact_cases_;
 }
 
 // optional .ei.LiveConfig live_config = 5;
@@ -101181,6 +101507,51 @@ ShellDB_ShellSetVariationStatus::mutable_owned_variations() {
 
 // ShellDB_FarmConfiguration
 
+// repeated .ei.ShellDB.FarmElement locked_elements = 10;
+inline int ShellDB_FarmConfiguration::_internal_locked_elements_size() const {
+  return locked_elements_.size();
+}
+inline int ShellDB_FarmConfiguration::locked_elements_size() const {
+  return _internal_locked_elements_size();
+}
+inline void ShellDB_FarmConfiguration::clear_locked_elements() {
+  locked_elements_.Clear();
+}
+inline ::ei::ShellDB_FarmElement ShellDB_FarmConfiguration::_internal_locked_elements(int index) const {
+  return static_cast< ::ei::ShellDB_FarmElement >(locked_elements_.Get(index));
+}
+inline ::ei::ShellDB_FarmElement ShellDB_FarmConfiguration::locked_elements(int index) const {
+  // @@protoc_insertion_point(field_get:ei.ShellDB.FarmConfiguration.locked_elements)
+  return _internal_locked_elements(index);
+}
+inline void ShellDB_FarmConfiguration::set_locked_elements(int index, ::ei::ShellDB_FarmElement value) {
+  assert(::ei::ShellDB_FarmElement_IsValid(value));
+  locked_elements_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.ShellDB.FarmConfiguration.locked_elements)
+}
+inline void ShellDB_FarmConfiguration::_internal_add_locked_elements(::ei::ShellDB_FarmElement value) {
+  assert(::ei::ShellDB_FarmElement_IsValid(value));
+  locked_elements_.Add(value);
+}
+inline void ShellDB_FarmConfiguration::add_locked_elements(::ei::ShellDB_FarmElement value) {
+  _internal_add_locked_elements(value);
+  // @@protoc_insertion_point(field_add:ei.ShellDB.FarmConfiguration.locked_elements)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>&
+ShellDB_FarmConfiguration::locked_elements() const {
+  // @@protoc_insertion_point(field_list:ei.ShellDB.FarmConfiguration.locked_elements)
+  return locked_elements_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
+ShellDB_FarmConfiguration::_internal_mutable_locked_elements() {
+  return &locked_elements_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
+ShellDB_FarmConfiguration::mutable_locked_elements() {
+  // @@protoc_insertion_point(field_mutable_list:ei.ShellDB.FarmConfiguration.locked_elements)
+  return _internal_mutable_locked_elements();
+}
+
 // repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;
 inline int ShellDB_FarmConfiguration::_internal_shell_configs_size() const {
   return shell_configs_.size();
@@ -103929,6 +104300,118 @@ inline void UserVerificationAnalysis::_internal_set_artifacts_in_inventory(doubl
 inline void UserVerificationAnalysis::set_artifacts_in_inventory(double value) {
   _internal_set_artifacts_in_inventory(value);
   // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.artifacts_in_inventory)
+}
+
+// optional uint64 rare_artifacts_in_inventory = 33;
+inline bool UserVerificationAnalysis::_internal_has_rare_artifacts_in_inventory() const {
+  bool value = (_has_bits_[0] & 0x80000000u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_rare_artifacts_in_inventory() const {
+  return _internal_has_rare_artifacts_in_inventory();
+}
+inline void UserVerificationAnalysis::clear_rare_artifacts_in_inventory() {
+  rare_artifacts_in_inventory_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x80000000u;
+}
+inline uint64_t UserVerificationAnalysis::_internal_rare_artifacts_in_inventory() const {
+  return rare_artifacts_in_inventory_;
+}
+inline uint64_t UserVerificationAnalysis::rare_artifacts_in_inventory() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.rare_artifacts_in_inventory)
+  return _internal_rare_artifacts_in_inventory();
+}
+inline void UserVerificationAnalysis::_internal_set_rare_artifacts_in_inventory(uint64_t value) {
+  _has_bits_[0] |= 0x80000000u;
+  rare_artifacts_in_inventory_ = value;
+}
+inline void UserVerificationAnalysis::set_rare_artifacts_in_inventory(uint64_t value) {
+  _internal_set_rare_artifacts_in_inventory(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.rare_artifacts_in_inventory)
+}
+
+// optional uint64 rare_artifacts_on_server = 34;
+inline bool UserVerificationAnalysis::_internal_has_rare_artifacts_on_server() const {
+  bool value = (_has_bits_[1] & 0x00000001u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_rare_artifacts_on_server() const {
+  return _internal_has_rare_artifacts_on_server();
+}
+inline void UserVerificationAnalysis::clear_rare_artifacts_on_server() {
+  rare_artifacts_on_server_ = uint64_t{0u};
+  _has_bits_[1] &= ~0x00000001u;
+}
+inline uint64_t UserVerificationAnalysis::_internal_rare_artifacts_on_server() const {
+  return rare_artifacts_on_server_;
+}
+inline uint64_t UserVerificationAnalysis::rare_artifacts_on_server() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.rare_artifacts_on_server)
+  return _internal_rare_artifacts_on_server();
+}
+inline void UserVerificationAnalysis::_internal_set_rare_artifacts_on_server(uint64_t value) {
+  _has_bits_[1] |= 0x00000001u;
+  rare_artifacts_on_server_ = value;
+}
+inline void UserVerificationAnalysis::set_rare_artifacts_on_server(uint64_t value) {
+  _internal_set_rare_artifacts_on_server(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.rare_artifacts_on_server)
+}
+
+// optional uint64 legendary_artifacts_in_inventory = 35;
+inline bool UserVerificationAnalysis::_internal_has_legendary_artifacts_in_inventory() const {
+  bool value = (_has_bits_[1] & 0x00000002u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_legendary_artifacts_in_inventory() const {
+  return _internal_has_legendary_artifacts_in_inventory();
+}
+inline void UserVerificationAnalysis::clear_legendary_artifacts_in_inventory() {
+  legendary_artifacts_in_inventory_ = uint64_t{0u};
+  _has_bits_[1] &= ~0x00000002u;
+}
+inline uint64_t UserVerificationAnalysis::_internal_legendary_artifacts_in_inventory() const {
+  return legendary_artifacts_in_inventory_;
+}
+inline uint64_t UserVerificationAnalysis::legendary_artifacts_in_inventory() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.legendary_artifacts_in_inventory)
+  return _internal_legendary_artifacts_in_inventory();
+}
+inline void UserVerificationAnalysis::_internal_set_legendary_artifacts_in_inventory(uint64_t value) {
+  _has_bits_[1] |= 0x00000002u;
+  legendary_artifacts_in_inventory_ = value;
+}
+inline void UserVerificationAnalysis::set_legendary_artifacts_in_inventory(uint64_t value) {
+  _internal_set_legendary_artifacts_in_inventory(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.legendary_artifacts_in_inventory)
+}
+
+// optional uint64 legendary_artifacts_on_server = 36;
+inline bool UserVerificationAnalysis::_internal_has_legendary_artifacts_on_server() const {
+  bool value = (_has_bits_[1] & 0x00000004u) != 0;
+  return value;
+}
+inline bool UserVerificationAnalysis::has_legendary_artifacts_on_server() const {
+  return _internal_has_legendary_artifacts_on_server();
+}
+inline void UserVerificationAnalysis::clear_legendary_artifacts_on_server() {
+  legendary_artifacts_on_server_ = uint64_t{0u};
+  _has_bits_[1] &= ~0x00000004u;
+}
+inline uint64_t UserVerificationAnalysis::_internal_legendary_artifacts_on_server() const {
+  return legendary_artifacts_on_server_;
+}
+inline uint64_t UserVerificationAnalysis::legendary_artifacts_on_server() const {
+  // @@protoc_insertion_point(field_get:ei.UserVerificationAnalysis.legendary_artifacts_on_server)
+  return _internal_legendary_artifacts_on_server();
+}
+inline void UserVerificationAnalysis::_internal_set_legendary_artifacts_on_server(uint64_t value) {
+  _has_bits_[1] |= 0x00000004u;
+  legendary_artifacts_on_server_ = value;
+}
+inline void UserVerificationAnalysis::set_legendary_artifacts_on_server(uint64_t value) {
+  _internal_set_legendary_artifacts_on_server(value);
+  // @@protoc_insertion_point(field_set:ei.UserVerificationAnalysis.legendary_artifacts_on_server)
 }
 
 // optional double gold_spent_crafting = 21;

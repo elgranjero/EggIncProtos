@@ -115,7 +115,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.Contract.repeatedFields_ = [3,16,20];
+proto.ei.Contract.repeatedFields_ = [3,16,20,24];
 
 
 
@@ -171,6 +171,7 @@ proto.ei.Contract.toObject = function(includeInstance, msg) {
     minClientVersion: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     leggacy: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
     ccOnly: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
+    defaultShellIdsList: (f = jspb.Message.getRepeatedField(msg, 24)) == null ? undefined : f,
     debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     key: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f
   };
@@ -291,6 +292,10 @@ proto.ei.Contract.deserializeBinaryFromReader = function(msg, reader) {
     case 22:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setCcOnly(value);
+      break;
+    case 24:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addDefaultShellIds(value);
       break;
     case 11:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -469,6 +474,13 @@ proto.ei.Contract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       22,
+      f
+    );
+  }
+  f = message.getDefaultShellIdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      24,
       f
     );
   }
@@ -2081,6 +2093,43 @@ proto.ei.Contract.prototype.clearCcOnly = function() {
  */
 proto.ei.Contract.prototype.hasCcOnly = function() {
   return jspb.Message.getField(this, 22) != null;
+};
+
+
+/**
+ * repeated string default_shell_ids = 24;
+ * @return {!Array<string>}
+ */
+proto.ei.Contract.prototype.getDefaultShellIdsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 24));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.setDefaultShellIdsList = function(value) {
+  return jspb.Message.setField(this, 24, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.addDefaultShellIds = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 24, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.clearDefaultShellIdsList = function() {
+  return this.setDefaultShellIdsList([]);
 };
 
 

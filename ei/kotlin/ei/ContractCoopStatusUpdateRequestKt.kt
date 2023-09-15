@@ -313,6 +313,30 @@ public object ContractCoopStatusUpdateRequestKt {
     }
 
     /**
+     * <code>optional bool hide_cc_status = 17;</code>
+     */
+    public var hideCcStatus: kotlin.Boolean
+      @JvmName("getHideCcStatus")
+      get() = _builder.getHideCcStatus()
+      @JvmName("setHideCcStatus")
+      set(value) {
+        _builder.setHideCcStatus(value)
+      }
+    /**
+     * <code>optional bool hide_cc_status = 17;</code>
+     */
+    public fun clearHideCcStatus() {
+      _builder.clearHideCcStatus()
+    }
+    /**
+     * <code>optional bool hide_cc_status = 17;</code>
+     * @return Whether the hideCcStatus field is set.
+     */
+    public fun hasHideCcStatus(): kotlin.Boolean {
+      return _builder.hasHideCcStatus()
+    }
+
+    /**
      * <code>optional .ei.FarmProductionParams production_params = 14;</code>
      */
     public var productionParams: ei.Ei.FarmProductionParams

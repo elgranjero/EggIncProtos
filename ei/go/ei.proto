@@ -48,6 +48,7 @@ message Backup {
         optional bool low_performance = 10;
         optional bool auto_stop_fueling = 25;
         optional bool max_enabled = 26;
+        optional bool hide_cc_status = 28;
         optional double last_backup_time = 24;
         optional bool coppa_queried = 7;
         optional bool coppa_restricted = 8;
@@ -527,6 +528,7 @@ message Contract {
     optional uint32 min_client_version = 14;
     optional bool leggacy = 19;
     optional bool cc_only = 22;
+    repeated string default_shell_ids = 24;
     optional bool debug = 11;
     optional string key = 21;
     
@@ -1045,6 +1047,7 @@ message ContractCoopStatusUpdateRequest {
     optional uint32 eop = 15;
     optional uint32 boost_tokens = 9;
     optional uint32 boost_tokens_spent = 13;
+    optional bool hide_cc_status = 17;
     optional FarmProductionParams production_params = 14;
     optional PlayerFarmInfo farm_info = 16;
     optional double egg_laying_rate_buff = 10 [default = 1];
@@ -1281,6 +1284,7 @@ message PeriodicalsResponse {
     optional ContractsResponse contracts = 3;
     repeated ContractEvaluation evaluations = 8;
     repeated ServerGift gifts = 4;
+    repeated CompleteMissionResponse artifact_cases = 9;
     optional LiveConfig live_config = 5;
     optional MailDB mail_bag = 6;
     optional ContractPlayerInfo contract_player_info = 7;
@@ -2011,6 +2015,7 @@ message ShellDB {
     
     repeated FarmConfiguration farm_configs = 3;
     message FarmConfiguration {
+        repeated FarmElement locked_elements = 10;
         repeated ShellConfiguration shell_configs = 1;
         repeated ShellSetConfiguration shell_set_configs = 2;
         optional bool configure_chickens_by_group = 7;
@@ -2123,6 +2128,10 @@ message UserVerificationAnalysis {
     optional double artifacts_collected = 9;
     optional double artifacts_consumed = 10;
     optional double artifacts_in_inventory = 11;
+    optional uint64 rare_artifacts_in_inventory = 33;
+    optional uint64 rare_artifacts_on_server = 34;
+    optional uint64 legendary_artifacts_in_inventory = 35;
+    optional uint64 legendary_artifacts_on_server = 36;
     optional double gold_spent_crafting = 21;
     optional bool excessive_consumes = 24;
     optional bool excessive_inventory = 25;

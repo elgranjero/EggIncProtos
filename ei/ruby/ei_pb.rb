@@ -46,6 +46,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :low_performance, :bool, 10
       optional :auto_stop_fueling, :bool, 25
       optional :max_enabled, :bool, 26
+      optional :hide_cc_status, :bool, 28
       optional :last_backup_time, :double, 24
       optional :coppa_queried, :bool, 7
       optional :coppa_restricted, :bool, 8
@@ -449,6 +450,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :min_client_version, :uint32, 14
       optional :leggacy, :bool, 19
       optional :cc_only, :bool, 22
+      repeated :default_shell_ids, :string, 24
       optional :debug, :bool, 11
       optional :key, :string, 21
     end
@@ -933,6 +935,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :eop, :uint32, 15
       optional :boost_tokens, :uint32, 9
       optional :boost_tokens_spent, :uint32, 13
+      optional :hide_cc_status, :bool, 17
       optional :production_params, :message, 14, "ei.FarmProductionParams"
       optional :farm_info, :message, 16, "ei.PlayerFarmInfo"
       optional :egg_laying_rate_buff, :double, 10, default: 1
@@ -1139,6 +1142,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :contracts, :message, 3, "ei.ContractsResponse"
       repeated :evaluations, :message, 8, "ei.ContractEvaluation"
       repeated :gifts, :message, 4, "ei.ServerGift"
+      repeated :artifact_cases, :message, 9, "ei.CompleteMissionResponse"
       optional :live_config, :message, 5, "ei.LiveConfig"
       optional :mail_bag, :message, 6, "ei.MailDB"
       optional :contract_player_info, :message, 7, "ei.ContractPlayerInfo"
@@ -1797,6 +1801,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :owned_variations, :string, 2
     end
     add_message "ei.ShellDB.FarmConfiguration" do
+      repeated :locked_elements, :enum, 10, "ei.ShellDB.FarmElement"
       repeated :shell_configs, :message, 1, "ei.ShellDB.ShellConfiguration"
       repeated :shell_set_configs, :message, 2, "ei.ShellDB.ShellSetConfiguration"
       optional :configure_chickens_by_group, :bool, 7
@@ -1889,6 +1894,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :artifacts_collected, :double, 9
       optional :artifacts_consumed, :double, 10
       optional :artifacts_in_inventory, :double, 11
+      optional :rare_artifacts_in_inventory, :uint64, 33
+      optional :rare_artifacts_on_server, :uint64, 34
+      optional :legendary_artifacts_in_inventory, :uint64, 35
+      optional :legendary_artifacts_on_server, :uint64, 36
       optional :gold_spent_crafting, :double, 21
       optional :excessive_consumes, :bool, 24
       optional :excessive_inventory, :bool, 25

@@ -1072,6 +1072,30 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional bool hide_cc_status = 28;</code>
+       */
+      public var hideCcStatus: kotlin.Boolean
+        @JvmName("getHideCcStatus")
+        get() = _builder.getHideCcStatus()
+        @JvmName("setHideCcStatus")
+        set(value) {
+          _builder.setHideCcStatus(value)
+        }
+      /**
+       * <code>optional bool hide_cc_status = 28;</code>
+       */
+      public fun clearHideCcStatus() {
+        _builder.clearHideCcStatus()
+      }
+      /**
+       * <code>optional bool hide_cc_status = 28;</code>
+       * @return Whether the hideCcStatus field is set.
+       */
+      public fun hasHideCcStatus(): kotlin.Boolean {
+        return _builder.hasHideCcStatus()
+      }
+
+      /**
        * <code>optional double last_backup_time = 24;</code>
        */
       public var lastBackupTime: kotlin.Double

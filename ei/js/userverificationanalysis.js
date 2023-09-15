@@ -97,6 +97,10 @@ proto.ei.UserVerificationAnalysis.toObject = function(includeInstance, msg) {
     artifactsCollected: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
     artifactsConsumed: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
     artifactsInInventory: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    rareArtifactsInInventory: (f = jspb.Message.getField(msg, 33)) == null ? undefined : f,
+    rareArtifactsOnServer: (f = jspb.Message.getField(msg, 34)) == null ? undefined : f,
+    legendaryArtifactsInInventory: (f = jspb.Message.getField(msg, 35)) == null ? undefined : f,
+    legendaryArtifactsOnServer: (f = jspb.Message.getField(msg, 36)) == null ? undefined : f,
     goldSpentCrafting: (f = jspb.Message.getOptionalFloatingPointField(msg, 21)) == null ? undefined : f,
     excessiveConsumes: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
     excessiveInventory: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
@@ -221,6 +225,22 @@ proto.ei.UserVerificationAnalysis.deserializeBinaryFromReader = function(msg, re
     case 11:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setArtifactsInInventory(value);
+      break;
+    case 33:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setRareArtifactsInInventory(value);
+      break;
+    case 34:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setRareArtifactsOnServer(value);
+      break;
+    case 35:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setLegendaryArtifactsInInventory(value);
+      break;
+    case 36:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setLegendaryArtifactsOnServer(value);
       break;
     case 21:
       var value = /** @type {number} */ (reader.readDouble());
@@ -433,6 +453,34 @@ proto.ei.UserVerificationAnalysis.serializeBinaryToWriter = function(message, wr
   if (f != null) {
     writer.writeDouble(
       11,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 33));
+  if (f != null) {
+    writer.writeUint64(
+      33,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 34));
+  if (f != null) {
+    writer.writeUint64(
+      34,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 35));
+  if (f != null) {
+    writer.writeUint64(
+      35,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 36));
+  if (f != null) {
+    writer.writeUint64(
+      36,
       f
     );
   }
@@ -1220,6 +1268,150 @@ proto.ei.UserVerificationAnalysis.prototype.clearArtifactsInInventory = function
  */
 proto.ei.UserVerificationAnalysis.prototype.hasArtifactsInInventory = function() {
   return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional uint64 rare_artifacts_in_inventory = 33;
+ * @return {number}
+ */
+proto.ei.UserVerificationAnalysis.prototype.getRareArtifactsInInventory = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 33, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.setRareArtifactsInInventory = function(value) {
+  return jspb.Message.setField(this, 33, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.clearRareArtifactsInInventory = function() {
+  return jspb.Message.setField(this, 33, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.UserVerificationAnalysis.prototype.hasRareArtifactsInInventory = function() {
+  return jspb.Message.getField(this, 33) != null;
+};
+
+
+/**
+ * optional uint64 rare_artifacts_on_server = 34;
+ * @return {number}
+ */
+proto.ei.UserVerificationAnalysis.prototype.getRareArtifactsOnServer = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 34, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.setRareArtifactsOnServer = function(value) {
+  return jspb.Message.setField(this, 34, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.clearRareArtifactsOnServer = function() {
+  return jspb.Message.setField(this, 34, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.UserVerificationAnalysis.prototype.hasRareArtifactsOnServer = function() {
+  return jspb.Message.getField(this, 34) != null;
+};
+
+
+/**
+ * optional uint64 legendary_artifacts_in_inventory = 35;
+ * @return {number}
+ */
+proto.ei.UserVerificationAnalysis.prototype.getLegendaryArtifactsInInventory = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 35, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.setLegendaryArtifactsInInventory = function(value) {
+  return jspb.Message.setField(this, 35, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.clearLegendaryArtifactsInInventory = function() {
+  return jspb.Message.setField(this, 35, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.UserVerificationAnalysis.prototype.hasLegendaryArtifactsInInventory = function() {
+  return jspb.Message.getField(this, 35) != null;
+};
+
+
+/**
+ * optional uint64 legendary_artifacts_on_server = 36;
+ * @return {number}
+ */
+proto.ei.UserVerificationAnalysis.prototype.getLegendaryArtifactsOnServer = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 36, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.setLegendaryArtifactsOnServer = function(value) {
+  return jspb.Message.setField(this, 36, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.clearLegendaryArtifactsOnServer = function() {
+  return jspb.Message.setField(this, 36, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.UserVerificationAnalysis.prototype.hasLegendaryArtifactsOnServer = function() {
+  return jspb.Message.getField(this, 36) != null;
 };
 
 
