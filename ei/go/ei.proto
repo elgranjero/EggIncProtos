@@ -49,6 +49,7 @@ message Backup {
         optional bool auto_stop_fueling = 25;
         optional bool max_enabled = 26;
         optional bool hide_cc_status = 28;
+        optional bool contracts_widget_enabled = 29;
         optional double last_backup_time = 24;
         optional bool coppa_queried = 7;
         optional bool coppa_restricted = 8;
@@ -159,6 +160,7 @@ message Backup {
         optional bool tank_filling_enabled = 14;
         optional uint32 tank_level = 15;
         repeated double tank_fuels = 16;
+        repeated double tank_limits = 18;
         optional ei.MissionInfo.Spaceship last_fueled_ship = 9;
         optional double inventory_score = 10;
         optional double crafting_xp = 17;
@@ -815,6 +817,7 @@ message ContractCoopStatusResponse {
     }
     
     optional double local_timestamp = 12;
+    optional double last_sync = 18;
     
     enum MemberStatus {
         VALID = 0;

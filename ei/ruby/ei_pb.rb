@@ -47,6 +47,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :auto_stop_fueling, :bool, 25
       optional :max_enabled, :bool, 26
       optional :hide_cc_status, :bool, 28
+      optional :contracts_widget_enabled, :bool, 29
       optional :last_backup_time, :double, 24
       optional :coppa_queried, :bool, 7
       optional :coppa_restricted, :bool, 8
@@ -149,6 +150,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :tank_filling_enabled, :bool, 14
       optional :tank_level, :uint32, 15
       repeated :tank_fuels, :double, 16
+      repeated :tank_limits, :double, 18
       optional :last_fueled_ship, :enum, 9, "ei.MissionInfo.Spaceship"
       optional :inventory_score, :double, 10
       optional :crafting_xp, :double, 17
@@ -688,6 +690,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :gifts, :message, 11, "ei.ContractCoopStatusResponse.CoopGift"
       repeated :chicken_runs, :message, 13, "ei.ContractCoopStatusResponse.ChickenRun"
       optional :local_timestamp, :double, 12
+      optional :last_sync, :double, 18
     end
     add_message "ei.ContractCoopStatusResponse.ContributionInfo" do
       optional :uuid, :string, 21

@@ -573,6 +573,30 @@ public object ContractCoopStatusResponseKt {
     public fun hasLocalTimestamp(): kotlin.Boolean {
       return _builder.hasLocalTimestamp()
     }
+
+    /**
+     * <code>optional double last_sync = 18;</code>
+     */
+    public var lastSync: kotlin.Double
+      @JvmName("getLastSync")
+      get() = _builder.getLastSync()
+      @JvmName("setLastSync")
+      set(value) {
+        _builder.setLastSync(value)
+      }
+    /**
+     * <code>optional double last_sync = 18;</code>
+     */
+    public fun clearLastSync() {
+      _builder.clearLastSync()
+    }
+    /**
+     * <code>optional double last_sync = 18;</code>
+     * @return Whether the lastSync field is set.
+     */
+    public fun hasLastSync(): kotlin.Boolean {
+      return _builder.hasLastSync()
+    }
   }
   @kotlin.jvm.JvmName("-initializecontributionInfo")
   public inline fun contributionInfo(block: ei.ContractCoopStatusResponseKt.ContributionInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.ContributionInfo =

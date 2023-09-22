@@ -984,6 +984,7 @@ typedef struct Backup__storage_ {
 @dynamic hasAutoStopFueling, autoStopFueling;
 @dynamic hasMaxEnabled, maxEnabled;
 @dynamic hasHideCcStatus, hideCcStatus;
+@dynamic hasContractsWidgetEnabled, contractsWidgetEnabled;
 @dynamic hasLastBackupTime, lastBackupTime;
 @dynamic hasCoppaQueried, coppaQueried;
 @dynamic hasCoppaRestricted, coppaRestricted;
@@ -1078,8 +1079,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "coppaQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_CoppaQueried,
-        .core.hasIndex = 26,
-        .core.offset = 27,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 28,
+        .core.offset = 29,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1088,8 +1089,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "coppaRestricted",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_CoppaRestricted,
-        .core.hasIndex = 28,
-        .core.offset = 29,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 30,
+        .core.offset = 31,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1128,8 +1129,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "gdprConsentQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_GdprConsentQueried,
-        .core.hasIndex = 30,
-        .core.offset = 31,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 32,
+        .core.offset = 33,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1138,8 +1139,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "gdprConsentGiven",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_GdprConsentGiven,
-        .core.hasIndex = 34,
-        .core.offset = 35,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 36,
+        .core.offset = 37,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1148,8 +1149,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userAdsEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserAdsEnabled,
-        .core.hasIndex = 45,
-        .core.offset = 46,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 47,
+        .core.offset = 48,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1158,8 +1159,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userCloudEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserCloudEnabled,
-        .core.hasIndex = 47,
-        .core.offset = 48,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 49,
+        .core.offset = 50,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1168,8 +1169,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "gdprAgeRestricted",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_GdprAgeRestricted,
-        .core.hasIndex = 32,
-        .core.offset = 33,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 34,
+        .core.offset = 35,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1178,7 +1179,7 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "lastDayAgeQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_LastDayAgeQueried,
-        .core.hasIndex = 44,
+        .core.hasIndex = 46,
         .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, lastDayAgeQueried),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -1188,8 +1189,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "ageQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_AgeQueried,
-        .core.hasIndex = 36,
-        .core.offset = 37,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 38,
+        .core.offset = 39,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1198,8 +1199,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "ageRestricted",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_AgeRestricted,
-        .core.hasIndex = 38,
-        .core.offset = 39,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 40,
+        .core.offset = 41,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1208,8 +1209,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "dataCollectionConsentQueried",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_DataCollectionConsentQueried,
-        .core.hasIndex = 40,
-        .core.offset = 41,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 42,
+        .core.offset = 43,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1218,8 +1219,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "dataCollectionConsentGiven",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_DataCollectionConsentGiven,
-        .core.hasIndex = 42,
-        .core.offset = 43,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 44,
+        .core.offset = 45,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -1228,8 +1229,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userAnalyticsEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserAnalyticsEnabled,
-        .core.hasIndex = 49,
-        .core.offset = 50,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 51,
+        .core.offset = 52,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1238,8 +1239,8 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "userPersonalizedAdsEnabled",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_UserPersonalizedAdsEnabled,
-        .core.hasIndex = 51,
-        .core.offset = 52,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 53,
+        .core.offset = 54,  // Stored in _has_storage_ to save space.
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeBool,
       },
@@ -1248,7 +1249,7 @@ typedef struct Backup_Settings__storage_ {
         .core.name = "lastBackupTime",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Backup_Settings_FieldNumber_LastBackupTime,
-        .core.hasIndex = 25,
+        .core.hasIndex = 27,
         .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, lastBackupTime),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -1290,6 +1291,16 @@ typedef struct Backup_Settings__storage_ {
         .core.number = Backup_Settings_FieldNumber_HideCcStatus,
         .core.hasIndex = 23,
         .core.offset = 24,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
+      },
+      {
+        .defaultValue.valueBool = NO,
+        .core.name = "contractsWidgetEnabled",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Settings_FieldNumber_ContractsWidgetEnabled,
+        .core.hasIndex = 25,
+        .core.offset = 26,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -2209,6 +2220,7 @@ typedef struct Backup_Game__storage_ {
 @dynamic hasTankFillingEnabled, tankFillingEnabled;
 @dynamic hasTankLevel, tankLevel;
 @dynamic tankFuelsArray, tankFuelsArray_Count;
+@dynamic tankLimitsArray, tankLimitsArray_Count;
 @dynamic hasLastFueledShip, lastFueledShip;
 @dynamic hasInventoryScore, inventoryScore;
 @dynamic hasCraftingXp, craftingXp;
@@ -2224,6 +2236,7 @@ typedef struct Backup_Artifacts__storage_ {
   ArtifactInventoryItem *itemBeingInfused;
   ArtifactSpec *specBeingInfused;
   GPBDoubleArray *tankFuelsArray;
+  GPBDoubleArray *tankLimitsArray;
   double infusingEggsRequired;
   double eggsInfused;
   double flowPercentageArtifacts;
@@ -2405,6 +2418,16 @@ typedef struct Backup_Artifacts__storage_ {
         .core.hasIndex = 15,
         .core.offset = (uint32_t)offsetof(Backup_Artifacts__storage_, craftingXp),
         .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueMessage = nil,
+        .core.name = "tankLimitsArray",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Artifacts_FieldNumber_TankLimitsArray,
+        .core.hasIndex = GPBNoHasBit,
+        .core.offset = (uint32_t)offsetof(Backup_Artifacts__storage_, tankLimitsArray),
+        .core.flags = GPBFieldRepeated,
         .core.dataType = GPBDataTypeDouble,
       },
     };
@@ -8623,6 +8646,7 @@ typedef struct PlayerFarmInfo__storage_ {
 @dynamic giftsArray, giftsArray_Count;
 @dynamic chickenRunsArray, chickenRunsArray_Count;
 @dynamic hasLocalTimestamp, localTimestamp;
+@dynamic hasLastSync, lastSync;
 
 typedef struct ContractCoopStatusResponse__storage_ {
   uint32_t _has_storage_[1];
@@ -8638,6 +8662,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
   double gracePeriodSecondsRemaining;
   double localTimestamp;
   double secondsSinceAllGoalsAchieved;
+  double lastSync;
 } ContractCoopStatusResponse__storage_;
 
 // This method is threadsafe because it is initially called
@@ -8798,6 +8823,15 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, grade),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "lastSync",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_FieldNumber_LastSync,
+        .hasIndex = 19,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, lastSync),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =

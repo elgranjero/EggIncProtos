@@ -1119,6 +1119,7 @@ typedef GPB_ENUM(Backup_Settings_FieldNumber) {
   Backup_Settings_FieldNumber_MaxEnabled = 26,
   Backup_Settings_FieldNumber_LastNotificationQueryTime = 27,
   Backup_Settings_FieldNumber_HideCcStatus = 28,
+  Backup_Settings_FieldNumber_ContractsWidgetEnabled = 29,
 };
 
 GPB_FINAL @interface Backup_Settings : GPBMessage
@@ -1162,6 +1163,9 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 @property(nonatomic, readwrite) BOOL hideCcStatus;
 
 @property(nonatomic, readwrite) BOOL hasHideCcStatus;
+@property(nonatomic, readwrite) BOOL contractsWidgetEnabled;
+
+@property(nonatomic, readwrite) BOOL hasContractsWidgetEnabled;
 @property(nonatomic, readwrite) double lastBackupTime;
 
 @property(nonatomic, readwrite) BOOL hasLastBackupTime;
@@ -1537,6 +1541,7 @@ typedef GPB_ENUM(Backup_Artifacts_FieldNumber) {
   Backup_Artifacts_FieldNumber_TankLevel = 15,
   Backup_Artifacts_FieldNumber_TankFuelsArray = 16,
   Backup_Artifacts_FieldNumber_CraftingXp = 17,
+  Backup_Artifacts_FieldNumber_TankLimitsArray = 18,
 };
 
 GPB_FINAL @interface Backup_Artifacts : GPBMessage
@@ -1576,6 +1581,10 @@ GPB_FINAL @interface Backup_Artifacts : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *tankFuelsArray;
 /** The number of items in @c tankFuelsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger tankFuelsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *tankLimitsArray;
+/** The number of items in @c tankLimitsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger tankLimitsArray_Count;
 
 @property(nonatomic, readwrite) MissionInfo_Spaceship lastFueledShip;
 
@@ -3677,6 +3686,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_ClearedForExit = 15,
   ContractCoopStatusResponse_FieldNumber_SecondsSinceAllGoalsAchieved = 16,
   ContractCoopStatusResponse_FieldNumber_Grade = 17,
+  ContractCoopStatusResponse_FieldNumber_LastSync = 18,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
@@ -3738,6 +3748,9 @@ GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 @property(nonatomic, readwrite) double localTimestamp;
 
 @property(nonatomic, readwrite) BOOL hasLocalTimestamp;
+@property(nonatomic, readwrite) double lastSync;
+
+@property(nonatomic, readwrite) BOOL hasLastSync;
 @end
 
 #pragma mark - ContractCoopStatusResponse_ContributionInfo

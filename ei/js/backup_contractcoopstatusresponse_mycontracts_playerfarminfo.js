@@ -1008,6 +1008,7 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     autoStopFueling: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
     maxEnabled: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
     hideCcStatus: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
+    contractsWidgetEnabled: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
     lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
     coppaQueried: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     coppaRestricted: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
@@ -1110,6 +1111,10 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 28:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setHideCcStatus(value);
+      break;
+    case 29:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setContractsWidgetEnabled(value);
       break;
     case 24:
       var value = /** @type {number} */ (reader.readDouble());
@@ -1288,6 +1293,13 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       28,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 29));
+  if (f != null) {
+    writer.writeBool(
+      29,
       f
     );
   }
@@ -1864,6 +1876,42 @@ proto.ei.Backup.Settings.prototype.clearHideCcStatus = function() {
  */
 proto.ei.Backup.Settings.prototype.hasHideCcStatus = function() {
   return jspb.Message.getField(this, 28) != null;
+};
+
+
+/**
+ * optional bool contracts_widget_enabled = 29;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getContractsWidgetEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 29, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setContractsWidgetEnabled = function(value) {
+  return jspb.Message.setField(this, 29, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearContractsWidgetEnabled = function() {
+  return jspb.Message.setField(this, 29, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasContractsWidgetEnabled = function() {
+  return jspb.Message.getField(this, 29) != null;
 };
 
 
@@ -6033,7 +6081,7 @@ proto.ei.Backup.Game.prototype.hasNewPlayerEventEndTime = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.Backup.Artifacts.repeatedFields_ = [16];
+proto.ei.Backup.Artifacts.repeatedFields_ = [16,18];
 
 
 
@@ -6077,6 +6125,7 @@ proto.ei.Backup.Artifacts.toObject = function(includeInstance, msg) {
     tankFillingEnabled: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
     tankLevel: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
     tankFuelsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 16)) == null ? undefined : f,
+    tankLimitsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 18)) == null ? undefined : f,
     lastFueledShip: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     inventoryScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
     craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
@@ -6165,6 +6214,12 @@ proto.ei.Backup.Artifacts.deserializeBinaryFromReader = function(msg, reader) {
       var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedDouble() : [reader.readDouble()]);
       for (var i = 0; i < values.length; i++) {
         msg.addTankFuels(values[i]);
+      }
+      break;
+    case 18:
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedDouble() : [reader.readDouble()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addTankLimits(values[i]);
       }
       break;
     case 9:
@@ -6296,6 +6351,13 @@ proto.ei.Backup.Artifacts.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedDouble(
       16,
+      f
+    );
+  }
+  f = message.getTankLimitsList();
+  if (f.length > 0) {
+    writer.writeRepeatedDouble(
+      18,
       f
     );
   }
@@ -6740,6 +6802,43 @@ proto.ei.Backup.Artifacts.prototype.addTankFuels = function(value, opt_index) {
  */
 proto.ei.Backup.Artifacts.prototype.clearTankFuelsList = function() {
   return this.setTankFuelsList([]);
+};
+
+
+/**
+ * repeated double tank_limits = 18;
+ * @return {!Array<number>}
+ */
+proto.ei.Backup.Artifacts.prototype.getTankLimitsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 18));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.ei.Backup.Artifacts} returns this
+ */
+proto.ei.Backup.Artifacts.prototype.setTankLimitsList = function(value) {
+  return jspb.Message.setField(this, 18, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.ei.Backup.Artifacts} returns this
+ */
+proto.ei.Backup.Artifacts.prototype.addTankLimits = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 18, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.Backup.Artifacts} returns this
+ */
+proto.ei.Backup.Artifacts.prototype.clearTankLimitsList = function() {
+  return this.setTankLimitsList([]);
 };
 
 
@@ -12674,7 +12773,8 @@ proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
     proto.ei.ContractCoopStatusResponse.CoopGift.toObject, includeInstance),
     chickenRunsList: jspb.Message.toObjectList(msg.getChickenRunsList(),
     proto.ei.ContractCoopStatusResponse.ChickenRun.toObject, includeInstance),
-    localTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f
+    localTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    lastSync: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -12781,6 +12881,10 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
     case 12:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setLocalTimestamp(value);
+      break;
+    case 18:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastSync(value);
       break;
     default:
       reader.skipField();
@@ -12930,6 +13034,13 @@ proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeDouble(
       12,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 18));
+  if (f != null) {
+    writer.writeDouble(
+      18,
       f
     );
   }
@@ -15379,6 +15490,42 @@ proto.ei.ContractCoopStatusResponse.prototype.clearLocalTimestamp = function() {
  */
 proto.ei.ContractCoopStatusResponse.prototype.hasLocalTimestamp = function() {
   return jspb.Message.getField(this, 12) != null;
+};
+
+
+/**
+ * optional double last_sync = 18;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getLastSync = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 18, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setLastSync = function(value) {
+  return jspb.Message.setField(this, 18, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearLastSync = function() {
+  return jspb.Message.setField(this, 18, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasLastSync = function() {
+  return jspb.Message.getField(this, 18) != null;
 };
 
 

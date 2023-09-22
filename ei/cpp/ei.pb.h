@@ -1982,14 +1982,15 @@ class Backup_Settings final :
     kNotificationsQueriedFieldNumber = 5,
     kNotificationsOnFieldNumber = 6,
     kNotifyDailyGiftFieldNumber = 11,
+    kContractsWidgetEnabledFieldNumber = 29,
     kCoppaQueriedFieldNumber = 7,
     kCoppaRestrictedFieldNumber = 8,
     kGdprConsentQueriedFieldNumber = 12,
     kGdprAgeRestrictedFieldNumber = 16,
-    kLastDayAgeQueriedFieldNumber = 17,
     kGdprConsentGivenFieldNumber = 13,
     kAgeQueriedFieldNumber = 18,
     kAgeRestrictedFieldNumber = 19,
+    kLastDayAgeQueriedFieldNumber = 17,
     kDataCollectionConsentQueriedFieldNumber = 20,
     kDataCollectionConsentGivenFieldNumber = 21,
     kLastBackupTimeFieldNumber = 24,
@@ -2107,6 +2108,19 @@ class Backup_Settings final :
   void _internal_set_notify_daily_gift(bool value);
   public:
 
+  // optional bool contracts_widget_enabled = 29;
+  bool has_contracts_widget_enabled() const;
+  private:
+  bool _internal_has_contracts_widget_enabled() const;
+  public:
+  void clear_contracts_widget_enabled();
+  bool contracts_widget_enabled() const;
+  void set_contracts_widget_enabled(bool value);
+  private:
+  bool _internal_contracts_widget_enabled() const;
+  void _internal_set_contracts_widget_enabled(bool value);
+  public:
+
   // optional bool coppa_queried = 7;
   bool has_coppa_queried() const;
   private:
@@ -2159,19 +2173,6 @@ class Backup_Settings final :
   void _internal_set_gdpr_age_restricted(bool value);
   public:
 
-  // optional uint32 last_day_age_queried = 17;
-  bool has_last_day_age_queried() const;
-  private:
-  bool _internal_has_last_day_age_queried() const;
-  public:
-  void clear_last_day_age_queried();
-  uint32_t last_day_age_queried() const;
-  void set_last_day_age_queried(uint32_t value);
-  private:
-  uint32_t _internal_last_day_age_queried() const;
-  void _internal_set_last_day_age_queried(uint32_t value);
-  public:
-
   // optional bool gdpr_consent_given = 13;
   bool has_gdpr_consent_given() const;
   private:
@@ -2209,6 +2210,19 @@ class Backup_Settings final :
   private:
   bool _internal_age_restricted() const;
   void _internal_set_age_restricted(bool value);
+  public:
+
+  // optional uint32 last_day_age_queried = 17;
+  bool has_last_day_age_queried() const;
+  private:
+  bool _internal_has_last_day_age_queried() const;
+  public:
+  void clear_last_day_age_queried();
+  uint32_t last_day_age_queried() const;
+  void set_last_day_age_queried(uint32_t value);
+  private:
+  uint32_t _internal_last_day_age_queried() const;
+  void _internal_set_last_day_age_queried(uint32_t value);
   public:
 
   // optional bool data_collection_consent_queried = 20;
@@ -2384,14 +2398,15 @@ class Backup_Settings final :
   bool notifications_queried_;
   bool notifications_on_;
   bool notify_daily_gift_;
+  bool contracts_widget_enabled_;
   bool coppa_queried_;
   bool coppa_restricted_;
   bool gdpr_consent_queried_;
   bool gdpr_age_restricted_;
-  uint32_t last_day_age_queried_;
   bool gdpr_consent_given_;
   bool age_queried_;
   bool age_restricted_;
+  uint32_t last_day_age_queried_;
   bool data_collection_consent_queried_;
   bool data_collection_consent_given_;
   double last_backup_time_;
@@ -4040,6 +4055,7 @@ class Backup_Artifacts final :
 
   enum : int {
     kTankFuelsFieldNumber = 16,
+    kTankLimitsFieldNumber = 18,
     kItemBeingInfusedFieldNumber = 2,
     kSpecBeingInfusedFieldNumber = 13,
     kInfusingEggsRequiredFieldNumber = 4,
@@ -4078,6 +4094,28 @@ class Backup_Artifacts final :
       tank_fuels() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
       mutable_tank_fuels();
+
+  // repeated double tank_limits = 18;
+  int tank_limits_size() const;
+  private:
+  int _internal_tank_limits_size() const;
+  public:
+  void clear_tank_limits();
+  private:
+  double _internal_tank_limits(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+      _internal_tank_limits() const;
+  void _internal_add_tank_limits(double value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+      _internal_mutable_tank_limits();
+  public:
+  double tank_limits(int index) const;
+  void set_tank_limits(int index, double value);
+  void add_tank_limits(double value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+      tank_limits() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+      mutable_tank_limits();
 
   // optional .ei.ArtifactInventoryItem item_being_infused = 2;
   bool has_item_being_infused() const;
@@ -4307,6 +4345,7 @@ class Backup_Artifacts final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > tank_fuels_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > tank_limits_;
   ::ei::ArtifactInventoryItem* item_being_infused_;
   ::ei::ArtifactSpec* spec_being_infused_;
   double infusing_eggs_required_;
@@ -20081,6 +20120,7 @@ class ContractCoopStatusResponse final :
     kClearedForExitFieldNumber = 15,
     kLocalTimestampFieldNumber = 12,
     kSecondsSinceAllGoalsAchievedFieldNumber = 16,
+    kLastSyncFieldNumber = 18,
     kGradeFieldNumber = 17,
   };
   // repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;
@@ -20321,6 +20361,19 @@ class ContractCoopStatusResponse final :
   void _internal_set_seconds_since_all_goals_achieved(double value);
   public:
 
+  // optional double last_sync = 18;
+  bool has_last_sync() const;
+  private:
+  bool _internal_has_last_sync() const;
+  public:
+  void clear_last_sync();
+  double last_sync() const;
+  void set_last_sync(double value);
+  private:
+  double _internal_last_sync() const;
+  void _internal_set_last_sync(double value);
+  public:
+
   // optional .ei.Contract.PlayerGrade grade = 17;
   bool has_grade() const;
   private:
@@ -20359,6 +20412,7 @@ class ContractCoopStatusResponse final :
   bool cleared_for_exit_;
   double local_timestamp_;
   double seconds_since_all_goals_achieved_;
+  double last_sync_;
   int grade_;
   friend struct ::TableStruct_ei_2eproto;
 };
@@ -50372,7 +50426,7 @@ inline void Backup_Settings::set_notifications_queried(bool value) {
 
 // optional double last_notification_query_time = 27;
 inline bool Backup_Settings::_internal_has_last_notification_query_time() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_last_notification_query_time() const {
@@ -50380,7 +50434,7 @@ inline bool Backup_Settings::has_last_notification_query_time() const {
 }
 inline void Backup_Settings::clear_last_notification_query_time() {
   last_notification_query_time_ = 0;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline double Backup_Settings::_internal_last_notification_query_time() const {
   return last_notification_query_time_;
@@ -50390,7 +50444,7 @@ inline double Backup_Settings::last_notification_query_time() const {
   return _internal_last_notification_query_time();
 }
 inline void Backup_Settings::_internal_set_last_notification_query_time(double value) {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
   last_notification_query_time_ = value;
 }
 inline void Backup_Settings::set_last_notification_query_time(double value) {
@@ -50456,7 +50510,7 @@ inline void Backup_Settings::set_notify_daily_gift(bool value) {
 
 // optional bool low_performance = 10;
 inline bool Backup_Settings::_internal_has_low_performance() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_low_performance() const {
@@ -50464,7 +50518,7 @@ inline bool Backup_Settings::has_low_performance() const {
 }
 inline void Backup_Settings::clear_low_performance() {
   low_performance_ = false;
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline bool Backup_Settings::_internal_low_performance() const {
   return low_performance_;
@@ -50474,7 +50528,7 @@ inline bool Backup_Settings::low_performance() const {
   return _internal_low_performance();
 }
 inline void Backup_Settings::_internal_set_low_performance(bool value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
   low_performance_ = value;
 }
 inline void Backup_Settings::set_low_performance(bool value) {
@@ -50484,7 +50538,7 @@ inline void Backup_Settings::set_low_performance(bool value) {
 
 // optional bool auto_stop_fueling = 25;
 inline bool Backup_Settings::_internal_has_auto_stop_fueling() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_auto_stop_fueling() const {
@@ -50492,7 +50546,7 @@ inline bool Backup_Settings::has_auto_stop_fueling() const {
 }
 inline void Backup_Settings::clear_auto_stop_fueling() {
   auto_stop_fueling_ = false;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline bool Backup_Settings::_internal_auto_stop_fueling() const {
   return auto_stop_fueling_;
@@ -50502,7 +50556,7 @@ inline bool Backup_Settings::auto_stop_fueling() const {
   return _internal_auto_stop_fueling();
 }
 inline void Backup_Settings::_internal_set_auto_stop_fueling(bool value) {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
   auto_stop_fueling_ = value;
 }
 inline void Backup_Settings::set_auto_stop_fueling(bool value) {
@@ -50512,7 +50566,7 @@ inline void Backup_Settings::set_auto_stop_fueling(bool value) {
 
 // optional bool max_enabled = 26;
 inline bool Backup_Settings::_internal_has_max_enabled() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_max_enabled() const {
@@ -50520,7 +50574,7 @@ inline bool Backup_Settings::has_max_enabled() const {
 }
 inline void Backup_Settings::clear_max_enabled() {
   max_enabled_ = false;
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline bool Backup_Settings::_internal_max_enabled() const {
   return max_enabled_;
@@ -50530,7 +50584,7 @@ inline bool Backup_Settings::max_enabled() const {
   return _internal_max_enabled();
 }
 inline void Backup_Settings::_internal_set_max_enabled(bool value) {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
   max_enabled_ = value;
 }
 inline void Backup_Settings::set_max_enabled(bool value) {
@@ -50540,7 +50594,7 @@ inline void Backup_Settings::set_max_enabled(bool value) {
 
 // optional bool hide_cc_status = 28;
 inline bool Backup_Settings::_internal_has_hide_cc_status() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
+  bool value = (_has_bits_[0] & 0x01000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_hide_cc_status() const {
@@ -50548,7 +50602,7 @@ inline bool Backup_Settings::has_hide_cc_status() const {
 }
 inline void Backup_Settings::clear_hide_cc_status() {
   hide_cc_status_ = false;
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline bool Backup_Settings::_internal_hide_cc_status() const {
   return hide_cc_status_;
@@ -50558,7 +50612,7 @@ inline bool Backup_Settings::hide_cc_status() const {
   return _internal_hide_cc_status();
 }
 inline void Backup_Settings::_internal_set_hide_cc_status(bool value) {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
   hide_cc_status_ = value;
 }
 inline void Backup_Settings::set_hide_cc_status(bool value) {
@@ -50566,9 +50620,37 @@ inline void Backup_Settings::set_hide_cc_status(bool value) {
   // @@protoc_insertion_point(field_set:ei.Backup.Settings.hide_cc_status)
 }
 
+// optional bool contracts_widget_enabled = 29;
+inline bool Backup_Settings::_internal_has_contracts_widget_enabled() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool Backup_Settings::has_contracts_widget_enabled() const {
+  return _internal_has_contracts_widget_enabled();
+}
+inline void Backup_Settings::clear_contracts_widget_enabled() {
+  contracts_widget_enabled_ = false;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline bool Backup_Settings::_internal_contracts_widget_enabled() const {
+  return contracts_widget_enabled_;
+}
+inline bool Backup_Settings::contracts_widget_enabled() const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Settings.contracts_widget_enabled)
+  return _internal_contracts_widget_enabled();
+}
+inline void Backup_Settings::_internal_set_contracts_widget_enabled(bool value) {
+  _has_bits_[0] |= 0x00000100u;
+  contracts_widget_enabled_ = value;
+}
+inline void Backup_Settings::set_contracts_widget_enabled(bool value) {
+  _internal_set_contracts_widget_enabled(value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Settings.contracts_widget_enabled)
+}
+
 // optional double last_backup_time = 24;
 inline bool Backup_Settings::_internal_has_last_backup_time() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_last_backup_time() const {
@@ -50576,7 +50658,7 @@ inline bool Backup_Settings::has_last_backup_time() const {
 }
 inline void Backup_Settings::clear_last_backup_time() {
   last_backup_time_ = 0;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline double Backup_Settings::_internal_last_backup_time() const {
   return last_backup_time_;
@@ -50586,7 +50668,7 @@ inline double Backup_Settings::last_backup_time() const {
   return _internal_last_backup_time();
 }
 inline void Backup_Settings::_internal_set_last_backup_time(double value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
   last_backup_time_ = value;
 }
 inline void Backup_Settings::set_last_backup_time(double value) {
@@ -50596,7 +50678,7 @@ inline void Backup_Settings::set_last_backup_time(double value) {
 
 // optional bool coppa_queried = 7;
 inline bool Backup_Settings::_internal_has_coppa_queried() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_coppa_queried() const {
@@ -50604,7 +50686,7 @@ inline bool Backup_Settings::has_coppa_queried() const {
 }
 inline void Backup_Settings::clear_coppa_queried() {
   coppa_queried_ = false;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline bool Backup_Settings::_internal_coppa_queried() const {
   return coppa_queried_;
@@ -50614,7 +50696,7 @@ inline bool Backup_Settings::coppa_queried() const {
   return _internal_coppa_queried();
 }
 inline void Backup_Settings::_internal_set_coppa_queried(bool value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   coppa_queried_ = value;
 }
 inline void Backup_Settings::set_coppa_queried(bool value) {
@@ -50624,7 +50706,7 @@ inline void Backup_Settings::set_coppa_queried(bool value) {
 
 // optional bool coppa_restricted = 8;
 inline bool Backup_Settings::_internal_has_coppa_restricted() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_coppa_restricted() const {
@@ -50632,7 +50714,7 @@ inline bool Backup_Settings::has_coppa_restricted() const {
 }
 inline void Backup_Settings::clear_coppa_restricted() {
   coppa_restricted_ = false;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline bool Backup_Settings::_internal_coppa_restricted() const {
   return coppa_restricted_;
@@ -50642,7 +50724,7 @@ inline bool Backup_Settings::coppa_restricted() const {
   return _internal_coppa_restricted();
 }
 inline void Backup_Settings::_internal_set_coppa_restricted(bool value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   coppa_restricted_ = value;
 }
 inline void Backup_Settings::set_coppa_restricted(bool value) {
@@ -50652,7 +50734,7 @@ inline void Backup_Settings::set_coppa_restricted(bool value) {
 
 // optional bool gdpr_consent_queried = 12;
 inline bool Backup_Settings::_internal_has_gdpr_consent_queried() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_consent_queried() const {
@@ -50660,7 +50742,7 @@ inline bool Backup_Settings::has_gdpr_consent_queried() const {
 }
 inline void Backup_Settings::clear_gdpr_consent_queried() {
   gdpr_consent_queried_ = false;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline bool Backup_Settings::_internal_gdpr_consent_queried() const {
   return gdpr_consent_queried_;
@@ -50670,7 +50752,7 @@ inline bool Backup_Settings::gdpr_consent_queried() const {
   return _internal_gdpr_consent_queried();
 }
 inline void Backup_Settings::_internal_set_gdpr_consent_queried(bool value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   gdpr_consent_queried_ = value;
 }
 inline void Backup_Settings::set_gdpr_consent_queried(bool value) {
@@ -50680,7 +50762,7 @@ inline void Backup_Settings::set_gdpr_consent_queried(bool value) {
 
 // optional bool gdpr_age_restricted = 16;
 inline bool Backup_Settings::_internal_has_gdpr_age_restricted() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_gdpr_age_restricted() const {
@@ -50688,7 +50770,7 @@ inline bool Backup_Settings::has_gdpr_age_restricted() const {
 }
 inline void Backup_Settings::clear_gdpr_age_restricted() {
   gdpr_age_restricted_ = false;
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline bool Backup_Settings::_internal_gdpr_age_restricted() const {
   return gdpr_age_restricted_;
@@ -50698,7 +50780,7 @@ inline bool Backup_Settings::gdpr_age_restricted() const {
   return _internal_gdpr_age_restricted();
 }
 inline void Backup_Settings::_internal_set_gdpr_age_restricted(bool value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   gdpr_age_restricted_ = value;
 }
 inline void Backup_Settings::set_gdpr_age_restricted(bool value) {
@@ -50792,7 +50874,7 @@ inline void Backup_Settings::set_age_restricted(bool value) {
 
 // optional bool data_collection_consent_queried = 20;
 inline bool Backup_Settings::_internal_has_data_collection_consent_queried() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_data_collection_consent_queried() const {
@@ -50800,7 +50882,7 @@ inline bool Backup_Settings::has_data_collection_consent_queried() const {
 }
 inline void Backup_Settings::clear_data_collection_consent_queried() {
   data_collection_consent_queried_ = false;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline bool Backup_Settings::_internal_data_collection_consent_queried() const {
   return data_collection_consent_queried_;
@@ -50810,7 +50892,7 @@ inline bool Backup_Settings::data_collection_consent_queried() const {
   return _internal_data_collection_consent_queried();
 }
 inline void Backup_Settings::_internal_set_data_collection_consent_queried(bool value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
   data_collection_consent_queried_ = value;
 }
 inline void Backup_Settings::set_data_collection_consent_queried(bool value) {
@@ -50820,7 +50902,7 @@ inline void Backup_Settings::set_data_collection_consent_queried(bool value) {
 
 // optional bool data_collection_consent_given = 21;
 inline bool Backup_Settings::_internal_has_data_collection_consent_given() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_data_collection_consent_given() const {
@@ -50828,7 +50910,7 @@ inline bool Backup_Settings::has_data_collection_consent_given() const {
 }
 inline void Backup_Settings::clear_data_collection_consent_given() {
   data_collection_consent_given_ = false;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline bool Backup_Settings::_internal_data_collection_consent_given() const {
   return data_collection_consent_given_;
@@ -50838,7 +50920,7 @@ inline bool Backup_Settings::data_collection_consent_given() const {
   return _internal_data_collection_consent_given();
 }
 inline void Backup_Settings::_internal_set_data_collection_consent_given(bool value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
   data_collection_consent_given_ = value;
 }
 inline void Backup_Settings::set_data_collection_consent_given(bool value) {
@@ -50848,7 +50930,7 @@ inline void Backup_Settings::set_data_collection_consent_given(bool value) {
 
 // optional uint32 last_day_age_queried = 17;
 inline bool Backup_Settings::_internal_has_last_day_age_queried() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_last_day_age_queried() const {
@@ -50856,7 +50938,7 @@ inline bool Backup_Settings::has_last_day_age_queried() const {
 }
 inline void Backup_Settings::clear_last_day_age_queried() {
   last_day_age_queried_ = 0u;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline uint32_t Backup_Settings::_internal_last_day_age_queried() const {
   return last_day_age_queried_;
@@ -50866,7 +50948,7 @@ inline uint32_t Backup_Settings::last_day_age_queried() const {
   return _internal_last_day_age_queried();
 }
 inline void Backup_Settings::_internal_set_last_day_age_queried(uint32_t value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00010000u;
   last_day_age_queried_ = value;
 }
 inline void Backup_Settings::set_last_day_age_queried(uint32_t value) {
@@ -50876,7 +50958,7 @@ inline void Backup_Settings::set_last_day_age_queried(uint32_t value) {
 
 // optional bool user_ads_enabled = 14 [default = true];
 inline bool Backup_Settings::_internal_has_user_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x01000000u) != 0;
+  bool value = (_has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_ads_enabled() const {
@@ -50884,7 +50966,7 @@ inline bool Backup_Settings::has_user_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_ads_enabled() {
   user_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline bool Backup_Settings::_internal_user_ads_enabled() const {
   return user_ads_enabled_;
@@ -50894,7 +50976,7 @@ inline bool Backup_Settings::user_ads_enabled() const {
   return _internal_user_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
   user_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_ads_enabled(bool value) {
@@ -50904,7 +50986,7 @@ inline void Backup_Settings::set_user_ads_enabled(bool value) {
 
 // optional bool user_cloud_enabled = 15 [default = true];
 inline bool Backup_Settings::_internal_has_user_cloud_enabled() const {
-  bool value = (_has_bits_[0] & 0x02000000u) != 0;
+  bool value = (_has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_cloud_enabled() const {
@@ -50912,7 +50994,7 @@ inline bool Backup_Settings::has_user_cloud_enabled() const {
 }
 inline void Backup_Settings::clear_user_cloud_enabled() {
   user_cloud_enabled_ = true;
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline bool Backup_Settings::_internal_user_cloud_enabled() const {
   return user_cloud_enabled_;
@@ -50922,7 +51004,7 @@ inline bool Backup_Settings::user_cloud_enabled() const {
   return _internal_user_cloud_enabled();
 }
 inline void Backup_Settings::_internal_set_user_cloud_enabled(bool value) {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x04000000u;
   user_cloud_enabled_ = value;
 }
 inline void Backup_Settings::set_user_cloud_enabled(bool value) {
@@ -50932,7 +51014,7 @@ inline void Backup_Settings::set_user_cloud_enabled(bool value) {
 
 // optional bool user_analytics_enabled = 22 [default = true];
 inline bool Backup_Settings::_internal_has_user_analytics_enabled() const {
-  bool value = (_has_bits_[0] & 0x04000000u) != 0;
+  bool value = (_has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_analytics_enabled() const {
@@ -50940,7 +51022,7 @@ inline bool Backup_Settings::has_user_analytics_enabled() const {
 }
 inline void Backup_Settings::clear_user_analytics_enabled() {
   user_analytics_enabled_ = true;
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline bool Backup_Settings::_internal_user_analytics_enabled() const {
   return user_analytics_enabled_;
@@ -50950,7 +51032,7 @@ inline bool Backup_Settings::user_analytics_enabled() const {
   return _internal_user_analytics_enabled();
 }
 inline void Backup_Settings::_internal_set_user_analytics_enabled(bool value) {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x08000000u;
   user_analytics_enabled_ = value;
 }
 inline void Backup_Settings::set_user_analytics_enabled(bool value) {
@@ -50960,7 +51042,7 @@ inline void Backup_Settings::set_user_analytics_enabled(bool value) {
 
 // optional bool user_personalized_ads_enabled = 23 [default = true];
 inline bool Backup_Settings::_internal_has_user_personalized_ads_enabled() const {
-  bool value = (_has_bits_[0] & 0x08000000u) != 0;
+  bool value = (_has_bits_[0] & 0x10000000u) != 0;
   return value;
 }
 inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
@@ -50968,7 +51050,7 @@ inline bool Backup_Settings::has_user_personalized_ads_enabled() const {
 }
 inline void Backup_Settings::clear_user_personalized_ads_enabled() {
   user_personalized_ads_enabled_ = true;
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 inline bool Backup_Settings::_internal_user_personalized_ads_enabled() const {
   return user_personalized_ads_enabled_;
@@ -50978,7 +51060,7 @@ inline bool Backup_Settings::user_personalized_ads_enabled() const {
   return _internal_user_personalized_ads_enabled();
 }
 inline void Backup_Settings::_internal_set_user_personalized_ads_enabled(bool value) {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x10000000u;
   user_personalized_ads_enabled_ = value;
 }
 inline void Backup_Settings::set_user_personalized_ads_enabled(bool value) {
@@ -53500,6 +53582,53 @@ inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
 Backup_Artifacts::mutable_tank_fuels() {
   // @@protoc_insertion_point(field_mutable_list:ei.Backup.Artifacts.tank_fuels)
   return _internal_mutable_tank_fuels();
+}
+
+// repeated double tank_limits = 18;
+inline int Backup_Artifacts::_internal_tank_limits_size() const {
+  return tank_limits_.size();
+}
+inline int Backup_Artifacts::tank_limits_size() const {
+  return _internal_tank_limits_size();
+}
+inline void Backup_Artifacts::clear_tank_limits() {
+  tank_limits_.Clear();
+}
+inline double Backup_Artifacts::_internal_tank_limits(int index) const {
+  return tank_limits_.Get(index);
+}
+inline double Backup_Artifacts::tank_limits(int index) const {
+  // @@protoc_insertion_point(field_get:ei.Backup.Artifacts.tank_limits)
+  return _internal_tank_limits(index);
+}
+inline void Backup_Artifacts::set_tank_limits(int index, double value) {
+  tank_limits_.Set(index, value);
+  // @@protoc_insertion_point(field_set:ei.Backup.Artifacts.tank_limits)
+}
+inline void Backup_Artifacts::_internal_add_tank_limits(double value) {
+  tank_limits_.Add(value);
+}
+inline void Backup_Artifacts::add_tank_limits(double value) {
+  _internal_add_tank_limits(value);
+  // @@protoc_insertion_point(field_add:ei.Backup.Artifacts.tank_limits)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+Backup_Artifacts::_internal_tank_limits() const {
+  return tank_limits_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+Backup_Artifacts::tank_limits() const {
+  // @@protoc_insertion_point(field_list:ei.Backup.Artifacts.tank_limits)
+  return _internal_tank_limits();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+Backup_Artifacts::_internal_mutable_tank_limits() {
+  return &tank_limits_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
+Backup_Artifacts::mutable_tank_limits() {
+  // @@protoc_insertion_point(field_mutable_list:ei.Backup.Artifacts.tank_limits)
+  return _internal_mutable_tank_limits();
 }
 
 // optional .ei.MissionInfo.Spaceship last_fueled_ship = 9;
@@ -72032,7 +72161,7 @@ inline void ContractCoopStatusResponse::set_allocated_coop_identifier(std::strin
 
 // optional .ei.Contract.PlayerGrade grade = 17;
 inline bool ContractCoopStatusResponse::_internal_has_grade() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool ContractCoopStatusResponse::has_grade() const {
@@ -72040,7 +72169,7 @@ inline bool ContractCoopStatusResponse::has_grade() const {
 }
 inline void ContractCoopStatusResponse::clear_grade() {
   grade_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline ::ei::Contract_PlayerGrade ContractCoopStatusResponse::_internal_grade() const {
   return static_cast< ::ei::Contract_PlayerGrade >(grade_);
@@ -72051,7 +72180,7 @@ inline ::ei::Contract_PlayerGrade ContractCoopStatusResponse::grade() const {
 }
 inline void ContractCoopStatusResponse::_internal_set_grade(::ei::Contract_PlayerGrade value) {
   assert(::ei::Contract_PlayerGrade_IsValid(value));
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   grade_ = value;
 }
 inline void ContractCoopStatusResponse::set_grade(::ei::Contract_PlayerGrade value) {
@@ -72497,6 +72626,34 @@ inline void ContractCoopStatusResponse::_internal_set_local_timestamp(double val
 inline void ContractCoopStatusResponse::set_local_timestamp(double value) {
   _internal_set_local_timestamp(value);
   // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.local_timestamp)
+}
+
+// optional double last_sync = 18;
+inline bool ContractCoopStatusResponse::_internal_has_last_sync() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool ContractCoopStatusResponse::has_last_sync() const {
+  return _internal_has_last_sync();
+}
+inline void ContractCoopStatusResponse::clear_last_sync() {
+  last_sync_ = 0;
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline double ContractCoopStatusResponse::_internal_last_sync() const {
+  return last_sync_;
+}
+inline double ContractCoopStatusResponse::last_sync() const {
+  // @@protoc_insertion_point(field_get:ei.ContractCoopStatusResponse.last_sync)
+  return _internal_last_sync();
+}
+inline void ContractCoopStatusResponse::_internal_set_last_sync(double value) {
+  _has_bits_[0] |= 0x00002000u;
+  last_sync_ = value;
+}
+inline void ContractCoopStatusResponse::set_last_sync(double value) {
+  _internal_set_last_sync(value);
+  // @@protoc_insertion_point(field_set:ei.ContractCoopStatusResponse.last_sync)
 }
 
 // -------------------------------------------------------------------

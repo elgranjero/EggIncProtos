@@ -797,6 +797,7 @@
 | tank_filling_enabled | [bool](#bool) | optional |  |
 | tank_level | [uint32](#uint32) | optional |  |
 | tank_fuels | [double](#double) | repeated |  |
+| tank_limits | [double](#double) | repeated |  |
 | last_fueled_ship | [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship) | optional |  |
 | inventory_score | [double](#double) | optional |  |
 | crafting_xp | [double](#double) | optional |  |
@@ -1004,6 +1005,7 @@
 | auto_stop_fueling | [bool](#bool) | optional |  |
 | max_enabled | [bool](#bool) | optional |  |
 | hide_cc_status | [bool](#bool) | optional |  |
+| contracts_widget_enabled | [bool](#bool) | optional |  |
 | last_backup_time | [double](#double) | optional |  |
 | coppa_queried | [bool](#bool) | optional |  |
 | coppa_restricted | [bool](#bool) | optional |  |
@@ -1551,6 +1553,7 @@
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
 | chicken_runs | [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun) | repeated |  |
 | local_timestamp | [double](#double) | optional |  |
+| last_sync | [double](#double) | optional |  |
 
 
 

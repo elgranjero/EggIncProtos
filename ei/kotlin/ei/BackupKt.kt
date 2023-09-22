@@ -1096,6 +1096,30 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional bool contracts_widget_enabled = 29;</code>
+       */
+      public var contractsWidgetEnabled: kotlin.Boolean
+        @JvmName("getContractsWidgetEnabled")
+        get() = _builder.getContractsWidgetEnabled()
+        @JvmName("setContractsWidgetEnabled")
+        set(value) {
+          _builder.setContractsWidgetEnabled(value)
+        }
+      /**
+       * <code>optional bool contracts_widget_enabled = 29;</code>
+       */
+      public fun clearContractsWidgetEnabled() {
+        _builder.clearContractsWidgetEnabled()
+      }
+      /**
+       * <code>optional bool contracts_widget_enabled = 29;</code>
+       * @return Whether the contractsWidgetEnabled field is set.
+       */
+      public fun hasContractsWidgetEnabled(): kotlin.Boolean {
+        return _builder.hasContractsWidgetEnabled()
+      }
+
+      /**
        * <code>optional double last_backup_time = 24;</code>
        */
       public var lastBackupTime: kotlin.Double
@@ -3872,6 +3896,71 @@ public object BackupKt {
       @kotlin.jvm.JvmName("clearTankFuels")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankFuelsProxy>.clear() {
         _builder.clearTankFuels()
+      }
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class TankLimitsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * <code>repeated double tank_limits = 18;</code>
+       */
+       public val tankLimits: com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>
+        @kotlin.jvm.JvmSynthetic
+        get() = com.google.protobuf.kotlin.DslList(
+          _builder.getTankLimitsList()
+        )
+      /**
+       * <code>repeated double tank_limits = 18;</code>
+       * @param value The tankLimits to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addTankLimits")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.add(value: kotlin.Double) {
+        _builder.addTankLimits(value)
+      }/**
+       * <code>repeated double tank_limits = 18;</code>
+       * @param value The tankLimits to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignTankLimits")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.plusAssign(value: kotlin.Double) {
+        add(value)
+      }/**
+       * <code>repeated double tank_limits = 18;</code>
+       * @param values The tankLimits to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addAllTankLimits")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
+        _builder.addAllTankLimits(values)
+      }/**
+       * <code>repeated double tank_limits = 18;</code>
+       * @param values The tankLimits to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignAllTankLimits")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
+        addAll(values)
+      }/**
+       * <code>repeated double tank_limits = 18;</code>
+       * @param index The index to set the value at.
+       * @param value The tankLimits to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("setTankLimits")
+      public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.set(index: kotlin.Int, value: kotlin.Double) {
+        _builder.setTankLimits(index, value)
+      }/**
+       * <code>repeated double tank_limits = 18;</code>
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("clearTankLimits")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.clear() {
+        _builder.clearTankLimits()
       }
       /**
        * <code>optional .ei.MissionInfo.Spaceship last_fueled_ship = 9;</code>
