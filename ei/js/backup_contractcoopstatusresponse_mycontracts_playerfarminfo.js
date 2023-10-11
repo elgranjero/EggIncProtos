@@ -47,6 +47,7 @@ goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.CoopBuffState');
 goog.require('proto.ei.FarmProductionParams');
 goog.require('proto.ei.LocalContract');
+goog.require('proto.ei.MailState');
 goog.require('proto.ei.ShellDB');
 goog.require('proto.ei.ShellDB.FarmConfiguration');
 
@@ -581,6 +582,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     artifactsDb: (f = msg.getArtifactsDb()) && proto.ei.ArtifactsDB.toObject(includeInstance, f),
     shellDb: (f = msg.getShellDb()) && proto.ei.ShellDB.toObject(includeInstance, f),
     readMailIdsList: (f = jspb.Message.getRepeatedField(msg, 23)) == null ? undefined : f,
+    mailState: (f = msg.getMailState()) && proto.ei.MailState.toObject(includeInstance, f),
     checksum: (f = jspb.Message.getField(msg, 100)) == null ? undefined : f,
     signature: (f = jspb.Message.getField(msg, 101)) == null ? undefined : f
   };
@@ -727,6 +729,11 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
     case 23:
       var value = /** @type {string} */ (reader.readString());
       msg.addReadMailIds(value);
+      break;
+    case 27:
+      var value = new proto.ei.MailState;
+      reader.readMessage(value,proto.ei.MailState.deserializeBinaryFromReader);
+      msg.setMailState(value);
       break;
     case 100:
       var value = /** @type {number} */ (reader.readUint64());
@@ -944,6 +951,14 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedString(
       23,
       f
+    );
+  }
+  f = message.getMailState();
+  if (f != null) {
+    writer.writeMessage(
+      27,
+      f,
+      proto.ei.MailState.serializeBinaryToWriter
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 100));
@@ -12644,6 +12659,43 @@ proto.ei.Backup.prototype.clearReadMailIdsList = function() {
 
 
 /**
+ * optional MailState mail_state = 27;
+ * @return {?proto.ei.MailState}
+ */
+proto.ei.Backup.prototype.getMailState = function() {
+  return /** @type{?proto.ei.MailState} */ (
+    jspb.Message.getWrapperField(this, proto.ei.MailState, 27));
+};
+
+
+/**
+ * @param {?proto.ei.MailState|undefined} value
+ * @return {!proto.ei.Backup} returns this
+*/
+proto.ei.Backup.prototype.setMailState = function(value) {
+  return jspb.Message.setWrapperField(this, 27, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearMailState = function() {
+  return this.setMailState(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasMailState = function() {
+  return jspb.Message.getField(this, 27) != null;
+};
+
+
+/**
  * optional uint64 checksum = 100;
  * @return {number}
  */
@@ -14054,7 +14106,7 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasTimeCheatDetec
  * @return {!proto.ei.Platform}
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getPlatform = function() {
-  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 5, 1));
+  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 

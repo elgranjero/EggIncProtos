@@ -17,6 +17,7 @@ goog.provide('proto.ei.Platform');
  * @enum {number}
  */
 proto.ei.Platform = {
+  UNKNOWN_PLATFORM: 0,
   IOS: 1,
   DROID: 2
 };

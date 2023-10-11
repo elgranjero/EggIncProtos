@@ -114,6 +114,8 @@ GPBObjCClassDeclaration(LiveConfig_GiftConfig_GiftValueConfig);
 GPBObjCClassDeclaration(LiveConfig_MiscConfig);
 GPBObjCClassDeclaration(LocalContract);
 GPBObjCClassDeclaration(MailDB);
+GPBObjCClassDeclaration(MailState);
+GPBObjCClassDeclaration(MailState_TipState);
 GPBObjCClassDeclaration(MissionInfo);
 GPBObjCClassDeclaration(MissionInfo_Fuel);
 GPBObjCClassDeclaration(MissionRequest);
@@ -127,6 +129,7 @@ GPBObjCClassDeclaration(SetArtifactResponse);
 GPBObjCClassDeclaration(ShellDB);
 GPBObjCClassDeclaration(ShellDB_ChickenConfig);
 GPBObjCClassDeclaration(ShellDB_FarmConfiguration);
+GPBObjCClassDeclaration(ShellDB_LightingConfig);
 GPBObjCClassDeclaration(ShellDB_SavedFarmConfiguration);
 GPBObjCClassDeclaration(ShellDB_ShellConfiguration);
 GPBObjCClassDeclaration(ShellDB_ShellElementStatus);
@@ -141,10 +144,13 @@ GPBObjCClassDeclaration(ShellPopularityStats);
 GPBObjCClassDeclaration(ShellPopularityStats_Entry);
 GPBObjCClassDeclaration(ShellSetSpec);
 GPBObjCClassDeclaration(ShellSetSpec_VariationSpec);
+GPBObjCClassDeclaration(ShellShowcaseListing);
 GPBObjCClassDeclaration(ShellSpec);
 GPBObjCClassDeclaration(ShellSpec_ShellPiece);
 GPBObjCClassDeclaration(UserSubscriptionInfo);
 GPBObjCClassDeclaration(UserSubscriptionInfo_HistoryEntry);
+GPBObjCClassDeclaration(Vector3);
+GPBObjCClassDeclaration(Vector4);
 
 #pragma mark - EiRoot
 
@@ -175,8 +181,9 @@ GPBEnumDescriptor *Platform_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Ios\000Droid\000";
+        "UnknownPlatform\000Ios\000Droid\000";
     static const int32_t values[] = {
+        Platform_UnknownPlatform,
         Platform_Ios,
         Platform_Droid,
     };
@@ -196,6 +203,7 @@ GPBEnumDescriptor *Platform_EnumDescriptor(void) {
 
 BOOL Platform_IsValidValue(int32_t value__) {
   switch (value__) {
+    case Platform_UnknownPlatform:
     case Platform_Ios:
     case Platform_Droid:
       return YES;
@@ -210,8 +218,9 @@ GPBEnumDescriptor *DeviceFormFactor_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Phone\000Tablet\000";
+        "UnknownDevice\000Phone\000Tablet\000";
     static const int32_t values[] = {
+        DeviceFormFactor_UnknownDevice,
         DeviceFormFactor_Phone,
         DeviceFormFactor_Tablet,
     };
@@ -231,6 +240,7 @@ GPBEnumDescriptor *DeviceFormFactor_EnumDescriptor(void) {
 
 BOOL DeviceFormFactor_IsValidValue(int32_t value__) {
   switch (value__) {
+    case DeviceFormFactor_UnknownDevice:
     case DeviceFormFactor_Phone:
     case DeviceFormFactor_Tablet:
       return YES;
@@ -571,11 +581,15 @@ GPBEnumDescriptor *UserType_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "AllUsers\000ContractsUnlocked\000ArtifactsUnlo"
-        "cked\000FuelTankUnlocked\000ProPermitActive\000Ul"
-        "traActive\000NoProPermit\000NoUltra\000";
+        "AllUsers\000EggedUp\000ContractsUnlocked\000Artif"
+        "actsUnlocked\000FuelTankUnlocked\000ProPermitA"
+        "ctive\000UltraActive\000NoProPermit\000NoUltra\000Co"
+        "ntractsInactive\000ContractsActive\000PlayingC"
+        "ontract\000ArtifactsInactive\000ArtifactsActiv"
+        "e\000PrestigeReady\000PiggyHesitant\000";
     static const int32_t values[] = {
         UserType_AllUsers,
+        UserType_EggedUp,
         UserType_ContractsUnlocked,
         UserType_ArtifactsUnlocked,
         UserType_FuelTankUnlocked,
@@ -583,6 +597,13 @@ GPBEnumDescriptor *UserType_EnumDescriptor(void) {
         UserType_UltraActive,
         UserType_NoProPermit,
         UserType_NoUltra,
+        UserType_ContractsInactive,
+        UserType_ContractsActive,
+        UserType_PlayingContract,
+        UserType_ArtifactsInactive,
+        UserType_ArtifactsActive,
+        UserType_PrestigeReady,
+        UserType_PiggyHesitant,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(UserType)
@@ -601,6 +622,7 @@ GPBEnumDescriptor *UserType_EnumDescriptor(void) {
 BOOL UserType_IsValidValue(int32_t value__) {
   switch (value__) {
     case UserType_AllUsers:
+    case UserType_EggedUp:
     case UserType_ContractsUnlocked:
     case UserType_ArtifactsUnlocked:
     case UserType_FuelTankUnlocked:
@@ -608,6 +630,13 @@ BOOL UserType_IsValidValue(int32_t value__) {
     case UserType_UltraActive:
     case UserType_NoProPermit:
     case UserType_NoUltra:
+    case UserType_ContractsInactive:
+    case UserType_ContractsActive:
+    case UserType_PlayingContract:
+    case UserType_ArtifactsInactive:
+    case UserType_ArtifactsActive:
+    case UserType_PrestigeReady:
+    case UserType_PiggyHesitant:
       return YES;
     default:
       return NO;
@@ -649,6 +678,151 @@ BOOL LeaderboardScope_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Vector3
+
+@implementation Vector3
+
+@dynamic hasX, x;
+@dynamic hasY, y;
+@dynamic hasZ, z;
+
+typedef struct Vector3__storage_ {
+  uint32_t _has_storage_[1];
+  float x;
+  float y;
+  float z;
+} Vector3__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "x",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector3_FieldNumber_X,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Vector3__storage_, x),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "y",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector3_FieldNumber_Y,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Vector3__storage_, y),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "z",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector3_FieldNumber_Z,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Vector3__storage_, z),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Vector3 class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(Vector3__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - Vector4
+
+@implementation Vector4
+
+@dynamic hasX, x;
+@dynamic hasY, y;
+@dynamic hasZ, z;
+@dynamic hasW, w;
+
+typedef struct Vector4__storage_ {
+  uint32_t _has_storage_[1];
+  float x;
+  float y;
+  float z;
+  float w;
+} Vector4__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "x",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector4_FieldNumber_X,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Vector4__storage_, x),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "y",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector4_FieldNumber_Y,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Vector4__storage_, y),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "z",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector4_FieldNumber_Z,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Vector4__storage_, z),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "w",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Vector4_FieldNumber_W,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(Vector4__storage_, w),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Vector4 class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(Vector4__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - Backup
 
 @implementation Backup
@@ -677,6 +851,7 @@ BOOL LeaderboardScope_IsValidValue(int32_t value__) {
 @dynamic hasArtifactsDb, artifactsDb;
 @dynamic hasShellDb, shellDb;
 @dynamic readMailIdsArray, readMailIdsArray_Count;
+@dynamic hasMailState, mailState;
 @dynamic hasChecksum, checksum;
 @dynamic hasSignature, signature;
 
@@ -703,6 +878,7 @@ typedef struct Backup__storage_ {
   ShellDB *shellDb;
   Backup_Shells *shells;
   NSString *pushUserId;
+  MailState *mailState;
   NSString *signature;
   double approxTime;
   uint64_t checksum;
@@ -931,10 +1107,19 @@ typedef struct Backup__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "mailState",
+        .dataTypeSpecific.clazz = GPBObjCClass(MailState),
+        .number = Backup_FieldNumber_MailState,
+        .hasIndex = 24,
+        .offset = (uint32_t)offsetof(Backup__storage_, mailState),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
         .name = "checksum",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Checksum,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(Backup__storage_, checksum),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -943,7 +1128,7 @@ typedef struct Backup__storage_ {
         .name = "signature",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Signature,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(Backup__storage_, signature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -3710,86 +3895,78 @@ typedef struct EggIncFirstContactRequest__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = EggIncFirstContactRequest_FieldNumber_UserId,
-        .core.hasIndex = 2,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, userId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_UserId,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "clientVersion",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = EggIncFirstContactRequest_FieldNumber_ClientVersion,
-        .core.hasIndex = 6,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, clientVersion),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "clientVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_ClientVersion,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, clientVersion),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueEnum = Platform_Ios,
-        .core.name = "platform",
-        .core.dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
-        .core.number = EggIncFirstContactRequest_FieldNumber_Platform,
-        .core.hasIndex = 7,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, platform),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = EggIncFirstContactRequest_FieldNumber_Platform,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, platform),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "eiUserId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = EggIncFirstContactRequest_FieldNumber_EiUserId,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, eiUserId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "eiUserId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_EiUserId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, eiUserId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "deviceId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = EggIncFirstContactRequest_FieldNumber_DeviceId,
-        .core.hasIndex = 4,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, deviceId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "deviceId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_DeviceId,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, deviceId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "username",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = EggIncFirstContactRequest_FieldNumber_Username,
-        .core.hasIndex = 5,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, username),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "username",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_Username,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, username),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "gameServicesId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = EggIncFirstContactRequest_FieldNumber_GameServicesId,
-        .core.hasIndex = 3,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, gameServicesId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "gameServicesId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_GameServicesId,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, gameServicesId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "rinfo",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
-        .core.number = EggIncFirstContactRequest_FieldNumber_Rinfo,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, rinfo),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = EggIncFirstContactRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, rinfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -3797,9 +3974,9 @@ typedef struct EggIncFirstContactRequest__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(EggIncFirstContactRequest__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -8990,246 +9167,222 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_UserId,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, userId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_UserId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userName",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_UserName,
-        .core.hasIndex = 2,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, userName),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userName",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_UserName,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, userName),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "contributionAmount",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContributionAmount,
-        .core.hasIndex = 4,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, contributionAmount),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "contributionAmount",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContributionAmount,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, contributionAmount),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "active",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Active,
-        .core.hasIndex = 12,
-        .core.offset = 13,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "active",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Active,
+        .hasIndex = 12,
+        .offset = 13,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueEnum = Platform_Ios,
-        .core.name = "platform",
-        .core.dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Platform,
-        .core.hasIndex = 22,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, platform),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Platform,
+        .hasIndex = 22,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, platform),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "contributionRate",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContributionRate,
-        .core.hasIndex = 5,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, contributionRate),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "contributionRate",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContributionRate,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, contributionRate),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "timeCheatDetected",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_TimeCheatDetected,
-        .core.hasIndex = 20,
-        .core.offset = 21,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "timeCheatDetected",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_TimeCheatDetected,
+        .hasIndex = 20,
+        .offset = 21,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueInt32 = 0,
-        .core.name = "rankChange",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_RankChange,
-        .core.hasIndex = 9,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, rankChange),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeInt32,
+        .name = "rankChange",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_RankChange,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, rankChange),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt32,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "pushId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_PushId,
-        .core.hasIndex = 23,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, pushId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "pushId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_PushId,
+        .hasIndex = 23,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, pushId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "banVotes",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BanVotes,
-        .core.hasIndex = 24,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, banVotes),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "banVotes",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BanVotes,
+        .hasIndex = 24,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, banVotes),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "soulPower",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_SoulPower,
-        .core.hasIndex = 6,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, soulPower),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "soulPower",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_SoulPower,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, soulPower),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "boostTokens",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BoostTokens,
-        .core.hasIndex = 27,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, boostTokens),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "boostTokens",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BoostTokens,
+        .hasIndex = 27,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, boostTokens),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "buffHistoryArray",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(CoopBuffState),
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BuffHistoryArray,
-        .core.hasIndex = GPBNoHasBit,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, buffHistoryArray),
-        .core.flags = GPBFieldRepeated,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "buffHistoryArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(CoopBuffState),
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BuffHistoryArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, buffHistoryArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "boostTokensSpent",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BoostTokensSpent,
-        .core.hasIndex = 28,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, boostTokensSpent),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "boostTokensSpent",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BoostTokensSpent,
+        .hasIndex = 28,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, boostTokensSpent),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "productionParams",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(FarmProductionParams),
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ProductionParams,
-        .core.hasIndex = 7,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, productionParams),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "productionParams",
+        .dataTypeSpecific.clazz = GPBObjCClass(FarmProductionParams),
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ProductionParams,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, productionParams),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "leech",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Leech,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "leech",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Leech,
+        .hasIndex = 16,
+        .offset = 17,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "autojoined",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Autojoined,
-        .core.hasIndex = 25,
-        .core.offset = 26,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "autojoined",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Autojoined,
+        .hasIndex = 25,
+        .offset = 26,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "farmInfo",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(PlayerFarmInfo),
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_FarmInfo,
-        .core.hasIndex = 8,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, farmInfo),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "farmInfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(PlayerFarmInfo),
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_FarmInfo,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, farmInfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "contractIdentifier",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContractIdentifier,
-        .core.hasIndex = 3,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, contractIdentifier),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "contractIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ContractIdentifier,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, contractIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "chickenRunCooldown",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ChickenRunCooldown,
-        .core.hasIndex = 29,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, chickenRunCooldown),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "chickenRunCooldown",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ChickenRunCooldown,
+        .hasIndex = 29,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, chickenRunCooldown),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "uuid",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Uuid,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, uuid),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "uuid",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Uuid,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, uuid),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "finalized",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Finalized,
-        .core.hasIndex = 18,
-        .core.offset = 19,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "finalized",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Finalized,
+        .hasIndex = 18,
+        .offset = 19,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "recentlyActive",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_RecentlyActive,
-        .core.hasIndex = 10,
-        .core.offset = 11,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "recentlyActive",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_RecentlyActive,
+        .hasIndex = 10,
+        .offset = 11,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "ccMember",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_CcMember,
-        .core.hasIndex = 14,
-        .core.offset = 15,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "ccMember",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_CcMember,
+        .hasIndex = 14,
+        .offset = 15,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -9237,9 +9390,9 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ContractCoopStatusResponse_ContributionInfo__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     [localDescriptor setupContainingMessageClass:GPBObjCClass(ContractCoopStatusResponse)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
@@ -10034,166 +10187,150 @@ typedef struct CreateCoopRequest__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueString = nil,
-        .core.name = "contractIdentifier",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_ContractIdentifier,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, contractIdentifier),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "contractIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_ContractIdentifier,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, contractIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "coopIdentifier",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_CoopIdentifier,
-        .core.hasIndex = 2,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, coopIdentifier),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "coopIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_CoopIdentifier,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, coopIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "secondsRemaining",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_SecondsRemaining,
-        .core.hasIndex = 9,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, secondsRemaining),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "secondsRemaining",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_SecondsRemaining,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, secondsRemaining),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_UserId,
-        .core.hasIndex = 10,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, userId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_UserId,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userName",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_UserName,
-        .core.hasIndex = 11,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, userName),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userName",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_UserName,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, userName),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueEnum = Platform_Ios,
-        .core.name = "platform",
-        .core.dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
-        .core.number = CreateCoopRequest_FieldNumber_Platform,
-        .core.hasIndex = 18,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, platform),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = CreateCoopRequest_FieldNumber_Platform,
+        .hasIndex = 18,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, platform),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "clientVersion",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_ClientVersion,
-        .core.hasIndex = 19,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, clientVersion),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "clientVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_ClientVersion,
+        .hasIndex = 19,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, clientVersion),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "soulPower",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_SoulPower,
-        .core.hasIndex = 12,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, soulPower),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "soulPower",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_SoulPower,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, soulPower),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "league",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_League,
-        .core.hasIndex = 14,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, league),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "league",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_League,
+        .hasIndex = 14,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, league),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "rinfo",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
-        .core.number = CreateCoopRequest_FieldNumber_Rinfo,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, rinfo),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = CreateCoopRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, rinfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "eop",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_Eop,
-        .core.hasIndex = 13,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, eop),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "eop",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_Eop,
+        .hasIndex = 13,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, eop),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueEnum = Contract_PlayerGrade_GradeUnset,
-        .core.name = "grade",
-        .core.dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
-        .core.number = CreateCoopRequest_FieldNumber_Grade,
-        .core.hasIndex = 15,
-        .core.offset = (uint32_t)offsetof(CreateCoopRequest__storage_, grade),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "grade",
+        .dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
+        .number = CreateCoopRequest_FieldNumber_Grade,
+        .hasIndex = 15,
+        .offset = (uint32_t)offsetof(CreateCoopRequest__storage_, grade),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "public_p",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_Public_p,
-        .core.hasIndex = 3,
-        .core.offset = 4,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "public_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_Public_p,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "ccOnly",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_CcOnly,
-        .core.hasIndex = 5,
-        .core.offset = 6,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "ccOnly",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_CcOnly,
+        .hasIndex = 5,
+        .offset = 6,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "pointsReplay",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_PointsReplay,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "pointsReplay",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_PointsReplay,
+        .hasIndex = 16,
+        .offset = 17,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "allowAllGrades",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = CreateCoopRequest_FieldNumber_AllowAllGrades,
-        .core.hasIndex = 7,
-        .core.offset = 8,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "allowAllGrades",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CreateCoopRequest_FieldNumber_AllowAllGrades,
+        .hasIndex = 7,
+        .offset = 8,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -10201,9 +10338,9 @@ typedef struct CreateCoopRequest__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CreateCoopRequest__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -10308,136 +10445,123 @@ typedef struct JoinCoopRequest__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueString = nil,
-        .core.name = "contractIdentifier",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_ContractIdentifier,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, contractIdentifier),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "contractIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_ContractIdentifier,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, contractIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "coopIdentifier",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_CoopIdentifier,
-        .core.hasIndex = 2,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, coopIdentifier),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "coopIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_CoopIdentifier,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, coopIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_UserId,
-        .core.hasIndex = 3,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, userId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_UserId,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userName",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_UserName,
-        .core.hasIndex = 4,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, userName),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userName",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_UserName,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, userName),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueEnum = Platform_Ios,
-        .core.name = "platform",
-        .core.dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
-        .core.number = JoinCoopRequest_FieldNumber_Platform,
-        .core.hasIndex = 11,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, platform),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = JoinCoopRequest_FieldNumber_Platform,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, platform),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "clientVersion",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_ClientVersion,
-        .core.hasIndex = 13,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, clientVersion),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "clientVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_ClientVersion,
+        .hasIndex = 13,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, clientVersion),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "soulPower",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_SoulPower,
-        .core.hasIndex = 5,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, soulPower),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "soulPower",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_SoulPower,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, soulPower),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "league",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_League,
-        .core.hasIndex = 7,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, league),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "league",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_League,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, league),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "rinfo",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
-        .core.number = JoinCoopRequest_FieldNumber_Rinfo,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, rinfo),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = JoinCoopRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, rinfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "secondsRemaining",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_SecondsRemaining,
-        .core.hasIndex = 12,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, secondsRemaining),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "secondsRemaining",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_SecondsRemaining,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, secondsRemaining),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "eop",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_Eop,
-        .core.hasIndex = 6,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, eop),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "eop",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_Eop,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, eop),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueEnum = Contract_PlayerGrade_GradeUnset,
-        .core.name = "grade",
-        .core.dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
-        .core.number = JoinCoopRequest_FieldNumber_Grade,
-        .core.hasIndex = 8,
-        .core.offset = (uint32_t)offsetof(JoinCoopRequest__storage_, grade),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "grade",
+        .dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
+        .number = JoinCoopRequest_FieldNumber_Grade,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(JoinCoopRequest__storage_, grade),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "pointsReplay",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = JoinCoopRequest_FieldNumber_PointsReplay,
-        .core.hasIndex = 9,
-        .core.offset = 10,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "pointsReplay",
+        .dataTypeSpecific.clazz = Nil,
+        .number = JoinCoopRequest_FieldNumber_PointsReplay,
+        .hasIndex = 9,
+        .offset = 10,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -10445,9 +10569,9 @@ typedef struct JoinCoopRequest__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(JoinCoopRequest__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -10636,126 +10760,114 @@ typedef struct AutoJoinCoopRequest__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueString = nil,
-        .core.name = "contractIdentifier",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_ContractIdentifier,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, contractIdentifier),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "contractIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_ContractIdentifier,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, contractIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_UserId,
-        .core.hasIndex = 2,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, userId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_UserId,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "userName",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_UserName,
-        .core.hasIndex = 3,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, userName),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "userName",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_UserName,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, userName),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "soulPower",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_SoulPower,
-        .core.hasIndex = 4,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, soulPower),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "soulPower",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_SoulPower,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, soulPower),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "secondsRemaining",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_SecondsRemaining,
-        .core.hasIndex = 10,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, secondsRemaining),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "secondsRemaining",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_SecondsRemaining,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, secondsRemaining),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueEnum = Platform_Ios,
-        .core.name = "platform",
-        .core.dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
-        .core.number = AutoJoinCoopRequest_FieldNumber_Platform,
-        .core.hasIndex = 11,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, platform),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = AutoJoinCoopRequest_FieldNumber_Platform,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, platform),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "clientVersion",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_ClientVersion,
-        .core.hasIndex = 12,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, clientVersion),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "clientVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_ClientVersion,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, clientVersion),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueUInt32 = 0U,
-        .core.name = "league",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_League,
-        .core.hasIndex = 6,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, league),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeUInt32,
+        .name = "league",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_League,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, league),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "rinfo",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
-        .core.number = AutoJoinCoopRequest_FieldNumber_Rinfo,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, rinfo),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = AutoJoinCoopRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, rinfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "eop",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_Eop,
-        .core.hasIndex = 5,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, eop),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "eop",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_Eop,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, eop),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueEnum = Contract_PlayerGrade_GradeUnset,
-        .core.name = "grade",
-        .core.dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
-        .core.number = AutoJoinCoopRequest_FieldNumber_Grade,
-        .core.hasIndex = 7,
-        .core.offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, grade),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "grade",
+        .dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
+        .number = AutoJoinCoopRequest_FieldNumber_Grade,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(AutoJoinCoopRequest__storage_, grade),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "pointsReplay",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = AutoJoinCoopRequest_FieldNumber_PointsReplay,
-        .core.hasIndex = 8,
-        .core.offset = 9,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "pointsReplay",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AutoJoinCoopRequest_FieldNumber_PointsReplay,
+        .hasIndex = 8,
+        .offset = 9,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -10763,9 +10875,9 @@ typedef struct AutoJoinCoopRequest__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(AutoJoinCoopRequest__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -13792,6 +13904,7 @@ typedef struct LiveConfig_GiftConfig_GiftMuConfig__storage_ {
 @dynamic hasShellsIntroTickets, shellsIntroTickets;
 @dynamic hasShellsMaxFreeChickenConfigs, shellsMaxFreeChickenConfigs;
 @dynamic hasShellsIntroAlertThreshold, shellsIntroAlertThreshold;
+@dynamic hasShellsLightingControlsPrice, shellsLightingControlsPrice;
 @dynamic hasContractsExpertLeagueMinSoulPower, contractsExpertLeagueMinSoulPower;
 @dynamic hasNewPlayerEventDuration, newPlayerEventDuration;
 @dynamic hasContractsClubAvailable, contractsClubAvailable;
@@ -13802,6 +13915,7 @@ typedef struct LiveConfig_MiscConfig__storage_ {
   uint32_t shellsIntroTickets;
   uint32_t shellsMaxFreeChickenConfigs;
   uint32_t shellsIntroAlertThreshold;
+  uint32_t shellsLightingControlsPrice;
   NSString *askToTrackMessage;
   double askToTrackMinSoulEggs;
   double chickenRunBoostPercentage;
@@ -13814,123 +13928,146 @@ typedef struct LiveConfig_MiscConfig__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
+    static GPBMessageFieldDescriptionWithDefault fields[] = {
       {
-        .name = "askToTrack",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_AskToTrack,
-        .hasIndex = 0,
-        .offset = 1,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
+        .defaultValue.valueBool = NO,
+        .core.name = "askToTrack",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_AskToTrack,
+        .core.hasIndex = 0,
+        .core.offset = 1,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
       },
       {
-        .name = "askToTrackMinSoulEggs",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_AskToTrackMinSoulEggs,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, askToTrackMinSoulEggs),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .defaultValue.valueDouble = 0,
+        .core.name = "askToTrackMinSoulEggs",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_AskToTrackMinSoulEggs,
+        .core.hasIndex = 2,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, askToTrackMinSoulEggs),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
       {
-        .name = "askToTrackMessage",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_AskToTrackMessage,
-        .hasIndex = 3,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, askToTrackMessage),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
+        .defaultValue.valueString = nil,
+        .core.name = "askToTrackMessage",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_AskToTrackMessage,
+        .core.hasIndex = 3,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, askToTrackMessage),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeString,
       },
       {
-        .name = "askToTrackShowPreDialog",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_AskToTrackShowPreDialog,
-        .hasIndex = 4,
-        .offset = 5,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
+        .defaultValue.valueBool = NO,
+        .core.name = "askToTrackShowPreDialog",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_AskToTrackShowPreDialog,
+        .core.hasIndex = 4,
+        .core.offset = 5,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
       },
       {
-        .name = "askToTrackAfterPrivacy",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_AskToTrackAfterPrivacy,
-        .hasIndex = 6,
-        .offset = 7,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
+        .defaultValue.valueBool = NO,
+        .core.name = "askToTrackAfterPrivacy",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_AskToTrackAfterPrivacy,
+        .core.hasIndex = 6,
+        .core.offset = 7,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
       },
       {
-        .name = "chickenRunBoostPercentage",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ChickenRunBoostPercentage,
-        .hasIndex = 8,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, chickenRunBoostPercentage),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .defaultValue.valueDouble = 0,
+        .core.name = "chickenRunBoostPercentage",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ChickenRunBoostPercentage,
+        .core.hasIndex = 8,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, chickenRunBoostPercentage),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
       {
-        .name = "shellsIntroTickets",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ShellsIntroTickets,
-        .hasIndex = 9,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsIntroTickets),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeUInt32,
+        .defaultValue.valueUInt32 = 0U,
+        .core.name = "shellsIntroTickets",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ShellsIntroTickets,
+        .core.hasIndex = 9,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsIntroTickets),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt32,
       },
       {
-        .name = "shellsMaxFreeChickenConfigs",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ShellsMaxFreeChickenConfigs,
-        .hasIndex = 10,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsMaxFreeChickenConfigs),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeUInt32,
+        .defaultValue.valueUInt32 = 0U,
+        .core.name = "shellsMaxFreeChickenConfigs",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ShellsMaxFreeChickenConfigs,
+        .core.hasIndex = 10,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsMaxFreeChickenConfigs),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt32,
       },
       {
-        .name = "shellsIntroAlertThreshold",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ShellsIntroAlertThreshold,
-        .hasIndex = 11,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsIntroAlertThreshold),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeUInt32,
+        .defaultValue.valueUInt32 = 0U,
+        .core.name = "shellsIntroAlertThreshold",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ShellsIntroAlertThreshold,
+        .core.hasIndex = 11,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsIntroAlertThreshold),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeUInt32,
       },
       {
-        .name = "contractsExpertLeagueMinSoulPower",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ContractsExpertLeagueMinSoulPower,
-        .hasIndex = 12,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, contractsExpertLeagueMinSoulPower),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .defaultValue.valueDouble = 0,
+        .core.name = "contractsExpertLeagueMinSoulPower",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ContractsExpertLeagueMinSoulPower,
+        .core.hasIndex = 13,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, contractsExpertLeagueMinSoulPower),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
       {
-        .name = "newPlayerEventDuration",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_NewPlayerEventDuration,
-        .hasIndex = 13,
-        .offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, newPlayerEventDuration),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .defaultValue.valueDouble = 0,
+        .core.name = "newPlayerEventDuration",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_NewPlayerEventDuration,
+        .core.hasIndex = 14,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, newPlayerEventDuration),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
       {
-        .name = "contractsClubAvailable",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ContractsClubAvailable,
-        .hasIndex = 14,
-        .offset = 15,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
+        .defaultValue.valueBool = NO,
+        .core.name = "contractsClubAvailable",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ContractsClubAvailable,
+        .core.hasIndex = 15,
+        .core.offset = 16,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
       },
       {
-        .name = "contractsBeta",
-        .dataTypeSpecific.clazz = Nil,
-        .number = LiveConfig_MiscConfig_FieldNumber_ContractsBeta,
-        .hasIndex = 16,
-        .offset = 17,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
+        .defaultValue.valueBool = NO,
+        .core.name = "contractsBeta",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ContractsBeta,
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
+      },
+      {
+        .defaultValue.valueUInt32 = 175U,
+        .core.name = "shellsLightingControlsPrice",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_ShellsLightingControlsPrice,
+        .core.hasIndex = 12,
+        .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsLightingControlsPrice),
+        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
+        .core.dataType = GPBDataTypeUInt32,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -13938,9 +14075,9 @@ typedef struct LiveConfig_MiscConfig__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
                                    storageSize:sizeof(LiveConfig_MiscConfig__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
     [localDescriptor setupContainingMessageClass:GPBObjCClass(LiveConfig)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
@@ -13976,6 +14113,12 @@ typedef struct LiveConfig_MiscConfig__storage_ {
 @dynamic hasUserType, userType;
 @dynamic hasMinPiggyBreaks, minPiggyBreaks;
 @dynamic hasGoldTip, goldTip;
+@dynamic hasTip, tip;
+@dynamic hasPriority, priority;
+@dynamic hasMinDaysSinceLastTip, minDaysSinceLastTip;
+@dynamic hasMaxRetries, maxRetries;
+@dynamic hasDaysUntilRetry, daysUntilRetry;
+@dynamic hasCategory, category;
 
 typedef struct InGameMail__storage_ {
   uint32_t _has_storage_[1];
@@ -13985,6 +14128,8 @@ typedef struct InGameMail__storage_ {
   UILocation appLink;
   UserType userType;
   uint32_t minPiggyBreaks;
+  uint32_t maxRetries;
+  uint32_t priority;
   NSString *id_p;
   NSString *title;
   NSString *message;
@@ -13994,11 +14139,14 @@ typedef struct InGameMail__storage_ {
   NSMutableArray *buildsArray;
   NSString *appLinkExtra;
   DLCItem *image;
+  NSString *category;
   double goldTip;
   double minSoulEggs;
   double minMysticalBonus;
   double imageWidth;
   double imageHeight;
+  double minDaysSinceLastTip;
+  double daysUntilRetry;
 } InGameMail__storage_;
 
 // This method is threadsafe because it is initially called
@@ -14187,6 +14335,60 @@ typedef struct InGameMail__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
+      {
+        .name = "tip",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_Tip,
+        .hasIndex = 19,
+        .offset = 20,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "minDaysSinceLastTip",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_MinDaysSinceLastTip,
+        .hasIndex = 22,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, minDaysSinceLastTip),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "maxRetries",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_MaxRetries,
+        .hasIndex = 23,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, maxRetries),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "daysUntilRetry",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_DaysUntilRetry,
+        .hasIndex = 24,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, daysUntilRetry),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "priority",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_Priority,
+        .hasIndex = 21,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, priority),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "category",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_Category,
+        .hasIndex = 25,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, category),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[InGameMail class]
@@ -14216,10 +14418,14 @@ typedef struct InGameMail__storage_ {
 @implementation MailDB
 
 @dynamic mailArray, mailArray_Count;
+@dynamic hasTipsDbData, tipsDbData;
+@dynamic hasTipsChecksum, tipsChecksum;
 
 typedef struct MailDB__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *mailArray;
+  NSData *tipsDbData;
+  NSString *tipsChecksum;
 } MailDB__storage_;
 
 // This method is threadsafe because it is initially called
@@ -14237,6 +14443,24 @@ typedef struct MailDB__storage_ {
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
+      {
+        .name = "tipsDbData",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailDB_FieldNumber_TipsDbData,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(MailDB__storage_, tipsDbData),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "tipsChecksum",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailDB_FieldNumber_TipsChecksum,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(MailDB__storage_, tipsChecksum),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[MailDB class]
@@ -14246,6 +14470,186 @@ typedef struct MailDB__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(MailDB__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TipsDB
+
+@implementation TipsDB
+
+@dynamic tipsArray, tipsArray_Count;
+
+typedef struct TipsDB__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *tipsArray;
+} TipsDB__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "tipsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(InGameMail),
+        .number = TipsDB_FieldNumber_TipsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TipsDB__storage_, tipsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[TipsDB class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TipsDB__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - MailState
+
+@implementation MailState
+
+@dynamic readMailIdsArray, readMailIdsArray_Count;
+@dynamic tipsStatesArray, tipsStatesArray_Count;
+@dynamic hasTipsChecksum, tipsChecksum;
+
+typedef struct MailState__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *readMailIdsArray;
+  NSMutableArray *tipsStatesArray;
+  NSString *tipsChecksum;
+} MailState__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "readMailIdsArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailState_FieldNumber_ReadMailIdsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(MailState__storage_, readMailIdsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "tipsStatesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(MailState_TipState),
+        .number = MailState_FieldNumber_TipsStatesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(MailState__storage_, tipsStatesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "tipsChecksum",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailState_FieldNumber_TipsChecksum,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(MailState__storage_, tipsChecksum),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[MailState class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(MailState__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - MailState_TipState
+
+@implementation MailState_TipState
+
+@dynamic hasId_p, id_p;
+@dynamic hasReads, reads;
+@dynamic hasTimeRead, timeRead;
+
+typedef struct MailState_TipState__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t reads;
+  NSString *id_p;
+  double timeRead;
+} MailState_TipState__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "id_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailState_TipState_FieldNumber_Id_p,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(MailState_TipState__storage_, id_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "reads",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailState_TipState_FieldNumber_Reads,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(MailState_TipState__storage_, reads),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "timeRead",
+        .dataTypeSpecific.clazz = Nil,
+        .number = MailState_TipState_FieldNumber_TimeRead,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(MailState_TipState__storage_, timeRead),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[MailState_TipState class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(MailState_TipState__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(MailState)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -14583,10 +14987,12 @@ typedef struct GetPeriodicalsRequest__storage_ {
 @dynamic hasFuelTankUnlocked, fuelTankUnlocked;
 @dynamic hasProPermit, proPermit;
 @dynamic hasUltra, ultra;
+@dynamic hasTipsChecksum, tipsChecksum;
 
 typedef struct ConfigRequest__storage_ {
   uint32_t _has_storage_[1];
   BasicRequestInfo *rinfo;
+  NSString *tipsChecksum;
   double soulEggs;
 } ConfigRequest__storage_;
 
@@ -14658,6 +15064,15 @@ typedef struct ConfigRequest__storage_ {
         .offset = 11,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "tipsChecksum",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ConfigRequest_FieldNumber_TipsChecksum,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(ConfigRequest__storage_, tipsChecksum),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -20396,6 +20811,7 @@ typedef struct DLCCatalog__storage_ {
 @dynamic savedConfigsArray, savedConfigsArray_Count;
 @dynamic newShellsDownloadedArray, newShellsDownloadedArray_Count;
 @dynamic newShellsSeenArray, newShellsSeenArray_Count;
+@dynamic hasLightingControlsUnlocked, lightingControlsUnlocked;
 
 typedef struct ShellDB__storage_ {
   uint32_t _has_storage_[1];
@@ -20496,6 +20912,15 @@ typedef struct ShellDB__storage_ {
         .offset = (uint32_t)offsetof(ShellDB__storage_, savedConfigsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "lightingControlsUnlocked",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_FieldNumber_LightingControlsUnlocked,
+        .hasIndex = 0,
+        .offset = 1,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -20764,6 +21189,8 @@ typedef struct ShellDB_ShellSetVariationStatus__storage_ {
 @dynamic hasConfigureChickensByGroup, configureChickensByGroup;
 @dynamic groupConfigsArray, groupConfigsArray_Count;
 @dynamic chickenConfigsArray, chickenConfigsArray_Count;
+@dynamic hasLightingConfigEnabled, lightingConfigEnabled;
+@dynamic hasLightingConfig, lightingConfig;
 
 typedef struct ShellDB_FarmConfiguration__storage_ {
   uint32_t _has_storage_[1];
@@ -20772,6 +21199,7 @@ typedef struct ShellDB_FarmConfiguration__storage_ {
   NSMutableArray *groupConfigsArray;
   NSMutableArray *chickenConfigsArray;
   GPBEnumArray *lockedElementsArray;
+  ShellDB_LightingConfig *lightingConfig;
 } ShellDB_FarmConfiguration__storage_;
 
 // This method is threadsafe because it is initially called
@@ -20833,6 +21261,24 @@ typedef struct ShellDB_FarmConfiguration__storage_ {
         .offset = (uint32_t)offsetof(ShellDB_FarmConfiguration__storage_, lockedElementsArray),
         .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "lightingConfigEnabled",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_FarmConfiguration_FieldNumber_LightingConfigEnabled,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "lightingConfig",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_LightingConfig),
+        .number = ShellDB_FarmConfiguration_FieldNumber_LightingConfig,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ShellDB_FarmConfiguration__storage_, lightingConfig),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -21204,6 +21650,140 @@ typedef struct ShellDB_ChickenConfig__storage_ {
 
 @end
 
+#pragma mark - ShellDB_LightingConfig
+
+@implementation ShellDB_LightingConfig
+
+@dynamic hasLightDir, lightDir;
+@dynamic hasLightDirectColor, lightDirectColor;
+@dynamic hasLightDirectIntensity, lightDirectIntensity;
+@dynamic hasLightAmbientColor, lightAmbientColor;
+@dynamic hasLightAmbientIntensity, lightAmbientIntensity;
+@dynamic hasFogColor, fogColor;
+@dynamic hasFogNear, fogNear;
+@dynamic hasFogFar, fogFar;
+@dynamic hasFogDensity, fogDensity;
+
+typedef struct ShellDB_LightingConfig__storage_ {
+  uint32_t _has_storage_[1];
+  float lightDirectIntensity;
+  float lightAmbientIntensity;
+  float fogNear;
+  float fogFar;
+  float fogDensity;
+  Vector3 *lightDir;
+  Vector4 *lightDirectColor;
+  Vector4 *lightAmbientColor;
+  Vector4 *fogColor;
+} ShellDB_LightingConfig__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "lightDir",
+        .dataTypeSpecific.clazz = GPBObjCClass(Vector3),
+        .number = ShellDB_LightingConfig_FieldNumber_LightDir,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, lightDir),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "lightDirectColor",
+        .dataTypeSpecific.clazz = GPBObjCClass(Vector4),
+        .number = ShellDB_LightingConfig_FieldNumber_LightDirectColor,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, lightDirectColor),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "lightDirectIntensity",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_LightingConfig_FieldNumber_LightDirectIntensity,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, lightDirectIntensity),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "lightAmbientColor",
+        .dataTypeSpecific.clazz = GPBObjCClass(Vector4),
+        .number = ShellDB_LightingConfig_FieldNumber_LightAmbientColor,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, lightAmbientColor),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "lightAmbientIntensity",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_LightingConfig_FieldNumber_LightAmbientIntensity,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, lightAmbientIntensity),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "fogColor",
+        .dataTypeSpecific.clazz = GPBObjCClass(Vector4),
+        .number = ShellDB_LightingConfig_FieldNumber_FogColor,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, fogColor),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "fogNear",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_LightingConfig_FieldNumber_FogNear,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, fogNear),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "fogFar",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_LightingConfig_FieldNumber_FogFar,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, fogFar),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "fogDensity",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_LightingConfig_FieldNumber_FogDensity,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(ShellDB_LightingConfig__storage_, fogDensity),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellDB_LightingConfig class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellDB_LightingConfig__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(ShellDB)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - ShellPopularityStats
 
 @implementation ShellPopularityStats
@@ -21500,6 +22080,396 @@ typedef struct ShellsActionLog__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
                                    storageSize:sizeof(ShellsActionLog__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - SubmitShellShowcaseRequest
+
+@implementation SubmitShellShowcaseRequest
+
+@dynamic hasId_p, id_p;
+@dynamic hasUserId, userId;
+@dynamic hasFarmConfig, farmConfig;
+
+typedef struct SubmitShellShowcaseRequest__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *id_p;
+  NSString *userId;
+  ShellDB_FarmConfiguration *farmConfig;
+} SubmitShellShowcaseRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "id_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = SubmitShellShowcaseRequest_FieldNumber_Id_p,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(SubmitShellShowcaseRequest__storage_, id_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = SubmitShellShowcaseRequest_FieldNumber_UserId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(SubmitShellShowcaseRequest__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "farmConfig",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_FarmConfiguration),
+        .number = SubmitShellShowcaseRequest_FieldNumber_FarmConfig,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(SubmitShellShowcaseRequest__storage_, farmConfig),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[SubmitShellShowcaseRequest class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(SubmitShellShowcaseRequest__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellShowcase
+
+@implementation ShellShowcase
+
+@dynamic topArray, topArray_Count;
+@dynamic featuredArray, featuredArray_Count;
+@dynamic randomArray, randomArray_Count;
+
+typedef struct ShellShowcase__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *topArray;
+  NSMutableArray *featuredArray;
+  NSMutableArray *randomArray;
+} ShellShowcase__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "topArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellShowcaseListing),
+        .number = ShellShowcase_FieldNumber_TopArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellShowcase__storage_, topArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "featuredArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellShowcaseListing),
+        .number = ShellShowcase_FieldNumber_FeaturedArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellShowcase__storage_, featuredArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "randomArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellShowcaseListing),
+        .number = ShellShowcase_FieldNumber_RandomArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellShowcase__storage_, randomArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellShowcase class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellShowcase__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellShowcaseListing
+
+@implementation ShellShowcaseListing
+
+@dynamic hasId_p, id_p;
+@dynamic hasName, name;
+@dynamic hasDescription_p, description_p;
+@dynamic hasFarmConfig, farmConfig;
+@dynamic hasSales, sales;
+@dynamic hasGross, gross;
+@dynamic hasViews, views;
+@dynamic hasLikes, likes;
+@dynamic hasDislikes, dislikes;
+
+typedef struct ShellShowcaseListing__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t sales;
+  uint32_t likes;
+  uint32_t dislikes;
+  NSString *id_p;
+  NSString *name;
+  NSString *description_p;
+  ShellDB_FarmConfiguration *farmConfig;
+  uint64_t gross;
+  uint64_t views;
+} ShellShowcaseListing__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "id_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Id_p,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, id_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "name",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Name,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, name),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Description_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "farmConfig",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_FarmConfiguration),
+        .number = ShellShowcaseListing_FieldNumber_FarmConfig,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, farmConfig),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "sales",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Sales,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, sales),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "gross",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Gross,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, gross),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "views",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Views,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, views),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "likes",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Likes,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, likes),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "dislikes",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListing_FieldNumber_Dislikes,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(ShellShowcaseListing__storage_, dislikes),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellShowcaseListing class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellShowcaseListing__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellShowcaseListingSet
+
+@implementation ShellShowcaseListingSet
+
+@dynamic listingsArray, listingsArray_Count;
+
+typedef struct ShellShowcaseListingSet__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *listingsArray;
+} ShellShowcaseListingSet__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "listingsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellShowcaseListing),
+        .number = ShellShowcaseListingSet_FieldNumber_ListingsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellShowcaseListingSet__storage_, listingsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellShowcaseListingSet class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellShowcaseListingSet__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ShellShowcaseAction
+
+@implementation ShellShowcaseAction
+
+@dynamic hasAction, action;
+@dynamic hasUserId, userId;
+@dynamic hasId_p, id_p;
+@dynamic hasValue, value;
+
+typedef struct ShellShowcaseAction__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *action;
+  NSString *userId;
+  NSString *id_p;
+  NSString *value;
+} ShellShowcaseAction__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "action",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseAction_FieldNumber_Action,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, action),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseAction_FieldNumber_UserId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "id_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseAction_FieldNumber_Id_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, id_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "value",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseAction_FieldNumber_Value,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, value),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShellShowcaseAction class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShellShowcaseAction__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -22008,166 +22978,150 @@ typedef struct UserSubscriptionInfo__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueString = nil,
-        .core.name = "originalTransactionId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_OriginalTransactionId,
-        .core.hasIndex = 5,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, originalTransactionId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "originalTransactionId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_OriginalTransactionId,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, originalTransactionId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "firstSubscribed",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_FirstSubscribed,
-        .core.hasIndex = 9,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, firstSubscribed),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "firstSubscribed",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_FirstSubscribed,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, firstSubscribed),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "periodEnd",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_PeriodEnd,
-        .core.hasIndex = 10,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, periodEnd),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "periodEnd",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_PeriodEnd,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, periodEnd),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueEnum = UserSubscriptionInfo_Status_Unknown,
-        .core.name = "status",
-        .core.dataTypeSpecific.enumDescFunc = UserSubscriptionInfo_Status_EnumDescriptor,
-        .core.number = UserSubscriptionInfo_FieldNumber_Status,
-        .core.hasIndex = 11,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, status),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "status",
+        .dataTypeSpecific.enumDescFunc = UserSubscriptionInfo_Status_EnumDescriptor,
+        .number = UserSubscriptionInfo_FieldNumber_Status,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, status),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "autoRenew",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_AutoRenew,
-        .core.hasIndex = 13,
-        .core.offset = 14,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "autoRenew",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_AutoRenew,
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "lastUpdated",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_LastUpdated,
-        .core.hasIndex = 17,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, lastUpdated),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "lastUpdated",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_LastUpdated,
+        .hasIndex = 17,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, lastUpdated),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "historyArray",
-        .core.dataTypeSpecific.clazz = GPBObjCClass(UserSubscriptionInfo_HistoryEntry),
-        .core.number = UserSubscriptionInfo_FieldNumber_HistoryArray,
-        .core.hasIndex = GPBNoHasBit,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, historyArray),
-        .core.flags = GPBFieldRepeated,
-        .core.dataType = GPBDataTypeMessage,
+        .name = "historyArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(UserSubscriptionInfo_HistoryEntry),
+        .number = UserSubscriptionInfo_FieldNumber_HistoryArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, historyArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .defaultValue.valueEnum = Platform_Ios,
-        .core.name = "platform",
-        .core.dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
-        .core.number = UserSubscriptionInfo_FieldNumber_Platform,
-        .core.hasIndex = 4,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, platform),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = UserSubscriptionInfo_FieldNumber_Platform,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, platform),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueMessage = nil,
-        .core.name = "pastUserIdsArray",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_PastUserIdsArray,
-        .core.hasIndex = GPBNoHasBit,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, pastUserIdsArray),
-        .core.flags = GPBFieldRepeated,
-        .core.dataType = GPBDataTypeString,
+        .name = "pastUserIdsArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_PastUserIdsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, pastUserIdsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueEnum = UserSubscriptionInfo_Level_Standard,
-        .core.name = "subscriptionLevel",
-        .core.dataTypeSpecific.enumDescFunc = UserSubscriptionInfo_Level_EnumDescriptor,
-        .core.number = UserSubscriptionInfo_FieldNumber_SubscriptionLevel,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, subscriptionLevel),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "subscriptionLevel",
+        .dataTypeSpecific.enumDescFunc = UserSubscriptionInfo_Level_EnumDescriptor,
+        .number = UserSubscriptionInfo_FieldNumber_SubscriptionLevel,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, subscriptionLevel),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "storeStatus",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_StoreStatus,
-        .core.hasIndex = 12,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, storeStatus),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "storeStatus",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_StoreStatus,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, storeStatus),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueEnum = UserSubscriptionInfo_Level_Standard,
-        .core.name = "nextSubscriptionLevel",
-        .core.dataTypeSpecific.enumDescFunc = UserSubscriptionInfo_Level_EnumDescriptor,
-        .core.number = UserSubscriptionInfo_FieldNumber_NextSubscriptionLevel,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, nextSubscriptionLevel),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "nextSubscriptionLevel",
+        .dataTypeSpecific.enumDescFunc = UserSubscriptionInfo_Level_EnumDescriptor,
+        .number = UserSubscriptionInfo_FieldNumber_NextSubscriptionLevel,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, nextSubscriptionLevel),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "linkedTransactionId",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_LinkedTransactionId,
-        .core.hasIndex = 6,
-        .core.offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, linkedTransactionId),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "linkedTransactionId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_LinkedTransactionId,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(UserSubscriptionInfo__storage_, linkedTransactionId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "acknowledged",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_Acknowledged,
-        .core.hasIndex = 7,
-        .core.offset = 8,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "acknowledged",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_Acknowledged,
+        .hasIndex = 7,
+        .offset = 8,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "lockNextSubscriptionLevel",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_LockNextSubscriptionLevel,
-        .core.hasIndex = 2,
-        .core.offset = 3,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "lockNextSubscriptionLevel",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_LockNextSubscriptionLevel,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueBool = NO,
-        .core.name = "sandbox",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = UserSubscriptionInfo_FieldNumber_Sandbox,
-        .core.hasIndex = 15,
-        .core.offset = 16,  // Stored in _has_storage_ to save space.
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeBool,
+        .name = "sandbox",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserSubscriptionInfo_FieldNumber_Sandbox,
+        .hasIndex = 15,
+        .offset = 16,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -22175,9 +23129,9 @@ typedef struct UserSubscriptionInfo__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(UserSubscriptionInfo__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG

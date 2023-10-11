@@ -496,7 +496,7 @@ proto.ei.EggIncFirstContactRequest.prototype.hasClientVersion = function() {
  * @return {!proto.ei.Platform}
  */
 proto.ei.EggIncFirstContactRequest.prototype.getPlatform = function() {
-  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 3, 1));
+  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 

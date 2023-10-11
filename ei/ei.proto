@@ -3,11 +3,13 @@ syntax = "proto2";
 package ei;
 
 enum Platform {
+    UNKNOWN_PLATFORM = 0;
     IOS = 1;
     DROID = 2;
 }
 
 enum DeviceFormFactor {
+    UNKNOWN_DEVICE = 0;
     PHONE = 1;
     TABLET = 2;
 }
@@ -20,6 +22,19 @@ enum AdNetwork {
     UNITY = 4;
     FACEBOOK = 5;
     APPLOVIN = 6;
+}
+
+message Vector3 {
+    optional float x = 1;
+    optional float y = 2;
+    optional float z = 3;
+}
+
+message Vector4 {
+    optional float x = 1;
+    optional float y = 2;
+    optional float z = 3;
+    optional float w = 4;
 }
 
 message Backup {
@@ -253,6 +268,7 @@ message Backup {
     optional ArtifactsDB artifacts_db = 15;
     optional ShellDB shell_db = 24;
     repeated string read_mail_ids = 23;
+    optional MailState mail_state = 27;
     optional uint64 checksum = 100;
     optional string signature = 101;
     
@@ -1247,6 +1263,7 @@ message LiveConfig {
         optional uint32 shells_intro_tickets = 7;
         optional uint32 shells_max_free_chicken_configs = 8;
         optional uint32 shells_intro_alert_threshold = 9;
+        optional uint32 shells_lighting_controls_price = 14 [default = 175];
         optional double contracts_expert_league_min_soul_power = 10;
         optional double new_player_event_duration = 11;
         optional bool contracts_club_available = 12;
@@ -1275,10 +1292,35 @@ message InGameMail {
     optional UserType user_type = 17;
     optional uint32 min_piggy_breaks = 20;
     optional double gold_tip = 6;
+    optional bool tip = 23;
+    optional uint32 priority = 27;
+    optional double min_days_since_last_tip = 24;
+    optional uint32 max_retries = 25;
+    optional double days_until_retry = 26;
+    optional string category = 28;
 }
 
 message MailDB {
     repeated InGameMail mail = 1;
+    optional bytes tips_db_data = 2;
+    optional string tips_checksum = 3;
+}
+
+message TipsDB {
+    repeated InGameMail tips = 1;
+}
+
+message MailState {
+    repeated string read_mail_ids = 1;
+    
+    repeated TipState tips_states = 2;
+    message TipState {
+        optional string id = 1;
+        optional uint32 reads = 2;
+        optional double time_read = 3;
+    }
+    
+    optional string tips_checksum = 3;
 }
 
 message PeriodicalsResponse {
@@ -1318,6 +1360,7 @@ message ConfigRequest {
     optional bool fuel_tank_unlocked = 4;
     optional bool pro_permit = 6;
     optional bool ultra = 7;
+    optional string tips_checksum = 8;
 }
 
 message ConfigResponse {
@@ -2024,6 +2067,8 @@ message ShellDB {
         optional bool configure_chickens_by_group = 7;
         repeated ShellGroupConfiguration group_configs = 8;
         repeated ChickenConfig chicken_configs = 9;
+        optional bool lighting_config_enabled = 11;
+        optional LightingConfig lighting_config = 12;
     }
     
     repeated SavedFarmConfiguration saved_configs = 9;
@@ -2035,6 +2080,7 @@ message ShellDB {
     
     repeated string new_shells_downloaded = 6;
     repeated string new_shells_seen = 7;
+    optional bool lighting_controls_unlocked = 10;
     
     message ShellConfiguration {
         optional ShellSpec.AssetType asset_type = 1;
@@ -2058,6 +2104,18 @@ message ShellDB {
     message ChickenConfig {
         optional string chicken_identifier = 1;
         optional string hat_identifier = 2;
+    }
+    
+    message LightingConfig {
+        optional Vector3 light_dir = 1;
+        optional Vector4 light_direct_color = 2;
+        optional float light_direct_intensity = 3;
+        optional Vector4 light_ambient_color = 4;
+        optional float light_ambient_intensity = 5;
+        optional Vector4 fog_color = 6;
+        optional float fog_near = 7;
+        optional float fog_far = 8;
+        optional float fog_density = 9;
     }
     
     enum FarmElement {
@@ -2103,6 +2161,41 @@ message ShellsActionLog {
     optional double soul_eggs = 10;
     optional uint64 tickets_spent = 11;
     optional uint64 gold_spent = 12;
+}
+
+message SubmitShellShowcaseRequest {
+    optional string id = 1;
+    optional string user_id = 2;
+    optional ShellDB.FarmConfiguration farm_config = 3;
+}
+
+message ShellShowcase {
+    repeated ShellShowcaseListing top = 1;
+    repeated ShellShowcaseListing featured = 2;
+    repeated ShellShowcaseListing random = 3;
+}
+
+message ShellShowcaseListing {
+    optional string id = 1;
+    optional string name = 2;
+    optional string description = 3;
+    optional ShellDB.FarmConfiguration farm_config = 4;
+    optional uint32 sales = 5;
+    optional uint64 gross = 6;
+    optional uint64 views = 7;
+    optional uint32 likes = 8;
+    optional uint32 dislikes = 9;
+}
+
+message ShellShowcaseListingSet {
+    repeated ShellShowcaseListing listings = 1;
+}
+
+message ShellShowcaseAction {
+    optional string action = 1;
+    optional string user_id = 2;
+    optional string id = 3;
+    optional string value = 4;
 }
 
 message UserVerificationAnalysis {
@@ -2276,6 +2369,7 @@ enum UILocation {
 
 enum UserType {
     ALL_USERS = 0;
+    EGGED_UP = 15;
     CONTRACTS_UNLOCKED = 1;
     ARTIFACTS_UNLOCKED = 3;
     FUEL_TANK_UNLOCKED = 4;
@@ -2283,6 +2377,13 @@ enum UserType {
     ULTRA_ACTIVE = 6;
     NO_PRO_PERMIT = 7;
     NO_ULTRA = 8;
+    CONTRACTS_INACTIVE = 9;
+    CONTRACTS_ACTIVE = 10;
+    PLAYING_CONTRACT = 11;
+    ARTIFACTS_INACTIVE = 12;
+    ARTIFACTS_ACTIVE = 13;
+    PRESTIGE_READY = 14;
+    PIGGY_HESITANT = 16;
 }
 
 enum LeaderboardScope {

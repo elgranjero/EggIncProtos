@@ -5,6 +5,17 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("ei.proto", :syntax => :proto2) do
+    add_message "ei.Vector3" do
+      optional :x, :float, 1
+      optional :y, :float, 2
+      optional :z, :float, 3
+    end
+    add_message "ei.Vector4" do
+      optional :x, :float, 1
+      optional :y, :float, 2
+      optional :z, :float, 3
+      optional :w, :float, 4
+    end
     add_message "ei.Backup" do
       optional :user_id, :string, 1
       optional :ei_user_id, :string, 18
@@ -30,6 +41,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :artifacts_db, :message, 15, "ei.ArtifactsDB"
       optional :shell_db, :message, 24, "ei.ShellDB"
       repeated :read_mail_ids, :string, 23
+      optional :mail_state, :message, 27, "ei.MailState"
       optional :checksum, :uint64, 100
       optional :signature, :string, 101
     end
@@ -1109,6 +1121,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :shells_intro_tickets, :uint32, 7
       optional :shells_max_free_chicken_configs, :uint32, 8
       optional :shells_intro_alert_threshold, :uint32, 9
+      optional :shells_lighting_controls_price, :uint32, 14, default: 175
       optional :contracts_expert_league_min_soul_power, :double, 10
       optional :new_player_event_duration, :double, 11
       optional :contracts_club_available, :bool, 12
@@ -1135,9 +1148,30 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :user_type, :enum, 17, "ei.UserType"
       optional :min_piggy_breaks, :uint32, 20
       optional :gold_tip, :double, 6
+      optional :tip, :bool, 23
+      optional :priority, :uint32, 27
+      optional :min_days_since_last_tip, :double, 24
+      optional :max_retries, :uint32, 25
+      optional :days_until_retry, :double, 26
+      optional :category, :string, 28
     end
     add_message "ei.MailDB" do
       repeated :mail, :message, 1, "ei.InGameMail"
+      optional :tips_db_data, :bytes, 2
+      optional :tips_checksum, :string, 3
+    end
+    add_message "ei.TipsDB" do
+      repeated :tips, :message, 1, "ei.InGameMail"
+    end
+    add_message "ei.MailState" do
+      repeated :read_mail_ids, :string, 1
+      repeated :tips_states, :message, 2, "ei.MailState.TipState"
+      optional :tips_checksum, :string, 3
+    end
+    add_message "ei.MailState.TipState" do
+      optional :id, :string, 1
+      optional :reads, :uint32, 2
+      optional :time_read, :double, 3
     end
     add_message "ei.PeriodicalsResponse" do
       optional :sales, :message, 1, "ei.SalesInfo"
@@ -1174,6 +1208,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :fuel_tank_unlocked, :bool, 4
       optional :pro_permit, :bool, 6
       optional :ultra, :bool, 7
+      optional :tips_checksum, :string, 8
     end
     add_message "ei.ConfigResponse" do
       optional :live_config, :message, 1, "ei.LiveConfig"
@@ -1790,6 +1825,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :saved_configs, :message, 9, "ei.ShellDB.SavedFarmConfiguration"
       repeated :new_shells_downloaded, :string, 6
       repeated :new_shells_seen, :string, 7
+      optional :lighting_controls_unlocked, :bool, 10
     end
     add_message "ei.ShellDB.ShellStatus" do
       optional :identifier, :string, 1
@@ -1810,6 +1846,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :configure_chickens_by_group, :bool, 7
       repeated :group_configs, :message, 8, "ei.ShellDB.ShellGroupConfiguration"
       repeated :chicken_configs, :message, 9, "ei.ShellDB.ChickenConfig"
+      optional :lighting_config_enabled, :bool, 11
+      optional :lighting_config, :message, 12, "ei.ShellDB.LightingConfig"
     end
     add_message "ei.ShellDB.SavedFarmConfiguration" do
       optional :name, :string, 1
@@ -1835,6 +1873,17 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ShellDB.ChickenConfig" do
       optional :chicken_identifier, :string, 1
       optional :hat_identifier, :string, 2
+    end
+    add_message "ei.ShellDB.LightingConfig" do
+      optional :light_dir, :message, 1, "ei.Vector3"
+      optional :light_direct_color, :message, 2, "ei.Vector4"
+      optional :light_direct_intensity, :float, 3
+      optional :light_ambient_color, :message, 4, "ei.Vector4"
+      optional :light_ambient_intensity, :float, 5
+      optional :fog_color, :message, 6, "ei.Vector4"
+      optional :fog_near, :float, 7
+      optional :fog_far, :float, 8
+      optional :fog_density, :float, 9
     end
     add_enum "ei.ShellDB.FarmElement" do
       value :HEN_HOUSE, 1
@@ -1876,6 +1925,36 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :soul_eggs, :double, 10
       optional :tickets_spent, :uint64, 11
       optional :gold_spent, :uint64, 12
+    end
+    add_message "ei.SubmitShellShowcaseRequest" do
+      optional :id, :string, 1
+      optional :user_id, :string, 2
+      optional :farm_config, :message, 3, "ei.ShellDB.FarmConfiguration"
+    end
+    add_message "ei.ShellShowcase" do
+      repeated :top, :message, 1, "ei.ShellShowcaseListing"
+      repeated :featured, :message, 2, "ei.ShellShowcaseListing"
+      repeated :random, :message, 3, "ei.ShellShowcaseListing"
+    end
+    add_message "ei.ShellShowcaseListing" do
+      optional :id, :string, 1
+      optional :name, :string, 2
+      optional :description, :string, 3
+      optional :farm_config, :message, 4, "ei.ShellDB.FarmConfiguration"
+      optional :sales, :uint32, 5
+      optional :gross, :uint64, 6
+      optional :views, :uint64, 7
+      optional :likes, :uint32, 8
+      optional :dislikes, :uint32, 9
+    end
+    add_message "ei.ShellShowcaseListingSet" do
+      repeated :listings, :message, 1, "ei.ShellShowcaseListing"
+    end
+    add_message "ei.ShellShowcaseAction" do
+      optional :action, :string, 1
+      optional :user_id, :string, 2
+      optional :id, :string, 3
+      optional :value, :string, 4
     end
     add_message "ei.UserVerificationAnalysis" do
       optional :overall_status, :enum, 1, "ei.UserVerificationAnalysis.Status"
@@ -1965,10 +2044,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :basis_points, :uint32, 2
     end
     add_enum "ei.Platform" do
+      value :UNKNOWN_PLATFORM, 0
       value :IOS, 1
       value :DROID, 2
     end
     add_enum "ei.DeviceFormFactor" do
+      value :UNKNOWN_DEVICE, 0
       value :PHONE, 1
       value :TABLET, 2
     end
@@ -2050,6 +2131,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_enum "ei.UserType" do
       value :ALL_USERS, 0
+      value :EGGED_UP, 15
       value :CONTRACTS_UNLOCKED, 1
       value :ARTIFACTS_UNLOCKED, 3
       value :FUEL_TANK_UNLOCKED, 4
@@ -2057,6 +2139,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :ULTRA_ACTIVE, 6
       value :NO_PRO_PERMIT, 7
       value :NO_ULTRA, 8
+      value :CONTRACTS_INACTIVE, 9
+      value :CONTRACTS_ACTIVE, 10
+      value :PLAYING_CONTRACT, 11
+      value :ARTIFACTS_INACTIVE, 12
+      value :ARTIFACTS_ACTIVE, 13
+      value :PRESTIGE_READY, 14
+      value :PIGGY_HESITANT, 16
     end
     add_enum "ei.LeaderboardScope" do
       value :ALL_TIME, 0
@@ -2066,6 +2155,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Ei
+  Vector3 = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Vector3").msgclass
+  Vector4 = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Vector4").msgclass
   Backup = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup").msgclass
   Backup::Settings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Settings").msgclass
   Backup::Tutorial = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Backup.Tutorial").msgclass
@@ -2184,6 +2275,9 @@ module Ei
   LiveConfig::MiscConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.MiscConfig").msgclass
   InGameMail = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.InGameMail").msgclass
   MailDB = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MailDB").msgclass
+  TipsDB = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.TipsDB").msgclass
+  MailState = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MailState").msgclass
+  MailState::TipState = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MailState.TipState").msgclass
   PeriodicalsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.PeriodicalsResponse").msgclass
   GetPeriodicalsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GetPeriodicalsRequest").msgclass
   ConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ConfigRequest").msgclass
@@ -2259,10 +2353,16 @@ module Ei
   ShellDB::ShellSetConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellSetConfiguration").msgclass
   ShellDB::ShellGroupConfiguration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ShellGroupConfiguration").msgclass
   ShellDB::ChickenConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.ChickenConfig").msgclass
+  ShellDB::LightingConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.LightingConfig").msgclass
   ShellDB::FarmElement = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellDB.FarmElement").enummodule
   ShellPopularityStats = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellPopularityStats").msgclass
   ShellPopularityStats::Entry = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellPopularityStats.Entry").msgclass
   ShellsActionLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellsActionLog").msgclass
+  SubmitShellShowcaseRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SubmitShellShowcaseRequest").msgclass
+  ShellShowcase = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcase").msgclass
+  ShellShowcaseListing = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListing").msgclass
+  ShellShowcaseListingSet = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingSet").msgclass
+  ShellShowcaseAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseAction").msgclass
   UserVerificationAnalysis = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis").msgclass
   UserVerificationAnalysis::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis.Status").enummodule
   UserSubscriptionInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo").msgclass

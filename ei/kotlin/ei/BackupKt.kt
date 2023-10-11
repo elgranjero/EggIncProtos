@@ -717,6 +717,32 @@ public object BackupKt {
       _builder.clearReadMailIds()
     }
     /**
+     * <code>optional .ei.MailState mail_state = 27;</code>
+     */
+    public var mailState: ei.Ei.MailState
+      @JvmName("getMailState")
+      get() = _builder.getMailState()
+      @JvmName("setMailState")
+      set(value) {
+        _builder.setMailState(value)
+      }
+    /**
+     * <code>optional .ei.MailState mail_state = 27;</code>
+     */
+    public fun clearMailState() {
+      _builder.clearMailState()
+    }
+    /**
+     * <code>optional .ei.MailState mail_state = 27;</code>
+     * @return Whether the mailState field is set.
+     */
+    public fun hasMailState(): kotlin.Boolean {
+      return _builder.hasMailState()
+    }
+    public val BackupKt.Dsl.mailStateOrNull: ei.Ei.MailState?
+      get() = _builder.mailStateOrNull
+
+    /**
      * <code>optional uint64 checksum = 100;</code>
      */
     public var checksum: kotlin.Long
@@ -6714,4 +6740,7 @@ val ei.Ei.BackupOrBuilder.artifactsDbOrNull: ei.Ei.ArtifactsDB?
 
 val ei.Ei.BackupOrBuilder.shellDbOrNull: ei.Ei.ShellDB?
   get() = if (hasShellDb()) getShellDb() else null
+
+val ei.Ei.BackupOrBuilder.mailStateOrNull: ei.Ei.MailState?
+  get() = if (hasMailState()) getMailState() else null
 

@@ -136,6 +136,8 @@
     - [LogCraftArtifactPayload](#ei-LogCraftArtifactPayload)
     - [LogSetArtifactPayload](#ei-LogSetArtifactPayload)
     - [MailDB](#ei-MailDB)
+    - [MailState](#ei-MailState)
+    - [MailState.TipState](#ei-MailState-TipState)
     - [MissionInfo](#ei-MissionInfo)
     - [MissionInfo.Fuel](#ei-MissionInfo-Fuel)
     - [MissionRequest](#ei-MissionRequest)
@@ -158,6 +160,7 @@
     - [ShellDB](#ei-ShellDB)
     - [ShellDB.ChickenConfig](#ei-ShellDB-ChickenConfig)
     - [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration)
+    - [ShellDB.LightingConfig](#ei-ShellDB-LightingConfig)
     - [ShellDB.SavedFarmConfiguration](#ei-ShellDB-SavedFarmConfiguration)
     - [ShellDB.ShellConfiguration](#ei-ShellDB-ShellConfiguration)
     - [ShellDB.ShellElementStatus](#ei-ShellDB-ShellElementStatus)
@@ -172,10 +175,16 @@
     - [ShellPopularityStats.Entry](#ei-ShellPopularityStats-Entry)
     - [ShellSetSpec](#ei-ShellSetSpec)
     - [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec)
+    - [ShellShowcase](#ei-ShellShowcase)
+    - [ShellShowcaseAction](#ei-ShellShowcaseAction)
+    - [ShellShowcaseListing](#ei-ShellShowcaseListing)
+    - [ShellShowcaseListingSet](#ei-ShellShowcaseListingSet)
     - [ShellSpec](#ei-ShellSpec)
     - [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece)
     - [ShellsActionLog](#ei-ShellsActionLog)
+    - [SubmitShellShowcaseRequest](#ei-SubmitShellShowcaseRequest)
     - [SubscriptionChangeHintRequest](#ei-SubscriptionChangeHintRequest)
+    - [TipsDB](#ei-TipsDB)
     - [UpdateCoopPermissionsRequest](#ei-UpdateCoopPermissionsRequest)
     - [UpdateCoopPermissionsResponse](#ei-UpdateCoopPermissionsResponse)
     - [UserDataInfoRequest](#ei-UserDataInfoRequest)
@@ -183,6 +192,8 @@
     - [UserSubscriptionInfo](#ei-UserSubscriptionInfo)
     - [UserSubscriptionInfo.HistoryEntry](#ei-UserSubscriptionInfo-HistoryEntry)
     - [UserVerificationAnalysis](#ei-UserVerificationAnalysis)
+    - [Vector3](#ei-Vector3)
+    - [Vector4](#ei-Vector4)
     - [VerifyPurchaseRequest](#ei-VerifyPurchaseRequest)
     - [VerifyPurchaseResponse](#ei-VerifyPurchaseResponse)
   
@@ -737,6 +748,7 @@
 | artifacts_db | [ArtifactsDB](#ei-ArtifactsDB) | optional |  |
 | shell_db | [ShellDB](#ei-ShellDB) | optional |  |
 | read_mail_ids | [string](#string) | repeated |  |
+| mail_state | [MailState](#ei-MailState) | optional |  |
 | checksum | [uint64](#uint64) | optional |  |
 | signature | [string](#string) | optional |  |
 
@@ -1304,6 +1316,7 @@
 | fuel_tank_unlocked | [bool](#bool) | optional |  |
 | pro_permit | [bool](#bool) | optional |  |
 | ultra | [bool](#bool) | optional |  |
+| tips_checksum | [string](#string) | optional |  |
 
 
 
@@ -2529,6 +2542,12 @@
 | user_type | [UserType](#ei-UserType) | optional |  |
 | min_piggy_breaks | [uint32](#uint32) | optional |  |
 | gold_tip | [double](#double) | optional |  |
+| tip | [bool](#bool) | optional |  |
+| priority | [uint32](#uint32) | optional |  |
+| min_days_since_last_tip | [double](#double) | optional |  |
+| max_retries | [uint32](#uint32) | optional |  |
+| days_until_retry | [double](#double) | optional |  |
+| category | [string](#string) | optional |  |
 
 
 
@@ -2903,6 +2922,7 @@
 | shells_intro_tickets | [uint32](#uint32) | optional |  |
 | shells_max_free_chicken_configs | [uint32](#uint32) | optional |  |
 | shells_intro_alert_threshold | [uint32](#uint32) | optional |  |
+| shells_lighting_controls_price | [uint32](#uint32) | optional |  Default: 175 |
 | contracts_expert_league_min_soul_power | [double](#double) | optional |  |
 | new_player_event_duration | [double](#double) | optional |  |
 | contracts_club_available | [bool](#bool) | optional |  |
@@ -3022,6 +3042,42 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | mail | [InGameMail](#ei-InGameMail) | repeated |  |
+| tips_db_data | [bytes](#bytes) | optional |  |
+| tips_checksum | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-MailState"></a>
+
+### MailState
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| read_mail_ids | [string](#string) | repeated |  |
+| tips_states | [MailState.TipState](#ei-MailState-TipState) | repeated |  |
+| tips_checksum | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-MailState-TipState"></a>
+
+### MailState.TipState
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) | optional |  |
+| reads | [uint32](#uint32) | optional |  |
+| time_read | [double](#double) | optional |  |
 
 
 
@@ -3425,6 +3481,7 @@
 | saved_configs | [ShellDB.SavedFarmConfiguration](#ei-ShellDB-SavedFarmConfiguration) | repeated |  |
 | new_shells_downloaded | [string](#string) | repeated |  |
 | new_shells_seen | [string](#string) | repeated |  |
+| lighting_controls_unlocked | [bool](#bool) | optional |  |
 
 
 
@@ -3461,6 +3518,31 @@
 | configure_chickens_by_group | [bool](#bool) | optional |  |
 | group_configs | [ShellDB.ShellGroupConfiguration](#ei-ShellDB-ShellGroupConfiguration) | repeated |  |
 | chicken_configs | [ShellDB.ChickenConfig](#ei-ShellDB-ChickenConfig) | repeated |  |
+| lighting_config_enabled | [bool](#bool) | optional |  |
+| lighting_config | [ShellDB.LightingConfig](#ei-ShellDB-LightingConfig) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellDB-LightingConfig"></a>
+
+### ShellDB.LightingConfig
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| light_dir | [Vector3](#ei-Vector3) | optional |  |
+| light_direct_color | [Vector4](#ei-Vector4) | optional |  |
+| light_direct_intensity | [float](#float) | optional |  |
+| light_ambient_color | [Vector4](#ei-Vector4) | optional |  |
+| light_ambient_intensity | [float](#float) | optional |  |
+| fog_color | [Vector4](#ei-Vector4) | optional |  |
+| fog_near | [float](#float) | optional |  |
+| fog_far | [float](#float) | optional |  |
+| fog_density | [float](#float) | optional |  |
 
 
 
@@ -3740,6 +3822,79 @@
 
 
 
+<a name="ei-ShellShowcase"></a>
+
+### ShellShowcase
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| top | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
+| featured | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
+| random | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ShellShowcaseAction"></a>
+
+### ShellShowcaseAction
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| action | [string](#string) | optional |  |
+| user_id | [string](#string) | optional |  |
+| id | [string](#string) | optional |  |
+| value | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellShowcaseListing"></a>
+
+### ShellShowcaseListing
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) | optional |  |
+| name | [string](#string) | optional |  |
+| description | [string](#string) | optional |  |
+| farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
+| sales | [uint32](#uint32) | optional |  |
+| gross | [uint64](#uint64) | optional |  |
+| views | [uint64](#uint64) | optional |  |
+| likes | [uint32](#uint32) | optional |  |
+| dislikes | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-ShellShowcaseListingSet"></a>
+
+### ShellShowcaseListingSet
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| listings | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
+
+
+
+
+
+
 <a name="ei-ShellSpec"></a>
 
 ### ShellSpec
@@ -3813,6 +3968,23 @@
 
 
 
+<a name="ei-SubmitShellShowcaseRequest"></a>
+
+### SubmitShellShowcaseRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) | optional |  |
+| user_id | [string](#string) | optional |  |
+| farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
+
+
+
+
+
+
 <a name="ei-SubscriptionChangeHintRequest"></a>
 
 ### SubscriptionChangeHintRequest
@@ -3824,6 +3996,21 @@
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | original_transaction_id | [string](#string) | optional |  |
 | next_subscription_level | [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level) | optional |  |
+
+
+
+
+
+
+<a name="ei-TipsDB"></a>
+
+### TipsDB
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| tips | [InGameMail](#ei-InGameMail) | repeated |  |
 
 
 
@@ -3992,6 +4179,41 @@
 | verified | [bool](#bool) | optional |  |
 | verification_override | [bool](#bool) | optional |  |
 | verification_override_value | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-Vector3"></a>
+
+### Vector3
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| x | [float](#float) | optional |  |
+| y | [float](#float) | optional |  |
+| z | [float](#float) | optional |  |
+
+
+
+
+
+
+<a name="ei-Vector4"></a>
+
+### Vector4
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| x | [float](#float) | optional |  |
+| y | [float](#float) | optional |  |
+| z | [float](#float) | optional |  |
+| w | [float](#float) | optional |  |
 
 
 
@@ -4261,6 +4483,7 @@
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
+| UNKNOWN_DEVICE | 0 |  |
 | PHONE | 1 |  |
 | TABLET | 2 |  |
 
@@ -4444,6 +4667,7 @@
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
+| UNKNOWN_PLATFORM | 0 |  |
 | IOS | 1 |  |
 | DROID | 2 |  |
 
@@ -4712,6 +4936,7 @@
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | ALL_USERS | 0 |  |
+| EGGED_UP | 15 |  |
 | CONTRACTS_UNLOCKED | 1 |  |
 | ARTIFACTS_UNLOCKED | 3 |  |
 | FUEL_TANK_UNLOCKED | 4 |  |
@@ -4719,6 +4944,13 @@
 | ULTRA_ACTIVE | 6 |  |
 | NO_PRO_PERMIT | 7 |  |
 | NO_ULTRA | 8 |  |
+| CONTRACTS_INACTIVE | 9 |  |
+| CONTRACTS_ACTIVE | 10 |  |
+| PLAYING_CONTRACT | 11 |  |
+| ARTIFACTS_INACTIVE | 12 |  |
+| ARTIFACTS_ACTIVE | 13 |  |
+| PRESTIGE_READY | 14 |  |
+| PIGGY_HESITANT | 16 |  |
 
 
 

@@ -93,6 +93,54 @@ public object MailDBKt {
       _builder.clearMail()
     }
 
+
+    /**
+     * <code>optional bytes tips_db_data = 2;</code>
+     */
+    public var tipsDbData: com.google.protobuf.ByteString
+      @JvmName("getTipsDbData")
+      get() = _builder.getTipsDbData()
+      @JvmName("setTipsDbData")
+      set(value) {
+        _builder.setTipsDbData(value)
+      }
+    /**
+     * <code>optional bytes tips_db_data = 2;</code>
+     */
+    public fun clearTipsDbData() {
+      _builder.clearTipsDbData()
+    }
+    /**
+     * <code>optional bytes tips_db_data = 2;</code>
+     * @return Whether the tipsDbData field is set.
+     */
+    public fun hasTipsDbData(): kotlin.Boolean {
+      return _builder.hasTipsDbData()
+    }
+
+    /**
+     * <code>optional string tips_checksum = 3;</code>
+     */
+    public var tipsChecksum: kotlin.String
+      @JvmName("getTipsChecksum")
+      get() = _builder.getTipsChecksum()
+      @JvmName("setTipsChecksum")
+      set(value) {
+        _builder.setTipsChecksum(value)
+      }
+    /**
+     * <code>optional string tips_checksum = 3;</code>
+     */
+    public fun clearTipsChecksum() {
+      _builder.clearTipsChecksum()
+    }
+    /**
+     * <code>optional string tips_checksum = 3;</code>
+     * @return Whether the tipsChecksum field is set.
+     */
+    public fun hasTipsChecksum(): kotlin.Boolean {
+      return _builder.hasTipsChecksum()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

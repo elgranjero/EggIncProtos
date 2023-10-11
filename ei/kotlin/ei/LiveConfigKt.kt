@@ -1304,6 +1304,30 @@ public object LiveConfigKt {
       }
 
       /**
+       * <code>optional uint32 shells_lighting_controls_price = 14 [default = 175];</code>
+       */
+      public var shellsLightingControlsPrice: kotlin.Int
+        @JvmName("getShellsLightingControlsPrice")
+        get() = _builder.getShellsLightingControlsPrice()
+        @JvmName("setShellsLightingControlsPrice")
+        set(value) {
+          _builder.setShellsLightingControlsPrice(value)
+        }
+      /**
+       * <code>optional uint32 shells_lighting_controls_price = 14 [default = 175];</code>
+       */
+      public fun clearShellsLightingControlsPrice() {
+        _builder.clearShellsLightingControlsPrice()
+      }
+      /**
+       * <code>optional uint32 shells_lighting_controls_price = 14 [default = 175];</code>
+       * @return Whether the shellsLightingControlsPrice field is set.
+       */
+      public fun hasShellsLightingControlsPrice(): kotlin.Boolean {
+        return _builder.hasShellsLightingControlsPrice()
+      }
+
+      /**
        * <code>optional double contracts_expert_league_min_soul_power = 10;</code>
        */
       public var contractsExpertLeagueMinSoulPower: kotlin.Double

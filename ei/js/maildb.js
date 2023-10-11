@@ -79,7 +79,9 @@ proto.ei.MailDB.prototype.toObject = function(opt_includeInstance) {
 proto.ei.MailDB.toObject = function(includeInstance, msg) {
   var f, obj = {
     mailList: jspb.Message.toObjectList(msg.getMailList(),
-    proto.ei.InGameMail.toObject, includeInstance)
+    proto.ei.InGameMail.toObject, includeInstance),
+    tipsDbData: msg.getTipsDbData_asB64(),
+    tipsChecksum: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -121,6 +123,14 @@ proto.ei.MailDB.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,proto.ei.InGameMail.deserializeBinaryFromReader);
       msg.addMail(value);
       break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setTipsDbData(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTipsChecksum(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -156,6 +166,20 @@ proto.ei.MailDB.serializeBinaryToWriter = function(message, writer) {
       1,
       f,
       proto.ei.InGameMail.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeBytes(
+      2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
+      3,
+      f
     );
   }
 };
@@ -196,6 +220,102 @@ proto.ei.MailDB.prototype.addMail = function(opt_value, opt_index) {
  */
 proto.ei.MailDB.prototype.clearMailList = function() {
   return this.setMailList([]);
+};
+
+
+/**
+ * optional bytes tips_db_data = 2;
+ * @return {string}
+ */
+proto.ei.MailDB.prototype.getTipsDbData = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * optional bytes tips_db_data = 2;
+ * This is a type-conversion wrapper around `getTipsDbData()`
+ * @return {string}
+ */
+proto.ei.MailDB.prototype.getTipsDbData_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getTipsDbData()));
+};
+
+
+/**
+ * optional bytes tips_db_data = 2;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getTipsDbData()`
+ * @return {!Uint8Array}
+ */
+proto.ei.MailDB.prototype.getTipsDbData_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getTipsDbData()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.ei.MailDB} returns this
+ */
+proto.ei.MailDB.prototype.setTipsDbData = function(value) {
+  return jspb.Message.setField(this, 2, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MailDB} returns this
+ */
+proto.ei.MailDB.prototype.clearTipsDbData = function() {
+  return jspb.Message.setField(this, 2, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MailDB.prototype.hasTipsDbData = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string tips_checksum = 3;
+ * @return {string}
+ */
+proto.ei.MailDB.prototype.getTipsChecksum = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.MailDB} returns this
+ */
+proto.ei.MailDB.prototype.setTipsChecksum = function(value) {
+  return jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MailDB} returns this
+ */
+proto.ei.MailDB.prototype.clearTipsChecksum = function() {
+  return jspb.Message.setField(this, 3, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MailDB.prototype.hasTipsChecksum = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

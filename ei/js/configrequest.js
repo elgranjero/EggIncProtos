@@ -77,7 +77,8 @@ proto.ei.ConfigRequest.toObject = function(includeInstance, msg) {
     artifactsUnlocked: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
     fuelTankUnlocked: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
     proPermit: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-    ultra: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f
+    ultra: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    tipsChecksum: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -142,6 +143,10 @@ proto.ei.ConfigRequest.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUltra(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTipsChecksum(value);
       break;
     default:
       reader.skipField();
@@ -219,6 +224,13 @@ proto.ei.ConfigRequest.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       7,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeString(
+      8,
       f
     );
   }
@@ -475,6 +487,42 @@ proto.ei.ConfigRequest.prototype.clearUltra = function() {
  */
 proto.ei.ConfigRequest.prototype.hasUltra = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional string tips_checksum = 8;
+ * @return {string}
+ */
+proto.ei.ConfigRequest.prototype.getTipsChecksum = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.setTipsChecksum = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ConfigRequest} returns this
+ */
+proto.ei.ConfigRequest.prototype.clearTipsChecksum = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ConfigRequest.prototype.hasTipsChecksum = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

@@ -2383,6 +2383,7 @@ proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
     shellsIntroTickets: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
     shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    shellsLightingControlsPrice: jspb.Message.getFieldWithDefault(msg, 14, 175),
     contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
     newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
     contractsClubAvailable: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
@@ -2458,6 +2459,10 @@ proto.ei.LiveConfig.MiscConfig.deserializeBinaryFromReader = function(msg, reade
     case 9:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setShellsIntroAlertThreshold(value);
+      break;
+    case 14:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setShellsLightingControlsPrice(value);
       break;
     case 10:
       var value = /** @type {number} */ (reader.readDouble());
@@ -2564,6 +2569,13 @@ proto.ei.LiveConfig.MiscConfig.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeUint32(
       9,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeUint32(
+      14,
       f
     );
   }
@@ -2919,6 +2931,42 @@ proto.ei.LiveConfig.MiscConfig.prototype.clearShellsIntroAlertThreshold = functi
  */
 proto.ei.LiveConfig.MiscConfig.prototype.hasShellsIntroAlertThreshold = function() {
   return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional uint32 shells_lighting_controls_price = 14;
+ * @return {number}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getShellsLightingControlsPrice = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 14, 175));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setShellsLightingControlsPrice = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearShellsLightingControlsPrice = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasShellsLightingControlsPrice = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 

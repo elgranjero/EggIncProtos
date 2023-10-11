@@ -707,6 +707,14 @@
                 </li>
               
                 <li>
+                  <a href="#ei.MailState"><span class="badge">M</span>MailState</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.MailState.TipState"><span class="badge">M</span>MailState.TipState</a>
+                </li>
+              
+                <li>
                   <a href="#ei.MissionInfo"><span class="badge">M</span>MissionInfo</a>
                 </li>
               
@@ -795,6 +803,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ShellDB.LightingConfig"><span class="badge">M</span>ShellDB.LightingConfig</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ShellDB.SavedFarmConfiguration"><span class="badge">M</span>ShellDB.SavedFarmConfiguration</a>
                 </li>
               
@@ -851,6 +863,22 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ShellShowcase"><span class="badge">M</span>ShellShowcase</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShellShowcaseAction"><span class="badge">M</span>ShellShowcaseAction</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShellShowcaseListing"><span class="badge">M</span>ShellShowcaseListing</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShellShowcaseListingSet"><span class="badge">M</span>ShellShowcaseListingSet</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ShellSpec"><span class="badge">M</span>ShellSpec</a>
                 </li>
               
@@ -863,7 +891,15 @@
                 </li>
               
                 <li>
+                  <a href="#ei.SubmitShellShowcaseRequest"><span class="badge">M</span>SubmitShellShowcaseRequest</a>
+                </li>
+              
+                <li>
                   <a href="#ei.SubscriptionChangeHintRequest"><span class="badge">M</span>SubscriptionChangeHintRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TipsDB"><span class="badge">M</span>TipsDB</a>
                 </li>
               
                 <li>
@@ -892,6 +928,14 @@
               
                 <li>
                   <a href="#ei.UserVerificationAnalysis"><span class="badge">M</span>UserVerificationAnalysis</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.Vector3"><span class="badge">M</span>Vector3</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.Vector4"><span class="badge">M</span>Vector4</a>
                 </li>
               
                 <li>
@@ -2679,6 +2723,13 @@
                   <td>read_mail_ids</td>
                   <td><a href="#string">string</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>mail_state</td>
+                  <td><a href="#ei.MailState">MailState</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -4703,6 +4754,13 @@
                 <tr>
                   <td>ultra</td>
                   <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tips_checksum</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -8503,6 +8561,48 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>tip</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>priority</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>min_days_since_last_tip</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>max_retries</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>days_until_retry</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>category</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -9583,6 +9683,13 @@
                 </tr>
               
                 <tr>
+                  <td>shells_lighting_controls_price</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> Default: 175</p></td>
+                </tr>
+              
+                <tr>
                   <td>contracts_expert_league_min_soul_power</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
@@ -9926,6 +10033,96 @@
                   <td>mail</td>
                   <td><a href="#ei.InGameMail">InGameMail</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tips_db_data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tips_checksum</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.MailState">MailState</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>read_mail_ids</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tips_states</td>
+                  <td><a href="#ei.MailState.TipState">MailState.TipState</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tips_checksum</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.MailState.TipState">MailState.TipState</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reads</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>time_read</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -11130,6 +11327,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>lighting_controls_unlocked</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -11217,6 +11421,100 @@
                   <td>chicken_configs</td>
                   <td><a href="#ei.ShellDB.ChickenConfig">ShellDB.ChickenConfig</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>lighting_config_enabled</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>lighting_config</td>
+                  <td><a href="#ei.ShellDB.LightingConfig">ShellDB.LightingConfig</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellDB.LightingConfig">ShellDB.LightingConfig</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>light_dir</td>
+                  <td><a href="#ei.Vector3">Vector3</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>light_direct_color</td>
+                  <td><a href="#ei.Vector4">Vector4</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>light_direct_intensity</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>light_ambient_color</td>
+                  <td><a href="#ei.Vector4">Vector4</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>light_ambient_intensity</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fog_color</td>
+                  <td><a href="#ei.Vector4">Vector4</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fog_near</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fog_far</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fog_density</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -12004,6 +12302,193 @@
 
         
       
+        <h3 id="ei.ShellShowcase">ShellShowcase</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>top</td>
+                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>featured</td>
+                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>random</td>
+                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellShowcaseAction">ShellShowcaseAction</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>action</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>user_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellShowcaseListing">ShellShowcaseListing</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>description</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>farm_config</td>
+                  <td><a href="#ei.ShellDB.FarmConfiguration">ShellDB.FarmConfiguration</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sales</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gross</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>views</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>likes</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>dislikes</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ShellShowcaseListingSet">ShellShowcaseListingSet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>listings</td>
+                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.ShellSpec">ShellSpec</h3>
         <p></p>
 
@@ -12272,6 +12757,44 @@
 
         
       
+        <h3 id="ei.SubmitShellShowcaseRequest">SubmitShellShowcaseRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>user_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>farm_config</td>
+                  <td><a href="#ei.ShellDB.FarmConfiguration">ShellDB.FarmConfiguration</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.SubscriptionChangeHintRequest">SubscriptionChangeHintRequest</h3>
         <p></p>
 
@@ -12300,6 +12823,30 @@
                   <td>next_subscription_level</td>
                   <td><a href="#ei.UserSubscriptionInfo.Level">UserSubscriptionInfo.Level</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TipsDB">TipsDB</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>tips</td>
+                  <td><a href="#ei.InGameMail">InGameMail</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -12908,6 +13455,89 @@
                 <tr>
                   <td>verification_override_value</td>
                   <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.Vector3">Vector3</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>z</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.Vector4">Vector4</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>z</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>w</td>
+                  <td><a href="#float">float</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -13791,6 +14421,12 @@
           <tbody>
             
               <tr>
+                <td>UNKNOWN_DEVICE</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>PHONE</td>
                 <td>1</td>
                 <td><p></p></td>
@@ -14348,6 +14984,12 @@
             <tr><td>Name</td><td>Number</td><td>Description</td></tr>
           </thead>
           <tbody>
+            
+              <tr>
+                <td>UNKNOWN_PLATFORM</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
             
               <tr>
                 <td>IOS</td>
@@ -15468,6 +16110,12 @@
               </tr>
             
               <tr>
+                <td>EGGED_UP</td>
+                <td>15</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>CONTRACTS_UNLOCKED</td>
                 <td>1</td>
                 <td><p></p></td>
@@ -15506,6 +16154,48 @@
               <tr>
                 <td>NO_ULTRA</td>
                 <td>8</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CONTRACTS_INACTIVE</td>
+                <td>9</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CONTRACTS_ACTIVE</td>
+                <td>10</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PLAYING_CONTRACT</td>
+                <td>11</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ARTIFACTS_INACTIVE</td>
+                <td>12</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ARTIFACTS_ACTIVE</td>
+                <td>13</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PRESTIGE_READY</td>
+                <td>14</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PIGGY_HESITANT</td>
+                <td>16</td>
                 <td><p></p></td>
               </tr>
             

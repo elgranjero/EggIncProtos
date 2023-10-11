@@ -665,7 +665,7 @@ proto.ei.JoinCoopRequest.prototype.hasPointsReplay = function() {
  * @return {!proto.ei.Platform}
  */
 proto.ei.JoinCoopRequest.prototype.getPlatform = function() {
-  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 5, 1));
+  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 

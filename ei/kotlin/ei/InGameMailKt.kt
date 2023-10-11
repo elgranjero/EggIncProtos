@@ -549,6 +549,150 @@ public object InGameMailKt {
     public fun hasGoldTip(): kotlin.Boolean {
       return _builder.hasGoldTip()
     }
+
+    /**
+     * <code>optional bool tip = 23;</code>
+     */
+    public var tip: kotlin.Boolean
+      @JvmName("getTip")
+      get() = _builder.getTip()
+      @JvmName("setTip")
+      set(value) {
+        _builder.setTip(value)
+      }
+    /**
+     * <code>optional bool tip = 23;</code>
+     */
+    public fun clearTip() {
+      _builder.clearTip()
+    }
+    /**
+     * <code>optional bool tip = 23;</code>
+     * @return Whether the tip field is set.
+     */
+    public fun hasTip(): kotlin.Boolean {
+      return _builder.hasTip()
+    }
+
+    /**
+     * <code>optional uint32 priority = 27;</code>
+     */
+    public var priority: kotlin.Int
+      @JvmName("getPriority")
+      get() = _builder.getPriority()
+      @JvmName("setPriority")
+      set(value) {
+        _builder.setPriority(value)
+      }
+    /**
+     * <code>optional uint32 priority = 27;</code>
+     */
+    public fun clearPriority() {
+      _builder.clearPriority()
+    }
+    /**
+     * <code>optional uint32 priority = 27;</code>
+     * @return Whether the priority field is set.
+     */
+    public fun hasPriority(): kotlin.Boolean {
+      return _builder.hasPriority()
+    }
+
+    /**
+     * <code>optional double min_days_since_last_tip = 24;</code>
+     */
+    public var minDaysSinceLastTip: kotlin.Double
+      @JvmName("getMinDaysSinceLastTip")
+      get() = _builder.getMinDaysSinceLastTip()
+      @JvmName("setMinDaysSinceLastTip")
+      set(value) {
+        _builder.setMinDaysSinceLastTip(value)
+      }
+    /**
+     * <code>optional double min_days_since_last_tip = 24;</code>
+     */
+    public fun clearMinDaysSinceLastTip() {
+      _builder.clearMinDaysSinceLastTip()
+    }
+    /**
+     * <code>optional double min_days_since_last_tip = 24;</code>
+     * @return Whether the minDaysSinceLastTip field is set.
+     */
+    public fun hasMinDaysSinceLastTip(): kotlin.Boolean {
+      return _builder.hasMinDaysSinceLastTip()
+    }
+
+    /**
+     * <code>optional uint32 max_retries = 25;</code>
+     */
+    public var maxRetries: kotlin.Int
+      @JvmName("getMaxRetries")
+      get() = _builder.getMaxRetries()
+      @JvmName("setMaxRetries")
+      set(value) {
+        _builder.setMaxRetries(value)
+      }
+    /**
+     * <code>optional uint32 max_retries = 25;</code>
+     */
+    public fun clearMaxRetries() {
+      _builder.clearMaxRetries()
+    }
+    /**
+     * <code>optional uint32 max_retries = 25;</code>
+     * @return Whether the maxRetries field is set.
+     */
+    public fun hasMaxRetries(): kotlin.Boolean {
+      return _builder.hasMaxRetries()
+    }
+
+    /**
+     * <code>optional double days_until_retry = 26;</code>
+     */
+    public var daysUntilRetry: kotlin.Double
+      @JvmName("getDaysUntilRetry")
+      get() = _builder.getDaysUntilRetry()
+      @JvmName("setDaysUntilRetry")
+      set(value) {
+        _builder.setDaysUntilRetry(value)
+      }
+    /**
+     * <code>optional double days_until_retry = 26;</code>
+     */
+    public fun clearDaysUntilRetry() {
+      _builder.clearDaysUntilRetry()
+    }
+    /**
+     * <code>optional double days_until_retry = 26;</code>
+     * @return Whether the daysUntilRetry field is set.
+     */
+    public fun hasDaysUntilRetry(): kotlin.Boolean {
+      return _builder.hasDaysUntilRetry()
+    }
+
+    /**
+     * <code>optional string category = 28;</code>
+     */
+    public var category: kotlin.String
+      @JvmName("getCategory")
+      get() = _builder.getCategory()
+      @JvmName("setCategory")
+      set(value) {
+        _builder.setCategory(value)
+      }
+    /**
+     * <code>optional string category = 28;</code>
+     */
+    public fun clearCategory() {
+      _builder.clearCategory()
+    }
+    /**
+     * <code>optional string category = 28;</code>
+     * @return Whether the category field is set.
+     */
+    public fun hasCategory(): kotlin.Boolean {
+      return _builder.hasCategory()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

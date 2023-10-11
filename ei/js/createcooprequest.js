@@ -845,7 +845,7 @@ proto.ei.CreateCoopRequest.prototype.hasPointsReplay = function() {
  * @return {!proto.ei.Platform}
  */
 proto.ei.CreateCoopRequest.prototype.getPlatform = function() {
-  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 6, 1));
+  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 

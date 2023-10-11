@@ -653,7 +653,7 @@ proto.ei.AutoJoinCoopRequest.prototype.hasSecondsRemaining = function() {
  * @return {!proto.ei.Platform}
  */
 proto.ei.AutoJoinCoopRequest.prototype.getPlatform = function() {
-  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 6, 1));
+  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 

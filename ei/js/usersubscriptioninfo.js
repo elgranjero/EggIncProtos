@@ -742,7 +742,7 @@ proto.ei.UserSubscriptionInfo.prototype.hasLockNextSubscriptionLevel = function(
  * @return {!proto.ei.Platform}
  */
 proto.ei.UserSubscriptionInfo.prototype.getPlatform = function() {
-  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 10, 1));
+  return /** @type {!proto.ei.Platform} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
 

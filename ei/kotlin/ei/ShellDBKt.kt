@@ -665,7 +665,31 @@ public object ShellDBKt {
     @kotlin.jvm.JvmName("clearNewShellsSeen")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, NewShellsSeenProxy>.clear() {
       _builder.clearNewShellsSeen()
-    }}
+    }
+    /**
+     * <code>optional bool lighting_controls_unlocked = 10;</code>
+     */
+    public var lightingControlsUnlocked: kotlin.Boolean
+      @JvmName("getLightingControlsUnlocked")
+      get() = _builder.getLightingControlsUnlocked()
+      @JvmName("setLightingControlsUnlocked")
+      set(value) {
+        _builder.setLightingControlsUnlocked(value)
+      }
+    /**
+     * <code>optional bool lighting_controls_unlocked = 10;</code>
+     */
+    public fun clearLightingControlsUnlocked() {
+      _builder.clearLightingControlsUnlocked()
+    }
+    /**
+     * <code>optional bool lighting_controls_unlocked = 10;</code>
+     * @return Whether the lightingControlsUnlocked field is set.
+     */
+    public fun hasLightingControlsUnlocked(): kotlin.Boolean {
+      return _builder.hasLightingControlsUnlocked()
+    }
+  }
   @kotlin.jvm.JvmName("-initializeshellStatus")
   public inline fun shellStatus(block: ei.ShellDBKt.ShellStatusKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ShellStatus =
     ei.ShellDBKt.ShellStatusKt.Dsl._create(ei.Ei.ShellDB.ShellStatus.newBuilder()).apply { block() }._build()
@@ -1311,6 +1335,56 @@ public object ShellDBKt {
         _builder.clearChickenConfigs()
       }
 
+
+      /**
+       * <code>optional bool lighting_config_enabled = 11;</code>
+       */
+      public var lightingConfigEnabled: kotlin.Boolean
+        @JvmName("getLightingConfigEnabled")
+        get() = _builder.getLightingConfigEnabled()
+        @JvmName("setLightingConfigEnabled")
+        set(value) {
+          _builder.setLightingConfigEnabled(value)
+        }
+      /**
+       * <code>optional bool lighting_config_enabled = 11;</code>
+       */
+      public fun clearLightingConfigEnabled() {
+        _builder.clearLightingConfigEnabled()
+      }
+      /**
+       * <code>optional bool lighting_config_enabled = 11;</code>
+       * @return Whether the lightingConfigEnabled field is set.
+       */
+      public fun hasLightingConfigEnabled(): kotlin.Boolean {
+        return _builder.hasLightingConfigEnabled()
+      }
+
+      /**
+       * <code>optional .ei.ShellDB.LightingConfig lighting_config = 12;</code>
+       */
+      public var lightingConfig: ei.Ei.ShellDB.LightingConfig
+        @JvmName("getLightingConfig")
+        get() = _builder.getLightingConfig()
+        @JvmName("setLightingConfig")
+        set(value) {
+          _builder.setLightingConfig(value)
+        }
+      /**
+       * <code>optional .ei.ShellDB.LightingConfig lighting_config = 12;</code>
+       */
+      public fun clearLightingConfig() {
+        _builder.clearLightingConfig()
+      }
+      /**
+       * <code>optional .ei.ShellDB.LightingConfig lighting_config = 12;</code>
+       * @return Whether the lightingConfig field is set.
+       */
+      public fun hasLightingConfig(): kotlin.Boolean {
+        return _builder.hasLightingConfig()
+      }
+      public val FarmConfigurationKt.Dsl.lightingConfigOrNull: ei.Ei.ShellDB.LightingConfig?
+        get() = _builder.lightingConfigOrNull
     }
   }
   @kotlin.jvm.JvmName("-initializesavedFarmConfiguration")
@@ -1775,6 +1849,250 @@ public object ShellDBKt {
       }
     }
   }
+  @kotlin.jvm.JvmName("-initializelightingConfig")
+  public inline fun lightingConfig(block: ei.ShellDBKt.LightingConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.LightingConfig =
+    ei.ShellDBKt.LightingConfigKt.Dsl._create(ei.Ei.ShellDB.LightingConfig.newBuilder()).apply { block() }._build()
+  public object LightingConfigKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.ShellDB.LightingConfig.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.ShellDB.LightingConfig.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.ShellDB.LightingConfig = _builder.build()
+
+      /**
+       * <code>optional .ei.Vector3 light_dir = 1;</code>
+       */
+      public var lightDir: ei.Ei.Vector3
+        @JvmName("getLightDir")
+        get() = _builder.getLightDir()
+        @JvmName("setLightDir")
+        set(value) {
+          _builder.setLightDir(value)
+        }
+      /**
+       * <code>optional .ei.Vector3 light_dir = 1;</code>
+       */
+      public fun clearLightDir() {
+        _builder.clearLightDir()
+      }
+      /**
+       * <code>optional .ei.Vector3 light_dir = 1;</code>
+       * @return Whether the lightDir field is set.
+       */
+      public fun hasLightDir(): kotlin.Boolean {
+        return _builder.hasLightDir()
+      }
+      public val LightingConfigKt.Dsl.lightDirOrNull: ei.Ei.Vector3?
+        get() = _builder.lightDirOrNull
+
+      /**
+       * <code>optional .ei.Vector4 light_direct_color = 2;</code>
+       */
+      public var lightDirectColor: ei.Ei.Vector4
+        @JvmName("getLightDirectColor")
+        get() = _builder.getLightDirectColor()
+        @JvmName("setLightDirectColor")
+        set(value) {
+          _builder.setLightDirectColor(value)
+        }
+      /**
+       * <code>optional .ei.Vector4 light_direct_color = 2;</code>
+       */
+      public fun clearLightDirectColor() {
+        _builder.clearLightDirectColor()
+      }
+      /**
+       * <code>optional .ei.Vector4 light_direct_color = 2;</code>
+       * @return Whether the lightDirectColor field is set.
+       */
+      public fun hasLightDirectColor(): kotlin.Boolean {
+        return _builder.hasLightDirectColor()
+      }
+      public val LightingConfigKt.Dsl.lightDirectColorOrNull: ei.Ei.Vector4?
+        get() = _builder.lightDirectColorOrNull
+
+      /**
+       * <code>optional float light_direct_intensity = 3;</code>
+       */
+      public var lightDirectIntensity: kotlin.Float
+        @JvmName("getLightDirectIntensity")
+        get() = _builder.getLightDirectIntensity()
+        @JvmName("setLightDirectIntensity")
+        set(value) {
+          _builder.setLightDirectIntensity(value)
+        }
+      /**
+       * <code>optional float light_direct_intensity = 3;</code>
+       */
+      public fun clearLightDirectIntensity() {
+        _builder.clearLightDirectIntensity()
+      }
+      /**
+       * <code>optional float light_direct_intensity = 3;</code>
+       * @return Whether the lightDirectIntensity field is set.
+       */
+      public fun hasLightDirectIntensity(): kotlin.Boolean {
+        return _builder.hasLightDirectIntensity()
+      }
+
+      /**
+       * <code>optional .ei.Vector4 light_ambient_color = 4;</code>
+       */
+      public var lightAmbientColor: ei.Ei.Vector4
+        @JvmName("getLightAmbientColor")
+        get() = _builder.getLightAmbientColor()
+        @JvmName("setLightAmbientColor")
+        set(value) {
+          _builder.setLightAmbientColor(value)
+        }
+      /**
+       * <code>optional .ei.Vector4 light_ambient_color = 4;</code>
+       */
+      public fun clearLightAmbientColor() {
+        _builder.clearLightAmbientColor()
+      }
+      /**
+       * <code>optional .ei.Vector4 light_ambient_color = 4;</code>
+       * @return Whether the lightAmbientColor field is set.
+       */
+      public fun hasLightAmbientColor(): kotlin.Boolean {
+        return _builder.hasLightAmbientColor()
+      }
+      public val LightingConfigKt.Dsl.lightAmbientColorOrNull: ei.Ei.Vector4?
+        get() = _builder.lightAmbientColorOrNull
+
+      /**
+       * <code>optional float light_ambient_intensity = 5;</code>
+       */
+      public var lightAmbientIntensity: kotlin.Float
+        @JvmName("getLightAmbientIntensity")
+        get() = _builder.getLightAmbientIntensity()
+        @JvmName("setLightAmbientIntensity")
+        set(value) {
+          _builder.setLightAmbientIntensity(value)
+        }
+      /**
+       * <code>optional float light_ambient_intensity = 5;</code>
+       */
+      public fun clearLightAmbientIntensity() {
+        _builder.clearLightAmbientIntensity()
+      }
+      /**
+       * <code>optional float light_ambient_intensity = 5;</code>
+       * @return Whether the lightAmbientIntensity field is set.
+       */
+      public fun hasLightAmbientIntensity(): kotlin.Boolean {
+        return _builder.hasLightAmbientIntensity()
+      }
+
+      /**
+       * <code>optional .ei.Vector4 fog_color = 6;</code>
+       */
+      public var fogColor: ei.Ei.Vector4
+        @JvmName("getFogColor")
+        get() = _builder.getFogColor()
+        @JvmName("setFogColor")
+        set(value) {
+          _builder.setFogColor(value)
+        }
+      /**
+       * <code>optional .ei.Vector4 fog_color = 6;</code>
+       */
+      public fun clearFogColor() {
+        _builder.clearFogColor()
+      }
+      /**
+       * <code>optional .ei.Vector4 fog_color = 6;</code>
+       * @return Whether the fogColor field is set.
+       */
+      public fun hasFogColor(): kotlin.Boolean {
+        return _builder.hasFogColor()
+      }
+      public val LightingConfigKt.Dsl.fogColorOrNull: ei.Ei.Vector4?
+        get() = _builder.fogColorOrNull
+
+      /**
+       * <code>optional float fog_near = 7;</code>
+       */
+      public var fogNear: kotlin.Float
+        @JvmName("getFogNear")
+        get() = _builder.getFogNear()
+        @JvmName("setFogNear")
+        set(value) {
+          _builder.setFogNear(value)
+        }
+      /**
+       * <code>optional float fog_near = 7;</code>
+       */
+      public fun clearFogNear() {
+        _builder.clearFogNear()
+      }
+      /**
+       * <code>optional float fog_near = 7;</code>
+       * @return Whether the fogNear field is set.
+       */
+      public fun hasFogNear(): kotlin.Boolean {
+        return _builder.hasFogNear()
+      }
+
+      /**
+       * <code>optional float fog_far = 8;</code>
+       */
+      public var fogFar: kotlin.Float
+        @JvmName("getFogFar")
+        get() = _builder.getFogFar()
+        @JvmName("setFogFar")
+        set(value) {
+          _builder.setFogFar(value)
+        }
+      /**
+       * <code>optional float fog_far = 8;</code>
+       */
+      public fun clearFogFar() {
+        _builder.clearFogFar()
+      }
+      /**
+       * <code>optional float fog_far = 8;</code>
+       * @return Whether the fogFar field is set.
+       */
+      public fun hasFogFar(): kotlin.Boolean {
+        return _builder.hasFogFar()
+      }
+
+      /**
+       * <code>optional float fog_density = 9;</code>
+       */
+      public var fogDensity: kotlin.Float
+        @JvmName("getFogDensity")
+        get() = _builder.getFogDensity()
+        @JvmName("setFogDensity")
+        set(value) {
+          _builder.setFogDensity(value)
+        }
+      /**
+       * <code>optional float fog_density = 9;</code>
+       */
+      public fun clearFogDensity() {
+        _builder.clearFogDensity()
+      }
+      /**
+       * <code>optional float fog_density = 9;</code>
+       * @return Whether the fogDensity field is set.
+       */
+      public fun hasFogDensity(): kotlin.Boolean {
+        return _builder.hasFogDensity()
+      }
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.copy(block: ei.ShellDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB =
@@ -1795,6 +2113,9 @@ public inline fun ei.Ei.ShellDB.ShellSetVariationStatus.copy(block: ei.ShellDBKt
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.FarmConfiguration.copy(block: ei.ShellDBKt.FarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.FarmConfiguration =
   ei.ShellDBKt.FarmConfigurationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellDB.FarmConfigurationOrBuilder.lightingConfigOrNull: ei.Ei.ShellDB.LightingConfig?
+  get() = if (hasLightingConfig()) getLightingConfig() else null
 
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.SavedFarmConfiguration.copy(block: ei.ShellDBKt.SavedFarmConfigurationKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.SavedFarmConfiguration =
@@ -1818,4 +2139,20 @@ public inline fun ei.Ei.ShellDB.ShellGroupConfiguration.copy(block: ei.ShellDBKt
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ShellDB.ChickenConfig.copy(block: ei.ShellDBKt.ChickenConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.ChickenConfig =
   ei.ShellDBKt.ChickenConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.ShellDB.LightingConfig.copy(block: ei.ShellDBKt.LightingConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellDB.LightingConfig =
+  ei.ShellDBKt.LightingConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.ShellDB.LightingConfigOrBuilder.lightDirOrNull: ei.Ei.Vector3?
+  get() = if (hasLightDir()) getLightDir() else null
+
+val ei.Ei.ShellDB.LightingConfigOrBuilder.lightDirectColorOrNull: ei.Ei.Vector4?
+  get() = if (hasLightDirectColor()) getLightDirectColor() else null
+
+val ei.Ei.ShellDB.LightingConfigOrBuilder.lightAmbientColorOrNull: ei.Ei.Vector4?
+  get() = if (hasLightAmbientColor()) getLightAmbientColor() else null
+
+val ei.Ei.ShellDB.LightingConfigOrBuilder.fogColorOrNull: ei.Ei.Vector4?
+  get() = if (hasFogColor()) getFogColor() else null
 

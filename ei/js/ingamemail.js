@@ -99,7 +99,13 @@ proto.ei.InGameMail.toObject = function(includeInstance, msg) {
     minMysticalBonus: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
     userType: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
     minPiggyBreaks: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-    goldTip: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
+    goldTip: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    tip: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
+    priority: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
+    minDaysSinceLastTip: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
+    maxRetries: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
+    daysUntilRetry: (f = jspb.Message.getOptionalFloatingPointField(msg, 26)) == null ? undefined : f,
+    category: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -216,6 +222,30 @@ proto.ei.InGameMail.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setGoldTip(value);
+      break;
+    case 23:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTip(value);
+      break;
+    case 27:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPriority(value);
+      break;
+    case 24:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMinDaysSinceLastTip(value);
+      break;
+    case 25:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setMaxRetries(value);
+      break;
+    case 26:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setDaysUntilRetry(value);
+      break;
+    case 28:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCategory(value);
       break;
     default:
       reader.skipField();
@@ -384,6 +414,48 @@ proto.ei.InGameMail.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 23));
+  if (f != null) {
+    writer.writeBool(
+      23,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 27));
+  if (f != null) {
+    writer.writeUint32(
+      27,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 24));
+  if (f != null) {
+    writer.writeDouble(
+      24,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 25));
+  if (f != null) {
+    writer.writeUint32(
+      25,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 26));
+  if (f != null) {
+    writer.writeDouble(
+      26,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 28));
+  if (f != null) {
+    writer.writeString(
+      28,
       f
     );
   }
@@ -1109,6 +1181,222 @@ proto.ei.InGameMail.prototype.clearGoldTip = function() {
  */
 proto.ei.InGameMail.prototype.hasGoldTip = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional bool tip = 23;
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.getTip = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 23, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setTip = function(value) {
+  return jspb.Message.setField(this, 23, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearTip = function() {
+  return jspb.Message.setField(this, 23, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasTip = function() {
+  return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
+ * optional uint32 priority = 27;
+ * @return {number}
+ */
+proto.ei.InGameMail.prototype.getPriority = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 27, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setPriority = function(value) {
+  return jspb.Message.setField(this, 27, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearPriority = function() {
+  return jspb.Message.setField(this, 27, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasPriority = function() {
+  return jspb.Message.getField(this, 27) != null;
+};
+
+
+/**
+ * optional double min_days_since_last_tip = 24;
+ * @return {number}
+ */
+proto.ei.InGameMail.prototype.getMinDaysSinceLastTip = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 24, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setMinDaysSinceLastTip = function(value) {
+  return jspb.Message.setField(this, 24, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearMinDaysSinceLastTip = function() {
+  return jspb.Message.setField(this, 24, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasMinDaysSinceLastTip = function() {
+  return jspb.Message.getField(this, 24) != null;
+};
+
+
+/**
+ * optional uint32 max_retries = 25;
+ * @return {number}
+ */
+proto.ei.InGameMail.prototype.getMaxRetries = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 25, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setMaxRetries = function(value) {
+  return jspb.Message.setField(this, 25, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearMaxRetries = function() {
+  return jspb.Message.setField(this, 25, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasMaxRetries = function() {
+  return jspb.Message.getField(this, 25) != null;
+};
+
+
+/**
+ * optional double days_until_retry = 26;
+ * @return {number}
+ */
+proto.ei.InGameMail.prototype.getDaysUntilRetry = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 26, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setDaysUntilRetry = function(value) {
+  return jspb.Message.setField(this, 26, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearDaysUntilRetry = function() {
+  return jspb.Message.setField(this, 26, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasDaysUntilRetry = function() {
+  return jspb.Message.getField(this, 26) != null;
+};
+
+
+/**
+ * optional string category = 28;
+ * @return {string}
+ */
+proto.ei.InGameMail.prototype.getCategory = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 28, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setCategory = function(value) {
+  return jspb.Message.setField(this, 28, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearCategory = function() {
+  return jspb.Message.setField(this, 28, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasCategory = function() {
+  return jspb.Message.getField(this, 28) != null;
 };
 
 

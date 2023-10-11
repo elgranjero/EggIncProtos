@@ -191,6 +191,30 @@ public object ConfigRequestKt {
     public fun hasUltra(): kotlin.Boolean {
       return _builder.hasUltra()
     }
+
+    /**
+     * <code>optional string tips_checksum = 8;</code>
+     */
+    public var tipsChecksum: kotlin.String
+      @JvmName("getTipsChecksum")
+      get() = _builder.getTipsChecksum()
+      @JvmName("setTipsChecksum")
+      set(value) {
+        _builder.setTipsChecksum(value)
+      }
+    /**
+     * <code>optional string tips_checksum = 8;</code>
+     */
+    public fun clearTipsChecksum() {
+      _builder.clearTipsChecksum()
+    }
+    /**
+     * <code>optional string tips_checksum = 8;</code>
+     * @return Whether the tipsChecksum field is set.
+     */
+    public fun hasTipsChecksum(): kotlin.Boolean {
+      return _builder.hasTipsChecksum()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
