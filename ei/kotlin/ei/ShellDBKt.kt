@@ -1479,6 +1479,30 @@ public object ShellDBKt {
       public fun hasClientSaveTime(): kotlin.Boolean {
         return _builder.hasClientSaveTime()
       }
+
+      /**
+       * <code>optional string server_id = 4;</code>
+       */
+      public var serverId: kotlin.String
+        @JvmName("getServerId")
+        get() = _builder.getServerId()
+        @JvmName("setServerId")
+        set(value) {
+          _builder.setServerId(value)
+        }
+      /**
+       * <code>optional string server_id = 4;</code>
+       */
+      public fun clearServerId() {
+        _builder.clearServerId()
+      }
+      /**
+       * <code>optional string server_id = 4;</code>
+       * @return Whether the serverId field is set.
+       */
+      public fun hasServerId(): kotlin.Boolean {
+        return _builder.hasServerId()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializeshellConfiguration")

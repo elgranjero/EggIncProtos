@@ -16,6 +16,7 @@ goog.provide('proto.ei.SubmitShellShowcaseRequest');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ei.BasicRequestInfo');
 goog.require('proto.ei.ShellDB.FarmConfiguration');
 
 /**
@@ -71,7 +72,8 @@ proto.ei.SubmitShellShowcaseRequest.prototype.toObject = function(opt_includeIns
  */
 proto.ei.SubmitShellShowcaseRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    localId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f)
   };
@@ -110,9 +112,14 @@ proto.ei.SubmitShellShowcaseRequest.deserializeBinaryFromReader = function(msg, 
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 4:
+      var value = new proto.ei.BasicRequestInfo;
+      reader.readMessage(value,proto.ei.BasicRequestInfo.deserializeBinaryFromReader);
+      msg.setRinfo(value);
+      break;
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setId(value);
+      msg.setLocalId(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -152,6 +159,14 @@ proto.ei.SubmitShellShowcaseRequest.prototype.serializeBinary = function() {
  */
 proto.ei.SubmitShellShowcaseRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getRinfo();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.ei.BasicRequestInfo.serializeBinaryToWriter
+    );
+  }
   f = /** @type {string} */ (jspb.Message.getField(message, 1));
   if (f != null) {
     writer.writeString(
@@ -178,10 +193,47 @@ proto.ei.SubmitShellShowcaseRequest.serializeBinaryToWriter = function(message, 
 
 
 /**
- * optional string id = 1;
+ * optional BasicRequestInfo rinfo = 4;
+ * @return {?proto.ei.BasicRequestInfo}
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.getRinfo = function() {
+  return /** @type{?proto.ei.BasicRequestInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.BasicRequestInfo, 4));
+};
+
+
+/**
+ * @param {?proto.ei.BasicRequestInfo|undefined} value
+ * @return {!proto.ei.SubmitShellShowcaseRequest} returns this
+*/
+proto.ei.SubmitShellShowcaseRequest.prototype.setRinfo = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.SubmitShellShowcaseRequest} returns this
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.clearRinfo = function() {
+  return this.setRinfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.hasRinfo = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string local_id = 1;
  * @return {string}
  */
-proto.ei.SubmitShellShowcaseRequest.prototype.getId = function() {
+proto.ei.SubmitShellShowcaseRequest.prototype.getLocalId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -190,7 +242,7 @@ proto.ei.SubmitShellShowcaseRequest.prototype.getId = function() {
  * @param {string} value
  * @return {!proto.ei.SubmitShellShowcaseRequest} returns this
  */
-proto.ei.SubmitShellShowcaseRequest.prototype.setId = function(value) {
+proto.ei.SubmitShellShowcaseRequest.prototype.setLocalId = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
@@ -199,7 +251,7 @@ proto.ei.SubmitShellShowcaseRequest.prototype.setId = function(value) {
  * Clears the field making it undefined.
  * @return {!proto.ei.SubmitShellShowcaseRequest} returns this
  */
-proto.ei.SubmitShellShowcaseRequest.prototype.clearId = function() {
+proto.ei.SubmitShellShowcaseRequest.prototype.clearLocalId = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -208,7 +260,7 @@ proto.ei.SubmitShellShowcaseRequest.prototype.clearId = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.SubmitShellShowcaseRequest.prototype.hasId = function() {
+proto.ei.SubmitShellShowcaseRequest.prototype.hasLocalId = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 

@@ -137,7 +137,7 @@ CF_EXTERN_C_BEGIN
 @class ShellPopularityStats_Entry;
 @class ShellSetSpec;
 @class ShellSetSpec_VariationSpec;
-@class ShellShowcaseListing;
+@class ShellShowcaseListingInfo;
 @class ShellSpec;
 @class ShellSpec_ShellPiece;
 @class UserSubscriptionInfo_HistoryEntry;
@@ -476,6 +476,28 @@ GPBEnumDescriptor *ContractEvaluation_Status_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL ContractEvaluation_Status_IsValidValue(int32_t value);
+
+#pragma mark - Enum ContractCoopStatusResponse_ResponseStatus
+
+typedef GPB_ENUM(ContractCoopStatusResponse_ResponseStatus) {
+  ContractCoopStatusResponse_ResponseStatus_NoError = 0,
+  ContractCoopStatusResponse_ResponseStatus_MissingUser = 1,
+  ContractCoopStatusResponse_ResponseStatus_MissingCoopId = 2,
+  ContractCoopStatusResponse_ResponseStatus_MissingContractId = 3,
+  ContractCoopStatusResponse_ResponseStatus_MembershipNotFound = 4,
+  ContractCoopStatusResponse_ResponseStatus_CoopNotFound = 5,
+  ContractCoopStatusResponse_ResponseStatus_ContractNotFound = 6,
+  ContractCoopStatusResponse_ResponseStatus_InvalidMembership = 7,
+  ContractCoopStatusResponse_ResponseStatus_NoHTTPResponse = 500,
+};
+
+GPBEnumDescriptor *ContractCoopStatusResponse_ResponseStatus_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL ContractCoopStatusResponse_ResponseStatus_IsValidValue(int32_t value);
 
 #pragma mark - Enum ContractCoopStatusResponse_MemberStatus
 
@@ -904,6 +926,23 @@ GPBEnumDescriptor *ShellDB_FarmElement_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL ShellDB_FarmElement_IsValidValue(int32_t value);
+
+#pragma mark - Enum ShellShowcaseListingInfo_Status
+
+typedef GPB_ENUM(ShellShowcaseListingInfo_Status) {
+  ShellShowcaseListingInfo_Status_None = 0,
+  ShellShowcaseListingInfo_Status_Submitted = 1,
+  ShellShowcaseListingInfo_Status_Live = 2,
+  ShellShowcaseListingInfo_Status_Featured = 3,
+};
+
+GPBEnumDescriptor *ShellShowcaseListingInfo_Status_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL ShellShowcaseListingInfo_Status_IsValidValue(int32_t value);
 
 #pragma mark - Enum UserVerificationAnalysis_Status
 
@@ -3754,10 +3793,14 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_SecondsSinceAllGoalsAchieved = 16,
   ContractCoopStatusResponse_FieldNumber_Grade = 17,
   ContractCoopStatusResponse_FieldNumber_LastSync = 18,
+  ContractCoopStatusResponse_FieldNumber_ResponseStatus = 19,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 
+@property(nonatomic, readwrite) ContractCoopStatusResponse_ResponseStatus responseStatus;
+
+@property(nonatomic, readwrite) BOOL hasResponseStatus;
 @property(nonatomic, readwrite, copy, null_resettable) NSString *contractIdentifier;
 /** Test to see if @c contractIdentifier has been set. */
 @property(nonatomic, readwrite) BOOL hasContractIdentifier;
@@ -7857,6 +7900,7 @@ typedef GPB_ENUM(ShellDB_SavedFarmConfiguration_FieldNumber) {
   ShellDB_SavedFarmConfiguration_FieldNumber_Name = 1,
   ShellDB_SavedFarmConfiguration_FieldNumber_Config = 2,
   ShellDB_SavedFarmConfiguration_FieldNumber_ClientSaveTime = 3,
+  ShellDB_SavedFarmConfiguration_FieldNumber_ServerId = 4,
 };
 
 GPB_FINAL @interface ShellDB_SavedFarmConfiguration : GPBMessage
@@ -7872,6 +7916,10 @@ GPB_FINAL @interface ShellDB_SavedFarmConfiguration : GPBMessage
 @property(nonatomic, readwrite) double clientSaveTime;
 
 @property(nonatomic, readwrite) BOOL hasClientSaveTime;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *serverId;
+/** Test to see if @c serverId has been set. */
+@property(nonatomic, readwrite) BOOL hasServerId;
+
 @end
 
 #pragma mark - ShellDB_ShellConfiguration
@@ -8119,16 +8167,21 @@ GPB_FINAL @interface ShellsActionLog : GPBMessage
 #pragma mark - SubmitShellShowcaseRequest
 
 typedef GPB_ENUM(SubmitShellShowcaseRequest_FieldNumber) {
-  SubmitShellShowcaseRequest_FieldNumber_Id_p = 1,
+  SubmitShellShowcaseRequest_FieldNumber_LocalId = 1,
   SubmitShellShowcaseRequest_FieldNumber_UserId = 2,
   SubmitShellShowcaseRequest_FieldNumber_FarmConfig = 3,
+  SubmitShellShowcaseRequest_FieldNumber_Rinfo = 4,
 };
 
 GPB_FINAL @interface SubmitShellShowcaseRequest : GPBMessage
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *id_p;
-/** Test to see if @c id_p has been set. */
-@property(nonatomic, readwrite) BOOL hasId_p;
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *localId;
+/** Test to see if @c localId has been set. */
+@property(nonatomic, readwrite) BOOL hasLocalId;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
 /** Test to see if @c userId has been set. */
@@ -8150,39 +8203,46 @@ typedef GPB_ENUM(ShellShowcase_FieldNumber) {
 
 GPB_FINAL @interface ShellShowcase : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListing*> *topArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListingInfo*> *topArray;
 /** The number of items in @c topArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger topArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListing*> *featuredArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListingInfo*> *featuredArray;
 /** The number of items in @c featuredArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger featuredArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListing*> *randomArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListingInfo*> *randomArray;
 /** The number of items in @c randomArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger randomArray_Count;
 
 @end
 
-#pragma mark - ShellShowcaseListing
+#pragma mark - ShellShowcaseListingInfo
 
-typedef GPB_ENUM(ShellShowcaseListing_FieldNumber) {
-  ShellShowcaseListing_FieldNumber_Id_p = 1,
-  ShellShowcaseListing_FieldNumber_Name = 2,
-  ShellShowcaseListing_FieldNumber_Description_p = 3,
-  ShellShowcaseListing_FieldNumber_FarmConfig = 4,
-  ShellShowcaseListing_FieldNumber_Sales = 5,
-  ShellShowcaseListing_FieldNumber_Gross = 6,
-  ShellShowcaseListing_FieldNumber_Views = 7,
-  ShellShowcaseListing_FieldNumber_Likes = 8,
-  ShellShowcaseListing_FieldNumber_Dislikes = 9,
+typedef GPB_ENUM(ShellShowcaseListingInfo_FieldNumber) {
+  ShellShowcaseListingInfo_FieldNumber_Id_p = 1,
+  ShellShowcaseListingInfo_FieldNumber_Name = 2,
+  ShellShowcaseListingInfo_FieldNumber_Description_p = 3,
+  ShellShowcaseListingInfo_FieldNumber_FarmConfig = 4,
+  ShellShowcaseListingInfo_FieldNumber_Sales = 5,
+  ShellShowcaseListingInfo_FieldNumber_Gross = 6,
+  ShellShowcaseListingInfo_FieldNumber_Views = 7,
+  ShellShowcaseListingInfo_FieldNumber_Likes = 8,
+  ShellShowcaseListingInfo_FieldNumber_Dislikes = 9,
+  ShellShowcaseListingInfo_FieldNumber_ShareURL = 10,
+  ShellShowcaseListingInfo_FieldNumber_Status = 11,
+  ShellShowcaseListingInfo_FieldNumber_LocalId = 12,
 };
 
-GPB_FINAL @interface ShellShowcaseListing : GPBMessage
+GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *id_p;
 /** Test to see if @c id_p has been set. */
 @property(nonatomic, readwrite) BOOL hasId_p;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *localId;
+/** Test to see if @c localId has been set. */
+@property(nonatomic, readwrite) BOOL hasLocalId;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *name;
 /** Test to see if @c name has been set. */
@@ -8192,6 +8252,9 @@ GPB_FINAL @interface ShellShowcaseListing : GPBMessage
 /** Test to see if @c description_p has been set. */
 @property(nonatomic, readwrite) BOOL hasDescription_p;
 
+@property(nonatomic, readwrite) ShellShowcaseListingInfo_Status status;
+
+@property(nonatomic, readwrite) BOOL hasStatus;
 @property(nonatomic, readwrite, strong, null_resettable) ShellDB_FarmConfiguration *farmConfig;
 /** Test to see if @c farmConfig has been set. */
 @property(nonatomic, readwrite) BOOL hasFarmConfig;
@@ -8211,6 +8274,10 @@ GPB_FINAL @interface ShellShowcaseListing : GPBMessage
 @property(nonatomic, readwrite) uint32_t dislikes;
 
 @property(nonatomic, readwrite) BOOL hasDislikes;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *shareURL;
+/** Test to see if @c shareURL has been set. */
+@property(nonatomic, readwrite) BOOL hasShareURL;
+
 @end
 
 #pragma mark - ShellShowcaseListingSet
@@ -8221,7 +8288,7 @@ typedef GPB_ENUM(ShellShowcaseListingSet_FieldNumber) {
 
 GPB_FINAL @interface ShellShowcaseListingSet : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListing*> *listingsArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListingInfo*> *listingsArray;
 /** The number of items in @c listingsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger listingsArray_Count;
 

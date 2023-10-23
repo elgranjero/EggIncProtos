@@ -177,7 +177,7 @@
     - [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec)
     - [ShellShowcase](#ei-ShellShowcase)
     - [ShellShowcaseAction](#ei-ShellShowcaseAction)
-    - [ShellShowcaseListing](#ei-ShellShowcaseListing)
+    - [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo)
     - [ShellShowcaseListingSet](#ei-ShellShowcaseListingSet)
     - [ShellSpec](#ei-ShellSpec)
     - [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece)
@@ -204,6 +204,7 @@
     - [ArtifactSpec.Type](#ei-ArtifactSpec-Type)
     - [Contract.PlayerGrade](#ei-Contract-PlayerGrade)
     - [ContractCoopStatusResponse.MemberStatus](#ei-ContractCoopStatusResponse-MemberStatus)
+    - [ContractCoopStatusResponse.ResponseStatus](#ei-ContractCoopStatusResponse-ResponseStatus)
     - [ContractCoopStatusResponse.Status](#ei-ContractCoopStatusResponse-Status)
     - [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior)
     - [ContractEvaluation.Status](#ei-ContractEvaluation-Status)
@@ -225,6 +226,7 @@
     - [SaveBackupResponse.ErrorCodes](#ei-SaveBackupResponse-ErrorCodes)
     - [ShellDB.FarmElement](#ei-ShellDB-FarmElement)
     - [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation)
+    - [ShellShowcaseListingInfo.Status](#ei-ShellShowcaseListingInfo-Status)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
     - [UILocation](#ei-UILocation)
     - [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level)
@@ -1549,6 +1551,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
+| response_status | [ContractCoopStatusResponse.ResponseStatus](#ei-ContractCoopStatusResponse-ResponseStatus) | optional |  |
 | contract_identifier | [string](#string) | optional |  |
 | total_amount | [double](#double) | optional |  |
 | coop_identifier | [string](#string) | optional |  |
@@ -3560,6 +3563,7 @@
 | name | [string](#string) | optional |  |
 | config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 | client_save_time | [double](#double) | optional |  |
+| server_id | [string](#string) | optional |  |
 
 
 
@@ -3830,9 +3834,9 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| top | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
-| featured | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
-| random | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
+| top | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
+| featured | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
+| random | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
 
 
 
@@ -3857,23 +3861,26 @@
 
 
 
-<a name="ei-ShellShowcaseListing"></a>
+<a name="ei-ShellShowcaseListingInfo"></a>
 
-### ShellShowcaseListing
+### ShellShowcaseListingInfo
 
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | id | [string](#string) | optional |  |
+| local_id | [string](#string) | optional |  |
 | name | [string](#string) | optional |  |
 | description | [string](#string) | optional |  |
+| status | [ShellShowcaseListingInfo.Status](#ei-ShellShowcaseListingInfo-Status) | optional |  |
 | farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 | sales | [uint32](#uint32) | optional |  |
 | gross | [uint64](#uint64) | optional |  |
 | views | [uint64](#uint64) | optional |  |
 | likes | [uint32](#uint32) | optional |  |
 | dislikes | [uint32](#uint32) | optional |  |
+| share_url | [string](#string) | optional |  |
 
 
 
@@ -3888,7 +3895,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| listings | [ShellShowcaseListing](#ei-ShellShowcaseListing) | repeated |  |
+| listings | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
 
 
 
@@ -3976,7 +3983,8 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| id | [string](#string) | optional |  |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| local_id | [string](#string) | optional |  |
 | user_id | [string](#string) | optional |  |
 | farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 
@@ -4415,6 +4423,25 @@
 
 
 
+<a name="ei-ContractCoopStatusResponse-ResponseStatus"></a>
+
+### ContractCoopStatusResponse.ResponseStatus
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NO_ERROR | 0 |  |
+| MISSING_USER | 1 |  |
+| MISSING_COOP_ID | 2 |  |
+| MISSING_CONTRACT_ID | 3 |  |
+| MEMBERSHIP_NOT_FOUND | 4 |  |
+| COOP_NOT_FOUND | 5 |  |
+| CONTRACT_NOT_FOUND | 6 |  |
+| INVALID_MEMBERSHIP | 7 |  |
+| NO_HTTP_RESPONSE | 500 |  |
+
+
+
 <a name="ei-ContractCoopStatusResponse-Status"></a>
 
 ### ContractCoopStatusResponse.Status
@@ -4769,6 +4796,20 @@
 | HOVER | 3 |  |
 | SIDEWAYS_SMOOTH | 4 |  |
 | SIDEWAYS_LEAN | 8 |  |
+
+
+
+<a name="ei-ShellShowcaseListingInfo-Status"></a>
+
+### ShellShowcaseListingInfo.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NONE | 0 |  |
+| SUBMITTED | 1 |  |
+| LIVE | 2 |  |
+| FEATURED | 3 |  |
 
 
 

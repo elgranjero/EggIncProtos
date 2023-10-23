@@ -1679,7 +1679,8 @@ proto.ei.ShellDB.SavedFarmConfiguration.toObject = function(includeInstance, msg
   var f, obj = {
     name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     config: (f = msg.getConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
-    clientSaveTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    clientSaveTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1729,6 +1730,10 @@ proto.ei.ShellDB.SavedFarmConfiguration.deserializeBinaryFromReader = function(m
       var value = /** @type {number} */ (reader.readDouble());
       msg.setClientSaveTime(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setServerId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1777,6 +1782,13 @@ proto.ei.ShellDB.SavedFarmConfiguration.serializeBinaryToWriter = function(messa
   if (f != null) {
     writer.writeDouble(
       3,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -1889,6 +1901,42 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearClientSaveTime = function
  */
 proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasClientSaveTime = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional string server_id = 4;
+ * @return {string}
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.getServerId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.setServerId = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearServerId = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasServerId = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

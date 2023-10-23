@@ -32,6 +32,7 @@ goog.provide('proto.ei.ContractCoopStatusResponse.ChickenRun');
 goog.provide('proto.ei.ContractCoopStatusResponse.ContributionInfo');
 goog.provide('proto.ei.ContractCoopStatusResponse.CoopGift');
 goog.provide('proto.ei.ContractCoopStatusResponse.MemberStatus');
+goog.provide('proto.ei.ContractCoopStatusResponse.ResponseStatus');
 goog.provide('proto.ei.ContractCoopStatusResponse.Status');
 goog.provide('proto.ei.MyContracts');
 goog.provide('proto.ei.PlayerFarmInfo');
@@ -12806,6 +12807,7 @@ proto.ei.ContractCoopStatusResponse.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
+    responseStatus: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
     contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     totalAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
@@ -12863,6 +12865,10 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 19:
+      var value = /** @type {!proto.ei.ContractCoopStatusResponse.ResponseStatus} */ (reader.readEnum());
+      msg.setResponseStatus(value);
+      break;
     case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.setContractIdentifier(value);
@@ -12967,6 +12973,13 @@ proto.ei.ContractCoopStatusResponse.prototype.serializeBinary = function() {
  */
 proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = /** @type {!proto.ei.ContractCoopStatusResponse.ResponseStatus} */ (jspb.Message.getField(message, 19));
+  if (f != null) {
+    writer.writeEnum(
+      19,
+      f
+    );
+  }
   f = /** @type {string} */ (jspb.Message.getField(message, 1));
   if (f != null) {
     writer.writeString(
@@ -13098,6 +13111,21 @@ proto.ei.ContractCoopStatusResponse.serializeBinaryToWriter = function(message, 
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.ei.ContractCoopStatusResponse.ResponseStatus = {
+  NO_ERROR: 0,
+  MISSING_USER: 1,
+  MISSING_COOP_ID: 2,
+  MISSING_CONTRACT_ID: 3,
+  MEMBERSHIP_NOT_FOUND: 4,
+  COOP_NOT_FOUND: 5,
+  CONTRACT_NOT_FOUND: 6,
+  INVALID_MEMBERSHIP: 7,
+  NO_HTTP_RESPONSE: 500
+};
 
 /**
  * @enum {number}
@@ -14924,6 +14952,42 @@ proto.ei.ContractCoopStatusResponse.ChickenRun.prototype.clearAmount = function(
  */
 proto.ei.ContractCoopStatusResponse.ChickenRun.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional ResponseStatus response_status = 19;
+ * @return {!proto.ei.ContractCoopStatusResponse.ResponseStatus}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.getResponseStatus = function() {
+  return /** @type {!proto.ei.ContractCoopStatusResponse.ResponseStatus} */ (jspb.Message.getFieldWithDefault(this, 19, 0));
+};
+
+
+/**
+ * @param {!proto.ei.ContractCoopStatusResponse.ResponseStatus} value
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.setResponseStatus = function(value) {
+  return jspb.Message.setField(this, 19, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse} returns this
+ */
+proto.ei.ContractCoopStatusResponse.prototype.clearResponseStatus = function() {
+  return jspb.Message.setField(this, 19, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.prototype.hasResponseStatus = function() {
+  return jspb.Message.getField(this, 19) != null;
 };
 
 

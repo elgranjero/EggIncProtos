@@ -685,6 +685,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :timestamp, :double, 22
     end
     add_message "ei.ContractCoopStatusResponse" do
+      optional :response_status, :enum, 19, "ei.ContractCoopStatusResponse.ResponseStatus"
       optional :contract_identifier, :string, 1
       optional :total_amount, :double, 2
       optional :coop_identifier, :string, 3
@@ -740,6 +741,17 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :user_id, :string, 1
       optional :user_name, :string, 3
       optional :amount, :uint64, 2
+    end
+    add_enum "ei.ContractCoopStatusResponse.ResponseStatus" do
+      value :NO_ERROR, 0
+      value :MISSING_USER, 1
+      value :MISSING_COOP_ID, 2
+      value :MISSING_CONTRACT_ID, 3
+      value :MEMBERSHIP_NOT_FOUND, 4
+      value :COOP_NOT_FOUND, 5
+      value :CONTRACT_NOT_FOUND, 6
+      value :INVALID_MEMBERSHIP, 7
+      value :NO_HTTP_RESPONSE, 500
     end
     add_enum "ei.ContractCoopStatusResponse.MemberStatus" do
       value :VALID, 0
@@ -1853,6 +1865,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :name, :string, 1
       optional :config, :message, 2, "ei.ShellDB.FarmConfiguration"
       optional :client_save_time, :double, 3
+      optional :server_id, :string, 4
     end
     add_message "ei.ShellDB.ShellConfiguration" do
       optional :asset_type, :enum, 1, "ei.ShellSpec.AssetType"
@@ -1927,28 +1940,38 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :gold_spent, :uint64, 12
     end
     add_message "ei.SubmitShellShowcaseRequest" do
-      optional :id, :string, 1
+      optional :rinfo, :message, 4, "ei.BasicRequestInfo"
+      optional :local_id, :string, 1
       optional :user_id, :string, 2
       optional :farm_config, :message, 3, "ei.ShellDB.FarmConfiguration"
     end
     add_message "ei.ShellShowcase" do
-      repeated :top, :message, 1, "ei.ShellShowcaseListing"
-      repeated :featured, :message, 2, "ei.ShellShowcaseListing"
-      repeated :random, :message, 3, "ei.ShellShowcaseListing"
+      repeated :top, :message, 1, "ei.ShellShowcaseListingInfo"
+      repeated :featured, :message, 2, "ei.ShellShowcaseListingInfo"
+      repeated :random, :message, 3, "ei.ShellShowcaseListingInfo"
     end
-    add_message "ei.ShellShowcaseListing" do
+    add_message "ei.ShellShowcaseListingInfo" do
       optional :id, :string, 1
+      optional :local_id, :string, 12
       optional :name, :string, 2
       optional :description, :string, 3
+      optional :status, :enum, 11, "ei.ShellShowcaseListingInfo.Status"
       optional :farm_config, :message, 4, "ei.ShellDB.FarmConfiguration"
       optional :sales, :uint32, 5
       optional :gross, :uint64, 6
       optional :views, :uint64, 7
       optional :likes, :uint32, 8
       optional :dislikes, :uint32, 9
+      optional :share_url, :string, 10
+    end
+    add_enum "ei.ShellShowcaseListingInfo.Status" do
+      value :NONE, 0
+      value :SUBMITTED, 1
+      value :LIVE, 2
+      value :FEATURED, 3
     end
     add_message "ei.ShellShowcaseListingSet" do
-      repeated :listings, :message, 1, "ei.ShellShowcaseListing"
+      repeated :listings, :message, 1, "ei.ShellShowcaseListingInfo"
     end
     add_message "ei.ShellShowcaseAction" do
       optional :action, :string, 1
@@ -2227,6 +2250,7 @@ module Ei
   ContractCoopStatusResponse::ContributionInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.ContributionInfo").msgclass
   ContractCoopStatusResponse::CoopGift = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.CoopGift").msgclass
   ContractCoopStatusResponse::ChickenRun = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.ChickenRun").msgclass
+  ContractCoopStatusResponse::ResponseStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.ResponseStatus").enummodule
   ContractCoopStatusResponse::MemberStatus = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.MemberStatus").enummodule
   ContractCoopStatusResponse::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ContractCoopStatusResponse.Status").enummodule
   LocalContract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LocalContract").msgclass
@@ -2360,7 +2384,8 @@ module Ei
   ShellsActionLog = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellsActionLog").msgclass
   SubmitShellShowcaseRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.SubmitShellShowcaseRequest").msgclass
   ShellShowcase = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcase").msgclass
-  ShellShowcaseListing = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListing").msgclass
+  ShellShowcaseListingInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingInfo").msgclass
+  ShellShowcaseListingInfo::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingInfo.Status").enummodule
   ShellShowcaseListingSet = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingSet").msgclass
   ShellShowcaseAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseAction").msgclass
   UserVerificationAnalysis = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis").msgclass

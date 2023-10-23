@@ -23,27 +23,53 @@ public object SubmitShellShowcaseRequestKt {
     internal fun _build(): ei.Ei.SubmitShellShowcaseRequest = _builder.build()
 
     /**
-     * <code>optional string id = 1;</code>
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
      */
-    public var id: kotlin.String
-      @JvmName("getId")
-      get() = _builder.getId()
-      @JvmName("setId")
+    public var rinfo: ei.Ei.BasicRequestInfo
+      @JvmName("getRinfo")
+      get() = _builder.getRinfo()
+      @JvmName("setRinfo")
       set(value) {
-        _builder.setId(value)
+        _builder.setRinfo(value)
       }
     /**
-     * <code>optional string id = 1;</code>
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
      */
-    public fun clearId() {
-      _builder.clearId()
+    public fun clearRinfo() {
+      _builder.clearRinfo()
     }
     /**
-     * <code>optional string id = 1;</code>
-     * @return Whether the id field is set.
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * @return Whether the rinfo field is set.
      */
-    public fun hasId(): kotlin.Boolean {
-      return _builder.hasId()
+    public fun hasRinfo(): kotlin.Boolean {
+      return _builder.hasRinfo()
+    }
+    public val SubmitShellShowcaseRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
+      get() = _builder.rinfoOrNull
+
+    /**
+     * <code>optional string local_id = 1;</code>
+     */
+    public var localId: kotlin.String
+      @JvmName("getLocalId")
+      get() = _builder.getLocalId()
+      @JvmName("setLocalId")
+      set(value) {
+        _builder.setLocalId(value)
+      }
+    /**
+     * <code>optional string local_id = 1;</code>
+     */
+    public fun clearLocalId() {
+      _builder.clearLocalId()
+    }
+    /**
+     * <code>optional string local_id = 1;</code>
+     * @return Whether the localId field is set.
+     */
+    public fun hasLocalId(): kotlin.Boolean {
+      return _builder.hasLocalId()
     }
 
     /**
@@ -100,6 +126,9 @@ public object SubmitShellShowcaseRequestKt {
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.SubmitShellShowcaseRequest.copy(block: ei.SubmitShellShowcaseRequestKt.Dsl.() -> kotlin.Unit): ei.Ei.SubmitShellShowcaseRequest =
   ei.SubmitShellShowcaseRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+val ei.Ei.SubmitShellShowcaseRequestOrBuilder.rinfoOrNull: ei.Ei.BasicRequestInfo?
+  get() = if (hasRinfo()) getRinfo() else null
 
 val ei.Ei.SubmitShellShowcaseRequestOrBuilder.farmConfigOrNull: ei.Ei.ShellDB.FarmConfiguration?
   get() = if (hasFarmConfig()) getFarmConfig() else null

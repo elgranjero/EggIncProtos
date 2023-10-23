@@ -23,6 +23,30 @@ public object ContractCoopStatusResponseKt {
     internal fun _build(): ei.Ei.ContractCoopStatusResponse = _builder.build()
 
     /**
+     * <code>optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;</code>
+     */
+    public var responseStatus: ei.Ei.ContractCoopStatusResponse.ResponseStatus
+      @JvmName("getResponseStatus")
+      get() = _builder.getResponseStatus()
+      @JvmName("setResponseStatus")
+      set(value) {
+        _builder.setResponseStatus(value)
+      }
+    /**
+     * <code>optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;</code>
+     */
+    public fun clearResponseStatus() {
+      _builder.clearResponseStatus()
+    }
+    /**
+     * <code>optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;</code>
+     * @return Whether the responseStatus field is set.
+     */
+    public fun hasResponseStatus(): kotlin.Boolean {
+      return _builder.hasResponseStatus()
+    }
+
+    /**
      * <code>optional string contract_identifier = 1;</code>
      */
     public var contractIdentifier: kotlin.String

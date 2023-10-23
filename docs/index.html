@@ -871,7 +871,7 @@
                 </li>
               
                 <li>
-                  <a href="#ei.ShellShowcaseListing"><span class="badge">M</span>ShellShowcaseListing</a>
+                  <a href="#ei.ShellShowcaseListingInfo"><span class="badge">M</span>ShellShowcaseListingInfo</a>
                 </li>
               
                 <li>
@@ -976,6 +976,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ContractCoopStatusResponse.ResponseStatus"><span class="badge">E</span>ContractCoopStatusResponse.ResponseStatus</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ContractCoopStatusResponse.Status"><span class="badge">E</span>ContractCoopStatusResponse.Status</a>
                 </li>
               
@@ -1057,6 +1061,10 @@
               
                 <li>
                   <a href="#ei.ShellObjectSpec.ChickenAnimation"><span class="badge">E</span>ShellObjectSpec.ChickenAnimation</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShellShowcaseListingInfo.Status"><span class="badge">E</span>ShellShowcaseListingInfo.Status</a>
                 </li>
               
                 <li>
@@ -5497,6 +5505,13 @@
               <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
             </thead>
             <tbody>
+              
+                <tr>
+                  <td>response_status</td>
+                  <td><a href="#ei.ContractCoopStatusResponse.ResponseStatus">ContractCoopStatusResponse.ResponseStatus</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
               
                 <tr>
                   <td>contract_identifier</td>
@@ -11556,6 +11571,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>server_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -12314,21 +12336,21 @@
               
                 <tr>
                   <td>top</td>
-                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td><a href="#ei.ShellShowcaseListingInfo">ShellShowcaseListingInfo</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>featured</td>
-                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td><a href="#ei.ShellShowcaseListingInfo">ShellShowcaseListingInfo</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>random</td>
-                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td><a href="#ei.ShellShowcaseListingInfo">ShellShowcaseListingInfo</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -12385,7 +12407,7 @@
 
         
       
-        <h3 id="ei.ShellShowcaseListing">ShellShowcaseListing</h3>
+        <h3 id="ei.ShellShowcaseListingInfo">ShellShowcaseListingInfo</h3>
         <p></p>
 
         
@@ -12403,6 +12425,13 @@
                 </tr>
               
                 <tr>
+                  <td>local_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>name</td>
                   <td><a href="#string">string</a></td>
                   <td>optional</td>
@@ -12412,6 +12441,13 @@
                 <tr>
                   <td>description</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#ei.ShellShowcaseListingInfo.Status">ShellShowcaseListingInfo.Status</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -12458,6 +12494,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>share_url</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -12477,7 +12520,7 @@
               
                 <tr>
                   <td>listings</td>
-                  <td><a href="#ei.ShellShowcaseListing">ShellShowcaseListing</a></td>
+                  <td><a href="#ei.ShellShowcaseListingInfo">ShellShowcaseListingInfo</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -12768,7 +12811,14 @@
             <tbody>
               
                 <tr>
-                  <td>id</td>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>local_id</td>
                   <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -14242,6 +14292,71 @@
           </tbody>
         </table>
       
+        <h3 id="ei.ContractCoopStatusResponse.ResponseStatus">ContractCoopStatusResponse.ResponseStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NO_ERROR</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>MISSING_USER</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>MISSING_COOP_ID</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>MISSING_CONTRACT_ID</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>MEMBERSHIP_NOT_FOUND</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>COOP_NOT_FOUND</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CONTRACT_NOT_FOUND</td>
+                <td>6</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>INVALID_MEMBERSHIP</td>
+                <td>7</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>NO_HTTP_RESPONSE</td>
+                <td>500</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="ei.ContractCoopStatusResponse.Status">ContractCoopStatusResponse.Status</h3>
         <p></p>
         <table class="enum-table">
@@ -15349,6 +15464,41 @@
               <tr>
                 <td>SIDEWAYS_LEAN</td>
                 <td>8</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.ShellShowcaseListingInfo.Status">ShellShowcaseListingInfo.Status</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NONE</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SUBMITTED</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>LIVE</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>FEATURED</td>
+                <td>3</td>
                 <td><p></p></td>
               </tr>
             

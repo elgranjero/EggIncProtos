@@ -29,67 +29,67 @@ public object ShellShowcaseListingSetKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ListingsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      */
-     public val listings: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>
+     public val listings: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
         _builder.getListingsList()
       )
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      * @param value The listings to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addListings")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>.add(value: ei.Ei.ShellShowcaseListing) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>.add(value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.addListings(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      * @param value The listings to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignListings")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>.plusAssign(value: ei.Ei.ShellShowcaseListing) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>.plusAssign(value: ei.Ei.ShellShowcaseListingInfo) {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      * @param values The listings to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("addAllListings")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListing>) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       _builder.addAllListings(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      * @param values The listings to add.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("plusAssignAllListings")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListing>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      * @param index The index to set the value at.
      * @param value The listings to set.
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("setListings")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListing) {
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.setListings(index, value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListing listings = 1;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
      */
     @kotlin.jvm.JvmSynthetic
     @kotlin.jvm.JvmName("clearListings")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListing, ListingsProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, ListingsProxy>.clear() {
       _builder.clearListings()
     }
 
