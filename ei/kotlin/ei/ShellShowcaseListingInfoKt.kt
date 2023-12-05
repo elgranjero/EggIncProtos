@@ -119,6 +119,30 @@ public object ShellShowcaseListingInfoKt {
     }
 
     /**
+     * <code>optional string creator_name = 14;</code>
+     */
+    public var creatorName: kotlin.String
+      @JvmName("getCreatorName")
+      get() = _builder.getCreatorName()
+      @JvmName("setCreatorName")
+      set(value) {
+        _builder.setCreatorName(value)
+      }
+    /**
+     * <code>optional string creator_name = 14;</code>
+     */
+    public fun clearCreatorName() {
+      _builder.clearCreatorName()
+    }
+    /**
+     * <code>optional string creator_name = 14;</code>
+     * @return Whether the creatorName field is set.
+     */
+    public fun hasCreatorName(): kotlin.Boolean {
+      return _builder.hasCreatorName()
+    }
+
+    /**
      * <code>optional .ei.ShellShowcaseListingInfo.Status status = 11;</code>
      */
     public var status: ei.Ei.ShellShowcaseListingInfo.Status
@@ -238,6 +262,30 @@ public object ShellShowcaseListingInfoKt {
      */
     public fun hasViews(): kotlin.Boolean {
       return _builder.hasViews()
+    }
+
+    /**
+     * <code>optional uint64 equips = 13;</code>
+     */
+    public var equips: kotlin.Long
+      @JvmName("getEquips")
+      get() = _builder.getEquips()
+      @JvmName("setEquips")
+      set(value) {
+        _builder.setEquips(value)
+      }
+    /**
+     * <code>optional uint64 equips = 13;</code>
+     */
+    public fun clearEquips() {
+      _builder.clearEquips()
+    }
+    /**
+     * <code>optional uint64 equips = 13;</code>
+     * @return Whether the equips field is set.
+     */
+    public fun hasEquips(): kotlin.Boolean {
+      return _builder.hasEquips()
     }
 
     /**

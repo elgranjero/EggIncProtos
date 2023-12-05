@@ -75,6 +75,7 @@ proto.ei.SubmitShellShowcaseRequest.toObject = function(includeInstance, msg) {
     rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
     localId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    publicUsername: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
     farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f)
   };
 
@@ -124,6 +125,10 @@ proto.ei.SubmitShellShowcaseRequest.deserializeBinaryFromReader = function(msg, 
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setUserId(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPublicUsername(value);
       break;
     case 3:
       var value = new proto.ei.ShellDB.FarmConfiguration;
@@ -178,6 +183,13 @@ proto.ei.SubmitShellShowcaseRequest.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeString(
       2,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeBool(
+      5,
       f
     );
   }
@@ -298,6 +310,42 @@ proto.ei.SubmitShellShowcaseRequest.prototype.clearUserId = function() {
  */
 proto.ei.SubmitShellShowcaseRequest.prototype.hasUserId = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bool public_username = 5;
+ * @return {boolean}
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.getPublicUsername = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.SubmitShellShowcaseRequest} returns this
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.setPublicUsername = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.SubmitShellShowcaseRequest} returns this
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.clearPublicUsername = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.SubmitShellShowcaseRequest.prototype.hasPublicUsername = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

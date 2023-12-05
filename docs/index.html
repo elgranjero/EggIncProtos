@@ -739,6 +739,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.PeriodicalsResponse.RoyaltyInfo"><span class="badge">M</span>PeriodicalsResponse.RoyaltyInfo</a>
+                </li>
+              
+                <li>
                   <a href="#ei.PlayerFarmInfo"><span class="badge">M</span>PlayerFarmInfo</a>
                 </li>
               
@@ -867,10 +871,6 @@
                 </li>
               
                 <li>
-                  <a href="#ei.ShellShowcaseAction"><span class="badge">M</span>ShellShowcaseAction</a>
-                </li>
-              
-                <li>
                   <a href="#ei.ShellShowcaseListingInfo"><span class="badge">M</span>ShellShowcaseListingInfo</a>
                 </li>
               
@@ -887,7 +887,15 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ShellsActionBatch"><span class="badge">M</span>ShellsActionBatch</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ShellsActionLog"><span class="badge">M</span>ShellsActionLog</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ShowcaseRoyaltyDeliveryConfirmation"><span class="badge">M</span>ShowcaseRoyaltyDeliveryConfirmation</a>
                 </li>
               
                 <li>
@@ -2444,6 +2452,13 @@
                 <tr>
                   <td>original_size</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>user_id</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -10516,6 +10531,44 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>showcase_royalties</td>
+                  <td><a href="#ei.PeriodicalsResponse.RoyaltyInfo">PeriodicalsResponse.RoyaltyInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.PeriodicalsResponse.RoyaltyInfo">PeriodicalsResponse.RoyaltyInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>amount</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -11551,7 +11604,7 @@
             <tbody>
               
                 <tr>
-                  <td>name</td>
+                  <td>id</td>
                   <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -11574,6 +11627,20 @@
                 <tr>
                   <td>server_id</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>display_name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>purchased</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -12349,54 +12416,9 @@
                 </tr>
               
                 <tr>
-                  <td>random</td>
+                  <td>fresh</td>
                   <td><a href="#ei.ShellShowcaseListingInfo">ShellShowcaseListingInfo</a></td>
                   <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="ei.ShellShowcaseAction">ShellShowcaseAction</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>action</td>
-                  <td><a href="#string">string</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>user_id</td>
-                  <td><a href="#string">string</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>value</td>
-                  <td><a href="#string">string</a></td>
-                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -12446,6 +12468,13 @@
                 </tr>
               
                 <tr>
+                  <td>creator_name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>status</td>
                   <td><a href="#ei.ShellShowcaseListingInfo.Status">ShellShowcaseListingInfo.Status</a></td>
                   <td>optional</td>
@@ -12475,6 +12504,13 @@
               
                 <tr>
                   <td>views</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>equips</td>
                   <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -12699,6 +12735,37 @@
 
         
       
+        <h3 id="ei.ShellsActionBatch">ShellsActionBatch</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>actions</td>
+                  <td><a href="#ei.ShellsActionLog">ShellsActionLog</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.ShellsActionLog">ShellsActionLog</h3>
         <p></p>
 
@@ -12800,6 +12867,44 @@
 
         
       
+        <h3 id="ei.ShowcaseRoyaltyDeliveryConfirmation">ShowcaseRoyaltyDeliveryConfirmation</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ids</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>amount</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.SubmitShellShowcaseRequest">SubmitShellShowcaseRequest</h3>
         <p></p>
 
@@ -12827,6 +12932,13 @@
                 <tr>
                   <td>user_id</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>public_username</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -15502,6 +15614,12 @@
                 <td><p></p></td>
               </tr>
             
+              <tr>
+                <td>INVALID</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
           </tbody>
         </table>
       
@@ -16145,6 +16263,12 @@
               <tr>
                 <td>SHELL_SETS</td>
                 <td>6</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SHELLS_SHOWCASE</td>
+                <td>12</td>
                 <td><p></p></td>
               </tr>
             

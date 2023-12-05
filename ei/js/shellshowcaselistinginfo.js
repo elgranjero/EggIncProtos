@@ -76,11 +76,13 @@ proto.ei.ShellShowcaseListingInfo.toObject = function(includeInstance, msg) {
     localId: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     description: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    creatorName: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     status: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
     farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
     sales: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     gross: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
     views: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    equips: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
     likes: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     dislikes: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     shareUrl: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
@@ -136,6 +138,10 @@ proto.ei.ShellShowcaseListingInfo.deserializeBinaryFromReader = function(msg, re
       var value = /** @type {string} */ (reader.readString());
       msg.setDescription(value);
       break;
+    case 14:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCreatorName(value);
+      break;
     case 11:
       var value = /** @type {!proto.ei.ShellShowcaseListingInfo.Status} */ (reader.readEnum());
       msg.setStatus(value);
@@ -156,6 +162,10 @@ proto.ei.ShellShowcaseListingInfo.deserializeBinaryFromReader = function(msg, re
     case 7:
       var value = /** @type {number} */ (reader.readUint64());
       msg.setViews(value);
+      break;
+    case 13:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setEquips(value);
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint32());
@@ -226,6 +236,13 @@ proto.ei.ShellShowcaseListingInfo.serializeBinaryToWriter = function(message, wr
       f
     );
   }
+  f = /** @type {string} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeString(
+      14,
+      f
+    );
+  }
   f = /** @type {!proto.ei.ShellShowcaseListingInfo.Status} */ (jspb.Message.getField(message, 11));
   if (f != null) {
     writer.writeEnum(
@@ -262,6 +279,13 @@ proto.ei.ShellShowcaseListingInfo.serializeBinaryToWriter = function(message, wr
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 13));
+  if (f != null) {
+    writer.writeUint64(
+      13,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 8));
   if (f != null) {
     writer.writeUint32(
@@ -293,7 +317,8 @@ proto.ei.ShellShowcaseListingInfo.Status = {
   NONE: 0,
   SUBMITTED: 1,
   LIVE: 2,
-  FEATURED: 3
+  FEATURED: 3,
+  INVALID: 4
 };
 
 /**
@@ -437,6 +462,42 @@ proto.ei.ShellShowcaseListingInfo.prototype.clearDescription = function() {
  */
 proto.ei.ShellShowcaseListingInfo.prototype.hasDescription = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional string creator_name = 14;
+ * @return {string}
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.getCreatorName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ShellShowcaseListingInfo} returns this
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.setCreatorName = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellShowcaseListingInfo} returns this
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.clearCreatorName = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.hasCreatorName = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 
@@ -618,6 +679,42 @@ proto.ei.ShellShowcaseListingInfo.prototype.clearViews = function() {
  */
 proto.ei.ShellShowcaseListingInfo.prototype.hasViews = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional uint64 equips = 13;
+ * @return {number}
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.getEquips = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 13, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellShowcaseListingInfo} returns this
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.setEquips = function(value) {
+  return jspb.Message.setField(this, 13, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellShowcaseListingInfo} returns this
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.clearEquips = function() {
+  return jspb.Message.setField(this, 13, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.hasEquips = function() {
+  return jspb.Message.getField(this, 13) != null;
 };
 
 

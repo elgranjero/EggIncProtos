@@ -171,70 +171,70 @@ public object ShellShowcaseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class RandomProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class FreshProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      */
-     public val random: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>
+     public val fresh: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>
       @kotlin.jvm.JvmSynthetic
       get() = com.google.protobuf.kotlin.DslList(
-        _builder.getRandomList()
+        _builder.getFreshList()
       )
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
-     * @param value The random to add.
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * @param value The fresh to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addRandom")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>.add(value: ei.Ei.ShellShowcaseListingInfo) {
-      _builder.addRandom(value)
+    @kotlin.jvm.JvmName("addFresh")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.add(value: ei.Ei.ShellShowcaseListingInfo) {
+      _builder.addFresh(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
-     * @param value The random to add.
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * @param value The fresh to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignRandom")
+    @kotlin.jvm.JvmName("plusAssignFresh")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>.plusAssign(value: ei.Ei.ShellShowcaseListingInfo) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.plusAssign(value: ei.Ei.ShellShowcaseListingInfo) {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
-     * @param values The random to add.
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * @param values The fresh to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllRandom")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
-      _builder.addAllRandom(values)
+    @kotlin.jvm.JvmName("addAllFresh")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
+      _builder.addAllFresh(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
-     * @param values The random to add.
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * @param values The fresh to add.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllRandom")
+    @kotlin.jvm.JvmName("plusAssignAllFresh")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      * @param index The index to set the value at.
-     * @param value The random to set.
+     * @param value The fresh to set.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setRandom")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListingInfo) {
-      _builder.setRandom(index, value)
+    @kotlin.jvm.JvmName("setFresh")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListingInfo) {
+      _builder.setFresh(index, value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo random = 3;</code>
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearRandom")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, RandomProxy>.clear() {
-      _builder.clearRandom()
+    @kotlin.jvm.JvmName("clearFresh")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.clear() {
+      _builder.clearFresh()
     }
 
   }

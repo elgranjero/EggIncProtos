@@ -74,7 +74,8 @@ proto.ei.AuthenticatedMessage.toObject = function(includeInstance, msg) {
     version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     code: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     compressed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-    originalSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+    originalSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -130,6 +131,10 @@ proto.ei.AuthenticatedMessage.deserializeBinaryFromReader = function(msg, reader
     case 5:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setOriginalSize(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
       break;
     default:
       reader.skipField();
@@ -192,6 +197,13 @@ proto.ei.AuthenticatedMessage.serializeBinaryToWriter = function(message, writer
   if (f != null) {
     writer.writeUint32(
       5,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -399,6 +411,42 @@ proto.ei.AuthenticatedMessage.prototype.clearOriginalSize = function() {
  */
 proto.ei.AuthenticatedMessage.prototype.hasOriginalSize = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional string user_id = 6;
+ * @return {string}
+ */
+proto.ei.AuthenticatedMessage.prototype.getUserId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.setUserId = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.AuthenticatedMessage} returns this
+ */
+proto.ei.AuthenticatedMessage.prototype.clearUserId = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.AuthenticatedMessage.prototype.hasUserId = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

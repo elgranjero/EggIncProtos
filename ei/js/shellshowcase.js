@@ -82,7 +82,7 @@ proto.ei.ShellShowcase.toObject = function(includeInstance, msg) {
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance),
     featuredList: jspb.Message.toObjectList(msg.getFeaturedList(),
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance),
-    randomList: jspb.Message.toObjectList(msg.getRandomList(),
+    freshList: jspb.Message.toObjectList(msg.getFreshList(),
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance)
   };
 
@@ -133,7 +133,7 @@ proto.ei.ShellShowcase.deserializeBinaryFromReader = function(msg, reader) {
     case 3:
       var value = new proto.ei.ShellShowcaseListingInfo;
       reader.readMessage(value,proto.ei.ShellShowcaseListingInfo.deserializeBinaryFromReader);
-      msg.addRandom(value);
+      msg.addFresh(value);
       break;
     default:
       reader.skipField();
@@ -180,7 +180,7 @@ proto.ei.ShellShowcase.serializeBinaryToWriter = function(message, writer) {
       proto.ei.ShellShowcaseListingInfo.serializeBinaryToWriter
     );
   }
-  f = message.getRandomList();
+  f = message.getFreshList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
@@ -268,10 +268,10 @@ proto.ei.ShellShowcase.prototype.clearFeaturedList = function() {
 
 
 /**
- * repeated ShellShowcaseListingInfo random = 3;
+ * repeated ShellShowcaseListingInfo fresh = 3;
  * @return {!Array<!proto.ei.ShellShowcaseListingInfo>}
  */
-proto.ei.ShellShowcase.prototype.getRandomList = function() {
+proto.ei.ShellShowcase.prototype.getFreshList = function() {
   return /** @type{!Array<!proto.ei.ShellShowcaseListingInfo>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ei.ShellShowcaseListingInfo, 3));
 };
@@ -281,7 +281,7 @@ proto.ei.ShellShowcase.prototype.getRandomList = function() {
  * @param {!Array<!proto.ei.ShellShowcaseListingInfo>} value
  * @return {!proto.ei.ShellShowcase} returns this
 */
-proto.ei.ShellShowcase.prototype.setRandomList = function(value) {
+proto.ei.ShellShowcase.prototype.setFreshList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
@@ -291,7 +291,7 @@ proto.ei.ShellShowcase.prototype.setRandomList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ei.ShellShowcaseListingInfo}
  */
-proto.ei.ShellShowcase.prototype.addRandom = function(opt_value, opt_index) {
+proto.ei.ShellShowcase.prototype.addFresh = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.ei.ShellShowcaseListingInfo, opt_index);
 };
 
@@ -300,8 +300,8 @@ proto.ei.ShellShowcase.prototype.addRandom = function(opt_value, opt_index) {
  * Clears the list making it empty but non-null.
  * @return {!proto.ei.ShellShowcase} returns this
  */
-proto.ei.ShellShowcase.prototype.clearRandomList = function() {
-  return this.setRandomList([]);
+proto.ei.ShellShowcase.prototype.clearFreshList = function() {
+  return this.setFreshList([]);
 };
 
 

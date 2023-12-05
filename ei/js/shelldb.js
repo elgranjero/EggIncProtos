@@ -1677,10 +1677,12 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.toObject = function(opt_includ
  */
 proto.ei.ShellDB.SavedFarmConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     config: (f = msg.getConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
     clientSaveTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+    serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    displayName: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    purchased: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1719,7 +1721,7 @@ proto.ei.ShellDB.SavedFarmConfiguration.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      msg.setId(value);
       break;
     case 2:
       var value = new proto.ei.ShellDB.FarmConfiguration;
@@ -1733,6 +1735,14 @@ proto.ei.ShellDB.SavedFarmConfiguration.deserializeBinaryFromReader = function(m
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setServerId(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDisplayName(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPurchased(value);
       break;
     default:
       reader.skipField();
@@ -1792,14 +1802,28 @@ proto.ei.ShellDB.SavedFarmConfiguration.serializeBinaryToWriter = function(messa
       f
     );
   }
+  f = /** @type {string} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
 };
 
 
 /**
- * optional string name = 1;
+ * optional string id = 1;
  * @return {string}
  */
-proto.ei.ShellDB.SavedFarmConfiguration.prototype.getName = function() {
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -1808,7 +1832,7 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.getName = function() {
  * @param {string} value
  * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
  */
-proto.ei.ShellDB.SavedFarmConfiguration.prototype.setName = function(value) {
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.setId = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
@@ -1817,7 +1841,7 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.setName = function(value) {
  * Clears the field making it undefined.
  * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
  */
-proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearName = function() {
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearId = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -1826,7 +1850,7 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearName = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasName = function() {
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasId = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -1937,6 +1961,78 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearServerId = function() {
  */
 proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasServerId = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string display_name = 5;
+ * @return {string}
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.getDisplayName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.setDisplayName = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearDisplayName = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasDisplayName = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bool purchased = 6;
+ * @return {boolean}
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.getPurchased = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.setPurchased = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellDB.SavedFarmConfiguration} returns this
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.clearPurchased = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellDB.SavedFarmConfiguration.prototype.hasPurchased = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

@@ -120,6 +120,8 @@ GPBObjCClassDeclaration(MissionInfo);
 GPBObjCClassDeclaration(MissionInfo_Fuel);
 GPBObjCClassDeclaration(MissionRequest);
 GPBObjCClassDeclaration(MyContracts);
+GPBObjCClassDeclaration(PeriodicalsResponse);
+GPBObjCClassDeclaration(PeriodicalsResponse_RoyaltyInfo);
 GPBObjCClassDeclaration(PlayerFarmInfo);
 GPBObjCClassDeclaration(Reward);
 GPBObjCClassDeclaration(SalesInfo);
@@ -147,6 +149,7 @@ GPBObjCClassDeclaration(ShellSetSpec_VariationSpec);
 GPBObjCClassDeclaration(ShellShowcaseListingInfo);
 GPBObjCClassDeclaration(ShellSpec);
 GPBObjCClassDeclaration(ShellSpec_ShellPiece);
+GPBObjCClassDeclaration(ShellsActionLog);
 GPBObjCClassDeclaration(UserSubscriptionInfo);
 GPBObjCClassDeclaration(UserSubscriptionInfo_HistoryEntry);
 GPBObjCClassDeclaration(Vector3);
@@ -525,8 +528,9 @@ GPBEnumDescriptor *UILocation_EnumDescriptor(void) {
   if (!descriptor) {
     static const char *valueNames =
         "None\000Shop\000BoostShop\000Piggy\000ProPermit\000Ultr"
-        "aShop\000Shells\000ShellSets\000Chickens\000ChickenH"
-        "ats\000EpicResearch\000Settings\000";
+        "aShop\000Shells\000ShellSets\000ShellsShowcase\000Ch"
+        "ickens\000ChickenHats\000EpicResearch\000Settings"
+        "\000";
     static const int32_t values[] = {
         UILocation_None,
         UILocation_Shop,
@@ -536,6 +540,7 @@ GPBEnumDescriptor *UILocation_EnumDescriptor(void) {
         UILocation_UltraShop,
         UILocation_Shells,
         UILocation_ShellSets,
+        UILocation_ShellsShowcase,
         UILocation_Chickens,
         UILocation_ChickenHats,
         UILocation_EpicResearch,
@@ -565,6 +570,7 @@ BOOL UILocation_IsValidValue(int32_t value__) {
     case UILocation_UltraShop:
     case UILocation_Shells:
     case UILocation_ShellSets:
+    case UILocation_ShellsShowcase:
     case UILocation_Chickens:
     case UILocation_ChickenHats:
     case UILocation_EpicResearch:
@@ -14738,6 +14744,7 @@ typedef struct MailState_TipState__storage_ {
 @dynamic hasLiveConfig, liveConfig;
 @dynamic hasMailBag, mailBag;
 @dynamic hasContractPlayerInfo, contractPlayerInfo;
+@dynamic showcaseRoyaltiesArray, showcaseRoyaltiesArray_Count;
 
 typedef struct PeriodicalsResponse__storage_ {
   uint32_t _has_storage_[1];
@@ -14750,6 +14757,7 @@ typedef struct PeriodicalsResponse__storage_ {
   ContractPlayerInfo *contractPlayerInfo;
   NSMutableArray *evaluationsArray;
   NSMutableArray *artifactCasesArray;
+  NSMutableArray *showcaseRoyaltiesArray;
 } PeriodicalsResponse__storage_;
 
 // This method is threadsafe because it is initially called
@@ -14839,6 +14847,15 @@ typedef struct PeriodicalsResponse__storage_ {
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
+      {
+        .name = "showcaseRoyaltiesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(PeriodicalsResponse_RoyaltyInfo),
+        .number = PeriodicalsResponse_FieldNumber_ShowcaseRoyaltiesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(PeriodicalsResponse__storage_, showcaseRoyaltiesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[PeriodicalsResponse class]
@@ -14848,6 +14865,63 @@ typedef struct PeriodicalsResponse__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(PeriodicalsResponse__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - PeriodicalsResponse_RoyaltyInfo
+
+@implementation PeriodicalsResponse_RoyaltyInfo
+
+@dynamic hasId_p, id_p;
+@dynamic hasAmount, amount;
+
+typedef struct PeriodicalsResponse_RoyaltyInfo__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t amount;
+  NSString *id_p;
+} PeriodicalsResponse_RoyaltyInfo__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "id_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = PeriodicalsResponse_RoyaltyInfo_FieldNumber_Id_p,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(PeriodicalsResponse_RoyaltyInfo__storage_, id_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "amount",
+        .dataTypeSpecific.clazz = Nil,
+        .number = PeriodicalsResponse_RoyaltyInfo_FieldNumber_Amount,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(PeriodicalsResponse_RoyaltyInfo__storage_, amount),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[PeriodicalsResponse_RoyaltyInfo class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(PeriodicalsResponse_RoyaltyInfo__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(PeriodicalsResponse)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -18691,6 +18765,7 @@ typedef struct ArtifactsDB_CraftableArtifact__storage_ {
 @dynamic hasCode, code;
 @dynamic hasCompressed, compressed;
 @dynamic hasOriginalSize, originalSize;
+@dynamic hasUserId, userId;
 
 typedef struct AuthenticatedMessage__storage_ {
   uint32_t _has_storage_[1];
@@ -18698,6 +18773,7 @@ typedef struct AuthenticatedMessage__storage_ {
   uint32_t originalSize;
   NSData *message;
   NSString *code;
+  NSString *userId;
 } AuthenticatedMessage__storage_;
 
 // This method is threadsafe because it is initially called
@@ -18750,6 +18826,15 @@ typedef struct AuthenticatedMessage__storage_ {
         .offset = (uint32_t)offsetof(AuthenticatedMessage__storage_, originalSize),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "userId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AuthenticatedMessage_FieldNumber_UserId,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(AuthenticatedMessage__storage_, userId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -21369,16 +21454,19 @@ typedef struct ShellDB_FarmConfiguration__storage_ {
 
 @implementation ShellDB_SavedFarmConfiguration
 
-@dynamic hasName, name;
+@dynamic hasId_p, id_p;
 @dynamic hasConfig, config;
 @dynamic hasClientSaveTime, clientSaveTime;
 @dynamic hasServerId, serverId;
+@dynamic hasDisplayName, displayName;
+@dynamic hasPurchased, purchased;
 
 typedef struct ShellDB_SavedFarmConfiguration__storage_ {
   uint32_t _has_storage_[1];
-  NSString *name;
+  NSString *id_p;
   ShellDB_FarmConfiguration *config;
   NSString *serverId;
+  NSString *displayName;
   double clientSaveTime;
 } ShellDB_SavedFarmConfiguration__storage_;
 
@@ -21389,11 +21477,11 @@ typedef struct ShellDB_SavedFarmConfiguration__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "name",
+        .name = "id_p",
         .dataTypeSpecific.clazz = Nil,
-        .number = ShellDB_SavedFarmConfiguration_FieldNumber_Name,
+        .number = ShellDB_SavedFarmConfiguration_FieldNumber_Id_p,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, name),
+        .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
@@ -21423,6 +21511,24 @@ typedef struct ShellDB_SavedFarmConfiguration__storage_ {
         .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, serverId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "displayName",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_SavedFarmConfiguration_FieldNumber_DisplayName,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ShellDB_SavedFarmConfiguration__storage_, displayName),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "purchased",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_SavedFarmConfiguration_FieldNumber_Purchased,
+        .hasIndex = 5,
+        .offset = 6,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -22173,6 +22279,7 @@ typedef struct ShellsActionLog__storage_ {
 @dynamic hasRinfo, rinfo;
 @dynamic hasLocalId, localId;
 @dynamic hasUserId, userId;
+@dynamic hasPublicUsername, publicUsername;
 @dynamic hasFarmConfig, farmConfig;
 
 typedef struct SubmitShellShowcaseRequest__storage_ {
@@ -22211,7 +22318,7 @@ typedef struct SubmitShellShowcaseRequest__storage_ {
         .name = "farmConfig",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_FarmConfiguration),
         .number = SubmitShellShowcaseRequest_FieldNumber_FarmConfig,
-        .hasIndex = 3,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(SubmitShellShowcaseRequest__storage_, farmConfig),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -22224,6 +22331,15 @@ typedef struct SubmitShellShowcaseRequest__storage_ {
         .offset = (uint32_t)offsetof(SubmitShellShowcaseRequest__storage_, rinfo),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "publicUsername",
+        .dataTypeSpecific.clazz = Nil,
+        .number = SubmitShellShowcaseRequest_FieldNumber_PublicUsername,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -22250,13 +22366,13 @@ typedef struct SubmitShellShowcaseRequest__storage_ {
 
 @dynamic topArray, topArray_Count;
 @dynamic featuredArray, featuredArray_Count;
-@dynamic randomArray, randomArray_Count;
+@dynamic freshArray, freshArray_Count;
 
 typedef struct ShellShowcase__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *topArray;
   NSMutableArray *featuredArray;
-  NSMutableArray *randomArray;
+  NSMutableArray *freshArray;
 } ShellShowcase__storage_;
 
 // This method is threadsafe because it is initially called
@@ -22284,11 +22400,11 @@ typedef struct ShellShowcase__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "randomArray",
+        .name = "freshArray",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellShowcaseListingInfo),
-        .number = ShellShowcase_FieldNumber_RandomArray,
+        .number = ShellShowcase_FieldNumber_FreshArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ShellShowcase__storage_, randomArray),
+        .offset = (uint32_t)offsetof(ShellShowcase__storage_, freshArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
@@ -22319,11 +22435,13 @@ typedef struct ShellShowcase__storage_ {
 @dynamic hasLocalId, localId;
 @dynamic hasName, name;
 @dynamic hasDescription_p, description_p;
+@dynamic hasCreatorName, creatorName;
 @dynamic hasStatus, status;
 @dynamic hasFarmConfig, farmConfig;
 @dynamic hasSales, sales;
 @dynamic hasGross, gross;
 @dynamic hasViews, views;
+@dynamic hasEquips, equips;
 @dynamic hasLikes, likes;
 @dynamic hasDislikes, dislikes;
 @dynamic hasShareURL, shareURL;
@@ -22340,8 +22458,10 @@ typedef struct ShellShowcaseListingInfo__storage_ {
   ShellDB_FarmConfiguration *farmConfig;
   NSString *shareURL;
   NSString *localId;
+  NSString *creatorName;
   uint64_t gross;
   uint64_t views;
+  uint64_t equips;
 } ShellShowcaseListingInfo__storage_;
 
 // This method is threadsafe because it is initially called
@@ -22381,7 +22501,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "farmConfig",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_FarmConfiguration),
         .number = ShellShowcaseListingInfo_FieldNumber_FarmConfig,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, farmConfig),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -22390,7 +22510,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "sales",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Sales,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, sales),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -22399,7 +22519,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "gross",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Gross,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, gross),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -22408,7 +22528,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "views",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Views,
-        .hasIndex = 8,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, views),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -22417,7 +22537,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "likes",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Likes,
-        .hasIndex = 9,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, likes),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -22426,7 +22546,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "dislikes",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Dislikes,
-        .hasIndex = 10,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, dislikes),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -22435,7 +22555,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "shareURL",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_ShareURL,
-        .hasIndex = 11,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, shareURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
@@ -22444,7 +22564,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "status",
         .dataTypeSpecific.enumDescFunc = ShellShowcaseListingInfo_Status_EnumDescriptor,
         .number = ShellShowcaseListingInfo_FieldNumber_Status,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -22455,6 +22575,24 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .number = ShellShowcaseListingInfo_FieldNumber_LocalId,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, localId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "equips",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListingInfo_FieldNumber_Equips,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, equips),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "creatorName",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListingInfo_FieldNumber_CreatorName,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, creatorName),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
@@ -22488,12 +22626,13 @@ GPBEnumDescriptor *ShellShowcaseListingInfo_Status_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "None\000Submitted\000Live\000Featured\000";
+        "None\000Submitted\000Live\000Featured\000Invalid\000";
     static const int32_t values[] = {
         ShellShowcaseListingInfo_Status_None,
         ShellShowcaseListingInfo_Status_Submitted,
         ShellShowcaseListingInfo_Status_Live,
         ShellShowcaseListingInfo_Status_Featured,
+        ShellShowcaseListingInfo_Status_Invalid,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ShellShowcaseListingInfo_Status)
@@ -22515,11 +22654,79 @@ BOOL ShellShowcaseListingInfo_Status_IsValidValue(int32_t value__) {
     case ShellShowcaseListingInfo_Status_Submitted:
     case ShellShowcaseListingInfo_Status_Live:
     case ShellShowcaseListingInfo_Status_Featured:
+    case ShellShowcaseListingInfo_Status_Invalid:
       return YES;
     default:
       return NO;
   }
 }
+
+#pragma mark - ShowcaseRoyaltyDeliveryConfirmation
+
+@implementation ShowcaseRoyaltyDeliveryConfirmation
+
+@dynamic hasRinfo, rinfo;
+@dynamic idsArray, idsArray_Count;
+@dynamic hasAmount, amount;
+
+typedef struct ShowcaseRoyaltyDeliveryConfirmation__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t amount;
+  NSMutableArray *idsArray;
+  BasicRequestInfo *rinfo;
+} ShowcaseRoyaltyDeliveryConfirmation__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "idsArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShowcaseRoyaltyDeliveryConfirmation_FieldNumber_IdsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShowcaseRoyaltyDeliveryConfirmation__storage_, idsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "amount",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShowcaseRoyaltyDeliveryConfirmation_FieldNumber_Amount,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ShowcaseRoyaltyDeliveryConfirmation__storage_, amount),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = ShowcaseRoyaltyDeliveryConfirmation_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ShowcaseRoyaltyDeliveryConfirmation__storage_, rinfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ShowcaseRoyaltyDeliveryConfirmation class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ShowcaseRoyaltyDeliveryConfirmation__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
 
 #pragma mark - ShellShowcaseListingSet
 
@@ -22566,22 +22773,18 @@ typedef struct ShellShowcaseListingSet__storage_ {
 
 @end
 
-#pragma mark - ShellShowcaseAction
+#pragma mark - ShellsActionBatch
 
-@implementation ShellShowcaseAction
+@implementation ShellsActionBatch
 
-@dynamic hasAction, action;
-@dynamic hasUserId, userId;
-@dynamic hasId_p, id_p;
-@dynamic hasValue, value;
+@dynamic hasRinfo, rinfo;
+@dynamic actionsArray, actionsArray_Count;
 
-typedef struct ShellShowcaseAction__storage_ {
+typedef struct ShellsActionBatch__storage_ {
   uint32_t _has_storage_[1];
-  NSString *action;
-  NSString *userId;
-  NSString *id_p;
-  NSString *value;
-} ShellShowcaseAction__storage_;
+  BasicRequestInfo *rinfo;
+  NSMutableArray *actionsArray;
+} ShellsActionBatch__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -22590,49 +22793,31 @@ typedef struct ShellShowcaseAction__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "action",
-        .dataTypeSpecific.clazz = Nil,
-        .number = ShellShowcaseAction_FieldNumber_Action,
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = ShellsActionBatch_FieldNumber_Rinfo,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, action),
+        .offset = (uint32_t)offsetof(ShellsActionBatch__storage_, rinfo),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "userId",
-        .dataTypeSpecific.clazz = Nil,
-        .number = ShellShowcaseAction_FieldNumber_UserId,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, userId),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "id_p",
-        .dataTypeSpecific.clazz = Nil,
-        .number = ShellShowcaseAction_FieldNumber_Id_p,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, id_p),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "value",
-        .dataTypeSpecific.clazz = Nil,
-        .number = ShellShowcaseAction_FieldNumber_Value,
-        .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ShellShowcaseAction__storage_, value),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
+        .name = "actionsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ShellsActionLog),
+        .number = ShellsActionBatch_FieldNumber_ActionsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ShellsActionBatch__storage_, actionsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ShellShowcaseAction class]
+        [GPBDescriptor allocDescriptorForClass:[ShellsActionBatch class]
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ShellShowcaseAction__storage_)
+                                   storageSize:sizeof(ShellsActionBatch__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");

@@ -97,6 +97,30 @@ public object SubmitShellShowcaseRequestKt {
     }
 
     /**
+     * <code>optional bool public_username = 5;</code>
+     */
+    public var publicUsername: kotlin.Boolean
+      @JvmName("getPublicUsername")
+      get() = _builder.getPublicUsername()
+      @JvmName("setPublicUsername")
+      set(value) {
+        _builder.setPublicUsername(value)
+      }
+    /**
+     * <code>optional bool public_username = 5;</code>
+     */
+    public fun clearPublicUsername() {
+      _builder.clearPublicUsername()
+    }
+    /**
+     * <code>optional bool public_username = 5;</code>
+     * @return Whether the publicUsername field is set.
+     */
+    public fun hasPublicUsername(): kotlin.Boolean {
+      return _builder.hasPublicUsername()
+    }
+
+    /**
      * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 3;</code>
      */
     public var farmConfig: ei.Ei.ShellDB.FarmConfiguration

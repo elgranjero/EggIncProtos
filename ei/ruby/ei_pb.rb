@@ -1195,6 +1195,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :live_config, :message, 5, "ei.LiveConfig"
       optional :mail_bag, :message, 6, "ei.MailDB"
       optional :contract_player_info, :message, 7, "ei.ContractPlayerInfo"
+      repeated :showcase_royalties, :message, 10, "ei.PeriodicalsResponse.RoyaltyInfo"
+    end
+    add_message "ei.PeriodicalsResponse.RoyaltyInfo" do
+      optional :id, :string, 1
+      optional :amount, :uint32, 2
     end
     add_message "ei.GetPeriodicalsRequest" do
       optional :rinfo, :message, 12, "ei.BasicRequestInfo"
@@ -1574,6 +1579,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :code, :string, 2
       optional :compressed, :bool, 4
       optional :original_size, :uint32, 5
+      optional :user_id, :string, 6
     end
     add_message "ei.LogCompleteMissionPayload" do
       optional :req, :message, 1, "ei.MissionRequest"
@@ -1862,10 +1868,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :lighting_config, :message, 12, "ei.ShellDB.LightingConfig"
     end
     add_message "ei.ShellDB.SavedFarmConfiguration" do
-      optional :name, :string, 1
+      optional :id, :string, 1
       optional :config, :message, 2, "ei.ShellDB.FarmConfiguration"
       optional :client_save_time, :double, 3
       optional :server_id, :string, 4
+      optional :display_name, :string, 5
+      optional :purchased, :bool, 6
     end
     add_message "ei.ShellDB.ShellConfiguration" do
       optional :asset_type, :enum, 1, "ei.ShellSpec.AssetType"
@@ -1943,23 +1951,26 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :rinfo, :message, 4, "ei.BasicRequestInfo"
       optional :local_id, :string, 1
       optional :user_id, :string, 2
+      optional :public_username, :bool, 5
       optional :farm_config, :message, 3, "ei.ShellDB.FarmConfiguration"
     end
     add_message "ei.ShellShowcase" do
       repeated :top, :message, 1, "ei.ShellShowcaseListingInfo"
       repeated :featured, :message, 2, "ei.ShellShowcaseListingInfo"
-      repeated :random, :message, 3, "ei.ShellShowcaseListingInfo"
+      repeated :fresh, :message, 3, "ei.ShellShowcaseListingInfo"
     end
     add_message "ei.ShellShowcaseListingInfo" do
       optional :id, :string, 1
       optional :local_id, :string, 12
       optional :name, :string, 2
       optional :description, :string, 3
+      optional :creator_name, :string, 14
       optional :status, :enum, 11, "ei.ShellShowcaseListingInfo.Status"
       optional :farm_config, :message, 4, "ei.ShellDB.FarmConfiguration"
       optional :sales, :uint32, 5
       optional :gross, :uint64, 6
       optional :views, :uint64, 7
+      optional :equips, :uint64, 13
       optional :likes, :uint32, 8
       optional :dislikes, :uint32, 9
       optional :share_url, :string, 10
@@ -1969,15 +1980,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :SUBMITTED, 1
       value :LIVE, 2
       value :FEATURED, 3
+      value :INVALID, 4
+    end
+    add_message "ei.ShowcaseRoyaltyDeliveryConfirmation" do
+      optional :rinfo, :message, 3, "ei.BasicRequestInfo"
+      repeated :ids, :string, 1
+      optional :amount, :uint32, 2
     end
     add_message "ei.ShellShowcaseListingSet" do
       repeated :listings, :message, 1, "ei.ShellShowcaseListingInfo"
     end
-    add_message "ei.ShellShowcaseAction" do
-      optional :action, :string, 1
-      optional :user_id, :string, 2
-      optional :id, :string, 3
-      optional :value, :string, 4
+    add_message "ei.ShellsActionBatch" do
+      optional :rinfo, :message, 1, "ei.BasicRequestInfo"
+      repeated :actions, :message, 2, "ei.ShellsActionLog"
     end
     add_message "ei.UserVerificationAnalysis" do
       optional :overall_status, :enum, 1, "ei.UserVerificationAnalysis.Status"
@@ -2147,6 +2162,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :ULTRA_SHOP, 10
       value :SHELLS, 5
       value :SHELL_SETS, 6
+      value :SHELLS_SHOWCASE, 12
       value :CHICKENS, 7
       value :CHICKEN_HATS, 11
       value :EPIC_RESEARCH, 8
@@ -2303,6 +2319,7 @@ module Ei
   MailState = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MailState").msgclass
   MailState::TipState = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MailState.TipState").msgclass
   PeriodicalsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.PeriodicalsResponse").msgclass
+  PeriodicalsResponse::RoyaltyInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.PeriodicalsResponse.RoyaltyInfo").msgclass
   GetPeriodicalsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GetPeriodicalsRequest").msgclass
   ConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ConfigRequest").msgclass
   ConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ConfigResponse").msgclass
@@ -2386,8 +2403,9 @@ module Ei
   ShellShowcase = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcase").msgclass
   ShellShowcaseListingInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingInfo").msgclass
   ShellShowcaseListingInfo::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingInfo.Status").enummodule
+  ShowcaseRoyaltyDeliveryConfirmation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShowcaseRoyaltyDeliveryConfirmation").msgclass
   ShellShowcaseListingSet = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseListingSet").msgclass
-  ShellShowcaseAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellShowcaseAction").msgclass
+  ShellsActionBatch = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ShellsActionBatch").msgclass
   UserVerificationAnalysis = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis").msgclass
   UserVerificationAnalysis::Status = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserVerificationAnalysis.Status").enummodule
   UserSubscriptionInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.UserSubscriptionInfo").msgclass

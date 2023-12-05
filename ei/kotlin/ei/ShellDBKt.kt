@@ -1407,27 +1407,27 @@ public object ShellDBKt {
       internal fun _build(): ei.Ei.ShellDB.SavedFarmConfiguration = _builder.build()
 
       /**
-       * <code>optional string name = 1;</code>
+       * <code>optional string id = 1;</code>
        */
-      public var name: kotlin.String
-        @JvmName("getName")
-        get() = _builder.getName()
-        @JvmName("setName")
+      public var id: kotlin.String
+        @JvmName("getId")
+        get() = _builder.getId()
+        @JvmName("setId")
         set(value) {
-          _builder.setName(value)
+          _builder.setId(value)
         }
       /**
-       * <code>optional string name = 1;</code>
+       * <code>optional string id = 1;</code>
        */
-      public fun clearName() {
-        _builder.clearName()
+      public fun clearId() {
+        _builder.clearId()
       }
       /**
-       * <code>optional string name = 1;</code>
-       * @return Whether the name field is set.
+       * <code>optional string id = 1;</code>
+       * @return Whether the id field is set.
        */
-      public fun hasName(): kotlin.Boolean {
-        return _builder.hasName()
+      public fun hasId(): kotlin.Boolean {
+        return _builder.hasId()
       }
 
       /**
@@ -1502,6 +1502,54 @@ public object ShellDBKt {
        */
       public fun hasServerId(): kotlin.Boolean {
         return _builder.hasServerId()
+      }
+
+      /**
+       * <code>optional string display_name = 5;</code>
+       */
+      public var displayName: kotlin.String
+        @JvmName("getDisplayName")
+        get() = _builder.getDisplayName()
+        @JvmName("setDisplayName")
+        set(value) {
+          _builder.setDisplayName(value)
+        }
+      /**
+       * <code>optional string display_name = 5;</code>
+       */
+      public fun clearDisplayName() {
+        _builder.clearDisplayName()
+      }
+      /**
+       * <code>optional string display_name = 5;</code>
+       * @return Whether the displayName field is set.
+       */
+      public fun hasDisplayName(): kotlin.Boolean {
+        return _builder.hasDisplayName()
+      }
+
+      /**
+       * <code>optional bool purchased = 6;</code>
+       */
+      public var purchased: kotlin.Boolean
+        @JvmName("getPurchased")
+        get() = _builder.getPurchased()
+        @JvmName("setPurchased")
+        set(value) {
+          _builder.setPurchased(value)
+        }
+      /**
+       * <code>optional bool purchased = 6;</code>
+       */
+      public fun clearPurchased() {
+        _builder.clearPurchased()
+      }
+      /**
+       * <code>optional bool purchased = 6;</code>
+       * @return Whether the purchased field is set.
+       */
+      public fun hasPurchased(): kotlin.Boolean {
+        return _builder.hasPurchased()
       }
     }
   }

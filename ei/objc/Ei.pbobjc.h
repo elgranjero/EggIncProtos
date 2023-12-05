@@ -114,6 +114,7 @@ CF_EXTERN_C_BEGIN
 @class MissionInfo_Fuel;
 @class MissionRequest;
 @class MyContracts;
+@class PeriodicalsResponse_RoyaltyInfo;
 @class PlayerFarmInfo;
 @class Reward;
 @class SalesInfo;
@@ -140,6 +141,7 @@ CF_EXTERN_C_BEGIN
 @class ShellShowcaseListingInfo;
 @class ShellSpec;
 @class ShellSpec_ShellPiece;
+@class ShellsActionLog;
 @class UserSubscriptionInfo_HistoryEntry;
 @class Vector3;
 @class Vector4;
@@ -306,6 +308,7 @@ typedef GPB_ENUM(UILocation) {
   UILocation_UltraShop = 10,
   UILocation_Shells = 5,
   UILocation_ShellSets = 6,
+  UILocation_ShellsShowcase = 12,
   UILocation_Chickens = 7,
   UILocation_ChickenHats = 11,
   UILocation_EpicResearch = 8,
@@ -934,6 +937,7 @@ typedef GPB_ENUM(ShellShowcaseListingInfo_Status) {
   ShellShowcaseListingInfo_Status_Submitted = 1,
   ShellShowcaseListingInfo_Status_Live = 2,
   ShellShowcaseListingInfo_Status_Featured = 3,
+  ShellShowcaseListingInfo_Status_Invalid = 4,
 };
 
 GPBEnumDescriptor *ShellShowcaseListingInfo_Status_EnumDescriptor(void);
@@ -5835,6 +5839,7 @@ typedef GPB_ENUM(PeriodicalsResponse_FieldNumber) {
   PeriodicalsResponse_FieldNumber_ContractPlayerInfo = 7,
   PeriodicalsResponse_FieldNumber_EvaluationsArray = 8,
   PeriodicalsResponse_FieldNumber_ArtifactCasesArray = 9,
+  PeriodicalsResponse_FieldNumber_ShowcaseRoyaltiesArray = 10,
 };
 
 GPB_FINAL @interface PeriodicalsResponse : GPBMessage
@@ -5875,6 +5880,28 @@ GPB_FINAL @interface PeriodicalsResponse : GPBMessage
 /** Test to see if @c contractPlayerInfo has been set. */
 @property(nonatomic, readwrite) BOOL hasContractPlayerInfo;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PeriodicalsResponse_RoyaltyInfo*> *showcaseRoyaltiesArray;
+/** The number of items in @c showcaseRoyaltiesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger showcaseRoyaltiesArray_Count;
+
+@end
+
+#pragma mark - PeriodicalsResponse_RoyaltyInfo
+
+typedef GPB_ENUM(PeriodicalsResponse_RoyaltyInfo_FieldNumber) {
+  PeriodicalsResponse_RoyaltyInfo_FieldNumber_Id_p = 1,
+  PeriodicalsResponse_RoyaltyInfo_FieldNumber_Amount = 2,
+};
+
+GPB_FINAL @interface PeriodicalsResponse_RoyaltyInfo : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *id_p;
+/** Test to see if @c id_p has been set. */
+@property(nonatomic, readwrite) BOOL hasId_p;
+
+@property(nonatomic, readwrite) uint32_t amount;
+
+@property(nonatomic, readwrite) BOOL hasAmount;
 @end
 
 #pragma mark - GetPeriodicalsRequest
@@ -7097,6 +7124,7 @@ typedef GPB_ENUM(AuthenticatedMessage_FieldNumber) {
   AuthenticatedMessage_FieldNumber_Version = 3,
   AuthenticatedMessage_FieldNumber_Compressed = 4,
   AuthenticatedMessage_FieldNumber_OriginalSize = 5,
+  AuthenticatedMessage_FieldNumber_UserId = 6,
 };
 
 GPB_FINAL @interface AuthenticatedMessage : GPBMessage
@@ -7118,6 +7146,10 @@ GPB_FINAL @interface AuthenticatedMessage : GPBMessage
 @property(nonatomic, readwrite) uint32_t originalSize;
 
 @property(nonatomic, readwrite) BOOL hasOriginalSize;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+/** Test to see if @c userId has been set. */
+@property(nonatomic, readwrite) BOOL hasUserId;
+
 @end
 
 #pragma mark - LogCompleteMissionPayload
@@ -7897,17 +7929,19 @@ GPB_FINAL @interface ShellDB_FarmConfiguration : GPBMessage
 #pragma mark - ShellDB_SavedFarmConfiguration
 
 typedef GPB_ENUM(ShellDB_SavedFarmConfiguration_FieldNumber) {
-  ShellDB_SavedFarmConfiguration_FieldNumber_Name = 1,
+  ShellDB_SavedFarmConfiguration_FieldNumber_Id_p = 1,
   ShellDB_SavedFarmConfiguration_FieldNumber_Config = 2,
   ShellDB_SavedFarmConfiguration_FieldNumber_ClientSaveTime = 3,
   ShellDB_SavedFarmConfiguration_FieldNumber_ServerId = 4,
+  ShellDB_SavedFarmConfiguration_FieldNumber_DisplayName = 5,
+  ShellDB_SavedFarmConfiguration_FieldNumber_Purchased = 6,
 };
 
 GPB_FINAL @interface ShellDB_SavedFarmConfiguration : GPBMessage
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
-/** Test to see if @c name has been set. */
-@property(nonatomic, readwrite) BOOL hasName;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *id_p;
+/** Test to see if @c id_p has been set. */
+@property(nonatomic, readwrite) BOOL hasId_p;
 
 @property(nonatomic, readwrite, strong, null_resettable) ShellDB_FarmConfiguration *config;
 /** Test to see if @c config has been set. */
@@ -7920,6 +7954,13 @@ GPB_FINAL @interface ShellDB_SavedFarmConfiguration : GPBMessage
 /** Test to see if @c serverId has been set. */
 @property(nonatomic, readwrite) BOOL hasServerId;
 
+@property(nonatomic, readwrite, copy, null_resettable) NSString *displayName;
+/** Test to see if @c displayName has been set. */
+@property(nonatomic, readwrite) BOOL hasDisplayName;
+
+@property(nonatomic, readwrite) BOOL purchased;
+
+@property(nonatomic, readwrite) BOOL hasPurchased;
 @end
 
 #pragma mark - ShellDB_ShellConfiguration
@@ -8171,6 +8212,7 @@ typedef GPB_ENUM(SubmitShellShowcaseRequest_FieldNumber) {
   SubmitShellShowcaseRequest_FieldNumber_UserId = 2,
   SubmitShellShowcaseRequest_FieldNumber_FarmConfig = 3,
   SubmitShellShowcaseRequest_FieldNumber_Rinfo = 4,
+  SubmitShellShowcaseRequest_FieldNumber_PublicUsername = 5,
 };
 
 GPB_FINAL @interface SubmitShellShowcaseRequest : GPBMessage
@@ -8187,6 +8229,9 @@ GPB_FINAL @interface SubmitShellShowcaseRequest : GPBMessage
 /** Test to see if @c userId has been set. */
 @property(nonatomic, readwrite) BOOL hasUserId;
 
+@property(nonatomic, readwrite) BOOL publicUsername;
+
+@property(nonatomic, readwrite) BOOL hasPublicUsername;
 @property(nonatomic, readwrite, strong, null_resettable) ShellDB_FarmConfiguration *farmConfig;
 /** Test to see if @c farmConfig has been set. */
 @property(nonatomic, readwrite) BOOL hasFarmConfig;
@@ -8198,7 +8243,7 @@ GPB_FINAL @interface SubmitShellShowcaseRequest : GPBMessage
 typedef GPB_ENUM(ShellShowcase_FieldNumber) {
   ShellShowcase_FieldNumber_TopArray = 1,
   ShellShowcase_FieldNumber_FeaturedArray = 2,
-  ShellShowcase_FieldNumber_RandomArray = 3,
+  ShellShowcase_FieldNumber_FreshArray = 3,
 };
 
 GPB_FINAL @interface ShellShowcase : GPBMessage
@@ -8211,9 +8256,9 @@ GPB_FINAL @interface ShellShowcase : GPBMessage
 /** The number of items in @c featuredArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger featuredArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListingInfo*> *randomArray;
-/** The number of items in @c randomArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger randomArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellShowcaseListingInfo*> *freshArray;
+/** The number of items in @c freshArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger freshArray_Count;
 
 @end
 
@@ -8232,6 +8277,8 @@ typedef GPB_ENUM(ShellShowcaseListingInfo_FieldNumber) {
   ShellShowcaseListingInfo_FieldNumber_ShareURL = 10,
   ShellShowcaseListingInfo_FieldNumber_Status = 11,
   ShellShowcaseListingInfo_FieldNumber_LocalId = 12,
+  ShellShowcaseListingInfo_FieldNumber_Equips = 13,
+  ShellShowcaseListingInfo_FieldNumber_CreatorName = 14,
 };
 
 GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
@@ -8252,6 +8299,10 @@ GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
 /** Test to see if @c description_p has been set. */
 @property(nonatomic, readwrite) BOOL hasDescription_p;
 
+@property(nonatomic, readwrite, copy, null_resettable) NSString *creatorName;
+/** Test to see if @c creatorName has been set. */
+@property(nonatomic, readwrite) BOOL hasCreatorName;
+
 @property(nonatomic, readwrite) ShellShowcaseListingInfo_Status status;
 
 @property(nonatomic, readwrite) BOOL hasStatus;
@@ -8268,6 +8319,9 @@ GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
 @property(nonatomic, readwrite) uint64_t views;
 
 @property(nonatomic, readwrite) BOOL hasViews;
+@property(nonatomic, readwrite) uint64_t equips;
+
+@property(nonatomic, readwrite) BOOL hasEquips;
 @property(nonatomic, readwrite) uint32_t likes;
 
 @property(nonatomic, readwrite) BOOL hasLikes;
@@ -8278,6 +8332,29 @@ GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
 /** Test to see if @c shareURL has been set. */
 @property(nonatomic, readwrite) BOOL hasShareURL;
 
+@end
+
+#pragma mark - ShowcaseRoyaltyDeliveryConfirmation
+
+typedef GPB_ENUM(ShowcaseRoyaltyDeliveryConfirmation_FieldNumber) {
+  ShowcaseRoyaltyDeliveryConfirmation_FieldNumber_IdsArray = 1,
+  ShowcaseRoyaltyDeliveryConfirmation_FieldNumber_Amount = 2,
+  ShowcaseRoyaltyDeliveryConfirmation_FieldNumber_Rinfo = 3,
+};
+
+GPB_FINAL @interface ShowcaseRoyaltyDeliveryConfirmation : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *idsArray;
+/** The number of items in @c idsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger idsArray_Count;
+
+@property(nonatomic, readwrite) uint32_t amount;
+
+@property(nonatomic, readwrite) BOOL hasAmount;
 @end
 
 #pragma mark - ShellShowcaseListingSet
@@ -8294,32 +8371,22 @@ GPB_FINAL @interface ShellShowcaseListingSet : GPBMessage
 
 @end
 
-#pragma mark - ShellShowcaseAction
+#pragma mark - ShellsActionBatch
 
-typedef GPB_ENUM(ShellShowcaseAction_FieldNumber) {
-  ShellShowcaseAction_FieldNumber_Action = 1,
-  ShellShowcaseAction_FieldNumber_UserId = 2,
-  ShellShowcaseAction_FieldNumber_Id_p = 3,
-  ShellShowcaseAction_FieldNumber_Value = 4,
+typedef GPB_ENUM(ShellsActionBatch_FieldNumber) {
+  ShellsActionBatch_FieldNumber_Rinfo = 1,
+  ShellsActionBatch_FieldNumber_ActionsArray = 2,
 };
 
-GPB_FINAL @interface ShellShowcaseAction : GPBMessage
+GPB_FINAL @interface ShellsActionBatch : GPBMessage
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *action;
-/** Test to see if @c action has been set. */
-@property(nonatomic, readwrite) BOOL hasAction;
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
-/** Test to see if @c userId has been set. */
-@property(nonatomic, readwrite) BOOL hasUserId;
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *id_p;
-/** Test to see if @c id_p has been set. */
-@property(nonatomic, readwrite) BOOL hasId_p;
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *value;
-/** Test to see if @c value has been set. */
-@property(nonatomic, readwrite) BOOL hasValue;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ShellsActionLog*> *actionsArray;
+/** The number of items in @c actionsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger actionsArray_Count;
 
 @end
 

@@ -393,11 +393,155 @@ public object PeriodicalsResponseKt {
     }
     public val PeriodicalsResponseKt.Dsl.contractPlayerInfoOrNull: ei.Ei.ContractPlayerInfo?
       get() = _builder.contractPlayerInfoOrNull
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ShowcaseRoyaltiesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     */
+     public val showcaseRoyalties: com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getShowcaseRoyaltiesList()
+      )
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * @param value The showcaseRoyalties to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addShowcaseRoyalties")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.add(value: ei.Ei.PeriodicalsResponse.RoyaltyInfo) {
+      _builder.addShowcaseRoyalties(value)
+    }
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * @param value The showcaseRoyalties to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignShowcaseRoyalties")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.plusAssign(value: ei.Ei.PeriodicalsResponse.RoyaltyInfo) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * @param values The showcaseRoyalties to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllShowcaseRoyalties")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.PeriodicalsResponse.RoyaltyInfo>) {
+      _builder.addAllShowcaseRoyalties(values)
+    }
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * @param values The showcaseRoyalties to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllShowcaseRoyalties")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.PeriodicalsResponse.RoyaltyInfo>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * @param index The index to set the value at.
+     * @param value The showcaseRoyalties to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setShowcaseRoyalties")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.set(index: kotlin.Int, value: ei.Ei.PeriodicalsResponse.RoyaltyInfo) {
+      _builder.setShowcaseRoyalties(index, value)
+    }
+    /**
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearShowcaseRoyalties")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.clear() {
+      _builder.clearShowcaseRoyalties()
+    }
+
+  }
+  @kotlin.jvm.JvmName("-initializeroyaltyInfo")
+  public inline fun royaltyInfo(block: ei.PeriodicalsResponseKt.RoyaltyInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.PeriodicalsResponse.RoyaltyInfo =
+    ei.PeriodicalsResponseKt.RoyaltyInfoKt.Dsl._create(ei.Ei.PeriodicalsResponse.RoyaltyInfo.newBuilder()).apply { block() }._build()
+  public object RoyaltyInfoKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.PeriodicalsResponse.RoyaltyInfo.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.PeriodicalsResponse.RoyaltyInfo.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.PeriodicalsResponse.RoyaltyInfo = _builder.build()
+
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public var id: kotlin.String
+        @JvmName("getId")
+        get() = _builder.getId()
+        @JvmName("setId")
+        set(value) {
+          _builder.setId(value)
+        }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public fun clearId() {
+        _builder.clearId()
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      public fun hasId(): kotlin.Boolean {
+        return _builder.hasId()
+      }
+
+      /**
+       * <code>optional uint32 amount = 2;</code>
+       */
+      public var amount: kotlin.Int
+        @JvmName("getAmount")
+        get() = _builder.getAmount()
+        @JvmName("setAmount")
+        set(value) {
+          _builder.setAmount(value)
+        }
+      /**
+       * <code>optional uint32 amount = 2;</code>
+       */
+      public fun clearAmount() {
+        _builder.clearAmount()
+      }
+      /**
+       * <code>optional uint32 amount = 2;</code>
+       * @return Whether the amount field is set.
+       */
+      public fun hasAmount(): kotlin.Boolean {
+        return _builder.hasAmount()
+      }
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.PeriodicalsResponse.copy(block: ei.PeriodicalsResponseKt.Dsl.() -> kotlin.Unit): ei.Ei.PeriodicalsResponse =
   ei.PeriodicalsResponseKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.PeriodicalsResponse.RoyaltyInfo.copy(block: ei.PeriodicalsResponseKt.RoyaltyInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.PeriodicalsResponse.RoyaltyInfo =
+  ei.PeriodicalsResponseKt.RoyaltyInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 
 val ei.Ei.PeriodicalsResponseOrBuilder.salesOrNull: ei.Ei.SalesInfo?
   get() = if (hasSales()) getSales() else null

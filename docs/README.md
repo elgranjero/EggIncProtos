@@ -144,6 +144,7 @@
     - [MissionResponse](#ei-MissionResponse)
     - [MyContracts](#ei-MyContracts)
     - [PeriodicalsResponse](#ei-PeriodicalsResponse)
+    - [PeriodicalsResponse.RoyaltyInfo](#ei-PeriodicalsResponse-RoyaltyInfo)
     - [PlayerFarmInfo](#ei-PlayerFarmInfo)
     - [QueryCoopRequest](#ei-QueryCoopRequest)
     - [QueryCoopResponse](#ei-QueryCoopResponse)
@@ -176,12 +177,13 @@
     - [ShellSetSpec](#ei-ShellSetSpec)
     - [ShellSetSpec.VariationSpec](#ei-ShellSetSpec-VariationSpec)
     - [ShellShowcase](#ei-ShellShowcase)
-    - [ShellShowcaseAction](#ei-ShellShowcaseAction)
     - [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo)
     - [ShellShowcaseListingSet](#ei-ShellShowcaseListingSet)
     - [ShellSpec](#ei-ShellSpec)
     - [ShellSpec.ShellPiece](#ei-ShellSpec-ShellPiece)
+    - [ShellsActionBatch](#ei-ShellsActionBatch)
     - [ShellsActionLog](#ei-ShellsActionLog)
+    - [ShowcaseRoyaltyDeliveryConfirmation](#ei-ShowcaseRoyaltyDeliveryConfirmation)
     - [SubmitShellShowcaseRequest](#ei-SubmitShellShowcaseRequest)
     - [SubscriptionChangeHintRequest](#ei-SubscriptionChangeHintRequest)
     - [TipsDB](#ei-TipsDB)
@@ -686,6 +688,7 @@
 | code | [string](#string) | optional |  |
 | compressed | [bool](#bool) | optional |  |
 | original_size | [uint32](#uint32) | optional |  |
+| user_id | [string](#string) | optional |  |
 
 
 
@@ -3204,6 +3207,23 @@
 | live_config | [LiveConfig](#ei-LiveConfig) | optional |  |
 | mail_bag | [MailDB](#ei-MailDB) | optional |  |
 | contract_player_info | [ContractPlayerInfo](#ei-ContractPlayerInfo) | optional |  |
+| showcase_royalties | [PeriodicalsResponse.RoyaltyInfo](#ei-PeriodicalsResponse-RoyaltyInfo) | repeated |  |
+
+
+
+
+
+
+<a name="ei-PeriodicalsResponse-RoyaltyInfo"></a>
+
+### PeriodicalsResponse.RoyaltyInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) | optional |  |
+| amount | [uint32](#uint32) | optional |  |
 
 
 
@@ -3560,10 +3580,12 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| name | [string](#string) | optional |  |
+| id | [string](#string) | optional |  |
 | config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 | client_save_time | [double](#double) | optional |  |
 | server_id | [string](#string) | optional |  |
+| display_name | [string](#string) | optional |  |
+| purchased | [bool](#bool) | optional |  |
 
 
 
@@ -3836,25 +3858,7 @@
 | ----- | ---- | ----- | ----------- |
 | top | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
 | featured | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
-| random | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
-
-
-
-
-
-
-<a name="ei-ShellShowcaseAction"></a>
-
-### ShellShowcaseAction
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| action | [string](#string) | optional |  |
-| user_id | [string](#string) | optional |  |
-| id | [string](#string) | optional |  |
-| value | [string](#string) | optional |  |
+| fresh | [ShellShowcaseListingInfo](#ei-ShellShowcaseListingInfo) | repeated |  |
 
 
 
@@ -3873,11 +3877,13 @@
 | local_id | [string](#string) | optional |  |
 | name | [string](#string) | optional |  |
 | description | [string](#string) | optional |  |
+| creator_name | [string](#string) | optional |  |
 | status | [ShellShowcaseListingInfo.Status](#ei-ShellShowcaseListingInfo-Status) | optional |  |
 | farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 | sales | [uint32](#uint32) | optional |  |
 | gross | [uint64](#uint64) | optional |  |
 | views | [uint64](#uint64) | optional |  |
+| equips | [uint64](#uint64) | optional |  |
 | likes | [uint32](#uint32) | optional |  |
 | dislikes | [uint32](#uint32) | optional |  |
 | share_url | [string](#string) | optional |  |
@@ -3949,6 +3955,22 @@
 
 
 
+<a name="ei-ShellsActionBatch"></a>
+
+### ShellsActionBatch
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| actions | [ShellsActionLog](#ei-ShellsActionLog) | repeated |  |
+
+
+
+
+
+
 <a name="ei-ShellsActionLog"></a>
 
 ### ShellsActionLog
@@ -3975,6 +3997,23 @@
 
 
 
+<a name="ei-ShowcaseRoyaltyDeliveryConfirmation"></a>
+
+### ShowcaseRoyaltyDeliveryConfirmation
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| ids | [string](#string) | repeated |  |
+| amount | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
 <a name="ei-SubmitShellShowcaseRequest"></a>
 
 ### SubmitShellShowcaseRequest
@@ -3986,6 +4025,7 @@
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | local_id | [string](#string) | optional |  |
 | user_id | [string](#string) | optional |  |
+| public_username | [bool](#bool) | optional |  |
 | farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 
 
@@ -4810,6 +4850,7 @@
 | SUBMITTED | 1 |  |
 | LIVE | 2 |  |
 | FEATURED | 3 |  |
+| INVALID | 4 |  |
 
 
 
@@ -4934,6 +4975,7 @@
 | ULTRA_SHOP | 10 |  |
 | SHELLS | 5 |  |
 | SHELL_SETS | 6 |  |
+| SHELLS_SHOWCASE | 12 |  |
 | CHICKENS | 7 |  |
 | CHICKEN_HATS | 11 |  |
 | EPIC_RESEARCH | 8 |  |
