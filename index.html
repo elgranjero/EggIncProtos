@@ -679,6 +679,14 @@
                 </li>
               
                 <li>
+                  <a href="#ei.LiveConfig.HelpConfig"><span class="badge">M</span>LiveConfig.HelpConfig</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.LiveConfig.HelpConfig.HowToVideoInfo"><span class="badge">M</span>LiveConfig.HelpConfig.HowToVideoInfo</a>
+                </li>
+              
+                <li>
                   <a href="#ei.LiveConfig.MiscConfig"><span class="badge">M</span>LiveConfig.MiscConfig</a>
                 </li>
               
@@ -1033,6 +1041,10 @@
               
                 <li>
                   <a href="#ei.LeaderboardScope"><span class="badge">E</span>LeaderboardScope</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.LiveConfig.HelpConfig.HowToVideoInfo.Type"><span class="badge">E</span>LiveConfig.HelpConfig.HowToVideoInfo.Type</a>
                 </li>
               
                 <li>
@@ -7542,6 +7554,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>shells_showcase_last_featured_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -9330,6 +9349,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>help_config</td>
+                  <td><a href="#ei.LiveConfig.HelpConfig">LiveConfig.HelpConfig</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -9627,6 +9653,89 @@
               
                 <tr>
                   <td>video_max</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.LiveConfig.HelpConfig">LiveConfig.HelpConfig</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>video_infos</td>
+                  <td><a href="#ei.LiveConfig.HelpConfig.HowToVideoInfo">LiveConfig.HelpConfig.HowToVideoInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.LiveConfig.HelpConfig.HowToVideoInfo">LiveConfig.HelpConfig.HowToVideoInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>type</td>
+                  <td><a href="#ei.LiveConfig.HelpConfig.HowToVideoInfo.Type">LiveConfig.HelpConfig.HowToVideoInfo.Type</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>description</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>duration</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>url</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>soul_eggs</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -11396,6 +11505,13 @@
                 </tr>
               
                 <tr>
+                  <td>last_showcase_featured_time_seen</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>lighting_controls_unlocked</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -12463,6 +12579,13 @@
                 <tr>
                   <td>description</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>is_new</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -15045,6 +15168,29 @@
           </tbody>
         </table>
       
+        <h3 id="ei.LiveConfig.HelpConfig.HowToVideoInfo.Type">LiveConfig.HelpConfig.HowToVideoInfo.Type</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>VIDEO</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ARTICLE</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="ei.MissionInfo.DurationType">MissionInfo.DurationType</h3>
         <p></p>
         <table class="enum-table">
@@ -15611,6 +15757,18 @@
               <tr>
                 <td>FEATURED</td>
                 <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>FEATURED_ALUM</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ARCHIVED</td>
+                <td>6</td>
                 <td><p></p></td>
               </tr>
             
@@ -16293,6 +16451,18 @@
               <tr>
                 <td>SETTINGS</td>
                 <td>9</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HELP</td>
+                <td>13</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>UNIVERSITY</td>
+                <td>14</td>
                 <td><p></p></td>
               </tr>
             
