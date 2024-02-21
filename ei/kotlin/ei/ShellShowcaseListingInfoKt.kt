@@ -119,6 +119,30 @@ public object ShellShowcaseListingInfoKt {
     }
 
     /**
+     * <code>optional bool is_new = 15;</code>
+     */
+    public var isNew: kotlin.Boolean
+      @JvmName("getIsNew")
+      get() = _builder.getIsNew()
+      @JvmName("setIsNew")
+      set(value) {
+        _builder.setIsNew(value)
+      }
+    /**
+     * <code>optional bool is_new = 15;</code>
+     */
+    public fun clearIsNew() {
+      _builder.clearIsNew()
+    }
+    /**
+     * <code>optional bool is_new = 15;</code>
+     * @return Whether the isNew field is set.
+     */
+    public fun hasIsNew(): kotlin.Boolean {
+      return _builder.hasIsNew()
+    }
+
+    /**
      * <code>optional string creator_name = 14;</code>
      */
     public var creatorName: kotlin.String

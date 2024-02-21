@@ -93,7 +93,8 @@ proto.ei.DLCCatalog.toObject = function(includeInstance, msg) {
     shellObjectsList: jspb.Message.toObjectList(msg.getShellObjectsList(),
     proto.ei.ShellObjectSpec.toObject, includeInstance),
     shellGroupsList: jspb.Message.toObjectList(msg.getShellGroupsList(),
-    proto.ei.ShellGroupSpec.toObject, includeInstance)
+    proto.ei.ShellGroupSpec.toObject, includeInstance),
+    shellsShowcaseLastFeaturedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -159,6 +160,10 @@ proto.ei.DLCCatalog.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.ShellGroupSpec;
       reader.readMessage(value,proto.ei.ShellGroupSpec.deserializeBinaryFromReader);
       msg.addShellGroups(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setShellsShowcaseLastFeaturedTime(value);
       break;
     default:
       reader.skipField();
@@ -235,6 +240,13 @@ proto.ei.DLCCatalog.serializeBinaryToWriter = function(message, writer) {
       5,
       f,
       proto.ei.ShellGroupSpec.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeDouble(
+      7,
+      f
     );
   }
 };
@@ -465,6 +477,42 @@ proto.ei.DLCCatalog.prototype.addShellGroups = function(opt_value, opt_index) {
  */
 proto.ei.DLCCatalog.prototype.clearShellGroupsList = function() {
   return this.setShellGroupsList([]);
+};
+
+
+/**
+ * optional double shells_showcase_last_featured_time = 7;
+ * @return {number}
+ */
+proto.ei.DLCCatalog.prototype.getShellsShowcaseLastFeaturedTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.DLCCatalog} returns this
+ */
+proto.ei.DLCCatalog.prototype.setShellsShowcaseLastFeaturedTime = function(value) {
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.DLCCatalog} returns this
+ */
+proto.ei.DLCCatalog.prototype.clearShellsShowcaseLastFeaturedTime = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.DLCCatalog.prototype.hasShellsShowcaseLastFeaturedTime = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

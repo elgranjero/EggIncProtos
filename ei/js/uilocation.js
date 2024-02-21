@@ -29,6 +29,8 @@ proto.ei.UILocation = {
   CHICKENS: 7,
   CHICKEN_HATS: 11,
   EPIC_RESEARCH: 8,
-  SETTINGS: 9
+  SETTINGS: 9,
+  HELP: 13,
+  UNIVERSITY: 14
 };
 

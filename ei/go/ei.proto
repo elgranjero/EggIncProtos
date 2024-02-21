@@ -1282,6 +1282,24 @@ message LiveConfig {
         optional bool contracts_club_available = 12;
         optional bool contracts_beta = 13;
     }
+    
+    optional HelpConfig help_config = 5;
+    message HelpConfig {
+        repeated HowToVideoInfo video_infos = 1;
+        message HowToVideoInfo {
+            optional Type type = 6;
+            enum Type {
+                VIDEO = 0;
+                ARTICLE = 1;
+            }
+            
+            optional string name = 1;
+            optional string description = 2;
+            optional string duration = 5;
+            optional string url = 3;
+            optional double soul_eggs = 4;
+        }
+    }
 }
 
 message InGameMail {
@@ -2055,6 +2073,7 @@ message DLCCatalog {
     repeated ShellSetSpec decorators = 6;
     repeated ShellObjectSpec shell_objects = 4;
     repeated ShellGroupSpec shell_groups = 5;
+    optional double shells_showcase_last_featured_time = 7;
 }
 
 message ShellDB {
@@ -2103,6 +2122,7 @@ message ShellDB {
     
     repeated string new_shells_downloaded = 6;
     repeated string new_shells_seen = 7;
+    optional double last_showcase_featured_time_seen = 11;
     optional bool lighting_controls_unlocked = 10;
     
     message ShellConfiguration {
@@ -2205,6 +2225,7 @@ message ShellShowcaseListingInfo {
     optional string local_id = 12;
     optional string name = 2;
     optional string description = 3;
+    optional bool is_new = 15;
     optional string creator_name = 14;
     
     optional Status status = 11;
@@ -2213,6 +2234,8 @@ message ShellShowcaseListingInfo {
         SUBMITTED = 1;
         LIVE = 2;
         FEATURED = 3;
+        FEATURED_ALUM = 5;
+        ARCHIVED = 6;
         INVALID = 4;
     }
     
@@ -2409,6 +2432,8 @@ enum UILocation {
     CHICKEN_HATS = 11;
     EPIC_RESEARCH = 8;
     SETTINGS = 9;
+    HELP = 13;
+    UNIVERSITY = 14;
 }
 
 enum UserType {

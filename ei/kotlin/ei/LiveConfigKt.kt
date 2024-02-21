@@ -123,6 +123,32 @@ public object LiveConfigKt {
     }
     public val LiveConfigKt.Dsl.miscConfigOrNull: ei.Ei.LiveConfig.MiscConfig?
       get() = _builder.miscConfigOrNull
+
+    /**
+     * <code>optional .ei.LiveConfig.HelpConfig help_config = 5;</code>
+     */
+    public var helpConfig: ei.Ei.LiveConfig.HelpConfig
+      @JvmName("getHelpConfig")
+      get() = _builder.getHelpConfig()
+      @JvmName("setHelpConfig")
+      set(value) {
+        _builder.setHelpConfig(value)
+      }
+    /**
+     * <code>optional .ei.LiveConfig.HelpConfig help_config = 5;</code>
+     */
+    public fun clearHelpConfig() {
+      _builder.clearHelpConfig()
+    }
+    /**
+     * <code>optional .ei.LiveConfig.HelpConfig help_config = 5;</code>
+     * @return Whether the helpConfig field is set.
+     */
+    public fun hasHelpConfig(): kotlin.Boolean {
+      return _builder.hasHelpConfig()
+    }
+    public val LiveConfigKt.Dsl.helpConfigOrNull: ei.Ei.LiveConfig.HelpConfig?
+      get() = _builder.helpConfigOrNull
   }
   @kotlin.jvm.JvmName("-initializeboostsConfig")
   public inline fun boostsConfig(block: ei.LiveConfigKt.BoostsConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.BoostsConfig =
@@ -1424,6 +1450,262 @@ public object LiveConfigKt {
       }
     }
   }
+  @kotlin.jvm.JvmName("-initializehelpConfig")
+  public inline fun helpConfig(block: ei.LiveConfigKt.HelpConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.HelpConfig =
+    ei.LiveConfigKt.HelpConfigKt.Dsl._create(ei.Ei.LiveConfig.HelpConfig.newBuilder()).apply { block() }._build()
+  public object HelpConfigKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.LiveConfig.HelpConfig.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.LiveConfig.HelpConfig.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.LiveConfig.HelpConfig = _builder.build()
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class VideoInfosProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       */
+       public val videoInfos: com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>
+        @kotlin.jvm.JvmSynthetic
+        get() = com.google.protobuf.kotlin.DslList(
+          _builder.getVideoInfosList()
+        )
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * @param value The videoInfos to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addVideoInfos")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>.add(value: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo) {
+        _builder.addVideoInfos(value)
+      }
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * @param value The videoInfos to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignVideoInfos")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>.plusAssign(value: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo) {
+        add(value)
+      }
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * @param values The videoInfos to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("addAllVideoInfos")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo>) {
+        _builder.addAllVideoInfos(values)
+      }
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * @param values The videoInfos to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("plusAssignAllVideoInfos")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo>) {
+        addAll(values)
+      }
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The videoInfos to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("setVideoInfos")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>.set(index: kotlin.Int, value: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo) {
+        _builder.setVideoInfos(index, value)
+      }
+      /**
+       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       */
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.jvm.JvmName("clearVideoInfos")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo, VideoInfosProxy>.clear() {
+        _builder.clearVideoInfos()
+      }
+
+    }
+    @kotlin.jvm.JvmName("-initializehowToVideoInfo")
+    public inline fun howToVideoInfo(block: ei.LiveConfigKt.HelpConfigKt.HowToVideoInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo =
+      ei.LiveConfigKt.HelpConfigKt.HowToVideoInfoKt.Dsl._create(ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo.newBuilder()).apply { block() }._build()
+    public object HowToVideoInfoKt {
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      @com.google.protobuf.kotlin.ProtoDslMarker
+      public class Dsl private constructor(
+        private val _builder: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo.Builder
+      ) {
+        public companion object {
+          @kotlin.jvm.JvmSynthetic
+          @kotlin.PublishedApi
+          internal fun _create(builder: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo.Builder): Dsl = Dsl(builder)
+        }
+
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo = _builder.build()
+
+        /**
+         * <code>optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;</code>
+         */
+        public var type: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo.Type
+          @JvmName("getType")
+          get() = _builder.getType()
+          @JvmName("setType")
+          set(value) {
+            _builder.setType(value)
+          }
+        /**
+         * <code>optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;</code>
+         */
+        public fun clearType() {
+          _builder.clearType()
+        }
+        /**
+         * <code>optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;</code>
+         * @return Whether the type field is set.
+         */
+        public fun hasType(): kotlin.Boolean {
+          return _builder.hasType()
+        }
+
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public var name: kotlin.String
+          @JvmName("getName")
+          get() = _builder.getName()
+          @JvmName("setName")
+          set(value) {
+            _builder.setName(value)
+          }
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public fun clearName() {
+          _builder.clearName()
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         * @return Whether the name field is set.
+         */
+        public fun hasName(): kotlin.Boolean {
+          return _builder.hasName()
+        }
+
+        /**
+         * <code>optional string description = 2;</code>
+         */
+        public var description: kotlin.String
+          @JvmName("getDescription")
+          get() = _builder.getDescription()
+          @JvmName("setDescription")
+          set(value) {
+            _builder.setDescription(value)
+          }
+        /**
+         * <code>optional string description = 2;</code>
+         */
+        public fun clearDescription() {
+          _builder.clearDescription()
+        }
+        /**
+         * <code>optional string description = 2;</code>
+         * @return Whether the description field is set.
+         */
+        public fun hasDescription(): kotlin.Boolean {
+          return _builder.hasDescription()
+        }
+
+        /**
+         * <code>optional string duration = 5;</code>
+         */
+        public var duration: kotlin.String
+          @JvmName("getDuration")
+          get() = _builder.getDuration()
+          @JvmName("setDuration")
+          set(value) {
+            _builder.setDuration(value)
+          }
+        /**
+         * <code>optional string duration = 5;</code>
+         */
+        public fun clearDuration() {
+          _builder.clearDuration()
+        }
+        /**
+         * <code>optional string duration = 5;</code>
+         * @return Whether the duration field is set.
+         */
+        public fun hasDuration(): kotlin.Boolean {
+          return _builder.hasDuration()
+        }
+
+        /**
+         * <code>optional string url = 3;</code>
+         */
+        public var url: kotlin.String
+          @JvmName("getUrl")
+          get() = _builder.getUrl()
+          @JvmName("setUrl")
+          set(value) {
+            _builder.setUrl(value)
+          }
+        /**
+         * <code>optional string url = 3;</code>
+         */
+        public fun clearUrl() {
+          _builder.clearUrl()
+        }
+        /**
+         * <code>optional string url = 3;</code>
+         * @return Whether the url field is set.
+         */
+        public fun hasUrl(): kotlin.Boolean {
+          return _builder.hasUrl()
+        }
+
+        /**
+         * <code>optional double soul_eggs = 4;</code>
+         */
+        public var soulEggs: kotlin.Double
+          @JvmName("getSoulEggs")
+          get() = _builder.getSoulEggs()
+          @JvmName("setSoulEggs")
+          set(value) {
+            _builder.setSoulEggs(value)
+          }
+        /**
+         * <code>optional double soul_eggs = 4;</code>
+         */
+        public fun clearSoulEggs() {
+          _builder.clearSoulEggs()
+        }
+        /**
+         * <code>optional double soul_eggs = 4;</code>
+         * @return Whether the soulEggs field is set.
+         */
+        public fun hasSoulEggs(): kotlin.Boolean {
+          return _builder.hasSoulEggs()
+        }
+      }
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.LiveConfig.copy(block: ei.LiveConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig =
@@ -1459,6 +1741,14 @@ val ei.Ei.LiveConfig.GiftConfigOrBuilder.videoGiftMuConfigOrNull: ei.Ei.LiveConf
 public inline fun ei.Ei.LiveConfig.MiscConfig.copy(block: ei.LiveConfigKt.MiscConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.MiscConfig =
   ei.LiveConfigKt.MiscConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.LiveConfig.HelpConfig.copy(block: ei.LiveConfigKt.HelpConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.HelpConfig =
+  ei.LiveConfigKt.HelpConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo.copy(block: ei.LiveConfigKt.HelpConfigKt.HowToVideoInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo =
+  ei.LiveConfigKt.HelpConfigKt.HowToVideoInfoKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
 val ei.Ei.LiveConfigOrBuilder.boostsConfigOrNull: ei.Ei.LiveConfig.BoostsConfig?
   get() = if (hasBoostsConfig()) getBoostsConfig() else null
 
@@ -1467,4 +1757,7 @@ val ei.Ei.LiveConfigOrBuilder.giftConfigOrNull: ei.Ei.LiveConfig.GiftConfig?
 
 val ei.Ei.LiveConfigOrBuilder.miscConfigOrNull: ei.Ei.LiveConfig.MiscConfig?
   get() = if (hasMiscConfig()) getMiscConfig() else null
+
+val ei.Ei.LiveConfigOrBuilder.helpConfigOrNull: ei.Ei.LiveConfig.HelpConfig?
+  get() = if (hasHelpConfig()) getHelpConfig() else null
 

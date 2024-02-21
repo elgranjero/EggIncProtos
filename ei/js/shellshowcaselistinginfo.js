@@ -76,6 +76,7 @@ proto.ei.ShellShowcaseListingInfo.toObject = function(includeInstance, msg) {
     localId: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     description: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    isNew: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
     creatorName: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     status: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
     farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
@@ -137,6 +138,10 @@ proto.ei.ShellShowcaseListingInfo.deserializeBinaryFromReader = function(msg, re
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setDescription(value);
+      break;
+    case 15:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsNew(value);
       break;
     case 14:
       var value = /** @type {string} */ (reader.readString());
@@ -236,6 +241,13 @@ proto.ei.ShellShowcaseListingInfo.serializeBinaryToWriter = function(message, wr
       f
     );
   }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 15));
+  if (f != null) {
+    writer.writeBool(
+      15,
+      f
+    );
+  }
   f = /** @type {string} */ (jspb.Message.getField(message, 14));
   if (f != null) {
     writer.writeString(
@@ -318,6 +330,8 @@ proto.ei.ShellShowcaseListingInfo.Status = {
   SUBMITTED: 1,
   LIVE: 2,
   FEATURED: 3,
+  FEATURED_ALUM: 5,
+  ARCHIVED: 6,
   INVALID: 4
 };
 
@@ -462,6 +476,42 @@ proto.ei.ShellShowcaseListingInfo.prototype.clearDescription = function() {
  */
 proto.ei.ShellShowcaseListingInfo.prototype.hasDescription = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional bool is_new = 15;
+ * @return {boolean}
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.getIsNew = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.ShellShowcaseListingInfo} returns this
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.setIsNew = function(value) {
+  return jspb.Message.setField(this, 15, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellShowcaseListingInfo} returns this
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.clearIsNew = function() {
+  return jspb.Message.setField(this, 15, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellShowcaseListingInfo.prototype.hasIsNew = function() {
+  return jspb.Message.getField(this, 15) != null;
 };
 
 

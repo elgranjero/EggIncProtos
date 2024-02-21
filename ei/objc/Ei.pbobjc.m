@@ -111,6 +111,8 @@ GPBObjCClassDeclaration(LiveConfig_BoostsConfig_ItemConfig);
 GPBObjCClassDeclaration(LiveConfig_GiftConfig);
 GPBObjCClassDeclaration(LiveConfig_GiftConfig_GiftMuConfig);
 GPBObjCClassDeclaration(LiveConfig_GiftConfig_GiftValueConfig);
+GPBObjCClassDeclaration(LiveConfig_HelpConfig);
+GPBObjCClassDeclaration(LiveConfig_HelpConfig_HowToVideoInfo);
 GPBObjCClassDeclaration(LiveConfig_MiscConfig);
 GPBObjCClassDeclaration(LocalContract);
 GPBObjCClassDeclaration(MailDB);
@@ -530,7 +532,7 @@ GPBEnumDescriptor *UILocation_EnumDescriptor(void) {
         "None\000Shop\000BoostShop\000Piggy\000ProPermit\000Ultr"
         "aShop\000Shells\000ShellSets\000ShellsShowcase\000Ch"
         "ickens\000ChickenHats\000EpicResearch\000Settings"
-        "\000";
+        "\000Help\000University\000";
     static const int32_t values[] = {
         UILocation_None,
         UILocation_Shop,
@@ -545,6 +547,8 @@ GPBEnumDescriptor *UILocation_EnumDescriptor(void) {
         UILocation_ChickenHats,
         UILocation_EpicResearch,
         UILocation_Settings,
+        UILocation_Help,
+        UILocation_University,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(UILocation)
@@ -575,6 +579,8 @@ BOOL UILocation_IsValidValue(int32_t value__) {
     case UILocation_ChickenHats:
     case UILocation_EpicResearch:
     case UILocation_Settings:
+    case UILocation_Help:
+    case UILocation_University:
       return YES;
     default:
       return NO;
@@ -13378,6 +13384,7 @@ typedef struct ServerGift__storage_ {
 @dynamic hasBoostsConfig, boostsConfig;
 @dynamic hasGiftConfig, giftConfig;
 @dynamic hasMiscConfig, miscConfig;
+@dynamic hasHelpConfig, helpConfig;
 
 typedef struct LiveConfig__storage_ {
   uint32_t _has_storage_[1];
@@ -13385,6 +13392,7 @@ typedef struct LiveConfig__storage_ {
   LiveConfig_BoostsConfig *boostsConfig;
   LiveConfig_GiftConfig *giftConfig;
   LiveConfig_MiscConfig *miscConfig;
+  LiveConfig_HelpConfig *helpConfig;
 } LiveConfig__storage_;
 
 // This method is threadsafe because it is initially called
@@ -13426,6 +13434,15 @@ typedef struct LiveConfig__storage_ {
         .number = LiveConfig_FieldNumber_MiscConfig,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(LiveConfig__storage_, miscConfig),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "helpConfig",
+        .dataTypeSpecific.clazz = GPBObjCClass(LiveConfig_HelpConfig),
+        .number = LiveConfig_FieldNumber_HelpConfig,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(LiveConfig__storage_, helpConfig),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -14159,6 +14176,193 @@ typedef struct LiveConfig_MiscConfig__storage_ {
 }
 
 @end
+
+#pragma mark - LiveConfig_HelpConfig
+
+@implementation LiveConfig_HelpConfig
+
+@dynamic videoInfosArray, videoInfosArray_Count;
+
+typedef struct LiveConfig_HelpConfig__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *videoInfosArray;
+} LiveConfig_HelpConfig__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "videoInfosArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(LiveConfig_HelpConfig_HowToVideoInfo),
+        .number = LiveConfig_HelpConfig_FieldNumber_VideoInfosArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig__storage_, videoInfosArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[LiveConfig_HelpConfig class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(LiveConfig_HelpConfig__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(LiveConfig)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - LiveConfig_HelpConfig_HowToVideoInfo
+
+@implementation LiveConfig_HelpConfig_HowToVideoInfo
+
+@dynamic hasType, type;
+@dynamic hasName, name;
+@dynamic hasDescription_p, description_p;
+@dynamic hasDuration, duration;
+@dynamic hasURL, URL;
+@dynamic hasSoulEggs, soulEggs;
+
+typedef struct LiveConfig_HelpConfig_HowToVideoInfo__storage_ {
+  uint32_t _has_storage_[1];
+  LiveConfig_HelpConfig_HowToVideoInfo_Type type;
+  NSString *name;
+  NSString *description_p;
+  NSString *URL;
+  NSString *duration;
+  double soulEggs;
+} LiveConfig_HelpConfig_HowToVideoInfo__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "name",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Name,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig_HowToVideoInfo__storage_, name),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Description_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig_HowToVideoInfo__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "URL",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_URL,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig_HowToVideoInfo__storage_, URL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "soulEggs",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_SoulEggs,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig_HowToVideoInfo__storage_, soulEggs),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "duration",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Duration,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig_HowToVideoInfo__storage_, duration),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "type",
+        .dataTypeSpecific.enumDescFunc = LiveConfig_HelpConfig_HowToVideoInfo_Type_EnumDescriptor,
+        .number = LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Type,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(LiveConfig_HelpConfig_HowToVideoInfo__storage_, type),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[LiveConfig_HelpConfig_HowToVideoInfo class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(LiveConfig_HelpConfig_HowToVideoInfo__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\003!!!\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(LiveConfig_HelpConfig)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - Enum LiveConfig_HelpConfig_HowToVideoInfo_Type
+
+GPBEnumDescriptor *LiveConfig_HelpConfig_HowToVideoInfo_Type_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Video\000Article\000";
+    static const int32_t values[] = {
+        LiveConfig_HelpConfig_HowToVideoInfo_Type_Video,
+        LiveConfig_HelpConfig_HowToVideoInfo_Type_Article,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(LiveConfig_HelpConfig_HowToVideoInfo_Type)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:LiveConfig_HelpConfig_HowToVideoInfo_Type_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL LiveConfig_HelpConfig_HowToVideoInfo_Type_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case LiveConfig_HelpConfig_HowToVideoInfo_Type_Video:
+    case LiveConfig_HelpConfig_HowToVideoInfo_Type_Article:
+      return YES;
+    default:
+      return NO;
+  }
+}
 
 #pragma mark - InGameMail
 
@@ -20858,6 +21062,7 @@ typedef struct ShellGroupSpec__storage_ {
 @dynamic decoratorsArray, decoratorsArray_Count;
 @dynamic shellObjectsArray, shellObjectsArray_Count;
 @dynamic shellGroupsArray, shellGroupsArray_Count;
+@dynamic hasShellsShowcaseLastFeaturedTime, shellsShowcaseLastFeaturedTime;
 
 typedef struct DLCCatalog__storage_ {
   uint32_t _has_storage_[1];
@@ -20867,6 +21072,7 @@ typedef struct DLCCatalog__storage_ {
   NSMutableArray *shellObjectsArray;
   NSMutableArray *shellGroupsArray;
   NSMutableArray *decoratorsArray;
+  double shellsShowcaseLastFeaturedTime;
 } DLCCatalog__storage_;
 
 // This method is threadsafe because it is initially called
@@ -20929,6 +21135,15 @@ typedef struct DLCCatalog__storage_ {
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
+      {
+        .name = "shellsShowcaseLastFeaturedTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = DLCCatalog_FieldNumber_ShellsShowcaseLastFeaturedTime,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(DLCCatalog__storage_, shellsShowcaseLastFeaturedTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[DLCCatalog class]
@@ -20961,6 +21176,7 @@ typedef struct DLCCatalog__storage_ {
 @dynamic savedConfigsArray, savedConfigsArray_Count;
 @dynamic newShellsDownloadedArray, newShellsDownloadedArray_Count;
 @dynamic newShellsSeenArray, newShellsSeenArray_Count;
+@dynamic hasLastShowcaseFeaturedTimeSeen, lastShowcaseFeaturedTimeSeen;
 @dynamic hasLightingControlsUnlocked, lightingControlsUnlocked;
 
 typedef struct ShellDB__storage_ {
@@ -20974,6 +21190,7 @@ typedef struct ShellDB__storage_ {
   NSMutableArray *newShellsSeenArray;
   NSMutableArray *shellVariationInventoryArray;
   NSMutableArray *savedConfigsArray;
+  double lastShowcaseFeaturedTimeSeen;
 } ShellDB__storage_;
 
 // This method is threadsafe because it is initially called
@@ -21067,10 +21284,19 @@ typedef struct ShellDB__storage_ {
         .name = "lightingControlsUnlocked",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellDB_FieldNumber_LightingControlsUnlocked,
-        .hasIndex = 0,
-        .offset = 1,  // Stored in _has_storage_ to save space.
+        .hasIndex = 1,
+        .offset = 2,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "lastShowcaseFeaturedTimeSeen",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellDB_FieldNumber_LastShowcaseFeaturedTimeSeen,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ShellDB__storage_, lastShowcaseFeaturedTimeSeen),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -22435,6 +22661,7 @@ typedef struct ShellShowcase__storage_ {
 @dynamic hasLocalId, localId;
 @dynamic hasName, name;
 @dynamic hasDescription_p, description_p;
+@dynamic hasIsNew, isNew;
 @dynamic hasCreatorName, creatorName;
 @dynamic hasStatus, status;
 @dynamic hasFarmConfig, farmConfig;
@@ -22501,7 +22728,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "farmConfig",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellDB_FarmConfiguration),
         .number = ShellShowcaseListingInfo_FieldNumber_FarmConfig,
-        .hasIndex = 6,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, farmConfig),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -22510,7 +22737,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "sales",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Sales,
-        .hasIndex = 7,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, sales),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -22519,7 +22746,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "gross",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Gross,
-        .hasIndex = 8,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, gross),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -22528,7 +22755,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "views",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Views,
-        .hasIndex = 9,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, views),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -22537,7 +22764,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "likes",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Likes,
-        .hasIndex = 11,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, likes),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -22546,7 +22773,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "dislikes",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Dislikes,
-        .hasIndex = 12,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, dislikes),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -22555,7 +22782,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "shareURL",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_ShareURL,
-        .hasIndex = 13,
+        .hasIndex = 15,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, shareURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
@@ -22564,7 +22791,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "status",
         .dataTypeSpecific.enumDescFunc = ShellShowcaseListingInfo_Status_EnumDescriptor,
         .number = ShellShowcaseListingInfo_FieldNumber_Status,
-        .hasIndex = 5,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -22582,7 +22809,7 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "equips",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_Equips,
-        .hasIndex = 10,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, equips),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -22591,10 +22818,19 @@ typedef struct ShellShowcaseListingInfo__storage_ {
         .name = "creatorName",
         .dataTypeSpecific.clazz = Nil,
         .number = ShellShowcaseListingInfo_FieldNumber_CreatorName,
-        .hasIndex = 4,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(ShellShowcaseListingInfo__storage_, creatorName),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "isNew",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ShellShowcaseListingInfo_FieldNumber_IsNew,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -22626,12 +22862,15 @@ GPBEnumDescriptor *ShellShowcaseListingInfo_Status_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "None\000Submitted\000Live\000Featured\000Invalid\000";
+        "None\000Submitted\000Live\000Featured\000FeaturedAlu"
+        "m\000Archived\000Invalid\000";
     static const int32_t values[] = {
         ShellShowcaseListingInfo_Status_None,
         ShellShowcaseListingInfo_Status_Submitted,
         ShellShowcaseListingInfo_Status_Live,
         ShellShowcaseListingInfo_Status_Featured,
+        ShellShowcaseListingInfo_Status_FeaturedAlum,
+        ShellShowcaseListingInfo_Status_Archived,
         ShellShowcaseListingInfo_Status_Invalid,
     };
     GPBEnumDescriptor *worker =
@@ -22654,6 +22893,8 @@ BOOL ShellShowcaseListingInfo_Status_IsValidValue(int32_t value__) {
     case ShellShowcaseListingInfo_Status_Submitted:
     case ShellShowcaseListingInfo_Status_Live:
     case ShellShowcaseListingInfo_Status_Featured:
+    case ShellShowcaseListingInfo_Status_FeaturedAlum:
+    case ShellShowcaseListingInfo_Status_Archived:
     case ShellShowcaseListingInfo_Status_Invalid:
       return YES;
     default:

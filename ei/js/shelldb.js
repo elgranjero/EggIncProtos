@@ -317,6 +317,7 @@ proto.ei.ShellDB.toObject = function(includeInstance, msg) {
     proto.ei.ShellDB.SavedFarmConfiguration.toObject, includeInstance),
     newShellsDownloadedList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
     newShellsSeenList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
+    lastShowcaseFeaturedTimeSeen: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
     lightingControlsUnlocked: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f
   };
 
@@ -396,6 +397,10 @@ proto.ei.ShellDB.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.addNewShellsSeen(value);
+      break;
+    case 11:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastShowcaseFeaturedTimeSeen(value);
       break;
     case 10:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -497,6 +502,13 @@ proto.ei.ShellDB.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedString(
       7,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 11));
+  if (f != null) {
+    writer.writeDouble(
+      11,
       f
     );
   }
@@ -3893,6 +3905,42 @@ proto.ei.ShellDB.prototype.addNewShellsSeen = function(value, opt_index) {
  */
 proto.ei.ShellDB.prototype.clearNewShellsSeenList = function() {
   return this.setNewShellsSeenList([]);
+};
+
+
+/**
+ * optional double last_showcase_featured_time_seen = 11;
+ * @return {number}
+ */
+proto.ei.ShellDB.prototype.getLastShowcaseFeaturedTimeSeen = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ShellDB} returns this
+ */
+proto.ei.ShellDB.prototype.setLastShowcaseFeaturedTimeSeen = function(value) {
+  return jspb.Message.setField(this, 11, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ShellDB} returns this
+ */
+proto.ei.ShellDB.prototype.clearLastShowcaseFeaturedTimeSeen = function() {
+  return jspb.Message.setField(this, 11, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ShellDB.prototype.hasLastShowcaseFeaturedTimeSeen = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 

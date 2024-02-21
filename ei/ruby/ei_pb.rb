@@ -1081,6 +1081,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :boosts_config, :message, 2, "ei.LiveConfig.BoostsConfig"
       optional :gift_config, :message, 3, "ei.LiveConfig.GiftConfig"
       optional :misc_config, :message, 4, "ei.LiveConfig.MiscConfig"
+      optional :help_config, :message, 5, "ei.LiveConfig.HelpConfig"
     end
     add_message "ei.LiveConfig.BoostsConfig" do
       repeated :item_configs, :message, 1, "ei.LiveConfig.BoostsConfig.ItemConfig"
@@ -1138,6 +1139,21 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :new_player_event_duration, :double, 11
       optional :contracts_club_available, :bool, 12
       optional :contracts_beta, :bool, 13
+    end
+    add_message "ei.LiveConfig.HelpConfig" do
+      repeated :video_infos, :message, 1, "ei.LiveConfig.HelpConfig.HowToVideoInfo"
+    end
+    add_message "ei.LiveConfig.HelpConfig.HowToVideoInfo" do
+      optional :type, :enum, 6, "ei.LiveConfig.HelpConfig.HowToVideoInfo.Type"
+      optional :name, :string, 1
+      optional :description, :string, 2
+      optional :duration, :string, 5
+      optional :url, :string, 3
+      optional :soul_eggs, :double, 4
+    end
+    add_enum "ei.LiveConfig.HelpConfig.HowToVideoInfo.Type" do
+      value :VIDEO, 0
+      value :ARTICLE, 1
     end
     add_message "ei.InGameMail" do
       optional :id, :string, 1
@@ -1832,6 +1848,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :decorators, :message, 6, "ei.ShellSetSpec"
       repeated :shell_objects, :message, 4, "ei.ShellObjectSpec"
       repeated :shell_groups, :message, 5, "ei.ShellGroupSpec"
+      optional :shells_showcase_last_featured_time, :double, 7
     end
     add_message "ei.ShellDB" do
       repeated :shell_inventory, :message, 1, "ei.ShellDB.ShellStatus"
@@ -1843,6 +1860,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :saved_configs, :message, 9, "ei.ShellDB.SavedFarmConfiguration"
       repeated :new_shells_downloaded, :string, 6
       repeated :new_shells_seen, :string, 7
+      optional :last_showcase_featured_time_seen, :double, 11
       optional :lighting_controls_unlocked, :bool, 10
     end
     add_message "ei.ShellDB.ShellStatus" do
@@ -1964,6 +1982,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :local_id, :string, 12
       optional :name, :string, 2
       optional :description, :string, 3
+      optional :is_new, :bool, 15
       optional :creator_name, :string, 14
       optional :status, :enum, 11, "ei.ShellShowcaseListingInfo.Status"
       optional :farm_config, :message, 4, "ei.ShellDB.FarmConfiguration"
@@ -1980,6 +1999,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :SUBMITTED, 1
       value :LIVE, 2
       value :FEATURED, 3
+      value :FEATURED_ALUM, 5
+      value :ARCHIVED, 6
       value :INVALID, 4
     end
     add_message "ei.ShowcaseRoyaltyDeliveryConfirmation" do
@@ -2167,6 +2188,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :CHICKEN_HATS, 11
       value :EPIC_RESEARCH, 8
       value :SETTINGS, 9
+      value :HELP, 13
+      value :UNIVERSITY, 14
     end
     add_enum "ei.UserType" do
       value :ALL_USERS, 0
@@ -2313,6 +2336,9 @@ module Ei
   LiveConfig::GiftConfig::GiftValueConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.GiftConfig.GiftValueConfig").msgclass
   LiveConfig::GiftConfig::GiftMuConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.GiftConfig.GiftMuConfig").msgclass
   LiveConfig::MiscConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.MiscConfig").msgclass
+  LiveConfig::HelpConfig = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.HelpConfig").msgclass
+  LiveConfig::HelpConfig::HowToVideoInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.HelpConfig.HowToVideoInfo").msgclass
+  LiveConfig::HelpConfig::HowToVideoInfo::Type = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.LiveConfig.HelpConfig.HowToVideoInfo.Type").enummodule
   InGameMail = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.InGameMail").msgclass
   MailDB = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MailDB").msgclass
   TipsDB = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.TipsDB").msgclass

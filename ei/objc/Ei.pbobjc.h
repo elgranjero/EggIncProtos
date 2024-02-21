@@ -105,6 +105,8 @@ CF_EXTERN_C_BEGIN
 @class LiveConfig_GiftConfig;
 @class LiveConfig_GiftConfig_GiftMuConfig;
 @class LiveConfig_GiftConfig_GiftValueConfig;
+@class LiveConfig_HelpConfig;
+@class LiveConfig_HelpConfig_HowToVideoInfo;
 @class LiveConfig_MiscConfig;
 @class LocalContract;
 @class MailDB;
@@ -313,6 +315,8 @@ typedef GPB_ENUM(UILocation) {
   UILocation_ChickenHats = 11,
   UILocation_EpicResearch = 8,
   UILocation_Settings = 9,
+  UILocation_Help = 13,
+  UILocation_University = 14,
 };
 
 GPBEnumDescriptor *UILocation_EnumDescriptor(void);
@@ -572,6 +576,21 @@ GPBEnumDescriptor *KickPlayerCoopRequest_Reason_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL KickPlayerCoopRequest_Reason_IsValidValue(int32_t value);
+
+#pragma mark - Enum LiveConfig_HelpConfig_HowToVideoInfo_Type
+
+typedef GPB_ENUM(LiveConfig_HelpConfig_HowToVideoInfo_Type) {
+  LiveConfig_HelpConfig_HowToVideoInfo_Type_Video = 0,
+  LiveConfig_HelpConfig_HowToVideoInfo_Type_Article = 1,
+};
+
+GPBEnumDescriptor *LiveConfig_HelpConfig_HowToVideoInfo_Type_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL LiveConfig_HelpConfig_HowToVideoInfo_Type_IsValidValue(int32_t value);
 
 #pragma mark - Enum MissionInfo_Spaceship
 
@@ -937,6 +956,8 @@ typedef GPB_ENUM(ShellShowcaseListingInfo_Status) {
   ShellShowcaseListingInfo_Status_Submitted = 1,
   ShellShowcaseListingInfo_Status_Live = 2,
   ShellShowcaseListingInfo_Status_Featured = 3,
+  ShellShowcaseListingInfo_Status_FeaturedAlum = 5,
+  ShellShowcaseListingInfo_Status_Archived = 6,
   ShellShowcaseListingInfo_Status_Invalid = 4,
 };
 
@@ -5357,6 +5378,7 @@ typedef GPB_ENUM(LiveConfig_FieldNumber) {
   LiveConfig_FieldNumber_BoostsConfig = 2,
   LiveConfig_FieldNumber_GiftConfig = 3,
   LiveConfig_FieldNumber_MiscConfig = 4,
+  LiveConfig_FieldNumber_HelpConfig = 5,
 };
 
 GPB_FINAL @interface LiveConfig : GPBMessage
@@ -5376,6 +5398,10 @@ GPB_FINAL @interface LiveConfig : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) LiveConfig_MiscConfig *miscConfig;
 /** Test to see if @c miscConfig has been set. */
 @property(nonatomic, readwrite) BOOL hasMiscConfig;
+
+@property(nonatomic, readwrite, strong, null_resettable) LiveConfig_HelpConfig *helpConfig;
+/** Test to see if @c helpConfig has been set. */
+@property(nonatomic, readwrite) BOOL hasHelpConfig;
 
 @end
 
@@ -5618,6 +5644,57 @@ GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
 @property(nonatomic, readwrite) BOOL contractsBeta;
 
 @property(nonatomic, readwrite) BOOL hasContractsBeta;
+@end
+
+#pragma mark - LiveConfig_HelpConfig
+
+typedef GPB_ENUM(LiveConfig_HelpConfig_FieldNumber) {
+  LiveConfig_HelpConfig_FieldNumber_VideoInfosArray = 1,
+};
+
+GPB_FINAL @interface LiveConfig_HelpConfig : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<LiveConfig_HelpConfig_HowToVideoInfo*> *videoInfosArray;
+/** The number of items in @c videoInfosArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger videoInfosArray_Count;
+
+@end
+
+#pragma mark - LiveConfig_HelpConfig_HowToVideoInfo
+
+typedef GPB_ENUM(LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber) {
+  LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Name = 1,
+  LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Description_p = 2,
+  LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_URL = 3,
+  LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_SoulEggs = 4,
+  LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Duration = 5,
+  LiveConfig_HelpConfig_HowToVideoInfo_FieldNumber_Type = 6,
+};
+
+GPB_FINAL @interface LiveConfig_HelpConfig_HowToVideoInfo : GPBMessage
+
+@property(nonatomic, readwrite) LiveConfig_HelpConfig_HowToVideoInfo_Type type;
+
+@property(nonatomic, readwrite) BOOL hasType;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+/** Test to see if @c name has been set. */
+@property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *duration;
+/** Test to see if @c duration has been set. */
+@property(nonatomic, readwrite) BOOL hasDuration;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *URL;
+/** Test to see if @c URL has been set. */
+@property(nonatomic, readwrite) BOOL hasURL;
+
+@property(nonatomic, readwrite) double soulEggs;
+
+@property(nonatomic, readwrite) BOOL hasSoulEggs;
 @end
 
 #pragma mark - InGameMail
@@ -7735,6 +7812,7 @@ typedef GPB_ENUM(DLCCatalog_FieldNumber) {
   DLCCatalog_FieldNumber_ShellObjectsArray = 4,
   DLCCatalog_FieldNumber_ShellGroupsArray = 5,
   DLCCatalog_FieldNumber_DecoratorsArray = 6,
+  DLCCatalog_FieldNumber_ShellsShowcaseLastFeaturedTime = 7,
 };
 
 GPB_FINAL @interface DLCCatalog : GPBMessage
@@ -7763,6 +7841,9 @@ GPB_FINAL @interface DLCCatalog : GPBMessage
 /** The number of items in @c shellGroupsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger shellGroupsArray_Count;
 
+@property(nonatomic, readwrite) double shellsShowcaseLastFeaturedTime;
+
+@property(nonatomic, readwrite) BOOL hasShellsShowcaseLastFeaturedTime;
 @end
 
 #pragma mark - ShellDB
@@ -7778,6 +7859,7 @@ typedef GPB_ENUM(ShellDB_FieldNumber) {
   ShellDB_FieldNumber_ShellVariationInventoryArray = 8,
   ShellDB_FieldNumber_SavedConfigsArray = 9,
   ShellDB_FieldNumber_LightingControlsUnlocked = 10,
+  ShellDB_FieldNumber_LastShowcaseFeaturedTimeSeen = 11,
 };
 
 GPB_FINAL @interface ShellDB : GPBMessage
@@ -7818,6 +7900,9 @@ GPB_FINAL @interface ShellDB : GPBMessage
 /** The number of items in @c newShellsSeenArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger newShellsSeenArray_Count;
 
+@property(nonatomic, readwrite) double lastShowcaseFeaturedTimeSeen;
+
+@property(nonatomic, readwrite) BOOL hasLastShowcaseFeaturedTimeSeen;
 @property(nonatomic, readwrite) BOOL lightingControlsUnlocked;
 
 @property(nonatomic, readwrite) BOOL hasLightingControlsUnlocked;
@@ -8279,6 +8364,7 @@ typedef GPB_ENUM(ShellShowcaseListingInfo_FieldNumber) {
   ShellShowcaseListingInfo_FieldNumber_LocalId = 12,
   ShellShowcaseListingInfo_FieldNumber_Equips = 13,
   ShellShowcaseListingInfo_FieldNumber_CreatorName = 14,
+  ShellShowcaseListingInfo_FieldNumber_IsNew = 15,
 };
 
 GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
@@ -8299,6 +8385,9 @@ GPB_FINAL @interface ShellShowcaseListingInfo : GPBMessage
 /** Test to see if @c description_p has been set. */
 @property(nonatomic, readwrite) BOOL hasDescription_p;
 
+@property(nonatomic, readwrite) BOOL isNew;
+
+@property(nonatomic, readwrite) BOOL hasIsNew;
 @property(nonatomic, readwrite, copy, null_resettable) NSString *creatorName;
 /** Test to see if @c creatorName has been set. */
 @property(nonatomic, readwrite) BOOL hasCreatorName;

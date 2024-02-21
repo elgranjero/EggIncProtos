@@ -2068,12 +2068,43 @@ struct LiveConfig_MiscConfigDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LiveConfig_MiscConfigDefaultTypeInternal _LiveConfig_MiscConfig_default_instance_;
+PROTOBUF_CONSTEXPR LiveConfig_HelpConfig_HowToVideoInfo::LiveConfig_HelpConfig_HowToVideoInfo(
+    ::_pbi::ConstantInitialized)
+  : name_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , description_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , url_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , duration_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , soul_eggs_(0)
+  , type_(0)
+{}
+struct LiveConfig_HelpConfig_HowToVideoInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LiveConfig_HelpConfig_HowToVideoInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LiveConfig_HelpConfig_HowToVideoInfoDefaultTypeInternal() {}
+  union {
+    LiveConfig_HelpConfig_HowToVideoInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LiveConfig_HelpConfig_HowToVideoInfoDefaultTypeInternal _LiveConfig_HelpConfig_HowToVideoInfo_default_instance_;
+PROTOBUF_CONSTEXPR LiveConfig_HelpConfig::LiveConfig_HelpConfig(
+    ::_pbi::ConstantInitialized)
+  : video_infos_(){}
+struct LiveConfig_HelpConfigDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LiveConfig_HelpConfigDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LiveConfig_HelpConfigDefaultTypeInternal() {}
+  union {
+    LiveConfig_HelpConfig _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LiveConfig_HelpConfigDefaultTypeInternal _LiveConfig_HelpConfig_default_instance_;
 PROTOBUF_CONSTEXPR LiveConfig::LiveConfig(
     ::_pbi::ConstantInitialized)
   : config_id_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
   , boosts_config_(nullptr)
   , gift_config_(nullptr)
-  , misc_config_(nullptr){}
+  , misc_config_(nullptr)
+  , help_config_(nullptr){}
 struct LiveConfigDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LiveConfigDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -3119,7 +3150,8 @@ PROTOBUF_CONSTEXPR DLCCatalog::DLCCatalog(
   , shell_sets_()
   , shell_objects_()
   , shell_groups_()
-  , decorators_(){}
+  , decorators_()
+  , shells_showcase_last_featured_time_(0){}
 struct DLCCatalogDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DLCCatalogDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -3295,6 +3327,7 @@ PROTOBUF_CONSTEXPR ShellDB::ShellDB(
   , new_shells_seen_()
   , shell_variation_inventory_()
   , saved_configs_()
+  , last_showcase_featured_time_seen_(0)
   , lighting_controls_unlocked_(false){}
 struct ShellDBDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ShellDBDefaultTypeInternal()
@@ -3403,7 +3436,8 @@ PROTOBUF_CONSTEXPR ShellShowcaseListingInfo::ShellShowcaseListingInfo(
   , dislikes_(0u)
   , status_(0)
 
-  , equips_(uint64_t{0u}){}
+  , equips_(uint64_t{0u})
+  , is_new_(false){}
 struct ShellShowcaseListingInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ShellShowcaseListingInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -3577,8 +3611,8 @@ struct CXPEvalRolloutInfoDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CXPEvalRolloutInfoDefaultTypeInternal _CXPEvalRolloutInfo_default_instance_;
 }  // namespace ei
-static ::_pb::Metadata file_level_metadata_ei_2eproto[194];
-static const ::_pb::EnumDescriptor* file_level_enum_descriptors_ei_2eproto[36];
+static ::_pb::Metadata file_level_metadata_ei_2eproto[196];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_ei_2eproto[37];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ei_2eproto = nullptr;
 
 const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -5872,6 +5906,31 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   11,
   5,
   12,
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, type_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, name_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, description_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, duration_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, url_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig_HowToVideoInfo, soul_eggs_),
+  5,
+  0,
+  1,
+  3,
+  2,
+  4,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig_HelpConfig, video_infos_),
   PROTOBUF_FIELD_OFFSET(::ei::LiveConfig, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ei::LiveConfig, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -5882,10 +5941,12 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   PROTOBUF_FIELD_OFFSET(::ei::LiveConfig, boosts_config_),
   PROTOBUF_FIELD_OFFSET(::ei::LiveConfig, gift_config_),
   PROTOBUF_FIELD_OFFSET(::ei::LiveConfig, misc_config_),
+  PROTOBUF_FIELD_OFFSET(::ei::LiveConfig, help_config_),
   0,
   1,
   2,
   3,
+  4,
   PROTOBUF_FIELD_OFFSET(::ei::InGameMail, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ei::InGameMail, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -6938,7 +6999,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   3,
   ~0u,
   2,
-  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::ei::DLCCatalog, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ei::DLCCatalog, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -6950,6 +7011,14 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   PROTOBUF_FIELD_OFFSET(::ei::DLCCatalog, decorators_),
   PROTOBUF_FIELD_OFFSET(::ei::DLCCatalog, shell_objects_),
   PROTOBUF_FIELD_OFFSET(::ei::DLCCatalog, shell_groups_),
+  PROTOBUF_FIELD_OFFSET(::ei::DLCCatalog, shells_showcase_last_featured_time_),
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  0,
   PROTOBUF_FIELD_OFFSET(::ei::ShellDB_ShellStatus, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellDB_ShellStatus, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -7107,6 +7176,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   PROTOBUF_FIELD_OFFSET(::ei::ShellDB, saved_configs_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellDB, new_shells_downloaded_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellDB, new_shells_seen_),
+  PROTOBUF_FIELD_OFFSET(::ei::ShellDB, last_showcase_featured_time_seen_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellDB, lighting_controls_unlocked_),
   ~0u,
   ~0u,
@@ -7118,6 +7188,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   ~0u,
   ~0u,
   0,
+  1,
   PROTOBUF_FIELD_OFFSET(::ei::ShellPopularityStats_Entry, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellPopularityStats_Entry, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -7204,6 +7275,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, local_id_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, name_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, description_),
+  PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, is_new_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, creator_name_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, status_),
   PROTOBUF_FIELD_OFFSET(::ei::ShellShowcaseListingInfo, farm_config_),
@@ -7218,6 +7290,7 @@ const uint32_t TableStruct_ei_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(proto
   4,
   1,
   2,
+  14,
   5,
   12,
   6,
@@ -7516,93 +7589,95 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 2206, 2215, -1, sizeof(::ei::LiveConfig_GiftConfig_GiftMuConfig)},
   { 2218, 2240, -1, sizeof(::ei::LiveConfig_GiftConfig)},
   { 2256, 2276, -1, sizeof(::ei::LiveConfig_MiscConfig)},
-  { 2290, 2300, -1, sizeof(::ei::LiveConfig)},
-  { 2304, 2336, -1, sizeof(::ei::InGameMail)},
-  { 2362, 2371, -1, sizeof(::ei::MailDB)},
-  { 2374, -1, -1, sizeof(::ei::TipsDB)},
-  { 2381, 2390, -1, sizeof(::ei::MailState_TipState)},
-  { 2393, 2402, -1, sizeof(::ei::MailState)},
-  { 2405, 2413, -1, sizeof(::ei::PeriodicalsResponse_RoyaltyInfo)},
-  { 2415, 2431, -1, sizeof(::ei::PeriodicalsResponse)},
-  { 2441, 2461, -1, sizeof(::ei::GetPeriodicalsRequest)},
-  { 2475, 2489, -1, sizeof(::ei::ConfigRequest)},
-  { 2497, 2506, -1, sizeof(::ei::ConfigResponse)},
-  { 2509, 2519, -1, sizeof(::ei::AdAttributionRawData)},
-  { 2523, 2538, -1, sizeof(::ei::AdAttributionRow)},
-  { 2547, 2571, -1, sizeof(::ei::AdAttributionInfo)},
-  { 2589, 2598, -1, sizeof(::ei::ArtifactsClientInfo_LaunchCount)},
-  { 2601, 2611, -1, sizeof(::ei::ArtifactsClientInfo)},
-  { 2615, 2623, -1, sizeof(::ei::MissionInfo_Fuel)},
-  { 2625, 2644, -1, sizeof(::ei::MissionInfo)},
-  { 2657, 2667, -1, sizeof(::ei::ArtifactSpec)},
-  { 2671, 2679, -1, sizeof(::ei::CompleteArtifact)},
-  { 2681, 2691, -1, sizeof(::ei::ArtifactInventoryItem)},
-  { 2695, 2703, -1, sizeof(::ei::InventorySlot)},
-  { 2705, 2713, -1, sizeof(::ei::ArtifactsConfigurationRequest)},
-  { 2715, 2729, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters_Duration)},
-  { 2737, 2747, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters)},
-  { 2751, 2766, -1, sizeof(::ei::ArtifactsConfigurationResponse_ArtifactParameters)},
-  { 2775, 2783, -1, sizeof(::ei::ArtifactsConfigurationResponse_CraftingLevelInfo)},
-  { 2785, -1, -1, sizeof(::ei::ArtifactsConfigurationResponse)},
-  { 2794, 2805, -1, sizeof(::ei::MissionRequest)},
-  { 2810, 2818, -1, sizeof(::ei::MissionResponse)},
-  { 2820, 2828, -1, sizeof(::ei::CompleteMissionResponse_SecureArtifactSpec)},
-  { 2830, 2841, -1, sizeof(::ei::CompleteMissionResponse)},
-  { 2846, 2858, -1, sizeof(::ei::CollectContractArtifactRewardsRequest)},
-  { 2864, 2878, -1, sizeof(::ei::CraftArtifactRequest)},
-  { 2886, 2896, -1, sizeof(::ei::CraftArtifactResponse)},
-  { 2900, 2914, -1, sizeof(::ei::ConsumeArtifactRequest)},
-  { 2922, 2934, -1, sizeof(::ei::ConsumeArtifactResponse)},
-  { 2940, 2951, -1, sizeof(::ei::AuthenticateArtifactResponse)},
-  { 2956, 2966, -1, sizeof(::ei::SetArtifactRequest)},
-  { 2970, 2979, -1, sizeof(::ei::SetArtifactResponse)},
-  { 2982, 2990, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSlot)},
-  { 2992, 3000, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSet)},
-  { 3002, 3014, -1, sizeof(::ei::ArtifactsDB_CraftableArtifact)},
-  { 3020, 3038, -1, sizeof(::ei::ArtifactsDB)},
-  { 3050, 3062, -1, sizeof(::ei::AuthenticatedMessage)},
-  { 3068, 3076, -1, sizeof(::ei::LogCompleteMissionPayload)},
-  { 3078, 3086, -1, sizeof(::ei::LogCraftArtifactPayload)},
-  { 3088, 3096, -1, sizeof(::ei::LogConsumeArtifactPayload)},
-  { 3098, 3106, -1, sizeof(::ei::LogSetArtifactPayload)},
-  { 3108, 3116, -1, sizeof(::ei::AccountTransferPayload)},
-  { 3118, 3128, -1, sizeof(::ei::SaveBackupResponse)},
-  { 3132, 3140, -1, sizeof(::ei::CleanAccountRequest)},
-  { 3142, 3149, -1, sizeof(::ei::ReturnEDTPayload)},
-  { 3150, 3163, -1, sizeof(::ei::DLCItem)},
-  { 3170, 3178, -1, sizeof(::ei::ShellSpec_ShellPiece)},
-  { 3180, 3203, -1, sizeof(::ei::ShellSpec)},
-  { 3220, 3232, -1, sizeof(::ei::ShellSetSpec_VariationSpec)},
-  { 3238, 3265, -1, sizeof(::ei::ShellSetSpec)},
-  { 3286, 3294, -1, sizeof(::ei::ShellObjectSpec_LODPiece)},
-  { 3296, 3321, -1, sizeof(::ei::ShellObjectSpec)},
-  { 3340, 3351, -1, sizeof(::ei::ShellGroupSpec)},
-  { 3356, -1, -1, sizeof(::ei::DLCCatalog)},
-  { 3368, 3376, -1, sizeof(::ei::ShellDB_ShellStatus)},
-  { 3378, 3386, -1, sizeof(::ei::ShellDB_ShellElementStatus)},
-  { 3388, 3396, -1, sizeof(::ei::ShellDB_ShellSetVariationStatus)},
-  { 3398, 3412, -1, sizeof(::ei::ShellDB_FarmConfiguration)},
-  { 3420, 3432, -1, sizeof(::ei::ShellDB_SavedFarmConfiguration)},
-  { 3438, 3447, -1, sizeof(::ei::ShellDB_ShellConfiguration)},
-  { 3450, 3461, -1, sizeof(::ei::ShellDB_ShellSetConfiguration)},
-  { 3466, 3474, -1, sizeof(::ei::ShellDB_ShellGroupConfiguration)},
-  { 3476, 3484, -1, sizeof(::ei::ShellDB_ChickenConfig)},
-  { 3486, 3501, -1, sizeof(::ei::ShellDB_LightingConfig)},
-  { 3510, 3526, -1, sizeof(::ei::ShellDB)},
-  { 3536, 3546, -1, sizeof(::ei::ShellPopularityStats_Entry)},
-  { 3550, -1, -1, sizeof(::ei::ShellPopularityStats)},
-  { 3557, 3575, -1, sizeof(::ei::ShellsActionLog)},
-  { 3587, 3598, -1, sizeof(::ei::SubmitShellShowcaseRequest)},
-  { 3603, -1, -1, sizeof(::ei::ShellShowcase)},
-  { 3612, 3632, -1, sizeof(::ei::ShellShowcaseListingInfo)},
-  { 3646, 3655, -1, sizeof(::ei::ShowcaseRoyaltyDeliveryConfirmation)},
-  { 3658, -1, -1, sizeof(::ei::ShellShowcaseListingSet)},
-  { 3665, 3673, -1, sizeof(::ei::ShellsActionBatch)},
-  { 3675, 3717, -1, sizeof(::ei::UserVerificationAnalysis)},
-  { 3753, 3762, -1, sizeof(::ei::UserSubscriptionInfo_HistoryEntry)},
-  { 3765, 3787, -1, sizeof(::ei::UserSubscriptionInfo)},
-  { 3803, 3812, -1, sizeof(::ei::SubscriptionChangeHintRequest)},
-  { 3815, 3823, -1, sizeof(::ei::CXPEvalRolloutInfo)},
+  { 2290, 2302, -1, sizeof(::ei::LiveConfig_HelpConfig_HowToVideoInfo)},
+  { 2308, -1, -1, sizeof(::ei::LiveConfig_HelpConfig)},
+  { 2315, 2326, -1, sizeof(::ei::LiveConfig)},
+  { 2331, 2363, -1, sizeof(::ei::InGameMail)},
+  { 2389, 2398, -1, sizeof(::ei::MailDB)},
+  { 2401, -1, -1, sizeof(::ei::TipsDB)},
+  { 2408, 2417, -1, sizeof(::ei::MailState_TipState)},
+  { 2420, 2429, -1, sizeof(::ei::MailState)},
+  { 2432, 2440, -1, sizeof(::ei::PeriodicalsResponse_RoyaltyInfo)},
+  { 2442, 2458, -1, sizeof(::ei::PeriodicalsResponse)},
+  { 2468, 2488, -1, sizeof(::ei::GetPeriodicalsRequest)},
+  { 2502, 2516, -1, sizeof(::ei::ConfigRequest)},
+  { 2524, 2533, -1, sizeof(::ei::ConfigResponse)},
+  { 2536, 2546, -1, sizeof(::ei::AdAttributionRawData)},
+  { 2550, 2565, -1, sizeof(::ei::AdAttributionRow)},
+  { 2574, 2598, -1, sizeof(::ei::AdAttributionInfo)},
+  { 2616, 2625, -1, sizeof(::ei::ArtifactsClientInfo_LaunchCount)},
+  { 2628, 2638, -1, sizeof(::ei::ArtifactsClientInfo)},
+  { 2642, 2650, -1, sizeof(::ei::MissionInfo_Fuel)},
+  { 2652, 2671, -1, sizeof(::ei::MissionInfo)},
+  { 2684, 2694, -1, sizeof(::ei::ArtifactSpec)},
+  { 2698, 2706, -1, sizeof(::ei::CompleteArtifact)},
+  { 2708, 2718, -1, sizeof(::ei::ArtifactInventoryItem)},
+  { 2722, 2730, -1, sizeof(::ei::InventorySlot)},
+  { 2732, 2740, -1, sizeof(::ei::ArtifactsConfigurationRequest)},
+  { 2742, 2756, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters_Duration)},
+  { 2764, 2774, -1, sizeof(::ei::ArtifactsConfigurationResponse_MissionParameters)},
+  { 2778, 2793, -1, sizeof(::ei::ArtifactsConfigurationResponse_ArtifactParameters)},
+  { 2802, 2810, -1, sizeof(::ei::ArtifactsConfigurationResponse_CraftingLevelInfo)},
+  { 2812, -1, -1, sizeof(::ei::ArtifactsConfigurationResponse)},
+  { 2821, 2832, -1, sizeof(::ei::MissionRequest)},
+  { 2837, 2845, -1, sizeof(::ei::MissionResponse)},
+  { 2847, 2855, -1, sizeof(::ei::CompleteMissionResponse_SecureArtifactSpec)},
+  { 2857, 2868, -1, sizeof(::ei::CompleteMissionResponse)},
+  { 2873, 2885, -1, sizeof(::ei::CollectContractArtifactRewardsRequest)},
+  { 2891, 2905, -1, sizeof(::ei::CraftArtifactRequest)},
+  { 2913, 2923, -1, sizeof(::ei::CraftArtifactResponse)},
+  { 2927, 2941, -1, sizeof(::ei::ConsumeArtifactRequest)},
+  { 2949, 2961, -1, sizeof(::ei::ConsumeArtifactResponse)},
+  { 2967, 2978, -1, sizeof(::ei::AuthenticateArtifactResponse)},
+  { 2983, 2993, -1, sizeof(::ei::SetArtifactRequest)},
+  { 2997, 3006, -1, sizeof(::ei::SetArtifactResponse)},
+  { 3009, 3017, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSlot)},
+  { 3019, 3027, -1, sizeof(::ei::ArtifactsDB_ActiveArtifactSet)},
+  { 3029, 3041, -1, sizeof(::ei::ArtifactsDB_CraftableArtifact)},
+  { 3047, 3065, -1, sizeof(::ei::ArtifactsDB)},
+  { 3077, 3089, -1, sizeof(::ei::AuthenticatedMessage)},
+  { 3095, 3103, -1, sizeof(::ei::LogCompleteMissionPayload)},
+  { 3105, 3113, -1, sizeof(::ei::LogCraftArtifactPayload)},
+  { 3115, 3123, -1, sizeof(::ei::LogConsumeArtifactPayload)},
+  { 3125, 3133, -1, sizeof(::ei::LogSetArtifactPayload)},
+  { 3135, 3143, -1, sizeof(::ei::AccountTransferPayload)},
+  { 3145, 3155, -1, sizeof(::ei::SaveBackupResponse)},
+  { 3159, 3167, -1, sizeof(::ei::CleanAccountRequest)},
+  { 3169, 3176, -1, sizeof(::ei::ReturnEDTPayload)},
+  { 3177, 3190, -1, sizeof(::ei::DLCItem)},
+  { 3197, 3205, -1, sizeof(::ei::ShellSpec_ShellPiece)},
+  { 3207, 3230, -1, sizeof(::ei::ShellSpec)},
+  { 3247, 3259, -1, sizeof(::ei::ShellSetSpec_VariationSpec)},
+  { 3265, 3292, -1, sizeof(::ei::ShellSetSpec)},
+  { 3313, 3321, -1, sizeof(::ei::ShellObjectSpec_LODPiece)},
+  { 3323, 3348, -1, sizeof(::ei::ShellObjectSpec)},
+  { 3367, 3378, -1, sizeof(::ei::ShellGroupSpec)},
+  { 3383, 3396, -1, sizeof(::ei::DLCCatalog)},
+  { 3403, 3411, -1, sizeof(::ei::ShellDB_ShellStatus)},
+  { 3413, 3421, -1, sizeof(::ei::ShellDB_ShellElementStatus)},
+  { 3423, 3431, -1, sizeof(::ei::ShellDB_ShellSetVariationStatus)},
+  { 3433, 3447, -1, sizeof(::ei::ShellDB_FarmConfiguration)},
+  { 3455, 3467, -1, sizeof(::ei::ShellDB_SavedFarmConfiguration)},
+  { 3473, 3482, -1, sizeof(::ei::ShellDB_ShellConfiguration)},
+  { 3485, 3496, -1, sizeof(::ei::ShellDB_ShellSetConfiguration)},
+  { 3501, 3509, -1, sizeof(::ei::ShellDB_ShellGroupConfiguration)},
+  { 3511, 3519, -1, sizeof(::ei::ShellDB_ChickenConfig)},
+  { 3521, 3536, -1, sizeof(::ei::ShellDB_LightingConfig)},
+  { 3545, 3562, -1, sizeof(::ei::ShellDB)},
+  { 3573, 3583, -1, sizeof(::ei::ShellPopularityStats_Entry)},
+  { 3587, -1, -1, sizeof(::ei::ShellPopularityStats)},
+  { 3594, 3612, -1, sizeof(::ei::ShellsActionLog)},
+  { 3624, 3635, -1, sizeof(::ei::SubmitShellShowcaseRequest)},
+  { 3640, -1, -1, sizeof(::ei::ShellShowcase)},
+  { 3649, 3670, -1, sizeof(::ei::ShellShowcaseListingInfo)},
+  { 3685, 3694, -1, sizeof(::ei::ShowcaseRoyaltyDeliveryConfirmation)},
+  { 3697, -1, -1, sizeof(::ei::ShellShowcaseListingSet)},
+  { 3704, 3712, -1, sizeof(::ei::ShellsActionBatch)},
+  { 3714, 3756, -1, sizeof(::ei::UserVerificationAnalysis)},
+  { 3792, 3801, -1, sizeof(::ei::UserSubscriptionInfo_HistoryEntry)},
+  { 3804, 3826, -1, sizeof(::ei::UserSubscriptionInfo)},
+  { 3842, 3851, -1, sizeof(::ei::SubscriptionChangeHintRequest)},
+  { 3854, 3862, -1, sizeof(::ei::CXPEvalRolloutInfo)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -7713,6 +7788,8 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::ei::_LiveConfig_GiftConfig_GiftMuConfig_default_instance_._instance,
   &::ei::_LiveConfig_GiftConfig_default_instance_._instance,
   &::ei::_LiveConfig_MiscConfig_default_instance_._instance,
+  &::ei::_LiveConfig_HelpConfig_HowToVideoInfo_default_instance_._instance,
+  &::ei::_LiveConfig_HelpConfig_default_instance_._instance,
   &::ei::_LiveConfig_default_instance_._instance,
   &::ei::_InGameMail_default_instance_._instance,
   &::ei::_MailDB_default_instance_._instance,
@@ -8403,620 +8480,632 @@ const char descriptor_table_protodef_ei_2eproto[] PROTOBUF_SECTION_VARIABLE(prot
   "\022\027\n\017backup_checksum\030\003 \001(\004\"r\n\nServerGift\022"
   "\017\n\007user_id\030\001 \001(\t\022#\n\013reward_type\030\003 \001(\0162\016."
   "ei.RewardType\022\027\n\017reward_sub_type\030\004 \001(\t\022\025"
-  "\n\rreward_amount\030\005 \001(\001\"\333\r\n\nLiveConfig\022\021\n\t"
+  "\n\rreward_amount\030\005 \001(\001\"\236\020\n\nLiveConfig\022\021\n\t"
   "config_id\030\001 \001(\t\0222\n\rboosts_config\030\002 \001(\0132\033"
   ".ei.LiveConfig.BoostsConfig\022.\n\013gift_conf"
   "ig\030\003 \001(\0132\031.ei.LiveConfig.GiftConfig\022.\n\013m"
   "isc_config\030\004 \001(\0132\031.ei.LiveConfig.MiscCon"
-  "fig\032\306\001\n\014BoostsConfig\022<\n\014item_configs\030\001 \003"
-  "(\0132&.ei.LiveConfig.BoostsConfig.ItemConf"
-  "ig\022\037\n\027cash_boost_cooloff_time\030\002 \001(\001\032W\n\nI"
-  "temConfig\022\020\n\010boost_id\030\001 \001(\t\022\r\n\005price\030\002 \001"
-  "(\r\022\023\n\013token_price\030\003 \001(\r\022\023\n\013se_required\030\004"
-  " \001(\001\032\336\006\n\nGiftConfig\022\?\n\014gift_configs\030\t \003("
-  "\0132).ei.LiveConfig.GiftConfig.GiftValueCo"
-  "nfig\022\031\n\021gift_mu_min_spent\030\n \001(\001\022\031\n\021gift_"
-  "mu_max_spent\030\013 \001(\001\022\034\n\024gift_mu_overall_mu"
-  "lt\030\014 \001(\001\022E\n\025random_gift_mu_config\030\017 \001(\0132"
-  "&.ei.LiveConfig.GiftConfig.GiftMuConfig\022"
-  "D\n\024video_gift_mu_config\030\020 \001(\0132&.ei.LiveC"
-  "onfig.GiftConfig.GiftMuConfig\022\030\n\020package"
-  "_interval\030\001 \001(\001\022\034\n\024video_offer_interval\030"
-  "\002 \001(\001\022%\n\035video_offer_interval_contract\030\003"
-  " \001(\001\022\'\n\037video_offer_interval_piggy_full\030"
-  "\004 \001(\001\022-\n%video_offer_interval_piggy_extr"
-  "a_full\030\005 \001(\001\022\033\n\023video_reset_on_idle\030\016 \001("
-  "\010\022!\n\031package_interval_contract\030\006 \001(\001\022#\n\033"
-  "package_interval_piggy_full\030\007 \001(\001\022)\n!pac"
-  "kage_interval_piggy_extra_full\030\010 \001(\001\022\035\n\025"
-  "package_reset_on_idle\030\r \001(\010\032|\n\017GiftValue"
-  "Config\022\017\n\007gift_id\030\001 \001(\t\022\016\n\006amount\030\004 \001(\001\022"
-  "\020\n\010rand_min\030\002 \001(\001\022\020\n\010rand_max\030\003 \001(\001\022\021\n\tv"
-  "ideo_min\030\005 \001(\001\022\021\n\tvideo_max\030\006 \001(\001\032J\n\014Gif"
-  "tMuConfig\022\021\n\tmin_spent\030\001 \001(\001\022\021\n\tmax_spen"
-  "t\030\002 \001(\001\022\024\n\014overall_mult\030\003 \001(\001\032\373\003\n\nMiscCo"
-  "nfig\022\024\n\014ask_to_track\030\001 \001(\010\022\"\n\032ask_to_tra"
-  "ck_min_soul_eggs\030\002 \001(\001\022\034\n\024ask_to_track_m"
-  "essage\030\003 \001(\t\022$\n\034ask_to_track_show_pre_di"
-  "alog\030\004 \001(\010\022\"\n\032ask_to_track_after_privacy"
-  "\030\005 \001(\010\022$\n\034chicken_run_boost_percentage\030\006"
-  " \001(\001\022\034\n\024shells_intro_tickets\030\007 \001(\r\022\'\n\037sh"
-  "ells_max_free_chicken_configs\030\010 \001(\r\022$\n\034s"
-  "hells_intro_alert_threshold\030\t \001(\r\022+\n\036she"
-  "lls_lighting_controls_price\030\016 \001(\r:\003175\022."
-  "\n&contracts_expert_league_min_soul_power"
-  "\030\n \001(\001\022!\n\031new_player_event_duration\030\013 \001("
-  "\001\022 \n\030contracts_club_available\030\014 \001(\010\022\026\n\016c"
-  "ontracts_beta\030\r \001(\010\"\277\004\n\nInGameMail\022\n\n\002id"
-  "\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n\004date\030\010 \001(\t\022\017\n\007m"
-  "essage\030\003 \001(\t\022\016\n\006action\030\004 \001(\t\022\013\n\003url\030\005 \001("
-  "\t\022 \n\010app_link\030\016 \001(\0162\016.ei.UILocation\022\026\n\016a"
-  "pp_link_extra\030\017 \001(\t\022\032\n\005image\030\020 \001(\0132\013.ei."
-  "DLCItem\022\023\n\013image_width\030\025 \001(\001\022\024\n\014image_he"
-  "ight\030\026 \001(\001\022\020\n\010platform\030\007 \001(\r\022\016\n\006builds\030\t"
-  " \003(\t\022\032\n\022min_client_version\030\n \001(\r\022\032\n\022max_"
-  "client_version\030\014 \001(\r\022\025\n\rmin_soul_eggs\030\013 "
-  "\001(\001\022\032\n\022min_mystical_bonus\030\r \001(\001\022\037\n\tuser_"
-  "type\030\021 \001(\0162\014.ei.UserType\022\030\n\020min_piggy_br"
-  "eaks\030\024 \001(\r\022\020\n\010gold_tip\030\006 \001(\001\022\013\n\003tip\030\027 \001("
-  "\010\022\020\n\010priority\030\033 \001(\r\022\037\n\027min_days_since_la"
-  "st_tip\030\030 \001(\001\022\023\n\013max_retries\030\031 \001(\r\022\030\n\020day"
-  "s_until_retry\030\032 \001(\001\022\020\n\010category\030\034 \001(\t\"S\n"
-  "\006MailDB\022\034\n\004mail\030\001 \003(\0132\016.ei.InGameMail\022\024\n"
-  "\014tips_db_data\030\002 \001(\014\022\025\n\rtips_checksum\030\003 \001"
-  "(\t\"&\n\006TipsDB\022\034\n\004tips\030\001 \003(\0132\016.ei.InGameMa"
-  "il\"\240\001\n\tMailState\022\025\n\rread_mail_ids\030\001 \003(\t\022"
-  "+\n\013tips_states\030\002 \003(\0132\026.ei.MailState.TipS"
-  "tate\022\025\n\rtips_checksum\030\003 \001(\t\0328\n\010TipState\022"
-  "\n\n\002id\030\001 \001(\t\022\r\n\005reads\030\002 \001(\r\022\021\n\ttime_read\030"
-  "\003 \001(\001\"\354\003\n\023PeriodicalsResponse\022\034\n\005sales\030\001"
-  " \001(\0132\r.ei.SalesInfo\022\'\n\006events\030\002 \001(\0132\027.ei"
-  ".EggIncCurrentEvents\022(\n\tcontracts\030\003 \001(\0132"
-  "\025.ei.ContractsResponse\022+\n\013evaluations\030\010 "
-  "\003(\0132\026.ei.ContractEvaluation\022\035\n\005gifts\030\004 \003"
-  "(\0132\016.ei.ServerGift\0223\n\016artifact_cases\030\t \003"
-  "(\0132\033.ei.CompleteMissionResponse\022#\n\013live_"
-  "config\030\005 \001(\0132\016.ei.LiveConfig\022\034\n\010mail_bag"
-  "\030\006 \001(\0132\n.ei.MailDB\0224\n\024contract_player_in"
-  "fo\030\007 \001(\0132\026.ei.ContractPlayerInfo\022\?\n\022show"
-  "case_royalties\030\n \003(\0132#.ei.PeriodicalsRes"
-  "ponse.RoyaltyInfo\032)\n\013RoyaltyInfo\022\n\n\002id\030\001"
-  " \001(\t\022\016\n\006amount\030\002 \001(\r\"\371\002\n\025GetPeriodicalsR"
-  "equest\022#\n\005rinfo\030\014 \001(\0132\024.ei.BasicRequestI"
-  "nfo\022\017\n\007user_id\030\001 \001(\t\022\022\n\npiggy_full\030\002 \001(\010"
-  "\022\030\n\020piggy_found_full\030\003 \001(\010\022\035\n\025seconds_fu"
-  "ll_realtime\030\004 \001(\001\022\035\n\025seconds_full_gameti"
-  "me\030\005 \001(\001\022\027\n\017lost_increments\030\007 \001(\r\022\021\n\tsou"
-  "l_eggs\030\010 \001(\001\022\036\n\026mystical_earnings_mult\030\r"
-  " \001(\001\022\013\n\003eop\030\016 \001(\r\022\032\n\022contracts_unlocked\030"
-  "\017 \001(\010\022\032\n\022artifacts_unlocked\030\020 \001(\010\022\036\n\026cur"
-  "rent_client_version\030\n \001(\r\022\r\n\005debug\030\013 \001(\010"
-  "\"\325\001\n\rConfigRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.B"
-  "asicRequestInfo\022\021\n\tsoul_eggs\030\002 \001(\001\022\032\n\022co"
-  "ntracts_unlocked\030\005 \001(\010\022\032\n\022artifacts_unlo"
-  "cked\030\003 \001(\010\022\032\n\022fuel_tank_unlocked\030\004 \001(\010\022\022"
-  "\n\npro_permit\030\006 \001(\010\022\r\n\005ultra\030\007 \001(\010\022\025\n\rtip"
-  "s_checksum\030\010 \001(\t\"x\n\016ConfigResponse\022#\n\013li"
-  "ve_config\030\001 \001(\0132\016.ei.LiveConfig\022\034\n\010mail_"
-  "bag\030\002 \001(\0132\n.ei.MailDB\022#\n\013dlc_catalog\030\003 \001"
-  "(\0132\016.ei.DLCCatalog\"d\n\024AdAttributionRawDa"
-  "ta\022\024\n\014device_ad_id\030\001 \001(\t\022\017\n\007user_id\030\004 \001("
-  "\t\022\022\n\nad_network\030\002 \001(\t\022\021\n\tjson_data\030\003 \001(\t"
-  "\"\270\001\n\020AdAttributionRow\022\017\n\007user_id\030\001 \001(\t\022\r"
-  "\n\005ad_id\030\002 \001(\t\022\022\n\nad_network\030\003 \001(\t\022\020\n\010cam"
-  "paign\030\004 \001(\t\022\017\n\007keyword\030\005 \001(\t\022\r\n\005extra\030\006 "
-  "\001(\t\022\022\n\nclick_date\030\007 \001(\002\022\025\n\rdownload_date"
-  "\030\010 \001(\002\022\023\n\013approx_time\030\t \001(\002\"\215\003\n\021AdAttrib"
-  "utionInfo\022\024\n\014device_ad_id\030\001 \001(\t\022\024\n\014netwo"
-  "rk_name\030\002 \001(\t\022\023\n\013attribution\030\003 \001(\010\022\020\n\010or"
-  "g_name\030\004 \001(\t\022\016\n\006org_id\030\005 \001(\t\022\025\n\rcampaign"
-  "_name\030\006 \001(\t\022\023\n\013campaign_id\030\007 \001(\t\022\022\n\nclic"
-  "k_date\030\010 \001(\t\022\027\n\017conversion_date\030\t \001(\t\022\027\n"
-  "\017conversion_type\030\n \001(\t\022\013\n\003geo\030\013 \001(\t\022\024\n\014a"
-  "dgroup_name\030\014 \001(\t\022\022\n\nadgroup_id\030\r \001(\t\022\017\n"
-  "\007keyword\030\016 \001(\t\022\022\n\nkeyword_id\030\017 \001(\t\022\025\n\rke"
-  "yword_extra\030\020 \001(\t\022\030\n\020creativeset_name\030\021 "
-  "\001(\t\022\026\n\016creativeset_id\030\022 \001(\t\"\227\002\n\023Artifact"
-  "sClientInfo\022\035\n\025mission_capacity_mult\030\001 \001"
-  "(\001\022\035\n\025mission_duration_mult\030\002 \001(\001\022!\n\031mis"
-  "sion_ftl_duration_mult\030\004 \001(\001\022:\n\rlaunch_c"
-  "ounts\030\003 \003(\0132#.ei.ArtifactsClientInfo.Lau"
-  "nchCount\032c\n\013LaunchCount\022\'\n\004ship\030\001 \001(\0162\031."
-  "ei.MissionInfo.Spaceship\022\024\n\014num_launches"
-  "\030\002 \001(\r\022\025\n\rlaunch_points\030\003 \001(\001\"\264\006\n\013Missio"
-  "nInfo\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionInfo.Spa"
-  "ceship\022&\n\006status\030\002 \001(\0162\026.ei.MissionInfo."
-  "Status\0223\n\rduration_type\030\003 \001(\0162\034.ei.Missi"
-  "onInfo.DurationType\022\"\n\004fuel\030\004 \003(\0132\024.ei.M"
-  "issionInfo.Fuel\022\r\n\005level\030\014 \001(\r\022\030\n\020durati"
-  "on_seconds\030\005 \001(\001\022\020\n\010capacity\030\t \001(\r\022\024\n\014qu"
-  "ality_bump\030\013 \001(\001\022.\n\017target_artifact\030\r \001("
-  "\0162\025.ei.ArtifactSpec.Name\022\031\n\021seconds_rema"
-  "ining\030\006 \001(\001\022\032\n\022start_time_derived\030\010 \001(\001\022"
-  "\023\n\013mission_log\030\n \001(\t\022\022\n\nidentifier\030\007 \001(\t"
-  "\032,\n\004Fuel\022\024\n\003egg\030\001 \001(\0162\007.ei.Egg\022\016\n\006amount"
-  "\030\002 \001(\001\"\270\001\n\tSpaceship\022\017\n\013CHICKEN_ONE\020\000\022\020\n"
-  "\014CHICKEN_NINE\020\001\022\021\n\rCHICKEN_HEAVY\020\002\022\007\n\003BC"
-  "R\020\003\022\025\n\021MILLENIUM_CHICKEN\020\004\022\027\n\023CORELLIHEN"
-  "_CORVETTE\020\005\022\016\n\nGALEGGTICA\020\006\022\016\n\nCHICKFIAN"
-  "T\020\007\022\014\n\010VOYEGGER\020\010\022\016\n\nHENERPRISE\020\t\"t\n\006Sta"
-  "tus\022\013\n\007FUELING\020\000\022\025\n\021PREPARE_TO_LAUNCH\020\005\022"
-  "\r\n\tEXPLORING\020\n\022\014\n\010RETURNED\020\017\022\r\n\tANALYZIN"
-  "G\020\020\022\014\n\010COMPLETE\020\024\022\014\n\010ARCHIVED\020\031\";\n\014Durat"
-  "ionType\022\t\n\005SHORT\020\000\022\010\n\004LONG\020\001\022\010\n\004EPIC\020\002\022\014"
-  "\n\010TUTORIAL\020\003\"\360\013\n\014ArtifactSpec\022#\n\004name\030\001 "
-  "\001(\0162\025.ei.ArtifactSpec.Name\022%\n\005level\030\002 \001("
-  "\0162\026.ei.ArtifactSpec.Level\022\'\n\006rarity\030\003 \001("
-  "\0162\027.ei.ArtifactSpec.Rarity\022\024\n\003egg\030\004 \001(\0162"
-  "\007.ei.Egg\"\212\t\n\004Name\022\017\n\013LUNAR_TOTEM\020\000\022\027\n\023NE"
-  "ODYMIUM_MEDALLION\020\003\022\021\n\rBEAK_OF_MIDAS\020\004\022\025"
-  "\n\021LIGHT_OF_EGGENDIL\020\005\022\025\n\021DEMETERS_NECKLA"
-  "CE\020\006\022\025\n\021VIAL_MARTIAN_DUST\020\007\022\021\n\rORNATE_GU"
-  "SSET\020\010\022\017\n\013THE_CHALICE\020\t\022\021\n\rBOOK_OF_BASAN"
-  "\020\n\022\023\n\017PHOENIX_FEATHER\020\013\022\021\n\rTUNGSTEN_ANKH"
-  "\020\014\022\023\n\017AURELIAN_BROOCH\020\025\022\024\n\020CARVED_RAINST"
-  "ICK\020\026\022\017\n\013PUZZLE_CUBE\020\027\022\025\n\021QUANTUM_METRON"
-  "OME\020\030\022\024\n\020SHIP_IN_A_BOTTLE\020\031\022\025\n\021TACHYON_D"
-  "EFLECTOR\020\032\022\030\n\024INTERSTELLAR_COMPASS\020\033\022\025\n\021"
-  "DILITHIUM_MONOCLE\020\034\022\025\n\021TITANIUM_ACTUATOR"
-  "\020\035\022\021\n\rMERCURYS_LENS\020\036\022\021\n\rTACHYON_STONE\020\001"
-  "\022\023\n\017DILITHIUM_STONE\020\037\022\017\n\013SHELL_STONE\020 \022\017"
-  "\n\013LUNAR_STONE\020!\022\016\n\nSOUL_STONE\020\"\022\022\n\016PROPH"
-  "ECY_STONE\020\'\022\021\n\rQUANTUM_STONE\020$\022\017\n\013TERRA_"
-  "STONE\020%\022\016\n\nLIFE_STONE\020&\022\021\n\rCLARITY_STONE"
-  "\020(\022\035\n\031EXTRATERRESTRIAL_ALUMINUM\020\r\022\024\n\020ANC"
-  "IENT_TUNGSTEN\020\016\022\017\n\013SPACE_ROCKS\020\017\022\016\n\nALIE"
-  "N_WOOD\020\020\022\022\n\016GOLD_METEORITE\020\021\022\022\n\016TAU_CETI"
-  "_GEODE\020\022\022\024\n\020CENTAURIAN_STEEL\020\023\022\023\n\017ERIDAN"
-  "I_FEATHER\020\024\022\017\n\013DRONE_PARTS\020#\022\024\n\020CELESTIA"
-  "L_BRONZE\020)\022\020\n\014LALANDE_HIDE\020*\022\022\n\016SOLAR_TI"
-  "TANIUM\020+\022\032\n\026TACHYON_STONE_FRAGMENT\020\002\022\034\n\030"
-  "DILITHIUM_STONE_FRAGMENT\020,\022\030\n\024SHELL_STON"
-  "E_FRAGMENT\020-\022\030\n\024LUNAR_STONE_FRAGMENT\020.\022\027"
-  "\n\023SOUL_STONE_FRAGMENT\020/\022\033\n\027PROPHECY_STON"
-  "E_FRAGMENT\0200\022\032\n\026QUANTUM_STONE_FRAGMENT\0201"
-  "\022\030\n\024TERRA_STONE_FRAGMENT\0202\022\027\n\023LIFE_STONE"
-  "_FRAGMENT\0203\022\032\n\026CLARITY_STONE_FRAGMENT\0204\022"
-  "\014\n\007UNKNOWN\020\220N\"H\n\005Level\022\014\n\010INFERIOR\020\000\022\n\n\006"
-  "LESSER\020\001\022\n\n\006NORMAL\020\002\022\013\n\007GREATER\020\003\022\014\n\010SUP"
-  "ERIOR\020\004\"7\n\006Rarity\022\n\n\006COMMON\020\000\022\010\n\004RARE\020\001\022"
-  "\010\n\004EPIC\020\002\022\r\n\tLEGENDARY\020\003\"E\n\004Type\022\014\n\010ARTI"
-  "FACT\020\000\022\t\n\005STONE\020\001\022\016\n\nINGREDIENT\020\002\022\024\n\020STO"
-  "NE_INGREDIENT\020\003\"T\n\020CompleteArtifact\022\036\n\004s"
-  "pec\030\001 \001(\0132\020.ei.ArtifactSpec\022 \n\006stones\030\002 "
-  "\003(\0132\020.ei.ArtifactSpec\"u\n\025ArtifactInvento"
-  "ryItem\022\017\n\007item_id\030\001 \001(\004\022&\n\010artifact\030\002 \001("
-  "\0132\024.ei.CompleteArtifact\022\020\n\010quantity\030\003 \001("
-  "\001\022\021\n\tserver_id\030\004 \001(\t\"2\n\rInventorySlot\022\020\n"
-  "\010occupied\030\001 \001(\010\022\017\n\007item_id\030\002 \001(\r\"\\\n\035Arti"
-  "factsConfigurationRequest\022#\n\005rinfo\030\002 \001(\013"
-  "2\024.ei.BasicRequestInfo\022\026\n\016client_version"
-  "\030\001 \001(\r\"\377\007\n\036ArtifactsConfigurationRespons"
-  "e\022P\n\022mission_parameters\030\001 \003(\01324.ei.Artif"
-  "actsConfigurationResponse.MissionParamet"
-  "ers\022R\n\023artifact_parameters\030\002 \003(\01325.ei.Ar"
-  "tifactsConfigurationResponse.ArtifactPar"
-  "ameters\022R\n\024crafting_level_infos\030\003 \003(\01324."
-  "ei.ArtifactsConfigurationResponse.Crafti"
-  "ngLevelInfo\032\250\003\n\021MissionParameters\022\'\n\004shi"
-  "p\030\001 \001(\0162\031.ei.MissionInfo.Spaceship\022P\n\tdu"
-  "rations\030\003 \003(\0132=.ei.ArtifactsConfiguratio"
-  "nResponse.MissionParameters.Duration\022\"\n\032"
-  "level_mission_requirements\030\004 \003(\r\022\033\n\023capa"
-  "city_DEPRECATED\030\002 \001(\r\032\326\001\n\010Duration\0223\n\rdu"
-  "ration_type\030\001 \001(\0162\034.ei.MissionInfo.Durat"
-  "ionType\022\017\n\007seconds\030\002 \001(\001\022\017\n\007quality\030\003 \001("
-  "\002\022\023\n\013min_quality\030\004 \001(\002\022\023\n\013max_quality\030\005 "
-  "\001(\002\022\020\n\010capacity\030\006 \001(\r\022\033\n\023level_capacity_"
-  "bump\030\007 \001(\r\022\032\n\022level_quality_bump\030\010 \001(\002\032\370"
-  "\001\n\022ArtifactParameters\022\036\n\004spec\030\001 \001(\0132\020.ei"
-  ".ArtifactSpec\022\024\n\014base_quality\030\002 \001(\001\022\027\n\017o"
-  "dds_multiplier\030\004 \001(\001\022\r\n\005value\030\003 \001(\001\022\026\n\016c"
-  "rafting_price\030\005 \001(\001\022\032\n\022crafting_price_lo"
-  "w\030\006 \001(\001\022\035\n\025crafting_price_domain\030\007 \001(\r\022\034"
-  "\n\024crafting_price_curve\030\010 \001(\001\022\023\n\013crafting"
-  "_xp\030\t \001(\004\032=\n\021CraftingLevelInfo\022\023\n\013xp_req"
-  "uired\030\001 \001(\001\022\023\n\013rarity_mult\030\002 \001(\002\"\256\001\n\016Mis"
-  "sionRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicReq"
-  "uestInfo\022\026\n\016client_version\030\001 \001(\r\022\022\n\nei_u"
-  "ser_id\030\003 \001(\t\022\035\n\004info\030\002 \001(\0132\017.ei.MissionI"
-  "nfo\022,\n\013client_info\030\005 \001(\0132\027.ei.ArtifactsC"
-  "lientInfo\"A\n\017MissionResponse\022\017\n\007success\030"
-  "\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\"\214\002\n"
-  "\027CompleteMissionResponse\022\017\n\007success\030\001 \001("
-  "\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\022A\n\tarti"
-  "facts\030\003 \003(\0132..ei.CompleteMissionResponse"
-  ".SecureArtifactSpec\022!\n\rother_rewards\030\004 \003"
-  "(\0132\n.ei.Reward\022\022\n\nei_user_id\030\005 \001(\t\032G\n\022Se"
-  "cureArtifactSpec\022\036\n\004spec\030\001 \001(\0132\020.ei.Arti"
-  "factSpec\022\021\n\tserver_id\030\002 \001(\t\"\344\001\n%CollectC"
-  "ontractArtifactRewardsRequest\022#\n\005rinfo\030\001"
-  " \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contract_i"
-  "dentifier\030\002 \001(\t\022\016\n\006league\030\005 \001(\r\022\'\n\005grade"
-  "\030\006 \001(\0162\030.ei.Contract.PlayerGrade\022\022\n\ngoal"
-  "_index\030\003 \001(\r\022,\n\tbest_ship\030\004 \001(\0162\031.ei.Mis"
-  "sionInfo.Spaceship\"\366\001\n\024CraftArtifactRequ"
-  "est\022#\n\005rinfo\030\005 \001(\0132\024.ei.BasicRequestInfo"
-  "\022\022\n\nei_user_id\030\001 \001(\t\022\036\n\004spec\030\002 \001(\0132\020.ei."
-  "ArtifactSpec\022\017\n\007item_id\030\003 \001(\004\022\027\n\017gold_pr"
-  "ice_paid\030\006 \001(\001\022\026\n\016crafting_count\030\007 \001(\r\022\023"
-  "\n\013crafting_xp\030\010 \001(\001\022.\n\013ingredients\030\004 \003(\013"
-  "2\031.ei.ArtifactInventoryItem\"\211\001\n\025CraftArt"
-  "ifactResponse\022\017\n\007item_id\030\001 \001(\004\022\022\n\nei_use"
-  "r_id\030\005 \001(\t\0228\n\017rarity_achieved\030\002 \001(\0162\027.ei"
-  ".ArtifactSpec.Rarity:\006COMMON\022\021\n\tserver_i"
-  "d\030\003 \001(\t\"\365\001\n\026ConsumeArtifactRequest\022#\n\005ri"
-  "nfo\030\004 \001(\0132\024.ei.BasicRequestInfo\022\022\n\nei_us"
-  "er_id\030\003 \001(\t\022\036\n\004spec\030\001 \001(\0132\020.ei.ArtifactS"
-  "pec\022\032\n\022artifact_server_id\030\005 \001(\t\022\030\n\020origi"
-  "nal_item_id\030\002 \001(\004\022\035\n\025additional_server_i"
-  "ds\030\007 \003(\t\022\033\n\023additional_item_ids\030\010 \003(\004\022\020\n"
-  "\010quantity\030\006 \001(\r\"\276\001\n\027ConsumeArtifactRespo"
+  "fig\022.\n\013help_config\030\005 \001(\0132\031.ei.LiveConfig"
+  ".HelpConfig\032\306\001\n\014BoostsConfig\022<\n\014item_con"
+  "figs\030\001 \003(\0132&.ei.LiveConfig.BoostsConfig."
+  "ItemConfig\022\037\n\027cash_boost_cooloff_time\030\002 "
+  "\001(\001\032W\n\nItemConfig\022\020\n\010boost_id\030\001 \001(\t\022\r\n\005p"
+  "rice\030\002 \001(\r\022\023\n\013token_price\030\003 \001(\r\022\023\n\013se_re"
+  "quired\030\004 \001(\001\032\336\006\n\nGiftConfig\022\?\n\014gift_conf"
+  "igs\030\t \003(\0132).ei.LiveConfig.GiftConfig.Gif"
+  "tValueConfig\022\031\n\021gift_mu_min_spent\030\n \001(\001\022"
+  "\031\n\021gift_mu_max_spent\030\013 \001(\001\022\034\n\024gift_mu_ov"
+  "erall_mult\030\014 \001(\001\022E\n\025random_gift_mu_confi"
+  "g\030\017 \001(\0132&.ei.LiveConfig.GiftConfig.GiftM"
+  "uConfig\022D\n\024video_gift_mu_config\030\020 \001(\0132&."
+  "ei.LiveConfig.GiftConfig.GiftMuConfig\022\030\n"
+  "\020package_interval\030\001 \001(\001\022\034\n\024video_offer_i"
+  "nterval\030\002 \001(\001\022%\n\035video_offer_interval_co"
+  "ntract\030\003 \001(\001\022\'\n\037video_offer_interval_pig"
+  "gy_full\030\004 \001(\001\022-\n%video_offer_interval_pi"
+  "ggy_extra_full\030\005 \001(\001\022\033\n\023video_reset_on_i"
+  "dle\030\016 \001(\010\022!\n\031package_interval_contract\030\006"
+  " \001(\001\022#\n\033package_interval_piggy_full\030\007 \001("
+  "\001\022)\n!package_interval_piggy_extra_full\030\010"
+  " \001(\001\022\035\n\025package_reset_on_idle\030\r \001(\010\032|\n\017G"
+  "iftValueConfig\022\017\n\007gift_id\030\001 \001(\t\022\016\n\006amoun"
+  "t\030\004 \001(\001\022\020\n\010rand_min\030\002 \001(\001\022\020\n\010rand_max\030\003 "
+  "\001(\001\022\021\n\tvideo_min\030\005 \001(\001\022\021\n\tvideo_max\030\006 \001("
+  "\001\032J\n\014GiftMuConfig\022\021\n\tmin_spent\030\001 \001(\001\022\021\n\t"
+  "max_spent\030\002 \001(\001\022\024\n\014overall_mult\030\003 \001(\001\032\373\003"
+  "\n\nMiscConfig\022\024\n\014ask_to_track\030\001 \001(\010\022\"\n\032as"
+  "k_to_track_min_soul_eggs\030\002 \001(\001\022\034\n\024ask_to"
+  "_track_message\030\003 \001(\t\022$\n\034ask_to_track_sho"
+  "w_pre_dialog\030\004 \001(\010\022\"\n\032ask_to_track_after"
+  "_privacy\030\005 \001(\010\022$\n\034chicken_run_boost_perc"
+  "entage\030\006 \001(\001\022\034\n\024shells_intro_tickets\030\007 \001"
+  "(\r\022\'\n\037shells_max_free_chicken_configs\030\010 "
+  "\001(\r\022$\n\034shells_intro_alert_threshold\030\t \001("
+  "\r\022+\n\036shells_lighting_controls_price\030\016 \001("
+  "\r:\003175\022.\n&contracts_expert_league_min_so"
+  "ul_power\030\n \001(\001\022!\n\031new_player_event_durat"
+  "ion\030\013 \001(\001\022 \n\030contracts_club_available\030\014 "
+  "\001(\010\022\026\n\016contracts_beta\030\r \001(\010\032\220\002\n\nHelpConf"
+  "ig\022=\n\013video_infos\030\001 \003(\0132(.ei.LiveConfig."
+  "HelpConfig.HowToVideoInfo\032\302\001\n\016HowToVideo"
+  "Info\022;\n\004type\030\006 \001(\0162-.ei.LiveConfig.HelpC"
+  "onfig.HowToVideoInfo.Type\022\014\n\004name\030\001 \001(\t\022"
+  "\023\n\013description\030\002 \001(\t\022\020\n\010duration\030\005 \001(\t\022\013"
+  "\n\003url\030\003 \001(\t\022\021\n\tsoul_eggs\030\004 \001(\001\"\036\n\004Type\022\t"
+  "\n\005VIDEO\020\000\022\013\n\007ARTICLE\020\001\"\277\004\n\nInGameMail\022\n\n"
+  "\002id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n\004date\030\010 \001(\t\022\017"
+  "\n\007message\030\003 \001(\t\022\016\n\006action\030\004 \001(\t\022\013\n\003url\030\005"
+  " \001(\t\022 \n\010app_link\030\016 \001(\0162\016.ei.UILocation\022\026"
+  "\n\016app_link_extra\030\017 \001(\t\022\032\n\005image\030\020 \001(\0132\013."
+  "ei.DLCItem\022\023\n\013image_width\030\025 \001(\001\022\024\n\014image"
+  "_height\030\026 \001(\001\022\020\n\010platform\030\007 \001(\r\022\016\n\006build"
+  "s\030\t \003(\t\022\032\n\022min_client_version\030\n \001(\r\022\032\n\022m"
+  "ax_client_version\030\014 \001(\r\022\025\n\rmin_soul_eggs"
+  "\030\013 \001(\001\022\032\n\022min_mystical_bonus\030\r \001(\001\022\037\n\tus"
+  "er_type\030\021 \001(\0162\014.ei.UserType\022\030\n\020min_piggy"
+  "_breaks\030\024 \001(\r\022\020\n\010gold_tip\030\006 \001(\001\022\013\n\003tip\030\027"
+  " \001(\010\022\020\n\010priority\030\033 \001(\r\022\037\n\027min_days_since"
+  "_last_tip\030\030 \001(\001\022\023\n\013max_retries\030\031 \001(\r\022\030\n\020"
+  "days_until_retry\030\032 \001(\001\022\020\n\010category\030\034 \001(\t"
+  "\"S\n\006MailDB\022\034\n\004mail\030\001 \003(\0132\016.ei.InGameMail"
+  "\022\024\n\014tips_db_data\030\002 \001(\014\022\025\n\rtips_checksum\030"
+  "\003 \001(\t\"&\n\006TipsDB\022\034\n\004tips\030\001 \003(\0132\016.ei.InGam"
+  "eMail\"\240\001\n\tMailState\022\025\n\rread_mail_ids\030\001 \003"
+  "(\t\022+\n\013tips_states\030\002 \003(\0132\026.ei.MailState.T"
+  "ipState\022\025\n\rtips_checksum\030\003 \001(\t\0328\n\010TipSta"
+  "te\022\n\n\002id\030\001 \001(\t\022\r\n\005reads\030\002 \001(\r\022\021\n\ttime_re"
+  "ad\030\003 \001(\001\"\354\003\n\023PeriodicalsResponse\022\034\n\005sale"
+  "s\030\001 \001(\0132\r.ei.SalesInfo\022\'\n\006events\030\002 \001(\0132\027"
+  ".ei.EggIncCurrentEvents\022(\n\tcontracts\030\003 \001"
+  "(\0132\025.ei.ContractsResponse\022+\n\013evaluations"
+  "\030\010 \003(\0132\026.ei.ContractEvaluation\022\035\n\005gifts\030"
+  "\004 \003(\0132\016.ei.ServerGift\0223\n\016artifact_cases\030"
+  "\t \003(\0132\033.ei.CompleteMissionResponse\022#\n\013li"
+  "ve_config\030\005 \001(\0132\016.ei.LiveConfig\022\034\n\010mail_"
+  "bag\030\006 \001(\0132\n.ei.MailDB\0224\n\024contract_player"
+  "_info\030\007 \001(\0132\026.ei.ContractPlayerInfo\022\?\n\022s"
+  "howcase_royalties\030\n \003(\0132#.ei.Periodicals"
+  "Response.RoyaltyInfo\032)\n\013RoyaltyInfo\022\n\n\002i"
+  "d\030\001 \001(\t\022\016\n\006amount\030\002 \001(\r\"\371\002\n\025GetPeriodica"
+  "lsRequest\022#\n\005rinfo\030\014 \001(\0132\024.ei.BasicReque"
+  "stInfo\022\017\n\007user_id\030\001 \001(\t\022\022\n\npiggy_full\030\002 "
+  "\001(\010\022\030\n\020piggy_found_full\030\003 \001(\010\022\035\n\025seconds"
+  "_full_realtime\030\004 \001(\001\022\035\n\025seconds_full_gam"
+  "etime\030\005 \001(\001\022\027\n\017lost_increments\030\007 \001(\r\022\021\n\t"
+  "soul_eggs\030\010 \001(\001\022\036\n\026mystical_earnings_mul"
+  "t\030\r \001(\001\022\013\n\003eop\030\016 \001(\r\022\032\n\022contracts_unlock"
+  "ed\030\017 \001(\010\022\032\n\022artifacts_unlocked\030\020 \001(\010\022\036\n\026"
+  "current_client_version\030\n \001(\r\022\r\n\005debug\030\013 "
+  "\001(\010\"\325\001\n\rConfigRequest\022#\n\005rinfo\030\001 \001(\0132\024.e"
+  "i.BasicRequestInfo\022\021\n\tsoul_eggs\030\002 \001(\001\022\032\n"
+  "\022contracts_unlocked\030\005 \001(\010\022\032\n\022artifacts_u"
+  "nlocked\030\003 \001(\010\022\032\n\022fuel_tank_unlocked\030\004 \001("
+  "\010\022\022\n\npro_permit\030\006 \001(\010\022\r\n\005ultra\030\007 \001(\010\022\025\n\r"
+  "tips_checksum\030\010 \001(\t\"x\n\016ConfigResponse\022#\n"
+  "\013live_config\030\001 \001(\0132\016.ei.LiveConfig\022\034\n\010ma"
+  "il_bag\030\002 \001(\0132\n.ei.MailDB\022#\n\013dlc_catalog\030"
+  "\003 \001(\0132\016.ei.DLCCatalog\"d\n\024AdAttributionRa"
+  "wData\022\024\n\014device_ad_id\030\001 \001(\t\022\017\n\007user_id\030\004"
+  " \001(\t\022\022\n\nad_network\030\002 \001(\t\022\021\n\tjson_data\030\003 "
+  "\001(\t\"\270\001\n\020AdAttributionRow\022\017\n\007user_id\030\001 \001("
+  "\t\022\r\n\005ad_id\030\002 \001(\t\022\022\n\nad_network\030\003 \001(\t\022\020\n\010"
+  "campaign\030\004 \001(\t\022\017\n\007keyword\030\005 \001(\t\022\r\n\005extra"
+  "\030\006 \001(\t\022\022\n\nclick_date\030\007 \001(\002\022\025\n\rdownload_d"
+  "ate\030\010 \001(\002\022\023\n\013approx_time\030\t \001(\002\"\215\003\n\021AdAtt"
+  "ributionInfo\022\024\n\014device_ad_id\030\001 \001(\t\022\024\n\014ne"
+  "twork_name\030\002 \001(\t\022\023\n\013attribution\030\003 \001(\010\022\020\n"
+  "\010org_name\030\004 \001(\t\022\016\n\006org_id\030\005 \001(\t\022\025\n\rcampa"
+  "ign_name\030\006 \001(\t\022\023\n\013campaign_id\030\007 \001(\t\022\022\n\nc"
+  "lick_date\030\010 \001(\t\022\027\n\017conversion_date\030\t \001(\t"
+  "\022\027\n\017conversion_type\030\n \001(\t\022\013\n\003geo\030\013 \001(\t\022\024"
+  "\n\014adgroup_name\030\014 \001(\t\022\022\n\nadgroup_id\030\r \001(\t"
+  "\022\017\n\007keyword\030\016 \001(\t\022\022\n\nkeyword_id\030\017 \001(\t\022\025\n"
+  "\rkeyword_extra\030\020 \001(\t\022\030\n\020creativeset_name"
+  "\030\021 \001(\t\022\026\n\016creativeset_id\030\022 \001(\t\"\227\002\n\023Artif"
+  "actsClientInfo\022\035\n\025mission_capacity_mult\030"
+  "\001 \001(\001\022\035\n\025mission_duration_mult\030\002 \001(\001\022!\n\031"
+  "mission_ftl_duration_mult\030\004 \001(\001\022:\n\rlaunc"
+  "h_counts\030\003 \003(\0132#.ei.ArtifactsClientInfo."
+  "LaunchCount\032c\n\013LaunchCount\022\'\n\004ship\030\001 \001(\016"
+  "2\031.ei.MissionInfo.Spaceship\022\024\n\014num_launc"
+  "hes\030\002 \001(\r\022\025\n\rlaunch_points\030\003 \001(\001\"\264\006\n\013Mis"
+  "sionInfo\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionInfo."
+  "Spaceship\022&\n\006status\030\002 \001(\0162\026.ei.MissionIn"
+  "fo.Status\0223\n\rduration_type\030\003 \001(\0162\034.ei.Mi"
+  "ssionInfo.DurationType\022\"\n\004fuel\030\004 \003(\0132\024.e"
+  "i.MissionInfo.Fuel\022\r\n\005level\030\014 \001(\r\022\030\n\020dur"
+  "ation_seconds\030\005 \001(\001\022\020\n\010capacity\030\t \001(\r\022\024\n"
+  "\014quality_bump\030\013 \001(\001\022.\n\017target_artifact\030\r"
+  " \001(\0162\025.ei.ArtifactSpec.Name\022\031\n\021seconds_r"
+  "emaining\030\006 \001(\001\022\032\n\022start_time_derived\030\010 \001"
+  "(\001\022\023\n\013mission_log\030\n \001(\t\022\022\n\nidentifier\030\007 "
+  "\001(\t\032,\n\004Fuel\022\024\n\003egg\030\001 \001(\0162\007.ei.Egg\022\016\n\006amo"
+  "unt\030\002 \001(\001\"\270\001\n\tSpaceship\022\017\n\013CHICKEN_ONE\020\000"
+  "\022\020\n\014CHICKEN_NINE\020\001\022\021\n\rCHICKEN_HEAVY\020\002\022\007\n"
+  "\003BCR\020\003\022\025\n\021MILLENIUM_CHICKEN\020\004\022\027\n\023CORELLI"
+  "HEN_CORVETTE\020\005\022\016\n\nGALEGGTICA\020\006\022\016\n\nCHICKF"
+  "IANT\020\007\022\014\n\010VOYEGGER\020\010\022\016\n\nHENERPRISE\020\t\"t\n\006"
+  "Status\022\013\n\007FUELING\020\000\022\025\n\021PREPARE_TO_LAUNCH"
+  "\020\005\022\r\n\tEXPLORING\020\n\022\014\n\010RETURNED\020\017\022\r\n\tANALY"
+  "ZING\020\020\022\014\n\010COMPLETE\020\024\022\014\n\010ARCHIVED\020\031\";\n\014Du"
+  "rationType\022\t\n\005SHORT\020\000\022\010\n\004LONG\020\001\022\010\n\004EPIC\020"
+  "\002\022\014\n\010TUTORIAL\020\003\"\360\013\n\014ArtifactSpec\022#\n\004name"
+  "\030\001 \001(\0162\025.ei.ArtifactSpec.Name\022%\n\005level\030\002"
+  " \001(\0162\026.ei.ArtifactSpec.Level\022\'\n\006rarity\030\003"
+  " \001(\0162\027.ei.ArtifactSpec.Rarity\022\024\n\003egg\030\004 \001"
+  "(\0162\007.ei.Egg\"\212\t\n\004Name\022\017\n\013LUNAR_TOTEM\020\000\022\027\n"
+  "\023NEODYMIUM_MEDALLION\020\003\022\021\n\rBEAK_OF_MIDAS\020"
+  "\004\022\025\n\021LIGHT_OF_EGGENDIL\020\005\022\025\n\021DEMETERS_NEC"
+  "KLACE\020\006\022\025\n\021VIAL_MARTIAN_DUST\020\007\022\021\n\rORNATE"
+  "_GUSSET\020\010\022\017\n\013THE_CHALICE\020\t\022\021\n\rBOOK_OF_BA"
+  "SAN\020\n\022\023\n\017PHOENIX_FEATHER\020\013\022\021\n\rTUNGSTEN_A"
+  "NKH\020\014\022\023\n\017AURELIAN_BROOCH\020\025\022\024\n\020CARVED_RAI"
+  "NSTICK\020\026\022\017\n\013PUZZLE_CUBE\020\027\022\025\n\021QUANTUM_MET"
+  "RONOME\020\030\022\024\n\020SHIP_IN_A_BOTTLE\020\031\022\025\n\021TACHYO"
+  "N_DEFLECTOR\020\032\022\030\n\024INTERSTELLAR_COMPASS\020\033\022"
+  "\025\n\021DILITHIUM_MONOCLE\020\034\022\025\n\021TITANIUM_ACTUA"
+  "TOR\020\035\022\021\n\rMERCURYS_LENS\020\036\022\021\n\rTACHYON_STON"
+  "E\020\001\022\023\n\017DILITHIUM_STONE\020\037\022\017\n\013SHELL_STONE\020"
+  " \022\017\n\013LUNAR_STONE\020!\022\016\n\nSOUL_STONE\020\"\022\022\n\016PR"
+  "OPHECY_STONE\020\'\022\021\n\rQUANTUM_STONE\020$\022\017\n\013TER"
+  "RA_STONE\020%\022\016\n\nLIFE_STONE\020&\022\021\n\rCLARITY_ST"
+  "ONE\020(\022\035\n\031EXTRATERRESTRIAL_ALUMINUM\020\r\022\024\n\020"
+  "ANCIENT_TUNGSTEN\020\016\022\017\n\013SPACE_ROCKS\020\017\022\016\n\nA"
+  "LIEN_WOOD\020\020\022\022\n\016GOLD_METEORITE\020\021\022\022\n\016TAU_C"
+  "ETI_GEODE\020\022\022\024\n\020CENTAURIAN_STEEL\020\023\022\023\n\017ERI"
+  "DANI_FEATHER\020\024\022\017\n\013DRONE_PARTS\020#\022\024\n\020CELES"
+  "TIAL_BRONZE\020)\022\020\n\014LALANDE_HIDE\020*\022\022\n\016SOLAR"
+  "_TITANIUM\020+\022\032\n\026TACHYON_STONE_FRAGMENT\020\002\022"
+  "\034\n\030DILITHIUM_STONE_FRAGMENT\020,\022\030\n\024SHELL_S"
+  "TONE_FRAGMENT\020-\022\030\n\024LUNAR_STONE_FRAGMENT\020"
+  ".\022\027\n\023SOUL_STONE_FRAGMENT\020/\022\033\n\027PROPHECY_S"
+  "TONE_FRAGMENT\0200\022\032\n\026QUANTUM_STONE_FRAGMEN"
+  "T\0201\022\030\n\024TERRA_STONE_FRAGMENT\0202\022\027\n\023LIFE_ST"
+  "ONE_FRAGMENT\0203\022\032\n\026CLARITY_STONE_FRAGMENT"
+  "\0204\022\014\n\007UNKNOWN\020\220N\"H\n\005Level\022\014\n\010INFERIOR\020\000\022"
+  "\n\n\006LESSER\020\001\022\n\n\006NORMAL\020\002\022\013\n\007GREATER\020\003\022\014\n\010"
+  "SUPERIOR\020\004\"7\n\006Rarity\022\n\n\006COMMON\020\000\022\010\n\004RARE"
+  "\020\001\022\010\n\004EPIC\020\002\022\r\n\tLEGENDARY\020\003\"E\n\004Type\022\014\n\010A"
+  "RTIFACT\020\000\022\t\n\005STONE\020\001\022\016\n\nINGREDIENT\020\002\022\024\n\020"
+  "STONE_INGREDIENT\020\003\"T\n\020CompleteArtifact\022\036"
+  "\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpec\022 \n\006stones"
+  "\030\002 \003(\0132\020.ei.ArtifactSpec\"u\n\025ArtifactInve"
+  "ntoryItem\022\017\n\007item_id\030\001 \001(\004\022&\n\010artifact\030\002"
+  " \001(\0132\024.ei.CompleteArtifact\022\020\n\010quantity\030\003"
+  " \001(\001\022\021\n\tserver_id\030\004 \001(\t\"2\n\rInventorySlot"
+  "\022\020\n\010occupied\030\001 \001(\010\022\017\n\007item_id\030\002 \001(\r\"\\\n\035A"
+  "rtifactsConfigurationRequest\022#\n\005rinfo\030\002 "
+  "\001(\0132\024.ei.BasicRequestInfo\022\026\n\016client_vers"
+  "ion\030\001 \001(\r\"\377\007\n\036ArtifactsConfigurationResp"
+  "onse\022P\n\022mission_parameters\030\001 \003(\01324.ei.Ar"
+  "tifactsConfigurationResponse.MissionPara"
+  "meters\022R\n\023artifact_parameters\030\002 \003(\01325.ei"
+  ".ArtifactsConfigurationResponse.Artifact"
+  "Parameters\022R\n\024crafting_level_infos\030\003 \003(\013"
+  "24.ei.ArtifactsConfigurationResponse.Cra"
+  "ftingLevelInfo\032\250\003\n\021MissionParameters\022\'\n\004"
+  "ship\030\001 \001(\0162\031.ei.MissionInfo.Spaceship\022P\n"
+  "\tdurations\030\003 \003(\0132=.ei.ArtifactsConfigura"
+  "tionResponse.MissionParameters.Duration\022"
+  "\"\n\032level_mission_requirements\030\004 \003(\r\022\033\n\023c"
+  "apacity_DEPRECATED\030\002 \001(\r\032\326\001\n\010Duration\0223\n"
+  "\rduration_type\030\001 \001(\0162\034.ei.MissionInfo.Du"
+  "rationType\022\017\n\007seconds\030\002 \001(\001\022\017\n\007quality\030\003"
+  " \001(\002\022\023\n\013min_quality\030\004 \001(\002\022\023\n\013max_quality"
+  "\030\005 \001(\002\022\020\n\010capacity\030\006 \001(\r\022\033\n\023level_capaci"
+  "ty_bump\030\007 \001(\r\022\032\n\022level_quality_bump\030\010 \001("
+  "\002\032\370\001\n\022ArtifactParameters\022\036\n\004spec\030\001 \001(\0132\020"
+  ".ei.ArtifactSpec\022\024\n\014base_quality\030\002 \001(\001\022\027"
+  "\n\017odds_multiplier\030\004 \001(\001\022\r\n\005value\030\003 \001(\001\022\026"
+  "\n\016crafting_price\030\005 \001(\001\022\032\n\022crafting_price"
+  "_low\030\006 \001(\001\022\035\n\025crafting_price_domain\030\007 \001("
+  "\r\022\034\n\024crafting_price_curve\030\010 \001(\001\022\023\n\013craft"
+  "ing_xp\030\t \001(\004\032=\n\021CraftingLevelInfo\022\023\n\013xp_"
+  "required\030\001 \001(\001\022\023\n\013rarity_mult\030\002 \001(\002\"\256\001\n\016"
+  "MissionRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.Basic"
+  "RequestInfo\022\026\n\016client_version\030\001 \001(\r\022\022\n\ne"
+  "i_user_id\030\003 \001(\t\022\035\n\004info\030\002 \001(\0132\017.ei.Missi"
+  "onInfo\022,\n\013client_info\030\005 \001(\0132\027.ei.Artifac"
+  "tsClientInfo\"A\n\017MissionResponse\022\017\n\007succe"
+  "ss\030\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\""
+  "\214\002\n\027CompleteMissionResponse\022\017\n\007success\030\001"
+  " \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\022A\n\ta"
+  "rtifacts\030\003 \003(\0132..ei.CompleteMissionRespo"
+  "nse.SecureArtifactSpec\022!\n\rother_rewards\030"
+  "\004 \003(\0132\n.ei.Reward\022\022\n\nei_user_id\030\005 \001(\t\032G\n"
+  "\022SecureArtifactSpec\022\036\n\004spec\030\001 \001(\0132\020.ei.A"
+  "rtifactSpec\022\021\n\tserver_id\030\002 \001(\t\"\344\001\n%Colle"
+  "ctContractArtifactRewardsRequest\022#\n\005rinf"
+  "o\030\001 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contrac"
+  "t_identifier\030\002 \001(\t\022\016\n\006league\030\005 \001(\r\022\'\n\005gr"
+  "ade\030\006 \001(\0162\030.ei.Contract.PlayerGrade\022\022\n\ng"
+  "oal_index\030\003 \001(\r\022,\n\tbest_ship\030\004 \001(\0162\031.ei."
+  "MissionInfo.Spaceship\"\366\001\n\024CraftArtifactR"
+  "equest\022#\n\005rinfo\030\005 \001(\0132\024.ei.BasicRequestI"
+  "nfo\022\022\n\nei_user_id\030\001 \001(\t\022\036\n\004spec\030\002 \001(\0132\020."
+  "ei.ArtifactSpec\022\017\n\007item_id\030\003 \001(\004\022\027\n\017gold"
+  "_price_paid\030\006 \001(\001\022\026\n\016crafting_count\030\007 \001("
+  "\r\022\023\n\013crafting_xp\030\010 \001(\001\022.\n\013ingredients\030\004 "
+  "\003(\0132\031.ei.ArtifactInventoryItem\"\211\001\n\025Craft"
+  "ArtifactResponse\022\017\n\007item_id\030\001 \001(\004\022\022\n\nei_"
+  "user_id\030\005 \001(\t\0228\n\017rarity_achieved\030\002 \001(\0162\027"
+  ".ei.ArtifactSpec.Rarity:\006COMMON\022\021\n\tserve"
+  "r_id\030\003 \001(\t\"\365\001\n\026ConsumeArtifactRequest\022#\n"
+  "\005rinfo\030\004 \001(\0132\024.ei.BasicRequestInfo\022\022\n\nei"
+  "_user_id\030\003 \001(\t\022\036\n\004spec\030\001 \001(\0132\020.ei.Artifa"
+  "ctSpec\022\032\n\022artifact_server_id\030\005 \001(\t\022\030\n\020or"
+  "iginal_item_id\030\002 \001(\004\022\035\n\025additional_serve"
+  "r_ids\030\007 \003(\t\022\033\n\023additional_item_ids\030\010 \003(\004"
+  "\022\020\n\010quantity\030\006 \001(\r\"\276\001\n\027ConsumeArtifactRe"
+  "sponse\022\017\n\007success\030\001 \001(\010\022\030\n\020original_item"
+  "_id\030\002 \001(\004\022\033\n\023additional_item_ids\030\006 \003(\004\022$"
+  "\n\nbyproducts\030\003 \003(\0132\020.ei.ArtifactSpec\022!\n\r"
+  "other_rewards\030\004 \003(\0132\n.ei.Reward\022\022\n\nei_us"
+  "er_id\030\005 \001(\t\"}\n\034AuthenticateArtifactRespo"
   "nse\022\017\n\007success\030\001 \001(\010\022\030\n\020original_item_id"
-  "\030\002 \001(\004\022\033\n\023additional_item_ids\030\006 \003(\004\022$\n\nb"
-  "yproducts\030\003 \003(\0132\020.ei.ArtifactSpec\022!\n\roth"
-  "er_rewards\030\004 \003(\0132\n.ei.Reward\022\022\n\nei_user_"
-  "id\030\005 \001(\t\"}\n\034AuthenticateArtifactResponse"
-  "\022\017\n\007success\030\001 \001(\010\022\030\n\020original_item_id\030\002 "
-  "\001(\004\022\016\n\006demote\030\003 \001(\010\022\016\n\006delete\030\004 \001(\010\022\022\n\ne"
-  "i_user_id\030\005 \001(\t\"\241\001\n\022SetArtifactRequest\022#"
-  "\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022+\n\010a"
-  "rtifact\030\002 \001(\0132\031.ei.ArtifactInventoryItem"
-  "\022 \n\006stones\030\003 \003(\0132\020.ei.ArtifactSpec\022\027\n\017go"
-  "ld_price_paid\030\004 \001(\001\"T\n\023SetArtifactRespon"
-  "se\022\017\n\007success\030\001 \001(\010\022\030\n\020original_item_id\030"
-  "\002 \001(\004\022\022\n\nei_user_id\030\005 \001(\t\"\314\007\n\013ArtifactsD"
-  "B\0222\n\017inventory_items\030\001 \003(\0132\031.ei.Artifact"
-  "InventoryItem\022\025\n\ritem_sequence\030\002 \001(\004\022*\n\017"
-  "inventory_slots\030\003 \003(\0132\021.ei.InventorySlot"
-  "\022G\n\033active_artifacts_DEPRECATED\030\007 \003(\0132\"."
-  "ei.ArtifactsDB.ActiveArtifactSlot\022\?\n\024act"
-  "ive_artifact_sets\030\013 \003(\0132!.ei.ArtifactsDB"
-  ".ActiveArtifactSet\022>\n\023saved_artifact_set"
-  "s\030\r \003(\0132!.ei.ArtifactsDB.ActiveArtifactS"
-  "et\022:\n\017artifact_status\030\014 \003(\0132!.ei.Artifac"
-  "tsDB.CraftableArtifact\022&\n\rmission_infos\030"
-  "\004 \003(\0132\017.ei.MissionInfo\022(\n\017mission_archiv"
-  "e\030\005 \003(\0132\017.ei.MissionInfo\0229\n\037discovered_a"
-  "rtifacts_DEPRECATED\030\010 \003(\0132\020.ei.ArtifactS"
-  "pec\022I\n\036craftable_artifacts_DEPRECATED\030\t "
-  "\003(\0132!.ei.ArtifactsDB.CraftableArtifact\022E"
-  "\n\032crafting_counts_DEPRECATED\030\n \003(\0132!.ei."
-  "ArtifactsDB.CraftableArtifact\0327\n\022ActiveA"
-  "rtifactSlot\022\020\n\010occupied\030\001 \001(\010\022\017\n\007item_id"
-  "\030\002 \001(\004\032S\n\021ActiveArtifactSet\0221\n\005slots\030\001 \003"
-  "(\0132\".ei.ArtifactsDB.ActiveArtifactSlot\022\013"
-  "\n\003uid\030\002 \001(\r\032\222\001\n\021CraftableArtifact\022\036\n\004spe"
-  "c\030\001 \001(\0132\020.ei.ArtifactSpec\022\022\n\ndiscovered\030"
-  "\006 \001(\010\022\021\n\tcraftable\030\004 \001(\010\022\031\n\021recipe_disco"
-  "vered\030\005 \001(\010\022\014\n\004seen\030\002 \001(\010\022\r\n\005count\030\003 \001(\r"
-  "\"\202\001\n\024AuthenticatedMessage\022\017\n\007message\030\001 \001"
-  "(\014\022\017\n\007version\030\003 \001(\r\022\014\n\004code\030\002 \001(\t\022\022\n\ncom"
-  "pressed\030\004 \001(\010\022\025\n\roriginal_size\030\005 \001(\r\022\017\n\007"
-  "user_id\030\006 \001(\t\"f\n\031LogCompleteMissionPaylo"
-  "ad\022\037\n\003req\030\001 \001(\0132\022.ei.MissionRequest\022(\n\003r"
-  "es\030\002 \001(\0132\033.ei.CompleteMissionResponse\"h\n"
-  "\027LogCraftArtifactPayload\022%\n\003req\030\001 \001(\0132\030."
-  "ei.CraftArtifactRequest\022&\n\003res\030\002 \001(\0132\031.e"
-  "i.CraftArtifactResponse\"n\n\031LogConsumeArt"
-  "ifactPayload\022\'\n\003req\030\001 \001(\0132\032.ei.ConsumeAr"
-  "tifactRequest\022(\n\003res\030\002 \001(\0132\033.ei.ConsumeA"
-  "rtifactResponse\"b\n\025LogSetArtifactPayload"
-  "\022#\n\003req\030\001 \001(\0132\026.ei.SetArtifactRequest\022$\n"
-  "\003res\030\002 \001(\0132\027.ei.SetArtifactResponse\"@\n\026A"
-  "ccountTransferPayload\022\017\n\007from_id\030\001 \001(\t\022\025"
-  "\n\rto_ei_user_id\030\002 \001(\t\"\335\001\n\022SaveBackupResp"
-  "onse\022\017\n\007success\030\001 \001(\010\022\022\n\nerror_code\030\002 \001("
-  "\r\022\017\n\007message\030\003 \001(\t\022#\n\017existing_backup\030\004 "
-  "\001(\0132\n.ei.Backup\"l\n\nErrorCodes\022\014\n\010NO_ERRO"
-  "R\020\000\022\022\n\016USER_NOT_FOUND\020\001\022\027\n\023COULD_NOT_OVE"
-  "RWRITE\020\002\022\022\n\016BACKUP_OFFERED\020\003\022\017\n\013BAD_USER"
-  "_ID\020\004\"K\n\023CleanAccountRequest\022\032\n\022ei_user_"
-  "id_to_keep\030\001 \001(\t\022\030\n\020game_services_id\030\002 \001"
-  "(\t\"&\n\020ReturnEDTPayload\022\022\n\nei_user_id\030\001 \001"
-  "(\t\"\201\001\n\007DLCItem\022\014\n\004name\030\001 \001(\t\022\021\n\tdirector"
-  "y\030\002 \001(\t\022\013\n\003ext\030\003 \001(\t\022\022\n\ncompressed\030\006 \001(\010"
-  "\022\025\n\roriginal_size\030\007 \001(\004\022\013\n\003url\030\004 \001(\t\022\020\n\010"
-  "checksum\030\005 \001(\t\"\325\022\n\tShellSpec\022\022\n\nidentifi"
-  "er\030\001 \001(\t\022/\n\rprimary_piece\030\014 \001(\0132\030.ei.She"
-  "llSpec.ShellPiece\022(\n\006pieces\030\013 \003(\0132\030.ei.S"
-  "hellSpec.ShellPiece\022\037\n\nalt_assets\030\022 \003(\0132"
-  "\013.ei.DLCItem\022\014\n\004name\030\003 \001(\t\022\026\n\016set_identi"
-  "fier\030\r \001(\t\022\031\n\021modified_geometry\030\023 \001(\010\022\r\n"
-  "\005price\030\004 \001(\r\022\024\n\014required_eop\030\005 \001(\r\022\032\n\022re"
-  "quired_soul_eggs\030\006 \001(\001\022\035\n\025required_paren"
-  "t_shell\030\024 \001(\t\022\016\n\006is_new\030\016 \001(\010\022\017\n\007expires"
-  "\030\017 \001(\010\022\037\n\027seconds_until_available\030\021 \001(\001\022"
-  "\031\n\021seconds_remaining\030\020 \001(\001\022\022\n\npopularity"
-  "\030\025 \001(\004\022\032\n\022default_appearance\030\010 \001(\010\032S\n\nSh"
-  "ellPiece\022+\n\nasset_type\030\001 \001(\0162\027.ei.ShellS"
-  "pec.AssetType\022\030\n\003dlc\030\002 \001(\0132\013.ei.DLCItem\""
-  "\264\016\n\tAssetType\022\010\n\004COOP\020\001\022\t\n\005SHACK\020\002\022\017\n\013SU"
-  "PER_SHACK\020\003\022\017\n\013SHORT_HOUSE\020\004\022\020\n\014THE_STAN"
-  "DARD\020\005\022\016\n\nLONG_HOUSE\020\006\022\021\n\rDOUBLE_DECKER\020"
-  "\007\022\r\n\tWAREHOUSE\020\010\022\n\n\006CENTER\020\t\022\n\n\006BUNKER\020\n"
-  "\022\n\n\006EGGKEA\020\013\022\n\n\006HAB_1K\020\014\022\n\n\006HANGAR\020\r\022\t\n\005"
-  "TOWER\020\016\022\013\n\007HAB_10K\020\017\022\014\n\010EGGTOPIA\020\020\022\014\n\010MO"
-  "NOLITH\020\021\022\021\n\rPLANET_PORTAL\020\022\022\024\n\020CHICKEN_U"
-  "NIVERSE\020\023\022\020\n\014SILO_0_SMALL\0202\022\016\n\nSILO_0_ME"
-  "D\0203\022\020\n\014SILO_0_LARGE\0204\022\020\n\014SILO_1_SMALL\0205\022"
-  "\016\n\nSILO_1_MED\0206\022\020\n\014SILO_1_LARGE\0207\022\014\n\010SIL"
-  "O_ALL\020;\022\013\n\007MAILBOX\020F\022\017\n\013TROPHY_CASE\020G\022\n\n"
-  "\006GROUND\020H\022\r\n\tHARDSCAPE\020I\022\r\n\tHYPERLOOP\020J\022"
-  "\013\n\007DEPOT_1\020d\022\013\n\007DEPOT_2\020e\022\013\n\007DEPOT_3\020f\022\013"
-  "\n\007DEPOT_4\020g\022\013\n\007DEPOT_5\020h\022\013\n\007DEPOT_6\020i\022\013\n"
-  "\007DEPOT_7\020j\022\t\n\005LAB_1\020n\022\t\n\005LAB_2\020o\022\t\n\005LAB_"
-  "3\020p\022\t\n\005LAB_4\020q\022\t\n\005LAB_5\020r\022\t\n\005LAB_6\020s\022\023\n\017"
-  "HATCHERY_EDIBLE\020x\022\026\n\022HATCHERY_SUPERFOOD\020"
-  "y\022\024\n\020HATCHERY_MEDICAL\020z\022\030\n\024HATCHERY_ROCK"
-  "ET_FUEL\020{\022\032\n\026HATCHERY_SUPERMATERIAL\020|\022\023\n"
-  "\017HATCHERY_FUSION\020}\022\024\n\020HATCHERY_QUANTUM\020~"
-  "\022\030\n\024HATCHERY_IMMORTALITY\020\177\022\025\n\020HATCHERY_T"
-  "ACHYON\020\200\001\022\026\n\021HATCHERY_GRAVITON\020\201\001\022\027\n\022HAT"
-  "CHERY_DILITHIUM\020\202\001\022\025\n\020HATCHERY_PRODIGY\020\203"
-  "\001\022\027\n\022HATCHERY_TERRAFORM\020\204\001\022\030\n\023HATCHERY_A"
-  "NTIMATTER\020\205\001\022\031\n\024HATCHERY_DARK_MATTER\020\206\001\022"
-  "\020\n\013HATCHERY_AI\020\207\001\022\024\n\017HATCHERY_NEBULA\020\210\001\022"
-  "\026\n\021HATCHERY_UNIVERSE\020\211\001\022\033\n\026HATCHERY_ENLI"
-  "GHTENMENT\020\212\001\022\027\n\022HATCHERY_CHOCOLATE\020\213\001\022\024\n"
-  "\017HATCHERY_EASTER\020\214\001\022\032\n\025HATCHERY_WATERBAL"
-  "LOON\020\215\001\022\026\n\021HATCHERY_FIREWORK\020\216\001\022\025\n\020HATCH"
-  "ERY_PUMPKIN\020\217\001\022\n\n\005HOA_1\020\252\001\022\n\n\005HOA_2\020\253\001\022\n"
-  "\n\005HOA_3\020\254\001\022\026\n\021MISSION_CONTROL_1\020\264\001\022\026\n\021MI"
-  "SSION_CONTROL_2\020\265\001\022\026\n\021MISSION_CONTROL_3\020"
-  "\266\001\022\020\n\013FUEL_TANK_1\020\310\001\022\020\n\013FUEL_TANK_2\020\311\001\022\020"
-  "\n\013FUEL_TANK_3\020\312\001\022\020\n\013FUEL_TANK_4\020\313\001\022\032\n\025HA"
-  "TCHERY_GRAVITON_TOP\020\364\003\022\033\n\026HATCHERY_NEBUL"
-  "A_MIDDLE\020\365\003\022\030\n\023HATCHERY_NEBULA_TOP\020\366\003\022 \n"
-  "\033HATCHERY_DARK_MATTER_RING_1\020\371\003\022 \n\033HATCH"
-  "ERY_DARK_MATTER_RING_2\020\372\003\022 \n\033HATCHERY_DA"
-  "RK_MATTER_RING_3\020\373\003\022\026\n\021HATCHERY_AI_TOP_1"
-  "\020\376\003\022\026\n\021HATCHERY_AI_TOP_2\020\377\003\022\026\n\021HATCHERY_"
-  "AI_TOP_3\020\200\004\022\026\n\021HATCHERY_AI_TOP_4\020\201\004\022\034\n\027H"
-  "ATCHERY_UNIVERSE_PROBE\020\203\004\022\033\n\026HATCHERY_UN"
-  "IVERSE_BOLT\020\204\004\022\037\n\032HATCHERY_ENLIGHTENMENT"
-  "_ORB\020\210\004\022\024\n\017HYPERLOOP_TRACK\020\272\004\022\021\n\014MAILBOX"
-  "_FULL\020\330\004\022\014\n\007CHICKEN\020\350\007\022\010\n\003HAT\020\362\007\022\014\n\007UNKN"
-  "OWN\020\217N\"\252\005\n\014ShellSetSpec\022\022\n\nidentifier\030\001 "
-  "\001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 \001(\r\022 \n\025pric"
-  "e_mult_DEPRECATED\030\010 \001(\001:\0011\022\020\n\010discount\030\021"
-  " \001(\001\022\024\n\014required_eop\030\004 \001(\r\022\032\n\022required_s"
-  "oul_eggs\030\005 \001(\001\022\033\n\023required_parent_set\030\024 "
-  "\001(\t\022\016\n\006is_new\030\t \001(\010\022\017\n\007expires\030\n \001(\010\022\037\n\027"
-  "seconds_until_available\030\022 \001(\001\022\031\n\021seconds"
-  "_remaining\030\013 \001(\001\022\022\n\npopularity\030\025 \001(\004\022\021\n\t"
-  "decorator\030\016 \001(\010\022\031\n\021modified_geometry\030\r \001"
-  "(\010\022\023\n\013element_set\030\007 \001(\010\022\026\n\016hex_base_colo"
-  "r\030\020 \001(\t\0222\n\nvariations\030\017 \003(\0132\036.ei.ShellSe"
-  "tSpec.VariationSpec\022\031\n\004icon\030\023 \001(\0132\013.ei.D"
-  "LCItem\022\032\n\022default_appearance\030\006 \001(\010\022\031\n\021cu"
-  "stom_appearance\030\014 \001(\010\032\223\001\n\rVariationSpec\022"
-  "\022\n\nidentifier\030\001 \001(\t\022\021\n\thex_color\030\002 \001(\t\022\r"
-  "\n\005price\030\003 \001(\r\022\025\n\rsort_priority\030\006 \001(\005\022\032\n\022"
-  "default_appearance\030\004 \001(\010\022\031\n\021custom_appea"
-  "rance\030\005 \001(\010\"\325\005\n\017ShellObjectSpec\022\022\n\nident"
-  "ifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasset_type\030"
-  "\003 \001(\0162\027.ei.ShellSpec.AssetType\022\024\n\014object"
-  "_class\030\016 \001(\t\022\023\n\013icon_colors\030\017 \003(\t\022\r\n\005pri"
-  "ce\030\004 \001(\r\022\024\n\014required_eop\030\005 \001(\r\022\032\n\022requir"
-  "ed_soul_eggs\030\006 \001(\001\022\016\n\006is_new\030\n \001(\010\022\017\n\007ex"
-  "pires\030\013 \001(\010\022\037\n\027seconds_until_available\030\022"
-  " \001(\001\022\031\n\021seconds_remaining\030\014 \001(\001\022\022\n\npopul"
-  "arity\030\023 \001(\004\022\020\n\010metadata\030\007 \003(\001\022\017\n\007no_hats"
-  "\030\r \001(\010\022\?\n\021chicken_animation\030\020 \001(\0162$.ei.S"
-  "hellObjectSpec.ChickenAnimation\022\025\n\rsort_"
-  "priority\030\021 \001(\005\022,\n\006pieces\030\010 \003(\0132\034.ei.Shel"
-  "lObjectSpec.LODPiece\022\032\n\022default_appearan"
-  "ce\030\t \001(\010\0321\n\010LODPiece\022\030\n\003dlc\030\001 \001(\0132\013.ei.D"
-  "LCItem\022\013\n\003lod\030\002 \001(\r\"\235\001\n\020ChickenAnimation"
-  "\022\020\n\014STANDARD_RUN\020\000\022\n\n\006SLOWMO\020\007\022\n\n\006WOBBLE"
-  "\020\001\022\017\n\013WOBBLE_LEAN\020\005\022\n\n\006SMOOTH\020\002\022\017\n\013SMOOT"
-  "H_LEAN\020\006\022\t\n\005HOVER\020\003\022\023\n\017SIDEWAYS_SMOOTH\020\004"
-  "\022\021\n\rSIDEWAYS_LEAN\020\010\"\222\001\n\016ShellGroupSpec\022\022"
-  "\n\nidentifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasse"
-  "t_type\030\005 \001(\0162\027.ei.ShellSpec.AssetType\022\022\n"
-  "\nmember_ids\030\003 \003(\t\022\035\n\025price_mult_DEPRECAT"
-  "ED\030\004 \001(\001\"\351\001\n\nDLCCatalog\022\032\n\005items\030\001 \003(\0132\013"
-  ".ei.DLCItem\022\035\n\006shells\030\002 \003(\0132\r.ei.ShellSp"
-  "ec\022$\n\nshell_sets\030\003 \003(\0132\020.ei.ShellSetSpec"
-  "\022$\n\ndecorators\030\006 \003(\0132\020.ei.ShellSetSpec\022*"
-  "\n\rshell_objects\030\004 \003(\0132\023.ei.ShellObjectSp"
-  "ec\022(\n\014shell_groups\030\005 \003(\0132\022.ei.ShellGroup"
-  "Spec\"\354\021\n\007ShellDB\0220\n\017shell_inventory\030\001 \003("
-  "\0132\027.ei.ShellDB.ShellStatus\022\?\n\027shell_elem"
-  "ent_inventory\030\005 \003(\0132\036.ei.ShellDB.ShellEl"
-  "ementStatus\022F\n\031shell_variation_inventory"
-  "\030\010 \003(\0132#.ei.ShellDB.ShellSetVariationSta"
-  "tus\0224\n\023shell_set_inventory\030\002 \003(\0132\027.ei.Sh"
-  "ellDB.ShellStatus\0227\n\026shell_object_invent"
-  "ory\030\004 \003(\0132\027.ei.ShellDB.ShellStatus\0223\n\014fa"
-  "rm_configs\030\003 \003(\0132\035.ei.ShellDB.FarmConfig"
-  "uration\0229\n\rsaved_configs\030\t \003(\0132\".ei.Shel"
-  "lDB.SavedFarmConfiguration\022\035\n\025new_shells"
-  "_downloaded\030\006 \003(\t\022\027\n\017new_shells_seen\030\007 \003"
-  "(\t\022\"\n\032lighting_controls_unlocked\030\n \001(\010\0320"
-  "\n\013ShellStatus\022\022\n\nidentifier\030\001 \001(\t\022\r\n\005own"
-  "ed\030\002 \001(\010\032V\n\022ShellElementStatus\022(\n\007elemen"
-  "t\030\001 \001(\0162\027.ei.ShellDB.FarmElement\022\026\n\016set_"
-  "identifier\030\002 \001(\t\032K\n\027ShellSetVariationSta"
-  "tus\022\026\n\016set_identifier\030\001 \001(\t\022\030\n\020owned_var"
-  "iations\030\002 \003(\t\032\245\003\n\021FarmConfiguration\0220\n\017l"
-  "ocked_elements\030\n \003(\0162\027.ei.ShellDB.FarmEl"
-  "ement\0225\n\rshell_configs\030\001 \003(\0132\036.ei.ShellD"
-  "B.ShellConfiguration\022<\n\021shell_set_config"
-  "s\030\002 \003(\0132!.ei.ShellDB.ShellSetConfigurati"
-  "on\022#\n\033configure_chickens_by_group\030\007 \001(\010\022"
-  ":\n\rgroup_configs\030\010 \003(\0132#.ei.ShellDB.Shel"
-  "lGroupConfiguration\0222\n\017chicken_configs\030\t"
-  " \003(\0132\031.ei.ShellDB.ChickenConfig\022\037\n\027light"
-  "ing_config_enabled\030\013 \001(\010\0223\n\017lighting_con"
-  "fig\030\014 \001(\0132\032.ei.ShellDB.LightingConfig\032\251\001"
-  "\n\026SavedFarmConfiguration\022\n\n\002id\030\001 \001(\t\022-\n\006"
-  "config\030\002 \001(\0132\035.ei.ShellDB.FarmConfigurat"
-  "ion\022\030\n\020client_save_time\030\003 \001(\001\022\021\n\tserver_"
-  "id\030\004 \001(\t\022\024\n\014display_name\030\005 \001(\t\022\021\n\tpurcha"
-  "sed\030\006 \001(\010\032j\n\022ShellConfiguration\022+\n\nasset"
-  "_type\030\001 \001(\0162\027.ei.ShellSpec.AssetType\022\r\n\005"
-  "index\030\002 \001(\r\022\030\n\020shell_identifier\030\003 \001(\t\032\252\001"
-  "\n\025ShellSetConfiguration\022(\n\007element\030\001 \001(\016"
-  "2\027.ei.ShellDB.FarmElement\022\r\n\005index\030\002 \001(\r"
-  "\022\034\n\024shell_set_identifier\030\003 \001(\t\022\034\n\024variat"
-  "ion_identifier\030\004 \001(\t\022\034\n\024decorator_identi"
-  "fier\030\005 \001(\t\032`\n\027ShellGroupConfiguration\022+\n"
-  "\nasset_type\030\001 \001(\0162\027.ei.ShellSpec.AssetTy"
-  "pe\022\030\n\020group_identifier\030\002 \001(\t\032C\n\rChickenC"
-  "onfig\022\032\n\022chicken_identifier\030\001 \001(\t\022\026\n\016hat"
-  "_identifier\030\002 \001(\t\032\234\002\n\016LightingConfig\022\036\n\t"
-  "light_dir\030\001 \001(\0132\013.ei.Vector3\022\'\n\022light_di"
-  "rect_color\030\002 \001(\0132\013.ei.Vector4\022\036\n\026light_d"
-  "irect_intensity\030\003 \001(\002\022(\n\023light_ambient_c"
-  "olor\030\004 \001(\0132\013.ei.Vector4\022\037\n\027light_ambient"
-  "_intensity\030\005 \001(\002\022\036\n\tfog_color\030\006 \001(\0132\013.ei"
-  ".Vector4\022\020\n\010fog_near\030\007 \001(\002\022\017\n\007fog_far\030\010 "
-  "\001(\002\022\023\n\013fog_density\030\t \001(\002\"\340\001\n\013FarmElement"
-  "\022\r\n\tHEN_HOUSE\020\001\022\010\n\004SILO\020\002\022\013\n\007MAILBOX\020\003\022\017"
-  "\n\013TROPHY_CASE\020\004\022\n\n\006GROUND\020\005\022\r\n\tHARDSCAPE"
-  "\020\006\022\r\n\tHYPERLOOP\020\007\022\t\n\005DEPOT\020\010\022\007\n\003LAB\020\t\022\014\n"
-  "\010HATCHERY\020\n\022\007\n\003HOA\020\013\022\023\n\017MISSION_CONTROL\020"
-  "\014\022\r\n\tFUEL_TANK\020\r\022\013\n\007CHICKEN\020\016\022\007\n\003HAT\020\017\022\013"
-  "\n\007UNKNOWN\020c\"\241\001\n\024ShellPopularityStats\022,\n\004"
-  "data\030\001 \003(\0132\036.ei.ShellPopularityStats.Ent"
-  "ry\032[\n\005Entry\022\n\n\002id\030\001 \001(\t\022(\n\007element\030\002 \001(\016"
-  "2\027.ei.ShellDB.FarmElement\022\r\n\005spent\030\003 \001(\004"
-  "\022\r\n\005count\030\004 \001(\004\"\234\002\n\017ShellsActionLog\022#\n\005r"
-  "info\030\010 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user"
-  "_id\030\001 \001(\t\022\016\n\006action\030\002 \001(\t\022\016\n\006sub_id\030\003 \001("
-  "\t\022-\n\014farm_element\030\t \001(\0162\027.ei.ShellDB.Far"
-  "mElement\022\014\n\004cost\030\004 \001(\r\022\023\n\013approx_time\030\005 "
-  "\001(\001\022\017\n\007version\030\006 \001(\t\022\022\n\nfarm_index\030\007 \001(\005"
-  "\022\021\n\tsoul_eggs\030\n \001(\001\022\025\n\rtickets_spent\030\013 \001"
-  "(\004\022\022\n\ngold_spent\030\014 \001(\004\"\261\001\n\032SubmitShellSh"
-  "owcaseRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicR"
-  "equestInfo\022\020\n\010local_id\030\001 \001(\t\022\017\n\007user_id\030"
-  "\002 \001(\t\022\027\n\017public_username\030\005 \001(\010\0222\n\013farm_c"
-  "onfig\030\003 \001(\0132\035.ei.ShellDB.FarmConfigurati"
-  "on\"\227\001\n\rShellShowcase\022)\n\003top\030\001 \003(\0132\034.ei.S"
-  "hellShowcaseListingInfo\022.\n\010featured\030\002 \003("
-  "\0132\034.ei.ShellShowcaseListingInfo\022+\n\005fresh"
-  "\030\003 \003(\0132\034.ei.ShellShowcaseListingInfo\"\223\003\n"
-  "\030ShellShowcaseListingInfo\022\n\n\002id\030\001 \001(\t\022\020\n"
-  "\010local_id\030\014 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descrip"
-  "tion\030\003 \001(\t\022\024\n\014creator_name\030\016 \001(\t\0223\n\006stat"
-  "us\030\013 \001(\0162#.ei.ShellShowcaseListingInfo.S"
-  "tatus\0222\n\013farm_config\030\004 \001(\0132\035.ei.ShellDB."
-  "FarmConfiguration\022\r\n\005sales\030\005 \001(\r\022\r\n\005gros"
-  "s\030\006 \001(\004\022\r\n\005views\030\007 \001(\004\022\016\n\006equips\030\r \001(\004\022\r"
-  "\n\005likes\030\010 \001(\r\022\020\n\010dislikes\030\t \001(\r\022\021\n\tshare"
-  "_url\030\n \001(\t\"F\n\006Status\022\010\n\004NONE\020\000\022\r\n\tSUBMIT"
-  "TED\020\001\022\010\n\004LIVE\020\002\022\014\n\010FEATURED\020\003\022\013\n\007INVALID"
-  "\020\004\"g\n#ShowcaseRoyaltyDeliveryConfirmatio"
-  "n\022#\n\005rinfo\030\003 \001(\0132\024.ei.BasicRequestInfo\022\013"
-  "\n\003ids\030\001 \003(\t\022\016\n\006amount\030\002 \001(\r\"I\n\027ShellShow"
-  "caseListingSet\022.\n\010listings\030\001 \003(\0132\034.ei.Sh"
-  "ellShowcaseListingInfo\"^\n\021ShellsActionBa"
-  "tch\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo"
-  "\022$\n\007actions\030\002 \003(\0132\023.ei.ShellsActionLog\"\321"
-  "\t\n\030UserVerificationAnalysis\022;\n\016overall_s"
-  "tatus\030\001 \001(\0162#.ei.UserVerificationAnalysi"
-  "s.Status\022\022\n\nstart_time\030\002 \001(\001\022\027\n\017completi"
-  "on_time\030\003 \001(\001\022\025\n\rnum_prestiges\030\016 \001(\001\022\021\n\t"
-  "soul_eggs\030\017 \001(\001\022\030\n\020eggs_of_prophecy\030\033 \001("
-  "\r\0227\n\niap_status\030\022 \001(\0162#.ei.UserVerificat"
-  "ionAnalysis.Status\022\033\n\023verified_pro_permi"
-  "t\030\004 \001(\010\022\035\n\025verified_piggy_breaks\030\005 \001(\r\022\032"
-  "\n\022verified_other_iap\030\006 \001(\r\022\026\n\016unverified"
-  "_iap\030\007 \001(\r\022\023\n\013gold_earned\030\r \001(\001\022\031\n\021regul"
-  "ar_iap_buyer\030\026 \001(\010\022\033\n\023regular_iap_cheate"
-  "r\030\027 \001(\010\022=\n\020artifacts_status\030\023 \001(\0162#.ei.U"
-  "serVerificationAnalysis.Status\022\032\n\022missio"
-  "ns_completed\030\010 \001(\r\022\033\n\023artifacts_collecte"
-  "d\030\t \001(\001\022\032\n\022artifacts_consumed\030\n \001(\001\022\036\n\026a"
-  "rtifacts_in_inventory\030\013 \001(\001\022#\n\033rare_arti"
-  "facts_in_inventory\030! \001(\004\022 \n\030rare_artifac"
-  "ts_on_server\030\" \001(\004\022(\n legendary_artifact"
-  "s_in_inventory\030# \001(\004\022%\n\035legendary_artifa"
-  "cts_on_server\030$ \001(\004\022\033\n\023gold_spent_crafti"
-  "ng\030\025 \001(\001\022\032\n\022excessive_consumes\030\030 \001(\010\022\033\n\023"
-  "excessive_inventory\030\031 \001(\010\022\027\n\017excessive_s"
-  "pend\030\032 \001(\010\022=\n\020contracts_status\030\024 \001(\0162#.e"
-  "i.UserVerificationAnalysis.Status\022\034\n\024num"
-  "_coop_memberships\030\014 \001(\r\022\027\n\017valid_contrac"
-  "ts\030\020 \001(\r\022\031\n\021invalid_contracts\030\021 \003(\t\022\025\n\re"
-  "xcessive_eop\030\034 \001(\010\022#\n\033excessive_invalid_"
-  "contracts\030\035 \001(\010\022\020\n\010verified\030\036 \001(\010\022\035\n\025ver"
-  "ification_override\030\037 \001(\010\022#\n\033verification"
-  "_override_value\030  \001(\010\"3\n\006Status\022\013\n\007UNKNO"
-  "WN\020\000\022\016\n\nPROCESSING\020\001\022\014\n\010COMPLETE\020\002\"\365\005\n\024U"
-  "serSubscriptionInfo\022:\n\022subscription_leve"
-  "l\030\r \001(\0162\036.ei.UserSubscriptionInfo.Level\022"
-  "\?\n\027next_subscription_level\030\017 \001(\0162\036.ei.Us"
-  "erSubscriptionInfo.Level\022$\n\034lock_next_su"
-  "bscription_level\030\022 \001(\010\022\036\n\010platform\030\n \001(\016"
-  "2\014.ei.Platform\022\037\n\027original_transaction_i"
-  "d\030\001 \001(\t\022\035\n\025linked_transaction_id\030\020 \001(\t\022\024"
-  "\n\014acknowledged\030\021 \001(\010\022\030\n\020first_subscribed"
-  "\030\002 \001(\001\022\022\n\nperiod_end\030\004 \001(\001\022/\n\006status\030\005 \001"
-  "(\0162\037.ei.UserSubscriptionInfo.Status\022\024\n\014s"
-  "tore_status\030\016 \001(\t\022\022\n\nauto_renew\030\006 \001(\010\022\017\n"
-  "\007sandbox\030\023 \001(\010\022\024\n\014last_updated\030\007 \001(\001\0226\n\007"
-  "history\030\t \003(\0132%.ei.UserSubscriptionInfo."
-  "HistoryEntry\022\025\n\rpast_user_ids\030\013 \003(\t\032F\n\014H"
-  "istoryEntry\022\021\n\ttimestamp\030\001 \001(\001\022\022\n\nmessag"
-  "e_id\030\002 \001(\t\022\017\n\007message\030\003 \001(\t\"\036\n\005Level\022\014\n\010"
-  "STANDARD\020\000\022\007\n\003PRO\020\001\"]\n\006Status\022\013\n\007UNKNOWN"
-  "\020\000\022\n\n\006ACTIVE\020\001\022\013\n\007EXPIRED\020\002\022\013\n\007REVOKED\020\003"
-  "\022\020\n\014GRACE_PERIOD\020\004\022\016\n\nPAUSE_HOLD\020\005\"\246\001\n\035S"
-  "ubscriptionChangeHintRequest\022#\n\005rinfo\030\003 "
-  "\001(\0132\024.ei.BasicRequestInfo\022\037\n\027original_tr"
-  "ansaction_id\030\001 \001(\t\022\?\n\027next_subscription_"
-  "level\030\002 \001(\0162\036.ei.UserSubscriptionInfo.Le"
-  "vel\">\n\022CXPEvalRolloutInfo\022\022\n\ncurrent_id\030"
-  "\001 \001(\t\022\024\n\014basis_points\030\002 \001(\r*4\n\010Platform\022"
-  "\024\n\020UNKNOWN_PLATFORM\020\000\022\007\n\003IOS\020\001\022\t\n\005DROID\020"
-  "\002*=\n\020DeviceFormFactor\022\022\n\016UNKNOWN_DEVICE\020"
-  "\000\022\t\n\005PHONE\020\001\022\n\n\006TABLET\020\002*k\n\tAdNetwork\022\n\n"
-  "\006VUNGLE\020\000\022\016\n\nCHARTBOOST\020\001\022\r\n\tAD_COLONY\020\002"
-  "\022\014\n\010HYPER_MX\020\003\022\t\n\005UNITY\020\004\022\014\n\010FACEBOOK\020\005\022"
-  "\014\n\010APPLOVIN\020\006*\356\002\n\003Egg\022\n\n\006EDIBLE\020\001\022\r\n\tSUP"
-  "ERFOOD\020\002\022\013\n\007MEDICAL\020\003\022\017\n\013ROCKET_FUEL\020\004\022\022"
-  "\n\016SUPER_MATERIAL\020\005\022\n\n\006FUSION\020\006\022\013\n\007QUANTU"
-  "M\020\007\022\017\n\013IMMORTALITY\020\010\022\013\n\007TACHYON\020\t\022\014\n\010GRA"
-  "VITON\020\n\022\r\n\tDILITHIUM\020\013\022\013\n\007PRODIGY\020\014\022\r\n\tT"
-  "ERRAFORM\020\r\022\016\n\nANTIMATTER\020\016\022\017\n\013DARK_MATTE"
-  "R\020\017\022\006\n\002AI\020\020\022\n\n\006NEBULA\020\021\022\014\n\010UNIVERSE\020\022\022\021\n"
-  "\rENLIGHTENMENT\020\023\022\r\n\tCHOCOLATE\020d\022\n\n\006EASTE"
-  "R\020e\022\020\n\014WATERBALLOON\020f\022\014\n\010FIREWORK\020g\022\013\n\007P"
-  "UMPKIN\020h\022\014\n\007UNKNOWN\020\350\007*-\n\010FarmType\022\t\n\005EM"
-  "PTY\020\001\022\010\n\004HOME\020\002\022\014\n\010CONTRACT\020\003*+\n\010GoalTyp"
-  "e\022\r\n\tEGGS_LAID\020\001\022\020\n\014UNKNOWN_GOAL\020d*\211\002\n\nR"
-  "ewardType\022\010\n\004CASH\020\001\022\010\n\004GOLD\020\002\022\r\n\tSOUL_EG"
-  "GS\020\003\022\024\n\020EGGS_OF_PROPHECY\020\004\022\026\n\022EPIC_RESEA"
-  "RCH_ITEM\020\005\022\016\n\nPIGGY_FILL\020\006\022\024\n\020PIGGY_MULT"
-  "IPLIER\020\007\022\024\n\020PIGGY_LEVEL_BUMP\020\010\022\t\n\005BOOST\020"
-  "\t\022\017\n\013BOOST_TOKEN\020\n\022\014\n\010ARTIFACT\020\013\022\021\n\rARTI"
-  "FACT_CASE\020\014\022\013\n\007CHICKEN\020\r\022\020\n\014SHELL_SCRIPT"
-  "\020\016\022\022\n\016UNKNOWN_REWARD\020d*\315\001\n\nUILocation\022\010\n"
-  "\004NONE\020\000\022\010\n\004SHOP\020\001\022\016\n\nBOOST_SHOP\020\002\022\t\n\005PIG"
-  "GY\020\003\022\016\n\nPRO_PERMIT\020\004\022\016\n\nULTRA_SHOP\020\n\022\n\n\006"
-  "SHELLS\020\005\022\016\n\nSHELL_SETS\020\006\022\023\n\017SHELLS_SHOWC"
-  "ASE\020\014\022\014\n\010CHICKENS\020\007\022\020\n\014CHICKEN_HATS\020\013\022\021\n"
-  "\rEPIC_RESEARCH\020\010\022\014\n\010SETTINGS\020\t*\323\002\n\010UserT"
-  "ype\022\r\n\tALL_USERS\020\000\022\014\n\010EGGED_UP\020\017\022\026\n\022CONT"
-  "RACTS_UNLOCKED\020\001\022\026\n\022ARTIFACTS_UNLOCKED\020\003"
-  "\022\026\n\022FUEL_TANK_UNLOCKED\020\004\022\025\n\021PRO_PERMIT_A"
-  "CTIVE\020\005\022\020\n\014ULTRA_ACTIVE\020\006\022\021\n\rNO_PRO_PERM"
-  "IT\020\007\022\014\n\010NO_ULTRA\020\010\022\026\n\022CONTRACTS_INACTIVE"
-  "\020\t\022\024\n\020CONTRACTS_ACTIVE\020\n\022\024\n\020PLAYING_CONT"
-  "RACT\020\013\022\026\n\022ARTIFACTS_INACTIVE\020\014\022\024\n\020ARTIFA"
-  "CTS_ACTIVE\020\r\022\022\n\016PRESTIGE_READY\020\016\022\022\n\016PIGG"
-  "Y_HESITANT\020\020*4\n\020LeaderboardScope\022\014\n\010ALL_"
-  "TIME\020\000\022\022\n\016CURRENT_SEASON\020\001"
+  "\030\002 \001(\004\022\016\n\006demote\030\003 \001(\010\022\016\n\006delete\030\004 \001(\010\022\022"
+  "\n\nei_user_id\030\005 \001(\t\"\241\001\n\022SetArtifactReques"
+  "t\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022+"
+  "\n\010artifact\030\002 \001(\0132\031.ei.ArtifactInventoryI"
+  "tem\022 \n\006stones\030\003 \003(\0132\020.ei.ArtifactSpec\022\027\n"
+  "\017gold_price_paid\030\004 \001(\001\"T\n\023SetArtifactRes"
+  "ponse\022\017\n\007success\030\001 \001(\010\022\030\n\020original_item_"
+  "id\030\002 \001(\004\022\022\n\nei_user_id\030\005 \001(\t\"\314\007\n\013Artifac"
+  "tsDB\0222\n\017inventory_items\030\001 \003(\0132\031.ei.Artif"
+  "actInventoryItem\022\025\n\ritem_sequence\030\002 \001(\004\022"
+  "*\n\017inventory_slots\030\003 \003(\0132\021.ei.InventoryS"
+  "lot\022G\n\033active_artifacts_DEPRECATED\030\007 \003(\013"
+  "2\".ei.ArtifactsDB.ActiveArtifactSlot\022\?\n\024"
+  "active_artifact_sets\030\013 \003(\0132!.ei.Artifact"
+  "sDB.ActiveArtifactSet\022>\n\023saved_artifact_"
+  "sets\030\r \003(\0132!.ei.ArtifactsDB.ActiveArtifa"
+  "ctSet\022:\n\017artifact_status\030\014 \003(\0132!.ei.Arti"
+  "factsDB.CraftableArtifact\022&\n\rmission_inf"
+  "os\030\004 \003(\0132\017.ei.MissionInfo\022(\n\017mission_arc"
+  "hive\030\005 \003(\0132\017.ei.MissionInfo\0229\n\037discovere"
+  "d_artifacts_DEPRECATED\030\010 \003(\0132\020.ei.Artifa"
+  "ctSpec\022I\n\036craftable_artifacts_DEPRECATED"
+  "\030\t \003(\0132!.ei.ArtifactsDB.CraftableArtifac"
+  "t\022E\n\032crafting_counts_DEPRECATED\030\n \003(\0132!."
+  "ei.ArtifactsDB.CraftableArtifact\0327\n\022Acti"
+  "veArtifactSlot\022\020\n\010occupied\030\001 \001(\010\022\017\n\007item"
+  "_id\030\002 \001(\004\032S\n\021ActiveArtifactSet\0221\n\005slots\030"
+  "\001 \003(\0132\".ei.ArtifactsDB.ActiveArtifactSlo"
+  "t\022\013\n\003uid\030\002 \001(\r\032\222\001\n\021CraftableArtifact\022\036\n\004"
+  "spec\030\001 \001(\0132\020.ei.ArtifactSpec\022\022\n\ndiscover"
+  "ed\030\006 \001(\010\022\021\n\tcraftable\030\004 \001(\010\022\031\n\021recipe_di"
+  "scovered\030\005 \001(\010\022\014\n\004seen\030\002 \001(\010\022\r\n\005count\030\003 "
+  "\001(\r\"\202\001\n\024AuthenticatedMessage\022\017\n\007message\030"
+  "\001 \001(\014\022\017\n\007version\030\003 \001(\r\022\014\n\004code\030\002 \001(\t\022\022\n\n"
+  "compressed\030\004 \001(\010\022\025\n\roriginal_size\030\005 \001(\r\022"
+  "\017\n\007user_id\030\006 \001(\t\"f\n\031LogCompleteMissionPa"
+  "yload\022\037\n\003req\030\001 \001(\0132\022.ei.MissionRequest\022("
+  "\n\003res\030\002 \001(\0132\033.ei.CompleteMissionResponse"
+  "\"h\n\027LogCraftArtifactPayload\022%\n\003req\030\001 \001(\013"
+  "2\030.ei.CraftArtifactRequest\022&\n\003res\030\002 \001(\0132"
+  "\031.ei.CraftArtifactResponse\"n\n\031LogConsume"
+  "ArtifactPayload\022\'\n\003req\030\001 \001(\0132\032.ei.Consum"
+  "eArtifactRequest\022(\n\003res\030\002 \001(\0132\033.ei.Consu"
+  "meArtifactResponse\"b\n\025LogSetArtifactPayl"
+  "oad\022#\n\003req\030\001 \001(\0132\026.ei.SetArtifactRequest"
+  "\022$\n\003res\030\002 \001(\0132\027.ei.SetArtifactResponse\"@"
+  "\n\026AccountTransferPayload\022\017\n\007from_id\030\001 \001("
+  "\t\022\025\n\rto_ei_user_id\030\002 \001(\t\"\335\001\n\022SaveBackupR"
+  "esponse\022\017\n\007success\030\001 \001(\010\022\022\n\nerror_code\030\002"
+  " \001(\r\022\017\n\007message\030\003 \001(\t\022#\n\017existing_backup"
+  "\030\004 \001(\0132\n.ei.Backup\"l\n\nErrorCodes\022\014\n\010NO_E"
+  "RROR\020\000\022\022\n\016USER_NOT_FOUND\020\001\022\027\n\023COULD_NOT_"
+  "OVERWRITE\020\002\022\022\n\016BACKUP_OFFERED\020\003\022\017\n\013BAD_U"
+  "SER_ID\020\004\"K\n\023CleanAccountRequest\022\032\n\022ei_us"
+  "er_id_to_keep\030\001 \001(\t\022\030\n\020game_services_id\030"
+  "\002 \001(\t\"&\n\020ReturnEDTPayload\022\022\n\nei_user_id\030"
+  "\001 \001(\t\"\201\001\n\007DLCItem\022\014\n\004name\030\001 \001(\t\022\021\n\tdirec"
+  "tory\030\002 \001(\t\022\013\n\003ext\030\003 \001(\t\022\022\n\ncompressed\030\006 "
+  "\001(\010\022\025\n\roriginal_size\030\007 \001(\004\022\013\n\003url\030\004 \001(\t\022"
+  "\020\n\010checksum\030\005 \001(\t\"\325\022\n\tShellSpec\022\022\n\nident"
+  "ifier\030\001 \001(\t\022/\n\rprimary_piece\030\014 \001(\0132\030.ei."
+  "ShellSpec.ShellPiece\022(\n\006pieces\030\013 \003(\0132\030.e"
+  "i.ShellSpec.ShellPiece\022\037\n\nalt_assets\030\022 \003"
+  "(\0132\013.ei.DLCItem\022\014\n\004name\030\003 \001(\t\022\026\n\016set_ide"
+  "ntifier\030\r \001(\t\022\031\n\021modified_geometry\030\023 \001(\010"
+  "\022\r\n\005price\030\004 \001(\r\022\024\n\014required_eop\030\005 \001(\r\022\032\n"
+  "\022required_soul_eggs\030\006 \001(\001\022\035\n\025required_pa"
+  "rent_shell\030\024 \001(\t\022\016\n\006is_new\030\016 \001(\010\022\017\n\007expi"
+  "res\030\017 \001(\010\022\037\n\027seconds_until_available\030\021 \001"
+  "(\001\022\031\n\021seconds_remaining\030\020 \001(\001\022\022\n\npopular"
+  "ity\030\025 \001(\004\022\032\n\022default_appearance\030\010 \001(\010\032S\n"
+  "\nShellPiece\022+\n\nasset_type\030\001 \001(\0162\027.ei.She"
+  "llSpec.AssetType\022\030\n\003dlc\030\002 \001(\0132\013.ei.DLCIt"
+  "em\"\264\016\n\tAssetType\022\010\n\004COOP\020\001\022\t\n\005SHACK\020\002\022\017\n"
+  "\013SUPER_SHACK\020\003\022\017\n\013SHORT_HOUSE\020\004\022\020\n\014THE_S"
+  "TANDARD\020\005\022\016\n\nLONG_HOUSE\020\006\022\021\n\rDOUBLE_DECK"
+  "ER\020\007\022\r\n\tWAREHOUSE\020\010\022\n\n\006CENTER\020\t\022\n\n\006BUNKE"
+  "R\020\n\022\n\n\006EGGKEA\020\013\022\n\n\006HAB_1K\020\014\022\n\n\006HANGAR\020\r\022"
+  "\t\n\005TOWER\020\016\022\013\n\007HAB_10K\020\017\022\014\n\010EGGTOPIA\020\020\022\014\n"
+  "\010MONOLITH\020\021\022\021\n\rPLANET_PORTAL\020\022\022\024\n\020CHICKE"
+  "N_UNIVERSE\020\023\022\020\n\014SILO_0_SMALL\0202\022\016\n\nSILO_0"
+  "_MED\0203\022\020\n\014SILO_0_LARGE\0204\022\020\n\014SILO_1_SMALL"
+  "\0205\022\016\n\nSILO_1_MED\0206\022\020\n\014SILO_1_LARGE\0207\022\014\n\010"
+  "SILO_ALL\020;\022\013\n\007MAILBOX\020F\022\017\n\013TROPHY_CASE\020G"
+  "\022\n\n\006GROUND\020H\022\r\n\tHARDSCAPE\020I\022\r\n\tHYPERLOOP"
+  "\020J\022\013\n\007DEPOT_1\020d\022\013\n\007DEPOT_2\020e\022\013\n\007DEPOT_3\020"
+  "f\022\013\n\007DEPOT_4\020g\022\013\n\007DEPOT_5\020h\022\013\n\007DEPOT_6\020i"
+  "\022\013\n\007DEPOT_7\020j\022\t\n\005LAB_1\020n\022\t\n\005LAB_2\020o\022\t\n\005L"
+  "AB_3\020p\022\t\n\005LAB_4\020q\022\t\n\005LAB_5\020r\022\t\n\005LAB_6\020s\022"
+  "\023\n\017HATCHERY_EDIBLE\020x\022\026\n\022HATCHERY_SUPERFO"
+  "OD\020y\022\024\n\020HATCHERY_MEDICAL\020z\022\030\n\024HATCHERY_R"
+  "OCKET_FUEL\020{\022\032\n\026HATCHERY_SUPERMATERIAL\020|"
+  "\022\023\n\017HATCHERY_FUSION\020}\022\024\n\020HATCHERY_QUANTU"
+  "M\020~\022\030\n\024HATCHERY_IMMORTALITY\020\177\022\025\n\020HATCHER"
+  "Y_TACHYON\020\200\001\022\026\n\021HATCHERY_GRAVITON\020\201\001\022\027\n\022"
+  "HATCHERY_DILITHIUM\020\202\001\022\025\n\020HATCHERY_PRODIG"
+  "Y\020\203\001\022\027\n\022HATCHERY_TERRAFORM\020\204\001\022\030\n\023HATCHER"
+  "Y_ANTIMATTER\020\205\001\022\031\n\024HATCHERY_DARK_MATTER\020"
+  "\206\001\022\020\n\013HATCHERY_AI\020\207\001\022\024\n\017HATCHERY_NEBULA\020"
+  "\210\001\022\026\n\021HATCHERY_UNIVERSE\020\211\001\022\033\n\026HATCHERY_E"
+  "NLIGHTENMENT\020\212\001\022\027\n\022HATCHERY_CHOCOLATE\020\213\001"
+  "\022\024\n\017HATCHERY_EASTER\020\214\001\022\032\n\025HATCHERY_WATER"
+  "BALLOON\020\215\001\022\026\n\021HATCHERY_FIREWORK\020\216\001\022\025\n\020HA"
+  "TCHERY_PUMPKIN\020\217\001\022\n\n\005HOA_1\020\252\001\022\n\n\005HOA_2\020\253"
+  "\001\022\n\n\005HOA_3\020\254\001\022\026\n\021MISSION_CONTROL_1\020\264\001\022\026\n"
+  "\021MISSION_CONTROL_2\020\265\001\022\026\n\021MISSION_CONTROL"
+  "_3\020\266\001\022\020\n\013FUEL_TANK_1\020\310\001\022\020\n\013FUEL_TANK_2\020\311"
+  "\001\022\020\n\013FUEL_TANK_3\020\312\001\022\020\n\013FUEL_TANK_4\020\313\001\022\032\n"
+  "\025HATCHERY_GRAVITON_TOP\020\364\003\022\033\n\026HATCHERY_NE"
+  "BULA_MIDDLE\020\365\003\022\030\n\023HATCHERY_NEBULA_TOP\020\366\003"
+  "\022 \n\033HATCHERY_DARK_MATTER_RING_1\020\371\003\022 \n\033HA"
+  "TCHERY_DARK_MATTER_RING_2\020\372\003\022 \n\033HATCHERY"
+  "_DARK_MATTER_RING_3\020\373\003\022\026\n\021HATCHERY_AI_TO"
+  "P_1\020\376\003\022\026\n\021HATCHERY_AI_TOP_2\020\377\003\022\026\n\021HATCHE"
+  "RY_AI_TOP_3\020\200\004\022\026\n\021HATCHERY_AI_TOP_4\020\201\004\022\034"
+  "\n\027HATCHERY_UNIVERSE_PROBE\020\203\004\022\033\n\026HATCHERY"
+  "_UNIVERSE_BOLT\020\204\004\022\037\n\032HATCHERY_ENLIGHTENM"
+  "ENT_ORB\020\210\004\022\024\n\017HYPERLOOP_TRACK\020\272\004\022\021\n\014MAIL"
+  "BOX_FULL\020\330\004\022\014\n\007CHICKEN\020\350\007\022\010\n\003HAT\020\362\007\022\014\n\007U"
+  "NKNOWN\020\217N\"\252\005\n\014ShellSetSpec\022\022\n\nidentifier"
+  "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 \001(\r\022 \n\025p"
+  "rice_mult_DEPRECATED\030\010 \001(\001:\0011\022\020\n\010discoun"
+  "t\030\021 \001(\001\022\024\n\014required_eop\030\004 \001(\r\022\032\n\022require"
+  "d_soul_eggs\030\005 \001(\001\022\033\n\023required_parent_set"
+  "\030\024 \001(\t\022\016\n\006is_new\030\t \001(\010\022\017\n\007expires\030\n \001(\010\022"
+  "\037\n\027seconds_until_available\030\022 \001(\001\022\031\n\021seco"
+  "nds_remaining\030\013 \001(\001\022\022\n\npopularity\030\025 \001(\004\022"
+  "\021\n\tdecorator\030\016 \001(\010\022\031\n\021modified_geometry\030"
+  "\r \001(\010\022\023\n\013element_set\030\007 \001(\010\022\026\n\016hex_base_c"
+  "olor\030\020 \001(\t\0222\n\nvariations\030\017 \003(\0132\036.ei.Shel"
+  "lSetSpec.VariationSpec\022\031\n\004icon\030\023 \001(\0132\013.e"
+  "i.DLCItem\022\032\n\022default_appearance\030\006 \001(\010\022\031\n"
+  "\021custom_appearance\030\014 \001(\010\032\223\001\n\rVariationSp"
+  "ec\022\022\n\nidentifier\030\001 \001(\t\022\021\n\thex_color\030\002 \001("
+  "\t\022\r\n\005price\030\003 \001(\r\022\025\n\rsort_priority\030\006 \001(\005\022"
+  "\032\n\022default_appearance\030\004 \001(\010\022\031\n\021custom_ap"
+  "pearance\030\005 \001(\010\"\325\005\n\017ShellObjectSpec\022\022\n\nid"
+  "entifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasset_ty"
+  "pe\030\003 \001(\0162\027.ei.ShellSpec.AssetType\022\024\n\014obj"
+  "ect_class\030\016 \001(\t\022\023\n\013icon_colors\030\017 \003(\t\022\r\n\005"
+  "price\030\004 \001(\r\022\024\n\014required_eop\030\005 \001(\r\022\032\n\022req"
+  "uired_soul_eggs\030\006 \001(\001\022\016\n\006is_new\030\n \001(\010\022\017\n"
+  "\007expires\030\013 \001(\010\022\037\n\027seconds_until_availabl"
+  "e\030\022 \001(\001\022\031\n\021seconds_remaining\030\014 \001(\001\022\022\n\npo"
+  "pularity\030\023 \001(\004\022\020\n\010metadata\030\007 \003(\001\022\017\n\007no_h"
+  "ats\030\r \001(\010\022\?\n\021chicken_animation\030\020 \001(\0162$.e"
+  "i.ShellObjectSpec.ChickenAnimation\022\025\n\rso"
+  "rt_priority\030\021 \001(\005\022,\n\006pieces\030\010 \003(\0132\034.ei.S"
+  "hellObjectSpec.LODPiece\022\032\n\022default_appea"
+  "rance\030\t \001(\010\0321\n\010LODPiece\022\030\n\003dlc\030\001 \001(\0132\013.e"
+  "i.DLCItem\022\013\n\003lod\030\002 \001(\r\"\235\001\n\020ChickenAnimat"
+  "ion\022\020\n\014STANDARD_RUN\020\000\022\n\n\006SLOWMO\020\007\022\n\n\006WOB"
+  "BLE\020\001\022\017\n\013WOBBLE_LEAN\020\005\022\n\n\006SMOOTH\020\002\022\017\n\013SM"
+  "OOTH_LEAN\020\006\022\t\n\005HOVER\020\003\022\023\n\017SIDEWAYS_SMOOT"
+  "H\020\004\022\021\n\rSIDEWAYS_LEAN\020\010\"\222\001\n\016ShellGroupSpe"
+  "c\022\022\n\nidentifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\na"
+  "sset_type\030\005 \001(\0162\027.ei.ShellSpec.AssetType"
+  "\022\022\n\nmember_ids\030\003 \003(\t\022\035\n\025price_mult_DEPRE"
+  "CATED\030\004 \001(\001\"\225\002\n\nDLCCatalog\022\032\n\005items\030\001 \003("
+  "\0132\013.ei.DLCItem\022\035\n\006shells\030\002 \003(\0132\r.ei.Shel"
+  "lSpec\022$\n\nshell_sets\030\003 \003(\0132\020.ei.ShellSetS"
+  "pec\022$\n\ndecorators\030\006 \003(\0132\020.ei.ShellSetSpe"
+  "c\022*\n\rshell_objects\030\004 \003(\0132\023.ei.ShellObjec"
+  "tSpec\022(\n\014shell_groups\030\005 \003(\0132\022.ei.ShellGr"
+  "oupSpec\022*\n\"shells_showcase_last_featured"
+  "_time\030\007 \001(\001\"\226\022\n\007ShellDB\0220\n\017shell_invento"
+  "ry\030\001 \003(\0132\027.ei.ShellDB.ShellStatus\022\?\n\027she"
+  "ll_element_inventory\030\005 \003(\0132\036.ei.ShellDB."
+  "ShellElementStatus\022F\n\031shell_variation_in"
+  "ventory\030\010 \003(\0132#.ei.ShellDB.ShellSetVaria"
+  "tionStatus\0224\n\023shell_set_inventory\030\002 \003(\0132"
+  "\027.ei.ShellDB.ShellStatus\0227\n\026shell_object"
+  "_inventory\030\004 \003(\0132\027.ei.ShellDB.ShellStatu"
+  "s\0223\n\014farm_configs\030\003 \003(\0132\035.ei.ShellDB.Far"
+  "mConfiguration\0229\n\rsaved_configs\030\t \003(\0132\"."
+  "ei.ShellDB.SavedFarmConfiguration\022\035\n\025new"
+  "_shells_downloaded\030\006 \003(\t\022\027\n\017new_shells_s"
+  "een\030\007 \003(\t\022(\n last_showcase_featured_time"
+  "_seen\030\013 \001(\001\022\"\n\032lighting_controls_unlocke"
+  "d\030\n \001(\010\0320\n\013ShellStatus\022\022\n\nidentifier\030\001 \001"
+  "(\t\022\r\n\005owned\030\002 \001(\010\032V\n\022ShellElementStatus\022"
+  "(\n\007element\030\001 \001(\0162\027.ei.ShellDB.FarmElemen"
+  "t\022\026\n\016set_identifier\030\002 \001(\t\032K\n\027ShellSetVar"
+  "iationStatus\022\026\n\016set_identifier\030\001 \001(\t\022\030\n\020"
+  "owned_variations\030\002 \003(\t\032\245\003\n\021FarmConfigura"
+  "tion\0220\n\017locked_elements\030\n \003(\0162\027.ei.Shell"
+  "DB.FarmElement\0225\n\rshell_configs\030\001 \003(\0132\036."
+  "ei.ShellDB.ShellConfiguration\022<\n\021shell_s"
+  "et_configs\030\002 \003(\0132!.ei.ShellDB.ShellSetCo"
+  "nfiguration\022#\n\033configure_chickens_by_gro"
+  "up\030\007 \001(\010\022:\n\rgroup_configs\030\010 \003(\0132#.ei.She"
+  "llDB.ShellGroupConfiguration\0222\n\017chicken_"
+  "configs\030\t \003(\0132\031.ei.ShellDB.ChickenConfig"
+  "\022\037\n\027lighting_config_enabled\030\013 \001(\010\0223\n\017lig"
+  "hting_config\030\014 \001(\0132\032.ei.ShellDB.Lighting"
+  "Config\032\251\001\n\026SavedFarmConfiguration\022\n\n\002id\030"
+  "\001 \001(\t\022-\n\006config\030\002 \001(\0132\035.ei.ShellDB.FarmC"
+  "onfiguration\022\030\n\020client_save_time\030\003 \001(\001\022\021"
+  "\n\tserver_id\030\004 \001(\t\022\024\n\014display_name\030\005 \001(\t\022"
+  "\021\n\tpurchased\030\006 \001(\010\032j\n\022ShellConfiguration"
+  "\022+\n\nasset_type\030\001 \001(\0162\027.ei.ShellSpec.Asse"
+  "tType\022\r\n\005index\030\002 \001(\r\022\030\n\020shell_identifier"
+  "\030\003 \001(\t\032\252\001\n\025ShellSetConfiguration\022(\n\007elem"
+  "ent\030\001 \001(\0162\027.ei.ShellDB.FarmElement\022\r\n\005in"
+  "dex\030\002 \001(\r\022\034\n\024shell_set_identifier\030\003 \001(\t\022"
+  "\034\n\024variation_identifier\030\004 \001(\t\022\034\n\024decorat"
+  "or_identifier\030\005 \001(\t\032`\n\027ShellGroupConfigu"
+  "ration\022+\n\nasset_type\030\001 \001(\0162\027.ei.ShellSpe"
+  "c.AssetType\022\030\n\020group_identifier\030\002 \001(\t\032C\n"
+  "\rChickenConfig\022\032\n\022chicken_identifier\030\001 \001"
+  "(\t\022\026\n\016hat_identifier\030\002 \001(\t\032\234\002\n\016LightingC"
+  "onfig\022\036\n\tlight_dir\030\001 \001(\0132\013.ei.Vector3\022\'\n"
+  "\022light_direct_color\030\002 \001(\0132\013.ei.Vector4\022\036"
+  "\n\026light_direct_intensity\030\003 \001(\002\022(\n\023light_"
+  "ambient_color\030\004 \001(\0132\013.ei.Vector4\022\037\n\027ligh"
+  "t_ambient_intensity\030\005 \001(\002\022\036\n\tfog_color\030\006"
+  " \001(\0132\013.ei.Vector4\022\020\n\010fog_near\030\007 \001(\002\022\017\n\007f"
+  "og_far\030\010 \001(\002\022\023\n\013fog_density\030\t \001(\002\"\340\001\n\013Fa"
+  "rmElement\022\r\n\tHEN_HOUSE\020\001\022\010\n\004SILO\020\002\022\013\n\007MA"
+  "ILBOX\020\003\022\017\n\013TROPHY_CASE\020\004\022\n\n\006GROUND\020\005\022\r\n\t"
+  "HARDSCAPE\020\006\022\r\n\tHYPERLOOP\020\007\022\t\n\005DEPOT\020\010\022\007\n"
+  "\003LAB\020\t\022\014\n\010HATCHERY\020\n\022\007\n\003HOA\020\013\022\023\n\017MISSION"
+  "_CONTROL\020\014\022\r\n\tFUEL_TANK\020\r\022\013\n\007CHICKEN\020\016\022\007"
+  "\n\003HAT\020\017\022\013\n\007UNKNOWN\020c\"\241\001\n\024ShellPopularity"
+  "Stats\022,\n\004data\030\001 \003(\0132\036.ei.ShellPopularity"
+  "Stats.Entry\032[\n\005Entry\022\n\n\002id\030\001 \001(\t\022(\n\007elem"
+  "ent\030\002 \001(\0162\027.ei.ShellDB.FarmElement\022\r\n\005sp"
+  "ent\030\003 \001(\004\022\r\n\005count\030\004 \001(\004\"\234\002\n\017ShellsActio"
+  "nLog\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequestInf"
+  "o\022\017\n\007user_id\030\001 \001(\t\022\016\n\006action\030\002 \001(\t\022\016\n\006su"
+  "b_id\030\003 \001(\t\022-\n\014farm_element\030\t \001(\0162\027.ei.Sh"
+  "ellDB.FarmElement\022\014\n\004cost\030\004 \001(\r\022\023\n\013appro"
+  "x_time\030\005 \001(\001\022\017\n\007version\030\006 \001(\t\022\022\n\nfarm_in"
+  "dex\030\007 \001(\005\022\021\n\tsoul_eggs\030\n \001(\001\022\025\n\rtickets_"
+  "spent\030\013 \001(\004\022\022\n\ngold_spent\030\014 \001(\004\"\261\001\n\032Subm"
+  "itShellShowcaseRequest\022#\n\005rinfo\030\004 \001(\0132\024."
+  "ei.BasicRequestInfo\022\020\n\010local_id\030\001 \001(\t\022\017\n"
+  "\007user_id\030\002 \001(\t\022\027\n\017public_username\030\005 \001(\010\022"
+  "2\n\013farm_config\030\003 \001(\0132\035.ei.ShellDB.FarmCo"
+  "nfiguration\"\227\001\n\rShellShowcase\022)\n\003top\030\001 \003"
+  "(\0132\034.ei.ShellShowcaseListingInfo\022.\n\010feat"
+  "ured\030\002 \003(\0132\034.ei.ShellShowcaseListingInfo"
+  "\022+\n\005fresh\030\003 \003(\0132\034.ei.ShellShowcaseListin"
+  "gInfo\"\304\003\n\030ShellShowcaseListingInfo\022\n\n\002id"
+  "\030\001 \001(\t\022\020\n\010local_id\030\014 \001(\t\022\014\n\004name\030\002 \001(\t\022\023"
+  "\n\013description\030\003 \001(\t\022\016\n\006is_new\030\017 \001(\010\022\024\n\014c"
+  "reator_name\030\016 \001(\t\0223\n\006status\030\013 \001(\0162#.ei.S"
+  "hellShowcaseListingInfo.Status\0222\n\013farm_c"
+  "onfig\030\004 \001(\0132\035.ei.ShellDB.FarmConfigurati"
+  "on\022\r\n\005sales\030\005 \001(\r\022\r\n\005gross\030\006 \001(\004\022\r\n\005view"
+  "s\030\007 \001(\004\022\016\n\006equips\030\r \001(\004\022\r\n\005likes\030\010 \001(\r\022\020"
+  "\n\010dislikes\030\t \001(\r\022\021\n\tshare_url\030\n \001(\t\"g\n\006S"
+  "tatus\022\010\n\004NONE\020\000\022\r\n\tSUBMITTED\020\001\022\010\n\004LIVE\020\002"
+  "\022\014\n\010FEATURED\020\003\022\021\n\rFEATURED_ALUM\020\005\022\014\n\010ARC"
+  "HIVED\020\006\022\013\n\007INVALID\020\004\"g\n#ShowcaseRoyaltyD"
+  "eliveryConfirmation\022#\n\005rinfo\030\003 \001(\0132\024.ei."
+  "BasicRequestInfo\022\013\n\003ids\030\001 \003(\t\022\016\n\006amount\030"
+  "\002 \001(\r\"I\n\027ShellShowcaseListingSet\022.\n\010list"
+  "ings\030\001 \003(\0132\034.ei.ShellShowcaseListingInfo"
+  "\"^\n\021ShellsActionBatch\022#\n\005rinfo\030\001 \001(\0132\024.e"
+  "i.BasicRequestInfo\022$\n\007actions\030\002 \003(\0132\023.ei"
+  ".ShellsActionLog\"\321\t\n\030UserVerificationAna"
+  "lysis\022;\n\016overall_status\030\001 \001(\0162#.ei.UserV"
+  "erificationAnalysis.Status\022\022\n\nstart_time"
+  "\030\002 \001(\001\022\027\n\017completion_time\030\003 \001(\001\022\025\n\rnum_p"
+  "restiges\030\016 \001(\001\022\021\n\tsoul_eggs\030\017 \001(\001\022\030\n\020egg"
+  "s_of_prophecy\030\033 \001(\r\0227\n\niap_status\030\022 \001(\0162"
+  "#.ei.UserVerificationAnalysis.Status\022\033\n\023"
+  "verified_pro_permit\030\004 \001(\010\022\035\n\025verified_pi"
+  "ggy_breaks\030\005 \001(\r\022\032\n\022verified_other_iap\030\006"
+  " \001(\r\022\026\n\016unverified_iap\030\007 \001(\r\022\023\n\013gold_ear"
+  "ned\030\r \001(\001\022\031\n\021regular_iap_buyer\030\026 \001(\010\022\033\n\023"
+  "regular_iap_cheater\030\027 \001(\010\022=\n\020artifacts_s"
+  "tatus\030\023 \001(\0162#.ei.UserVerificationAnalysi"
+  "s.Status\022\032\n\022missions_completed\030\010 \001(\r\022\033\n\023"
+  "artifacts_collected\030\t \001(\001\022\032\n\022artifacts_c"
+  "onsumed\030\n \001(\001\022\036\n\026artifacts_in_inventory\030"
+  "\013 \001(\001\022#\n\033rare_artifacts_in_inventory\030! \001"
+  "(\004\022 \n\030rare_artifacts_on_server\030\" \001(\004\022(\n "
+  "legendary_artifacts_in_inventory\030# \001(\004\022%"
+  "\n\035legendary_artifacts_on_server\030$ \001(\004\022\033\n"
+  "\023gold_spent_crafting\030\025 \001(\001\022\032\n\022excessive_"
+  "consumes\030\030 \001(\010\022\033\n\023excessive_inventory\030\031 "
+  "\001(\010\022\027\n\017excessive_spend\030\032 \001(\010\022=\n\020contract"
+  "s_status\030\024 \001(\0162#.ei.UserVerificationAnal"
+  "ysis.Status\022\034\n\024num_coop_memberships\030\014 \001("
+  "\r\022\027\n\017valid_contracts\030\020 \001(\r\022\031\n\021invalid_co"
+  "ntracts\030\021 \003(\t\022\025\n\rexcessive_eop\030\034 \001(\010\022#\n\033"
+  "excessive_invalid_contracts\030\035 \001(\010\022\020\n\010ver"
+  "ified\030\036 \001(\010\022\035\n\025verification_override\030\037 \001"
+  "(\010\022#\n\033verification_override_value\030  \001(\010\""
+  "3\n\006Status\022\013\n\007UNKNOWN\020\000\022\016\n\nPROCESSING\020\001\022\014"
+  "\n\010COMPLETE\020\002\"\365\005\n\024UserSubscriptionInfo\022:\n"
+  "\022subscription_level\030\r \001(\0162\036.ei.UserSubsc"
+  "riptionInfo.Level\022\?\n\027next_subscription_l"
+  "evel\030\017 \001(\0162\036.ei.UserSubscriptionInfo.Lev"
+  "el\022$\n\034lock_next_subscription_level\030\022 \001(\010"
+  "\022\036\n\010platform\030\n \001(\0162\014.ei.Platform\022\037\n\027orig"
+  "inal_transaction_id\030\001 \001(\t\022\035\n\025linked_tran"
+  "saction_id\030\020 \001(\t\022\024\n\014acknowledged\030\021 \001(\010\022\030"
+  "\n\020first_subscribed\030\002 \001(\001\022\022\n\nperiod_end\030\004"
+  " \001(\001\022/\n\006status\030\005 \001(\0162\037.ei.UserSubscripti"
+  "onInfo.Status\022\024\n\014store_status\030\016 \001(\t\022\022\n\na"
+  "uto_renew\030\006 \001(\010\022\017\n\007sandbox\030\023 \001(\010\022\024\n\014last"
+  "_updated\030\007 \001(\001\0226\n\007history\030\t \003(\0132%.ei.Use"
+  "rSubscriptionInfo.HistoryEntry\022\025\n\rpast_u"
+  "ser_ids\030\013 \003(\t\032F\n\014HistoryEntry\022\021\n\ttimesta"
+  "mp\030\001 \001(\001\022\022\n\nmessage_id\030\002 \001(\t\022\017\n\007message\030"
+  "\003 \001(\t\"\036\n\005Level\022\014\n\010STANDARD\020\000\022\007\n\003PRO\020\001\"]\n"
+  "\006Status\022\013\n\007UNKNOWN\020\000\022\n\n\006ACTIVE\020\001\022\013\n\007EXPI"
+  "RED\020\002\022\013\n\007REVOKED\020\003\022\020\n\014GRACE_PERIOD\020\004\022\016\n\n"
+  "PAUSE_HOLD\020\005\"\246\001\n\035SubscriptionChangeHintR"
+  "equest\022#\n\005rinfo\030\003 \001(\0132\024.ei.BasicRequestI"
+  "nfo\022\037\n\027original_transaction_id\030\001 \001(\t\022\?\n\027"
+  "next_subscription_level\030\002 \001(\0162\036.ei.UserS"
+  "ubscriptionInfo.Level\">\n\022CXPEvalRolloutI"
+  "nfo\022\022\n\ncurrent_id\030\001 \001(\t\022\024\n\014basis_points\030"
+  "\002 \001(\r*4\n\010Platform\022\024\n\020UNKNOWN_PLATFORM\020\000\022"
+  "\007\n\003IOS\020\001\022\t\n\005DROID\020\002*=\n\020DeviceFormFactor\022"
+  "\022\n\016UNKNOWN_DEVICE\020\000\022\t\n\005PHONE\020\001\022\n\n\006TABLET"
+  "\020\002*k\n\tAdNetwork\022\n\n\006VUNGLE\020\000\022\016\n\nCHARTBOOS"
+  "T\020\001\022\r\n\tAD_COLONY\020\002\022\014\n\010HYPER_MX\020\003\022\t\n\005UNIT"
+  "Y\020\004\022\014\n\010FACEBOOK\020\005\022\014\n\010APPLOVIN\020\006*\356\002\n\003Egg\022"
+  "\n\n\006EDIBLE\020\001\022\r\n\tSUPERFOOD\020\002\022\013\n\007MEDICAL\020\003\022"
+  "\017\n\013ROCKET_FUEL\020\004\022\022\n\016SUPER_MATERIAL\020\005\022\n\n\006"
+  "FUSION\020\006\022\013\n\007QUANTUM\020\007\022\017\n\013IMMORTALITY\020\010\022\013"
+  "\n\007TACHYON\020\t\022\014\n\010GRAVITON\020\n\022\r\n\tDILITHIUM\020\013"
+  "\022\013\n\007PRODIGY\020\014\022\r\n\tTERRAFORM\020\r\022\016\n\nANTIMATT"
+  "ER\020\016\022\017\n\013DARK_MATTER\020\017\022\006\n\002AI\020\020\022\n\n\006NEBULA\020"
+  "\021\022\014\n\010UNIVERSE\020\022\022\021\n\rENLIGHTENMENT\020\023\022\r\n\tCH"
+  "OCOLATE\020d\022\n\n\006EASTER\020e\022\020\n\014WATERBALLOON\020f\022"
+  "\014\n\010FIREWORK\020g\022\013\n\007PUMPKIN\020h\022\014\n\007UNKNOWN\020\350\007"
+  "*-\n\010FarmType\022\t\n\005EMPTY\020\001\022\010\n\004HOME\020\002\022\014\n\010CON"
+  "TRACT\020\003*+\n\010GoalType\022\r\n\tEGGS_LAID\020\001\022\020\n\014UN"
+  "KNOWN_GOAL\020d*\211\002\n\nRewardType\022\010\n\004CASH\020\001\022\010\n"
+  "\004GOLD\020\002\022\r\n\tSOUL_EGGS\020\003\022\024\n\020EGGS_OF_PROPHE"
+  "CY\020\004\022\026\n\022EPIC_RESEARCH_ITEM\020\005\022\016\n\nPIGGY_FI"
+  "LL\020\006\022\024\n\020PIGGY_MULTIPLIER\020\007\022\024\n\020PIGGY_LEVE"
+  "L_BUMP\020\010\022\t\n\005BOOST\020\t\022\017\n\013BOOST_TOKEN\020\n\022\014\n\010"
+  "ARTIFACT\020\013\022\021\n\rARTIFACT_CASE\020\014\022\013\n\007CHICKEN"
+  "\020\r\022\020\n\014SHELL_SCRIPT\020\016\022\022\n\016UNKNOWN_REWARD\020d"
+  "*\347\001\n\nUILocation\022\010\n\004NONE\020\000\022\010\n\004SHOP\020\001\022\016\n\nB"
+  "OOST_SHOP\020\002\022\t\n\005PIGGY\020\003\022\016\n\nPRO_PERMIT\020\004\022\016"
+  "\n\nULTRA_SHOP\020\n\022\n\n\006SHELLS\020\005\022\016\n\nSHELL_SETS"
+  "\020\006\022\023\n\017SHELLS_SHOWCASE\020\014\022\014\n\010CHICKENS\020\007\022\020\n"
+  "\014CHICKEN_HATS\020\013\022\021\n\rEPIC_RESEARCH\020\010\022\014\n\010SE"
+  "TTINGS\020\t\022\010\n\004HELP\020\r\022\016\n\nUNIVERSITY\020\016*\323\002\n\010U"
+  "serType\022\r\n\tALL_USERS\020\000\022\014\n\010EGGED_UP\020\017\022\026\n\022"
+  "CONTRACTS_UNLOCKED\020\001\022\026\n\022ARTIFACTS_UNLOCK"
+  "ED\020\003\022\026\n\022FUEL_TANK_UNLOCKED\020\004\022\025\n\021PRO_PERM"
+  "IT_ACTIVE\020\005\022\020\n\014ULTRA_ACTIVE\020\006\022\021\n\rNO_PRO_"
+  "PERMIT\020\007\022\014\n\010NO_ULTRA\020\010\022\026\n\022CONTRACTS_INAC"
+  "TIVE\020\t\022\024\n\020CONTRACTS_ACTIVE\020\n\022\024\n\020PLAYING_"
+  "CONTRACT\020\013\022\026\n\022ARTIFACTS_INACTIVE\020\014\022\024\n\020AR"
+  "TIFACTS_ACTIVE\020\r\022\022\n\016PRESTIGE_READY\020\016\022\022\n\016"
+  "PIGGY_HESITANT\020\020*4\n\020LeaderboardScope\022\014\n\010"
+  "ALL_TIME\020\000\022\022\n\016CURRENT_SEASON\020\001"
   ;
 static ::_pbi::once_flag descriptor_table_ei_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_ei_2eproto = {
-    false, false, 48306, descriptor_table_protodef_ei_2eproto,
+    false, false, 48790, descriptor_table_protodef_ei_2eproto,
     "ei.proto",
-    &descriptor_table_ei_2eproto_once, nullptr, 0, 194,
+    &descriptor_table_ei_2eproto_once, nullptr, 0, 196,
     schemas, file_default_instances, TableStruct_ei_2eproto::offsets,
     file_level_metadata_ei_2eproto, file_level_enum_descriptors_ei_2eproto,
     file_level_service_descriptors_ei_2eproto,
@@ -9341,9 +9430,30 @@ constexpr KickPlayerCoopRequest_Reason KickPlayerCoopRequest::Reason_MIN;
 constexpr KickPlayerCoopRequest_Reason KickPlayerCoopRequest::Reason_MAX;
 constexpr int KickPlayerCoopRequest::Reason_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MissionInfo_Spaceship_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* LiveConfig_HelpConfig_HowToVideoInfo_Type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
   return file_level_enum_descriptors_ei_2eproto[11];
+}
+bool LiveConfig_HelpConfig_HowToVideoInfo_Type_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr LiveConfig_HelpConfig_HowToVideoInfo_Type LiveConfig_HelpConfig_HowToVideoInfo::VIDEO;
+constexpr LiveConfig_HelpConfig_HowToVideoInfo_Type LiveConfig_HelpConfig_HowToVideoInfo::ARTICLE;
+constexpr LiveConfig_HelpConfig_HowToVideoInfo_Type LiveConfig_HelpConfig_HowToVideoInfo::Type_MIN;
+constexpr LiveConfig_HelpConfig_HowToVideoInfo_Type LiveConfig_HelpConfig_HowToVideoInfo::Type_MAX;
+constexpr int LiveConfig_HelpConfig_HowToVideoInfo::Type_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MissionInfo_Spaceship_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
+  return file_level_enum_descriptors_ei_2eproto[12];
 }
 bool MissionInfo_Spaceship_IsValid(int value) {
   switch (value) {
@@ -9380,7 +9490,7 @@ constexpr int MissionInfo::Spaceship_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MissionInfo_Status_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[12];
+  return file_level_enum_descriptors_ei_2eproto[13];
 }
 bool MissionInfo_Status_IsValid(int value) {
   switch (value) {
@@ -9411,7 +9521,7 @@ constexpr int MissionInfo::Status_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MissionInfo_DurationType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[13];
+  return file_level_enum_descriptors_ei_2eproto[14];
 }
 bool MissionInfo_DurationType_IsValid(int value) {
   switch (value) {
@@ -9436,7 +9546,7 @@ constexpr int MissionInfo::DurationType_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ArtifactSpec_Name_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[14];
+  return file_level_enum_descriptors_ei_2eproto[15];
 }
 bool ArtifactSpec_Name_IsValid(int value) {
   switch (value) {
@@ -9561,7 +9671,7 @@ constexpr int ArtifactSpec::Name_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ArtifactSpec_Level_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[15];
+  return file_level_enum_descriptors_ei_2eproto[16];
 }
 bool ArtifactSpec_Level_IsValid(int value) {
   switch (value) {
@@ -9588,7 +9698,7 @@ constexpr int ArtifactSpec::Level_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ArtifactSpec_Rarity_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[16];
+  return file_level_enum_descriptors_ei_2eproto[17];
 }
 bool ArtifactSpec_Rarity_IsValid(int value) {
   switch (value) {
@@ -9613,7 +9723,7 @@ constexpr int ArtifactSpec::Rarity_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ArtifactSpec_Type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[17];
+  return file_level_enum_descriptors_ei_2eproto[18];
 }
 bool ArtifactSpec_Type_IsValid(int value) {
   switch (value) {
@@ -9638,7 +9748,7 @@ constexpr int ArtifactSpec::Type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* SaveBackupResponse_ErrorCodes_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[18];
+  return file_level_enum_descriptors_ei_2eproto[19];
 }
 bool SaveBackupResponse_ErrorCodes_IsValid(int value) {
   switch (value) {
@@ -9665,7 +9775,7 @@ constexpr int SaveBackupResponse::ErrorCodes_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ShellSpec_AssetType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[19];
+  return file_level_enum_descriptors_ei_2eproto[20];
 }
 bool ShellSpec_AssetType_IsValid(int value) {
   switch (value) {
@@ -9874,7 +9984,7 @@ constexpr int ShellSpec::AssetType_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ShellObjectSpec_ChickenAnimation_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[20];
+  return file_level_enum_descriptors_ei_2eproto[21];
 }
 bool ShellObjectSpec_ChickenAnimation_IsValid(int value) {
   switch (value) {
@@ -9909,7 +10019,7 @@ constexpr int ShellObjectSpec::ChickenAnimation_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ShellDB_FarmElement_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[21];
+  return file_level_enum_descriptors_ei_2eproto[22];
 }
 bool ShellDB_FarmElement_IsValid(int value) {
   switch (value) {
@@ -9958,7 +10068,7 @@ constexpr int ShellDB::FarmElement_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ShellShowcaseListingInfo_Status_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[22];
+  return file_level_enum_descriptors_ei_2eproto[23];
 }
 bool ShellShowcaseListingInfo_Status_IsValid(int value) {
   switch (value) {
@@ -9967,6 +10077,8 @@ bool ShellShowcaseListingInfo_Status_IsValid(int value) {
     case 2:
     case 3:
     case 4:
+    case 5:
+    case 6:
       return true;
     default:
       return false;
@@ -9978,6 +10090,8 @@ constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::NONE;
 constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::SUBMITTED;
 constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::LIVE;
 constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::FEATURED;
+constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::FEATURED_ALUM;
+constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::ARCHIVED;
 constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::INVALID;
 constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::Status_MIN;
 constexpr ShellShowcaseListingInfo_Status ShellShowcaseListingInfo::Status_MAX;
@@ -9985,7 +10099,7 @@ constexpr int ShellShowcaseListingInfo::Status_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserVerificationAnalysis_Status_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[23];
+  return file_level_enum_descriptors_ei_2eproto[24];
 }
 bool UserVerificationAnalysis_Status_IsValid(int value) {
   switch (value) {
@@ -10008,7 +10122,7 @@ constexpr int UserVerificationAnalysis::Status_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserSubscriptionInfo_Level_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[24];
+  return file_level_enum_descriptors_ei_2eproto[25];
 }
 bool UserSubscriptionInfo_Level_IsValid(int value) {
   switch (value) {
@@ -10029,7 +10143,7 @@ constexpr int UserSubscriptionInfo::Level_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserSubscriptionInfo_Status_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[25];
+  return file_level_enum_descriptors_ei_2eproto[26];
 }
 bool UserSubscriptionInfo_Status_IsValid(int value) {
   switch (value) {
@@ -10058,7 +10172,7 @@ constexpr int UserSubscriptionInfo::Status_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Platform_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[26];
+  return file_level_enum_descriptors_ei_2eproto[27];
 }
 bool Platform_IsValid(int value) {
   switch (value) {
@@ -10073,7 +10187,7 @@ bool Platform_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DeviceFormFactor_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[27];
+  return file_level_enum_descriptors_ei_2eproto[28];
 }
 bool DeviceFormFactor_IsValid(int value) {
   switch (value) {
@@ -10088,7 +10202,7 @@ bool DeviceFormFactor_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AdNetwork_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[28];
+  return file_level_enum_descriptors_ei_2eproto[29];
 }
 bool AdNetwork_IsValid(int value) {
   switch (value) {
@@ -10107,7 +10221,7 @@ bool AdNetwork_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Egg_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[29];
+  return file_level_enum_descriptors_ei_2eproto[30];
 }
 bool Egg_IsValid(int value) {
   switch (value) {
@@ -10144,7 +10258,7 @@ bool Egg_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* FarmType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[30];
+  return file_level_enum_descriptors_ei_2eproto[31];
 }
 bool FarmType_IsValid(int value) {
   switch (value) {
@@ -10159,7 +10273,7 @@ bool FarmType_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GoalType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[31];
+  return file_level_enum_descriptors_ei_2eproto[32];
 }
 bool GoalType_IsValid(int value) {
   switch (value) {
@@ -10173,7 +10287,7 @@ bool GoalType_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* RewardType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[32];
+  return file_level_enum_descriptors_ei_2eproto[33];
 }
 bool RewardType_IsValid(int value) {
   switch (value) {
@@ -10200,7 +10314,7 @@ bool RewardType_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UILocation_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[33];
+  return file_level_enum_descriptors_ei_2eproto[34];
 }
 bool UILocation_IsValid(int value) {
   switch (value) {
@@ -10217,6 +10331,8 @@ bool UILocation_IsValid(int value) {
     case 10:
     case 11:
     case 12:
+    case 13:
+    case 14:
       return true;
     default:
       return false;
@@ -10225,7 +10341,7 @@ bool UILocation_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* UserType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[34];
+  return file_level_enum_descriptors_ei_2eproto[35];
 }
 bool UserType_IsValid(int value) {
   switch (value) {
@@ -10253,7 +10369,7 @@ bool UserType_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* LeaderboardScope_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ei_2eproto);
-  return file_level_enum_descriptors_ei_2eproto[35];
+  return file_level_enum_descriptors_ei_2eproto[36];
 }
 bool LeaderboardScope_IsValid(int value) {
   switch (value) {
@@ -57544,6 +57660,644 @@ void LiveConfig_MiscConfig::InternalSwap(LiveConfig_MiscConfig* other) {
 
 // ===================================================================
 
+class LiveConfig_HelpConfig_HowToVideoInfo::_Internal {
+ public:
+  using HasBits = decltype(std::declval<LiveConfig_HelpConfig_HowToVideoInfo>()._has_bits_);
+  static void set_has_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_description(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_duration(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_soul_eggs(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+};
+
+LiveConfig_HelpConfig_HowToVideoInfo::LiveConfig_HelpConfig_HowToVideoInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+}
+LiveConfig_HelpConfig_HowToVideoInfo::LiveConfig_HelpConfig_HowToVideoInfo(const LiveConfig_HelpConfig_HowToVideoInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_name()) {
+    name_.Set(from._internal_name(), 
+      GetArenaForAllocation());
+  }
+  description_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    description_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_description()) {
+    description_.Set(from._internal_description(), 
+      GetArenaForAllocation());
+  }
+  url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_url()) {
+    url_.Set(from._internal_url(), 
+      GetArenaForAllocation());
+  }
+  duration_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    duration_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_duration()) {
+    duration_.Set(from._internal_duration(), 
+      GetArenaForAllocation());
+  }
+  ::memcpy(&soul_eggs_, &from.soul_eggs_,
+    static_cast<size_t>(reinterpret_cast<char*>(&type_) -
+    reinterpret_cast<char*>(&soul_eggs_)) + sizeof(type_));
+  // @@protoc_insertion_point(copy_constructor:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+}
+
+inline void LiveConfig_HelpConfig_HowToVideoInfo::SharedCtor() {
+name_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  name_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+description_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  description_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+url_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  url_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+duration_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  duration_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&soul_eggs_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&type_) -
+    reinterpret_cast<char*>(&soul_eggs_)) + sizeof(type_));
+}
+
+LiveConfig_HelpConfig_HowToVideoInfo::~LiveConfig_HelpConfig_HowToVideoInfo() {
+  // @@protoc_insertion_point(destructor:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void LiveConfig_HelpConfig_HowToVideoInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  name_.Destroy();
+  description_.Destroy();
+  url_.Destroy();
+  duration_.Destroy();
+}
+
+void LiveConfig_HelpConfig_HowToVideoInfo::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void LiveConfig_HelpConfig_HowToVideoInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      description_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      url_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      duration_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000030u) {
+    ::memset(&soul_eggs_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&type_) -
+        reinterpret_cast<char*>(&soul_eggs_)) + sizeof(type_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LiveConfig_HelpConfig_HowToVideoInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // optional string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "ei.LiveConfig.HelpConfig.HowToVideoInfo.name");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string description = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_description();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "ei.LiveConfig.HelpConfig.HowToVideoInfo.description");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string url = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_url();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "ei.LiveConfig.HelpConfig.HowToVideoInfo.url");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional double soul_eggs = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          _Internal::set_has_soul_eggs(&has_bits);
+          soul_eggs_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional string duration = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_duration();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          #ifndef NDEBUG
+          ::_pbi::VerifyUTF8(str, "ei.LiveConfig.HelpConfig.HowToVideoInfo.duration");
+          #endif  // !NDEBUG
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::ei::LiveConfig_HelpConfig_HowToVideoInfo_Type_IsValid(val))) {
+            _internal_set_type(static_cast<::ei::LiveConfig_HelpConfig_HowToVideoInfo_Type>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(6, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LiveConfig_HelpConfig_HowToVideoInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional string name = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "ei.LiveConfig.HelpConfig.HowToVideoInfo.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
+  }
+
+  // optional string description = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_description().data(), static_cast<int>(this->_internal_description().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "ei.LiveConfig.HelpConfig.HowToVideoInfo.description");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_description(), target);
+  }
+
+  // optional string url = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "ei.LiveConfig.HelpConfig.HowToVideoInfo.url");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_url(), target);
+  }
+
+  // optional double soul_eggs = 4;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_soul_eggs(), target);
+  }
+
+  // optional string duration = 5;
+  if (cached_has_bits & 0x00000008u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_duration().data(), static_cast<int>(this->_internal_duration().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "ei.LiveConfig.HelpConfig.HowToVideoInfo.duration");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_duration(), target);
+  }
+
+  // optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      6, this->_internal_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  return target;
+}
+
+size_t LiveConfig_HelpConfig_HowToVideoInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    // optional string name = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_name());
+    }
+
+    // optional string description = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_description());
+    }
+
+    // optional string url = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_url());
+    }
+
+    // optional string duration = 5;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_duration());
+    }
+
+    // optional double soul_eggs = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 8;
+    }
+
+    // optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
+    }
+
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LiveConfig_HelpConfig_HowToVideoInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    LiveConfig_HelpConfig_HowToVideoInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LiveConfig_HelpConfig_HowToVideoInfo::GetClassData() const { return &_class_data_; }
+
+void LiveConfig_HelpConfig_HowToVideoInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<LiveConfig_HelpConfig_HowToVideoInfo *>(to)->MergeFrom(
+      static_cast<const LiveConfig_HelpConfig_HowToVideoInfo &>(from));
+}
+
+
+void LiveConfig_HelpConfig_HowToVideoInfo::MergeFrom(const LiveConfig_HelpConfig_HowToVideoInfo& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_name(from._internal_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _internal_set_description(from._internal_description());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _internal_set_url(from._internal_url());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _internal_set_duration(from._internal_duration());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      soul_eggs_ = from.soul_eggs_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      type_ = from.type_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void LiveConfig_HelpConfig_HowToVideoInfo::CopyFrom(const LiveConfig_HelpConfig_HowToVideoInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ei.LiveConfig.HelpConfig.HowToVideoInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LiveConfig_HelpConfig_HowToVideoInfo::IsInitialized() const {
+  return true;
+}
+
+void LiveConfig_HelpConfig_HowToVideoInfo::InternalSwap(LiveConfig_HelpConfig_HowToVideoInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &name_, lhs_arena,
+      &other->name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &description_, lhs_arena,
+      &other->description_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &url_, lhs_arena,
+      &other->url_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &duration_, lhs_arena,
+      &other->duration_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(LiveConfig_HelpConfig_HowToVideoInfo, type_)
+      + sizeof(LiveConfig_HelpConfig_HowToVideoInfo::type_)
+      - PROTOBUF_FIELD_OFFSET(LiveConfig_HelpConfig_HowToVideoInfo, soul_eggs_)>(
+          reinterpret_cast<char*>(&soul_eggs_),
+          reinterpret_cast<char*>(&other->soul_eggs_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LiveConfig_HelpConfig_HowToVideoInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
+      file_level_metadata_ei_2eproto[107]);
+}
+
+// ===================================================================
+
+class LiveConfig_HelpConfig::_Internal {
+ public:
+};
+
+LiveConfig_HelpConfig::LiveConfig_HelpConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  video_infos_(arena) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:ei.LiveConfig.HelpConfig)
+}
+LiveConfig_HelpConfig::LiveConfig_HelpConfig(const LiveConfig_HelpConfig& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      video_infos_(from.video_infos_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:ei.LiveConfig.HelpConfig)
+}
+
+inline void LiveConfig_HelpConfig::SharedCtor() {
+}
+
+LiveConfig_HelpConfig::~LiveConfig_HelpConfig() {
+  // @@protoc_insertion_point(destructor:ei.LiveConfig.HelpConfig)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void LiveConfig_HelpConfig::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void LiveConfig_HelpConfig::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void LiveConfig_HelpConfig::Clear() {
+// @@protoc_insertion_point(message_clear_start:ei.LiveConfig.HelpConfig)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  video_infos_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LiveConfig_HelpConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_video_infos(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LiveConfig_HelpConfig::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ei.LiveConfig.HelpConfig)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_video_infos_size()); i < n; i++) {
+    const auto& repfield = this->_internal_video_infos(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ei.LiveConfig.HelpConfig)
+  return target;
+}
+
+size_t LiveConfig_HelpConfig::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ei.LiveConfig.HelpConfig)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;
+  total_size += 1UL * this->_internal_video_infos_size();
+  for (const auto& msg : this->video_infos_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LiveConfig_HelpConfig::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    LiveConfig_HelpConfig::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LiveConfig_HelpConfig::GetClassData() const { return &_class_data_; }
+
+void LiveConfig_HelpConfig::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<LiveConfig_HelpConfig *>(to)->MergeFrom(
+      static_cast<const LiveConfig_HelpConfig &>(from));
+}
+
+
+void LiveConfig_HelpConfig::MergeFrom(const LiveConfig_HelpConfig& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ei.LiveConfig.HelpConfig)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  video_infos_.MergeFrom(from.video_infos_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void LiveConfig_HelpConfig::CopyFrom(const LiveConfig_HelpConfig& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ei.LiveConfig.HelpConfig)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LiveConfig_HelpConfig::IsInitialized() const {
+  return true;
+}
+
+void LiveConfig_HelpConfig::InternalSwap(LiveConfig_HelpConfig* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  video_infos_.InternalSwap(&other->video_infos_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LiveConfig_HelpConfig::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
+      file_level_metadata_ei_2eproto[108]);
+}
+
+// ===================================================================
+
 class LiveConfig::_Internal {
  public:
   using HasBits = decltype(std::declval<LiveConfig>()._has_bits_);
@@ -57562,6 +58316,10 @@ class LiveConfig::_Internal {
   static void set_has_misc_config(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
+  static const ::ei::LiveConfig_HelpConfig& help_config(const LiveConfig* msg);
+  static void set_has_help_config(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
 };
 
 const ::ei::LiveConfig_BoostsConfig&
@@ -57575,6 +58333,10 @@ LiveConfig::_Internal::gift_config(const LiveConfig* msg) {
 const ::ei::LiveConfig_MiscConfig&
 LiveConfig::_Internal::misc_config(const LiveConfig* msg) {
   return *msg->misc_config_;
+}
+const ::ei::LiveConfig_HelpConfig&
+LiveConfig::_Internal::help_config(const LiveConfig* msg) {
+  return *msg->help_config_;
 }
 LiveConfig::LiveConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -57609,6 +58371,11 @@ LiveConfig::LiveConfig(const LiveConfig& from)
   } else {
     misc_config_ = nullptr;
   }
+  if (from._internal_has_help_config()) {
+    help_config_ = new ::ei::LiveConfig_HelpConfig(*from.help_config_);
+  } else {
+    help_config_ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:ei.LiveConfig)
 }
 
@@ -57619,8 +58386,8 @@ config_id_.InitDefault();
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&boosts_config_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&misc_config_) -
-    reinterpret_cast<char*>(&boosts_config_)) + sizeof(misc_config_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&help_config_) -
+    reinterpret_cast<char*>(&boosts_config_)) + sizeof(help_config_));
 }
 
 LiveConfig::~LiveConfig() {
@@ -57638,6 +58405,7 @@ inline void LiveConfig::SharedDtor() {
   if (this != internal_default_instance()) delete boosts_config_;
   if (this != internal_default_instance()) delete gift_config_;
   if (this != internal_default_instance()) delete misc_config_;
+  if (this != internal_default_instance()) delete help_config_;
 }
 
 void LiveConfig::SetCachedSize(int size) const {
@@ -57651,7 +58419,7 @@ void LiveConfig::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
       config_id_.ClearNonDefaultToEmpty();
     }
@@ -57666,6 +58434,10 @@ void LiveConfig::Clear() {
     if (cached_has_bits & 0x00000008u) {
       GOOGLE_DCHECK(misc_config_ != nullptr);
       misc_config_->Clear();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      GOOGLE_DCHECK(help_config_ != nullptr);
+      help_config_->Clear();
     }
   }
   _has_bits_.Clear();
@@ -57711,6 +58483,14 @@ const char* LiveConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_misc_config(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .ei.LiveConfig.HelpConfig help_config = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_help_config(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -57777,6 +58557,13 @@ uint8_t* LiveConfig::_InternalSerialize(
         _Internal::misc_config(this).GetCachedSize(), target, stream);
   }
 
+  // optional .ei.LiveConfig.HelpConfig help_config = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::help_config(this),
+        _Internal::help_config(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -57794,7 +58581,7 @@ size_t LiveConfig::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     // optional string config_id = 1;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -57823,6 +58610,13 @@ size_t LiveConfig::ByteSizeLong() const {
           *misc_config_);
     }
 
+    // optional .ei.LiveConfig.HelpConfig help_config = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *help_config_);
+    }
+
   }
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
@@ -57847,7 +58641,7 @@ void LiveConfig::MergeFrom(const LiveConfig& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
       _internal_set_config_id(from._internal_config_id());
     }
@@ -57859,6 +58653,9 @@ void LiveConfig::MergeFrom(const LiveConfig& from) {
     }
     if (cached_has_bits & 0x00000008u) {
       _internal_mutable_misc_config()->::ei::LiveConfig_MiscConfig::MergeFrom(from._internal_misc_config());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _internal_mutable_help_config()->::ei::LiveConfig_HelpConfig::MergeFrom(from._internal_help_config());
     }
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -57886,8 +58683,8 @@ void LiveConfig::InternalSwap(LiveConfig* other) {
       &other->config_id_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LiveConfig, misc_config_)
-      + sizeof(LiveConfig::misc_config_)
+      PROTOBUF_FIELD_OFFSET(LiveConfig, help_config_)
+      + sizeof(LiveConfig::help_config_)
       - PROTOBUF_FIELD_OFFSET(LiveConfig, boosts_config_)>(
           reinterpret_cast<char*>(&boosts_config_),
           reinterpret_cast<char*>(&other->boosts_config_));
@@ -57896,7 +58693,7 @@ void LiveConfig::InternalSwap(LiveConfig* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LiveConfig::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[107]);
+      file_level_metadata_ei_2eproto[109]);
 }
 
 // ===================================================================
@@ -59050,7 +59847,7 @@ void InGameMail::InternalSwap(InGameMail* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata InGameMail::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[108]);
+      file_level_metadata_ei_2eproto[110]);
 }
 
 // ===================================================================
@@ -59349,7 +60146,7 @@ void MailDB::InternalSwap(MailDB* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MailDB::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[109]);
+      file_level_metadata_ei_2eproto[111]);
 }
 
 // ===================================================================
@@ -59527,7 +60324,7 @@ void TipsDB::InternalSwap(TipsDB* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TipsDB::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[110]);
+      file_level_metadata_ei_2eproto[112]);
 }
 
 // ===================================================================
@@ -59814,7 +60611,7 @@ void MailState_TipState::InternalSwap(MailState_TipState* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MailState_TipState::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[111]);
+      file_level_metadata_ei_2eproto[113]);
 }
 
 // ===================================================================
@@ -60098,7 +60895,7 @@ void MailState::InternalSwap(MailState* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MailState::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[112]);
+      file_level_metadata_ei_2eproto[114]);
 }
 
 // ===================================================================
@@ -60345,7 +61142,7 @@ void PeriodicalsResponse_RoyaltyInfo::InternalSwap(PeriodicalsResponse_RoyaltyIn
 ::PROTOBUF_NAMESPACE_ID::Metadata PeriodicalsResponse_RoyaltyInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[113]);
+      file_level_metadata_ei_2eproto[115]);
 }
 
 // ===================================================================
@@ -60906,7 +61703,7 @@ void PeriodicalsResponse::InternalSwap(PeriodicalsResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PeriodicalsResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[114]);
+      file_level_metadata_ei_2eproto[116]);
 }
 
 // ===================================================================
@@ -61508,7 +62305,7 @@ void GetPeriodicalsRequest::InternalSwap(GetPeriodicalsRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPeriodicalsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[115]);
+      file_level_metadata_ei_2eproto[117]);
 }
 
 // ===================================================================
@@ -61944,7 +62741,7 @@ void ConfigRequest::InternalSwap(ConfigRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[116]);
+      file_level_metadata_ei_2eproto[118]);
 }
 
 // ===================================================================
@@ -62244,7 +63041,7 @@ void ConfigResponse::InternalSwap(ConfigResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConfigResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[117]);
+      file_level_metadata_ei_2eproto[119]);
 }
 
 // ===================================================================
@@ -62627,7 +63424,7 @@ void AdAttributionRawData::InternalSwap(AdAttributionRawData* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AdAttributionRawData::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[118]);
+      file_level_metadata_ei_2eproto[120]);
 }
 
 // ===================================================================
@@ -63218,7 +64015,7 @@ void AdAttributionRow::InternalSwap(AdAttributionRow* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AdAttributionRow::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[119]);
+      file_level_metadata_ei_2eproto[121]);
 }
 
 // ===================================================================
@@ -64357,7 +65154,7 @@ void AdAttributionInfo::InternalSwap(AdAttributionInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AdAttributionInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[120]);
+      file_level_metadata_ei_2eproto[122]);
 }
 
 // ===================================================================
@@ -64619,7 +65416,7 @@ void ArtifactsClientInfo_LaunchCount::InternalSwap(ArtifactsClientInfo_LaunchCou
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsClientInfo_LaunchCount::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[121]);
+      file_level_metadata_ei_2eproto[123]);
 }
 
 // ===================================================================
@@ -64908,7 +65705,7 @@ void ArtifactsClientInfo::InternalSwap(ArtifactsClientInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsClientInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[122]);
+      file_level_metadata_ei_2eproto[124]);
 }
 
 // ===================================================================
@@ -65137,7 +65934,7 @@ void MissionInfo_Fuel::InternalSwap(MissionInfo_Fuel* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MissionInfo_Fuel::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[123]);
+      file_level_metadata_ei_2eproto[125]);
 }
 
 // ===================================================================
@@ -65756,7 +66553,7 @@ void MissionInfo::InternalSwap(MissionInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MissionInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[124]);
+      file_level_metadata_ei_2eproto[126]);
 }
 
 // ===================================================================
@@ -66065,7 +66862,7 @@ void ArtifactSpec::InternalSwap(ArtifactSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[125]);
+      file_level_metadata_ei_2eproto[127]);
 }
 
 // ===================================================================
@@ -66297,7 +67094,7 @@ void CompleteArtifact::InternalSwap(CompleteArtifact* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CompleteArtifact::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[126]);
+      file_level_metadata_ei_2eproto[128]);
 }
 
 // ===================================================================
@@ -66629,7 +67426,7 @@ void ArtifactInventoryItem::InternalSwap(ArtifactInventoryItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactInventoryItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[127]);
+      file_level_metadata_ei_2eproto[129]);
 }
 
 // ===================================================================
@@ -66859,7 +67656,7 @@ void InventorySlot::InternalSwap(InventorySlot* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata InventorySlot::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[128]);
+      file_level_metadata_ei_2eproto[130]);
 }
 
 // ===================================================================
@@ -67100,7 +67897,7 @@ void ArtifactsConfigurationRequest::InternalSwap(ArtifactsConfigurationRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsConfigurationRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[129]);
+      file_level_metadata_ei_2eproto[131]);
 }
 
 // ===================================================================
@@ -67492,7 +68289,7 @@ void ArtifactsConfigurationResponse_MissionParameters_Duration::InternalSwap(Art
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsConfigurationResponse_MissionParameters_Duration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[130]);
+      file_level_metadata_ei_2eproto[132]);
 }
 
 // ===================================================================
@@ -67797,7 +68594,7 @@ void ArtifactsConfigurationResponse_MissionParameters::InternalSwap(ArtifactsCon
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsConfigurationResponse_MissionParameters::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[131]);
+      file_level_metadata_ei_2eproto[133]);
 }
 
 // ===================================================================
@@ -68227,7 +69024,7 @@ void ArtifactsConfigurationResponse_ArtifactParameters::InternalSwap(ArtifactsCo
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsConfigurationResponse_ArtifactParameters::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[132]);
+      file_level_metadata_ei_2eproto[134]);
 }
 
 // ===================================================================
@@ -68457,7 +69254,7 @@ void ArtifactsConfigurationResponse_CraftingLevelInfo::InternalSwap(ArtifactsCon
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsConfigurationResponse_CraftingLevelInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[133]);
+      file_level_metadata_ei_2eproto[135]);
 }
 
 // ===================================================================
@@ -68701,7 +69498,7 @@ void ArtifactsConfigurationResponse::InternalSwap(ArtifactsConfigurationResponse
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsConfigurationResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[134]);
+      file_level_metadata_ei_2eproto[136]);
 }
 
 // ===================================================================
@@ -69087,7 +69884,7 @@ void MissionRequest::InternalSwap(MissionRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MissionRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[135]);
+      file_level_metadata_ei_2eproto[137]);
 }
 
 // ===================================================================
@@ -69328,7 +70125,7 @@ void MissionResponse::InternalSwap(MissionResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MissionResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[136]);
+      file_level_metadata_ei_2eproto[138]);
 }
 
 // ===================================================================
@@ -69591,7 +70388,7 @@ void CompleteMissionResponse_SecureArtifactSpec::InternalSwap(CompleteMissionRes
 ::PROTOBUF_NAMESPACE_ID::Metadata CompleteMissionResponse_SecureArtifactSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[137]);
+      file_level_metadata_ei_2eproto[139]);
 }
 
 // ===================================================================
@@ -69957,7 +70754,7 @@ void CompleteMissionResponse::InternalSwap(CompleteMissionResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CompleteMissionResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[138]);
+      file_level_metadata_ei_2eproto[140]);
 }
 
 // ===================================================================
@@ -70353,7 +71150,7 @@ void CollectContractArtifactRewardsRequest::InternalSwap(CollectContractArtifact
 ::PROTOBUF_NAMESPACE_ID::Metadata CollectContractArtifactRewardsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[139]);
+      file_level_metadata_ei_2eproto[141]);
 }
 
 // ===================================================================
@@ -70813,7 +71610,7 @@ void CraftArtifactRequest::InternalSwap(CraftArtifactRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CraftArtifactRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[140]);
+      file_level_metadata_ei_2eproto[142]);
 }
 
 // ===================================================================
@@ -71163,7 +71960,7 @@ void CraftArtifactResponse::InternalSwap(CraftArtifactResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CraftArtifactResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[141]);
+      file_level_metadata_ei_2eproto[143]);
 }
 
 // ===================================================================
@@ -71669,7 +72466,7 @@ void ConsumeArtifactRequest::InternalSwap(ConsumeArtifactRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConsumeArtifactRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[142]);
+      file_level_metadata_ei_2eproto[144]);
 }
 
 // ===================================================================
@@ -72058,7 +72855,7 @@ void ConsumeArtifactResponse::InternalSwap(ConsumeArtifactResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ConsumeArtifactResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[143]);
+      file_level_metadata_ei_2eproto[145]);
 }
 
 // ===================================================================
@@ -72397,7 +73194,7 @@ void AuthenticateArtifactResponse::InternalSwap(AuthenticateArtifactResponse* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata AuthenticateArtifactResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[144]);
+      file_level_metadata_ei_2eproto[146]);
 }
 
 // ===================================================================
@@ -72716,7 +73513,7 @@ void SetArtifactRequest::InternalSwap(SetArtifactRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SetArtifactRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[145]);
+      file_level_metadata_ei_2eproto[147]);
 }
 
 // ===================================================================
@@ -73003,7 +73800,7 @@ void SetArtifactResponse::InternalSwap(SetArtifactResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SetArtifactResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[146]);
+      file_level_metadata_ei_2eproto[148]);
 }
 
 // ===================================================================
@@ -73233,7 +74030,7 @@ void ArtifactsDB_ActiveArtifactSlot::InternalSwap(ArtifactsDB_ActiveArtifactSlot
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsDB_ActiveArtifactSlot::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[147]);
+      file_level_metadata_ei_2eproto[149]);
 }
 
 // ===================================================================
@@ -73449,7 +74246,7 @@ void ArtifactsDB_ActiveArtifactSet::InternalSwap(ArtifactsDB_ActiveArtifactSet* 
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsDB_ActiveArtifactSet::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[148]);
+      file_level_metadata_ei_2eproto[150]);
 }
 
 // ===================================================================
@@ -73800,7 +74597,7 @@ void ArtifactsDB_CraftableArtifact::InternalSwap(ArtifactsDB_CraftableArtifact* 
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsDB_CraftableArtifact::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[149]);
+      file_level_metadata_ei_2eproto[151]);
 }
 
 // ===================================================================
@@ -74346,7 +75143,7 @@ void ArtifactsDB::InternalSwap(ArtifactsDB* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ArtifactsDB::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[150]);
+      file_level_metadata_ei_2eproto[152]);
 }
 
 // ===================================================================
@@ -74764,7 +75561,7 @@ void AuthenticatedMessage::InternalSwap(AuthenticatedMessage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AuthenticatedMessage::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[151]);
+      file_level_metadata_ei_2eproto[153]);
 }
 
 // ===================================================================
@@ -75021,7 +75818,7 @@ void LogCompleteMissionPayload::InternalSwap(LogCompleteMissionPayload* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LogCompleteMissionPayload::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[152]);
+      file_level_metadata_ei_2eproto[154]);
 }
 
 // ===================================================================
@@ -75278,7 +76075,7 @@ void LogCraftArtifactPayload::InternalSwap(LogCraftArtifactPayload* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LogCraftArtifactPayload::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[153]);
+      file_level_metadata_ei_2eproto[155]);
 }
 
 // ===================================================================
@@ -75535,7 +76332,7 @@ void LogConsumeArtifactPayload::InternalSwap(LogConsumeArtifactPayload* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LogConsumeArtifactPayload::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[154]);
+      file_level_metadata_ei_2eproto[156]);
 }
 
 // ===================================================================
@@ -75792,7 +76589,7 @@ void LogSetArtifactPayload::InternalSwap(LogSetArtifactPayload* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LogSetArtifactPayload::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[155]);
+      file_level_metadata_ei_2eproto[157]);
 }
 
 // ===================================================================
@@ -76065,7 +76862,7 @@ void AccountTransferPayload::InternalSwap(AccountTransferPayload* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AccountTransferPayload::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[156]);
+      file_level_metadata_ei_2eproto[158]);
 }
 
 // ===================================================================
@@ -76397,7 +77194,7 @@ void SaveBackupResponse::InternalSwap(SaveBackupResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SaveBackupResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[157]);
+      file_level_metadata_ei_2eproto[159]);
 }
 
 // ===================================================================
@@ -76670,7 +77467,7 @@ void CleanAccountRequest::InternalSwap(CleanAccountRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CleanAccountRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[158]);
+      file_level_metadata_ei_2eproto[160]);
 }
 
 // ===================================================================
@@ -76881,7 +77678,7 @@ void ReturnEDTPayload::InternalSwap(ReturnEDTPayload* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ReturnEDTPayload::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[159]);
+      file_level_metadata_ei_2eproto[161]);
 }
 
 // ===================================================================
@@ -77390,7 +78187,7 @@ void DLCItem::InternalSwap(DLCItem* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DLCItem::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[160]);
+      file_level_metadata_ei_2eproto[162]);
 }
 
 // ===================================================================
@@ -77633,7 +78430,7 @@ void ShellSpec_ShellPiece::InternalSwap(ShellSpec_ShellPiece* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellSpec_ShellPiece::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[161]);
+      file_level_metadata_ei_2eproto[163]);
 }
 
 // ===================================================================
@@ -78416,7 +79213,7 @@ void ShellSpec::InternalSwap(ShellSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[162]);
+      file_level_metadata_ei_2eproto[164]);
 }
 
 // ===================================================================
@@ -78812,7 +79609,7 @@ void ShellSetSpec_VariationSpec::InternalSwap(ShellSetSpec_VariationSpec* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellSetSpec_VariationSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[163]);
+      file_level_metadata_ei_2eproto[165]);
 }
 
 // ===================================================================
@@ -79705,7 +80502,7 @@ void ShellSetSpec::InternalSwap(ShellSetSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellSetSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[164]);
+      file_level_metadata_ei_2eproto[166]);
 }
 
 // ===================================================================
@@ -79946,7 +80743,7 @@ void ShellObjectSpec_LODPiece::InternalSwap(ShellObjectSpec_LODPiece* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellObjectSpec_LODPiece::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[165]);
+      file_level_metadata_ei_2eproto[167]);
 }
 
 // ===================================================================
@@ -80769,7 +81566,7 @@ void ShellObjectSpec::InternalSwap(ShellObjectSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellObjectSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[166]);
+      file_level_metadata_ei_2eproto[168]);
 }
 
 // ===================================================================
@@ -81152,13 +81949,17 @@ void ShellGroupSpec::InternalSwap(ShellGroupSpec* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellGroupSpec::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[167]);
+      file_level_metadata_ei_2eproto[169]);
 }
 
 // ===================================================================
 
 class DLCCatalog::_Internal {
  public:
+  using HasBits = decltype(std::declval<DLCCatalog>()._has_bits_);
+  static void set_has_shells_showcase_last_featured_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
 };
 
 DLCCatalog::DLCCatalog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -81175,6 +81976,7 @@ DLCCatalog::DLCCatalog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
 }
 DLCCatalog::DLCCatalog(const DLCCatalog& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_),
       items_(from.items_),
       shells_(from.shells_),
       shell_sets_(from.shell_sets_),
@@ -81182,10 +81984,12 @@ DLCCatalog::DLCCatalog(const DLCCatalog& from)
       shell_groups_(from.shell_groups_),
       decorators_(from.decorators_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  shells_showcase_last_featured_time_ = from.shells_showcase_last_featured_time_;
   // @@protoc_insertion_point(copy_constructor:ei.DLCCatalog)
 }
 
 inline void DLCCatalog::SharedCtor() {
+shells_showcase_last_featured_time_ = 0;
 }
 
 DLCCatalog::~DLCCatalog() {
@@ -81217,11 +82021,14 @@ void DLCCatalog::Clear() {
   shell_objects_.Clear();
   shell_groups_.Clear();
   decorators_.Clear();
+  shells_showcase_last_featured_time_ = 0;
+  _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DLCCatalog::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -81304,6 +82111,15 @@ const char* DLCCatalog::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
+      // optional double shells_showcase_last_featured_time = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
+          _Internal::set_has_shells_showcase_last_featured_time(&has_bits);
+          shells_showcase_last_featured_time_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -81320,6 +82136,7 @@ const char* DLCCatalog::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -81381,6 +82198,13 @@ uint8_t* DLCCatalog::_InternalSerialize(
         InternalWriteMessage(6, repfield, repfield.GetCachedSize(), target, stream);
   }
 
+  cached_has_bits = _has_bits_[0];
+  // optional double shells_showcase_last_featured_time = 7;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_shells_showcase_last_featured_time(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -81439,6 +82263,12 @@ size_t DLCCatalog::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // optional double shells_showcase_last_featured_time = 7;
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 8;
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
@@ -81467,6 +82297,9 @@ void DLCCatalog::MergeFrom(const DLCCatalog& from) {
   shell_objects_.MergeFrom(from.shell_objects_);
   shell_groups_.MergeFrom(from.shell_groups_);
   decorators_.MergeFrom(from.decorators_);
+  if (from._internal_has_shells_showcase_last_featured_time()) {
+    _internal_set_shells_showcase_last_featured_time(from._internal_shells_showcase_last_featured_time());
+  }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -81484,18 +82317,20 @@ bool DLCCatalog::IsInitialized() const {
 void DLCCatalog::InternalSwap(DLCCatalog* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
   items_.InternalSwap(&other->items_);
   shells_.InternalSwap(&other->shells_);
   shell_sets_.InternalSwap(&other->shell_sets_);
   shell_objects_.InternalSwap(&other->shell_objects_);
   shell_groups_.InternalSwap(&other->shell_groups_);
   decorators_.InternalSwap(&other->decorators_);
+  swap(shells_showcase_last_featured_time_, other->shells_showcase_last_featured_time_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DLCCatalog::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[168]);
+      file_level_metadata_ei_2eproto[170]);
 }
 
 // ===================================================================
@@ -81742,7 +82577,7 @@ void ShellDB_ShellStatus::InternalSwap(ShellDB_ShellStatus* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ShellStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[169]);
+      file_level_metadata_ei_2eproto[171]);
 }
 
 // ===================================================================
@@ -81997,7 +82832,7 @@ void ShellDB_ShellElementStatus::InternalSwap(ShellDB_ShellElementStatus* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ShellElementStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[170]);
+      file_level_metadata_ei_2eproto[172]);
 }
 
 // ===================================================================
@@ -82248,7 +83083,7 @@ void ShellDB_ShellSetVariationStatus::InternalSwap(ShellDB_ShellSetVariationStat
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ShellSetVariationStatus::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[171]);
+      file_level_metadata_ei_2eproto[173]);
 }
 
 // ===================================================================
@@ -82694,7 +83529,7 @@ void ShellDB_FarmConfiguration::InternalSwap(ShellDB_FarmConfiguration* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_FarmConfiguration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[172]);
+      file_level_metadata_ei_2eproto[174]);
 }
 
 // ===================================================================
@@ -83136,7 +83971,7 @@ void ShellDB_SavedFarmConfiguration::InternalSwap(ShellDB_SavedFarmConfiguration
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_SavedFarmConfiguration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[173]);
+      file_level_metadata_ei_2eproto[175]);
 }
 
 // ===================================================================
@@ -83422,7 +84257,7 @@ void ShellDB_ShellConfiguration::InternalSwap(ShellDB_ShellConfiguration* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ShellConfiguration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[174]);
+      file_level_metadata_ei_2eproto[176]);
 }
 
 // ===================================================================
@@ -83820,7 +84655,7 @@ void ShellDB_ShellSetConfiguration::InternalSwap(ShellDB_ShellSetConfiguration* 
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ShellSetConfiguration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[175]);
+      file_level_metadata_ei_2eproto[177]);
 }
 
 // ===================================================================
@@ -84075,7 +84910,7 @@ void ShellDB_ShellGroupConfiguration::InternalSwap(ShellDB_ShellGroupConfigurati
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ShellGroupConfiguration::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[176]);
+      file_level_metadata_ei_2eproto[178]);
 }
 
 // ===================================================================
@@ -84348,7 +85183,7 @@ void ShellDB_ChickenConfig::InternalSwap(ShellDB_ChickenConfig* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_ChickenConfig::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[177]);
+      file_level_metadata_ei_2eproto[179]);
 }
 
 // ===================================================================
@@ -84831,7 +85666,7 @@ void ShellDB_LightingConfig::InternalSwap(ShellDB_LightingConfig* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB_LightingConfig::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[178]);
+      file_level_metadata_ei_2eproto[180]);
 }
 
 // ===================================================================
@@ -84839,8 +85674,11 @@ void ShellDB_LightingConfig::InternalSwap(ShellDB_LightingConfig* other) {
 class ShellDB::_Internal {
  public:
   using HasBits = decltype(std::declval<ShellDB>()._has_bits_);
-  static void set_has_lighting_controls_unlocked(HasBits* has_bits) {
+  static void set_has_last_showcase_featured_time_seen(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_lighting_controls_unlocked(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
   }
 };
 
@@ -84872,12 +85710,17 @@ ShellDB::ShellDB(const ShellDB& from)
       shell_variation_inventory_(from.shell_variation_inventory_),
       saved_configs_(from.saved_configs_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  lighting_controls_unlocked_ = from.lighting_controls_unlocked_;
+  ::memcpy(&last_showcase_featured_time_seen_, &from.last_showcase_featured_time_seen_,
+    static_cast<size_t>(reinterpret_cast<char*>(&lighting_controls_unlocked_) -
+    reinterpret_cast<char*>(&last_showcase_featured_time_seen_)) + sizeof(lighting_controls_unlocked_));
   // @@protoc_insertion_point(copy_constructor:ei.ShellDB)
 }
 
 inline void ShellDB::SharedCtor() {
-lighting_controls_unlocked_ = false;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&last_showcase_featured_time_seen_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&lighting_controls_unlocked_) -
+    reinterpret_cast<char*>(&last_showcase_featured_time_seen_)) + sizeof(lighting_controls_unlocked_));
 }
 
 ShellDB::~ShellDB() {
@@ -84912,7 +85755,12 @@ void ShellDB::Clear() {
   new_shells_seen_.Clear();
   shell_variation_inventory_.Clear();
   saved_configs_.Clear();
-  lighting_controls_unlocked_ = false;
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&last_showcase_featured_time_seen_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&lighting_controls_unlocked_) -
+        reinterpret_cast<char*>(&last_showcase_featured_time_seen_)) + sizeof(lighting_controls_unlocked_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -85058,6 +85906,15 @@ const char* ShellDB::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
         } else
           goto handle_unusual;
         continue;
+      // optional double last_showcase_featured_time_seen = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 89)) {
+          _Internal::set_has_last_showcase_featured_time_seen(&has_bits);
+          last_showcase_featured_time_seen_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -85166,9 +86023,15 @@ uint8_t* ShellDB::_InternalSerialize(
 
   cached_has_bits = _has_bits_[0];
   // optional bool lighting_controls_unlocked = 10;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(10, this->_internal_lighting_controls_unlocked(), target);
+  }
+
+  // optional double last_showcase_featured_time_seen = 11;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(11, this->_internal_last_showcase_featured_time_seen(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -85252,12 +86115,19 @@ size_t ShellDB::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional bool lighting_controls_unlocked = 10;
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 + 1;
-  }
+  if (cached_has_bits & 0x00000003u) {
+    // optional double last_showcase_featured_time_seen = 11;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 + 8;
+    }
 
+    // optional bool lighting_controls_unlocked = 10;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+  }
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
@@ -85289,8 +86159,15 @@ void ShellDB::MergeFrom(const ShellDB& from) {
   new_shells_seen_.MergeFrom(from.new_shells_seen_);
   shell_variation_inventory_.MergeFrom(from.shell_variation_inventory_);
   saved_configs_.MergeFrom(from.saved_configs_);
-  if (from._internal_has_lighting_controls_unlocked()) {
-    _internal_set_lighting_controls_unlocked(from._internal_lighting_controls_unlocked());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      last_showcase_featured_time_seen_ = from.last_showcase_featured_time_seen_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      lighting_controls_unlocked_ = from.lighting_controls_unlocked_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -85319,13 +86196,18 @@ void ShellDB::InternalSwap(ShellDB* other) {
   new_shells_seen_.InternalSwap(&other->new_shells_seen_);
   shell_variation_inventory_.InternalSwap(&other->shell_variation_inventory_);
   saved_configs_.InternalSwap(&other->saved_configs_);
-  swap(lighting_controls_unlocked_, other->lighting_controls_unlocked_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ShellDB, lighting_controls_unlocked_)
+      + sizeof(ShellDB::lighting_controls_unlocked_)
+      - PROTOBUF_FIELD_OFFSET(ShellDB, last_showcase_featured_time_seen_)>(
+          reinterpret_cast<char*>(&last_showcase_featured_time_seen_),
+          reinterpret_cast<char*>(&other->last_showcase_featured_time_seen_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellDB::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[179]);
+      file_level_metadata_ei_2eproto[181]);
 }
 
 // ===================================================================
@@ -85647,7 +86529,7 @@ void ShellPopularityStats_Entry::InternalSwap(ShellPopularityStats_Entry* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellPopularityStats_Entry::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[180]);
+      file_level_metadata_ei_2eproto[182]);
 }
 
 // ===================================================================
@@ -85825,7 +86707,7 @@ void ShellPopularityStats::InternalSwap(ShellPopularityStats* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellPopularityStats::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[181]);
+      file_level_metadata_ei_2eproto[183]);
 }
 
 // ===================================================================
@@ -86471,7 +87353,7 @@ void ShellsActionLog::InternalSwap(ShellsActionLog* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellsActionLog::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[182]);
+      file_level_metadata_ei_2eproto[184]);
 }
 
 // ===================================================================
@@ -86869,7 +87751,7 @@ void SubmitShellShowcaseRequest::InternalSwap(SubmitShellShowcaseRequest* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata SubmitShellShowcaseRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[183]);
+      file_level_metadata_ei_2eproto[185]);
 }
 
 // ===================================================================
@@ -87113,7 +87995,7 @@ void ShellShowcase::InternalSwap(ShellShowcase* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellShowcase::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[184]);
+      file_level_metadata_ei_2eproto[186]);
 }
 
 // ===================================================================
@@ -87132,6 +88014,9 @@ class ShellShowcaseListingInfo::_Internal {
   }
   static void set_has_description(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
+  }
+  static void set_has_is_new(HasBits* has_bits) {
+    (*has_bits)[0] |= 16384u;
   }
   static void set_has_creator_name(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
@@ -87234,8 +88119,8 @@ ShellShowcaseListingInfo::ShellShowcaseListingInfo(const ShellShowcaseListingInf
     farm_config_ = nullptr;
   }
   ::memcpy(&gross_, &from.gross_,
-    static_cast<size_t>(reinterpret_cast<char*>(&equips_) -
-    reinterpret_cast<char*>(&gross_)) + sizeof(equips_));
+    static_cast<size_t>(reinterpret_cast<char*>(&is_new_) -
+    reinterpret_cast<char*>(&gross_)) + sizeof(is_new_));
   // @@protoc_insertion_point(copy_constructor:ei.ShellShowcaseListingInfo)
 }
 
@@ -87266,8 +88151,8 @@ creator_name_.InitDefault();
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&farm_config_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&equips_) -
-    reinterpret_cast<char*>(&farm_config_)) + sizeof(equips_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&is_new_) -
+    reinterpret_cast<char*>(&farm_config_)) + sizeof(is_new_));
 }
 
 ShellShowcaseListingInfo::~ShellShowcaseListingInfo() {
@@ -87326,10 +88211,10 @@ void ShellShowcaseListingInfo::Clear() {
     }
   }
   gross_ = uint64_t{0u};
-  if (cached_has_bits & 0x00003f00u) {
+  if (cached_has_bits & 0x00007f00u) {
     ::memset(&sales_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&equips_) -
-        reinterpret_cast<char*>(&sales_)) + sizeof(equips_));
+        reinterpret_cast<char*>(&is_new_) -
+        reinterpret_cast<char*>(&sales_)) + sizeof(is_new_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -87489,6 +88374,15 @@ const char* ShellShowcaseListingInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
+      // optional bool is_new = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          _Internal::set_has_is_new(&has_bits);
+          is_new_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -87630,6 +88524,12 @@ uint8_t* ShellShowcaseListingInfo::_InternalSerialize(
         14, this->_internal_creator_name(), target);
   }
 
+  // optional bool is_new = 15;
+  if (cached_has_bits & 0x00004000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(15, this->_internal_is_new(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -87703,7 +88603,7 @@ size_t ShellShowcaseListingInfo::ByteSizeLong() const {
     }
 
   }
-  if (cached_has_bits & 0x00003f00u) {
+  if (cached_has_bits & 0x00007f00u) {
     // optional uint32 sales = 5;
     if (cached_has_bits & 0x00000100u) {
       total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_sales());
@@ -87733,6 +88633,11 @@ size_t ShellShowcaseListingInfo::ByteSizeLong() const {
     // optional uint64 equips = 13;
     if (cached_has_bits & 0x00002000u) {
       total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_equips());
+    }
+
+    // optional bool is_new = 15;
+    if (cached_has_bits & 0x00004000u) {
+      total_size += 1 + 1;
     }
 
   }
@@ -87786,7 +88691,7 @@ void ShellShowcaseListingInfo::MergeFrom(const ShellShowcaseListingInfo& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x00003f00u) {
+  if (cached_has_bits & 0x00007f00u) {
     if (cached_has_bits & 0x00000100u) {
       sales_ = from.sales_;
     }
@@ -87804,6 +88709,9 @@ void ShellShowcaseListingInfo::MergeFrom(const ShellShowcaseListingInfo& from) {
     }
     if (cached_has_bits & 0x00002000u) {
       equips_ = from.equips_;
+    }
+    if (cached_has_bits & 0x00004000u) {
+      is_new_ = from.is_new_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -87852,8 +88760,8 @@ void ShellShowcaseListingInfo::InternalSwap(ShellShowcaseListingInfo* other) {
       &other->creator_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ShellShowcaseListingInfo, equips_)
-      + sizeof(ShellShowcaseListingInfo::equips_)
+      PROTOBUF_FIELD_OFFSET(ShellShowcaseListingInfo, is_new_)
+      + sizeof(ShellShowcaseListingInfo::is_new_)
       - PROTOBUF_FIELD_OFFSET(ShellShowcaseListingInfo, farm_config_)>(
           reinterpret_cast<char*>(&farm_config_),
           reinterpret_cast<char*>(&other->farm_config_));
@@ -87862,7 +88770,7 @@ void ShellShowcaseListingInfo::InternalSwap(ShellShowcaseListingInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellShowcaseListingInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[185]);
+      file_level_metadata_ei_2eproto[187]);
 }
 
 // ===================================================================
@@ -88143,7 +89051,7 @@ void ShowcaseRoyaltyDeliveryConfirmation::InternalSwap(ShowcaseRoyaltyDeliveryCo
 ::PROTOBUF_NAMESPACE_ID::Metadata ShowcaseRoyaltyDeliveryConfirmation::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[186]);
+      file_level_metadata_ei_2eproto[188]);
 }
 
 // ===================================================================
@@ -88321,7 +89229,7 @@ void ShellShowcaseListingSet::InternalSwap(ShellShowcaseListingSet* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellShowcaseListingSet::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[187]);
+      file_level_metadata_ei_2eproto[189]);
 }
 
 // ===================================================================
@@ -88553,7 +89461,7 @@ void ShellsActionBatch::InternalSwap(ShellsActionBatch* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ShellsActionBatch::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[188]);
+      file_level_metadata_ei_2eproto[190]);
 }
 
 // ===================================================================
@@ -89760,7 +90668,7 @@ void UserVerificationAnalysis::InternalSwap(UserVerificationAnalysis* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserVerificationAnalysis::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[189]);
+      file_level_metadata_ei_2eproto[191]);
 }
 
 // ===================================================================
@@ -90064,7 +90972,7 @@ void UserSubscriptionInfo_HistoryEntry::InternalSwap(UserSubscriptionInfo_Histor
 ::PROTOBUF_NAMESPACE_ID::Metadata UserSubscriptionInfo_HistoryEntry::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[190]);
+      file_level_metadata_ei_2eproto[192]);
 }
 
 // ===================================================================
@@ -90804,7 +91712,7 @@ void UserSubscriptionInfo::InternalSwap(UserSubscriptionInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata UserSubscriptionInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[191]);
+      file_level_metadata_ei_2eproto[193]);
 }
 
 // ===================================================================
@@ -91110,7 +92018,7 @@ void SubscriptionChangeHintRequest::InternalSwap(SubscriptionChangeHintRequest* 
 ::PROTOBUF_NAMESPACE_ID::Metadata SubscriptionChangeHintRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[192]);
+      file_level_metadata_ei_2eproto[194]);
 }
 
 // ===================================================================
@@ -91357,7 +92265,7 @@ void CXPEvalRolloutInfo::InternalSwap(CXPEvalRolloutInfo* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata CXPEvalRolloutInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_ei_2eproto_getter, &descriptor_table_ei_2eproto_once,
-      file_level_metadata_ei_2eproto[193]);
+      file_level_metadata_ei_2eproto[195]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -91790,6 +92698,14 @@ Arena::CreateMaybeMessage< ::ei::LiveConfig_GiftConfig >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::ei::LiveConfig_MiscConfig*
 Arena::CreateMaybeMessage< ::ei::LiveConfig_MiscConfig >(Arena* arena) {
   return Arena::CreateMessageInternal< ::ei::LiveConfig_MiscConfig >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ei::LiveConfig_HelpConfig_HowToVideoInfo*
+Arena::CreateMaybeMessage< ::ei::LiveConfig_HelpConfig_HowToVideoInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ei::LiveConfig_HelpConfig_HowToVideoInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ei::LiveConfig_HelpConfig*
+Arena::CreateMaybeMessage< ::ei::LiveConfig_HelpConfig >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ei::LiveConfig_HelpConfig >(arena);
 }
 template<> PROTOBUF_NOINLINE ::ei::LiveConfig*
 Arena::CreateMaybeMessage< ::ei::LiveConfig >(Arena* arena) {

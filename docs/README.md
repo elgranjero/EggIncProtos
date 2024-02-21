@@ -129,6 +129,8 @@
     - [LiveConfig.GiftConfig](#ei-LiveConfig-GiftConfig)
     - [LiveConfig.GiftConfig.GiftMuConfig](#ei-LiveConfig-GiftConfig-GiftMuConfig)
     - [LiveConfig.GiftConfig.GiftValueConfig](#ei-LiveConfig-GiftConfig-GiftValueConfig)
+    - [LiveConfig.HelpConfig](#ei-LiveConfig-HelpConfig)
+    - [LiveConfig.HelpConfig.HowToVideoInfo](#ei-LiveConfig-HelpConfig-HowToVideoInfo)
     - [LiveConfig.MiscConfig](#ei-LiveConfig-MiscConfig)
     - [LocalContract](#ei-LocalContract)
     - [LogCompleteMissionPayload](#ei-LogCompleteMissionPayload)
@@ -219,6 +221,7 @@
     - [GoalType](#ei-GoalType)
     - [KickPlayerCoopRequest.Reason](#ei-KickPlayerCoopRequest-Reason)
     - [LeaderboardScope](#ei-LeaderboardScope)
+    - [LiveConfig.HelpConfig.HowToVideoInfo.Type](#ei-LiveConfig-HelpConfig-HowToVideoInfo-Type)
     - [MissionInfo.DurationType](#ei-MissionInfo-DurationType)
     - [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship)
     - [MissionInfo.Status](#ei-MissionInfo-Status)
@@ -2213,6 +2216,7 @@
 | decorators | [ShellSetSpec](#ei-ShellSetSpec) | repeated |  |
 | shell_objects | [ShellObjectSpec](#ei-ShellObjectSpec) | repeated |  |
 | shell_groups | [ShellGroupSpec](#ei-ShellGroupSpec) | repeated |  |
+| shells_showcase_last_featured_time | [double](#double) | optional |  |
 
 
 
@@ -2804,6 +2808,7 @@
 | boosts_config | [LiveConfig.BoostsConfig](#ei-LiveConfig-BoostsConfig) | optional |  |
 | gift_config | [LiveConfig.GiftConfig](#ei-LiveConfig-GiftConfig) | optional |  |
 | misc_config | [LiveConfig.MiscConfig](#ei-LiveConfig-MiscConfig) | optional |  |
+| help_config | [LiveConfig.HelpConfig](#ei-LiveConfig-HelpConfig) | optional |  |
 
 
 
@@ -2905,6 +2910,41 @@
 | rand_max | [double](#double) | optional |  |
 | video_min | [double](#double) | optional |  |
 | video_max | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-LiveConfig-HelpConfig"></a>
+
+### LiveConfig.HelpConfig
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| video_infos | [LiveConfig.HelpConfig.HowToVideoInfo](#ei-LiveConfig-HelpConfig-HowToVideoInfo) | repeated |  |
+
+
+
+
+
+
+<a name="ei-LiveConfig-HelpConfig-HowToVideoInfo"></a>
+
+### LiveConfig.HelpConfig.HowToVideoInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| type | [LiveConfig.HelpConfig.HowToVideoInfo.Type](#ei-LiveConfig-HelpConfig-HowToVideoInfo-Type) | optional |  |
+| name | [string](#string) | optional |  |
+| description | [string](#string) | optional |  |
+| duration | [string](#string) | optional |  |
+| url | [string](#string) | optional |  |
+| soul_eggs | [double](#double) | optional |  |
 
 
 
@@ -3504,6 +3544,7 @@
 | saved_configs | [ShellDB.SavedFarmConfiguration](#ei-ShellDB-SavedFarmConfiguration) | repeated |  |
 | new_shells_downloaded | [string](#string) | repeated |  |
 | new_shells_seen | [string](#string) | repeated |  |
+| last_showcase_featured_time_seen | [double](#double) | optional |  |
 | lighting_controls_unlocked | [bool](#bool) | optional |  |
 
 
@@ -3877,6 +3918,7 @@
 | local_id | [string](#string) | optional |  |
 | name | [string](#string) | optional |  |
 | description | [string](#string) | optional |  |
+| is_new | [bool](#bool) | optional |  |
 | creator_name | [string](#string) | optional |  |
 | status | [ShellShowcaseListingInfo.Status](#ei-ShellShowcaseListingInfo-Status) | optional |  |
 | farm_config | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
@@ -4676,6 +4718,18 @@
 
 
 
+<a name="ei-LiveConfig-HelpConfig-HowToVideoInfo-Type"></a>
+
+### LiveConfig.HelpConfig.HowToVideoInfo.Type
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| VIDEO | 0 |  |
+| ARTICLE | 1 |  |
+
+
+
 <a name="ei-MissionInfo-DurationType"></a>
 
 ### MissionInfo.DurationType
@@ -4850,6 +4904,8 @@
 | SUBMITTED | 1 |  |
 | LIVE | 2 |  |
 | FEATURED | 3 |  |
+| FEATURED_ALUM | 5 |  |
+| ARCHIVED | 6 |  |
 | INVALID | 4 |  |
 
 
@@ -4980,6 +5036,8 @@
 | CHICKEN_HATS | 11 |  |
 | EPIC_RESEARCH | 8 |  |
 | SETTINGS | 9 |  |
+| HELP | 13 |  |
+| UNIVERSITY | 14 |  |
 
 
 

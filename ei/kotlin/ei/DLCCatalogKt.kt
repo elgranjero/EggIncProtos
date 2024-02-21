@@ -453,6 +453,30 @@ public object DLCCatalogKt {
       _builder.clearShellGroups()
     }
 
+
+    /**
+     * <code>optional double shells_showcase_last_featured_time = 7;</code>
+     */
+    public var shellsShowcaseLastFeaturedTime: kotlin.Double
+      @JvmName("getShellsShowcaseLastFeaturedTime")
+      get() = _builder.getShellsShowcaseLastFeaturedTime()
+      @JvmName("setShellsShowcaseLastFeaturedTime")
+      set(value) {
+        _builder.setShellsShowcaseLastFeaturedTime(value)
+      }
+    /**
+     * <code>optional double shells_showcase_last_featured_time = 7;</code>
+     */
+    public fun clearShellsShowcaseLastFeaturedTime() {
+      _builder.clearShellsShowcaseLastFeaturedTime()
+    }
+    /**
+     * <code>optional double shells_showcase_last_featured_time = 7;</code>
+     * @return Whether the shellsShowcaseLastFeaturedTime field is set.
+     */
+    public fun hasShellsShowcaseLastFeaturedTime(): kotlin.Boolean {
+      return _builder.hasShellsShowcaseLastFeaturedTime()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

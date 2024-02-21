@@ -667,6 +667,30 @@ public object ShellDBKt {
       _builder.clearNewShellsSeen()
     }
     /**
+     * <code>optional double last_showcase_featured_time_seen = 11;</code>
+     */
+    public var lastShowcaseFeaturedTimeSeen: kotlin.Double
+      @JvmName("getLastShowcaseFeaturedTimeSeen")
+      get() = _builder.getLastShowcaseFeaturedTimeSeen()
+      @JvmName("setLastShowcaseFeaturedTimeSeen")
+      set(value) {
+        _builder.setLastShowcaseFeaturedTimeSeen(value)
+      }
+    /**
+     * <code>optional double last_showcase_featured_time_seen = 11;</code>
+     */
+    public fun clearLastShowcaseFeaturedTimeSeen() {
+      _builder.clearLastShowcaseFeaturedTimeSeen()
+    }
+    /**
+     * <code>optional double last_showcase_featured_time_seen = 11;</code>
+     * @return Whether the lastShowcaseFeaturedTimeSeen field is set.
+     */
+    public fun hasLastShowcaseFeaturedTimeSeen(): kotlin.Boolean {
+      return _builder.hasLastShowcaseFeaturedTimeSeen()
+    }
+
+    /**
      * <code>optional bool lighting_controls_unlocked = 10;</code>
      */
     public var lightingControlsUnlocked: kotlin.Boolean
