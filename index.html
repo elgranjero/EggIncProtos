@@ -591,6 +591,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.GetActiveMissionsResponse"><span class="badge">M</span>GetActiveMissionsResponse</a>
+                </li>
+              
+                <li>
                   <a href="#ei.GetPeriodicalsRequest"><span class="badge">M</span>GetPeriodicalsRequest</a>
                 </li>
               
@@ -2205,6 +2209,13 @@
                   <td>artifact_status</td>
                   <td><a href="#ei.ArtifactsDB.CraftableArtifact">ArtifactsDB.CraftableArtifact</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fueling_mission</td>
+                  <td><a href="#ei.MissionInfo">MissionInfo</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -8227,6 +8238,37 @@
 
         
       
+        <h3 id="ei.GetActiveMissionsResponse">GetActiveMissionsResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>success</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>active_missions</td>
+                  <td><a href="#ei.MissionInfo">MissionInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.GetPeriodicalsRequest">GetPeriodicalsRequest</h3>
         <p></p>
 
@@ -8577,6 +8619,13 @@
               
                 <tr>
                   <td>min_soul_eggs</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>max_soul_eggs</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -15291,6 +15340,12 @@
               <tr>
                 <td>HENERPRISE</td>
                 <td>9</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ATREGGIES</td>
+                <td>10</td>
                 <td><p></p></td>
               </tr>
             
