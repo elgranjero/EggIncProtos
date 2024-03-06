@@ -455,6 +455,30 @@ public object InGameMailKt {
     }
 
     /**
+     * <code>optional double max_soul_eggs = 29;</code>
+     */
+    public var maxSoulEggs: kotlin.Double
+      @JvmName("getMaxSoulEggs")
+      get() = _builder.getMaxSoulEggs()
+      @JvmName("setMaxSoulEggs")
+      set(value) {
+        _builder.setMaxSoulEggs(value)
+      }
+    /**
+     * <code>optional double max_soul_eggs = 29;</code>
+     */
+    public fun clearMaxSoulEggs() {
+      _builder.clearMaxSoulEggs()
+    }
+    /**
+     * <code>optional double max_soul_eggs = 29;</code>
+     * @return Whether the maxSoulEggs field is set.
+     */
+    public fun hasMaxSoulEggs(): kotlin.Boolean {
+      return _builder.hasMaxSoulEggs()
+    }
+
+    /**
      * <code>optional double min_mystical_bonus = 13;</code>
      */
     public var minMysticalBonus: kotlin.Double

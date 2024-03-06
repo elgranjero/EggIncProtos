@@ -160,6 +160,7 @@ proto.ei.ArtifactsDB.toObject = function(includeInstance, msg) {
     proto.ei.ArtifactsDB.ActiveArtifactSet.toObject, includeInstance),
     artifactStatusList: jspb.Message.toObjectList(msg.getArtifactStatusList(),
     proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
+    fuelingMission: (f = msg.getFuelingMission()) && proto.ei.MissionInfo.toObject(includeInstance, f),
     missionInfosList: jspb.Message.toObjectList(msg.getMissionInfosList(),
     proto.ei.MissionInfo.toObject, includeInstance),
     missionArchiveList: jspb.Message.toObjectList(msg.getMissionArchiveList(),
@@ -239,6 +240,11 @@ proto.ei.ArtifactsDB.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.ArtifactsDB.CraftableArtifact;
       reader.readMessage(value,proto.ei.ArtifactsDB.CraftableArtifact.deserializeBinaryFromReader);
       msg.addArtifactStatus(value);
+      break;
+    case 14:
+      var value = new proto.ei.MissionInfo;
+      reader.readMessage(value,proto.ei.MissionInfo.deserializeBinaryFromReader);
+      msg.setFuelingMission(value);
       break;
     case 4:
       var value = new proto.ei.MissionInfo;
@@ -347,6 +353,14 @@ proto.ei.ArtifactsDB.serializeBinaryToWriter = function(message, writer) {
       12,
       f,
       proto.ei.ArtifactsDB.CraftableArtifact.serializeBinaryToWriter
+    );
+  }
+  f = message.getFuelingMission();
+  if (f != null) {
+    writer.writeMessage(
+      14,
+      f,
+      proto.ei.MissionInfo.serializeBinaryToWriter
     );
   }
   f = message.getMissionInfosList();
@@ -1448,6 +1462,43 @@ proto.ei.ArtifactsDB.prototype.addArtifactStatus = function(opt_value, opt_index
  */
 proto.ei.ArtifactsDB.prototype.clearArtifactStatusList = function() {
   return this.setArtifactStatusList([]);
+};
+
+
+/**
+ * optional MissionInfo fueling_mission = 14;
+ * @return {?proto.ei.MissionInfo}
+ */
+proto.ei.ArtifactsDB.prototype.getFuelingMission = function() {
+  return /** @type{?proto.ei.MissionInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.MissionInfo, 14));
+};
+
+
+/**
+ * @param {?proto.ei.MissionInfo|undefined} value
+ * @return {!proto.ei.ArtifactsDB} returns this
+*/
+proto.ei.ArtifactsDB.prototype.setFuelingMission = function(value) {
+  return jspb.Message.setWrapperField(this, 14, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.ArtifactsDB} returns this
+ */
+proto.ei.ArtifactsDB.prototype.clearFuelingMission = function() {
+  return this.setFuelingMission(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsDB.prototype.hasFuelingMission = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 

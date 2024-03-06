@@ -605,6 +605,7 @@ typedef GPB_ENUM(MissionInfo_Spaceship) {
   MissionInfo_Spaceship_Chickfiant = 7,
   MissionInfo_Spaceship_Voyegger = 8,
   MissionInfo_Spaceship_Henerprise = 9,
+  MissionInfo_Spaceship_Atreggies = 10,
 };
 
 GPBEnumDescriptor *MissionInfo_Spaceship_EnumDescriptor(void);
@@ -5726,6 +5727,7 @@ typedef GPB_ENUM(InGameMail_FieldNumber) {
   InGameMail_FieldNumber_DaysUntilRetry = 26,
   InGameMail_FieldNumber_Priority = 27,
   InGameMail_FieldNumber_Category = 28,
+  InGameMail_FieldNumber_MaxSoulEggs = 29,
 };
 
 GPB_FINAL @interface InGameMail : GPBMessage
@@ -5787,6 +5789,9 @@ GPB_FINAL @interface InGameMail : GPBMessage
 @property(nonatomic, readwrite) double minSoulEggs;
 
 @property(nonatomic, readwrite) BOOL hasMinSoulEggs;
+@property(nonatomic, readwrite) double maxSoulEggs;
+
+@property(nonatomic, readwrite) BOOL hasMaxSoulEggs;
 @property(nonatomic, readwrite) double minMysticalBonus;
 
 @property(nonatomic, readwrite) BOOL hasMinMysticalBonus;
@@ -6733,6 +6738,24 @@ GPB_FINAL @interface MissionResponse : GPBMessage
 
 @end
 
+#pragma mark - GetActiveMissionsResponse
+
+typedef GPB_ENUM(GetActiveMissionsResponse_FieldNumber) {
+  GetActiveMissionsResponse_FieldNumber_Success = 1,
+  GetActiveMissionsResponse_FieldNumber_ActiveMissionsArray = 2,
+};
+
+GPB_FINAL @interface GetActiveMissionsResponse : GPBMessage
+
+@property(nonatomic, readwrite) BOOL success;
+
+@property(nonatomic, readwrite) BOOL hasSuccess;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<MissionInfo*> *activeMissionsArray;
+/** The number of items in @c activeMissionsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger activeMissionsArray_Count;
+
+@end
+
 #pragma mark - CompleteMissionResponse
 
 typedef GPB_ENUM(CompleteMissionResponse_FieldNumber) {
@@ -7071,6 +7094,7 @@ typedef GPB_ENUM(ArtifactsDB_FieldNumber) {
   ArtifactsDB_FieldNumber_ActiveArtifactSetsArray = 11,
   ArtifactsDB_FieldNumber_ArtifactStatusArray = 12,
   ArtifactsDB_FieldNumber_SavedArtifactSetsArray = 13,
+  ArtifactsDB_FieldNumber_FuelingMission = 14,
 };
 
 GPB_FINAL @interface ArtifactsDB : GPBMessage
@@ -7101,6 +7125,10 @@ GPB_FINAL @interface ArtifactsDB : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsDB_CraftableArtifact*> *artifactStatusArray;
 /** The number of items in @c artifactStatusArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger artifactStatusArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) MissionInfo *fuelingMission;
+/** Test to see if @c fuelingMission has been set. */
+@property(nonatomic, readwrite) BOOL hasFuelingMission;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<MissionInfo*> *missionInfosArray;
 /** The number of items in @c missionInfosArray without causing the array to be created. */

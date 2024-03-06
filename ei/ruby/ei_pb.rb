@@ -1172,6 +1172,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :min_client_version, :uint32, 10
       optional :max_client_version, :uint32, 12
       optional :min_soul_eggs, :double, 11
+      optional :max_soul_eggs, :double, 29
       optional :min_mystical_bonus, :double, 13
       optional :user_type, :enum, 17, "ei.UserType"
       optional :min_piggy_breaks, :uint32, 20
@@ -1326,6 +1327,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :CHICKFIANT, 7
       value :VOYEGGER, 8
       value :HENERPRISE, 9
+      value :ATREGGIES, 10
     end
     add_enum "ei.MissionInfo.Status" do
       value :FUELING, 0
@@ -1488,6 +1490,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :success, :bool, 1
       optional :info, :message, 2, "ei.MissionInfo"
     end
+    add_message "ei.GetActiveMissionsResponse" do
+      optional :success, :bool, 1
+      repeated :active_missions, :message, 2, "ei.MissionInfo"
+    end
     add_message "ei.CompleteMissionResponse" do
       optional :success, :bool, 1
       optional :info, :message, 2, "ei.MissionInfo"
@@ -1567,6 +1573,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :active_artifact_sets, :message, 11, "ei.ArtifactsDB.ActiveArtifactSet"
       repeated :saved_artifact_sets, :message, 13, "ei.ArtifactsDB.ActiveArtifactSet"
       repeated :artifact_status, :message, 12, "ei.ArtifactsDB.CraftableArtifact"
+      optional :fueling_mission, :message, 14, "ei.MissionInfo"
       repeated :mission_infos, :message, 4, "ei.MissionInfo"
       repeated :mission_archive, :message, 5, "ei.MissionInfo"
       repeated :discovered_artifacts_DEPRECATED, :message, 8, "ei.ArtifactSpec"
@@ -2375,6 +2382,7 @@ module Ei
   ArtifactsConfigurationResponse::CraftingLevelInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.ArtifactsConfigurationResponse.CraftingLevelInfo").msgclass
   MissionRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MissionRequest").msgclass
   MissionResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.MissionResponse").msgclass
+  GetActiveMissionsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GetActiveMissionsResponse").msgclass
   CompleteMissionResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CompleteMissionResponse").msgclass
   CompleteMissionResponse::SecureArtifactSpec = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CompleteMissionResponse.SecureArtifactSpec").msgclass
   CollectContractArtifactRewardsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CollectContractArtifactRewardsRequest").msgclass

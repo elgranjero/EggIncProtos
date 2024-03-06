@@ -14384,6 +14384,7 @@ BOOL LiveConfig_HelpConfig_HowToVideoInfo_Type_IsValidValue(int32_t value__) {
 @dynamic hasMinClientVersion, minClientVersion;
 @dynamic hasMaxClientVersion, maxClientVersion;
 @dynamic hasMinSoulEggs, minSoulEggs;
+@dynamic hasMaxSoulEggs, maxSoulEggs;
 @dynamic hasMinMysticalBonus, minMysticalBonus;
 @dynamic hasUserType, userType;
 @dynamic hasMinPiggyBreaks, minPiggyBreaks;
@@ -14422,6 +14423,7 @@ typedef struct InGameMail__storage_ {
   double imageHeight;
   double minDaysSinceLastTip;
   double daysUntilRetry;
+  double maxSoulEggs;
 } InGameMail__storage_;
 
 // This method is threadsafe because it is initially called
@@ -14479,7 +14481,7 @@ typedef struct InGameMail__storage_ {
         .name = "goldTip",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_GoldTip,
-        .hasIndex = 18,
+        .hasIndex = 19,
         .offset = (uint32_t)offsetof(InGameMail__storage_, goldTip),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -14542,7 +14544,7 @@ typedef struct InGameMail__storage_ {
         .name = "minMysticalBonus",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MinMysticalBonus,
-        .hasIndex = 15,
+        .hasIndex = 16,
         .offset = (uint32_t)offsetof(InGameMail__storage_, minMysticalBonus),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -14578,7 +14580,7 @@ typedef struct InGameMail__storage_ {
         .name = "userType",
         .dataTypeSpecific.enumDescFunc = UserType_EnumDescriptor,
         .number = InGameMail_FieldNumber_UserType,
-        .hasIndex = 16,
+        .hasIndex = 17,
         .offset = (uint32_t)offsetof(InGameMail__storage_, userType),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -14587,7 +14589,7 @@ typedef struct InGameMail__storage_ {
         .name = "minPiggyBreaks",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MinPiggyBreaks,
-        .hasIndex = 17,
+        .hasIndex = 18,
         .offset = (uint32_t)offsetof(InGameMail__storage_, minPiggyBreaks),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -14614,8 +14616,8 @@ typedef struct InGameMail__storage_ {
         .name = "tip",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_Tip,
-        .hasIndex = 19,
-        .offset = 20,  // Stored in _has_storage_ to save space.
+        .hasIndex = 20,
+        .offset = 21,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -14623,7 +14625,7 @@ typedef struct InGameMail__storage_ {
         .name = "minDaysSinceLastTip",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MinDaysSinceLastTip,
-        .hasIndex = 22,
+        .hasIndex = 23,
         .offset = (uint32_t)offsetof(InGameMail__storage_, minDaysSinceLastTip),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -14632,7 +14634,7 @@ typedef struct InGameMail__storage_ {
         .name = "maxRetries",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_MaxRetries,
-        .hasIndex = 23,
+        .hasIndex = 24,
         .offset = (uint32_t)offsetof(InGameMail__storage_, maxRetries),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -14641,7 +14643,7 @@ typedef struct InGameMail__storage_ {
         .name = "daysUntilRetry",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_DaysUntilRetry,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(InGameMail__storage_, daysUntilRetry),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -14650,7 +14652,7 @@ typedef struct InGameMail__storage_ {
         .name = "priority",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_Priority,
-        .hasIndex = 21,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(InGameMail__storage_, priority),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -14659,10 +14661,19 @@ typedef struct InGameMail__storage_ {
         .name = "category",
         .dataTypeSpecific.clazz = Nil,
         .number = InGameMail_FieldNumber_Category,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(InGameMail__storage_, category),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "maxSoulEggs",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_MaxSoulEggs,
+        .hasIndex = 15,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, maxSoulEggs),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -16276,7 +16287,8 @@ GPBEnumDescriptor *MissionInfo_Spaceship_EnumDescriptor(void) {
     static const char *valueNames =
         "ChickenOne\000ChickenNine\000ChickenHeavy\000Bcr\000"
         "MilleniumChicken\000CorellihenCorvette\000Gale"
-        "ggtica\000Chickfiant\000Voyegger\000Henerprise\000";
+        "ggtica\000Chickfiant\000Voyegger\000Henerprise\000At"
+        "reggies\000";
     static const int32_t values[] = {
         MissionInfo_Spaceship_ChickenOne,
         MissionInfo_Spaceship_ChickenNine,
@@ -16288,6 +16300,7 @@ GPBEnumDescriptor *MissionInfo_Spaceship_EnumDescriptor(void) {
         MissionInfo_Spaceship_Chickfiant,
         MissionInfo_Spaceship_Voyegger,
         MissionInfo_Spaceship_Henerprise,
+        MissionInfo_Spaceship_Atreggies,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(MissionInfo_Spaceship)
@@ -16315,6 +16328,7 @@ BOOL MissionInfo_Spaceship_IsValidValue(int32_t value__) {
     case MissionInfo_Spaceship_Chickfiant:
     case MissionInfo_Spaceship_Voyegger:
     case MissionInfo_Spaceship_Henerprise:
+    case MissionInfo_Spaceship_Atreggies:
       return YES;
     default:
       return NO;
@@ -17680,6 +17694,61 @@ typedef struct MissionResponse__storage_ {
 
 @end
 
+#pragma mark - GetActiveMissionsResponse
+
+@implementation GetActiveMissionsResponse
+
+@dynamic hasSuccess, success;
+@dynamic activeMissionsArray, activeMissionsArray_Count;
+
+typedef struct GetActiveMissionsResponse__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *activeMissionsArray;
+} GetActiveMissionsResponse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "success",
+        .dataTypeSpecific.clazz = Nil,
+        .number = GetActiveMissionsResponse_FieldNumber_Success,
+        .hasIndex = 0,
+        .offset = 1,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "activeMissionsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(MissionInfo),
+        .number = GetActiveMissionsResponse_FieldNumber_ActiveMissionsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(GetActiveMissionsResponse__storage_, activeMissionsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[GetActiveMissionsResponse class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(GetActiveMissionsResponse__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - CompleteMissionResponse
 
 @implementation CompleteMissionResponse
@@ -18587,6 +18656,7 @@ typedef struct SetArtifactResponse__storage_ {
 @dynamic activeArtifactSetsArray, activeArtifactSetsArray_Count;
 @dynamic savedArtifactSetsArray, savedArtifactSetsArray_Count;
 @dynamic artifactStatusArray, artifactStatusArray_Count;
+@dynamic hasFuelingMission, fuelingMission;
 @dynamic missionInfosArray, missionInfosArray_Count;
 @dynamic missionArchiveArray, missionArchiveArray_Count;
 @dynamic discoveredArtifactsDeprecatedArray, discoveredArtifactsDeprecatedArray_Count;
@@ -18606,6 +18676,7 @@ typedef struct ArtifactsDB__storage_ {
   NSMutableArray *activeArtifactSetsArray;
   NSMutableArray *artifactStatusArray;
   NSMutableArray *savedArtifactSetsArray;
+  MissionInfo *fuelingMission;
   uint64_t itemSequence;
 } ArtifactsDB__storage_;
 
@@ -18721,6 +18792,15 @@ typedef struct ArtifactsDB__storage_ {
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(ArtifactsDB__storage_, savedArtifactSetsArray),
         .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "fuelingMission",
+        .dataTypeSpecific.clazz = GPBObjCClass(MissionInfo),
+        .number = ArtifactsDB_FieldNumber_FuelingMission,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ArtifactsDB__storage_, fuelingMission),
+        .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
     };

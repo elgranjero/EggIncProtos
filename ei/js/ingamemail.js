@@ -96,6 +96,7 @@ proto.ei.InGameMail.toObject = function(includeInstance, msg) {
     minClientVersion: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
     maxClientVersion: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     minSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    maxSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 29)) == null ? undefined : f,
     minMysticalBonus: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
     userType: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
     minPiggyBreaks: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
@@ -206,6 +207,10 @@ proto.ei.InGameMail.deserializeBinaryFromReader = function(msg, reader) {
     case 11:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setMinSoulEggs(value);
+      break;
+    case 29:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMaxSoulEggs(value);
       break;
     case 13:
       var value = /** @type {number} */ (reader.readDouble());
@@ -386,6 +391,13 @@ proto.ei.InGameMail.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       11,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 29));
+  if (f != null) {
+    writer.writeDouble(
+      29,
       f
     );
   }
@@ -1037,6 +1049,42 @@ proto.ei.InGameMail.prototype.clearMinSoulEggs = function() {
  */
 proto.ei.InGameMail.prototype.hasMinSoulEggs = function() {
   return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional double max_soul_eggs = 29;
+ * @return {number}
+ */
+proto.ei.InGameMail.prototype.getMaxSoulEggs = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 29, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setMaxSoulEggs = function(value) {
+  return jspb.Message.setField(this, 29, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearMaxSoulEggs = function() {
+  return jspb.Message.setField(this, 29, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasMaxSoulEggs = function() {
+  return jspb.Message.getField(this, 29) != null;
 };
 
 

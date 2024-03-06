@@ -344,7 +344,8 @@ proto.ei.MissionInfo.Spaceship = {
   GALEGGTICA: 6,
   CHICKFIANT: 7,
   VOYEGGER: 8,
-  HENERPRISE: 9
+  HENERPRISE: 9,
+  ATREGGIES: 10
 };
 
 /**

@@ -107,6 +107,7 @@
     - [GameModifier](#ei-GameModifier)
     - [GenericAction](#ei-GenericAction)
     - [GenericActionBatchRequest](#ei-GenericActionBatchRequest)
+    - [GetActiveMissionsResponse](#ei-GetActiveMissionsResponse)
     - [GetPeriodicalsRequest](#ei-GetPeriodicalsRequest)
     - [GiftPlayerCoopRequest](#ei-GiftPlayerCoopRequest)
     - [IAPSaleEntry](#ei-IAPSaleEntry)
@@ -596,6 +597,7 @@
 | active_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
 | saved_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
 | artifact_status | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
+| fueling_mission | [MissionInfo](#ei-MissionInfo) | optional |  |
 | mission_infos | [MissionInfo](#ei-MissionInfo) | repeated |  |
 | mission_archive | [MissionInfo](#ei-MissionInfo) | repeated |  |
 | discovered_artifacts_DEPRECATED | [ArtifactSpec](#ei-ArtifactSpec) | repeated |  |
@@ -2456,6 +2458,22 @@
 
 
 
+<a name="ei-GetActiveMissionsResponse"></a>
+
+### GetActiveMissionsResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| success | [bool](#bool) | optional |  |
+| active_missions | [MissionInfo](#ei-MissionInfo) | repeated |  |
+
+
+
+
+
+
 <a name="ei-GetPeriodicalsRequest"></a>
 
 ### GetPeriodicalsRequest
@@ -2548,6 +2566,7 @@
 | min_client_version | [uint32](#uint32) | optional |  |
 | max_client_version | [uint32](#uint32) | optional |  |
 | min_soul_eggs | [double](#double) | optional |  |
+| max_soul_eggs | [double](#double) | optional |  |
 | min_mystical_bonus | [double](#double) | optional |  |
 | user_type | [UserType](#ei-UserType) | optional |  |
 | min_piggy_breaks | [uint32](#uint32) | optional |  |
@@ -4761,6 +4780,7 @@
 | CHICKFIANT | 7 |  |
 | VOYEGGER | 8 |  |
 | HENERPRISE | 9 |  |
+| ATREGGIES | 10 |  |
 
 
 

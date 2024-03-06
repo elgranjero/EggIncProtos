@@ -479,6 +479,32 @@ public object ArtifactsDBKt {
 
 
     /**
+     * <code>optional .ei.MissionInfo fueling_mission = 14;</code>
+     */
+    public var fuelingMission: ei.Ei.MissionInfo
+      @JvmName("getFuelingMission")
+      get() = _builder.getFuelingMission()
+      @JvmName("setFuelingMission")
+      set(value) {
+        _builder.setFuelingMission(value)
+      }
+    /**
+     * <code>optional .ei.MissionInfo fueling_mission = 14;</code>
+     */
+    public fun clearFuelingMission() {
+      _builder.clearFuelingMission()
+    }
+    /**
+     * <code>optional .ei.MissionInfo fueling_mission = 14;</code>
+     * @return Whether the fuelingMission field is set.
+     */
+    public fun hasFuelingMission(): kotlin.Boolean {
+      return _builder.hasFuelingMission()
+    }
+    public val ArtifactsDBKt.Dsl.fuelingMissionOrNull: ei.Ei.MissionInfo?
+      get() = _builder.fuelingMissionOrNull
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */
@@ -1207,4 +1233,7 @@ public inline fun ei.Ei.ArtifactsDB.CraftableArtifact.copy(block: ei.ArtifactsDB
 
 val ei.Ei.ArtifactsDB.CraftableArtifactOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
   get() = if (hasSpec()) getSpec() else null
+
+val ei.Ei.ArtifactsDBOrBuilder.fuelingMissionOrNull: ei.Ei.MissionInfo?
+  get() = if (hasFuelingMission()) getFuelingMission() else null
 
