@@ -60,6 +60,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :max_enabled, :bool, 26
       optional :hide_cc_status, :bool, 28
       optional :contracts_widget_enabled, :bool, 29
+      optional :artifact_sparkle, :bool, 30
       optional :last_backup_time, :double, 24
       optional :coppa_queried, :bool, 7
       optional :coppa_restricted, :bool, 8

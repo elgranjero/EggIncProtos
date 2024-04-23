@@ -1025,6 +1025,7 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     maxEnabled: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
     hideCcStatus: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
     contractsWidgetEnabled: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
+    artifactSparkle: (f = jspb.Message.getBooleanField(msg, 30)) == null ? undefined : f,
     lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
     coppaQueried: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     coppaRestricted: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
@@ -1131,6 +1132,10 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 29:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setContractsWidgetEnabled(value);
+      break;
+    case 30:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setArtifactSparkle(value);
       break;
     case 24:
       var value = /** @type {number} */ (reader.readDouble());
@@ -1316,6 +1321,13 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       29,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 30));
+  if (f != null) {
+    writer.writeBool(
+      30,
       f
     );
   }
@@ -1928,6 +1940,42 @@ proto.ei.Backup.Settings.prototype.clearContractsWidgetEnabled = function() {
  */
 proto.ei.Backup.Settings.prototype.hasContractsWidgetEnabled = function() {
   return jspb.Message.getField(this, 29) != null;
+};
+
+
+/**
+ * optional bool artifact_sparkle = 30;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getArtifactSparkle = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 30, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setArtifactSparkle = function(value) {
+  return jspb.Message.setField(this, 30, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearArtifactSparkle = function() {
+  return jspb.Message.setField(this, 30, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasArtifactSparkle = function() {
+  return jspb.Message.getField(this, 30) != null;
 };
 
 

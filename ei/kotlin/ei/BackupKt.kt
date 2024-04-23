@@ -1146,6 +1146,30 @@ public object BackupKt {
       }
 
       /**
+       * <code>optional bool artifact_sparkle = 30;</code>
+       */
+      public var artifactSparkle: kotlin.Boolean
+        @JvmName("getArtifactSparkle")
+        get() = _builder.getArtifactSparkle()
+        @JvmName("setArtifactSparkle")
+        set(value) {
+          _builder.setArtifactSparkle(value)
+        }
+      /**
+       * <code>optional bool artifact_sparkle = 30;</code>
+       */
+      public fun clearArtifactSparkle() {
+        _builder.clearArtifactSparkle()
+      }
+      /**
+       * <code>optional bool artifact_sparkle = 30;</code>
+       * @return Whether the artifactSparkle field is set.
+       */
+      public fun hasArtifactSparkle(): kotlin.Boolean {
+        return _builder.hasArtifactSparkle()
+      }
+
+      /**
        * <code>optional double last_backup_time = 24;</code>
        */
       public var lastBackupTime: kotlin.Double

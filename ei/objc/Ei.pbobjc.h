@@ -1252,6 +1252,7 @@ typedef GPB_ENUM(Backup_Settings_FieldNumber) {
   Backup_Settings_FieldNumber_LastNotificationQueryTime = 27,
   Backup_Settings_FieldNumber_HideCcStatus = 28,
   Backup_Settings_FieldNumber_ContractsWidgetEnabled = 29,
+  Backup_Settings_FieldNumber_ArtifactSparkle = 30,
 };
 
 GPB_FINAL @interface Backup_Settings : GPBMessage
@@ -1298,6 +1299,9 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 @property(nonatomic, readwrite) BOOL contractsWidgetEnabled;
 
 @property(nonatomic, readwrite) BOOL hasContractsWidgetEnabled;
+@property(nonatomic, readwrite) BOOL artifactSparkle;
+
+@property(nonatomic, readwrite) BOOL hasArtifactSparkle;
 @property(nonatomic, readwrite) double lastBackupTime;
 
 @property(nonatomic, readwrite) BOOL hasLastBackupTime;

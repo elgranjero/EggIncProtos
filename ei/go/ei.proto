@@ -65,6 +65,7 @@ message Backup {
         optional bool max_enabled = 26;
         optional bool hide_cc_status = 28;
         optional bool contracts_widget_enabled = 29;
+        optional bool artifact_sparkle = 30;
         optional double last_backup_time = 24;
         optional bool coppa_queried = 7;
         optional bool coppa_restricted = 8;
