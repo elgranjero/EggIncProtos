@@ -1028,6 +1028,7 @@
 | max_enabled | [bool](#bool) | optional |  |
 | hide_cc_status | [bool](#bool) | optional |  |
 | contracts_widget_enabled | [bool](#bool) | optional |  |
+| artifact_sparkle | [bool](#bool) | optional |  |
 | last_backup_time | [double](#double) | optional |  |
 | coppa_queried | [bool](#bool) | optional |  |
 | coppa_restricted | [bool](#bool) | optional |  |
