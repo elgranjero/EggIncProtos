@@ -71,27 +71,51 @@ public object ArtifactsClientInfoKt {
     }
 
     /**
-     * <code>optional double mission_ftl_duration_mult = 4;</code>
+     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
      */
-    public var missionFtlDurationMult: kotlin.Double
-      @JvmName("getMissionFtlDurationMult")
-      get() = _builder.getMissionFtlDurationMult()
-      @JvmName("setMissionFtlDurationMult")
+    public var missionFtlDurationResearchMult: kotlin.Double
+      @JvmName("getMissionFtlDurationResearchMult")
+      get() = _builder.getMissionFtlDurationResearchMult()
+      @JvmName("setMissionFtlDurationResearchMult")
       set(value) {
-        _builder.setMissionFtlDurationMult(value)
+        _builder.setMissionFtlDurationResearchMult(value)
       }
     /**
-     * <code>optional double mission_ftl_duration_mult = 4;</code>
+     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
      */
-    public fun clearMissionFtlDurationMult() {
-      _builder.clearMissionFtlDurationMult()
+    public fun clearMissionFtlDurationResearchMult() {
+      _builder.clearMissionFtlDurationResearchMult()
     }
     /**
-     * <code>optional double mission_ftl_duration_mult = 4;</code>
-     * @return Whether the missionFtlDurationMult field is set.
+     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
+     * @return Whether the missionFtlDurationResearchMult field is set.
      */
-    public fun hasMissionFtlDurationMult(): kotlin.Boolean {
-      return _builder.hasMissionFtlDurationMult()
+    public fun hasMissionFtlDurationResearchMult(): kotlin.Boolean {
+      return _builder.hasMissionFtlDurationResearchMult()
+    }
+
+    /**
+     * <code>optional double mission_capacity_research_mult = 6;</code>
+     */
+    public var missionCapacityResearchMult: kotlin.Double
+      @JvmName("getMissionCapacityResearchMult")
+      get() = _builder.getMissionCapacityResearchMult()
+      @JvmName("setMissionCapacityResearchMult")
+      set(value) {
+        _builder.setMissionCapacityResearchMult(value)
+      }
+    /**
+     * <code>optional double mission_capacity_research_mult = 6;</code>
+     */
+    public fun clearMissionCapacityResearchMult() {
+      _builder.clearMissionCapacityResearchMult()
+    }
+    /**
+     * <code>optional double mission_capacity_research_mult = 6;</code>
+     * @return Whether the missionCapacityResearchMult field is set.
+     */
+    public fun hasMissionCapacityResearchMult(): kotlin.Boolean {
+      return _builder.hasMissionCapacityResearchMult()
     }
 
     /**
@@ -165,6 +189,30 @@ public object ArtifactsClientInfoKt {
       _builder.clearLaunchCounts()
     }
 
+
+    /**
+     * <code>optional double last_server_launch_count_sum_time = 5;</code>
+     */
+    public var lastServerLaunchCountSumTime: kotlin.Double
+      @JvmName("getLastServerLaunchCountSumTime")
+      get() = _builder.getLastServerLaunchCountSumTime()
+      @JvmName("setLastServerLaunchCountSumTime")
+      set(value) {
+        _builder.setLastServerLaunchCountSumTime(value)
+      }
+    /**
+     * <code>optional double last_server_launch_count_sum_time = 5;</code>
+     */
+    public fun clearLastServerLaunchCountSumTime() {
+      _builder.clearLastServerLaunchCountSumTime()
+    }
+    /**
+     * <code>optional double last_server_launch_count_sum_time = 5;</code>
+     * @return Whether the lastServerLaunchCountSumTime field is set.
+     */
+    public fun hasLastServerLaunchCountSumTime(): kotlin.Boolean {
+      return _builder.hasLastServerLaunchCountSumTime()
+    }
   }
   @kotlin.jvm.JvmName("-initializelaunchCount")
   public inline fun launchCount(block: ei.ArtifactsClientInfoKt.LaunchCountKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsClientInfo.LaunchCount =

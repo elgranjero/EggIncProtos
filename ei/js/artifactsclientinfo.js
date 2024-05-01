@@ -102,9 +102,11 @@ proto.ei.ArtifactsClientInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     missionCapacityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
     missionDurationMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    missionFtlDurationMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    missionFtlDurationResearchMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    missionCapacityResearchMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     launchCountsList: jspb.Message.toObjectList(msg.getLaunchCountsList(),
-    proto.ei.ArtifactsClientInfo.LaunchCount.toObject, includeInstance)
+    proto.ei.ArtifactsClientInfo.LaunchCount.toObject, includeInstance),
+    lastServerLaunchCountSumTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -151,12 +153,20 @@ proto.ei.ArtifactsClientInfo.deserializeBinaryFromReader = function(msg, reader)
       break;
     case 4:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setMissionFtlDurationMult(value);
+      msg.setMissionFtlDurationResearchMult(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMissionCapacityResearchMult(value);
       break;
     case 3:
       var value = new proto.ei.ArtifactsClientInfo.LaunchCount;
       reader.readMessage(value,proto.ei.ArtifactsClientInfo.LaunchCount.deserializeBinaryFromReader);
       msg.addLaunchCounts(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setLastServerLaunchCountSumTime(value);
       break;
     default:
       reader.skipField();
@@ -208,12 +218,26 @@ proto.ei.ArtifactsClientInfo.serializeBinaryToWriter = function(message, writer)
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeDouble(
+      6,
+      f
+    );
+  }
   f = message.getLaunchCountsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
       f,
       proto.ei.ArtifactsClientInfo.LaunchCount.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeDouble(
+      5,
+      f
     );
   }
 };
@@ -536,10 +560,10 @@ proto.ei.ArtifactsClientInfo.prototype.hasMissionDurationMult = function() {
 
 
 /**
- * optional double mission_ftl_duration_mult = 4;
+ * optional double mission_ftl_duration_research_mult = 4;
  * @return {number}
  */
-proto.ei.ArtifactsClientInfo.prototype.getMissionFtlDurationMult = function() {
+proto.ei.ArtifactsClientInfo.prototype.getMissionFtlDurationResearchMult = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
@@ -548,7 +572,7 @@ proto.ei.ArtifactsClientInfo.prototype.getMissionFtlDurationMult = function() {
  * @param {number} value
  * @return {!proto.ei.ArtifactsClientInfo} returns this
  */
-proto.ei.ArtifactsClientInfo.prototype.setMissionFtlDurationMult = function(value) {
+proto.ei.ArtifactsClientInfo.prototype.setMissionFtlDurationResearchMult = function(value) {
   return jspb.Message.setField(this, 4, value);
 };
 
@@ -557,7 +581,7 @@ proto.ei.ArtifactsClientInfo.prototype.setMissionFtlDurationMult = function(valu
  * Clears the field making it undefined.
  * @return {!proto.ei.ArtifactsClientInfo} returns this
  */
-proto.ei.ArtifactsClientInfo.prototype.clearMissionFtlDurationMult = function() {
+proto.ei.ArtifactsClientInfo.prototype.clearMissionFtlDurationResearchMult = function() {
   return jspb.Message.setField(this, 4, undefined);
 };
 
@@ -566,8 +590,44 @@ proto.ei.ArtifactsClientInfo.prototype.clearMissionFtlDurationMult = function() 
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ArtifactsClientInfo.prototype.hasMissionFtlDurationMult = function() {
+proto.ei.ArtifactsClientInfo.prototype.hasMissionFtlDurationResearchMult = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional double mission_capacity_research_mult = 6;
+ * @return {number}
+ */
+proto.ei.ArtifactsClientInfo.prototype.getMissionCapacityResearchMult = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ArtifactsClientInfo} returns this
+ */
+proto.ei.ArtifactsClientInfo.prototype.setMissionCapacityResearchMult = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ArtifactsClientInfo} returns this
+ */
+proto.ei.ArtifactsClientInfo.prototype.clearMissionCapacityResearchMult = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsClientInfo.prototype.hasMissionCapacityResearchMult = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -606,6 +666,42 @@ proto.ei.ArtifactsClientInfo.prototype.addLaunchCounts = function(opt_value, opt
  */
 proto.ei.ArtifactsClientInfo.prototype.clearLaunchCountsList = function() {
   return this.setLaunchCountsList([]);
+};
+
+
+/**
+ * optional double last_server_launch_count_sum_time = 5;
+ * @return {number}
+ */
+proto.ei.ArtifactsClientInfo.prototype.getLastServerLaunchCountSumTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ArtifactsClientInfo} returns this
+ */
+proto.ei.ArtifactsClientInfo.prototype.setLastServerLaunchCountSumTime = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ArtifactsClientInfo} returns this
+ */
+proto.ei.ArtifactsClientInfo.prototype.clearLastServerLaunchCountSumTime = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ArtifactsClientInfo.prototype.hasLastServerLaunchCountSumTime = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

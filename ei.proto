@@ -1451,7 +1451,8 @@ message AdAttributionInfo {
 message ArtifactsClientInfo {
     optional double mission_capacity_mult = 1;
     optional double mission_duration_mult = 2;
-    optional double mission_ftl_duration_mult = 4;
+    optional double mission_ftl_duration_research_mult = 4;
+    optional double mission_capacity_research_mult = 6;
     
     repeated LaunchCount launch_counts = 3;
     message LaunchCount {
@@ -1459,6 +1460,8 @@ message ArtifactsClientInfo {
         optional uint32 num_launches = 2;
         optional double launch_points = 3;
     }
+    
+    optional double last_server_launch_count_sum_time = 5;
 }
 
 message MissionInfo {

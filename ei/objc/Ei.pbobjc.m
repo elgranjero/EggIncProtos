@@ -15973,15 +15973,19 @@ typedef struct AdAttributionInfo__storage_ {
 
 @dynamic hasMissionCapacityMult, missionCapacityMult;
 @dynamic hasMissionDurationMult, missionDurationMult;
-@dynamic hasMissionFtlDurationMult, missionFtlDurationMult;
+@dynamic hasMissionFtlDurationResearchMult, missionFtlDurationResearchMult;
+@dynamic hasMissionCapacityResearchMult, missionCapacityResearchMult;
 @dynamic launchCountsArray, launchCountsArray_Count;
+@dynamic hasLastServerLaunchCountSumTime, lastServerLaunchCountSumTime;
 
 typedef struct ArtifactsClientInfo__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *launchCountsArray;
   double missionCapacityMult;
   double missionDurationMult;
-  double missionFtlDurationMult;
+  double missionFtlDurationResearchMult;
+  double lastServerLaunchCountSumTime;
+  double missionCapacityResearchMult;
 } ArtifactsClientInfo__storage_;
 
 // This method is threadsafe because it is initially called
@@ -16018,11 +16022,29 @@ typedef struct ArtifactsClientInfo__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "missionFtlDurationMult",
+        .name = "missionFtlDurationResearchMult",
         .dataTypeSpecific.clazz = Nil,
-        .number = ArtifactsClientInfo_FieldNumber_MissionFtlDurationMult,
+        .number = ArtifactsClientInfo_FieldNumber_MissionFtlDurationResearchMult,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ArtifactsClientInfo__storage_, missionFtlDurationMult),
+        .offset = (uint32_t)offsetof(ArtifactsClientInfo__storage_, missionFtlDurationResearchMult),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "lastServerLaunchCountSumTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsClientInfo_FieldNumber_LastServerLaunchCountSumTime,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ArtifactsClientInfo__storage_, lastServerLaunchCountSumTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "missionCapacityResearchMult",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ArtifactsClientInfo_FieldNumber_MissionCapacityResearchMult,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ArtifactsClientInfo__storage_, missionCapacityResearchMult),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },

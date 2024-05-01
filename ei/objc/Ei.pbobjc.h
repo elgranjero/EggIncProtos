@@ -6308,7 +6308,9 @@ typedef GPB_ENUM(ArtifactsClientInfo_FieldNumber) {
   ArtifactsClientInfo_FieldNumber_MissionCapacityMult = 1,
   ArtifactsClientInfo_FieldNumber_MissionDurationMult = 2,
   ArtifactsClientInfo_FieldNumber_LaunchCountsArray = 3,
-  ArtifactsClientInfo_FieldNumber_MissionFtlDurationMult = 4,
+  ArtifactsClientInfo_FieldNumber_MissionFtlDurationResearchMult = 4,
+  ArtifactsClientInfo_FieldNumber_LastServerLaunchCountSumTime = 5,
+  ArtifactsClientInfo_FieldNumber_MissionCapacityResearchMult = 6,
 };
 
 GPB_FINAL @interface ArtifactsClientInfo : GPBMessage
@@ -6319,13 +6321,19 @@ GPB_FINAL @interface ArtifactsClientInfo : GPBMessage
 @property(nonatomic, readwrite) double missionDurationMult;
 
 @property(nonatomic, readwrite) BOOL hasMissionDurationMult;
-@property(nonatomic, readwrite) double missionFtlDurationMult;
+@property(nonatomic, readwrite) double missionFtlDurationResearchMult;
 
-@property(nonatomic, readwrite) BOOL hasMissionFtlDurationMult;
+@property(nonatomic, readwrite) BOOL hasMissionFtlDurationResearchMult;
+@property(nonatomic, readwrite) double missionCapacityResearchMult;
+
+@property(nonatomic, readwrite) BOOL hasMissionCapacityResearchMult;
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ArtifactsClientInfo_LaunchCount*> *launchCountsArray;
 /** The number of items in @c launchCountsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger launchCountsArray_Count;
 
+@property(nonatomic, readwrite) double lastServerLaunchCountSumTime;
+
+@property(nonatomic, readwrite) BOOL hasLastServerLaunchCountSumTime;
 @end
 
 #pragma mark - ArtifactsClientInfo_LaunchCount

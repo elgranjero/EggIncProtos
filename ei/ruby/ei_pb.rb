@@ -1290,8 +1290,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "ei.ArtifactsClientInfo" do
       optional :mission_capacity_mult, :double, 1
       optional :mission_duration_mult, :double, 2
-      optional :mission_ftl_duration_mult, :double, 4
+      optional :mission_ftl_duration_research_mult, :double, 4
+      optional :mission_capacity_research_mult, :double, 6
       repeated :launch_counts, :message, 3, "ei.ArtifactsClientInfo.LaunchCount"
+      optional :last_server_launch_count_sum_time, :double, 5
     end
     add_message "ei.ArtifactsClientInfo.LaunchCount" do
       optional :ship, :enum, 1, "ei.MissionInfo.Spaceship"
