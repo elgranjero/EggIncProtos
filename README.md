@@ -445,8 +445,10 @@
 | ----- | ---- | ----- | ----------- |
 | mission_capacity_mult | [double](#double) | optional |  |
 | mission_duration_mult | [double](#double) | optional |  |
-| mission_ftl_duration_mult | [double](#double) | optional |  |
+| mission_ftl_duration_research_mult | [double](#double) | optional |  |
+| mission_capacity_research_mult | [double](#double) | optional |  |
 | launch_counts | [ArtifactsClientInfo.LaunchCount](#ei-ArtifactsClientInfo-LaunchCount) | repeated |  |
+| last_server_launch_count_sum_time | [double](#double) | optional |  |
 
 
 
