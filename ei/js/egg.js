@@ -41,6 +41,7 @@ proto.ei.Egg = {
   WATERBALLOON: 102,
   FIREWORK: 103,
   PUMPKIN: 104,
+  CUSTOM_EGG: 200,
   UNKNOWN: 1000
 };
 

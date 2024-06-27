@@ -179,6 +179,7 @@ proto.ei.GameModifier.serializeBinaryToWriter = function(message, writer) {
  * @enum {number}
  */
 proto.ei.GameModifier.GameDimension = {
+  INVALID: 0,
   EARNINGS: 1,
   AWAY_EARNINGS: 2,
   INTERNAL_HATCHERY_RATE: 3,
@@ -195,7 +196,7 @@ proto.ei.GameModifier.GameDimension = {
  * @return {!proto.ei.GameModifier.GameDimension}
  */
 proto.ei.GameModifier.prototype.getDimension = function() {
-  return /** @type {!proto.ei.GameModifier.GameDimension} */ (jspb.Message.getFieldWithDefault(this, 1, 1));
+  return /** @type {!proto.ei.GameModifier.GameDimension} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 

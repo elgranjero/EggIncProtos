@@ -240,6 +240,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :backup_reminder_alert, :bool, 19
       optional :max_button_alert, :bool, 23
       optional :mission_target_alert, :bool, 24
+      optional :colleggtibles_alert, :bool, 25
     end
     add_message "ei.Backup.ResearchItem" do
       optional :id, :string, 1
@@ -434,6 +435,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :description, :string, 3
     end
     add_enum "ei.GameModifier.GameDimension" do
+      value :INVALID, 0
       value :EARNINGS, 1
       value :AWAY_EARNINGS, 2
       value :INTERNAL_HATCHERY_RATE, 3
@@ -444,11 +446,24 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :HAB_COST, 8
       value :RESEARCH_COST, 9
     end
+    add_message "ei.CustomEgg" do
+      optional :identifier, :string, 1
+      optional :name, :string, 2
+      optional :description, :string, 3
+      optional :value, :double, 4
+      optional :hatchery_id, :string, 5
+      optional :hatchery_max_x, :double, 6
+      optional :icon, :message, 7, "ei.DLCItem"
+      optional :icon_width, :double, 21
+      optional :icon_height, :double, 22
+      repeated :buffs, :message, 8, "ei.GameModifier"
+    end
     add_message "ei.Contract" do
       optional :identifier, :string, 1
       optional :name, :string, 9
       optional :description, :string, 10
       optional :egg, :enum, 2, "ei.Egg"
+      optional :custom_egg_id, :string, 25
       repeated :goals, :message, 3, "ei.Contract.Goal"
       repeated :goal_sets, :message, 16, "ei.Contract.GoalSet"
       repeated :grade_specs, :message, 20, "ei.Contract.GradeSpec"
@@ -641,6 +656,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "ei.ContractsResponse" do
       repeated :contracts, :message, 1, "ei.Contract"
+      repeated :custom_eggs, :message, 6, "ei.CustomEgg"
       optional :warning_message, :string, 4
       optional :total_eop, :double, 5
       optional :server_time, :double, 2
@@ -784,6 +800,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :coop_share_farm, :bool, 17
       optional :last_amount_when_reward_given, :double, 6
       optional :num_goals_achieved, :uint32, 14
+      optional :max_farm_size_reached, :double, 23
       optional :boosts_used, :uint32, 12
       optional :points_replay, :bool, 20
       optional :league, :uint32, 15
@@ -801,6 +818,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :initial_grade_revealed, :bool, 6
       optional :last_grade_progress_shown, :double, 7
       optional :show_advanced_evaluations, :bool, 8
+      repeated :custom_egg_info, :message, 9, "ei.CustomEgg"
     end
     add_message "ei.QueryCoopRequest" do
       optional :rinfo, :message, 5, "ei.BasicRequestInfo"
@@ -1748,6 +1766,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :HATCHERY_WATERBALLOON, 141
       value :HATCHERY_FIREWORK, 142
       value :HATCHERY_PUMPKIN, 143
+      value :HATCHERY_CUSTOM, 150
       value :HOA_1, 170
       value :HOA_2, 171
       value :HOA_3, 172
@@ -2156,6 +2175,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :WATERBALLOON, 102
       value :FIREWORK, 103
       value :PUMPKIN, 104
+      value :CUSTOM_EGG, 200
       value :UNKNOWN, 1000
     end
     add_enum "ei.FarmType" do
@@ -2267,6 +2287,7 @@ module Ei
   Reward = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Reward").msgclass
   GameModifier = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameModifier").msgclass
   GameModifier::GameDimension = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.GameModifier.GameDimension").enummodule
+  CustomEgg = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.CustomEgg").msgclass
   Contract = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract").msgclass
   Contract::Goal = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.Goal").msgclass
   Contract::GoalSet = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("ei.Contract.GoalSet").msgclass

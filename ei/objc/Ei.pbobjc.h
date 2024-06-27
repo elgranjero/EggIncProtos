@@ -85,6 +85,7 @@ CF_EXTERN_C_BEGIN
 @class CraftArtifactRequest;
 @class CraftArtifactResponse;
 @class CurrencyFlowLog;
+@class CustomEgg;
 @class DLCCatalog;
 @class DLCItem;
 @class DeviceInfo;
@@ -229,6 +230,7 @@ typedef GPB_ENUM(Egg) {
   Egg_Waterballoon = 102,
   Egg_Firework = 103,
   Egg_Pumpkin = 104,
+  Egg_CustomEgg = 200,
   Egg_Unknown = 1000,
 };
 
@@ -391,6 +393,7 @@ BOOL EggIncFirstContactResponse_ErrorCodes_IsValidValue(int32_t value);
 #pragma mark - Enum GameModifier_GameDimension
 
 typedef GPB_ENUM(GameModifier_GameDimension) {
+  GameModifier_GameDimension_Invalid = 0,
   GameModifier_GameDimension_Earnings = 1,
   GameModifier_GameDimension_AwayEarnings = 2,
   GameModifier_GameDimension_InternalHatcheryRate = 3,
@@ -861,6 +864,7 @@ typedef GPB_ENUM(ShellSpec_AssetType) {
   ShellSpec_AssetType_HatcheryWaterballoon = 141,
   ShellSpec_AssetType_HatcheryFirework = 142,
   ShellSpec_AssetType_HatcheryPumpkin = 143,
+  ShellSpec_AssetType_HatcheryCustom = 150,
   ShellSpec_AssetType_Hoa1 = 170,
   ShellSpec_AssetType_Hoa2 = 171,
   ShellSpec_AssetType_Hoa3 = 172,
@@ -1961,6 +1965,7 @@ typedef GPB_ENUM(Backup_Misc_FieldNumber) {
   Backup_Misc_FieldNumber_CoopAlertV2 = 22,
   Backup_Misc_FieldNumber_MaxButtonAlert = 23,
   Backup_Misc_FieldNumber_MissionTargetAlert = 24,
+  Backup_Misc_FieldNumber_ColleggtiblesAlert = 25,
 };
 
 GPB_FINAL @interface Backup_Misc : GPBMessage
@@ -2037,6 +2042,9 @@ GPB_FINAL @interface Backup_Misc : GPBMessage
 @property(nonatomic, readwrite) BOOL missionTargetAlert;
 
 @property(nonatomic, readwrite) BOOL hasMissionTargetAlert;
+@property(nonatomic, readwrite) BOOL colleggtiblesAlert;
+
+@property(nonatomic, readwrite) BOOL hasColleggtiblesAlert;
 @end
 
 #pragma mark - Backup_ResearchItem
@@ -2875,6 +2883,61 @@ GPB_FINAL @interface GameModifier : GPBMessage
 
 @end
 
+#pragma mark - CustomEgg
+
+typedef GPB_ENUM(CustomEgg_FieldNumber) {
+  CustomEgg_FieldNumber_Identifier = 1,
+  CustomEgg_FieldNumber_Name = 2,
+  CustomEgg_FieldNumber_Description_p = 3,
+  CustomEgg_FieldNumber_Value = 4,
+  CustomEgg_FieldNumber_HatcheryId = 5,
+  CustomEgg_FieldNumber_HatcheryMaxX = 6,
+  CustomEgg_FieldNumber_Icon = 7,
+  CustomEgg_FieldNumber_BuffsArray = 8,
+  CustomEgg_FieldNumber_IconWidth = 21,
+  CustomEgg_FieldNumber_IconHeight = 22,
+};
+
+GPB_FINAL @interface CustomEgg : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *identifier;
+/** Test to see if @c identifier has been set. */
+@property(nonatomic, readwrite) BOOL hasIdentifier;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+/** Test to see if @c name has been set. */
+@property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
+
+@property(nonatomic, readwrite) double value;
+
+@property(nonatomic, readwrite) BOOL hasValue;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *hatcheryId;
+/** Test to see if @c hatcheryId has been set. */
+@property(nonatomic, readwrite) BOOL hasHatcheryId;
+
+@property(nonatomic, readwrite) double hatcheryMaxX;
+
+@property(nonatomic, readwrite) BOOL hasHatcheryMaxX;
+@property(nonatomic, readwrite, strong, null_resettable) DLCItem *icon;
+/** Test to see if @c icon has been set. */
+@property(nonatomic, readwrite) BOOL hasIcon;
+
+@property(nonatomic, readwrite) double iconWidth;
+
+@property(nonatomic, readwrite) BOOL hasIconWidth;
+@property(nonatomic, readwrite) double iconHeight;
+
+@property(nonatomic, readwrite) BOOL hasIconHeight;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<GameModifier*> *buffsArray;
+/** The number of items in @c buffsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger buffsArray_Count;
+
+@end
+
 #pragma mark - Contract
 
 typedef GPB_ENUM(Contract_FieldNumber) {
@@ -2901,6 +2964,7 @@ typedef GPB_ENUM(Contract_FieldNumber) {
   Contract_FieldNumber_CcOnly = 22,
   Contract_FieldNumber_SeasonId = 23,
   Contract_FieldNumber_DefaultShellIdsArray = 24,
+  Contract_FieldNumber_CustomEggId = 25,
 };
 
 GPB_FINAL @interface Contract : GPBMessage
@@ -2920,6 +2984,10 @@ GPB_FINAL @interface Contract : GPBMessage
 @property(nonatomic, readwrite) Egg egg;
 
 @property(nonatomic, readwrite) BOOL hasEgg;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *customEggId;
+/** Test to see if @c customEggId has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomEggId;
+
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Contract_Goal*> *goalsArray;
 /** The number of items in @c goalsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger goalsArray_Count;
@@ -3605,6 +3673,7 @@ typedef GPB_ENUM(ContractsResponse_FieldNumber) {
   ContractsResponse_FieldNumber_MaxEop = 3,
   ContractsResponse_FieldNumber_WarningMessage = 4,
   ContractsResponse_FieldNumber_TotalEop = 5,
+  ContractsResponse_FieldNumber_CustomEggsArray = 6,
 };
 
 GPB_FINAL @interface ContractsResponse : GPBMessage
@@ -3612,6 +3681,10 @@ GPB_FINAL @interface ContractsResponse : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Contract*> *contractsArray;
 /** The number of items in @c contractsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger contractsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CustomEgg*> *customEggsArray;
+/** The number of items in @c customEggsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger customEggsArray_Count;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *warningMessage;
 /** Test to see if @c warningMessage has been set. */
@@ -4082,6 +4155,7 @@ typedef GPB_ENUM(LocalContract_FieldNumber) {
   LocalContract_FieldNumber_PointsReplay = 20,
   LocalContract_FieldNumber_ReportedUuidsArray = 21,
   LocalContract_FieldNumber_CoopSimulationEndTime = 22,
+  LocalContract_FieldNumber_MaxFarmSizeReached = 23,
 };
 
 GPB_FINAL @interface LocalContract : GPBMessage
@@ -4134,6 +4208,9 @@ GPB_FINAL @interface LocalContract : GPBMessage
 @property(nonatomic, readwrite) uint32_t numGoalsAchieved;
 
 @property(nonatomic, readwrite) BOOL hasNumGoalsAchieved;
+@property(nonatomic, readwrite) double maxFarmSizeReached;
+
+@property(nonatomic, readwrite) BOOL hasMaxFarmSizeReached;
 @property(nonatomic, readwrite) uint32_t boostsUsed;
 
 @property(nonatomic, readwrite) BOOL hasBoostsUsed;
@@ -4170,6 +4247,7 @@ typedef GPB_ENUM(MyContracts_FieldNumber) {
   MyContracts_FieldNumber_InitialGradeRevealed = 6,
   MyContracts_FieldNumber_LastGradeProgressShown = 7,
   MyContracts_FieldNumber_ShowAdvancedEvaluations = 8,
+  MyContracts_FieldNumber_CustomEggInfoArray = 9,
 };
 
 GPB_FINAL @interface MyContracts : GPBMessage
@@ -4203,6 +4281,10 @@ GPB_FINAL @interface MyContracts : GPBMessage
 @property(nonatomic, readwrite) BOOL showAdvancedEvaluations;
 
 @property(nonatomic, readwrite) BOOL hasShowAdvancedEvaluations;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CustomEgg*> *customEggInfoArray;
+/** The number of items in @c customEggInfoArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger customEggInfoArray_Count;
+
 @end
 
 #pragma mark - QueryCoopRequest

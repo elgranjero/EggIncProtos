@@ -405,6 +405,78 @@ public object MyContractsKt {
     public fun hasShowAdvancedEvaluations(): kotlin.Boolean {
       return _builder.hasShowAdvancedEvaluations()
     }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class CustomEggInfoProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     */
+     public val customEggInfo: com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getCustomEggInfoList()
+      )
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * @param value The customEggInfo to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addCustomEggInfo")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.add(value: ei.Ei.CustomEgg) {
+      _builder.addCustomEggInfo(value)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * @param value The customEggInfo to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignCustomEggInfo")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.plusAssign(value: ei.Ei.CustomEgg) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * @param values The customEggInfo to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllCustomEggInfo")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
+      _builder.addAllCustomEggInfo(values)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * @param values The customEggInfo to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllCustomEggInfo")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * @param index The index to set the value at.
+     * @param value The customEggInfo to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setCustomEggInfo")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.set(index: kotlin.Int, value: ei.Ei.CustomEgg) {
+      _builder.setCustomEggInfo(index, value)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearCustomEggInfo")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.clear() {
+      _builder.clearCustomEggInfo()
+    }
+
   }
 }
 @kotlin.jvm.JvmSynthetic

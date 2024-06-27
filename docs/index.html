@@ -539,6 +539,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.CustomEgg"><span class="badge">M</span>CustomEgg</a>
+                </li>
+              
+                <li>
                   <a href="#ei.DLCCatalog"><span class="badge">M</span>DLCCatalog</a>
                 </li>
               
@@ -3494,6 +3498,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>colleggtibles_alert</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -5043,6 +5054,13 @@
                 <tr>
                   <td>egg</td>
                   <td><a href="#ei.Egg">Egg</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>custom_egg_id</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -6897,6 +6915,13 @@
                 </tr>
               
                 <tr>
+                  <td>custom_eggs</td>
+                  <td><a href="#ei.CustomEgg">CustomEgg</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>warning_message</td>
                   <td><a href="#string">string</a></td>
                   <td>optional</td>
@@ -7524,6 +7549,93 @@
                   <td>gold_spent</td>
                   <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.CustomEgg">CustomEgg</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>identifier</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>description</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>hatchery_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>hatchery_max_x</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>icon</td>
+                  <td><a href="#ei.DLCItem">DLCItem</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>icon_width</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>icon_height</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>buffs</td>
+                  <td><a href="#ei.GameModifier">GameModifier</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -10049,6 +10161,13 @@
                 </tr>
               
                 <tr>
+                  <td>max_farm_size_reached</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>boosts_used</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -10627,6 +10746,13 @@
                   <td>show_advanced_evaluations</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>custom_egg_info</td>
+                  <td><a href="#ei.CustomEgg">CustomEgg</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -15014,6 +15140,12 @@
               </tr>
             
               <tr>
+                <td>CUSTOM_EGG</td>
+                <td>200</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>UNKNOWN</td>
                 <td>1000</td>
                 <td><p></p></td>
@@ -15093,6 +15225,12 @@
             <tr><td>Name</td><td>Number</td><td>Description</td></tr>
           </thead>
           <tbody>
+            
+              <tr>
+                <td>INVALID</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
             
               <tr>
                 <td>EARNINGS</td>
@@ -16270,6 +16408,12 @@
               <tr>
                 <td>HATCHERY_PUMPKIN</td>
                 <td>143</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_CUSTOM</td>
+                <td>150</td>
                 <td><p></p></td>
               </tr>
             

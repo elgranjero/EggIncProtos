@@ -119,6 +119,30 @@ public object ContractKt {
     }
 
     /**
+     * <code>optional string custom_egg_id = 25;</code>
+     */
+    public var customEggId: kotlin.String
+      @JvmName("getCustomEggId")
+      get() = _builder.getCustomEggId()
+      @JvmName("setCustomEggId")
+      set(value) {
+        _builder.setCustomEggId(value)
+      }
+    /**
+     * <code>optional string custom_egg_id = 25;</code>
+     */
+    public fun clearCustomEggId() {
+      _builder.clearCustomEggId()
+    }
+    /**
+     * <code>optional string custom_egg_id = 25;</code>
+     * @return Whether the customEggId field is set.
+     */
+    public fun hasCustomEggId(): kotlin.Boolean {
+      return _builder.hasCustomEggId()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */

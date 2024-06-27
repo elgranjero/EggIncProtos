@@ -88,6 +88,7 @@ GPBObjCClassDeclaration(CoopCompletionSnapshot_ContributorSnapshot);
 GPBObjCClassDeclaration(CraftArtifactRequest);
 GPBObjCClassDeclaration(CraftArtifactResponse);
 GPBObjCClassDeclaration(CurrencyFlowLog);
+GPBObjCClassDeclaration(CustomEgg);
 GPBObjCClassDeclaration(DLCCatalog);
 GPBObjCClassDeclaration(DLCItem);
 GPBObjCClassDeclaration(DeviceInfo);
@@ -311,7 +312,8 @@ GPBEnumDescriptor *Egg_EnumDescriptor(void) {
         "hyon\000Graviton\000Dilithium\000Prodigy\000Terrafor"
         "m\000Antimatter\000DarkMatter\000Ai\000Nebula\000Univer"
         "se\000Enlightenment\000Chocolate\000Easter\000Waterb"
-        "alloon\000Firework\000Pumpkin\000Unknown\000";
+        "alloon\000Firework\000Pumpkin\000CustomEgg\000Unknow"
+        "n\000";
     static const int32_t values[] = {
         Egg_Edible,
         Egg_Superfood,
@@ -337,6 +339,7 @@ GPBEnumDescriptor *Egg_EnumDescriptor(void) {
         Egg_Waterballoon,
         Egg_Firework,
         Egg_Pumpkin,
+        Egg_CustomEgg,
         Egg_Unknown,
     };
     GPBEnumDescriptor *worker =
@@ -379,6 +382,7 @@ BOOL Egg_IsValidValue(int32_t value__) {
     case Egg_Waterballoon:
     case Egg_Firework:
     case Egg_Pumpkin:
+    case Egg_CustomEgg:
     case Egg_Unknown:
       return YES;
     default:
@@ -3243,6 +3247,7 @@ typedef struct Backup_Mission__storage_ {
 @dynamic hasBackupReminderAlert, backupReminderAlert;
 @dynamic hasMaxButtonAlert, maxButtonAlert;
 @dynamic hasMissionTargetAlert, missionTargetAlert;
+@dynamic hasColleggtiblesAlert, colleggtiblesAlert;
 
 typedef struct Backup_Misc__storage_ {
   uint32_t _has_storage_[2];
@@ -3499,6 +3504,16 @@ typedef struct Backup_Misc__storage_ {
         .core.number = Backup_Misc_FieldNumber_MissionTargetAlert,
         .core.hasIndex = 38,
         .core.offset = 39,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
+      },
+      {
+        .defaultValue.valueBool = NO,
+        .core.name = "colleggtiblesAlert",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Misc_FieldNumber_ColleggtiblesAlert,
+        .core.hasIndex = 40,
+        .core.offset = 41,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -5890,36 +5905,33 @@ typedef struct GameModifier__storage_ {
 + (GPBDescriptor *)descriptor {
   static GPBDescriptor *descriptor = nil;
   if (!descriptor) {
-    static GPBMessageFieldDescriptionWithDefault fields[] = {
+    static GPBMessageFieldDescription fields[] = {
       {
-        .defaultValue.valueEnum = GameModifier_GameDimension_Earnings,
-        .core.name = "dimension",
-        .core.dataTypeSpecific.enumDescFunc = GameModifier_GameDimension_EnumDescriptor,
-        .core.number = GameModifier_FieldNumber_Dimension,
-        .core.hasIndex = 0,
-        .core.offset = (uint32_t)offsetof(GameModifier__storage_, dimension),
-        .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
-        .core.dataType = GPBDataTypeEnum,
+        .name = "dimension",
+        .dataTypeSpecific.enumDescFunc = GameModifier_GameDimension_EnumDescriptor,
+        .number = GameModifier_FieldNumber_Dimension,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(GameModifier__storage_, dimension),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
-        .defaultValue.valueDouble = 0,
-        .core.name = "value",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = GameModifier_FieldNumber_Value,
-        .core.hasIndex = 1,
-        .core.offset = (uint32_t)offsetof(GameModifier__storage_, value),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeDouble,
+        .name = "value",
+        .dataTypeSpecific.clazz = Nil,
+        .number = GameModifier_FieldNumber_Value,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(GameModifier__storage_, value),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
       {
-        .defaultValue.valueString = nil,
-        .core.name = "description_p",
-        .core.dataTypeSpecific.clazz = Nil,
-        .core.number = GameModifier_FieldNumber_Description_p,
-        .core.hasIndex = 2,
-        .core.offset = (uint32_t)offsetof(GameModifier__storage_, description_p),
-        .core.flags = GPBFieldOptional,
-        .core.dataType = GPBDataTypeString,
+        .name = "description_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = GameModifier_FieldNumber_Description_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(GameModifier__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -5927,9 +5939,9 @@ typedef struct GameModifier__storage_ {
                                      rootClass:[EiRoot class]
                                           file:EiRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(GameModifier__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_FieldsWithDefault)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -5946,10 +5958,12 @@ GPBEnumDescriptor *GameModifier_GameDimension_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Earnings\000AwayEarnings\000InternalHatcheryRa"
-        "te\000EggLayingRate\000ShippingCapacity\000HabCap"
-        "acity\000VehicleCost\000HabCost\000ResearchCost\000";
+        "Invalid\000Earnings\000AwayEarnings\000InternalHa"
+        "tcheryRate\000EggLayingRate\000ShippingCapacit"
+        "y\000HabCapacity\000VehicleCost\000HabCost\000Resear"
+        "chCost\000";
     static const int32_t values[] = {
+        GameModifier_GameDimension_Invalid,
         GameModifier_GameDimension_Earnings,
         GameModifier_GameDimension_AwayEarnings,
         GameModifier_GameDimension_InternalHatcheryRate,
@@ -5976,6 +5990,7 @@ GPBEnumDescriptor *GameModifier_GameDimension_EnumDescriptor(void) {
 
 BOOL GameModifier_GameDimension_IsValidValue(int32_t value__) {
   switch (value__) {
+    case GameModifier_GameDimension_Invalid:
     case GameModifier_GameDimension_Earnings:
     case GameModifier_GameDimension_AwayEarnings:
     case GameModifier_GameDimension_InternalHatcheryRate:
@@ -5991,6 +6006,150 @@ BOOL GameModifier_GameDimension_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - CustomEgg
+
+@implementation CustomEgg
+
+@dynamic hasIdentifier, identifier;
+@dynamic hasName, name;
+@dynamic hasDescription_p, description_p;
+@dynamic hasValue, value;
+@dynamic hasHatcheryId, hatcheryId;
+@dynamic hasHatcheryMaxX, hatcheryMaxX;
+@dynamic hasIcon, icon;
+@dynamic hasIconWidth, iconWidth;
+@dynamic hasIconHeight, iconHeight;
+@dynamic buffsArray, buffsArray_Count;
+
+typedef struct CustomEgg__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *identifier;
+  NSString *name;
+  NSString *description_p;
+  NSString *hatcheryId;
+  DLCItem *icon;
+  NSMutableArray *buffsArray;
+  double value;
+  double hatcheryMaxX;
+  double iconWidth;
+  double iconHeight;
+} CustomEgg__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "identifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_Identifier,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, identifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "name",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_Name,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, name),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_Description_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "value",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_Value,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, value),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "hatcheryId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_HatcheryId,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, hatcheryId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "hatcheryMaxX",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_HatcheryMaxX,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, hatcheryMaxX),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "icon",
+        .dataTypeSpecific.clazz = GPBObjCClass(DLCItem),
+        .number = CustomEgg_FieldNumber_Icon,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, icon),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "buffsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(GameModifier),
+        .number = CustomEgg_FieldNumber_BuffsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, buffsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "iconWidth",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_IconWidth,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, iconWidth),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "iconHeight",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CustomEgg_FieldNumber_IconHeight,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(CustomEgg__storage_, iconHeight),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CustomEgg class]
+                                     rootClass:[EiRoot class]
+                                          file:EiRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CustomEgg__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - Contract
 
 @implementation Contract
@@ -5999,6 +6158,7 @@ BOOL GameModifier_GameDimension_IsValidValue(int32_t value__) {
 @dynamic hasName, name;
 @dynamic hasDescription_p, description_p;
 @dynamic hasEgg, egg;
+@dynamic hasCustomEggId, customEggId;
 @dynamic goalsArray, goalsArray_Count;
 @dynamic goalSetsArray, goalSetsArray_Count;
 @dynamic gradeSpecsArray, gradeSpecsArray_Count;
@@ -6034,6 +6194,7 @@ typedef struct Contract__storage_ {
   NSString *key;
   NSString *seasonId;
   NSMutableArray *defaultShellIdsArray;
+  NSString *customEggId;
   double expirationTime;
   double lengthSeconds;
   double maxSoulEggs;
@@ -6083,8 +6244,8 @@ typedef struct Contract__storage_ {
         .core.name = "coopAllowed",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_CoopAllowed,
-        .core.hasIndex = 5,
-        .core.offset = 6,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 6,
+        .core.offset = 7,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -6093,7 +6254,7 @@ typedef struct Contract__storage_ {
         .core.name = "maxCoopSize",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_MaxCoopSize,
-        .core.hasIndex = 7,
+        .core.hasIndex = 8,
         .core.offset = (uint32_t)offsetof(Contract__storage_, maxCoopSize),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -6103,7 +6264,7 @@ typedef struct Contract__storage_ {
         .core.name = "expirationTime",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_ExpirationTime,
-        .core.hasIndex = 12,
+        .core.hasIndex = 13,
         .core.offset = (uint32_t)offsetof(Contract__storage_, expirationTime),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -6113,7 +6274,7 @@ typedef struct Contract__storage_ {
         .core.name = "lengthSeconds",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_LengthSeconds,
-        .core.hasIndex = 13,
+        .core.hasIndex = 14,
         .core.offset = (uint32_t)offsetof(Contract__storage_, lengthSeconds),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -6143,8 +6304,8 @@ typedef struct Contract__storage_ {
         .core.name = "debug",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_Debug,
-        .core.hasIndex = 20,
-        .core.offset = 21,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 21,
+        .core.offset = 22,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -6153,7 +6314,7 @@ typedef struct Contract__storage_ {
         .core.name = "maxBoosts",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_MaxBoosts,
-        .core.hasIndex = 8,
+        .core.hasIndex = 9,
         .core.offset = (uint32_t)offsetof(Contract__storage_, maxBoosts),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -6163,7 +6324,7 @@ typedef struct Contract__storage_ {
         .core.name = "maxSoulEggs",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_MaxSoulEggs,
-        .core.hasIndex = 14,
+        .core.hasIndex = 15,
         .core.offset = (uint32_t)offsetof(Contract__storage_, maxSoulEggs),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -6173,7 +6334,7 @@ typedef struct Contract__storage_ {
         .core.name = "minClientVersion",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_MinClientVersion,
-        .core.hasIndex = 15,
+        .core.hasIndex = 16,
         .core.offset = (uint32_t)offsetof(Contract__storage_, minClientVersion),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -6183,7 +6344,7 @@ typedef struct Contract__storage_ {
         .core.name = "minutesPerToken",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_MinutesPerToken,
-        .core.hasIndex = 9,
+        .core.hasIndex = 10,
         .core.offset = (uint32_t)offsetof(Contract__storage_, minutesPerToken),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeDouble,
@@ -6203,7 +6364,7 @@ typedef struct Contract__storage_ {
         .core.name = "startTime",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_StartTime,
-        .core.hasIndex = 11,
+        .core.hasIndex = 12,
         .core.offset = (uint32_t)offsetof(Contract__storage_, startTime),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -6213,7 +6374,7 @@ typedef struct Contract__storage_ {
         .core.name = "chickenRunCooldownMinutes",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_ChickenRunCooldownMinutes,
-        .core.hasIndex = 10,
+        .core.hasIndex = 11,
         .core.offset = (uint32_t)offsetof(Contract__storage_, chickenRunCooldownMinutes),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeDouble,
@@ -6223,8 +6384,8 @@ typedef struct Contract__storage_ {
         .core.name = "leggacy",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_Leggacy,
-        .core.hasIndex = 16,
-        .core.offset = 17,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 17,
+        .core.offset = 18,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -6243,7 +6404,7 @@ typedef struct Contract__storage_ {
         .core.name = "key",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_Key,
-        .core.hasIndex = 22,
+        .core.hasIndex = 23,
         .core.offset = (uint32_t)offsetof(Contract__storage_, key),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
@@ -6253,8 +6414,8 @@ typedef struct Contract__storage_ {
         .core.name = "ccOnly",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_CcOnly,
-        .core.hasIndex = 18,
-        .core.offset = 19,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 19,
+        .core.offset = 20,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -6263,7 +6424,7 @@ typedef struct Contract__storage_ {
         .core.name = "seasonId",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = Contract_FieldNumber_SeasonId,
-        .core.hasIndex = 4,
+        .core.hasIndex = 5,
         .core.offset = (uint32_t)offsetof(Contract__storage_, seasonId),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
@@ -6276,6 +6437,16 @@ typedef struct Contract__storage_ {
         .core.hasIndex = GPBNoHasBit,
         .core.offset = (uint32_t)offsetof(Contract__storage_, defaultShellIdsArray),
         .core.flags = GPBFieldRepeated,
+        .core.dataType = GPBDataTypeString,
+      },
+      {
+        .defaultValue.valueString = nil,
+        .core.name = "customEggId",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Contract_FieldNumber_CustomEggId,
+        .core.hasIndex = 4,
+        .core.offset = (uint32_t)offsetof(Contract__storage_, customEggId),
+        .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeString,
       },
     };
@@ -8250,6 +8421,7 @@ typedef struct ContractsRequest__storage_ {
 @implementation ContractsResponse
 
 @dynamic contractsArray, contractsArray_Count;
+@dynamic customEggsArray, customEggsArray_Count;
 @dynamic hasWarningMessage, warningMessage;
 @dynamic hasTotalEop, totalEop;
 @dynamic hasServerTime, serverTime;
@@ -8260,6 +8432,7 @@ typedef struct ContractsResponse__storage_ {
   uint32_t maxEop;
   NSMutableArray *contractsArray;
   NSString *warningMessage;
+  NSMutableArray *customEggsArray;
   double serverTime;
   double totalEop;
 } ContractsResponse__storage_;
@@ -8319,6 +8492,16 @@ typedef struct ContractsResponse__storage_ {
         .core.offset = (uint32_t)offsetof(ContractsResponse__storage_, totalEop),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueMessage = nil,
+        .core.name = "customEggsArray",
+        .core.dataTypeSpecific.clazz = GPBObjCClass(CustomEgg),
+        .core.number = ContractsResponse_FieldNumber_CustomEggsArray,
+        .core.hasIndex = GPBNoHasBit,
+        .core.offset = (uint32_t)offsetof(ContractsResponse__storage_, customEggsArray),
+        .core.flags = GPBFieldRepeated,
+        .core.dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -9658,6 +9841,7 @@ typedef struct ContractCoopStatusResponse_ChickenRun__storage_ {
 @dynamic hasCoopShareFarm, coopShareFarm;
 @dynamic hasLastAmountWhenRewardGiven, lastAmountWhenRewardGiven;
 @dynamic hasNumGoalsAchieved, numGoalsAchieved;
+@dynamic hasMaxFarmSizeReached, maxFarmSizeReached;
 @dynamic hasBoostsUsed, boostsUsed;
 @dynamic hasPointsReplay, pointsReplay;
 @dynamic hasLeague, league;
@@ -9684,6 +9868,7 @@ typedef struct LocalContract__storage_ {
   double coopLastUploadedContribution;
   double lastNagTime;
   double coopSimulationEndTime;
+  double maxFarmSizeReached;
 } LocalContract__storage_;
 
 // This method is threadsafe because it is initially called
@@ -9795,7 +9980,7 @@ typedef struct LocalContract__storage_ {
         .name = "boostsUsed",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_BoostsUsed,
-        .hasIndex = 20,
+        .hasIndex = 21,
         .offset = (uint32_t)offsetof(LocalContract__storage_, boostsUsed),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -9822,7 +10007,7 @@ typedef struct LocalContract__storage_ {
         .name = "league",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_League,
-        .hasIndex = 23,
+        .hasIndex = 24,
         .offset = (uint32_t)offsetof(LocalContract__storage_, league),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -9831,7 +10016,7 @@ typedef struct LocalContract__storage_ {
         .name = "lastNagTime",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_LastNagTime,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(LocalContract__storage_, lastNagTime),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -9849,7 +10034,7 @@ typedef struct LocalContract__storage_ {
         .name = "grade",
         .dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
         .number = LocalContract_FieldNumber_Grade,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(LocalContract__storage_, grade),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -9858,7 +10043,7 @@ typedef struct LocalContract__storage_ {
         .name = "evaluation",
         .dataTypeSpecific.clazz = GPBObjCClass(ContractEvaluation),
         .number = LocalContract_FieldNumber_Evaluation,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(LocalContract__storage_, evaluation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -9867,8 +10052,8 @@ typedef struct LocalContract__storage_ {
         .name = "pointsReplay",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_PointsReplay,
-        .hasIndex = 21,
-        .offset = 22,  // Stored in _has_storage_ to save space.
+        .hasIndex = 22,
+        .offset = 23,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -9887,6 +10072,15 @@ typedef struct LocalContract__storage_ {
         .number = LocalContract_FieldNumber_CoopSimulationEndTime,
         .hasIndex = 10,
         .offset = (uint32_t)offsetof(LocalContract__storage_, coopSimulationEndTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "maxFarmSizeReached",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LocalContract_FieldNumber_MaxFarmSizeReached,
+        .hasIndex = 20,
+        .offset = (uint32_t)offsetof(LocalContract__storage_, maxFarmSizeReached),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -9921,6 +10115,7 @@ typedef struct LocalContract__storage_ {
 @dynamic hasInitialGradeRevealed, initialGradeRevealed;
 @dynamic hasLastGradeProgressShown, lastGradeProgressShown;
 @dynamic hasShowAdvancedEvaluations, showAdvancedEvaluations;
+@dynamic customEggInfoArray, customEggInfoArray_Count;
 
 typedef struct MyContracts__storage_ {
   uint32_t _has_storage_[1];
@@ -9929,6 +10124,7 @@ typedef struct MyContracts__storage_ {
   NSMutableArray *contractIdsSeenArray;
   NSMutableArray *currentCoopStatusesArray;
   ContractPlayerInfo *lastCpi;
+  NSMutableArray *customEggInfoArray;
   double lastGradeProgressShown;
 } MyContracts__storage_;
 
@@ -10009,6 +10205,15 @@ typedef struct MyContracts__storage_ {
         .offset = 5,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "customEggInfoArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomEgg),
+        .number = MyContracts_FieldNumber_CustomEggInfoArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(MyContracts__storage_, customEggInfoArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -20029,17 +20234,18 @@ GPBEnumDescriptor *ShellSpec_AssetType_EnumDescriptor(void) {
         "i\000HatcheryNebula\000HatcheryUniverse\000Hatche"
         "ryEnlightenment\000HatcheryChocolate\000Hatche"
         "ryEaster\000HatcheryWaterballoon\000HatcheryFi"
-        "rework\000HatcheryPumpkin\000Hoa1\000Hoa2\000Hoa3\000Mi"
-        "ssionControl1\000MissionControl2\000MissionCon"
-        "trol3\000FuelTank1\000FuelTank2\000FuelTank3\000Fuel"
-        "Tank4\000HatcheryGravitonTop\000HatcheryNebula"
-        "Middle\000HatcheryNebulaTop\000HatcheryDarkMat"
-        "terRing1\000HatcheryDarkMatterRing2\000Hatcher"
-        "yDarkMatterRing3\000HatcheryAiTop1\000Hatchery"
-        "AiTop2\000HatcheryAiTop3\000HatcheryAiTop4\000Hat"
-        "cheryUniverseProbe\000HatcheryUniverseBolt\000"
-        "HatcheryEnlightenmentOrb\000HyperloopTrack\000"
-        "MailboxFull\000Chicken\000Hat\000Unknown\000";
+        "rework\000HatcheryPumpkin\000HatcheryCustom\000Ho"
+        "a1\000Hoa2\000Hoa3\000MissionControl1\000MissionCont"
+        "rol2\000MissionControl3\000FuelTank1\000FuelTank2"
+        "\000FuelTank3\000FuelTank4\000HatcheryGravitonTop"
+        "\000HatcheryNebulaMiddle\000HatcheryNebulaTop\000"
+        "HatcheryDarkMatterRing1\000HatcheryDarkMatt"
+        "erRing2\000HatcheryDarkMatterRing3\000Hatchery"
+        "AiTop1\000HatcheryAiTop2\000HatcheryAiTop3\000Hat"
+        "cheryAiTop4\000HatcheryUniverseProbe\000Hatche"
+        "ryUniverseBolt\000HatcheryEnlightenmentOrb\000"
+        "HyperloopTrack\000MailboxFull\000Chicken\000Hat\000U"
+        "nknown\000";
     static const int32_t values[] = {
         ShellSpec_AssetType_Coop,
         ShellSpec_AssetType_Shack,
@@ -20109,6 +20315,7 @@ GPBEnumDescriptor *ShellSpec_AssetType_EnumDescriptor(void) {
         ShellSpec_AssetType_HatcheryWaterballoon,
         ShellSpec_AssetType_HatcheryFirework,
         ShellSpec_AssetType_HatcheryPumpkin,
+        ShellSpec_AssetType_HatcheryCustom,
         ShellSpec_AssetType_Hoa1,
         ShellSpec_AssetType_Hoa2,
         ShellSpec_AssetType_Hoa3,
@@ -20138,7 +20345,7 @@ GPBEnumDescriptor *ShellSpec_AssetType_EnumDescriptor(void) {
         ShellSpec_AssetType_Hat,
         ShellSpec_AssetType_Unknown,
     };
-    static const char *extraTextFormatInfo = "&\013c\202\000\016c\203\000\023d\201\345\000\024d\201\343\000\025d\201\345\000\026d\201\345\000\027d\201\343\000\030d\201\345\000\037e\201\000 e\201\000!e\201\000\"e\201\000#e\201\000$e\201\000%e\201\000&c\201\000\'c\201\000(c\201\000)c\201\000*c\201\000+c\201\000Dc\201\000Ec\201\000Fc\201\000Gg\347\201\000Hg\347\201\000Ig\347\201\000Jd\344\201\000Kd\344\201\000Ld\344\201\000Md\344\201\000Qh\344\346\344\201\000Rh\344\346\344\201\000Sh\344\346\344\201\000Th\342\343\201\000Uh\342\343\201\000Vh\342\343\201\000Wh\342\343\201\000";
+    static const char *extraTextFormatInfo = "&\013c\202\000\016c\203\000\023d\201\345\000\024d\201\343\000\025d\201\345\000\026d\201\345\000\027d\201\343\000\030d\201\345\000\037e\201\000 e\201\000!e\201\000\"e\201\000#e\201\000$e\201\000%e\201\000&c\201\000\'c\201\000(c\201\000)c\201\000*c\201\000+c\201\000Ec\201\000Fc\201\000Gc\201\000Hg\347\201\000Ig\347\201\000Jg\347\201\000Kd\344\201\000Ld\344\201\000Md\344\201\000Nd\344\201\000Rh\344\346\344\201\000Sh\344\346\344\201\000Th\344\346\344\201\000Uh\342\343\201\000Vh\342\343\201\000Wh\342\343\201\000Xh\342\343\201\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ShellSpec_AssetType)
                                        valueNames:valueNames
@@ -20224,6 +20431,7 @@ BOOL ShellSpec_AssetType_IsValidValue(int32_t value__) {
     case ShellSpec_AssetType_HatcheryWaterballoon:
     case ShellSpec_AssetType_HatcheryFirework:
     case ShellSpec_AssetType_HatcheryPumpkin:
+    case ShellSpec_AssetType_HatcheryCustom:
     case ShellSpec_AssetType_Hoa1:
     case ShellSpec_AssetType_Hoa2:
     case ShellSpec_AssetType_Hoa3:

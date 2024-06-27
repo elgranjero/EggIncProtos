@@ -385,6 +385,30 @@ public object LocalContractKt {
     }
 
     /**
+     * <code>optional double max_farm_size_reached = 23;</code>
+     */
+    public var maxFarmSizeReached: kotlin.Double
+      @JvmName("getMaxFarmSizeReached")
+      get() = _builder.getMaxFarmSizeReached()
+      @JvmName("setMaxFarmSizeReached")
+      set(value) {
+        _builder.setMaxFarmSizeReached(value)
+      }
+    /**
+     * <code>optional double max_farm_size_reached = 23;</code>
+     */
+    public fun clearMaxFarmSizeReached() {
+      _builder.clearMaxFarmSizeReached()
+    }
+    /**
+     * <code>optional double max_farm_size_reached = 23;</code>
+     * @return Whether the maxFarmSizeReached field is set.
+     */
+    public fun hasMaxFarmSizeReached(): kotlin.Boolean {
+      return _builder.hasMaxFarmSizeReached()
+    }
+
+    /**
      * <code>optional uint32 boosts_used = 12;</code>
      */
     public var boostsUsed: kotlin.Int

@@ -95,6 +95,78 @@ public object ContractsResponseKt {
 
 
     /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class CustomEggsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     */
+     public val customEggs: com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getCustomEggsList()
+      )
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * @param value The customEggs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addCustomEggs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.add(value: ei.Ei.CustomEgg) {
+      _builder.addCustomEggs(value)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * @param value The customEggs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignCustomEggs")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.plusAssign(value: ei.Ei.CustomEgg) {
+      add(value)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * @param values The customEggs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllCustomEggs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
+      _builder.addAllCustomEggs(values)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * @param values The customEggs to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllCustomEggs")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * @param index The index to set the value at.
+     * @param value The customEggs to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setCustomEggs")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.set(index: kotlin.Int, value: ei.Ei.CustomEgg) {
+      _builder.setCustomEggs(index, value)
+    }
+    /**
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearCustomEggs")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.clear() {
+      _builder.clearCustomEggs()
+    }
+
+
+    /**
      * <code>optional string warning_message = 4;</code>
      */
     public var warningMessage: kotlin.String

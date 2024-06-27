@@ -152,6 +152,7 @@ proto.ei.Contract.toObject = function(includeInstance, msg) {
     name: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     description: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
     egg: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    customEggId: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
     goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
     proto.ei.Contract.Goal.toObject, includeInstance),
     goalSetsList: jspb.Message.toObjectList(msg.getGoalSetsList(),
@@ -225,6 +226,10 @@ proto.ei.Contract.deserializeBinaryFromReader = function(msg, reader) {
     case 2:
       var value = /** @type {!proto.ei.Egg} */ (reader.readEnum());
       msg.setEgg(value);
+      break;
+    case 25:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomEggId(value);
       break;
     case 3:
       var value = new proto.ei.Contract.Goal;
@@ -359,6 +364,13 @@ proto.ei.Contract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeEnum(
       2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 25));
+  if (f != null) {
+    writer.writeString(
+      25,
       f
     );
   }
@@ -1511,6 +1523,42 @@ proto.ei.Contract.prototype.clearEgg = function() {
  */
 proto.ei.Contract.prototype.hasEgg = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string custom_egg_id = 25;
+ * @return {string}
+ */
+proto.ei.Contract.prototype.getCustomEggId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.setCustomEggId = function(value) {
+  return jspb.Message.setField(this, 25, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Contract} returns this
+ */
+proto.ei.Contract.prototype.clearCustomEggId = function() {
+  return jspb.Message.setField(this, 25, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Contract.prototype.hasCustomEggId = function() {
+  return jspb.Message.getField(this, 25) != null;
 };
 
 

@@ -6200,6 +6200,30 @@ public object BackupKt {
       public fun hasMissionTargetAlert(): kotlin.Boolean {
         return _builder.hasMissionTargetAlert()
       }
+
+      /**
+       * <code>optional bool colleggtibles_alert = 25;</code>
+       */
+      public var colleggtiblesAlert: kotlin.Boolean
+        @JvmName("getColleggtiblesAlert")
+        get() = _builder.getColleggtiblesAlert()
+        @JvmName("setColleggtiblesAlert")
+        set(value) {
+          _builder.setColleggtiblesAlert(value)
+        }
+      /**
+       * <code>optional bool colleggtibles_alert = 25;</code>
+       */
+      public fun clearColleggtiblesAlert() {
+        _builder.clearColleggtiblesAlert()
+      }
+      /**
+       * <code>optional bool colleggtibles_alert = 25;</code>
+       * @return Whether the colleggtiblesAlert field is set.
+       */
+      public fun hasColleggtiblesAlert(): kotlin.Boolean {
+        return _builder.hasColleggtiblesAlert()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializeresearchItem")

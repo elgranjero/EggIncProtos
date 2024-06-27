@@ -46,6 +46,7 @@ goog.require('proto.ei.ArtifactsDB');
 goog.require('proto.ei.CompleteArtifact');
 goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.CoopBuffState');
+goog.require('proto.ei.CustomEgg');
 goog.require('proto.ei.FarmProductionParams');
 goog.require('proto.ei.LocalContract');
 goog.require('proto.ei.MailState');
@@ -9359,7 +9360,8 @@ proto.ei.Backup.Misc.toObject = function(includeInstance, msg) {
     soulEggAlert: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
     backupReminderAlert: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
     maxButtonAlert: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
-    missionTargetAlert: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f
+    missionTargetAlert: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
+    colleggtiblesAlert: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -9491,6 +9493,10 @@ proto.ei.Backup.Misc.deserializeBinaryFromReader = function(msg, reader) {
     case 24:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setMissionTargetAlert(value);
+      break;
+    case 25:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setColleggtiblesAlert(value);
       break;
     default:
       reader.skipField();
@@ -9686,6 +9692,13 @@ proto.ei.Backup.Misc.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       24,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 25));
+  if (f != null) {
+    writer.writeBool(
+      25,
       f
     );
   }
@@ -10553,6 +10566,42 @@ proto.ei.Backup.Misc.prototype.clearMissionTargetAlert = function() {
  */
 proto.ei.Backup.Misc.prototype.hasMissionTargetAlert = function() {
   return jspb.Message.getField(this, 24) != null;
+};
+
+
+/**
+ * optional bool colleggtibles_alert = 25;
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.getColleggtiblesAlert = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 25, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.setColleggtiblesAlert = function(value) {
+  return jspb.Message.setField(this, 25, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.clearColleggtiblesAlert = function() {
+  return jspb.Message.setField(this, 25, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.hasColleggtiblesAlert = function() {
+  return jspb.Message.getField(this, 25) != null;
 };
 
 
@@ -15699,7 +15748,7 @@ proto.ei.ContractCoopStatusResponse.prototype.hasLastSync = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.MyContracts.repeatedFields_ = [3,1,2,4];
+proto.ei.MyContracts.repeatedFields_ = [3,1,2,4,9];
 
 
 
@@ -15742,7 +15791,9 @@ proto.ei.MyContracts.toObject = function(includeInstance, msg) {
     lastCpi: (f = msg.getLastCpi()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f),
     initialGradeRevealed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
     lastGradeProgressShown: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-    showAdvancedEvaluations: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
+    showAdvancedEvaluations: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
+    customEggInfoList: jspb.Message.toObjectList(msg.getCustomEggInfoList(),
+    proto.ei.CustomEgg.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -15814,6 +15865,11 @@ proto.ei.MyContracts.deserializeBinaryFromReader = function(msg, reader) {
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setShowAdvancedEvaluations(value);
+      break;
+    case 9:
+      var value = new proto.ei.CustomEgg;
+      reader.readMessage(value,proto.ei.CustomEgg.deserializeBinaryFromReader);
+      msg.addCustomEggInfo(value);
       break;
     default:
       reader.skipField();
@@ -15902,6 +15958,14 @@ proto.ei.MyContracts.serializeBinaryToWriter = function(message, writer) {
     writer.writeBool(
       8,
       f
+    );
+  }
+  f = message.getCustomEggInfoList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.ei.CustomEgg.serializeBinaryToWriter
     );
   }
 };
@@ -16200,6 +16264,44 @@ proto.ei.MyContracts.prototype.clearShowAdvancedEvaluations = function() {
  */
 proto.ei.MyContracts.prototype.hasShowAdvancedEvaluations = function() {
   return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * repeated CustomEgg custom_egg_info = 9;
+ * @return {!Array<!proto.ei.CustomEgg>}
+ */
+proto.ei.MyContracts.prototype.getCustomEggInfoList = function() {
+  return /** @type{!Array<!proto.ei.CustomEgg>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.CustomEgg, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.CustomEgg>} value
+ * @return {!proto.ei.MyContracts} returns this
+*/
+proto.ei.MyContracts.prototype.setCustomEggInfoList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.ei.CustomEgg=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.CustomEgg}
+ */
+proto.ei.MyContracts.prototype.addCustomEggInfo = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.ei.CustomEgg, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.clearCustomEggInfoList = function() {
+  return this.setCustomEggInfoList([]);
 };
 
 

@@ -95,6 +95,7 @@ proto.ei.LocalContract.toObject = function(includeInstance, msg) {
     coopShareFarm: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
     lastAmountWhenRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     numGoalsAchieved: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    maxFarmSizeReached: (f = jspb.Message.getOptionalFloatingPointField(msg, 23)) == null ? undefined : f,
     boostsUsed: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     pointsReplay: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     league: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
@@ -198,6 +199,10 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
     case 14:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setNumGoalsAchieved(value);
+      break;
+    case 23:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setMaxFarmSizeReached(value);
       break;
     case 12:
       var value = /** @type {number} */ (reader.readUint32());
@@ -360,6 +365,13 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeUint32(
       14,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 23));
+  if (f != null) {
+    writer.writeDouble(
+      23,
       f
     );
   }
@@ -954,6 +966,42 @@ proto.ei.LocalContract.prototype.clearNumGoalsAchieved = function() {
  */
 proto.ei.LocalContract.prototype.hasNumGoalsAchieved = function() {
   return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
+ * optional double max_farm_size_reached = 23;
+ * @return {number}
+ */
+proto.ei.LocalContract.prototype.getMaxFarmSizeReached = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 23, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setMaxFarmSizeReached = function(value) {
+  return jspb.Message.setField(this, 23, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearMaxFarmSizeReached = function() {
+  return jspb.Message.setField(this, 23, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasMaxFarmSizeReached = function() {
+  return jspb.Message.getField(this, 23) != null;
 };
 
 
