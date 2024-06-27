@@ -94,6 +94,7 @@
     - [CreateCoopResponse](#ei-CreateCoopResponse)
     - [CurrencyFlowBatchRequest](#ei-CurrencyFlowBatchRequest)
     - [CurrencyFlowLog](#ei-CurrencyFlowLog)
+    - [CustomEgg](#ei-CustomEgg)
     - [DLCCatalog](#ei-DLCCatalog)
     - [DLCItem](#ei-DLCItem)
     - [DailyGiftInfo](#ei-DailyGiftInfo)
@@ -919,6 +920,7 @@
 | backup_reminder_alert | [bool](#bool) | optional |  |
 | max_button_alert | [bool](#bool) | optional |  |
 | mission_target_alert | [bool](#bool) | optional |  |
+| colleggtibles_alert | [bool](#bool) | optional |  |
 
 
 
@@ -1407,6 +1409,7 @@
 | name | [string](#string) | optional |  |
 | description | [string](#string) | optional |  |
 | egg | [Egg](#ei-Egg) | optional |  |
+| custom_egg_id | [string](#string) | optional |  |
 | goals | [Contract.Goal](#ei-Contract-Goal) | repeated |  |
 | goal_sets | [Contract.GoalSet](#ei-Contract-GoalSet) | repeated |  |
 | grade_specs | [Contract.GradeSpec](#ei-Contract-GradeSpec) | repeated |  |
@@ -1972,6 +1975,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | contracts | [Contract](#ei-Contract) | repeated |  |
+| custom_eggs | [CustomEgg](#ei-CustomEgg) | repeated |  |
 | warning_message | [string](#string) | optional |  |
 | total_eop | [double](#double) | optional |  |
 | server_time | [double](#double) | optional |  |
@@ -2201,6 +2205,30 @@
 | soul_eggs | [double](#double) | optional |  |
 | tickets_spent | [uint64](#uint64) | optional |  |
 | gold_spent | [uint64](#uint64) | optional |  |
+
+
+
+
+
+
+<a name="ei-CustomEgg"></a>
+
+### CustomEgg
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| identifier | [string](#string) | optional |  |
+| name | [string](#string) | optional |  |
+| description | [string](#string) | optional |  |
+| value | [double](#double) | optional |  |
+| hatchery_id | [string](#string) | optional |  |
+| hatchery_max_x | [double](#double) | optional |  |
+| icon | [DLCItem](#ei-DLCItem) | optional |  |
+| icon_width | [double](#double) | optional |  |
+| icon_height | [double](#double) | optional |  |
+| buffs | [GameModifier](#ei-GameModifier) | repeated |  |
 
 
 
@@ -3024,6 +3052,7 @@
 | coop_share_farm | [bool](#bool) | optional |  |
 | last_amount_when_reward_given | [double](#double) | optional |  |
 | num_goals_achieved | [uint32](#uint32) | optional |  |
+| max_farm_size_reached | [double](#double) | optional |  |
 | boosts_used | [uint32](#uint32) | optional |  |
 | points_replay | [bool](#bool) | optional |  |
 | league | [uint32](#uint32) | optional |  |
@@ -3246,6 +3275,7 @@
 | initial_grade_revealed | [bool](#bool) | optional |  |
 | last_grade_progress_shown | [double](#double) | optional |  |
 | show_advanced_evaluations | [bool](#bool) | optional |  |
+| custom_egg_info | [CustomEgg](#ei-CustomEgg) | repeated |  |
 
 
 
@@ -4651,6 +4681,7 @@
 | WATERBALLOON | 102 |  |
 | FIREWORK | 103 |  |
 | PUMPKIN | 104 |  |
+| CUSTOM_EGG | 200 |  |
 | UNKNOWN | 1000 |  |
 
 
@@ -4689,6 +4720,7 @@
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
+| INVALID | 0 |  |
 | EARNINGS | 1 |  |
 | AWAY_EARNINGS | 2 |  |
 | INTERNAL_HATCHERY_RATE | 3 |  |
@@ -5008,6 +5040,7 @@
 | HATCHERY_WATERBALLOON | 141 |  |
 | HATCHERY_FIREWORK | 142 |  |
 | HATCHERY_PUMPKIN | 143 |  |
+| HATCHERY_CUSTOM | 150 |  |
 | HOA_1 | 170 |  |
 | HOA_2 | 171 |  |
 | HOA_3 | 172 |  |
