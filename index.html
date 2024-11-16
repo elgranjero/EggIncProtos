@@ -451,6 +451,30 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ContractPlayerInfo.SeasonProgress"><span class="badge">M</span>ContractPlayerInfo.SeasonProgress</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSeasonGoal"><span class="badge">M</span>ContractSeasonGoal</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSeasonInfo"><span class="badge">M</span>ContractSeasonInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSeasonInfo.GoalSet"><span class="badge">M</span>ContractSeasonInfo.GoalSet</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSeasonInfos"><span class="badge">M</span>ContractSeasonInfos</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractSeasonRewardConfirmationRequest"><span class="badge">M</span>ContractSeasonRewardConfirmationRequest</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ContractSimConfig"><span class="badge">M</span>ContractSimConfig</a>
                 </li>
               
@@ -608,6 +632,10 @@
               
                 <li>
                   <a href="#ei.IAPSaleEntry"><span class="badge">M</span>IAPSaleEntry</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.IdleSessionSummary"><span class="badge">M</span>IdleSessionSummary</a>
                 </li>
               
                 <li>
@@ -6107,6 +6135,13 @@
                 </tr>
               
                 <tr>
+                  <td>last_idle_summary</td>
+                  <td><a href="#ei.IdleSessionSummary">IdleSessionSummary</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>egg_laying_rate_buff</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
@@ -6583,6 +6618,241 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>season_progress</td>
+                  <td><a href="#ei.ContractPlayerInfo.SeasonProgress">ContractPlayerInfo.SeasonProgress</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractPlayerInfo.SeasonProgress">ContractPlayerInfo.SeasonProgress</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>season_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>active</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>starting_grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>total_cxp</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cxp_last_reward_given</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSeasonGoal">ContractSeasonGoal</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>cxp</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reward_type</td>
+                  <td><a href="#ei.RewardType">RewardType</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reward_sub_type</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reward_amount</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSeasonInfo">ContractSeasonInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>grade_goals</td>
+                  <td><a href="#ei.ContractSeasonInfo.GoalSet">ContractSeasonInfo.GoalSet</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSeasonInfo.GoalSet">ContractSeasonInfo.GoalSet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>grade</td>
+                  <td><a href="#ei.Contract.PlayerGrade">Contract.PlayerGrade</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goals</td>
+                  <td><a href="#ei.ContractSeasonGoal">ContractSeasonGoal</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSeasonInfos">ContractSeasonInfos</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>infos</td>
+                  <td><a href="#ei.ContractSeasonInfo">ContractSeasonInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractSeasonRewardConfirmationRequest">ContractSeasonRewardConfirmationRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>season_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goal</td>
+                  <td><a href="#ei.ContractSeasonGoal">ContractSeasonGoal</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -6947,6 +7217,13 @@
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
                   <td><p> Default: 1000</p></td>
+                </tr>
+              
+                <tr>
+                  <td>current_season</td>
+                  <td><a href="#ei.ContractSeasonInfo">ContractSeasonInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
                 </tr>
               
             </tbody>
@@ -8624,6 +8901,79 @@
                 <tr>
                   <td>sale_id</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.IdleSessionSummary">IdleSessionSummary</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>time_away</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>time_simulated</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>silos_owned</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>average_elr</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>average_msr</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>average_egg_delivery_rate</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>last_egg_delivery_rate</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>farm_index</td>
+                  <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>

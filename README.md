@@ -72,6 +72,12 @@
     - [ContractEvaluationBatch](#ei-ContractEvaluationBatch)
     - [ContractEvaluationBatch.Pair](#ei-ContractEvaluationBatch-Pair)
     - [ContractPlayerInfo](#ei-ContractPlayerInfo)
+    - [ContractPlayerInfo.SeasonProgress](#ei-ContractPlayerInfo-SeasonProgress)
+    - [ContractSeasonGoal](#ei-ContractSeasonGoal)
+    - [ContractSeasonInfo](#ei-ContractSeasonInfo)
+    - [ContractSeasonInfo.GoalSet](#ei-ContractSeasonInfo-GoalSet)
+    - [ContractSeasonInfos](#ei-ContractSeasonInfos)
+    - [ContractSeasonRewardConfirmationRequest](#ei-ContractSeasonRewardConfirmationRequest)
     - [ContractSimConfig](#ei-ContractSimConfig)
     - [ContractSimConfig.ContractGradeSimConfig](#ei-ContractSimConfig-ContractGradeSimConfig)
     - [ContractSimConfig.ContractGradeSimConfig.GoalParams](#ei-ContractSimConfig-ContractGradeSimConfig-GoalParams)
@@ -112,6 +118,7 @@
     - [GetPeriodicalsRequest](#ei-GetPeriodicalsRequest)
     - [GiftPlayerCoopRequest](#ei-GiftPlayerCoopRequest)
     - [IAPSaleEntry](#ei-IAPSaleEntry)
+    - [IdleSessionSummary](#ei-IdleSessionSummary)
     - [InGameMail](#ei-InGameMail)
     - [InventorySlot](#ei-InventorySlot)
     - [JoinCoopRequest](#ei-JoinCoopRequest)
@@ -1686,6 +1693,7 @@
 | hide_cc_status | [bool](#bool) | optional |  |
 | production_params | [FarmProductionParams](#ei-FarmProductionParams) | optional |  |
 | farm_info | [PlayerFarmInfo](#ei-PlayerFarmInfo) | optional |  |
+| last_idle_summary | [IdleSessionSummary](#ei-IdleSessionSummary) | optional |  |
 | egg_laying_rate_buff | [double](#double) | optional |  Default: 1 |
 | earnings_buff | [double](#double) | optional |  Default: 1 |
 
@@ -1812,6 +1820,109 @@
 | last_evaluation_time | [double](#double) | optional |  |
 | last_evaluation_version | [string](#string) | optional |  |
 | unread_evaluations | [ContractEvaluation](#ei-ContractEvaluation) | repeated |  |
+| season_progress | [ContractPlayerInfo.SeasonProgress](#ei-ContractPlayerInfo-SeasonProgress) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractPlayerInfo-SeasonProgress"></a>
+
+### ContractPlayerInfo.SeasonProgress
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| season_id | [string](#string) | optional |  |
+| active | [bool](#bool) | optional |  |
+| starting_grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| total_cxp | [double](#double) | optional |  |
+| cxp_last_reward_given | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractSeasonGoal"></a>
+
+### ContractSeasonGoal
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| cxp | [double](#double) | optional |  |
+| reward_type | [RewardType](#ei-RewardType) | optional |  |
+| reward_sub_type | [string](#string) | optional |  |
+| reward_amount | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractSeasonInfo"></a>
+
+### ContractSeasonInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) | optional |  |
+| name | [string](#string) | optional |  |
+| grade_goals | [ContractSeasonInfo.GoalSet](#ei-ContractSeasonInfo-GoalSet) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractSeasonInfo-GoalSet"></a>
+
+### ContractSeasonInfo.GoalSet
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
+| goals | [ContractSeasonGoal](#ei-ContractSeasonGoal) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractSeasonInfos"></a>
+
+### ContractSeasonInfos
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| infos | [ContractSeasonInfo](#ei-ContractSeasonInfo) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractSeasonRewardConfirmationRequest"></a>
+
+### ContractSeasonRewardConfirmationRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| season_id | [string](#string) | optional |  |
+| goal | [ContractSeasonGoal](#ei-ContractSeasonGoal) | optional |  |
 
 
 
@@ -1980,6 +2091,7 @@
 | total_eop | [double](#double) | optional |  |
 | server_time | [double](#double) | optional |  |
 | max_eop | [uint32](#uint32) | optional |  Default: 1000 |
+| current_season | [ContractSeasonInfo](#ei-ContractSeasonInfo) | optional |  |
 
 
 
@@ -2567,6 +2679,28 @@
 | seconds_remaining | [double](#double) | optional |  |
 | discount_string | [string](#string) | optional |  |
 | sale_id | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-IdleSessionSummary"></a>
+
+### IdleSessionSummary
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| time_away | [double](#double) | optional |  |
+| time_simulated | [double](#double) | optional |  |
+| silos_owned | [uint32](#uint32) | optional |  |
+| average_elr | [double](#double) | optional |  |
+| average_msr | [double](#double) | optional |  |
+| average_egg_delivery_rate | [double](#double) | optional |  |
+| last_egg_delivery_rate | [double](#double) | optional |  |
+| farm_index | [uint32](#uint32) | optional |  |
 
 
 
