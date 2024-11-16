@@ -17,6 +17,7 @@ goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.ei.Contract');
+goog.require('proto.ei.ContractSeasonInfo');
 goog.require('proto.ei.CustomEgg');
 
 /**
@@ -86,7 +87,8 @@ proto.ei.ContractsResponse.toObject = function(includeInstance, msg) {
     warningMessage: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     totalEop: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
     serverTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    maxEop: jspb.Message.getFieldWithDefault(msg, 3, 1000)
+    maxEop: jspb.Message.getFieldWithDefault(msg, 3, 1000),
+    currentSeason: (f = msg.getCurrentSeason()) && proto.ei.ContractSeasonInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -148,6 +150,11 @@ proto.ei.ContractsResponse.deserializeBinaryFromReader = function(msg, reader) {
     case 3:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setMaxEop(value);
+      break;
+    case 7:
+      var value = new proto.ei.ContractSeasonInfo;
+      reader.readMessage(value,proto.ei.ContractSeasonInfo.deserializeBinaryFromReader);
+      msg.setCurrentSeason(value);
       break;
     default:
       reader.skipField();
@@ -220,6 +227,14 @@ proto.ei.ContractsResponse.serializeBinaryToWriter = function(message, writer) {
     writer.writeUint32(
       3,
       f
+    );
+  }
+  f = message.getCurrentSeason();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.ei.ContractSeasonInfo.serializeBinaryToWriter
     );
   }
 };
@@ -442,6 +457,43 @@ proto.ei.ContractsResponse.prototype.clearMaxEop = function() {
  */
 proto.ei.ContractsResponse.prototype.hasMaxEop = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional ContractSeasonInfo current_season = 7;
+ * @return {?proto.ei.ContractSeasonInfo}
+ */
+proto.ei.ContractsResponse.prototype.getCurrentSeason = function() {
+  return /** @type{?proto.ei.ContractSeasonInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.ContractSeasonInfo, 7));
+};
+
+
+/**
+ * @param {?proto.ei.ContractSeasonInfo|undefined} value
+ * @return {!proto.ei.ContractsResponse} returns this
+*/
+proto.ei.ContractsResponse.prototype.setCurrentSeason = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.ContractsResponse} returns this
+ */
+proto.ei.ContractsResponse.prototype.clearCurrentSeason = function() {
+  return this.setCurrentSeason(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractsResponse.prototype.hasCurrentSeason = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

@@ -18,6 +18,7 @@ goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.ei.BasicRequestInfo');
 goog.require('proto.ei.FarmProductionParams');
+goog.require('proto.ei.IdleSessionSummary');
 goog.require('proto.ei.PlayerFarmInfo');
 
 /**
@@ -88,6 +89,7 @@ proto.ei.ContractCoopStatusUpdateRequest.toObject = function(includeInstance, ms
     hideCcStatus: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
     productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
     farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
+    lastIdleSummary: (f = msg.getLastIdleSummary()) && proto.ei.IdleSessionSummary.toObject(includeInstance, f),
     eggLayingRateBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 1.0),
     earningsBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 1.0)
   };
@@ -188,6 +190,11 @@ proto.ei.ContractCoopStatusUpdateRequest.deserializeBinaryFromReader = function(
       var value = new proto.ei.PlayerFarmInfo;
       reader.readMessage(value,proto.ei.PlayerFarmInfo.deserializeBinaryFromReader);
       msg.setFarmInfo(value);
+      break;
+    case 18:
+      var value = new proto.ei.IdleSessionSummary;
+      reader.readMessage(value,proto.ei.IdleSessionSummary.deserializeBinaryFromReader);
+      msg.setLastIdleSummary(value);
       break;
     case 10:
       var value = /** @type {number} */ (reader.readDouble());
@@ -332,6 +339,14 @@ proto.ei.ContractCoopStatusUpdateRequest.serializeBinaryToWriter = function(mess
       16,
       f,
       proto.ei.PlayerFarmInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getLastIdleSummary();
+  if (f != null) {
+    writer.writeMessage(
+      18,
+      f,
+      proto.ei.IdleSessionSummary.serializeBinaryToWriter
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 10));
@@ -891,6 +906,43 @@ proto.ei.ContractCoopStatusUpdateRequest.prototype.clearFarmInfo = function() {
  */
 proto.ei.ContractCoopStatusUpdateRequest.prototype.hasFarmInfo = function() {
   return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional IdleSessionSummary last_idle_summary = 18;
+ * @return {?proto.ei.IdleSessionSummary}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.getLastIdleSummary = function() {
+  return /** @type{?proto.ei.IdleSessionSummary} */ (
+    jspb.Message.getWrapperField(this, proto.ei.IdleSessionSummary, 18));
+};
+
+
+/**
+ * @param {?proto.ei.IdleSessionSummary|undefined} value
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+*/
+proto.ei.ContractCoopStatusUpdateRequest.prototype.setLastIdleSummary = function(value) {
+  return jspb.Message.setWrapperField(this, 18, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.clearLastIdleSummary = function() {
+  return this.setLastIdleSummary(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.hasLastIdleSummary = function() {
+  return jspb.Message.getField(this, 18) != null;
 };
 
 
