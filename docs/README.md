@@ -119,6 +119,7 @@
     - [GiftPlayerCoopRequest](#ei-GiftPlayerCoopRequest)
     - [IAPSaleEntry](#ei-IAPSaleEntry)
     - [IdleSessionSummary](#ei-IdleSessionSummary)
+    - [IdleSessionSummary.Stat](#ei-IdleSessionSummary-Stat)
     - [InGameMail](#ei-InGameMail)
     - [InventorySlot](#ei-InventorySlot)
     - [JoinCoopRequest](#ei-JoinCoopRequest)
@@ -2700,7 +2701,28 @@
 | average_msr | [double](#double) | optional |  |
 | average_egg_delivery_rate | [double](#double) | optional |  |
 | last_egg_delivery_rate | [double](#double) | optional |  |
+| eggs_delivered | [double](#double) | optional |  |
+| stats | [IdleSessionSummary.Stat](#ei-IdleSessionSummary-Stat) | repeated |  |
 | farm_index | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-IdleSessionSummary-Stat"></a>
+
+### IdleSessionSummary.Stat
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [string](#string) | optional |  |
+| min | [double](#double) | optional |  |
+| max | [double](#double) | optional |  |
+| avg | [double](#double) | optional |  |
+| total_time | [double](#double) | optional |  |
 
 
 

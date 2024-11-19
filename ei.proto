@@ -1132,6 +1132,17 @@ message IdleSessionSummary {
     optional double average_msr = 5;
     optional double average_egg_delivery_rate = 6;
     optional double last_egg_delivery_rate = 8;
+    optional double eggs_delivered = 9;
+    
+    repeated Stat stats = 10;
+    message Stat {
+        optional string name = 1;
+        optional double min = 2;
+        optional double max = 3;
+        optional double avg = 4;
+        optional double total_time = 5;
+    }
+    
     optional uint32 farm_index = 7;
 }
 

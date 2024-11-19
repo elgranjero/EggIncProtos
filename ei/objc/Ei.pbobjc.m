@@ -150,6 +150,7 @@ GPBObjCClassDeclaration(GetPeriodicalsRequest);
 GPBObjCClassDeclaration(GiftPlayerCoopRequest);
 GPBObjCClassDeclaration(IAPSaleEntry);
 GPBObjCClassDeclaration(IdleSessionSummary);
+GPBObjCClassDeclaration(IdleSessionSummary_Stat);
 GPBObjCClassDeclaration(InGameMail);
 GPBObjCClassDeclaration(InventorySlot);
 GPBObjCClassDeclaration(JoinCoopRequest);
@@ -13660,18 +13661,22 @@ typedef struct KickPlayerCoopRequest__storage_ {
 @dynamic hasAverageMsr, averageMsr;
 @dynamic hasAverageEggDeliveryRate, averageEggDeliveryRate;
 @dynamic hasLastEggDeliveryRate, lastEggDeliveryRate;
+@dynamic hasEggsDelivered, eggsDelivered;
+@dynamic statsArray, statsArray_Count;
 @dynamic hasFarmIndex, farmIndex;
 
 typedef struct IdleSessionSummary__storage_ {
   uint32_t _has_storage_[1];
   uint32_t silosOwned;
   uint32_t farmIndex;
+  NSMutableArray *statsArray;
   double timeAway;
   double timeSimulated;
   double averageElr;
   double averageMsr;
   double averageEggDeliveryRate;
   double lastEggDeliveryRate;
+  double eggsDelivered;
 } IdleSessionSummary__storage_;
 
 // This method is threadsafe because it is initially called
@@ -13739,7 +13744,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "farmIndex",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_FarmIndex,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, farmIndex),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -13753,6 +13758,24 @@ typedef struct IdleSessionSummary__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
+      {
+        .name = "eggsDelivered",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_FieldNumber_EggsDelivered,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, eggsDelivered),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "statsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(IdleSessionSummary_Stat),
+        .number = IdleSessionSummary_FieldNumber_StatsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, statsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:GPBObjCClass(IdleSessionSummary)
@@ -13762,6 +13785,97 @@ typedef struct IdleSessionSummary__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(IdleSessionSummary__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_ClosedEnumSupportKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - IdleSessionSummary_Stat
+
+@implementation IdleSessionSummary_Stat
+
+@dynamic hasName, name;
+@dynamic hasMin, min;
+@dynamic hasMax, max;
+@dynamic hasAvg, avg;
+@dynamic hasTotalTime, totalTime;
+
+typedef struct IdleSessionSummary_Stat__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *name;
+  double min;
+  double max;
+  double avg;
+  double totalTime;
+} IdleSessionSummary_Stat__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    GPB_DEBUG_CHECK_RUNTIME_VERSIONS();
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "name",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_Stat_FieldNumber_Name,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(IdleSessionSummary_Stat__storage_, name),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "min",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_Stat_FieldNumber_Min,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(IdleSessionSummary_Stat__storage_, min),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "max",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_Stat_FieldNumber_Max,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(IdleSessionSummary_Stat__storage_, max),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "avg",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_Stat_FieldNumber_Avg,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(IdleSessionSummary_Stat__storage_, avg),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "totalTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_Stat_FieldNumber_TotalTime,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(IdleSessionSummary_Stat__storage_, totalTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(IdleSessionSummary_Stat)
+                                   messageName:@"Stat"
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(IdleSessionSummary_Stat__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_ClosedEnumSupportKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(IdleSessionSummary)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG

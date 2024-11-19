@@ -197,6 +197,102 @@ public object IdleSessionSummaryKt {
     }
 
     /**
+     * `optional double eggs_delivered = 9;`
+     */
+    public var eggsDelivered: kotlin.Double
+      @JvmName("getEggsDelivered")
+      get() = _builder.eggsDelivered
+      @JvmName("setEggsDelivered")
+      set(value) {
+        _builder.eggsDelivered = value
+      }
+    /**
+     * `optional double eggs_delivered = 9;`
+     */
+    public fun clearEggsDelivered() {
+      _builder.clearEggsDelivered()
+    }
+    /**
+     * `optional double eggs_delivered = 9;`
+     * @return Whether the eggsDelivered field is set.
+     */
+    public fun hasEggsDelivered(): kotlin.Boolean {
+      return _builder.hasEggsDelivered()
+    }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class StatsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     */
+     public val stats: com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.statsList
+      )
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * @param value The stats to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addStats")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.add(value: ei.Ei.IdleSessionSummary.Stat) {
+      _builder.addStats(value)
+    }
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * @param value The stats to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignStats")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.plusAssign(value: ei.Ei.IdleSessionSummary.Stat) {
+      add(value)
+    }
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * @param values The stats to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllStats")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.IdleSessionSummary.Stat>) {
+      _builder.addAllStats(values)
+    }
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * @param values The stats to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllStats")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.IdleSessionSummary.Stat>) {
+      addAll(values)
+    }
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * @param index The index to set the value at.
+     * @param value The stats to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setStats")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.set(index: kotlin.Int, value: ei.Ei.IdleSessionSummary.Stat) {
+      _builder.setStats(index, value)
+    }
+    /**
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearStats")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.clear() {
+      _builder.clearStats()
+    }
+
+
+    /**
      * `optional uint32 farm_index = 7;`
      */
     public var farmIndex: kotlin.Int
@@ -220,8 +316,155 @@ public object IdleSessionSummaryKt {
       return _builder.hasFarmIndex()
     }
   }
+  @kotlin.jvm.JvmName("-initializestat")
+  public inline fun stat(block: ei.IdleSessionSummaryKt.StatKt.Dsl.() -> kotlin.Unit): ei.Ei.IdleSessionSummary.Stat =
+    ei.IdleSessionSummaryKt.StatKt.Dsl._create(ei.Ei.IdleSessionSummary.Stat.newBuilder()).apply { block() }._build()
+  /**
+   * Protobuf type `ei.IdleSessionSummary.Stat`
+   */
+  public object StatKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.IdleSessionSummary.Stat.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.IdleSessionSummary.Stat.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+      @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.IdleSessionSummary.Stat = _builder.build()
+
+      /**
+       * `optional string name = 1;`
+       */
+      public var name: kotlin.String
+        @JvmName("getName")
+        get() = _builder.name
+        @JvmName("setName")
+        set(value) {
+          _builder.name = value
+        }
+      /**
+       * `optional string name = 1;`
+       */
+      public fun clearName() {
+        _builder.clearName()
+      }
+      /**
+       * `optional string name = 1;`
+       * @return Whether the name field is set.
+       */
+      public fun hasName(): kotlin.Boolean {
+        return _builder.hasName()
+      }
+
+      /**
+       * `optional double min = 2;`
+       */
+      public var min: kotlin.Double
+        @JvmName("getMin")
+        get() = _builder.min
+        @JvmName("setMin")
+        set(value) {
+          _builder.min = value
+        }
+      /**
+       * `optional double min = 2;`
+       */
+      public fun clearMin() {
+        _builder.clearMin()
+      }
+      /**
+       * `optional double min = 2;`
+       * @return Whether the min field is set.
+       */
+      public fun hasMin(): kotlin.Boolean {
+        return _builder.hasMin()
+      }
+
+      /**
+       * `optional double max = 3;`
+       */
+      public var max: kotlin.Double
+        @JvmName("getMax")
+        get() = _builder.max
+        @JvmName("setMax")
+        set(value) {
+          _builder.max = value
+        }
+      /**
+       * `optional double max = 3;`
+       */
+      public fun clearMax() {
+        _builder.clearMax()
+      }
+      /**
+       * `optional double max = 3;`
+       * @return Whether the max field is set.
+       */
+      public fun hasMax(): kotlin.Boolean {
+        return _builder.hasMax()
+      }
+
+      /**
+       * `optional double avg = 4;`
+       */
+      public var avg: kotlin.Double
+        @JvmName("getAvg")
+        get() = _builder.avg
+        @JvmName("setAvg")
+        set(value) {
+          _builder.avg = value
+        }
+      /**
+       * `optional double avg = 4;`
+       */
+      public fun clearAvg() {
+        _builder.clearAvg()
+      }
+      /**
+       * `optional double avg = 4;`
+       * @return Whether the avg field is set.
+       */
+      public fun hasAvg(): kotlin.Boolean {
+        return _builder.hasAvg()
+      }
+
+      /**
+       * `optional double total_time = 5;`
+       */
+      public var totalTime: kotlin.Double
+        @JvmName("getTotalTime")
+        get() = _builder.totalTime
+        @JvmName("setTotalTime")
+        set(value) {
+          _builder.totalTime = value
+        }
+      /**
+       * `optional double total_time = 5;`
+       */
+      public fun clearTotalTime() {
+        _builder.clearTotalTime()
+      }
+      /**
+       * `optional double total_time = 5;`
+       * @return Whether the totalTime field is set.
+       */
+      public fun hasTotalTime(): kotlin.Boolean {
+        return _builder.hasTotalTime()
+      }
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.IdleSessionSummary.copy(block: `ei`.IdleSessionSummaryKt.Dsl.() -> kotlin.Unit): ei.Ei.IdleSessionSummary =
   `ei`.IdleSessionSummaryKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.IdleSessionSummary.Stat.copy(block: `ei`.IdleSessionSummaryKt.StatKt.Dsl.() -> kotlin.Unit): ei.Ei.IdleSessionSummary.Stat =
+  `ei`.IdleSessionSummaryKt.StatKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

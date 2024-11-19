@@ -102,6 +102,7 @@ CF_EXTERN_C_BEGIN
 @class GenericAction;
 @class IAPSaleEntry;
 @class IdleSessionSummary;
+@class IdleSessionSummary_Stat;
 @class InGameMail;
 @class InventorySlot;
 @class LeaderboardAnalysis_Chunk;
@@ -5055,6 +5056,8 @@ typedef GPB_ENUM(IdleSessionSummary_FieldNumber) {
   IdleSessionSummary_FieldNumber_AverageEggDeliveryRate = 6,
   IdleSessionSummary_FieldNumber_FarmIndex = 7,
   IdleSessionSummary_FieldNumber_LastEggDeliveryRate = 8,
+  IdleSessionSummary_FieldNumber_EggsDelivered = 9,
+  IdleSessionSummary_FieldNumber_StatsArray = 10,
 };
 
 GPB_FINAL @interface IdleSessionSummary : GPBMessage
@@ -5080,8 +5083,45 @@ GPB_FINAL @interface IdleSessionSummary : GPBMessage
 @property(nonatomic, readwrite) double lastEggDeliveryRate;
 @property(nonatomic, readwrite) BOOL hasLastEggDeliveryRate;
 
+@property(nonatomic, readwrite) double eggsDelivered;
+@property(nonatomic, readwrite) BOOL hasEggsDelivered;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<IdleSessionSummary_Stat*> *statsArray;
+/** The number of items in @c statsArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger statsArray_Count;
+
 @property(nonatomic, readwrite) uint32_t farmIndex;
 @property(nonatomic, readwrite) BOOL hasFarmIndex;
+
+@end
+
+#pragma mark - IdleSessionSummary_Stat
+
+typedef GPB_ENUM(IdleSessionSummary_Stat_FieldNumber) {
+  IdleSessionSummary_Stat_FieldNumber_Name = 1,
+  IdleSessionSummary_Stat_FieldNumber_Min = 2,
+  IdleSessionSummary_Stat_FieldNumber_Max = 3,
+  IdleSessionSummary_Stat_FieldNumber_Avg = 4,
+  IdleSessionSummary_Stat_FieldNumber_TotalTime = 5,
+};
+
+GPB_FINAL @interface IdleSessionSummary_Stat : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+/** Test to see if @c name has been set. */
+@property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite) double min;
+@property(nonatomic, readwrite) BOOL hasMin;
+
+@property(nonatomic, readwrite) double max;
+@property(nonatomic, readwrite) BOOL hasMax;
+
+@property(nonatomic, readwrite) double avg;
+@property(nonatomic, readwrite) BOOL hasAvg;
+
+@property(nonatomic, readwrite) double totalTime;
+@property(nonatomic, readwrite) BOOL hasTotalTime;
 
 @end
 
