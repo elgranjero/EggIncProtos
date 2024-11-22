@@ -12925,7 +12925,7 @@ proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
     chickenRunsList: jspb.Message.toObjectList(msg.getChickenRunsList(),
     proto.ei.ContractCoopStatusResponse.ChickenRun.toObject, includeInstance),
     localTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-    lastSync: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f
+    lastSyncDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -13039,7 +13039,7 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
       break;
     case 18:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setLastSync(value);
+      msg.setLastSyncDep(value);
       break;
     default:
       reader.skipField();
@@ -15707,10 +15707,10 @@ proto.ei.ContractCoopStatusResponse.prototype.hasLocalTimestamp = function() {
 
 
 /**
- * optional double last_sync = 18;
+ * optional double last_sync_DEP = 18;
  * @return {number}
  */
-proto.ei.ContractCoopStatusResponse.prototype.getLastSync = function() {
+proto.ei.ContractCoopStatusResponse.prototype.getLastSyncDep = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 18, 0.0));
 };
 
@@ -15719,7 +15719,7 @@ proto.ei.ContractCoopStatusResponse.prototype.getLastSync = function() {
  * @param {number} value
  * @return {!proto.ei.ContractCoopStatusResponse} returns this
  */
-proto.ei.ContractCoopStatusResponse.prototype.setLastSync = function(value) {
+proto.ei.ContractCoopStatusResponse.prototype.setLastSyncDep = function(value) {
   return jspb.Message.setField(this, 18, value);
 };
 
@@ -15728,7 +15728,7 @@ proto.ei.ContractCoopStatusResponse.prototype.setLastSync = function(value) {
  * Clears the field making it undefined.
  * @return {!proto.ei.ContractCoopStatusResponse} returns this
  */
-proto.ei.ContractCoopStatusResponse.prototype.clearLastSync = function() {
+proto.ei.ContractCoopStatusResponse.prototype.clearLastSyncDep = function() {
   return jspb.Message.setField(this, 18, undefined);
 };
 
@@ -15737,7 +15737,7 @@ proto.ei.ContractCoopStatusResponse.prototype.clearLastSync = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ContractCoopStatusResponse.prototype.hasLastSync = function() {
+proto.ei.ContractCoopStatusResponse.prototype.hasLastSyncDep = function() {
   return jspb.Message.getField(this, 18) != null;
 };
 

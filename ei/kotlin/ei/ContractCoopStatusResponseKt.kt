@@ -605,27 +605,27 @@ public object ContractCoopStatusResponseKt {
     }
 
     /**
-     * `optional double last_sync = 18;`
+     * `optional double last_sync_DEP = 18;`
      */
-    public var lastSync: kotlin.Double
-      @JvmName("getLastSync")
-      get() = _builder.lastSync
-      @JvmName("setLastSync")
+    public var lastSyncDEP: kotlin.Double
+      @JvmName("getLastSyncDEP")
+      get() = _builder.lastSyncDEP
+      @JvmName("setLastSyncDEP")
       set(value) {
-        _builder.lastSync = value
+        _builder.lastSyncDEP = value
       }
     /**
-     * `optional double last_sync = 18;`
+     * `optional double last_sync_DEP = 18;`
      */
-    public fun clearLastSync() {
-      _builder.clearLastSync()
+    public fun clearLastSyncDEP() {
+      _builder.clearLastSyncDEP()
     }
     /**
-     * `optional double last_sync = 18;`
-     * @return Whether the lastSync field is set.
+     * `optional double last_sync_DEP = 18;`
+     * @return Whether the lastSyncDEP field is set.
      */
-    public fun hasLastSync(): kotlin.Boolean {
-      return _builder.hasLastSync()
+    public fun hasLastSyncDEP(): kotlin.Boolean {
+      return _builder.hasLastSyncDEP()
     }
   }
   @kotlin.jvm.JvmName("-initializecontributionInfo")

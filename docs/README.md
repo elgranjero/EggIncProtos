@@ -1591,7 +1591,7 @@
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
 | chicken_runs | [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun) | repeated |  |
 | local_timestamp | [double](#double) | optional |  |
-| last_sync | [double](#double) | optional |  |
+| last_sync_DEP | [double](#double) | optional |  |
 
 
 
@@ -2694,6 +2694,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
+| success | [bool](#bool) | optional |  |
 | time_away | [double](#double) | optional |  |
 | time_simulated | [double](#double) | optional |  |
 | silos_owned | [uint32](#uint32) | optional |  |

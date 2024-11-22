@@ -29,6 +29,30 @@ public object IdleSessionSummaryKt {
     internal fun _build(): ei.Ei.IdleSessionSummary = _builder.build()
 
     /**
+     * `optional bool success = 11;`
+     */
+    public var success: kotlin.Boolean
+      @JvmName("getSuccess")
+      get() = _builder.success
+      @JvmName("setSuccess")
+      set(value) {
+        _builder.success = value
+      }
+    /**
+     * `optional bool success = 11;`
+     */
+    public fun clearSuccess() {
+      _builder.clearSuccess()
+    }
+    /**
+     * `optional bool success = 11;`
+     * @return Whether the success field is set.
+     */
+    public fun hasSuccess(): kotlin.Boolean {
+      return _builder.hasSuccess()
+    }
+
+    /**
      * `optional double time_away = 1;`
      */
     public var timeAway: kotlin.Double

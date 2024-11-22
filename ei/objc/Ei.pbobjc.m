@@ -10929,7 +10929,7 @@ typedef struct PlayerFarmInfo__storage_ {
 @dynamic giftsArray, giftsArray_Count;
 @dynamic chickenRunsArray, chickenRunsArray_Count;
 @dynamic hasLocalTimestamp, localTimestamp;
-@dynamic hasLastSync, lastSync;
+@dynamic hasLastSyncDep, lastSyncDep;
 
 typedef struct ContractCoopStatusResponse__storage_ {
   uint32_t _has_storage_[1];
@@ -10946,7 +10946,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
   double gracePeriodSecondsRemaining;
   double localTimestamp;
   double secondsSinceAllGoalsAchieved;
-  double lastSync;
+  double lastSyncDep;
 } ContractCoopStatusResponse__storage_;
 
 // This method is threadsafe because it is initially called
@@ -11110,12 +11110,12 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "lastSync",
+        .name = "lastSyncDep",
         .dataTypeSpecific.clazz = Nil,
-        .number = ContractCoopStatusResponse_FieldNumber_LastSync,
+        .number = ContractCoopStatusResponse_FieldNumber_LastSyncDep,
         .hasIndex = 20,
-        .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, lastSync),
-        .flags = GPBFieldOptional,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, lastSyncDep),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeDouble,
       },
       {
@@ -11136,6 +11136,11 @@ typedef struct ContractCoopStatusResponse__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ContractCoopStatusResponse__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_ClosedEnumSupportKnown)];
+    #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+      static const char *extraTextFormatInfo =
+        "\001\022\004\244\343\000";
+      [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+    #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -13654,6 +13659,7 @@ typedef struct KickPlayerCoopRequest__storage_ {
 
 @implementation IdleSessionSummary
 
+@dynamic hasSuccess, success;
 @dynamic hasTimeAway, timeAway;
 @dynamic hasTimeSimulated, timeSimulated;
 @dynamic hasSilosOwned, silosOwned;
@@ -13690,7 +13696,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "timeAway",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_TimeAway,
-        .hasIndex = 0,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, timeAway),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13699,7 +13705,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "timeSimulated",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_TimeSimulated,
-        .hasIndex = 1,
+        .hasIndex = 3,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, timeSimulated),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13708,7 +13714,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "silosOwned",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_SilosOwned,
-        .hasIndex = 2,
+        .hasIndex = 4,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, silosOwned),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -13717,7 +13723,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "averageElr",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_AverageElr,
-        .hasIndex = 3,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, averageElr),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13726,7 +13732,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "averageMsr",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_AverageMsr,
-        .hasIndex = 4,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, averageMsr),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13735,7 +13741,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "averageEggDeliveryRate",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_AverageEggDeliveryRate,
-        .hasIndex = 5,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, averageEggDeliveryRate),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13744,7 +13750,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "farmIndex",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_FarmIndex,
-        .hasIndex = 8,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, farmIndex),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -13753,7 +13759,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "lastEggDeliveryRate",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_LastEggDeliveryRate,
-        .hasIndex = 6,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, lastEggDeliveryRate),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13762,7 +13768,7 @@ typedef struct IdleSessionSummary__storage_ {
         .name = "eggsDelivered",
         .dataTypeSpecific.clazz = Nil,
         .number = IdleSessionSummary_FieldNumber_EggsDelivered,
-        .hasIndex = 7,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, eggsDelivered),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -13775,6 +13781,15 @@ typedef struct IdleSessionSummary__storage_ {
         .offset = (uint32_t)offsetof(IdleSessionSummary__storage_, statsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "success",
+        .dataTypeSpecific.clazz = Nil,
+        .number = IdleSessionSummary_FieldNumber_Success,
+        .hasIndex = 0,
+        .offset = 1,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =

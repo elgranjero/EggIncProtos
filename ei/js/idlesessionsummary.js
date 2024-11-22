@@ -99,6 +99,7 @@ proto.ei.IdleSessionSummary.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.IdleSessionSummary.toObject = function(includeInstance, msg) {
   var f, obj = {
+    success: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
     timeAway: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
     timeSimulated: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
     silosOwned: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
@@ -146,6 +147,10 @@ proto.ei.IdleSessionSummary.deserializeBinaryFromReader = function(msg, reader) 
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 11:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSuccess(value);
+      break;
     case 1:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setTimeAway(value);
@@ -216,6 +221,13 @@ proto.ei.IdleSessionSummary.prototype.serializeBinary = function() {
  */
 proto.ei.IdleSessionSummary.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 11));
+  if (f != null) {
+    writer.writeBool(
+      11,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
     writer.writeDouble(
@@ -627,6 +639,42 @@ proto.ei.IdleSessionSummary.Stat.prototype.clearTotalTime = function() {
  */
 proto.ei.IdleSessionSummary.Stat.prototype.hasTotalTime = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bool success = 11;
+ * @return {boolean}
+ */
+proto.ei.IdleSessionSummary.prototype.getSuccess = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 11, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.IdleSessionSummary} returns this
+ */
+proto.ei.IdleSessionSummary.prototype.setSuccess = function(value) {
+  return jspb.Message.setField(this, 11, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.IdleSessionSummary} returns this
+ */
+proto.ei.IdleSessionSummary.prototype.clearSuccess = function() {
+  return jspb.Message.setField(this, 11, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.IdleSessionSummary.prototype.hasSuccess = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 

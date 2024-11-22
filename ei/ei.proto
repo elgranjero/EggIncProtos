@@ -902,7 +902,7 @@ message ContractCoopStatusResponse {
     }
     
     optional double local_timestamp = 12;
-    optional double last_sync = 18;
+    optional double last_sync_DEP = 18;
     
     enum MemberStatus {
         VALID = 0;
@@ -1125,6 +1125,7 @@ message KickPlayerCoopRequest {
 }
 
 message IdleSessionSummary {
+    optional bool success = 11;
     optional double time_away = 1;
     optional double time_simulated = 2;
     optional uint32 silos_owned = 3;

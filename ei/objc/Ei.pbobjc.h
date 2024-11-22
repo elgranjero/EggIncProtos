@@ -4049,7 +4049,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_ClearedForExit = 15,
   ContractCoopStatusResponse_FieldNumber_SecondsSinceAllGoalsAchieved = 16,
   ContractCoopStatusResponse_FieldNumber_Grade = 17,
-  ContractCoopStatusResponse_FieldNumber_LastSync = 18,
+  ContractCoopStatusResponse_FieldNumber_LastSyncDep = 18,
   ContractCoopStatusResponse_FieldNumber_ResponseStatus = 19,
 };
 
@@ -4115,8 +4115,8 @@ GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 @property(nonatomic, readwrite) double localTimestamp;
 @property(nonatomic, readwrite) BOOL hasLocalTimestamp;
 
-@property(nonatomic, readwrite) double lastSync;
-@property(nonatomic, readwrite) BOOL hasLastSync;
+@property(nonatomic, readwrite) double lastSyncDep;
+@property(nonatomic, readwrite) BOOL hasLastSyncDep;
 
 @end
 
@@ -5058,9 +5058,13 @@ typedef GPB_ENUM(IdleSessionSummary_FieldNumber) {
   IdleSessionSummary_FieldNumber_LastEggDeliveryRate = 8,
   IdleSessionSummary_FieldNumber_EggsDelivered = 9,
   IdleSessionSummary_FieldNumber_StatsArray = 10,
+  IdleSessionSummary_FieldNumber_Success = 11,
 };
 
 GPB_FINAL @interface IdleSessionSummary : GPBMessage
+
+@property(nonatomic, readwrite) BOOL success;
+@property(nonatomic, readwrite) BOOL hasSuccess;
 
 @property(nonatomic, readwrite) double timeAway;
 @property(nonatomic, readwrite) BOOL hasTimeAway;
