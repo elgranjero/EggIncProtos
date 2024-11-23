@@ -10427,6 +10427,7 @@ typedef struct ContractsResponse__storage_ {
 @dynamic hasCoopIdentifier, coopIdentifier;
 @dynamic hasUserId, userId;
 @dynamic hasClientVersion, clientVersion;
+@dynamic hasClientTimestamp, clientTimestamp;
 
 typedef struct ContractCoopStatusRequest__storage_ {
   uint32_t _has_storage_[1];
@@ -10435,6 +10436,7 @@ typedef struct ContractCoopStatusRequest__storage_ {
   NSString *coopIdentifier;
   NSString *userId;
   BasicRequestInfo *rinfo;
+  double clientTimestamp;
 } ContractCoopStatusRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -10488,6 +10490,15 @@ typedef struct ContractCoopStatusRequest__storage_ {
         .offset = (uint32_t)offsetof(ContractCoopStatusRequest__storage_, rinfo),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "clientTimestamp",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusRequest_FieldNumber_ClientTimestamp,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ContractCoopStatusRequest__storage_, clientTimestamp),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -10928,7 +10939,7 @@ typedef struct PlayerFarmInfo__storage_ {
 @dynamic hasClearedForExit, clearedForExit;
 @dynamic giftsArray, giftsArray_Count;
 @dynamic chickenRunsArray, chickenRunsArray_Count;
-@dynamic hasLocalTimestamp, localTimestamp;
+@dynamic hasClientTimestamp, clientTimestamp;
 @dynamic hasLastSyncDep, lastSyncDep;
 
 typedef struct ContractCoopStatusResponse__storage_ {
@@ -10944,7 +10955,7 @@ typedef struct ContractCoopStatusResponse__storage_ {
   double totalAmount;
   double secondsRemaining;
   double gracePeriodSecondsRemaining;
-  double localTimestamp;
+  double clientTimestamp;
   double secondsSinceAllGoalsAchieved;
   double lastSyncDep;
 } ContractCoopStatusResponse__storage_;
@@ -11056,11 +11067,11 @@ typedef struct ContractCoopStatusResponse__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "localTimestamp",
+        .name = "clientTimestamp",
         .dataTypeSpecific.clazz = Nil,
-        .number = ContractCoopStatusResponse_FieldNumber_LocalTimestamp,
+        .number = ContractCoopStatusResponse_FieldNumber_ClientTimestamp,
         .hasIndex = 19,
-        .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, localTimestamp),
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse__storage_, clientTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },

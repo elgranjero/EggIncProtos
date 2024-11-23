@@ -581,27 +581,27 @@ public object ContractCoopStatusResponseKt {
 
 
     /**
-     * `optional double local_timestamp = 12;`
+     * `optional double client_timestamp = 12;`
      */
-    public var localTimestamp: kotlin.Double
-      @JvmName("getLocalTimestamp")
-      get() = _builder.localTimestamp
-      @JvmName("setLocalTimestamp")
+    public var clientTimestamp: kotlin.Double
+      @JvmName("getClientTimestamp")
+      get() = _builder.clientTimestamp
+      @JvmName("setClientTimestamp")
       set(value) {
-        _builder.localTimestamp = value
+        _builder.clientTimestamp = value
       }
     /**
-     * `optional double local_timestamp = 12;`
+     * `optional double client_timestamp = 12;`
      */
-    public fun clearLocalTimestamp() {
-      _builder.clearLocalTimestamp()
+    public fun clearClientTimestamp() {
+      _builder.clearClientTimestamp()
     }
     /**
-     * `optional double local_timestamp = 12;`
-     * @return Whether the localTimestamp field is set.
+     * `optional double client_timestamp = 12;`
+     * @return Whether the clientTimestamp field is set.
      */
-    public fun hasLocalTimestamp(): kotlin.Boolean {
-      return _builder.hasLocalTimestamp()
+    public fun hasClientTimestamp(): kotlin.Boolean {
+      return _builder.hasClientTimestamp()
     }
 
     /**

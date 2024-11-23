@@ -3863,6 +3863,7 @@ typedef GPB_ENUM(ContractCoopStatusRequest_FieldNumber) {
   ContractCoopStatusRequest_FieldNumber_UserId = 3,
   ContractCoopStatusRequest_FieldNumber_ClientVersion = 4,
   ContractCoopStatusRequest_FieldNumber_Rinfo = 5,
+  ContractCoopStatusRequest_FieldNumber_ClientTimestamp = 6,
 };
 
 GPB_FINAL @interface ContractCoopStatusRequest : GPBMessage
@@ -3885,6 +3886,9 @@ GPB_FINAL @interface ContractCoopStatusRequest : GPBMessage
 
 @property(nonatomic, readwrite) uint32_t clientVersion;
 @property(nonatomic, readwrite) BOOL hasClientVersion;
+
+@property(nonatomic, readwrite) double clientTimestamp;
+@property(nonatomic, readwrite) BOOL hasClientTimestamp;
 
 @end
 
@@ -4043,7 +4047,7 @@ typedef GPB_ENUM(ContractCoopStatusResponse_FieldNumber) {
   ContractCoopStatusResponse_FieldNumber_CreatorId = 9,
   ContractCoopStatusResponse_FieldNumber_Public_p = 10,
   ContractCoopStatusResponse_FieldNumber_GiftsArray = 11,
-  ContractCoopStatusResponse_FieldNumber_LocalTimestamp = 12,
+  ContractCoopStatusResponse_FieldNumber_ClientTimestamp = 12,
   ContractCoopStatusResponse_FieldNumber_ChickenRunsArray = 13,
   ContractCoopStatusResponse_FieldNumber_AllGoalsAchieved = 14,
   ContractCoopStatusResponse_FieldNumber_ClearedForExit = 15,
@@ -4112,8 +4116,8 @@ GPB_FINAL @interface ContractCoopStatusResponse : GPBMessage
 /** The number of items in @c chickenRunsArray without causing the container to be created. */
 @property(nonatomic, readonly) NSUInteger chickenRunsArray_Count;
 
-@property(nonatomic, readwrite) double localTimestamp;
-@property(nonatomic, readwrite) BOOL hasLocalTimestamp;
+@property(nonatomic, readwrite) double clientTimestamp;
+@property(nonatomic, readwrite) BOOL hasClientTimestamp;
 
 @property(nonatomic, readwrite) double lastSyncDep;
 @property(nonatomic, readwrite) BOOL hasLastSyncDep;

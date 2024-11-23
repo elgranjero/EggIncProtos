@@ -12924,7 +12924,7 @@ proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
     proto.ei.ContractCoopStatusResponse.CoopGift.toObject, includeInstance),
     chickenRunsList: jspb.Message.toObjectList(msg.getChickenRunsList(),
     proto.ei.ContractCoopStatusResponse.ChickenRun.toObject, includeInstance),
-    localTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    clientTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
     lastSyncDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f
   };
 
@@ -13035,7 +13035,7 @@ proto.ei.ContractCoopStatusResponse.deserializeBinaryFromReader = function(msg, 
       break;
     case 12:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setLocalTimestamp(value);
+      msg.setClientTimestamp(value);
       break;
     case 18:
       var value = /** @type {number} */ (reader.readDouble());
@@ -15671,10 +15671,10 @@ proto.ei.ContractCoopStatusResponse.prototype.clearChickenRunsList = function() 
 
 
 /**
- * optional double local_timestamp = 12;
+ * optional double client_timestamp = 12;
  * @return {number}
  */
-proto.ei.ContractCoopStatusResponse.prototype.getLocalTimestamp = function() {
+proto.ei.ContractCoopStatusResponse.prototype.getClientTimestamp = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 12, 0.0));
 };
 
@@ -15683,7 +15683,7 @@ proto.ei.ContractCoopStatusResponse.prototype.getLocalTimestamp = function() {
  * @param {number} value
  * @return {!proto.ei.ContractCoopStatusResponse} returns this
  */
-proto.ei.ContractCoopStatusResponse.prototype.setLocalTimestamp = function(value) {
+proto.ei.ContractCoopStatusResponse.prototype.setClientTimestamp = function(value) {
   return jspb.Message.setField(this, 12, value);
 };
 
@@ -15692,7 +15692,7 @@ proto.ei.ContractCoopStatusResponse.prototype.setLocalTimestamp = function(value
  * Clears the field making it undefined.
  * @return {!proto.ei.ContractCoopStatusResponse} returns this
  */
-proto.ei.ContractCoopStatusResponse.prototype.clearLocalTimestamp = function() {
+proto.ei.ContractCoopStatusResponse.prototype.clearClientTimestamp = function() {
   return jspb.Message.setField(this, 12, undefined);
 };
 
@@ -15701,7 +15701,7 @@ proto.ei.ContractCoopStatusResponse.prototype.clearLocalTimestamp = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ContractCoopStatusResponse.prototype.hasLocalTimestamp = function() {
+proto.ei.ContractCoopStatusResponse.prototype.hasClientTimestamp = function() {
   return jspb.Message.getField(this, 12) != null;
 };
 

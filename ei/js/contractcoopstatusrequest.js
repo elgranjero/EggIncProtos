@@ -75,7 +75,8 @@ proto.ei.ContractCoopStatusRequest.toObject = function(includeInstance, msg) {
     contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    clientVersion: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+    clientVersion: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    clientTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -132,6 +133,10 @@ proto.ei.ContractCoopStatusRequest.deserializeBinaryFromReader = function(msg, r
     case 4:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setClientVersion(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setClientTimestamp(value);
       break;
     default:
       reader.skipField();
@@ -195,6 +200,13 @@ proto.ei.ContractCoopStatusRequest.serializeBinaryToWriter = function(message, w
   if (f != null) {
     writer.writeUint32(
       4,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeDouble(
+      6,
       f
     );
   }
@@ -379,6 +391,42 @@ proto.ei.ContractCoopStatusRequest.prototype.clearClientVersion = function() {
  */
 proto.ei.ContractCoopStatusRequest.prototype.hasClientVersion = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional double client_timestamp = 6;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusRequest.prototype.getClientTimestamp = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusRequest} returns this
+ */
+proto.ei.ContractCoopStatusRequest.prototype.setClientTimestamp = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusRequest} returns this
+ */
+proto.ei.ContractCoopStatusRequest.prototype.clearClientTimestamp = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusRequest.prototype.hasClientTimestamp = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

@@ -149,6 +149,30 @@ public object ContractCoopStatusRequestKt {
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
     }
+
+    /**
+     * `optional double client_timestamp = 6;`
+     */
+    public var clientTimestamp: kotlin.Double
+      @JvmName("getClientTimestamp")
+      get() = _builder.clientTimestamp
+      @JvmName("setClientTimestamp")
+      set(value) {
+        _builder.clientTimestamp = value
+      }
+    /**
+     * `optional double client_timestamp = 6;`
+     */
+    public fun clearClientTimestamp() {
+      _builder.clearClientTimestamp()
+    }
+    /**
+     * `optional double client_timestamp = 6;`
+     * @return Whether the clientTimestamp field is set.
+     */
+    public fun hasClientTimestamp(): kotlin.Boolean {
+      return _builder.hasClientTimestamp()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

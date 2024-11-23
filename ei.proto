@@ -793,6 +793,7 @@ message ContractCoopStatusRequest {
     optional string coop_identifier = 2;
     optional string user_id = 3;
     optional uint32 client_version = 4;
+    optional double client_timestamp = 6;
 }
 
 message FarmProductionParams {
@@ -901,7 +902,7 @@ message ContractCoopStatusResponse {
         optional uint64 amount = 2;
     }
     
-    optional double local_timestamp = 12;
+    optional double client_timestamp = 12;
     optional double last_sync_DEP = 18;
     
     enum MemberStatus {
