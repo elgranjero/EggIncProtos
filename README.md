@@ -1559,6 +1559,7 @@
 | coop_identifier | [string](#string) | optional |  |
 | user_id | [string](#string) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
+| client_timestamp | [double](#double) | optional |  |
 
 
 
@@ -1590,7 +1591,7 @@
 | cleared_for_exit | [bool](#bool) | optional |  |
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
 | chicken_runs | [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun) | repeated |  |
-| local_timestamp | [double](#double) | optional |  |
+| client_timestamp | [double](#double) | optional |  |
 | last_sync_DEP | [double](#double) | optional |  |
 
 
