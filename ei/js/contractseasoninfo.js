@@ -103,6 +103,7 @@ proto.ei.ContractSeasonInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     name: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
     gradeGoalsList: jspb.Message.toObjectList(msg.getGradeGoalsList(),
     proto.ei.ContractSeasonInfo.GoalSet.toObject, includeInstance)
   };
@@ -149,6 +150,10 @@ proto.ei.ContractSeasonInfo.deserializeBinaryFromReader = function(msg, reader) 
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setStartTime(value);
+      break;
     case 2:
       var value = new proto.ei.ContractSeasonInfo.GoalSet;
       reader.readMessage(value,proto.ei.ContractSeasonInfo.GoalSet.deserializeBinaryFromReader);
@@ -194,6 +199,13 @@ proto.ei.ContractSeasonInfo.serializeBinaryToWriter = function(message, writer) 
   if (f != null) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeDouble(
+      4,
       f
     );
   }
@@ -485,6 +497,42 @@ proto.ei.ContractSeasonInfo.prototype.clearName = function() {
  */
 proto.ei.ContractSeasonInfo.prototype.hasName = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional double start_time = 4;
+ * @return {number}
+ */
+proto.ei.ContractSeasonInfo.prototype.getStartTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractSeasonInfo} returns this
+ */
+proto.ei.ContractSeasonInfo.prototype.setStartTime = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractSeasonInfo} returns this
+ */
+proto.ei.ContractSeasonInfo.prototype.clearStartTime = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractSeasonInfo.prototype.hasStartTime = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

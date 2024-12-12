@@ -2446,7 +2446,8 @@ proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
     contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
     newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
     contractsClubAvailable: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
-    contractsBeta: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f
+    contractsBeta: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    seasonRewardsEnabled: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2538,6 +2539,10 @@ proto.ei.LiveConfig.MiscConfig.deserializeBinaryFromReader = function(msg, reade
     case 13:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setContractsBeta(value);
+      break;
+    case 15:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSeasonRewardsEnabled(value);
       break;
     default:
       reader.skipField();
@@ -2663,6 +2668,13 @@ proto.ei.LiveConfig.MiscConfig.serializeBinaryToWriter = function(message, write
   if (f != null) {
     writer.writeBool(
       13,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 15));
+  if (f != null) {
+    writer.writeBool(
+      15,
       f
     );
   }
@@ -3170,6 +3182,42 @@ proto.ei.LiveConfig.MiscConfig.prototype.clearContractsBeta = function() {
  */
 proto.ei.LiveConfig.MiscConfig.prototype.hasContractsBeta = function() {
   return jspb.Message.getField(this, 13) != null;
+};
+
+
+/**
+ * optional bool season_rewards_enabled = 15;
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.getSeasonRewardsEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.setSeasonRewardsEnabled = function(value) {
+  return jspb.Message.setField(this, 15, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LiveConfig.MiscConfig} returns this
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.clearSeasonRewardsEnabled = function() {
+  return jspb.Message.setField(this, 15, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LiveConfig.MiscConfig.prototype.hasSeasonRewardsEnabled = function() {
+  return jspb.Message.getField(this, 15) != null;
 };
 
 

@@ -77,6 +77,30 @@ public object ContractSeasonInfoKt {
     }
 
     /**
+     * `optional double start_time = 4;`
+     */
+    public var startTime: kotlin.Double
+      @JvmName("getStartTime")
+      get() = _builder.startTime
+      @JvmName("setStartTime")
+      set(value) {
+        _builder.startTime = value
+      }
+    /**
+     * `optional double start_time = 4;`
+     */
+    public fun clearStartTime() {
+      _builder.clearStartTime()
+    }
+    /**
+     * `optional double start_time = 4;`
+     * @return Whether the startTime field is set.
+     */
+    public fun hasStartTime(): kotlin.Boolean {
+      return _builder.hasStartTime()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */

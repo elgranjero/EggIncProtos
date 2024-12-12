@@ -3192,6 +3192,7 @@ typedef GPB_ENUM(ContractSeasonInfo_FieldNumber) {
   ContractSeasonInfo_FieldNumber_Id_p = 1,
   ContractSeasonInfo_FieldNumber_GradeGoalsArray = 2,
   ContractSeasonInfo_FieldNumber_Name = 3,
+  ContractSeasonInfo_FieldNumber_StartTime = 4,
 };
 
 GPB_FINAL @interface ContractSeasonInfo : GPBMessage
@@ -3203,6 +3204,9 @@ GPB_FINAL @interface ContractSeasonInfo : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *name;
 /** Test to see if @c name has been set. */
 @property(nonatomic, readwrite) BOOL hasName;
+
+@property(nonatomic, readwrite) double startTime;
+@property(nonatomic, readwrite) BOOL hasStartTime;
 
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ContractSeasonInfo_GoalSet*> *gradeGoalsArray;
 /** The number of items in @c gradeGoalsArray without causing the container to be created. */
@@ -3320,7 +3324,7 @@ GPB_FINAL @interface ContractPlayerInfo : GPBMessage
 
 typedef GPB_ENUM(ContractPlayerInfo_SeasonProgress_FieldNumber) {
   ContractPlayerInfo_SeasonProgress_FieldNumber_SeasonId = 1,
-  ContractPlayerInfo_SeasonProgress_FieldNumber_Active = 2,
+  ContractPlayerInfo_SeasonProgress_FieldNumber_ActiveDep = 2,
   ContractPlayerInfo_SeasonProgress_FieldNumber_StartingGrade = 3,
   ContractPlayerInfo_SeasonProgress_FieldNumber_TotalCxp = 4,
   ContractPlayerInfo_SeasonProgress_FieldNumber_CxpLastRewardGiven = 5,
@@ -3332,8 +3336,8 @@ GPB_FINAL @interface ContractPlayerInfo_SeasonProgress : GPBMessage
 /** Test to see if @c seasonId has been set. */
 @property(nonatomic, readwrite) BOOL hasSeasonId;
 
-@property(nonatomic, readwrite) BOOL active;
-@property(nonatomic, readwrite) BOOL hasActive;
+@property(nonatomic, readwrite) BOOL activeDep;
+@property(nonatomic, readwrite) BOOL hasActiveDep;
 
 @property(nonatomic, readwrite) Contract_PlayerGrade startingGrade;
 @property(nonatomic, readwrite) BOOL hasStartingGrade;
@@ -5931,6 +5935,7 @@ typedef GPB_ENUM(LiveConfig_MiscConfig_FieldNumber) {
   LiveConfig_MiscConfig_FieldNumber_ContractsClubAvailable = 12,
   LiveConfig_MiscConfig_FieldNumber_ContractsBeta = 13,
   LiveConfig_MiscConfig_FieldNumber_ShellsLightingControlsPrice = 14,
+  LiveConfig_MiscConfig_FieldNumber_SeasonRewardsEnabled = 15,
 };
 
 GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
@@ -5977,6 +5982,9 @@ GPB_FINAL @interface LiveConfig_MiscConfig : GPBMessage
 
 @property(nonatomic, readwrite) BOOL contractsBeta;
 @property(nonatomic, readwrite) BOOL hasContractsBeta;
+
+@property(nonatomic, readwrite) BOOL seasonRewardsEnabled;
+@property(nonatomic, readwrite) BOOL hasSeasonRewardsEnabled;
 
 @end
 
@@ -7178,6 +7186,33 @@ GPB_FINAL @interface CollectContractArtifactRewardsRequest : GPBMessage
 
 @property(nonatomic, readwrite) uint32_t goalIndex;
 @property(nonatomic, readwrite) BOOL hasGoalIndex;
+
+@property(nonatomic, readwrite) MissionInfo_Spaceship bestShip;
+@property(nonatomic, readwrite) BOOL hasBestShip;
+
+@end
+
+#pragma mark - CollectSeasonArtifactRewardsRequest
+
+typedef GPB_ENUM(CollectSeasonArtifactRewardsRequest_FieldNumber) {
+  CollectSeasonArtifactRewardsRequest_FieldNumber_Rinfo = 1,
+  CollectSeasonArtifactRewardsRequest_FieldNumber_SeasonIdentifier = 2,
+  CollectSeasonArtifactRewardsRequest_FieldNumber_Cxp = 3,
+  CollectSeasonArtifactRewardsRequest_FieldNumber_BestShip = 4,
+};
+
+GPB_FINAL @interface CollectSeasonArtifactRewardsRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *seasonIdentifier;
+/** Test to see if @c seasonIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasSeasonIdentifier;
+
+@property(nonatomic, readwrite) double cxp;
+@property(nonatomic, readwrite) BOOL hasCxp;
 
 @property(nonatomic, readwrite) MissionInfo_Spaceship bestShip;
 @property(nonatomic, readwrite) BOOL hasBestShip;

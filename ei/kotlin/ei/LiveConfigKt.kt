@@ -1472,6 +1472,30 @@ public object LiveConfigKt {
       public fun hasContractsBeta(): kotlin.Boolean {
         return _builder.hasContractsBeta()
       }
+
+      /**
+       * `optional bool season_rewards_enabled = 15;`
+       */
+      public var seasonRewardsEnabled: kotlin.Boolean
+        @JvmName("getSeasonRewardsEnabled")
+        get() = _builder.seasonRewardsEnabled
+        @JvmName("setSeasonRewardsEnabled")
+        set(value) {
+          _builder.seasonRewardsEnabled = value
+        }
+      /**
+       * `optional bool season_rewards_enabled = 15;`
+       */
+      public fun clearSeasonRewardsEnabled() {
+        _builder.clearSeasonRewardsEnabled()
+      }
+      /**
+       * `optional bool season_rewards_enabled = 15;`
+       * @return Whether the seasonRewardsEnabled field is set.
+       */
+      public fun hasSeasonRewardsEnabled(): kotlin.Boolean {
+        return _builder.hasSeasonRewardsEnabled()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializehelpConfig")

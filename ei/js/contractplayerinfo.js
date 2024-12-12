@@ -403,7 +403,7 @@ proto.ei.ContractPlayerInfo.SeasonProgress.prototype.toObject = function(opt_inc
 proto.ei.ContractPlayerInfo.SeasonProgress.toObject = function(includeInstance, msg) {
   var f, obj = {
     seasonId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    active: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    activeDep: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
     startingGrade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
     totalCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
     cxpLastRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
@@ -449,7 +449,7 @@ proto.ei.ContractPlayerInfo.SeasonProgress.deserializeBinaryFromReader = functio
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setActive(value);
+      msg.setActiveDep(value);
       break;
     case 3:
       var value = /** @type {!proto.ei.Contract.PlayerGrade} */ (reader.readEnum());
@@ -567,10 +567,10 @@ proto.ei.ContractPlayerInfo.SeasonProgress.prototype.hasSeasonId = function() {
 
 
 /**
- * optional bool active = 2;
+ * optional bool active_DEP = 2;
  * @return {boolean}
  */
-proto.ei.ContractPlayerInfo.SeasonProgress.prototype.getActive = function() {
+proto.ei.ContractPlayerInfo.SeasonProgress.prototype.getActiveDep = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
@@ -579,7 +579,7 @@ proto.ei.ContractPlayerInfo.SeasonProgress.prototype.getActive = function() {
  * @param {boolean} value
  * @return {!proto.ei.ContractPlayerInfo.SeasonProgress} returns this
  */
-proto.ei.ContractPlayerInfo.SeasonProgress.prototype.setActive = function(value) {
+proto.ei.ContractPlayerInfo.SeasonProgress.prototype.setActiveDep = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
@@ -588,7 +588,7 @@ proto.ei.ContractPlayerInfo.SeasonProgress.prototype.setActive = function(value)
  * Clears the field making it undefined.
  * @return {!proto.ei.ContractPlayerInfo.SeasonProgress} returns this
  */
-proto.ei.ContractPlayerInfo.SeasonProgress.prototype.clearActive = function() {
+proto.ei.ContractPlayerInfo.SeasonProgress.prototype.clearActiveDep = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -597,7 +597,7 @@ proto.ei.ContractPlayerInfo.SeasonProgress.prototype.clearActive = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ei.ContractPlayerInfo.SeasonProgress.prototype.hasActive = function() {
+proto.ei.ContractPlayerInfo.SeasonProgress.prototype.hasActiveDep = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 

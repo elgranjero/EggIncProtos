@@ -593,6 +593,7 @@ message ContractSeasonRewardConfirmationRequest {
 message ContractSeasonInfo {
     optional string id = 1;
     optional string name = 3;
+    optional double start_time = 4;
     
     repeated GoalSet grade_goals = 2;
     message GoalSet {
@@ -633,7 +634,7 @@ message ContractPlayerInfo {
     repeated SeasonProgress season_progress = 15;
     message SeasonProgress {
         optional string season_id = 1;
-        optional bool active = 2;
+        optional bool active_DEP = 2;
         optional Contract.PlayerGrade starting_grade = 3;
         optional double total_cxp = 4;
         optional double cxp_last_reward_given = 5;
@@ -1364,6 +1365,7 @@ message LiveConfig {
         optional double new_player_event_duration = 11;
         optional bool contracts_club_available = 12;
         optional bool contracts_beta = 13;
+        optional bool season_rewards_enabled = 15;
     }
     
     optional HelpConfig help_config = 5;
@@ -1785,6 +1787,13 @@ message CollectContractArtifactRewardsRequest {
     optional uint32 league = 5;
     optional Contract.PlayerGrade grade = 6;
     optional uint32 goal_index = 3;
+    optional ei.MissionInfo.Spaceship best_ship = 4;
+}
+
+message CollectSeasonArtifactRewardsRequest {
+    optional BasicRequestInfo rinfo = 1;
+    optional string season_identifier = 2;
+    optional double cxp = 3;
     optional ei.MissionInfo.Spaceship best_ship = 4;
 }
 

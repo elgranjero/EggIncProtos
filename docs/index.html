@@ -355,6 +355,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.CollectSeasonArtifactRewardsRequest"><span class="badge">M</span>CollectSeasonArtifactRewardsRequest</a>
+                </li>
+              
+                <li>
                   <a href="#ei.CompleteArtifact"><span class="badge">M</span>CompleteArtifact</a>
                 </li>
               
@@ -4695,6 +4699,51 @@
 
         
       
+        <h3 id="ei.CollectSeasonArtifactRewardsRequest">CollectSeasonArtifactRewardsRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>season_identifier</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cxp</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>best_ship</td>
+                  <td><a href="#ei.MissionInfo.Spaceship">MissionInfo.Spaceship</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.CompleteArtifact">CompleteArtifact</h3>
         <p></p>
 
@@ -6661,7 +6710,7 @@
                 </tr>
               
                 <tr>
-                  <td>active</td>
+                  <td>active_DEP</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -6760,6 +6809,13 @@
                 <tr>
                   <td>name</td>
                   <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>start_time</td>
+                  <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -10467,6 +10523,13 @@
               
                 <tr>
                   <td>contracts_beta</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>season_rewards_enabled</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>

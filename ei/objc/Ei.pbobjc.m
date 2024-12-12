@@ -79,6 +79,7 @@ GPBObjCClassDeclaration(CXPEvalRolloutInfo);
 GPBObjCClassDeclaration(CleanAccountRequest);
 GPBObjCClassDeclaration(ClearAllUserDataRequest);
 GPBObjCClassDeclaration(CollectContractArtifactRewardsRequest);
+GPBObjCClassDeclaration(CollectSeasonArtifactRewardsRequest);
 GPBObjCClassDeclaration(CompleteArtifact);
 GPBObjCClassDeclaration(CompleteMissionResponse);
 GPBObjCClassDeclaration(CompleteMissionResponse_SecureArtifactSpec);
@@ -8472,6 +8473,7 @@ typedef struct ContractSeasonRewardConfirmationRequest__storage_ {
 
 @dynamic hasId_p, id_p;
 @dynamic hasName, name;
+@dynamic hasStartTime, startTime;
 @dynamic gradeGoalsArray, gradeGoalsArray_Count;
 
 typedef struct ContractSeasonInfo__storage_ {
@@ -8479,6 +8481,7 @@ typedef struct ContractSeasonInfo__storage_ {
   NSString *id_p;
   NSMutableArray *gradeGoalsArray;
   NSString *name;
+  double startTime;
 } ContractSeasonInfo__storage_;
 
 // This method is threadsafe because it is initially called
@@ -8514,6 +8517,15 @@ typedef struct ContractSeasonInfo__storage_ {
         .offset = (uint32_t)offsetof(ContractSeasonInfo__storage_, name),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "startTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractSeasonInfo_FieldNumber_StartTime,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ContractSeasonInfo__storage_, startTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -8843,7 +8855,7 @@ typedef struct ContractPlayerInfo__storage_ {
 @implementation ContractPlayerInfo_SeasonProgress
 
 @dynamic hasSeasonId, seasonId;
-@dynamic hasActive, active;
+@dynamic hasActiveDep, activeDep;
 @dynamic hasStartingGrade, startingGrade;
 @dynamic hasTotalCxp, totalCxp;
 @dynamic hasCxpLastRewardGiven, cxpLastRewardGiven;
@@ -8873,12 +8885,12 @@ typedef struct ContractPlayerInfo_SeasonProgress__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "active",
+        .name = "activeDep",
         .dataTypeSpecific.clazz = Nil,
-        .number = ContractPlayerInfo_SeasonProgress_FieldNumber_Active,
+        .number = ContractPlayerInfo_SeasonProgress_FieldNumber_ActiveDep,
         .hasIndex = 1,
         .offset = 2,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeBool,
       },
       {
@@ -8917,6 +8929,11 @@ typedef struct ContractPlayerInfo_SeasonProgress__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ContractPlayerInfo_SeasonProgress__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_ClosedEnumSupportKnown)];
+    #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+      static const char *extraTextFormatInfo =
+        "\001\002\006\343\000";
+      [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+    #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     [localDescriptor setupContainingMessageClass:GPBObjCClass(ContractPlayerInfo)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
@@ -16214,6 +16231,7 @@ typedef struct LiveConfig_GiftConfig_GiftMuConfig__storage_ {
 @dynamic hasNewPlayerEventDuration, newPlayerEventDuration;
 @dynamic hasContractsClubAvailable, contractsClubAvailable;
 @dynamic hasContractsBeta, contractsBeta;
+@dynamic hasSeasonRewardsEnabled, seasonRewardsEnabled;
 
 typedef struct LiveConfig_MiscConfig__storage_ {
   uint32_t _has_storage_[1];
@@ -16374,6 +16392,16 @@ typedef struct LiveConfig_MiscConfig__storage_ {
         .core.offset = (uint32_t)offsetof(LiveConfig_MiscConfig__storage_, shellsLightingControlsPrice),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeUInt32,
+      },
+      {
+        .defaultValue.valueBool = NO,
+        .core.name = "seasonRewardsEnabled",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = LiveConfig_MiscConfig_FieldNumber_SeasonRewardsEnabled,
+        .core.hasIndex = 19,
+        .core.offset = 20,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -19803,6 +19831,85 @@ typedef struct CollectContractArtifactRewardsRequest__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CollectContractArtifactRewardsRequest__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_ClosedEnumSupportKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - CollectSeasonArtifactRewardsRequest
+
+@implementation CollectSeasonArtifactRewardsRequest
+
+@dynamic hasRinfo, rinfo;
+@dynamic hasSeasonIdentifier, seasonIdentifier;
+@dynamic hasCxp, cxp;
+@dynamic hasBestShip, bestShip;
+
+typedef struct CollectSeasonArtifactRewardsRequest__storage_ {
+  uint32_t _has_storage_[1];
+  MissionInfo_Spaceship bestShip;
+  BasicRequestInfo *rinfo;
+  NSString *seasonIdentifier;
+  double cxp;
+} CollectSeasonArtifactRewardsRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    GPB_DEBUG_CHECK_RUNTIME_VERSIONS();
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = CollectSeasonArtifactRewardsRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CollectSeasonArtifactRewardsRequest__storage_, rinfo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "seasonIdentifier",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CollectSeasonArtifactRewardsRequest_FieldNumber_SeasonIdentifier,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CollectSeasonArtifactRewardsRequest__storage_, seasonIdentifier),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "cxp",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CollectSeasonArtifactRewardsRequest_FieldNumber_Cxp,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CollectSeasonArtifactRewardsRequest__storage_, cxp),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "bestShip",
+        .dataTypeSpecific.enumDescFunc = MissionInfo_Spaceship_EnumDescriptor,
+        .number = CollectSeasonArtifactRewardsRequest_FieldNumber_BestShip,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(CollectSeasonArtifactRewardsRequest__storage_, bestShip),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClosedEnum),
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(CollectSeasonArtifactRewardsRequest)
+                                   messageName:@"CollectSeasonArtifactRewardsRequest"
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CollectSeasonArtifactRewardsRequest__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown | GPBDescriptorInitializationFlag_ClosedEnumSupportKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");

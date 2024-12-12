@@ -572,27 +572,27 @@ public object ContractPlayerInfoKt {
       }
 
       /**
-       * `optional bool active = 2;`
+       * `optional bool active_DEP = 2;`
        */
-      public var active: kotlin.Boolean
-        @JvmName("getActive")
-        get() = _builder.active
-        @JvmName("setActive")
+      public var activeDEP: kotlin.Boolean
+        @JvmName("getActiveDEP")
+        get() = _builder.activeDEP
+        @JvmName("setActiveDEP")
         set(value) {
-          _builder.active = value
+          _builder.activeDEP = value
         }
       /**
-       * `optional bool active = 2;`
+       * `optional bool active_DEP = 2;`
        */
-      public fun clearActive() {
-        _builder.clearActive()
+      public fun clearActiveDEP() {
+        _builder.clearActiveDEP()
       }
       /**
-       * `optional bool active = 2;`
-       * @return Whether the active field is set.
+       * `optional bool active_DEP = 2;`
+       * @return Whether the activeDEP field is set.
        */
-      public fun hasActive(): kotlin.Boolean {
-        return _builder.hasActive()
+      public fun hasActiveDEP(): kotlin.Boolean {
+        return _builder.hasActiveDEP()
       }
 
       /**

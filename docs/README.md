@@ -48,6 +48,7 @@
     - [CleanAccountRequest](#ei-CleanAccountRequest)
     - [ClearAllUserDataRequest](#ei-ClearAllUserDataRequest)
     - [CollectContractArtifactRewardsRequest](#ei-CollectContractArtifactRewardsRequest)
+    - [CollectSeasonArtifactRewardsRequest](#ei-CollectSeasonArtifactRewardsRequest)
     - [CompleteArtifact](#ei-CompleteArtifact)
     - [CompleteMissionResponse](#ei-CompleteMissionResponse)
     - [CompleteMissionResponse.SecureArtifactSpec](#ei-CompleteMissionResponse-SecureArtifactSpec)
@@ -1273,6 +1274,24 @@
 
 
 
+<a name="ei-CollectSeasonArtifactRewardsRequest"></a>
+
+### CollectSeasonArtifactRewardsRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| season_identifier | [string](#string) | optional |  |
+| cxp | [double](#double) | optional |  |
+| best_ship | [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship) | optional |  |
+
+
+
+
+
+
 <a name="ei-CompleteArtifact"></a>
 
 ### CompleteArtifact
@@ -1838,7 +1857,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | season_id | [string](#string) | optional |  |
-| active | [bool](#bool) | optional |  |
+| active_DEP | [bool](#bool) | optional |  |
 | starting_grade | [Contract.PlayerGrade](#ei-Contract-PlayerGrade) | optional |  |
 | total_cxp | [double](#double) | optional |  |
 | cxp_last_reward_given | [double](#double) | optional |  |
@@ -1876,6 +1895,7 @@
 | ----- | ---- | ----- | ----------- |
 | id | [string](#string) | optional |  |
 | name | [string](#string) | optional |  |
+| start_time | [double](#double) | optional |  |
 | grade_goals | [ContractSeasonInfo.GoalSet](#ei-ContractSeasonInfo-GoalSet) | repeated |  |
 
 
@@ -3181,6 +3201,7 @@
 | new_player_event_duration | [double](#double) | optional |  |
 | contracts_club_available | [bool](#bool) | optional |  |
 | contracts_beta | [bool](#bool) | optional |  |
+| season_rewards_enabled | [bool](#bool) | optional |  |
 
 
 
