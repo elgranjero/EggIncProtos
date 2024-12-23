@@ -78,11 +78,11 @@ proto.ei.ShellShowcase.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellShowcase.toObject = function(includeInstance, msg) {
   var f, obj = {
-    topList: jspb.Message.toObjectList(msg.getTopList(),
+topList: jspb.Message.toObjectList(msg.getTopList(),
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance),
-    featuredList: jspb.Message.toObjectList(msg.getFeaturedList(),
+featuredList: jspb.Message.toObjectList(msg.getFeaturedList(),
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance),
-    freshList: jspb.Message.toObjectList(msg.getFreshList(),
+freshList: jspb.Message.toObjectList(msg.getFreshList(),
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance)
   };
 

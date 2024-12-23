@@ -78,9 +78,9 @@ proto.ei.ShowcaseRoyaltyDeliveryConfirmation.prototype.toObject = function(opt_i
  */
 proto.ei.ShowcaseRoyaltyDeliveryConfirmation.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    idsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+idsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
+amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

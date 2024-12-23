@@ -70,19 +70,19 @@ proto.ei.DeviceInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.DeviceInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    deviceId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    advertisingId: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-    platform: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    formFactor: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    deviceName: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    platformVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    localeCountry: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    localeLanguage: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    gpuVendor: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-    gpuModel: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-    deviceBucket: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-    screenWidth: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-    screenHeight: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f
+deviceId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+advertisingId: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+platform: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+formFactor: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+deviceName: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+platformVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+localeCountry: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+localeLanguage: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+gpuVendor: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+gpuModel: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+deviceBucket: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+screenWidth: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+screenHeight: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f
   };
 
   if (includeInstance) {

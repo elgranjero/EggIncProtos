@@ -100,7 +100,7 @@ proto.ei.ShellPopularityStats.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.ShellPopularityStats.toObject = function(includeInstance, msg) {
   var f, obj = {
-    dataList: jspb.Message.toObjectList(msg.getDataList(),
+dataList: jspb.Message.toObjectList(msg.getDataList(),
     proto.ei.ShellPopularityStats.Entry.toObject, includeInstance)
   };
 
@@ -215,10 +215,10 @@ proto.ei.ShellPopularityStats.Entry.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ShellPopularityStats.Entry.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    element: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    spent: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    count: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+element: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+spent: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+count: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -70,9 +70,9 @@ proto.ei.Vector3.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Vector3.toObject = function(includeInstance, msg) {
   var f, obj = {
-    x: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    y: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    z: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+x: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+y: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+z: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

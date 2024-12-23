@@ -70,9 +70,9 @@ proto.ei.ContractsRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    clientVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+clientVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

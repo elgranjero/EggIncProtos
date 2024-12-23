@@ -71,10 +71,10 @@ proto.ei.CraftArtifactResponse.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.CraftArtifactResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    itemId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    eiUserId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    rarityAchieved: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    serverId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+itemId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+eiUserId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+rarityAchieved: jspb.Message.getFieldWithDefault(msg, 2, 0),
+serverId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

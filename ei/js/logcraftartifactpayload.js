@@ -72,8 +72,8 @@ proto.ei.LogCraftArtifactPayload.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.LogCraftArtifactPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
-    req: (f = msg.getReq()) && proto.ei.CraftArtifactRequest.toObject(includeInstance, f),
-    res: (f = msg.getRes()) && proto.ei.CraftArtifactResponse.toObject(includeInstance, f)
+req: (f = msg.getReq()) && proto.ei.CraftArtifactRequest.toObject(includeInstance, f),
+res: (f = msg.getRes()) && proto.ei.CraftArtifactResponse.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

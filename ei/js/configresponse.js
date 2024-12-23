@@ -73,9 +73,9 @@ proto.ei.ConfigResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ConfigResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
-    mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
-    dlcCatalog: (f = msg.getDlcCatalog()) && proto.ei.DLCCatalog.toObject(includeInstance, f)
+liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
+mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
+dlcCatalog: (f = msg.getDlcCatalog()) && proto.ei.DLCCatalog.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

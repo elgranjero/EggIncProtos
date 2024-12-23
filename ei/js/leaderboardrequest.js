@@ -72,9 +72,9 @@ proto.ei.LeaderboardRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.LeaderboardRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    scope: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    grade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+scope: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+grade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

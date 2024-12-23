@@ -72,8 +72,8 @@ proto.ei.LogSetArtifactPayload.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.LogSetArtifactPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
-    req: (f = msg.getReq()) && proto.ei.SetArtifactRequest.toObject(includeInstance, f),
-    res: (f = msg.getRes()) && proto.ei.SetArtifactResponse.toObject(includeInstance, f)
+req: (f = msg.getReq()) && proto.ei.SetArtifactRequest.toObject(includeInstance, f),
+res: (f = msg.getRes()) && proto.ei.SetArtifactResponse.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

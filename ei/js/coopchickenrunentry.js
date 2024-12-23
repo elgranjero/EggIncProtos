@@ -70,8 +70,8 @@ proto.ei.CoopChickenRunEntry.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.CoopChickenRunEntry.toObject = function(includeInstance, msg) {
   var f, obj = {
-    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    serverTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
+userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+serverTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

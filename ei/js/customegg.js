@@ -79,16 +79,16 @@ proto.ei.CustomEgg.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CustomEgg.toObject = function(includeInstance, msg) {
   var f, obj = {
-    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    description: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    value: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-    hatcheryId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    hatcheryMaxX: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-    icon: (f = msg.getIcon()) && proto.ei.DLCItem.toObject(includeInstance, f),
-    iconWidth: (f = jspb.Message.getOptionalFloatingPointField(msg, 21)) == null ? undefined : f,
-    iconHeight: (f = jspb.Message.getOptionalFloatingPointField(msg, 22)) == null ? undefined : f,
-    buffsList: jspb.Message.toObjectList(msg.getBuffsList(),
+identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+description: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+value: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+hatcheryId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+hatcheryMaxX: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+icon: (f = msg.getIcon()) && proto.ei.DLCItem.toObject(includeInstance, f),
+iconWidth: (f = jspb.Message.getOptionalFloatingPointField(msg, 21)) == null ? undefined : f,
+iconHeight: (f = jspb.Message.getOptionalFloatingPointField(msg, 22)) == null ? undefined : f,
+buffsList: jspb.Message.toObjectList(msg.getBuffsList(),
     proto.ei.GameModifier.toObject, includeInstance)
   };
 

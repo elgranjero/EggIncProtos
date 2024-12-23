@@ -147,29 +147,29 @@ proto.ei.ArtifactsDB.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ArtifactsDB.toObject = function(includeInstance, msg) {
   var f, obj = {
-    inventoryItemsList: jspb.Message.toObjectList(msg.getInventoryItemsList(),
+inventoryItemsList: jspb.Message.toObjectList(msg.getInventoryItemsList(),
     proto.ei.ArtifactInventoryItem.toObject, includeInstance),
-    itemSequence: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    inventorySlotsList: jspb.Message.toObjectList(msg.getInventorySlotsList(),
+itemSequence: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+inventorySlotsList: jspb.Message.toObjectList(msg.getInventorySlotsList(),
     proto.ei.InventorySlot.toObject, includeInstance),
-    activeArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getActiveArtifactsDeprecatedList(),
+activeArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getActiveArtifactsDeprecatedList(),
     proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject, includeInstance),
-    activeArtifactSetsList: jspb.Message.toObjectList(msg.getActiveArtifactSetsList(),
+activeArtifactSetsList: jspb.Message.toObjectList(msg.getActiveArtifactSetsList(),
     proto.ei.ArtifactsDB.ActiveArtifactSet.toObject, includeInstance),
-    savedArtifactSetsList: jspb.Message.toObjectList(msg.getSavedArtifactSetsList(),
+savedArtifactSetsList: jspb.Message.toObjectList(msg.getSavedArtifactSetsList(),
     proto.ei.ArtifactsDB.ActiveArtifactSet.toObject, includeInstance),
-    artifactStatusList: jspb.Message.toObjectList(msg.getArtifactStatusList(),
+artifactStatusList: jspb.Message.toObjectList(msg.getArtifactStatusList(),
     proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
-    fuelingMission: (f = msg.getFuelingMission()) && proto.ei.MissionInfo.toObject(includeInstance, f),
-    missionInfosList: jspb.Message.toObjectList(msg.getMissionInfosList(),
+fuelingMission: (f = msg.getFuelingMission()) && proto.ei.MissionInfo.toObject(includeInstance, f),
+missionInfosList: jspb.Message.toObjectList(msg.getMissionInfosList(),
     proto.ei.MissionInfo.toObject, includeInstance),
-    missionArchiveList: jspb.Message.toObjectList(msg.getMissionArchiveList(),
+missionArchiveList: jspb.Message.toObjectList(msg.getMissionArchiveList(),
     proto.ei.MissionInfo.toObject, includeInstance),
-    discoveredArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getDiscoveredArtifactsDeprecatedList(),
+discoveredArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getDiscoveredArtifactsDeprecatedList(),
     proto.ei.ArtifactSpec.toObject, includeInstance),
-    craftableArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getCraftableArtifactsDeprecatedList(),
+craftableArtifactsDeprecatedList: jspb.Message.toObjectList(msg.getCraftableArtifactsDeprecatedList(),
     proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance),
-    craftingCountsDeprecatedList: jspb.Message.toObjectList(msg.getCraftingCountsDeprecatedList(),
+craftingCountsDeprecatedList: jspb.Message.toObjectList(msg.getCraftingCountsDeprecatedList(),
     proto.ei.ArtifactsDB.CraftableArtifact.toObject, includeInstance)
   };
 
@@ -438,8 +438,8 @@ proto.ei.ArtifactsDB.ActiveArtifactSlot.prototype.toObject = function(opt_includ
  */
 proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject = function(includeInstance, msg) {
   var f, obj = {
-    occupied: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    itemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+occupied: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+itemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -641,9 +641,9 @@ proto.ei.ArtifactsDB.ActiveArtifactSet.prototype.toObject = function(opt_include
  */
 proto.ei.ArtifactsDB.ActiveArtifactSet.toObject = function(includeInstance, msg) {
   var f, obj = {
-    slotsList: jspb.Message.toObjectList(msg.getSlotsList(),
+slotsList: jspb.Message.toObjectList(msg.getSlotsList(),
     proto.ei.ArtifactsDB.ActiveArtifactSlot.toObject, includeInstance),
-    uid: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+uid: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -842,12 +842,12 @@ proto.ei.ArtifactsDB.CraftableArtifact.prototype.toObject = function(opt_include
  */
 proto.ei.ArtifactsDB.CraftableArtifact.toObject = function(includeInstance, msg) {
   var f, obj = {
-    spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-    discovered: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-    craftable: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-    recipeDiscovered: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-    seen: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-    count: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+discovered: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+craftable: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+recipeDiscovered: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+seen: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+count: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -75,10 +75,10 @@ proto.ei.ArtifactSpec.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ArtifactSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    level: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    rarity: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    egg: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+level: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+rarity: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+egg: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

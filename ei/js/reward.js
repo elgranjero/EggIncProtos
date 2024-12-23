@@ -71,9 +71,9 @@ proto.ei.Reward.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Reward.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rewardType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    rewardSubType: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+rewardType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+rewardSubType: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

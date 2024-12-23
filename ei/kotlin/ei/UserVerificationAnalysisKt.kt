@@ -101,6 +101,30 @@ public object UserVerificationAnalysisKt {
     }
 
     /**
+     * `optional int32 verification_count = 37;`
+     */
+    public var verificationCount: kotlin.Int
+      @JvmName("getVerificationCount")
+      get() = _builder.verificationCount
+      @JvmName("setVerificationCount")
+      set(value) {
+        _builder.verificationCount = value
+      }
+    /**
+     * `optional int32 verification_count = 37;`
+     */
+    public fun clearVerificationCount() {
+      _builder.clearVerificationCount()
+    }
+    /**
+     * `optional int32 verification_count = 37;`
+     * @return Whether the verificationCount field is set.
+     */
+    public fun hasVerificationCount(): kotlin.Boolean {
+      return _builder.hasVerificationCount()
+    }
+
+    /**
      * `optional double num_prestiges = 14;`
      */
     public var numPrestiges: kotlin.Double

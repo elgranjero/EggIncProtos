@@ -71,14 +71,14 @@ proto.ei.ConfigRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ConfigRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    contractsUnlocked: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-    artifactsUnlocked: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-    fuelTankUnlocked: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-    proPermit: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-    ultra: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-    tipsChecksum: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+contractsUnlocked: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+artifactsUnlocked: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+fuelTankUnlocked: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+proPermit: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+ultra: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+tipsChecksum: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {

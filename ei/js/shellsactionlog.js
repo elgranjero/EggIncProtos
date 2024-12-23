@@ -72,18 +72,18 @@ proto.ei.ShellsActionLog.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellsActionLog.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    action: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    subId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    farmElement: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-    cost: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-    version: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    farmIndex: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-    ticketsSpent: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-    goldSpent: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+action: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+subId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+farmElement: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+cost: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+version: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+farmIndex: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+ticketsSpent: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+goldSpent: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f
   };
 
   if (includeInstance) {

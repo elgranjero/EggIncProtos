@@ -79,14 +79,14 @@ proto.ei.ConsumeArtifactResponse.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.ConsumeArtifactResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    originalItemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    additionalItemIdsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
-    byproductsList: jspb.Message.toObjectList(msg.getByproductsList(),
+success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+originalItemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+additionalItemIdsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+byproductsList: jspb.Message.toObjectList(msg.getByproductsList(),
     proto.ei.ArtifactSpec.toObject, includeInstance),
-    otherRewardsList: jspb.Message.toObjectList(msg.getOtherRewardsList(),
+otherRewardsList: jspb.Message.toObjectList(msg.getOtherRewardsList(),
     proto.ei.Reward.toObject, includeInstance),
-    eiUserId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+eiUserId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

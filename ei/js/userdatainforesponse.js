@@ -77,9 +77,9 @@ proto.ei.UserDataInfoResponse.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.UserDataInfoResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    backupChecksum: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    backupTotalCash: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    coopMembershipsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+backupChecksum: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+backupTotalCash: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+coopMembershipsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -72,21 +72,21 @@ proto.ei.ShellShowcaseListingInfo.prototype.toObject = function(opt_includeInsta
  */
 proto.ei.ShellShowcaseListingInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    localId: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-    name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    description: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    isNew: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
-    creatorName: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-    status: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-    farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
-    sales: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    gross: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    views: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    equips: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-    likes: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-    dislikes: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-    shareUrl: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
+id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+localId: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+description: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+isNew: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+creatorName: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+status: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
+sales: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+gross: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+views: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+equips: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+likes: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+dislikes: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+shareUrl: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {

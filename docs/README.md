@@ -4467,6 +4467,7 @@
 | overall_status | [UserVerificationAnalysis.Status](#ei-UserVerificationAnalysis-Status) | optional |  |
 | start_time | [double](#double) | optional |  |
 | completion_time | [double](#double) | optional |  |
+| verification_count | [int32](#int32) | optional |  |
 | num_prestiges | [double](#double) | optional |  |
 | soul_eggs | [double](#double) | optional |  |
 | eggs_of_prophecy | [uint32](#uint32) | optional |  |

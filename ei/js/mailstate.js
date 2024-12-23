@@ -99,10 +99,10 @@ proto.ei.MailState.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MailState.toObject = function(includeInstance, msg) {
   var f, obj = {
-    readMailIdsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    tipsStatesList: jspb.Message.toObjectList(msg.getTipsStatesList(),
+readMailIdsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
+tipsStatesList: jspb.Message.toObjectList(msg.getTipsStatesList(),
     proto.ei.MailState.TipState.toObject, includeInstance),
-    tipsChecksum: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+tipsChecksum: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -238,9 +238,9 @@ proto.ei.MailState.TipState.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MailState.TipState.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    reads: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    timeRead: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+reads: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+timeRead: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

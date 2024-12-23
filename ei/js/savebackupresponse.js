@@ -72,10 +72,10 @@ proto.ei.SaveBackupResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.SaveBackupResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    errorCode: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    message: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    existingBackup: (f = msg.getExistingBackup()) && proto.ei.Backup.toObject(includeInstance, f)
+success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+errorCode: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+message: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+existingBackup: (f = msg.getExistingBackup()) && proto.ei.Backup.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

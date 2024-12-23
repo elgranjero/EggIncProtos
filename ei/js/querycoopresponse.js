@@ -70,13 +70,13 @@ proto.ei.QueryCoopResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.QueryCoopResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    exists: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    full: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-    expired: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-    differentLeague: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-    differentGrade: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-    ccOnly: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-    banned: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f
+exists: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+full: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+expired: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+differentLeague: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+differentGrade: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+ccOnly: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+banned: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

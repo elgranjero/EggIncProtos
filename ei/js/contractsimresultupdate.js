@@ -100,8 +100,8 @@ proto.ei.ContractSimResultUpdate.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.ContractSimResultUpdate.toObject = function(includeInstance, msg) {
   var f, obj = {
-    contractId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    goalInfosList: jspb.Message.toObjectList(msg.getGoalInfosList(),
+contractId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+goalInfosList: jspb.Message.toObjectList(msg.getGoalInfosList(),
     proto.ei.ContractSimResultUpdate.GoalInfo.toObject, includeInstance)
   };
 
@@ -227,9 +227,9 @@ proto.ei.ContractSimResultUpdate.GoalInfo.prototype.toObject = function(opt_incl
  */
 proto.ei.ContractSimResultUpdate.GoalInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    goalIndex: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    projectedEggsLaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+goalIndex: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+projectedEggsLaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -2378,6 +2378,7 @@ message UserVerificationAnalysis {
     
     optional double start_time = 2;
     optional double completion_time = 3;
+    optional int32 verification_count = 37;
     optional double num_prestiges = 14;
     optional double soul_eggs = 15;
     optional uint32 eggs_of_prophecy = 27;

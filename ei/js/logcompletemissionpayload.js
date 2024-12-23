@@ -72,8 +72,8 @@ proto.ei.LogCompleteMissionPayload.prototype.toObject = function(opt_includeInst
  */
 proto.ei.LogCompleteMissionPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
-    req: (f = msg.getReq()) && proto.ei.MissionRequest.toObject(includeInstance, f),
-    res: (f = msg.getRes()) && proto.ei.CompleteMissionResponse.toObject(includeInstance, f)
+req: (f = msg.getReq()) && proto.ei.MissionRequest.toObject(includeInstance, f),
+res: (f = msg.getRes()) && proto.ei.CompleteMissionResponse.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

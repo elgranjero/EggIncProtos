@@ -70,12 +70,12 @@ proto.ei.FarmProductionParams.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.FarmProductionParams.toObject = function(includeInstance, msg) {
   var f, obj = {
-    farmPopulation: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    farmCapacity: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    elr: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    ihr: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-    sr: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-    delivered: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
+farmPopulation: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+farmCapacity: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+elr: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+ihr: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+sr: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+delivered: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -168,11 +168,11 @@ proto.ei.ArtifactsConfigurationResponse.prototype.toObject = function(opt_includ
  */
 proto.ei.ArtifactsConfigurationResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    missionParametersList: jspb.Message.toObjectList(msg.getMissionParametersList(),
+missionParametersList: jspb.Message.toObjectList(msg.getMissionParametersList(),
     proto.ei.ArtifactsConfigurationResponse.MissionParameters.toObject, includeInstance),
-    artifactParametersList: jspb.Message.toObjectList(msg.getArtifactParametersList(),
+artifactParametersList: jspb.Message.toObjectList(msg.getArtifactParametersList(),
     proto.ei.ArtifactsConfigurationResponse.ArtifactParameters.toObject, includeInstance),
-    craftingLevelInfosList: jspb.Message.toObjectList(msg.getCraftingLevelInfosList(),
+craftingLevelInfosList: jspb.Message.toObjectList(msg.getCraftingLevelInfosList(),
     proto.ei.ArtifactsConfigurationResponse.CraftingLevelInfo.toObject, includeInstance)
   };
 
@@ -320,11 +320,11 @@ proto.ei.ArtifactsConfigurationResponse.MissionParameters.prototype.toObject = f
  */
 proto.ei.ArtifactsConfigurationResponse.MissionParameters.toObject = function(includeInstance, msg) {
   var f, obj = {
-    ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    durationsList: jspb.Message.toObjectList(msg.getDurationsList(),
+ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+durationsList: jspb.Message.toObjectList(msg.getDurationsList(),
     proto.ei.ArtifactsConfigurationResponse.MissionParameters.Duration.toObject, includeInstance),
-    levelMissionRequirementsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    capacityDeprecated: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+levelMissionRequirementsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+capacityDeprecated: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -473,14 +473,14 @@ proto.ei.ArtifactsConfigurationResponse.MissionParameters.Duration.prototype.toO
  */
 proto.ei.ArtifactsConfigurationResponse.MissionParameters.Duration.toObject = function(includeInstance, msg) {
   var f, obj = {
-    durationType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    seconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    quality: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    minQuality: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-    maxQuality: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-    capacity: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    levelCapacityBump: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    levelQualityBump: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f
+durationType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+seconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+quality: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+minQuality: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+maxQuality: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+capacity: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+levelCapacityBump: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+levelQualityBump: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1104,15 +1104,15 @@ proto.ei.ArtifactsConfigurationResponse.ArtifactParameters.prototype.toObject = 
  */
 proto.ei.ArtifactsConfigurationResponse.ArtifactParameters.toObject = function(includeInstance, msg) {
   var f, obj = {
-    spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-    baseQuality: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    oddsMultiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-    value: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    craftingPrice: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-    craftingPriceLow: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-    craftingPriceDomain: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    craftingPriceCurve: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-    craftingXp: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
+spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+baseQuality: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+oddsMultiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+value: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+craftingPrice: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+craftingPriceLow: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+craftingPriceDomain: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+craftingPriceCurve: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+craftingXp: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1639,8 +1639,8 @@ proto.ei.ArtifactsConfigurationResponse.CraftingLevelInfo.prototype.toObject = f
  */
 proto.ei.ArtifactsConfigurationResponse.CraftingLevelInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    xpRequired: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    rarityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
+xpRequired: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+rarityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -80,11 +80,11 @@ proto.ei.SetArtifactRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.SetArtifactRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    artifact: (f = msg.getArtifact()) && proto.ei.ArtifactInventoryItem.toObject(includeInstance, f),
-    stonesList: jspb.Message.toObjectList(msg.getStonesList(),
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+artifact: (f = msg.getArtifact()) && proto.ei.ArtifactInventoryItem.toObject(includeInstance, f),
+stonesList: jspb.Message.toObjectList(msg.getStonesList(),
     proto.ei.ArtifactSpec.toObject, includeInstance),
-    goldPricePaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+goldPricePaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

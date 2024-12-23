@@ -72,11 +72,11 @@ proto.ei.ReportPlayerCoopRequest.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.ReportPlayerCoopRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    contractIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    userId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    reason: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+contractIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+userId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+reason: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -70,14 +70,14 @@ proto.ei.BasicRequestInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.BasicRequestInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    eiUserId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    clientVersion: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    build: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    country: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    language: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    debug: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
+eiUserId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+clientVersion: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+build: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+country: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+language: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+debug: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {

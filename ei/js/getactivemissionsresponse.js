@@ -78,8 +78,8 @@ proto.ei.GetActiveMissionsResponse.prototype.toObject = function(opt_includeInst
  */
 proto.ei.GetActiveMissionsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    activeMissionsList: jspb.Message.toObjectList(msg.getActiveMissionsList(),
+success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+activeMissionsList: jspb.Message.toObjectList(msg.getActiveMissionsList(),
     proto.ei.MissionInfo.toObject, includeInstance)
   };
 

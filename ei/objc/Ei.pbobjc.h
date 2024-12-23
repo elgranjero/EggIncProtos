@@ -8922,6 +8922,7 @@ typedef GPB_ENUM(UserVerificationAnalysis_FieldNumber) {
   UserVerificationAnalysis_FieldNumber_RareArtifactsOnServer = 34,
   UserVerificationAnalysis_FieldNumber_LegendaryArtifactsInInventory = 35,
   UserVerificationAnalysis_FieldNumber_LegendaryArtifactsOnServer = 36,
+  UserVerificationAnalysis_FieldNumber_VerificationCount = 37,
 };
 
 GPB_FINAL @interface UserVerificationAnalysis : GPBMessage
@@ -8934,6 +8935,9 @@ GPB_FINAL @interface UserVerificationAnalysis : GPBMessage
 
 @property(nonatomic, readwrite) double completionTime;
 @property(nonatomic, readwrite) BOOL hasCompletionTime;
+
+@property(nonatomic, readwrite) int32_t verificationCount;
+@property(nonatomic, readwrite) BOOL hasVerificationCount;
 
 @property(nonatomic, readwrite) double numPrestiges;
 @property(nonatomic, readwrite) BOOL hasNumPrestiges;

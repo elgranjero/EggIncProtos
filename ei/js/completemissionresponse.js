@@ -102,13 +102,13 @@ proto.ei.CompleteMissionResponse.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.CompleteMissionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    info: (f = msg.getInfo()) && proto.ei.MissionInfo.toObject(includeInstance, f),
-    artifactsList: jspb.Message.toObjectList(msg.getArtifactsList(),
+success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+info: (f = msg.getInfo()) && proto.ei.MissionInfo.toObject(includeInstance, f),
+artifactsList: jspb.Message.toObjectList(msg.getArtifactsList(),
     proto.ei.CompleteMissionResponse.SecureArtifactSpec.toObject, includeInstance),
-    otherRewardsList: jspb.Message.toObjectList(msg.getOtherRewardsList(),
+otherRewardsList: jspb.Message.toObjectList(msg.getOtherRewardsList(),
     proto.ei.Reward.toObject, includeInstance),
-    eiUserId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+eiUserId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -270,8 +270,8 @@ proto.ei.CompleteMissionResponse.SecureArtifactSpec.prototype.toObject = functio
  */
 proto.ei.CompleteMissionResponse.SecureArtifactSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-    spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-    serverId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+serverId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

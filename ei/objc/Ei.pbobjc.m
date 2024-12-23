@@ -24674,6 +24674,7 @@ typedef struct ShellsActionBatch__storage_ {
 @dynamic hasOverallStatus, overallStatus;
 @dynamic hasStartTime, startTime;
 @dynamic hasCompletionTime, completionTime;
+@dynamic hasVerificationCount, verificationCount;
 @dynamic hasNumPrestiges, numPrestiges;
 @dynamic hasSoulEggs, soulEggs;
 @dynamic hasEggsOfProphecy, eggsOfProphecy;
@@ -24721,6 +24722,7 @@ typedef struct UserVerificationAnalysis__storage_ {
   UserVerificationAnalysis_Status artifactsStatus;
   UserVerificationAnalysis_Status contractsStatus;
   uint32_t eggsOfProphecy;
+  int32_t verificationCount;
   NSMutableArray *invalidContractsArray;
   double startTime;
   double completionTime;
@@ -24775,8 +24777,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "verifiedProPermit",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_VerifiedProPermit,
-        .hasIndex = 7,
-        .offset = 8,  // Stored in _has_storage_ to save space.
+        .hasIndex = 8,
+        .offset = 9,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -24784,7 +24786,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "verifiedPiggyBreaks",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_VerifiedPiggyBreaks,
-        .hasIndex = 9,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, verifiedPiggyBreaks),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24793,7 +24795,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "verifiedOtherIap",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_VerifiedOtherIap,
-        .hasIndex = 10,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, verifiedOtherIap),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24802,7 +24804,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "unverifiedIap",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_UnverifiedIap,
-        .hasIndex = 11,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, unverifiedIap),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24811,7 +24813,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "missionsCompleted",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_MissionsCompleted,
-        .hasIndex = 18,
+        .hasIndex = 19,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, missionsCompleted),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24820,7 +24822,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "artifactsCollected",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ArtifactsCollected,
-        .hasIndex = 19,
+        .hasIndex = 20,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, artifactsCollected),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24829,7 +24831,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "artifactsConsumed",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ArtifactsConsumed,
-        .hasIndex = 20,
+        .hasIndex = 21,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, artifactsConsumed),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24838,7 +24840,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "artifactsInInventory",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ArtifactsInInventory,
-        .hasIndex = 21,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, artifactsInInventory),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24847,7 +24849,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "numCoopMemberships",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_NumCoopMemberships,
-        .hasIndex = 34,
+        .hasIndex = 35,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, numCoopMemberships),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24856,7 +24858,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "goldEarned",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_GoldEarned,
-        .hasIndex = 12,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, goldEarned),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24865,7 +24867,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "numPrestiges",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_NumPrestiges,
-        .hasIndex = 3,
+        .hasIndex = 4,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, numPrestiges),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24874,7 +24876,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "soulEggs",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_SoulEggs,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, soulEggs),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24883,7 +24885,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "validContracts",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ValidContracts,
-        .hasIndex = 35,
+        .hasIndex = 36,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, validContracts),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24901,7 +24903,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "iapStatus",
         .dataTypeSpecific.enumDescFunc = UserVerificationAnalysis_Status_EnumDescriptor,
         .number = UserVerificationAnalysis_FieldNumber_IapStatus,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, iapStatus),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClosedEnum),
         .dataType = GPBDataTypeEnum,
@@ -24910,7 +24912,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "artifactsStatus",
         .dataTypeSpecific.enumDescFunc = UserVerificationAnalysis_Status_EnumDescriptor,
         .number = UserVerificationAnalysis_FieldNumber_ArtifactsStatus,
-        .hasIndex = 17,
+        .hasIndex = 18,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, artifactsStatus),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClosedEnum),
         .dataType = GPBDataTypeEnum,
@@ -24919,7 +24921,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "contractsStatus",
         .dataTypeSpecific.enumDescFunc = UserVerificationAnalysis_Status_EnumDescriptor,
         .number = UserVerificationAnalysis_FieldNumber_ContractsStatus,
-        .hasIndex = 33,
+        .hasIndex = 34,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, contractsStatus),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClosedEnum),
         .dataType = GPBDataTypeEnum,
@@ -24928,7 +24930,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "goldSpentCrafting",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_GoldSpentCrafting,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, goldSpentCrafting),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -24937,8 +24939,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "regularIapBuyer",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_RegularIapBuyer,
-        .hasIndex = 13,
-        .offset = 14,  // Stored in _has_storage_ to save space.
+        .hasIndex = 14,
+        .offset = 15,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -24946,8 +24948,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "regularIapCheater",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_RegularIapCheater,
-        .hasIndex = 15,
-        .offset = 16,  // Stored in _has_storage_ to save space.
+        .hasIndex = 16,
+        .offset = 17,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -24955,8 +24957,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "excessiveConsumes",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ExcessiveConsumes,
-        .hasIndex = 27,
-        .offset = 28,  // Stored in _has_storage_ to save space.
+        .hasIndex = 28,
+        .offset = 29,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -24964,8 +24966,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "excessiveInventory",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ExcessiveInventory,
-        .hasIndex = 29,
-        .offset = 30,  // Stored in _has_storage_ to save space.
+        .hasIndex = 30,
+        .offset = 31,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -24973,8 +24975,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "excessiveSpend",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ExcessiveSpend,
-        .hasIndex = 31,
-        .offset = 32,  // Stored in _has_storage_ to save space.
+        .hasIndex = 32,
+        .offset = 33,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -24982,7 +24984,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "eggsOfProphecy",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_EggsOfProphecy,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, eggsOfProphecy),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -24991,8 +24993,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "excessiveEop",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ExcessiveEop,
-        .hasIndex = 36,
-        .offset = 37,  // Stored in _has_storage_ to save space.
+        .hasIndex = 37,
+        .offset = 38,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -25000,8 +25002,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "excessiveInvalidContracts",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_ExcessiveInvalidContracts,
-        .hasIndex = 38,
-        .offset = 39,  // Stored in _has_storage_ to save space.
+        .hasIndex = 39,
+        .offset = 40,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -25009,8 +25011,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "verified",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_Verified,
-        .hasIndex = 40,
-        .offset = 41,  // Stored in _has_storage_ to save space.
+        .hasIndex = 41,
+        .offset = 42,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -25018,8 +25020,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "verificationOverride",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_VerificationOverride,
-        .hasIndex = 42,
-        .offset = 43,  // Stored in _has_storage_ to save space.
+        .hasIndex = 43,
+        .offset = 44,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -25027,8 +25029,8 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "verificationOverrideValue",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_VerificationOverrideValue,
-        .hasIndex = 44,
-        .offset = 45,  // Stored in _has_storage_ to save space.
+        .hasIndex = 45,
+        .offset = 46,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -25036,7 +25038,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "rareArtifactsInInventory",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_RareArtifactsInInventory,
-        .hasIndex = 22,
+        .hasIndex = 23,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, rareArtifactsInInventory),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -25045,7 +25047,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "rareArtifactsOnServer",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_RareArtifactsOnServer,
-        .hasIndex = 23,
+        .hasIndex = 24,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, rareArtifactsOnServer),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -25054,7 +25056,7 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "legendaryArtifactsInInventory",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_LegendaryArtifactsInInventory,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, legendaryArtifactsInInventory),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
@@ -25063,10 +25065,19 @@ typedef struct UserVerificationAnalysis__storage_ {
         .name = "legendaryArtifactsOnServer",
         .dataTypeSpecific.clazz = Nil,
         .number = UserVerificationAnalysis_FieldNumber_LegendaryArtifactsOnServer,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, legendaryArtifactsOnServer),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "verificationCount",
+        .dataTypeSpecific.clazz = Nil,
+        .number = UserVerificationAnalysis_FieldNumber_VerificationCount,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(UserVerificationAnalysis__storage_, verificationCount),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =

@@ -73,19 +73,19 @@ proto.ei.JoinCoopRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.JoinCoopRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    userName: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-    eop: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-    league: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-    grade: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-    pointsReplay: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-    platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-    clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+userName: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+eop: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+league: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+grade: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+pointsReplay: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {

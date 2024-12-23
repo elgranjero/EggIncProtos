@@ -71,10 +71,10 @@ proto.ei.ServerGift.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ServerGift.toObject = function(includeInstance, msg) {
   var f, obj = {
-    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    rewardType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    rewardSubType: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
+userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+rewardType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+rewardSubType: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

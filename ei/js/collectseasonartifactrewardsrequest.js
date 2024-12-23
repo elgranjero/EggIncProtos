@@ -72,10 +72,10 @@ proto.ei.CollectSeasonArtifactRewardsRequest.prototype.toObject = function(opt_i
  */
 proto.ei.CollectSeasonArtifactRewardsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    seasonIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    cxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    bestShip: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+seasonIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+cxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+bestShip: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

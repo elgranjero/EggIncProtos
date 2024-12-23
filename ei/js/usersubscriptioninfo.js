@@ -102,23 +102,23 @@ proto.ei.UserSubscriptionInfo.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.UserSubscriptionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    subscriptionLevel: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-    nextSubscriptionLevel: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
-    lockNextSubscriptionLevel: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
-    platform: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-    originalTransactionId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    linkedTransactionId: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-    acknowledged: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
-    firstSubscribed: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    periodEnd: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-    status: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    storeStatus: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-    autoRenew: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-    sandbox: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
-    lastUpdated: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-    historyList: jspb.Message.toObjectList(msg.getHistoryList(),
+subscriptionLevel: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+nextSubscriptionLevel: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+lockNextSubscriptionLevel: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
+platform: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+originalTransactionId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+linkedTransactionId: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+acknowledged: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
+firstSubscribed: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+periodEnd: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+status: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+storeStatus: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+autoRenew: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+sandbox: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
+lastUpdated: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+historyList: jspb.Message.toObjectList(msg.getHistoryList(),
     proto.ei.UserSubscriptionInfo.HistoryEntry.toObject, includeInstance),
-    pastUserIdsList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f
+pastUserIdsList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -417,9 +417,9 @@ proto.ei.UserSubscriptionInfo.HistoryEntry.prototype.toObject = function(opt_inc
  */
 proto.ei.UserSubscriptionInfo.HistoryEntry.toObject = function(includeInstance, msg) {
   var f, obj = {
-    timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-    messageId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    message: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+messageId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+message: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

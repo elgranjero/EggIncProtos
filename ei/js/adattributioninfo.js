@@ -70,24 +70,24 @@ proto.ei.AdAttributionInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.AdAttributionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    deviceAdId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    networkName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    attribution: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-    orgName: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    orgId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    campaignName: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    campaignId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    clickDate: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-    conversionDate: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-    conversionType: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-    geo: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-    adgroupName: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-    adgroupId: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-    keyword: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-    keywordId: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
-    keywordExtra: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-    creativesetName: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-    creativesetId: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f
+deviceAdId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+networkName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+attribution: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+orgName: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+orgId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+campaignName: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+campaignId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+clickDate: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+conversionDate: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+conversionType: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+geo: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+adgroupName: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+adgroupId: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+keyword: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+keywordId: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+keywordExtra: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+creativesetName: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+creativesetId: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f
   };
 
   if (includeInstance) {

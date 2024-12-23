@@ -78,7 +78,7 @@ proto.ei.EggIncCurrentEvents.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.EggIncCurrentEvents.toObject = function(includeInstance, msg) {
   var f, obj = {
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+eventsList: jspb.Message.toObjectList(msg.getEventsList(),
     proto.ei.EggIncEvent.toObject, includeInstance)
   };
 

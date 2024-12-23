@@ -70,8 +70,8 @@ proto.ei.VerifyPurchaseResponse.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.VerifyPurchaseResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    verified: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    message: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+verified: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+message: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

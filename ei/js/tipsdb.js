@@ -78,7 +78,7 @@ proto.ei.TipsDB.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.TipsDB.toObject = function(includeInstance, msg) {
   var f, obj = {
-    tipsList: jspb.Message.toObjectList(msg.getTipsList(),
+tipsList: jspb.Message.toObjectList(msg.getTipsList(),
     proto.ei.InGameMail.toObject, includeInstance)
   };
 

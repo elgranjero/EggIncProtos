@@ -70,8 +70,8 @@ proto.ei.InventorySlot.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.InventorySlot.toObject = function(includeInstance, msg) {
   var f, obj = {
-    occupied: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    itemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+occupied: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+itemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

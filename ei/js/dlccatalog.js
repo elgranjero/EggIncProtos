@@ -82,19 +82,19 @@ proto.ei.DLCCatalog.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.DLCCatalog.toObject = function(includeInstance, msg) {
   var f, obj = {
-    itemsList: jspb.Message.toObjectList(msg.getItemsList(),
+itemsList: jspb.Message.toObjectList(msg.getItemsList(),
     proto.ei.DLCItem.toObject, includeInstance),
-    shellsList: jspb.Message.toObjectList(msg.getShellsList(),
+shellsList: jspb.Message.toObjectList(msg.getShellsList(),
     proto.ei.ShellSpec.toObject, includeInstance),
-    shellSetsList: jspb.Message.toObjectList(msg.getShellSetsList(),
+shellSetsList: jspb.Message.toObjectList(msg.getShellSetsList(),
     proto.ei.ShellSetSpec.toObject, includeInstance),
-    decoratorsList: jspb.Message.toObjectList(msg.getDecoratorsList(),
+decoratorsList: jspb.Message.toObjectList(msg.getDecoratorsList(),
     proto.ei.ShellSetSpec.toObject, includeInstance),
-    shellObjectsList: jspb.Message.toObjectList(msg.getShellObjectsList(),
+shellObjectsList: jspb.Message.toObjectList(msg.getShellObjectsList(),
     proto.ei.ShellObjectSpec.toObject, includeInstance),
-    shellGroupsList: jspb.Message.toObjectList(msg.getShellGroupsList(),
+shellGroupsList: jspb.Message.toObjectList(msg.getShellGroupsList(),
     proto.ei.ShellGroupSpec.toObject, includeInstance),
-    shellsShowcaseLastFeaturedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f
+shellsShowcaseLastFeaturedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -70,10 +70,10 @@ proto.ei.IAPSaleEntry.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.IAPSaleEntry.toObject = function(includeInstance, msg) {
   var f, obj = {
-    productId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    discountString: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    saleId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+productId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+discountString: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+saleId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

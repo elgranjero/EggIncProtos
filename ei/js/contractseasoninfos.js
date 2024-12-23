@@ -78,7 +78,7 @@ proto.ei.ContractSeasonInfos.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.ContractSeasonInfos.toObject = function(includeInstance, msg) {
   var f, obj = {
-    infosList: jspb.Message.toObjectList(msg.getInfosList(),
+infosList: jspb.Message.toObjectList(msg.getInfosList(),
     proto.ei.ContractSeasonInfo.toObject, includeInstance)
   };
 

@@ -73,11 +73,11 @@ proto.ei.MissionRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MissionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    clientVersion: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    eiUserId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-    info: (f = msg.getInfo()) && proto.ei.MissionInfo.toObject(includeInstance, f),
-    clientInfo: (f = msg.getClientInfo()) && proto.ei.ArtifactsClientInfo.toObject(includeInstance, f)
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+clientVersion: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+eiUserId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+info: (f = msg.getInfo()) && proto.ei.MissionInfo.toObject(includeInstance, f),
+clientInfo: (f = msg.getClientInfo()) && proto.ei.ArtifactsClientInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

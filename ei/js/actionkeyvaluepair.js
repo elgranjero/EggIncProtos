@@ -70,8 +70,8 @@ proto.ei.ActionKeyValuePair.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ActionKeyValuePair.toObject = function(includeInstance, msg) {
   var f, obj = {
-    key: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    value: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+key: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+value: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

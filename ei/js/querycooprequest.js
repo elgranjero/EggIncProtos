@@ -72,12 +72,12 @@ proto.ei.QueryCoopRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.QueryCoopRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    league: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-    grade: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    clientVersion: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+league: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+grade: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+clientVersion: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

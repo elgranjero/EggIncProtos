@@ -70,8 +70,8 @@ proto.ei.DailyGiftInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.DailyGiftInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    currentDay: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    secondsToNextDay: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
+currentDay: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+secondsToNextDay: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

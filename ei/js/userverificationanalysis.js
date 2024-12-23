@@ -78,42 +78,43 @@ proto.ei.UserVerificationAnalysis.prototype.toObject = function(opt_includeInsta
  */
 proto.ei.UserVerificationAnalysis.toObject = function(includeInstance, msg) {
   var f, obj = {
-    overallStatus: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-    completionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    numPrestiges: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
-    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 15)) == null ? undefined : f,
-    eggsOfProphecy: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
-    iapStatus: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
-    verifiedProPermit: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-    verifiedPiggyBreaks: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-    verifiedOtherIap: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-    unverifiedIap: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-    goldEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
-    regularIapBuyer: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
-    regularIapCheater: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
-    artifactsStatus: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
-    missionsCompleted: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-    artifactsCollected: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
-    artifactsConsumed: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-    artifactsInInventory: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-    rareArtifactsInInventory: (f = jspb.Message.getField(msg, 33)) == null ? undefined : f,
-    rareArtifactsOnServer: (f = jspb.Message.getField(msg, 34)) == null ? undefined : f,
-    legendaryArtifactsInInventory: (f = jspb.Message.getField(msg, 35)) == null ? undefined : f,
-    legendaryArtifactsOnServer: (f = jspb.Message.getField(msg, 36)) == null ? undefined : f,
-    goldSpentCrafting: (f = jspb.Message.getOptionalFloatingPointField(msg, 21)) == null ? undefined : f,
-    excessiveConsumes: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
-    excessiveInventory: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
-    excessiveSpend: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
-    contractsStatus: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-    numCoopMemberships: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-    validContracts: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-    invalidContractsList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
-    excessiveEop: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
-    excessiveInvalidContracts: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
-    verified: (f = jspb.Message.getBooleanField(msg, 30)) == null ? undefined : f,
-    verificationOverride: (f = jspb.Message.getBooleanField(msg, 31)) == null ? undefined : f,
-    verificationOverrideValue: (f = jspb.Message.getBooleanField(msg, 32)) == null ? undefined : f
+overallStatus: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+completionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+verificationCount: (f = jspb.Message.getField(msg, 37)) == null ? undefined : f,
+numPrestiges: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
+soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 15)) == null ? undefined : f,
+eggsOfProphecy: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
+iapStatus: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
+verifiedProPermit: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+verifiedPiggyBreaks: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+verifiedOtherIap: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+unverifiedIap: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+goldEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
+regularIapBuyer: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
+regularIapCheater: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
+artifactsStatus: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
+missionsCompleted: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+artifactsCollected: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
+artifactsConsumed: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+artifactsInInventory: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+rareArtifactsInInventory: (f = jspb.Message.getField(msg, 33)) == null ? undefined : f,
+rareArtifactsOnServer: (f = jspb.Message.getField(msg, 34)) == null ? undefined : f,
+legendaryArtifactsInInventory: (f = jspb.Message.getField(msg, 35)) == null ? undefined : f,
+legendaryArtifactsOnServer: (f = jspb.Message.getField(msg, 36)) == null ? undefined : f,
+goldSpentCrafting: (f = jspb.Message.getOptionalFloatingPointField(msg, 21)) == null ? undefined : f,
+excessiveConsumes: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
+excessiveInventory: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
+excessiveSpend: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
+contractsStatus: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
+numCoopMemberships: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+validContracts: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+invalidContractsList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
+excessiveEop: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
+excessiveInvalidContracts: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
+verified: (f = jspb.Message.getBooleanField(msg, 30)) == null ? undefined : f,
+verificationOverride: (f = jspb.Message.getBooleanField(msg, 31)) == null ? undefined : f,
+verificationOverrideValue: (f = jspb.Message.getBooleanField(msg, 32)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -161,6 +162,10 @@ proto.ei.UserVerificationAnalysis.deserializeBinaryFromReader = function(msg, re
     case 3:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setCompletionTime(value);
+      break;
+    case 37:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setVerificationCount(value);
       break;
     case 14:
       var value = /** @type {number} */ (reader.readDouble());
@@ -341,6 +346,13 @@ proto.ei.UserVerificationAnalysis.serializeBinaryToWriter = function(message, wr
   if (f != null) {
     writer.writeDouble(
       3,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 37));
+  if (f != null) {
+    writer.writeInt32(
+      37,
       f
     );
   }
@@ -692,6 +704,42 @@ proto.ei.UserVerificationAnalysis.prototype.clearCompletionTime = function() {
  */
 proto.ei.UserVerificationAnalysis.prototype.hasCompletionTime = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional int32 verification_count = 37;
+ * @return {number}
+ */
+proto.ei.UserVerificationAnalysis.prototype.getVerificationCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 37, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.setVerificationCount = function(value) {
+  return jspb.Message.setField(this, 37, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.UserVerificationAnalysis} returns this
+ */
+proto.ei.UserVerificationAnalysis.prototype.clearVerificationCount = function() {
+  return jspb.Message.setField(this, 37, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.UserVerificationAnalysis.prototype.hasVerificationCount = function() {
+  return jspb.Message.getField(this, 37) != null;
 };
 
 

@@ -71,8 +71,8 @@ proto.ei.ArtifactsConfigurationRequest.prototype.toObject = function(opt_include
  */
 proto.ei.ArtifactsConfigurationRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-    clientVersion: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
+rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+clientVersion: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {

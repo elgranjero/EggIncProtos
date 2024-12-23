@@ -108,19 +108,19 @@ proto.ei.PeriodicalsResponse.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.PeriodicalsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    sales: (f = msg.getSales()) && proto.ei.SalesInfo.toObject(includeInstance, f),
-    events: (f = msg.getEvents()) && proto.ei.EggIncCurrentEvents.toObject(includeInstance, f),
-    contracts: (f = msg.getContracts()) && proto.ei.ContractsResponse.toObject(includeInstance, f),
-    evaluationsList: jspb.Message.toObjectList(msg.getEvaluationsList(),
+sales: (f = msg.getSales()) && proto.ei.SalesInfo.toObject(includeInstance, f),
+events: (f = msg.getEvents()) && proto.ei.EggIncCurrentEvents.toObject(includeInstance, f),
+contracts: (f = msg.getContracts()) && proto.ei.ContractsResponse.toObject(includeInstance, f),
+evaluationsList: jspb.Message.toObjectList(msg.getEvaluationsList(),
     proto.ei.ContractEvaluation.toObject, includeInstance),
-    giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
+giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
     proto.ei.ServerGift.toObject, includeInstance),
-    artifactCasesList: jspb.Message.toObjectList(msg.getArtifactCasesList(),
+artifactCasesList: jspb.Message.toObjectList(msg.getArtifactCasesList(),
     proto.ei.CompleteMissionResponse.toObject, includeInstance),
-    liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
-    mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
-    contractPlayerInfo: (f = msg.getContractPlayerInfo()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f),
-    showcaseRoyaltiesList: jspb.Message.toObjectList(msg.getShowcaseRoyaltiesList(),
+liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
+mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
+contractPlayerInfo: (f = msg.getContractPlayerInfo()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f),
+showcaseRoyaltiesList: jspb.Message.toObjectList(msg.getShowcaseRoyaltiesList(),
     proto.ei.PeriodicalsResponse.RoyaltyInfo.toObject, includeInstance)
   };
 
@@ -352,8 +352,8 @@ proto.ei.PeriodicalsResponse.RoyaltyInfo.prototype.toObject = function(opt_inclu
  */
 proto.ei.PeriodicalsResponse.RoyaltyInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

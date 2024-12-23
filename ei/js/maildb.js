@@ -78,10 +78,10 @@ proto.ei.MailDB.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MailDB.toObject = function(includeInstance, msg) {
   var f, obj = {
-    mailList: jspb.Message.toObjectList(msg.getMailList(),
+mailList: jspb.Message.toObjectList(msg.getMailList(),
     proto.ei.InGameMail.toObject, includeInstance),
-    tipsDbData: msg.getTipsDbData_asB64(),
-    tipsChecksum: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+tipsDbData: msg.getTipsDbData_asB64(),
+tipsChecksum: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

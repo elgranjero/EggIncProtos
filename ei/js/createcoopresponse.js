@@ -70,8 +70,8 @@ proto.ei.CreateCoopResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CreateCoopResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-    message: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+message: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

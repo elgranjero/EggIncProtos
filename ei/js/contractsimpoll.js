@@ -70,7 +70,7 @@ proto.ei.ContractSimPoll.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractSimPoll.toObject = function(includeInstance, msg) {
   var f, obj = {
-    clientVersion: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
+clientVersion: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
