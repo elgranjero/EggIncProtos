@@ -20,12 +20,12 @@ public object ArtifactsClientInfoKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ArtifactsClientInfo.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ArtifactsClientInfo = _builder.build()
 
     /**
@@ -234,12 +234,12 @@ public object ArtifactsClientInfoKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsClientInfo.LaunchCount.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsClientInfo.LaunchCount = _builder.build()
 
       /**

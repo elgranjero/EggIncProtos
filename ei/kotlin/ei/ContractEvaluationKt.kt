@@ -20,12 +20,12 @@ public object ContractEvaluationKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractEvaluation.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractEvaluation = _builder.build()
 
     /**
@@ -722,6 +722,30 @@ public object ContractEvaluationKt {
      */
     public fun hasTimeCheats(): kotlin.Boolean {
       return _builder.hasTimeCheats()
+    }
+
+    /**
+     * `optional uint32 extra_players = 30;`
+     */
+    public var extraPlayers: kotlin.Int
+      @JvmName("getExtraPlayers")
+      get() = _builder.extraPlayers
+      @JvmName("setExtraPlayers")
+      set(value) {
+        _builder.extraPlayers = value
+      }
+    /**
+     * `optional uint32 extra_players = 30;`
+     */
+    public fun clearExtraPlayers() {
+      _builder.clearExtraPlayers()
+    }
+    /**
+     * `optional uint32 extra_players = 30;`
+     * @return Whether the extraPlayers field is set.
+     */
+    public fun hasExtraPlayers(): kotlin.Boolean {
+      return _builder.hasExtraPlayers()
     }
 
     /**

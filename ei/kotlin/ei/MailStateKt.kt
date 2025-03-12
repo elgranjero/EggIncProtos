@@ -20,12 +20,12 @@ public object MailStateKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.MailState.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.MailState = _builder.build()
 
     /**
@@ -208,12 +208,12 @@ public object MailStateKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.MailState.TipState.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.MailState.TipState = _builder.build()
 
       /**

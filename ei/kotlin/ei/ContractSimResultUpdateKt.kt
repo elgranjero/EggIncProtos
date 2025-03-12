@@ -20,12 +20,12 @@ public object ContractSimResultUpdateKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractSimResultUpdate.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractSimResultUpdate = _builder.build()
 
     /**
@@ -138,12 +138,12 @@ public object ContractSimResultUpdateKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ContractSimResultUpdate.GoalInfo.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ContractSimResultUpdate.GoalInfo = _builder.build()
 
       /**

@@ -109,6 +109,7 @@ otherBonuses: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null 
 countedInSeason: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
 seasonId: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
 timeCheats: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
+extraPlayers: (f = jspb.Message.getField(msg, 30)) == null ? undefined : f,
 issuesList: (f = jspb.Message.getRepeatedField(msg, 19)) == null ? undefined : f,
 notesList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
 version: (f = jspb.Message.getField(msg, 50)) == null ? undefined : f,
@@ -265,6 +266,10 @@ proto.ei.ContractEvaluation.deserializeBinaryFromReader = function(msg, reader) 
     case 27:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setTimeCheats(value);
+      break;
+    case 30:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setExtraPlayers(value);
       break;
     case 19:
       var values = /** @type {!Array<!proto.ei.ContractEvaluation.PoorBehavior>} */ (reader.isDelimited() ? reader.readPackedEnum() : [reader.readEnum()]);
@@ -517,6 +522,13 @@ proto.ei.ContractEvaluation.serializeBinaryToWriter = function(message, writer) 
   if (f != null) {
     writer.writeUint32(
       27,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 30));
+  if (f != null) {
+    writer.writeUint32(
+      30,
       f
     );
   }
@@ -1622,6 +1634,42 @@ proto.ei.ContractEvaluation.prototype.clearTimeCheats = function() {
  */
 proto.ei.ContractEvaluation.prototype.hasTimeCheats = function() {
   return jspb.Message.getField(this, 27) != null;
+};
+
+
+/**
+ * optional uint32 extra_players = 30;
+ * @return {number}
+ */
+proto.ei.ContractEvaluation.prototype.getExtraPlayers = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 30, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.setExtraPlayers = function(value) {
+  return jspb.Message.setField(this, 30, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractEvaluation} returns this
+ */
+proto.ei.ContractEvaluation.prototype.clearExtraPlayers = function() {
+  return jspb.Message.setField(this, 30, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractEvaluation.prototype.hasExtraPlayers = function() {
+  return jspb.Message.getField(this, 30) != null;
 };
 
 

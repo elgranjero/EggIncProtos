@@ -20,12 +20,12 @@ public object GetPeriodicalsRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.GetPeriodicalsRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.GetPeriodicalsRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object GetPeriodicalsRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val GetPeriodicalsRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 

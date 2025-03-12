@@ -20,12 +20,12 @@ public object CompleteArtifactKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.CompleteArtifact.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.CompleteArtifact = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object CompleteArtifactKt {
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
     }
+
     public val CompleteArtifactKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
       get() = _builder.specOrNull
 

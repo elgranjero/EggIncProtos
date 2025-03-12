@@ -20,12 +20,12 @@ public object ConsumeArtifactRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ConsumeArtifactRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ConsumeArtifactRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object ConsumeArtifactRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val ConsumeArtifactRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 
@@ -101,6 +102,7 @@ public object ConsumeArtifactRequestKt {
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
     }
+
     public val ConsumeArtifactRequestKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
       get() = _builder.specOrNull
 

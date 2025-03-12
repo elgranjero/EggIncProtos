@@ -20,12 +20,12 @@ public object VerifyPurchaseRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.VerifyPurchaseRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.VerifyPurchaseRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object VerifyPurchaseRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val VerifyPurchaseRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 
@@ -221,6 +222,7 @@ public object VerifyPurchaseRequestKt {
     public fun hasLog(): kotlin.Boolean {
       return _builder.hasLog()
     }
+
     public val VerifyPurchaseRequestKt.Dsl.logOrNull: ei.Ei.GenericAction?
       get() = _builder.logOrNull
   }

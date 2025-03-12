@@ -20,12 +20,12 @@ public object IdleSessionSummaryKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.IdleSessionSummary.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.IdleSessionSummary = _builder.build()
 
     /**
@@ -354,12 +354,12 @@ public object IdleSessionSummaryKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.IdleSessionSummary.Stat.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.IdleSessionSummary.Stat = _builder.build()
 
       /**

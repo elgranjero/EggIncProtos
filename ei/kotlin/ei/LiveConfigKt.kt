@@ -20,12 +20,12 @@ public object LiveConfigKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.LiveConfig.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.LiveConfig = _builder.build()
 
     /**
@@ -75,6 +75,7 @@ public object LiveConfigKt {
     public fun hasBoostsConfig(): kotlin.Boolean {
       return _builder.hasBoostsConfig()
     }
+
     public val LiveConfigKt.Dsl.boostsConfigOrNull: ei.Ei.LiveConfig.BoostsConfig?
       get() = _builder.boostsConfigOrNull
 
@@ -101,6 +102,7 @@ public object LiveConfigKt {
     public fun hasGiftConfig(): kotlin.Boolean {
       return _builder.hasGiftConfig()
     }
+
     public val LiveConfigKt.Dsl.giftConfigOrNull: ei.Ei.LiveConfig.GiftConfig?
       get() = _builder.giftConfigOrNull
 
@@ -127,6 +129,7 @@ public object LiveConfigKt {
     public fun hasMiscConfig(): kotlin.Boolean {
       return _builder.hasMiscConfig()
     }
+
     public val LiveConfigKt.Dsl.miscConfigOrNull: ei.Ei.LiveConfig.MiscConfig?
       get() = _builder.miscConfigOrNull
 
@@ -153,6 +156,7 @@ public object LiveConfigKt {
     public fun hasHelpConfig(): kotlin.Boolean {
       return _builder.hasHelpConfig()
     }
+
     public val LiveConfigKt.Dsl.helpConfigOrNull: ei.Ei.LiveConfig.HelpConfig?
       get() = _builder.helpConfigOrNull
   }
@@ -170,12 +174,12 @@ public object LiveConfigKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.LiveConfig.BoostsConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.LiveConfig.BoostsConfig = _builder.build()
 
       /**
@@ -288,12 +292,12 @@ public object LiveConfigKt {
       ) {
         public companion object {
           @kotlin.jvm.JvmSynthetic
-          @kotlin.PublishedApi
+    @kotlin.PublishedApi
           internal fun _create(builder: ei.Ei.LiveConfig.BoostsConfig.ItemConfig.Builder): Dsl = Dsl(builder)
         }
 
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+  @kotlin.PublishedApi
         internal fun _build(): ei.Ei.LiveConfig.BoostsConfig.ItemConfig = _builder.build()
 
         /**
@@ -408,12 +412,12 @@ public object LiveConfigKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.LiveConfig.GiftConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.LiveConfig.GiftConfig = _builder.build()
 
       /**
@@ -583,6 +587,7 @@ public object LiveConfigKt {
       public fun hasRandomGiftMuConfig(): kotlin.Boolean {
         return _builder.hasRandomGiftMuConfig()
       }
+
       public val GiftConfigKt.Dsl.randomGiftMuConfigOrNull: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig?
         get() = _builder.randomGiftMuConfigOrNull
 
@@ -609,6 +614,7 @@ public object LiveConfigKt {
       public fun hasVideoGiftMuConfig(): kotlin.Boolean {
         return _builder.hasVideoGiftMuConfig()
       }
+
       public val GiftConfigKt.Dsl.videoGiftMuConfigOrNull: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig?
         get() = _builder.videoGiftMuConfigOrNull
 
@@ -866,12 +872,12 @@ public object LiveConfigKt {
       ) {
         public companion object {
           @kotlin.jvm.JvmSynthetic
-          @kotlin.PublishedApi
+    @kotlin.PublishedApi
           internal fun _create(builder: ei.Ei.LiveConfig.GiftConfig.GiftValueConfig.Builder): Dsl = Dsl(builder)
         }
 
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+  @kotlin.PublishedApi
         internal fun _build(): ei.Ei.LiveConfig.GiftConfig.GiftValueConfig = _builder.build()
 
         /**
@@ -1033,12 +1039,12 @@ public object LiveConfigKt {
       ) {
         public companion object {
           @kotlin.jvm.JvmSynthetic
-          @kotlin.PublishedApi
+    @kotlin.PublishedApi
           internal fun _create(builder: ei.Ei.LiveConfig.GiftConfig.GiftMuConfig.Builder): Dsl = Dsl(builder)
         }
 
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+  @kotlin.PublishedApi
         internal fun _build(): ei.Ei.LiveConfig.GiftConfig.GiftMuConfig = _builder.build()
 
         /**
@@ -1129,12 +1135,12 @@ public object LiveConfigKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.LiveConfig.MiscConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.LiveConfig.MiscConfig = _builder.build()
 
       /**
@@ -1512,12 +1518,12 @@ public object LiveConfigKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.LiveConfig.HelpConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.LiveConfig.HelpConfig = _builder.build()
 
       /**
@@ -1606,12 +1612,12 @@ public object LiveConfigKt {
       ) {
         public companion object {
           @kotlin.jvm.JvmSynthetic
-          @kotlin.PublishedApi
+    @kotlin.PublishedApi
           internal fun _create(builder: ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo.Builder): Dsl = Dsl(builder)
         }
 
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+  @kotlin.PublishedApi
         internal fun _build(): ei.Ei.LiveConfig.HelpConfig.HowToVideoInfo = _builder.build()
 
         /**

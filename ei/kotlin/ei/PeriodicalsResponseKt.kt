@@ -20,12 +20,12 @@ public object PeriodicalsResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.PeriodicalsResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.PeriodicalsResponse = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object PeriodicalsResponseKt {
     public fun hasSales(): kotlin.Boolean {
       return _builder.hasSales()
     }
+
     public val PeriodicalsResponseKt.Dsl.salesOrNull: ei.Ei.SalesInfo?
       get() = _builder.salesOrNull
 
@@ -77,6 +78,7 @@ public object PeriodicalsResponseKt {
     public fun hasEvents(): kotlin.Boolean {
       return _builder.hasEvents()
     }
+
     public val PeriodicalsResponseKt.Dsl.eventsOrNull: ei.Ei.EggIncCurrentEvents?
       get() = _builder.eventsOrNull
 
@@ -103,6 +105,7 @@ public object PeriodicalsResponseKt {
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
     }
+
     public val PeriodicalsResponseKt.Dsl.contractsOrNull: ei.Ei.ContractsResponse?
       get() = _builder.contractsOrNull
 
@@ -345,6 +348,7 @@ public object PeriodicalsResponseKt {
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
     }
+
     public val PeriodicalsResponseKt.Dsl.liveConfigOrNull: ei.Ei.LiveConfig?
       get() = _builder.liveConfigOrNull
 
@@ -371,6 +375,7 @@ public object PeriodicalsResponseKt {
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
     }
+
     public val PeriodicalsResponseKt.Dsl.mailBagOrNull: ei.Ei.MailDB?
       get() = _builder.mailBagOrNull
 
@@ -397,6 +402,7 @@ public object PeriodicalsResponseKt {
     public fun hasContractPlayerInfo(): kotlin.Boolean {
       return _builder.hasContractPlayerInfo()
     }
+
     public val PeriodicalsResponseKt.Dsl.contractPlayerInfoOrNull: ei.Ei.ContractPlayerInfo?
       get() = _builder.contractPlayerInfoOrNull
 
@@ -486,12 +492,12 @@ public object PeriodicalsResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.PeriodicalsResponse.RoyaltyInfo.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.PeriodicalsResponse.RoyaltyInfo = _builder.build()
 
       /**

@@ -20,12 +20,12 @@ public object ContractSeasonRewardConfirmationRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractSeasonRewardConfirmationRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractSeasonRewardConfirmationRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object ContractSeasonRewardConfirmationRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val ContractSeasonRewardConfirmationRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 
@@ -101,6 +102,7 @@ public object ContractSeasonRewardConfirmationRequestKt {
     public fun hasGoal(): kotlin.Boolean {
       return _builder.hasGoal()
     }
+
     public val ContractSeasonRewardConfirmationRequestKt.Dsl.goalOrNull: ei.Ei.ContractSeasonGoal?
       get() = _builder.goalOrNull
   }

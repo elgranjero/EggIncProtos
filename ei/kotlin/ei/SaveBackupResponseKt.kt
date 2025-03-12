@@ -20,12 +20,12 @@ public object SaveBackupResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.SaveBackupResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.SaveBackupResponse = _builder.build()
 
     /**
@@ -123,6 +123,7 @@ public object SaveBackupResponseKt {
     public fun hasExistingBackup(): kotlin.Boolean {
       return _builder.hasExistingBackup()
     }
+
     public val SaveBackupResponseKt.Dsl.existingBackupOrNull: ei.Ei.Backup?
       get() = _builder.existingBackupOrNull
   }

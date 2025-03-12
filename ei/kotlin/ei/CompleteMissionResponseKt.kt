@@ -20,12 +20,12 @@ public object CompleteMissionResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.CompleteMissionResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.CompleteMissionResponse = _builder.build()
 
     /**
@@ -75,6 +75,7 @@ public object CompleteMissionResponseKt {
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
     }
+
     public val CompleteMissionResponseKt.Dsl.infoOrNull: ei.Ei.MissionInfo?
       get() = _builder.infoOrNull
 
@@ -260,12 +261,12 @@ public object CompleteMissionResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.CompleteMissionResponse.SecureArtifactSpec.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.CompleteMissionResponse.SecureArtifactSpec = _builder.build()
 
       /**
@@ -291,6 +292,7 @@ public object CompleteMissionResponseKt {
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
       }
+
       public val SecureArtifactSpecKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
         get() = _builder.specOrNull
 

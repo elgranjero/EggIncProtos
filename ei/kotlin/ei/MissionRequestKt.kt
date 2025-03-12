@@ -20,12 +20,12 @@ public object MissionRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.MissionRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.MissionRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object MissionRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val MissionRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 
@@ -125,6 +126,7 @@ public object MissionRequestKt {
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
     }
+
     public val MissionRequestKt.Dsl.infoOrNull: ei.Ei.MissionInfo?
       get() = _builder.infoOrNull
 
@@ -151,6 +153,7 @@ public object MissionRequestKt {
     public fun hasClientInfo(): kotlin.Boolean {
       return _builder.hasClientInfo()
     }
+
     public val MissionRequestKt.Dsl.clientInfoOrNull: ei.Ei.ArtifactsClientInfo?
       get() = _builder.clientInfoOrNull
   }

@@ -20,12 +20,12 @@ public object ShellShowcaseListingInfoKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ShellShowcaseListingInfo.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ShellShowcaseListingInfo = _builder.build()
 
     /**
@@ -219,6 +219,7 @@ public object ShellShowcaseListingInfoKt {
     public fun hasFarmConfig(): kotlin.Boolean {
       return _builder.hasFarmConfig()
     }
+
     public val ShellShowcaseListingInfoKt.Dsl.farmConfigOrNull: ei.Ei.ShellDB.FarmConfiguration?
       get() = _builder.farmConfigOrNull
 

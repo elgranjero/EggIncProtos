@@ -20,12 +20,12 @@ public object ContractCoopStatusUpdateRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractCoopStatusUpdateRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractCoopStatusUpdateRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val ContractCoopStatusUpdateRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 
@@ -223,6 +224,30 @@ public object ContractCoopStatusUpdateRequestKt {
     }
 
     /**
+     * `optional double total_step_time = 19;`
+     */
+    public var totalStepTime: kotlin.Double
+      @JvmName("getTotalStepTime")
+      get() = _builder.totalStepTime
+      @JvmName("setTotalStepTime")
+      set(value) {
+        _builder.totalStepTime = value
+      }
+    /**
+     * `optional double total_step_time = 19;`
+     */
+    public fun clearTotalStepTime() {
+      _builder.clearTotalStepTime()
+    }
+    /**
+     * `optional double total_step_time = 19;`
+     * @return Whether the totalStepTime field is set.
+     */
+    public fun hasTotalStepTime(): kotlin.Boolean {
+      return _builder.hasTotalStepTime()
+    }
+
+    /**
      * `optional double soul_power = 7;`
      */
     public var soulPower: kotlin.Double
@@ -365,6 +390,7 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasProductionParams(): kotlin.Boolean {
       return _builder.hasProductionParams()
     }
+
     public val ContractCoopStatusUpdateRequestKt.Dsl.productionParamsOrNull: ei.Ei.FarmProductionParams?
       get() = _builder.productionParamsOrNull
 
@@ -391,6 +417,7 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasFarmInfo(): kotlin.Boolean {
       return _builder.hasFarmInfo()
     }
+
     public val ContractCoopStatusUpdateRequestKt.Dsl.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
       get() = _builder.farmInfoOrNull
 
@@ -417,6 +444,7 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasLastIdleSummary(): kotlin.Boolean {
       return _builder.hasLastIdleSummary()
     }
+
     public val ContractCoopStatusUpdateRequestKt.Dsl.lastIdleSummaryOrNull: ei.Ei.IdleSessionSummary?
       get() = _builder.lastIdleSummaryOrNull
 

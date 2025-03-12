@@ -20,12 +20,12 @@ public object ShellObjectSpecKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ShellObjectSpec.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ShellObjectSpec = _builder.build()
 
     /**
@@ -633,12 +633,12 @@ public object ShellObjectSpecKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellObjectSpec.LODPiece.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellObjectSpec.LODPiece = _builder.build()
 
       /**
@@ -664,6 +664,7 @@ public object ShellObjectSpecKt {
       public fun hasDlc(): kotlin.Boolean {
         return _builder.hasDlc()
       }
+
       public val LODPieceKt.Dsl.dlcOrNull: ei.Ei.DLCItem?
         get() = _builder.dlcOrNull
 

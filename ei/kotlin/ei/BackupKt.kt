@@ -20,12 +20,12 @@ public object BackupKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.Backup.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.Backup = _builder.build()
 
     /**
@@ -291,6 +291,7 @@ public object BackupKt {
     public fun hasSettings(): kotlin.Boolean {
       return _builder.hasSettings()
     }
+
     public val BackupKt.Dsl.settingsOrNull: ei.Ei.Backup.Settings?
       get() = _builder.settingsOrNull
 
@@ -317,6 +318,7 @@ public object BackupKt {
     public fun hasTutorial(): kotlin.Boolean {
       return _builder.hasTutorial()
     }
+
     public val BackupKt.Dsl.tutorialOrNull: ei.Ei.Backup.Tutorial?
       get() = _builder.tutorialOrNull
 
@@ -343,6 +345,7 @@ public object BackupKt {
     public fun hasStats(): kotlin.Boolean {
       return _builder.hasStats()
     }
+
     public val BackupKt.Dsl.statsOrNull: ei.Ei.Backup.Stats?
       get() = _builder.statsOrNull
 
@@ -369,6 +372,7 @@ public object BackupKt {
     public fun hasGame(): kotlin.Boolean {
       return _builder.hasGame()
     }
+
     public val BackupKt.Dsl.gameOrNull: ei.Ei.Backup.Game?
       get() = _builder.gameOrNull
 
@@ -395,6 +399,7 @@ public object BackupKt {
     public fun hasArtifacts(): kotlin.Boolean {
       return _builder.hasArtifacts()
     }
+
     public val BackupKt.Dsl.artifactsOrNull: ei.Ei.Backup.Artifacts?
       get() = _builder.artifactsOrNull
 
@@ -421,6 +426,7 @@ public object BackupKt {
     public fun hasShells(): kotlin.Boolean {
       return _builder.hasShells()
     }
+
     public val BackupKt.Dsl.shellsOrNull: ei.Ei.Backup.Shells?
       get() = _builder.shellsOrNull
 
@@ -447,6 +453,7 @@ public object BackupKt {
     public fun hasSim(): kotlin.Boolean {
       return _builder.hasSim()
     }
+
     public val BackupKt.Dsl.simOrNull: ei.Ei.Backup.Simulation?
       get() = _builder.simOrNull
 
@@ -545,6 +552,7 @@ public object BackupKt {
     public fun hasMission(): kotlin.Boolean {
       return _builder.hasMission()
     }
+
     public val BackupKt.Dsl.missionOrNull: ei.Ei.Backup.Mission?
       get() = _builder.missionOrNull
 
@@ -571,6 +579,7 @@ public object BackupKt {
     public fun hasMisc(): kotlin.Boolean {
       return _builder.hasMisc()
     }
+
     public val BackupKt.Dsl.miscOrNull: ei.Ei.Backup.Misc?
       get() = _builder.miscOrNull
 
@@ -597,6 +606,7 @@ public object BackupKt {
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
     }
+
     public val BackupKt.Dsl.contractsOrNull: ei.Ei.MyContracts?
       get() = _builder.contractsOrNull
 
@@ -623,6 +633,7 @@ public object BackupKt {
     public fun hasArtifactsDb(): kotlin.Boolean {
       return _builder.hasArtifactsDb()
     }
+
     public val BackupKt.Dsl.artifactsDbOrNull: ei.Ei.ArtifactsDB?
       get() = _builder.artifactsDbOrNull
 
@@ -649,6 +660,7 @@ public object BackupKt {
     public fun hasShellDb(): kotlin.Boolean {
       return _builder.hasShellDb()
     }
+
     public val BackupKt.Dsl.shellDbOrNull: ei.Ei.ShellDB?
       get() = _builder.shellDbOrNull
 
@@ -745,6 +757,7 @@ public object BackupKt {
     public fun hasMailState(): kotlin.Boolean {
       return _builder.hasMailState()
     }
+
     public val BackupKt.Dsl.mailStateOrNull: ei.Ei.MailState?
       get() = _builder.mailStateOrNull
 
@@ -810,12 +823,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Settings.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Settings = _builder.build()
 
       /**
@@ -1553,12 +1566,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Tutorial.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Tutorial = _builder.build()
 
       /**
@@ -1881,12 +1894,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Stats.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Stats = _builder.build()
 
       /**
@@ -2418,12 +2431,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Game.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Game = _builder.build()
 
       /**
@@ -3651,12 +3664,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Artifacts.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Artifacts = _builder.build()
 
       /**
@@ -3706,6 +3719,7 @@ public object BackupKt {
       public fun hasItemBeingInfused(): kotlin.Boolean {
         return _builder.hasItemBeingInfused()
       }
+
       public val ArtifactsKt.Dsl.itemBeingInfusedOrNull: ei.Ei.ArtifactInventoryItem?
         get() = _builder.itemBeingInfusedOrNull
 
@@ -3732,6 +3746,7 @@ public object BackupKt {
       public fun hasSpecBeingInfused(): kotlin.Boolean {
         return _builder.hasSpecBeingInfused()
       }
+
       public val ArtifactsKt.Dsl.specBeingInfusedOrNull: ei.Ei.ArtifactSpec?
         get() = _builder.specBeingInfusedOrNull
 
@@ -4192,12 +4207,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Shells.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Shells = _builder.build()
 
       /**
@@ -4328,12 +4343,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Simulation.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Simulation = _builder.build()
 
       /**
@@ -5421,6 +5436,30 @@ public object BackupKt {
       public fun hasGametimeUntilNextBoostToken(): kotlin.Boolean {
         return _builder.hasGametimeUntilNextBoostToken()
       }
+
+      /**
+       * `optional double total_step_time = 32;`
+       */
+      public var totalStepTime: kotlin.Double
+        @JvmName("getTotalStepTime")
+        get() = _builder.totalStepTime
+        @JvmName("setTotalStepTime")
+        set(value) {
+          _builder.totalStepTime = value
+        }
+      /**
+       * `optional double total_step_time = 32;`
+       */
+      public fun clearTotalStepTime() {
+        _builder.clearTotalStepTime()
+      }
+      /**
+       * `optional double total_step_time = 32;`
+       * @return Whether the totalStepTime field is set.
+       */
+      public fun hasTotalStepTime(): kotlin.Boolean {
+        return _builder.hasTotalStepTime()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializemission")
@@ -5437,12 +5476,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Mission.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Mission = _builder.build()
 
       /**
@@ -5650,12 +5689,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.Misc.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.Misc = _builder.build()
 
       /**
@@ -6273,12 +6312,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.ResearchItem.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.ResearchItem = _builder.build()
 
       /**
@@ -6344,12 +6383,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.NewsHeadline.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.NewsHeadline = _builder.build()
 
       /**
@@ -6415,12 +6454,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.AchievementInfo.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.AchievementInfo = _builder.build()
 
       /**
@@ -6486,12 +6525,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.ActiveBoost.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.ActiveBoost = _builder.build()
 
       /**
@@ -6581,12 +6620,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.OwnedBoost.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.OwnedBoost = _builder.build()
 
       /**
@@ -6652,12 +6691,12 @@ public object BackupKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.Backup.MissionInfo.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.Backup.MissionInfo = _builder.build()
 
       /**

@@ -1119,6 +1119,7 @@
 | boost_tokens_given | [uint32](#uint32) | optional |  |
 | unclaimed_boost_tokens | [uint32](#uint32) | optional |  |
 | gametime_until_next_boost_token | [double](#double) | optional |  |
+| total_step_time | [double](#double) | optional |  |
 
 
 
@@ -1707,6 +1708,7 @@
 | amount | [double](#double) | optional |  |
 | rate | [double](#double) | optional |  |
 | time_cheats_detected | [uint32](#uint32) | optional |  |
+| total_step_time | [double](#double) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | eop | [uint32](#uint32) | optional |  |
 | boost_tokens | [uint32](#uint32) | optional |  |
@@ -1777,6 +1779,7 @@
 | counted_in_season | [bool](#bool) | optional |  |
 | season_id | [string](#string) | optional |  |
 | time_cheats | [uint32](#uint32) | optional |  |
+| extra_players | [uint32](#uint32) | optional |  |
 | issues | [ContractEvaluation.PoorBehavior](#ei-ContractEvaluation-PoorBehavior) | repeated |  |
 | notes | [string](#string) | repeated |  |
 | version | [string](#string) | optional |  |
@@ -2192,6 +2195,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | contribution | [double](#double) | optional |  |
+| total_step_time | [double](#double) | optional |  |
 | last_contribution_time | [double](#double) | optional |  |
 | finalized | [bool](#bool) | optional |  |
 | soul_power | [double](#double) | optional |  |

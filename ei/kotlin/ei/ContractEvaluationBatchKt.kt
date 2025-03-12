@@ -20,12 +20,12 @@ public object ContractEvaluationBatchKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractEvaluationBatch.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractEvaluationBatch = _builder.build()
 
     /**
@@ -114,12 +114,12 @@ public object ContractEvaluationBatchKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ContractEvaluationBatch.Pair.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ContractEvaluationBatch.Pair = _builder.build()
 
       /**
@@ -169,6 +169,7 @@ public object ContractEvaluationBatchKt {
       public fun hasCev(): kotlin.Boolean {
         return _builder.hasCev()
       }
+
       public val PairKt.Dsl.cevOrNull: ei.Ei.ContractEvaluation?
         get() = _builder.cevOrNull
     }

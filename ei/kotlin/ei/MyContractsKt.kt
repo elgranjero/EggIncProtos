@@ -20,12 +20,12 @@ public object MyContractsKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.MyContracts.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.MyContracts = _builder.build()
 
     /**
@@ -337,6 +337,7 @@ public object MyContractsKt {
     public fun hasLastCpi(): kotlin.Boolean {
       return _builder.hasLastCpi()
     }
+
     public val MyContractsKt.Dsl.lastCpiOrNull: ei.Ei.ContractPlayerInfo?
       get() = _builder.lastCpiOrNull
 

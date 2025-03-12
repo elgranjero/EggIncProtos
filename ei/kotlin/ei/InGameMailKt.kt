@@ -20,12 +20,12 @@ public object InGameMailKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.InGameMail.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.InGameMail = _builder.build()
 
     /**
@@ -243,6 +243,7 @@ public object InGameMailKt {
     public fun hasImage(): kotlin.Boolean {
       return _builder.hasImage()
     }
+
     public val InGameMailKt.Dsl.imageOrNull: ei.Ei.DLCItem?
       get() = _builder.imageOrNull
 

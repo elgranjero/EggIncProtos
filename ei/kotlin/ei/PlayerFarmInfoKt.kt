@@ -20,12 +20,12 @@ public object PlayerFarmInfoKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.PlayerFarmInfo.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.PlayerFarmInfo = _builder.build()
 
     /**
@@ -969,6 +969,7 @@ public object PlayerFarmInfoKt {
     public fun hasFarmAppearance(): kotlin.Boolean {
       return _builder.hasFarmAppearance()
     }
+
     public val PlayerFarmInfoKt.Dsl.farmAppearanceOrNull: ei.Ei.ShellDB.FarmConfiguration?
       get() = _builder.farmAppearanceOrNull
 

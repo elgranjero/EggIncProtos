@@ -82,6 +82,7 @@ pushUserId: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
 amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
 rate: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
 timeCheatsDetected: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 19)) == null ? undefined : f,
 soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
 eop: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
 boostTokens: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
@@ -160,6 +161,10 @@ proto.ei.ContractCoopStatusUpdateRequest.deserializeBinaryFromReader = function(
     case 6:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setTimeCheatsDetected(value);
+      break;
+    case 19:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setTotalStepTime(value);
       break;
     case 7:
       var value = /** @type {number} */ (reader.readDouble());
@@ -287,6 +292,13 @@ proto.ei.ContractCoopStatusUpdateRequest.serializeBinaryToWriter = function(mess
   if (f != null) {
     writer.writeUint32(
       6,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 19));
+  if (f != null) {
+    writer.writeDouble(
+      19,
       f
     );
   }
@@ -652,6 +664,42 @@ proto.ei.ContractCoopStatusUpdateRequest.prototype.clearTimeCheatsDetected = fun
  */
 proto.ei.ContractCoopStatusUpdateRequest.prototype.hasTimeCheatsDetected = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional double total_step_time = 19;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.getTotalStepTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 19, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.setTotalStepTime = function(value) {
+  return jspb.Message.setField(this, 19, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.clearTotalStepTime = function() {
+  return jspb.Message.setField(this, 19, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.hasTotalStepTime = function() {
+  return jspb.Message.getField(this, 19) != null;
 };
 
 

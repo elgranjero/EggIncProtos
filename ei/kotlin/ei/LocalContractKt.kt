@@ -20,12 +20,12 @@ public object LocalContractKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.LocalContract.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.LocalContract = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object LocalContractKt {
     public fun hasContract(): kotlin.Boolean {
       return _builder.hasContract()
     }
+
     public val LocalContractKt.Dsl.contractOrNull: ei.Ei.Contract?
       get() = _builder.contractOrNull
 
@@ -557,6 +558,7 @@ public object LocalContractKt {
     public fun hasEvaluation(): kotlin.Boolean {
       return _builder.hasEvaluation()
     }
+
     public val LocalContractKt.Dsl.evaluationOrNull: ei.Ei.ContractEvaluation?
       get() = _builder.evaluationOrNull
 

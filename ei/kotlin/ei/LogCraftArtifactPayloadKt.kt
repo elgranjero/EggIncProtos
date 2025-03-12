@@ -20,12 +20,12 @@ public object LogCraftArtifactPayloadKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.LogCraftArtifactPayload.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.LogCraftArtifactPayload = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object LogCraftArtifactPayloadKt {
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
     }
+
     public val LogCraftArtifactPayloadKt.Dsl.reqOrNull: ei.Ei.CraftArtifactRequest?
       get() = _builder.reqOrNull
 
@@ -77,6 +78,7 @@ public object LogCraftArtifactPayloadKt {
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()
     }
+
     public val LogCraftArtifactPayloadKt.Dsl.resOrNull: ei.Ei.CraftArtifactResponse?
       get() = _builder.resOrNull
   }

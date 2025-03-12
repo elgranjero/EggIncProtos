@@ -20,12 +20,12 @@ public object CustomEggKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.CustomEgg.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.CustomEgg = _builder.build()
 
     /**
@@ -195,6 +195,7 @@ public object CustomEggKt {
     public fun hasIcon(): kotlin.Boolean {
       return _builder.hasIcon()
     }
+
     public val CustomEggKt.Dsl.iconOrNull: ei.Ei.DLCItem?
       get() = _builder.iconOrNull
 

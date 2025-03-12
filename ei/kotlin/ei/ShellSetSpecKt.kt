@@ -20,12 +20,12 @@ public object ShellSetSpecKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ShellSetSpec.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ShellSetSpec = _builder.build()
 
     /**
@@ -531,6 +531,7 @@ public object ShellSetSpecKt {
     public fun hasIcon(): kotlin.Boolean {
       return _builder.hasIcon()
     }
+
     public val ShellSetSpecKt.Dsl.iconOrNull: ei.Ei.DLCItem?
       get() = _builder.iconOrNull
 
@@ -596,12 +597,12 @@ public object ShellSetSpecKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellSetSpec.VariationSpec.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellSetSpec.VariationSpec = _builder.build()
 
       /**

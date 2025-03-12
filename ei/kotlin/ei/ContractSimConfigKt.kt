@@ -20,12 +20,12 @@ public object ContractSimConfigKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractSimConfig.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractSimConfig = _builder.build()
 
     /**
@@ -114,12 +114,12 @@ public object ContractSimConfigKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ContractSimConfig.ContractGradeSimConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ContractSimConfig.ContractGradeSimConfig = _builder.build()
 
       /**
@@ -232,12 +232,12 @@ public object ContractSimConfigKt {
       ) {
         public companion object {
           @kotlin.jvm.JvmSynthetic
-          @kotlin.PublishedApi
+    @kotlin.PublishedApi
           internal fun _create(builder: ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.Builder): Dsl = Dsl(builder)
         }
 
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+  @kotlin.PublishedApi
         internal fun _build(): ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams = _builder.build()
 
         /**

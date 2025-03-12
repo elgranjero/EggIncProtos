@@ -225,6 +225,7 @@ message Backup {
         optional uint32 boost_tokens_given = 28;
         optional uint32 unclaimed_boost_tokens = 27;
         optional double gametime_until_next_boost_token = 29;
+        optional double total_step_time = 32;
     }
     
     repeated Simulation farms = 12;
@@ -671,6 +672,7 @@ message ContractEvaluation {
     optional bool counted_in_season = 20;
     optional string season_id = 21;
     optional uint32 time_cheats = 27;
+    optional uint32 extra_players = 30;
     
     repeated PoorBehavior issues = 19;
     enum PoorBehavior {
@@ -714,6 +716,7 @@ message CoopCompletionSnapshot {
     repeated ContributorSnapshot contributors = 1;
     message ContributorSnapshot {
         optional double contribution = 1;
+        optional double total_step_time = 8;
         optional double last_contribution_time = 6;
         optional bool finalized = 7;
         optional double soul_power = 2;
@@ -1158,6 +1161,7 @@ message ContractCoopStatusUpdateRequest {
     optional double amount = 4;
     optional double rate = 5;
     optional uint32 time_cheats_detected = 6;
+    optional double total_step_time = 19;
     optional double soul_power = 7;
     optional uint32 eop = 15;
     optional uint32 boost_tokens = 9;

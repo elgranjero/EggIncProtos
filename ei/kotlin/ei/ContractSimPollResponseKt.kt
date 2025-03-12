@@ -20,12 +20,12 @@ public object ContractSimPollResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractSimPollResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractSimPollResponse = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object ContractSimPollResponseKt {
     public fun hasContractToSimulate(): kotlin.Boolean {
       return _builder.hasContractToSimulate()
     }
+
     public val ContractSimPollResponseKt.Dsl.contractToSimulateOrNull: ei.Ei.Contract?
       get() = _builder.contractToSimulateOrNull
 
@@ -77,6 +78,7 @@ public object ContractSimPollResponseKt {
     public fun hasSimConfig(): kotlin.Boolean {
       return _builder.hasSimConfig()
     }
+
     public val ContractSimPollResponseKt.Dsl.simConfigOrNull: ei.Ei.ContractSimConfig?
       get() = _builder.simConfigOrNull
   }

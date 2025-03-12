@@ -20,12 +20,12 @@ public object ConfigResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ConfigResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ConfigResponse = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object ConfigResponseKt {
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
     }
+
     public val ConfigResponseKt.Dsl.liveConfigOrNull: ei.Ei.LiveConfig?
       get() = _builder.liveConfigOrNull
 
@@ -77,6 +78,7 @@ public object ConfigResponseKt {
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
     }
+
     public val ConfigResponseKt.Dsl.mailBagOrNull: ei.Ei.MailDB?
       get() = _builder.mailBagOrNull
 
@@ -103,6 +105,7 @@ public object ConfigResponseKt {
     public fun hasDlcCatalog(): kotlin.Boolean {
       return _builder.hasDlcCatalog()
     }
+
     public val ConfigResponseKt.Dsl.dlcCatalogOrNull: ei.Ei.DLCCatalog?
       get() = _builder.dlcCatalogOrNull
   }

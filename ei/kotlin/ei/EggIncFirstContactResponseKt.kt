@@ -20,12 +20,12 @@ public object EggIncFirstContactResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.EggIncFirstContactResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.EggIncFirstContactResponse = _builder.build()
 
     /**
@@ -193,6 +193,7 @@ public object EggIncFirstContactResponseKt {
     public fun hasBackup(): kotlin.Boolean {
       return _builder.hasBackup()
     }
+
     public val EggIncFirstContactResponseKt.Dsl.backupOrNull: ei.Ei.Backup?
       get() = _builder.backupOrNull
   }

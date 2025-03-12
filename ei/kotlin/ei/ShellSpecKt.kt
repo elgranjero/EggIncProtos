@@ -20,12 +20,12 @@ public object ShellSpecKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ShellSpec.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ShellSpec = _builder.build()
 
     /**
@@ -75,6 +75,7 @@ public object ShellSpecKt {
     public fun hasPrimaryPiece(): kotlin.Boolean {
       return _builder.hasPrimaryPiece()
     }
+
     public val ShellSpecKt.Dsl.primaryPieceOrNull: ei.Ei.ShellSpec.ShellPiece?
       get() = _builder.primaryPieceOrNull
 
@@ -548,12 +549,12 @@ public object ShellSpecKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellSpec.ShellPiece.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellSpec.ShellPiece = _builder.build()
 
       /**
@@ -603,6 +604,7 @@ public object ShellSpecKt {
       public fun hasDlc(): kotlin.Boolean {
         return _builder.hasDlc()
       }
+
       public val ShellPieceKt.Dsl.dlcOrNull: ei.Ei.DLCItem?
         get() = _builder.dlcOrNull
     }

@@ -20,12 +20,12 @@ public object CoopCompletionSnapshotKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.CoopCompletionSnapshot.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.CoopCompletionSnapshot = _builder.build()
 
     /**
@@ -114,12 +114,12 @@ public object CoopCompletionSnapshotKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.CoopCompletionSnapshot.ContributorSnapshot.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.CoopCompletionSnapshot.ContributorSnapshot = _builder.build()
 
       /**
@@ -144,6 +144,30 @@ public object CoopCompletionSnapshotKt {
        */
       public fun hasContribution(): kotlin.Boolean {
         return _builder.hasContribution()
+      }
+
+      /**
+       * `optional double total_step_time = 8;`
+       */
+      public var totalStepTime: kotlin.Double
+        @JvmName("getTotalStepTime")
+        get() = _builder.totalStepTime
+        @JvmName("setTotalStepTime")
+        set(value) {
+          _builder.totalStepTime = value
+        }
+      /**
+       * `optional double total_step_time = 8;`
+       */
+      public fun clearTotalStepTime() {
+        _builder.clearTotalStepTime()
+      }
+      /**
+       * `optional double total_step_time = 8;`
+       * @return Whether the totalStepTime field is set.
+       */
+      public fun hasTotalStepTime(): kotlin.Boolean {
+        return _builder.hasTotalStepTime()
       }
 
       /**

@@ -215,6 +215,7 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.toObject = functio
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
 contribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
 lastContributionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
 finalized: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
 soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
@@ -260,6 +261,10 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.deserializeBinaryFromReader 
     case 1:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setContribution(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setTotalStepTime(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
@@ -318,6 +323,13 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.serializeBinaryToWriter = fu
   if (f != null) {
     writer.writeDouble(
       1,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeDouble(
+      8,
       f
     );
   }
@@ -399,6 +411,42 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearContribution 
  */
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasContribution = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional double total_step_time = 8;
+ * @return {number}
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.getTotalStepTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.setTotalStepTime = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CoopCompletionSnapshot.ContributorSnapshot} returns this
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.clearTotalStepTime = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.hasTotalStepTime = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

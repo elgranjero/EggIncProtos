@@ -7448,7 +7448,8 @@ boostTokensReceived: (f = jspb.Message.getField(msg, 25)) == null ? undefined : 
 boostTokensSpent: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
 boostTokensGiven: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f,
 unclaimedBoostTokens: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
-gametimeUntilNextBoostToken: (f = jspb.Message.getOptionalFloatingPointField(msg, 29)) == null ? undefined : f
+gametimeUntilNextBoostToken: (f = jspb.Message.getOptionalFloatingPointField(msg, 29)) == null ? undefined : f,
+totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 32)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -7622,6 +7623,10 @@ proto.ei.Backup.Simulation.deserializeBinaryFromReader = function(msg, reader) {
     case 29:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setGametimeUntilNextBoostToken(value);
+      break;
+    case 32:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setTotalStepTime(value);
       break;
     default:
       reader.skipField();
@@ -7868,6 +7873,13 @@ proto.ei.Backup.Simulation.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       29,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 32));
+  if (f != null) {
+    writer.writeDouble(
+      32,
       f
     );
   }
@@ -8997,6 +9009,42 @@ proto.ei.Backup.Simulation.prototype.clearGametimeUntilNextBoostToken = function
  */
 proto.ei.Backup.Simulation.prototype.hasGametimeUntilNextBoostToken = function() {
   return jspb.Message.getField(this, 29) != null;
+};
+
+
+/**
+ * optional double total_step_time = 32;
+ * @return {number}
+ */
+proto.ei.Backup.Simulation.prototype.getTotalStepTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 32, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Simulation} returns this
+ */
+proto.ei.Backup.Simulation.prototype.setTotalStepTime = function(value) {
+  return jspb.Message.setField(this, 32, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Simulation} returns this
+ */
+proto.ei.Backup.Simulation.prototype.clearTotalStepTime = function() {
+  return jspb.Message.setField(this, 32, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Simulation.prototype.hasTotalStepTime = function() {
+  return jspb.Message.getField(this, 32) != null;
 };
 
 

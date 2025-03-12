@@ -20,12 +20,12 @@ public object GenericActionKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.GenericAction.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.GenericAction = _builder.build()
 
     /**
@@ -267,6 +267,7 @@ public object GenericActionKt {
     public fun hasApp(): kotlin.Boolean {
       return _builder.hasApp()
     }
+
     public val GenericActionKt.Dsl.appOrNull: ei.Ei.AppInfo?
       get() = _builder.appOrNull
 
@@ -293,6 +294,7 @@ public object GenericActionKt {
     public fun hasDevice(): kotlin.Boolean {
       return _builder.hasDevice()
     }
+
     public val GenericActionKt.Dsl.deviceOrNull: ei.Ei.DeviceInfo?
       get() = _builder.deviceOrNull
   }

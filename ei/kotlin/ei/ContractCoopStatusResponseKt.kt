@@ -20,12 +20,12 @@ public object ContractCoopStatusResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractCoopStatusResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractCoopStatusResponse = _builder.build()
 
     /**
@@ -642,12 +642,12 @@ public object ContractCoopStatusResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ContractCoopStatusResponse.ContributionInfo.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ContractCoopStatusResponse.ContributionInfo = _builder.build()
 
       /**
@@ -841,6 +841,7 @@ public object ContractCoopStatusResponseKt {
       public fun hasProductionParams(): kotlin.Boolean {
         return _builder.hasProductionParams()
       }
+
       public val ContributionInfoKt.Dsl.productionParamsOrNull: ei.Ei.FarmProductionParams?
         get() = _builder.productionParamsOrNull
 
@@ -867,6 +868,7 @@ public object ContractCoopStatusResponseKt {
       public fun hasFarmInfo(): kotlin.Boolean {
         return _builder.hasFarmInfo()
       }
+
       public val ContributionInfoKt.Dsl.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
         get() = _builder.farmInfoOrNull
 
@@ -1293,12 +1295,12 @@ public object ContractCoopStatusResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ContractCoopStatusResponse.CoopGift.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ContractCoopStatusResponse.CoopGift = _builder.build()
 
       /**
@@ -1412,12 +1414,12 @@ public object ContractCoopStatusResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ContractCoopStatusResponse.ChickenRun.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ContractCoopStatusResponse.ChickenRun = _builder.build()
 
       /**

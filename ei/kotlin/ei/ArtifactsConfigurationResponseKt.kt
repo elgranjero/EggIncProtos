@@ -20,12 +20,12 @@ public object ArtifactsConfigurationResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ArtifactsConfigurationResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ArtifactsConfigurationResponse = _builder.build()
 
     /**
@@ -258,12 +258,12 @@ public object ArtifactsConfigurationResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsConfigurationResponse.MissionParameters = _builder.build()
 
       /**
@@ -465,12 +465,12 @@ public object ArtifactsConfigurationResponseKt {
       ) {
         public companion object {
           @kotlin.jvm.JvmSynthetic
-          @kotlin.PublishedApi
+    @kotlin.PublishedApi
           internal fun _create(builder: ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration.Builder): Dsl = Dsl(builder)
         }
 
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+  @kotlin.PublishedApi
         internal fun _build(): ei.Ei.ArtifactsConfigurationResponse.MissionParameters.Duration = _builder.build()
 
         /**
@@ -681,12 +681,12 @@ public object ArtifactsConfigurationResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsConfigurationResponse.ArtifactParameters = _builder.build()
 
       /**
@@ -712,6 +712,7 @@ public object ArtifactsConfigurationResponseKt {
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
       }
+
       public val ArtifactParametersKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
         get() = _builder.specOrNull
 
@@ -922,12 +923,12 @@ public object ArtifactsConfigurationResponseKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsConfigurationResponse.CraftingLevelInfo = _builder.build()
 
       /**

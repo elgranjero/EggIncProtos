@@ -20,12 +20,12 @@ public object ArtifactInventoryItemKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ArtifactInventoryItem.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ArtifactInventoryItem = _builder.build()
 
     /**
@@ -75,6 +75,7 @@ public object ArtifactInventoryItemKt {
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
     }
+
     public val ArtifactInventoryItemKt.Dsl.artifactOrNull: ei.Ei.CompleteArtifact?
       get() = _builder.artifactOrNull
 

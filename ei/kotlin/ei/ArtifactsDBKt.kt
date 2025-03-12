@@ -20,12 +20,12 @@ public object ArtifactsDBKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ArtifactsDB.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ArtifactsDB = _builder.build()
 
     /**
@@ -507,6 +507,7 @@ public object ArtifactsDBKt {
     public fun hasFuelingMission(): kotlin.Boolean {
       return _builder.hasFuelingMission()
     }
+
     public val ArtifactsDBKt.Dsl.fuelingMissionOrNull: ei.Ei.MissionInfo?
       get() = _builder.fuelingMissionOrNull
 
@@ -884,12 +885,12 @@ public object ArtifactsDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsDB.ActiveArtifactSlot.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsDB.ActiveArtifactSlot = _builder.build()
 
       /**
@@ -955,12 +956,12 @@ public object ArtifactsDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsDB.ActiveArtifactSet.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsDB.ActiveArtifactSet = _builder.build()
 
       /**
@@ -1074,12 +1075,12 @@ public object ArtifactsDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ArtifactsDB.CraftableArtifact.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ArtifactsDB.CraftableArtifact = _builder.build()
 
       /**
@@ -1105,6 +1106,7 @@ public object ArtifactsDBKt {
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
       }
+
       public val CraftableArtifactKt.Dsl.specOrNull: ei.Ei.ArtifactSpec?
         get() = _builder.specOrNull
 

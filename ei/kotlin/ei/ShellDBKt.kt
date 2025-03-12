@@ -20,12 +20,12 @@ public object ShellDBKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ShellDB.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ShellDB = _builder.build()
 
     /**
@@ -734,12 +734,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ShellStatus.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ShellStatus = _builder.build()
 
       /**
@@ -805,12 +805,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ShellElementStatus.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ShellElementStatus = _builder.build()
 
       /**
@@ -876,12 +876,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ShellSetVariationStatus.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ShellSetVariationStatus = _builder.build()
 
       /**
@@ -993,12 +993,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.FarmConfiguration.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.FarmConfiguration = _builder.build()
 
       /**
@@ -1425,6 +1425,7 @@ public object ShellDBKt {
       public fun hasLightingConfig(): kotlin.Boolean {
         return _builder.hasLightingConfig()
       }
+
       public val FarmConfigurationKt.Dsl.lightingConfigOrNull: ei.Ei.ShellDB.LightingConfig?
         get() = _builder.lightingConfigOrNull
     }
@@ -1443,12 +1444,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.SavedFarmConfiguration.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.SavedFarmConfiguration = _builder.build()
 
       /**
@@ -1498,6 +1499,7 @@ public object ShellDBKt {
       public fun hasConfig(): kotlin.Boolean {
         return _builder.hasConfig()
       }
+
       public val SavedFarmConfigurationKt.Dsl.configOrNull: ei.Ei.ShellDB.FarmConfiguration?
         get() = _builder.configOrNull
 
@@ -1612,12 +1614,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ShellConfiguration.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ShellConfiguration = _builder.build()
 
       /**
@@ -1707,12 +1709,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ShellSetConfiguration.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ShellSetConfiguration = _builder.build()
 
       /**
@@ -1850,12 +1852,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ShellGroupConfiguration.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ShellGroupConfiguration = _builder.build()
 
       /**
@@ -1921,12 +1923,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.ChickenConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.ChickenConfig = _builder.build()
 
       /**
@@ -1992,12 +1994,12 @@ public object ShellDBKt {
     ) {
       public companion object {
         @kotlin.jvm.JvmSynthetic
-        @kotlin.PublishedApi
+    @kotlin.PublishedApi
         internal fun _create(builder: ei.Ei.ShellDB.LightingConfig.Builder): Dsl = Dsl(builder)
       }
 
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+  @kotlin.PublishedApi
       internal fun _build(): ei.Ei.ShellDB.LightingConfig = _builder.build()
 
       /**
@@ -2023,6 +2025,7 @@ public object ShellDBKt {
       public fun hasLightDir(): kotlin.Boolean {
         return _builder.hasLightDir()
       }
+
       public val LightingConfigKt.Dsl.lightDirOrNull: ei.Ei.Vector3?
         get() = _builder.lightDirOrNull
 
@@ -2049,6 +2052,7 @@ public object ShellDBKt {
       public fun hasLightDirectColor(): kotlin.Boolean {
         return _builder.hasLightDirectColor()
       }
+
       public val LightingConfigKt.Dsl.lightDirectColorOrNull: ei.Ei.Vector4?
         get() = _builder.lightDirectColorOrNull
 
@@ -2099,6 +2103,7 @@ public object ShellDBKt {
       public fun hasLightAmbientColor(): kotlin.Boolean {
         return _builder.hasLightAmbientColor()
       }
+
       public val LightingConfigKt.Dsl.lightAmbientColorOrNull: ei.Ei.Vector4?
         get() = _builder.lightAmbientColorOrNull
 
@@ -2149,6 +2154,7 @@ public object ShellDBKt {
       public fun hasFogColor(): kotlin.Boolean {
         return _builder.hasFogColor()
       }
+
       public val LightingConfigKt.Dsl.fogColorOrNull: ei.Ei.Vector4?
         get() = _builder.fogColorOrNull
 

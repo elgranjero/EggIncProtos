@@ -20,12 +20,12 @@ public object LogCompleteMissionPayloadKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.LogCompleteMissionPayload.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.LogCompleteMissionPayload = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object LogCompleteMissionPayloadKt {
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
     }
+
     public val LogCompleteMissionPayloadKt.Dsl.reqOrNull: ei.Ei.MissionRequest?
       get() = _builder.reqOrNull
 
@@ -77,6 +78,7 @@ public object LogCompleteMissionPayloadKt {
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()
     }
+
     public val LogCompleteMissionPayloadKt.Dsl.resOrNull: ei.Ei.CompleteMissionResponse?
       get() = _builder.resOrNull
   }

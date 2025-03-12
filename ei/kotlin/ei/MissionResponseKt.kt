@@ -20,12 +20,12 @@ public object MissionResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.MissionResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.MissionResponse = _builder.build()
 
     /**
@@ -75,6 +75,7 @@ public object MissionResponseKt {
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
     }
+
     public val MissionResponseKt.Dsl.infoOrNull: ei.Ei.MissionInfo?
       get() = _builder.infoOrNull
   }

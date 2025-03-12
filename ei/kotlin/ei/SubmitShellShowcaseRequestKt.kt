@@ -20,12 +20,12 @@ public object SubmitShellShowcaseRequestKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.SubmitShellShowcaseRequest.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.SubmitShellShowcaseRequest = _builder.build()
 
     /**
@@ -51,6 +51,7 @@ public object SubmitShellShowcaseRequestKt {
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
     }
+
     public val SubmitShellShowcaseRequestKt.Dsl.rinfoOrNull: ei.Ei.BasicRequestInfo?
       get() = _builder.rinfoOrNull
 
@@ -149,6 +150,7 @@ public object SubmitShellShowcaseRequestKt {
     public fun hasFarmConfig(): kotlin.Boolean {
       return _builder.hasFarmConfig()
     }
+
     public val SubmitShellShowcaseRequestKt.Dsl.farmConfigOrNull: ei.Ei.ShellDB.FarmConfiguration?
       get() = _builder.farmConfigOrNull
   }

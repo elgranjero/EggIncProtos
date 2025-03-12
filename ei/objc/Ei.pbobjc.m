@@ -4444,6 +4444,7 @@ typedef struct Backup_Shells__storage_ {
 @dynamic hasBoostTokensGiven, boostTokensGiven;
 @dynamic hasUnclaimedBoostTokens, unclaimedBoostTokens;
 @dynamic hasGametimeUntilNextBoostToken, gametimeUntilNextBoostToken;
+@dynamic hasTotalStepTime, totalStepTime;
 
 typedef struct Backup_Simulation__storage_ {
   uint32_t _has_storage_[1];
@@ -4478,6 +4479,7 @@ typedef struct Backup_Simulation__storage_ {
   double gametimeUntilNextBoostToken;
   double eggsShipped;
   double lastCashBoostTime;
+  double totalStepTime;
 } Backup_Simulation__storage_;
 
 // This method is threadsafe because it is initially called
@@ -4794,6 +4796,16 @@ typedef struct Backup_Simulation__storage_ {
         .core.number = Backup_Simulation_FieldNumber_LastCashBoostTime,
         .core.hasIndex = 15,
         .core.offset = (uint32_t)offsetof(Backup_Simulation__storage_, lastCashBoostTime),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "totalStepTime",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Simulation_FieldNumber_TotalStepTime,
+        .core.hasIndex = 23,
+        .core.offset = (uint32_t)offsetof(Backup_Simulation__storage_, totalStepTime),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
       },
@@ -8978,6 +8990,7 @@ typedef struct ContractPlayerInfo_SeasonProgress__storage_ {
 @dynamic hasCountedInSeason, countedInSeason;
 @dynamic hasSeasonId, seasonId;
 @dynamic hasTimeCheats, timeCheats;
+@dynamic hasExtraPlayers, extraPlayers;
 @dynamic issuesArray, issuesArray_Count;
 @dynamic notesArray, notesArray_Count;
 @dynamic hasVersion, version;
@@ -8995,6 +9008,7 @@ typedef struct ContractEvaluation__storage_ {
   uint32_t boostTokenAllotment;
   uint32_t coopSize;
   uint32_t timeCheats;
+  uint32_t extraPlayers;
   ContractEvaluation_Status status;
   NSMutableArray *notesArray;
   GPBEnumArray *issuesArray;
@@ -9287,6 +9301,15 @@ typedef struct ContractEvaluation__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
+        .name = "extraPlayers",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractEvaluation_FieldNumber_ExtraPlayers,
+        .hasIndex = 33,
+        .offset = (uint32_t)offsetof(ContractEvaluation__storage_, extraPlayers),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
         .name = "contractIdentifier",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractEvaluation_FieldNumber_ContractIdentifier,
@@ -9308,7 +9331,7 @@ typedef struct ContractEvaluation__storage_ {
         .name = "version",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractEvaluation_FieldNumber_Version,
-        .hasIndex = 33,
+        .hasIndex = 34,
         .offset = (uint32_t)offsetof(ContractEvaluation__storage_, version),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -9317,7 +9340,7 @@ typedef struct ContractEvaluation__storage_ {
         .name = "evaluationStartTime",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractEvaluation_FieldNumber_EvaluationStartTime,
-        .hasIndex = 34,
+        .hasIndex = 35,
         .offset = (uint32_t)offsetof(ContractEvaluation__storage_, evaluationStartTime),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -9326,7 +9349,7 @@ typedef struct ContractEvaluation__storage_ {
         .name = "status",
         .dataTypeSpecific.enumDescFunc = ContractEvaluation_Status_EnumDescriptor,
         .number = ContractEvaluation_FieldNumber_Status,
-        .hasIndex = 35,
+        .hasIndex = 36,
         .offset = (uint32_t)offsetof(ContractEvaluation__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClosedEnum),
         .dataType = GPBDataTypeEnum,
@@ -9573,6 +9596,7 @@ typedef struct CoopCompletionSnapshot__storage_ {
 @implementation CoopCompletionSnapshot_ContributorSnapshot
 
 @dynamic hasContribution, contribution;
+@dynamic hasTotalStepTime, totalStepTime;
 @dynamic hasLastContributionTime, lastContributionTime;
 @dynamic hasFinalized, finalized;
 @dynamic hasSoulPower, soulPower;
@@ -9588,6 +9612,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
   double contribution;
   double soulPower;
   double lastContributionTime;
+  double totalStepTime;
 } CoopCompletionSnapshot_ContributorSnapshot__storage_;
 
 // This method is threadsafe because it is initially called
@@ -9610,7 +9635,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "soulPower",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_SoulPower,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, soulPower),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -9619,7 +9644,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "userId",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_UserId,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, userId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -9628,7 +9653,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "tokens",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_Tokens,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, tokens),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -9637,7 +9662,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "tokensSpent",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_TokensSpent,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, tokensSpent),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeUInt32,
@@ -9646,7 +9671,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "lastContributionTime",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_LastContributionTime,
-        .hasIndex = 1,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, lastContributionTime),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -9655,10 +9680,19 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
         .name = "finalized",
         .dataTypeSpecific.clazz = Nil,
         .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_Finalized,
-        .hasIndex = 2,
-        .offset = 3,  // Stored in _has_storage_ to save space.
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "totalStepTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_TotalStepTime,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CoopCompletionSnapshot_ContributorSnapshot__storage_, totalStepTime),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -13941,6 +13975,7 @@ typedef struct IdleSessionSummary_Stat__storage_ {
 @dynamic hasAmount, amount;
 @dynamic hasRate, rate;
 @dynamic hasTimeCheatsDetected, timeCheatsDetected;
+@dynamic hasTotalStepTime, totalStepTime;
 @dynamic hasSoulPower, soulPower;
 @dynamic hasEop, eop;
 @dynamic hasBoostTokens, boostTokens;
@@ -13971,6 +14006,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
   double soulPower;
   double eggLayingRateBuff;
   double earningsBuff;
+  double totalStepTime;
 } ContractCoopStatusUpdateRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -14045,7 +14081,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "soulPower",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_SoulPower,
-        .core.hasIndex = 8,
+        .core.hasIndex = 9,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, soulPower),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeDouble,
@@ -14065,7 +14101,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "boostTokens",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_BoostTokens,
-        .core.hasIndex = 10,
+        .core.hasIndex = 11,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, boostTokens),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -14075,7 +14111,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "eggLayingRateBuff",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_EggLayingRateBuff,
-        .core.hasIndex = 17,
+        .core.hasIndex = 18,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, eggLayingRateBuff),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeDouble,
@@ -14085,7 +14121,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "earningsBuff",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_EarningsBuff,
-        .core.hasIndex = 18,
+        .core.hasIndex = 19,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, earningsBuff),
         .core.flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasDefaultValue),
         .core.dataType = GPBDataTypeDouble,
@@ -14105,7 +14141,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "boostTokensSpent",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_BoostTokensSpent,
-        .core.hasIndex = 11,
+        .core.hasIndex = 12,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, boostTokensSpent),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -14115,7 +14151,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "productionParams",
         .core.dataTypeSpecific.clazz = GPBObjCClass(FarmProductionParams),
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_ProductionParams,
-        .core.hasIndex = 14,
+        .core.hasIndex = 15,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, productionParams),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeMessage,
@@ -14125,7 +14161,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "eop",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_Eop,
-        .core.hasIndex = 9,
+        .core.hasIndex = 10,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, eop),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeUInt32,
@@ -14135,7 +14171,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "farmInfo",
         .core.dataTypeSpecific.clazz = GPBObjCClass(PlayerFarmInfo),
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_FarmInfo,
-        .core.hasIndex = 15,
+        .core.hasIndex = 16,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, farmInfo),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeMessage,
@@ -14145,8 +14181,8 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "hideCcStatus",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_HideCcStatus,
-        .core.hasIndex = 12,
-        .core.offset = 13,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 13,
+        .core.offset = 14,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeBool,
       },
@@ -14155,10 +14191,20 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "lastIdleSummary",
         .core.dataTypeSpecific.clazz = GPBObjCClass(IdleSessionSummary),
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_LastIdleSummary,
-        .core.hasIndex = 16,
+        .core.hasIndex = 17,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, lastIdleSummary),
         .core.flags = GPBFieldOptional,
         .core.dataType = GPBDataTypeMessage,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "totalStepTime",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ContractCoopStatusUpdateRequest_FieldNumber_TotalStepTime,
+        .core.hasIndex = 8,
+        .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, totalStepTime),
+        .core.flags = GPBFieldOptional,
+        .core.dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =

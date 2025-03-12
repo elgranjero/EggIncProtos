@@ -20,12 +20,12 @@ public object ContractsResponseKt {
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
+    @kotlin.PublishedApi
       internal fun _create(builder: ei.Ei.ContractsResponse.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
+  @kotlin.PublishedApi
     internal fun _build(): ei.Ei.ContractsResponse = _builder.build()
 
     /**
@@ -291,6 +291,7 @@ public object ContractsResponseKt {
     public fun hasCurrentSeason(): kotlin.Boolean {
       return _builder.hasCurrentSeason()
     }
+
     public val ContractsResponseKt.Dsl.currentSeasonOrNull: ei.Ei.ContractSeasonInfo?
       get() = _builder.currentSeasonOrNull
   }

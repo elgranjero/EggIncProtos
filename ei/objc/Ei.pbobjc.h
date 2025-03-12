@@ -1810,6 +1810,7 @@ typedef GPB_ENUM(Backup_Simulation_FieldNumber) {
   Backup_Simulation_FieldNumber_GametimeUntilNextBoostToken = 29,
   Backup_Simulation_FieldNumber_EggsShipped = 30,
   Backup_Simulation_FieldNumber_LastCashBoostTime = 31,
+  Backup_Simulation_FieldNumber_TotalStepTime = 32,
 };
 
 GPB_FINAL @interface Backup_Simulation : GPBMessage
@@ -1915,6 +1916,9 @@ GPB_FINAL @interface Backup_Simulation : GPBMessage
 
 @property(nonatomic, readwrite) double gametimeUntilNextBoostToken;
 @property(nonatomic, readwrite) BOOL hasGametimeUntilNextBoostToken;
+
+@property(nonatomic, readwrite) double totalStepTime;
+@property(nonatomic, readwrite) BOOL hasTotalStepTime;
 
 @end
 
@@ -3382,6 +3386,7 @@ typedef GPB_ENUM(ContractEvaluation_FieldNumber) {
   ContractEvaluation_FieldNumber_TimeCheats = 27,
   ContractEvaluation_FieldNumber_GiftTokenValueSent = 28,
   ContractEvaluation_FieldNumber_GiftTokenValueReceived = 29,
+  ContractEvaluation_FieldNumber_ExtraPlayers = 30,
   ContractEvaluation_FieldNumber_ContractIdentifier = 40,
   ContractEvaluation_FieldNumber_CoopIdentifier = 41,
   ContractEvaluation_FieldNumber_Version = 50,
@@ -3480,6 +3485,9 @@ GPB_FINAL @interface ContractEvaluation : GPBMessage
 
 @property(nonatomic, readwrite) uint32_t timeCheats;
 @property(nonatomic, readwrite) BOOL hasTimeCheats;
+
+@property(nonatomic, readwrite) uint32_t extraPlayers;
+@property(nonatomic, readwrite) BOOL hasExtraPlayers;
 
 // |issuesArray| contains |ContractEvaluation_PoorBehavior|
 @property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *issuesArray;
@@ -3580,12 +3588,16 @@ typedef GPB_ENUM(CoopCompletionSnapshot_ContributorSnapshot_FieldNumber) {
   CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_TokensSpent = 5,
   CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_LastContributionTime = 6,
   CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_Finalized = 7,
+  CoopCompletionSnapshot_ContributorSnapshot_FieldNumber_TotalStepTime = 8,
 };
 
 GPB_FINAL @interface CoopCompletionSnapshot_ContributorSnapshot : GPBMessage
 
 @property(nonatomic, readwrite) double contribution;
 @property(nonatomic, readwrite) BOOL hasContribution;
+
+@property(nonatomic, readwrite) double totalStepTime;
+@property(nonatomic, readwrite) BOOL hasTotalStepTime;
 
 @property(nonatomic, readwrite) double lastContributionTime;
 @property(nonatomic, readwrite) BOOL hasLastContributionTime;
@@ -5158,6 +5170,7 @@ typedef GPB_ENUM(ContractCoopStatusUpdateRequest_FieldNumber) {
   ContractCoopStatusUpdateRequest_FieldNumber_FarmInfo = 16,
   ContractCoopStatusUpdateRequest_FieldNumber_HideCcStatus = 17,
   ContractCoopStatusUpdateRequest_FieldNumber_LastIdleSummary = 18,
+  ContractCoopStatusUpdateRequest_FieldNumber_TotalStepTime = 19,
 };
 
 GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
@@ -5190,6 +5203,9 @@ GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
 
 @property(nonatomic, readwrite) uint32_t timeCheatsDetected;
 @property(nonatomic, readwrite) BOOL hasTimeCheatsDetected;
+
+@property(nonatomic, readwrite) double totalStepTime;
+@property(nonatomic, readwrite) BOOL hasTotalStepTime;
 
 @property(nonatomic, readwrite) double soulPower;
 @property(nonatomic, readwrite) BOOL hasSoulPower;
