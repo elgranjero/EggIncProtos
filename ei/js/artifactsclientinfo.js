@@ -100,13 +100,13 @@ proto.ei.ArtifactsClientInfo.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.ArtifactsClientInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-missionCapacityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-missionDurationMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-missionFtlDurationResearchMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-missionCapacityResearchMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-launchCountsList: jspb.Message.toObjectList(msg.getLaunchCountsList(),
+    missionCapacityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    missionDurationMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    missionFtlDurationResearchMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    missionCapacityResearchMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    launchCountsList: jspb.Message.toObjectList(msg.getLaunchCountsList(),
     proto.ei.ArtifactsClientInfo.LaunchCount.toObject, includeInstance),
-lastServerLaunchCountSumTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
+    lastServerLaunchCountSumTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -275,9 +275,9 @@ proto.ei.ArtifactsClientInfo.LaunchCount.prototype.toObject = function(opt_inclu
  */
 proto.ei.ArtifactsClientInfo.LaunchCount.toObject = function(includeInstance, msg) {
   var f, obj = {
-ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-numLaunches: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-launchPoints: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    numLaunches: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    launchPoints: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

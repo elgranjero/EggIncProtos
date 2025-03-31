@@ -32,21 +32,23 @@ public object MissionResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object MissionResponseKt {
      * `optional .ei.MissionInfo info = 2;`
      */
     public var info: ei.Ei.MissionInfo
-      @JvmName("getInfo")
-      get() = _builder.info
-      @JvmName("setInfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getInfo")
+        get() = _builder.info
+      @kotlin.jvm.JvmName("setInfo")
+        set(value) {
         _builder.info = value
       }
     /**
-     * `optional .ei.MissionInfo info = 2;`
+     * <code>optional .ei.MissionInfo info = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearInfo() {
       _builder.clearInfo()
     }
     /**
-     * `optional .ei.MissionInfo info = 2;`
+     * <code>optional .ei.MissionInfo info = 2;</code>
      * @return Whether the info field is set.
+     * @return This builder for chaining.
      */
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()

@@ -80,16 +80,16 @@ proto.ei.GenericAction.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.GenericAction.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-ccUser: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
-advertisingId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-approxTimeDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-actionName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-dataList: jspb.Message.toObjectList(msg.getDataList(),
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    ccUser: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
+    advertisingId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    approxTimeDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    actionName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    dataList: jspb.Message.toObjectList(msg.getDataList(),
     proto.ei.ActionKeyValuePair.toObject, includeInstance),
-app: (f = msg.getApp()) && proto.ei.AppInfo.toObject(includeInstance, f),
-device: (f = msg.getDevice()) && proto.ei.DeviceInfo.toObject(includeInstance, f)
+    app: (f = msg.getApp()) && proto.ei.AppInfo.toObject(includeInstance, f),
+    device: (f = msg.getDevice()) && proto.ei.DeviceInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

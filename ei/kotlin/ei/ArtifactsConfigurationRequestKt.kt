@@ -32,21 +32,23 @@ public object ArtifactsConfigurationRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 2;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 2;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 2;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ArtifactsConfigurationRequestKt {
      * `optional uint32 client_version = 1;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 1;`
+     * <code>optional uint32 client_version = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 1;`
+     * <code>optional uint32 client_version = 1;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

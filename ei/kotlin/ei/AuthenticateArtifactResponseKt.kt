@@ -32,21 +32,23 @@ public object AuthenticateArtifactResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object AuthenticateArtifactResponseKt {
      * `optional uint64 original_item_id = 2;`
      */
     public var originalItemId: kotlin.Long
-      @JvmName("getOriginalItemId")
-      get() = _builder.originalItemId
-      @JvmName("setOriginalItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalItemId")
+        get() = _builder.originalItemId
+      @kotlin.jvm.JvmName("setOriginalItemId")
+        set(value) {
         _builder.originalItemId = value
       }
     /**
-     * `optional uint64 original_item_id = 2;`
+     * <code>optional uint64 original_item_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalItemId() {
       _builder.clearOriginalItemId()
     }
     /**
-     * `optional uint64 original_item_id = 2;`
+     * <code>optional uint64 original_item_id = 2;</code>
      * @return Whether the originalItemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalItemId(): kotlin.Boolean {
       return _builder.hasOriginalItemId()
@@ -80,21 +84,23 @@ public object AuthenticateArtifactResponseKt {
      * `optional bool demote = 3;`
      */
     public var demote: kotlin.Boolean
-      @JvmName("getDemote")
-      get() = _builder.demote
-      @JvmName("setDemote")
-      set(value) {
+      @kotlin.jvm.JvmName("getDemote")
+        get() = _builder.demote
+      @kotlin.jvm.JvmName("setDemote")
+        set(value) {
         _builder.demote = value
       }
     /**
-     * `optional bool demote = 3;`
+     * <code>optional bool demote = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearDemote() {
       _builder.clearDemote()
     }
     /**
-     * `optional bool demote = 3;`
+     * <code>optional bool demote = 3;</code>
      * @return Whether the demote field is set.
+     * @return This builder for chaining.
      */
     public fun hasDemote(): kotlin.Boolean {
       return _builder.hasDemote()
@@ -104,21 +110,23 @@ public object AuthenticateArtifactResponseKt {
      * `optional bool delete = 4;`
      */
     public var delete: kotlin.Boolean
-      @JvmName("getDelete")
-      get() = _builder.delete
-      @JvmName("setDelete")
-      set(value) {
+      @kotlin.jvm.JvmName("getDelete")
+        get() = _builder.delete
+      @kotlin.jvm.JvmName("setDelete")
+        set(value) {
         _builder.delete = value
       }
     /**
-     * `optional bool delete = 4;`
+     * <code>optional bool delete = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearDelete() {
       _builder.clearDelete()
     }
     /**
-     * `optional bool delete = 4;`
+     * <code>optional bool delete = 4;</code>
      * @return Whether the delete field is set.
+     * @return This builder for chaining.
      */
     public fun hasDelete(): kotlin.Boolean {
       return _builder.hasDelete()
@@ -128,21 +136,23 @@ public object AuthenticateArtifactResponseKt {
      * `optional string ei_user_id = 5;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()

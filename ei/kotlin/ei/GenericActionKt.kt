@@ -32,21 +32,23 @@ public object GenericActionKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -56,21 +58,23 @@ public object GenericActionKt {
      * `optional bool cc_user = 9;`
      */
     public var ccUser: kotlin.Boolean
-      @JvmName("getCcUser")
-      get() = _builder.ccUser
-      @JvmName("setCcUser")
-      set(value) {
+      @kotlin.jvm.JvmName("getCcUser")
+        get() = _builder.ccUser
+      @kotlin.jvm.JvmName("setCcUser")
+        set(value) {
         _builder.ccUser = value
       }
     /**
-     * `optional bool cc_user = 9;`
+     * <code>optional bool cc_user = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearCcUser() {
       _builder.clearCcUser()
     }
     /**
-     * `optional bool cc_user = 9;`
+     * <code>optional bool cc_user = 9;</code>
      * @return Whether the ccUser field is set.
+     * @return This builder for chaining.
      */
     public fun hasCcUser(): kotlin.Boolean {
       return _builder.hasCcUser()
@@ -80,21 +84,23 @@ public object GenericActionKt {
      * `optional string advertising_id = 7;`
      */
     public var advertisingId: kotlin.String
-      @JvmName("getAdvertisingId")
-      get() = _builder.advertisingId
-      @JvmName("setAdvertisingId")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdvertisingId")
+        get() = _builder.advertisingId
+      @kotlin.jvm.JvmName("setAdvertisingId")
+        set(value) {
         _builder.advertisingId = value
       }
     /**
-     * `optional string advertising_id = 7;`
+     * <code>optional string advertising_id = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdvertisingId() {
       _builder.clearAdvertisingId()
     }
     /**
-     * `optional string advertising_id = 7;`
+     * <code>optional string advertising_id = 7;</code>
      * @return Whether the advertisingId field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdvertisingId(): kotlin.Boolean {
       return _builder.hasAdvertisingId()
@@ -104,21 +110,23 @@ public object GenericActionKt {
      * `optional float approx_time_DEP = 2;`
      */
     public var approxTimeDEP: kotlin.Float
-      @JvmName("getApproxTimeDEP")
-      get() = _builder.approxTimeDEP
-      @JvmName("setApproxTimeDEP")
-      set(value) {
+      @kotlin.jvm.JvmName("getApproxTimeDEP")
+        get() = _builder.approxTimeDEP
+      @kotlin.jvm.JvmName("setApproxTimeDEP")
+        set(value) {
         _builder.approxTimeDEP = value
       }
     /**
-     * `optional float approx_time_DEP = 2;`
+     * <code>optional float approx_time_DEP = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearApproxTimeDEP() {
       _builder.clearApproxTimeDEP()
     }
     /**
-     * `optional float approx_time_DEP = 2;`
+     * <code>optional float approx_time_DEP = 2;</code>
      * @return Whether the approxTimeDEP field is set.
+     * @return This builder for chaining.
      */
     public fun hasApproxTimeDEP(): kotlin.Boolean {
       return _builder.hasApproxTimeDEP()
@@ -128,21 +136,23 @@ public object GenericActionKt {
      * `optional double approx_time = 8;`
      */
     public var approxTime: kotlin.Double
-      @JvmName("getApproxTime")
-      get() = _builder.approxTime
-      @JvmName("setApproxTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getApproxTime")
+        get() = _builder.approxTime
+      @kotlin.jvm.JvmName("setApproxTime")
+        set(value) {
         _builder.approxTime = value
       }
     /**
-     * `optional double approx_time = 8;`
+     * <code>optional double approx_time = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * `optional double approx_time = 8;`
+     * <code>optional double approx_time = 8;</code>
      * @return Whether the approxTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -152,21 +162,23 @@ public object GenericActionKt {
      * `optional string action_name = 3;`
      */
     public var actionName: kotlin.String
-      @JvmName("getActionName")
-      get() = _builder.actionName
-      @JvmName("setActionName")
-      set(value) {
+      @kotlin.jvm.JvmName("getActionName")
+        get() = _builder.actionName
+      @kotlin.jvm.JvmName("setActionName")
+        set(value) {
         _builder.actionName = value
       }
     /**
-     * `optional string action_name = 3;`
+     * <code>optional string action_name = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearActionName() {
       _builder.clearActionName()
     }
     /**
-     * `optional string action_name = 3;`
+     * <code>optional string action_name = 3;</code>
      * @return Whether the actionName field is set.
+     * @return This builder for chaining.
      */
     public fun hasActionName(): kotlin.Boolean {
       return _builder.hasActionName()
@@ -183,86 +195,93 @@ public object GenericActionKt {
      */
      public val data: com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.dataList
       )
     /**
-     * `repeated .ei.ActionKeyValuePair data = 4;`
+     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param value The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addData")
+@kotlin.jvm.JvmName("addData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.add(value: ei.Ei.ActionKeyValuePair) {
       _builder.addData(value)
     }
     /**
-     * `repeated .ei.ActionKeyValuePair data = 4;`
+     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param value The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignData")
+@kotlin.jvm.JvmName("plusAssignData")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.plusAssign(value: ei.Ei.ActionKeyValuePair) {
       add(value)
     }
     /**
-     * `repeated .ei.ActionKeyValuePair data = 4;`
+     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param values The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllData")
+@kotlin.jvm.JvmName("addAllData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ActionKeyValuePair>) {
       _builder.addAllData(values)
     }
     /**
-     * `repeated .ei.ActionKeyValuePair data = 4;`
+     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param values The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllData")
+@kotlin.jvm.JvmName("plusAssignAllData")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ActionKeyValuePair>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ActionKeyValuePair data = 4;`
+     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
      * @param index The index to set the value at.
      * @param value The data to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setData")
+@kotlin.jvm.JvmName("setData")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.set(index: kotlin.Int, value: ei.Ei.ActionKeyValuePair) {
       _builder.setData(index, value)
     }
     /**
-     * `repeated .ei.ActionKeyValuePair data = 4;`
+     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearData")
+@kotlin.jvm.JvmName("clearData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActionKeyValuePair, DataProxy>.clear() {
       _builder.clearData()
     }
-
 
     /**
      * `optional .ei.AppInfo app = 5;`
      */
     public var app: ei.Ei.AppInfo
-      @JvmName("getApp")
-      get() = _builder.app
-      @JvmName("setApp")
-      set(value) {
+      @kotlin.jvm.JvmName("getApp")
+        get() = _builder.app
+      @kotlin.jvm.JvmName("setApp")
+        set(value) {
         _builder.app = value
       }
     /**
-     * `optional .ei.AppInfo app = 5;`
+     * <code>optional .ei.AppInfo app = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearApp() {
       _builder.clearApp()
     }
     /**
-     * `optional .ei.AppInfo app = 5;`
+     * <code>optional .ei.AppInfo app = 5;</code>
      * @return Whether the app field is set.
+     * @return This builder for chaining.
      */
     public fun hasApp(): kotlin.Boolean {
       return _builder.hasApp()
@@ -275,21 +294,23 @@ public object GenericActionKt {
      * `optional .ei.DeviceInfo device = 6;`
      */
     public var device: ei.Ei.DeviceInfo
-      @JvmName("getDevice")
-      get() = _builder.device
-      @JvmName("setDevice")
-      set(value) {
+      @kotlin.jvm.JvmName("getDevice")
+        get() = _builder.device
+      @kotlin.jvm.JvmName("setDevice")
+        set(value) {
         _builder.device = value
       }
     /**
-     * `optional .ei.DeviceInfo device = 6;`
+     * <code>optional .ei.DeviceInfo device = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearDevice() {
       _builder.clearDevice()
     }
     /**
-     * `optional .ei.DeviceInfo device = 6;`
+     * <code>optional .ei.DeviceInfo device = 6;</code>
      * @return Whether the device field is set.
+     * @return This builder for chaining.
      */
     public fun hasDevice(): kotlin.Boolean {
       return _builder.hasDevice()

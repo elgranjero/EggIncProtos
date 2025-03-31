@@ -32,21 +32,23 @@ public object DLCItemKt {
      * `optional string name = 1;`
      */
     public var name: kotlin.String
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional string name = 1;`
+     * <code>optional string name = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional string name = 1;`
+     * <code>optional string name = 1;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -56,21 +58,23 @@ public object DLCItemKt {
      * `optional string directory = 2;`
      */
     public var directory: kotlin.String
-      @JvmName("getDirectory")
-      get() = _builder.directory
-      @JvmName("setDirectory")
-      set(value) {
+      @kotlin.jvm.JvmName("getDirectory")
+        get() = _builder.directory
+      @kotlin.jvm.JvmName("setDirectory")
+        set(value) {
         _builder.directory = value
       }
     /**
-     * `optional string directory = 2;`
+     * <code>optional string directory = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearDirectory() {
       _builder.clearDirectory()
     }
     /**
-     * `optional string directory = 2;`
+     * <code>optional string directory = 2;</code>
      * @return Whether the directory field is set.
+     * @return This builder for chaining.
      */
     public fun hasDirectory(): kotlin.Boolean {
       return _builder.hasDirectory()
@@ -80,21 +84,23 @@ public object DLCItemKt {
      * `optional string ext = 3;`
      */
     public var ext: kotlin.String
-      @JvmName("getExt")
-      get() = _builder.ext
-      @JvmName("setExt")
-      set(value) {
+      @kotlin.jvm.JvmName("getExt")
+        get() = _builder.ext
+      @kotlin.jvm.JvmName("setExt")
+        set(value) {
         _builder.ext = value
       }
     /**
-     * `optional string ext = 3;`
+     * <code>optional string ext = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearExt() {
       _builder.clearExt()
     }
     /**
-     * `optional string ext = 3;`
+     * <code>optional string ext = 3;</code>
      * @return Whether the ext field is set.
+     * @return This builder for chaining.
      */
     public fun hasExt(): kotlin.Boolean {
       return _builder.hasExt()
@@ -104,21 +110,23 @@ public object DLCItemKt {
      * `optional bool compressed = 6;`
      */
     public var compressed: kotlin.Boolean
-      @JvmName("getCompressed")
-      get() = _builder.compressed
-      @JvmName("setCompressed")
-      set(value) {
+      @kotlin.jvm.JvmName("getCompressed")
+        get() = _builder.compressed
+      @kotlin.jvm.JvmName("setCompressed")
+        set(value) {
         _builder.compressed = value
       }
     /**
-     * `optional bool compressed = 6;`
+     * <code>optional bool compressed = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearCompressed() {
       _builder.clearCompressed()
     }
     /**
-     * `optional bool compressed = 6;`
+     * <code>optional bool compressed = 6;</code>
      * @return Whether the compressed field is set.
+     * @return This builder for chaining.
      */
     public fun hasCompressed(): kotlin.Boolean {
       return _builder.hasCompressed()
@@ -128,21 +136,23 @@ public object DLCItemKt {
      * `optional uint64 original_size = 7;`
      */
     public var originalSize: kotlin.Long
-      @JvmName("getOriginalSize")
-      get() = _builder.originalSize
-      @JvmName("setOriginalSize")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalSize")
+        get() = _builder.originalSize
+      @kotlin.jvm.JvmName("setOriginalSize")
+        set(value) {
         _builder.originalSize = value
       }
     /**
-     * `optional uint64 original_size = 7;`
+     * <code>optional uint64 original_size = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalSize() {
       _builder.clearOriginalSize()
     }
     /**
-     * `optional uint64 original_size = 7;`
+     * <code>optional uint64 original_size = 7;</code>
      * @return Whether the originalSize field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalSize(): kotlin.Boolean {
       return _builder.hasOriginalSize()
@@ -152,21 +162,23 @@ public object DLCItemKt {
      * `optional string url = 4;`
      */
     public var url: kotlin.String
-      @JvmName("getUrl")
-      get() = _builder.url
-      @JvmName("setUrl")
-      set(value) {
+      @kotlin.jvm.JvmName("getUrl")
+        get() = _builder.url
+      @kotlin.jvm.JvmName("setUrl")
+        set(value) {
         _builder.url = value
       }
     /**
-     * `optional string url = 4;`
+     * <code>optional string url = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearUrl() {
       _builder.clearUrl()
     }
     /**
-     * `optional string url = 4;`
+     * <code>optional string url = 4;</code>
      * @return Whether the url field is set.
+     * @return This builder for chaining.
      */
     public fun hasUrl(): kotlin.Boolean {
       return _builder.hasUrl()
@@ -176,21 +188,23 @@ public object DLCItemKt {
      * `optional string checksum = 5;`
      */
     public var checksum: kotlin.String
-      @JvmName("getChecksum")
-      get() = _builder.checksum
-      @JvmName("setChecksum")
-      set(value) {
+      @kotlin.jvm.JvmName("getChecksum")
+        get() = _builder.checksum
+      @kotlin.jvm.JvmName("setChecksum")
+        set(value) {
         _builder.checksum = value
       }
     /**
-     * `optional string checksum = 5;`
+     * <code>optional string checksum = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearChecksum() {
       _builder.clearChecksum()
     }
     /**
-     * `optional string checksum = 5;`
+     * <code>optional string checksum = 5;</code>
      * @return Whether the checksum field is set.
+     * @return This builder for chaining.
      */
     public fun hasChecksum(): kotlin.Boolean {
       return _builder.hasChecksum()

@@ -78,8 +78,8 @@ proto.ei.CompleteArtifact.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CompleteArtifact.toObject = function(includeInstance, msg) {
   var f, obj = {
-spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-stonesList: jspb.Message.toObjectList(msg.getStonesList(),
+    spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+    stonesList: jspb.Message.toObjectList(msg.getStonesList(),
     proto.ei.ArtifactSpec.toObject, includeInstance)
   };
 

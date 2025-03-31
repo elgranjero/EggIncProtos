@@ -32,21 +32,23 @@ public object ShellsActionLogKt {
      * `optional .ei.BasicRequestInfo rinfo = 8;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 8;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 8;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ShellsActionLogKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -83,21 +87,23 @@ public object ShellsActionLogKt {
      * `optional string action = 2;`
      */
     public var action: kotlin.String
-      @JvmName("getAction")
-      get() = _builder.action
-      @JvmName("setAction")
-      set(value) {
+      @kotlin.jvm.JvmName("getAction")
+        get() = _builder.action
+      @kotlin.jvm.JvmName("setAction")
+        set(value) {
         _builder.action = value
       }
     /**
-     * `optional string action = 2;`
+     * <code>optional string action = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearAction() {
       _builder.clearAction()
     }
     /**
-     * `optional string action = 2;`
+     * <code>optional string action = 2;</code>
      * @return Whether the action field is set.
+     * @return This builder for chaining.
      */
     public fun hasAction(): kotlin.Boolean {
       return _builder.hasAction()
@@ -107,21 +113,23 @@ public object ShellsActionLogKt {
      * `optional string sub_id = 3;`
      */
     public var subId: kotlin.String
-      @JvmName("getSubId")
-      get() = _builder.subId
-      @JvmName("setSubId")
-      set(value) {
+      @kotlin.jvm.JvmName("getSubId")
+        get() = _builder.subId
+      @kotlin.jvm.JvmName("setSubId")
+        set(value) {
         _builder.subId = value
       }
     /**
-     * `optional string sub_id = 3;`
+     * <code>optional string sub_id = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearSubId() {
       _builder.clearSubId()
     }
     /**
-     * `optional string sub_id = 3;`
+     * <code>optional string sub_id = 3;</code>
      * @return Whether the subId field is set.
+     * @return This builder for chaining.
      */
     public fun hasSubId(): kotlin.Boolean {
       return _builder.hasSubId()
@@ -131,21 +139,23 @@ public object ShellsActionLogKt {
      * `optional .ei.ShellDB.FarmElement farm_element = 9;`
      */
     public var farmElement: ei.Ei.ShellDB.FarmElement
-      @JvmName("getFarmElement")
-      get() = _builder.farmElement
-      @JvmName("setFarmElement")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmElement")
+        get() = _builder.farmElement
+      @kotlin.jvm.JvmName("setFarmElement")
+        set(value) {
         _builder.farmElement = value
       }
     /**
-     * `optional .ei.ShellDB.FarmElement farm_element = 9;`
+     * <code>optional .ei.ShellDB.FarmElement farm_element = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmElement() {
       _builder.clearFarmElement()
     }
     /**
-     * `optional .ei.ShellDB.FarmElement farm_element = 9;`
+     * <code>optional .ei.ShellDB.FarmElement farm_element = 9;</code>
      * @return Whether the farmElement field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmElement(): kotlin.Boolean {
       return _builder.hasFarmElement()
@@ -155,21 +165,23 @@ public object ShellsActionLogKt {
      * `optional uint32 cost = 4;`
      */
     public var cost: kotlin.Int
-      @JvmName("getCost")
-      get() = _builder.cost
-      @JvmName("setCost")
-      set(value) {
+      @kotlin.jvm.JvmName("getCost")
+        get() = _builder.cost
+      @kotlin.jvm.JvmName("setCost")
+        set(value) {
         _builder.cost = value
       }
     /**
-     * `optional uint32 cost = 4;`
+     * <code>optional uint32 cost = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearCost() {
       _builder.clearCost()
     }
     /**
-     * `optional uint32 cost = 4;`
+     * <code>optional uint32 cost = 4;</code>
      * @return Whether the cost field is set.
+     * @return This builder for chaining.
      */
     public fun hasCost(): kotlin.Boolean {
       return _builder.hasCost()
@@ -179,21 +191,23 @@ public object ShellsActionLogKt {
      * `optional double approx_time = 5;`
      */
     public var approxTime: kotlin.Double
-      @JvmName("getApproxTime")
-      get() = _builder.approxTime
-      @JvmName("setApproxTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getApproxTime")
+        get() = _builder.approxTime
+      @kotlin.jvm.JvmName("setApproxTime")
+        set(value) {
         _builder.approxTime = value
       }
     /**
-     * `optional double approx_time = 5;`
+     * <code>optional double approx_time = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * `optional double approx_time = 5;`
+     * <code>optional double approx_time = 5;</code>
      * @return Whether the approxTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -203,21 +217,23 @@ public object ShellsActionLogKt {
      * `optional string version = 6;`
      */
     public var version: kotlin.String
-      @JvmName("getVersion")
-      get() = _builder.version
-      @JvmName("setVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getVersion")
+        get() = _builder.version
+      @kotlin.jvm.JvmName("setVersion")
+        set(value) {
         _builder.version = value
       }
     /**
-     * `optional string version = 6;`
+     * <code>optional string version = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * `optional string version = 6;`
+     * <code>optional string version = 6;</code>
      * @return Whether the version field is set.
+     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -227,21 +243,23 @@ public object ShellsActionLogKt {
      * `optional int32 farm_index = 7;`
      */
     public var farmIndex: kotlin.Int
-      @JvmName("getFarmIndex")
-      get() = _builder.farmIndex
-      @JvmName("setFarmIndex")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmIndex")
+        get() = _builder.farmIndex
+      @kotlin.jvm.JvmName("setFarmIndex")
+        set(value) {
         _builder.farmIndex = value
       }
     /**
-     * `optional int32 farm_index = 7;`
+     * <code>optional int32 farm_index = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmIndex() {
       _builder.clearFarmIndex()
     }
     /**
-     * `optional int32 farm_index = 7;`
+     * <code>optional int32 farm_index = 7;</code>
      * @return Whether the farmIndex field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmIndex(): kotlin.Boolean {
       return _builder.hasFarmIndex()
@@ -251,21 +269,23 @@ public object ShellsActionLogKt {
      * `optional double soul_eggs = 10;`
      */
     public var soulEggs: kotlin.Double
-      @JvmName("getSoulEggs")
-      get() = _builder.soulEggs
-      @JvmName("setSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getSoulEggs")
+        get() = _builder.soulEggs
+      @kotlin.jvm.JvmName("setSoulEggs")
+        set(value) {
         _builder.soulEggs = value
       }
     /**
-     * `optional double soul_eggs = 10;`
+     * <code>optional double soul_eggs = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * `optional double soul_eggs = 10;`
+     * <code>optional double soul_eggs = 10;</code>
      * @return Whether the soulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -275,21 +295,23 @@ public object ShellsActionLogKt {
      * `optional uint64 tickets_spent = 11;`
      */
     public var ticketsSpent: kotlin.Long
-      @JvmName("getTicketsSpent")
-      get() = _builder.ticketsSpent
-      @JvmName("setTicketsSpent")
-      set(value) {
+      @kotlin.jvm.JvmName("getTicketsSpent")
+        get() = _builder.ticketsSpent
+      @kotlin.jvm.JvmName("setTicketsSpent")
+        set(value) {
         _builder.ticketsSpent = value
       }
     /**
-     * `optional uint64 tickets_spent = 11;`
+     * <code>optional uint64 tickets_spent = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearTicketsSpent() {
       _builder.clearTicketsSpent()
     }
     /**
-     * `optional uint64 tickets_spent = 11;`
+     * <code>optional uint64 tickets_spent = 11;</code>
      * @return Whether the ticketsSpent field is set.
+     * @return This builder for chaining.
      */
     public fun hasTicketsSpent(): kotlin.Boolean {
       return _builder.hasTicketsSpent()
@@ -299,21 +321,23 @@ public object ShellsActionLogKt {
      * `optional uint64 gold_spent = 12;`
      */
     public var goldSpent: kotlin.Long
-      @JvmName("getGoldSpent")
-      get() = _builder.goldSpent
-      @JvmName("setGoldSpent")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoldSpent")
+        get() = _builder.goldSpent
+      @kotlin.jvm.JvmName("setGoldSpent")
+        set(value) {
         _builder.goldSpent = value
       }
     /**
-     * `optional uint64 gold_spent = 12;`
+     * <code>optional uint64 gold_spent = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoldSpent() {
       _builder.clearGoldSpent()
     }
     /**
-     * `optional uint64 gold_spent = 12;`
+     * <code>optional uint64 gold_spent = 12;</code>
      * @return Whether the goldSpent field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoldSpent(): kotlin.Boolean {
       return _builder.hasGoldSpent()

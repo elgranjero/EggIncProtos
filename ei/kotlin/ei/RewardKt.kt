@@ -32,21 +32,23 @@ public object RewardKt {
      * `optional .ei.RewardType reward_type = 1;`
      */
     public var rewardType: ei.Ei.RewardType
-      @JvmName("getRewardType")
-      get() = _builder.rewardType
-      @JvmName("setRewardType")
-      set(value) {
+      @kotlin.jvm.JvmName("getRewardType")
+        get() = _builder.rewardType
+      @kotlin.jvm.JvmName("setRewardType")
+        set(value) {
         _builder.rewardType = value
       }
     /**
-     * `optional .ei.RewardType reward_type = 1;`
+     * <code>optional .ei.RewardType reward_type = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRewardType() {
       _builder.clearRewardType()
     }
     /**
-     * `optional .ei.RewardType reward_type = 1;`
+     * <code>optional .ei.RewardType reward_type = 1;</code>
      * @return Whether the rewardType field is set.
+     * @return This builder for chaining.
      */
     public fun hasRewardType(): kotlin.Boolean {
       return _builder.hasRewardType()
@@ -56,21 +58,23 @@ public object RewardKt {
      * `optional string reward_sub_type = 2;`
      */
     public var rewardSubType: kotlin.String
-      @JvmName("getRewardSubType")
-      get() = _builder.rewardSubType
-      @JvmName("setRewardSubType")
-      set(value) {
+      @kotlin.jvm.JvmName("getRewardSubType")
+        get() = _builder.rewardSubType
+      @kotlin.jvm.JvmName("setRewardSubType")
+        set(value) {
         _builder.rewardSubType = value
       }
     /**
-     * `optional string reward_sub_type = 2;`
+     * <code>optional string reward_sub_type = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearRewardSubType() {
       _builder.clearRewardSubType()
     }
     /**
-     * `optional string reward_sub_type = 2;`
+     * <code>optional string reward_sub_type = 2;</code>
      * @return Whether the rewardSubType field is set.
+     * @return This builder for chaining.
      */
     public fun hasRewardSubType(): kotlin.Boolean {
       return _builder.hasRewardSubType()
@@ -80,21 +84,23 @@ public object RewardKt {
      * `optional double reward_amount = 3;`
      */
     public var rewardAmount: kotlin.Double
-      @JvmName("getRewardAmount")
-      get() = _builder.rewardAmount
-      @JvmName("setRewardAmount")
-      set(value) {
+      @kotlin.jvm.JvmName("getRewardAmount")
+        get() = _builder.rewardAmount
+      @kotlin.jvm.JvmName("setRewardAmount")
+        set(value) {
         _builder.rewardAmount = value
       }
     /**
-     * `optional double reward_amount = 3;`
+     * <code>optional double reward_amount = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearRewardAmount() {
       _builder.clearRewardAmount()
     }
     /**
-     * `optional double reward_amount = 3;`
+     * <code>optional double reward_amount = 3;</code>
      * @return Whether the rewardAmount field is set.
+     * @return This builder for chaining.
      */
     public fun hasRewardAmount(): kotlin.Boolean {
       return _builder.hasRewardAmount()

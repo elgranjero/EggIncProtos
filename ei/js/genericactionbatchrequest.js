@@ -79,8 +79,8 @@ proto.ei.GenericActionBatchRequest.prototype.toObject = function(opt_includeInst
  */
 proto.ei.GenericActionBatchRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-actionsList: jspb.Message.toObjectList(msg.getActionsList(),
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    actionsList: jspb.Message.toObjectList(msg.getActionsList(),
     proto.ei.GenericAction.toObject, includeInstance)
   };
 

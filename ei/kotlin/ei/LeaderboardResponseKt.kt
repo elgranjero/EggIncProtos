@@ -32,21 +32,23 @@ public object LeaderboardResponseKt {
      * `optional string scope = 1;`
      */
     public var scope: kotlin.String
-      @JvmName("getScope")
-      get() = _builder.scope
-      @JvmName("setScope")
-      set(value) {
+      @kotlin.jvm.JvmName("getScope")
+        get() = _builder.scope
+      @kotlin.jvm.JvmName("setScope")
+        set(value) {
         _builder.scope = value
       }
     /**
-     * `optional string scope = 1;`
+     * <code>optional string scope = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearScope() {
       _builder.clearScope()
     }
     /**
-     * `optional string scope = 1;`
+     * <code>optional string scope = 1;</code>
      * @return Whether the scope field is set.
+     * @return This builder for chaining.
      */
     public fun hasScope(): kotlin.Boolean {
       return _builder.hasScope()
@@ -56,21 +58,23 @@ public object LeaderboardResponseKt {
      * `optional .ei.Contract.PlayerGrade grade = 2;`
      */
     public var grade: ei.Ei.Contract.PlayerGrade
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 2;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 2;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 2;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -87,86 +91,93 @@ public object LeaderboardResponseKt {
      */
      public val topEntries: com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.topEntriesList
       )
     /**
-     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
+     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
      * @param value The topEntries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addTopEntries")
+@kotlin.jvm.JvmName("addTopEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>.add(value: ei.Ei.LeaderboardResponse.Entry) {
       _builder.addTopEntries(value)
     }
     /**
-     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
+     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
      * @param value The topEntries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignTopEntries")
+@kotlin.jvm.JvmName("plusAssignTopEntries")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>.plusAssign(value: ei.Ei.LeaderboardResponse.Entry) {
       add(value)
     }
     /**
-     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
+     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
      * @param values The topEntries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllTopEntries")
+@kotlin.jvm.JvmName("addAllTopEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LeaderboardResponse.Entry>) {
       _builder.addAllTopEntries(values)
     }
     /**
-     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
+     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
      * @param values The topEntries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllTopEntries")
+@kotlin.jvm.JvmName("plusAssignAllTopEntries")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LeaderboardResponse.Entry>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
+     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
      * @param index The index to set the value at.
      * @param value The topEntries to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setTopEntries")
+@kotlin.jvm.JvmName("setTopEntries")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>.set(index: kotlin.Int, value: ei.Ei.LeaderboardResponse.Entry) {
       _builder.setTopEntries(index, value)
     }
     /**
-     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
+     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearTopEntries")
+@kotlin.jvm.JvmName("clearTopEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LeaderboardResponse.Entry, TopEntriesProxy>.clear() {
       _builder.clearTopEntries()
     }
-
 
     /**
      * `optional uint32 count = 4;`
      */
     public var count: kotlin.Int
-      @JvmName("getCount")
-      get() = _builder.count
-      @JvmName("setCount")
-      set(value) {
+      @kotlin.jvm.JvmName("getCount")
+        get() = _builder.count
+      @kotlin.jvm.JvmName("setCount")
+        set(value) {
         _builder.count = value
       }
     /**
-     * `optional uint32 count = 4;`
+     * <code>optional uint32 count = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearCount() {
       _builder.clearCount()
     }
     /**
-     * `optional uint32 count = 4;`
+     * <code>optional uint32 count = 4;</code>
      * @return Whether the count field is set.
+     * @return This builder for chaining.
      */
     public fun hasCount(): kotlin.Boolean {
       return _builder.hasCount()
@@ -176,21 +187,23 @@ public object LeaderboardResponseKt {
      * `optional uint32 rank = 5;`
      */
     public var rank: kotlin.Int
-      @JvmName("getRank")
-      get() = _builder.rank
-      @JvmName("setRank")
-      set(value) {
+      @kotlin.jvm.JvmName("getRank")
+        get() = _builder.rank
+      @kotlin.jvm.JvmName("setRank")
+        set(value) {
         _builder.rank = value
       }
     /**
-     * `optional uint32 rank = 5;`
+     * <code>optional uint32 rank = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearRank() {
       _builder.clearRank()
     }
     /**
-     * `optional uint32 rank = 5;`
+     * <code>optional uint32 rank = 5;</code>
      * @return Whether the rank field is set.
+     * @return This builder for chaining.
      */
     public fun hasRank(): kotlin.Boolean {
       return _builder.hasRank()
@@ -200,21 +213,23 @@ public object LeaderboardResponseKt {
      * `optional double score = 6;`
      */
     public var score: kotlin.Double
-      @JvmName("getScore")
-      get() = _builder.score
-      @JvmName("setScore")
-      set(value) {
+      @kotlin.jvm.JvmName("getScore")
+        get() = _builder.score
+      @kotlin.jvm.JvmName("setScore")
+        set(value) {
         _builder.score = value
       }
     /**
-     * `optional double score = 6;`
+     * <code>optional double score = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearScore() {
       _builder.clearScore()
     }
     /**
-     * `optional double score = 6;`
+     * <code>optional double score = 6;</code>
      * @return Whether the score field is set.
+     * @return This builder for chaining.
      */
     public fun hasScore(): kotlin.Boolean {
       return _builder.hasScore()
@@ -246,21 +261,23 @@ public object LeaderboardResponseKt {
        * `optional uint32 rank = 1;`
        */
       public var rank: kotlin.Int
-        @JvmName("getRank")
-        get() = _builder.rank
-        @JvmName("setRank")
-        set(value) {
+        @kotlin.jvm.JvmName("getRank")
+          get() = _builder.rank
+        @kotlin.jvm.JvmName("setRank")
+          set(value) {
           _builder.rank = value
         }
       /**
-       * `optional uint32 rank = 1;`
+       * <code>optional uint32 rank = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearRank() {
         _builder.clearRank()
       }
       /**
-       * `optional uint32 rank = 1;`
+       * <code>optional uint32 rank = 1;</code>
        * @return Whether the rank field is set.
+       * @return This builder for chaining.
        */
       public fun hasRank(): kotlin.Boolean {
         return _builder.hasRank()
@@ -270,21 +287,23 @@ public object LeaderboardResponseKt {
        * `optional string alias = 2;`
        */
       public var alias: kotlin.String
-        @JvmName("getAlias")
-        get() = _builder.alias
-        @JvmName("setAlias")
-        set(value) {
+        @kotlin.jvm.JvmName("getAlias")
+          get() = _builder.alias
+        @kotlin.jvm.JvmName("setAlias")
+          set(value) {
           _builder.alias = value
         }
       /**
-       * `optional string alias = 2;`
+       * <code>optional string alias = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearAlias() {
         _builder.clearAlias()
       }
       /**
-       * `optional string alias = 2;`
+       * <code>optional string alias = 2;</code>
        * @return Whether the alias field is set.
+       * @return This builder for chaining.
        */
       public fun hasAlias(): kotlin.Boolean {
         return _builder.hasAlias()
@@ -294,21 +313,23 @@ public object LeaderboardResponseKt {
        * `optional double score = 3;`
        */
       public var score: kotlin.Double
-        @JvmName("getScore")
-        get() = _builder.score
-        @JvmName("setScore")
-        set(value) {
+        @kotlin.jvm.JvmName("getScore")
+          get() = _builder.score
+        @kotlin.jvm.JvmName("setScore")
+          set(value) {
           _builder.score = value
         }
       /**
-       * `optional double score = 3;`
+       * <code>optional double score = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearScore() {
         _builder.clearScore()
       }
       /**
-       * `optional double score = 3;`
+       * <code>optional double score = 3;</code>
        * @return Whether the score field is set.
+       * @return This builder for chaining.
        */
       public fun hasScore(): kotlin.Boolean {
         return _builder.hasScore()

@@ -32,21 +32,23 @@ public object CoopChickenRunEntryKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -56,21 +58,23 @@ public object CoopChickenRunEntryKt {
      * `optional double server_timestamp = 2;`
      */
     public var serverTimestamp: kotlin.Double
-      @JvmName("getServerTimestamp")
-      get() = _builder.serverTimestamp
-      @JvmName("setServerTimestamp")
-      set(value) {
+      @kotlin.jvm.JvmName("getServerTimestamp")
+        get() = _builder.serverTimestamp
+      @kotlin.jvm.JvmName("setServerTimestamp")
+        set(value) {
         _builder.serverTimestamp = value
       }
     /**
-     * `optional double server_timestamp = 2;`
+     * <code>optional double server_timestamp = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearServerTimestamp() {
       _builder.clearServerTimestamp()
     }
     /**
-     * `optional double server_timestamp = 2;`
+     * <code>optional double server_timestamp = 2;</code>
      * @return Whether the serverTimestamp field is set.
+     * @return This builder for chaining.
      */
     public fun hasServerTimestamp(): kotlin.Boolean {
       return _builder.hasServerTimestamp()

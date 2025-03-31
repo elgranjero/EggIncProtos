@@ -72,9 +72,9 @@ proto.ei.ContractCitation.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractCitation.toObject = function(includeInstance, msg) {
   var f, obj = {
-issue: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+    issue: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

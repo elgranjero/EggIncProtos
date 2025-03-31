@@ -71,9 +71,9 @@ proto.ei.ContractCoopStatusUpdateResponse.prototype.toObject = function(opt_incl
  */
 proto.ei.ContractCoopStatusUpdateResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-finalized: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-exists: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-status: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+    finalized: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    exists: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    status: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

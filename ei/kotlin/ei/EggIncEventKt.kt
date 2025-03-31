@@ -32,21 +32,23 @@ public object EggIncEventKt {
      * `optional string identifier = 1;`
      */
     public var identifier: kotlin.String
-      @JvmName("getIdentifier")
-      get() = _builder.identifier
-      @JvmName("setIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getIdentifier")
+        get() = _builder.identifier
+      @kotlin.jvm.JvmName("setIdentifier")
+        set(value) {
         _builder.identifier = value
       }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
      * @return Whether the identifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -56,21 +58,23 @@ public object EggIncEventKt {
      * `optional double seconds_remaining = 2;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 2;`
+     * <code>optional double seconds_remaining = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 2;`
+     * <code>optional double seconds_remaining = 2;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -80,21 +84,23 @@ public object EggIncEventKt {
      * `optional string type = 3;`
      */
     public var type: kotlin.String
-      @JvmName("getType")
-      get() = _builder.type
-      @JvmName("setType")
-      set(value) {
+      @kotlin.jvm.JvmName("getType")
+        get() = _builder.type
+      @kotlin.jvm.JvmName("setType")
+        set(value) {
         _builder.type = value
       }
     /**
-     * `optional string type = 3;`
+     * <code>optional string type = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearType() {
       _builder.clearType()
     }
     /**
-     * `optional string type = 3;`
+     * <code>optional string type = 3;</code>
      * @return Whether the type field is set.
+     * @return This builder for chaining.
      */
     public fun hasType(): kotlin.Boolean {
       return _builder.hasType()
@@ -104,21 +110,23 @@ public object EggIncEventKt {
      * `optional double multiplier = 4;`
      */
     public var multiplier: kotlin.Double
-      @JvmName("getMultiplier")
-      get() = _builder.multiplier
-      @JvmName("setMultiplier")
-      set(value) {
+      @kotlin.jvm.JvmName("getMultiplier")
+        get() = _builder.multiplier
+      @kotlin.jvm.JvmName("setMultiplier")
+        set(value) {
         _builder.multiplier = value
       }
     /**
-     * `optional double multiplier = 4;`
+     * <code>optional double multiplier = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearMultiplier() {
       _builder.clearMultiplier()
     }
     /**
-     * `optional double multiplier = 4;`
+     * <code>optional double multiplier = 4;</code>
      * @return Whether the multiplier field is set.
+     * @return This builder for chaining.
      */
     public fun hasMultiplier(): kotlin.Boolean {
       return _builder.hasMultiplier()
@@ -128,21 +136,23 @@ public object EggIncEventKt {
      * `optional string subtitle = 5;`
      */
     public var subtitle: kotlin.String
-      @JvmName("getSubtitle")
-      get() = _builder.subtitle
-      @JvmName("setSubtitle")
-      set(value) {
+      @kotlin.jvm.JvmName("getSubtitle")
+        get() = _builder.subtitle
+      @kotlin.jvm.JvmName("setSubtitle")
+        set(value) {
         _builder.subtitle = value
       }
     /**
-     * `optional string subtitle = 5;`
+     * <code>optional string subtitle = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearSubtitle() {
       _builder.clearSubtitle()
     }
     /**
-     * `optional string subtitle = 5;`
+     * <code>optional string subtitle = 5;</code>
      * @return Whether the subtitle field is set.
+     * @return This builder for chaining.
      */
     public fun hasSubtitle(): kotlin.Boolean {
       return _builder.hasSubtitle()
@@ -152,21 +162,23 @@ public object EggIncEventKt {
      * `optional double start_time = 6;`
      */
     public var startTime: kotlin.Double
-      @JvmName("getStartTime")
-      get() = _builder.startTime
-      @JvmName("setStartTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getStartTime")
+        get() = _builder.startTime
+      @kotlin.jvm.JvmName("setStartTime")
+        set(value) {
         _builder.startTime = value
       }
     /**
-     * `optional double start_time = 6;`
+     * <code>optional double start_time = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * `optional double start_time = 6;`
+     * <code>optional double start_time = 6;</code>
      * @return Whether the startTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -176,21 +188,23 @@ public object EggIncEventKt {
      * `optional double duration = 7;`
      */
     public var duration: kotlin.Double
-      @JvmName("getDuration")
-      get() = _builder.duration
-      @JvmName("setDuration")
-      set(value) {
+      @kotlin.jvm.JvmName("getDuration")
+        get() = _builder.duration
+      @kotlin.jvm.JvmName("setDuration")
+        set(value) {
         _builder.duration = value
       }
     /**
-     * `optional double duration = 7;`
+     * <code>optional double duration = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearDuration() {
       _builder.clearDuration()
     }
     /**
-     * `optional double duration = 7;`
+     * <code>optional double duration = 7;</code>
      * @return Whether the duration field is set.
+     * @return This builder for chaining.
      */
     public fun hasDuration(): kotlin.Boolean {
       return _builder.hasDuration()
@@ -200,21 +214,23 @@ public object EggIncEventKt {
      * `optional bool cc_only = 8;`
      */
     public var ccOnly: kotlin.Boolean
-      @JvmName("getCcOnly")
-      get() = _builder.ccOnly
-      @JvmName("setCcOnly")
-      set(value) {
+      @kotlin.jvm.JvmName("getCcOnly")
+        get() = _builder.ccOnly
+      @kotlin.jvm.JvmName("setCcOnly")
+        set(value) {
         _builder.ccOnly = value
       }
     /**
-     * `optional bool cc_only = 8;`
+     * <code>optional bool cc_only = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * `optional bool cc_only = 8;`
+     * <code>optional bool cc_only = 8;</code>
      * @return Whether the ccOnly field is set.
+     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()

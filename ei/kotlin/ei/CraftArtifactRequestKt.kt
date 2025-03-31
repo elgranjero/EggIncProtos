@@ -32,21 +32,23 @@ public object CraftArtifactRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 5;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 5;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 5;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object CraftArtifactRequestKt {
      * `optional string ei_user_id = 1;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 1;`
+     * <code>optional string ei_user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 1;`
+     * <code>optional string ei_user_id = 1;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -83,21 +87,23 @@ public object CraftArtifactRequestKt {
      * `optional .ei.ArtifactSpec spec = 2;`
      */
     public var spec: ei.Ei.ArtifactSpec
-      @JvmName("getSpec")
-      get() = _builder.spec
-      @JvmName("setSpec")
-      set(value) {
+      @kotlin.jvm.JvmName("getSpec")
+        get() = _builder.spec
+      @kotlin.jvm.JvmName("setSpec")
+        set(value) {
         _builder.spec = value
       }
     /**
-     * `optional .ei.ArtifactSpec spec = 2;`
+     * <code>optional .ei.ArtifactSpec spec = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSpec() {
       _builder.clearSpec()
     }
     /**
-     * `optional .ei.ArtifactSpec spec = 2;`
+     * <code>optional .ei.ArtifactSpec spec = 2;</code>
      * @return Whether the spec field is set.
+     * @return This builder for chaining.
      */
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
@@ -110,21 +116,23 @@ public object CraftArtifactRequestKt {
      * `optional uint64 item_id = 3;`
      */
     public var itemId: kotlin.Long
-      @JvmName("getItemId")
-      get() = _builder.itemId
-      @JvmName("setItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getItemId")
+        get() = _builder.itemId
+      @kotlin.jvm.JvmName("setItemId")
+        set(value) {
         _builder.itemId = value
       }
     /**
-     * `optional uint64 item_id = 3;`
+     * <code>optional uint64 item_id = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * `optional uint64 item_id = 3;`
+     * <code>optional uint64 item_id = 3;</code>
      * @return Whether the itemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()
@@ -134,21 +142,23 @@ public object CraftArtifactRequestKt {
      * `optional double gold_price_paid = 6;`
      */
     public var goldPricePaid: kotlin.Double
-      @JvmName("getGoldPricePaid")
-      get() = _builder.goldPricePaid
-      @JvmName("setGoldPricePaid")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoldPricePaid")
+        get() = _builder.goldPricePaid
+      @kotlin.jvm.JvmName("setGoldPricePaid")
+        set(value) {
         _builder.goldPricePaid = value
       }
     /**
-     * `optional double gold_price_paid = 6;`
+     * <code>optional double gold_price_paid = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoldPricePaid() {
       _builder.clearGoldPricePaid()
     }
     /**
-     * `optional double gold_price_paid = 6;`
+     * <code>optional double gold_price_paid = 6;</code>
      * @return Whether the goldPricePaid field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoldPricePaid(): kotlin.Boolean {
       return _builder.hasGoldPricePaid()
@@ -158,21 +168,23 @@ public object CraftArtifactRequestKt {
      * `optional uint32 crafting_count = 7;`
      */
     public var craftingCount: kotlin.Int
-      @JvmName("getCraftingCount")
-      get() = _builder.craftingCount
-      @JvmName("setCraftingCount")
-      set(value) {
+      @kotlin.jvm.JvmName("getCraftingCount")
+        get() = _builder.craftingCount
+      @kotlin.jvm.JvmName("setCraftingCount")
+        set(value) {
         _builder.craftingCount = value
       }
     /**
-     * `optional uint32 crafting_count = 7;`
+     * <code>optional uint32 crafting_count = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearCraftingCount() {
       _builder.clearCraftingCount()
     }
     /**
-     * `optional uint32 crafting_count = 7;`
+     * <code>optional uint32 crafting_count = 7;</code>
      * @return Whether the craftingCount field is set.
+     * @return This builder for chaining.
      */
     public fun hasCraftingCount(): kotlin.Boolean {
       return _builder.hasCraftingCount()
@@ -182,21 +194,23 @@ public object CraftArtifactRequestKt {
      * `optional double crafting_xp = 8;`
      */
     public var craftingXp: kotlin.Double
-      @JvmName("getCraftingXp")
-      get() = _builder.craftingXp
-      @JvmName("setCraftingXp")
-      set(value) {
+      @kotlin.jvm.JvmName("getCraftingXp")
+        get() = _builder.craftingXp
+      @kotlin.jvm.JvmName("setCraftingXp")
+        set(value) {
         _builder.craftingXp = value
       }
     /**
-     * `optional double crafting_xp = 8;`
+     * <code>optional double crafting_xp = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearCraftingXp() {
       _builder.clearCraftingXp()
     }
     /**
-     * `optional double crafting_xp = 8;`
+     * <code>optional double crafting_xp = 8;</code>
      * @return Whether the craftingXp field is set.
+     * @return This builder for chaining.
      */
     public fun hasCraftingXp(): kotlin.Boolean {
       return _builder.hasCraftingXp()
@@ -213,66 +227,71 @@ public object CraftArtifactRequestKt {
      */
      public val ingredients: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.ingredientsList
       )
     /**
-     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
+     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param value The ingredients to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addIngredients")
+@kotlin.jvm.JvmName("addIngredients")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.add(value: ei.Ei.ArtifactInventoryItem) {
       _builder.addIngredients(value)
     }
     /**
-     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
+     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param value The ingredients to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignIngredients")
+@kotlin.jvm.JvmName("plusAssignIngredients")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.plusAssign(value: ei.Ei.ArtifactInventoryItem) {
       add(value)
     }
     /**
-     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
+     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param values The ingredients to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllIngredients")
+@kotlin.jvm.JvmName("addAllIngredients")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
       _builder.addAllIngredients(values)
     }
     /**
-     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
+     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param values The ingredients to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllIngredients")
+@kotlin.jvm.JvmName("plusAssignAllIngredients")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
+     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
      * @param index The index to set the value at.
      * @param value The ingredients to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setIngredients")
+@kotlin.jvm.JvmName("setIngredients")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactInventoryItem) {
       _builder.setIngredients(index, value)
     }
     /**
-     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
+     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearIngredients")
+@kotlin.jvm.JvmName("clearIngredients")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, IngredientsProxy>.clear() {
       _builder.clearIngredients()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

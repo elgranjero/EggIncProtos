@@ -39,66 +39,71 @@ public object ShellPopularityStatsKt {
      */
      public val data: com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.dataList
       )
     /**
-     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
+     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
      * @param value The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addData")
+@kotlin.jvm.JvmName("addData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>.add(value: ei.Ei.ShellPopularityStats.Entry) {
       _builder.addData(value)
     }
     /**
-     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
+     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
      * @param value The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignData")
+@kotlin.jvm.JvmName("plusAssignData")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>.plusAssign(value: ei.Ei.ShellPopularityStats.Entry) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
+     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
      * @param values The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllData")
+@kotlin.jvm.JvmName("addAllData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellPopularityStats.Entry>) {
       _builder.addAllData(values)
     }
     /**
-     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
+     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
      * @param values The data to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllData")
+@kotlin.jvm.JvmName("plusAssignAllData")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellPopularityStats.Entry>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
+     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
      * @param index The index to set the value at.
      * @param value The data to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setData")
+@kotlin.jvm.JvmName("setData")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>.set(index: kotlin.Int, value: ei.Ei.ShellPopularityStats.Entry) {
       _builder.setData(index, value)
     }
     /**
-     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
+     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearData")
+@kotlin.jvm.JvmName("clearData")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellPopularityStats.Entry, DataProxy>.clear() {
       _builder.clearData()
     }
-
   }
   @kotlin.jvm.JvmName("-initializeentry")
   public inline fun entry(block: ei.ShellPopularityStatsKt.EntryKt.Dsl.() -> kotlin.Unit): ei.Ei.ShellPopularityStats.Entry =
@@ -126,21 +131,23 @@ public object ShellPopularityStatsKt {
        * `optional string id = 1;`
        */
       public var id: kotlin.String
-        @JvmName("getId")
-        get() = _builder.id
-        @JvmName("setId")
-        set(value) {
+        @kotlin.jvm.JvmName("getId")
+          get() = _builder.id
+        @kotlin.jvm.JvmName("setId")
+          set(value) {
           _builder.id = value
         }
       /**
-       * `optional string id = 1;`
+       * <code>optional string id = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * `optional string id = 1;`
+       * <code>optional string id = 1;</code>
        * @return Whether the id field is set.
+       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -150,21 +157,23 @@ public object ShellPopularityStatsKt {
        * `optional .ei.ShellDB.FarmElement element = 2;`
        */
       public var element: ei.Ei.ShellDB.FarmElement
-        @JvmName("getElement")
-        get() = _builder.element
-        @JvmName("setElement")
-        set(value) {
+        @kotlin.jvm.JvmName("getElement")
+          get() = _builder.element
+        @kotlin.jvm.JvmName("setElement")
+          set(value) {
           _builder.element = value
         }
       /**
-       * `optional .ei.ShellDB.FarmElement element = 2;`
+       * <code>optional .ei.ShellDB.FarmElement element = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearElement() {
         _builder.clearElement()
       }
       /**
-       * `optional .ei.ShellDB.FarmElement element = 2;`
+       * <code>optional .ei.ShellDB.FarmElement element = 2;</code>
        * @return Whether the element field is set.
+       * @return This builder for chaining.
        */
       public fun hasElement(): kotlin.Boolean {
         return _builder.hasElement()
@@ -174,21 +183,23 @@ public object ShellPopularityStatsKt {
        * `optional uint64 spent = 3;`
        */
       public var spent: kotlin.Long
-        @JvmName("getSpent")
-        get() = _builder.spent
-        @JvmName("setSpent")
-        set(value) {
+        @kotlin.jvm.JvmName("getSpent")
+          get() = _builder.spent
+        @kotlin.jvm.JvmName("setSpent")
+          set(value) {
           _builder.spent = value
         }
       /**
-       * `optional uint64 spent = 3;`
+       * <code>optional uint64 spent = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearSpent() {
         _builder.clearSpent()
       }
       /**
-       * `optional uint64 spent = 3;`
+       * <code>optional uint64 spent = 3;</code>
        * @return Whether the spent field is set.
+       * @return This builder for chaining.
        */
       public fun hasSpent(): kotlin.Boolean {
         return _builder.hasSpent()
@@ -198,21 +209,23 @@ public object ShellPopularityStatsKt {
        * `optional uint64 count = 4;`
        */
       public var count: kotlin.Long
-        @JvmName("getCount")
-        get() = _builder.count
-        @JvmName("setCount")
-        set(value) {
+        @kotlin.jvm.JvmName("getCount")
+          get() = _builder.count
+        @kotlin.jvm.JvmName("setCount")
+          set(value) {
           _builder.count = value
         }
       /**
-       * `optional uint64 count = 4;`
+       * <code>optional uint64 count = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearCount() {
         _builder.clearCount()
       }
       /**
-       * `optional uint64 count = 4;`
+       * <code>optional uint64 count = 4;</code>
        * @return Whether the count field is set.
+       * @return This builder for chaining.
        */
       public fun hasCount(): kotlin.Boolean {
         return _builder.hasCount()

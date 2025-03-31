@@ -70,8 +70,8 @@ proto.ei.AccountTransferPayload.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.AccountTransferPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
-fromId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-toEiUserId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    fromId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    toEiUserId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

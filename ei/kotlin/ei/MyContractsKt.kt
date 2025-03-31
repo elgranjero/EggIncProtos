@@ -35,66 +35,73 @@ public object MyContractsKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ContractIdsSeenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
      * @return A list containing the contractIdsSeen.
+     * @return This builder for chaining.
      */
     public val contractIdsSeen: com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.contractIdsSeenList
       )
     /**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
      * @param value The contractIdsSeen to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addContractIdsSeen")
+@kotlin.jvm.JvmName("addContractIdsSeen")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.add(value: kotlin.String) {
       _builder.addContractIdsSeen(value)
     }
     /**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
      * @param value The contractIdsSeen to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignContractIdsSeen")
+@kotlin.jvm.JvmName("plusAssignContractIdsSeen")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
      * @param values The contractIdsSeen to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllContractIdsSeen")
+@kotlin.jvm.JvmName("addAllContractIdsSeen")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllContractIdsSeen(values)
     }
     /**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
      * @param values The contractIdsSeen to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllContractIdsSeen")
+@kotlin.jvm.JvmName("plusAssignAllContractIdsSeen")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
      * @param index The index to set the value at.
      * @param value The contractIdsSeen to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setContractIdsSeen")
+@kotlin.jvm.JvmName("setContractIdsSeen")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setContractIdsSeen(index, value)
     }/**
-     * `repeated string contract_ids_seen = 3;`
+     * <code>repeated string contract_ids_seen = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearContractIdsSeen")
+@kotlin.jvm.JvmName("setContractIdsSeen")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.clear() {
       _builder.clearContractIdsSeen()
     }
@@ -109,66 +116,71 @@ public object MyContractsKt {
      */
      public val contracts: com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.contractsList
       )
     /**
-     * `repeated .ei.LocalContract contracts = 1;`
+     * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param value The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addContracts")
+@kotlin.jvm.JvmName("addContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.add(value: ei.Ei.LocalContract) {
       _builder.addContracts(value)
     }
     /**
-     * `repeated .ei.LocalContract contracts = 1;`
+     * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param value The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignContracts")
+@kotlin.jvm.JvmName("plusAssignContracts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.plusAssign(value: ei.Ei.LocalContract) {
       add(value)
     }
     /**
-     * `repeated .ei.LocalContract contracts = 1;`
+     * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param values The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllContracts")
+@kotlin.jvm.JvmName("addAllContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       _builder.addAllContracts(values)
     }
     /**
-     * `repeated .ei.LocalContract contracts = 1;`
+     * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param values The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllContracts")
+@kotlin.jvm.JvmName("plusAssignAllContracts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.LocalContract contracts = 1;`
+     * <code>repeated .ei.LocalContract contracts = 1;</code>
      * @param index The index to set the value at.
      * @param value The contracts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setContracts")
+@kotlin.jvm.JvmName("setContracts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.set(index: kotlin.Int, value: ei.Ei.LocalContract) {
       _builder.setContracts(index, value)
     }
     /**
-     * `repeated .ei.LocalContract contracts = 1;`
+     * <code>repeated .ei.LocalContract contracts = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearContracts")
+@kotlin.jvm.JvmName("clearContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ContractsProxy>.clear() {
       _builder.clearContracts()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -181,66 +193,71 @@ public object MyContractsKt {
      */
      public val archive: com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.archiveList
       )
     /**
-     * `repeated .ei.LocalContract archive = 2;`
+     * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param value The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addArchive")
+@kotlin.jvm.JvmName("addArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.add(value: ei.Ei.LocalContract) {
       _builder.addArchive(value)
     }
     /**
-     * `repeated .ei.LocalContract archive = 2;`
+     * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param value The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignArchive")
+@kotlin.jvm.JvmName("plusAssignArchive")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.plusAssign(value: ei.Ei.LocalContract) {
       add(value)
     }
     /**
-     * `repeated .ei.LocalContract archive = 2;`
+     * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param values The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllArchive")
+@kotlin.jvm.JvmName("addAllArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       _builder.addAllArchive(values)
     }
     /**
-     * `repeated .ei.LocalContract archive = 2;`
+     * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param values The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllArchive")
+@kotlin.jvm.JvmName("plusAssignAllArchive")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.LocalContract archive = 2;`
+     * <code>repeated .ei.LocalContract archive = 2;</code>
      * @param index The index to set the value at.
      * @param value The archive to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setArchive")
+@kotlin.jvm.JvmName("setArchive")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.set(index: kotlin.Int, value: ei.Ei.LocalContract) {
       _builder.setArchive(index, value)
     }
     /**
-     * `repeated .ei.LocalContract archive = 2;`
+     * <code>repeated .ei.LocalContract archive = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearArchive")
+@kotlin.jvm.JvmName("clearArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.clear() {
       _builder.clearArchive()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -253,86 +270,93 @@ public object MyContractsKt {
      */
      public val currentCoopStatuses: com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.currentCoopStatusesList
       )
     /**
-     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param value The currentCoopStatuses to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCurrentCoopStatuses")
+@kotlin.jvm.JvmName("addCurrentCoopStatuses")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.add(value: ei.Ei.ContractCoopStatusResponse) {
       _builder.addCurrentCoopStatuses(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param value The currentCoopStatuses to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCurrentCoopStatuses")
+@kotlin.jvm.JvmName("plusAssignCurrentCoopStatuses")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param values The currentCoopStatuses to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCurrentCoopStatuses")
+@kotlin.jvm.JvmName("addAllCurrentCoopStatuses")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse>) {
       _builder.addAllCurrentCoopStatuses(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param values The currentCoopStatuses to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCurrentCoopStatuses")
+@kotlin.jvm.JvmName("plusAssignAllCurrentCoopStatuses")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
      * @param index The index to set the value at.
      * @param value The currentCoopStatuses to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCurrentCoopStatuses")
+@kotlin.jvm.JvmName("setCurrentCoopStatuses")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse) {
       _builder.setCurrentCoopStatuses(index, value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCurrentCoopStatuses")
+@kotlin.jvm.JvmName("clearCurrentCoopStatuses")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse, CurrentCoopStatusesProxy>.clear() {
       _builder.clearCurrentCoopStatuses()
     }
-
 
     /**
      * `optional .ei.ContractPlayerInfo last_cpi = 5;`
      */
     public var lastCpi: ei.Ei.ContractPlayerInfo
-      @JvmName("getLastCpi")
-      get() = _builder.lastCpi
-      @JvmName("setLastCpi")
-      set(value) {
+      @kotlin.jvm.JvmName("getLastCpi")
+        get() = _builder.lastCpi
+      @kotlin.jvm.JvmName("setLastCpi")
+        set(value) {
         _builder.lastCpi = value
       }
     /**
-     * `optional .ei.ContractPlayerInfo last_cpi = 5;`
+     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearLastCpi() {
       _builder.clearLastCpi()
     }
     /**
-     * `optional .ei.ContractPlayerInfo last_cpi = 5;`
+     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
      * @return Whether the lastCpi field is set.
+     * @return This builder for chaining.
      */
     public fun hasLastCpi(): kotlin.Boolean {
       return _builder.hasLastCpi()
@@ -345,21 +369,23 @@ public object MyContractsKt {
      * `optional bool initial_grade_revealed = 6;`
      */
     public var initialGradeRevealed: kotlin.Boolean
-      @JvmName("getInitialGradeRevealed")
-      get() = _builder.initialGradeRevealed
-      @JvmName("setInitialGradeRevealed")
-      set(value) {
+      @kotlin.jvm.JvmName("getInitialGradeRevealed")
+        get() = _builder.initialGradeRevealed
+      @kotlin.jvm.JvmName("setInitialGradeRevealed")
+        set(value) {
         _builder.initialGradeRevealed = value
       }
     /**
-     * `optional bool initial_grade_revealed = 6;`
+     * <code>optional bool initial_grade_revealed = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearInitialGradeRevealed() {
       _builder.clearInitialGradeRevealed()
     }
     /**
-     * `optional bool initial_grade_revealed = 6;`
+     * <code>optional bool initial_grade_revealed = 6;</code>
      * @return Whether the initialGradeRevealed field is set.
+     * @return This builder for chaining.
      */
     public fun hasInitialGradeRevealed(): kotlin.Boolean {
       return _builder.hasInitialGradeRevealed()
@@ -369,21 +395,23 @@ public object MyContractsKt {
      * `optional double last_grade_progress_shown = 7;`
      */
     public var lastGradeProgressShown: kotlin.Double
-      @JvmName("getLastGradeProgressShown")
-      get() = _builder.lastGradeProgressShown
-      @JvmName("setLastGradeProgressShown")
-      set(value) {
+      @kotlin.jvm.JvmName("getLastGradeProgressShown")
+        get() = _builder.lastGradeProgressShown
+      @kotlin.jvm.JvmName("setLastGradeProgressShown")
+        set(value) {
         _builder.lastGradeProgressShown = value
       }
     /**
-     * `optional double last_grade_progress_shown = 7;`
+     * <code>optional double last_grade_progress_shown = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearLastGradeProgressShown() {
       _builder.clearLastGradeProgressShown()
     }
     /**
-     * `optional double last_grade_progress_shown = 7;`
+     * <code>optional double last_grade_progress_shown = 7;</code>
      * @return Whether the lastGradeProgressShown field is set.
+     * @return This builder for chaining.
      */
     public fun hasLastGradeProgressShown(): kotlin.Boolean {
       return _builder.hasLastGradeProgressShown()
@@ -393,21 +421,23 @@ public object MyContractsKt {
      * `optional bool show_advanced_evaluations = 8;`
      */
     public var showAdvancedEvaluations: kotlin.Boolean
-      @JvmName("getShowAdvancedEvaluations")
-      get() = _builder.showAdvancedEvaluations
-      @JvmName("setShowAdvancedEvaluations")
-      set(value) {
+      @kotlin.jvm.JvmName("getShowAdvancedEvaluations")
+        get() = _builder.showAdvancedEvaluations
+      @kotlin.jvm.JvmName("setShowAdvancedEvaluations")
+        set(value) {
         _builder.showAdvancedEvaluations = value
       }
     /**
-     * `optional bool show_advanced_evaluations = 8;`
+     * <code>optional bool show_advanced_evaluations = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearShowAdvancedEvaluations() {
       _builder.clearShowAdvancedEvaluations()
     }
     /**
-     * `optional bool show_advanced_evaluations = 8;`
+     * <code>optional bool show_advanced_evaluations = 8;</code>
      * @return Whether the showAdvancedEvaluations field is set.
+     * @return This builder for chaining.
      */
     public fun hasShowAdvancedEvaluations(): kotlin.Boolean {
       return _builder.hasShowAdvancedEvaluations()
@@ -424,66 +454,71 @@ public object MyContractsKt {
      */
      public val customEggInfo: com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.customEggInfoList
       )
     /**
-     * `repeated .ei.CustomEgg custom_egg_info = 9;`
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
      * @param value The customEggInfo to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCustomEggInfo")
+@kotlin.jvm.JvmName("addCustomEggInfo")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.add(value: ei.Ei.CustomEgg) {
       _builder.addCustomEggInfo(value)
     }
     /**
-     * `repeated .ei.CustomEgg custom_egg_info = 9;`
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
      * @param value The customEggInfo to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCustomEggInfo")
+@kotlin.jvm.JvmName("plusAssignCustomEggInfo")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.plusAssign(value: ei.Ei.CustomEgg) {
       add(value)
     }
     /**
-     * `repeated .ei.CustomEgg custom_egg_info = 9;`
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
      * @param values The customEggInfo to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCustomEggInfo")
+@kotlin.jvm.JvmName("addAllCustomEggInfo")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
       _builder.addAllCustomEggInfo(values)
     }
     /**
-     * `repeated .ei.CustomEgg custom_egg_info = 9;`
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
      * @param values The customEggInfo to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCustomEggInfo")
+@kotlin.jvm.JvmName("plusAssignAllCustomEggInfo")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CustomEgg custom_egg_info = 9;`
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
      * @param index The index to set the value at.
      * @param value The customEggInfo to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCustomEggInfo")
+@kotlin.jvm.JvmName("setCustomEggInfo")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.set(index: kotlin.Int, value: ei.Ei.CustomEgg) {
       _builder.setCustomEggInfo(index, value)
     }
     /**
-     * `repeated .ei.CustomEgg custom_egg_info = 9;`
+     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCustomEggInfo")
+@kotlin.jvm.JvmName("clearCustomEggInfo")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.clear() {
       _builder.clearCustomEggInfo()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

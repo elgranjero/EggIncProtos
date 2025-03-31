@@ -101,25 +101,25 @@ proto.ei.ShellSpec.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-primaryPiece: (f = msg.getPrimaryPiece()) && proto.ei.ShellSpec.ShellPiece.toObject(includeInstance, f),
-piecesList: jspb.Message.toObjectList(msg.getPiecesList(),
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    primaryPiece: (f = msg.getPrimaryPiece()) && proto.ei.ShellSpec.ShellPiece.toObject(includeInstance, f),
+    piecesList: jspb.Message.toObjectList(msg.getPiecesList(),
     proto.ei.ShellSpec.ShellPiece.toObject, includeInstance),
-altAssetsList: jspb.Message.toObjectList(msg.getAltAssetsList(),
+    altAssetsList: jspb.Message.toObjectList(msg.getAltAssetsList(),
     proto.ei.DLCItem.toObject, includeInstance),
-name: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-setIdentifier: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-modifiedGeometry: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
-price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-requiredParentShell: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-isNew: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-expires: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
-secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
-popularity: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
-defaultAppearance: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
+    name: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    setIdentifier: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    modifiedGeometry: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
+    price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    requiredParentShell: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
+    isNew: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    expires: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
+    popularity: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
+    defaultAppearance: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -516,8 +516,8 @@ proto.ei.ShellSpec.ShellPiece.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.ShellSpec.ShellPiece.toObject = function(includeInstance, msg) {
   var f, obj = {
-assetType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-dlc: (f = msg.getDlc()) && proto.ei.DLCItem.toObject(includeInstance, f)
+    assetType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    dlc: (f = msg.getDlc()) && proto.ei.DLCItem.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

@@ -32,21 +32,23 @@ public object CoopBuffStateKt {
      * `optional double egg_laying_rate = 1 [default = 1];`
      */
     public var eggLayingRate: kotlin.Double
-      @JvmName("getEggLayingRate")
-      get() = _builder.eggLayingRate
-      @JvmName("setEggLayingRate")
-      set(value) {
+      @kotlin.jvm.JvmName("getEggLayingRate")
+        get() = _builder.eggLayingRate
+      @kotlin.jvm.JvmName("setEggLayingRate")
+        set(value) {
         _builder.eggLayingRate = value
       }
     /**
-     * `optional double egg_laying_rate = 1 [default = 1];`
+     * <code>optional double egg_laying_rate = 1 [default = 1];</code>
+     * @return This builder for chaining.
      */
     public fun clearEggLayingRate() {
       _builder.clearEggLayingRate()
     }
     /**
-     * `optional double egg_laying_rate = 1 [default = 1];`
+     * <code>optional double egg_laying_rate = 1 [default = 1];</code>
      * @return Whether the eggLayingRate field is set.
+     * @return This builder for chaining.
      */
     public fun hasEggLayingRate(): kotlin.Boolean {
       return _builder.hasEggLayingRate()
@@ -56,21 +58,23 @@ public object CoopBuffStateKt {
      * `optional double earnings = 2 [default = 1];`
      */
     public var earnings: kotlin.Double
-      @JvmName("getEarnings")
-      get() = _builder.earnings
-      @JvmName("setEarnings")
-      set(value) {
+      @kotlin.jvm.JvmName("getEarnings")
+        get() = _builder.earnings
+      @kotlin.jvm.JvmName("setEarnings")
+        set(value) {
         _builder.earnings = value
       }
     /**
-     * `optional double earnings = 2 [default = 1];`
+     * <code>optional double earnings = 2 [default = 1];</code>
+     * @return This builder for chaining.
      */
     public fun clearEarnings() {
       _builder.clearEarnings()
     }
     /**
-     * `optional double earnings = 2 [default = 1];`
+     * <code>optional double earnings = 2 [default = 1];</code>
      * @return Whether the earnings field is set.
+     * @return This builder for chaining.
      */
     public fun hasEarnings(): kotlin.Boolean {
       return _builder.hasEarnings()
@@ -80,21 +84,23 @@ public object CoopBuffStateKt {
      * `optional double server_timestamp = 3;`
      */
     public var serverTimestamp: kotlin.Double
-      @JvmName("getServerTimestamp")
-      get() = _builder.serverTimestamp
-      @JvmName("setServerTimestamp")
-      set(value) {
+      @kotlin.jvm.JvmName("getServerTimestamp")
+        get() = _builder.serverTimestamp
+      @kotlin.jvm.JvmName("setServerTimestamp")
+        set(value) {
         _builder.serverTimestamp = value
       }
     /**
-     * `optional double server_timestamp = 3;`
+     * <code>optional double server_timestamp = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearServerTimestamp() {
       _builder.clearServerTimestamp()
     }
     /**
-     * `optional double server_timestamp = 3;`
+     * <code>optional double server_timestamp = 3;</code>
      * @return Whether the serverTimestamp field is set.
+     * @return This builder for chaining.
      */
     public fun hasServerTimestamp(): kotlin.Boolean {
       return _builder.hasServerTimestamp()

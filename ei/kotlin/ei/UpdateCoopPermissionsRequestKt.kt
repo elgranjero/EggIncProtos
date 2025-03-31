@@ -32,21 +32,23 @@ public object UpdateCoopPermissionsRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 6;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 6;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 6;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 6;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object UpdateCoopPermissionsRequestKt {
      * `optional string contract_identifier = 1;`
      */
     public var contractIdentifier: kotlin.String
-      @JvmName("getContractIdentifier")
-      get() = _builder.contractIdentifier
-      @JvmName("setContractIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractIdentifier")
+        get() = _builder.contractIdentifier
+      @kotlin.jvm.JvmName("setContractIdentifier")
+        set(value) {
         _builder.contractIdentifier = value
       }
     /**
-     * `optional string contract_identifier = 1;`
+     * <code>optional string contract_identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * `optional string contract_identifier = 1;`
+     * <code>optional string contract_identifier = 1;</code>
      * @return Whether the contractIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -83,21 +87,23 @@ public object UpdateCoopPermissionsRequestKt {
      * `optional string coop_identifier = 2;`
      */
     public var coopIdentifier: kotlin.String
-      @JvmName("getCoopIdentifier")
-      get() = _builder.coopIdentifier
-      @JvmName("setCoopIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopIdentifier")
+        get() = _builder.coopIdentifier
+      @kotlin.jvm.JvmName("setCoopIdentifier")
+        set(value) {
         _builder.coopIdentifier = value
       }
     /**
-     * `optional string coop_identifier = 2;`
+     * <code>optional string coop_identifier = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * `optional string coop_identifier = 2;`
+     * <code>optional string coop_identifier = 2;</code>
      * @return Whether the coopIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -107,21 +113,23 @@ public object UpdateCoopPermissionsRequestKt {
      * `optional string requesting_user_id = 3;`
      */
     public var requestingUserId: kotlin.String
-      @JvmName("getRequestingUserId")
-      get() = _builder.requestingUserId
-      @JvmName("setRequestingUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getRequestingUserId")
+        get() = _builder.requestingUserId
+      @kotlin.jvm.JvmName("setRequestingUserId")
+        set(value) {
         _builder.requestingUserId = value
       }
     /**
-     * `optional string requesting_user_id = 3;`
+     * <code>optional string requesting_user_id = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearRequestingUserId() {
       _builder.clearRequestingUserId()
     }
     /**
-     * `optional string requesting_user_id = 3;`
+     * <code>optional string requesting_user_id = 3;</code>
      * @return Whether the requestingUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasRequestingUserId(): kotlin.Boolean {
       return _builder.hasRequestingUserId()
@@ -131,21 +139,23 @@ public object UpdateCoopPermissionsRequestKt {
      * `optional bool public = 4;`
      */
     public var public: kotlin.Boolean
-      @JvmName("getPublic")
-      get() = _builder.public
-      @JvmName("setPublic")
-      set(value) {
+      @kotlin.jvm.JvmName("getPublic")
+        get() = _builder.public
+      @kotlin.jvm.JvmName("setPublic")
+        set(value) {
         _builder.public = value
       }
     /**
-     * `optional bool public = 4;`
+     * <code>optional bool public = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearPublic() {
       _builder.clearPublic()
     }
     /**
-     * `optional bool public = 4;`
+     * <code>optional bool public = 4;</code>
      * @return Whether the public field is set.
+     * @return This builder for chaining.
      */
     public fun hasPublic(): kotlin.Boolean {
       return _builder.hasPublic()
@@ -155,21 +165,23 @@ public object UpdateCoopPermissionsRequestKt {
      * `optional uint32 client_version = 5;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 5;`
+     * <code>optional uint32 client_version = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 5;`
+     * <code>optional uint32 client_version = 5;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

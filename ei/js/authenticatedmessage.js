@@ -70,12 +70,12 @@ proto.ei.AuthenticatedMessage.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.AuthenticatedMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-message: msg.getMessage_asB64(),
-version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-code: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-compressed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-originalSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
+    message: msg.getMessage_asB64(),
+    version: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    code: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    compressed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    originalSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -78,7 +78,7 @@ proto.ei.ContractsArchive.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractsArchive.toObject = function(includeInstance, msg) {
   var f, obj = {
-archiveList: jspb.Message.toObjectList(msg.getArchiveList(),
+    archiveList: jspb.Message.toObjectList(msg.getArchiveList(),
     proto.ei.LocalContract.toObject, includeInstance)
   };
 

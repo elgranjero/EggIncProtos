@@ -32,21 +32,23 @@ public object ShellSetSpecKt {
      * `optional string identifier = 1;`
      */
     public var identifier: kotlin.String
-      @JvmName("getIdentifier")
-      get() = _builder.identifier
-      @JvmName("setIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getIdentifier")
+        get() = _builder.identifier
+      @kotlin.jvm.JvmName("setIdentifier")
+        set(value) {
         _builder.identifier = value
       }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
      * @return Whether the identifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -56,21 +58,23 @@ public object ShellSetSpecKt {
      * `optional string name = 2;`
      */
     public var name: kotlin.String
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional string name = 2;`
+     * <code>optional string name = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional string name = 2;`
+     * <code>optional string name = 2;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -80,21 +84,23 @@ public object ShellSetSpecKt {
      * `optional uint32 price = 3;`
      */
     public var price: kotlin.Int
-      @JvmName("getPrice")
-      get() = _builder.price
-      @JvmName("setPrice")
-      set(value) {
+      @kotlin.jvm.JvmName("getPrice")
+        get() = _builder.price
+      @kotlin.jvm.JvmName("setPrice")
+        set(value) {
         _builder.price = value
       }
     /**
-     * `optional uint32 price = 3;`
+     * <code>optional uint32 price = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearPrice() {
       _builder.clearPrice()
     }
     /**
-     * `optional uint32 price = 3;`
+     * <code>optional uint32 price = 3;</code>
      * @return Whether the price field is set.
+     * @return This builder for chaining.
      */
     public fun hasPrice(): kotlin.Boolean {
       return _builder.hasPrice()
@@ -104,21 +110,23 @@ public object ShellSetSpecKt {
      * `optional double price_mult_DEPRECATED = 8 [default = 1];`
      */
     public var priceMultDEPRECATED: kotlin.Double
-      @JvmName("getPriceMultDEPRECATED")
-      get() = _builder.priceMultDEPRECATED
-      @JvmName("setPriceMultDEPRECATED")
-      set(value) {
+      @kotlin.jvm.JvmName("getPriceMultDEPRECATED")
+        get() = _builder.priceMultDEPRECATED
+      @kotlin.jvm.JvmName("setPriceMultDEPRECATED")
+        set(value) {
         _builder.priceMultDEPRECATED = value
       }
     /**
-     * `optional double price_mult_DEPRECATED = 8 [default = 1];`
+     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
+     * @return This builder for chaining.
      */
     public fun clearPriceMultDEPRECATED() {
       _builder.clearPriceMultDEPRECATED()
     }
     /**
-     * `optional double price_mult_DEPRECATED = 8 [default = 1];`
+     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
      * @return Whether the priceMultDEPRECATED field is set.
+     * @return This builder for chaining.
      */
     public fun hasPriceMultDEPRECATED(): kotlin.Boolean {
       return _builder.hasPriceMultDEPRECATED()
@@ -128,21 +136,23 @@ public object ShellSetSpecKt {
      * `optional double discount = 17;`
      */
     public var discount: kotlin.Double
-      @JvmName("getDiscount")
-      get() = _builder.discount
-      @JvmName("setDiscount")
-      set(value) {
+      @kotlin.jvm.JvmName("getDiscount")
+        get() = _builder.discount
+      @kotlin.jvm.JvmName("setDiscount")
+        set(value) {
         _builder.discount = value
       }
     /**
-     * `optional double discount = 17;`
+     * <code>optional double discount = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearDiscount() {
       _builder.clearDiscount()
     }
     /**
-     * `optional double discount = 17;`
+     * <code>optional double discount = 17;</code>
      * @return Whether the discount field is set.
+     * @return This builder for chaining.
      */
     public fun hasDiscount(): kotlin.Boolean {
       return _builder.hasDiscount()
@@ -152,21 +162,23 @@ public object ShellSetSpecKt {
      * `optional uint32 required_eop = 4;`
      */
     public var requiredEop: kotlin.Int
-      @JvmName("getRequiredEop")
-      get() = _builder.requiredEop
-      @JvmName("setRequiredEop")
-      set(value) {
+      @kotlin.jvm.JvmName("getRequiredEop")
+        get() = _builder.requiredEop
+      @kotlin.jvm.JvmName("setRequiredEop")
+        set(value) {
         _builder.requiredEop = value
       }
     /**
-     * `optional uint32 required_eop = 4;`
+     * <code>optional uint32 required_eop = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearRequiredEop() {
       _builder.clearRequiredEop()
     }
     /**
-     * `optional uint32 required_eop = 4;`
+     * <code>optional uint32 required_eop = 4;</code>
      * @return Whether the requiredEop field is set.
+     * @return This builder for chaining.
      */
     public fun hasRequiredEop(): kotlin.Boolean {
       return _builder.hasRequiredEop()
@@ -176,21 +188,23 @@ public object ShellSetSpecKt {
      * `optional double required_soul_eggs = 5;`
      */
     public var requiredSoulEggs: kotlin.Double
-      @JvmName("getRequiredSoulEggs")
-      get() = _builder.requiredSoulEggs
-      @JvmName("setRequiredSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getRequiredSoulEggs")
+        get() = _builder.requiredSoulEggs
+      @kotlin.jvm.JvmName("setRequiredSoulEggs")
+        set(value) {
         _builder.requiredSoulEggs = value
       }
     /**
-     * `optional double required_soul_eggs = 5;`
+     * <code>optional double required_soul_eggs = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearRequiredSoulEggs() {
       _builder.clearRequiredSoulEggs()
     }
     /**
-     * `optional double required_soul_eggs = 5;`
+     * <code>optional double required_soul_eggs = 5;</code>
      * @return Whether the requiredSoulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasRequiredSoulEggs(): kotlin.Boolean {
       return _builder.hasRequiredSoulEggs()
@@ -200,21 +214,23 @@ public object ShellSetSpecKt {
      * `optional string required_parent_set = 20;`
      */
     public var requiredParentSet: kotlin.String
-      @JvmName("getRequiredParentSet")
-      get() = _builder.requiredParentSet
-      @JvmName("setRequiredParentSet")
-      set(value) {
+      @kotlin.jvm.JvmName("getRequiredParentSet")
+        get() = _builder.requiredParentSet
+      @kotlin.jvm.JvmName("setRequiredParentSet")
+        set(value) {
         _builder.requiredParentSet = value
       }
     /**
-     * `optional string required_parent_set = 20;`
+     * <code>optional string required_parent_set = 20;</code>
+     * @return This builder for chaining.
      */
     public fun clearRequiredParentSet() {
       _builder.clearRequiredParentSet()
     }
     /**
-     * `optional string required_parent_set = 20;`
+     * <code>optional string required_parent_set = 20;</code>
      * @return Whether the requiredParentSet field is set.
+     * @return This builder for chaining.
      */
     public fun hasRequiredParentSet(): kotlin.Boolean {
       return _builder.hasRequiredParentSet()
@@ -224,21 +240,23 @@ public object ShellSetSpecKt {
      * `optional bool is_new = 9;`
      */
     public var isNew: kotlin.Boolean
-      @JvmName("getIsNew")
-      get() = _builder.isNew
-      @JvmName("setIsNew")
-      set(value) {
+      @kotlin.jvm.JvmName("getIsNew")
+        get() = _builder.isNew
+      @kotlin.jvm.JvmName("setIsNew")
+        set(value) {
         _builder.isNew = value
       }
     /**
-     * `optional bool is_new = 9;`
+     * <code>optional bool is_new = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearIsNew() {
       _builder.clearIsNew()
     }
     /**
-     * `optional bool is_new = 9;`
+     * <code>optional bool is_new = 9;</code>
      * @return Whether the isNew field is set.
+     * @return This builder for chaining.
      */
     public fun hasIsNew(): kotlin.Boolean {
       return _builder.hasIsNew()
@@ -248,21 +266,23 @@ public object ShellSetSpecKt {
      * `optional bool expires = 10;`
      */
     public var expires: kotlin.Boolean
-      @JvmName("getExpires")
-      get() = _builder.expires
-      @JvmName("setExpires")
-      set(value) {
+      @kotlin.jvm.JvmName("getExpires")
+        get() = _builder.expires
+      @kotlin.jvm.JvmName("setExpires")
+        set(value) {
         _builder.expires = value
       }
     /**
-     * `optional bool expires = 10;`
+     * <code>optional bool expires = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearExpires() {
       _builder.clearExpires()
     }
     /**
-     * `optional bool expires = 10;`
+     * <code>optional bool expires = 10;</code>
      * @return Whether the expires field is set.
+     * @return This builder for chaining.
      */
     public fun hasExpires(): kotlin.Boolean {
       return _builder.hasExpires()
@@ -272,21 +292,23 @@ public object ShellSetSpecKt {
      * `optional double seconds_until_available = 18;`
      */
     public var secondsUntilAvailable: kotlin.Double
-      @JvmName("getSecondsUntilAvailable")
-      get() = _builder.secondsUntilAvailable
-      @JvmName("setSecondsUntilAvailable")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsUntilAvailable")
+        get() = _builder.secondsUntilAvailable
+      @kotlin.jvm.JvmName("setSecondsUntilAvailable")
+        set(value) {
         _builder.secondsUntilAvailable = value
       }
     /**
-     * `optional double seconds_until_available = 18;`
+     * <code>optional double seconds_until_available = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsUntilAvailable() {
       _builder.clearSecondsUntilAvailable()
     }
     /**
-     * `optional double seconds_until_available = 18;`
+     * <code>optional double seconds_until_available = 18;</code>
      * @return Whether the secondsUntilAvailable field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsUntilAvailable(): kotlin.Boolean {
       return _builder.hasSecondsUntilAvailable()
@@ -296,21 +318,23 @@ public object ShellSetSpecKt {
      * `optional double seconds_remaining = 11;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 11;`
+     * <code>optional double seconds_remaining = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 11;`
+     * <code>optional double seconds_remaining = 11;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -320,21 +344,23 @@ public object ShellSetSpecKt {
      * `optional uint64 popularity = 21;`
      */
     public var popularity: kotlin.Long
-      @JvmName("getPopularity")
-      get() = _builder.popularity
-      @JvmName("setPopularity")
-      set(value) {
+      @kotlin.jvm.JvmName("getPopularity")
+        get() = _builder.popularity
+      @kotlin.jvm.JvmName("setPopularity")
+        set(value) {
         _builder.popularity = value
       }
     /**
-     * `optional uint64 popularity = 21;`
+     * <code>optional uint64 popularity = 21;</code>
+     * @return This builder for chaining.
      */
     public fun clearPopularity() {
       _builder.clearPopularity()
     }
     /**
-     * `optional uint64 popularity = 21;`
+     * <code>optional uint64 popularity = 21;</code>
      * @return Whether the popularity field is set.
+     * @return This builder for chaining.
      */
     public fun hasPopularity(): kotlin.Boolean {
       return _builder.hasPopularity()
@@ -344,21 +370,23 @@ public object ShellSetSpecKt {
      * `optional bool decorator = 14;`
      */
     public var decorator: kotlin.Boolean
-      @JvmName("getDecorator")
-      get() = _builder.decorator
-      @JvmName("setDecorator")
-      set(value) {
+      @kotlin.jvm.JvmName("getDecorator")
+        get() = _builder.decorator
+      @kotlin.jvm.JvmName("setDecorator")
+        set(value) {
         _builder.decorator = value
       }
     /**
-     * `optional bool decorator = 14;`
+     * <code>optional bool decorator = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearDecorator() {
       _builder.clearDecorator()
     }
     /**
-     * `optional bool decorator = 14;`
+     * <code>optional bool decorator = 14;</code>
      * @return Whether the decorator field is set.
+     * @return This builder for chaining.
      */
     public fun hasDecorator(): kotlin.Boolean {
       return _builder.hasDecorator()
@@ -368,21 +396,23 @@ public object ShellSetSpecKt {
      * `optional bool modified_geometry = 13;`
      */
     public var modifiedGeometry: kotlin.Boolean
-      @JvmName("getModifiedGeometry")
-      get() = _builder.modifiedGeometry
-      @JvmName("setModifiedGeometry")
-      set(value) {
+      @kotlin.jvm.JvmName("getModifiedGeometry")
+        get() = _builder.modifiedGeometry
+      @kotlin.jvm.JvmName("setModifiedGeometry")
+        set(value) {
         _builder.modifiedGeometry = value
       }
     /**
-     * `optional bool modified_geometry = 13;`
+     * <code>optional bool modified_geometry = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearModifiedGeometry() {
       _builder.clearModifiedGeometry()
     }
     /**
-     * `optional bool modified_geometry = 13;`
+     * <code>optional bool modified_geometry = 13;</code>
      * @return Whether the modifiedGeometry field is set.
+     * @return This builder for chaining.
      */
     public fun hasModifiedGeometry(): kotlin.Boolean {
       return _builder.hasModifiedGeometry()
@@ -392,21 +422,23 @@ public object ShellSetSpecKt {
      * `optional bool element_set = 7;`
      */
     public var elementSet: kotlin.Boolean
-      @JvmName("getElementSet")
-      get() = _builder.elementSet
-      @JvmName("setElementSet")
-      set(value) {
+      @kotlin.jvm.JvmName("getElementSet")
+        get() = _builder.elementSet
+      @kotlin.jvm.JvmName("setElementSet")
+        set(value) {
         _builder.elementSet = value
       }
     /**
-     * `optional bool element_set = 7;`
+     * <code>optional bool element_set = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearElementSet() {
       _builder.clearElementSet()
     }
     /**
-     * `optional bool element_set = 7;`
+     * <code>optional bool element_set = 7;</code>
      * @return Whether the elementSet field is set.
+     * @return This builder for chaining.
      */
     public fun hasElementSet(): kotlin.Boolean {
       return _builder.hasElementSet()
@@ -416,21 +448,23 @@ public object ShellSetSpecKt {
      * `optional string hex_base_color = 16;`
      */
     public var hexBaseColor: kotlin.String
-      @JvmName("getHexBaseColor")
-      get() = _builder.hexBaseColor
-      @JvmName("setHexBaseColor")
-      set(value) {
+      @kotlin.jvm.JvmName("getHexBaseColor")
+        get() = _builder.hexBaseColor
+      @kotlin.jvm.JvmName("setHexBaseColor")
+        set(value) {
         _builder.hexBaseColor = value
       }
     /**
-     * `optional string hex_base_color = 16;`
+     * <code>optional string hex_base_color = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearHexBaseColor() {
       _builder.clearHexBaseColor()
     }
     /**
-     * `optional string hex_base_color = 16;`
+     * <code>optional string hex_base_color = 16;</code>
      * @return Whether the hexBaseColor field is set.
+     * @return This builder for chaining.
      */
     public fun hasHexBaseColor(): kotlin.Boolean {
       return _builder.hasHexBaseColor()
@@ -447,86 +481,93 @@ public object ShellSetSpecKt {
      */
      public val variations: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.variationsList
       )
     /**
-     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param value The variations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addVariations")
+@kotlin.jvm.JvmName("addVariations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.add(value: ei.Ei.ShellSetSpec.VariationSpec) {
       _builder.addVariations(value)
     }
     /**
-     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param value The variations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignVariations")
+@kotlin.jvm.JvmName("plusAssignVariations")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.plusAssign(value: ei.Ei.ShellSetSpec.VariationSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param values The variations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllVariations")
+@kotlin.jvm.JvmName("addAllVariations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationSpec>) {
       _builder.addAllVariations(values)
     }
     /**
-     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param values The variations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllVariations")
+@kotlin.jvm.JvmName("plusAssignAllVariations")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec.VariationSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
      * @param index The index to set the value at.
      * @param value The variations to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setVariations")
+@kotlin.jvm.JvmName("setVariations")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec.VariationSpec) {
       _builder.setVariations(index, value)
     }
     /**
-     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
+     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearVariations")
+@kotlin.jvm.JvmName("clearVariations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec.VariationSpec, VariationsProxy>.clear() {
       _builder.clearVariations()
     }
-
 
     /**
      * `optional .ei.DLCItem icon = 19;`
      */
     public var icon: ei.Ei.DLCItem
-      @JvmName("getIcon")
-      get() = _builder.icon
-      @JvmName("setIcon")
-      set(value) {
+      @kotlin.jvm.JvmName("getIcon")
+        get() = _builder.icon
+      @kotlin.jvm.JvmName("setIcon")
+        set(value) {
         _builder.icon = value
       }
     /**
-     * `optional .ei.DLCItem icon = 19;`
+     * <code>optional .ei.DLCItem icon = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearIcon() {
       _builder.clearIcon()
     }
     /**
-     * `optional .ei.DLCItem icon = 19;`
+     * <code>optional .ei.DLCItem icon = 19;</code>
      * @return Whether the icon field is set.
+     * @return This builder for chaining.
      */
     public fun hasIcon(): kotlin.Boolean {
       return _builder.hasIcon()
@@ -539,21 +580,23 @@ public object ShellSetSpecKt {
      * `optional bool default_appearance = 6;`
      */
     public var defaultAppearance: kotlin.Boolean
-      @JvmName("getDefaultAppearance")
-      get() = _builder.defaultAppearance
-      @JvmName("setDefaultAppearance")
-      set(value) {
+      @kotlin.jvm.JvmName("getDefaultAppearance")
+        get() = _builder.defaultAppearance
+      @kotlin.jvm.JvmName("setDefaultAppearance")
+        set(value) {
         _builder.defaultAppearance = value
       }
     /**
-     * `optional bool default_appearance = 6;`
+     * <code>optional bool default_appearance = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearDefaultAppearance() {
       _builder.clearDefaultAppearance()
     }
     /**
-     * `optional bool default_appearance = 6;`
+     * <code>optional bool default_appearance = 6;</code>
      * @return Whether the defaultAppearance field is set.
+     * @return This builder for chaining.
      */
     public fun hasDefaultAppearance(): kotlin.Boolean {
       return _builder.hasDefaultAppearance()
@@ -563,21 +606,23 @@ public object ShellSetSpecKt {
      * `optional bool custom_appearance = 12;`
      */
     public var customAppearance: kotlin.Boolean
-      @JvmName("getCustomAppearance")
-      get() = _builder.customAppearance
-      @JvmName("setCustomAppearance")
-      set(value) {
+      @kotlin.jvm.JvmName("getCustomAppearance")
+        get() = _builder.customAppearance
+      @kotlin.jvm.JvmName("setCustomAppearance")
+        set(value) {
         _builder.customAppearance = value
       }
     /**
-     * `optional bool custom_appearance = 12;`
+     * <code>optional bool custom_appearance = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearCustomAppearance() {
       _builder.clearCustomAppearance()
     }
     /**
-     * `optional bool custom_appearance = 12;`
+     * <code>optional bool custom_appearance = 12;</code>
      * @return Whether the customAppearance field is set.
+     * @return This builder for chaining.
      */
     public fun hasCustomAppearance(): kotlin.Boolean {
       return _builder.hasCustomAppearance()
@@ -609,21 +654,23 @@ public object ShellSetSpecKt {
        * `optional string identifier = 1;`
        */
       public var identifier: kotlin.String
-        @JvmName("getIdentifier")
-        get() = _builder.identifier
-        @JvmName("setIdentifier")
-        set(value) {
+        @kotlin.jvm.JvmName("getIdentifier")
+          get() = _builder.identifier
+        @kotlin.jvm.JvmName("setIdentifier")
+          set(value) {
           _builder.identifier = value
         }
       /**
-       * `optional string identifier = 1;`
+       * <code>optional string identifier = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearIdentifier() {
         _builder.clearIdentifier()
       }
       /**
-       * `optional string identifier = 1;`
+       * <code>optional string identifier = 1;</code>
        * @return Whether the identifier field is set.
+       * @return This builder for chaining.
        */
       public fun hasIdentifier(): kotlin.Boolean {
         return _builder.hasIdentifier()
@@ -633,21 +680,23 @@ public object ShellSetSpecKt {
        * `optional string hex_color = 2;`
        */
       public var hexColor: kotlin.String
-        @JvmName("getHexColor")
-        get() = _builder.hexColor
-        @JvmName("setHexColor")
-        set(value) {
+        @kotlin.jvm.JvmName("getHexColor")
+          get() = _builder.hexColor
+        @kotlin.jvm.JvmName("setHexColor")
+          set(value) {
           _builder.hexColor = value
         }
       /**
-       * `optional string hex_color = 2;`
+       * <code>optional string hex_color = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearHexColor() {
         _builder.clearHexColor()
       }
       /**
-       * `optional string hex_color = 2;`
+       * <code>optional string hex_color = 2;</code>
        * @return Whether the hexColor field is set.
+       * @return This builder for chaining.
        */
       public fun hasHexColor(): kotlin.Boolean {
         return _builder.hasHexColor()
@@ -657,21 +706,23 @@ public object ShellSetSpecKt {
        * `optional uint32 price = 3;`
        */
       public var price: kotlin.Int
-        @JvmName("getPrice")
-        get() = _builder.price
-        @JvmName("setPrice")
-        set(value) {
+        @kotlin.jvm.JvmName("getPrice")
+          get() = _builder.price
+        @kotlin.jvm.JvmName("setPrice")
+          set(value) {
           _builder.price = value
         }
       /**
-       * `optional uint32 price = 3;`
+       * <code>optional uint32 price = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearPrice() {
         _builder.clearPrice()
       }
       /**
-       * `optional uint32 price = 3;`
+       * <code>optional uint32 price = 3;</code>
        * @return Whether the price field is set.
+       * @return This builder for chaining.
        */
       public fun hasPrice(): kotlin.Boolean {
         return _builder.hasPrice()
@@ -681,21 +732,23 @@ public object ShellSetSpecKt {
        * `optional int32 sort_priority = 6;`
        */
       public var sortPriority: kotlin.Int
-        @JvmName("getSortPriority")
-        get() = _builder.sortPriority
-        @JvmName("setSortPriority")
-        set(value) {
+        @kotlin.jvm.JvmName("getSortPriority")
+          get() = _builder.sortPriority
+        @kotlin.jvm.JvmName("setSortPriority")
+          set(value) {
           _builder.sortPriority = value
         }
       /**
-       * `optional int32 sort_priority = 6;`
+       * <code>optional int32 sort_priority = 6;</code>
+       * @return This builder for chaining.
        */
       public fun clearSortPriority() {
         _builder.clearSortPriority()
       }
       /**
-       * `optional int32 sort_priority = 6;`
+       * <code>optional int32 sort_priority = 6;</code>
        * @return Whether the sortPriority field is set.
+       * @return This builder for chaining.
        */
       public fun hasSortPriority(): kotlin.Boolean {
         return _builder.hasSortPriority()
@@ -705,21 +758,23 @@ public object ShellSetSpecKt {
        * `optional bool default_appearance = 4;`
        */
       public var defaultAppearance: kotlin.Boolean
-        @JvmName("getDefaultAppearance")
-        get() = _builder.defaultAppearance
-        @JvmName("setDefaultAppearance")
-        set(value) {
+        @kotlin.jvm.JvmName("getDefaultAppearance")
+          get() = _builder.defaultAppearance
+        @kotlin.jvm.JvmName("setDefaultAppearance")
+          set(value) {
           _builder.defaultAppearance = value
         }
       /**
-       * `optional bool default_appearance = 4;`
+       * <code>optional bool default_appearance = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearDefaultAppearance() {
         _builder.clearDefaultAppearance()
       }
       /**
-       * `optional bool default_appearance = 4;`
+       * <code>optional bool default_appearance = 4;</code>
        * @return Whether the defaultAppearance field is set.
+       * @return This builder for chaining.
        */
       public fun hasDefaultAppearance(): kotlin.Boolean {
         return _builder.hasDefaultAppearance()
@@ -729,21 +784,23 @@ public object ShellSetSpecKt {
        * `optional bool custom_appearance = 5;`
        */
       public var customAppearance: kotlin.Boolean
-        @JvmName("getCustomAppearance")
-        get() = _builder.customAppearance
-        @JvmName("setCustomAppearance")
-        set(value) {
+        @kotlin.jvm.JvmName("getCustomAppearance")
+          get() = _builder.customAppearance
+        @kotlin.jvm.JvmName("setCustomAppearance")
+          set(value) {
           _builder.customAppearance = value
         }
       /**
-       * `optional bool custom_appearance = 5;`
+       * <code>optional bool custom_appearance = 5;</code>
+       * @return This builder for chaining.
        */
       public fun clearCustomAppearance() {
         _builder.clearCustomAppearance()
       }
       /**
-       * `optional bool custom_appearance = 5;`
+       * <code>optional bool custom_appearance = 5;</code>
        * @return Whether the customAppearance field is set.
+       * @return This builder for chaining.
        */
       public fun hasCustomAppearance(): kotlin.Boolean {
         return _builder.hasCustomAppearance()

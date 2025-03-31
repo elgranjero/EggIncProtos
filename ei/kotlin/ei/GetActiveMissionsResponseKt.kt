@@ -32,21 +32,23 @@ public object GetActiveMissionsResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -63,66 +65,71 @@ public object GetActiveMissionsResponseKt {
      */
      public val activeMissions: com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.activeMissionsList
       )
     /**
-     * `repeated .ei.MissionInfo active_missions = 2;`
+     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
      * @param value The activeMissions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addActiveMissions")
+@kotlin.jvm.JvmName("addActiveMissions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>.add(value: ei.Ei.MissionInfo) {
       _builder.addActiveMissions(value)
     }
     /**
-     * `repeated .ei.MissionInfo active_missions = 2;`
+     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
      * @param value The activeMissions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignActiveMissions")
+@kotlin.jvm.JvmName("plusAssignActiveMissions")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>.plusAssign(value: ei.Ei.MissionInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.MissionInfo active_missions = 2;`
+     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
      * @param values The activeMissions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllActiveMissions")
+@kotlin.jvm.JvmName("addAllActiveMissions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.MissionInfo>) {
       _builder.addAllActiveMissions(values)
     }
     /**
-     * `repeated .ei.MissionInfo active_missions = 2;`
+     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
      * @param values The activeMissions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllActiveMissions")
+@kotlin.jvm.JvmName("plusAssignAllActiveMissions")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.MissionInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.MissionInfo active_missions = 2;`
+     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
      * @param index The index to set the value at.
      * @param value The activeMissions to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setActiveMissions")
+@kotlin.jvm.JvmName("setActiveMissions")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>.set(index: kotlin.Int, value: ei.Ei.MissionInfo) {
       _builder.setActiveMissions(index, value)
     }
     /**
-     * `repeated .ei.MissionInfo active_missions = 2;`
+     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearActiveMissions")
+@kotlin.jvm.JvmName("clearActiveMissions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, ActiveMissionsProxy>.clear() {
       _builder.clearActiveMissions()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

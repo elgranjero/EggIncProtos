@@ -32,21 +32,23 @@ public object AdAttributionRowKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -56,21 +58,23 @@ public object AdAttributionRowKt {
      * `optional string ad_id = 2;`
      */
     public var adId: kotlin.String
-      @JvmName("getAdId")
-      get() = _builder.adId
-      @JvmName("setAdId")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdId")
+        get() = _builder.adId
+      @kotlin.jvm.JvmName("setAdId")
+        set(value) {
         _builder.adId = value
       }
     /**
-     * `optional string ad_id = 2;`
+     * <code>optional string ad_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdId() {
       _builder.clearAdId()
     }
     /**
-     * `optional string ad_id = 2;`
+     * <code>optional string ad_id = 2;</code>
      * @return Whether the adId field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdId(): kotlin.Boolean {
       return _builder.hasAdId()
@@ -80,21 +84,23 @@ public object AdAttributionRowKt {
      * `optional string ad_network = 3;`
      */
     public var adNetwork: kotlin.String
-      @JvmName("getAdNetwork")
-      get() = _builder.adNetwork
-      @JvmName("setAdNetwork")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdNetwork")
+        get() = _builder.adNetwork
+      @kotlin.jvm.JvmName("setAdNetwork")
+        set(value) {
         _builder.adNetwork = value
       }
     /**
-     * `optional string ad_network = 3;`
+     * <code>optional string ad_network = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdNetwork() {
       _builder.clearAdNetwork()
     }
     /**
-     * `optional string ad_network = 3;`
+     * <code>optional string ad_network = 3;</code>
      * @return Whether the adNetwork field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdNetwork(): kotlin.Boolean {
       return _builder.hasAdNetwork()
@@ -104,21 +110,23 @@ public object AdAttributionRowKt {
      * `optional string campaign = 4;`
      */
     public var campaign: kotlin.String
-      @JvmName("getCampaign")
-      get() = _builder.campaign
-      @JvmName("setCampaign")
-      set(value) {
+      @kotlin.jvm.JvmName("getCampaign")
+        get() = _builder.campaign
+      @kotlin.jvm.JvmName("setCampaign")
+        set(value) {
         _builder.campaign = value
       }
     /**
-     * `optional string campaign = 4;`
+     * <code>optional string campaign = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearCampaign() {
       _builder.clearCampaign()
     }
     /**
-     * `optional string campaign = 4;`
+     * <code>optional string campaign = 4;</code>
      * @return Whether the campaign field is set.
+     * @return This builder for chaining.
      */
     public fun hasCampaign(): kotlin.Boolean {
       return _builder.hasCampaign()
@@ -128,21 +136,23 @@ public object AdAttributionRowKt {
      * `optional string keyword = 5;`
      */
     public var keyword: kotlin.String
-      @JvmName("getKeyword")
-      get() = _builder.keyword
-      @JvmName("setKeyword")
-      set(value) {
+      @kotlin.jvm.JvmName("getKeyword")
+        get() = _builder.keyword
+      @kotlin.jvm.JvmName("setKeyword")
+        set(value) {
         _builder.keyword = value
       }
     /**
-     * `optional string keyword = 5;`
+     * <code>optional string keyword = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearKeyword() {
       _builder.clearKeyword()
     }
     /**
-     * `optional string keyword = 5;`
+     * <code>optional string keyword = 5;</code>
      * @return Whether the keyword field is set.
+     * @return This builder for chaining.
      */
     public fun hasKeyword(): kotlin.Boolean {
       return _builder.hasKeyword()
@@ -152,21 +162,23 @@ public object AdAttributionRowKt {
      * `optional string extra = 6;`
      */
     public var extra: kotlin.String
-      @JvmName("getExtra")
-      get() = _builder.extra
-      @JvmName("setExtra")
-      set(value) {
+      @kotlin.jvm.JvmName("getExtra")
+        get() = _builder.extra
+      @kotlin.jvm.JvmName("setExtra")
+        set(value) {
         _builder.extra = value
       }
     /**
-     * `optional string extra = 6;`
+     * <code>optional string extra = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearExtra() {
       _builder.clearExtra()
     }
     /**
-     * `optional string extra = 6;`
+     * <code>optional string extra = 6;</code>
      * @return Whether the extra field is set.
+     * @return This builder for chaining.
      */
     public fun hasExtra(): kotlin.Boolean {
       return _builder.hasExtra()
@@ -176,21 +188,23 @@ public object AdAttributionRowKt {
      * `optional float click_date = 7;`
      */
     public var clickDate: kotlin.Float
-      @JvmName("getClickDate")
-      get() = _builder.clickDate
-      @JvmName("setClickDate")
-      set(value) {
+      @kotlin.jvm.JvmName("getClickDate")
+        get() = _builder.clickDate
+      @kotlin.jvm.JvmName("setClickDate")
+        set(value) {
         _builder.clickDate = value
       }
     /**
-     * `optional float click_date = 7;`
+     * <code>optional float click_date = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearClickDate() {
       _builder.clearClickDate()
     }
     /**
-     * `optional float click_date = 7;`
+     * <code>optional float click_date = 7;</code>
      * @return Whether the clickDate field is set.
+     * @return This builder for chaining.
      */
     public fun hasClickDate(): kotlin.Boolean {
       return _builder.hasClickDate()
@@ -200,21 +214,23 @@ public object AdAttributionRowKt {
      * `optional float download_date = 8;`
      */
     public var downloadDate: kotlin.Float
-      @JvmName("getDownloadDate")
-      get() = _builder.downloadDate
-      @JvmName("setDownloadDate")
-      set(value) {
+      @kotlin.jvm.JvmName("getDownloadDate")
+        get() = _builder.downloadDate
+      @kotlin.jvm.JvmName("setDownloadDate")
+        set(value) {
         _builder.downloadDate = value
       }
     /**
-     * `optional float download_date = 8;`
+     * <code>optional float download_date = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearDownloadDate() {
       _builder.clearDownloadDate()
     }
     /**
-     * `optional float download_date = 8;`
+     * <code>optional float download_date = 8;</code>
      * @return Whether the downloadDate field is set.
+     * @return This builder for chaining.
      */
     public fun hasDownloadDate(): kotlin.Boolean {
       return _builder.hasDownloadDate()
@@ -224,21 +240,23 @@ public object AdAttributionRowKt {
      * `optional float approx_time = 9;`
      */
     public var approxTime: kotlin.Float
-      @JvmName("getApproxTime")
-      get() = _builder.approxTime
-      @JvmName("setApproxTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getApproxTime")
+        get() = _builder.approxTime
+      @kotlin.jvm.JvmName("setApproxTime")
+        set(value) {
         _builder.approxTime = value
       }
     /**
-     * `optional float approx_time = 9;`
+     * <code>optional float approx_time = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * `optional float approx_time = 9;`
+     * <code>optional float approx_time = 9;</code>
      * @return Whether the approxTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()

@@ -71,16 +71,16 @@ proto.ei.CurrencyFlowLog.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CurrencyFlowLog.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-currency: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-amount: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-location: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-version: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-platform: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-ticketsSpent: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-goldSpent: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    currency: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    amount: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    location: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    version: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    platform: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    ticketsSpent: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    goldSpent: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {

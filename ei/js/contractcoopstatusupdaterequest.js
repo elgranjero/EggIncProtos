@@ -74,25 +74,25 @@ proto.ei.ContractCoopStatusUpdateRequest.prototype.toObject = function(opt_inclu
  */
 proto.ei.ContractCoopStatusUpdateRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-contractIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-pushUserId: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-rate: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-timeCheatsDetected: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 19)) == null ? undefined : f,
-soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-eop: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
-boostTokens: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-boostTokensSpent: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-hideCcStatus: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
-productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
-farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
-lastIdleSummary: (f = msg.getLastIdleSummary()) && proto.ei.IdleSessionSummary.toObject(includeInstance, f),
-eggLayingRateBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 1.0),
-earningsBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 1.0)
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    contractIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    pushUserId: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    rate: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    timeCheatsDetected: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 19)) == null ? undefined : f,
+    soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    eop: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+    boostTokens: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    boostTokensSpent: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    hideCcStatus: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
+    productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
+    farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
+    lastIdleSummary: (f = msg.getLastIdleSummary()) && proto.ei.IdleSessionSummary.toObject(includeInstance, f),
+    eggLayingRateBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 1.0),
+    earningsBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 1.0)
   };
 
   if (includeInstance) {

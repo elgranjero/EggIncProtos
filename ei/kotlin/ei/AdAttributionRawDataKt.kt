@@ -32,21 +32,23 @@ public object AdAttributionRawDataKt {
      * `optional string device_ad_id = 1;`
      */
     public var deviceAdId: kotlin.String
-      @JvmName("getDeviceAdId")
-      get() = _builder.deviceAdId
-      @JvmName("setDeviceAdId")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceAdId")
+        get() = _builder.deviceAdId
+      @kotlin.jvm.JvmName("setDeviceAdId")
+        set(value) {
         _builder.deviceAdId = value
       }
     /**
-     * `optional string device_ad_id = 1;`
+     * <code>optional string device_ad_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceAdId() {
       _builder.clearDeviceAdId()
     }
     /**
-     * `optional string device_ad_id = 1;`
+     * <code>optional string device_ad_id = 1;</code>
      * @return Whether the deviceAdId field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceAdId(): kotlin.Boolean {
       return _builder.hasDeviceAdId()
@@ -56,21 +58,23 @@ public object AdAttributionRawDataKt {
      * `optional string user_id = 4;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 4;`
+     * <code>optional string user_id = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 4;`
+     * <code>optional string user_id = 4;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -80,21 +84,23 @@ public object AdAttributionRawDataKt {
      * `optional string ad_network = 2;`
      */
     public var adNetwork: kotlin.String
-      @JvmName("getAdNetwork")
-      get() = _builder.adNetwork
-      @JvmName("setAdNetwork")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdNetwork")
+        get() = _builder.adNetwork
+      @kotlin.jvm.JvmName("setAdNetwork")
+        set(value) {
         _builder.adNetwork = value
       }
     /**
-     * `optional string ad_network = 2;`
+     * <code>optional string ad_network = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdNetwork() {
       _builder.clearAdNetwork()
     }
     /**
-     * `optional string ad_network = 2;`
+     * <code>optional string ad_network = 2;</code>
      * @return Whether the adNetwork field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdNetwork(): kotlin.Boolean {
       return _builder.hasAdNetwork()
@@ -104,21 +110,23 @@ public object AdAttributionRawDataKt {
      * `optional string json_data = 3;`
      */
     public var jsonData: kotlin.String
-      @JvmName("getJsonData")
-      get() = _builder.jsonData
-      @JvmName("setJsonData")
-      set(value) {
+      @kotlin.jvm.JvmName("getJsonData")
+        get() = _builder.jsonData
+      @kotlin.jvm.JvmName("setJsonData")
+        set(value) {
         _builder.jsonData = value
       }
     /**
-     * `optional string json_data = 3;`
+     * <code>optional string json_data = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearJsonData() {
       _builder.clearJsonData()
     }
     /**
-     * `optional string json_data = 3;`
+     * <code>optional string json_data = 3;</code>
      * @return Whether the jsonData field is set.
+     * @return This builder for chaining.
      */
     public fun hasJsonData(): kotlin.Boolean {
       return _builder.hasJsonData()

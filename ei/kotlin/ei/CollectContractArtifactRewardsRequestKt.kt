@@ -32,21 +32,23 @@ public object CollectContractArtifactRewardsRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object CollectContractArtifactRewardsRequestKt {
      * `optional string contract_identifier = 2;`
      */
     public var contractIdentifier: kotlin.String
-      @JvmName("getContractIdentifier")
-      get() = _builder.contractIdentifier
-      @JvmName("setContractIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractIdentifier")
+        get() = _builder.contractIdentifier
+      @kotlin.jvm.JvmName("setContractIdentifier")
+        set(value) {
         _builder.contractIdentifier = value
       }
     /**
-     * `optional string contract_identifier = 2;`
+     * <code>optional string contract_identifier = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * `optional string contract_identifier = 2;`
+     * <code>optional string contract_identifier = 2;</code>
      * @return Whether the contractIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -83,21 +87,23 @@ public object CollectContractArtifactRewardsRequestKt {
      * `optional uint32 league = 5;`
      */
     public var league: kotlin.Int
-      @JvmName("getLeague")
-      get() = _builder.league
-      @JvmName("setLeague")
-      set(value) {
+      @kotlin.jvm.JvmName("getLeague")
+        get() = _builder.league
+      @kotlin.jvm.JvmName("setLeague")
+        set(value) {
         _builder.league = value
       }
     /**
-     * `optional uint32 league = 5;`
+     * <code>optional uint32 league = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearLeague() {
       _builder.clearLeague()
     }
     /**
-     * `optional uint32 league = 5;`
+     * <code>optional uint32 league = 5;</code>
      * @return Whether the league field is set.
+     * @return This builder for chaining.
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
@@ -107,21 +113,23 @@ public object CollectContractArtifactRewardsRequestKt {
      * `optional .ei.Contract.PlayerGrade grade = 6;`
      */
     public var grade: ei.Ei.Contract.PlayerGrade
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 6;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 6;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -131,21 +139,23 @@ public object CollectContractArtifactRewardsRequestKt {
      * `optional uint32 goal_index = 3;`
      */
     public var goalIndex: kotlin.Int
-      @JvmName("getGoalIndex")
-      get() = _builder.goalIndex
-      @JvmName("setGoalIndex")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoalIndex")
+        get() = _builder.goalIndex
+      @kotlin.jvm.JvmName("setGoalIndex")
+        set(value) {
         _builder.goalIndex = value
       }
     /**
-     * `optional uint32 goal_index = 3;`
+     * <code>optional uint32 goal_index = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoalIndex() {
       _builder.clearGoalIndex()
     }
     /**
-     * `optional uint32 goal_index = 3;`
+     * <code>optional uint32 goal_index = 3;</code>
      * @return Whether the goalIndex field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoalIndex(): kotlin.Boolean {
       return _builder.hasGoalIndex()
@@ -155,21 +165,23 @@ public object CollectContractArtifactRewardsRequestKt {
      * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
      */
     public var bestShip: ei.Ei.MissionInfo.Spaceship
-      @JvmName("getBestShip")
-      get() = _builder.bestShip
-      @JvmName("setBestShip")
-      set(value) {
+      @kotlin.jvm.JvmName("getBestShip")
+        get() = _builder.bestShip
+      @kotlin.jvm.JvmName("setBestShip")
+        set(value) {
         _builder.bestShip = value
       }
     /**
-     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
+     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearBestShip() {
       _builder.clearBestShip()
     }
     /**
-     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
+     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
      * @return Whether the bestShip field is set.
+     * @return This builder for chaining.
      */
     public fun hasBestShip(): kotlin.Boolean {
       return _builder.hasBestShip()

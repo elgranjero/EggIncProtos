@@ -70,14 +70,14 @@ proto.ei.EggIncEvent.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.EggIncEvent.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-type: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-multiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-subtitle: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-duration: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-ccOnly: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    type: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    multiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    subtitle: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    duration: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    ccOnly: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {

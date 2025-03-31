@@ -79,11 +79,11 @@ proto.ei.EggIncFirstContactResponse.prototype.toObject = function(opt_includeIns
  */
 proto.ei.EggIncFirstContactResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-eiUserId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-idsTransferredList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-errorCode: jspb.Message.getFieldWithDefault(msg, 4, 0),
-errorMessage: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-backup: (f = msg.getBackup()) && proto.ei.Backup.toObject(includeInstance, f)
+    eiUserId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    idsTransferredList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    errorCode: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    errorMessage: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    backup: (f = msg.getBackup()) && proto.ei.Backup.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

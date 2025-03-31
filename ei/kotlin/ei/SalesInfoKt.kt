@@ -39,66 +39,71 @@ public object SalesInfoKt {
      */
      public val sales: com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.salesList
       )
     /**
-     * `repeated .ei.IAPSaleEntry sales = 1;`
+     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
      * @param value The sales to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addSales")
+@kotlin.jvm.JvmName("addSales")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>.add(value: ei.Ei.IAPSaleEntry) {
       _builder.addSales(value)
     }
     /**
-     * `repeated .ei.IAPSaleEntry sales = 1;`
+     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
      * @param value The sales to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignSales")
+@kotlin.jvm.JvmName("plusAssignSales")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>.plusAssign(value: ei.Ei.IAPSaleEntry) {
       add(value)
     }
     /**
-     * `repeated .ei.IAPSaleEntry sales = 1;`
+     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
      * @param values The sales to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllSales")
+@kotlin.jvm.JvmName("addAllSales")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.IAPSaleEntry>) {
       _builder.addAllSales(values)
     }
     /**
-     * `repeated .ei.IAPSaleEntry sales = 1;`
+     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
      * @param values The sales to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllSales")
+@kotlin.jvm.JvmName("plusAssignAllSales")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.IAPSaleEntry>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.IAPSaleEntry sales = 1;`
+     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
      * @param index The index to set the value at.
      * @param value The sales to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setSales")
+@kotlin.jvm.JvmName("setSales")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>.set(index: kotlin.Int, value: ei.Ei.IAPSaleEntry) {
       _builder.setSales(index, value)
     }
     /**
-     * `repeated .ei.IAPSaleEntry sales = 1;`
+     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearSales")
+@kotlin.jvm.JvmName("clearSales")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.IAPSaleEntry, SalesProxy>.clear() {
       _builder.clearSales()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

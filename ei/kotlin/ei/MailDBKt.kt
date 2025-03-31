@@ -39,86 +39,93 @@ public object MailDBKt {
      */
      public val mail: com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.mailList
       )
     /**
-     * `repeated .ei.InGameMail mail = 1;`
+     * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param value The mail to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addMail")
+@kotlin.jvm.JvmName("addMail")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.add(value: ei.Ei.InGameMail) {
       _builder.addMail(value)
     }
     /**
-     * `repeated .ei.InGameMail mail = 1;`
+     * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param value The mail to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignMail")
+@kotlin.jvm.JvmName("plusAssignMail")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.plusAssign(value: ei.Ei.InGameMail) {
       add(value)
     }
     /**
-     * `repeated .ei.InGameMail mail = 1;`
+     * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param values The mail to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllMail")
+@kotlin.jvm.JvmName("addAllMail")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.InGameMail>) {
       _builder.addAllMail(values)
     }
     /**
-     * `repeated .ei.InGameMail mail = 1;`
+     * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param values The mail to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllMail")
+@kotlin.jvm.JvmName("plusAssignAllMail")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.InGameMail>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.InGameMail mail = 1;`
+     * <code>repeated .ei.InGameMail mail = 1;</code>
      * @param index The index to set the value at.
      * @param value The mail to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setMail")
+@kotlin.jvm.JvmName("setMail")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.set(index: kotlin.Int, value: ei.Ei.InGameMail) {
       _builder.setMail(index, value)
     }
     /**
-     * `repeated .ei.InGameMail mail = 1;`
+     * <code>repeated .ei.InGameMail mail = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearMail")
+@kotlin.jvm.JvmName("clearMail")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, MailProxy>.clear() {
       _builder.clearMail()
     }
-
 
     /**
      * `optional bytes tips_db_data = 2;`
      */
     public var tipsDbData: com.google.protobuf.ByteString
-      @JvmName("getTipsDbData")
-      get() = _builder.tipsDbData
-      @JvmName("setTipsDbData")
-      set(value) {
+      @kotlin.jvm.JvmName("getTipsDbData")
+        get() = _builder.tipsDbData
+      @kotlin.jvm.JvmName("setTipsDbData")
+        set(value) {
         _builder.tipsDbData = value
       }
     /**
-     * `optional bytes tips_db_data = 2;`
+     * <code>optional bytes tips_db_data = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearTipsDbData() {
       _builder.clearTipsDbData()
     }
     /**
-     * `optional bytes tips_db_data = 2;`
+     * <code>optional bytes tips_db_data = 2;</code>
      * @return Whether the tipsDbData field is set.
+     * @return This builder for chaining.
      */
     public fun hasTipsDbData(): kotlin.Boolean {
       return _builder.hasTipsDbData()
@@ -128,21 +135,23 @@ public object MailDBKt {
      * `optional string tips_checksum = 3;`
      */
     public var tipsChecksum: kotlin.String
-      @JvmName("getTipsChecksum")
-      get() = _builder.tipsChecksum
-      @JvmName("setTipsChecksum")
-      set(value) {
+      @kotlin.jvm.JvmName("getTipsChecksum")
+        get() = _builder.tipsChecksum
+      @kotlin.jvm.JvmName("setTipsChecksum")
+        set(value) {
         _builder.tipsChecksum = value
       }
     /**
-     * `optional string tips_checksum = 3;`
+     * <code>optional string tips_checksum = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearTipsChecksum() {
       _builder.clearTipsChecksum()
     }
     /**
-     * `optional string tips_checksum = 3;`
+     * <code>optional string tips_checksum = 3;</code>
      * @return Whether the tipsChecksum field is set.
+     * @return This builder for chaining.
      */
     public fun hasTipsChecksum(): kotlin.Boolean {
       return _builder.hasTipsChecksum()

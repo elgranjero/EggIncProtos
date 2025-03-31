@@ -32,21 +32,23 @@ public object MissionInfoKt {
      * `optional .ei.MissionInfo.Spaceship ship = 1;`
      */
     public var ship: ei.Ei.MissionInfo.Spaceship
-      @JvmName("getShip")
-      get() = _builder.ship
-      @JvmName("setShip")
-      set(value) {
+      @kotlin.jvm.JvmName("getShip")
+        get() = _builder.ship
+      @kotlin.jvm.JvmName("setShip")
+        set(value) {
         _builder.ship = value
       }
     /**
-     * `optional .ei.MissionInfo.Spaceship ship = 1;`
+     * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearShip() {
       _builder.clearShip()
     }
     /**
-     * `optional .ei.MissionInfo.Spaceship ship = 1;`
+     * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
      * @return Whether the ship field is set.
+     * @return This builder for chaining.
      */
     public fun hasShip(): kotlin.Boolean {
       return _builder.hasShip()
@@ -56,21 +58,23 @@ public object MissionInfoKt {
      * `optional .ei.MissionInfo.Status status = 2;`
      */
     public var status: ei.Ei.MissionInfo.Status
-      @JvmName("getStatus")
-      get() = _builder.status
-      @JvmName("setStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getStatus")
+        get() = _builder.status
+      @kotlin.jvm.JvmName("setStatus")
+        set(value) {
         _builder.status = value
       }
     /**
-     * `optional .ei.MissionInfo.Status status = 2;`
+     * <code>optional .ei.MissionInfo.Status status = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * `optional .ei.MissionInfo.Status status = 2;`
+     * <code>optional .ei.MissionInfo.Status status = 2;</code>
      * @return Whether the status field is set.
+     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -80,21 +84,23 @@ public object MissionInfoKt {
      * `optional .ei.MissionInfo.DurationType duration_type = 3;`
      */
     public var durationType: ei.Ei.MissionInfo.DurationType
-      @JvmName("getDurationType")
-      get() = _builder.durationType
-      @JvmName("setDurationType")
-      set(value) {
+      @kotlin.jvm.JvmName("getDurationType")
+        get() = _builder.durationType
+      @kotlin.jvm.JvmName("setDurationType")
+        set(value) {
         _builder.durationType = value
       }
     /**
-     * `optional .ei.MissionInfo.DurationType duration_type = 3;`
+     * <code>optional .ei.MissionInfo.DurationType duration_type = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearDurationType() {
       _builder.clearDurationType()
     }
     /**
-     * `optional .ei.MissionInfo.DurationType duration_type = 3;`
+     * <code>optional .ei.MissionInfo.DurationType duration_type = 3;</code>
      * @return Whether the durationType field is set.
+     * @return This builder for chaining.
      */
     public fun hasDurationType(): kotlin.Boolean {
       return _builder.hasDurationType()
@@ -111,86 +117,93 @@ public object MissionInfoKt {
      */
      public val fuel: com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.fuelList
       )
     /**
-     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
+     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param value The fuel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addFuel")
+@kotlin.jvm.JvmName("addFuel")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.add(value: ei.Ei.MissionInfo.Fuel) {
       _builder.addFuel(value)
     }
     /**
-     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
+     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param value The fuel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignFuel")
+@kotlin.jvm.JvmName("plusAssignFuel")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.plusAssign(value: ei.Ei.MissionInfo.Fuel) {
       add(value)
     }
     /**
-     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
+     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param values The fuel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllFuel")
+@kotlin.jvm.JvmName("addAllFuel")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.MissionInfo.Fuel>) {
       _builder.addAllFuel(values)
     }
     /**
-     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
+     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param values The fuel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllFuel")
+@kotlin.jvm.JvmName("plusAssignAllFuel")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.MissionInfo.Fuel>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
+     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
      * @param index The index to set the value at.
      * @param value The fuel to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setFuel")
+@kotlin.jvm.JvmName("setFuel")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.set(index: kotlin.Int, value: ei.Ei.MissionInfo.Fuel) {
       _builder.setFuel(index, value)
     }
     /**
-     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
+     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearFuel")
+@kotlin.jvm.JvmName("clearFuel")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo.Fuel, FuelProxy>.clear() {
       _builder.clearFuel()
     }
-
 
     /**
      * `optional uint32 level = 12;`
      */
     public var level: kotlin.Int
-      @JvmName("getLevel")
-      get() = _builder.level
-      @JvmName("setLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getLevel")
+        get() = _builder.level
+      @kotlin.jvm.JvmName("setLevel")
+        set(value) {
         _builder.level = value
       }
     /**
-     * `optional uint32 level = 12;`
+     * <code>optional uint32 level = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearLevel() {
       _builder.clearLevel()
     }
     /**
-     * `optional uint32 level = 12;`
+     * <code>optional uint32 level = 12;</code>
      * @return Whether the level field is set.
+     * @return This builder for chaining.
      */
     public fun hasLevel(): kotlin.Boolean {
       return _builder.hasLevel()
@@ -200,21 +213,23 @@ public object MissionInfoKt {
      * `optional double duration_seconds = 5;`
      */
     public var durationSeconds: kotlin.Double
-      @JvmName("getDurationSeconds")
-      get() = _builder.durationSeconds
-      @JvmName("setDurationSeconds")
-      set(value) {
+      @kotlin.jvm.JvmName("getDurationSeconds")
+        get() = _builder.durationSeconds
+      @kotlin.jvm.JvmName("setDurationSeconds")
+        set(value) {
         _builder.durationSeconds = value
       }
     /**
-     * `optional double duration_seconds = 5;`
+     * <code>optional double duration_seconds = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearDurationSeconds() {
       _builder.clearDurationSeconds()
     }
     /**
-     * `optional double duration_seconds = 5;`
+     * <code>optional double duration_seconds = 5;</code>
      * @return Whether the durationSeconds field is set.
+     * @return This builder for chaining.
      */
     public fun hasDurationSeconds(): kotlin.Boolean {
       return _builder.hasDurationSeconds()
@@ -224,21 +239,23 @@ public object MissionInfoKt {
      * `optional uint32 capacity = 9;`
      */
     public var capacity: kotlin.Int
-      @JvmName("getCapacity")
-      get() = _builder.capacity
-      @JvmName("setCapacity")
-      set(value) {
+      @kotlin.jvm.JvmName("getCapacity")
+        get() = _builder.capacity
+      @kotlin.jvm.JvmName("setCapacity")
+        set(value) {
         _builder.capacity = value
       }
     /**
-     * `optional uint32 capacity = 9;`
+     * <code>optional uint32 capacity = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearCapacity() {
       _builder.clearCapacity()
     }
     /**
-     * `optional uint32 capacity = 9;`
+     * <code>optional uint32 capacity = 9;</code>
      * @return Whether the capacity field is set.
+     * @return This builder for chaining.
      */
     public fun hasCapacity(): kotlin.Boolean {
       return _builder.hasCapacity()
@@ -248,21 +265,23 @@ public object MissionInfoKt {
      * `optional double quality_bump = 11;`
      */
     public var qualityBump: kotlin.Double
-      @JvmName("getQualityBump")
-      get() = _builder.qualityBump
-      @JvmName("setQualityBump")
-      set(value) {
+      @kotlin.jvm.JvmName("getQualityBump")
+        get() = _builder.qualityBump
+      @kotlin.jvm.JvmName("setQualityBump")
+        set(value) {
         _builder.qualityBump = value
       }
     /**
-     * `optional double quality_bump = 11;`
+     * <code>optional double quality_bump = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearQualityBump() {
       _builder.clearQualityBump()
     }
     /**
-     * `optional double quality_bump = 11;`
+     * <code>optional double quality_bump = 11;</code>
      * @return Whether the qualityBump field is set.
+     * @return This builder for chaining.
      */
     public fun hasQualityBump(): kotlin.Boolean {
       return _builder.hasQualityBump()
@@ -272,21 +291,23 @@ public object MissionInfoKt {
      * `optional .ei.ArtifactSpec.Name target_artifact = 13;`
      */
     public var targetArtifact: ei.Ei.ArtifactSpec.Name
-      @JvmName("getTargetArtifact")
-      get() = _builder.targetArtifact
-      @JvmName("setTargetArtifact")
-      set(value) {
+      @kotlin.jvm.JvmName("getTargetArtifact")
+        get() = _builder.targetArtifact
+      @kotlin.jvm.JvmName("setTargetArtifact")
+        set(value) {
         _builder.targetArtifact = value
       }
     /**
-     * `optional .ei.ArtifactSpec.Name target_artifact = 13;`
+     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearTargetArtifact() {
       _builder.clearTargetArtifact()
     }
     /**
-     * `optional .ei.ArtifactSpec.Name target_artifact = 13;`
+     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
      * @return Whether the targetArtifact field is set.
+     * @return This builder for chaining.
      */
     public fun hasTargetArtifact(): kotlin.Boolean {
       return _builder.hasTargetArtifact()
@@ -296,21 +317,23 @@ public object MissionInfoKt {
      * `optional double seconds_remaining = 6;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 6;`
+     * <code>optional double seconds_remaining = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 6;`
+     * <code>optional double seconds_remaining = 6;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -320,21 +343,23 @@ public object MissionInfoKt {
      * `optional double start_time_derived = 8;`
      */
     public var startTimeDerived: kotlin.Double
-      @JvmName("getStartTimeDerived")
-      get() = _builder.startTimeDerived
-      @JvmName("setStartTimeDerived")
-      set(value) {
+      @kotlin.jvm.JvmName("getStartTimeDerived")
+        get() = _builder.startTimeDerived
+      @kotlin.jvm.JvmName("setStartTimeDerived")
+        set(value) {
         _builder.startTimeDerived = value
       }
     /**
-     * `optional double start_time_derived = 8;`
+     * <code>optional double start_time_derived = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearStartTimeDerived() {
       _builder.clearStartTimeDerived()
     }
     /**
-     * `optional double start_time_derived = 8;`
+     * <code>optional double start_time_derived = 8;</code>
      * @return Whether the startTimeDerived field is set.
+     * @return This builder for chaining.
      */
     public fun hasStartTimeDerived(): kotlin.Boolean {
       return _builder.hasStartTimeDerived()
@@ -344,21 +369,23 @@ public object MissionInfoKt {
      * `optional string mission_log = 10;`
      */
     public var missionLog: kotlin.String
-      @JvmName("getMissionLog")
-      get() = _builder.missionLog
-      @JvmName("setMissionLog")
-      set(value) {
+      @kotlin.jvm.JvmName("getMissionLog")
+        get() = _builder.missionLog
+      @kotlin.jvm.JvmName("setMissionLog")
+        set(value) {
         _builder.missionLog = value
       }
     /**
-     * `optional string mission_log = 10;`
+     * <code>optional string mission_log = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearMissionLog() {
       _builder.clearMissionLog()
     }
     /**
-     * `optional string mission_log = 10;`
+     * <code>optional string mission_log = 10;</code>
      * @return Whether the missionLog field is set.
+     * @return This builder for chaining.
      */
     public fun hasMissionLog(): kotlin.Boolean {
       return _builder.hasMissionLog()
@@ -368,21 +395,23 @@ public object MissionInfoKt {
      * `optional string identifier = 7;`
      */
     public var identifier: kotlin.String
-      @JvmName("getIdentifier")
-      get() = _builder.identifier
-      @JvmName("setIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getIdentifier")
+        get() = _builder.identifier
+      @kotlin.jvm.JvmName("setIdentifier")
+        set(value) {
         _builder.identifier = value
       }
     /**
-     * `optional string identifier = 7;`
+     * <code>optional string identifier = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * `optional string identifier = 7;`
+     * <code>optional string identifier = 7;</code>
      * @return Whether the identifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -414,21 +443,23 @@ public object MissionInfoKt {
        * `optional .ei.Egg egg = 1;`
        */
       public var egg: ei.Ei.Egg
-        @JvmName("getEgg")
-        get() = _builder.egg
-        @JvmName("setEgg")
-        set(value) {
+        @kotlin.jvm.JvmName("getEgg")
+          get() = _builder.egg
+        @kotlin.jvm.JvmName("setEgg")
+          set(value) {
           _builder.egg = value
         }
       /**
-       * `optional .ei.Egg egg = 1;`
+       * <code>optional .ei.Egg egg = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearEgg() {
         _builder.clearEgg()
       }
       /**
-       * `optional .ei.Egg egg = 1;`
+       * <code>optional .ei.Egg egg = 1;</code>
        * @return Whether the egg field is set.
+       * @return This builder for chaining.
        */
       public fun hasEgg(): kotlin.Boolean {
         return _builder.hasEgg()
@@ -438,21 +469,23 @@ public object MissionInfoKt {
        * `optional double amount = 2;`
        */
       public var amount: kotlin.Double
-        @JvmName("getAmount")
-        get() = _builder.amount
-        @JvmName("setAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getAmount")
+          get() = _builder.amount
+        @kotlin.jvm.JvmName("setAmount")
+          set(value) {
           _builder.amount = value
         }
       /**
-       * `optional double amount = 2;`
+       * <code>optional double amount = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearAmount() {
         _builder.clearAmount()
       }
       /**
-       * `optional double amount = 2;`
+       * <code>optional double amount = 2;</code>
        * @return Whether the amount field is set.
+       * @return This builder for chaining.
        */
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()

@@ -70,15 +70,15 @@ proto.ei.AdAttributionRow.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.AdAttributionRow.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-adId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-adNetwork: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-campaign: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-keyword: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-extra: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-clickDate: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-downloadDate: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    adId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    adNetwork: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    campaign: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    keyword: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    extra: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    clickDate: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    downloadDate: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {

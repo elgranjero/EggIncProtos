@@ -32,21 +32,23 @@ public object ArtifactSpecKt {
      * `optional .ei.ArtifactSpec.Name name = 1;`
      */
     public var name: ei.Ei.ArtifactSpec.Name
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional .ei.ArtifactSpec.Name name = 1;`
+     * <code>optional .ei.ArtifactSpec.Name name = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional .ei.ArtifactSpec.Name name = 1;`
+     * <code>optional .ei.ArtifactSpec.Name name = 1;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -56,21 +58,23 @@ public object ArtifactSpecKt {
      * `optional .ei.ArtifactSpec.Level level = 2;`
      */
     public var level: ei.Ei.ArtifactSpec.Level
-      @JvmName("getLevel")
-      get() = _builder.level
-      @JvmName("setLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getLevel")
+        get() = _builder.level
+      @kotlin.jvm.JvmName("setLevel")
+        set(value) {
         _builder.level = value
       }
     /**
-     * `optional .ei.ArtifactSpec.Level level = 2;`
+     * <code>optional .ei.ArtifactSpec.Level level = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearLevel() {
       _builder.clearLevel()
     }
     /**
-     * `optional .ei.ArtifactSpec.Level level = 2;`
+     * <code>optional .ei.ArtifactSpec.Level level = 2;</code>
      * @return Whether the level field is set.
+     * @return This builder for chaining.
      */
     public fun hasLevel(): kotlin.Boolean {
       return _builder.hasLevel()
@@ -80,21 +84,23 @@ public object ArtifactSpecKt {
      * `optional .ei.ArtifactSpec.Rarity rarity = 3;`
      */
     public var rarity: ei.Ei.ArtifactSpec.Rarity
-      @JvmName("getRarity")
-      get() = _builder.rarity
-      @JvmName("setRarity")
-      set(value) {
+      @kotlin.jvm.JvmName("getRarity")
+        get() = _builder.rarity
+      @kotlin.jvm.JvmName("setRarity")
+        set(value) {
         _builder.rarity = value
       }
     /**
-     * `optional .ei.ArtifactSpec.Rarity rarity = 3;`
+     * <code>optional .ei.ArtifactSpec.Rarity rarity = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearRarity() {
       _builder.clearRarity()
     }
     /**
-     * `optional .ei.ArtifactSpec.Rarity rarity = 3;`
+     * <code>optional .ei.ArtifactSpec.Rarity rarity = 3;</code>
      * @return Whether the rarity field is set.
+     * @return This builder for chaining.
      */
     public fun hasRarity(): kotlin.Boolean {
       return _builder.hasRarity()
@@ -104,21 +110,23 @@ public object ArtifactSpecKt {
      * `optional .ei.Egg egg = 4;`
      */
     public var egg: ei.Ei.Egg
-      @JvmName("getEgg")
-      get() = _builder.egg
-      @JvmName("setEgg")
-      set(value) {
+      @kotlin.jvm.JvmName("getEgg")
+        get() = _builder.egg
+      @kotlin.jvm.JvmName("setEgg")
+        set(value) {
         _builder.egg = value
       }
     /**
-     * `optional .ei.Egg egg = 4;`
+     * <code>optional .ei.Egg egg = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearEgg() {
       _builder.clearEgg()
     }
     /**
-     * `optional .ei.Egg egg = 4;`
+     * <code>optional .ei.Egg egg = 4;</code>
      * @return Whether the egg field is set.
+     * @return This builder for chaining.
      */
     public fun hasEgg(): kotlin.Boolean {
       return _builder.hasEgg()

@@ -32,21 +32,23 @@ public object EggIncFirstContactRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 8;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 8;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 8;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object EggIncFirstContactRequestKt {
      * `optional string ei_user_id = 4;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 4;`
+     * <code>optional string ei_user_id = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 4;`
+     * <code>optional string ei_user_id = 4;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -83,21 +87,23 @@ public object EggIncFirstContactRequestKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -107,21 +113,23 @@ public object EggIncFirstContactRequestKt {
      * `optional string game_services_id = 7;`
      */
     public var gameServicesId: kotlin.String
-      @JvmName("getGameServicesId")
-      get() = _builder.gameServicesId
-      @JvmName("setGameServicesId")
-      set(value) {
+      @kotlin.jvm.JvmName("getGameServicesId")
+        get() = _builder.gameServicesId
+      @kotlin.jvm.JvmName("setGameServicesId")
+        set(value) {
         _builder.gameServicesId = value
       }
     /**
-     * `optional string game_services_id = 7;`
+     * <code>optional string game_services_id = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearGameServicesId() {
       _builder.clearGameServicesId()
     }
     /**
-     * `optional string game_services_id = 7;`
+     * <code>optional string game_services_id = 7;</code>
      * @return Whether the gameServicesId field is set.
+     * @return This builder for chaining.
      */
     public fun hasGameServicesId(): kotlin.Boolean {
       return _builder.hasGameServicesId()
@@ -131,21 +139,23 @@ public object EggIncFirstContactRequestKt {
      * `optional string device_id = 5;`
      */
     public var deviceId: kotlin.String
-      @JvmName("getDeviceId")
-      get() = _builder.deviceId
-      @JvmName("setDeviceId")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceId")
+        get() = _builder.deviceId
+      @kotlin.jvm.JvmName("setDeviceId")
+        set(value) {
         _builder.deviceId = value
       }
     /**
-     * `optional string device_id = 5;`
+     * <code>optional string device_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * `optional string device_id = 5;`
+     * <code>optional string device_id = 5;</code>
      * @return Whether the deviceId field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -155,21 +165,23 @@ public object EggIncFirstContactRequestKt {
      * `optional string username = 6;`
      */
     public var username: kotlin.String
-      @JvmName("getUsername")
-      get() = _builder.username
-      @JvmName("setUsername")
-      set(value) {
+      @kotlin.jvm.JvmName("getUsername")
+        get() = _builder.username
+      @kotlin.jvm.JvmName("setUsername")
+        set(value) {
         _builder.username = value
       }
     /**
-     * `optional string username = 6;`
+     * <code>optional string username = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearUsername() {
       _builder.clearUsername()
     }
     /**
-     * `optional string username = 6;`
+     * <code>optional string username = 6;</code>
      * @return Whether the username field is set.
+     * @return This builder for chaining.
      */
     public fun hasUsername(): kotlin.Boolean {
       return _builder.hasUsername()
@@ -179,21 +191,23 @@ public object EggIncFirstContactRequestKt {
      * `optional uint32 client_version = 2;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 2;`
+     * <code>optional uint32 client_version = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 2;`
+     * <code>optional uint32 client_version = 2;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -203,21 +217,23 @@ public object EggIncFirstContactRequestKt {
      * `optional .ei.Platform platform = 3;`
      */
     public var platform: ei.Ei.Platform
-      @JvmName("getPlatform")
-      get() = _builder.platform
-      @JvmName("setPlatform")
-      set(value) {
+      @kotlin.jvm.JvmName("getPlatform")
+        get() = _builder.platform
+      @kotlin.jvm.JvmName("setPlatform")
+        set(value) {
         _builder.platform = value
       }
     /**
-     * `optional .ei.Platform platform = 3;`
+     * <code>optional .ei.Platform platform = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * `optional .ei.Platform platform = 3;`
+     * <code>optional .ei.Platform platform = 3;</code>
      * @return Whether the platform field is set.
+     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()

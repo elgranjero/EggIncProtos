@@ -102,26 +102,26 @@ proto.ei.ShellObjectSpec.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellObjectSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-assetType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-objectClass: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-iconColorsList: (f = jspb.Message.getRepeatedField(msg, 15)) == null ? undefined : f,
-price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-isNew: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-expires: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-popularity: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
-metadataList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f,
-noHats: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
-chickenAnimation: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-sortPriority: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-piecesList: jspb.Message.toObjectList(msg.getPiecesList(),
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    assetType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    objectClass: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    iconColorsList: (f = jspb.Message.getRepeatedField(msg, 15)) == null ? undefined : f,
+    price: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    requiredEop: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    isNew: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    expires: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    popularity: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
+    metadataList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f,
+    noHats: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    chickenAnimation: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    sortPriority: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+    piecesList: jspb.Message.toObjectList(msg.getPiecesList(),
     proto.ei.ShellObjectSpec.LODPiece.toObject, includeInstance),
-defaultAppearance: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f
+    defaultAppearance: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -450,8 +450,8 @@ proto.ei.ShellObjectSpec.LODPiece.prototype.toObject = function(opt_includeInsta
  */
 proto.ei.ShellObjectSpec.LODPiece.toObject = function(includeInstance, msg) {
   var f, obj = {
-dlc: (f = msg.getDlc()) && proto.ei.DLCItem.toObject(includeInstance, f),
-lod: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    dlc: (f = msg.getDlc()) && proto.ei.DLCItem.toObject(includeInstance, f),
+    lod: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

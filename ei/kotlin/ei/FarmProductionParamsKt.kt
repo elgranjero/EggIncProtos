@@ -32,21 +32,23 @@ public object FarmProductionParamsKt {
      * `optional double farm_population = 1;`
      */
     public var farmPopulation: kotlin.Double
-      @JvmName("getFarmPopulation")
-      get() = _builder.farmPopulation
-      @JvmName("setFarmPopulation")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmPopulation")
+        get() = _builder.farmPopulation
+      @kotlin.jvm.JvmName("setFarmPopulation")
+        set(value) {
         _builder.farmPopulation = value
       }
     /**
-     * `optional double farm_population = 1;`
+     * <code>optional double farm_population = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmPopulation() {
       _builder.clearFarmPopulation()
     }
     /**
-     * `optional double farm_population = 1;`
+     * <code>optional double farm_population = 1;</code>
      * @return Whether the farmPopulation field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmPopulation(): kotlin.Boolean {
       return _builder.hasFarmPopulation()
@@ -56,21 +58,23 @@ public object FarmProductionParamsKt {
      * `optional double farm_capacity = 2;`
      */
     public var farmCapacity: kotlin.Double
-      @JvmName("getFarmCapacity")
-      get() = _builder.farmCapacity
-      @JvmName("setFarmCapacity")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmCapacity")
+        get() = _builder.farmCapacity
+      @kotlin.jvm.JvmName("setFarmCapacity")
+        set(value) {
         _builder.farmCapacity = value
       }
     /**
-     * `optional double farm_capacity = 2;`
+     * <code>optional double farm_capacity = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmCapacity() {
       _builder.clearFarmCapacity()
     }
     /**
-     * `optional double farm_capacity = 2;`
+     * <code>optional double farm_capacity = 2;</code>
      * @return Whether the farmCapacity field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmCapacity(): kotlin.Boolean {
       return _builder.hasFarmCapacity()
@@ -80,21 +84,23 @@ public object FarmProductionParamsKt {
      * `optional double elr = 3;`
      */
     public var elr: kotlin.Double
-      @JvmName("getElr")
-      get() = _builder.elr
-      @JvmName("setElr")
-      set(value) {
+      @kotlin.jvm.JvmName("getElr")
+        get() = _builder.elr
+      @kotlin.jvm.JvmName("setElr")
+        set(value) {
         _builder.elr = value
       }
     /**
-     * `optional double elr = 3;`
+     * <code>optional double elr = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearElr() {
       _builder.clearElr()
     }
     /**
-     * `optional double elr = 3;`
+     * <code>optional double elr = 3;</code>
      * @return Whether the elr field is set.
+     * @return This builder for chaining.
      */
     public fun hasElr(): kotlin.Boolean {
       return _builder.hasElr()
@@ -104,21 +110,23 @@ public object FarmProductionParamsKt {
      * `optional double ihr = 4;`
      */
     public var ihr: kotlin.Double
-      @JvmName("getIhr")
-      get() = _builder.ihr
-      @JvmName("setIhr")
-      set(value) {
+      @kotlin.jvm.JvmName("getIhr")
+        get() = _builder.ihr
+      @kotlin.jvm.JvmName("setIhr")
+        set(value) {
         _builder.ihr = value
       }
     /**
-     * `optional double ihr = 4;`
+     * <code>optional double ihr = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearIhr() {
       _builder.clearIhr()
     }
     /**
-     * `optional double ihr = 4;`
+     * <code>optional double ihr = 4;</code>
      * @return Whether the ihr field is set.
+     * @return This builder for chaining.
      */
     public fun hasIhr(): kotlin.Boolean {
       return _builder.hasIhr()
@@ -128,21 +136,23 @@ public object FarmProductionParamsKt {
      * `optional double sr = 5;`
      */
     public var sr: kotlin.Double
-      @JvmName("getSr")
-      get() = _builder.sr
-      @JvmName("setSr")
-      set(value) {
+      @kotlin.jvm.JvmName("getSr")
+        get() = _builder.sr
+      @kotlin.jvm.JvmName("setSr")
+        set(value) {
         _builder.sr = value
       }
     /**
-     * `optional double sr = 5;`
+     * <code>optional double sr = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearSr() {
       _builder.clearSr()
     }
     /**
-     * `optional double sr = 5;`
+     * <code>optional double sr = 5;</code>
      * @return Whether the sr field is set.
+     * @return This builder for chaining.
      */
     public fun hasSr(): kotlin.Boolean {
       return _builder.hasSr()
@@ -152,21 +162,23 @@ public object FarmProductionParamsKt {
      * `optional double delivered = 6;`
      */
     public var delivered: kotlin.Double
-      @JvmName("getDelivered")
-      get() = _builder.delivered
-      @JvmName("setDelivered")
-      set(value) {
+      @kotlin.jvm.JvmName("getDelivered")
+        get() = _builder.delivered
+      @kotlin.jvm.JvmName("setDelivered")
+        set(value) {
         _builder.delivered = value
       }
     /**
-     * `optional double delivered = 6;`
+     * <code>optional double delivered = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearDelivered() {
       _builder.clearDelivered()
     }
     /**
-     * `optional double delivered = 6;`
+     * <code>optional double delivered = 6;</code>
      * @return Whether the delivered field is set.
+     * @return This builder for chaining.
      */
     public fun hasDelivered(): kotlin.Boolean {
       return _builder.hasDelivered()

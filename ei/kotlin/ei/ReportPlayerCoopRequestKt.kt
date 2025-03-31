@@ -32,21 +32,23 @@ public object ReportPlayerCoopRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ReportPlayerCoopRequestKt {
      * `optional string contract_identifier = 2;`
      */
     public var contractIdentifier: kotlin.String
-      @JvmName("getContractIdentifier")
-      get() = _builder.contractIdentifier
-      @JvmName("setContractIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractIdentifier")
+        get() = _builder.contractIdentifier
+      @kotlin.jvm.JvmName("setContractIdentifier")
+        set(value) {
         _builder.contractIdentifier = value
       }
     /**
-     * `optional string contract_identifier = 2;`
+     * <code>optional string contract_identifier = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * `optional string contract_identifier = 2;`
+     * <code>optional string contract_identifier = 2;</code>
      * @return Whether the contractIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -83,21 +87,23 @@ public object ReportPlayerCoopRequestKt {
      * `optional string coop_identifier = 3;`
      */
     public var coopIdentifier: kotlin.String
-      @JvmName("getCoopIdentifier")
-      get() = _builder.coopIdentifier
-      @JvmName("setCoopIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopIdentifier")
+        get() = _builder.coopIdentifier
+      @kotlin.jvm.JvmName("setCoopIdentifier")
+        set(value) {
         _builder.coopIdentifier = value
       }
     /**
-     * `optional string coop_identifier = 3;`
+     * <code>optional string coop_identifier = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * `optional string coop_identifier = 3;`
+     * <code>optional string coop_identifier = 3;</code>
      * @return Whether the coopIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -107,21 +113,23 @@ public object ReportPlayerCoopRequestKt {
      * `optional string user_id = 4;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 4;`
+     * <code>optional string user_id = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 4;`
+     * <code>optional string user_id = 4;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -131,21 +139,23 @@ public object ReportPlayerCoopRequestKt {
      * `optional .ei.ReportPlayerCoopRequest.Reason reason = 5;`
      */
     public var reason: ei.Ei.ReportPlayerCoopRequest.Reason
-      @JvmName("getReason")
-      get() = _builder.reason
-      @JvmName("setReason")
-      set(value) {
+      @kotlin.jvm.JvmName("getReason")
+        get() = _builder.reason
+      @kotlin.jvm.JvmName("setReason")
+        set(value) {
         _builder.reason = value
       }
     /**
-     * `optional .ei.ReportPlayerCoopRequest.Reason reason = 5;`
+     * <code>optional .ei.ReportPlayerCoopRequest.Reason reason = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearReason() {
       _builder.clearReason()
     }
     /**
-     * `optional .ei.ReportPlayerCoopRequest.Reason reason = 5;`
+     * <code>optional .ei.ReportPlayerCoopRequest.Reason reason = 5;</code>
      * @return Whether the reason field is set.
+     * @return This builder for chaining.
      */
     public fun hasReason(): kotlin.Boolean {
       return _builder.hasReason()

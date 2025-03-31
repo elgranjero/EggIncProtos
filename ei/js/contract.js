@@ -148,33 +148,33 @@ proto.ei.Contract.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Contract.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-description: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-egg: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-customEggId: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
-goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    description: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+    egg: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    customEggId: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
+    goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
     proto.ei.Contract.Goal.toObject, includeInstance),
-goalSetsList: jspb.Message.toObjectList(msg.getGoalSetsList(),
+    goalSetsList: jspb.Message.toObjectList(msg.getGoalSetsList(),
     proto.ei.Contract.GoalSet.toObject, includeInstance),
-gradeSpecsList: jspb.Message.toObjectList(msg.getGradeSpecsList(),
+    gradeSpecsList: jspb.Message.toObjectList(msg.getGradeSpecsList(),
     proto.ei.Contract.GradeSpec.toObject, includeInstance),
-seasonId: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
-coopAllowed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-maxCoopSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-maxBoosts: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-minutesPerToken: jspb.Message.getFloatingPointFieldWithDefault(msg, 15, 60.0),
-chickenRunCooldownMinutes: jspb.Message.getFloatingPointFieldWithDefault(msg, 18, 180.0),
-startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
-expirationTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-maxSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
-minClientVersion: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-leggacy: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
-ccOnly: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
-defaultShellIdsList: (f = jspb.Message.getRepeatedField(msg, 24)) == null ? undefined : f,
-debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-key: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f
+    seasonId: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
+    coopAllowed: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    maxCoopSize: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    maxBoosts: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    minutesPerToken: jspb.Message.getFloatingPointFieldWithDefault(msg, 15, 60.0),
+    chickenRunCooldownMinutes: jspb.Message.getFloatingPointFieldWithDefault(msg, 18, 180.0),
+    startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
+    expirationTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    maxSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
+    minClientVersion: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    leggacy: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
+    ccOnly: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
+    defaultShellIdsList: (f = jspb.Message.getRepeatedField(msg, 24)) == null ? undefined : f,
+    debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    key: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -557,12 +557,12 @@ proto.ei.Contract.Goal.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Contract.Goal.toObject = function(includeInstance, msg) {
   var f, obj = {
-type: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-targetAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-rewardType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-rewardSubType: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-targetSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
+    type: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    targetAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    rewardType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    rewardSubType: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    targetSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -952,7 +952,7 @@ proto.ei.Contract.GoalSet.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Contract.GoalSet.toObject = function(includeInstance, msg) {
   var f, obj = {
-goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
+    goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
     proto.ei.Contract.Goal.toObject, includeInstance)
   };
 
@@ -1112,12 +1112,12 @@ proto.ei.Contract.GradeSpec.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Contract.GradeSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
+    grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
     proto.ei.Contract.Goal.toObject, includeInstance),
-modifiersList: jspb.Message.toObjectList(msg.getModifiersList(),
+    modifiersList: jspb.Message.toObjectList(msg.getModifiersList(),
     proto.ei.GameModifier.toObject, includeInstance),
-lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+    lengthSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

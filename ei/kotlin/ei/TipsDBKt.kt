@@ -39,66 +39,71 @@ public object TipsDBKt {
      */
      public val tips: com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.tipsList
       )
     /**
-     * `repeated .ei.InGameMail tips = 1;`
+     * <code>repeated .ei.InGameMail tips = 1;</code>
      * @param value The tips to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addTips")
+@kotlin.jvm.JvmName("addTips")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>.add(value: ei.Ei.InGameMail) {
       _builder.addTips(value)
     }
     /**
-     * `repeated .ei.InGameMail tips = 1;`
+     * <code>repeated .ei.InGameMail tips = 1;</code>
      * @param value The tips to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignTips")
+@kotlin.jvm.JvmName("plusAssignTips")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>.plusAssign(value: ei.Ei.InGameMail) {
       add(value)
     }
     /**
-     * `repeated .ei.InGameMail tips = 1;`
+     * <code>repeated .ei.InGameMail tips = 1;</code>
      * @param values The tips to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllTips")
+@kotlin.jvm.JvmName("addAllTips")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.InGameMail>) {
       _builder.addAllTips(values)
     }
     /**
-     * `repeated .ei.InGameMail tips = 1;`
+     * <code>repeated .ei.InGameMail tips = 1;</code>
      * @param values The tips to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllTips")
+@kotlin.jvm.JvmName("plusAssignAllTips")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.InGameMail>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.InGameMail tips = 1;`
+     * <code>repeated .ei.InGameMail tips = 1;</code>
      * @param index The index to set the value at.
      * @param value The tips to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setTips")
+@kotlin.jvm.JvmName("setTips")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>.set(index: kotlin.Int, value: ei.Ei.InGameMail) {
       _builder.setTips(index, value)
     }
     /**
-     * `repeated .ei.InGameMail tips = 1;`
+     * <code>repeated .ei.InGameMail tips = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearTips")
+@kotlin.jvm.JvmName("clearTips")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.InGameMail, TipsProxy>.clear() {
       _builder.clearTips()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

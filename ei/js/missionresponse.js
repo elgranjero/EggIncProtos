@@ -71,8 +71,8 @@ proto.ei.MissionResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MissionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-info: (f = msg.getInfo()) && proto.ei.MissionInfo.toObject(includeInstance, f)
+    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    info: (f = msg.getInfo()) && proto.ei.MissionInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

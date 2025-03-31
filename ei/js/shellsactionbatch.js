@@ -79,8 +79,8 @@ proto.ei.ShellsActionBatch.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellsActionBatch.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-actionsList: jspb.Message.toObjectList(msg.getActionsList(),
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    actionsList: jspb.Message.toObjectList(msg.getActionsList(),
     proto.ei.ShellsActionLog.toObject, includeInstance)
   };
 

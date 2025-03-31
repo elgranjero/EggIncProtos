@@ -32,21 +32,23 @@ public object ContractSimPollKt {
      * `optional uint32 client_version = 1;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 1;`
+     * <code>optional uint32 client_version = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 1;`
+     * <code>optional uint32 client_version = 1;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

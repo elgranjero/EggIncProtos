@@ -73,18 +73,18 @@ proto.ei.AutoJoinCoopRequest.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.AutoJoinCoopRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-eop: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-league: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-pointsReplay: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-platform: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    eop: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    league: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    pointsReplay: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    platform: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {

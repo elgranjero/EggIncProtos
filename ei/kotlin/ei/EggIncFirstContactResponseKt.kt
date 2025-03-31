@@ -32,21 +32,23 @@ public object EggIncFirstContactResponseKt {
      * `optional string ei_user_id = 2;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 2;`
+     * <code>optional string ei_user_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 2;`
+     * <code>optional string ei_user_id = 2;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -59,66 +61,73 @@ public object EggIncFirstContactResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class IdsTransferredProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
      * @return A list containing the idsTransferred.
+     * @return This builder for chaining.
      */
     public val idsTransferred: com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.idsTransferredList
       )
     /**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
      * @param value The idsTransferred to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addIdsTransferred")
+@kotlin.jvm.JvmName("addIdsTransferred")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>.add(value: kotlin.String) {
       _builder.addIdsTransferred(value)
     }
     /**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
      * @param value The idsTransferred to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignIdsTransferred")
+@kotlin.jvm.JvmName("plusAssignIdsTransferred")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
      * @param values The idsTransferred to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllIdsTransferred")
+@kotlin.jvm.JvmName("addAllIdsTransferred")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllIdsTransferred(values)
     }
     /**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
      * @param values The idsTransferred to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllIdsTransferred")
+@kotlin.jvm.JvmName("plusAssignAllIdsTransferred")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
      * @param index The index to set the value at.
      * @param value The idsTransferred to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setIdsTransferred")
+@kotlin.jvm.JvmName("setIdsTransferred")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setIdsTransferred(index, value)
     }/**
-     * `repeated string ids_transferred = 3;`
+     * <code>repeated string ids_transferred = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearIdsTransferred")
+@kotlin.jvm.JvmName("setIdsTransferred")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsTransferredProxy>.clear() {
       _builder.clearIdsTransferred()
     }
@@ -126,21 +135,23 @@ public object EggIncFirstContactResponseKt {
      * `optional uint32 error_code = 4 [default = 0];`
      */
     public var errorCode: kotlin.Int
-      @JvmName("getErrorCode")
-      get() = _builder.errorCode
-      @JvmName("setErrorCode")
-      set(value) {
+      @kotlin.jvm.JvmName("getErrorCode")
+        get() = _builder.errorCode
+      @kotlin.jvm.JvmName("setErrorCode")
+        set(value) {
         _builder.errorCode = value
       }
     /**
-     * `optional uint32 error_code = 4 [default = 0];`
+     * <code>optional uint32 error_code = 4 [default = 0];</code>
+     * @return This builder for chaining.
      */
     public fun clearErrorCode() {
       _builder.clearErrorCode()
     }
     /**
-     * `optional uint32 error_code = 4 [default = 0];`
+     * <code>optional uint32 error_code = 4 [default = 0];</code>
      * @return Whether the errorCode field is set.
+     * @return This builder for chaining.
      */
     public fun hasErrorCode(): kotlin.Boolean {
       return _builder.hasErrorCode()
@@ -150,21 +161,23 @@ public object EggIncFirstContactResponseKt {
      * `optional string error_message = 5;`
      */
     public var errorMessage: kotlin.String
-      @JvmName("getErrorMessage")
-      get() = _builder.errorMessage
-      @JvmName("setErrorMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getErrorMessage")
+        get() = _builder.errorMessage
+      @kotlin.jvm.JvmName("setErrorMessage")
+        set(value) {
         _builder.errorMessage = value
       }
     /**
-     * `optional string error_message = 5;`
+     * <code>optional string error_message = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearErrorMessage() {
       _builder.clearErrorMessage()
     }
     /**
-     * `optional string error_message = 5;`
+     * <code>optional string error_message = 5;</code>
      * @return Whether the errorMessage field is set.
+     * @return This builder for chaining.
      */
     public fun hasErrorMessage(): kotlin.Boolean {
       return _builder.hasErrorMessage()
@@ -174,21 +187,23 @@ public object EggIncFirstContactResponseKt {
      * `optional .ei.Backup backup = 1;`
      */
     public var backup: ei.Ei.Backup
-      @JvmName("getBackup")
-      get() = _builder.backup
-      @JvmName("setBackup")
-      set(value) {
+      @kotlin.jvm.JvmName("getBackup")
+        get() = _builder.backup
+      @kotlin.jvm.JvmName("setBackup")
+        set(value) {
         _builder.backup = value
       }
     /**
-     * `optional .ei.Backup backup = 1;`
+     * <code>optional .ei.Backup backup = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearBackup() {
       _builder.clearBackup()
     }
     /**
-     * `optional .ei.Backup backup = 1;`
+     * <code>optional .ei.Backup backup = 1;</code>
      * @return Whether the backup field is set.
+     * @return This builder for chaining.
      */
     public fun hasBackup(): kotlin.Boolean {
       return _builder.hasBackup()

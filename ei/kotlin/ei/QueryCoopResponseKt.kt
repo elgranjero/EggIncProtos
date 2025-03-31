@@ -32,21 +32,23 @@ public object QueryCoopResponseKt {
      * `optional bool exists = 1;`
      */
     public var exists: kotlin.Boolean
-      @JvmName("getExists")
-      get() = _builder.exists
-      @JvmName("setExists")
-      set(value) {
+      @kotlin.jvm.JvmName("getExists")
+        get() = _builder.exists
+      @kotlin.jvm.JvmName("setExists")
+        set(value) {
         _builder.exists = value
       }
     /**
-     * `optional bool exists = 1;`
+     * <code>optional bool exists = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearExists() {
       _builder.clearExists()
     }
     /**
-     * `optional bool exists = 1;`
+     * <code>optional bool exists = 1;</code>
      * @return Whether the exists field is set.
+     * @return This builder for chaining.
      */
     public fun hasExists(): kotlin.Boolean {
       return _builder.hasExists()
@@ -56,21 +58,23 @@ public object QueryCoopResponseKt {
      * `optional bool full = 2;`
      */
     public var full: kotlin.Boolean
-      @JvmName("getFull")
-      get() = _builder.full
-      @JvmName("setFull")
-      set(value) {
+      @kotlin.jvm.JvmName("getFull")
+        get() = _builder.full
+      @kotlin.jvm.JvmName("setFull")
+        set(value) {
         _builder.full = value
       }
     /**
-     * `optional bool full = 2;`
+     * <code>optional bool full = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearFull() {
       _builder.clearFull()
     }
     /**
-     * `optional bool full = 2;`
+     * <code>optional bool full = 2;</code>
      * @return Whether the full field is set.
+     * @return This builder for chaining.
      */
     public fun hasFull(): kotlin.Boolean {
       return _builder.hasFull()
@@ -80,21 +84,23 @@ public object QueryCoopResponseKt {
      * `optional bool expired = 5;`
      */
     public var expired: kotlin.Boolean
-      @JvmName("getExpired")
-      get() = _builder.expired
-      @JvmName("setExpired")
-      set(value) {
+      @kotlin.jvm.JvmName("getExpired")
+        get() = _builder.expired
+      @kotlin.jvm.JvmName("setExpired")
+        set(value) {
         _builder.expired = value
       }
     /**
-     * `optional bool expired = 5;`
+     * <code>optional bool expired = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearExpired() {
       _builder.clearExpired()
     }
     /**
-     * `optional bool expired = 5;`
+     * <code>optional bool expired = 5;</code>
      * @return Whether the expired field is set.
+     * @return This builder for chaining.
      */
     public fun hasExpired(): kotlin.Boolean {
       return _builder.hasExpired()
@@ -104,21 +110,23 @@ public object QueryCoopResponseKt {
      * `optional bool different_league = 4;`
      */
     public var differentLeague: kotlin.Boolean
-      @JvmName("getDifferentLeague")
-      get() = _builder.differentLeague
-      @JvmName("setDifferentLeague")
-      set(value) {
+      @kotlin.jvm.JvmName("getDifferentLeague")
+        get() = _builder.differentLeague
+      @kotlin.jvm.JvmName("setDifferentLeague")
+        set(value) {
         _builder.differentLeague = value
       }
     /**
-     * `optional bool different_league = 4;`
+     * <code>optional bool different_league = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearDifferentLeague() {
       _builder.clearDifferentLeague()
     }
     /**
-     * `optional bool different_league = 4;`
+     * <code>optional bool different_league = 4;</code>
      * @return Whether the differentLeague field is set.
+     * @return This builder for chaining.
      */
     public fun hasDifferentLeague(): kotlin.Boolean {
       return _builder.hasDifferentLeague()
@@ -128,21 +136,23 @@ public object QueryCoopResponseKt {
      * `optional bool different_grade = 6;`
      */
     public var differentGrade: kotlin.Boolean
-      @JvmName("getDifferentGrade")
-      get() = _builder.differentGrade
-      @JvmName("setDifferentGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getDifferentGrade")
+        get() = _builder.differentGrade
+      @kotlin.jvm.JvmName("setDifferentGrade")
+        set(value) {
         _builder.differentGrade = value
       }
     /**
-     * `optional bool different_grade = 6;`
+     * <code>optional bool different_grade = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearDifferentGrade() {
       _builder.clearDifferentGrade()
     }
     /**
-     * `optional bool different_grade = 6;`
+     * <code>optional bool different_grade = 6;</code>
      * @return Whether the differentGrade field is set.
+     * @return This builder for chaining.
      */
     public fun hasDifferentGrade(): kotlin.Boolean {
       return _builder.hasDifferentGrade()
@@ -152,21 +162,23 @@ public object QueryCoopResponseKt {
      * `optional bool cc_only = 7;`
      */
     public var ccOnly: kotlin.Boolean
-      @JvmName("getCcOnly")
-      get() = _builder.ccOnly
-      @JvmName("setCcOnly")
-      set(value) {
+      @kotlin.jvm.JvmName("getCcOnly")
+        get() = _builder.ccOnly
+      @kotlin.jvm.JvmName("setCcOnly")
+        set(value) {
         _builder.ccOnly = value
       }
     /**
-     * `optional bool cc_only = 7;`
+     * <code>optional bool cc_only = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * `optional bool cc_only = 7;`
+     * <code>optional bool cc_only = 7;</code>
      * @return Whether the ccOnly field is set.
+     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()
@@ -176,21 +188,23 @@ public object QueryCoopResponseKt {
      * `optional bool banned = 3;`
      */
     public var banned: kotlin.Boolean
-      @JvmName("getBanned")
-      get() = _builder.banned
-      @JvmName("setBanned")
-      set(value) {
+      @kotlin.jvm.JvmName("getBanned")
+        get() = _builder.banned
+      @kotlin.jvm.JvmName("setBanned")
+        set(value) {
         _builder.banned = value
       }
     /**
-     * `optional bool banned = 3;`
+     * <code>optional bool banned = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearBanned() {
       _builder.clearBanned()
     }
     /**
-     * `optional bool banned = 3;`
+     * <code>optional bool banned = 3;</code>
      * @return Whether the banned field is set.
+     * @return This builder for chaining.
      */
     public fun hasBanned(): kotlin.Boolean {
       return _builder.hasBanned()

@@ -32,21 +32,23 @@ public object CleanAccountRequestKt {
      * `optional string ei_user_id_to_keep = 1;`
      */
     public var eiUserIdToKeep: kotlin.String
-      @JvmName("getEiUserIdToKeep")
-      get() = _builder.eiUserIdToKeep
-      @JvmName("setEiUserIdToKeep")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserIdToKeep")
+        get() = _builder.eiUserIdToKeep
+      @kotlin.jvm.JvmName("setEiUserIdToKeep")
+        set(value) {
         _builder.eiUserIdToKeep = value
       }
     /**
-     * `optional string ei_user_id_to_keep = 1;`
+     * <code>optional string ei_user_id_to_keep = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserIdToKeep() {
       _builder.clearEiUserIdToKeep()
     }
     /**
-     * `optional string ei_user_id_to_keep = 1;`
+     * <code>optional string ei_user_id_to_keep = 1;</code>
      * @return Whether the eiUserIdToKeep field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserIdToKeep(): kotlin.Boolean {
       return _builder.hasEiUserIdToKeep()
@@ -56,21 +58,23 @@ public object CleanAccountRequestKt {
      * `optional string game_services_id = 2;`
      */
     public var gameServicesId: kotlin.String
-      @JvmName("getGameServicesId")
-      get() = _builder.gameServicesId
-      @JvmName("setGameServicesId")
-      set(value) {
+      @kotlin.jvm.JvmName("getGameServicesId")
+        get() = _builder.gameServicesId
+      @kotlin.jvm.JvmName("setGameServicesId")
+        set(value) {
         _builder.gameServicesId = value
       }
     /**
-     * `optional string game_services_id = 2;`
+     * <code>optional string game_services_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearGameServicesId() {
       _builder.clearGameServicesId()
     }
     /**
-     * `optional string game_services_id = 2;`
+     * <code>optional string game_services_id = 2;</code>
      * @return Whether the gameServicesId field is set.
+     * @return This builder for chaining.
      */
     public fun hasGameServicesId(): kotlin.Boolean {
       return _builder.hasGameServicesId()

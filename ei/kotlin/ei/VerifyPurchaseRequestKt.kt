@@ -32,21 +32,23 @@ public object VerifyPurchaseRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 6;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 6;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 6;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 6;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object VerifyPurchaseRequestKt {
      * `optional string sku = 1;`
      */
     public var sku: kotlin.String
-      @JvmName("getSku")
-      get() = _builder.sku
-      @JvmName("setSku")
-      set(value) {
+      @kotlin.jvm.JvmName("getSku")
+        get() = _builder.sku
+      @kotlin.jvm.JvmName("setSku")
+        set(value) {
         _builder.sku = value
       }
     /**
-     * `optional string sku = 1;`
+     * <code>optional string sku = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSku() {
       _builder.clearSku()
     }
     /**
-     * `optional string sku = 1;`
+     * <code>optional string sku = 1;</code>
      * @return Whether the sku field is set.
+     * @return This builder for chaining.
      */
     public fun hasSku(): kotlin.Boolean {
       return _builder.hasSku()
@@ -83,21 +87,23 @@ public object VerifyPurchaseRequestKt {
      * `optional string transaction_id = 2;`
      */
     public var transactionId: kotlin.String
-      @JvmName("getTransactionId")
-      get() = _builder.transactionId
-      @JvmName("setTransactionId")
-      set(value) {
+      @kotlin.jvm.JvmName("getTransactionId")
+        get() = _builder.transactionId
+      @kotlin.jvm.JvmName("setTransactionId")
+        set(value) {
         _builder.transactionId = value
       }
     /**
-     * `optional string transaction_id = 2;`
+     * <code>optional string transaction_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearTransactionId() {
       _builder.clearTransactionId()
     }
     /**
-     * `optional string transaction_id = 2;`
+     * <code>optional string transaction_id = 2;</code>
      * @return Whether the transactionId field is set.
+     * @return This builder for chaining.
      */
     public fun hasTransactionId(): kotlin.Boolean {
       return _builder.hasTransactionId()
@@ -107,21 +113,23 @@ public object VerifyPurchaseRequestKt {
      * `optional string original_transaction_id = 8;`
      */
     public var originalTransactionId: kotlin.String
-      @JvmName("getOriginalTransactionId")
-      get() = _builder.originalTransactionId
-      @JvmName("setOriginalTransactionId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalTransactionId")
+        get() = _builder.originalTransactionId
+      @kotlin.jvm.JvmName("setOriginalTransactionId")
+        set(value) {
         _builder.originalTransactionId = value
       }
     /**
-     * `optional string original_transaction_id = 8;`
+     * <code>optional string original_transaction_id = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalTransactionId() {
       _builder.clearOriginalTransactionId()
     }
     /**
-     * `optional string original_transaction_id = 8;`
+     * <code>optional string original_transaction_id = 8;</code>
      * @return Whether the originalTransactionId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalTransactionId(): kotlin.Boolean {
       return _builder.hasOriginalTransactionId()
@@ -131,21 +139,23 @@ public object VerifyPurchaseRequestKt {
      * `optional string receipt = 3;`
      */
     public var receipt: kotlin.String
-      @JvmName("getReceipt")
-      get() = _builder.receipt
-      @JvmName("setReceipt")
-      set(value) {
+      @kotlin.jvm.JvmName("getReceipt")
+        get() = _builder.receipt
+      @kotlin.jvm.JvmName("setReceipt")
+        set(value) {
         _builder.receipt = value
       }
     /**
-     * `optional string receipt = 3;`
+     * <code>optional string receipt = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearReceipt() {
       _builder.clearReceipt()
     }
     /**
-     * `optional string receipt = 3;`
+     * <code>optional string receipt = 3;</code>
      * @return Whether the receipt field is set.
+     * @return This builder for chaining.
      */
     public fun hasReceipt(): kotlin.Boolean {
       return _builder.hasReceipt()
@@ -155,21 +165,23 @@ public object VerifyPurchaseRequestKt {
      * `optional string platform = 4;`
      */
     public var platform: kotlin.String
-      @JvmName("getPlatform")
-      get() = _builder.platform
-      @JvmName("setPlatform")
-      set(value) {
+      @kotlin.jvm.JvmName("getPlatform")
+        get() = _builder.platform
+      @kotlin.jvm.JvmName("setPlatform")
+        set(value) {
         _builder.platform = value
       }
     /**
-     * `optional string platform = 4;`
+     * <code>optional string platform = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * `optional string platform = 4;`
+     * <code>optional string platform = 4;</code>
      * @return Whether the platform field is set.
+     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -179,21 +191,23 @@ public object VerifyPurchaseRequestKt {
      * `optional bool sandbox = 7;`
      */
     public var sandbox: kotlin.Boolean
-      @JvmName("getSandbox")
-      get() = _builder.sandbox
-      @JvmName("setSandbox")
-      set(value) {
+      @kotlin.jvm.JvmName("getSandbox")
+        get() = _builder.sandbox
+      @kotlin.jvm.JvmName("setSandbox")
+        set(value) {
         _builder.sandbox = value
       }
     /**
-     * `optional bool sandbox = 7;`
+     * <code>optional bool sandbox = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearSandbox() {
       _builder.clearSandbox()
     }
     /**
-     * `optional bool sandbox = 7;`
+     * <code>optional bool sandbox = 7;</code>
      * @return Whether the sandbox field is set.
+     * @return This builder for chaining.
      */
     public fun hasSandbox(): kotlin.Boolean {
       return _builder.hasSandbox()
@@ -203,21 +217,23 @@ public object VerifyPurchaseRequestKt {
      * `optional .ei.GenericAction log = 5;`
      */
     public var log: ei.Ei.GenericAction
-      @JvmName("getLog")
-      get() = _builder.log
-      @JvmName("setLog")
-      set(value) {
+      @kotlin.jvm.JvmName("getLog")
+        get() = _builder.log
+      @kotlin.jvm.JvmName("setLog")
+        set(value) {
         _builder.log = value
       }
     /**
-     * `optional .ei.GenericAction log = 5;`
+     * <code>optional .ei.GenericAction log = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearLog() {
       _builder.clearLog()
     }
     /**
-     * `optional .ei.GenericAction log = 5;`
+     * <code>optional .ei.GenericAction log = 5;</code>
      * @return Whether the log field is set.
+     * @return This builder for chaining.
      */
     public fun hasLog(): kotlin.Boolean {
       return _builder.hasLog()

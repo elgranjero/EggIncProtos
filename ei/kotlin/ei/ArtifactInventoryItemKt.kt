@@ -32,21 +32,23 @@ public object ArtifactInventoryItemKt {
      * `optional uint64 item_id = 1;`
      */
     public var itemId: kotlin.Long
-      @JvmName("getItemId")
-      get() = _builder.itemId
-      @JvmName("setItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getItemId")
+        get() = _builder.itemId
+      @kotlin.jvm.JvmName("setItemId")
+        set(value) {
         _builder.itemId = value
       }
     /**
-     * `optional uint64 item_id = 1;`
+     * <code>optional uint64 item_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * `optional uint64 item_id = 1;`
+     * <code>optional uint64 item_id = 1;</code>
      * @return Whether the itemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()
@@ -56,21 +58,23 @@ public object ArtifactInventoryItemKt {
      * `optional .ei.CompleteArtifact artifact = 2;`
      */
     public var artifact: ei.Ei.CompleteArtifact
-      @JvmName("getArtifact")
-      get() = _builder.artifact
-      @JvmName("setArtifact")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifact")
+        get() = _builder.artifact
+      @kotlin.jvm.JvmName("setArtifact")
+        set(value) {
         _builder.artifact = value
       }
     /**
-     * `optional .ei.CompleteArtifact artifact = 2;`
+     * <code>optional .ei.CompleteArtifact artifact = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifact() {
       _builder.clearArtifact()
     }
     /**
-     * `optional .ei.CompleteArtifact artifact = 2;`
+     * <code>optional .ei.CompleteArtifact artifact = 2;</code>
      * @return Whether the artifact field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
@@ -83,21 +87,23 @@ public object ArtifactInventoryItemKt {
      * `optional double quantity = 3;`
      */
     public var quantity: kotlin.Double
-      @JvmName("getQuantity")
-      get() = _builder.quantity
-      @JvmName("setQuantity")
-      set(value) {
+      @kotlin.jvm.JvmName("getQuantity")
+        get() = _builder.quantity
+      @kotlin.jvm.JvmName("setQuantity")
+        set(value) {
         _builder.quantity = value
       }
     /**
-     * `optional double quantity = 3;`
+     * <code>optional double quantity = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearQuantity() {
       _builder.clearQuantity()
     }
     /**
-     * `optional double quantity = 3;`
+     * <code>optional double quantity = 3;</code>
      * @return Whether the quantity field is set.
+     * @return This builder for chaining.
      */
     public fun hasQuantity(): kotlin.Boolean {
       return _builder.hasQuantity()
@@ -107,21 +113,23 @@ public object ArtifactInventoryItemKt {
      * `optional string server_id = 4;`
      */
     public var serverId: kotlin.String
-      @JvmName("getServerId")
-      get() = _builder.serverId
-      @JvmName("setServerId")
-      set(value) {
+      @kotlin.jvm.JvmName("getServerId")
+        get() = _builder.serverId
+      @kotlin.jvm.JvmName("setServerId")
+        set(value) {
         _builder.serverId = value
       }
     /**
-     * `optional string server_id = 4;`
+     * <code>optional string server_id = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearServerId() {
       _builder.clearServerId()
     }
     /**
-     * `optional string server_id = 4;`
+     * <code>optional string server_id = 4;</code>
      * @return Whether the serverId field is set.
+     * @return This builder for chaining.
      */
     public fun hasServerId(): kotlin.Boolean {
       return _builder.hasServerId()

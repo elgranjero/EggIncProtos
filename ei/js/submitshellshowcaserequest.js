@@ -72,11 +72,11 @@ proto.ei.SubmitShellShowcaseRequest.prototype.toObject = function(opt_includeIns
  */
 proto.ei.SubmitShellShowcaseRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-localId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-publicUsername: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f)
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    localId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    publicUsername: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    farmConfig: (f = msg.getFarmConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

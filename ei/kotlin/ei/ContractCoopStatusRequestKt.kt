@@ -32,21 +32,23 @@ public object ContractCoopStatusRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 5;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 5;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 5;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ContractCoopStatusRequestKt {
      * `optional string contract_identifier = 1;`
      */
     public var contractIdentifier: kotlin.String
-      @JvmName("getContractIdentifier")
-      get() = _builder.contractIdentifier
-      @JvmName("setContractIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractIdentifier")
+        get() = _builder.contractIdentifier
+      @kotlin.jvm.JvmName("setContractIdentifier")
+        set(value) {
         _builder.contractIdentifier = value
       }
     /**
-     * `optional string contract_identifier = 1;`
+     * <code>optional string contract_identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * `optional string contract_identifier = 1;`
+     * <code>optional string contract_identifier = 1;</code>
      * @return Whether the contractIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -83,21 +87,23 @@ public object ContractCoopStatusRequestKt {
      * `optional string coop_identifier = 2;`
      */
     public var coopIdentifier: kotlin.String
-      @JvmName("getCoopIdentifier")
-      get() = _builder.coopIdentifier
-      @JvmName("setCoopIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopIdentifier")
+        get() = _builder.coopIdentifier
+      @kotlin.jvm.JvmName("setCoopIdentifier")
+        set(value) {
         _builder.coopIdentifier = value
       }
     /**
-     * `optional string coop_identifier = 2;`
+     * <code>optional string coop_identifier = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * `optional string coop_identifier = 2;`
+     * <code>optional string coop_identifier = 2;</code>
      * @return Whether the coopIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -107,21 +113,23 @@ public object ContractCoopStatusRequestKt {
      * `optional string user_id = 3;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 3;`
+     * <code>optional string user_id = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 3;`
+     * <code>optional string user_id = 3;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -131,21 +139,23 @@ public object ContractCoopStatusRequestKt {
      * `optional uint32 client_version = 4;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 4;`
+     * <code>optional uint32 client_version = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 4;`
+     * <code>optional uint32 client_version = 4;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -155,21 +165,23 @@ public object ContractCoopStatusRequestKt {
      * `optional double client_timestamp = 6;`
      */
     public var clientTimestamp: kotlin.Double
-      @JvmName("getClientTimestamp")
-      get() = _builder.clientTimestamp
-      @JvmName("setClientTimestamp")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientTimestamp")
+        get() = _builder.clientTimestamp
+      @kotlin.jvm.JvmName("setClientTimestamp")
+        set(value) {
         _builder.clientTimestamp = value
       }
     /**
-     * `optional double client_timestamp = 6;`
+     * <code>optional double client_timestamp = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientTimestamp() {
       _builder.clearClientTimestamp()
     }
     /**
-     * `optional double client_timestamp = 6;`
+     * <code>optional double client_timestamp = 6;</code>
      * @return Whether the clientTimestamp field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientTimestamp(): kotlin.Boolean {
       return _builder.hasClientTimestamp()

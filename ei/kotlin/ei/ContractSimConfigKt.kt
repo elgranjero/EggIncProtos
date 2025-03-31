@@ -39,66 +39,71 @@ public object ContractSimConfigKt {
      */
      public val gradeConfigs: com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.gradeConfigsList
       )
     /**
-     * `repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;`
+     * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;</code>
      * @param value The gradeConfigs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGradeConfigs")
+@kotlin.jvm.JvmName("addGradeConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>.add(value: ei.Ei.ContractSimConfig.ContractGradeSimConfig) {
       _builder.addGradeConfigs(value)
     }
     /**
-     * `repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;`
+     * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;</code>
      * @param value The gradeConfigs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGradeConfigs")
+@kotlin.jvm.JvmName("plusAssignGradeConfigs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>.plusAssign(value: ei.Ei.ContractSimConfig.ContractGradeSimConfig) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;`
+     * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;</code>
      * @param values The gradeConfigs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGradeConfigs")
+@kotlin.jvm.JvmName("addAllGradeConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractSimConfig.ContractGradeSimConfig>) {
       _builder.addAllGradeConfigs(values)
     }
     /**
-     * `repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;`
+     * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;</code>
      * @param values The gradeConfigs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGradeConfigs")
+@kotlin.jvm.JvmName("plusAssignAllGradeConfigs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractSimConfig.ContractGradeSimConfig>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;`
+     * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;</code>
      * @param index The index to set the value at.
      * @param value The gradeConfigs to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGradeConfigs")
+@kotlin.jvm.JvmName("setGradeConfigs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractSimConfig.ContractGradeSimConfig) {
       _builder.setGradeConfigs(index, value)
     }
     /**
-     * `repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;`
+     * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig grade_configs = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGradeConfigs")
+@kotlin.jvm.JvmName("clearGradeConfigs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig, GradeConfigsProxy>.clear() {
       _builder.clearGradeConfigs()
     }
-
   }
   @kotlin.jvm.JvmName("-initializecontractGradeSimConfig")
   public inline fun contractGradeSimConfig(block: ei.ContractSimConfigKt.ContractGradeSimConfigKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractSimConfig.ContractGradeSimConfig =
@@ -126,21 +131,23 @@ public object ContractSimConfigKt {
        * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public var grade: ei.Ei.Contract.PlayerGrade
-        @JvmName("getGrade")
-        get() = _builder.grade
-        @JvmName("setGrade")
-        set(value) {
+        @kotlin.jvm.JvmName("getGrade")
+          get() = _builder.grade
+        @kotlin.jvm.JvmName("setGrade")
+          set(value) {
           _builder.grade = value
         }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
        * @return Whether the grade field is set.
+       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -157,66 +164,71 @@ public object ContractSimConfigKt {
        */
        public val goalParams: com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>
         @kotlin.jvm.JvmSynthetic
-        get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
           _builder.goalParamsList
         )
       /**
-       * `repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;`
+       * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;</code>
        * @param value The goalParams to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addGoalParams")
+@kotlin.jvm.JvmName("addGoalParams")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>.add(value: ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams) {
         _builder.addGoalParams(value)
       }
       /**
-       * `repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;`
+       * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;</code>
        * @param value The goalParams to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignGoalParams")
+@kotlin.jvm.JvmName("plusAssignGoalParams")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>.plusAssign(value: ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams) {
         add(value)
       }
       /**
-       * `repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;`
+       * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;</code>
        * @param values The goalParams to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addAllGoalParams")
+@kotlin.jvm.JvmName("addAllGoalParams")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams>) {
         _builder.addAllGoalParams(values)
       }
       /**
-       * `repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;`
+       * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;</code>
        * @param values The goalParams to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignAllGoalParams")
+@kotlin.jvm.JvmName("plusAssignAllGoalParams")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams>) {
         addAll(values)
       }
       /**
-       * `repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;`
+       * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;</code>
        * @param index The index to set the value at.
        * @param value The goalParams to set.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("setGoalParams")
+@kotlin.jvm.JvmName("setGoalParams")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams) {
         _builder.setGoalParams(index, value)
       }
       /**
-       * `repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;`
+       * <code>repeated .ei.ContractSimConfig.ContractGradeSimConfig.GoalParams goal_params = 2;</code>
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("clearGoalParams")
+@kotlin.jvm.JvmName("clearGoalParams")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams, GoalParamsProxy>.clear() {
         _builder.clearGoalParams()
       }
-
     }
     @kotlin.jvm.JvmName("-initializegoalParams")
     public inline fun goalParams(block: ei.ContractSimConfigKt.ContractGradeSimConfigKt.GoalParamsKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractSimConfig.ContractGradeSimConfig.GoalParams =
@@ -244,21 +256,23 @@ public object ContractSimConfigKt {
          * `optional double target_se = 1;`
          */
         public var targetSe: kotlin.Double
-          @JvmName("getTargetSe")
-          get() = _builder.targetSe
-          @JvmName("setTargetSe")
-          set(value) {
+          @kotlin.jvm.JvmName("getTargetSe")
+            get() = _builder.targetSe
+          @kotlin.jvm.JvmName("setTargetSe")
+            set(value) {
             _builder.targetSe = value
           }
         /**
-         * `optional double target_se = 1;`
+         * <code>optional double target_se = 1;</code>
+         * @return This builder for chaining.
          */
         public fun clearTargetSe() {
           _builder.clearTargetSe()
         }
         /**
-         * `optional double target_se = 1;`
+         * <code>optional double target_se = 1;</code>
          * @return Whether the targetSe field is set.
+         * @return This builder for chaining.
          */
         public fun hasTargetSe(): kotlin.Boolean {
           return _builder.hasTargetSe()
@@ -268,21 +282,23 @@ public object ContractSimConfigKt {
          * `optional double cps_mult = 2;`
          */
         public var cpsMult: kotlin.Double
-          @JvmName("getCpsMult")
-          get() = _builder.cpsMult
-          @JvmName("setCpsMult")
-          set(value) {
+          @kotlin.jvm.JvmName("getCpsMult")
+            get() = _builder.cpsMult
+          @kotlin.jvm.JvmName("setCpsMult")
+            set(value) {
             _builder.cpsMult = value
           }
         /**
-         * `optional double cps_mult = 2;`
+         * <code>optional double cps_mult = 2;</code>
+         * @return This builder for chaining.
          */
         public fun clearCpsMult() {
           _builder.clearCpsMult()
         }
         /**
-         * `optional double cps_mult = 2;`
+         * <code>optional double cps_mult = 2;</code>
          * @return Whether the cpsMult field is set.
+         * @return This builder for chaining.
          */
         public fun hasCpsMult(): kotlin.Boolean {
           return _builder.hasCpsMult()
@@ -292,21 +308,23 @@ public object ContractSimConfigKt {
          * `optional double elr_mult = 7;`
          */
         public var elrMult: kotlin.Double
-          @JvmName("getElrMult")
-          get() = _builder.elrMult
-          @JvmName("setElrMult")
-          set(value) {
+          @kotlin.jvm.JvmName("getElrMult")
+            get() = _builder.elrMult
+          @kotlin.jvm.JvmName("setElrMult")
+            set(value) {
             _builder.elrMult = value
           }
         /**
-         * `optional double elr_mult = 7;`
+         * <code>optional double elr_mult = 7;</code>
+         * @return This builder for chaining.
          */
         public fun clearElrMult() {
           _builder.clearElrMult()
         }
         /**
-         * `optional double elr_mult = 7;`
+         * <code>optional double elr_mult = 7;</code>
          * @return Whether the elrMult field is set.
+         * @return This builder for chaining.
          */
         public fun hasElrMult(): kotlin.Boolean {
           return _builder.hasElrMult()
@@ -316,21 +334,23 @@ public object ContractSimConfigKt {
          * `optional double earnings_mult = 3;`
          */
         public var earningsMult: kotlin.Double
-          @JvmName("getEarningsMult")
-          get() = _builder.earningsMult
-          @JvmName("setEarningsMult")
-          set(value) {
+          @kotlin.jvm.JvmName("getEarningsMult")
+            get() = _builder.earningsMult
+          @kotlin.jvm.JvmName("setEarningsMult")
+            set(value) {
             _builder.earningsMult = value
           }
         /**
-         * `optional double earnings_mult = 3;`
+         * <code>optional double earnings_mult = 3;</code>
+         * @return This builder for chaining.
          */
         public fun clearEarningsMult() {
           _builder.clearEarningsMult()
         }
         /**
-         * `optional double earnings_mult = 3;`
+         * <code>optional double earnings_mult = 3;</code>
          * @return Whether the earningsMult field is set.
+         * @return This builder for chaining.
          */
         public fun hasEarningsMult(): kotlin.Boolean {
           return _builder.hasEarningsMult()
@@ -340,21 +360,23 @@ public object ContractSimConfigKt {
          * `optional double time_efficacy = 4;`
          */
         public var timeEfficacy: kotlin.Double
-          @JvmName("getTimeEfficacy")
-          get() = _builder.timeEfficacy
-          @JvmName("setTimeEfficacy")
-          set(value) {
+          @kotlin.jvm.JvmName("getTimeEfficacy")
+            get() = _builder.timeEfficacy
+          @kotlin.jvm.JvmName("setTimeEfficacy")
+            set(value) {
             _builder.timeEfficacy = value
           }
         /**
-         * `optional double time_efficacy = 4;`
+         * <code>optional double time_efficacy = 4;</code>
+         * @return This builder for chaining.
          */
         public fun clearTimeEfficacy() {
           _builder.clearTimeEfficacy()
         }
         /**
-         * `optional double time_efficacy = 4;`
+         * <code>optional double time_efficacy = 4;</code>
          * @return Whether the timeEfficacy field is set.
+         * @return This builder for chaining.
          */
         public fun hasTimeEfficacy(): kotlin.Boolean {
           return _builder.hasTimeEfficacy()
@@ -364,21 +386,23 @@ public object ContractSimConfigKt {
          * `optional double hab_capacity_mult = 5;`
          */
         public var habCapacityMult: kotlin.Double
-          @JvmName("getHabCapacityMult")
-          get() = _builder.habCapacityMult
-          @JvmName("setHabCapacityMult")
-          set(value) {
+          @kotlin.jvm.JvmName("getHabCapacityMult")
+            get() = _builder.habCapacityMult
+          @kotlin.jvm.JvmName("setHabCapacityMult")
+            set(value) {
             _builder.habCapacityMult = value
           }
         /**
-         * `optional double hab_capacity_mult = 5;`
+         * <code>optional double hab_capacity_mult = 5;</code>
+         * @return This builder for chaining.
          */
         public fun clearHabCapacityMult() {
           _builder.clearHabCapacityMult()
         }
         /**
-         * `optional double hab_capacity_mult = 5;`
+         * <code>optional double hab_capacity_mult = 5;</code>
          * @return Whether the habCapacityMult field is set.
+         * @return This builder for chaining.
          */
         public fun hasHabCapacityMult(): kotlin.Boolean {
           return _builder.hasHabCapacityMult()
@@ -388,21 +412,23 @@ public object ContractSimConfigKt {
          * `optional double epic_research_budget = 6;`
          */
         public var epicResearchBudget: kotlin.Double
-          @JvmName("getEpicResearchBudget")
-          get() = _builder.epicResearchBudget
-          @JvmName("setEpicResearchBudget")
-          set(value) {
+          @kotlin.jvm.JvmName("getEpicResearchBudget")
+            get() = _builder.epicResearchBudget
+          @kotlin.jvm.JvmName("setEpicResearchBudget")
+            set(value) {
             _builder.epicResearchBudget = value
           }
         /**
-         * `optional double epic_research_budget = 6;`
+         * <code>optional double epic_research_budget = 6;</code>
+         * @return This builder for chaining.
          */
         public fun clearEpicResearchBudget() {
           _builder.clearEpicResearchBudget()
         }
         /**
-         * `optional double epic_research_budget = 6;`
+         * <code>optional double epic_research_budget = 6;</code>
          * @return Whether the epicResearchBudget field is set.
+         * @return This builder for chaining.
          */
         public fun hasEpicResearchBudget(): kotlin.Boolean {
           return _builder.hasEpicResearchBudget()

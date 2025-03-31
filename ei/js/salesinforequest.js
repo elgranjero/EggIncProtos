@@ -70,13 +70,13 @@ proto.ei.SalesInfoRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.SalesInfoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-piggyFull: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-piggyFoundFull: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-secondsFullRealtime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-secondsFullGametime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-lostIncrements: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-currentClientVersion: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    piggyFull: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    piggyFoundFull: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+    secondsFullRealtime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    secondsFullGametime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    lostIncrements: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    currentClientVersion: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {

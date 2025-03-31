@@ -32,21 +32,23 @@ public object SaveBackupResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object SaveBackupResponseKt {
      * `optional uint32 error_code = 2;`
      */
     public var errorCode: kotlin.Int
-      @JvmName("getErrorCode")
-      get() = _builder.errorCode
-      @JvmName("setErrorCode")
-      set(value) {
+      @kotlin.jvm.JvmName("getErrorCode")
+        get() = _builder.errorCode
+      @kotlin.jvm.JvmName("setErrorCode")
+        set(value) {
         _builder.errorCode = value
       }
     /**
-     * `optional uint32 error_code = 2;`
+     * <code>optional uint32 error_code = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearErrorCode() {
       _builder.clearErrorCode()
     }
     /**
-     * `optional uint32 error_code = 2;`
+     * <code>optional uint32 error_code = 2;</code>
      * @return Whether the errorCode field is set.
+     * @return This builder for chaining.
      */
     public fun hasErrorCode(): kotlin.Boolean {
       return _builder.hasErrorCode()
@@ -80,21 +84,23 @@ public object SaveBackupResponseKt {
      * `optional string message = 3;`
      */
     public var message: kotlin.String
-      @JvmName("getMessage")
-      get() = _builder.message
-      @JvmName("setMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getMessage")
+        get() = _builder.message
+      @kotlin.jvm.JvmName("setMessage")
+        set(value) {
         _builder.message = value
       }
     /**
-     * `optional string message = 3;`
+     * <code>optional string message = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * `optional string message = 3;`
+     * <code>optional string message = 3;</code>
      * @return Whether the message field is set.
+     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -104,21 +110,23 @@ public object SaveBackupResponseKt {
      * `optional .ei.Backup existing_backup = 4;`
      */
     public var existingBackup: ei.Ei.Backup
-      @JvmName("getExistingBackup")
-      get() = _builder.existingBackup
-      @JvmName("setExistingBackup")
-      set(value) {
+      @kotlin.jvm.JvmName("getExistingBackup")
+        get() = _builder.existingBackup
+      @kotlin.jvm.JvmName("setExistingBackup")
+        set(value) {
         _builder.existingBackup = value
       }
     /**
-     * `optional .ei.Backup existing_backup = 4;`
+     * <code>optional .ei.Backup existing_backup = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearExistingBackup() {
       _builder.clearExistingBackup()
     }
     /**
-     * `optional .ei.Backup existing_backup = 4;`
+     * <code>optional .ei.Backup existing_backup = 4;</code>
      * @return Whether the existingBackup field is set.
+     * @return This builder for chaining.
      */
     public fun hasExistingBackup(): kotlin.Boolean {
       return _builder.hasExistingBackup()

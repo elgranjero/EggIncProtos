@@ -39,66 +39,71 @@ public object EggIncCurrentEventsKt {
      */
      public val events: com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.eventsList
       )
     /**
-     * `repeated .ei.EggIncEvent events = 1;`
+     * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param value The events to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addEvents")
+@kotlin.jvm.JvmName("addEvents")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.add(value: ei.Ei.EggIncEvent) {
       _builder.addEvents(value)
     }
     /**
-     * `repeated .ei.EggIncEvent events = 1;`
+     * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param value The events to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignEvents")
+@kotlin.jvm.JvmName("plusAssignEvents")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.plusAssign(value: ei.Ei.EggIncEvent) {
       add(value)
     }
     /**
-     * `repeated .ei.EggIncEvent events = 1;`
+     * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param values The events to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllEvents")
+@kotlin.jvm.JvmName("addAllEvents")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.EggIncEvent>) {
       _builder.addAllEvents(values)
     }
     /**
-     * `repeated .ei.EggIncEvent events = 1;`
+     * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param values The events to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllEvents")
+@kotlin.jvm.JvmName("plusAssignAllEvents")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.EggIncEvent>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.EggIncEvent events = 1;`
+     * <code>repeated .ei.EggIncEvent events = 1;</code>
      * @param index The index to set the value at.
      * @param value The events to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setEvents")
+@kotlin.jvm.JvmName("setEvents")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.set(index: kotlin.Int, value: ei.Ei.EggIncEvent) {
       _builder.setEvents(index, value)
     }
     /**
-     * `repeated .ei.EggIncEvent events = 1;`
+     * <code>repeated .ei.EggIncEvent events = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearEvents")
+@kotlin.jvm.JvmName("clearEvents")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.EggIncEvent, EventsProxy>.clear() {
       _builder.clearEvents()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

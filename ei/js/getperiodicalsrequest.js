@@ -71,20 +71,20 @@ proto.ei.GetPeriodicalsRequest.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.GetPeriodicalsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-piggyFull: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-piggyFoundFull: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-secondsFullRealtime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-secondsFullGametime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-lostIncrements: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-mysticalEarningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
-eop: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-contractsUnlocked: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
-artifactsUnlocked: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
-currentClientVersion: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    piggyFull: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    piggyFoundFull: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+    secondsFullRealtime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    secondsFullGametime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    lostIncrements: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    mysticalEarningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
+    eop: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    contractsUnlocked: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    artifactsUnlocked: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
+    currentClientVersion: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+    debug: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {

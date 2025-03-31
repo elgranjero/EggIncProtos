@@ -100,7 +100,7 @@ proto.ei.ContractEvaluationBatch.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.ContractEvaluationBatch.toObject = function(includeInstance, msg) {
   var f, obj = {
-evalsList: jspb.Message.toObjectList(msg.getEvalsList(),
+    evalsList: jspb.Message.toObjectList(msg.getEvalsList(),
     proto.ei.ContractEvaluationBatch.Pair.toObject, includeInstance)
   };
 
@@ -215,8 +215,8 @@ proto.ei.ContractEvaluationBatch.Pair.prototype.toObject = function(opt_includeI
  */
 proto.ei.ContractEvaluationBatch.Pair.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-cev: (f = msg.getCev()) && proto.ei.ContractEvaluation.toObject(includeInstance, f)
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    cev: (f = msg.getCev()) && proto.ei.ContractEvaluation.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

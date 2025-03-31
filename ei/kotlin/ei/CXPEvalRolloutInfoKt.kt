@@ -32,21 +32,23 @@ public object CXPEvalRolloutInfoKt {
      * `optional string current_id = 1;`
      */
     public var currentId: kotlin.String
-      @JvmName("getCurrentId")
-      get() = _builder.currentId
-      @JvmName("setCurrentId")
-      set(value) {
+      @kotlin.jvm.JvmName("getCurrentId")
+        get() = _builder.currentId
+      @kotlin.jvm.JvmName("setCurrentId")
+        set(value) {
         _builder.currentId = value
       }
     /**
-     * `optional string current_id = 1;`
+     * <code>optional string current_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearCurrentId() {
       _builder.clearCurrentId()
     }
     /**
-     * `optional string current_id = 1;`
+     * <code>optional string current_id = 1;</code>
      * @return Whether the currentId field is set.
+     * @return This builder for chaining.
      */
     public fun hasCurrentId(): kotlin.Boolean {
       return _builder.hasCurrentId()
@@ -56,21 +58,23 @@ public object CXPEvalRolloutInfoKt {
      * `optional uint32 basis_points = 2;`
      */
     public var basisPoints: kotlin.Int
-      @JvmName("getBasisPoints")
-      get() = _builder.basisPoints
-      @JvmName("setBasisPoints")
-      set(value) {
+      @kotlin.jvm.JvmName("getBasisPoints")
+        get() = _builder.basisPoints
+      @kotlin.jvm.JvmName("setBasisPoints")
+        set(value) {
         _builder.basisPoints = value
       }
     /**
-     * `optional uint32 basis_points = 2;`
+     * <code>optional uint32 basis_points = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearBasisPoints() {
       _builder.clearBasisPoints()
     }
     /**
-     * `optional uint32 basis_points = 2;`
+     * <code>optional uint32 basis_points = 2;</code>
      * @return Whether the basisPoints field is set.
+     * @return This builder for chaining.
      */
     public fun hasBasisPoints(): kotlin.Boolean {
       return _builder.hasBasisPoints()

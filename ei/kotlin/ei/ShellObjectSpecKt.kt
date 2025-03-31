@@ -32,21 +32,23 @@ public object ShellObjectSpecKt {
      * `optional string identifier = 1;`
      */
     public var identifier: kotlin.String
-      @JvmName("getIdentifier")
-      get() = _builder.identifier
-      @JvmName("setIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getIdentifier")
+        get() = _builder.identifier
+      @kotlin.jvm.JvmName("setIdentifier")
+        set(value) {
         _builder.identifier = value
       }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
      * @return Whether the identifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -56,21 +58,23 @@ public object ShellObjectSpecKt {
      * `optional string name = 2;`
      */
     public var name: kotlin.String
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional string name = 2;`
+     * <code>optional string name = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional string name = 2;`
+     * <code>optional string name = 2;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -80,21 +84,23 @@ public object ShellObjectSpecKt {
      * `optional .ei.ShellSpec.AssetType asset_type = 3;`
      */
     public var assetType: ei.Ei.ShellSpec.AssetType
-      @JvmName("getAssetType")
-      get() = _builder.assetType
-      @JvmName("setAssetType")
-      set(value) {
+      @kotlin.jvm.JvmName("getAssetType")
+        get() = _builder.assetType
+      @kotlin.jvm.JvmName("setAssetType")
+        set(value) {
         _builder.assetType = value
       }
     /**
-     * `optional .ei.ShellSpec.AssetType asset_type = 3;`
+     * <code>optional .ei.ShellSpec.AssetType asset_type = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearAssetType() {
       _builder.clearAssetType()
     }
     /**
-     * `optional .ei.ShellSpec.AssetType asset_type = 3;`
+     * <code>optional .ei.ShellSpec.AssetType asset_type = 3;</code>
      * @return Whether the assetType field is set.
+     * @return This builder for chaining.
      */
     public fun hasAssetType(): kotlin.Boolean {
       return _builder.hasAssetType()
@@ -104,21 +110,23 @@ public object ShellObjectSpecKt {
      * `optional string object_class = 14;`
      */
     public var objectClass: kotlin.String
-      @JvmName("getObjectClass")
-      get() = _builder.objectClass
-      @JvmName("setObjectClass")
-      set(value) {
+      @kotlin.jvm.JvmName("getObjectClass")
+        get() = _builder.objectClass
+      @kotlin.jvm.JvmName("setObjectClass")
+        set(value) {
         _builder.objectClass = value
       }
     /**
-     * `optional string object_class = 14;`
+     * <code>optional string object_class = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearObjectClass() {
       _builder.clearObjectClass()
     }
     /**
-     * `optional string object_class = 14;`
+     * <code>optional string object_class = 14;</code>
      * @return Whether the objectClass field is set.
+     * @return This builder for chaining.
      */
     public fun hasObjectClass(): kotlin.Boolean {
       return _builder.hasObjectClass()
@@ -131,66 +139,73 @@ public object ShellObjectSpecKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class IconColorsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
      * @return A list containing the iconColors.
+     * @return This builder for chaining.
      */
     public val iconColors: com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.iconColorsList
       )
     /**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
      * @param value The iconColors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addIconColors")
+@kotlin.jvm.JvmName("addIconColors")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.add(value: kotlin.String) {
       _builder.addIconColors(value)
     }
     /**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
      * @param value The iconColors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignIconColors")
+@kotlin.jvm.JvmName("plusAssignIconColors")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
      * @param values The iconColors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllIconColors")
+@kotlin.jvm.JvmName("addAllIconColors")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllIconColors(values)
     }
     /**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
      * @param values The iconColors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllIconColors")
+@kotlin.jvm.JvmName("plusAssignAllIconColors")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
      * @param index The index to set the value at.
      * @param value The iconColors to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setIconColors")
+@kotlin.jvm.JvmName("setIconColors")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setIconColors(index, value)
     }/**
-     * `repeated string icon_colors = 15;`
+     * <code>repeated string icon_colors = 15;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearIconColors")
+@kotlin.jvm.JvmName("setIconColors")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IconColorsProxy>.clear() {
       _builder.clearIconColors()
     }
@@ -198,21 +213,23 @@ public object ShellObjectSpecKt {
      * `optional uint32 price = 4;`
      */
     public var price: kotlin.Int
-      @JvmName("getPrice")
-      get() = _builder.price
-      @JvmName("setPrice")
-      set(value) {
+      @kotlin.jvm.JvmName("getPrice")
+        get() = _builder.price
+      @kotlin.jvm.JvmName("setPrice")
+        set(value) {
         _builder.price = value
       }
     /**
-     * `optional uint32 price = 4;`
+     * <code>optional uint32 price = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearPrice() {
       _builder.clearPrice()
     }
     /**
-     * `optional uint32 price = 4;`
+     * <code>optional uint32 price = 4;</code>
      * @return Whether the price field is set.
+     * @return This builder for chaining.
      */
     public fun hasPrice(): kotlin.Boolean {
       return _builder.hasPrice()
@@ -222,21 +239,23 @@ public object ShellObjectSpecKt {
      * `optional uint32 required_eop = 5;`
      */
     public var requiredEop: kotlin.Int
-      @JvmName("getRequiredEop")
-      get() = _builder.requiredEop
-      @JvmName("setRequiredEop")
-      set(value) {
+      @kotlin.jvm.JvmName("getRequiredEop")
+        get() = _builder.requiredEop
+      @kotlin.jvm.JvmName("setRequiredEop")
+        set(value) {
         _builder.requiredEop = value
       }
     /**
-     * `optional uint32 required_eop = 5;`
+     * <code>optional uint32 required_eop = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearRequiredEop() {
       _builder.clearRequiredEop()
     }
     /**
-     * `optional uint32 required_eop = 5;`
+     * <code>optional uint32 required_eop = 5;</code>
      * @return Whether the requiredEop field is set.
+     * @return This builder for chaining.
      */
     public fun hasRequiredEop(): kotlin.Boolean {
       return _builder.hasRequiredEop()
@@ -246,21 +265,23 @@ public object ShellObjectSpecKt {
      * `optional double required_soul_eggs = 6;`
      */
     public var requiredSoulEggs: kotlin.Double
-      @JvmName("getRequiredSoulEggs")
-      get() = _builder.requiredSoulEggs
-      @JvmName("setRequiredSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getRequiredSoulEggs")
+        get() = _builder.requiredSoulEggs
+      @kotlin.jvm.JvmName("setRequiredSoulEggs")
+        set(value) {
         _builder.requiredSoulEggs = value
       }
     /**
-     * `optional double required_soul_eggs = 6;`
+     * <code>optional double required_soul_eggs = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearRequiredSoulEggs() {
       _builder.clearRequiredSoulEggs()
     }
     /**
-     * `optional double required_soul_eggs = 6;`
+     * <code>optional double required_soul_eggs = 6;</code>
      * @return Whether the requiredSoulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasRequiredSoulEggs(): kotlin.Boolean {
       return _builder.hasRequiredSoulEggs()
@@ -270,21 +291,23 @@ public object ShellObjectSpecKt {
      * `optional bool is_new = 10;`
      */
     public var isNew: kotlin.Boolean
-      @JvmName("getIsNew")
-      get() = _builder.isNew
-      @JvmName("setIsNew")
-      set(value) {
+      @kotlin.jvm.JvmName("getIsNew")
+        get() = _builder.isNew
+      @kotlin.jvm.JvmName("setIsNew")
+        set(value) {
         _builder.isNew = value
       }
     /**
-     * `optional bool is_new = 10;`
+     * <code>optional bool is_new = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearIsNew() {
       _builder.clearIsNew()
     }
     /**
-     * `optional bool is_new = 10;`
+     * <code>optional bool is_new = 10;</code>
      * @return Whether the isNew field is set.
+     * @return This builder for chaining.
      */
     public fun hasIsNew(): kotlin.Boolean {
       return _builder.hasIsNew()
@@ -294,21 +317,23 @@ public object ShellObjectSpecKt {
      * `optional bool expires = 11;`
      */
     public var expires: kotlin.Boolean
-      @JvmName("getExpires")
-      get() = _builder.expires
-      @JvmName("setExpires")
-      set(value) {
+      @kotlin.jvm.JvmName("getExpires")
+        get() = _builder.expires
+      @kotlin.jvm.JvmName("setExpires")
+        set(value) {
         _builder.expires = value
       }
     /**
-     * `optional bool expires = 11;`
+     * <code>optional bool expires = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearExpires() {
       _builder.clearExpires()
     }
     /**
-     * `optional bool expires = 11;`
+     * <code>optional bool expires = 11;</code>
      * @return Whether the expires field is set.
+     * @return This builder for chaining.
      */
     public fun hasExpires(): kotlin.Boolean {
       return _builder.hasExpires()
@@ -318,21 +343,23 @@ public object ShellObjectSpecKt {
      * `optional double seconds_until_available = 18;`
      */
     public var secondsUntilAvailable: kotlin.Double
-      @JvmName("getSecondsUntilAvailable")
-      get() = _builder.secondsUntilAvailable
-      @JvmName("setSecondsUntilAvailable")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsUntilAvailable")
+        get() = _builder.secondsUntilAvailable
+      @kotlin.jvm.JvmName("setSecondsUntilAvailable")
+        set(value) {
         _builder.secondsUntilAvailable = value
       }
     /**
-     * `optional double seconds_until_available = 18;`
+     * <code>optional double seconds_until_available = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsUntilAvailable() {
       _builder.clearSecondsUntilAvailable()
     }
     /**
-     * `optional double seconds_until_available = 18;`
+     * <code>optional double seconds_until_available = 18;</code>
      * @return Whether the secondsUntilAvailable field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsUntilAvailable(): kotlin.Boolean {
       return _builder.hasSecondsUntilAvailable()
@@ -342,21 +369,23 @@ public object ShellObjectSpecKt {
      * `optional double seconds_remaining = 12;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 12;`
+     * <code>optional double seconds_remaining = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 12;`
+     * <code>optional double seconds_remaining = 12;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -366,21 +395,23 @@ public object ShellObjectSpecKt {
      * `optional uint64 popularity = 19;`
      */
     public var popularity: kotlin.Long
-      @JvmName("getPopularity")
-      get() = _builder.popularity
-      @JvmName("setPopularity")
-      set(value) {
+      @kotlin.jvm.JvmName("getPopularity")
+        get() = _builder.popularity
+      @kotlin.jvm.JvmName("setPopularity")
+        set(value) {
         _builder.popularity = value
       }
     /**
-     * `optional uint64 popularity = 19;`
+     * <code>optional uint64 popularity = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearPopularity() {
       _builder.clearPopularity()
     }
     /**
-     * `optional uint64 popularity = 19;`
+     * <code>optional uint64 popularity = 19;</code>
      * @return Whether the popularity field is set.
+     * @return This builder for chaining.
      */
     public fun hasPopularity(): kotlin.Boolean {
       return _builder.hasPopularity()
@@ -397,57 +428,63 @@ public object ShellObjectSpecKt {
      */
      public val metadata: com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.metadataList
       )
     /**
-     * `repeated double metadata = 7;`
+     * <code>repeated double metadata = 7;</code>
      * @param value The metadata to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addMetadata")
+@kotlin.jvm.JvmName("addMetadata")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>.add(value: kotlin.Double) {
       _builder.addMetadata(value)
     }/**
-     * `repeated double metadata = 7;`
+     * <code>repeated double metadata = 7;</code>
      * @param value The metadata to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignMetadata")
+@kotlin.jvm.JvmName("plusAssignMetadata")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>.plusAssign(value: kotlin.Double) {
       add(value)
     }/**
-     * `repeated double metadata = 7;`
+     * <code>repeated double metadata = 7;</code>
      * @param values The metadata to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllMetadata")
+@kotlin.jvm.JvmName("addAllMetadata")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
       _builder.addAllMetadata(values)
     }/**
-     * `repeated double metadata = 7;`
+     * <code>repeated double metadata = 7;</code>
      * @param values The metadata to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllMetadata")
+@kotlin.jvm.JvmName("plusAssignAllMetadata")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
       addAll(values)
     }/**
-     * `repeated double metadata = 7;`
+     * <code>repeated double metadata = 7;</code>
      * @param index The index to set the value at.
      * @param value The metadata to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setMetadata")
+@kotlin.jvm.JvmName("setMetadata")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>.set(index: kotlin.Int, value: kotlin.Double) {
       _builder.setMetadata(index, value)
     }/**
-     * `repeated double metadata = 7;`
+     * <code>repeated double metadata = 7;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearMetadata")
+@kotlin.jvm.JvmName("clearMetadata")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Double, MetadataProxy>.clear() {
       _builder.clearMetadata()
     }
@@ -455,21 +492,23 @@ public object ShellObjectSpecKt {
      * `optional bool no_hats = 13;`
      */
     public var noHats: kotlin.Boolean
-      @JvmName("getNoHats")
-      get() = _builder.noHats
-      @JvmName("setNoHats")
-      set(value) {
+      @kotlin.jvm.JvmName("getNoHats")
+        get() = _builder.noHats
+      @kotlin.jvm.JvmName("setNoHats")
+        set(value) {
         _builder.noHats = value
       }
     /**
-     * `optional bool no_hats = 13;`
+     * <code>optional bool no_hats = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearNoHats() {
       _builder.clearNoHats()
     }
     /**
-     * `optional bool no_hats = 13;`
+     * <code>optional bool no_hats = 13;</code>
      * @return Whether the noHats field is set.
+     * @return This builder for chaining.
      */
     public fun hasNoHats(): kotlin.Boolean {
       return _builder.hasNoHats()
@@ -479,21 +518,23 @@ public object ShellObjectSpecKt {
      * `optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;`
      */
     public var chickenAnimation: ei.Ei.ShellObjectSpec.ChickenAnimation
-      @JvmName("getChickenAnimation")
-      get() = _builder.chickenAnimation
-      @JvmName("setChickenAnimation")
-      set(value) {
+      @kotlin.jvm.JvmName("getChickenAnimation")
+        get() = _builder.chickenAnimation
+      @kotlin.jvm.JvmName("setChickenAnimation")
+        set(value) {
         _builder.chickenAnimation = value
       }
     /**
-     * `optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;`
+     * <code>optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearChickenAnimation() {
       _builder.clearChickenAnimation()
     }
     /**
-     * `optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;`
+     * <code>optional .ei.ShellObjectSpec.ChickenAnimation chicken_animation = 16;</code>
      * @return Whether the chickenAnimation field is set.
+     * @return This builder for chaining.
      */
     public fun hasChickenAnimation(): kotlin.Boolean {
       return _builder.hasChickenAnimation()
@@ -503,21 +544,23 @@ public object ShellObjectSpecKt {
      * `optional int32 sort_priority = 17;`
      */
     public var sortPriority: kotlin.Int
-      @JvmName("getSortPriority")
-      get() = _builder.sortPriority
-      @JvmName("setSortPriority")
-      set(value) {
+      @kotlin.jvm.JvmName("getSortPriority")
+        get() = _builder.sortPriority
+      @kotlin.jvm.JvmName("setSortPriority")
+        set(value) {
         _builder.sortPriority = value
       }
     /**
-     * `optional int32 sort_priority = 17;`
+     * <code>optional int32 sort_priority = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearSortPriority() {
       _builder.clearSortPriority()
     }
     /**
-     * `optional int32 sort_priority = 17;`
+     * <code>optional int32 sort_priority = 17;</code>
      * @return Whether the sortPriority field is set.
+     * @return This builder for chaining.
      */
     public fun hasSortPriority(): kotlin.Boolean {
       return _builder.hasSortPriority()
@@ -534,86 +577,93 @@ public object ShellObjectSpecKt {
      */
      public val pieces: com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.piecesList
       )
     /**
-     * `repeated .ei.ShellObjectSpec.LODPiece pieces = 8;`
+     * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param value The pieces to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addPieces")
+@kotlin.jvm.JvmName("addPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.add(value: ei.Ei.ShellObjectSpec.LODPiece) {
       _builder.addPieces(value)
     }
     /**
-     * `repeated .ei.ShellObjectSpec.LODPiece pieces = 8;`
+     * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param value The pieces to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignPieces")
+@kotlin.jvm.JvmName("plusAssignPieces")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.plusAssign(value: ei.Ei.ShellObjectSpec.LODPiece) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellObjectSpec.LODPiece pieces = 8;`
+     * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param values The pieces to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllPieces")
+@kotlin.jvm.JvmName("addAllPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec.LODPiece>) {
       _builder.addAllPieces(values)
     }
     /**
-     * `repeated .ei.ShellObjectSpec.LODPiece pieces = 8;`
+     * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param values The pieces to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllPieces")
+@kotlin.jvm.JvmName("plusAssignAllPieces")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec.LODPiece>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellObjectSpec.LODPiece pieces = 8;`
+     * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
      * @param index The index to set the value at.
      * @param value The pieces to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setPieces")
+@kotlin.jvm.JvmName("setPieces")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.set(index: kotlin.Int, value: ei.Ei.ShellObjectSpec.LODPiece) {
       _builder.setPieces(index, value)
     }
     /**
-     * `repeated .ei.ShellObjectSpec.LODPiece pieces = 8;`
+     * <code>repeated .ei.ShellObjectSpec.LODPiece pieces = 8;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearPieces")
+@kotlin.jvm.JvmName("clearPieces")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec.LODPiece, PiecesProxy>.clear() {
       _builder.clearPieces()
     }
-
 
     /**
      * `optional bool default_appearance = 9;`
      */
     public var defaultAppearance: kotlin.Boolean
-      @JvmName("getDefaultAppearance")
-      get() = _builder.defaultAppearance
-      @JvmName("setDefaultAppearance")
-      set(value) {
+      @kotlin.jvm.JvmName("getDefaultAppearance")
+        get() = _builder.defaultAppearance
+      @kotlin.jvm.JvmName("setDefaultAppearance")
+        set(value) {
         _builder.defaultAppearance = value
       }
     /**
-     * `optional bool default_appearance = 9;`
+     * <code>optional bool default_appearance = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearDefaultAppearance() {
       _builder.clearDefaultAppearance()
     }
     /**
-     * `optional bool default_appearance = 9;`
+     * <code>optional bool default_appearance = 9;</code>
      * @return Whether the defaultAppearance field is set.
+     * @return This builder for chaining.
      */
     public fun hasDefaultAppearance(): kotlin.Boolean {
       return _builder.hasDefaultAppearance()
@@ -645,21 +695,23 @@ public object ShellObjectSpecKt {
        * `optional .ei.DLCItem dlc = 1;`
        */
       public var dlc: ei.Ei.DLCItem
-        @JvmName("getDlc")
-        get() = _builder.dlc
-        @JvmName("setDlc")
-        set(value) {
+        @kotlin.jvm.JvmName("getDlc")
+          get() = _builder.dlc
+        @kotlin.jvm.JvmName("setDlc")
+          set(value) {
           _builder.dlc = value
         }
       /**
-       * `optional .ei.DLCItem dlc = 1;`
+       * <code>optional .ei.DLCItem dlc = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearDlc() {
         _builder.clearDlc()
       }
       /**
-       * `optional .ei.DLCItem dlc = 1;`
+       * <code>optional .ei.DLCItem dlc = 1;</code>
        * @return Whether the dlc field is set.
+       * @return This builder for chaining.
        */
       public fun hasDlc(): kotlin.Boolean {
         return _builder.hasDlc()
@@ -672,21 +724,23 @@ public object ShellObjectSpecKt {
        * `optional uint32 lod = 2;`
        */
       public var lod: kotlin.Int
-        @JvmName("getLod")
-        get() = _builder.lod
-        @JvmName("setLod")
-        set(value) {
+        @kotlin.jvm.JvmName("getLod")
+          get() = _builder.lod
+        @kotlin.jvm.JvmName("setLod")
+          set(value) {
           _builder.lod = value
         }
       /**
-       * `optional uint32 lod = 2;`
+       * <code>optional uint32 lod = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearLod() {
         _builder.clearLod()
       }
       /**
-       * `optional uint32 lod = 2;`
+       * <code>optional uint32 lod = 2;</code>
        * @return Whether the lod field is set.
+       * @return This builder for chaining.
        */
       public fun hasLod(): kotlin.Boolean {
         return _builder.hasLod()

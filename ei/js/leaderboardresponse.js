@@ -100,13 +100,13 @@ proto.ei.LeaderboardResponse.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.LeaderboardResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-scope: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-topEntriesList: jspb.Message.toObjectList(msg.getTopEntriesList(),
+    scope: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    topEntriesList: jspb.Message.toObjectList(msg.getTopEntriesList(),
     proto.ei.LeaderboardResponse.Entry.toObject, includeInstance),
-count: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-rank: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-score: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
+    count: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    rank: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    score: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -275,9 +275,9 @@ proto.ei.LeaderboardResponse.Entry.prototype.toObject = function(opt_includeInst
  */
 proto.ei.LeaderboardResponse.Entry.toObject = function(includeInstance, msg) {
   var f, obj = {
-rank: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-alias: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-score: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    rank: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    alias: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    score: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -32,21 +32,23 @@ public object MissionRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 4;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 4;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object MissionRequestKt {
      * `optional uint32 client_version = 1;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 1;`
+     * <code>optional uint32 client_version = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 1;`
+     * <code>optional uint32 client_version = 1;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -83,21 +87,23 @@ public object MissionRequestKt {
      * `optional string ei_user_id = 3;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 3;`
+     * <code>optional string ei_user_id = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 3;`
+     * <code>optional string ei_user_id = 3;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -107,21 +113,23 @@ public object MissionRequestKt {
      * `optional .ei.MissionInfo info = 2;`
      */
     public var info: ei.Ei.MissionInfo
-      @JvmName("getInfo")
-      get() = _builder.info
-      @JvmName("setInfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getInfo")
+        get() = _builder.info
+      @kotlin.jvm.JvmName("setInfo")
+        set(value) {
         _builder.info = value
       }
     /**
-     * `optional .ei.MissionInfo info = 2;`
+     * <code>optional .ei.MissionInfo info = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearInfo() {
       _builder.clearInfo()
     }
     /**
-     * `optional .ei.MissionInfo info = 2;`
+     * <code>optional .ei.MissionInfo info = 2;</code>
      * @return Whether the info field is set.
+     * @return This builder for chaining.
      */
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
@@ -134,21 +142,23 @@ public object MissionRequestKt {
      * `optional .ei.ArtifactsClientInfo client_info = 5;`
      */
     public var clientInfo: ei.Ei.ArtifactsClientInfo
-      @JvmName("getClientInfo")
-      get() = _builder.clientInfo
-      @JvmName("setClientInfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientInfo")
+        get() = _builder.clientInfo
+      @kotlin.jvm.JvmName("setClientInfo")
+        set(value) {
         _builder.clientInfo = value
       }
     /**
-     * `optional .ei.ArtifactsClientInfo client_info = 5;`
+     * <code>optional .ei.ArtifactsClientInfo client_info = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientInfo() {
       _builder.clearClientInfo()
     }
     /**
-     * `optional .ei.ArtifactsClientInfo client_info = 5;`
+     * <code>optional .ei.ArtifactsClientInfo client_info = 5;</code>
      * @return Whether the clientInfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientInfo(): kotlin.Boolean {
       return _builder.hasClientInfo()

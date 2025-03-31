@@ -70,25 +70,25 @@ proto.ei.ContractAction.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractAction.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-actionName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-destUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-contractId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-coopId: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-autojoin: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-replay: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
-pointsReplay: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-rewardType: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-rewardSubtype: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
-goalIndex: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-boostId: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
-tokens: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-kickReason: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-pb_public: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
-ccOnly: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    actionName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    destUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    contractId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    coopId: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    autojoin: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    replay: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
+    pointsReplay: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    rewardType: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+    rewardSubtype: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
+    goalIndex: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    boostId: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+    tokens: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    kickReason: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+    pb_public: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
+    ccOnly: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f
   };
 
   if (includeInstance) {

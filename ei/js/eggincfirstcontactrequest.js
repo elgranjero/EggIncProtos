@@ -72,14 +72,14 @@ proto.ei.EggIncFirstContactRequest.prototype.toObject = function(opt_includeInst
  */
 proto.ei.EggIncFirstContactRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-eiUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-gameServicesId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-deviceId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-username: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-clientVersion: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-platform: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    eiUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    gameServicesId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    deviceId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    username: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    clientVersion: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    platform: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

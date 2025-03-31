@@ -72,9 +72,9 @@ proto.ei.ContractSeasonRewardConfirmationRequest.prototype.toObject = function(o
  */
 proto.ei.ContractSeasonRewardConfirmationRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-seasonId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-goal: (f = msg.getGoal()) && proto.ei.ContractSeasonGoal.toObject(includeInstance, f)
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    seasonId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    goal: (f = msg.getGoal()) && proto.ei.ContractSeasonGoal.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

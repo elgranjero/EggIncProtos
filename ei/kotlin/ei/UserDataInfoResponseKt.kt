@@ -32,21 +32,23 @@ public object UserDataInfoResponseKt {
      * `optional uint64 backup_checksum = 1;`
      */
     public var backupChecksum: kotlin.Long
-      @JvmName("getBackupChecksum")
-      get() = _builder.backupChecksum
-      @JvmName("setBackupChecksum")
-      set(value) {
+      @kotlin.jvm.JvmName("getBackupChecksum")
+        get() = _builder.backupChecksum
+      @kotlin.jvm.JvmName("setBackupChecksum")
+        set(value) {
         _builder.backupChecksum = value
       }
     /**
-     * `optional uint64 backup_checksum = 1;`
+     * <code>optional uint64 backup_checksum = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearBackupChecksum() {
       _builder.clearBackupChecksum()
     }
     /**
-     * `optional uint64 backup_checksum = 1;`
+     * <code>optional uint64 backup_checksum = 1;</code>
      * @return Whether the backupChecksum field is set.
+     * @return This builder for chaining.
      */
     public fun hasBackupChecksum(): kotlin.Boolean {
       return _builder.hasBackupChecksum()
@@ -56,21 +58,23 @@ public object UserDataInfoResponseKt {
      * `optional double backup_total_cash = 2;`
      */
     public var backupTotalCash: kotlin.Double
-      @JvmName("getBackupTotalCash")
-      get() = _builder.backupTotalCash
-      @JvmName("setBackupTotalCash")
-      set(value) {
+      @kotlin.jvm.JvmName("getBackupTotalCash")
+        get() = _builder.backupTotalCash
+      @kotlin.jvm.JvmName("setBackupTotalCash")
+        set(value) {
         _builder.backupTotalCash = value
       }
     /**
-     * `optional double backup_total_cash = 2;`
+     * <code>optional double backup_total_cash = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearBackupTotalCash() {
       _builder.clearBackupTotalCash()
     }
     /**
-     * `optional double backup_total_cash = 2;`
+     * <code>optional double backup_total_cash = 2;</code>
      * @return Whether the backupTotalCash field is set.
+     * @return This builder for chaining.
      */
     public fun hasBackupTotalCash(): kotlin.Boolean {
       return _builder.hasBackupTotalCash()
@@ -83,66 +87,73 @@ public object UserDataInfoResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class CoopMembershipsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
      * @return A list containing the coopMemberships.
+     * @return This builder for chaining.
      */
     public val coopMemberships: com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.coopMembershipsList
       )
     /**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
      * @param value The coopMemberships to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCoopMemberships")
+@kotlin.jvm.JvmName("addCoopMemberships")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.add(value: kotlin.String) {
       _builder.addCoopMemberships(value)
     }
     /**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
      * @param value The coopMemberships to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCoopMemberships")
+@kotlin.jvm.JvmName("plusAssignCoopMemberships")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
      * @param values The coopMemberships to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCoopMemberships")
+@kotlin.jvm.JvmName("addAllCoopMemberships")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllCoopMemberships(values)
     }
     /**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
      * @param values The coopMemberships to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCoopMemberships")
+@kotlin.jvm.JvmName("plusAssignAllCoopMemberships")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
      * @param index The index to set the value at.
      * @param value The coopMemberships to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCoopMemberships")
+@kotlin.jvm.JvmName("setCoopMemberships")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setCoopMemberships(index, value)
     }/**
-     * `repeated string coop_memberships = 3;`
+     * <code>repeated string coop_memberships = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCoopMemberships")
+@kotlin.jvm.JvmName("setCoopMemberships")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.clear() {
       _builder.clearCoopMemberships()
     }}

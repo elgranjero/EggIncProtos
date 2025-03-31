@@ -32,21 +32,23 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
      * `optional .ei.BasicRequestInfo rinfo = 3;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 3;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 3;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -62,66 +64,73 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class IdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
      * @return A list containing the ids.
+     * @return This builder for chaining.
      */
     public val ids: com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.idsList
       )
     /**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
      * @param value The ids to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addIds")
+@kotlin.jvm.JvmName("addIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.add(value: kotlin.String) {
       _builder.addIds(value)
     }
     /**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
      * @param value The ids to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignIds")
+@kotlin.jvm.JvmName("plusAssignIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
      * @param values The ids to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllIds")
+@kotlin.jvm.JvmName("addAllIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllIds(values)
     }
     /**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
      * @param values The ids to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllIds")
+@kotlin.jvm.JvmName("plusAssignAllIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
      * @param index The index to set the value at.
      * @param value The ids to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setIds")
+@kotlin.jvm.JvmName("setIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setIds(index, value)
     }/**
-     * `repeated string ids = 1;`
+     * <code>repeated string ids = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearIds")
+@kotlin.jvm.JvmName("setIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.clear() {
       _builder.clearIds()
     }
@@ -129,21 +138,23 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
      * `optional uint32 amount = 2;`
      */
     public var amount: kotlin.Int
-      @JvmName("getAmount")
-      get() = _builder.amount
-      @JvmName("setAmount")
-      set(value) {
+      @kotlin.jvm.JvmName("getAmount")
+        get() = _builder.amount
+      @kotlin.jvm.JvmName("setAmount")
+        set(value) {
         _builder.amount = value
       }
     /**
-     * `optional uint32 amount = 2;`
+     * <code>optional uint32 amount = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearAmount() {
       _builder.clearAmount()
     }
     /**
-     * `optional uint32 amount = 2;`
+     * <code>optional uint32 amount = 2;</code>
      * @return Whether the amount field is set.
+     * @return This builder for chaining.
      */
     public fun hasAmount(): kotlin.Boolean {
       return _builder.hasAmount()

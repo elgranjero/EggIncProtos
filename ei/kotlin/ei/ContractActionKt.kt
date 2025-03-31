@@ -32,21 +32,23 @@ public object ContractActionKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -56,21 +58,23 @@ public object ContractActionKt {
      * `optional string action_name = 2;`
      */
     public var actionName: kotlin.String
-      @JvmName("getActionName")
-      get() = _builder.actionName
-      @JvmName("setActionName")
-      set(value) {
+      @kotlin.jvm.JvmName("getActionName")
+        get() = _builder.actionName
+      @kotlin.jvm.JvmName("setActionName")
+        set(value) {
         _builder.actionName = value
       }
     /**
-     * `optional string action_name = 2;`
+     * <code>optional string action_name = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearActionName() {
       _builder.clearActionName()
     }
     /**
-     * `optional string action_name = 2;`
+     * <code>optional string action_name = 2;</code>
      * @return Whether the actionName field is set.
+     * @return This builder for chaining.
      */
     public fun hasActionName(): kotlin.Boolean {
       return _builder.hasActionName()
@@ -80,21 +84,23 @@ public object ContractActionKt {
      * `optional double approx_time = 3;`
      */
     public var approxTime: kotlin.Double
-      @JvmName("getApproxTime")
-      get() = _builder.approxTime
-      @JvmName("setApproxTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getApproxTime")
+        get() = _builder.approxTime
+      @kotlin.jvm.JvmName("setApproxTime")
+        set(value) {
         _builder.approxTime = value
       }
     /**
-     * `optional double approx_time = 3;`
+     * <code>optional double approx_time = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * `optional double approx_time = 3;`
+     * <code>optional double approx_time = 3;</code>
      * @return Whether the approxTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -104,21 +110,23 @@ public object ContractActionKt {
      * `optional string dest_user_id = 4;`
      */
     public var destUserId: kotlin.String
-      @JvmName("getDestUserId")
-      get() = _builder.destUserId
-      @JvmName("setDestUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getDestUserId")
+        get() = _builder.destUserId
+      @kotlin.jvm.JvmName("setDestUserId")
+        set(value) {
         _builder.destUserId = value
       }
     /**
-     * `optional string dest_user_id = 4;`
+     * <code>optional string dest_user_id = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearDestUserId() {
       _builder.clearDestUserId()
     }
     /**
-     * `optional string dest_user_id = 4;`
+     * <code>optional string dest_user_id = 4;</code>
      * @return Whether the destUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasDestUserId(): kotlin.Boolean {
       return _builder.hasDestUserId()
@@ -128,21 +136,23 @@ public object ContractActionKt {
      * `optional string contract_id = 5;`
      */
     public var contractId: kotlin.String
-      @JvmName("getContractId")
-      get() = _builder.contractId
-      @JvmName("setContractId")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractId")
+        get() = _builder.contractId
+      @kotlin.jvm.JvmName("setContractId")
+        set(value) {
         _builder.contractId = value
       }
     /**
-     * `optional string contract_id = 5;`
+     * <code>optional string contract_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractId() {
       _builder.clearContractId()
     }
     /**
-     * `optional string contract_id = 5;`
+     * <code>optional string contract_id = 5;</code>
      * @return Whether the contractId field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractId(): kotlin.Boolean {
       return _builder.hasContractId()
@@ -152,21 +162,23 @@ public object ContractActionKt {
      * `optional string coop_id = 6;`
      */
     public var coopId: kotlin.String
-      @JvmName("getCoopId")
-      get() = _builder.coopId
-      @JvmName("setCoopId")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopId")
+        get() = _builder.coopId
+      @kotlin.jvm.JvmName("setCoopId")
+        set(value) {
         _builder.coopId = value
       }
     /**
-     * `optional string coop_id = 6;`
+     * <code>optional string coop_id = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopId() {
       _builder.clearCoopId()
     }
     /**
-     * `optional string coop_id = 6;`
+     * <code>optional string coop_id = 6;</code>
      * @return Whether the coopId field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopId(): kotlin.Boolean {
       return _builder.hasCoopId()
@@ -176,21 +188,23 @@ public object ContractActionKt {
      * `optional bool autojoin = 7;`
      */
     public var autojoin: kotlin.Boolean
-      @JvmName("getAutojoin")
-      get() = _builder.autojoin
-      @JvmName("setAutojoin")
-      set(value) {
+      @kotlin.jvm.JvmName("getAutojoin")
+        get() = _builder.autojoin
+      @kotlin.jvm.JvmName("setAutojoin")
+        set(value) {
         _builder.autojoin = value
       }
     /**
-     * `optional bool autojoin = 7;`
+     * <code>optional bool autojoin = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearAutojoin() {
       _builder.clearAutojoin()
     }
     /**
-     * `optional bool autojoin = 7;`
+     * <code>optional bool autojoin = 7;</code>
      * @return Whether the autojoin field is set.
+     * @return This builder for chaining.
      */
     public fun hasAutojoin(): kotlin.Boolean {
       return _builder.hasAutojoin()
@@ -200,21 +214,23 @@ public object ContractActionKt {
      * `optional uint32 grade = 8;`
      */
     public var grade: kotlin.Int
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional uint32 grade = 8;`
+     * <code>optional uint32 grade = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional uint32 grade = 8;`
+     * <code>optional uint32 grade = 8;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -224,21 +240,23 @@ public object ContractActionKt {
      * `optional bool replay = 9;`
      */
     public var replay: kotlin.Boolean
-      @JvmName("getReplay")
-      get() = _builder.replay
-      @JvmName("setReplay")
-      set(value) {
+      @kotlin.jvm.JvmName("getReplay")
+        get() = _builder.replay
+      @kotlin.jvm.JvmName("setReplay")
+        set(value) {
         _builder.replay = value
       }
     /**
-     * `optional bool replay = 9;`
+     * <code>optional bool replay = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearReplay() {
       _builder.clearReplay()
     }
     /**
-     * `optional bool replay = 9;`
+     * <code>optional bool replay = 9;</code>
      * @return Whether the replay field is set.
+     * @return This builder for chaining.
      */
     public fun hasReplay(): kotlin.Boolean {
       return _builder.hasReplay()
@@ -248,21 +266,23 @@ public object ContractActionKt {
      * `optional bool points_replay = 10;`
      */
     public var pointsReplay: kotlin.Boolean
-      @JvmName("getPointsReplay")
-      get() = _builder.pointsReplay
-      @JvmName("setPointsReplay")
-      set(value) {
+      @kotlin.jvm.JvmName("getPointsReplay")
+        get() = _builder.pointsReplay
+      @kotlin.jvm.JvmName("setPointsReplay")
+        set(value) {
         _builder.pointsReplay = value
       }
     /**
-     * `optional bool points_replay = 10;`
+     * <code>optional bool points_replay = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearPointsReplay() {
       _builder.clearPointsReplay()
     }
     /**
-     * `optional bool points_replay = 10;`
+     * <code>optional bool points_replay = 10;</code>
      * @return Whether the pointsReplay field is set.
+     * @return This builder for chaining.
      */
     public fun hasPointsReplay(): kotlin.Boolean {
       return _builder.hasPointsReplay()
@@ -272,21 +292,23 @@ public object ContractActionKt {
      * `optional uint32 reward_type = 11;`
      */
     public var rewardType: kotlin.Int
-      @JvmName("getRewardType")
-      get() = _builder.rewardType
-      @JvmName("setRewardType")
-      set(value) {
+      @kotlin.jvm.JvmName("getRewardType")
+        get() = _builder.rewardType
+      @kotlin.jvm.JvmName("setRewardType")
+        set(value) {
         _builder.rewardType = value
       }
     /**
-     * `optional uint32 reward_type = 11;`
+     * <code>optional uint32 reward_type = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearRewardType() {
       _builder.clearRewardType()
     }
     /**
-     * `optional uint32 reward_type = 11;`
+     * <code>optional uint32 reward_type = 11;</code>
      * @return Whether the rewardType field is set.
+     * @return This builder for chaining.
      */
     public fun hasRewardType(): kotlin.Boolean {
       return _builder.hasRewardType()
@@ -296,21 +318,23 @@ public object ContractActionKt {
      * `optional string reward_subtype = 12;`
      */
     public var rewardSubtype: kotlin.String
-      @JvmName("getRewardSubtype")
-      get() = _builder.rewardSubtype
-      @JvmName("setRewardSubtype")
-      set(value) {
+      @kotlin.jvm.JvmName("getRewardSubtype")
+        get() = _builder.rewardSubtype
+      @kotlin.jvm.JvmName("setRewardSubtype")
+        set(value) {
         _builder.rewardSubtype = value
       }
     /**
-     * `optional string reward_subtype = 12;`
+     * <code>optional string reward_subtype = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearRewardSubtype() {
       _builder.clearRewardSubtype()
     }
     /**
-     * `optional string reward_subtype = 12;`
+     * <code>optional string reward_subtype = 12;</code>
      * @return Whether the rewardSubtype field is set.
+     * @return This builder for chaining.
      */
     public fun hasRewardSubtype(): kotlin.Boolean {
       return _builder.hasRewardSubtype()
@@ -320,21 +344,23 @@ public object ContractActionKt {
      * `optional double reward_amount = 13;`
      */
     public var rewardAmount: kotlin.Double
-      @JvmName("getRewardAmount")
-      get() = _builder.rewardAmount
-      @JvmName("setRewardAmount")
-      set(value) {
+      @kotlin.jvm.JvmName("getRewardAmount")
+        get() = _builder.rewardAmount
+      @kotlin.jvm.JvmName("setRewardAmount")
+        set(value) {
         _builder.rewardAmount = value
       }
     /**
-     * `optional double reward_amount = 13;`
+     * <code>optional double reward_amount = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearRewardAmount() {
       _builder.clearRewardAmount()
     }
     /**
-     * `optional double reward_amount = 13;`
+     * <code>optional double reward_amount = 13;</code>
      * @return Whether the rewardAmount field is set.
+     * @return This builder for chaining.
      */
     public fun hasRewardAmount(): kotlin.Boolean {
       return _builder.hasRewardAmount()
@@ -344,21 +370,23 @@ public object ContractActionKt {
      * `optional uint32 goal_index = 14;`
      */
     public var goalIndex: kotlin.Int
-      @JvmName("getGoalIndex")
-      get() = _builder.goalIndex
-      @JvmName("setGoalIndex")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoalIndex")
+        get() = _builder.goalIndex
+      @kotlin.jvm.JvmName("setGoalIndex")
+        set(value) {
         _builder.goalIndex = value
       }
     /**
-     * `optional uint32 goal_index = 14;`
+     * <code>optional uint32 goal_index = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoalIndex() {
       _builder.clearGoalIndex()
     }
     /**
-     * `optional uint32 goal_index = 14;`
+     * <code>optional uint32 goal_index = 14;</code>
      * @return Whether the goalIndex field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoalIndex(): kotlin.Boolean {
       return _builder.hasGoalIndex()
@@ -368,21 +396,23 @@ public object ContractActionKt {
      * `optional string boost_id = 15;`
      */
     public var boostId: kotlin.String
-      @JvmName("getBoostId")
-      get() = _builder.boostId
-      @JvmName("setBoostId")
-      set(value) {
+      @kotlin.jvm.JvmName("getBoostId")
+        get() = _builder.boostId
+      @kotlin.jvm.JvmName("setBoostId")
+        set(value) {
         _builder.boostId = value
       }
     /**
-     * `optional string boost_id = 15;`
+     * <code>optional string boost_id = 15;</code>
+     * @return This builder for chaining.
      */
     public fun clearBoostId() {
       _builder.clearBoostId()
     }
     /**
-     * `optional string boost_id = 15;`
+     * <code>optional string boost_id = 15;</code>
      * @return Whether the boostId field is set.
+     * @return This builder for chaining.
      */
     public fun hasBoostId(): kotlin.Boolean {
       return _builder.hasBoostId()
@@ -392,21 +422,23 @@ public object ContractActionKt {
      * `optional uint32 tokens = 16;`
      */
     public var tokens: kotlin.Int
-      @JvmName("getTokens")
-      get() = _builder.tokens
-      @JvmName("setTokens")
-      set(value) {
+      @kotlin.jvm.JvmName("getTokens")
+        get() = _builder.tokens
+      @kotlin.jvm.JvmName("setTokens")
+        set(value) {
         _builder.tokens = value
       }
     /**
-     * `optional uint32 tokens = 16;`
+     * <code>optional uint32 tokens = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearTokens() {
       _builder.clearTokens()
     }
     /**
-     * `optional uint32 tokens = 16;`
+     * <code>optional uint32 tokens = 16;</code>
      * @return Whether the tokens field is set.
+     * @return This builder for chaining.
      */
     public fun hasTokens(): kotlin.Boolean {
       return _builder.hasTokens()
@@ -416,21 +448,23 @@ public object ContractActionKt {
      * `optional uint32 kick_reason = 17;`
      */
     public var kickReason: kotlin.Int
-      @JvmName("getKickReason")
-      get() = _builder.kickReason
-      @JvmName("setKickReason")
-      set(value) {
+      @kotlin.jvm.JvmName("getKickReason")
+        get() = _builder.kickReason
+      @kotlin.jvm.JvmName("setKickReason")
+        set(value) {
         _builder.kickReason = value
       }
     /**
-     * `optional uint32 kick_reason = 17;`
+     * <code>optional uint32 kick_reason = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearKickReason() {
       _builder.clearKickReason()
     }
     /**
-     * `optional uint32 kick_reason = 17;`
+     * <code>optional uint32 kick_reason = 17;</code>
      * @return Whether the kickReason field is set.
+     * @return This builder for chaining.
      */
     public fun hasKickReason(): kotlin.Boolean {
       return _builder.hasKickReason()
@@ -440,21 +474,23 @@ public object ContractActionKt {
      * `optional bool public = 18;`
      */
     public var public: kotlin.Boolean
-      @JvmName("getPublic")
-      get() = _builder.public
-      @JvmName("setPublic")
-      set(value) {
+      @kotlin.jvm.JvmName("getPublic")
+        get() = _builder.public
+      @kotlin.jvm.JvmName("setPublic")
+        set(value) {
         _builder.public = value
       }
     /**
-     * `optional bool public = 18;`
+     * <code>optional bool public = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearPublic() {
       _builder.clearPublic()
     }
     /**
-     * `optional bool public = 18;`
+     * <code>optional bool public = 18;</code>
      * @return Whether the public field is set.
+     * @return This builder for chaining.
      */
     public fun hasPublic(): kotlin.Boolean {
       return _builder.hasPublic()
@@ -464,21 +500,23 @@ public object ContractActionKt {
      * `optional bool cc_only = 19;`
      */
     public var ccOnly: kotlin.Boolean
-      @JvmName("getCcOnly")
-      get() = _builder.ccOnly
-      @JvmName("setCcOnly")
-      set(value) {
+      @kotlin.jvm.JvmName("getCcOnly")
+        get() = _builder.ccOnly
+      @kotlin.jvm.JvmName("setCcOnly")
+        set(value) {
         _builder.ccOnly = value
       }
     /**
-     * `optional bool cc_only = 19;`
+     * <code>optional bool cc_only = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * `optional bool cc_only = 19;`
+     * <code>optional bool cc_only = 19;</code>
      * @return Whether the ccOnly field is set.
+     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()

@@ -32,21 +32,23 @@ public object DailyGiftInfoKt {
      * `optional uint32 current_day = 1;`
      */
     public var currentDay: kotlin.Int
-      @JvmName("getCurrentDay")
-      get() = _builder.currentDay
-      @JvmName("setCurrentDay")
-      set(value) {
+      @kotlin.jvm.JvmName("getCurrentDay")
+        get() = _builder.currentDay
+      @kotlin.jvm.JvmName("setCurrentDay")
+        set(value) {
         _builder.currentDay = value
       }
     /**
-     * `optional uint32 current_day = 1;`
+     * <code>optional uint32 current_day = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearCurrentDay() {
       _builder.clearCurrentDay()
     }
     /**
-     * `optional uint32 current_day = 1;`
+     * <code>optional uint32 current_day = 1;</code>
      * @return Whether the currentDay field is set.
+     * @return This builder for chaining.
      */
     public fun hasCurrentDay(): kotlin.Boolean {
       return _builder.hasCurrentDay()
@@ -56,21 +58,23 @@ public object DailyGiftInfoKt {
      * `optional double seconds_to_next_day = 2;`
      */
     public var secondsToNextDay: kotlin.Double
-      @JvmName("getSecondsToNextDay")
-      get() = _builder.secondsToNextDay
-      @JvmName("setSecondsToNextDay")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsToNextDay")
+        get() = _builder.secondsToNextDay
+      @kotlin.jvm.JvmName("setSecondsToNextDay")
+        set(value) {
         _builder.secondsToNextDay = value
       }
     /**
-     * `optional double seconds_to_next_day = 2;`
+     * <code>optional double seconds_to_next_day = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsToNextDay() {
       _builder.clearSecondsToNextDay()
     }
     /**
-     * `optional double seconds_to_next_day = 2;`
+     * <code>optional double seconds_to_next_day = 2;</code>
      * @return Whether the secondsToNextDay field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsToNextDay(): kotlin.Boolean {
       return _builder.hasSecondsToNextDay()

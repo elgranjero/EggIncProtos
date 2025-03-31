@@ -70,9 +70,9 @@ proto.ei.CoopBuffState.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CoopBuffState.toObject = function(includeInstance, msg) {
   var f, obj = {
-eggLayingRate: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 1.0),
-earnings: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 1.0),
-serverTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    eggLayingRate: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 1.0),
+    earnings: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 1.0),
+    serverTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -32,21 +32,23 @@ public object ShellsActionBatchKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -66,66 +68,71 @@ public object ShellsActionBatchKt {
      */
      public val actions: com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.actionsList
       )
     /**
-     * `repeated .ei.ShellsActionLog actions = 2;`
+     * <code>repeated .ei.ShellsActionLog actions = 2;</code>
      * @param value The actions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addActions")
+@kotlin.jvm.JvmName("addActions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>.add(value: ei.Ei.ShellsActionLog) {
       _builder.addActions(value)
     }
     /**
-     * `repeated .ei.ShellsActionLog actions = 2;`
+     * <code>repeated .ei.ShellsActionLog actions = 2;</code>
      * @param value The actions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignActions")
+@kotlin.jvm.JvmName("plusAssignActions")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>.plusAssign(value: ei.Ei.ShellsActionLog) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellsActionLog actions = 2;`
+     * <code>repeated .ei.ShellsActionLog actions = 2;</code>
      * @param values The actions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllActions")
+@kotlin.jvm.JvmName("addAllActions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellsActionLog>) {
       _builder.addAllActions(values)
     }
     /**
-     * `repeated .ei.ShellsActionLog actions = 2;`
+     * <code>repeated .ei.ShellsActionLog actions = 2;</code>
      * @param values The actions to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllActions")
+@kotlin.jvm.JvmName("plusAssignAllActions")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellsActionLog>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellsActionLog actions = 2;`
+     * <code>repeated .ei.ShellsActionLog actions = 2;</code>
      * @param index The index to set the value at.
      * @param value The actions to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setActions")
+@kotlin.jvm.JvmName("setActions")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellsActionLog) {
       _builder.setActions(index, value)
     }
     /**
-     * `repeated .ei.ShellsActionLog actions = 2;`
+     * <code>repeated .ei.ShellsActionLog actions = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearActions")
+@kotlin.jvm.JvmName("clearActions")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellsActionLog, ActionsProxy>.clear() {
       _builder.clearActions()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

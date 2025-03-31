@@ -32,21 +32,23 @@ public object SubmitShellShowcaseRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 4;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 4;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object SubmitShellShowcaseRequestKt {
      * `optional string local_id = 1;`
      */
     public var localId: kotlin.String
-      @JvmName("getLocalId")
-      get() = _builder.localId
-      @JvmName("setLocalId")
-      set(value) {
+      @kotlin.jvm.JvmName("getLocalId")
+        get() = _builder.localId
+      @kotlin.jvm.JvmName("setLocalId")
+        set(value) {
         _builder.localId = value
       }
     /**
-     * `optional string local_id = 1;`
+     * <code>optional string local_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearLocalId() {
       _builder.clearLocalId()
     }
     /**
-     * `optional string local_id = 1;`
+     * <code>optional string local_id = 1;</code>
      * @return Whether the localId field is set.
+     * @return This builder for chaining.
      */
     public fun hasLocalId(): kotlin.Boolean {
       return _builder.hasLocalId()
@@ -83,21 +87,23 @@ public object SubmitShellShowcaseRequestKt {
      * `optional string user_id = 2;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 2;`
+     * <code>optional string user_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 2;`
+     * <code>optional string user_id = 2;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -107,21 +113,23 @@ public object SubmitShellShowcaseRequestKt {
      * `optional bool public_username = 5;`
      */
     public var publicUsername: kotlin.Boolean
-      @JvmName("getPublicUsername")
-      get() = _builder.publicUsername
-      @JvmName("setPublicUsername")
-      set(value) {
+      @kotlin.jvm.JvmName("getPublicUsername")
+        get() = _builder.publicUsername
+      @kotlin.jvm.JvmName("setPublicUsername")
+        set(value) {
         _builder.publicUsername = value
       }
     /**
-     * `optional bool public_username = 5;`
+     * <code>optional bool public_username = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearPublicUsername() {
       _builder.clearPublicUsername()
     }
     /**
-     * `optional bool public_username = 5;`
+     * <code>optional bool public_username = 5;</code>
      * @return Whether the publicUsername field is set.
+     * @return This builder for chaining.
      */
     public fun hasPublicUsername(): kotlin.Boolean {
       return _builder.hasPublicUsername()
@@ -131,21 +139,23 @@ public object SubmitShellShowcaseRequestKt {
      * `optional .ei.ShellDB.FarmConfiguration farm_config = 3;`
      */
     public var farmConfig: ei.Ei.ShellDB.FarmConfiguration
-      @JvmName("getFarmConfig")
-      get() = _builder.farmConfig
-      @JvmName("setFarmConfig")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmConfig")
+        get() = _builder.farmConfig
+      @kotlin.jvm.JvmName("setFarmConfig")
+        set(value) {
         _builder.farmConfig = value
       }
     /**
-     * `optional .ei.ShellDB.FarmConfiguration farm_config = 3;`
+     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmConfig() {
       _builder.clearFarmConfig()
     }
     /**
-     * `optional .ei.ShellDB.FarmConfiguration farm_config = 3;`
+     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 3;</code>
      * @return Whether the farmConfig field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmConfig(): kotlin.Boolean {
       return _builder.hasFarmConfig()

@@ -32,21 +32,23 @@ public object AuthenticatedMessageKt {
      * `optional bytes message = 1;`
      */
     public var message: com.google.protobuf.ByteString
-      @JvmName("getMessage")
-      get() = _builder.message
-      @JvmName("setMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getMessage")
+        get() = _builder.message
+      @kotlin.jvm.JvmName("setMessage")
+        set(value) {
         _builder.message = value
       }
     /**
-     * `optional bytes message = 1;`
+     * <code>optional bytes message = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * `optional bytes message = 1;`
+     * <code>optional bytes message = 1;</code>
      * @return Whether the message field is set.
+     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -56,21 +58,23 @@ public object AuthenticatedMessageKt {
      * `optional uint32 version = 3;`
      */
     public var version: kotlin.Int
-      @JvmName("getVersion")
-      get() = _builder.version
-      @JvmName("setVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getVersion")
+        get() = _builder.version
+      @kotlin.jvm.JvmName("setVersion")
+        set(value) {
         _builder.version = value
       }
     /**
-     * `optional uint32 version = 3;`
+     * <code>optional uint32 version = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * `optional uint32 version = 3;`
+     * <code>optional uint32 version = 3;</code>
      * @return Whether the version field is set.
+     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -80,21 +84,23 @@ public object AuthenticatedMessageKt {
      * `optional string code = 2;`
      */
     public var code: kotlin.String
-      @JvmName("getCode")
-      get() = _builder.code
-      @JvmName("setCode")
-      set(value) {
+      @kotlin.jvm.JvmName("getCode")
+        get() = _builder.code
+      @kotlin.jvm.JvmName("setCode")
+        set(value) {
         _builder.code = value
       }
     /**
-     * `optional string code = 2;`
+     * <code>optional string code = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearCode() {
       _builder.clearCode()
     }
     /**
-     * `optional string code = 2;`
+     * <code>optional string code = 2;</code>
      * @return Whether the code field is set.
+     * @return This builder for chaining.
      */
     public fun hasCode(): kotlin.Boolean {
       return _builder.hasCode()
@@ -104,21 +110,23 @@ public object AuthenticatedMessageKt {
      * `optional bool compressed = 4;`
      */
     public var compressed: kotlin.Boolean
-      @JvmName("getCompressed")
-      get() = _builder.compressed
-      @JvmName("setCompressed")
-      set(value) {
+      @kotlin.jvm.JvmName("getCompressed")
+        get() = _builder.compressed
+      @kotlin.jvm.JvmName("setCompressed")
+        set(value) {
         _builder.compressed = value
       }
     /**
-     * `optional bool compressed = 4;`
+     * <code>optional bool compressed = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearCompressed() {
       _builder.clearCompressed()
     }
     /**
-     * `optional bool compressed = 4;`
+     * <code>optional bool compressed = 4;</code>
      * @return Whether the compressed field is set.
+     * @return This builder for chaining.
      */
     public fun hasCompressed(): kotlin.Boolean {
       return _builder.hasCompressed()
@@ -128,21 +136,23 @@ public object AuthenticatedMessageKt {
      * `optional uint32 original_size = 5;`
      */
     public var originalSize: kotlin.Int
-      @JvmName("getOriginalSize")
-      get() = _builder.originalSize
-      @JvmName("setOriginalSize")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalSize")
+        get() = _builder.originalSize
+      @kotlin.jvm.JvmName("setOriginalSize")
+        set(value) {
         _builder.originalSize = value
       }
     /**
-     * `optional uint32 original_size = 5;`
+     * <code>optional uint32 original_size = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalSize() {
       _builder.clearOriginalSize()
     }
     /**
-     * `optional uint32 original_size = 5;`
+     * <code>optional uint32 original_size = 5;</code>
      * @return Whether the originalSize field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalSize(): kotlin.Boolean {
       return _builder.hasOriginalSize()
@@ -152,21 +162,23 @@ public object AuthenticatedMessageKt {
      * `optional string user_id = 6;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 6;`
+     * <code>optional string user_id = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 6;`
+     * <code>optional string user_id = 6;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()

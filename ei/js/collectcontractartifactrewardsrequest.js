@@ -73,12 +73,12 @@ proto.ei.CollectContractArtifactRewardsRequest.prototype.toObject = function(opt
  */
 proto.ei.CollectContractArtifactRewardsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-contractIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-league: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-goalIndex: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-bestShip: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    contractIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    league: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    goalIndex: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    bestShip: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

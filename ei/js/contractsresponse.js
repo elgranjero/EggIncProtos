@@ -80,15 +80,15 @@ proto.ei.ContractsResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-contractsList: jspb.Message.toObjectList(msg.getContractsList(),
+    contractsList: jspb.Message.toObjectList(msg.getContractsList(),
     proto.ei.Contract.toObject, includeInstance),
-customEggsList: jspb.Message.toObjectList(msg.getCustomEggsList(),
+    customEggsList: jspb.Message.toObjectList(msg.getCustomEggsList(),
     proto.ei.CustomEgg.toObject, includeInstance),
-warningMessage: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-totalEop: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-serverTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-maxEop: jspb.Message.getFieldWithDefault(msg, 3, 1000),
-currentSeason: (f = msg.getCurrentSeason()) && proto.ei.ContractSeasonInfo.toObject(includeInstance, f)
+    warningMessage: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    totalEop: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    serverTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    maxEop: jspb.Message.getFieldWithDefault(msg, 3, 1000),
+    currentSeason: (f = msg.getCurrentSeason()) && proto.ei.ContractSeasonInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

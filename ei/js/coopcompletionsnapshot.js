@@ -99,7 +99,7 @@ proto.ei.CoopCompletionSnapshot.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.CoopCompletionSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
-contributorsList: jspb.Message.toObjectList(msg.getContributorsList(),
+    contributorsList: jspb.Message.toObjectList(msg.getContributorsList(),
     proto.ei.CoopCompletionSnapshot.ContributorSnapshot.toObject, includeInstance)
   };
 
@@ -214,14 +214,14 @@ proto.ei.CoopCompletionSnapshot.ContributorSnapshot.prototype.toObject = functio
  */
 proto.ei.CoopCompletionSnapshot.ContributorSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
-contribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-lastContributionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-finalized: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-tokens: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-tokensSpent: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+    contribution: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    lastContributionTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    finalized: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    tokens: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    tokensSpent: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

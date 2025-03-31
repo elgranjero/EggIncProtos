@@ -39,66 +39,71 @@ public object CoopCompletionSnapshotKt {
      */
      public val contributors: com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.contributorsList
       )
     /**
-     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
+     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
      * @param value The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addContributors")
+@kotlin.jvm.JvmName("addContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>.add(value: ei.Ei.CoopCompletionSnapshot.ContributorSnapshot) {
       _builder.addContributors(value)
     }
     /**
-     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
+     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
      * @param value The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignContributors")
+@kotlin.jvm.JvmName("plusAssignContributors")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>.plusAssign(value: ei.Ei.CoopCompletionSnapshot.ContributorSnapshot) {
       add(value)
     }
     /**
-     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
+     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
      * @param values The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllContributors")
+@kotlin.jvm.JvmName("addAllContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot>) {
       _builder.addAllContributors(values)
     }
     /**
-     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
+     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
      * @param values The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllContributors")
+@kotlin.jvm.JvmName("plusAssignAllContributors")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
+     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
      * @param index The index to set the value at.
      * @param value The contributors to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setContributors")
+@kotlin.jvm.JvmName("setContributors")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>.set(index: kotlin.Int, value: ei.Ei.CoopCompletionSnapshot.ContributorSnapshot) {
       _builder.setContributors(index, value)
     }
     /**
-     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
+     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearContributors")
+@kotlin.jvm.JvmName("clearContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopCompletionSnapshot.ContributorSnapshot, ContributorsProxy>.clear() {
       _builder.clearContributors()
     }
-
   }
   @kotlin.jvm.JvmName("-initializecontributorSnapshot")
   public inline fun contributorSnapshot(block: ei.CoopCompletionSnapshotKt.ContributorSnapshotKt.Dsl.() -> kotlin.Unit): ei.Ei.CoopCompletionSnapshot.ContributorSnapshot =
@@ -126,21 +131,23 @@ public object CoopCompletionSnapshotKt {
        * `optional double contribution = 1;`
        */
       public var contribution: kotlin.Double
-        @JvmName("getContribution")
-        get() = _builder.contribution
-        @JvmName("setContribution")
-        set(value) {
+        @kotlin.jvm.JvmName("getContribution")
+          get() = _builder.contribution
+        @kotlin.jvm.JvmName("setContribution")
+          set(value) {
           _builder.contribution = value
         }
       /**
-       * `optional double contribution = 1;`
+       * <code>optional double contribution = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearContribution() {
         _builder.clearContribution()
       }
       /**
-       * `optional double contribution = 1;`
+       * <code>optional double contribution = 1;</code>
        * @return Whether the contribution field is set.
+       * @return This builder for chaining.
        */
       public fun hasContribution(): kotlin.Boolean {
         return _builder.hasContribution()
@@ -150,21 +157,23 @@ public object CoopCompletionSnapshotKt {
        * `optional double total_step_time = 8;`
        */
       public var totalStepTime: kotlin.Double
-        @JvmName("getTotalStepTime")
-        get() = _builder.totalStepTime
-        @JvmName("setTotalStepTime")
-        set(value) {
+        @kotlin.jvm.JvmName("getTotalStepTime")
+          get() = _builder.totalStepTime
+        @kotlin.jvm.JvmName("setTotalStepTime")
+          set(value) {
           _builder.totalStepTime = value
         }
       /**
-       * `optional double total_step_time = 8;`
+       * <code>optional double total_step_time = 8;</code>
+       * @return This builder for chaining.
        */
       public fun clearTotalStepTime() {
         _builder.clearTotalStepTime()
       }
       /**
-       * `optional double total_step_time = 8;`
+       * <code>optional double total_step_time = 8;</code>
        * @return Whether the totalStepTime field is set.
+       * @return This builder for chaining.
        */
       public fun hasTotalStepTime(): kotlin.Boolean {
         return _builder.hasTotalStepTime()
@@ -174,21 +183,23 @@ public object CoopCompletionSnapshotKt {
        * `optional double last_contribution_time = 6;`
        */
       public var lastContributionTime: kotlin.Double
-        @JvmName("getLastContributionTime")
-        get() = _builder.lastContributionTime
-        @JvmName("setLastContributionTime")
-        set(value) {
+        @kotlin.jvm.JvmName("getLastContributionTime")
+          get() = _builder.lastContributionTime
+        @kotlin.jvm.JvmName("setLastContributionTime")
+          set(value) {
           _builder.lastContributionTime = value
         }
       /**
-       * `optional double last_contribution_time = 6;`
+       * <code>optional double last_contribution_time = 6;</code>
+       * @return This builder for chaining.
        */
       public fun clearLastContributionTime() {
         _builder.clearLastContributionTime()
       }
       /**
-       * `optional double last_contribution_time = 6;`
+       * <code>optional double last_contribution_time = 6;</code>
        * @return Whether the lastContributionTime field is set.
+       * @return This builder for chaining.
        */
       public fun hasLastContributionTime(): kotlin.Boolean {
         return _builder.hasLastContributionTime()
@@ -198,21 +209,23 @@ public object CoopCompletionSnapshotKt {
        * `optional bool finalized = 7;`
        */
       public var finalized: kotlin.Boolean
-        @JvmName("getFinalized")
-        get() = _builder.finalized
-        @JvmName("setFinalized")
-        set(value) {
+        @kotlin.jvm.JvmName("getFinalized")
+          get() = _builder.finalized
+        @kotlin.jvm.JvmName("setFinalized")
+          set(value) {
           _builder.finalized = value
         }
       /**
-       * `optional bool finalized = 7;`
+       * <code>optional bool finalized = 7;</code>
+       * @return This builder for chaining.
        */
       public fun clearFinalized() {
         _builder.clearFinalized()
       }
       /**
-       * `optional bool finalized = 7;`
+       * <code>optional bool finalized = 7;</code>
        * @return Whether the finalized field is set.
+       * @return This builder for chaining.
        */
       public fun hasFinalized(): kotlin.Boolean {
         return _builder.hasFinalized()
@@ -222,21 +235,23 @@ public object CoopCompletionSnapshotKt {
        * `optional double soul_power = 2;`
        */
       public var soulPower: kotlin.Double
-        @JvmName("getSoulPower")
-        get() = _builder.soulPower
-        @JvmName("setSoulPower")
-        set(value) {
+        @kotlin.jvm.JvmName("getSoulPower")
+          get() = _builder.soulPower
+        @kotlin.jvm.JvmName("setSoulPower")
+          set(value) {
           _builder.soulPower = value
         }
       /**
-       * `optional double soul_power = 2;`
+       * <code>optional double soul_power = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearSoulPower() {
         _builder.clearSoulPower()
       }
       /**
-       * `optional double soul_power = 2;`
+       * <code>optional double soul_power = 2;</code>
        * @return Whether the soulPower field is set.
+       * @return This builder for chaining.
        */
       public fun hasSoulPower(): kotlin.Boolean {
         return _builder.hasSoulPower()
@@ -246,21 +261,23 @@ public object CoopCompletionSnapshotKt {
        * `optional string user_id = 3;`
        */
       public var userId: kotlin.String
-        @JvmName("getUserId")
-        get() = _builder.userId
-        @JvmName("setUserId")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserId")
+          get() = _builder.userId
+        @kotlin.jvm.JvmName("setUserId")
+          set(value) {
           _builder.userId = value
         }
       /**
-       * `optional string user_id = 3;`
+       * <code>optional string user_id = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserId() {
         _builder.clearUserId()
       }
       /**
-       * `optional string user_id = 3;`
+       * <code>optional string user_id = 3;</code>
        * @return Whether the userId field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserId(): kotlin.Boolean {
         return _builder.hasUserId()
@@ -270,21 +287,23 @@ public object CoopCompletionSnapshotKt {
        * `optional uint32 tokens = 4;`
        */
       public var tokens: kotlin.Int
-        @JvmName("getTokens")
-        get() = _builder.tokens
-        @JvmName("setTokens")
-        set(value) {
+        @kotlin.jvm.JvmName("getTokens")
+          get() = _builder.tokens
+        @kotlin.jvm.JvmName("setTokens")
+          set(value) {
           _builder.tokens = value
         }
       /**
-       * `optional uint32 tokens = 4;`
+       * <code>optional uint32 tokens = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearTokens() {
         _builder.clearTokens()
       }
       /**
-       * `optional uint32 tokens = 4;`
+       * <code>optional uint32 tokens = 4;</code>
        * @return Whether the tokens field is set.
+       * @return This builder for chaining.
        */
       public fun hasTokens(): kotlin.Boolean {
         return _builder.hasTokens()
@@ -294,21 +313,23 @@ public object CoopCompletionSnapshotKt {
        * `optional uint32 tokens_spent = 5;`
        */
       public var tokensSpent: kotlin.Int
-        @JvmName("getTokensSpent")
-        get() = _builder.tokensSpent
-        @JvmName("setTokensSpent")
-        set(value) {
+        @kotlin.jvm.JvmName("getTokensSpent")
+          get() = _builder.tokensSpent
+        @kotlin.jvm.JvmName("setTokensSpent")
+          set(value) {
           _builder.tokensSpent = value
         }
       /**
-       * `optional uint32 tokens_spent = 5;`
+       * <code>optional uint32 tokens_spent = 5;</code>
+       * @return This builder for chaining.
        */
       public fun clearTokensSpent() {
         _builder.clearTokensSpent()
       }
       /**
-       * `optional uint32 tokens_spent = 5;`
+       * <code>optional uint32 tokens_spent = 5;</code>
        * @return Whether the tokensSpent field is set.
+       * @return This builder for chaining.
        */
       public fun hasTokensSpent(): kotlin.Boolean {
         return _builder.hasTokensSpent()

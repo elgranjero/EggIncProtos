@@ -100,28 +100,28 @@ proto.ei.ShellSetSpec.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellSetSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-price: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-priceMultDeprecated: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 1.0),
-discount: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
-requiredEop: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-requiredParentSet: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-isNew: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
-expires: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-popularity: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
-decorator: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-modifiedGeometry: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
-elementSet: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-hexBaseColor: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-variationsList: jspb.Message.toObjectList(msg.getVariationsList(),
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    price: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    priceMultDeprecated: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 1.0),
+    discount: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
+    requiredEop: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    requiredSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    requiredParentSet: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
+    isNew: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
+    expires: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    secondsUntilAvailable: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    popularity: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
+    decorator: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    modifiedGeometry: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    elementSet: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    hexBaseColor: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    variationsList: jspb.Message.toObjectList(msg.getVariationsList(),
     proto.ei.ShellSetSpec.VariationSpec.toObject, includeInstance),
-icon: (f = msg.getIcon()) && proto.ei.DLCItem.toObject(includeInstance, f),
-defaultAppearance: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-customAppearance: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f
+    icon: (f = msg.getIcon()) && proto.ei.DLCItem.toObject(includeInstance, f),
+    defaultAppearance: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    customAppearance: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -457,12 +457,12 @@ proto.ei.ShellSetSpec.VariationSpec.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ShellSetSpec.VariationSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-hexColor: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-price: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-sortPriority: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-defaultAppearance: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-customAppearance: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    hexColor: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    price: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    sortPriority: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    defaultAppearance: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    customAppearance: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -32,21 +32,23 @@ public object CreateCoopResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object CreateCoopResponseKt {
      * `optional string message = 2;`
      */
     public var message: kotlin.String
-      @JvmName("getMessage")
-      get() = _builder.message
-      @JvmName("setMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getMessage")
+        get() = _builder.message
+      @kotlin.jvm.JvmName("setMessage")
+        set(value) {
         _builder.message = value
       }
     /**
-     * `optional string message = 2;`
+     * <code>optional string message = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * `optional string message = 2;`
+     * <code>optional string message = 2;</code>
      * @return Whether the message field is set.
+     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()

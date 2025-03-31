@@ -32,21 +32,23 @@ public object ConfigRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ConfigRequestKt {
      * `optional double soul_eggs = 2;`
      */
     public var soulEggs: kotlin.Double
-      @JvmName("getSoulEggs")
-      get() = _builder.soulEggs
-      @JvmName("setSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getSoulEggs")
+        get() = _builder.soulEggs
+      @kotlin.jvm.JvmName("setSoulEggs")
+        set(value) {
         _builder.soulEggs = value
       }
     /**
-     * `optional double soul_eggs = 2;`
+     * <code>optional double soul_eggs = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * `optional double soul_eggs = 2;`
+     * <code>optional double soul_eggs = 2;</code>
      * @return Whether the soulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -83,21 +87,23 @@ public object ConfigRequestKt {
      * `optional bool contracts_unlocked = 5;`
      */
     public var contractsUnlocked: kotlin.Boolean
-      @JvmName("getContractsUnlocked")
-      get() = _builder.contractsUnlocked
-      @JvmName("setContractsUnlocked")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractsUnlocked")
+        get() = _builder.contractsUnlocked
+      @kotlin.jvm.JvmName("setContractsUnlocked")
+        set(value) {
         _builder.contractsUnlocked = value
       }
     /**
-     * `optional bool contracts_unlocked = 5;`
+     * <code>optional bool contracts_unlocked = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractsUnlocked() {
       _builder.clearContractsUnlocked()
     }
     /**
-     * `optional bool contracts_unlocked = 5;`
+     * <code>optional bool contracts_unlocked = 5;</code>
      * @return Whether the contractsUnlocked field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractsUnlocked(): kotlin.Boolean {
       return _builder.hasContractsUnlocked()
@@ -107,21 +113,23 @@ public object ConfigRequestKt {
      * `optional bool artifacts_unlocked = 3;`
      */
     public var artifactsUnlocked: kotlin.Boolean
-      @JvmName("getArtifactsUnlocked")
-      get() = _builder.artifactsUnlocked
-      @JvmName("setArtifactsUnlocked")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifactsUnlocked")
+        get() = _builder.artifactsUnlocked
+      @kotlin.jvm.JvmName("setArtifactsUnlocked")
+        set(value) {
         _builder.artifactsUnlocked = value
       }
     /**
-     * `optional bool artifacts_unlocked = 3;`
+     * <code>optional bool artifacts_unlocked = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifactsUnlocked() {
       _builder.clearArtifactsUnlocked()
     }
     /**
-     * `optional bool artifacts_unlocked = 3;`
+     * <code>optional bool artifacts_unlocked = 3;</code>
      * @return Whether the artifactsUnlocked field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifactsUnlocked(): kotlin.Boolean {
       return _builder.hasArtifactsUnlocked()
@@ -131,21 +139,23 @@ public object ConfigRequestKt {
      * `optional bool fuel_tank_unlocked = 4;`
      */
     public var fuelTankUnlocked: kotlin.Boolean
-      @JvmName("getFuelTankUnlocked")
-      get() = _builder.fuelTankUnlocked
-      @JvmName("setFuelTankUnlocked")
-      set(value) {
+      @kotlin.jvm.JvmName("getFuelTankUnlocked")
+        get() = _builder.fuelTankUnlocked
+      @kotlin.jvm.JvmName("setFuelTankUnlocked")
+        set(value) {
         _builder.fuelTankUnlocked = value
       }
     /**
-     * `optional bool fuel_tank_unlocked = 4;`
+     * <code>optional bool fuel_tank_unlocked = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearFuelTankUnlocked() {
       _builder.clearFuelTankUnlocked()
     }
     /**
-     * `optional bool fuel_tank_unlocked = 4;`
+     * <code>optional bool fuel_tank_unlocked = 4;</code>
      * @return Whether the fuelTankUnlocked field is set.
+     * @return This builder for chaining.
      */
     public fun hasFuelTankUnlocked(): kotlin.Boolean {
       return _builder.hasFuelTankUnlocked()
@@ -155,21 +165,23 @@ public object ConfigRequestKt {
      * `optional bool pro_permit = 6;`
      */
     public var proPermit: kotlin.Boolean
-      @JvmName("getProPermit")
-      get() = _builder.proPermit
-      @JvmName("setProPermit")
-      set(value) {
+      @kotlin.jvm.JvmName("getProPermit")
+        get() = _builder.proPermit
+      @kotlin.jvm.JvmName("setProPermit")
+        set(value) {
         _builder.proPermit = value
       }
     /**
-     * `optional bool pro_permit = 6;`
+     * <code>optional bool pro_permit = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearProPermit() {
       _builder.clearProPermit()
     }
     /**
-     * `optional bool pro_permit = 6;`
+     * <code>optional bool pro_permit = 6;</code>
      * @return Whether the proPermit field is set.
+     * @return This builder for chaining.
      */
     public fun hasProPermit(): kotlin.Boolean {
       return _builder.hasProPermit()
@@ -179,21 +191,23 @@ public object ConfigRequestKt {
      * `optional bool ultra = 7;`
      */
     public var ultra: kotlin.Boolean
-      @JvmName("getUltra")
-      get() = _builder.ultra
-      @JvmName("setUltra")
-      set(value) {
+      @kotlin.jvm.JvmName("getUltra")
+        get() = _builder.ultra
+      @kotlin.jvm.JvmName("setUltra")
+        set(value) {
         _builder.ultra = value
       }
     /**
-     * `optional bool ultra = 7;`
+     * <code>optional bool ultra = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearUltra() {
       _builder.clearUltra()
     }
     /**
-     * `optional bool ultra = 7;`
+     * <code>optional bool ultra = 7;</code>
      * @return Whether the ultra field is set.
+     * @return This builder for chaining.
      */
     public fun hasUltra(): kotlin.Boolean {
       return _builder.hasUltra()
@@ -203,21 +217,23 @@ public object ConfigRequestKt {
      * `optional string tips_checksum = 8;`
      */
     public var tipsChecksum: kotlin.String
-      @JvmName("getTipsChecksum")
-      get() = _builder.tipsChecksum
-      @JvmName("setTipsChecksum")
-      set(value) {
+      @kotlin.jvm.JvmName("getTipsChecksum")
+        get() = _builder.tipsChecksum
+      @kotlin.jvm.JvmName("setTipsChecksum")
+        set(value) {
         _builder.tipsChecksum = value
       }
     /**
-     * `optional string tips_checksum = 8;`
+     * <code>optional string tips_checksum = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearTipsChecksum() {
       _builder.clearTipsChecksum()
     }
     /**
-     * `optional string tips_checksum = 8;`
+     * <code>optional string tips_checksum = 8;</code>
      * @return Whether the tipsChecksum field is set.
+     * @return This builder for chaining.
      */
     public fun hasTipsChecksum(): kotlin.Boolean {
       return _builder.hasTipsChecksum()

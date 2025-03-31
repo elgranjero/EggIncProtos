@@ -32,21 +32,23 @@ public object PlayerFarmInfoKt {
      * `optional uint32 client_version = 20;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 20;`
+     * <code>optional uint32 client_version = 20;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 20;`
+     * <code>optional uint32 client_version = 20;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -56,21 +58,23 @@ public object PlayerFarmInfoKt {
      * `optional double soul_eggs = 1;`
      */
     public var soulEggs: kotlin.Double
-      @JvmName("getSoulEggs")
-      get() = _builder.soulEggs
-      @JvmName("setSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getSoulEggs")
+        get() = _builder.soulEggs
+      @kotlin.jvm.JvmName("setSoulEggs")
+        set(value) {
         _builder.soulEggs = value
       }
     /**
-     * `optional double soul_eggs = 1;`
+     * <code>optional double soul_eggs = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * `optional double soul_eggs = 1;`
+     * <code>optional double soul_eggs = 1;</code>
      * @return Whether the soulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -80,21 +84,23 @@ public object PlayerFarmInfoKt {
      * `optional uint64 eggs_of_prophecy = 2;`
      */
     public var eggsOfProphecy: kotlin.Long
-      @JvmName("getEggsOfProphecy")
-      get() = _builder.eggsOfProphecy
-      @JvmName("setEggsOfProphecy")
-      set(value) {
+      @kotlin.jvm.JvmName("getEggsOfProphecy")
+        get() = _builder.eggsOfProphecy
+      @kotlin.jvm.JvmName("setEggsOfProphecy")
+        set(value) {
         _builder.eggsOfProphecy = value
       }
     /**
-     * `optional uint64 eggs_of_prophecy = 2;`
+     * <code>optional uint64 eggs_of_prophecy = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearEggsOfProphecy() {
       _builder.clearEggsOfProphecy()
     }
     /**
-     * `optional uint64 eggs_of_prophecy = 2;`
+     * <code>optional uint64 eggs_of_prophecy = 2;</code>
      * @return Whether the eggsOfProphecy field is set.
+     * @return This builder for chaining.
      */
     public fun hasEggsOfProphecy(): kotlin.Boolean {
       return _builder.hasEggsOfProphecy()
@@ -104,21 +110,23 @@ public object PlayerFarmInfoKt {
      * `optional uint32 permit_level = 3;`
      */
     public var permitLevel: kotlin.Int
-      @JvmName("getPermitLevel")
-      get() = _builder.permitLevel
-      @JvmName("setPermitLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getPermitLevel")
+        get() = _builder.permitLevel
+      @kotlin.jvm.JvmName("setPermitLevel")
+        set(value) {
         _builder.permitLevel = value
       }
     /**
-     * `optional uint32 permit_level = 3;`
+     * <code>optional uint32 permit_level = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearPermitLevel() {
       _builder.clearPermitLevel()
     }
     /**
-     * `optional uint32 permit_level = 3;`
+     * <code>optional uint32 permit_level = 3;</code>
      * @return Whether the permitLevel field is set.
+     * @return This builder for chaining.
      */
     public fun hasPermitLevel(): kotlin.Boolean {
       return _builder.hasPermitLevel()
@@ -128,21 +136,23 @@ public object PlayerFarmInfoKt {
      * `optional bool hyperloop_station = 4;`
      */
     public var hyperloopStation: kotlin.Boolean
-      @JvmName("getHyperloopStation")
-      get() = _builder.hyperloopStation
-      @JvmName("setHyperloopStation")
-      set(value) {
+      @kotlin.jvm.JvmName("getHyperloopStation")
+        get() = _builder.hyperloopStation
+      @kotlin.jvm.JvmName("setHyperloopStation")
+        set(value) {
         _builder.hyperloopStation = value
       }
     /**
-     * `optional bool hyperloop_station = 4;`
+     * <code>optional bool hyperloop_station = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearHyperloopStation() {
       _builder.clearHyperloopStation()
     }
     /**
-     * `optional bool hyperloop_station = 4;`
+     * <code>optional bool hyperloop_station = 4;</code>
      * @return Whether the hyperloopStation field is set.
+     * @return This builder for chaining.
      */
     public fun hasHyperloopStation(): kotlin.Boolean {
       return _builder.hasHyperloopStation()
@@ -159,57 +169,63 @@ public object PlayerFarmInfoKt {
      */
      public val eggMedalLevel: com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.eggMedalLevelList
       )
     /**
-     * `repeated uint32 egg_medal_level = 5;`
+     * <code>repeated uint32 egg_medal_level = 5;</code>
      * @param value The eggMedalLevel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addEggMedalLevel")
+@kotlin.jvm.JvmName("addEggMedalLevel")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.add(value: kotlin.Int) {
       _builder.addEggMedalLevel(value)
     }/**
-     * `repeated uint32 egg_medal_level = 5;`
+     * <code>repeated uint32 egg_medal_level = 5;</code>
      * @param value The eggMedalLevel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignEggMedalLevel")
+@kotlin.jvm.JvmName("plusAssignEggMedalLevel")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.plusAssign(value: kotlin.Int) {
       add(value)
     }/**
-     * `repeated uint32 egg_medal_level = 5;`
+     * <code>repeated uint32 egg_medal_level = 5;</code>
      * @param values The eggMedalLevel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllEggMedalLevel")
+@kotlin.jvm.JvmName("addAllEggMedalLevel")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
       _builder.addAllEggMedalLevel(values)
     }/**
-     * `repeated uint32 egg_medal_level = 5;`
+     * <code>repeated uint32 egg_medal_level = 5;</code>
      * @param values The eggMedalLevel to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllEggMedalLevel")
+@kotlin.jvm.JvmName("plusAssignAllEggMedalLevel")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
       addAll(values)
     }/**
-     * `repeated uint32 egg_medal_level = 5;`
+     * <code>repeated uint32 egg_medal_level = 5;</code>
      * @param index The index to set the value at.
      * @param value The eggMedalLevel to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setEggMedalLevel")
+@kotlin.jvm.JvmName("setEggMedalLevel")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.set(index: kotlin.Int, value: kotlin.Int) {
       _builder.setEggMedalLevel(index, value)
     }/**
-     * `repeated uint32 egg_medal_level = 5;`
+     * <code>repeated uint32 egg_medal_level = 5;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearEggMedalLevel")
+@kotlin.jvm.JvmName("clearEggMedalLevel")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.clear() {
       _builder.clearEggMedalLevel()
     }
@@ -224,86 +240,93 @@ public object PlayerFarmInfoKt {
      */
      public val epicResearch: com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.epicResearchList
       )
     /**
-     * `repeated .ei.Backup.ResearchItem epic_research = 6;`
+     * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param value The epicResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addEpicResearch")
+@kotlin.jvm.JvmName("addEpicResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.add(value: ei.Ei.Backup.ResearchItem) {
       _builder.addEpicResearch(value)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem epic_research = 6;`
+     * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param value The epicResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignEpicResearch")
+@kotlin.jvm.JvmName("plusAssignEpicResearch")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.plusAssign(value: ei.Ei.Backup.ResearchItem) {
       add(value)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem epic_research = 6;`
+     * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param values The epicResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllEpicResearch")
+@kotlin.jvm.JvmName("addAllEpicResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       _builder.addAllEpicResearch(values)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem epic_research = 6;`
+     * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param values The epicResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllEpicResearch")
+@kotlin.jvm.JvmName("plusAssignAllEpicResearch")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem epic_research = 6;`
+     * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
      * @param index The index to set the value at.
      * @param value The epicResearch to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setEpicResearch")
+@kotlin.jvm.JvmName("setEpicResearch")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ResearchItem) {
       _builder.setEpicResearch(index, value)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem epic_research = 6;`
+     * <code>repeated .ei.Backup.ResearchItem epic_research = 6;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearEpicResearch")
+@kotlin.jvm.JvmName("clearEpicResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, EpicResearchProxy>.clear() {
       _builder.clearEpicResearch()
     }
-
 
     /**
      * `optional .ei.Egg egg_type = 7;`
      */
     public var eggType: ei.Ei.Egg
-      @JvmName("getEggType")
-      get() = _builder.eggType
-      @JvmName("setEggType")
-      set(value) {
+      @kotlin.jvm.JvmName("getEggType")
+        get() = _builder.eggType
+      @kotlin.jvm.JvmName("setEggType")
+        set(value) {
         _builder.eggType = value
       }
     /**
-     * `optional .ei.Egg egg_type = 7;`
+     * <code>optional .ei.Egg egg_type = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearEggType() {
       _builder.clearEggType()
     }
     /**
-     * `optional .ei.Egg egg_type = 7;`
+     * <code>optional .ei.Egg egg_type = 7;</code>
      * @return Whether the eggType field is set.
+     * @return This builder for chaining.
      */
     public fun hasEggType(): kotlin.Boolean {
       return _builder.hasEggType()
@@ -313,21 +336,23 @@ public object PlayerFarmInfoKt {
      * `optional double cash_on_hand = 8;`
      */
     public var cashOnHand: kotlin.Double
-      @JvmName("getCashOnHand")
-      get() = _builder.cashOnHand
-      @JvmName("setCashOnHand")
-      set(value) {
+      @kotlin.jvm.JvmName("getCashOnHand")
+        get() = _builder.cashOnHand
+      @kotlin.jvm.JvmName("setCashOnHand")
+        set(value) {
         _builder.cashOnHand = value
       }
     /**
-     * `optional double cash_on_hand = 8;`
+     * <code>optional double cash_on_hand = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearCashOnHand() {
       _builder.clearCashOnHand()
     }
     /**
-     * `optional double cash_on_hand = 8;`
+     * <code>optional double cash_on_hand = 8;</code>
      * @return Whether the cashOnHand field is set.
+     * @return This builder for chaining.
      */
     public fun hasCashOnHand(): kotlin.Boolean {
       return _builder.hasCashOnHand()
@@ -344,57 +369,63 @@ public object PlayerFarmInfoKt {
      */
      public val habs: com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.habsList
       )
     /**
-     * `repeated uint32 habs = 9;`
+     * <code>repeated uint32 habs = 9;</code>
      * @param value The habs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addHabs")
+@kotlin.jvm.JvmName("addHabs")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.add(value: kotlin.Int) {
       _builder.addHabs(value)
     }/**
-     * `repeated uint32 habs = 9;`
+     * <code>repeated uint32 habs = 9;</code>
      * @param value The habs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignHabs")
+@kotlin.jvm.JvmName("plusAssignHabs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.plusAssign(value: kotlin.Int) {
       add(value)
     }/**
-     * `repeated uint32 habs = 9;`
+     * <code>repeated uint32 habs = 9;</code>
      * @param values The habs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllHabs")
+@kotlin.jvm.JvmName("addAllHabs")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
       _builder.addAllHabs(values)
     }/**
-     * `repeated uint32 habs = 9;`
+     * <code>repeated uint32 habs = 9;</code>
      * @param values The habs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllHabs")
+@kotlin.jvm.JvmName("plusAssignAllHabs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
       addAll(values)
     }/**
-     * `repeated uint32 habs = 9;`
+     * <code>repeated uint32 habs = 9;</code>
      * @param index The index to set the value at.
      * @param value The habs to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setHabs")
+@kotlin.jvm.JvmName("setHabs")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.set(index: kotlin.Int, value: kotlin.Int) {
       _builder.setHabs(index, value)
     }/**
-     * `repeated uint32 habs = 9;`
+     * <code>repeated uint32 habs = 9;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearHabs")
+@kotlin.jvm.JvmName("clearHabs")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.clear() {
       _builder.clearHabs()
     }
@@ -409,57 +440,63 @@ public object PlayerFarmInfoKt {
      */
      public val habPopulation: com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.habPopulationList
       )
     /**
-     * `repeated uint64 hab_population = 10;`
+     * <code>repeated uint64 hab_population = 10;</code>
      * @param value The habPopulation to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addHabPopulation")
+@kotlin.jvm.JvmName("addHabPopulation")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.add(value: kotlin.Long) {
       _builder.addHabPopulation(value)
     }/**
-     * `repeated uint64 hab_population = 10;`
+     * <code>repeated uint64 hab_population = 10;</code>
      * @param value The habPopulation to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignHabPopulation")
+@kotlin.jvm.JvmName("plusAssignHabPopulation")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * `repeated uint64 hab_population = 10;`
+     * <code>repeated uint64 hab_population = 10;</code>
      * @param values The habPopulation to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllHabPopulation")
+@kotlin.jvm.JvmName("addAllHabPopulation")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllHabPopulation(values)
     }/**
-     * `repeated uint64 hab_population = 10;`
+     * <code>repeated uint64 hab_population = 10;</code>
      * @param values The habPopulation to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllHabPopulation")
+@kotlin.jvm.JvmName("plusAssignAllHabPopulation")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * `repeated uint64 hab_population = 10;`
+     * <code>repeated uint64 hab_population = 10;</code>
      * @param index The index to set the value at.
      * @param value The habPopulation to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setHabPopulation")
+@kotlin.jvm.JvmName("setHabPopulation")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setHabPopulation(index, value)
     }/**
-     * `repeated uint64 hab_population = 10;`
+     * <code>repeated uint64 hab_population = 10;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearHabPopulation")
+@kotlin.jvm.JvmName("clearHabPopulation")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.clear() {
       _builder.clearHabPopulation()
     }
@@ -474,57 +511,63 @@ public object PlayerFarmInfoKt {
      */
      public val habCapacity: com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.habCapacityList
       )
     /**
-     * `repeated uint64 hab_capacity = 21;`
+     * <code>repeated uint64 hab_capacity = 21;</code>
      * @param value The habCapacity to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addHabCapacity")
+@kotlin.jvm.JvmName("addHabCapacity")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>.add(value: kotlin.Long) {
       _builder.addHabCapacity(value)
     }/**
-     * `repeated uint64 hab_capacity = 21;`
+     * <code>repeated uint64 hab_capacity = 21;</code>
      * @param value The habCapacity to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignHabCapacity")
+@kotlin.jvm.JvmName("plusAssignHabCapacity")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * `repeated uint64 hab_capacity = 21;`
+     * <code>repeated uint64 hab_capacity = 21;</code>
      * @param values The habCapacity to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllHabCapacity")
+@kotlin.jvm.JvmName("addAllHabCapacity")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllHabCapacity(values)
     }/**
-     * `repeated uint64 hab_capacity = 21;`
+     * <code>repeated uint64 hab_capacity = 21;</code>
      * @param values The habCapacity to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllHabCapacity")
+@kotlin.jvm.JvmName("plusAssignAllHabCapacity")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * `repeated uint64 hab_capacity = 21;`
+     * <code>repeated uint64 hab_capacity = 21;</code>
      * @param index The index to set the value at.
      * @param value The habCapacity to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setHabCapacity")
+@kotlin.jvm.JvmName("setHabCapacity")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setHabCapacity(index, value)
     }/**
-     * `repeated uint64 hab_capacity = 21;`
+     * <code>repeated uint64 hab_capacity = 21;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearHabCapacity")
+@kotlin.jvm.JvmName("clearHabCapacity")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabCapacityProxy>.clear() {
       _builder.clearHabCapacity()
     }
@@ -539,57 +582,63 @@ public object PlayerFarmInfoKt {
      */
      public val vehicles: com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.vehiclesList
       )
     /**
-     * `repeated uint32 vehicles = 11;`
+     * <code>repeated uint32 vehicles = 11;</code>
      * @param value The vehicles to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addVehicles")
+@kotlin.jvm.JvmName("addVehicles")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.add(value: kotlin.Int) {
       _builder.addVehicles(value)
     }/**
-     * `repeated uint32 vehicles = 11;`
+     * <code>repeated uint32 vehicles = 11;</code>
      * @param value The vehicles to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignVehicles")
+@kotlin.jvm.JvmName("plusAssignVehicles")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.plusAssign(value: kotlin.Int) {
       add(value)
     }/**
-     * `repeated uint32 vehicles = 11;`
+     * <code>repeated uint32 vehicles = 11;</code>
      * @param values The vehicles to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllVehicles")
+@kotlin.jvm.JvmName("addAllVehicles")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
       _builder.addAllVehicles(values)
     }/**
-     * `repeated uint32 vehicles = 11;`
+     * <code>repeated uint32 vehicles = 11;</code>
      * @param values The vehicles to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllVehicles")
+@kotlin.jvm.JvmName("plusAssignAllVehicles")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
       addAll(values)
     }/**
-     * `repeated uint32 vehicles = 11;`
+     * <code>repeated uint32 vehicles = 11;</code>
      * @param index The index to set the value at.
      * @param value The vehicles to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setVehicles")
+@kotlin.jvm.JvmName("setVehicles")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.set(index: kotlin.Int, value: kotlin.Int) {
       _builder.setVehicles(index, value)
     }/**
-     * `repeated uint32 vehicles = 11;`
+     * <code>repeated uint32 vehicles = 11;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearVehicles")
+@kotlin.jvm.JvmName("clearVehicles")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.clear() {
       _builder.clearVehicles()
     }
@@ -604,57 +653,63 @@ public object PlayerFarmInfoKt {
      */
      public val trainLength: com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.trainLengthList
       )
     /**
-     * `repeated uint32 train_length = 12;`
+     * <code>repeated uint32 train_length = 12;</code>
      * @param value The trainLength to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addTrainLength")
+@kotlin.jvm.JvmName("addTrainLength")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.add(value: kotlin.Int) {
       _builder.addTrainLength(value)
     }/**
-     * `repeated uint32 train_length = 12;`
+     * <code>repeated uint32 train_length = 12;</code>
      * @param value The trainLength to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignTrainLength")
+@kotlin.jvm.JvmName("plusAssignTrainLength")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.plusAssign(value: kotlin.Int) {
       add(value)
     }/**
-     * `repeated uint32 train_length = 12;`
+     * <code>repeated uint32 train_length = 12;</code>
      * @param values The trainLength to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllTrainLength")
+@kotlin.jvm.JvmName("addAllTrainLength")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
       _builder.addAllTrainLength(values)
     }/**
-     * `repeated uint32 train_length = 12;`
+     * <code>repeated uint32 train_length = 12;</code>
      * @param values The trainLength to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllTrainLength")
+@kotlin.jvm.JvmName("plusAssignAllTrainLength")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
       addAll(values)
     }/**
-     * `repeated uint32 train_length = 12;`
+     * <code>repeated uint32 train_length = 12;</code>
      * @param index The index to set the value at.
      * @param value The trainLength to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setTrainLength")
+@kotlin.jvm.JvmName("setTrainLength")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.set(index: kotlin.Int, value: kotlin.Int) {
       _builder.setTrainLength(index, value)
     }/**
-     * `repeated uint32 train_length = 12;`
+     * <code>repeated uint32 train_length = 12;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearTrainLength")
+@kotlin.jvm.JvmName("clearTrainLength")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.clear() {
       _builder.clearTrainLength()
     }
@@ -662,21 +717,23 @@ public object PlayerFarmInfoKt {
      * `optional uint32 silos_owned = 13;`
      */
     public var silosOwned: kotlin.Int
-      @JvmName("getSilosOwned")
-      get() = _builder.silosOwned
-      @JvmName("setSilosOwned")
-      set(value) {
+      @kotlin.jvm.JvmName("getSilosOwned")
+        get() = _builder.silosOwned
+      @kotlin.jvm.JvmName("setSilosOwned")
+        set(value) {
         _builder.silosOwned = value
       }
     /**
-     * `optional uint32 silos_owned = 13;`
+     * <code>optional uint32 silos_owned = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearSilosOwned() {
       _builder.clearSilosOwned()
     }
     /**
-     * `optional uint32 silos_owned = 13;`
+     * <code>optional uint32 silos_owned = 13;</code>
      * @return Whether the silosOwned field is set.
+     * @return This builder for chaining.
      */
     public fun hasSilosOwned(): kotlin.Boolean {
       return _builder.hasSilosOwned()
@@ -693,66 +750,71 @@ public object PlayerFarmInfoKt {
      */
      public val commonResearch: com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.commonResearchList
       )
     /**
-     * `repeated .ei.Backup.ResearchItem common_research = 14;`
+     * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param value The commonResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCommonResearch")
+@kotlin.jvm.JvmName("addCommonResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.add(value: ei.Ei.Backup.ResearchItem) {
       _builder.addCommonResearch(value)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem common_research = 14;`
+     * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param value The commonResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCommonResearch")
+@kotlin.jvm.JvmName("plusAssignCommonResearch")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.plusAssign(value: ei.Ei.Backup.ResearchItem) {
       add(value)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem common_research = 14;`
+     * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param values The commonResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCommonResearch")
+@kotlin.jvm.JvmName("addAllCommonResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       _builder.addAllCommonResearch(values)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem common_research = 14;`
+     * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param values The commonResearch to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCommonResearch")
+@kotlin.jvm.JvmName("plusAssignAllCommonResearch")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ResearchItem>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem common_research = 14;`
+     * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
      * @param index The index to set the value at.
      * @param value The commonResearch to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCommonResearch")
+@kotlin.jvm.JvmName("setCommonResearch")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ResearchItem) {
       _builder.setCommonResearch(index, value)
     }
     /**
-     * `repeated .ei.Backup.ResearchItem common_research = 14;`
+     * <code>repeated .ei.Backup.ResearchItem common_research = 14;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCommonResearch")
+@kotlin.jvm.JvmName("clearCommonResearch")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ResearchItem, CommonResearchProxy>.clear() {
       _builder.clearCommonResearch()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -765,86 +827,93 @@ public object PlayerFarmInfoKt {
      */
      public val activeBoosts: com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.activeBoostsList
       )
     /**
-     * `repeated .ei.Backup.ActiveBoost active_boosts = 15;`
+     * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param value The activeBoosts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addActiveBoosts")
+@kotlin.jvm.JvmName("addActiveBoosts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.add(value: ei.Ei.Backup.ActiveBoost) {
       _builder.addActiveBoosts(value)
     }
     /**
-     * `repeated .ei.Backup.ActiveBoost active_boosts = 15;`
+     * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param value The activeBoosts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignActiveBoosts")
+@kotlin.jvm.JvmName("plusAssignActiveBoosts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.plusAssign(value: ei.Ei.Backup.ActiveBoost) {
       add(value)
     }
     /**
-     * `repeated .ei.Backup.ActiveBoost active_boosts = 15;`
+     * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param values The activeBoosts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllActiveBoosts")
+@kotlin.jvm.JvmName("addAllActiveBoosts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Backup.ActiveBoost>) {
       _builder.addAllActiveBoosts(values)
     }
     /**
-     * `repeated .ei.Backup.ActiveBoost active_boosts = 15;`
+     * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param values The activeBoosts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllActiveBoosts")
+@kotlin.jvm.JvmName("plusAssignAllActiveBoosts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Backup.ActiveBoost>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Backup.ActiveBoost active_boosts = 15;`
+     * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
      * @param index The index to set the value at.
      * @param value The activeBoosts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setActiveBoosts")
+@kotlin.jvm.JvmName("setActiveBoosts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.set(index: kotlin.Int, value: ei.Ei.Backup.ActiveBoost) {
       _builder.setActiveBoosts(index, value)
     }
     /**
-     * `repeated .ei.Backup.ActiveBoost active_boosts = 15;`
+     * <code>repeated .ei.Backup.ActiveBoost active_boosts = 15;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearActiveBoosts")
+@kotlin.jvm.JvmName("clearActiveBoosts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Backup.ActiveBoost, ActiveBoostsProxy>.clear() {
       _builder.clearActiveBoosts()
     }
-
 
     /**
      * `optional uint32 boost_tokens_on_hand = 16;`
      */
     public var boostTokensOnHand: kotlin.Int
-      @JvmName("getBoostTokensOnHand")
-      get() = _builder.boostTokensOnHand
-      @JvmName("setBoostTokensOnHand")
-      set(value) {
+      @kotlin.jvm.JvmName("getBoostTokensOnHand")
+        get() = _builder.boostTokensOnHand
+      @kotlin.jvm.JvmName("setBoostTokensOnHand")
+        set(value) {
         _builder.boostTokensOnHand = value
       }
     /**
-     * `optional uint32 boost_tokens_on_hand = 16;`
+     * <code>optional uint32 boost_tokens_on_hand = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearBoostTokensOnHand() {
       _builder.clearBoostTokensOnHand()
     }
     /**
-     * `optional uint32 boost_tokens_on_hand = 16;`
+     * <code>optional uint32 boost_tokens_on_hand = 16;</code>
      * @return Whether the boostTokensOnHand field is set.
+     * @return This builder for chaining.
      */
     public fun hasBoostTokensOnHand(): kotlin.Boolean {
       return _builder.hasBoostTokensOnHand()
@@ -861,86 +930,93 @@ public object PlayerFarmInfoKt {
      */
      public val equippedArtifacts: com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.equippedArtifactsList
       )
     /**
-     * `repeated .ei.CompleteArtifact equipped_artifacts = 17;`
+     * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param value The equippedArtifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addEquippedArtifacts")
+@kotlin.jvm.JvmName("addEquippedArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.add(value: ei.Ei.CompleteArtifact) {
       _builder.addEquippedArtifacts(value)
     }
     /**
-     * `repeated .ei.CompleteArtifact equipped_artifacts = 17;`
+     * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param value The equippedArtifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignEquippedArtifacts")
+@kotlin.jvm.JvmName("plusAssignEquippedArtifacts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.plusAssign(value: ei.Ei.CompleteArtifact) {
       add(value)
     }
     /**
-     * `repeated .ei.CompleteArtifact equipped_artifacts = 17;`
+     * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param values The equippedArtifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllEquippedArtifacts")
+@kotlin.jvm.JvmName("addAllEquippedArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CompleteArtifact>) {
       _builder.addAllEquippedArtifacts(values)
     }
     /**
-     * `repeated .ei.CompleteArtifact equipped_artifacts = 17;`
+     * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param values The equippedArtifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllEquippedArtifacts")
+@kotlin.jvm.JvmName("plusAssignAllEquippedArtifacts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CompleteArtifact>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CompleteArtifact equipped_artifacts = 17;`
+     * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
      * @param index The index to set the value at.
      * @param value The equippedArtifacts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setEquippedArtifacts")
+@kotlin.jvm.JvmName("setEquippedArtifacts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.CompleteArtifact) {
       _builder.setEquippedArtifacts(index, value)
     }
     /**
-     * `repeated .ei.CompleteArtifact equipped_artifacts = 17;`
+     * <code>repeated .ei.CompleteArtifact equipped_artifacts = 17;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearEquippedArtifacts")
+@kotlin.jvm.JvmName("clearEquippedArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteArtifact, EquippedArtifactsProxy>.clear() {
       _builder.clearEquippedArtifacts()
     }
-
 
     /**
      * `optional uint64 artifact_inventory_score = 18;`
      */
     public var artifactInventoryScore: kotlin.Long
-      @JvmName("getArtifactInventoryScore")
-      get() = _builder.artifactInventoryScore
-      @JvmName("setArtifactInventoryScore")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifactInventoryScore")
+        get() = _builder.artifactInventoryScore
+      @kotlin.jvm.JvmName("setArtifactInventoryScore")
+        set(value) {
         _builder.artifactInventoryScore = value
       }
     /**
-     * `optional uint64 artifact_inventory_score = 18;`
+     * <code>optional uint64 artifact_inventory_score = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifactInventoryScore() {
       _builder.clearArtifactInventoryScore()
     }
     /**
-     * `optional uint64 artifact_inventory_score = 18;`
+     * <code>optional uint64 artifact_inventory_score = 18;</code>
      * @return Whether the artifactInventoryScore field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifactInventoryScore(): kotlin.Boolean {
       return _builder.hasArtifactInventoryScore()
@@ -950,21 +1026,23 @@ public object PlayerFarmInfoKt {
      * `optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;`
      */
     public var farmAppearance: ei.Ei.ShellDB.FarmConfiguration
-      @JvmName("getFarmAppearance")
-      get() = _builder.farmAppearance
-      @JvmName("setFarmAppearance")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmAppearance")
+        get() = _builder.farmAppearance
+      @kotlin.jvm.JvmName("setFarmAppearance")
+        set(value) {
         _builder.farmAppearance = value
       }
     /**
-     * `optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;`
+     * <code>optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmAppearance() {
       _builder.clearFarmAppearance()
     }
     /**
-     * `optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;`
+     * <code>optional .ei.ShellDB.FarmConfiguration farm_appearance = 19;</code>
      * @return Whether the farmAppearance field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmAppearance(): kotlin.Boolean {
       return _builder.hasFarmAppearance()
@@ -977,21 +1055,23 @@ public object PlayerFarmInfoKt {
      * `optional double timestamp = 22;`
      */
     public var timestamp: kotlin.Double
-      @JvmName("getTimestamp")
-      get() = _builder.timestamp
-      @JvmName("setTimestamp")
-      set(value) {
+      @kotlin.jvm.JvmName("getTimestamp")
+        get() = _builder.timestamp
+      @kotlin.jvm.JvmName("setTimestamp")
+        set(value) {
         _builder.timestamp = value
       }
     /**
-     * `optional double timestamp = 22;`
+     * <code>optional double timestamp = 22;</code>
+     * @return This builder for chaining.
      */
     public fun clearTimestamp() {
       _builder.clearTimestamp()
     }
     /**
-     * `optional double timestamp = 22;`
+     * <code>optional double timestamp = 22;</code>
      * @return Whether the timestamp field is set.
+     * @return This builder for chaining.
      */
     public fun hasTimestamp(): kotlin.Boolean {
       return _builder.hasTimestamp()

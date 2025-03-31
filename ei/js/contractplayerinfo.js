@@ -103,22 +103,22 @@ proto.ei.ContractPlayerInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractPlayerInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-totalCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-seasonCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
-gradeScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-targetGradeScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
-soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-targetSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-gradeProgress: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-issuesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f,
-issueScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
-status: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-lastEvaluationTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-lastEvaluationVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-unreadEvaluationsList: jspb.Message.toObjectList(msg.getUnreadEvaluationsList(),
+    grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    totalCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    seasonCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
+    gradeScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    targetGradeScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
+    soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    targetSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    gradeProgress: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    issuesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f,
+    issueScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
+    status: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    lastEvaluationTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    lastEvaluationVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    unreadEvaluationsList: jspb.Message.toObjectList(msg.getUnreadEvaluationsList(),
     proto.ei.ContractEvaluation.toObject, includeInstance),
-seasonProgressList: jspb.Message.toObjectList(msg.getSeasonProgressList(),
+    seasonProgressList: jspb.Message.toObjectList(msg.getSeasonProgressList(),
     proto.ei.ContractPlayerInfo.SeasonProgress.toObject, includeInstance)
   };
 
@@ -402,11 +402,11 @@ proto.ei.ContractPlayerInfo.SeasonProgress.prototype.toObject = function(opt_inc
  */
 proto.ei.ContractPlayerInfo.SeasonProgress.toObject = function(includeInstance, msg) {
   var f, obj = {
-seasonId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-activeDep: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-startingGrade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-totalCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-cxpLastRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
+    seasonId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    activeDep: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    startingGrade: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    totalCxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    cxpLastRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

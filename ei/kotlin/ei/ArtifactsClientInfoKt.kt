@@ -32,21 +32,23 @@ public object ArtifactsClientInfoKt {
      * `optional double mission_capacity_mult = 1;`
      */
     public var missionCapacityMult: kotlin.Double
-      @JvmName("getMissionCapacityMult")
-      get() = _builder.missionCapacityMult
-      @JvmName("setMissionCapacityMult")
-      set(value) {
+      @kotlin.jvm.JvmName("getMissionCapacityMult")
+        get() = _builder.missionCapacityMult
+      @kotlin.jvm.JvmName("setMissionCapacityMult")
+        set(value) {
         _builder.missionCapacityMult = value
       }
     /**
-     * `optional double mission_capacity_mult = 1;`
+     * <code>optional double mission_capacity_mult = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearMissionCapacityMult() {
       _builder.clearMissionCapacityMult()
     }
     /**
-     * `optional double mission_capacity_mult = 1;`
+     * <code>optional double mission_capacity_mult = 1;</code>
      * @return Whether the missionCapacityMult field is set.
+     * @return This builder for chaining.
      */
     public fun hasMissionCapacityMult(): kotlin.Boolean {
       return _builder.hasMissionCapacityMult()
@@ -56,21 +58,23 @@ public object ArtifactsClientInfoKt {
      * `optional double mission_duration_mult = 2;`
      */
     public var missionDurationMult: kotlin.Double
-      @JvmName("getMissionDurationMult")
-      get() = _builder.missionDurationMult
-      @JvmName("setMissionDurationMult")
-      set(value) {
+      @kotlin.jvm.JvmName("getMissionDurationMult")
+        get() = _builder.missionDurationMult
+      @kotlin.jvm.JvmName("setMissionDurationMult")
+        set(value) {
         _builder.missionDurationMult = value
       }
     /**
-     * `optional double mission_duration_mult = 2;`
+     * <code>optional double mission_duration_mult = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearMissionDurationMult() {
       _builder.clearMissionDurationMult()
     }
     /**
-     * `optional double mission_duration_mult = 2;`
+     * <code>optional double mission_duration_mult = 2;</code>
      * @return Whether the missionDurationMult field is set.
+     * @return This builder for chaining.
      */
     public fun hasMissionDurationMult(): kotlin.Boolean {
       return _builder.hasMissionDurationMult()
@@ -80,21 +84,23 @@ public object ArtifactsClientInfoKt {
      * `optional double mission_ftl_duration_research_mult = 4;`
      */
     public var missionFtlDurationResearchMult: kotlin.Double
-      @JvmName("getMissionFtlDurationResearchMult")
-      get() = _builder.missionFtlDurationResearchMult
-      @JvmName("setMissionFtlDurationResearchMult")
-      set(value) {
+      @kotlin.jvm.JvmName("getMissionFtlDurationResearchMult")
+        get() = _builder.missionFtlDurationResearchMult
+      @kotlin.jvm.JvmName("setMissionFtlDurationResearchMult")
+        set(value) {
         _builder.missionFtlDurationResearchMult = value
       }
     /**
-     * `optional double mission_ftl_duration_research_mult = 4;`
+     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearMissionFtlDurationResearchMult() {
       _builder.clearMissionFtlDurationResearchMult()
     }
     /**
-     * `optional double mission_ftl_duration_research_mult = 4;`
+     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
      * @return Whether the missionFtlDurationResearchMult field is set.
+     * @return This builder for chaining.
      */
     public fun hasMissionFtlDurationResearchMult(): kotlin.Boolean {
       return _builder.hasMissionFtlDurationResearchMult()
@@ -104,21 +110,23 @@ public object ArtifactsClientInfoKt {
      * `optional double mission_capacity_research_mult = 6;`
      */
     public var missionCapacityResearchMult: kotlin.Double
-      @JvmName("getMissionCapacityResearchMult")
-      get() = _builder.missionCapacityResearchMult
-      @JvmName("setMissionCapacityResearchMult")
-      set(value) {
+      @kotlin.jvm.JvmName("getMissionCapacityResearchMult")
+        get() = _builder.missionCapacityResearchMult
+      @kotlin.jvm.JvmName("setMissionCapacityResearchMult")
+        set(value) {
         _builder.missionCapacityResearchMult = value
       }
     /**
-     * `optional double mission_capacity_research_mult = 6;`
+     * <code>optional double mission_capacity_research_mult = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearMissionCapacityResearchMult() {
       _builder.clearMissionCapacityResearchMult()
     }
     /**
-     * `optional double mission_capacity_research_mult = 6;`
+     * <code>optional double mission_capacity_research_mult = 6;</code>
      * @return Whether the missionCapacityResearchMult field is set.
+     * @return This builder for chaining.
      */
     public fun hasMissionCapacityResearchMult(): kotlin.Boolean {
       return _builder.hasMissionCapacityResearchMult()
@@ -135,86 +143,93 @@ public object ArtifactsClientInfoKt {
      */
      public val launchCounts: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.launchCountsList
       )
     /**
-     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
+     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param value The launchCounts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addLaunchCounts")
+@kotlin.jvm.JvmName("addLaunchCounts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.add(value: ei.Ei.ArtifactsClientInfo.LaunchCount) {
       _builder.addLaunchCounts(value)
     }
     /**
-     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
+     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param value The launchCounts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignLaunchCounts")
+@kotlin.jvm.JvmName("plusAssignLaunchCounts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.plusAssign(value: ei.Ei.ArtifactsClientInfo.LaunchCount) {
       add(value)
     }
     /**
-     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
+     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param values The launchCounts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllLaunchCounts")
+@kotlin.jvm.JvmName("addAllLaunchCounts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsClientInfo.LaunchCount>) {
       _builder.addAllLaunchCounts(values)
     }
     /**
-     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
+     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param values The launchCounts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllLaunchCounts")
+@kotlin.jvm.JvmName("plusAssignAllLaunchCounts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsClientInfo.LaunchCount>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
+     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
      * @param index The index to set the value at.
      * @param value The launchCounts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setLaunchCounts")
+@kotlin.jvm.JvmName("setLaunchCounts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsClientInfo.LaunchCount) {
       _builder.setLaunchCounts(index, value)
     }
     /**
-     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
+     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearLaunchCounts")
+@kotlin.jvm.JvmName("clearLaunchCounts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsClientInfo.LaunchCount, LaunchCountsProxy>.clear() {
       _builder.clearLaunchCounts()
     }
-
 
     /**
      * `optional double last_server_launch_count_sum_time = 5;`
      */
     public var lastServerLaunchCountSumTime: kotlin.Double
-      @JvmName("getLastServerLaunchCountSumTime")
-      get() = _builder.lastServerLaunchCountSumTime
-      @JvmName("setLastServerLaunchCountSumTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getLastServerLaunchCountSumTime")
+        get() = _builder.lastServerLaunchCountSumTime
+      @kotlin.jvm.JvmName("setLastServerLaunchCountSumTime")
+        set(value) {
         _builder.lastServerLaunchCountSumTime = value
       }
     /**
-     * `optional double last_server_launch_count_sum_time = 5;`
+     * <code>optional double last_server_launch_count_sum_time = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearLastServerLaunchCountSumTime() {
       _builder.clearLastServerLaunchCountSumTime()
     }
     /**
-     * `optional double last_server_launch_count_sum_time = 5;`
+     * <code>optional double last_server_launch_count_sum_time = 5;</code>
      * @return Whether the lastServerLaunchCountSumTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasLastServerLaunchCountSumTime(): kotlin.Boolean {
       return _builder.hasLastServerLaunchCountSumTime()
@@ -246,21 +261,23 @@ public object ArtifactsClientInfoKt {
        * `optional .ei.MissionInfo.Spaceship ship = 1;`
        */
       public var ship: ei.Ei.MissionInfo.Spaceship
-        @JvmName("getShip")
-        get() = _builder.ship
-        @JvmName("setShip")
-        set(value) {
+        @kotlin.jvm.JvmName("getShip")
+          get() = _builder.ship
+        @kotlin.jvm.JvmName("setShip")
+          set(value) {
           _builder.ship = value
         }
       /**
-       * `optional .ei.MissionInfo.Spaceship ship = 1;`
+       * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearShip() {
         _builder.clearShip()
       }
       /**
-       * `optional .ei.MissionInfo.Spaceship ship = 1;`
+       * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
        * @return Whether the ship field is set.
+       * @return This builder for chaining.
        */
       public fun hasShip(): kotlin.Boolean {
         return _builder.hasShip()
@@ -270,21 +287,23 @@ public object ArtifactsClientInfoKt {
        * `optional uint32 num_launches = 2;`
        */
       public var numLaunches: kotlin.Int
-        @JvmName("getNumLaunches")
-        get() = _builder.numLaunches
-        @JvmName("setNumLaunches")
-        set(value) {
+        @kotlin.jvm.JvmName("getNumLaunches")
+          get() = _builder.numLaunches
+        @kotlin.jvm.JvmName("setNumLaunches")
+          set(value) {
           _builder.numLaunches = value
         }
       /**
-       * `optional uint32 num_launches = 2;`
+       * <code>optional uint32 num_launches = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearNumLaunches() {
         _builder.clearNumLaunches()
       }
       /**
-       * `optional uint32 num_launches = 2;`
+       * <code>optional uint32 num_launches = 2;</code>
        * @return Whether the numLaunches field is set.
+       * @return This builder for chaining.
        */
       public fun hasNumLaunches(): kotlin.Boolean {
         return _builder.hasNumLaunches()
@@ -294,21 +313,23 @@ public object ArtifactsClientInfoKt {
        * `optional double launch_points = 3;`
        */
       public var launchPoints: kotlin.Double
-        @JvmName("getLaunchPoints")
-        get() = _builder.launchPoints
-        @JvmName("setLaunchPoints")
-        set(value) {
+        @kotlin.jvm.JvmName("getLaunchPoints")
+          get() = _builder.launchPoints
+        @kotlin.jvm.JvmName("setLaunchPoints")
+          set(value) {
           _builder.launchPoints = value
         }
       /**
-       * `optional double launch_points = 3;`
+       * <code>optional double launch_points = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearLaunchPoints() {
         _builder.clearLaunchPoints()
       }
       /**
-       * `optional double launch_points = 3;`
+       * <code>optional double launch_points = 3;</code>
        * @return Whether the launchPoints field is set.
+       * @return This builder for chaining.
        */
       public fun hasLaunchPoints(): kotlin.Boolean {
         return _builder.hasLaunchPoints()

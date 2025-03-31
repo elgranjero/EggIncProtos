@@ -39,66 +39,71 @@ public object ContractsResponseKt {
      */
      public val contracts: com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.contractsList
       )
     /**
-     * `repeated .ei.Contract contracts = 1;`
+     * <code>repeated .ei.Contract contracts = 1;</code>
      * @param value The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addContracts")
+@kotlin.jvm.JvmName("addContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.add(value: ei.Ei.Contract) {
       _builder.addContracts(value)
     }
     /**
-     * `repeated .ei.Contract contracts = 1;`
+     * <code>repeated .ei.Contract contracts = 1;</code>
      * @param value The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignContracts")
+@kotlin.jvm.JvmName("plusAssignContracts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.plusAssign(value: ei.Ei.Contract) {
       add(value)
     }
     /**
-     * `repeated .ei.Contract contracts = 1;`
+     * <code>repeated .ei.Contract contracts = 1;</code>
      * @param values The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllContracts")
+@kotlin.jvm.JvmName("addAllContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract>) {
       _builder.addAllContracts(values)
     }
     /**
-     * `repeated .ei.Contract contracts = 1;`
+     * <code>repeated .ei.Contract contracts = 1;</code>
      * @param values The contracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllContracts")
+@kotlin.jvm.JvmName("plusAssignAllContracts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Contract contracts = 1;`
+     * <code>repeated .ei.Contract contracts = 1;</code>
      * @param index The index to set the value at.
      * @param value The contracts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setContracts")
+@kotlin.jvm.JvmName("setContracts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract) {
       _builder.setContracts(index, value)
     }
     /**
-     * `repeated .ei.Contract contracts = 1;`
+     * <code>repeated .ei.Contract contracts = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearContracts")
+@kotlin.jvm.JvmName("clearContracts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract, ContractsProxy>.clear() {
       _builder.clearContracts()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -111,86 +116,93 @@ public object ContractsResponseKt {
      */
      public val customEggs: com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.customEggsList
       )
     /**
-     * `repeated .ei.CustomEgg custom_eggs = 6;`
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
      * @param value The customEggs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCustomEggs")
+@kotlin.jvm.JvmName("addCustomEggs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.add(value: ei.Ei.CustomEgg) {
       _builder.addCustomEggs(value)
     }
     /**
-     * `repeated .ei.CustomEgg custom_eggs = 6;`
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
      * @param value The customEggs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCustomEggs")
+@kotlin.jvm.JvmName("plusAssignCustomEggs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.plusAssign(value: ei.Ei.CustomEgg) {
       add(value)
     }
     /**
-     * `repeated .ei.CustomEgg custom_eggs = 6;`
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
      * @param values The customEggs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCustomEggs")
+@kotlin.jvm.JvmName("addAllCustomEggs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
       _builder.addAllCustomEggs(values)
     }
     /**
-     * `repeated .ei.CustomEgg custom_eggs = 6;`
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
      * @param values The customEggs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCustomEggs")
+@kotlin.jvm.JvmName("plusAssignAllCustomEggs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CustomEgg>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CustomEgg custom_eggs = 6;`
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
      * @param index The index to set the value at.
      * @param value The customEggs to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCustomEggs")
+@kotlin.jvm.JvmName("setCustomEggs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.set(index: kotlin.Int, value: ei.Ei.CustomEgg) {
       _builder.setCustomEggs(index, value)
     }
     /**
-     * `repeated .ei.CustomEgg custom_eggs = 6;`
+     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCustomEggs")
+@kotlin.jvm.JvmName("clearCustomEggs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggsProxy>.clear() {
       _builder.clearCustomEggs()
     }
-
 
     /**
      * `optional string warning_message = 4;`
      */
     public var warningMessage: kotlin.String
-      @JvmName("getWarningMessage")
-      get() = _builder.warningMessage
-      @JvmName("setWarningMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getWarningMessage")
+        get() = _builder.warningMessage
+      @kotlin.jvm.JvmName("setWarningMessage")
+        set(value) {
         _builder.warningMessage = value
       }
     /**
-     * `optional string warning_message = 4;`
+     * <code>optional string warning_message = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearWarningMessage() {
       _builder.clearWarningMessage()
     }
     /**
-     * `optional string warning_message = 4;`
+     * <code>optional string warning_message = 4;</code>
      * @return Whether the warningMessage field is set.
+     * @return This builder for chaining.
      */
     public fun hasWarningMessage(): kotlin.Boolean {
       return _builder.hasWarningMessage()
@@ -200,21 +212,23 @@ public object ContractsResponseKt {
      * `optional double total_eop = 5;`
      */
     public var totalEop: kotlin.Double
-      @JvmName("getTotalEop")
-      get() = _builder.totalEop
-      @JvmName("setTotalEop")
-      set(value) {
+      @kotlin.jvm.JvmName("getTotalEop")
+        get() = _builder.totalEop
+      @kotlin.jvm.JvmName("setTotalEop")
+        set(value) {
         _builder.totalEop = value
       }
     /**
-     * `optional double total_eop = 5;`
+     * <code>optional double total_eop = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearTotalEop() {
       _builder.clearTotalEop()
     }
     /**
-     * `optional double total_eop = 5;`
+     * <code>optional double total_eop = 5;</code>
      * @return Whether the totalEop field is set.
+     * @return This builder for chaining.
      */
     public fun hasTotalEop(): kotlin.Boolean {
       return _builder.hasTotalEop()
@@ -224,21 +238,23 @@ public object ContractsResponseKt {
      * `optional double server_time = 2;`
      */
     public var serverTime: kotlin.Double
-      @JvmName("getServerTime")
-      get() = _builder.serverTime
-      @JvmName("setServerTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getServerTime")
+        get() = _builder.serverTime
+      @kotlin.jvm.JvmName("setServerTime")
+        set(value) {
         _builder.serverTime = value
       }
     /**
-     * `optional double server_time = 2;`
+     * <code>optional double server_time = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearServerTime() {
       _builder.clearServerTime()
     }
     /**
-     * `optional double server_time = 2;`
+     * <code>optional double server_time = 2;</code>
      * @return Whether the serverTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasServerTime(): kotlin.Boolean {
       return _builder.hasServerTime()
@@ -248,21 +264,23 @@ public object ContractsResponseKt {
      * `optional uint32 max_eop = 3 [default = 1000];`
      */
     public var maxEop: kotlin.Int
-      @JvmName("getMaxEop")
-      get() = _builder.maxEop
-      @JvmName("setMaxEop")
-      set(value) {
+      @kotlin.jvm.JvmName("getMaxEop")
+        get() = _builder.maxEop
+      @kotlin.jvm.JvmName("setMaxEop")
+        set(value) {
         _builder.maxEop = value
       }
     /**
-     * `optional uint32 max_eop = 3 [default = 1000];`
+     * <code>optional uint32 max_eop = 3 [default = 1000];</code>
+     * @return This builder for chaining.
      */
     public fun clearMaxEop() {
       _builder.clearMaxEop()
     }
     /**
-     * `optional uint32 max_eop = 3 [default = 1000];`
+     * <code>optional uint32 max_eop = 3 [default = 1000];</code>
      * @return Whether the maxEop field is set.
+     * @return This builder for chaining.
      */
     public fun hasMaxEop(): kotlin.Boolean {
       return _builder.hasMaxEop()
@@ -272,21 +290,23 @@ public object ContractsResponseKt {
      * `optional .ei.ContractSeasonInfo current_season = 7;`
      */
     public var currentSeason: ei.Ei.ContractSeasonInfo
-      @JvmName("getCurrentSeason")
-      get() = _builder.currentSeason
-      @JvmName("setCurrentSeason")
-      set(value) {
+      @kotlin.jvm.JvmName("getCurrentSeason")
+        get() = _builder.currentSeason
+      @kotlin.jvm.JvmName("setCurrentSeason")
+        set(value) {
         _builder.currentSeason = value
       }
     /**
-     * `optional .ei.ContractSeasonInfo current_season = 7;`
+     * <code>optional .ei.ContractSeasonInfo current_season = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearCurrentSeason() {
       _builder.clearCurrentSeason()
     }
     /**
-     * `optional .ei.ContractSeasonInfo current_season = 7;`
+     * <code>optional .ei.ContractSeasonInfo current_season = 7;</code>
      * @return Whether the currentSeason field is set.
+     * @return This builder for chaining.
      */
     public fun hasCurrentSeason(): kotlin.Boolean {
       return _builder.hasCurrentSeason()

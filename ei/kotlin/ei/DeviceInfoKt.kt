@@ -32,21 +32,23 @@ public object DeviceInfoKt {
      * `optional string device_id = 1;`
      */
     public var deviceId: kotlin.String
-      @JvmName("getDeviceId")
-      get() = _builder.deviceId
-      @JvmName("setDeviceId")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceId")
+        get() = _builder.deviceId
+      @kotlin.jvm.JvmName("setDeviceId")
+        set(value) {
         _builder.deviceId = value
       }
     /**
-     * `optional string device_id = 1;`
+     * <code>optional string device_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * `optional string device_id = 1;`
+     * <code>optional string device_id = 1;</code>
      * @return Whether the deviceId field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -56,21 +58,23 @@ public object DeviceInfoKt {
      * `optional string advertising_id = 13;`
      */
     public var advertisingId: kotlin.String
-      @JvmName("getAdvertisingId")
-      get() = _builder.advertisingId
-      @JvmName("setAdvertisingId")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdvertisingId")
+        get() = _builder.advertisingId
+      @kotlin.jvm.JvmName("setAdvertisingId")
+        set(value) {
         _builder.advertisingId = value
       }
     /**
-     * `optional string advertising_id = 13;`
+     * <code>optional string advertising_id = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdvertisingId() {
       _builder.clearAdvertisingId()
     }
     /**
-     * `optional string advertising_id = 13;`
+     * <code>optional string advertising_id = 13;</code>
      * @return Whether the advertisingId field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdvertisingId(): kotlin.Boolean {
       return _builder.hasAdvertisingId()
@@ -80,21 +84,23 @@ public object DeviceInfoKt {
      * `optional string platform = 2;`
      */
     public var platform: kotlin.String
-      @JvmName("getPlatform")
-      get() = _builder.platform
-      @JvmName("setPlatform")
-      set(value) {
+      @kotlin.jvm.JvmName("getPlatform")
+        get() = _builder.platform
+      @kotlin.jvm.JvmName("setPlatform")
+        set(value) {
         _builder.platform = value
       }
     /**
-     * `optional string platform = 2;`
+     * <code>optional string platform = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * `optional string platform = 2;`
+     * <code>optional string platform = 2;</code>
      * @return Whether the platform field is set.
+     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -104,21 +110,23 @@ public object DeviceInfoKt {
      * `optional string form_factor = 3;`
      */
     public var formFactor: kotlin.String
-      @JvmName("getFormFactor")
-      get() = _builder.formFactor
-      @JvmName("setFormFactor")
-      set(value) {
+      @kotlin.jvm.JvmName("getFormFactor")
+        get() = _builder.formFactor
+      @kotlin.jvm.JvmName("setFormFactor")
+        set(value) {
         _builder.formFactor = value
       }
     /**
-     * `optional string form_factor = 3;`
+     * <code>optional string form_factor = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearFormFactor() {
       _builder.clearFormFactor()
     }
     /**
-     * `optional string form_factor = 3;`
+     * <code>optional string form_factor = 3;</code>
      * @return Whether the formFactor field is set.
+     * @return This builder for chaining.
      */
     public fun hasFormFactor(): kotlin.Boolean {
       return _builder.hasFormFactor()
@@ -128,21 +136,23 @@ public object DeviceInfoKt {
      * `optional string device_name = 4;`
      */
     public var deviceName: kotlin.String
-      @JvmName("getDeviceName")
-      get() = _builder.deviceName
-      @JvmName("setDeviceName")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceName")
+        get() = _builder.deviceName
+      @kotlin.jvm.JvmName("setDeviceName")
+        set(value) {
         _builder.deviceName = value
       }
     /**
-     * `optional string device_name = 4;`
+     * <code>optional string device_name = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceName() {
       _builder.clearDeviceName()
     }
     /**
-     * `optional string device_name = 4;`
+     * <code>optional string device_name = 4;</code>
      * @return Whether the deviceName field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceName(): kotlin.Boolean {
       return _builder.hasDeviceName()
@@ -152,21 +162,23 @@ public object DeviceInfoKt {
      * `optional string platform_version = 5;`
      */
     public var platformVersion: kotlin.String
-      @JvmName("getPlatformVersion")
-      get() = _builder.platformVersion
-      @JvmName("setPlatformVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getPlatformVersion")
+        get() = _builder.platformVersion
+      @kotlin.jvm.JvmName("setPlatformVersion")
+        set(value) {
         _builder.platformVersion = value
       }
     /**
-     * `optional string platform_version = 5;`
+     * <code>optional string platform_version = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearPlatformVersion() {
       _builder.clearPlatformVersion()
     }
     /**
-     * `optional string platform_version = 5;`
+     * <code>optional string platform_version = 5;</code>
      * @return Whether the platformVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasPlatformVersion(): kotlin.Boolean {
       return _builder.hasPlatformVersion()
@@ -176,21 +188,23 @@ public object DeviceInfoKt {
      * `optional string locale_country = 6;`
      */
     public var localeCountry: kotlin.String
-      @JvmName("getLocaleCountry")
-      get() = _builder.localeCountry
-      @JvmName("setLocaleCountry")
-      set(value) {
+      @kotlin.jvm.JvmName("getLocaleCountry")
+        get() = _builder.localeCountry
+      @kotlin.jvm.JvmName("setLocaleCountry")
+        set(value) {
         _builder.localeCountry = value
       }
     /**
-     * `optional string locale_country = 6;`
+     * <code>optional string locale_country = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearLocaleCountry() {
       _builder.clearLocaleCountry()
     }
     /**
-     * `optional string locale_country = 6;`
+     * <code>optional string locale_country = 6;</code>
      * @return Whether the localeCountry field is set.
+     * @return This builder for chaining.
      */
     public fun hasLocaleCountry(): kotlin.Boolean {
       return _builder.hasLocaleCountry()
@@ -200,21 +214,23 @@ public object DeviceInfoKt {
      * `optional string locale_language = 7;`
      */
     public var localeLanguage: kotlin.String
-      @JvmName("getLocaleLanguage")
-      get() = _builder.localeLanguage
-      @JvmName("setLocaleLanguage")
-      set(value) {
+      @kotlin.jvm.JvmName("getLocaleLanguage")
+        get() = _builder.localeLanguage
+      @kotlin.jvm.JvmName("setLocaleLanguage")
+        set(value) {
         _builder.localeLanguage = value
       }
     /**
-     * `optional string locale_language = 7;`
+     * <code>optional string locale_language = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearLocaleLanguage() {
       _builder.clearLocaleLanguage()
     }
     /**
-     * `optional string locale_language = 7;`
+     * <code>optional string locale_language = 7;</code>
      * @return Whether the localeLanguage field is set.
+     * @return This builder for chaining.
      */
     public fun hasLocaleLanguage(): kotlin.Boolean {
       return _builder.hasLocaleLanguage()
@@ -224,21 +240,23 @@ public object DeviceInfoKt {
      * `optional string gpu_vendor = 8;`
      */
     public var gpuVendor: kotlin.String
-      @JvmName("getGpuVendor")
-      get() = _builder.gpuVendor
-      @JvmName("setGpuVendor")
-      set(value) {
+      @kotlin.jvm.JvmName("getGpuVendor")
+        get() = _builder.gpuVendor
+      @kotlin.jvm.JvmName("setGpuVendor")
+        set(value) {
         _builder.gpuVendor = value
       }
     /**
-     * `optional string gpu_vendor = 8;`
+     * <code>optional string gpu_vendor = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearGpuVendor() {
       _builder.clearGpuVendor()
     }
     /**
-     * `optional string gpu_vendor = 8;`
+     * <code>optional string gpu_vendor = 8;</code>
      * @return Whether the gpuVendor field is set.
+     * @return This builder for chaining.
      */
     public fun hasGpuVendor(): kotlin.Boolean {
       return _builder.hasGpuVendor()
@@ -248,21 +266,23 @@ public object DeviceInfoKt {
      * `optional string gpu_model = 9;`
      */
     public var gpuModel: kotlin.String
-      @JvmName("getGpuModel")
-      get() = _builder.gpuModel
-      @JvmName("setGpuModel")
-      set(value) {
+      @kotlin.jvm.JvmName("getGpuModel")
+        get() = _builder.gpuModel
+      @kotlin.jvm.JvmName("setGpuModel")
+        set(value) {
         _builder.gpuModel = value
       }
     /**
-     * `optional string gpu_model = 9;`
+     * <code>optional string gpu_model = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearGpuModel() {
       _builder.clearGpuModel()
     }
     /**
-     * `optional string gpu_model = 9;`
+     * <code>optional string gpu_model = 9;</code>
      * @return Whether the gpuModel field is set.
+     * @return This builder for chaining.
      */
     public fun hasGpuModel(): kotlin.Boolean {
       return _builder.hasGpuModel()
@@ -272,21 +292,23 @@ public object DeviceInfoKt {
      * `optional string device_bucket = 10;`
      */
     public var deviceBucket: kotlin.String
-      @JvmName("getDeviceBucket")
-      get() = _builder.deviceBucket
-      @JvmName("setDeviceBucket")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceBucket")
+        get() = _builder.deviceBucket
+      @kotlin.jvm.JvmName("setDeviceBucket")
+        set(value) {
         _builder.deviceBucket = value
       }
     /**
-     * `optional string device_bucket = 10;`
+     * <code>optional string device_bucket = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceBucket() {
       _builder.clearDeviceBucket()
     }
     /**
-     * `optional string device_bucket = 10;`
+     * <code>optional string device_bucket = 10;</code>
      * @return Whether the deviceBucket field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceBucket(): kotlin.Boolean {
       return _builder.hasDeviceBucket()
@@ -296,21 +318,23 @@ public object DeviceInfoKt {
      * `optional uint32 screen_width = 11;`
      */
     public var screenWidth: kotlin.Int
-      @JvmName("getScreenWidth")
-      get() = _builder.screenWidth
-      @JvmName("setScreenWidth")
-      set(value) {
+      @kotlin.jvm.JvmName("getScreenWidth")
+        get() = _builder.screenWidth
+      @kotlin.jvm.JvmName("setScreenWidth")
+        set(value) {
         _builder.screenWidth = value
       }
     /**
-     * `optional uint32 screen_width = 11;`
+     * <code>optional uint32 screen_width = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearScreenWidth() {
       _builder.clearScreenWidth()
     }
     /**
-     * `optional uint32 screen_width = 11;`
+     * <code>optional uint32 screen_width = 11;</code>
      * @return Whether the screenWidth field is set.
+     * @return This builder for chaining.
      */
     public fun hasScreenWidth(): kotlin.Boolean {
       return _builder.hasScreenWidth()
@@ -320,21 +344,23 @@ public object DeviceInfoKt {
      * `optional uint32 screen_height = 12;`
      */
     public var screenHeight: kotlin.Int
-      @JvmName("getScreenHeight")
-      get() = _builder.screenHeight
-      @JvmName("setScreenHeight")
-      set(value) {
+      @kotlin.jvm.JvmName("getScreenHeight")
+        get() = _builder.screenHeight
+      @kotlin.jvm.JvmName("setScreenHeight")
+        set(value) {
         _builder.screenHeight = value
       }
     /**
-     * `optional uint32 screen_height = 12;`
+     * <code>optional uint32 screen_height = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearScreenHeight() {
       _builder.clearScreenHeight()
     }
     /**
-     * `optional uint32 screen_height = 12;`
+     * <code>optional uint32 screen_height = 12;</code>
      * @return Whether the screenHeight field is set.
+     * @return This builder for chaining.
      */
     public fun hasScreenHeight(): kotlin.Boolean {
       return _builder.hasScreenHeight()

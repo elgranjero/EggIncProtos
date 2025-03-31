@@ -32,21 +32,23 @@ public object SetArtifactRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object SetArtifactRequestKt {
      * `optional .ei.ArtifactInventoryItem artifact = 2;`
      */
     public var artifact: ei.Ei.ArtifactInventoryItem
-      @JvmName("getArtifact")
-      get() = _builder.artifact
-      @JvmName("setArtifact")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifact")
+        get() = _builder.artifact
+      @kotlin.jvm.JvmName("setArtifact")
+        set(value) {
         _builder.artifact = value
       }
     /**
-     * `optional .ei.ArtifactInventoryItem artifact = 2;`
+     * <code>optional .ei.ArtifactInventoryItem artifact = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifact() {
       _builder.clearArtifact()
     }
     /**
-     * `optional .ei.ArtifactInventoryItem artifact = 2;`
+     * <code>optional .ei.ArtifactInventoryItem artifact = 2;</code>
      * @return Whether the artifact field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
@@ -93,86 +97,93 @@ public object SetArtifactRequestKt {
      */
      public val stones: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.stonesList
       )
     /**
-     * `repeated .ei.ArtifactSpec stones = 3;`
+     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param value The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addStones")
+@kotlin.jvm.JvmName("addStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addStones(value)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 3;`
+     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param value The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignStones")
+@kotlin.jvm.JvmName("plusAssignStones")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 3;`
+     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param values The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllStones")
+@kotlin.jvm.JvmName("addAllStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllStones(values)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 3;`
+     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param values The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllStones")
+@kotlin.jvm.JvmName("plusAssignAllStones")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 3;`
+     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
      * @param index The index to set the value at.
      * @param value The stones to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setStones")
+@kotlin.jvm.JvmName("setStones")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setStones(index, value)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 3;`
+     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearStones")
+@kotlin.jvm.JvmName("clearStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.clear() {
       _builder.clearStones()
     }
-
 
     /**
      * `optional double gold_price_paid = 4;`
      */
     public var goldPricePaid: kotlin.Double
-      @JvmName("getGoldPricePaid")
-      get() = _builder.goldPricePaid
-      @JvmName("setGoldPricePaid")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoldPricePaid")
+        get() = _builder.goldPricePaid
+      @kotlin.jvm.JvmName("setGoldPricePaid")
+        set(value) {
         _builder.goldPricePaid = value
       }
     /**
-     * `optional double gold_price_paid = 4;`
+     * <code>optional double gold_price_paid = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoldPricePaid() {
       _builder.clearGoldPricePaid()
     }
     /**
-     * `optional double gold_price_paid = 4;`
+     * <code>optional double gold_price_paid = 4;</code>
      * @return Whether the goldPricePaid field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoldPricePaid(): kotlin.Boolean {
       return _builder.hasGoldPricePaid()

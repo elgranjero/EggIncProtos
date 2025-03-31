@@ -32,21 +32,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional string id = 1;`
      */
     public var id: kotlin.String
-      @JvmName("getId")
-      get() = _builder.id
-      @JvmName("setId")
-      set(value) {
+      @kotlin.jvm.JvmName("getId")
+        get() = _builder.id
+      @kotlin.jvm.JvmName("setId")
+        set(value) {
         _builder.id = value
       }
     /**
-     * `optional string id = 1;`
+     * <code>optional string id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearId() {
       _builder.clearId()
     }
     /**
-     * `optional string id = 1;`
+     * <code>optional string id = 1;</code>
      * @return Whether the id field is set.
+     * @return This builder for chaining.
      */
     public fun hasId(): kotlin.Boolean {
       return _builder.hasId()
@@ -56,21 +58,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional string local_id = 12;`
      */
     public var localId: kotlin.String
-      @JvmName("getLocalId")
-      get() = _builder.localId
-      @JvmName("setLocalId")
-      set(value) {
+      @kotlin.jvm.JvmName("getLocalId")
+        get() = _builder.localId
+      @kotlin.jvm.JvmName("setLocalId")
+        set(value) {
         _builder.localId = value
       }
     /**
-     * `optional string local_id = 12;`
+     * <code>optional string local_id = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearLocalId() {
       _builder.clearLocalId()
     }
     /**
-     * `optional string local_id = 12;`
+     * <code>optional string local_id = 12;</code>
      * @return Whether the localId field is set.
+     * @return This builder for chaining.
      */
     public fun hasLocalId(): kotlin.Boolean {
       return _builder.hasLocalId()
@@ -80,21 +84,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional string name = 2;`
      */
     public var name: kotlin.String
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional string name = 2;`
+     * <code>optional string name = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional string name = 2;`
+     * <code>optional string name = 2;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -104,21 +110,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional string description = 3;`
      */
     public var description: kotlin.String
-      @JvmName("getDescription")
-      get() = _builder.description
-      @JvmName("setDescription")
-      set(value) {
+      @kotlin.jvm.JvmName("getDescription")
+        get() = _builder.description
+      @kotlin.jvm.JvmName("setDescription")
+        set(value) {
         _builder.description = value
       }
     /**
-     * `optional string description = 3;`
+     * <code>optional string description = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * `optional string description = 3;`
+     * <code>optional string description = 3;</code>
      * @return Whether the description field is set.
+     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()
@@ -128,21 +136,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional bool is_new = 15;`
      */
     public var isNew: kotlin.Boolean
-      @JvmName("getIsNew")
-      get() = _builder.isNew
-      @JvmName("setIsNew")
-      set(value) {
+      @kotlin.jvm.JvmName("getIsNew")
+        get() = _builder.isNew
+      @kotlin.jvm.JvmName("setIsNew")
+        set(value) {
         _builder.isNew = value
       }
     /**
-     * `optional bool is_new = 15;`
+     * <code>optional bool is_new = 15;</code>
+     * @return This builder for chaining.
      */
     public fun clearIsNew() {
       _builder.clearIsNew()
     }
     /**
-     * `optional bool is_new = 15;`
+     * <code>optional bool is_new = 15;</code>
      * @return Whether the isNew field is set.
+     * @return This builder for chaining.
      */
     public fun hasIsNew(): kotlin.Boolean {
       return _builder.hasIsNew()
@@ -152,21 +162,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional string creator_name = 14;`
      */
     public var creatorName: kotlin.String
-      @JvmName("getCreatorName")
-      get() = _builder.creatorName
-      @JvmName("setCreatorName")
-      set(value) {
+      @kotlin.jvm.JvmName("getCreatorName")
+        get() = _builder.creatorName
+      @kotlin.jvm.JvmName("setCreatorName")
+        set(value) {
         _builder.creatorName = value
       }
     /**
-     * `optional string creator_name = 14;`
+     * <code>optional string creator_name = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearCreatorName() {
       _builder.clearCreatorName()
     }
     /**
-     * `optional string creator_name = 14;`
+     * <code>optional string creator_name = 14;</code>
      * @return Whether the creatorName field is set.
+     * @return This builder for chaining.
      */
     public fun hasCreatorName(): kotlin.Boolean {
       return _builder.hasCreatorName()
@@ -176,21 +188,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional .ei.ShellShowcaseListingInfo.Status status = 11;`
      */
     public var status: ei.Ei.ShellShowcaseListingInfo.Status
-      @JvmName("getStatus")
-      get() = _builder.status
-      @JvmName("setStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getStatus")
+        get() = _builder.status
+      @kotlin.jvm.JvmName("setStatus")
+        set(value) {
         _builder.status = value
       }
     /**
-     * `optional .ei.ShellShowcaseListingInfo.Status status = 11;`
+     * <code>optional .ei.ShellShowcaseListingInfo.Status status = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * `optional .ei.ShellShowcaseListingInfo.Status status = 11;`
+     * <code>optional .ei.ShellShowcaseListingInfo.Status status = 11;</code>
      * @return Whether the status field is set.
+     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -200,21 +214,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional .ei.ShellDB.FarmConfiguration farm_config = 4;`
      */
     public var farmConfig: ei.Ei.ShellDB.FarmConfiguration
-      @JvmName("getFarmConfig")
-      get() = _builder.farmConfig
-      @JvmName("setFarmConfig")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmConfig")
+        get() = _builder.farmConfig
+      @kotlin.jvm.JvmName("setFarmConfig")
+        set(value) {
         _builder.farmConfig = value
       }
     /**
-     * `optional .ei.ShellDB.FarmConfiguration farm_config = 4;`
+     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmConfig() {
       _builder.clearFarmConfig()
     }
     /**
-     * `optional .ei.ShellDB.FarmConfiguration farm_config = 4;`
+     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 4;</code>
      * @return Whether the farmConfig field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmConfig(): kotlin.Boolean {
       return _builder.hasFarmConfig()
@@ -227,21 +243,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional uint32 sales = 5;`
      */
     public var sales: kotlin.Int
-      @JvmName("getSales")
-      get() = _builder.sales
-      @JvmName("setSales")
-      set(value) {
+      @kotlin.jvm.JvmName("getSales")
+        get() = _builder.sales
+      @kotlin.jvm.JvmName("setSales")
+        set(value) {
         _builder.sales = value
       }
     /**
-     * `optional uint32 sales = 5;`
+     * <code>optional uint32 sales = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearSales() {
       _builder.clearSales()
     }
     /**
-     * `optional uint32 sales = 5;`
+     * <code>optional uint32 sales = 5;</code>
      * @return Whether the sales field is set.
+     * @return This builder for chaining.
      */
     public fun hasSales(): kotlin.Boolean {
       return _builder.hasSales()
@@ -251,21 +269,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional uint64 gross = 6;`
      */
     public var gross: kotlin.Long
-      @JvmName("getGross")
-      get() = _builder.gross
-      @JvmName("setGross")
-      set(value) {
+      @kotlin.jvm.JvmName("getGross")
+        get() = _builder.gross
+      @kotlin.jvm.JvmName("setGross")
+        set(value) {
         _builder.gross = value
       }
     /**
-     * `optional uint64 gross = 6;`
+     * <code>optional uint64 gross = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearGross() {
       _builder.clearGross()
     }
     /**
-     * `optional uint64 gross = 6;`
+     * <code>optional uint64 gross = 6;</code>
      * @return Whether the gross field is set.
+     * @return This builder for chaining.
      */
     public fun hasGross(): kotlin.Boolean {
       return _builder.hasGross()
@@ -275,21 +295,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional uint64 views = 7;`
      */
     public var views: kotlin.Long
-      @JvmName("getViews")
-      get() = _builder.views
-      @JvmName("setViews")
-      set(value) {
+      @kotlin.jvm.JvmName("getViews")
+        get() = _builder.views
+      @kotlin.jvm.JvmName("setViews")
+        set(value) {
         _builder.views = value
       }
     /**
-     * `optional uint64 views = 7;`
+     * <code>optional uint64 views = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearViews() {
       _builder.clearViews()
     }
     /**
-     * `optional uint64 views = 7;`
+     * <code>optional uint64 views = 7;</code>
      * @return Whether the views field is set.
+     * @return This builder for chaining.
      */
     public fun hasViews(): kotlin.Boolean {
       return _builder.hasViews()
@@ -299,21 +321,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional uint64 equips = 13;`
      */
     public var equips: kotlin.Long
-      @JvmName("getEquips")
-      get() = _builder.equips
-      @JvmName("setEquips")
-      set(value) {
+      @kotlin.jvm.JvmName("getEquips")
+        get() = _builder.equips
+      @kotlin.jvm.JvmName("setEquips")
+        set(value) {
         _builder.equips = value
       }
     /**
-     * `optional uint64 equips = 13;`
+     * <code>optional uint64 equips = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearEquips() {
       _builder.clearEquips()
     }
     /**
-     * `optional uint64 equips = 13;`
+     * <code>optional uint64 equips = 13;</code>
      * @return Whether the equips field is set.
+     * @return This builder for chaining.
      */
     public fun hasEquips(): kotlin.Boolean {
       return _builder.hasEquips()
@@ -323,21 +347,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional uint32 likes = 8;`
      */
     public var likes: kotlin.Int
-      @JvmName("getLikes")
-      get() = _builder.likes
-      @JvmName("setLikes")
-      set(value) {
+      @kotlin.jvm.JvmName("getLikes")
+        get() = _builder.likes
+      @kotlin.jvm.JvmName("setLikes")
+        set(value) {
         _builder.likes = value
       }
     /**
-     * `optional uint32 likes = 8;`
+     * <code>optional uint32 likes = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearLikes() {
       _builder.clearLikes()
     }
     /**
-     * `optional uint32 likes = 8;`
+     * <code>optional uint32 likes = 8;</code>
      * @return Whether the likes field is set.
+     * @return This builder for chaining.
      */
     public fun hasLikes(): kotlin.Boolean {
       return _builder.hasLikes()
@@ -347,21 +373,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional uint32 dislikes = 9;`
      */
     public var dislikes: kotlin.Int
-      @JvmName("getDislikes")
-      get() = _builder.dislikes
-      @JvmName("setDislikes")
-      set(value) {
+      @kotlin.jvm.JvmName("getDislikes")
+        get() = _builder.dislikes
+      @kotlin.jvm.JvmName("setDislikes")
+        set(value) {
         _builder.dislikes = value
       }
     /**
-     * `optional uint32 dislikes = 9;`
+     * <code>optional uint32 dislikes = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearDislikes() {
       _builder.clearDislikes()
     }
     /**
-     * `optional uint32 dislikes = 9;`
+     * <code>optional uint32 dislikes = 9;</code>
      * @return Whether the dislikes field is set.
+     * @return This builder for chaining.
      */
     public fun hasDislikes(): kotlin.Boolean {
       return _builder.hasDislikes()
@@ -371,21 +399,23 @@ public object ShellShowcaseListingInfoKt {
      * `optional string share_url = 10;`
      */
     public var shareUrl: kotlin.String
-      @JvmName("getShareUrl")
-      get() = _builder.shareUrl
-      @JvmName("setShareUrl")
-      set(value) {
+      @kotlin.jvm.JvmName("getShareUrl")
+        get() = _builder.shareUrl
+      @kotlin.jvm.JvmName("setShareUrl")
+        set(value) {
         _builder.shareUrl = value
       }
     /**
-     * `optional string share_url = 10;`
+     * <code>optional string share_url = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearShareUrl() {
       _builder.clearShareUrl()
     }
     /**
-     * `optional string share_url = 10;`
+     * <code>optional string share_url = 10;</code>
      * @return Whether the shareUrl field is set.
+     * @return This builder for chaining.
      */
     public fun hasShareUrl(): kotlin.Boolean {
       return _builder.hasShareUrl()

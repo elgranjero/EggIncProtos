@@ -32,21 +32,23 @@ public object CurrencyFlowBatchRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 2;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 2;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 2;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -66,66 +68,71 @@ public object CurrencyFlowBatchRequestKt {
      */
      public val logs: com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.logsList
       )
     /**
-     * `repeated .ei.CurrencyFlowLog logs = 1;`
+     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param value The logs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addLogs")
+@kotlin.jvm.JvmName("addLogs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.add(value: ei.Ei.CurrencyFlowLog) {
       _builder.addLogs(value)
     }
     /**
-     * `repeated .ei.CurrencyFlowLog logs = 1;`
+     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param value The logs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignLogs")
+@kotlin.jvm.JvmName("plusAssignLogs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.plusAssign(value: ei.Ei.CurrencyFlowLog) {
       add(value)
     }
     /**
-     * `repeated .ei.CurrencyFlowLog logs = 1;`
+     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param values The logs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllLogs")
+@kotlin.jvm.JvmName("addAllLogs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CurrencyFlowLog>) {
       _builder.addAllLogs(values)
     }
     /**
-     * `repeated .ei.CurrencyFlowLog logs = 1;`
+     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param values The logs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllLogs")
+@kotlin.jvm.JvmName("plusAssignAllLogs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CurrencyFlowLog>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CurrencyFlowLog logs = 1;`
+     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
      * @param index The index to set the value at.
      * @param value The logs to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setLogs")
+@kotlin.jvm.JvmName("setLogs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.set(index: kotlin.Int, value: ei.Ei.CurrencyFlowLog) {
       _builder.setLogs(index, value)
     }
     /**
-     * `repeated .ei.CurrencyFlowLog logs = 1;`
+     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearLogs")
+@kotlin.jvm.JvmName("clearLogs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CurrencyFlowLog, LogsProxy>.clear() {
       _builder.clearLogs()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

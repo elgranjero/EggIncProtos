@@ -32,21 +32,23 @@ public object ContractCoopStatusResponseKt {
      * `optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;`
      */
     public var responseStatus: ei.Ei.ContractCoopStatusResponse.ResponseStatus
-      @JvmName("getResponseStatus")
-      get() = _builder.responseStatus
-      @JvmName("setResponseStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getResponseStatus")
+        get() = _builder.responseStatus
+      @kotlin.jvm.JvmName("setResponseStatus")
+        set(value) {
         _builder.responseStatus = value
       }
     /**
-     * `optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;`
+     * <code>optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearResponseStatus() {
       _builder.clearResponseStatus()
     }
     /**
-     * `optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;`
+     * <code>optional .ei.ContractCoopStatusResponse.ResponseStatus response_status = 19;</code>
      * @return Whether the responseStatus field is set.
+     * @return This builder for chaining.
      */
     public fun hasResponseStatus(): kotlin.Boolean {
       return _builder.hasResponseStatus()
@@ -56,21 +58,23 @@ public object ContractCoopStatusResponseKt {
      * `optional string contract_identifier = 1;`
      */
     public var contractIdentifier: kotlin.String
-      @JvmName("getContractIdentifier")
-      get() = _builder.contractIdentifier
-      @JvmName("setContractIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractIdentifier")
+        get() = _builder.contractIdentifier
+      @kotlin.jvm.JvmName("setContractIdentifier")
+        set(value) {
         _builder.contractIdentifier = value
       }
     /**
-     * `optional string contract_identifier = 1;`
+     * <code>optional string contract_identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * `optional string contract_identifier = 1;`
+     * <code>optional string contract_identifier = 1;</code>
      * @return Whether the contractIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -80,21 +84,23 @@ public object ContractCoopStatusResponseKt {
      * `optional double total_amount = 2;`
      */
     public var totalAmount: kotlin.Double
-      @JvmName("getTotalAmount")
-      get() = _builder.totalAmount
-      @JvmName("setTotalAmount")
-      set(value) {
+      @kotlin.jvm.JvmName("getTotalAmount")
+        get() = _builder.totalAmount
+      @kotlin.jvm.JvmName("setTotalAmount")
+        set(value) {
         _builder.totalAmount = value
       }
     /**
-     * `optional double total_amount = 2;`
+     * <code>optional double total_amount = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearTotalAmount() {
       _builder.clearTotalAmount()
     }
     /**
-     * `optional double total_amount = 2;`
+     * <code>optional double total_amount = 2;</code>
      * @return Whether the totalAmount field is set.
+     * @return This builder for chaining.
      */
     public fun hasTotalAmount(): kotlin.Boolean {
       return _builder.hasTotalAmount()
@@ -104,21 +110,23 @@ public object ContractCoopStatusResponseKt {
      * `optional string coop_identifier = 3;`
      */
     public var coopIdentifier: kotlin.String
-      @JvmName("getCoopIdentifier")
-      get() = _builder.coopIdentifier
-      @JvmName("setCoopIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopIdentifier")
+        get() = _builder.coopIdentifier
+      @kotlin.jvm.JvmName("setCoopIdentifier")
+        set(value) {
         _builder.coopIdentifier = value
       }
     /**
-     * `optional string coop_identifier = 3;`
+     * <code>optional string coop_identifier = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * `optional string coop_identifier = 3;`
+     * <code>optional string coop_identifier = 3;</code>
      * @return Whether the coopIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -128,21 +136,23 @@ public object ContractCoopStatusResponseKt {
      * `optional .ei.Contract.PlayerGrade grade = 17;`
      */
     public var grade: ei.Ei.Contract.PlayerGrade
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 17;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 17;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 17;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -159,86 +169,93 @@ public object ContractCoopStatusResponseKt {
      */
      public val contributors: com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.contributorsList
       )
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param value The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addContributors")
+@kotlin.jvm.JvmName("addContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.ContributionInfo) {
       _builder.addContributors(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param value The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignContributors")
+@kotlin.jvm.JvmName("plusAssignContributors")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.ContributionInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param values The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllContributors")
+@kotlin.jvm.JvmName("addAllContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ContributionInfo>) {
       _builder.addAllContributors(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param values The contributors to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllContributors")
+@kotlin.jvm.JvmName("plusAssignAllContributors")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ContributionInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
      * @param index The index to set the value at.
      * @param value The contributors to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setContributors")
+@kotlin.jvm.JvmName("setContributors")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.ContributionInfo) {
       _builder.setContributors(index, value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ContributionInfo contributors = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearContributors")
+@kotlin.jvm.JvmName("clearContributors")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ContributionInfo, ContributorsProxy>.clear() {
       _builder.clearContributors()
     }
-
 
     /**
      * `optional bool auto_generated = 8;`
      */
     public var autoGenerated: kotlin.Boolean
-      @JvmName("getAutoGenerated")
-      get() = _builder.autoGenerated
-      @JvmName("setAutoGenerated")
-      set(value) {
+      @kotlin.jvm.JvmName("getAutoGenerated")
+        get() = _builder.autoGenerated
+      @kotlin.jvm.JvmName("setAutoGenerated")
+        set(value) {
         _builder.autoGenerated = value
       }
     /**
-     * `optional bool auto_generated = 8;`
+     * <code>optional bool auto_generated = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearAutoGenerated() {
       _builder.clearAutoGenerated()
     }
     /**
-     * `optional bool auto_generated = 8;`
+     * <code>optional bool auto_generated = 8;</code>
      * @return Whether the autoGenerated field is set.
+     * @return This builder for chaining.
      */
     public fun hasAutoGenerated(): kotlin.Boolean {
       return _builder.hasAutoGenerated()
@@ -248,21 +265,23 @@ public object ContractCoopStatusResponseKt {
      * `optional bool public = 10;`
      */
     public var public: kotlin.Boolean
-      @JvmName("getPublic")
-      get() = _builder.public
-      @JvmName("setPublic")
-      set(value) {
+      @kotlin.jvm.JvmName("getPublic")
+        get() = _builder.public
+      @kotlin.jvm.JvmName("setPublic")
+        set(value) {
         _builder.public = value
       }
     /**
-     * `optional bool public = 10;`
+     * <code>optional bool public = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearPublic() {
       _builder.clearPublic()
     }
     /**
-     * `optional bool public = 10;`
+     * <code>optional bool public = 10;</code>
      * @return Whether the public field is set.
+     * @return This builder for chaining.
      */
     public fun hasPublic(): kotlin.Boolean {
       return _builder.hasPublic()
@@ -272,21 +291,23 @@ public object ContractCoopStatusResponseKt {
      * `optional string creator_id = 9;`
      */
     public var creatorId: kotlin.String
-      @JvmName("getCreatorId")
-      get() = _builder.creatorId
-      @JvmName("setCreatorId")
-      set(value) {
+      @kotlin.jvm.JvmName("getCreatorId")
+        get() = _builder.creatorId
+      @kotlin.jvm.JvmName("setCreatorId")
+        set(value) {
         _builder.creatorId = value
       }
     /**
-     * `optional string creator_id = 9;`
+     * <code>optional string creator_id = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearCreatorId() {
       _builder.clearCreatorId()
     }
     /**
-     * `optional string creator_id = 9;`
+     * <code>optional string creator_id = 9;</code>
      * @return Whether the creatorId field is set.
+     * @return This builder for chaining.
      */
     public fun hasCreatorId(): kotlin.Boolean {
       return _builder.hasCreatorId()
@@ -296,21 +317,23 @@ public object ContractCoopStatusResponseKt {
      * `optional double seconds_remaining = 5;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 5;`
+     * <code>optional double seconds_remaining = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 5;`
+     * <code>optional double seconds_remaining = 5;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -320,21 +343,23 @@ public object ContractCoopStatusResponseKt {
      * `optional double seconds_since_all_goals_achieved = 16;`
      */
     public var secondsSinceAllGoalsAchieved: kotlin.Double
-      @JvmName("getSecondsSinceAllGoalsAchieved")
-      get() = _builder.secondsSinceAllGoalsAchieved
-      @JvmName("setSecondsSinceAllGoalsAchieved")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsSinceAllGoalsAchieved")
+        get() = _builder.secondsSinceAllGoalsAchieved
+      @kotlin.jvm.JvmName("setSecondsSinceAllGoalsAchieved")
+        set(value) {
         _builder.secondsSinceAllGoalsAchieved = value
       }
     /**
-     * `optional double seconds_since_all_goals_achieved = 16;`
+     * <code>optional double seconds_since_all_goals_achieved = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsSinceAllGoalsAchieved() {
       _builder.clearSecondsSinceAllGoalsAchieved()
     }
     /**
-     * `optional double seconds_since_all_goals_achieved = 16;`
+     * <code>optional double seconds_since_all_goals_achieved = 16;</code>
      * @return Whether the secondsSinceAllGoalsAchieved field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsSinceAllGoalsAchieved(): kotlin.Boolean {
       return _builder.hasSecondsSinceAllGoalsAchieved()
@@ -344,21 +369,23 @@ public object ContractCoopStatusResponseKt {
      * `optional bool all_goals_achieved = 14;`
      */
     public var allGoalsAchieved: kotlin.Boolean
-      @JvmName("getAllGoalsAchieved")
-      get() = _builder.allGoalsAchieved
-      @JvmName("setAllGoalsAchieved")
-      set(value) {
+      @kotlin.jvm.JvmName("getAllGoalsAchieved")
+        get() = _builder.allGoalsAchieved
+      @kotlin.jvm.JvmName("setAllGoalsAchieved")
+        set(value) {
         _builder.allGoalsAchieved = value
       }
     /**
-     * `optional bool all_goals_achieved = 14;`
+     * <code>optional bool all_goals_achieved = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearAllGoalsAchieved() {
       _builder.clearAllGoalsAchieved()
     }
     /**
-     * `optional bool all_goals_achieved = 14;`
+     * <code>optional bool all_goals_achieved = 14;</code>
      * @return Whether the allGoalsAchieved field is set.
+     * @return This builder for chaining.
      */
     public fun hasAllGoalsAchieved(): kotlin.Boolean {
       return _builder.hasAllGoalsAchieved()
@@ -368,21 +395,23 @@ public object ContractCoopStatusResponseKt {
      * `optional bool all_members_reporting = 6;`
      */
     public var allMembersReporting: kotlin.Boolean
-      @JvmName("getAllMembersReporting")
-      get() = _builder.allMembersReporting
-      @JvmName("setAllMembersReporting")
-      set(value) {
+      @kotlin.jvm.JvmName("getAllMembersReporting")
+        get() = _builder.allMembersReporting
+      @kotlin.jvm.JvmName("setAllMembersReporting")
+        set(value) {
         _builder.allMembersReporting = value
       }
     /**
-     * `optional bool all_members_reporting = 6;`
+     * <code>optional bool all_members_reporting = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearAllMembersReporting() {
       _builder.clearAllMembersReporting()
     }
     /**
-     * `optional bool all_members_reporting = 6;`
+     * <code>optional bool all_members_reporting = 6;</code>
      * @return Whether the allMembersReporting field is set.
+     * @return This builder for chaining.
      */
     public fun hasAllMembersReporting(): kotlin.Boolean {
       return _builder.hasAllMembersReporting()
@@ -392,21 +421,23 @@ public object ContractCoopStatusResponseKt {
      * `optional double grace_period_seconds_remaining = 7;`
      */
     public var gracePeriodSecondsRemaining: kotlin.Double
-      @JvmName("getGracePeriodSecondsRemaining")
-      get() = _builder.gracePeriodSecondsRemaining
-      @JvmName("setGracePeriodSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getGracePeriodSecondsRemaining")
+        get() = _builder.gracePeriodSecondsRemaining
+      @kotlin.jvm.JvmName("setGracePeriodSecondsRemaining")
+        set(value) {
         _builder.gracePeriodSecondsRemaining = value
       }
     /**
-     * `optional double grace_period_seconds_remaining = 7;`
+     * <code>optional double grace_period_seconds_remaining = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearGracePeriodSecondsRemaining() {
       _builder.clearGracePeriodSecondsRemaining()
     }
     /**
-     * `optional double grace_period_seconds_remaining = 7;`
+     * <code>optional double grace_period_seconds_remaining = 7;</code>
      * @return Whether the gracePeriodSecondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasGracePeriodSecondsRemaining(): kotlin.Boolean {
       return _builder.hasGracePeriodSecondsRemaining()
@@ -416,21 +447,23 @@ public object ContractCoopStatusResponseKt {
      * `optional bool cleared_for_exit = 15;`
      */
     public var clearedForExit: kotlin.Boolean
-      @JvmName("getClearedForExit")
-      get() = _builder.clearedForExit
-      @JvmName("setClearedForExit")
-      set(value) {
+      @kotlin.jvm.JvmName("getClearedForExit")
+        get() = _builder.clearedForExit
+      @kotlin.jvm.JvmName("setClearedForExit")
+        set(value) {
         _builder.clearedForExit = value
       }
     /**
-     * `optional bool cleared_for_exit = 15;`
+     * <code>optional bool cleared_for_exit = 15;</code>
+     * @return This builder for chaining.
      */
     public fun clearClearedForExit() {
       _builder.clearClearedForExit()
     }
     /**
-     * `optional bool cleared_for_exit = 15;`
+     * <code>optional bool cleared_for_exit = 15;</code>
      * @return Whether the clearedForExit field is set.
+     * @return This builder for chaining.
      */
     public fun hasClearedForExit(): kotlin.Boolean {
       return _builder.hasClearedForExit()
@@ -447,66 +480,71 @@ public object ContractCoopStatusResponseKt {
      */
      public val gifts: com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.giftsList
       )
     /**
-     * `repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;`
+     * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param value The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGifts")
+@kotlin.jvm.JvmName("addGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.CoopGift) {
       _builder.addGifts(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;`
+     * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param value The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGifts")
+@kotlin.jvm.JvmName("plusAssignGifts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.CoopGift) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;`
+     * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param values The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGifts")
+@kotlin.jvm.JvmName("addAllGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.CoopGift>) {
       _builder.addAllGifts(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;`
+     * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param values The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGifts")
+@kotlin.jvm.JvmName("plusAssignAllGifts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.CoopGift>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;`
+     * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
      * @param index The index to set the value at.
      * @param value The gifts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGifts")
+@kotlin.jvm.JvmName("setGifts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.CoopGift) {
       _builder.setGifts(index, value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;`
+     * <code>repeated .ei.ContractCoopStatusResponse.CoopGift gifts = 11;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGifts")
+@kotlin.jvm.JvmName("clearGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.CoopGift, GiftsProxy>.clear() {
       _builder.clearGifts()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -519,86 +557,93 @@ public object ContractCoopStatusResponseKt {
      */
      public val chickenRuns: com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.chickenRunsList
       )
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param value The chickenRuns to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addChickenRuns")
+@kotlin.jvm.JvmName("addChickenRuns")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.add(value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
       _builder.addChickenRuns(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param value The chickenRuns to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignChickenRuns")
+@kotlin.jvm.JvmName("plusAssignChickenRuns")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.plusAssign(value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param values The chickenRuns to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllChickenRuns")
+@kotlin.jvm.JvmName("addAllChickenRuns")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ChickenRun>) {
       _builder.addAllChickenRuns(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param values The chickenRuns to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllChickenRuns")
+@kotlin.jvm.JvmName("plusAssignAllChickenRuns")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractCoopStatusResponse.ChickenRun>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
      * @param index The index to set the value at.
      * @param value The chickenRuns to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setChickenRuns")
+@kotlin.jvm.JvmName("setChickenRuns")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractCoopStatusResponse.ChickenRun) {
       _builder.setChickenRuns(index, value)
     }
     /**
-     * `repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;`
+     * <code>repeated .ei.ContractCoopStatusResponse.ChickenRun chicken_runs = 13;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearChickenRuns")
+@kotlin.jvm.JvmName("clearChickenRuns")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractCoopStatusResponse.ChickenRun, ChickenRunsProxy>.clear() {
       _builder.clearChickenRuns()
     }
-
 
     /**
      * `optional double client_timestamp = 12;`
      */
     public var clientTimestamp: kotlin.Double
-      @JvmName("getClientTimestamp")
-      get() = _builder.clientTimestamp
-      @JvmName("setClientTimestamp")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientTimestamp")
+        get() = _builder.clientTimestamp
+      @kotlin.jvm.JvmName("setClientTimestamp")
+        set(value) {
         _builder.clientTimestamp = value
       }
     /**
-     * `optional double client_timestamp = 12;`
+     * <code>optional double client_timestamp = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientTimestamp() {
       _builder.clearClientTimestamp()
     }
     /**
-     * `optional double client_timestamp = 12;`
+     * <code>optional double client_timestamp = 12;</code>
      * @return Whether the clientTimestamp field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientTimestamp(): kotlin.Boolean {
       return _builder.hasClientTimestamp()
@@ -608,21 +653,23 @@ public object ContractCoopStatusResponseKt {
      * `optional double last_sync_DEP = 18;`
      */
     public var lastSyncDEP: kotlin.Double
-      @JvmName("getLastSyncDEP")
-      get() = _builder.lastSyncDEP
-      @JvmName("setLastSyncDEP")
-      set(value) {
+      @kotlin.jvm.JvmName("getLastSyncDEP")
+        get() = _builder.lastSyncDEP
+      @kotlin.jvm.JvmName("setLastSyncDEP")
+        set(value) {
         _builder.lastSyncDEP = value
       }
     /**
-     * `optional double last_sync_DEP = 18;`
+     * <code>optional double last_sync_DEP = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearLastSyncDEP() {
       _builder.clearLastSyncDEP()
     }
     /**
-     * `optional double last_sync_DEP = 18;`
+     * <code>optional double last_sync_DEP = 18;</code>
      * @return Whether the lastSyncDEP field is set.
+     * @return This builder for chaining.
      */
     public fun hasLastSyncDEP(): kotlin.Boolean {
       return _builder.hasLastSyncDEP()
@@ -654,21 +701,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string uuid = 21;`
        */
       public var uuid: kotlin.String
-        @JvmName("getUuid")
-        get() = _builder.uuid
-        @JvmName("setUuid")
-        set(value) {
+        @kotlin.jvm.JvmName("getUuid")
+          get() = _builder.uuid
+        @kotlin.jvm.JvmName("setUuid")
+          set(value) {
           _builder.uuid = value
         }
       /**
-       * `optional string uuid = 21;`
+       * <code>optional string uuid = 21;</code>
+       * @return This builder for chaining.
        */
       public fun clearUuid() {
         _builder.clearUuid()
       }
       /**
-       * `optional string uuid = 21;`
+       * <code>optional string uuid = 21;</code>
        * @return Whether the uuid field is set.
+       * @return This builder for chaining.
        */
       public fun hasUuid(): kotlin.Boolean {
         return _builder.hasUuid()
@@ -678,21 +727,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string user_id = 1;`
        */
       public var userId: kotlin.String
-        @JvmName("getUserId")
-        get() = _builder.userId
-        @JvmName("setUserId")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserId")
+          get() = _builder.userId
+        @kotlin.jvm.JvmName("setUserId")
+          set(value) {
           _builder.userId = value
         }
       /**
-       * `optional string user_id = 1;`
+       * <code>optional string user_id = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserId() {
         _builder.clearUserId()
       }
       /**
-       * `optional string user_id = 1;`
+       * <code>optional string user_id = 1;</code>
        * @return Whether the userId field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserId(): kotlin.Boolean {
         return _builder.hasUserId()
@@ -702,21 +753,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string user_name = 2;`
        */
       public var userName: kotlin.String
-        @JvmName("getUserName")
-        get() = _builder.userName
-        @JvmName("setUserName")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserName")
+          get() = _builder.userName
+        @kotlin.jvm.JvmName("setUserName")
+          set(value) {
           _builder.userName = value
         }
       /**
-       * `optional string user_name = 2;`
+       * <code>optional string user_name = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserName() {
         _builder.clearUserName()
       }
       /**
-       * `optional string user_name = 2;`
+       * <code>optional string user_name = 2;</code>
        * @return Whether the userName field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserName(): kotlin.Boolean {
         return _builder.hasUserName()
@@ -726,21 +779,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string contract_identifier = 19;`
        */
       public var contractIdentifier: kotlin.String
-        @JvmName("getContractIdentifier")
-        get() = _builder.contractIdentifier
-        @JvmName("setContractIdentifier")
-        set(value) {
+        @kotlin.jvm.JvmName("getContractIdentifier")
+          get() = _builder.contractIdentifier
+        @kotlin.jvm.JvmName("setContractIdentifier")
+          set(value) {
           _builder.contractIdentifier = value
         }
       /**
-       * `optional string contract_identifier = 19;`
+       * <code>optional string contract_identifier = 19;</code>
+       * @return This builder for chaining.
        */
       public fun clearContractIdentifier() {
         _builder.clearContractIdentifier()
       }
       /**
-       * `optional string contract_identifier = 19;`
+       * <code>optional string contract_identifier = 19;</code>
        * @return Whether the contractIdentifier field is set.
+       * @return This builder for chaining.
        */
       public fun hasContractIdentifier(): kotlin.Boolean {
         return _builder.hasContractIdentifier()
@@ -750,21 +805,23 @@ public object ContractCoopStatusResponseKt {
        * `optional double contribution_amount = 3;`
        */
       public var contributionAmount: kotlin.Double
-        @JvmName("getContributionAmount")
-        get() = _builder.contributionAmount
-        @JvmName("setContributionAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getContributionAmount")
+          get() = _builder.contributionAmount
+        @kotlin.jvm.JvmName("setContributionAmount")
+          set(value) {
           _builder.contributionAmount = value
         }
       /**
-       * `optional double contribution_amount = 3;`
+       * <code>optional double contribution_amount = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearContributionAmount() {
         _builder.clearContributionAmount()
       }
       /**
-       * `optional double contribution_amount = 3;`
+       * <code>optional double contribution_amount = 3;</code>
        * @return Whether the contributionAmount field is set.
+       * @return This builder for chaining.
        */
       public fun hasContributionAmount(): kotlin.Boolean {
         return _builder.hasContributionAmount()
@@ -774,21 +831,23 @@ public object ContractCoopStatusResponseKt {
        * `optional double contribution_rate = 6;`
        */
       public var contributionRate: kotlin.Double
-        @JvmName("getContributionRate")
-        get() = _builder.contributionRate
-        @JvmName("setContributionRate")
-        set(value) {
+        @kotlin.jvm.JvmName("getContributionRate")
+          get() = _builder.contributionRate
+        @kotlin.jvm.JvmName("setContributionRate")
+          set(value) {
           _builder.contributionRate = value
         }
       /**
-       * `optional double contribution_rate = 6;`
+       * <code>optional double contribution_rate = 6;</code>
+       * @return This builder for chaining.
        */
       public fun clearContributionRate() {
         _builder.clearContributionRate()
       }
       /**
-       * `optional double contribution_rate = 6;`
+       * <code>optional double contribution_rate = 6;</code>
        * @return Whether the contributionRate field is set.
+       * @return This builder for chaining.
        */
       public fun hasContributionRate(): kotlin.Boolean {
         return _builder.hasContributionRate()
@@ -798,21 +857,23 @@ public object ContractCoopStatusResponseKt {
        * `optional double soul_power = 11;`
        */
       public var soulPower: kotlin.Double
-        @JvmName("getSoulPower")
-        get() = _builder.soulPower
-        @JvmName("setSoulPower")
-        set(value) {
+        @kotlin.jvm.JvmName("getSoulPower")
+          get() = _builder.soulPower
+        @kotlin.jvm.JvmName("setSoulPower")
+          set(value) {
           _builder.soulPower = value
         }
       /**
-       * `optional double soul_power = 11;`
+       * <code>optional double soul_power = 11;</code>
+       * @return This builder for chaining.
        */
       public fun clearSoulPower() {
         _builder.clearSoulPower()
       }
       /**
-       * `optional double soul_power = 11;`
+       * <code>optional double soul_power = 11;</code>
        * @return Whether the soulPower field is set.
+       * @return This builder for chaining.
        */
       public fun hasSoulPower(): kotlin.Boolean {
         return _builder.hasSoulPower()
@@ -822,21 +883,23 @@ public object ContractCoopStatusResponseKt {
        * `optional .ei.FarmProductionParams production_params = 15;`
        */
       public var productionParams: ei.Ei.FarmProductionParams
-        @JvmName("getProductionParams")
-        get() = _builder.productionParams
-        @JvmName("setProductionParams")
-        set(value) {
+        @kotlin.jvm.JvmName("getProductionParams")
+          get() = _builder.productionParams
+        @kotlin.jvm.JvmName("setProductionParams")
+          set(value) {
           _builder.productionParams = value
         }
       /**
-       * `optional .ei.FarmProductionParams production_params = 15;`
+       * <code>optional .ei.FarmProductionParams production_params = 15;</code>
+       * @return This builder for chaining.
        */
       public fun clearProductionParams() {
         _builder.clearProductionParams()
       }
       /**
-       * `optional .ei.FarmProductionParams production_params = 15;`
+       * <code>optional .ei.FarmProductionParams production_params = 15;</code>
        * @return Whether the productionParams field is set.
+       * @return This builder for chaining.
        */
       public fun hasProductionParams(): kotlin.Boolean {
         return _builder.hasProductionParams()
@@ -849,21 +912,23 @@ public object ContractCoopStatusResponseKt {
        * `optional .ei.PlayerFarmInfo farm_info = 18;`
        */
       public var farmInfo: ei.Ei.PlayerFarmInfo
-        @JvmName("getFarmInfo")
-        get() = _builder.farmInfo
-        @JvmName("setFarmInfo")
-        set(value) {
+        @kotlin.jvm.JvmName("getFarmInfo")
+          get() = _builder.farmInfo
+        @kotlin.jvm.JvmName("setFarmInfo")
+          set(value) {
           _builder.farmInfo = value
         }
       /**
-       * `optional .ei.PlayerFarmInfo farm_info = 18;`
+       * <code>optional .ei.PlayerFarmInfo farm_info = 18;</code>
+       * @return This builder for chaining.
        */
       public fun clearFarmInfo() {
         _builder.clearFarmInfo()
       }
       /**
-       * `optional .ei.PlayerFarmInfo farm_info = 18;`
+       * <code>optional .ei.PlayerFarmInfo farm_info = 18;</code>
        * @return Whether the farmInfo field is set.
+       * @return This builder for chaining.
        */
       public fun hasFarmInfo(): kotlin.Boolean {
         return _builder.hasFarmInfo()
@@ -876,21 +941,23 @@ public object ContractCoopStatusResponseKt {
        * `optional int32 rank_change = 8;`
        */
       public var rankChange: kotlin.Int
-        @JvmName("getRankChange")
-        get() = _builder.rankChange
-        @JvmName("setRankChange")
-        set(value) {
+        @kotlin.jvm.JvmName("getRankChange")
+          get() = _builder.rankChange
+        @kotlin.jvm.JvmName("setRankChange")
+          set(value) {
           _builder.rankChange = value
         }
       /**
-       * `optional int32 rank_change = 8;`
+       * <code>optional int32 rank_change = 8;</code>
+       * @return This builder for chaining.
        */
       public fun clearRankChange() {
         _builder.clearRankChange()
       }
       /**
-       * `optional int32 rank_change = 8;`
+       * <code>optional int32 rank_change = 8;</code>
        * @return Whether the rankChange field is set.
+       * @return This builder for chaining.
        */
       public fun hasRankChange(): kotlin.Boolean {
         return _builder.hasRankChange()
@@ -900,21 +967,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool recently_active = 23;`
        */
       public var recentlyActive: kotlin.Boolean
-        @JvmName("getRecentlyActive")
-        get() = _builder.recentlyActive
-        @JvmName("setRecentlyActive")
-        set(value) {
+        @kotlin.jvm.JvmName("getRecentlyActive")
+          get() = _builder.recentlyActive
+        @kotlin.jvm.JvmName("setRecentlyActive")
+          set(value) {
           _builder.recentlyActive = value
         }
       /**
-       * `optional bool recently_active = 23;`
+       * <code>optional bool recently_active = 23;</code>
+       * @return This builder for chaining.
        */
       public fun clearRecentlyActive() {
         _builder.clearRecentlyActive()
       }
       /**
-       * `optional bool recently_active = 23;`
+       * <code>optional bool recently_active = 23;</code>
        * @return Whether the recentlyActive field is set.
+       * @return This builder for chaining.
        */
       public fun hasRecentlyActive(): kotlin.Boolean {
         return _builder.hasRecentlyActive()
@@ -924,21 +993,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool active = 4;`
        */
       public var active: kotlin.Boolean
-        @JvmName("getActive")
-        get() = _builder.active
-        @JvmName("setActive")
-        set(value) {
+        @kotlin.jvm.JvmName("getActive")
+          get() = _builder.active
+        @kotlin.jvm.JvmName("setActive")
+          set(value) {
           _builder.active = value
         }
       /**
-       * `optional bool active = 4;`
+       * <code>optional bool active = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearActive() {
         _builder.clearActive()
       }
       /**
-       * `optional bool active = 4;`
+       * <code>optional bool active = 4;</code>
        * @return Whether the active field is set.
+       * @return This builder for chaining.
        */
       public fun hasActive(): kotlin.Boolean {
         return _builder.hasActive()
@@ -948,21 +1019,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool cc_member = 24;`
        */
       public var ccMember: kotlin.Boolean
-        @JvmName("getCcMember")
-        get() = _builder.ccMember
-        @JvmName("setCcMember")
-        set(value) {
+        @kotlin.jvm.JvmName("getCcMember")
+          get() = _builder.ccMember
+        @kotlin.jvm.JvmName("setCcMember")
+          set(value) {
           _builder.ccMember = value
         }
       /**
-       * `optional bool cc_member = 24;`
+       * <code>optional bool cc_member = 24;</code>
+       * @return This builder for chaining.
        */
       public fun clearCcMember() {
         _builder.clearCcMember()
       }
       /**
-       * `optional bool cc_member = 24;`
+       * <code>optional bool cc_member = 24;</code>
        * @return Whether the ccMember field is set.
+       * @return This builder for chaining.
        */
       public fun hasCcMember(): kotlin.Boolean {
         return _builder.hasCcMember()
@@ -972,21 +1045,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool leech = 16;`
        */
       public var leech: kotlin.Boolean
-        @JvmName("getLeech")
-        get() = _builder.leech
-        @JvmName("setLeech")
-        set(value) {
+        @kotlin.jvm.JvmName("getLeech")
+          get() = _builder.leech
+        @kotlin.jvm.JvmName("setLeech")
+          set(value) {
           _builder.leech = value
         }
       /**
-       * `optional bool leech = 16;`
+       * <code>optional bool leech = 16;</code>
+       * @return This builder for chaining.
        */
       public fun clearLeech() {
         _builder.clearLeech()
       }
       /**
-       * `optional bool leech = 16;`
+       * <code>optional bool leech = 16;</code>
        * @return Whether the leech field is set.
+       * @return This builder for chaining.
        */
       public fun hasLeech(): kotlin.Boolean {
         return _builder.hasLeech()
@@ -996,21 +1071,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool finalized = 22;`
        */
       public var finalized: kotlin.Boolean
-        @JvmName("getFinalized")
-        get() = _builder.finalized
-        @JvmName("setFinalized")
-        set(value) {
+        @kotlin.jvm.JvmName("getFinalized")
+          get() = _builder.finalized
+        @kotlin.jvm.JvmName("setFinalized")
+          set(value) {
           _builder.finalized = value
         }
       /**
-       * `optional bool finalized = 22;`
+       * <code>optional bool finalized = 22;</code>
+       * @return This builder for chaining.
        */
       public fun clearFinalized() {
         _builder.clearFinalized()
       }
       /**
-       * `optional bool finalized = 22;`
+       * <code>optional bool finalized = 22;</code>
        * @return Whether the finalized field is set.
+       * @return This builder for chaining.
        */
       public fun hasFinalized(): kotlin.Boolean {
         return _builder.hasFinalized()
@@ -1020,21 +1097,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool time_cheat_detected = 7;`
        */
       public var timeCheatDetected: kotlin.Boolean
-        @JvmName("getTimeCheatDetected")
-        get() = _builder.timeCheatDetected
-        @JvmName("setTimeCheatDetected")
-        set(value) {
+        @kotlin.jvm.JvmName("getTimeCheatDetected")
+          get() = _builder.timeCheatDetected
+        @kotlin.jvm.JvmName("setTimeCheatDetected")
+          set(value) {
           _builder.timeCheatDetected = value
         }
       /**
-       * `optional bool time_cheat_detected = 7;`
+       * <code>optional bool time_cheat_detected = 7;</code>
+       * @return This builder for chaining.
        */
       public fun clearTimeCheatDetected() {
         _builder.clearTimeCheatDetected()
       }
       /**
-       * `optional bool time_cheat_detected = 7;`
+       * <code>optional bool time_cheat_detected = 7;</code>
        * @return Whether the timeCheatDetected field is set.
+       * @return This builder for chaining.
        */
       public fun hasTimeCheatDetected(): kotlin.Boolean {
         return _builder.hasTimeCheatDetected()
@@ -1044,21 +1123,23 @@ public object ContractCoopStatusResponseKt {
        * `optional .ei.Platform platform = 5;`
        */
       public var platform: ei.Ei.Platform
-        @JvmName("getPlatform")
-        get() = _builder.platform
-        @JvmName("setPlatform")
-        set(value) {
+        @kotlin.jvm.JvmName("getPlatform")
+          get() = _builder.platform
+        @kotlin.jvm.JvmName("setPlatform")
+          set(value) {
           _builder.platform = value
         }
       /**
-       * `optional .ei.Platform platform = 5;`
+       * <code>optional .ei.Platform platform = 5;</code>
+       * @return This builder for chaining.
        */
       public fun clearPlatform() {
         _builder.clearPlatform()
       }
       /**
-       * `optional .ei.Platform platform = 5;`
+       * <code>optional .ei.Platform platform = 5;</code>
        * @return Whether the platform field is set.
+       * @return This builder for chaining.
        */
       public fun hasPlatform(): kotlin.Boolean {
         return _builder.hasPlatform()
@@ -1068,21 +1149,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string push_id = 9;`
        */
       public var pushId: kotlin.String
-        @JvmName("getPushId")
-        get() = _builder.pushId
-        @JvmName("setPushId")
-        set(value) {
+        @kotlin.jvm.JvmName("getPushId")
+          get() = _builder.pushId
+        @kotlin.jvm.JvmName("setPushId")
+          set(value) {
           _builder.pushId = value
         }
       /**
-       * `optional string push_id = 9;`
+       * <code>optional string push_id = 9;</code>
+       * @return This builder for chaining.
        */
       public fun clearPushId() {
         _builder.clearPushId()
       }
       /**
-       * `optional string push_id = 9;`
+       * <code>optional string push_id = 9;</code>
        * @return Whether the pushId field is set.
+       * @return This builder for chaining.
        */
       public fun hasPushId(): kotlin.Boolean {
         return _builder.hasPushId()
@@ -1092,21 +1175,23 @@ public object ContractCoopStatusResponseKt {
        * `optional uint32 ban_votes = 10;`
        */
       public var banVotes: kotlin.Int
-        @JvmName("getBanVotes")
-        get() = _builder.banVotes
-        @JvmName("setBanVotes")
-        set(value) {
+        @kotlin.jvm.JvmName("getBanVotes")
+          get() = _builder.banVotes
+        @kotlin.jvm.JvmName("setBanVotes")
+          set(value) {
           _builder.banVotes = value
         }
       /**
-       * `optional uint32 ban_votes = 10;`
+       * <code>optional uint32 ban_votes = 10;</code>
+       * @return This builder for chaining.
        */
       public fun clearBanVotes() {
         _builder.clearBanVotes()
       }
       /**
-       * `optional uint32 ban_votes = 10;`
+       * <code>optional uint32 ban_votes = 10;</code>
        * @return Whether the banVotes field is set.
+       * @return This builder for chaining.
        */
       public fun hasBanVotes(): kotlin.Boolean {
         return _builder.hasBanVotes()
@@ -1116,21 +1201,23 @@ public object ContractCoopStatusResponseKt {
        * `optional bool autojoined = 17;`
        */
       public var autojoined: kotlin.Boolean
-        @JvmName("getAutojoined")
-        get() = _builder.autojoined
-        @JvmName("setAutojoined")
-        set(value) {
+        @kotlin.jvm.JvmName("getAutojoined")
+          get() = _builder.autojoined
+        @kotlin.jvm.JvmName("setAutojoined")
+          set(value) {
           _builder.autojoined = value
         }
       /**
-       * `optional bool autojoined = 17;`
+       * <code>optional bool autojoined = 17;</code>
+       * @return This builder for chaining.
        */
       public fun clearAutojoined() {
         _builder.clearAutojoined()
       }
       /**
-       * `optional bool autojoined = 17;`
+       * <code>optional bool autojoined = 17;</code>
        * @return Whether the autojoined field is set.
+       * @return This builder for chaining.
        */
       public fun hasAutojoined(): kotlin.Boolean {
         return _builder.hasAutojoined()
@@ -1140,21 +1227,23 @@ public object ContractCoopStatusResponseKt {
        * `optional uint32 boost_tokens = 12;`
        */
       public var boostTokens: kotlin.Int
-        @JvmName("getBoostTokens")
-        get() = _builder.boostTokens
-        @JvmName("setBoostTokens")
-        set(value) {
+        @kotlin.jvm.JvmName("getBoostTokens")
+          get() = _builder.boostTokens
+        @kotlin.jvm.JvmName("setBoostTokens")
+          set(value) {
           _builder.boostTokens = value
         }
       /**
-       * `optional uint32 boost_tokens = 12;`
+       * <code>optional uint32 boost_tokens = 12;</code>
+       * @return This builder for chaining.
        */
       public fun clearBoostTokens() {
         _builder.clearBoostTokens()
       }
       /**
-       * `optional uint32 boost_tokens = 12;`
+       * <code>optional uint32 boost_tokens = 12;</code>
        * @return Whether the boostTokens field is set.
+       * @return This builder for chaining.
        */
       public fun hasBoostTokens(): kotlin.Boolean {
         return _builder.hasBoostTokens()
@@ -1164,21 +1253,23 @@ public object ContractCoopStatusResponseKt {
        * `optional uint32 boost_tokens_spent = 14;`
        */
       public var boostTokensSpent: kotlin.Int
-        @JvmName("getBoostTokensSpent")
-        get() = _builder.boostTokensSpent
-        @JvmName("setBoostTokensSpent")
-        set(value) {
+        @kotlin.jvm.JvmName("getBoostTokensSpent")
+          get() = _builder.boostTokensSpent
+        @kotlin.jvm.JvmName("setBoostTokensSpent")
+          set(value) {
           _builder.boostTokensSpent = value
         }
       /**
-       * `optional uint32 boost_tokens_spent = 14;`
+       * <code>optional uint32 boost_tokens_spent = 14;</code>
+       * @return This builder for chaining.
        */
       public fun clearBoostTokensSpent() {
         _builder.clearBoostTokensSpent()
       }
       /**
-       * `optional uint32 boost_tokens_spent = 14;`
+       * <code>optional uint32 boost_tokens_spent = 14;</code>
        * @return Whether the boostTokensSpent field is set.
+       * @return This builder for chaining.
        */
       public fun hasBoostTokensSpent(): kotlin.Boolean {
         return _builder.hasBoostTokensSpent()
@@ -1195,86 +1286,93 @@ public object ContractCoopStatusResponseKt {
        */
        public val buffHistory: com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>
         @kotlin.jvm.JvmSynthetic
-        get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
           _builder.buffHistoryList
         )
       /**
-       * `repeated .ei.CoopBuffState buff_history = 13;`
+       * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param value The buffHistory to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addBuffHistory")
+@kotlin.jvm.JvmName("addBuffHistory")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.add(value: ei.Ei.CoopBuffState) {
         _builder.addBuffHistory(value)
       }
       /**
-       * `repeated .ei.CoopBuffState buff_history = 13;`
+       * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param value The buffHistory to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignBuffHistory")
+@kotlin.jvm.JvmName("plusAssignBuffHistory")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.plusAssign(value: ei.Ei.CoopBuffState) {
         add(value)
       }
       /**
-       * `repeated .ei.CoopBuffState buff_history = 13;`
+       * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param values The buffHistory to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addAllBuffHistory")
+@kotlin.jvm.JvmName("addAllBuffHistory")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
         _builder.addAllBuffHistory(values)
       }
       /**
-       * `repeated .ei.CoopBuffState buff_history = 13;`
+       * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param values The buffHistory to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignAllBuffHistory")
+@kotlin.jvm.JvmName("plusAssignAllBuffHistory")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
         addAll(values)
       }
       /**
-       * `repeated .ei.CoopBuffState buff_history = 13;`
+       * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
        * @param index The index to set the value at.
        * @param value The buffHistory to set.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("setBuffHistory")
+@kotlin.jvm.JvmName("setBuffHistory")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.set(index: kotlin.Int, value: ei.Ei.CoopBuffState) {
         _builder.setBuffHistory(index, value)
       }
       /**
-       * `repeated .ei.CoopBuffState buff_history = 13;`
+       * <code>repeated .ei.CoopBuffState buff_history = 13;</code>
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("clearBuffHistory")
+@kotlin.jvm.JvmName("clearBuffHistory")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, BuffHistoryProxy>.clear() {
         _builder.clearBuffHistory()
       }
-
 
       /**
        * `optional double chicken_run_cooldown = 20;`
        */
       public var chickenRunCooldown: kotlin.Double
-        @JvmName("getChickenRunCooldown")
-        get() = _builder.chickenRunCooldown
-        @JvmName("setChickenRunCooldown")
-        set(value) {
+        @kotlin.jvm.JvmName("getChickenRunCooldown")
+          get() = _builder.chickenRunCooldown
+        @kotlin.jvm.JvmName("setChickenRunCooldown")
+          set(value) {
           _builder.chickenRunCooldown = value
         }
       /**
-       * `optional double chicken_run_cooldown = 20;`
+       * <code>optional double chicken_run_cooldown = 20;</code>
+       * @return This builder for chaining.
        */
       public fun clearChickenRunCooldown() {
         _builder.clearChickenRunCooldown()
       }
       /**
-       * `optional double chicken_run_cooldown = 20;`
+       * <code>optional double chicken_run_cooldown = 20;</code>
        * @return Whether the chickenRunCooldown field is set.
+       * @return This builder for chaining.
        */
       public fun hasChickenRunCooldown(): kotlin.Boolean {
         return _builder.hasChickenRunCooldown()
@@ -1307,21 +1405,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string user_id = 1;`
        */
       public var userId: kotlin.String
-        @JvmName("getUserId")
-        get() = _builder.userId
-        @JvmName("setUserId")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserId")
+          get() = _builder.userId
+        @kotlin.jvm.JvmName("setUserId")
+          set(value) {
           _builder.userId = value
         }
       /**
-       * `optional string user_id = 1;`
+       * <code>optional string user_id = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserId() {
         _builder.clearUserId()
       }
       /**
-       * `optional string user_id = 1;`
+       * <code>optional string user_id = 1;</code>
        * @return Whether the userId field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserId(): kotlin.Boolean {
         return _builder.hasUserId()
@@ -1331,21 +1431,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string user_name = 3;`
        */
       public var userName: kotlin.String
-        @JvmName("getUserName")
-        get() = _builder.userName
-        @JvmName("setUserName")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserName")
+          get() = _builder.userName
+        @kotlin.jvm.JvmName("setUserName")
+          set(value) {
           _builder.userName = value
         }
       /**
-       * `optional string user_name = 3;`
+       * <code>optional string user_name = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserName() {
         _builder.clearUserName()
       }
       /**
-       * `optional string user_name = 3;`
+       * <code>optional string user_name = 3;</code>
        * @return Whether the userName field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserName(): kotlin.Boolean {
         return _builder.hasUserName()
@@ -1355,21 +1457,23 @@ public object ContractCoopStatusResponseKt {
        * `optional uint32 amount = 2;`
        */
       public var amount: kotlin.Int
-        @JvmName("getAmount")
-        get() = _builder.amount
-        @JvmName("setAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getAmount")
+          get() = _builder.amount
+        @kotlin.jvm.JvmName("setAmount")
+          set(value) {
           _builder.amount = value
         }
       /**
-       * `optional uint32 amount = 2;`
+       * <code>optional uint32 amount = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearAmount() {
         _builder.clearAmount()
       }
       /**
-       * `optional uint32 amount = 2;`
+       * <code>optional uint32 amount = 2;</code>
        * @return Whether the amount field is set.
+       * @return This builder for chaining.
        */
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()
@@ -1379,21 +1483,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string tracking = 4;`
        */
       public var tracking: kotlin.String
-        @JvmName("getTracking")
-        get() = _builder.tracking
-        @JvmName("setTracking")
-        set(value) {
+        @kotlin.jvm.JvmName("getTracking")
+          get() = _builder.tracking
+        @kotlin.jvm.JvmName("setTracking")
+          set(value) {
           _builder.tracking = value
         }
       /**
-       * `optional string tracking = 4;`
+       * <code>optional string tracking = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearTracking() {
         _builder.clearTracking()
       }
       /**
-       * `optional string tracking = 4;`
+       * <code>optional string tracking = 4;</code>
        * @return Whether the tracking field is set.
+       * @return This builder for chaining.
        */
       public fun hasTracking(): kotlin.Boolean {
         return _builder.hasTracking()
@@ -1426,21 +1532,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string user_id = 1;`
        */
       public var userId: kotlin.String
-        @JvmName("getUserId")
-        get() = _builder.userId
-        @JvmName("setUserId")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserId")
+          get() = _builder.userId
+        @kotlin.jvm.JvmName("setUserId")
+          set(value) {
           _builder.userId = value
         }
       /**
-       * `optional string user_id = 1;`
+       * <code>optional string user_id = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserId() {
         _builder.clearUserId()
       }
       /**
-       * `optional string user_id = 1;`
+       * <code>optional string user_id = 1;</code>
        * @return Whether the userId field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserId(): kotlin.Boolean {
         return _builder.hasUserId()
@@ -1450,21 +1558,23 @@ public object ContractCoopStatusResponseKt {
        * `optional string user_name = 3;`
        */
       public var userName: kotlin.String
-        @JvmName("getUserName")
-        get() = _builder.userName
-        @JvmName("setUserName")
-        set(value) {
+        @kotlin.jvm.JvmName("getUserName")
+          get() = _builder.userName
+        @kotlin.jvm.JvmName("setUserName")
+          set(value) {
           _builder.userName = value
         }
       /**
-       * `optional string user_name = 3;`
+       * <code>optional string user_name = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearUserName() {
         _builder.clearUserName()
       }
       /**
-       * `optional string user_name = 3;`
+       * <code>optional string user_name = 3;</code>
        * @return Whether the userName field is set.
+       * @return This builder for chaining.
        */
       public fun hasUserName(): kotlin.Boolean {
         return _builder.hasUserName()
@@ -1474,21 +1584,23 @@ public object ContractCoopStatusResponseKt {
        * `optional uint64 amount = 2;`
        */
       public var amount: kotlin.Long
-        @JvmName("getAmount")
-        get() = _builder.amount
-        @JvmName("setAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getAmount")
+          get() = _builder.amount
+        @kotlin.jvm.JvmName("setAmount")
+          set(value) {
           _builder.amount = value
         }
       /**
-       * `optional uint64 amount = 2;`
+       * <code>optional uint64 amount = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearAmount() {
         _builder.clearAmount()
       }
       /**
-       * `optional uint64 amount = 2;`
+       * <code>optional uint64 amount = 2;</code>
        * @return Whether the amount field is set.
+       * @return This builder for chaining.
        */
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()

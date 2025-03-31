@@ -39,66 +39,71 @@ public object CoopBuffHistoryKt {
      */
      public val history: com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.historyList
       )
     /**
-     * `repeated .ei.CoopBuffState history = 1;`
+     * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param value The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addHistory")
+@kotlin.jvm.JvmName("addHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.add(value: ei.Ei.CoopBuffState) {
       _builder.addHistory(value)
     }
     /**
-     * `repeated .ei.CoopBuffState history = 1;`
+     * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param value The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignHistory")
+@kotlin.jvm.JvmName("plusAssignHistory")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.plusAssign(value: ei.Ei.CoopBuffState) {
       add(value)
     }
     /**
-     * `repeated .ei.CoopBuffState history = 1;`
+     * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param values The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllHistory")
+@kotlin.jvm.JvmName("addAllHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
       _builder.addAllHistory(values)
     }
     /**
-     * `repeated .ei.CoopBuffState history = 1;`
+     * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param values The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllHistory")
+@kotlin.jvm.JvmName("plusAssignAllHistory")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopBuffState>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CoopBuffState history = 1;`
+     * <code>repeated .ei.CoopBuffState history = 1;</code>
      * @param index The index to set the value at.
      * @param value The history to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setHistory")
+@kotlin.jvm.JvmName("setHistory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.set(index: kotlin.Int, value: ei.Ei.CoopBuffState) {
       _builder.setHistory(index, value)
     }
     /**
-     * `repeated .ei.CoopBuffState history = 1;`
+     * <code>repeated .ei.CoopBuffState history = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearHistory")
+@kotlin.jvm.JvmName("clearHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopBuffState, HistoryProxy>.clear() {
       _builder.clearHistory()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

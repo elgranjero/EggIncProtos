@@ -78,7 +78,7 @@ proto.ei.SalesInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.SalesInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-salesList: jspb.Message.toObjectList(msg.getSalesList(),
+    salesList: jspb.Message.toObjectList(msg.getSalesList(),
     proto.ei.IAPSaleEntry.toObject, includeInstance)
   };
 

@@ -32,21 +32,23 @@ public object ContractSeasonInfoKt {
      * `optional string id = 1;`
      */
     public var id: kotlin.String
-      @JvmName("getId")
-      get() = _builder.id
-      @JvmName("setId")
-      set(value) {
+      @kotlin.jvm.JvmName("getId")
+        get() = _builder.id
+      @kotlin.jvm.JvmName("setId")
+        set(value) {
         _builder.id = value
       }
     /**
-     * `optional string id = 1;`
+     * <code>optional string id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearId() {
       _builder.clearId()
     }
     /**
-     * `optional string id = 1;`
+     * <code>optional string id = 1;</code>
      * @return Whether the id field is set.
+     * @return This builder for chaining.
      */
     public fun hasId(): kotlin.Boolean {
       return _builder.hasId()
@@ -56,21 +58,23 @@ public object ContractSeasonInfoKt {
      * `optional string name = 3;`
      */
     public var name: kotlin.String
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional string name = 3;`
+     * <code>optional string name = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional string name = 3;`
+     * <code>optional string name = 3;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -80,21 +84,23 @@ public object ContractSeasonInfoKt {
      * `optional double start_time = 4;`
      */
     public var startTime: kotlin.Double
-      @JvmName("getStartTime")
-      get() = _builder.startTime
-      @JvmName("setStartTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getStartTime")
+        get() = _builder.startTime
+      @kotlin.jvm.JvmName("setStartTime")
+        set(value) {
         _builder.startTime = value
       }
     /**
-     * `optional double start_time = 4;`
+     * <code>optional double start_time = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * `optional double start_time = 4;`
+     * <code>optional double start_time = 4;</code>
      * @return Whether the startTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -111,66 +117,71 @@ public object ContractSeasonInfoKt {
      */
      public val gradeGoals: com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.gradeGoalsList
       )
     /**
-     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
+     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
      * @param value The gradeGoals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGradeGoals")
+@kotlin.jvm.JvmName("addGradeGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>.add(value: ei.Ei.ContractSeasonInfo.GoalSet) {
       _builder.addGradeGoals(value)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
+     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
      * @param value The gradeGoals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGradeGoals")
+@kotlin.jvm.JvmName("plusAssignGradeGoals")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>.plusAssign(value: ei.Ei.ContractSeasonInfo.GoalSet) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
+     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
      * @param values The gradeGoals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGradeGoals")
+@kotlin.jvm.JvmName("addAllGradeGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractSeasonInfo.GoalSet>) {
       _builder.addAllGradeGoals(values)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
+     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
      * @param values The gradeGoals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGradeGoals")
+@kotlin.jvm.JvmName("plusAssignAllGradeGoals")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractSeasonInfo.GoalSet>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
+     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
      * @param index The index to set the value at.
      * @param value The gradeGoals to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGradeGoals")
+@kotlin.jvm.JvmName("setGradeGoals")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractSeasonInfo.GoalSet) {
       _builder.setGradeGoals(index, value)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
+     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGradeGoals")
+@kotlin.jvm.JvmName("clearGradeGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo.GoalSet, GradeGoalsProxy>.clear() {
       _builder.clearGradeGoals()
     }
-
   }
   @kotlin.jvm.JvmName("-initializegoalSet")
   public inline fun goalSet(block: ei.ContractSeasonInfoKt.GoalSetKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractSeasonInfo.GoalSet =
@@ -198,21 +209,23 @@ public object ContractSeasonInfoKt {
        * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public var grade: ei.Ei.Contract.PlayerGrade
-        @JvmName("getGrade")
-        get() = _builder.grade
-        @JvmName("setGrade")
-        set(value) {
+        @kotlin.jvm.JvmName("getGrade")
+          get() = _builder.grade
+        @kotlin.jvm.JvmName("setGrade")
+          set(value) {
           _builder.grade = value
         }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
        * @return Whether the grade field is set.
+       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -229,66 +242,71 @@ public object ContractSeasonInfoKt {
        */
        public val goals: com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>
         @kotlin.jvm.JvmSynthetic
-        get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
           _builder.goalsList
         )
       /**
-       * `repeated .ei.ContractSeasonGoal goals = 2;`
+       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
        * @param value The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addGoals")
+@kotlin.jvm.JvmName("addGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>.add(value: ei.Ei.ContractSeasonGoal) {
         _builder.addGoals(value)
       }
       /**
-       * `repeated .ei.ContractSeasonGoal goals = 2;`
+       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
        * @param value The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignGoals")
+@kotlin.jvm.JvmName("plusAssignGoals")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>.plusAssign(value: ei.Ei.ContractSeasonGoal) {
         add(value)
       }
       /**
-       * `repeated .ei.ContractSeasonGoal goals = 2;`
+       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
        * @param values The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addAllGoals")
+@kotlin.jvm.JvmName("addAllGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractSeasonGoal>) {
         _builder.addAllGoals(values)
       }
       /**
-       * `repeated .ei.ContractSeasonGoal goals = 2;`
+       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
        * @param values The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignAllGoals")
+@kotlin.jvm.JvmName("plusAssignAllGoals")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractSeasonGoal>) {
         addAll(values)
       }
       /**
-       * `repeated .ei.ContractSeasonGoal goals = 2;`
+       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
        * @param index The index to set the value at.
        * @param value The goals to set.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("setGoals")
+@kotlin.jvm.JvmName("setGoals")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractSeasonGoal) {
         _builder.setGoals(index, value)
       }
       /**
-       * `repeated .ei.ContractSeasonGoal goals = 2;`
+       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("clearGoals")
+@kotlin.jvm.JvmName("clearGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonGoal, GoalsProxy>.clear() {
         _builder.clearGoals()
       }
-
     }
   }
 }

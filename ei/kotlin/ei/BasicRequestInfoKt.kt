@@ -32,21 +32,23 @@ public object BasicRequestInfoKt {
      * `optional string ei_user_id = 1;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 1;`
+     * <code>optional string ei_user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 1;`
+     * <code>optional string ei_user_id = 1;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -56,21 +58,23 @@ public object BasicRequestInfoKt {
      * `optional uint32 client_version = 2;`
      */
     public var clientVersion: kotlin.Int
-      @JvmName("getClientVersion")
-      get() = _builder.clientVersion
-      @JvmName("setClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getClientVersion")
+        get() = _builder.clientVersion
+      @kotlin.jvm.JvmName("setClientVersion")
+        set(value) {
         _builder.clientVersion = value
       }
     /**
-     * `optional uint32 client_version = 2;`
+     * <code>optional uint32 client_version = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * `optional uint32 client_version = 2;`
+     * <code>optional uint32 client_version = 2;</code>
      * @return Whether the clientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -80,21 +84,23 @@ public object BasicRequestInfoKt {
      * `optional string version = 3;`
      */
     public var version: kotlin.String
-      @JvmName("getVersion")
-      get() = _builder.version
-      @JvmName("setVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getVersion")
+        get() = _builder.version
+      @kotlin.jvm.JvmName("setVersion")
+        set(value) {
         _builder.version = value
       }
     /**
-     * `optional string version = 3;`
+     * <code>optional string version = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * `optional string version = 3;`
+     * <code>optional string version = 3;</code>
      * @return Whether the version field is set.
+     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -104,21 +110,23 @@ public object BasicRequestInfoKt {
      * `optional string build = 4;`
      */
     public var build: kotlin.String
-      @JvmName("getBuild")
-      get() = _builder.build
-      @JvmName("setBuild")
-      set(value) {
+      @kotlin.jvm.JvmName("getBuild")
+        get() = _builder.build
+      @kotlin.jvm.JvmName("setBuild")
+        set(value) {
         _builder.build = value
       }
     /**
-     * `optional string build = 4;`
+     * <code>optional string build = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearBuild() {
       _builder.clearBuild()
     }
     /**
-     * `optional string build = 4;`
+     * <code>optional string build = 4;</code>
      * @return Whether the build field is set.
+     * @return This builder for chaining.
      */
     public fun hasBuild(): kotlin.Boolean {
       return _builder.hasBuild()
@@ -128,21 +136,23 @@ public object BasicRequestInfoKt {
      * `optional string platform = 5;`
      */
     public var platform: kotlin.String
-      @JvmName("getPlatform")
-      get() = _builder.platform
-      @JvmName("setPlatform")
-      set(value) {
+      @kotlin.jvm.JvmName("getPlatform")
+        get() = _builder.platform
+      @kotlin.jvm.JvmName("setPlatform")
+        set(value) {
         _builder.platform = value
       }
     /**
-     * `optional string platform = 5;`
+     * <code>optional string platform = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * `optional string platform = 5;`
+     * <code>optional string platform = 5;</code>
      * @return Whether the platform field is set.
+     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -152,21 +162,23 @@ public object BasicRequestInfoKt {
      * `optional string country = 6;`
      */
     public var country: kotlin.String
-      @JvmName("getCountry")
-      get() = _builder.country
-      @JvmName("setCountry")
-      set(value) {
+      @kotlin.jvm.JvmName("getCountry")
+        get() = _builder.country
+      @kotlin.jvm.JvmName("setCountry")
+        set(value) {
         _builder.country = value
       }
     /**
-     * `optional string country = 6;`
+     * <code>optional string country = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearCountry() {
       _builder.clearCountry()
     }
     /**
-     * `optional string country = 6;`
+     * <code>optional string country = 6;</code>
      * @return Whether the country field is set.
+     * @return This builder for chaining.
      */
     public fun hasCountry(): kotlin.Boolean {
       return _builder.hasCountry()
@@ -176,21 +188,23 @@ public object BasicRequestInfoKt {
      * `optional string language = 7;`
      */
     public var language: kotlin.String
-      @JvmName("getLanguage")
-      get() = _builder.language
-      @JvmName("setLanguage")
-      set(value) {
+      @kotlin.jvm.JvmName("getLanguage")
+        get() = _builder.language
+      @kotlin.jvm.JvmName("setLanguage")
+        set(value) {
         _builder.language = value
       }
     /**
-     * `optional string language = 7;`
+     * <code>optional string language = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearLanguage() {
       _builder.clearLanguage()
     }
     /**
-     * `optional string language = 7;`
+     * <code>optional string language = 7;</code>
      * @return Whether the language field is set.
+     * @return This builder for chaining.
      */
     public fun hasLanguage(): kotlin.Boolean {
       return _builder.hasLanguage()
@@ -200,21 +214,23 @@ public object BasicRequestInfoKt {
      * `optional bool debug = 8;`
      */
     public var debug: kotlin.Boolean
-      @JvmName("getDebug")
-      get() = _builder.debug
-      @JvmName("setDebug")
-      set(value) {
+      @kotlin.jvm.JvmName("getDebug")
+        get() = _builder.debug
+      @kotlin.jvm.JvmName("setDebug")
+        set(value) {
         _builder.debug = value
       }
     /**
-     * `optional bool debug = 8;`
+     * <code>optional bool debug = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearDebug() {
       _builder.clearDebug()
     }
     /**
-     * `optional bool debug = 8;`
+     * <code>optional bool debug = 8;</code>
      * @return Whether the debug field is set.
+     * @return This builder for chaining.
      */
     public fun hasDebug(): kotlin.Boolean {
       return _builder.hasDebug()

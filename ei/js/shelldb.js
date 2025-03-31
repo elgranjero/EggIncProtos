@@ -301,24 +301,24 @@ proto.ei.ShellDB.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellDB.toObject = function(includeInstance, msg) {
   var f, obj = {
-shellInventoryList: jspb.Message.toObjectList(msg.getShellInventoryList(),
+    shellInventoryList: jspb.Message.toObjectList(msg.getShellInventoryList(),
     proto.ei.ShellDB.ShellStatus.toObject, includeInstance),
-shellElementInventoryList: jspb.Message.toObjectList(msg.getShellElementInventoryList(),
+    shellElementInventoryList: jspb.Message.toObjectList(msg.getShellElementInventoryList(),
     proto.ei.ShellDB.ShellElementStatus.toObject, includeInstance),
-shellVariationInventoryList: jspb.Message.toObjectList(msg.getShellVariationInventoryList(),
+    shellVariationInventoryList: jspb.Message.toObjectList(msg.getShellVariationInventoryList(),
     proto.ei.ShellDB.ShellSetVariationStatus.toObject, includeInstance),
-shellSetInventoryList: jspb.Message.toObjectList(msg.getShellSetInventoryList(),
+    shellSetInventoryList: jspb.Message.toObjectList(msg.getShellSetInventoryList(),
     proto.ei.ShellDB.ShellStatus.toObject, includeInstance),
-shellObjectInventoryList: jspb.Message.toObjectList(msg.getShellObjectInventoryList(),
+    shellObjectInventoryList: jspb.Message.toObjectList(msg.getShellObjectInventoryList(),
     proto.ei.ShellDB.ShellStatus.toObject, includeInstance),
-farmConfigsList: jspb.Message.toObjectList(msg.getFarmConfigsList(),
+    farmConfigsList: jspb.Message.toObjectList(msg.getFarmConfigsList(),
     proto.ei.ShellDB.FarmConfiguration.toObject, includeInstance),
-savedConfigsList: jspb.Message.toObjectList(msg.getSavedConfigsList(),
+    savedConfigsList: jspb.Message.toObjectList(msg.getSavedConfigsList(),
     proto.ei.ShellDB.SavedFarmConfiguration.toObject, includeInstance),
-newShellsDownloadedList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
-newShellsSeenList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
-lastShowcaseFeaturedTimeSeen: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-lightingControlsUnlocked: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f
+    newShellsDownloadedList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+    newShellsSeenList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
+    lastShowcaseFeaturedTimeSeen: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    lightingControlsUnlocked: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -576,8 +576,8 @@ proto.ei.ShellDB.ShellStatus.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.ShellDB.ShellStatus.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-owned: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    owned: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -772,8 +772,8 @@ proto.ei.ShellDB.ShellElementStatus.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ShellDB.ShellElementStatus.toObject = function(includeInstance, msg) {
   var f, obj = {
-element: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-setIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    element: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    setIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -975,8 +975,8 @@ proto.ei.ShellDB.ShellSetVariationStatus.prototype.toObject = function(opt_inclu
  */
 proto.ei.ShellDB.ShellSetVariationStatus.toObject = function(includeInstance, msg) {
   var f, obj = {
-setIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-ownedVariationsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
+    setIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    ownedVariationsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1179,18 +1179,18 @@ proto.ei.ShellDB.FarmConfiguration.prototype.toObject = function(opt_includeInst
  */
 proto.ei.ShellDB.FarmConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
-lockedElementsList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f,
-shellConfigsList: jspb.Message.toObjectList(msg.getShellConfigsList(),
+    lockedElementsList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f,
+    shellConfigsList: jspb.Message.toObjectList(msg.getShellConfigsList(),
     proto.ei.ShellDB.ShellConfiguration.toObject, includeInstance),
-shellSetConfigsList: jspb.Message.toObjectList(msg.getShellSetConfigsList(),
+    shellSetConfigsList: jspb.Message.toObjectList(msg.getShellSetConfigsList(),
     proto.ei.ShellDB.ShellSetConfiguration.toObject, includeInstance),
-configureChickensByGroup: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-groupConfigsList: jspb.Message.toObjectList(msg.getGroupConfigsList(),
+    configureChickensByGroup: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    groupConfigsList: jspb.Message.toObjectList(msg.getGroupConfigsList(),
     proto.ei.ShellDB.ShellGroupConfiguration.toObject, includeInstance),
-chickenConfigsList: jspb.Message.toObjectList(msg.getChickenConfigsList(),
+    chickenConfigsList: jspb.Message.toObjectList(msg.getChickenConfigsList(),
     proto.ei.ShellDB.ChickenConfig.toObject, includeInstance),
-lightingConfigEnabled: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-lightingConfig: (f = msg.getLightingConfig()) && proto.ei.ShellDB.LightingConfig.toObject(includeInstance, f)
+    lightingConfigEnabled: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    lightingConfig: (f = msg.getLightingConfig()) && proto.ei.ShellDB.LightingConfig.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1689,12 +1689,12 @@ proto.ei.ShellDB.SavedFarmConfiguration.prototype.toObject = function(opt_includ
  */
 proto.ei.ShellDB.SavedFarmConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
-id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-config: (f = msg.getConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
-clientSaveTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-displayName: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-purchased: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    config: (f = msg.getConfig()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
+    clientSaveTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    displayName: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    purchased: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2080,9 +2080,9 @@ proto.ei.ShellDB.ShellConfiguration.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ShellDB.ShellConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
-assetType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-index: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-shellIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+    assetType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    index: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    shellIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2324,11 +2324,11 @@ proto.ei.ShellDB.ShellSetConfiguration.prototype.toObject = function(opt_include
  */
 proto.ei.ShellDB.ShellSetConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
-element: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-index: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-shellSetIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-variationIdentifier: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-decoratorIdentifier: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+    element: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    index: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    shellSetIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    variationIdentifier: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    decoratorIdentifier: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2664,8 +2664,8 @@ proto.ei.ShellDB.ShellGroupConfiguration.prototype.toObject = function(opt_inclu
  */
 proto.ei.ShellDB.ShellGroupConfiguration.toObject = function(includeInstance, msg) {
   var f, obj = {
-assetType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-groupIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    assetType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    groupIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2860,8 +2860,8 @@ proto.ei.ShellDB.ChickenConfig.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.ShellDB.ChickenConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-chickenIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-hatIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    chickenIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    hatIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3056,15 +3056,15 @@ proto.ei.ShellDB.LightingConfig.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.ShellDB.LightingConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-lightDir: (f = msg.getLightDir()) && proto.ei.Vector3.toObject(includeInstance, f),
-lightDirectColor: (f = msg.getLightDirectColor()) && proto.ei.Vector4.toObject(includeInstance, f),
-lightDirectIntensity: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-lightAmbientColor: (f = msg.getLightAmbientColor()) && proto.ei.Vector4.toObject(includeInstance, f),
-lightAmbientIntensity: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-fogColor: (f = msg.getFogColor()) && proto.ei.Vector4.toObject(includeInstance, f),
-fogNear: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-fogFar: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-fogDensity: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f
+    lightDir: (f = msg.getLightDir()) && proto.ei.Vector3.toObject(includeInstance, f),
+    lightDirectColor: (f = msg.getLightDirectColor()) && proto.ei.Vector4.toObject(includeInstance, f),
+    lightDirectIntensity: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    lightAmbientColor: (f = msg.getLightAmbientColor()) && proto.ei.Vector4.toObject(includeInstance, f),
+    lightAmbientIntensity: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    fogColor: (f = msg.getFogColor()) && proto.ei.Vector4.toObject(includeInstance, f),
+    fogNear: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    fogFar: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    fogDensity: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {

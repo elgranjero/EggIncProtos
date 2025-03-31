@@ -79,8 +79,8 @@ proto.ei.CurrencyFlowBatchRequest.prototype.toObject = function(opt_includeInsta
  */
 proto.ei.CurrencyFlowBatchRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-logsList: jspb.Message.toObjectList(msg.getLogsList(),
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    logsList: jspb.Message.toObjectList(msg.getLogsList(),
     proto.ei.CurrencyFlowLog.toObject, includeInstance)
   };
 

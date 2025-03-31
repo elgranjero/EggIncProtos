@@ -32,21 +32,23 @@ public object CompleteMissionResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object CompleteMissionResponseKt {
      * `optional .ei.MissionInfo info = 2;`
      */
     public var info: ei.Ei.MissionInfo
-      @JvmName("getInfo")
-      get() = _builder.info
-      @JvmName("setInfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getInfo")
+        get() = _builder.info
+      @kotlin.jvm.JvmName("setInfo")
+        set(value) {
         _builder.info = value
       }
     /**
-     * `optional .ei.MissionInfo info = 2;`
+     * <code>optional .ei.MissionInfo info = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearInfo() {
       _builder.clearInfo()
     }
     /**
-     * `optional .ei.MissionInfo info = 2;`
+     * <code>optional .ei.MissionInfo info = 2;</code>
      * @return Whether the info field is set.
+     * @return This builder for chaining.
      */
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
@@ -90,66 +94,71 @@ public object CompleteMissionResponseKt {
      */
      public val artifacts: com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.artifactsList
       )
     /**
-     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
+     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param value The artifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addArtifacts")
+@kotlin.jvm.JvmName("addArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.add(value: ei.Ei.CompleteMissionResponse.SecureArtifactSpec) {
       _builder.addArtifacts(value)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
+     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param value The artifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignArtifacts")
+@kotlin.jvm.JvmName("plusAssignArtifacts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.plusAssign(value: ei.Ei.CompleteMissionResponse.SecureArtifactSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
+     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param values The artifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllArtifacts")
+@kotlin.jvm.JvmName("addAllArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse.SecureArtifactSpec>) {
       _builder.addAllArtifacts(values)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
+     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param values The artifacts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllArtifacts")
+@kotlin.jvm.JvmName("plusAssignAllArtifacts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse.SecureArtifactSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
+     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
      * @param index The index to set the value at.
      * @param value The artifacts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setArtifacts")
+@kotlin.jvm.JvmName("setArtifacts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.set(index: kotlin.Int, value: ei.Ei.CompleteMissionResponse.SecureArtifactSpec) {
       _builder.setArtifacts(index, value)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
+     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearArtifacts")
+@kotlin.jvm.JvmName("clearArtifacts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse.SecureArtifactSpec, ArtifactsProxy>.clear() {
       _builder.clearArtifacts()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -162,86 +171,93 @@ public object CompleteMissionResponseKt {
      */
      public val otherRewards: com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.otherRewardsList
       )
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param value The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addOtherRewards")
+@kotlin.jvm.JvmName("addOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.add(value: ei.Ei.Reward) {
       _builder.addOtherRewards(value)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param value The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignOtherRewards")
+@kotlin.jvm.JvmName("plusAssignOtherRewards")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(value: ei.Ei.Reward) {
       add(value)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllOtherRewards")
+@kotlin.jvm.JvmName("addAllOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       _builder.addAllOtherRewards(values)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllOtherRewards")
+@kotlin.jvm.JvmName("plusAssignAllOtherRewards")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param index The index to set the value at.
      * @param value The otherRewards to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setOtherRewards")
+@kotlin.jvm.JvmName("setOtherRewards")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.set(index: kotlin.Int, value: ei.Ei.Reward) {
       _builder.setOtherRewards(index, value)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearOtherRewards")
+@kotlin.jvm.JvmName("clearOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.clear() {
       _builder.clearOtherRewards()
     }
-
 
     /**
      * `optional string ei_user_id = 5;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -273,21 +289,23 @@ public object CompleteMissionResponseKt {
        * `optional .ei.ArtifactSpec spec = 1;`
        */
       public var spec: ei.Ei.ArtifactSpec
-        @JvmName("getSpec")
-        get() = _builder.spec
-        @JvmName("setSpec")
-        set(value) {
+        @kotlin.jvm.JvmName("getSpec")
+          get() = _builder.spec
+        @kotlin.jvm.JvmName("setSpec")
+          set(value) {
           _builder.spec = value
         }
       /**
-       * `optional .ei.ArtifactSpec spec = 1;`
+       * <code>optional .ei.ArtifactSpec spec = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearSpec() {
         _builder.clearSpec()
       }
       /**
-       * `optional .ei.ArtifactSpec spec = 1;`
+       * <code>optional .ei.ArtifactSpec spec = 1;</code>
        * @return Whether the spec field is set.
+       * @return This builder for chaining.
        */
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
@@ -300,21 +318,23 @@ public object CompleteMissionResponseKt {
        * `optional string server_id = 2;`
        */
       public var serverId: kotlin.String
-        @JvmName("getServerId")
-        get() = _builder.serverId
-        @JvmName("setServerId")
-        set(value) {
+        @kotlin.jvm.JvmName("getServerId")
+          get() = _builder.serverId
+        @kotlin.jvm.JvmName("setServerId")
+          set(value) {
           _builder.serverId = value
         }
       /**
-       * `optional string server_id = 2;`
+       * <code>optional string server_id = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearServerId() {
         _builder.clearServerId()
       }
       /**
-       * `optional string server_id = 2;`
+       * <code>optional string server_id = 2;</code>
        * @return Whether the serverId field is set.
+       * @return This builder for chaining.
        */
       public fun hasServerId(): kotlin.Boolean {
         return _builder.hasServerId()

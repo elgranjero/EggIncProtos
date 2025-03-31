@@ -32,21 +32,23 @@ public object ContractCoopStatusUpdateResponseKt {
      * `optional bool finalized = 1;`
      */
     public var finalized: kotlin.Boolean
-      @JvmName("getFinalized")
-      get() = _builder.finalized
-      @JvmName("setFinalized")
-      set(value) {
+      @kotlin.jvm.JvmName("getFinalized")
+        get() = _builder.finalized
+      @kotlin.jvm.JvmName("setFinalized")
+        set(value) {
         _builder.finalized = value
       }
     /**
-     * `optional bool finalized = 1;`
+     * <code>optional bool finalized = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearFinalized() {
       _builder.clearFinalized()
     }
     /**
-     * `optional bool finalized = 1;`
+     * <code>optional bool finalized = 1;</code>
      * @return Whether the finalized field is set.
+     * @return This builder for chaining.
      */
     public fun hasFinalized(): kotlin.Boolean {
       return _builder.hasFinalized()
@@ -56,21 +58,23 @@ public object ContractCoopStatusUpdateResponseKt {
      * `optional bool exists = 2;`
      */
     public var exists: kotlin.Boolean
-      @JvmName("getExists")
-      get() = _builder.exists
-      @JvmName("setExists")
-      set(value) {
+      @kotlin.jvm.JvmName("getExists")
+        get() = _builder.exists
+      @kotlin.jvm.JvmName("setExists")
+        set(value) {
         _builder.exists = value
       }
     /**
-     * `optional bool exists = 2;`
+     * <code>optional bool exists = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearExists() {
       _builder.clearExists()
     }
     /**
-     * `optional bool exists = 2;`
+     * <code>optional bool exists = 2;</code>
      * @return Whether the exists field is set.
+     * @return This builder for chaining.
      */
     public fun hasExists(): kotlin.Boolean {
       return _builder.hasExists()
@@ -80,21 +84,23 @@ public object ContractCoopStatusUpdateResponseKt {
      * `optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;`
      */
     public var status: ei.Ei.ContractCoopStatusResponse.MemberStatus
-      @JvmName("getStatus")
-      get() = _builder.status
-      @JvmName("setStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getStatus")
+        get() = _builder.status
+      @kotlin.jvm.JvmName("setStatus")
+        set(value) {
         _builder.status = value
       }
     /**
-     * `optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;`
+     * <code>optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * `optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;`
+     * <code>optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;</code>
      * @return Whether the status field is set.
+     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()

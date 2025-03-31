@@ -122,7 +122,7 @@ proto.ei.ContractSimConfig.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractSimConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-gradeConfigsList: jspb.Message.toObjectList(msg.getGradeConfigsList(),
+    gradeConfigsList: jspb.Message.toObjectList(msg.getGradeConfigsList(),
     proto.ei.ContractSimConfig.ContractGradeSimConfig.toObject, includeInstance)
   };
 
@@ -244,8 +244,8 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.prototype.toObject = function(
  */
 proto.ei.ContractSimConfig.ContractGradeSimConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-goalParamsList: jspb.Message.toObjectList(msg.getGoalParamsList(),
+    grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    goalParamsList: jspb.Message.toObjectList(msg.getGoalParamsList(),
     proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.toObject, includeInstance)
   };
 
@@ -371,13 +371,13 @@ proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.prototype.toObject 
  */
 proto.ei.ContractSimConfig.ContractGradeSimConfig.GoalParams.toObject = function(includeInstance, msg) {
   var f, obj = {
-targetSe: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-cpsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-elrMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-earningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-timeEfficacy: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-habCapacityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-epicResearchBudget: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
+    targetSe: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    cpsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    elrMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    earningsMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    timeEfficacy: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    habCapacityMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    epicResearchBudget: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {

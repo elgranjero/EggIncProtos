@@ -99,18 +99,18 @@ proto.ei.IdleSessionSummary.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.IdleSessionSummary.toObject = function(includeInstance, msg) {
   var f, obj = {
-success: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-timeAway: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-timeSimulated: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-silosOwned: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-averageElr: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-averageMsr: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-averageEggDeliveryRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-lastEggDeliveryRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-eggsDelivered: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
-statsList: jspb.Message.toObjectList(msg.getStatsList(),
+    success: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    timeAway: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    timeSimulated: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    silosOwned: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    averageElr: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    averageMsr: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    averageEggDeliveryRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    lastEggDeliveryRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    eggsDelivered: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
+    statsList: jspb.Message.toObjectList(msg.getStatsList(),
     proto.ei.IdleSessionSummary.Stat.toObject, includeInstance),
-farmIndex: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    farmIndex: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -334,11 +334,11 @@ proto.ei.IdleSessionSummary.Stat.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.IdleSessionSummary.Stat.toObject = function(includeInstance, msg) {
   var f, obj = {
-name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-min: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-max: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-avg: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-totalTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
+    name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    min: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    max: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    avg: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    totalTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

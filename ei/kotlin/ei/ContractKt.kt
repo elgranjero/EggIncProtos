@@ -32,21 +32,23 @@ public object ContractKt {
      * `optional string identifier = 1;`
      */
     public var identifier: kotlin.String
-      @JvmName("getIdentifier")
-      get() = _builder.identifier
-      @JvmName("setIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getIdentifier")
+        get() = _builder.identifier
+      @kotlin.jvm.JvmName("setIdentifier")
+        set(value) {
         _builder.identifier = value
       }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * `optional string identifier = 1;`
+     * <code>optional string identifier = 1;</code>
      * @return Whether the identifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -56,21 +58,23 @@ public object ContractKt {
      * `optional string name = 9;`
      */
     public var name: kotlin.String
-      @JvmName("getName")
-      get() = _builder.name
-      @JvmName("setName")
-      set(value) {
+      @kotlin.jvm.JvmName("getName")
+        get() = _builder.name
+      @kotlin.jvm.JvmName("setName")
+        set(value) {
         _builder.name = value
       }
     /**
-     * `optional string name = 9;`
+     * <code>optional string name = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * `optional string name = 9;`
+     * <code>optional string name = 9;</code>
      * @return Whether the name field is set.
+     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -80,21 +84,23 @@ public object ContractKt {
      * `optional string description = 10;`
      */
     public var description: kotlin.String
-      @JvmName("getDescription")
-      get() = _builder.description
-      @JvmName("setDescription")
-      set(value) {
+      @kotlin.jvm.JvmName("getDescription")
+        get() = _builder.description
+      @kotlin.jvm.JvmName("setDescription")
+        set(value) {
         _builder.description = value
       }
     /**
-     * `optional string description = 10;`
+     * <code>optional string description = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * `optional string description = 10;`
+     * <code>optional string description = 10;</code>
      * @return Whether the description field is set.
+     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()
@@ -104,21 +110,23 @@ public object ContractKt {
      * `optional .ei.Egg egg = 2;`
      */
     public var egg: ei.Ei.Egg
-      @JvmName("getEgg")
-      get() = _builder.egg
-      @JvmName("setEgg")
-      set(value) {
+      @kotlin.jvm.JvmName("getEgg")
+        get() = _builder.egg
+      @kotlin.jvm.JvmName("setEgg")
+        set(value) {
         _builder.egg = value
       }
     /**
-     * `optional .ei.Egg egg = 2;`
+     * <code>optional .ei.Egg egg = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearEgg() {
       _builder.clearEgg()
     }
     /**
-     * `optional .ei.Egg egg = 2;`
+     * <code>optional .ei.Egg egg = 2;</code>
      * @return Whether the egg field is set.
+     * @return This builder for chaining.
      */
     public fun hasEgg(): kotlin.Boolean {
       return _builder.hasEgg()
@@ -128,21 +136,23 @@ public object ContractKt {
      * `optional string custom_egg_id = 25;`
      */
     public var customEggId: kotlin.String
-      @JvmName("getCustomEggId")
-      get() = _builder.customEggId
-      @JvmName("setCustomEggId")
-      set(value) {
+      @kotlin.jvm.JvmName("getCustomEggId")
+        get() = _builder.customEggId
+      @kotlin.jvm.JvmName("setCustomEggId")
+        set(value) {
         _builder.customEggId = value
       }
     /**
-     * `optional string custom_egg_id = 25;`
+     * <code>optional string custom_egg_id = 25;</code>
+     * @return This builder for chaining.
      */
     public fun clearCustomEggId() {
       _builder.clearCustomEggId()
     }
     /**
-     * `optional string custom_egg_id = 25;`
+     * <code>optional string custom_egg_id = 25;</code>
      * @return Whether the customEggId field is set.
+     * @return This builder for chaining.
      */
     public fun hasCustomEggId(): kotlin.Boolean {
       return _builder.hasCustomEggId()
@@ -159,66 +169,71 @@ public object ContractKt {
      */
      public val goals: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.goalsList
       )
     /**
-     * `repeated .ei.Contract.Goal goals = 3;`
+     * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param value The goals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGoals")
+@kotlin.jvm.JvmName("addGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.add(value: ei.Ei.Contract.Goal) {
       _builder.addGoals(value)
     }
     /**
-     * `repeated .ei.Contract.Goal goals = 3;`
+     * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param value The goals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGoals")
+@kotlin.jvm.JvmName("plusAssignGoals")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(value: ei.Ei.Contract.Goal) {
       add(value)
     }
     /**
-     * `repeated .ei.Contract.Goal goals = 3;`
+     * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param values The goals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGoals")
+@kotlin.jvm.JvmName("addAllGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
       _builder.addAllGoals(values)
     }
     /**
-     * `repeated .ei.Contract.Goal goals = 3;`
+     * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param values The goals to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGoals")
+@kotlin.jvm.JvmName("plusAssignAllGoals")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Contract.Goal goals = 3;`
+     * <code>repeated .ei.Contract.Goal goals = 3;</code>
      * @param index The index to set the value at.
      * @param value The goals to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGoals")
+@kotlin.jvm.JvmName("setGoals")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.Goal) {
       _builder.setGoals(index, value)
     }
     /**
-     * `repeated .ei.Contract.Goal goals = 3;`
+     * <code>repeated .ei.Contract.Goal goals = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGoals")
+@kotlin.jvm.JvmName("clearGoals")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.clear() {
       _builder.clearGoals()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -231,66 +246,71 @@ public object ContractKt {
      */
      public val goalSets: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.goalSetsList
       )
     /**
-     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
+     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param value The goalSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGoalSets")
+@kotlin.jvm.JvmName("addGoalSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.add(value: ei.Ei.Contract.GoalSet) {
       _builder.addGoalSets(value)
     }
     /**
-     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
+     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param value The goalSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGoalSets")
+@kotlin.jvm.JvmName("plusAssignGoalSets")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.plusAssign(value: ei.Ei.Contract.GoalSet) {
       add(value)
     }
     /**
-     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
+     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param values The goalSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGoalSets")
+@kotlin.jvm.JvmName("addAllGoalSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.GoalSet>) {
       _builder.addAllGoalSets(values)
     }
     /**
-     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
+     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param values The goalSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGoalSets")
+@kotlin.jvm.JvmName("plusAssignAllGoalSets")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.GoalSet>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
+     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
      * @param index The index to set the value at.
      * @param value The goalSets to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGoalSets")
+@kotlin.jvm.JvmName("setGoalSets")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.GoalSet) {
       _builder.setGoalSets(index, value)
     }
     /**
-     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
+     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGoalSets")
+@kotlin.jvm.JvmName("clearGoalSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GoalSet, GoalSetsProxy>.clear() {
       _builder.clearGoalSets()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -303,86 +323,93 @@ public object ContractKt {
      */
      public val gradeSpecs: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.gradeSpecsList
       )
     /**
-     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
      * @param value The gradeSpecs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGradeSpecs")
+@kotlin.jvm.JvmName("addGradeSpecs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.add(value: ei.Ei.Contract.GradeSpec) {
       _builder.addGradeSpecs(value)
     }
     /**
-     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
      * @param value The gradeSpecs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGradeSpecs")
+@kotlin.jvm.JvmName("plusAssignGradeSpecs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.plusAssign(value: ei.Ei.Contract.GradeSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
      * @param values The gradeSpecs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGradeSpecs")
+@kotlin.jvm.JvmName("addAllGradeSpecs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.GradeSpec>) {
       _builder.addAllGradeSpecs(values)
     }
     /**
-     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
      * @param values The gradeSpecs to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGradeSpecs")
+@kotlin.jvm.JvmName("plusAssignAllGradeSpecs")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.GradeSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
      * @param index The index to set the value at.
      * @param value The gradeSpecs to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGradeSpecs")
+@kotlin.jvm.JvmName("setGradeSpecs")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.GradeSpec) {
       _builder.setGradeSpecs(index, value)
     }
     /**
-     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
+     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGradeSpecs")
+@kotlin.jvm.JvmName("clearGradeSpecs")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.GradeSpec, GradeSpecsProxy>.clear() {
       _builder.clearGradeSpecs()
     }
-
 
     /**
      * `optional string season_id = 23;`
      */
     public var seasonId: kotlin.String
-      @JvmName("getSeasonId")
-      get() = _builder.seasonId
-      @JvmName("setSeasonId")
-      set(value) {
+      @kotlin.jvm.JvmName("getSeasonId")
+        get() = _builder.seasonId
+      @kotlin.jvm.JvmName("setSeasonId")
+        set(value) {
         _builder.seasonId = value
       }
     /**
-     * `optional string season_id = 23;`
+     * <code>optional string season_id = 23;</code>
+     * @return This builder for chaining.
      */
     public fun clearSeasonId() {
       _builder.clearSeasonId()
     }
     /**
-     * `optional string season_id = 23;`
+     * <code>optional string season_id = 23;</code>
      * @return Whether the seasonId field is set.
+     * @return This builder for chaining.
      */
     public fun hasSeasonId(): kotlin.Boolean {
       return _builder.hasSeasonId()
@@ -392,21 +419,23 @@ public object ContractKt {
      * `optional bool coop_allowed = 4;`
      */
     public var coopAllowed: kotlin.Boolean
-      @JvmName("getCoopAllowed")
-      get() = _builder.coopAllowed
-      @JvmName("setCoopAllowed")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopAllowed")
+        get() = _builder.coopAllowed
+      @kotlin.jvm.JvmName("setCoopAllowed")
+        set(value) {
         _builder.coopAllowed = value
       }
     /**
-     * `optional bool coop_allowed = 4;`
+     * <code>optional bool coop_allowed = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopAllowed() {
       _builder.clearCoopAllowed()
     }
     /**
-     * `optional bool coop_allowed = 4;`
+     * <code>optional bool coop_allowed = 4;</code>
      * @return Whether the coopAllowed field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopAllowed(): kotlin.Boolean {
       return _builder.hasCoopAllowed()
@@ -416,21 +445,23 @@ public object ContractKt {
      * `optional uint32 max_coop_size = 5;`
      */
     public var maxCoopSize: kotlin.Int
-      @JvmName("getMaxCoopSize")
-      get() = _builder.maxCoopSize
-      @JvmName("setMaxCoopSize")
-      set(value) {
+      @kotlin.jvm.JvmName("getMaxCoopSize")
+        get() = _builder.maxCoopSize
+      @kotlin.jvm.JvmName("setMaxCoopSize")
+        set(value) {
         _builder.maxCoopSize = value
       }
     /**
-     * `optional uint32 max_coop_size = 5;`
+     * <code>optional uint32 max_coop_size = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearMaxCoopSize() {
       _builder.clearMaxCoopSize()
     }
     /**
-     * `optional uint32 max_coop_size = 5;`
+     * <code>optional uint32 max_coop_size = 5;</code>
      * @return Whether the maxCoopSize field is set.
+     * @return This builder for chaining.
      */
     public fun hasMaxCoopSize(): kotlin.Boolean {
       return _builder.hasMaxCoopSize()
@@ -440,21 +471,23 @@ public object ContractKt {
      * `optional uint32 max_boosts = 12;`
      */
     public var maxBoosts: kotlin.Int
-      @JvmName("getMaxBoosts")
-      get() = _builder.maxBoosts
-      @JvmName("setMaxBoosts")
-      set(value) {
+      @kotlin.jvm.JvmName("getMaxBoosts")
+        get() = _builder.maxBoosts
+      @kotlin.jvm.JvmName("setMaxBoosts")
+        set(value) {
         _builder.maxBoosts = value
       }
     /**
-     * `optional uint32 max_boosts = 12;`
+     * <code>optional uint32 max_boosts = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearMaxBoosts() {
       _builder.clearMaxBoosts()
     }
     /**
-     * `optional uint32 max_boosts = 12;`
+     * <code>optional uint32 max_boosts = 12;</code>
      * @return Whether the maxBoosts field is set.
+     * @return This builder for chaining.
      */
     public fun hasMaxBoosts(): kotlin.Boolean {
       return _builder.hasMaxBoosts()
@@ -464,21 +497,23 @@ public object ContractKt {
      * `optional double minutes_per_token = 15 [default = 60];`
      */
     public var minutesPerToken: kotlin.Double
-      @JvmName("getMinutesPerToken")
-      get() = _builder.minutesPerToken
-      @JvmName("setMinutesPerToken")
-      set(value) {
+      @kotlin.jvm.JvmName("getMinutesPerToken")
+        get() = _builder.minutesPerToken
+      @kotlin.jvm.JvmName("setMinutesPerToken")
+        set(value) {
         _builder.minutesPerToken = value
       }
     /**
-     * `optional double minutes_per_token = 15 [default = 60];`
+     * <code>optional double minutes_per_token = 15 [default = 60];</code>
+     * @return This builder for chaining.
      */
     public fun clearMinutesPerToken() {
       _builder.clearMinutesPerToken()
     }
     /**
-     * `optional double minutes_per_token = 15 [default = 60];`
+     * <code>optional double minutes_per_token = 15 [default = 60];</code>
      * @return Whether the minutesPerToken field is set.
+     * @return This builder for chaining.
      */
     public fun hasMinutesPerToken(): kotlin.Boolean {
       return _builder.hasMinutesPerToken()
@@ -488,21 +523,23 @@ public object ContractKt {
      * `optional double chicken_run_cooldown_minutes = 18 [default = 180];`
      */
     public var chickenRunCooldownMinutes: kotlin.Double
-      @JvmName("getChickenRunCooldownMinutes")
-      get() = _builder.chickenRunCooldownMinutes
-      @JvmName("setChickenRunCooldownMinutes")
-      set(value) {
+      @kotlin.jvm.JvmName("getChickenRunCooldownMinutes")
+        get() = _builder.chickenRunCooldownMinutes
+      @kotlin.jvm.JvmName("setChickenRunCooldownMinutes")
+        set(value) {
         _builder.chickenRunCooldownMinutes = value
       }
     /**
-     * `optional double chicken_run_cooldown_minutes = 18 [default = 180];`
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
+     * @return This builder for chaining.
      */
     public fun clearChickenRunCooldownMinutes() {
       _builder.clearChickenRunCooldownMinutes()
     }
     /**
-     * `optional double chicken_run_cooldown_minutes = 18 [default = 180];`
+     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
      * @return Whether the chickenRunCooldownMinutes field is set.
+     * @return This builder for chaining.
      */
     public fun hasChickenRunCooldownMinutes(): kotlin.Boolean {
       return _builder.hasChickenRunCooldownMinutes()
@@ -512,21 +549,23 @@ public object ContractKt {
      * `optional double start_time = 17;`
      */
     public var startTime: kotlin.Double
-      @JvmName("getStartTime")
-      get() = _builder.startTime
-      @JvmName("setStartTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getStartTime")
+        get() = _builder.startTime
+      @kotlin.jvm.JvmName("setStartTime")
+        set(value) {
         _builder.startTime = value
       }
     /**
-     * `optional double start_time = 17;`
+     * <code>optional double start_time = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * `optional double start_time = 17;`
+     * <code>optional double start_time = 17;</code>
      * @return Whether the startTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -536,21 +575,23 @@ public object ContractKt {
      * `optional double expiration_time = 6;`
      */
     public var expirationTime: kotlin.Double
-      @JvmName("getExpirationTime")
-      get() = _builder.expirationTime
-      @JvmName("setExpirationTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getExpirationTime")
+        get() = _builder.expirationTime
+      @kotlin.jvm.JvmName("setExpirationTime")
+        set(value) {
         _builder.expirationTime = value
       }
     /**
-     * `optional double expiration_time = 6;`
+     * <code>optional double expiration_time = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearExpirationTime() {
       _builder.clearExpirationTime()
     }
     /**
-     * `optional double expiration_time = 6;`
+     * <code>optional double expiration_time = 6;</code>
      * @return Whether the expirationTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasExpirationTime(): kotlin.Boolean {
       return _builder.hasExpirationTime()
@@ -560,21 +601,23 @@ public object ContractKt {
      * `optional double length_seconds = 7;`
      */
     public var lengthSeconds: kotlin.Double
-      @JvmName("getLengthSeconds")
-      get() = _builder.lengthSeconds
-      @JvmName("setLengthSeconds")
-      set(value) {
+      @kotlin.jvm.JvmName("getLengthSeconds")
+        get() = _builder.lengthSeconds
+      @kotlin.jvm.JvmName("setLengthSeconds")
+        set(value) {
         _builder.lengthSeconds = value
       }
     /**
-     * `optional double length_seconds = 7;`
+     * <code>optional double length_seconds = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearLengthSeconds() {
       _builder.clearLengthSeconds()
     }
     /**
-     * `optional double length_seconds = 7;`
+     * <code>optional double length_seconds = 7;</code>
      * @return Whether the lengthSeconds field is set.
+     * @return This builder for chaining.
      */
     public fun hasLengthSeconds(): kotlin.Boolean {
       return _builder.hasLengthSeconds()
@@ -584,21 +627,23 @@ public object ContractKt {
      * `optional double max_soul_eggs = 13;`
      */
     public var maxSoulEggs: kotlin.Double
-      @JvmName("getMaxSoulEggs")
-      get() = _builder.maxSoulEggs
-      @JvmName("setMaxSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getMaxSoulEggs")
+        get() = _builder.maxSoulEggs
+      @kotlin.jvm.JvmName("setMaxSoulEggs")
+        set(value) {
         _builder.maxSoulEggs = value
       }
     /**
-     * `optional double max_soul_eggs = 13;`
+     * <code>optional double max_soul_eggs = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearMaxSoulEggs() {
       _builder.clearMaxSoulEggs()
     }
     /**
-     * `optional double max_soul_eggs = 13;`
+     * <code>optional double max_soul_eggs = 13;</code>
      * @return Whether the maxSoulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasMaxSoulEggs(): kotlin.Boolean {
       return _builder.hasMaxSoulEggs()
@@ -608,21 +653,23 @@ public object ContractKt {
      * `optional uint32 min_client_version = 14;`
      */
     public var minClientVersion: kotlin.Int
-      @JvmName("getMinClientVersion")
-      get() = _builder.minClientVersion
-      @JvmName("setMinClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getMinClientVersion")
+        get() = _builder.minClientVersion
+      @kotlin.jvm.JvmName("setMinClientVersion")
+        set(value) {
         _builder.minClientVersion = value
       }
     /**
-     * `optional uint32 min_client_version = 14;`
+     * <code>optional uint32 min_client_version = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearMinClientVersion() {
       _builder.clearMinClientVersion()
     }
     /**
-     * `optional uint32 min_client_version = 14;`
+     * <code>optional uint32 min_client_version = 14;</code>
      * @return Whether the minClientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasMinClientVersion(): kotlin.Boolean {
       return _builder.hasMinClientVersion()
@@ -632,21 +679,23 @@ public object ContractKt {
      * `optional bool leggacy = 19;`
      */
     public var leggacy: kotlin.Boolean
-      @JvmName("getLeggacy")
-      get() = _builder.leggacy
-      @JvmName("setLeggacy")
-      set(value) {
+      @kotlin.jvm.JvmName("getLeggacy")
+        get() = _builder.leggacy
+      @kotlin.jvm.JvmName("setLeggacy")
+        set(value) {
         _builder.leggacy = value
       }
     /**
-     * `optional bool leggacy = 19;`
+     * <code>optional bool leggacy = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearLeggacy() {
       _builder.clearLeggacy()
     }
     /**
-     * `optional bool leggacy = 19;`
+     * <code>optional bool leggacy = 19;</code>
      * @return Whether the leggacy field is set.
+     * @return This builder for chaining.
      */
     public fun hasLeggacy(): kotlin.Boolean {
       return _builder.hasLeggacy()
@@ -656,21 +705,23 @@ public object ContractKt {
      * `optional bool cc_only = 22;`
      */
     public var ccOnly: kotlin.Boolean
-      @JvmName("getCcOnly")
-      get() = _builder.ccOnly
-      @JvmName("setCcOnly")
-      set(value) {
+      @kotlin.jvm.JvmName("getCcOnly")
+        get() = _builder.ccOnly
+      @kotlin.jvm.JvmName("setCcOnly")
+        set(value) {
         _builder.ccOnly = value
       }
     /**
-     * `optional bool cc_only = 22;`
+     * <code>optional bool cc_only = 22;</code>
+     * @return This builder for chaining.
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * `optional bool cc_only = 22;`
+     * <code>optional bool cc_only = 22;</code>
      * @return Whether the ccOnly field is set.
+     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()
@@ -683,66 +734,73 @@ public object ContractKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class DefaultShellIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
      * @return A list containing the defaultShellIds.
+     * @return This builder for chaining.
      */
     public val defaultShellIds: com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.defaultShellIdsList
       )
     /**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
      * @param value The defaultShellIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addDefaultShellIds")
+@kotlin.jvm.JvmName("addDefaultShellIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.add(value: kotlin.String) {
       _builder.addDefaultShellIds(value)
     }
     /**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
      * @param value The defaultShellIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignDefaultShellIds")
+@kotlin.jvm.JvmName("plusAssignDefaultShellIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
      * @param values The defaultShellIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllDefaultShellIds")
+@kotlin.jvm.JvmName("addAllDefaultShellIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllDefaultShellIds(values)
     }
     /**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
      * @param values The defaultShellIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllDefaultShellIds")
+@kotlin.jvm.JvmName("plusAssignAllDefaultShellIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
      * @param index The index to set the value at.
      * @param value The defaultShellIds to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setDefaultShellIds")
+@kotlin.jvm.JvmName("setDefaultShellIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setDefaultShellIds(index, value)
     }/**
-     * `repeated string default_shell_ids = 24;`
+     * <code>repeated string default_shell_ids = 24;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearDefaultShellIds")
+@kotlin.jvm.JvmName("setDefaultShellIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.clear() {
       _builder.clearDefaultShellIds()
     }
@@ -750,21 +808,23 @@ public object ContractKt {
      * `optional bool debug = 11;`
      */
     public var debug: kotlin.Boolean
-      @JvmName("getDebug")
-      get() = _builder.debug
-      @JvmName("setDebug")
-      set(value) {
+      @kotlin.jvm.JvmName("getDebug")
+        get() = _builder.debug
+      @kotlin.jvm.JvmName("setDebug")
+        set(value) {
         _builder.debug = value
       }
     /**
-     * `optional bool debug = 11;`
+     * <code>optional bool debug = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearDebug() {
       _builder.clearDebug()
     }
     /**
-     * `optional bool debug = 11;`
+     * <code>optional bool debug = 11;</code>
      * @return Whether the debug field is set.
+     * @return This builder for chaining.
      */
     public fun hasDebug(): kotlin.Boolean {
       return _builder.hasDebug()
@@ -774,21 +834,23 @@ public object ContractKt {
      * `optional string key = 21;`
      */
     public var key: kotlin.String
-      @JvmName("getKey")
-      get() = _builder.key
-      @JvmName("setKey")
-      set(value) {
+      @kotlin.jvm.JvmName("getKey")
+        get() = _builder.key
+      @kotlin.jvm.JvmName("setKey")
+        set(value) {
         _builder.key = value
       }
     /**
-     * `optional string key = 21;`
+     * <code>optional string key = 21;</code>
+     * @return This builder for chaining.
      */
     public fun clearKey() {
       _builder.clearKey()
     }
     /**
-     * `optional string key = 21;`
+     * <code>optional string key = 21;</code>
      * @return Whether the key field is set.
+     * @return This builder for chaining.
      */
     public fun hasKey(): kotlin.Boolean {
       return _builder.hasKey()
@@ -820,21 +882,23 @@ public object ContractKt {
        * `optional .ei.GoalType type = 1;`
        */
       public var type: ei.Ei.GoalType
-        @JvmName("getType")
-        get() = _builder.type
-        @JvmName("setType")
-        set(value) {
+        @kotlin.jvm.JvmName("getType")
+          get() = _builder.type
+        @kotlin.jvm.JvmName("setType")
+          set(value) {
           _builder.type = value
         }
       /**
-       * `optional .ei.GoalType type = 1;`
+       * <code>optional .ei.GoalType type = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearType() {
         _builder.clearType()
       }
       /**
-       * `optional .ei.GoalType type = 1;`
+       * <code>optional .ei.GoalType type = 1;</code>
        * @return Whether the type field is set.
+       * @return This builder for chaining.
        */
       public fun hasType(): kotlin.Boolean {
         return _builder.hasType()
@@ -844,21 +908,23 @@ public object ContractKt {
        * `optional double target_amount = 2;`
        */
       public var targetAmount: kotlin.Double
-        @JvmName("getTargetAmount")
-        get() = _builder.targetAmount
-        @JvmName("setTargetAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getTargetAmount")
+          get() = _builder.targetAmount
+        @kotlin.jvm.JvmName("setTargetAmount")
+          set(value) {
           _builder.targetAmount = value
         }
       /**
-       * `optional double target_amount = 2;`
+       * <code>optional double target_amount = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearTargetAmount() {
         _builder.clearTargetAmount()
       }
       /**
-       * `optional double target_amount = 2;`
+       * <code>optional double target_amount = 2;</code>
        * @return Whether the targetAmount field is set.
+       * @return This builder for chaining.
        */
       public fun hasTargetAmount(): kotlin.Boolean {
         return _builder.hasTargetAmount()
@@ -868,21 +934,23 @@ public object ContractKt {
        * `optional .ei.RewardType reward_type = 3;`
        */
       public var rewardType: ei.Ei.RewardType
-        @JvmName("getRewardType")
-        get() = _builder.rewardType
-        @JvmName("setRewardType")
-        set(value) {
+        @kotlin.jvm.JvmName("getRewardType")
+          get() = _builder.rewardType
+        @kotlin.jvm.JvmName("setRewardType")
+          set(value) {
           _builder.rewardType = value
         }
       /**
-       * `optional .ei.RewardType reward_type = 3;`
+       * <code>optional .ei.RewardType reward_type = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearRewardType() {
         _builder.clearRewardType()
       }
       /**
-       * `optional .ei.RewardType reward_type = 3;`
+       * <code>optional .ei.RewardType reward_type = 3;</code>
        * @return Whether the rewardType field is set.
+       * @return This builder for chaining.
        */
       public fun hasRewardType(): kotlin.Boolean {
         return _builder.hasRewardType()
@@ -892,21 +960,23 @@ public object ContractKt {
        * `optional string reward_sub_type = 4;`
        */
       public var rewardSubType: kotlin.String
-        @JvmName("getRewardSubType")
-        get() = _builder.rewardSubType
-        @JvmName("setRewardSubType")
-        set(value) {
+        @kotlin.jvm.JvmName("getRewardSubType")
+          get() = _builder.rewardSubType
+        @kotlin.jvm.JvmName("setRewardSubType")
+          set(value) {
           _builder.rewardSubType = value
         }
       /**
-       * `optional string reward_sub_type = 4;`
+       * <code>optional string reward_sub_type = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearRewardSubType() {
         _builder.clearRewardSubType()
       }
       /**
-       * `optional string reward_sub_type = 4;`
+       * <code>optional string reward_sub_type = 4;</code>
        * @return Whether the rewardSubType field is set.
+       * @return This builder for chaining.
        */
       public fun hasRewardSubType(): kotlin.Boolean {
         return _builder.hasRewardSubType()
@@ -916,21 +986,23 @@ public object ContractKt {
        * `optional double reward_amount = 5;`
        */
       public var rewardAmount: kotlin.Double
-        @JvmName("getRewardAmount")
-        get() = _builder.rewardAmount
-        @JvmName("setRewardAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getRewardAmount")
+          get() = _builder.rewardAmount
+        @kotlin.jvm.JvmName("setRewardAmount")
+          set(value) {
           _builder.rewardAmount = value
         }
       /**
-       * `optional double reward_amount = 5;`
+       * <code>optional double reward_amount = 5;</code>
+       * @return This builder for chaining.
        */
       public fun clearRewardAmount() {
         _builder.clearRewardAmount()
       }
       /**
-       * `optional double reward_amount = 5;`
+       * <code>optional double reward_amount = 5;</code>
        * @return Whether the rewardAmount field is set.
+       * @return This builder for chaining.
        */
       public fun hasRewardAmount(): kotlin.Boolean {
         return _builder.hasRewardAmount()
@@ -940,21 +1012,23 @@ public object ContractKt {
        * `optional double target_soul_eggs = 6;`
        */
       public var targetSoulEggs: kotlin.Double
-        @JvmName("getTargetSoulEggs")
-        get() = _builder.targetSoulEggs
-        @JvmName("setTargetSoulEggs")
-        set(value) {
+        @kotlin.jvm.JvmName("getTargetSoulEggs")
+          get() = _builder.targetSoulEggs
+        @kotlin.jvm.JvmName("setTargetSoulEggs")
+          set(value) {
           _builder.targetSoulEggs = value
         }
       /**
-       * `optional double target_soul_eggs = 6;`
+       * <code>optional double target_soul_eggs = 6;</code>
+       * @return This builder for chaining.
        */
       public fun clearTargetSoulEggs() {
         _builder.clearTargetSoulEggs()
       }
       /**
-       * `optional double target_soul_eggs = 6;`
+       * <code>optional double target_soul_eggs = 6;</code>
        * @return Whether the targetSoulEggs field is set.
+       * @return This builder for chaining.
        */
       public fun hasTargetSoulEggs(): kotlin.Boolean {
         return _builder.hasTargetSoulEggs()
@@ -994,66 +1068,71 @@ public object ContractKt {
        */
        public val goals: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>
         @kotlin.jvm.JvmSynthetic
-        get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
           _builder.goalsList
         )
       /**
-       * `repeated .ei.Contract.Goal goals = 1;`
+       * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param value The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addGoals")
+@kotlin.jvm.JvmName("addGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.add(value: ei.Ei.Contract.Goal) {
         _builder.addGoals(value)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 1;`
+       * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param value The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignGoals")
+@kotlin.jvm.JvmName("plusAssignGoals")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(value: ei.Ei.Contract.Goal) {
         add(value)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 1;`
+       * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param values The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addAllGoals")
+@kotlin.jvm.JvmName("addAllGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
         _builder.addAllGoals(values)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 1;`
+       * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param values The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignAllGoals")
+@kotlin.jvm.JvmName("plusAssignAllGoals")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
         addAll(values)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 1;`
+       * <code>repeated .ei.Contract.Goal goals = 1;</code>
        * @param index The index to set the value at.
        * @param value The goals to set.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("setGoals")
+@kotlin.jvm.JvmName("setGoals")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.Goal) {
         _builder.setGoals(index, value)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 1;`
+       * <code>repeated .ei.Contract.Goal goals = 1;</code>
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("clearGoals")
+@kotlin.jvm.JvmName("clearGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.clear() {
         _builder.clearGoals()
       }
-
     }
   }
   @kotlin.jvm.JvmName("-initializegradeSpec")
@@ -1082,21 +1161,23 @@ public object ContractKt {
        * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public var grade: ei.Ei.Contract.PlayerGrade
-        @JvmName("getGrade")
-        get() = _builder.grade
-        @JvmName("setGrade")
-        set(value) {
+        @kotlin.jvm.JvmName("getGrade")
+          get() = _builder.grade
+        @kotlin.jvm.JvmName("setGrade")
+          set(value) {
           _builder.grade = value
         }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
        * @return Whether the grade field is set.
+       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -1113,66 +1194,71 @@ public object ContractKt {
        */
        public val goals: com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>
         @kotlin.jvm.JvmSynthetic
-        get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
           _builder.goalsList
         )
       /**
-       * `repeated .ei.Contract.Goal goals = 2;`
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
        * @param value The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addGoals")
+@kotlin.jvm.JvmName("addGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.add(value: ei.Ei.Contract.Goal) {
         _builder.addGoals(value)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 2;`
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
        * @param value The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignGoals")
+@kotlin.jvm.JvmName("plusAssignGoals")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(value: ei.Ei.Contract.Goal) {
         add(value)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 2;`
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
        * @param values The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addAllGoals")
+@kotlin.jvm.JvmName("addAllGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
         _builder.addAllGoals(values)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 2;`
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
        * @param values The goals to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignAllGoals")
+@kotlin.jvm.JvmName("plusAssignAllGoals")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Contract.Goal>) {
         addAll(values)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 2;`
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
        * @param index The index to set the value at.
        * @param value The goals to set.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("setGoals")
+@kotlin.jvm.JvmName("setGoals")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.set(index: kotlin.Int, value: ei.Ei.Contract.Goal) {
         _builder.setGoals(index, value)
       }
       /**
-       * `repeated .ei.Contract.Goal goals = 2;`
+       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("clearGoals")
+@kotlin.jvm.JvmName("clearGoals")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.Contract.Goal, GoalsProxy>.clear() {
         _builder.clearGoals()
       }
-
 
       /**
        * An uninstantiable, behaviorless type to represent the field in
@@ -1185,86 +1271,93 @@ public object ContractKt {
        */
        public val modifiers: com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>
         @kotlin.jvm.JvmSynthetic
-        get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
           _builder.modifiersList
         )
       /**
-       * `repeated .ei.GameModifier modifiers = 3;`
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
        * @param value The modifiers to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addModifiers")
+@kotlin.jvm.JvmName("addModifiers")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.add(value: ei.Ei.GameModifier) {
         _builder.addModifiers(value)
       }
       /**
-       * `repeated .ei.GameModifier modifiers = 3;`
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
        * @param value The modifiers to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignModifiers")
+@kotlin.jvm.JvmName("plusAssignModifiers")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.plusAssign(value: ei.Ei.GameModifier) {
         add(value)
       }
       /**
-       * `repeated .ei.GameModifier modifiers = 3;`
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
        * @param values The modifiers to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("addAllModifiers")
+@kotlin.jvm.JvmName("addAllModifiers")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.GameModifier>) {
         _builder.addAllModifiers(values)
       }
       /**
-       * `repeated .ei.GameModifier modifiers = 3;`
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
        * @param values The modifiers to add.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("plusAssignAllModifiers")
+@kotlin.jvm.JvmName("plusAssignAllModifiers")
       @Suppress("NOTHING_TO_INLINE")
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.GameModifier>) {
         addAll(values)
       }
       /**
-       * `repeated .ei.GameModifier modifiers = 3;`
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
        * @param index The index to set the value at.
        * @param value The modifiers to set.
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("setModifiers")
+@kotlin.jvm.JvmName("setModifiers")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.set(index: kotlin.Int, value: ei.Ei.GameModifier) {
         _builder.setModifiers(index, value)
       }
       /**
-       * `repeated .ei.GameModifier modifiers = 3;`
+       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
-      @kotlin.jvm.JvmName("clearModifiers")
+@kotlin.jvm.JvmName("clearModifiers")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.GameModifier, ModifiersProxy>.clear() {
         _builder.clearModifiers()
       }
-
 
       /**
        * `optional double length_seconds = 4;`
        */
       public var lengthSeconds: kotlin.Double
-        @JvmName("getLengthSeconds")
-        get() = _builder.lengthSeconds
-        @JvmName("setLengthSeconds")
-        set(value) {
+        @kotlin.jvm.JvmName("getLengthSeconds")
+          get() = _builder.lengthSeconds
+        @kotlin.jvm.JvmName("setLengthSeconds")
+          set(value) {
           _builder.lengthSeconds = value
         }
       /**
-       * `optional double length_seconds = 4;`
+       * <code>optional double length_seconds = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearLengthSeconds() {
         _builder.clearLengthSeconds()
       }
       /**
-       * `optional double length_seconds = 4;`
+       * <code>optional double length_seconds = 4;</code>
        * @return Whether the lengthSeconds field is set.
+       * @return This builder for chaining.
        */
       public fun hasLengthSeconds(): kotlin.Boolean {
         return _builder.hasLengthSeconds()

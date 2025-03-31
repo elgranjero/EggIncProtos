@@ -32,21 +32,23 @@ public object ClearAllUserDataRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 4;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 4;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ClearAllUserDataRequestKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -83,21 +87,23 @@ public object ClearAllUserDataRequestKt {
      * `optional string device_id = 2;`
      */
     public var deviceId: kotlin.String
-      @JvmName("getDeviceId")
-      get() = _builder.deviceId
-      @JvmName("setDeviceId")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceId")
+        get() = _builder.deviceId
+      @kotlin.jvm.JvmName("setDeviceId")
+        set(value) {
         _builder.deviceId = value
       }
     /**
-     * `optional string device_id = 2;`
+     * <code>optional string device_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * `optional string device_id = 2;`
+     * <code>optional string device_id = 2;</code>
      * @return Whether the deviceId field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -107,21 +113,23 @@ public object ClearAllUserDataRequestKt {
      * `optional uint64 backup_checksum = 3;`
      */
     public var backupChecksum: kotlin.Long
-      @JvmName("getBackupChecksum")
-      get() = _builder.backupChecksum
-      @JvmName("setBackupChecksum")
-      set(value) {
+      @kotlin.jvm.JvmName("getBackupChecksum")
+        get() = _builder.backupChecksum
+      @kotlin.jvm.JvmName("setBackupChecksum")
+        set(value) {
         _builder.backupChecksum = value
       }
     /**
-     * `optional uint64 backup_checksum = 3;`
+     * <code>optional uint64 backup_checksum = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearBackupChecksum() {
       _builder.clearBackupChecksum()
     }
     /**
-     * `optional uint64 backup_checksum = 3;`
+     * <code>optional uint64 backup_checksum = 3;</code>
      * @return Whether the backupChecksum field is set.
+     * @return This builder for chaining.
      */
     public fun hasBackupChecksum(): kotlin.Boolean {
       return _builder.hasBackupChecksum()

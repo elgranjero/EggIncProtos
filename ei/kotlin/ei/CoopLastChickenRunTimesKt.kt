@@ -39,66 +39,71 @@ public object CoopLastChickenRunTimesKt {
      */
      public val entries: com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.entriesList
       )
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param value The entries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addEntries")
+@kotlin.jvm.JvmName("addEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.add(value: ei.Ei.CoopChickenRunEntry) {
       _builder.addEntries(value)
     }
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param value The entries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignEntries")
+@kotlin.jvm.JvmName("plusAssignEntries")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.plusAssign(value: ei.Ei.CoopChickenRunEntry) {
       add(value)
     }
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param values The entries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllEntries")
+@kotlin.jvm.JvmName("addAllEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopChickenRunEntry>) {
       _builder.addAllEntries(values)
     }
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param values The entries to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllEntries")
+@kotlin.jvm.JvmName("plusAssignAllEntries")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopChickenRunEntry>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
      * @param index The index to set the value at.
      * @param value The entries to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setEntries")
+@kotlin.jvm.JvmName("setEntries")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.set(index: kotlin.Int, value: ei.Ei.CoopChickenRunEntry) {
       _builder.setEntries(index, value)
     }
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearEntries")
+@kotlin.jvm.JvmName("clearEntries")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.clear() {
       _builder.clearEntries()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

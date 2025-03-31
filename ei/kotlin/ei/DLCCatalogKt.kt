@@ -39,66 +39,71 @@ public object DLCCatalogKt {
      */
      public val items: com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.itemsList
       )
     /**
-     * `repeated .ei.DLCItem items = 1;`
+     * <code>repeated .ei.DLCItem items = 1;</code>
      * @param value The items to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addItems")
+@kotlin.jvm.JvmName("addItems")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>.add(value: ei.Ei.DLCItem) {
       _builder.addItems(value)
     }
     /**
-     * `repeated .ei.DLCItem items = 1;`
+     * <code>repeated .ei.DLCItem items = 1;</code>
      * @param value The items to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignItems")
+@kotlin.jvm.JvmName("plusAssignItems")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>.plusAssign(value: ei.Ei.DLCItem) {
       add(value)
     }
     /**
-     * `repeated .ei.DLCItem items = 1;`
+     * <code>repeated .ei.DLCItem items = 1;</code>
      * @param values The items to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllItems")
+@kotlin.jvm.JvmName("addAllItems")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.DLCItem>) {
       _builder.addAllItems(values)
     }
     /**
-     * `repeated .ei.DLCItem items = 1;`
+     * <code>repeated .ei.DLCItem items = 1;</code>
      * @param values The items to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllItems")
+@kotlin.jvm.JvmName("plusAssignAllItems")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.DLCItem>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.DLCItem items = 1;`
+     * <code>repeated .ei.DLCItem items = 1;</code>
      * @param index The index to set the value at.
      * @param value The items to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setItems")
+@kotlin.jvm.JvmName("setItems")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>.set(index: kotlin.Int, value: ei.Ei.DLCItem) {
       _builder.setItems(index, value)
     }
     /**
-     * `repeated .ei.DLCItem items = 1;`
+     * <code>repeated .ei.DLCItem items = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearItems")
+@kotlin.jvm.JvmName("clearItems")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.DLCItem, ItemsProxy>.clear() {
       _builder.clearItems()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -111,66 +116,71 @@ public object DLCCatalogKt {
      */
      public val shells: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.shellsList
       )
     /**
-     * `repeated .ei.ShellSpec shells = 2;`
+     * <code>repeated .ei.ShellSpec shells = 2;</code>
      * @param value The shells to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addShells")
+@kotlin.jvm.JvmName("addShells")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>.add(value: ei.Ei.ShellSpec) {
       _builder.addShells(value)
     }
     /**
-     * `repeated .ei.ShellSpec shells = 2;`
+     * <code>repeated .ei.ShellSpec shells = 2;</code>
      * @param value The shells to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignShells")
+@kotlin.jvm.JvmName("plusAssignShells")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>.plusAssign(value: ei.Ei.ShellSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellSpec shells = 2;`
+     * <code>repeated .ei.ShellSpec shells = 2;</code>
      * @param values The shells to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllShells")
+@kotlin.jvm.JvmName("addAllShells")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSpec>) {
       _builder.addAllShells(values)
     }
     /**
-     * `repeated .ei.ShellSpec shells = 2;`
+     * <code>repeated .ei.ShellSpec shells = 2;</code>
      * @param values The shells to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllShells")
+@kotlin.jvm.JvmName("plusAssignAllShells")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellSpec shells = 2;`
+     * <code>repeated .ei.ShellSpec shells = 2;</code>
      * @param index The index to set the value at.
      * @param value The shells to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setShells")
+@kotlin.jvm.JvmName("setShells")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSpec) {
       _builder.setShells(index, value)
     }
     /**
-     * `repeated .ei.ShellSpec shells = 2;`
+     * <code>repeated .ei.ShellSpec shells = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearShells")
+@kotlin.jvm.JvmName("clearShells")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSpec, ShellsProxy>.clear() {
       _builder.clearShells()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -183,66 +193,71 @@ public object DLCCatalogKt {
      */
      public val shellSets: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.shellSetsList
       )
     /**
-     * `repeated .ei.ShellSetSpec shell_sets = 3;`
+     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
      * @param value The shellSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addShellSets")
+@kotlin.jvm.JvmName("addShellSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.add(value: ei.Ei.ShellSetSpec) {
       _builder.addShellSets(value)
     }
     /**
-     * `repeated .ei.ShellSetSpec shell_sets = 3;`
+     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
      * @param value The shellSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignShellSets")
+@kotlin.jvm.JvmName("plusAssignShellSets")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.plusAssign(value: ei.Ei.ShellSetSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellSetSpec shell_sets = 3;`
+     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
      * @param values The shellSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllShellSets")
+@kotlin.jvm.JvmName("addAllShellSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec>) {
       _builder.addAllShellSets(values)
     }
     /**
-     * `repeated .ei.ShellSetSpec shell_sets = 3;`
+     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
      * @param values The shellSets to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllShellSets")
+@kotlin.jvm.JvmName("plusAssignAllShellSets")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellSetSpec shell_sets = 3;`
+     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
      * @param index The index to set the value at.
      * @param value The shellSets to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setShellSets")
+@kotlin.jvm.JvmName("setShellSets")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec) {
       _builder.setShellSets(index, value)
     }
     /**
-     * `repeated .ei.ShellSetSpec shell_sets = 3;`
+     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearShellSets")
+@kotlin.jvm.JvmName("clearShellSets")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, ShellSetsProxy>.clear() {
       _builder.clearShellSets()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -255,66 +270,71 @@ public object DLCCatalogKt {
      */
      public val decorators: com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.decoratorsList
       )
     /**
-     * `repeated .ei.ShellSetSpec decorators = 6;`
+     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
      * @param value The decorators to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addDecorators")
+@kotlin.jvm.JvmName("addDecorators")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>.add(value: ei.Ei.ShellSetSpec) {
       _builder.addDecorators(value)
     }
     /**
-     * `repeated .ei.ShellSetSpec decorators = 6;`
+     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
      * @param value The decorators to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignDecorators")
+@kotlin.jvm.JvmName("plusAssignDecorators")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>.plusAssign(value: ei.Ei.ShellSetSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellSetSpec decorators = 6;`
+     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
      * @param values The decorators to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllDecorators")
+@kotlin.jvm.JvmName("addAllDecorators")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec>) {
       _builder.addAllDecorators(values)
     }
     /**
-     * `repeated .ei.ShellSetSpec decorators = 6;`
+     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
      * @param values The decorators to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllDecorators")
+@kotlin.jvm.JvmName("plusAssignAllDecorators")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellSetSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellSetSpec decorators = 6;`
+     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
      * @param index The index to set the value at.
      * @param value The decorators to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setDecorators")
+@kotlin.jvm.JvmName("setDecorators")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellSetSpec) {
       _builder.setDecorators(index, value)
     }
     /**
-     * `repeated .ei.ShellSetSpec decorators = 6;`
+     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearDecorators")
+@kotlin.jvm.JvmName("clearDecorators")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellSetSpec, DecoratorsProxy>.clear() {
       _builder.clearDecorators()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -327,66 +347,71 @@ public object DLCCatalogKt {
      */
      public val shellObjects: com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.shellObjectsList
       )
     /**
-     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
      * @param value The shellObjects to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addShellObjects")
+@kotlin.jvm.JvmName("addShellObjects")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.add(value: ei.Ei.ShellObjectSpec) {
       _builder.addShellObjects(value)
     }
     /**
-     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
      * @param value The shellObjects to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignShellObjects")
+@kotlin.jvm.JvmName("plusAssignShellObjects")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.plusAssign(value: ei.Ei.ShellObjectSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
      * @param values The shellObjects to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllShellObjects")
+@kotlin.jvm.JvmName("addAllShellObjects")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec>) {
       _builder.addAllShellObjects(values)
     }
     /**
-     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
      * @param values The shellObjects to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllShellObjects")
+@kotlin.jvm.JvmName("plusAssignAllShellObjects")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellObjectSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
      * @param index The index to set the value at.
      * @param value The shellObjects to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setShellObjects")
+@kotlin.jvm.JvmName("setShellObjects")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellObjectSpec) {
       _builder.setShellObjects(index, value)
     }
     /**
-     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
+     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearShellObjects")
+@kotlin.jvm.JvmName("clearShellObjects")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellObjectSpec, ShellObjectsProxy>.clear() {
       _builder.clearShellObjects()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -399,86 +424,93 @@ public object DLCCatalogKt {
      */
      public val shellGroups: com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.shellGroupsList
       )
     /**
-     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
      * @param value The shellGroups to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addShellGroups")
+@kotlin.jvm.JvmName("addShellGroups")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.add(value: ei.Ei.ShellGroupSpec) {
       _builder.addShellGroups(value)
     }
     /**
-     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
      * @param value The shellGroups to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignShellGroups")
+@kotlin.jvm.JvmName("plusAssignShellGroups")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.plusAssign(value: ei.Ei.ShellGroupSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
      * @param values The shellGroups to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllShellGroups")
+@kotlin.jvm.JvmName("addAllShellGroups")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellGroupSpec>) {
       _builder.addAllShellGroups(values)
     }
     /**
-     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
      * @param values The shellGroups to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllShellGroups")
+@kotlin.jvm.JvmName("plusAssignAllShellGroups")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellGroupSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
      * @param index The index to set the value at.
      * @param value The shellGroups to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setShellGroups")
+@kotlin.jvm.JvmName("setShellGroups")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellGroupSpec) {
       _builder.setShellGroups(index, value)
     }
     /**
-     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
+     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearShellGroups")
+@kotlin.jvm.JvmName("clearShellGroups")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellGroupSpec, ShellGroupsProxy>.clear() {
       _builder.clearShellGroups()
     }
-
 
     /**
      * `optional double shells_showcase_last_featured_time = 7;`
      */
     public var shellsShowcaseLastFeaturedTime: kotlin.Double
-      @JvmName("getShellsShowcaseLastFeaturedTime")
-      get() = _builder.shellsShowcaseLastFeaturedTime
-      @JvmName("setShellsShowcaseLastFeaturedTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getShellsShowcaseLastFeaturedTime")
+        get() = _builder.shellsShowcaseLastFeaturedTime
+      @kotlin.jvm.JvmName("setShellsShowcaseLastFeaturedTime")
+        set(value) {
         _builder.shellsShowcaseLastFeaturedTime = value
       }
     /**
-     * `optional double shells_showcase_last_featured_time = 7;`
+     * <code>optional double shells_showcase_last_featured_time = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearShellsShowcaseLastFeaturedTime() {
       _builder.clearShellsShowcaseLastFeaturedTime()
     }
     /**
-     * `optional double shells_showcase_last_featured_time = 7;`
+     * <code>optional double shells_showcase_last_featured_time = 7;</code>
      * @return Whether the shellsShowcaseLastFeaturedTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasShellsShowcaseLastFeaturedTime(): kotlin.Boolean {
       return _builder.hasShellsShowcaseLastFeaturedTime()

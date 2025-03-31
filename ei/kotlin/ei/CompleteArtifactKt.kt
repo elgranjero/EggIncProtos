@@ -32,21 +32,23 @@ public object CompleteArtifactKt {
      * `optional .ei.ArtifactSpec spec = 1;`
      */
     public var spec: ei.Ei.ArtifactSpec
-      @JvmName("getSpec")
-      get() = _builder.spec
-      @JvmName("setSpec")
-      set(value) {
+      @kotlin.jvm.JvmName("getSpec")
+        get() = _builder.spec
+      @kotlin.jvm.JvmName("setSpec")
+        set(value) {
         _builder.spec = value
       }
     /**
-     * `optional .ei.ArtifactSpec spec = 1;`
+     * <code>optional .ei.ArtifactSpec spec = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSpec() {
       _builder.clearSpec()
     }
     /**
-     * `optional .ei.ArtifactSpec spec = 1;`
+     * <code>optional .ei.ArtifactSpec spec = 1;</code>
      * @return Whether the spec field is set.
+     * @return This builder for chaining.
      */
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
@@ -66,66 +68,71 @@ public object CompleteArtifactKt {
      */
      public val stones: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.stonesList
       )
     /**
-     * `repeated .ei.ArtifactSpec stones = 2;`
+     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param value The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addStones")
+@kotlin.jvm.JvmName("addStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addStones(value)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 2;`
+     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param value The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignStones")
+@kotlin.jvm.JvmName("plusAssignStones")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 2;`
+     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param values The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllStones")
+@kotlin.jvm.JvmName("addAllStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllStones(values)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 2;`
+     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param values The stones to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllStones")
+@kotlin.jvm.JvmName("plusAssignAllStones")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 2;`
+     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
      * @param index The index to set the value at.
      * @param value The stones to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setStones")
+@kotlin.jvm.JvmName("setStones")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setStones(index, value)
     }
     /**
-     * `repeated .ei.ArtifactSpec stones = 2;`
+     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearStones")
+@kotlin.jvm.JvmName("clearStones")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, StonesProxy>.clear() {
       _builder.clearStones()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

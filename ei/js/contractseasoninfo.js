@@ -101,10 +101,10 @@ proto.ei.ContractSeasonInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractSeasonInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-gradeGoalsList: jspb.Message.toObjectList(msg.getGradeGoalsList(),
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    startTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    gradeGoalsList: jspb.Message.toObjectList(msg.getGradeGoalsList(),
     proto.ei.ContractSeasonInfo.GoalSet.toObject, includeInstance)
   };
 
@@ -259,8 +259,8 @@ proto.ei.ContractSeasonInfo.GoalSet.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ContractSeasonInfo.GoalSet.toObject = function(includeInstance, msg) {
   var f, obj = {
-grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
+    grade: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    goalsList: jspb.Message.toObjectList(msg.getGoalsList(),
     proto.ei.ContractSeasonGoal.toObject, includeInstance)
   };
 

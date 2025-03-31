@@ -32,21 +32,23 @@ public object CollectSeasonArtifactRewardsRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object CollectSeasonArtifactRewardsRequestKt {
      * `optional string season_identifier = 2;`
      */
     public var seasonIdentifier: kotlin.String
-      @JvmName("getSeasonIdentifier")
-      get() = _builder.seasonIdentifier
-      @JvmName("setSeasonIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getSeasonIdentifier")
+        get() = _builder.seasonIdentifier
+      @kotlin.jvm.JvmName("setSeasonIdentifier")
+        set(value) {
         _builder.seasonIdentifier = value
       }
     /**
-     * `optional string season_identifier = 2;`
+     * <code>optional string season_identifier = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSeasonIdentifier() {
       _builder.clearSeasonIdentifier()
     }
     /**
-     * `optional string season_identifier = 2;`
+     * <code>optional string season_identifier = 2;</code>
      * @return Whether the seasonIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasSeasonIdentifier(): kotlin.Boolean {
       return _builder.hasSeasonIdentifier()
@@ -83,21 +87,23 @@ public object CollectSeasonArtifactRewardsRequestKt {
      * `optional double cxp = 3;`
      */
     public var cxp: kotlin.Double
-      @JvmName("getCxp")
-      get() = _builder.cxp
-      @JvmName("setCxp")
-      set(value) {
+      @kotlin.jvm.JvmName("getCxp")
+        get() = _builder.cxp
+      @kotlin.jvm.JvmName("setCxp")
+        set(value) {
         _builder.cxp = value
       }
     /**
-     * `optional double cxp = 3;`
+     * <code>optional double cxp = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearCxp() {
       _builder.clearCxp()
     }
     /**
-     * `optional double cxp = 3;`
+     * <code>optional double cxp = 3;</code>
      * @return Whether the cxp field is set.
+     * @return This builder for chaining.
      */
     public fun hasCxp(): kotlin.Boolean {
       return _builder.hasCxp()
@@ -107,21 +113,23 @@ public object CollectSeasonArtifactRewardsRequestKt {
      * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
      */
     public var bestShip: ei.Ei.MissionInfo.Spaceship
-      @JvmName("getBestShip")
-      get() = _builder.bestShip
-      @JvmName("setBestShip")
-      set(value) {
+      @kotlin.jvm.JvmName("getBestShip")
+        get() = _builder.bestShip
+      @kotlin.jvm.JvmName("setBestShip")
+        set(value) {
         _builder.bestShip = value
       }
     /**
-     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
+     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearBestShip() {
       _builder.clearBestShip()
     }
     /**
-     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
+     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
      * @return Whether the bestShip field is set.
+     * @return This builder for chaining.
      */
     public fun hasBestShip(): kotlin.Boolean {
       return _builder.hasBestShip()

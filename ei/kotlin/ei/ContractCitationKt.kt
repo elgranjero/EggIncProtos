@@ -32,21 +32,23 @@ public object ContractCitationKt {
      * `optional .ei.ContractEvaluation.PoorBehavior issue = 1;`
      */
     public var issue: ei.Ei.ContractEvaluation.PoorBehavior
-      @JvmName("getIssue")
-      get() = _builder.issue
-      @JvmName("setIssue")
-      set(value) {
+      @kotlin.jvm.JvmName("getIssue")
+        get() = _builder.issue
+      @kotlin.jvm.JvmName("setIssue")
+        set(value) {
         _builder.issue = value
       }
     /**
-     * `optional .ei.ContractEvaluation.PoorBehavior issue = 1;`
+     * <code>optional .ei.ContractEvaluation.PoorBehavior issue = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearIssue() {
       _builder.clearIssue()
     }
     /**
-     * `optional .ei.ContractEvaluation.PoorBehavior issue = 1;`
+     * <code>optional .ei.ContractEvaluation.PoorBehavior issue = 1;</code>
      * @return Whether the issue field is set.
+     * @return This builder for chaining.
      */
     public fun hasIssue(): kotlin.Boolean {
       return _builder.hasIssue()
@@ -56,21 +58,23 @@ public object ContractCitationKt {
      * `optional double timestamp = 2;`
      */
     public var timestamp: kotlin.Double
-      @JvmName("getTimestamp")
-      get() = _builder.timestamp
-      @JvmName("setTimestamp")
-      set(value) {
+      @kotlin.jvm.JvmName("getTimestamp")
+        get() = _builder.timestamp
+      @kotlin.jvm.JvmName("setTimestamp")
+        set(value) {
         _builder.timestamp = value
       }
     /**
-     * `optional double timestamp = 2;`
+     * <code>optional double timestamp = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearTimestamp() {
       _builder.clearTimestamp()
     }
     /**
-     * `optional double timestamp = 2;`
+     * <code>optional double timestamp = 2;</code>
      * @return Whether the timestamp field is set.
+     * @return This builder for chaining.
      */
     public fun hasTimestamp(): kotlin.Boolean {
       return _builder.hasTimestamp()
@@ -80,21 +84,23 @@ public object ContractCitationKt {
      * `optional .ei.Contract.PlayerGrade grade = 3;`
      */
     public var grade: ei.Ei.Contract.PlayerGrade
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 3;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 3;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()

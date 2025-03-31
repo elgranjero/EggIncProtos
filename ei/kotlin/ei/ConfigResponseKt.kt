@@ -32,21 +32,23 @@ public object ConfigResponseKt {
      * `optional .ei.LiveConfig live_config = 1;`
      */
     public var liveConfig: ei.Ei.LiveConfig
-      @JvmName("getLiveConfig")
-      get() = _builder.liveConfig
-      @JvmName("setLiveConfig")
-      set(value) {
+      @kotlin.jvm.JvmName("getLiveConfig")
+        get() = _builder.liveConfig
+      @kotlin.jvm.JvmName("setLiveConfig")
+        set(value) {
         _builder.liveConfig = value
       }
     /**
-     * `optional .ei.LiveConfig live_config = 1;`
+     * <code>optional .ei.LiveConfig live_config = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearLiveConfig() {
       _builder.clearLiveConfig()
     }
     /**
-     * `optional .ei.LiveConfig live_config = 1;`
+     * <code>optional .ei.LiveConfig live_config = 1;</code>
      * @return Whether the liveConfig field is set.
+     * @return This builder for chaining.
      */
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
@@ -59,21 +61,23 @@ public object ConfigResponseKt {
      * `optional .ei.MailDB mail_bag = 2;`
      */
     public var mailBag: ei.Ei.MailDB
-      @JvmName("getMailBag")
-      get() = _builder.mailBag
-      @JvmName("setMailBag")
-      set(value) {
+      @kotlin.jvm.JvmName("getMailBag")
+        get() = _builder.mailBag
+      @kotlin.jvm.JvmName("setMailBag")
+        set(value) {
         _builder.mailBag = value
       }
     /**
-     * `optional .ei.MailDB mail_bag = 2;`
+     * <code>optional .ei.MailDB mail_bag = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearMailBag() {
       _builder.clearMailBag()
     }
     /**
-     * `optional .ei.MailDB mail_bag = 2;`
+     * <code>optional .ei.MailDB mail_bag = 2;</code>
      * @return Whether the mailBag field is set.
+     * @return This builder for chaining.
      */
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
@@ -86,21 +90,23 @@ public object ConfigResponseKt {
      * `optional .ei.DLCCatalog dlc_catalog = 3;`
      */
     public var dlcCatalog: ei.Ei.DLCCatalog
-      @JvmName("getDlcCatalog")
-      get() = _builder.dlcCatalog
-      @JvmName("setDlcCatalog")
-      set(value) {
+      @kotlin.jvm.JvmName("getDlcCatalog")
+        get() = _builder.dlcCatalog
+      @kotlin.jvm.JvmName("setDlcCatalog")
+        set(value) {
         _builder.dlcCatalog = value
       }
     /**
-     * `optional .ei.DLCCatalog dlc_catalog = 3;`
+     * <code>optional .ei.DLCCatalog dlc_catalog = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearDlcCatalog() {
       _builder.clearDlcCatalog()
     }
     /**
-     * `optional .ei.DLCCatalog dlc_catalog = 3;`
+     * <code>optional .ei.DLCCatalog dlc_catalog = 3;</code>
      * @return Whether the dlcCatalog field is set.
+     * @return This builder for chaining.
      */
     public fun hasDlcCatalog(): kotlin.Boolean {
       return _builder.hasDlcCatalog()

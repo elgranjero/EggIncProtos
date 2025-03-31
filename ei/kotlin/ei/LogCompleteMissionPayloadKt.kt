@@ -32,21 +32,23 @@ public object LogCompleteMissionPayloadKt {
      * `optional .ei.MissionRequest req = 1;`
      */
     public var req: ei.Ei.MissionRequest
-      @JvmName("getReq")
-      get() = _builder.req
-      @JvmName("setReq")
-      set(value) {
+      @kotlin.jvm.JvmName("getReq")
+        get() = _builder.req
+      @kotlin.jvm.JvmName("setReq")
+        set(value) {
         _builder.req = value
       }
     /**
-     * `optional .ei.MissionRequest req = 1;`
+     * <code>optional .ei.MissionRequest req = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearReq() {
       _builder.clearReq()
     }
     /**
-     * `optional .ei.MissionRequest req = 1;`
+     * <code>optional .ei.MissionRequest req = 1;</code>
      * @return Whether the req field is set.
+     * @return This builder for chaining.
      */
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
@@ -59,21 +61,23 @@ public object LogCompleteMissionPayloadKt {
      * `optional .ei.CompleteMissionResponse res = 2;`
      */
     public var res: ei.Ei.CompleteMissionResponse
-      @JvmName("getRes")
-      get() = _builder.res
-      @JvmName("setRes")
-      set(value) {
+      @kotlin.jvm.JvmName("getRes")
+        get() = _builder.res
+      @kotlin.jvm.JvmName("setRes")
+        set(value) {
         _builder.res = value
       }
     /**
-     * `optional .ei.CompleteMissionResponse res = 2;`
+     * <code>optional .ei.CompleteMissionResponse res = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearRes() {
       _builder.clearRes()
     }
     /**
-     * `optional .ei.CompleteMissionResponse res = 2;`
+     * <code>optional .ei.CompleteMissionResponse res = 2;</code>
      * @return Whether the res field is set.
+     * @return This builder for chaining.
      */
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()

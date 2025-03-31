@@ -32,21 +32,23 @@ public object Vector4Kt {
      * `optional float x = 1;`
      */
     public var x: kotlin.Float
-      @JvmName("getX")
-      get() = _builder.x
-      @JvmName("setX")
-      set(value) {
+      @kotlin.jvm.JvmName("getX")
+        get() = _builder.x
+      @kotlin.jvm.JvmName("setX")
+        set(value) {
         _builder.x = value
       }
     /**
-     * `optional float x = 1;`
+     * <code>optional float x = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearX() {
       _builder.clearX()
     }
     /**
-     * `optional float x = 1;`
+     * <code>optional float x = 1;</code>
      * @return Whether the x field is set.
+     * @return This builder for chaining.
      */
     public fun hasX(): kotlin.Boolean {
       return _builder.hasX()
@@ -56,21 +58,23 @@ public object Vector4Kt {
      * `optional float y = 2;`
      */
     public var y: kotlin.Float
-      @JvmName("getY")
-      get() = _builder.y
-      @JvmName("setY")
-      set(value) {
+      @kotlin.jvm.JvmName("getY")
+        get() = _builder.y
+      @kotlin.jvm.JvmName("setY")
+        set(value) {
         _builder.y = value
       }
     /**
-     * `optional float y = 2;`
+     * <code>optional float y = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearY() {
       _builder.clearY()
     }
     /**
-     * `optional float y = 2;`
+     * <code>optional float y = 2;</code>
      * @return Whether the y field is set.
+     * @return This builder for chaining.
      */
     public fun hasY(): kotlin.Boolean {
       return _builder.hasY()
@@ -80,21 +84,23 @@ public object Vector4Kt {
      * `optional float z = 3;`
      */
     public var z: kotlin.Float
-      @JvmName("getZ")
-      get() = _builder.z
-      @JvmName("setZ")
-      set(value) {
+      @kotlin.jvm.JvmName("getZ")
+        get() = _builder.z
+      @kotlin.jvm.JvmName("setZ")
+        set(value) {
         _builder.z = value
       }
     /**
-     * `optional float z = 3;`
+     * <code>optional float z = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearZ() {
       _builder.clearZ()
     }
     /**
-     * `optional float z = 3;`
+     * <code>optional float z = 3;</code>
      * @return Whether the z field is set.
+     * @return This builder for chaining.
      */
     public fun hasZ(): kotlin.Boolean {
       return _builder.hasZ()
@@ -104,21 +110,23 @@ public object Vector4Kt {
      * `optional float w = 4;`
      */
     public var w: kotlin.Float
-      @JvmName("getW")
-      get() = _builder.w
-      @JvmName("setW")
-      set(value) {
+      @kotlin.jvm.JvmName("getW")
+        get() = _builder.w
+      @kotlin.jvm.JvmName("setW")
+        set(value) {
         _builder.w = value
       }
     /**
-     * `optional float w = 4;`
+     * <code>optional float w = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearW() {
       _builder.clearW()
     }
     /**
-     * `optional float w = 4;`
+     * <code>optional float w = 4;</code>
      * @return Whether the w field is set.
+     * @return This builder for chaining.
      */
     public fun hasW(): kotlin.Boolean {
       return _builder.hasW()

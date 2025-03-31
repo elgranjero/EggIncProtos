@@ -32,21 +32,23 @@ public object LeaderboardRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object LeaderboardRequestKt {
      * `optional string scope = 2;`
      */
     public var scope: kotlin.String
-      @JvmName("getScope")
-      get() = _builder.scope
-      @JvmName("setScope")
-      set(value) {
+      @kotlin.jvm.JvmName("getScope")
+        get() = _builder.scope
+      @kotlin.jvm.JvmName("setScope")
+        set(value) {
         _builder.scope = value
       }
     /**
-     * `optional string scope = 2;`
+     * <code>optional string scope = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearScope() {
       _builder.clearScope()
     }
     /**
-     * `optional string scope = 2;`
+     * <code>optional string scope = 2;</code>
      * @return Whether the scope field is set.
+     * @return This builder for chaining.
      */
     public fun hasScope(): kotlin.Boolean {
       return _builder.hasScope()
@@ -83,21 +87,23 @@ public object LeaderboardRequestKt {
      * `optional .ei.Contract.PlayerGrade grade = 3;`
      */
     public var grade: ei.Ei.Contract.PlayerGrade
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 3;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 3;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()

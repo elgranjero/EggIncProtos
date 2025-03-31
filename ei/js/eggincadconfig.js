@@ -78,7 +78,7 @@ proto.ei.EggIncAdConfig.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.EggIncAdConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-networkPriorityList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+    networkPriorityList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {

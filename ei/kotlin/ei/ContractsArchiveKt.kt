@@ -39,66 +39,71 @@ public object ContractsArchiveKt {
      */
      public val archive: com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.archiveList
       )
     /**
-     * `repeated .ei.LocalContract archive = 1;`
+     * <code>repeated .ei.LocalContract archive = 1;</code>
      * @param value The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addArchive")
+@kotlin.jvm.JvmName("addArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.add(value: ei.Ei.LocalContract) {
       _builder.addArchive(value)
     }
     /**
-     * `repeated .ei.LocalContract archive = 1;`
+     * <code>repeated .ei.LocalContract archive = 1;</code>
      * @param value The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignArchive")
+@kotlin.jvm.JvmName("plusAssignArchive")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.plusAssign(value: ei.Ei.LocalContract) {
       add(value)
     }
     /**
-     * `repeated .ei.LocalContract archive = 1;`
+     * <code>repeated .ei.LocalContract archive = 1;</code>
      * @param values The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllArchive")
+@kotlin.jvm.JvmName("addAllArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       _builder.addAllArchive(values)
     }
     /**
-     * `repeated .ei.LocalContract archive = 1;`
+     * <code>repeated .ei.LocalContract archive = 1;</code>
      * @param values The archive to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllArchive")
+@kotlin.jvm.JvmName("plusAssignAllArchive")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.LocalContract>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.LocalContract archive = 1;`
+     * <code>repeated .ei.LocalContract archive = 1;</code>
      * @param index The index to set the value at.
      * @param value The archive to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setArchive")
+@kotlin.jvm.JvmName("setArchive")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.set(index: kotlin.Int, value: ei.Ei.LocalContract) {
       _builder.setArchive(index, value)
     }
     /**
-     * `repeated .ei.LocalContract archive = 1;`
+     * <code>repeated .ei.LocalContract archive = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearArchive")
+@kotlin.jvm.JvmName("clearArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.LocalContract, ArchiveProxy>.clear() {
       _builder.clearArchive()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

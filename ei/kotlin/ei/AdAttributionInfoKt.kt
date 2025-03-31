@@ -32,21 +32,23 @@ public object AdAttributionInfoKt {
      * `optional string device_ad_id = 1;`
      */
     public var deviceAdId: kotlin.String
-      @JvmName("getDeviceAdId")
-      get() = _builder.deviceAdId
-      @JvmName("setDeviceAdId")
-      set(value) {
+      @kotlin.jvm.JvmName("getDeviceAdId")
+        get() = _builder.deviceAdId
+      @kotlin.jvm.JvmName("setDeviceAdId")
+        set(value) {
         _builder.deviceAdId = value
       }
     /**
-     * `optional string device_ad_id = 1;`
+     * <code>optional string device_ad_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearDeviceAdId() {
       _builder.clearDeviceAdId()
     }
     /**
-     * `optional string device_ad_id = 1;`
+     * <code>optional string device_ad_id = 1;</code>
      * @return Whether the deviceAdId field is set.
+     * @return This builder for chaining.
      */
     public fun hasDeviceAdId(): kotlin.Boolean {
       return _builder.hasDeviceAdId()
@@ -56,21 +58,23 @@ public object AdAttributionInfoKt {
      * `optional string network_name = 2;`
      */
     public var networkName: kotlin.String
-      @JvmName("getNetworkName")
-      get() = _builder.networkName
-      @JvmName("setNetworkName")
-      set(value) {
+      @kotlin.jvm.JvmName("getNetworkName")
+        get() = _builder.networkName
+      @kotlin.jvm.JvmName("setNetworkName")
+        set(value) {
         _builder.networkName = value
       }
     /**
-     * `optional string network_name = 2;`
+     * <code>optional string network_name = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearNetworkName() {
       _builder.clearNetworkName()
     }
     /**
-     * `optional string network_name = 2;`
+     * <code>optional string network_name = 2;</code>
      * @return Whether the networkName field is set.
+     * @return This builder for chaining.
      */
     public fun hasNetworkName(): kotlin.Boolean {
       return _builder.hasNetworkName()
@@ -80,21 +84,23 @@ public object AdAttributionInfoKt {
      * `optional bool attribution = 3;`
      */
     public var attribution: kotlin.Boolean
-      @JvmName("getAttribution")
-      get() = _builder.attribution
-      @JvmName("setAttribution")
-      set(value) {
+      @kotlin.jvm.JvmName("getAttribution")
+        get() = _builder.attribution
+      @kotlin.jvm.JvmName("setAttribution")
+        set(value) {
         _builder.attribution = value
       }
     /**
-     * `optional bool attribution = 3;`
+     * <code>optional bool attribution = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearAttribution() {
       _builder.clearAttribution()
     }
     /**
-     * `optional bool attribution = 3;`
+     * <code>optional bool attribution = 3;</code>
      * @return Whether the attribution field is set.
+     * @return This builder for chaining.
      */
     public fun hasAttribution(): kotlin.Boolean {
       return _builder.hasAttribution()
@@ -104,21 +110,23 @@ public object AdAttributionInfoKt {
      * `optional string org_name = 4;`
      */
     public var orgName: kotlin.String
-      @JvmName("getOrgName")
-      get() = _builder.orgName
-      @JvmName("setOrgName")
-      set(value) {
+      @kotlin.jvm.JvmName("getOrgName")
+        get() = _builder.orgName
+      @kotlin.jvm.JvmName("setOrgName")
+        set(value) {
         _builder.orgName = value
       }
     /**
-     * `optional string org_name = 4;`
+     * <code>optional string org_name = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearOrgName() {
       _builder.clearOrgName()
     }
     /**
-     * `optional string org_name = 4;`
+     * <code>optional string org_name = 4;</code>
      * @return Whether the orgName field is set.
+     * @return This builder for chaining.
      */
     public fun hasOrgName(): kotlin.Boolean {
       return _builder.hasOrgName()
@@ -128,21 +136,23 @@ public object AdAttributionInfoKt {
      * `optional string org_id = 5;`
      */
     public var orgId: kotlin.String
-      @JvmName("getOrgId")
-      get() = _builder.orgId
-      @JvmName("setOrgId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOrgId")
+        get() = _builder.orgId
+      @kotlin.jvm.JvmName("setOrgId")
+        set(value) {
         _builder.orgId = value
       }
     /**
-     * `optional string org_id = 5;`
+     * <code>optional string org_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearOrgId() {
       _builder.clearOrgId()
     }
     /**
-     * `optional string org_id = 5;`
+     * <code>optional string org_id = 5;</code>
      * @return Whether the orgId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOrgId(): kotlin.Boolean {
       return _builder.hasOrgId()
@@ -152,21 +162,23 @@ public object AdAttributionInfoKt {
      * `optional string campaign_name = 6;`
      */
     public var campaignName: kotlin.String
-      @JvmName("getCampaignName")
-      get() = _builder.campaignName
-      @JvmName("setCampaignName")
-      set(value) {
+      @kotlin.jvm.JvmName("getCampaignName")
+        get() = _builder.campaignName
+      @kotlin.jvm.JvmName("setCampaignName")
+        set(value) {
         _builder.campaignName = value
       }
     /**
-     * `optional string campaign_name = 6;`
+     * <code>optional string campaign_name = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearCampaignName() {
       _builder.clearCampaignName()
     }
     /**
-     * `optional string campaign_name = 6;`
+     * <code>optional string campaign_name = 6;</code>
      * @return Whether the campaignName field is set.
+     * @return This builder for chaining.
      */
     public fun hasCampaignName(): kotlin.Boolean {
       return _builder.hasCampaignName()
@@ -176,21 +188,23 @@ public object AdAttributionInfoKt {
      * `optional string campaign_id = 7;`
      */
     public var campaignId: kotlin.String
-      @JvmName("getCampaignId")
-      get() = _builder.campaignId
-      @JvmName("setCampaignId")
-      set(value) {
+      @kotlin.jvm.JvmName("getCampaignId")
+        get() = _builder.campaignId
+      @kotlin.jvm.JvmName("setCampaignId")
+        set(value) {
         _builder.campaignId = value
       }
     /**
-     * `optional string campaign_id = 7;`
+     * <code>optional string campaign_id = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearCampaignId() {
       _builder.clearCampaignId()
     }
     /**
-     * `optional string campaign_id = 7;`
+     * <code>optional string campaign_id = 7;</code>
      * @return Whether the campaignId field is set.
+     * @return This builder for chaining.
      */
     public fun hasCampaignId(): kotlin.Boolean {
       return _builder.hasCampaignId()
@@ -200,21 +214,23 @@ public object AdAttributionInfoKt {
      * `optional string click_date = 8;`
      */
     public var clickDate: kotlin.String
-      @JvmName("getClickDate")
-      get() = _builder.clickDate
-      @JvmName("setClickDate")
-      set(value) {
+      @kotlin.jvm.JvmName("getClickDate")
+        get() = _builder.clickDate
+      @kotlin.jvm.JvmName("setClickDate")
+        set(value) {
         _builder.clickDate = value
       }
     /**
-     * `optional string click_date = 8;`
+     * <code>optional string click_date = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearClickDate() {
       _builder.clearClickDate()
     }
     /**
-     * `optional string click_date = 8;`
+     * <code>optional string click_date = 8;</code>
      * @return Whether the clickDate field is set.
+     * @return This builder for chaining.
      */
     public fun hasClickDate(): kotlin.Boolean {
       return _builder.hasClickDate()
@@ -224,21 +240,23 @@ public object AdAttributionInfoKt {
      * `optional string conversion_date = 9;`
      */
     public var conversionDate: kotlin.String
-      @JvmName("getConversionDate")
-      get() = _builder.conversionDate
-      @JvmName("setConversionDate")
-      set(value) {
+      @kotlin.jvm.JvmName("getConversionDate")
+        get() = _builder.conversionDate
+      @kotlin.jvm.JvmName("setConversionDate")
+        set(value) {
         _builder.conversionDate = value
       }
     /**
-     * `optional string conversion_date = 9;`
+     * <code>optional string conversion_date = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearConversionDate() {
       _builder.clearConversionDate()
     }
     /**
-     * `optional string conversion_date = 9;`
+     * <code>optional string conversion_date = 9;</code>
      * @return Whether the conversionDate field is set.
+     * @return This builder for chaining.
      */
     public fun hasConversionDate(): kotlin.Boolean {
       return _builder.hasConversionDate()
@@ -248,21 +266,23 @@ public object AdAttributionInfoKt {
      * `optional string conversion_type = 10;`
      */
     public var conversionType: kotlin.String
-      @JvmName("getConversionType")
-      get() = _builder.conversionType
-      @JvmName("setConversionType")
-      set(value) {
+      @kotlin.jvm.JvmName("getConversionType")
+        get() = _builder.conversionType
+      @kotlin.jvm.JvmName("setConversionType")
+        set(value) {
         _builder.conversionType = value
       }
     /**
-     * `optional string conversion_type = 10;`
+     * <code>optional string conversion_type = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearConversionType() {
       _builder.clearConversionType()
     }
     /**
-     * `optional string conversion_type = 10;`
+     * <code>optional string conversion_type = 10;</code>
      * @return Whether the conversionType field is set.
+     * @return This builder for chaining.
      */
     public fun hasConversionType(): kotlin.Boolean {
       return _builder.hasConversionType()
@@ -272,21 +292,23 @@ public object AdAttributionInfoKt {
      * `optional string geo = 11;`
      */
     public var geo: kotlin.String
-      @JvmName("getGeo")
-      get() = _builder.geo
-      @JvmName("setGeo")
-      set(value) {
+      @kotlin.jvm.JvmName("getGeo")
+        get() = _builder.geo
+      @kotlin.jvm.JvmName("setGeo")
+        set(value) {
         _builder.geo = value
       }
     /**
-     * `optional string geo = 11;`
+     * <code>optional string geo = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearGeo() {
       _builder.clearGeo()
     }
     /**
-     * `optional string geo = 11;`
+     * <code>optional string geo = 11;</code>
      * @return Whether the geo field is set.
+     * @return This builder for chaining.
      */
     public fun hasGeo(): kotlin.Boolean {
       return _builder.hasGeo()
@@ -296,21 +318,23 @@ public object AdAttributionInfoKt {
      * `optional string adgroup_name = 12;`
      */
     public var adgroupName: kotlin.String
-      @JvmName("getAdgroupName")
-      get() = _builder.adgroupName
-      @JvmName("setAdgroupName")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdgroupName")
+        get() = _builder.adgroupName
+      @kotlin.jvm.JvmName("setAdgroupName")
+        set(value) {
         _builder.adgroupName = value
       }
     /**
-     * `optional string adgroup_name = 12;`
+     * <code>optional string adgroup_name = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdgroupName() {
       _builder.clearAdgroupName()
     }
     /**
-     * `optional string adgroup_name = 12;`
+     * <code>optional string adgroup_name = 12;</code>
      * @return Whether the adgroupName field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdgroupName(): kotlin.Boolean {
       return _builder.hasAdgroupName()
@@ -320,21 +344,23 @@ public object AdAttributionInfoKt {
      * `optional string adgroup_id = 13;`
      */
     public var adgroupId: kotlin.String
-      @JvmName("getAdgroupId")
-      get() = _builder.adgroupId
-      @JvmName("setAdgroupId")
-      set(value) {
+      @kotlin.jvm.JvmName("getAdgroupId")
+        get() = _builder.adgroupId
+      @kotlin.jvm.JvmName("setAdgroupId")
+        set(value) {
         _builder.adgroupId = value
       }
     /**
-     * `optional string adgroup_id = 13;`
+     * <code>optional string adgroup_id = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearAdgroupId() {
       _builder.clearAdgroupId()
     }
     /**
-     * `optional string adgroup_id = 13;`
+     * <code>optional string adgroup_id = 13;</code>
      * @return Whether the adgroupId field is set.
+     * @return This builder for chaining.
      */
     public fun hasAdgroupId(): kotlin.Boolean {
       return _builder.hasAdgroupId()
@@ -344,21 +370,23 @@ public object AdAttributionInfoKt {
      * `optional string keyword = 14;`
      */
     public var keyword: kotlin.String
-      @JvmName("getKeyword")
-      get() = _builder.keyword
-      @JvmName("setKeyword")
-      set(value) {
+      @kotlin.jvm.JvmName("getKeyword")
+        get() = _builder.keyword
+      @kotlin.jvm.JvmName("setKeyword")
+        set(value) {
         _builder.keyword = value
       }
     /**
-     * `optional string keyword = 14;`
+     * <code>optional string keyword = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearKeyword() {
       _builder.clearKeyword()
     }
     /**
-     * `optional string keyword = 14;`
+     * <code>optional string keyword = 14;</code>
      * @return Whether the keyword field is set.
+     * @return This builder for chaining.
      */
     public fun hasKeyword(): kotlin.Boolean {
       return _builder.hasKeyword()
@@ -368,21 +396,23 @@ public object AdAttributionInfoKt {
      * `optional string keyword_id = 15;`
      */
     public var keywordId: kotlin.String
-      @JvmName("getKeywordId")
-      get() = _builder.keywordId
-      @JvmName("setKeywordId")
-      set(value) {
+      @kotlin.jvm.JvmName("getKeywordId")
+        get() = _builder.keywordId
+      @kotlin.jvm.JvmName("setKeywordId")
+        set(value) {
         _builder.keywordId = value
       }
     /**
-     * `optional string keyword_id = 15;`
+     * <code>optional string keyword_id = 15;</code>
+     * @return This builder for chaining.
      */
     public fun clearKeywordId() {
       _builder.clearKeywordId()
     }
     /**
-     * `optional string keyword_id = 15;`
+     * <code>optional string keyword_id = 15;</code>
      * @return Whether the keywordId field is set.
+     * @return This builder for chaining.
      */
     public fun hasKeywordId(): kotlin.Boolean {
       return _builder.hasKeywordId()
@@ -392,21 +422,23 @@ public object AdAttributionInfoKt {
      * `optional string keyword_extra = 16;`
      */
     public var keywordExtra: kotlin.String
-      @JvmName("getKeywordExtra")
-      get() = _builder.keywordExtra
-      @JvmName("setKeywordExtra")
-      set(value) {
+      @kotlin.jvm.JvmName("getKeywordExtra")
+        get() = _builder.keywordExtra
+      @kotlin.jvm.JvmName("setKeywordExtra")
+        set(value) {
         _builder.keywordExtra = value
       }
     /**
-     * `optional string keyword_extra = 16;`
+     * <code>optional string keyword_extra = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearKeywordExtra() {
       _builder.clearKeywordExtra()
     }
     /**
-     * `optional string keyword_extra = 16;`
+     * <code>optional string keyword_extra = 16;</code>
      * @return Whether the keywordExtra field is set.
+     * @return This builder for chaining.
      */
     public fun hasKeywordExtra(): kotlin.Boolean {
       return _builder.hasKeywordExtra()
@@ -416,21 +448,23 @@ public object AdAttributionInfoKt {
      * `optional string creativeset_name = 17;`
      */
     public var creativesetName: kotlin.String
-      @JvmName("getCreativesetName")
-      get() = _builder.creativesetName
-      @JvmName("setCreativesetName")
-      set(value) {
+      @kotlin.jvm.JvmName("getCreativesetName")
+        get() = _builder.creativesetName
+      @kotlin.jvm.JvmName("setCreativesetName")
+        set(value) {
         _builder.creativesetName = value
       }
     /**
-     * `optional string creativeset_name = 17;`
+     * <code>optional string creativeset_name = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearCreativesetName() {
       _builder.clearCreativesetName()
     }
     /**
-     * `optional string creativeset_name = 17;`
+     * <code>optional string creativeset_name = 17;</code>
      * @return Whether the creativesetName field is set.
+     * @return This builder for chaining.
      */
     public fun hasCreativesetName(): kotlin.Boolean {
       return _builder.hasCreativesetName()
@@ -440,21 +474,23 @@ public object AdAttributionInfoKt {
      * `optional string creativeset_id = 18;`
      */
     public var creativesetId: kotlin.String
-      @JvmName("getCreativesetId")
-      get() = _builder.creativesetId
-      @JvmName("setCreativesetId")
-      set(value) {
+      @kotlin.jvm.JvmName("getCreativesetId")
+        get() = _builder.creativesetId
+      @kotlin.jvm.JvmName("setCreativesetId")
+        set(value) {
         _builder.creativesetId = value
       }
     /**
-     * `optional string creativeset_id = 18;`
+     * <code>optional string creativeset_id = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearCreativesetId() {
       _builder.clearCreativesetId()
     }
     /**
-     * `optional string creativeset_id = 18;`
+     * <code>optional string creativeset_id = 18;</code>
      * @return Whether the creativesetId field is set.
+     * @return This builder for chaining.
      */
     public fun hasCreativesetId(): kotlin.Boolean {
       return _builder.hasCreativesetId()

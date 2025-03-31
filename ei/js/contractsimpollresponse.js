@@ -72,8 +72,8 @@ proto.ei.ContractSimPollResponse.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.ContractSimPollResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-contractToSimulate: (f = msg.getContractToSimulate()) && proto.ei.Contract.toObject(includeInstance, f),
-simConfig: (f = msg.getSimConfig()) && proto.ei.ContractSimConfig.toObject(includeInstance, f)
+    contractToSimulate: (f = msg.getContractToSimulate()) && proto.ei.Contract.toObject(includeInstance, f),
+    simConfig: (f = msg.getSimConfig()) && proto.ei.ContractSimConfig.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

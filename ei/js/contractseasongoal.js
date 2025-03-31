@@ -71,10 +71,10 @@ proto.ei.ContractSeasonGoal.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ContractSeasonGoal.toObject = function(includeInstance, msg) {
   var f, obj = {
-cxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-rewardType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-rewardSubType: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
+    cxp: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    rewardType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    rewardSubType: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    rewardAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

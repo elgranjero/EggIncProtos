@@ -70,8 +70,8 @@ proto.ei.CXPEvalRolloutInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CXPEvalRolloutInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-currentId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-basisPoints: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    currentId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    basisPoints: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -32,21 +32,23 @@ public object UserSubscriptionInfoKt {
      * `optional .ei.UserSubscriptionInfo.Level subscription_level = 13;`
      */
     public var subscriptionLevel: ei.Ei.UserSubscriptionInfo.Level
-      @JvmName("getSubscriptionLevel")
-      get() = _builder.subscriptionLevel
-      @JvmName("setSubscriptionLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getSubscriptionLevel")
+        get() = _builder.subscriptionLevel
+      @kotlin.jvm.JvmName("setSubscriptionLevel")
+        set(value) {
         _builder.subscriptionLevel = value
       }
     /**
-     * `optional .ei.UserSubscriptionInfo.Level subscription_level = 13;`
+     * <code>optional .ei.UserSubscriptionInfo.Level subscription_level = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearSubscriptionLevel() {
       _builder.clearSubscriptionLevel()
     }
     /**
-     * `optional .ei.UserSubscriptionInfo.Level subscription_level = 13;`
+     * <code>optional .ei.UserSubscriptionInfo.Level subscription_level = 13;</code>
      * @return Whether the subscriptionLevel field is set.
+     * @return This builder for chaining.
      */
     public fun hasSubscriptionLevel(): kotlin.Boolean {
       return _builder.hasSubscriptionLevel()
@@ -56,21 +58,23 @@ public object UserSubscriptionInfoKt {
      * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;`
      */
     public var nextSubscriptionLevel: ei.Ei.UserSubscriptionInfo.Level
-      @JvmName("getNextSubscriptionLevel")
-      get() = _builder.nextSubscriptionLevel
-      @JvmName("setNextSubscriptionLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getNextSubscriptionLevel")
+        get() = _builder.nextSubscriptionLevel
+      @kotlin.jvm.JvmName("setNextSubscriptionLevel")
+        set(value) {
         _builder.nextSubscriptionLevel = value
       }
     /**
-     * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;`
+     * <code>optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;</code>
+     * @return This builder for chaining.
      */
     public fun clearNextSubscriptionLevel() {
       _builder.clearNextSubscriptionLevel()
     }
     /**
-     * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;`
+     * <code>optional .ei.UserSubscriptionInfo.Level next_subscription_level = 15;</code>
      * @return Whether the nextSubscriptionLevel field is set.
+     * @return This builder for chaining.
      */
     public fun hasNextSubscriptionLevel(): kotlin.Boolean {
       return _builder.hasNextSubscriptionLevel()
@@ -80,21 +84,23 @@ public object UserSubscriptionInfoKt {
      * `optional bool lock_next_subscription_level = 18;`
      */
     public var lockNextSubscriptionLevel: kotlin.Boolean
-      @JvmName("getLockNextSubscriptionLevel")
-      get() = _builder.lockNextSubscriptionLevel
-      @JvmName("setLockNextSubscriptionLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getLockNextSubscriptionLevel")
+        get() = _builder.lockNextSubscriptionLevel
+      @kotlin.jvm.JvmName("setLockNextSubscriptionLevel")
+        set(value) {
         _builder.lockNextSubscriptionLevel = value
       }
     /**
-     * `optional bool lock_next_subscription_level = 18;`
+     * <code>optional bool lock_next_subscription_level = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearLockNextSubscriptionLevel() {
       _builder.clearLockNextSubscriptionLevel()
     }
     /**
-     * `optional bool lock_next_subscription_level = 18;`
+     * <code>optional bool lock_next_subscription_level = 18;</code>
      * @return Whether the lockNextSubscriptionLevel field is set.
+     * @return This builder for chaining.
      */
     public fun hasLockNextSubscriptionLevel(): kotlin.Boolean {
       return _builder.hasLockNextSubscriptionLevel()
@@ -104,21 +110,23 @@ public object UserSubscriptionInfoKt {
      * `optional .ei.Platform platform = 10;`
      */
     public var platform: ei.Ei.Platform
-      @JvmName("getPlatform")
-      get() = _builder.platform
-      @JvmName("setPlatform")
-      set(value) {
+      @kotlin.jvm.JvmName("getPlatform")
+        get() = _builder.platform
+      @kotlin.jvm.JvmName("setPlatform")
+        set(value) {
         _builder.platform = value
       }
     /**
-     * `optional .ei.Platform platform = 10;`
+     * <code>optional .ei.Platform platform = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * `optional .ei.Platform platform = 10;`
+     * <code>optional .ei.Platform platform = 10;</code>
      * @return Whether the platform field is set.
+     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -128,21 +136,23 @@ public object UserSubscriptionInfoKt {
      * `optional string original_transaction_id = 1;`
      */
     public var originalTransactionId: kotlin.String
-      @JvmName("getOriginalTransactionId")
-      get() = _builder.originalTransactionId
-      @JvmName("setOriginalTransactionId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalTransactionId")
+        get() = _builder.originalTransactionId
+      @kotlin.jvm.JvmName("setOriginalTransactionId")
+        set(value) {
         _builder.originalTransactionId = value
       }
     /**
-     * `optional string original_transaction_id = 1;`
+     * <code>optional string original_transaction_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalTransactionId() {
       _builder.clearOriginalTransactionId()
     }
     /**
-     * `optional string original_transaction_id = 1;`
+     * <code>optional string original_transaction_id = 1;</code>
      * @return Whether the originalTransactionId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalTransactionId(): kotlin.Boolean {
       return _builder.hasOriginalTransactionId()
@@ -152,21 +162,23 @@ public object UserSubscriptionInfoKt {
      * `optional string linked_transaction_id = 16;`
      */
     public var linkedTransactionId: kotlin.String
-      @JvmName("getLinkedTransactionId")
-      get() = _builder.linkedTransactionId
-      @JvmName("setLinkedTransactionId")
-      set(value) {
+      @kotlin.jvm.JvmName("getLinkedTransactionId")
+        get() = _builder.linkedTransactionId
+      @kotlin.jvm.JvmName("setLinkedTransactionId")
+        set(value) {
         _builder.linkedTransactionId = value
       }
     /**
-     * `optional string linked_transaction_id = 16;`
+     * <code>optional string linked_transaction_id = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearLinkedTransactionId() {
       _builder.clearLinkedTransactionId()
     }
     /**
-     * `optional string linked_transaction_id = 16;`
+     * <code>optional string linked_transaction_id = 16;</code>
      * @return Whether the linkedTransactionId field is set.
+     * @return This builder for chaining.
      */
     public fun hasLinkedTransactionId(): kotlin.Boolean {
       return _builder.hasLinkedTransactionId()
@@ -176,21 +188,23 @@ public object UserSubscriptionInfoKt {
      * `optional bool acknowledged = 17;`
      */
     public var acknowledged: kotlin.Boolean
-      @JvmName("getAcknowledged")
-      get() = _builder.acknowledged
-      @JvmName("setAcknowledged")
-      set(value) {
+      @kotlin.jvm.JvmName("getAcknowledged")
+        get() = _builder.acknowledged
+      @kotlin.jvm.JvmName("setAcknowledged")
+        set(value) {
         _builder.acknowledged = value
       }
     /**
-     * `optional bool acknowledged = 17;`
+     * <code>optional bool acknowledged = 17;</code>
+     * @return This builder for chaining.
      */
     public fun clearAcknowledged() {
       _builder.clearAcknowledged()
     }
     /**
-     * `optional bool acknowledged = 17;`
+     * <code>optional bool acknowledged = 17;</code>
      * @return Whether the acknowledged field is set.
+     * @return This builder for chaining.
      */
     public fun hasAcknowledged(): kotlin.Boolean {
       return _builder.hasAcknowledged()
@@ -200,21 +214,23 @@ public object UserSubscriptionInfoKt {
      * `optional double first_subscribed = 2;`
      */
     public var firstSubscribed: kotlin.Double
-      @JvmName("getFirstSubscribed")
-      get() = _builder.firstSubscribed
-      @JvmName("setFirstSubscribed")
-      set(value) {
+      @kotlin.jvm.JvmName("getFirstSubscribed")
+        get() = _builder.firstSubscribed
+      @kotlin.jvm.JvmName("setFirstSubscribed")
+        set(value) {
         _builder.firstSubscribed = value
       }
     /**
-     * `optional double first_subscribed = 2;`
+     * <code>optional double first_subscribed = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearFirstSubscribed() {
       _builder.clearFirstSubscribed()
     }
     /**
-     * `optional double first_subscribed = 2;`
+     * <code>optional double first_subscribed = 2;</code>
      * @return Whether the firstSubscribed field is set.
+     * @return This builder for chaining.
      */
     public fun hasFirstSubscribed(): kotlin.Boolean {
       return _builder.hasFirstSubscribed()
@@ -224,21 +240,23 @@ public object UserSubscriptionInfoKt {
      * `optional double period_end = 4;`
      */
     public var periodEnd: kotlin.Double
-      @JvmName("getPeriodEnd")
-      get() = _builder.periodEnd
-      @JvmName("setPeriodEnd")
-      set(value) {
+      @kotlin.jvm.JvmName("getPeriodEnd")
+        get() = _builder.periodEnd
+      @kotlin.jvm.JvmName("setPeriodEnd")
+        set(value) {
         _builder.periodEnd = value
       }
     /**
-     * `optional double period_end = 4;`
+     * <code>optional double period_end = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearPeriodEnd() {
       _builder.clearPeriodEnd()
     }
     /**
-     * `optional double period_end = 4;`
+     * <code>optional double period_end = 4;</code>
      * @return Whether the periodEnd field is set.
+     * @return This builder for chaining.
      */
     public fun hasPeriodEnd(): kotlin.Boolean {
       return _builder.hasPeriodEnd()
@@ -248,21 +266,23 @@ public object UserSubscriptionInfoKt {
      * `optional .ei.UserSubscriptionInfo.Status status = 5;`
      */
     public var status: ei.Ei.UserSubscriptionInfo.Status
-      @JvmName("getStatus")
-      get() = _builder.status
-      @JvmName("setStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getStatus")
+        get() = _builder.status
+      @kotlin.jvm.JvmName("setStatus")
+        set(value) {
         _builder.status = value
       }
     /**
-     * `optional .ei.UserSubscriptionInfo.Status status = 5;`
+     * <code>optional .ei.UserSubscriptionInfo.Status status = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * `optional .ei.UserSubscriptionInfo.Status status = 5;`
+     * <code>optional .ei.UserSubscriptionInfo.Status status = 5;</code>
      * @return Whether the status field is set.
+     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -272,21 +292,23 @@ public object UserSubscriptionInfoKt {
      * `optional string store_status = 14;`
      */
     public var storeStatus: kotlin.String
-      @JvmName("getStoreStatus")
-      get() = _builder.storeStatus
-      @JvmName("setStoreStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getStoreStatus")
+        get() = _builder.storeStatus
+      @kotlin.jvm.JvmName("setStoreStatus")
+        set(value) {
         _builder.storeStatus = value
       }
     /**
-     * `optional string store_status = 14;`
+     * <code>optional string store_status = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearStoreStatus() {
       _builder.clearStoreStatus()
     }
     /**
-     * `optional string store_status = 14;`
+     * <code>optional string store_status = 14;</code>
      * @return Whether the storeStatus field is set.
+     * @return This builder for chaining.
      */
     public fun hasStoreStatus(): kotlin.Boolean {
       return _builder.hasStoreStatus()
@@ -296,21 +318,23 @@ public object UserSubscriptionInfoKt {
      * `optional bool auto_renew = 6;`
      */
     public var autoRenew: kotlin.Boolean
-      @JvmName("getAutoRenew")
-      get() = _builder.autoRenew
-      @JvmName("setAutoRenew")
-      set(value) {
+      @kotlin.jvm.JvmName("getAutoRenew")
+        get() = _builder.autoRenew
+      @kotlin.jvm.JvmName("setAutoRenew")
+        set(value) {
         _builder.autoRenew = value
       }
     /**
-     * `optional bool auto_renew = 6;`
+     * <code>optional bool auto_renew = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearAutoRenew() {
       _builder.clearAutoRenew()
     }
     /**
-     * `optional bool auto_renew = 6;`
+     * <code>optional bool auto_renew = 6;</code>
      * @return Whether the autoRenew field is set.
+     * @return This builder for chaining.
      */
     public fun hasAutoRenew(): kotlin.Boolean {
       return _builder.hasAutoRenew()
@@ -320,21 +344,23 @@ public object UserSubscriptionInfoKt {
      * `optional bool sandbox = 19;`
      */
     public var sandbox: kotlin.Boolean
-      @JvmName("getSandbox")
-      get() = _builder.sandbox
-      @JvmName("setSandbox")
-      set(value) {
+      @kotlin.jvm.JvmName("getSandbox")
+        get() = _builder.sandbox
+      @kotlin.jvm.JvmName("setSandbox")
+        set(value) {
         _builder.sandbox = value
       }
     /**
-     * `optional bool sandbox = 19;`
+     * <code>optional bool sandbox = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearSandbox() {
       _builder.clearSandbox()
     }
     /**
-     * `optional bool sandbox = 19;`
+     * <code>optional bool sandbox = 19;</code>
      * @return Whether the sandbox field is set.
+     * @return This builder for chaining.
      */
     public fun hasSandbox(): kotlin.Boolean {
       return _builder.hasSandbox()
@@ -344,21 +370,23 @@ public object UserSubscriptionInfoKt {
      * `optional double last_updated = 7;`
      */
     public var lastUpdated: kotlin.Double
-      @JvmName("getLastUpdated")
-      get() = _builder.lastUpdated
-      @JvmName("setLastUpdated")
-      set(value) {
+      @kotlin.jvm.JvmName("getLastUpdated")
+        get() = _builder.lastUpdated
+      @kotlin.jvm.JvmName("setLastUpdated")
+        set(value) {
         _builder.lastUpdated = value
       }
     /**
-     * `optional double last_updated = 7;`
+     * <code>optional double last_updated = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearLastUpdated() {
       _builder.clearLastUpdated()
     }
     /**
-     * `optional double last_updated = 7;`
+     * <code>optional double last_updated = 7;</code>
      * @return Whether the lastUpdated field is set.
+     * @return This builder for chaining.
      */
     public fun hasLastUpdated(): kotlin.Boolean {
       return _builder.hasLastUpdated()
@@ -375,66 +403,71 @@ public object UserSubscriptionInfoKt {
      */
      public val history: com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.historyList
       )
     /**
-     * `repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;`
+     * <code>repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;</code>
      * @param value The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addHistory")
+@kotlin.jvm.JvmName("addHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>.add(value: ei.Ei.UserSubscriptionInfo.HistoryEntry) {
       _builder.addHistory(value)
     }
     /**
-     * `repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;`
+     * <code>repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;</code>
      * @param value The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignHistory")
+@kotlin.jvm.JvmName("plusAssignHistory")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>.plusAssign(value: ei.Ei.UserSubscriptionInfo.HistoryEntry) {
       add(value)
     }
     /**
-     * `repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;`
+     * <code>repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;</code>
      * @param values The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllHistory")
+@kotlin.jvm.JvmName("addAllHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.UserSubscriptionInfo.HistoryEntry>) {
       _builder.addAllHistory(values)
     }
     /**
-     * `repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;`
+     * <code>repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;</code>
      * @param values The history to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllHistory")
+@kotlin.jvm.JvmName("plusAssignAllHistory")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.UserSubscriptionInfo.HistoryEntry>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;`
+     * <code>repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;</code>
      * @param index The index to set the value at.
      * @param value The history to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setHistory")
+@kotlin.jvm.JvmName("setHistory")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>.set(index: kotlin.Int, value: ei.Ei.UserSubscriptionInfo.HistoryEntry) {
       _builder.setHistory(index, value)
     }
     /**
-     * `repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;`
+     * <code>repeated .ei.UserSubscriptionInfo.HistoryEntry history = 9;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearHistory")
+@kotlin.jvm.JvmName("clearHistory")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.UserSubscriptionInfo.HistoryEntry, HistoryProxy>.clear() {
       _builder.clearHistory()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -443,66 +476,73 @@ public object UserSubscriptionInfoKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class PastUserIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
      * @return A list containing the pastUserIds.
+     * @return This builder for chaining.
      */
     public val pastUserIds: com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.pastUserIdsList
       )
     /**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
      * @param value The pastUserIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addPastUserIds")
+@kotlin.jvm.JvmName("addPastUserIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>.add(value: kotlin.String) {
       _builder.addPastUserIds(value)
     }
     /**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
      * @param value The pastUserIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignPastUserIds")
+@kotlin.jvm.JvmName("plusAssignPastUserIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
      * @param values The pastUserIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllPastUserIds")
+@kotlin.jvm.JvmName("addAllPastUserIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllPastUserIds(values)
     }
     /**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
      * @param values The pastUserIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllPastUserIds")
+@kotlin.jvm.JvmName("plusAssignAllPastUserIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
      * @param index The index to set the value at.
      * @param value The pastUserIds to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setPastUserIds")
+@kotlin.jvm.JvmName("setPastUserIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setPastUserIds(index, value)
     }/**
-     * `repeated string past_user_ids = 11;`
+     * <code>repeated string past_user_ids = 11;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearPastUserIds")
+@kotlin.jvm.JvmName("setPastUserIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, PastUserIdsProxy>.clear() {
       _builder.clearPastUserIds()
     }}
@@ -532,21 +572,23 @@ public object UserSubscriptionInfoKt {
        * `optional double timestamp = 1;`
        */
       public var timestamp: kotlin.Double
-        @JvmName("getTimestamp")
-        get() = _builder.timestamp
-        @JvmName("setTimestamp")
-        set(value) {
+        @kotlin.jvm.JvmName("getTimestamp")
+          get() = _builder.timestamp
+        @kotlin.jvm.JvmName("setTimestamp")
+          set(value) {
           _builder.timestamp = value
         }
       /**
-       * `optional double timestamp = 1;`
+       * <code>optional double timestamp = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearTimestamp() {
         _builder.clearTimestamp()
       }
       /**
-       * `optional double timestamp = 1;`
+       * <code>optional double timestamp = 1;</code>
        * @return Whether the timestamp field is set.
+       * @return This builder for chaining.
        */
       public fun hasTimestamp(): kotlin.Boolean {
         return _builder.hasTimestamp()
@@ -556,21 +598,23 @@ public object UserSubscriptionInfoKt {
        * `optional string message_id = 2;`
        */
       public var messageId: kotlin.String
-        @JvmName("getMessageId")
-        get() = _builder.messageId
-        @JvmName("setMessageId")
-        set(value) {
+        @kotlin.jvm.JvmName("getMessageId")
+          get() = _builder.messageId
+        @kotlin.jvm.JvmName("setMessageId")
+          set(value) {
           _builder.messageId = value
         }
       /**
-       * `optional string message_id = 2;`
+       * <code>optional string message_id = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearMessageId() {
         _builder.clearMessageId()
       }
       /**
-       * `optional string message_id = 2;`
+       * <code>optional string message_id = 2;</code>
        * @return Whether the messageId field is set.
+       * @return This builder for chaining.
        */
       public fun hasMessageId(): kotlin.Boolean {
         return _builder.hasMessageId()
@@ -580,21 +624,23 @@ public object UserSubscriptionInfoKt {
        * `optional string message = 3;`
        */
       public var message: kotlin.String
-        @JvmName("getMessage")
-        get() = _builder.message
-        @JvmName("setMessage")
-        set(value) {
+        @kotlin.jvm.JvmName("getMessage")
+          get() = _builder.message
+        @kotlin.jvm.JvmName("setMessage")
+          set(value) {
           _builder.message = value
         }
       /**
-       * `optional string message = 3;`
+       * <code>optional string message = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearMessage() {
         _builder.clearMessage()
       }
       /**
-       * `optional string message = 3;`
+       * <code>optional string message = 3;</code>
        * @return Whether the message field is set.
+       * @return This builder for chaining.
        */
       public fun hasMessage(): kotlin.Boolean {
         return _builder.hasMessage()

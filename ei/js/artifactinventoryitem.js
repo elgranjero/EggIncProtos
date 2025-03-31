@@ -71,10 +71,10 @@ proto.ei.ArtifactInventoryItem.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.ArtifactInventoryItem.toObject = function(includeInstance, msg) {
   var f, obj = {
-itemId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-artifact: (f = msg.getArtifact()) && proto.ei.CompleteArtifact.toObject(includeInstance, f),
-quantity: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+    itemId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    artifact: (f = msg.getArtifact()) && proto.ei.CompleteArtifact.toObject(includeInstance, f),
+    quantity: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    serverId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

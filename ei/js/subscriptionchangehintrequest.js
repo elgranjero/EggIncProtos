@@ -72,9 +72,9 @@ proto.ei.SubscriptionChangeHintRequest.prototype.toObject = function(opt_include
  */
 proto.ei.SubscriptionChangeHintRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-originalTransactionId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-nextSubscriptionLevel: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    originalTransactionId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    nextSubscriptionLevel: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

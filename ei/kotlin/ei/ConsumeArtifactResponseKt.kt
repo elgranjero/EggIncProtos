@@ -32,21 +32,23 @@ public object ConsumeArtifactResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object ConsumeArtifactResponseKt {
      * `optional uint64 original_item_id = 2;`
      */
     public var originalItemId: kotlin.Long
-      @JvmName("getOriginalItemId")
-      get() = _builder.originalItemId
-      @JvmName("setOriginalItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalItemId")
+        get() = _builder.originalItemId
+      @kotlin.jvm.JvmName("setOriginalItemId")
+        set(value) {
         _builder.originalItemId = value
       }
     /**
-     * `optional uint64 original_item_id = 2;`
+     * <code>optional uint64 original_item_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalItemId() {
       _builder.clearOriginalItemId()
     }
     /**
-     * `optional uint64 original_item_id = 2;`
+     * <code>optional uint64 original_item_id = 2;</code>
      * @return Whether the originalItemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalItemId(): kotlin.Boolean {
       return _builder.hasOriginalItemId()
@@ -87,57 +91,63 @@ public object ConsumeArtifactResponseKt {
      */
      public val additionalItemIds: com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.additionalItemIdsList
       )
     /**
-     * `repeated uint64 additional_item_ids = 6;`
+     * <code>repeated uint64 additional_item_ids = 6;</code>
      * @param value The additionalItemIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAdditionalItemIds")
+@kotlin.jvm.JvmName("addAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.add(value: kotlin.Long) {
       _builder.addAdditionalItemIds(value)
     }/**
-     * `repeated uint64 additional_item_ids = 6;`
+     * <code>repeated uint64 additional_item_ids = 6;</code>
      * @param value The additionalItemIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAdditionalItemIds")
+@kotlin.jvm.JvmName("plusAssignAdditionalItemIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * `repeated uint64 additional_item_ids = 6;`
+     * <code>repeated uint64 additional_item_ids = 6;</code>
      * @param values The additionalItemIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllAdditionalItemIds")
+@kotlin.jvm.JvmName("addAllAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllAdditionalItemIds(values)
     }/**
-     * `repeated uint64 additional_item_ids = 6;`
+     * <code>repeated uint64 additional_item_ids = 6;</code>
      * @param values The additionalItemIds to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllAdditionalItemIds")
+@kotlin.jvm.JvmName("plusAssignAllAdditionalItemIds")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * `repeated uint64 additional_item_ids = 6;`
+     * <code>repeated uint64 additional_item_ids = 6;</code>
      * @param index The index to set the value at.
      * @param value The additionalItemIds to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setAdditionalItemIds")
+@kotlin.jvm.JvmName("setAdditionalItemIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setAdditionalItemIds(index, value)
     }/**
-     * `repeated uint64 additional_item_ids = 6;`
+     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearAdditionalItemIds")
+@kotlin.jvm.JvmName("clearAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.clear() {
       _builder.clearAdditionalItemIds()
     }
@@ -152,66 +162,71 @@ public object ConsumeArtifactResponseKt {
      */
      public val byproducts: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.byproductsList
       )
     /**
-     * `repeated .ei.ArtifactSpec byproducts = 3;`
+     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param value The byproducts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addByproducts")
+@kotlin.jvm.JvmName("addByproducts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.add(value: ei.Ei.ArtifactSpec) {
       _builder.addByproducts(value)
     }
     /**
-     * `repeated .ei.ArtifactSpec byproducts = 3;`
+     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param value The byproducts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignByproducts")
+@kotlin.jvm.JvmName("plusAssignByproducts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.plusAssign(value: ei.Ei.ArtifactSpec) {
       add(value)
     }
     /**
-     * `repeated .ei.ArtifactSpec byproducts = 3;`
+     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param values The byproducts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllByproducts")
+@kotlin.jvm.JvmName("addAllByproducts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       _builder.addAllByproducts(values)
     }
     /**
-     * `repeated .ei.ArtifactSpec byproducts = 3;`
+     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param values The byproducts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllByproducts")
+@kotlin.jvm.JvmName("plusAssignAllByproducts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactSpec>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ArtifactSpec byproducts = 3;`
+     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
      * @param index The index to set the value at.
      * @param value The byproducts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setByproducts")
+@kotlin.jvm.JvmName("setByproducts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactSpec) {
       _builder.setByproducts(index, value)
     }
     /**
-     * `repeated .ei.ArtifactSpec byproducts = 3;`
+     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearByproducts")
+@kotlin.jvm.JvmName("clearByproducts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactSpec, ByproductsProxy>.clear() {
       _builder.clearByproducts()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -224,86 +239,93 @@ public object ConsumeArtifactResponseKt {
      */
      public val otherRewards: com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.otherRewardsList
       )
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param value The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addOtherRewards")
+@kotlin.jvm.JvmName("addOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.add(value: ei.Ei.Reward) {
       _builder.addOtherRewards(value)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param value The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignOtherRewards")
+@kotlin.jvm.JvmName("plusAssignOtherRewards")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(value: ei.Ei.Reward) {
       add(value)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllOtherRewards")
+@kotlin.jvm.JvmName("addAllOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       _builder.addAllOtherRewards(values)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param values The otherRewards to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllOtherRewards")
+@kotlin.jvm.JvmName("plusAssignAllOtherRewards")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.Reward>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
      * @param index The index to set the value at.
      * @param value The otherRewards to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setOtherRewards")
+@kotlin.jvm.JvmName("setOtherRewards")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.set(index: kotlin.Int, value: ei.Ei.Reward) {
       _builder.setOtherRewards(index, value)
     }
     /**
-     * `repeated .ei.Reward other_rewards = 4;`
+     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearOtherRewards")
+@kotlin.jvm.JvmName("clearOtherRewards")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.Reward, OtherRewardsProxy>.clear() {
       _builder.clearOtherRewards()
     }
-
 
     /**
      * `optional string ei_user_id = 5;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()

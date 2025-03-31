@@ -32,21 +32,23 @@ public object SetArtifactResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object SetArtifactResponseKt {
      * `optional uint64 original_item_id = 2;`
      */
     public var originalItemId: kotlin.Long
-      @JvmName("getOriginalItemId")
-      get() = _builder.originalItemId
-      @JvmName("setOriginalItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalItemId")
+        get() = _builder.originalItemId
+      @kotlin.jvm.JvmName("setOriginalItemId")
+        set(value) {
         _builder.originalItemId = value
       }
     /**
-     * `optional uint64 original_item_id = 2;`
+     * <code>optional uint64 original_item_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalItemId() {
       _builder.clearOriginalItemId()
     }
     /**
-     * `optional uint64 original_item_id = 2;`
+     * <code>optional uint64 original_item_id = 2;</code>
      * @return Whether the originalItemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalItemId(): kotlin.Boolean {
       return _builder.hasOriginalItemId()
@@ -80,21 +84,23 @@ public object SetArtifactResponseKt {
      * `optional string ei_user_id = 5;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()

@@ -32,21 +32,23 @@ public object SalesInfoRequestKt {
      * `optional string user_id = 1;`
      */
     public var userId: kotlin.String
-      @JvmName("getUserId")
-      get() = _builder.userId
-      @JvmName("setUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getUserId")
+        get() = _builder.userId
+      @kotlin.jvm.JvmName("setUserId")
+        set(value) {
         _builder.userId = value
       }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * `optional string user_id = 1;`
+     * <code>optional string user_id = 1;</code>
      * @return Whether the userId field is set.
+     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -56,21 +58,23 @@ public object SalesInfoRequestKt {
      * `optional bool piggy_full = 2;`
      */
     public var piggyFull: kotlin.Boolean
-      @JvmName("getPiggyFull")
-      get() = _builder.piggyFull
-      @JvmName("setPiggyFull")
-      set(value) {
+      @kotlin.jvm.JvmName("getPiggyFull")
+        get() = _builder.piggyFull
+      @kotlin.jvm.JvmName("setPiggyFull")
+        set(value) {
         _builder.piggyFull = value
       }
     /**
-     * `optional bool piggy_full = 2;`
+     * <code>optional bool piggy_full = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearPiggyFull() {
       _builder.clearPiggyFull()
     }
     /**
-     * `optional bool piggy_full = 2;`
+     * <code>optional bool piggy_full = 2;</code>
      * @return Whether the piggyFull field is set.
+     * @return This builder for chaining.
      */
     public fun hasPiggyFull(): kotlin.Boolean {
       return _builder.hasPiggyFull()
@@ -80,21 +84,23 @@ public object SalesInfoRequestKt {
      * `optional bool piggy_found_full = 3;`
      */
     public var piggyFoundFull: kotlin.Boolean
-      @JvmName("getPiggyFoundFull")
-      get() = _builder.piggyFoundFull
-      @JvmName("setPiggyFoundFull")
-      set(value) {
+      @kotlin.jvm.JvmName("getPiggyFoundFull")
+        get() = _builder.piggyFoundFull
+      @kotlin.jvm.JvmName("setPiggyFoundFull")
+        set(value) {
         _builder.piggyFoundFull = value
       }
     /**
-     * `optional bool piggy_found_full = 3;`
+     * <code>optional bool piggy_found_full = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearPiggyFoundFull() {
       _builder.clearPiggyFoundFull()
     }
     /**
-     * `optional bool piggy_found_full = 3;`
+     * <code>optional bool piggy_found_full = 3;</code>
      * @return Whether the piggyFoundFull field is set.
+     * @return This builder for chaining.
      */
     public fun hasPiggyFoundFull(): kotlin.Boolean {
       return _builder.hasPiggyFoundFull()
@@ -104,21 +110,23 @@ public object SalesInfoRequestKt {
      * `optional double seconds_full_realtime = 4;`
      */
     public var secondsFullRealtime: kotlin.Double
-      @JvmName("getSecondsFullRealtime")
-      get() = _builder.secondsFullRealtime
-      @JvmName("setSecondsFullRealtime")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsFullRealtime")
+        get() = _builder.secondsFullRealtime
+      @kotlin.jvm.JvmName("setSecondsFullRealtime")
+        set(value) {
         _builder.secondsFullRealtime = value
       }
     /**
-     * `optional double seconds_full_realtime = 4;`
+     * <code>optional double seconds_full_realtime = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsFullRealtime() {
       _builder.clearSecondsFullRealtime()
     }
     /**
-     * `optional double seconds_full_realtime = 4;`
+     * <code>optional double seconds_full_realtime = 4;</code>
      * @return Whether the secondsFullRealtime field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsFullRealtime(): kotlin.Boolean {
       return _builder.hasSecondsFullRealtime()
@@ -128,21 +136,23 @@ public object SalesInfoRequestKt {
      * `optional double seconds_full_gametime = 5;`
      */
     public var secondsFullGametime: kotlin.Double
-      @JvmName("getSecondsFullGametime")
-      get() = _builder.secondsFullGametime
-      @JvmName("setSecondsFullGametime")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsFullGametime")
+        get() = _builder.secondsFullGametime
+      @kotlin.jvm.JvmName("setSecondsFullGametime")
+        set(value) {
         _builder.secondsFullGametime = value
       }
     /**
-     * `optional double seconds_full_gametime = 5;`
+     * <code>optional double seconds_full_gametime = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsFullGametime() {
       _builder.clearSecondsFullGametime()
     }
     /**
-     * `optional double seconds_full_gametime = 5;`
+     * <code>optional double seconds_full_gametime = 5;</code>
      * @return Whether the secondsFullGametime field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsFullGametime(): kotlin.Boolean {
       return _builder.hasSecondsFullGametime()
@@ -152,21 +162,23 @@ public object SalesInfoRequestKt {
      * `optional uint32 lost_increments = 7;`
      */
     public var lostIncrements: kotlin.Int
-      @JvmName("getLostIncrements")
-      get() = _builder.lostIncrements
-      @JvmName("setLostIncrements")
-      set(value) {
+      @kotlin.jvm.JvmName("getLostIncrements")
+        get() = _builder.lostIncrements
+      @kotlin.jvm.JvmName("setLostIncrements")
+        set(value) {
         _builder.lostIncrements = value
       }
     /**
-     * `optional uint32 lost_increments = 7;`
+     * <code>optional uint32 lost_increments = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearLostIncrements() {
       _builder.clearLostIncrements()
     }
     /**
-     * `optional uint32 lost_increments = 7;`
+     * <code>optional uint32 lost_increments = 7;</code>
      * @return Whether the lostIncrements field is set.
+     * @return This builder for chaining.
      */
     public fun hasLostIncrements(): kotlin.Boolean {
       return _builder.hasLostIncrements()
@@ -176,21 +188,23 @@ public object SalesInfoRequestKt {
      * `optional uint32 current_client_version = 10;`
      */
     public var currentClientVersion: kotlin.Int
-      @JvmName("getCurrentClientVersion")
-      get() = _builder.currentClientVersion
-      @JvmName("setCurrentClientVersion")
-      set(value) {
+      @kotlin.jvm.JvmName("getCurrentClientVersion")
+        get() = _builder.currentClientVersion
+      @kotlin.jvm.JvmName("setCurrentClientVersion")
+        set(value) {
         _builder.currentClientVersion = value
       }
     /**
-     * `optional uint32 current_client_version = 10;`
+     * <code>optional uint32 current_client_version = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearCurrentClientVersion() {
       _builder.clearCurrentClientVersion()
     }
     /**
-     * `optional uint32 current_client_version = 10;`
+     * <code>optional uint32 current_client_version = 10;</code>
      * @return Whether the currentClientVersion field is set.
+     * @return This builder for chaining.
      */
     public fun hasCurrentClientVersion(): kotlin.Boolean {
       return _builder.hasCurrentClientVersion()

@@ -39,66 +39,71 @@ public object ContractSeasonInfosKt {
      */
      public val infos: com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.infosList
       )
     /**
-     * `repeated .ei.ContractSeasonInfo infos = 1;`
+     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
      * @param value The infos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addInfos")
+@kotlin.jvm.JvmName("addInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>.add(value: ei.Ei.ContractSeasonInfo) {
       _builder.addInfos(value)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo infos = 1;`
+     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
      * @param value The infos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignInfos")
+@kotlin.jvm.JvmName("plusAssignInfos")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>.plusAssign(value: ei.Ei.ContractSeasonInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo infos = 1;`
+     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
      * @param values The infos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllInfos")
+@kotlin.jvm.JvmName("addAllInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractSeasonInfo>) {
       _builder.addAllInfos(values)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo infos = 1;`
+     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
      * @param values The infos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllInfos")
+@kotlin.jvm.JvmName("plusAssignAllInfos")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractSeasonInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo infos = 1;`
+     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
      * @param index The index to set the value at.
      * @param value The infos to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setInfos")
+@kotlin.jvm.JvmName("setInfos")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>.set(index: kotlin.Int, value: ei.Ei.ContractSeasonInfo) {
       _builder.setInfos(index, value)
     }
     /**
-     * `repeated .ei.ContractSeasonInfo infos = 1;`
+     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearInfos")
+@kotlin.jvm.JvmName("clearInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSeasonInfo, InfosProxy>.clear() {
       _builder.clearInfos()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

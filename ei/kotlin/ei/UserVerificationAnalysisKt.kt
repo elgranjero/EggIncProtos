@@ -32,21 +32,23 @@ public object UserVerificationAnalysisKt {
      * `optional .ei.UserVerificationAnalysis.Status overall_status = 1;`
      */
     public var overallStatus: ei.Ei.UserVerificationAnalysis.Status
-      @JvmName("getOverallStatus")
-      get() = _builder.overallStatus
-      @JvmName("setOverallStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getOverallStatus")
+        get() = _builder.overallStatus
+      @kotlin.jvm.JvmName("setOverallStatus")
+        set(value) {
         _builder.overallStatus = value
       }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status overall_status = 1;`
+     * <code>optional .ei.UserVerificationAnalysis.Status overall_status = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearOverallStatus() {
       _builder.clearOverallStatus()
     }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status overall_status = 1;`
+     * <code>optional .ei.UserVerificationAnalysis.Status overall_status = 1;</code>
      * @return Whether the overallStatus field is set.
+     * @return This builder for chaining.
      */
     public fun hasOverallStatus(): kotlin.Boolean {
       return _builder.hasOverallStatus()
@@ -56,21 +58,23 @@ public object UserVerificationAnalysisKt {
      * `optional double start_time = 2;`
      */
     public var startTime: kotlin.Double
-      @JvmName("getStartTime")
-      get() = _builder.startTime
-      @JvmName("setStartTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getStartTime")
+        get() = _builder.startTime
+      @kotlin.jvm.JvmName("setStartTime")
+        set(value) {
         _builder.startTime = value
       }
     /**
-     * `optional double start_time = 2;`
+     * <code>optional double start_time = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * `optional double start_time = 2;`
+     * <code>optional double start_time = 2;</code>
      * @return Whether the startTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -80,21 +84,23 @@ public object UserVerificationAnalysisKt {
      * `optional double completion_time = 3;`
      */
     public var completionTime: kotlin.Double
-      @JvmName("getCompletionTime")
-      get() = _builder.completionTime
-      @JvmName("setCompletionTime")
-      set(value) {
+      @kotlin.jvm.JvmName("getCompletionTime")
+        get() = _builder.completionTime
+      @kotlin.jvm.JvmName("setCompletionTime")
+        set(value) {
         _builder.completionTime = value
       }
     /**
-     * `optional double completion_time = 3;`
+     * <code>optional double completion_time = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearCompletionTime() {
       _builder.clearCompletionTime()
     }
     /**
-     * `optional double completion_time = 3;`
+     * <code>optional double completion_time = 3;</code>
      * @return Whether the completionTime field is set.
+     * @return This builder for chaining.
      */
     public fun hasCompletionTime(): kotlin.Boolean {
       return _builder.hasCompletionTime()
@@ -104,21 +110,23 @@ public object UserVerificationAnalysisKt {
      * `optional int32 verification_count = 37;`
      */
     public var verificationCount: kotlin.Int
-      @JvmName("getVerificationCount")
-      get() = _builder.verificationCount
-      @JvmName("setVerificationCount")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerificationCount")
+        get() = _builder.verificationCount
+      @kotlin.jvm.JvmName("setVerificationCount")
+        set(value) {
         _builder.verificationCount = value
       }
     /**
-     * `optional int32 verification_count = 37;`
+     * <code>optional int32 verification_count = 37;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerificationCount() {
       _builder.clearVerificationCount()
     }
     /**
-     * `optional int32 verification_count = 37;`
+     * <code>optional int32 verification_count = 37;</code>
      * @return Whether the verificationCount field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerificationCount(): kotlin.Boolean {
       return _builder.hasVerificationCount()
@@ -128,21 +136,23 @@ public object UserVerificationAnalysisKt {
      * `optional double num_prestiges = 14;`
      */
     public var numPrestiges: kotlin.Double
-      @JvmName("getNumPrestiges")
-      get() = _builder.numPrestiges
-      @JvmName("setNumPrestiges")
-      set(value) {
+      @kotlin.jvm.JvmName("getNumPrestiges")
+        get() = _builder.numPrestiges
+      @kotlin.jvm.JvmName("setNumPrestiges")
+        set(value) {
         _builder.numPrestiges = value
       }
     /**
-     * `optional double num_prestiges = 14;`
+     * <code>optional double num_prestiges = 14;</code>
+     * @return This builder for chaining.
      */
     public fun clearNumPrestiges() {
       _builder.clearNumPrestiges()
     }
     /**
-     * `optional double num_prestiges = 14;`
+     * <code>optional double num_prestiges = 14;</code>
      * @return Whether the numPrestiges field is set.
+     * @return This builder for chaining.
      */
     public fun hasNumPrestiges(): kotlin.Boolean {
       return _builder.hasNumPrestiges()
@@ -152,21 +162,23 @@ public object UserVerificationAnalysisKt {
      * `optional double soul_eggs = 15;`
      */
     public var soulEggs: kotlin.Double
-      @JvmName("getSoulEggs")
-      get() = _builder.soulEggs
-      @JvmName("setSoulEggs")
-      set(value) {
+      @kotlin.jvm.JvmName("getSoulEggs")
+        get() = _builder.soulEggs
+      @kotlin.jvm.JvmName("setSoulEggs")
+        set(value) {
         _builder.soulEggs = value
       }
     /**
-     * `optional double soul_eggs = 15;`
+     * <code>optional double soul_eggs = 15;</code>
+     * @return This builder for chaining.
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * `optional double soul_eggs = 15;`
+     * <code>optional double soul_eggs = 15;</code>
      * @return Whether the soulEggs field is set.
+     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -176,21 +188,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 eggs_of_prophecy = 27;`
      */
     public var eggsOfProphecy: kotlin.Int
-      @JvmName("getEggsOfProphecy")
-      get() = _builder.eggsOfProphecy
-      @JvmName("setEggsOfProphecy")
-      set(value) {
+      @kotlin.jvm.JvmName("getEggsOfProphecy")
+        get() = _builder.eggsOfProphecy
+      @kotlin.jvm.JvmName("setEggsOfProphecy")
+        set(value) {
         _builder.eggsOfProphecy = value
       }
     /**
-     * `optional uint32 eggs_of_prophecy = 27;`
+     * <code>optional uint32 eggs_of_prophecy = 27;</code>
+     * @return This builder for chaining.
      */
     public fun clearEggsOfProphecy() {
       _builder.clearEggsOfProphecy()
     }
     /**
-     * `optional uint32 eggs_of_prophecy = 27;`
+     * <code>optional uint32 eggs_of_prophecy = 27;</code>
      * @return Whether the eggsOfProphecy field is set.
+     * @return This builder for chaining.
      */
     public fun hasEggsOfProphecy(): kotlin.Boolean {
       return _builder.hasEggsOfProphecy()
@@ -200,21 +214,23 @@ public object UserVerificationAnalysisKt {
      * `optional .ei.UserVerificationAnalysis.Status iap_status = 18;`
      */
     public var iapStatus: ei.Ei.UserVerificationAnalysis.Status
-      @JvmName("getIapStatus")
-      get() = _builder.iapStatus
-      @JvmName("setIapStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getIapStatus")
+        get() = _builder.iapStatus
+      @kotlin.jvm.JvmName("setIapStatus")
+        set(value) {
         _builder.iapStatus = value
       }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status iap_status = 18;`
+     * <code>optional .ei.UserVerificationAnalysis.Status iap_status = 18;</code>
+     * @return This builder for chaining.
      */
     public fun clearIapStatus() {
       _builder.clearIapStatus()
     }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status iap_status = 18;`
+     * <code>optional .ei.UserVerificationAnalysis.Status iap_status = 18;</code>
      * @return Whether the iapStatus field is set.
+     * @return This builder for chaining.
      */
     public fun hasIapStatus(): kotlin.Boolean {
       return _builder.hasIapStatus()
@@ -224,21 +240,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool verified_pro_permit = 4;`
      */
     public var verifiedProPermit: kotlin.Boolean
-      @JvmName("getVerifiedProPermit")
-      get() = _builder.verifiedProPermit
-      @JvmName("setVerifiedProPermit")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerifiedProPermit")
+        get() = _builder.verifiedProPermit
+      @kotlin.jvm.JvmName("setVerifiedProPermit")
+        set(value) {
         _builder.verifiedProPermit = value
       }
     /**
-     * `optional bool verified_pro_permit = 4;`
+     * <code>optional bool verified_pro_permit = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerifiedProPermit() {
       _builder.clearVerifiedProPermit()
     }
     /**
-     * `optional bool verified_pro_permit = 4;`
+     * <code>optional bool verified_pro_permit = 4;</code>
      * @return Whether the verifiedProPermit field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerifiedProPermit(): kotlin.Boolean {
       return _builder.hasVerifiedProPermit()
@@ -248,21 +266,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 verified_piggy_breaks = 5;`
      */
     public var verifiedPiggyBreaks: kotlin.Int
-      @JvmName("getVerifiedPiggyBreaks")
-      get() = _builder.verifiedPiggyBreaks
-      @JvmName("setVerifiedPiggyBreaks")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerifiedPiggyBreaks")
+        get() = _builder.verifiedPiggyBreaks
+      @kotlin.jvm.JvmName("setVerifiedPiggyBreaks")
+        set(value) {
         _builder.verifiedPiggyBreaks = value
       }
     /**
-     * `optional uint32 verified_piggy_breaks = 5;`
+     * <code>optional uint32 verified_piggy_breaks = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerifiedPiggyBreaks() {
       _builder.clearVerifiedPiggyBreaks()
     }
     /**
-     * `optional uint32 verified_piggy_breaks = 5;`
+     * <code>optional uint32 verified_piggy_breaks = 5;</code>
      * @return Whether the verifiedPiggyBreaks field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerifiedPiggyBreaks(): kotlin.Boolean {
       return _builder.hasVerifiedPiggyBreaks()
@@ -272,21 +292,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 verified_other_iap = 6;`
      */
     public var verifiedOtherIap: kotlin.Int
-      @JvmName("getVerifiedOtherIap")
-      get() = _builder.verifiedOtherIap
-      @JvmName("setVerifiedOtherIap")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerifiedOtherIap")
+        get() = _builder.verifiedOtherIap
+      @kotlin.jvm.JvmName("setVerifiedOtherIap")
+        set(value) {
         _builder.verifiedOtherIap = value
       }
     /**
-     * `optional uint32 verified_other_iap = 6;`
+     * <code>optional uint32 verified_other_iap = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerifiedOtherIap() {
       _builder.clearVerifiedOtherIap()
     }
     /**
-     * `optional uint32 verified_other_iap = 6;`
+     * <code>optional uint32 verified_other_iap = 6;</code>
      * @return Whether the verifiedOtherIap field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerifiedOtherIap(): kotlin.Boolean {
       return _builder.hasVerifiedOtherIap()
@@ -296,21 +318,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 unverified_iap = 7;`
      */
     public var unverifiedIap: kotlin.Int
-      @JvmName("getUnverifiedIap")
-      get() = _builder.unverifiedIap
-      @JvmName("setUnverifiedIap")
-      set(value) {
+      @kotlin.jvm.JvmName("getUnverifiedIap")
+        get() = _builder.unverifiedIap
+      @kotlin.jvm.JvmName("setUnverifiedIap")
+        set(value) {
         _builder.unverifiedIap = value
       }
     /**
-     * `optional uint32 unverified_iap = 7;`
+     * <code>optional uint32 unverified_iap = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearUnverifiedIap() {
       _builder.clearUnverifiedIap()
     }
     /**
-     * `optional uint32 unverified_iap = 7;`
+     * <code>optional uint32 unverified_iap = 7;</code>
      * @return Whether the unverifiedIap field is set.
+     * @return This builder for chaining.
      */
     public fun hasUnverifiedIap(): kotlin.Boolean {
       return _builder.hasUnverifiedIap()
@@ -320,21 +344,23 @@ public object UserVerificationAnalysisKt {
      * `optional double gold_earned = 13;`
      */
     public var goldEarned: kotlin.Double
-      @JvmName("getGoldEarned")
-      get() = _builder.goldEarned
-      @JvmName("setGoldEarned")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoldEarned")
+        get() = _builder.goldEarned
+      @kotlin.jvm.JvmName("setGoldEarned")
+        set(value) {
         _builder.goldEarned = value
       }
     /**
-     * `optional double gold_earned = 13;`
+     * <code>optional double gold_earned = 13;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoldEarned() {
       _builder.clearGoldEarned()
     }
     /**
-     * `optional double gold_earned = 13;`
+     * <code>optional double gold_earned = 13;</code>
      * @return Whether the goldEarned field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoldEarned(): kotlin.Boolean {
       return _builder.hasGoldEarned()
@@ -344,21 +370,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool regular_iap_buyer = 22;`
      */
     public var regularIapBuyer: kotlin.Boolean
-      @JvmName("getRegularIapBuyer")
-      get() = _builder.regularIapBuyer
-      @JvmName("setRegularIapBuyer")
-      set(value) {
+      @kotlin.jvm.JvmName("getRegularIapBuyer")
+        get() = _builder.regularIapBuyer
+      @kotlin.jvm.JvmName("setRegularIapBuyer")
+        set(value) {
         _builder.regularIapBuyer = value
       }
     /**
-     * `optional bool regular_iap_buyer = 22;`
+     * <code>optional bool regular_iap_buyer = 22;</code>
+     * @return This builder for chaining.
      */
     public fun clearRegularIapBuyer() {
       _builder.clearRegularIapBuyer()
     }
     /**
-     * `optional bool regular_iap_buyer = 22;`
+     * <code>optional bool regular_iap_buyer = 22;</code>
      * @return Whether the regularIapBuyer field is set.
+     * @return This builder for chaining.
      */
     public fun hasRegularIapBuyer(): kotlin.Boolean {
       return _builder.hasRegularIapBuyer()
@@ -368,21 +396,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool regular_iap_cheater = 23;`
      */
     public var regularIapCheater: kotlin.Boolean
-      @JvmName("getRegularIapCheater")
-      get() = _builder.regularIapCheater
-      @JvmName("setRegularIapCheater")
-      set(value) {
+      @kotlin.jvm.JvmName("getRegularIapCheater")
+        get() = _builder.regularIapCheater
+      @kotlin.jvm.JvmName("setRegularIapCheater")
+        set(value) {
         _builder.regularIapCheater = value
       }
     /**
-     * `optional bool regular_iap_cheater = 23;`
+     * <code>optional bool regular_iap_cheater = 23;</code>
+     * @return This builder for chaining.
      */
     public fun clearRegularIapCheater() {
       _builder.clearRegularIapCheater()
     }
     /**
-     * `optional bool regular_iap_cheater = 23;`
+     * <code>optional bool regular_iap_cheater = 23;</code>
      * @return Whether the regularIapCheater field is set.
+     * @return This builder for chaining.
      */
     public fun hasRegularIapCheater(): kotlin.Boolean {
       return _builder.hasRegularIapCheater()
@@ -392,21 +422,23 @@ public object UserVerificationAnalysisKt {
      * `optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;`
      */
     public var artifactsStatus: ei.Ei.UserVerificationAnalysis.Status
-      @JvmName("getArtifactsStatus")
-      get() = _builder.artifactsStatus
-      @JvmName("setArtifactsStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifactsStatus")
+        get() = _builder.artifactsStatus
+      @kotlin.jvm.JvmName("setArtifactsStatus")
+        set(value) {
         _builder.artifactsStatus = value
       }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;`
+     * <code>optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifactsStatus() {
       _builder.clearArtifactsStatus()
     }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;`
+     * <code>optional .ei.UserVerificationAnalysis.Status artifacts_status = 19;</code>
      * @return Whether the artifactsStatus field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifactsStatus(): kotlin.Boolean {
       return _builder.hasArtifactsStatus()
@@ -416,21 +448,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 missions_completed = 8;`
      */
     public var missionsCompleted: kotlin.Int
-      @JvmName("getMissionsCompleted")
-      get() = _builder.missionsCompleted
-      @JvmName("setMissionsCompleted")
-      set(value) {
+      @kotlin.jvm.JvmName("getMissionsCompleted")
+        get() = _builder.missionsCompleted
+      @kotlin.jvm.JvmName("setMissionsCompleted")
+        set(value) {
         _builder.missionsCompleted = value
       }
     /**
-     * `optional uint32 missions_completed = 8;`
+     * <code>optional uint32 missions_completed = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearMissionsCompleted() {
       _builder.clearMissionsCompleted()
     }
     /**
-     * `optional uint32 missions_completed = 8;`
+     * <code>optional uint32 missions_completed = 8;</code>
      * @return Whether the missionsCompleted field is set.
+     * @return This builder for chaining.
      */
     public fun hasMissionsCompleted(): kotlin.Boolean {
       return _builder.hasMissionsCompleted()
@@ -440,21 +474,23 @@ public object UserVerificationAnalysisKt {
      * `optional double artifacts_collected = 9;`
      */
     public var artifactsCollected: kotlin.Double
-      @JvmName("getArtifactsCollected")
-      get() = _builder.artifactsCollected
-      @JvmName("setArtifactsCollected")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifactsCollected")
+        get() = _builder.artifactsCollected
+      @kotlin.jvm.JvmName("setArtifactsCollected")
+        set(value) {
         _builder.artifactsCollected = value
       }
     /**
-     * `optional double artifacts_collected = 9;`
+     * <code>optional double artifacts_collected = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifactsCollected() {
       _builder.clearArtifactsCollected()
     }
     /**
-     * `optional double artifacts_collected = 9;`
+     * <code>optional double artifacts_collected = 9;</code>
      * @return Whether the artifactsCollected field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifactsCollected(): kotlin.Boolean {
       return _builder.hasArtifactsCollected()
@@ -464,21 +500,23 @@ public object UserVerificationAnalysisKt {
      * `optional double artifacts_consumed = 10;`
      */
     public var artifactsConsumed: kotlin.Double
-      @JvmName("getArtifactsConsumed")
-      get() = _builder.artifactsConsumed
-      @JvmName("setArtifactsConsumed")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifactsConsumed")
+        get() = _builder.artifactsConsumed
+      @kotlin.jvm.JvmName("setArtifactsConsumed")
+        set(value) {
         _builder.artifactsConsumed = value
       }
     /**
-     * `optional double artifacts_consumed = 10;`
+     * <code>optional double artifacts_consumed = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifactsConsumed() {
       _builder.clearArtifactsConsumed()
     }
     /**
-     * `optional double artifacts_consumed = 10;`
+     * <code>optional double artifacts_consumed = 10;</code>
      * @return Whether the artifactsConsumed field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifactsConsumed(): kotlin.Boolean {
       return _builder.hasArtifactsConsumed()
@@ -488,21 +526,23 @@ public object UserVerificationAnalysisKt {
      * `optional double artifacts_in_inventory = 11;`
      */
     public var artifactsInInventory: kotlin.Double
-      @JvmName("getArtifactsInInventory")
-      get() = _builder.artifactsInInventory
-      @JvmName("setArtifactsInInventory")
-      set(value) {
+      @kotlin.jvm.JvmName("getArtifactsInInventory")
+        get() = _builder.artifactsInInventory
+      @kotlin.jvm.JvmName("setArtifactsInInventory")
+        set(value) {
         _builder.artifactsInInventory = value
       }
     /**
-     * `optional double artifacts_in_inventory = 11;`
+     * <code>optional double artifacts_in_inventory = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearArtifactsInInventory() {
       _builder.clearArtifactsInInventory()
     }
     /**
-     * `optional double artifacts_in_inventory = 11;`
+     * <code>optional double artifacts_in_inventory = 11;</code>
      * @return Whether the artifactsInInventory field is set.
+     * @return This builder for chaining.
      */
     public fun hasArtifactsInInventory(): kotlin.Boolean {
       return _builder.hasArtifactsInInventory()
@@ -512,21 +552,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint64 rare_artifacts_in_inventory = 33;`
      */
     public var rareArtifactsInInventory: kotlin.Long
-      @JvmName("getRareArtifactsInInventory")
-      get() = _builder.rareArtifactsInInventory
-      @JvmName("setRareArtifactsInInventory")
-      set(value) {
+      @kotlin.jvm.JvmName("getRareArtifactsInInventory")
+        get() = _builder.rareArtifactsInInventory
+      @kotlin.jvm.JvmName("setRareArtifactsInInventory")
+        set(value) {
         _builder.rareArtifactsInInventory = value
       }
     /**
-     * `optional uint64 rare_artifacts_in_inventory = 33;`
+     * <code>optional uint64 rare_artifacts_in_inventory = 33;</code>
+     * @return This builder for chaining.
      */
     public fun clearRareArtifactsInInventory() {
       _builder.clearRareArtifactsInInventory()
     }
     /**
-     * `optional uint64 rare_artifacts_in_inventory = 33;`
+     * <code>optional uint64 rare_artifacts_in_inventory = 33;</code>
      * @return Whether the rareArtifactsInInventory field is set.
+     * @return This builder for chaining.
      */
     public fun hasRareArtifactsInInventory(): kotlin.Boolean {
       return _builder.hasRareArtifactsInInventory()
@@ -536,21 +578,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint64 rare_artifacts_on_server = 34;`
      */
     public var rareArtifactsOnServer: kotlin.Long
-      @JvmName("getRareArtifactsOnServer")
-      get() = _builder.rareArtifactsOnServer
-      @JvmName("setRareArtifactsOnServer")
-      set(value) {
+      @kotlin.jvm.JvmName("getRareArtifactsOnServer")
+        get() = _builder.rareArtifactsOnServer
+      @kotlin.jvm.JvmName("setRareArtifactsOnServer")
+        set(value) {
         _builder.rareArtifactsOnServer = value
       }
     /**
-     * `optional uint64 rare_artifacts_on_server = 34;`
+     * <code>optional uint64 rare_artifacts_on_server = 34;</code>
+     * @return This builder for chaining.
      */
     public fun clearRareArtifactsOnServer() {
       _builder.clearRareArtifactsOnServer()
     }
     /**
-     * `optional uint64 rare_artifacts_on_server = 34;`
+     * <code>optional uint64 rare_artifacts_on_server = 34;</code>
      * @return Whether the rareArtifactsOnServer field is set.
+     * @return This builder for chaining.
      */
     public fun hasRareArtifactsOnServer(): kotlin.Boolean {
       return _builder.hasRareArtifactsOnServer()
@@ -560,21 +604,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint64 legendary_artifacts_in_inventory = 35;`
      */
     public var legendaryArtifactsInInventory: kotlin.Long
-      @JvmName("getLegendaryArtifactsInInventory")
-      get() = _builder.legendaryArtifactsInInventory
-      @JvmName("setLegendaryArtifactsInInventory")
-      set(value) {
+      @kotlin.jvm.JvmName("getLegendaryArtifactsInInventory")
+        get() = _builder.legendaryArtifactsInInventory
+      @kotlin.jvm.JvmName("setLegendaryArtifactsInInventory")
+        set(value) {
         _builder.legendaryArtifactsInInventory = value
       }
     /**
-     * `optional uint64 legendary_artifacts_in_inventory = 35;`
+     * <code>optional uint64 legendary_artifacts_in_inventory = 35;</code>
+     * @return This builder for chaining.
      */
     public fun clearLegendaryArtifactsInInventory() {
       _builder.clearLegendaryArtifactsInInventory()
     }
     /**
-     * `optional uint64 legendary_artifacts_in_inventory = 35;`
+     * <code>optional uint64 legendary_artifacts_in_inventory = 35;</code>
      * @return Whether the legendaryArtifactsInInventory field is set.
+     * @return This builder for chaining.
      */
     public fun hasLegendaryArtifactsInInventory(): kotlin.Boolean {
       return _builder.hasLegendaryArtifactsInInventory()
@@ -584,21 +630,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint64 legendary_artifacts_on_server = 36;`
      */
     public var legendaryArtifactsOnServer: kotlin.Long
-      @JvmName("getLegendaryArtifactsOnServer")
-      get() = _builder.legendaryArtifactsOnServer
-      @JvmName("setLegendaryArtifactsOnServer")
-      set(value) {
+      @kotlin.jvm.JvmName("getLegendaryArtifactsOnServer")
+        get() = _builder.legendaryArtifactsOnServer
+      @kotlin.jvm.JvmName("setLegendaryArtifactsOnServer")
+        set(value) {
         _builder.legendaryArtifactsOnServer = value
       }
     /**
-     * `optional uint64 legendary_artifacts_on_server = 36;`
+     * <code>optional uint64 legendary_artifacts_on_server = 36;</code>
+     * @return This builder for chaining.
      */
     public fun clearLegendaryArtifactsOnServer() {
       _builder.clearLegendaryArtifactsOnServer()
     }
     /**
-     * `optional uint64 legendary_artifacts_on_server = 36;`
+     * <code>optional uint64 legendary_artifacts_on_server = 36;</code>
      * @return Whether the legendaryArtifactsOnServer field is set.
+     * @return This builder for chaining.
      */
     public fun hasLegendaryArtifactsOnServer(): kotlin.Boolean {
       return _builder.hasLegendaryArtifactsOnServer()
@@ -608,21 +656,23 @@ public object UserVerificationAnalysisKt {
      * `optional double gold_spent_crafting = 21;`
      */
     public var goldSpentCrafting: kotlin.Double
-      @JvmName("getGoldSpentCrafting")
-      get() = _builder.goldSpentCrafting
-      @JvmName("setGoldSpentCrafting")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoldSpentCrafting")
+        get() = _builder.goldSpentCrafting
+      @kotlin.jvm.JvmName("setGoldSpentCrafting")
+        set(value) {
         _builder.goldSpentCrafting = value
       }
     /**
-     * `optional double gold_spent_crafting = 21;`
+     * <code>optional double gold_spent_crafting = 21;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoldSpentCrafting() {
       _builder.clearGoldSpentCrafting()
     }
     /**
-     * `optional double gold_spent_crafting = 21;`
+     * <code>optional double gold_spent_crafting = 21;</code>
      * @return Whether the goldSpentCrafting field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoldSpentCrafting(): kotlin.Boolean {
       return _builder.hasGoldSpentCrafting()
@@ -632,21 +682,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool excessive_consumes = 24;`
      */
     public var excessiveConsumes: kotlin.Boolean
-      @JvmName("getExcessiveConsumes")
-      get() = _builder.excessiveConsumes
-      @JvmName("setExcessiveConsumes")
-      set(value) {
+      @kotlin.jvm.JvmName("getExcessiveConsumes")
+        get() = _builder.excessiveConsumes
+      @kotlin.jvm.JvmName("setExcessiveConsumes")
+        set(value) {
         _builder.excessiveConsumes = value
       }
     /**
-     * `optional bool excessive_consumes = 24;`
+     * <code>optional bool excessive_consumes = 24;</code>
+     * @return This builder for chaining.
      */
     public fun clearExcessiveConsumes() {
       _builder.clearExcessiveConsumes()
     }
     /**
-     * `optional bool excessive_consumes = 24;`
+     * <code>optional bool excessive_consumes = 24;</code>
      * @return Whether the excessiveConsumes field is set.
+     * @return This builder for chaining.
      */
     public fun hasExcessiveConsumes(): kotlin.Boolean {
       return _builder.hasExcessiveConsumes()
@@ -656,21 +708,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool excessive_inventory = 25;`
      */
     public var excessiveInventory: kotlin.Boolean
-      @JvmName("getExcessiveInventory")
-      get() = _builder.excessiveInventory
-      @JvmName("setExcessiveInventory")
-      set(value) {
+      @kotlin.jvm.JvmName("getExcessiveInventory")
+        get() = _builder.excessiveInventory
+      @kotlin.jvm.JvmName("setExcessiveInventory")
+        set(value) {
         _builder.excessiveInventory = value
       }
     /**
-     * `optional bool excessive_inventory = 25;`
+     * <code>optional bool excessive_inventory = 25;</code>
+     * @return This builder for chaining.
      */
     public fun clearExcessiveInventory() {
       _builder.clearExcessiveInventory()
     }
     /**
-     * `optional bool excessive_inventory = 25;`
+     * <code>optional bool excessive_inventory = 25;</code>
      * @return Whether the excessiveInventory field is set.
+     * @return This builder for chaining.
      */
     public fun hasExcessiveInventory(): kotlin.Boolean {
       return _builder.hasExcessiveInventory()
@@ -680,21 +734,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool excessive_spend = 26;`
      */
     public var excessiveSpend: kotlin.Boolean
-      @JvmName("getExcessiveSpend")
-      get() = _builder.excessiveSpend
-      @JvmName("setExcessiveSpend")
-      set(value) {
+      @kotlin.jvm.JvmName("getExcessiveSpend")
+        get() = _builder.excessiveSpend
+      @kotlin.jvm.JvmName("setExcessiveSpend")
+        set(value) {
         _builder.excessiveSpend = value
       }
     /**
-     * `optional bool excessive_spend = 26;`
+     * <code>optional bool excessive_spend = 26;</code>
+     * @return This builder for chaining.
      */
     public fun clearExcessiveSpend() {
       _builder.clearExcessiveSpend()
     }
     /**
-     * `optional bool excessive_spend = 26;`
+     * <code>optional bool excessive_spend = 26;</code>
      * @return Whether the excessiveSpend field is set.
+     * @return This builder for chaining.
      */
     public fun hasExcessiveSpend(): kotlin.Boolean {
       return _builder.hasExcessiveSpend()
@@ -704,21 +760,23 @@ public object UserVerificationAnalysisKt {
      * `optional .ei.UserVerificationAnalysis.Status contracts_status = 20;`
      */
     public var contractsStatus: ei.Ei.UserVerificationAnalysis.Status
-      @JvmName("getContractsStatus")
-      get() = _builder.contractsStatus
-      @JvmName("setContractsStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractsStatus")
+        get() = _builder.contractsStatus
+      @kotlin.jvm.JvmName("setContractsStatus")
+        set(value) {
         _builder.contractsStatus = value
       }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status contracts_status = 20;`
+     * <code>optional .ei.UserVerificationAnalysis.Status contracts_status = 20;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractsStatus() {
       _builder.clearContractsStatus()
     }
     /**
-     * `optional .ei.UserVerificationAnalysis.Status contracts_status = 20;`
+     * <code>optional .ei.UserVerificationAnalysis.Status contracts_status = 20;</code>
      * @return Whether the contractsStatus field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractsStatus(): kotlin.Boolean {
       return _builder.hasContractsStatus()
@@ -728,21 +786,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 num_coop_memberships = 12;`
      */
     public var numCoopMemberships: kotlin.Int
-      @JvmName("getNumCoopMemberships")
-      get() = _builder.numCoopMemberships
-      @JvmName("setNumCoopMemberships")
-      set(value) {
+      @kotlin.jvm.JvmName("getNumCoopMemberships")
+        get() = _builder.numCoopMemberships
+      @kotlin.jvm.JvmName("setNumCoopMemberships")
+        set(value) {
         _builder.numCoopMemberships = value
       }
     /**
-     * `optional uint32 num_coop_memberships = 12;`
+     * <code>optional uint32 num_coop_memberships = 12;</code>
+     * @return This builder for chaining.
      */
     public fun clearNumCoopMemberships() {
       _builder.clearNumCoopMemberships()
     }
     /**
-     * `optional uint32 num_coop_memberships = 12;`
+     * <code>optional uint32 num_coop_memberships = 12;</code>
      * @return Whether the numCoopMemberships field is set.
+     * @return This builder for chaining.
      */
     public fun hasNumCoopMemberships(): kotlin.Boolean {
       return _builder.hasNumCoopMemberships()
@@ -752,21 +812,23 @@ public object UserVerificationAnalysisKt {
      * `optional uint32 valid_contracts = 16;`
      */
     public var validContracts: kotlin.Int
-      @JvmName("getValidContracts")
-      get() = _builder.validContracts
-      @JvmName("setValidContracts")
-      set(value) {
+      @kotlin.jvm.JvmName("getValidContracts")
+        get() = _builder.validContracts
+      @kotlin.jvm.JvmName("setValidContracts")
+        set(value) {
         _builder.validContracts = value
       }
     /**
-     * `optional uint32 valid_contracts = 16;`
+     * <code>optional uint32 valid_contracts = 16;</code>
+     * @return This builder for chaining.
      */
     public fun clearValidContracts() {
       _builder.clearValidContracts()
     }
     /**
-     * `optional uint32 valid_contracts = 16;`
+     * <code>optional uint32 valid_contracts = 16;</code>
      * @return Whether the validContracts field is set.
+     * @return This builder for chaining.
      */
     public fun hasValidContracts(): kotlin.Boolean {
       return _builder.hasValidContracts()
@@ -779,66 +841,73 @@ public object UserVerificationAnalysisKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class InvalidContractsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
      * @return A list containing the invalidContracts.
+     * @return This builder for chaining.
      */
     public val invalidContracts: com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>
-      @kotlin.jvm.JvmSynthetic
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       get() = com.google.protobuf.kotlin.DslList(
         _builder.invalidContractsList
       )
     /**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
      * @param value The invalidContracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addInvalidContracts")
+@kotlin.jvm.JvmName("addInvalidContracts")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>.add(value: kotlin.String) {
       _builder.addInvalidContracts(value)
     }
     /**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
      * @param value The invalidContracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignInvalidContracts")
+@kotlin.jvm.JvmName("plusAssignInvalidContracts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>.plusAssign(value: kotlin.String) {
       add(value)
     }
     /**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
      * @param values The invalidContracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllInvalidContracts")
+@kotlin.jvm.JvmName("addAllInvalidContracts")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.String>) {
       _builder.addAllInvalidContracts(values)
     }
     /**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
      * @param values The invalidContracts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllInvalidContracts")
+@kotlin.jvm.JvmName("plusAssignAllInvalidContracts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.String>) {
       addAll(values)
     }
     /**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
      * @param index The index to set the value at.
      * @param value The invalidContracts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setInvalidContracts")
+@kotlin.jvm.JvmName("setInvalidContracts")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setInvalidContracts(index, value)
     }/**
-     * `repeated string invalid_contracts = 17;`
+     * <code>repeated string invalid_contracts = 17;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearInvalidContracts")
+@kotlin.jvm.JvmName("setInvalidContracts")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, InvalidContractsProxy>.clear() {
       _builder.clearInvalidContracts()
     }
@@ -846,21 +915,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool excessive_eop = 28;`
      */
     public var excessiveEop: kotlin.Boolean
-      @JvmName("getExcessiveEop")
-      get() = _builder.excessiveEop
-      @JvmName("setExcessiveEop")
-      set(value) {
+      @kotlin.jvm.JvmName("getExcessiveEop")
+        get() = _builder.excessiveEop
+      @kotlin.jvm.JvmName("setExcessiveEop")
+        set(value) {
         _builder.excessiveEop = value
       }
     /**
-     * `optional bool excessive_eop = 28;`
+     * <code>optional bool excessive_eop = 28;</code>
+     * @return This builder for chaining.
      */
     public fun clearExcessiveEop() {
       _builder.clearExcessiveEop()
     }
     /**
-     * `optional bool excessive_eop = 28;`
+     * <code>optional bool excessive_eop = 28;</code>
      * @return Whether the excessiveEop field is set.
+     * @return This builder for chaining.
      */
     public fun hasExcessiveEop(): kotlin.Boolean {
       return _builder.hasExcessiveEop()
@@ -870,21 +941,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool excessive_invalid_contracts = 29;`
      */
     public var excessiveInvalidContracts: kotlin.Boolean
-      @JvmName("getExcessiveInvalidContracts")
-      get() = _builder.excessiveInvalidContracts
-      @JvmName("setExcessiveInvalidContracts")
-      set(value) {
+      @kotlin.jvm.JvmName("getExcessiveInvalidContracts")
+        get() = _builder.excessiveInvalidContracts
+      @kotlin.jvm.JvmName("setExcessiveInvalidContracts")
+        set(value) {
         _builder.excessiveInvalidContracts = value
       }
     /**
-     * `optional bool excessive_invalid_contracts = 29;`
+     * <code>optional bool excessive_invalid_contracts = 29;</code>
+     * @return This builder for chaining.
      */
     public fun clearExcessiveInvalidContracts() {
       _builder.clearExcessiveInvalidContracts()
     }
     /**
-     * `optional bool excessive_invalid_contracts = 29;`
+     * <code>optional bool excessive_invalid_contracts = 29;</code>
      * @return Whether the excessiveInvalidContracts field is set.
+     * @return This builder for chaining.
      */
     public fun hasExcessiveInvalidContracts(): kotlin.Boolean {
       return _builder.hasExcessiveInvalidContracts()
@@ -894,21 +967,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool verified = 30;`
      */
     public var verified: kotlin.Boolean
-      @JvmName("getVerified")
-      get() = _builder.verified
-      @JvmName("setVerified")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerified")
+        get() = _builder.verified
+      @kotlin.jvm.JvmName("setVerified")
+        set(value) {
         _builder.verified = value
       }
     /**
-     * `optional bool verified = 30;`
+     * <code>optional bool verified = 30;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerified() {
       _builder.clearVerified()
     }
     /**
-     * `optional bool verified = 30;`
+     * <code>optional bool verified = 30;</code>
      * @return Whether the verified field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerified(): kotlin.Boolean {
       return _builder.hasVerified()
@@ -918,21 +993,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool verification_override = 31;`
      */
     public var verificationOverride: kotlin.Boolean
-      @JvmName("getVerificationOverride")
-      get() = _builder.verificationOverride
-      @JvmName("setVerificationOverride")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerificationOverride")
+        get() = _builder.verificationOverride
+      @kotlin.jvm.JvmName("setVerificationOverride")
+        set(value) {
         _builder.verificationOverride = value
       }
     /**
-     * `optional bool verification_override = 31;`
+     * <code>optional bool verification_override = 31;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerificationOverride() {
       _builder.clearVerificationOverride()
     }
     /**
-     * `optional bool verification_override = 31;`
+     * <code>optional bool verification_override = 31;</code>
      * @return Whether the verificationOverride field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerificationOverride(): kotlin.Boolean {
       return _builder.hasVerificationOverride()
@@ -942,21 +1019,23 @@ public object UserVerificationAnalysisKt {
      * `optional bool verification_override_value = 32;`
      */
     public var verificationOverrideValue: kotlin.Boolean
-      @JvmName("getVerificationOverrideValue")
-      get() = _builder.verificationOverrideValue
-      @JvmName("setVerificationOverrideValue")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerificationOverrideValue")
+        get() = _builder.verificationOverrideValue
+      @kotlin.jvm.JvmName("setVerificationOverrideValue")
+        set(value) {
         _builder.verificationOverrideValue = value
       }
     /**
-     * `optional bool verification_override_value = 32;`
+     * <code>optional bool verification_override_value = 32;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerificationOverrideValue() {
       _builder.clearVerificationOverrideValue()
     }
     /**
-     * `optional bool verification_override_value = 32;`
+     * <code>optional bool verification_override_value = 32;</code>
      * @return Whether the verificationOverrideValue field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerificationOverrideValue(): kotlin.Boolean {
       return _builder.hasVerificationOverrideValue()

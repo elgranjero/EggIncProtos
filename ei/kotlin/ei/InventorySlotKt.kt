@@ -32,21 +32,23 @@ public object InventorySlotKt {
      * `optional bool occupied = 1;`
      */
     public var occupied: kotlin.Boolean
-      @JvmName("getOccupied")
-      get() = _builder.occupied
-      @JvmName("setOccupied")
-      set(value) {
+      @kotlin.jvm.JvmName("getOccupied")
+        get() = _builder.occupied
+      @kotlin.jvm.JvmName("setOccupied")
+        set(value) {
         _builder.occupied = value
       }
     /**
-     * `optional bool occupied = 1;`
+     * <code>optional bool occupied = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearOccupied() {
       _builder.clearOccupied()
     }
     /**
-     * `optional bool occupied = 1;`
+     * <code>optional bool occupied = 1;</code>
      * @return Whether the occupied field is set.
+     * @return This builder for chaining.
      */
     public fun hasOccupied(): kotlin.Boolean {
       return _builder.hasOccupied()
@@ -56,21 +58,23 @@ public object InventorySlotKt {
      * `optional uint32 item_id = 2;`
      */
     public var itemId: kotlin.Int
-      @JvmName("getItemId")
-      get() = _builder.itemId
-      @JvmName("setItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getItemId")
+        get() = _builder.itemId
+      @kotlin.jvm.JvmName("setItemId")
+        set(value) {
         _builder.itemId = value
       }
     /**
-     * `optional uint32 item_id = 2;`
+     * <code>optional uint32 item_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * `optional uint32 item_id = 2;`
+     * <code>optional uint32 item_id = 2;</code>
      * @return Whether the itemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()

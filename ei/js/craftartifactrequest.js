@@ -80,14 +80,14 @@ proto.ei.CraftArtifactRequest.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.CraftArtifactRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-eiUserId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-itemId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-goldPricePaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-craftingCount: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-ingredientsList: jspb.Message.toObjectList(msg.getIngredientsList(),
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    eiUserId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+    itemId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    goldPricePaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    craftingCount: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    ingredientsList: jspb.Message.toObjectList(msg.getIngredientsList(),
     proto.ei.ArtifactInventoryItem.toObject, includeInstance)
   };
 

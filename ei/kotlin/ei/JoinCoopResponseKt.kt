@@ -32,21 +32,23 @@ public object JoinCoopResponseKt {
      * `optional bool success = 1;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 1;`
+     * <code>optional bool success = 1;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object JoinCoopResponseKt {
      * `optional string message = 2;`
      */
     public var message: kotlin.String
-      @JvmName("getMessage")
-      get() = _builder.message
-      @JvmName("setMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getMessage")
+        get() = _builder.message
+      @kotlin.jvm.JvmName("setMessage")
+        set(value) {
         _builder.message = value
       }
     /**
-     * `optional string message = 2;`
+     * <code>optional string message = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * `optional string message = 2;`
+     * <code>optional string message = 2;</code>
      * @return Whether the message field is set.
+     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -80,21 +84,23 @@ public object JoinCoopResponseKt {
      * `optional bool banned = 4;`
      */
     public var banned: kotlin.Boolean
-      @JvmName("getBanned")
-      get() = _builder.banned
-      @JvmName("setBanned")
-      set(value) {
+      @kotlin.jvm.JvmName("getBanned")
+        get() = _builder.banned
+      @kotlin.jvm.JvmName("setBanned")
+        set(value) {
         _builder.banned = value
       }
     /**
-     * `optional bool banned = 4;`
+     * <code>optional bool banned = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearBanned() {
       _builder.clearBanned()
     }
     /**
-     * `optional bool banned = 4;`
+     * <code>optional bool banned = 4;</code>
      * @return Whether the banned field is set.
+     * @return This builder for chaining.
      */
     public fun hasBanned(): kotlin.Boolean {
       return _builder.hasBanned()
@@ -104,21 +110,23 @@ public object JoinCoopResponseKt {
      * `optional string coop_identifier = 5;`
      */
     public var coopIdentifier: kotlin.String
-      @JvmName("getCoopIdentifier")
-      get() = _builder.coopIdentifier
-      @JvmName("setCoopIdentifier")
-      set(value) {
+      @kotlin.jvm.JvmName("getCoopIdentifier")
+        get() = _builder.coopIdentifier
+      @kotlin.jvm.JvmName("setCoopIdentifier")
+        set(value) {
         _builder.coopIdentifier = value
       }
     /**
-     * `optional string coop_identifier = 5;`
+     * <code>optional string coop_identifier = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * `optional string coop_identifier = 5;`
+     * <code>optional string coop_identifier = 5;</code>
      * @return Whether the coopIdentifier field is set.
+     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -128,21 +136,23 @@ public object JoinCoopResponseKt {
      * `optional double seconds_remaining = 3;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 3;`
+     * <code>optional double seconds_remaining = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 3;`
+     * <code>optional double seconds_remaining = 3;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -152,21 +162,23 @@ public object JoinCoopResponseKt {
      * `optional double match_percent = 6;`
      */
     public var matchPercent: kotlin.Double
-      @JvmName("getMatchPercent")
-      get() = _builder.matchPercent
-      @JvmName("setMatchPercent")
-      set(value) {
+      @kotlin.jvm.JvmName("getMatchPercent")
+        get() = _builder.matchPercent
+      @kotlin.jvm.JvmName("setMatchPercent")
+        set(value) {
         _builder.matchPercent = value
       }
     /**
-     * `optional double match_percent = 6;`
+     * <code>optional double match_percent = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearMatchPercent() {
       _builder.clearMatchPercent()
     }
     /**
-     * `optional double match_percent = 6;`
+     * <code>optional double match_percent = 6;</code>
      * @return Whether the matchPercent field is set.
+     * @return This builder for chaining.
      */
     public fun hasMatchPercent(): kotlin.Boolean {
       return _builder.hasMatchPercent()
@@ -176,21 +188,23 @@ public object JoinCoopResponseKt {
      * `optional uint32 num_members = 7;`
      */
     public var numMembers: kotlin.Int
-      @JvmName("getNumMembers")
-      get() = _builder.numMembers
-      @JvmName("setNumMembers")
-      set(value) {
+      @kotlin.jvm.JvmName("getNumMembers")
+        get() = _builder.numMembers
+      @kotlin.jvm.JvmName("setNumMembers")
+        set(value) {
         _builder.numMembers = value
       }
     /**
-     * `optional uint32 num_members = 7;`
+     * <code>optional uint32 num_members = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearNumMembers() {
       _builder.clearNumMembers()
     }
     /**
-     * `optional uint32 num_members = 7;`
+     * <code>optional uint32 num_members = 7;</code>
      * @return Whether the numMembers field is set.
+     * @return This builder for chaining.
      */
     public fun hasNumMembers(): kotlin.Boolean {
       return _builder.hasNumMembers()
@@ -200,21 +214,23 @@ public object JoinCoopResponseKt {
      * `optional .ei.ContractCoopStatusResponse.Status status = 8;`
      */
     public var status: ei.Ei.ContractCoopStatusResponse.Status
-      @JvmName("getStatus")
-      get() = _builder.status
-      @JvmName("setStatus")
-      set(value) {
+      @kotlin.jvm.JvmName("getStatus")
+        get() = _builder.status
+      @kotlin.jvm.JvmName("setStatus")
+        set(value) {
         _builder.status = value
       }
     /**
-     * `optional .ei.ContractCoopStatusResponse.Status status = 8;`
+     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * `optional .ei.ContractCoopStatusResponse.Status status = 8;`
+     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
      * @return Whether the status field is set.
+     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -224,21 +240,23 @@ public object JoinCoopResponseKt {
      * `optional .ei.Contract.PlayerGrade grade = 9;`
      */
     public var grade: ei.Ei.Contract.PlayerGrade
-      @JvmName("getGrade")
-      get() = _builder.grade
-      @JvmName("setGrade")
-      set(value) {
+      @kotlin.jvm.JvmName("getGrade")
+        get() = _builder.grade
+      @kotlin.jvm.JvmName("setGrade")
+        set(value) {
         _builder.grade = value
       }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 9;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * `optional .ei.Contract.PlayerGrade grade = 9;`
+     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
      * @return Whether the grade field is set.
+     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -248,21 +266,23 @@ public object JoinCoopResponseKt {
      * `optional bool can_start = 10;`
      */
     public var canStart: kotlin.Boolean
-      @JvmName("getCanStart")
-      get() = _builder.canStart
-      @JvmName("setCanStart")
-      set(value) {
+      @kotlin.jvm.JvmName("getCanStart")
+        get() = _builder.canStart
+      @kotlin.jvm.JvmName("setCanStart")
+        set(value) {
         _builder.canStart = value
       }
     /**
-     * `optional bool can_start = 10;`
+     * <code>optional bool can_start = 10;</code>
+     * @return This builder for chaining.
      */
     public fun clearCanStart() {
       _builder.clearCanStart()
     }
     /**
-     * `optional bool can_start = 10;`
+     * <code>optional bool can_start = 10;</code>
      * @return Whether the canStart field is set.
+     * @return This builder for chaining.
      */
     public fun hasCanStart(): kotlin.Boolean {
       return _builder.hasCanStart()

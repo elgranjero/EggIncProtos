@@ -104,20 +104,20 @@ proto.ei.MissionInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MissionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-status: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-durationType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-fuelList: jspb.Message.toObjectList(msg.getFuelList(),
+    ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    status: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    durationType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    fuelList: jspb.Message.toObjectList(msg.getFuelList(),
     proto.ei.MissionInfo.Fuel.toObject, includeInstance),
-level: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-durationSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-capacity: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-qualityBump: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-targetArtifact: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-startTimeDerived: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-missionLog: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-identifier: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    level: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    durationSeconds: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    capacity: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    qualityBump: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    targetArtifact: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    startTimeDerived: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    missionLog: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+    identifier: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -403,8 +403,8 @@ proto.ei.MissionInfo.Fuel.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MissionInfo.Fuel.toObject = function(includeInstance, msg) {
   var f, obj = {
-egg: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
+    egg: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

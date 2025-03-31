@@ -32,21 +32,23 @@ public object ContractSimPollResponseKt {
      * `optional .ei.Contract contract_to_simulate = 1;`
      */
     public var contractToSimulate: ei.Ei.Contract
-      @JvmName("getContractToSimulate")
-      get() = _builder.contractToSimulate
-      @JvmName("setContractToSimulate")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractToSimulate")
+        get() = _builder.contractToSimulate
+      @kotlin.jvm.JvmName("setContractToSimulate")
+        set(value) {
         _builder.contractToSimulate = value
       }
     /**
-     * `optional .ei.Contract contract_to_simulate = 1;`
+     * <code>optional .ei.Contract contract_to_simulate = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractToSimulate() {
       _builder.clearContractToSimulate()
     }
     /**
-     * `optional .ei.Contract contract_to_simulate = 1;`
+     * <code>optional .ei.Contract contract_to_simulate = 1;</code>
      * @return Whether the contractToSimulate field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractToSimulate(): kotlin.Boolean {
       return _builder.hasContractToSimulate()
@@ -59,21 +61,23 @@ public object ContractSimPollResponseKt {
      * `optional .ei.ContractSimConfig sim_config = 2;`
      */
     public var simConfig: ei.Ei.ContractSimConfig
-      @JvmName("getSimConfig")
-      get() = _builder.simConfig
-      @JvmName("setSimConfig")
-      set(value) {
+      @kotlin.jvm.JvmName("getSimConfig")
+        get() = _builder.simConfig
+      @kotlin.jvm.JvmName("setSimConfig")
+        set(value) {
         _builder.simConfig = value
       }
     /**
-     * `optional .ei.ContractSimConfig sim_config = 2;`
+     * <code>optional .ei.ContractSimConfig sim_config = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSimConfig() {
       _builder.clearSimConfig()
     }
     /**
-     * `optional .ei.ContractSimConfig sim_config = 2;`
+     * <code>optional .ei.ContractSimConfig sim_config = 2;</code>
      * @return Whether the simConfig field is set.
+     * @return This builder for chaining.
      */
     public fun hasSimConfig(): kotlin.Boolean {
       return _builder.hasSimConfig()

@@ -32,21 +32,23 @@ public object SubscriptionChangeHintRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 3;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 3;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 3;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object SubscriptionChangeHintRequestKt {
      * `optional string original_transaction_id = 1;`
      */
     public var originalTransactionId: kotlin.String
-      @JvmName("getOriginalTransactionId")
-      get() = _builder.originalTransactionId
-      @JvmName("setOriginalTransactionId")
-      set(value) {
+      @kotlin.jvm.JvmName("getOriginalTransactionId")
+        get() = _builder.originalTransactionId
+      @kotlin.jvm.JvmName("setOriginalTransactionId")
+        set(value) {
         _builder.originalTransactionId = value
       }
     /**
-     * `optional string original_transaction_id = 1;`
+     * <code>optional string original_transaction_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearOriginalTransactionId() {
       _builder.clearOriginalTransactionId()
     }
     /**
-     * `optional string original_transaction_id = 1;`
+     * <code>optional string original_transaction_id = 1;</code>
      * @return Whether the originalTransactionId field is set.
+     * @return This builder for chaining.
      */
     public fun hasOriginalTransactionId(): kotlin.Boolean {
       return _builder.hasOriginalTransactionId()
@@ -83,21 +87,23 @@ public object SubscriptionChangeHintRequestKt {
      * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;`
      */
     public var nextSubscriptionLevel: ei.Ei.UserSubscriptionInfo.Level
-      @JvmName("getNextSubscriptionLevel")
-      get() = _builder.nextSubscriptionLevel
-      @JvmName("setNextSubscriptionLevel")
-      set(value) {
+      @kotlin.jvm.JvmName("getNextSubscriptionLevel")
+        get() = _builder.nextSubscriptionLevel
+      @kotlin.jvm.JvmName("setNextSubscriptionLevel")
+        set(value) {
         _builder.nextSubscriptionLevel = value
       }
     /**
-     * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;`
+     * <code>optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearNextSubscriptionLevel() {
       _builder.clearNextSubscriptionLevel()
     }
     /**
-     * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;`
+     * <code>optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;</code>
      * @return Whether the nextSubscriptionLevel field is set.
+     * @return This builder for chaining.
      */
     public fun hasNextSubscriptionLevel(): kotlin.Boolean {
       return _builder.hasNextSubscriptionLevel()

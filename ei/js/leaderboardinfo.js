@@ -99,9 +99,9 @@ proto.ei.LeaderboardInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.LeaderboardInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-seasonsList: jspb.Message.toObjectList(msg.getSeasonsList(),
+    seasonsList: jspb.Message.toObjectList(msg.getSeasonsList(),
     proto.ei.LeaderboardInfo.Season.toObject, includeInstance),
-allTimeScope: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    allTimeScope: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -226,8 +226,8 @@ proto.ei.LeaderboardInfo.Season.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.LeaderboardInfo.Season.toObject = function(includeInstance, msg) {
   var f, obj = {
-scope: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    scope: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

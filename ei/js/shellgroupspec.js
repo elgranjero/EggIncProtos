@@ -78,11 +78,11 @@ proto.ei.ShellGroupSpec.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ShellGroupSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-assetType: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-memberIdsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-priceMultDeprecated: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+    identifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    assetType: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    memberIdsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    priceMultDeprecated: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

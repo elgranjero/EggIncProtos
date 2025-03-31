@@ -78,7 +78,7 @@ proto.ei.CoopLastChickenRunTimes.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.CoopLastChickenRunTimes.toObject = function(includeInstance, msg) {
   var f, obj = {
-entriesList: jspb.Message.toObjectList(msg.getEntriesList(),
+    entriesList: jspb.Message.toObjectList(msg.getEntriesList(),
     proto.ei.CoopChickenRunEntry.toObject, includeInstance)
   };
 

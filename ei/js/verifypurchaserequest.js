@@ -72,14 +72,14 @@ proto.ei.VerifyPurchaseRequest.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.VerifyPurchaseRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-sku: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-transactionId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-originalTransactionId: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-receipt: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-platform: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-sandbox: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-log: (f = msg.getLog()) && proto.ei.GenericAction.toObject(includeInstance, f)
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    sku: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    transactionId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    originalTransactionId: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    receipt: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    platform: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    sandbox: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    log: (f = msg.getLog()) && proto.ei.GenericAction.toObject(includeInstance, f)
   };
 
   if (includeInstance) {

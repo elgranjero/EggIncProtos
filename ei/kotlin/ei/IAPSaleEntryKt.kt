@@ -32,21 +32,23 @@ public object IAPSaleEntryKt {
      * `optional string product_id = 1;`
      */
     public var productId: kotlin.String
-      @JvmName("getProductId")
-      get() = _builder.productId
-      @JvmName("setProductId")
-      set(value) {
+      @kotlin.jvm.JvmName("getProductId")
+        get() = _builder.productId
+      @kotlin.jvm.JvmName("setProductId")
+        set(value) {
         _builder.productId = value
       }
     /**
-     * `optional string product_id = 1;`
+     * <code>optional string product_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearProductId() {
       _builder.clearProductId()
     }
     /**
-     * `optional string product_id = 1;`
+     * <code>optional string product_id = 1;</code>
      * @return Whether the productId field is set.
+     * @return This builder for chaining.
      */
     public fun hasProductId(): kotlin.Boolean {
       return _builder.hasProductId()
@@ -56,21 +58,23 @@ public object IAPSaleEntryKt {
      * `optional double seconds_remaining = 2;`
      */
     public var secondsRemaining: kotlin.Double
-      @JvmName("getSecondsRemaining")
-      get() = _builder.secondsRemaining
-      @JvmName("setSecondsRemaining")
-      set(value) {
+      @kotlin.jvm.JvmName("getSecondsRemaining")
+        get() = _builder.secondsRemaining
+      @kotlin.jvm.JvmName("setSecondsRemaining")
+        set(value) {
         _builder.secondsRemaining = value
       }
     /**
-     * `optional double seconds_remaining = 2;`
+     * <code>optional double seconds_remaining = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * `optional double seconds_remaining = 2;`
+     * <code>optional double seconds_remaining = 2;</code>
      * @return Whether the secondsRemaining field is set.
+     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -80,21 +84,23 @@ public object IAPSaleEntryKt {
      * `optional string discount_string = 3;`
      */
     public var discountString: kotlin.String
-      @JvmName("getDiscountString")
-      get() = _builder.discountString
-      @JvmName("setDiscountString")
-      set(value) {
+      @kotlin.jvm.JvmName("getDiscountString")
+        get() = _builder.discountString
+      @kotlin.jvm.JvmName("setDiscountString")
+        set(value) {
         _builder.discountString = value
       }
     /**
-     * `optional string discount_string = 3;`
+     * <code>optional string discount_string = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearDiscountString() {
       _builder.clearDiscountString()
     }
     /**
-     * `optional string discount_string = 3;`
+     * <code>optional string discount_string = 3;</code>
      * @return Whether the discountString field is set.
+     * @return This builder for chaining.
      */
     public fun hasDiscountString(): kotlin.Boolean {
       return _builder.hasDiscountString()
@@ -104,21 +110,23 @@ public object IAPSaleEntryKt {
      * `optional string sale_id = 4;`
      */
     public var saleId: kotlin.String
-      @JvmName("getSaleId")
-      get() = _builder.saleId
-      @JvmName("setSaleId")
-      set(value) {
+      @kotlin.jvm.JvmName("getSaleId")
+        get() = _builder.saleId
+      @kotlin.jvm.JvmName("setSaleId")
+        set(value) {
         _builder.saleId = value
       }
     /**
-     * `optional string sale_id = 4;`
+     * <code>optional string sale_id = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearSaleId() {
       _builder.clearSaleId()
     }
     /**
-     * `optional string sale_id = 4;`
+     * <code>optional string sale_id = 4;</code>
      * @return Whether the saleId field is set.
+     * @return This builder for chaining.
      */
     public fun hasSaleId(): kotlin.Boolean {
       return _builder.hasSaleId()

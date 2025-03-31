@@ -559,34 +559,34 @@ proto.ei.Backup.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-eiUserId: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
-gameServicesId: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-pushUserId: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
-deviceId: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-version: jspb.Message.getFieldWithDefault(msg, 21, 0),
-forceOfferBackup: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
-forceBackup: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
-settings: (f = msg.getSettings()) && proto.ei.Backup.Settings.toObject(includeInstance, f),
-tutorial: (f = msg.getTutorial()) && proto.ei.Backup.Tutorial.toObject(includeInstance, f),
-stats: (f = msg.getStats()) && proto.ei.Backup.Stats.toObject(includeInstance, f),
-game: (f = msg.getGame()) && proto.ei.Backup.Game.toObject(includeInstance, f),
-artifacts: (f = msg.getArtifacts()) && proto.ei.Backup.Artifacts.toObject(includeInstance, f),
-shells: (f = msg.getShells()) && proto.ei.Backup.Shells.toObject(includeInstance, f),
-sim: (f = msg.getSim()) && proto.ei.Backup.Simulation.toObject(includeInstance, f),
-farmsList: jspb.Message.toObjectList(msg.getFarmsList(),
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    eiUserId: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
+    gameServicesId: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    pushUserId: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
+    deviceId: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+    userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    version: jspb.Message.getFieldWithDefault(msg, 21, 0),
+    forceOfferBackup: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
+    forceBackup: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
+    settings: (f = msg.getSettings()) && proto.ei.Backup.Settings.toObject(includeInstance, f),
+    tutorial: (f = msg.getTutorial()) && proto.ei.Backup.Tutorial.toObject(includeInstance, f),
+    stats: (f = msg.getStats()) && proto.ei.Backup.Stats.toObject(includeInstance, f),
+    game: (f = msg.getGame()) && proto.ei.Backup.Game.toObject(includeInstance, f),
+    artifacts: (f = msg.getArtifacts()) && proto.ei.Backup.Artifacts.toObject(includeInstance, f),
+    shells: (f = msg.getShells()) && proto.ei.Backup.Shells.toObject(includeInstance, f),
+    sim: (f = msg.getSim()) && proto.ei.Backup.Simulation.toObject(includeInstance, f),
+    farmsList: jspb.Message.toObjectList(msg.getFarmsList(),
     proto.ei.Backup.Simulation.toObject, includeInstance),
-mission: (f = msg.getMission()) && proto.ei.Backup.Mission.toObject(includeInstance, f),
-misc: (f = msg.getMisc()) && proto.ei.Backup.Misc.toObject(includeInstance, f),
-contracts: (f = msg.getContracts()) && proto.ei.MyContracts.toObject(includeInstance, f),
-artifactsDb: (f = msg.getArtifactsDb()) && proto.ei.ArtifactsDB.toObject(includeInstance, f),
-shellDb: (f = msg.getShellDb()) && proto.ei.ShellDB.toObject(includeInstance, f),
-readMailIdsList: (f = jspb.Message.getRepeatedField(msg, 23)) == null ? undefined : f,
-mailState: (f = msg.getMailState()) && proto.ei.MailState.toObject(includeInstance, f),
-checksum: (f = jspb.Message.getField(msg, 100)) == null ? undefined : f,
-signature: (f = jspb.Message.getField(msg, 101)) == null ? undefined : f
+    mission: (f = msg.getMission()) && proto.ei.Backup.Mission.toObject(includeInstance, f),
+    misc: (f = msg.getMisc()) && proto.ei.Backup.Misc.toObject(includeInstance, f),
+    contracts: (f = msg.getContracts()) && proto.ei.MyContracts.toObject(includeInstance, f),
+    artifactsDb: (f = msg.getArtifactsDb()) && proto.ei.ArtifactsDB.toObject(includeInstance, f),
+    shellDb: (f = msg.getShellDb()) && proto.ei.ShellDB.toObject(includeInstance, f),
+    readMailIdsList: (f = jspb.Message.getRepeatedField(msg, 23)) == null ? undefined : f,
+    mailState: (f = msg.getMailState()) && proto.ei.MailState.toObject(includeInstance, f),
+    checksum: (f = jspb.Message.getField(msg, 100)) == null ? undefined : f,
+    signature: (f = jspb.Message.getField(msg, 101)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1012,36 +1012,36 @@ proto.ei.Backup.Settings.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
   var f, obj = {
-sfx: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-music: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-lowBatteryMode: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-lowPerformanceMode: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-forceTouchChickenBtn: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
-notificationsQueried: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-lastNotificationQueryTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 27)) == null ? undefined : f,
-notificationsOn: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-notifyDailyGift: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-lowPerformance: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-autoStopFueling: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
-maxEnabled: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
-hideCcStatus: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
-contractsWidgetEnabled: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
-artifactSparkle: (f = jspb.Message.getBooleanField(msg, 30)) == null ? undefined : f,
-lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
-coppaQueried: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-coppaRestricted: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
-gdprConsentQueried: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
-gdprAgeRestricted: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
-gdprConsentGiven: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
-ageQueried: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
-ageRestricted: jspb.Message.getBooleanFieldWithDefault(msg, 19, false),
-dataCollectionConsentQueried: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
-dataCollectionConsentGiven: (f = jspb.Message.getBooleanField(msg, 21)) == null ? undefined : f,
-lastDayAgeQueried: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-userAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 14, true),
-userCloudEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 15, true),
-userAnalyticsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 22, true),
-userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true)
+    sfx: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    music: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    lowBatteryMode: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+    lowPerformanceMode: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    forceTouchChickenBtn: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
+    notificationsQueried: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    lastNotificationQueryTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 27)) == null ? undefined : f,
+    notificationsOn: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    notifyDailyGift: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    lowPerformance: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    autoStopFueling: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
+    maxEnabled: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
+    hideCcStatus: (f = jspb.Message.getBooleanField(msg, 28)) == null ? undefined : f,
+    contractsWidgetEnabled: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
+    artifactSparkle: (f = jspb.Message.getBooleanField(msg, 30)) == null ? undefined : f,
+    lastBackupTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
+    coppaQueried: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    coppaRestricted: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
+    gdprConsentQueried: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
+    gdprAgeRestricted: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
+    gdprConsentGiven: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    ageQueried: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
+    ageRestricted: jspb.Message.getBooleanFieldWithDefault(msg, 19, false),
+    dataCollectionConsentQueried: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
+    dataCollectionConsentGiven: (f = jspb.Message.getBooleanField(msg, 21)) == null ? undefined : f,
+    lastDayAgeQueried: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+    userAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 14, true),
+    userCloudEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 15, true),
+    userAnalyticsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 22, true),
+    userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true)
   };
 
   if (includeInstance) {
@@ -2559,17 +2559,17 @@ proto.ei.Backup.Tutorial.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Tutorial.toObject = function(includeInstance, msg) {
   var f, obj = {
-introShown: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-clickTutorialShown: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-buyHabShown: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
-hireVehicleShown: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-qNumShown: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-sNumShown: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-contractsTabShown: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-contractInfoShown: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
-joinCoopShown: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
-switchFarmShown: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-tutorialShownList: (f = jspb.Message.getRepeatedBooleanField(msg, 11)) == null ? undefined : f
+    introShown: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    clickTutorialShown: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    buyHabShown: (f = jspb.Message.getBooleanField(msg, 3)) == null ? undefined : f,
+    hireVehicleShown: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    qNumShown: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    sNumShown: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    contractsTabShown: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    contractInfoShown: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
+    joinCoopShown: (f = jspb.Message.getBooleanField(msg, 9)) == null ? undefined : f,
+    switchFarmShown: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    tutorialShownList: (f = jspb.Message.getRepeatedBooleanField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3197,24 +3197,24 @@ proto.ei.Backup.Stats.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Stats.toObject = function(includeInstance, msg) {
   var f, obj = {
-eggTotalsOldList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-eggTotalsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 8)) == null ? undefined : f,
-unlimitedChickensUses: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-refillUses: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-warp1Uses: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-warp8Uses: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-boostsUsed: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-videoDoublerUses: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-droneTakedowns: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-droneTakedownsElite: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-numPrestiges: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-numPiggyBreaks: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-iapPacksPurchased: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-piggyFull: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-piggyFoundFull: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
-timePiggyFilledRealtime: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
-timePiggyFullGametime: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
-lostPiggyIncrements: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f
+    eggTotalsOldList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
+    eggTotalsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 8)) == null ? undefined : f,
+    unlimitedChickensUses: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    refillUses: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    warp1Uses: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    warp8Uses: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    boostsUsed: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    videoDoublerUses: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    droneTakedowns: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    droneTakedownsElite: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+    numPrestiges: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    numPiggyBreaks: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+    iapPacksPurchased: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    piggyFull: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    piggyFoundFull: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    timePiggyFilledRealtime: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
+    timePiggyFullGametime: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
+    lostPiggyIncrements: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -4174,49 +4174,49 @@ proto.ei.Backup.Game.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Game.toObject = function(includeInstance, msg) {
   var f, obj = {
-currentFarm: jspb.Message.getFieldWithDefault(msg, 22, 0),
-maxEggReached: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-goldenEggsEarned: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-goldenEggsSpent: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-uncliamedGoldenEggs: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-soulEggs: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-unclaimedSoulEggs: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-soulEggsD: (f = jspb.Message.getOptionalFloatingPointField(msg, 34)) == null ? undefined : f,
-unclaimedSoulEggsD: (f = jspb.Message.getOptionalFloatingPointField(msg, 35)) == null ? undefined : f,
-eggsOfProphecy: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
-unclaimedEggsOfProphecy: (f = jspb.Message.getField(msg, 24)) == null ? undefined : f,
-shellScriptsEarned: (f = jspb.Message.getField(msg, 38)) == null ? undefined : f,
-shellScriptsSpent: (f = jspb.Message.getField(msg, 39)) == null ? undefined : f,
-unclaimedShellScripts: (f = jspb.Message.getField(msg, 40)) == null ? undefined : f,
-prestigeCashEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-prestigeSoulBoostCash: (f = jspb.Message.getOptionalFloatingPointField(msg, 33)) == null ? undefined : f,
-lifetimeCashEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-piggyBank: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-piggyFullAlertShown: (f = jspb.Message.getBooleanField(msg, 31)) == null ? undefined : f,
-permitLevel: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-epicResearchList: jspb.Message.toObjectList(msg.getEpicResearchList(),
+    currentFarm: jspb.Message.getFieldWithDefault(msg, 22, 0),
+    maxEggReached: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    goldenEggsEarned: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    goldenEggsSpent: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    uncliamedGoldenEggs: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    unclaimedSoulEggs: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+    soulEggsD: (f = jspb.Message.getOptionalFloatingPointField(msg, 34)) == null ? undefined : f,
+    unclaimedSoulEggsD: (f = jspb.Message.getOptionalFloatingPointField(msg, 35)) == null ? undefined : f,
+    eggsOfProphecy: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
+    unclaimedEggsOfProphecy: (f = jspb.Message.getField(msg, 24)) == null ? undefined : f,
+    shellScriptsEarned: (f = jspb.Message.getField(msg, 38)) == null ? undefined : f,
+    shellScriptsSpent: (f = jspb.Message.getField(msg, 39)) == null ? undefined : f,
+    unclaimedShellScripts: (f = jspb.Message.getField(msg, 40)) == null ? undefined : f,
+    prestigeCashEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    prestigeSoulBoostCash: (f = jspb.Message.getOptionalFloatingPointField(msg, 33)) == null ? undefined : f,
+    lifetimeCashEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    piggyBank: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    piggyFullAlertShown: (f = jspb.Message.getBooleanField(msg, 31)) == null ? undefined : f,
+    permitLevel: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    epicResearchList: jspb.Message.toObjectList(msg.getEpicResearchList(),
     proto.ei.Backup.ResearchItem.toObject, includeInstance),
-hyperloopStation: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
-nextDailyGiftTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-lastDailyGiftCollectedDay: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-numDailyGiftsCollected: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f,
-newsList: jspb.Message.toObjectList(msg.getNewsList(),
+    hyperloopStation: (f = jspb.Message.getBooleanField(msg, 29)) == null ? undefined : f,
+    nextDailyGiftTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    lastDailyGiftCollectedDay: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
+    numDailyGiftsCollected: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f,
+    newsList: jspb.Message.toObjectList(msg.getNewsList(),
     proto.ei.Backup.NewsHeadline.toObject, includeInstance),
-lastNewsTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-currentMultiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
-currentMultiplierExpiration: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
-achievementsList: jspb.Message.toObjectList(msg.getAchievementsList(),
+    lastNewsTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    currentMultiplier: (f = jspb.Message.getOptionalFloatingPointField(msg, 13)) == null ? undefined : f,
+    currentMultiplierExpiration: (f = jspb.Message.getOptionalFloatingPointField(msg, 14)) == null ? undefined : f,
+    achievementsList: jspb.Message.toObjectList(msg.getAchievementsList(),
     proto.ei.Backup.AchievementInfo.toObject, includeInstance),
-maxFarmSizeReachedList: (f = jspb.Message.getRepeatedField(msg, 18)) == null ? undefined : f,
-eggMedalLevelList: (f = jspb.Message.getRepeatedField(msg, 19)) == null ? undefined : f,
-longIdleNotificationSet: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
-longIdleNotificationThreshold: (f = jspb.Message.getOptionalFloatingPointField(msg, 26)) == null ? undefined : f,
-longIdleReward: (f = jspb.Message.getOptionalFloatingPointField(msg, 27)) == null ? undefined : f,
-boostsList: jspb.Message.toObjectList(msg.getBoostsList(),
+    maxFarmSizeReachedList: (f = jspb.Message.getRepeatedField(msg, 18)) == null ? undefined : f,
+    eggMedalLevelList: (f = jspb.Message.getRepeatedField(msg, 19)) == null ? undefined : f,
+    longIdleNotificationSet: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
+    longIdleNotificationThreshold: (f = jspb.Message.getOptionalFloatingPointField(msg, 26)) == null ? undefined : f,
+    longIdleReward: (f = jspb.Message.getOptionalFloatingPointField(msg, 27)) == null ? undefined : f,
+    boostsList: jspb.Message.toObjectList(msg.getBoostsList(),
     proto.ei.Backup.OwnedBoost.toObject, includeInstance),
-totalTimeCheatsDetected: (f = jspb.Message.getField(msg, 32)) == null ? undefined : f,
-forceEliteContracts: (f = jspb.Message.getBooleanField(msg, 36)) == null ? undefined : f,
-newPlayerEventEndTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 37)) == null ? undefined : f
+    totalTimeCheatsDetected: (f = jspb.Message.getField(msg, 32)) == null ? undefined : f,
+    forceEliteContracts: (f = jspb.Message.getBooleanField(msg, 36)) == null ? undefined : f,
+    newPlayerEventEndTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 37)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -6179,24 +6179,24 @@ proto.ei.Backup.Artifacts.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Artifacts.toObject = function(includeInstance, msg) {
   var f, obj = {
-infusing: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-itemBeingInfused: (f = msg.getItemBeingInfused()) && proto.ei.ArtifactInventoryItem.toObject(includeInstance, f),
-specBeingInfused: (f = msg.getSpecBeingInfused()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-eggTypeInfusing: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-infusingEggsRequired: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-eggsInfused: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-flowPercentageArtifacts: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.5),
-fuelingEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 7, true),
-tankFillingEnabled: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-tankLevel: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
-tankFuelsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 16)) == null ? undefined : f,
-tankLimitsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 18)) == null ? undefined : f,
-lastFueledShip: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-inventoryScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
-enabled: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-introShown: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
-infusingEnabledDeprecated: jspb.Message.getBooleanFieldWithDefault(msg, 8, true)
+    infusing: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    itemBeingInfused: (f = msg.getItemBeingInfused()) && proto.ei.ArtifactInventoryItem.toObject(includeInstance, f),
+    specBeingInfused: (f = msg.getSpecBeingInfused()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+    eggTypeInfusing: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    infusingEggsRequired: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    eggsInfused: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    flowPercentageArtifacts: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.5),
+    fuelingEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 7, true),
+    tankFillingEnabled: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    tankLevel: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+    tankFuelsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 16)) == null ? undefined : f,
+    tankLimitsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 18)) == null ? undefined : f,
+    lastFueledShip: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    inventoryScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    craftingXp: (f = jspb.Message.getOptionalFloatingPointField(msg, 17)) == null ? undefined : f,
+    enabled: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    introShown: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
+    infusingEnabledDeprecated: jspb.Message.getBooleanFieldWithDefault(msg, 8, true)
   };
 
   if (includeInstance) {
@@ -7162,9 +7162,9 @@ proto.ei.Backup.Shells.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Shells.toObject = function(includeInstance, msg) {
   var f, obj = {
-introAlert: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-contractsIntroAlert: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-numNewList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+    introAlert: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    contractsIntroAlert: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    numNewList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -7416,40 +7416,40 @@ proto.ei.Backup.Simulation.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Simulation.toObject = function(includeInstance, msg) {
   var f, obj = {
-eggType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-farmType: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
-contractId: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-cashEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-cashSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-unclaimedCash: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-lastStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-numChickens: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-numChickensUnsettled: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-numChickensRunning: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-eggsLaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
-eggsShipped: (f = jspb.Message.getOptionalFloatingPointField(msg, 30)) == null ? undefined : f,
-eggsPaidFor: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-silosOwned: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
-habsList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
-habPopulationList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f,
-habPopulationIndoundList: (f = jspb.Message.getRepeatedField(msg, 14)) == null ? undefined : f,
-habIncubatorPopuplationList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 15)) == null ? undefined : f,
-hatcheryPopulation: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
-vehiclesList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
-trainLengthList: (f = jspb.Message.getRepeatedField(msg, 21)) == null ? undefined : f,
-commonResearchList: jspb.Message.toObjectList(msg.getCommonResearchList(),
+    eggType: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    farmType: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
+    contractId: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
+    cashEarned: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    cashSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    unclaimedCash: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    lastStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    numChickens: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    numChickensUnsettled: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    numChickensRunning: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    eggsLaid: (f = jspb.Message.getOptionalFloatingPointField(msg, 9)) == null ? undefined : f,
+    eggsShipped: (f = jspb.Message.getOptionalFloatingPointField(msg, 30)) == null ? undefined : f,
+    eggsPaidFor: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    silosOwned: (f = jspb.Message.getField(msg, 11)) == null ? undefined : f,
+    habsList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
+    habPopulationList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f,
+    habPopulationIndoundList: (f = jspb.Message.getRepeatedField(msg, 14)) == null ? undefined : f,
+    habIncubatorPopuplationList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 15)) == null ? undefined : f,
+    hatcheryPopulation: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
+    vehiclesList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
+    trainLengthList: (f = jspb.Message.getRepeatedField(msg, 21)) == null ? undefined : f,
+    commonResearchList: jspb.Message.toObjectList(msg.getCommonResearchList(),
     proto.ei.Backup.ResearchItem.toObject, includeInstance),
-activeBoostsList: jspb.Message.toObjectList(msg.getActiveBoostsList(),
+    activeBoostsList: jspb.Message.toObjectList(msg.getActiveBoostsList(),
     proto.ei.Backup.ActiveBoost.toObject, includeInstance),
-lastCashBoostTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 31)) == null ? undefined : f,
-timeCheatsDetected: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
-timeCheatDebt: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
-boostTokensReceived: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
-boostTokensSpent: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
-boostTokensGiven: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f,
-unclaimedBoostTokens: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
-gametimeUntilNextBoostToken: (f = jspb.Message.getOptionalFloatingPointField(msg, 29)) == null ? undefined : f,
-totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 32)) == null ? undefined : f
+    lastCashBoostTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 31)) == null ? undefined : f,
+    timeCheatsDetected: (f = jspb.Message.getField(msg, 23)) == null ? undefined : f,
+    timeCheatDebt: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
+    boostTokensReceived: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
+    boostTokensSpent: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
+    boostTokensGiven: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f,
+    unclaimedBoostTokens: (f = jspb.Message.getField(msg, 27)) == null ? undefined : f,
+    gametimeUntilNextBoostToken: (f = jspb.Message.getOptionalFloatingPointField(msg, 29)) == null ? undefined : f,
+    totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 32)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -9087,10 +9087,10 @@ proto.ei.Backup.Mission.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Mission.toObject = function(includeInstance, msg) {
   var f, obj = {
-currentMission: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-referenceValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-currentMissionsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-missionsList: jspb.Message.toObjectList(msg.getMissionsList(),
+    currentMission: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    referenceValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    currentMissionsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+    missionsList: jspb.Message.toObjectList(msg.getMissionsList(),
     proto.ei.Backup.MissionInfo.toObject, includeInstance)
   };
 
@@ -9385,31 +9385,31 @@ proto.ei.Backup.Misc.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.Misc.toObject = function(includeInstance, msg) {
   var f, obj = {
-chickenBtnPrefBig: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-freeHatcheryRefillGiven: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-lastShareFarmValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 10000000.0),
-lastShareSwarmFarmValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 10000000.0),
-lastShareSwarmSize: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 140.0),
-lastPrestigeAlertSoulEggsDeprecated: jspb.Message.getFieldWithDefault(msg, 10, 45),
-friendRank: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-friendRankPop: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-globalRank: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-globalRankPop: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-challengesAlert: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
-trophyAlert: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
-arAlert: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
-contractsAlert: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
-contractsAlertV2: (f = jspb.Message.getBooleanField(msg, 21)) == null ? undefined : f,
-coopAlert: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-coopAlertV2: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
-switchAlert: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
-eggOfProphecyAlert: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
-boostTokenAlert: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
-soulEggAlert: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
-backupReminderAlert: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
-maxButtonAlert: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
-missionTargetAlert: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
-colleggtiblesAlert: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f
+    chickenBtnPrefBig: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    freeHatcheryRefillGiven: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    lastShareFarmValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 10000000.0),
+    lastShareSwarmFarmValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 10000000.0),
+    lastShareSwarmSize: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 140.0),
+    lastPrestigeAlertSoulEggsDeprecated: jspb.Message.getFieldWithDefault(msg, 10, 45),
+    friendRank: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    friendRankPop: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    globalRank: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    globalRankPop: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    challengesAlert: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
+    trophyAlert: (f = jspb.Message.getBooleanField(msg, 11)) == null ? undefined : f,
+    arAlert: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
+    contractsAlert: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    contractsAlertV2: (f = jspb.Message.getBooleanField(msg, 21)) == null ? undefined : f,
+    coopAlert: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    coopAlertV2: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
+    switchAlert: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    eggOfProphecyAlert: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
+    boostTokenAlert: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
+    soulEggAlert: (f = jspb.Message.getBooleanField(msg, 18)) == null ? undefined : f,
+    backupReminderAlert: (f = jspb.Message.getBooleanField(msg, 19)) == null ? undefined : f,
+    maxButtonAlert: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
+    missionTargetAlert: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
+    colleggtiblesAlert: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -10685,8 +10685,8 @@ proto.ei.Backup.ResearchItem.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.Backup.ResearchItem.toObject = function(includeInstance, msg) {
   var f, obj = {
-id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-level: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    level: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -10881,8 +10881,8 @@ proto.ei.Backup.NewsHeadline.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.Backup.NewsHeadline.toObject = function(includeInstance, msg) {
   var f, obj = {
-id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-read: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    read: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -11077,8 +11077,8 @@ proto.ei.Backup.AchievementInfo.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.Backup.AchievementInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-achieved: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    achieved: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -11273,9 +11273,9 @@ proto.ei.Backup.ActiveBoost.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.ActiveBoost.toObject = function(includeInstance, msg) {
   var f, obj = {
-boostId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-timeRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-referenceValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    boostId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    timeRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    referenceValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -11517,8 +11517,8 @@ proto.ei.Backup.OwnedBoost.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.OwnedBoost.toObject = function(includeInstance, msg) {
   var f, obj = {
-boostId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-count: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    boostId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    count: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -11713,9 +11713,9 @@ proto.ei.Backup.MissionInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.Backup.MissionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-completed: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
-referenceValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    id: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    completed: (f = jspb.Message.getBooleanField(msg, 2)) == null ? undefined : f,
+    referenceValue: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -12952,28 +12952,28 @@ proto.ei.ContractCoopStatusResponse.prototype.toObject = function(opt_includeIns
  */
 proto.ei.ContractCoopStatusResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-responseStatus: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
-contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-totalAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
-contributorsList: jspb.Message.toObjectList(msg.getContributorsList(),
+    responseStatus: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
+    contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    totalAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    coopIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
+    contributorsList: jspb.Message.toObjectList(msg.getContributorsList(),
     proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject, includeInstance),
-autoGenerated: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
-pb_public: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
-creatorId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-secondsSinceAllGoalsAchieved: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
-allGoalsAchieved: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-allMembersReporting: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-gracePeriodSecondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-clearedForExit: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
-giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
+    autoGenerated: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
+    pb_public: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f,
+    creatorId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    secondsSinceAllGoalsAchieved: (f = jspb.Message.getOptionalFloatingPointField(msg, 16)) == null ? undefined : f,
+    allGoalsAchieved: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    allMembersReporting: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    gracePeriodSecondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    clearedForExit: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f,
+    giftsList: jspb.Message.toObjectList(msg.getGiftsList(),
     proto.ei.ContractCoopStatusResponse.CoopGift.toObject, includeInstance),
-chickenRunsList: jspb.Message.toObjectList(msg.getChickenRunsList(),
+    chickenRunsList: jspb.Message.toObjectList(msg.getChickenRunsList(),
     proto.ei.ContractCoopStatusResponse.ChickenRun.toObject, includeInstance),
-clientTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-lastSyncDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f
+    clientTimestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    lastSyncDep: (f = jspb.Message.getOptionalFloatingPointField(msg, 18)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -13333,31 +13333,31 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.toObject = functi
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-uuid: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-contractIdentifier: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
-contributionAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-contributionRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
-farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
-rankChange: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-recentlyActive: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
-active: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-ccMember: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
-leech: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
-finalized: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
-timeCheatDetected: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
-platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-pushId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-banVotes: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
-autojoined: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
-boostTokens: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
-boostTokensSpent: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
-buffHistoryList: jspb.Message.toObjectList(msg.getBuffHistoryList(),
+    uuid: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    contractIdentifier: (f = jspb.Message.getField(msg, 19)) == null ? undefined : f,
+    contributionAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    contributionRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
+    farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
+    rankChange: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    recentlyActive: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
+    active: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    ccMember: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
+    leech: (f = jspb.Message.getBooleanField(msg, 16)) == null ? undefined : f,
+    finalized: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
+    timeCheatDetected: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
+    platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    pushId: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    banVotes: (f = jspb.Message.getField(msg, 10)) == null ? undefined : f,
+    autojoined: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
+    boostTokens: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
+    boostTokensSpent: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    buffHistoryList: jspb.Message.toObjectList(msg.getBuffHistoryList(),
     proto.ei.CoopBuffState.toObject, includeInstance),
-chickenRunCooldown: (f = jspb.Message.getOptionalFloatingPointField(msg, 20)) == null ? undefined : f
+    chickenRunCooldown: (f = jspb.Message.getOptionalFloatingPointField(msg, 20)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -14596,10 +14596,10 @@ proto.ei.ContractCoopStatusResponse.CoopGift.prototype.toObject = function(opt_i
  */
 proto.ei.ContractCoopStatusResponse.CoopGift.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-tracking: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    tracking: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -14888,9 +14888,9 @@ proto.ei.ContractCoopStatusResponse.ChickenRun.prototype.toObject = function(opt
  */
 proto.ei.ContractCoopStatusResponse.ChickenRun.toObject = function(includeInstance, msg) {
   var f, obj = {
-userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    userName: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    amount: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -15829,18 +15829,18 @@ proto.ei.MyContracts.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.MyContracts.toObject = function(includeInstance, msg) {
   var f, obj = {
-contractIdsSeenList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-contractsList: jspb.Message.toObjectList(msg.getContractsList(),
+    contractIdsSeenList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    contractsList: jspb.Message.toObjectList(msg.getContractsList(),
     proto.ei.LocalContract.toObject, includeInstance),
-archiveList: jspb.Message.toObjectList(msg.getArchiveList(),
+    archiveList: jspb.Message.toObjectList(msg.getArchiveList(),
     proto.ei.LocalContract.toObject, includeInstance),
-currentCoopStatusesList: jspb.Message.toObjectList(msg.getCurrentCoopStatusesList(),
+    currentCoopStatusesList: jspb.Message.toObjectList(msg.getCurrentCoopStatusesList(),
     proto.ei.ContractCoopStatusResponse.toObject, includeInstance),
-lastCpi: (f = msg.getLastCpi()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f),
-initialGradeRevealed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-lastGradeProgressShown: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-showAdvancedEvaluations: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
-customEggInfoList: jspb.Message.toObjectList(msg.getCustomEggInfoList(),
+    lastCpi: (f = msg.getLastCpi()) && proto.ei.ContractPlayerInfo.toObject(includeInstance, f),
+    initialGradeRevealed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    lastGradeProgressShown: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    showAdvancedEvaluations: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
+    customEggInfoList: jspb.Message.toObjectList(msg.getCustomEggInfoList(),
     proto.ei.CustomEgg.toObject, includeInstance)
   };
 
@@ -16392,32 +16392,32 @@ proto.ei.PlayerFarmInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.PlayerFarmInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-clientVersion: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
-soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-eggsOfProphecy: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-permitLevel: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-hyperloopStation: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-eggMedalLevelList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
-epicResearchList: jspb.Message.toObjectList(msg.getEpicResearchList(),
+    clientVersion: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    eggsOfProphecy: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    permitLevel: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    hyperloopStation: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    eggMedalLevelList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
+    epicResearchList: jspb.Message.toObjectList(msg.getEpicResearchList(),
     proto.ei.Backup.ResearchItem.toObject, includeInstance),
-eggType: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-cashOnHand: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-habsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f,
-habPopulationList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f,
-habCapacityList: (f = jspb.Message.getRepeatedField(msg, 21)) == null ? undefined : f,
-vehiclesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f,
-trainLengthList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
-silosOwned: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
-commonResearchList: jspb.Message.toObjectList(msg.getCommonResearchList(),
+    eggType: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    cashOnHand: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    habsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f,
+    habPopulationList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f,
+    habCapacityList: (f = jspb.Message.getRepeatedField(msg, 21)) == null ? undefined : f,
+    vehiclesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f,
+    trainLengthList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
+    silosOwned: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
+    commonResearchList: jspb.Message.toObjectList(msg.getCommonResearchList(),
     proto.ei.Backup.ResearchItem.toObject, includeInstance),
-activeBoostsList: jspb.Message.toObjectList(msg.getActiveBoostsList(),
+    activeBoostsList: jspb.Message.toObjectList(msg.getActiveBoostsList(),
     proto.ei.Backup.ActiveBoost.toObject, includeInstance),
-boostTokensOnHand: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
-equippedArtifactsList: jspb.Message.toObjectList(msg.getEquippedArtifactsList(),
+    boostTokensOnHand: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    equippedArtifactsList: jspb.Message.toObjectList(msg.getEquippedArtifactsList(),
     proto.ei.CompleteArtifact.toObject, includeInstance),
-artifactInventoryScore: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
-farmAppearance: (f = msg.getFarmAppearance()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
-timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 22)) == null ? undefined : f
+    artifactInventoryScore: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
+    farmAppearance: (f = msg.getFarmAppearance()) && proto.ei.ShellDB.FarmConfiguration.toObject(includeInstance, f),
+    timestamp: (f = jspb.Message.getOptionalFloatingPointField(msg, 22)) == null ? undefined : f
   };
 
   if (includeInstance) {

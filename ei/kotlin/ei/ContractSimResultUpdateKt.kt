@@ -32,21 +32,23 @@ public object ContractSimResultUpdateKt {
      * `optional string contract_id = 1;`
      */
     public var contractId: kotlin.String
-      @JvmName("getContractId")
-      get() = _builder.contractId
-      @JvmName("setContractId")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractId")
+        get() = _builder.contractId
+      @kotlin.jvm.JvmName("setContractId")
+        set(value) {
         _builder.contractId = value
       }
     /**
-     * `optional string contract_id = 1;`
+     * <code>optional string contract_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractId() {
       _builder.clearContractId()
     }
     /**
-     * `optional string contract_id = 1;`
+     * <code>optional string contract_id = 1;</code>
      * @return Whether the contractId field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractId(): kotlin.Boolean {
       return _builder.hasContractId()
@@ -63,66 +65,71 @@ public object ContractSimResultUpdateKt {
      */
      public val goalInfos: com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.goalInfosList
       )
     /**
-     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
+     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
      * @param value The goalInfos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGoalInfos")
+@kotlin.jvm.JvmName("addGoalInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>.add(value: ei.Ei.ContractSimResultUpdate.GoalInfo) {
       _builder.addGoalInfos(value)
     }
     /**
-     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
+     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
      * @param value The goalInfos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGoalInfos")
+@kotlin.jvm.JvmName("plusAssignGoalInfos")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>.plusAssign(value: ei.Ei.ContractSimResultUpdate.GoalInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
+     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
      * @param values The goalInfos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGoalInfos")
+@kotlin.jvm.JvmName("addAllGoalInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractSimResultUpdate.GoalInfo>) {
       _builder.addAllGoalInfos(values)
     }
     /**
-     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
+     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
      * @param values The goalInfos to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGoalInfos")
+@kotlin.jvm.JvmName("plusAssignAllGoalInfos")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractSimResultUpdate.GoalInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
+     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
      * @param index The index to set the value at.
      * @param value The goalInfos to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGoalInfos")
+@kotlin.jvm.JvmName("setGoalInfos")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>.set(index: kotlin.Int, value: ei.Ei.ContractSimResultUpdate.GoalInfo) {
       _builder.setGoalInfos(index, value)
     }
     /**
-     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
+     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGoalInfos")
+@kotlin.jvm.JvmName("clearGoalInfos")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractSimResultUpdate.GoalInfo, GoalInfosProxy>.clear() {
       _builder.clearGoalInfos()
     }
-
   }
   @kotlin.jvm.JvmName("-initializegoalInfo")
   public inline fun goalInfo(block: ei.ContractSimResultUpdateKt.GoalInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractSimResultUpdate.GoalInfo =
@@ -150,21 +157,23 @@ public object ContractSimResultUpdateKt {
        * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public var grade: ei.Ei.Contract.PlayerGrade
-        @JvmName("getGrade")
-        get() = _builder.grade
-        @JvmName("setGrade")
-        set(value) {
+        @kotlin.jvm.JvmName("getGrade")
+          get() = _builder.grade
+        @kotlin.jvm.JvmName("setGrade")
+          set(value) {
           _builder.grade = value
         }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * `optional .ei.Contract.PlayerGrade grade = 1;`
+       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
        * @return Whether the grade field is set.
+       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -174,21 +183,23 @@ public object ContractSimResultUpdateKt {
        * `optional uint32 goal_index = 2;`
        */
       public var goalIndex: kotlin.Int
-        @JvmName("getGoalIndex")
-        get() = _builder.goalIndex
-        @JvmName("setGoalIndex")
-        set(value) {
+        @kotlin.jvm.JvmName("getGoalIndex")
+          get() = _builder.goalIndex
+        @kotlin.jvm.JvmName("setGoalIndex")
+          set(value) {
           _builder.goalIndex = value
         }
       /**
-       * `optional uint32 goal_index = 2;`
+       * <code>optional uint32 goal_index = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearGoalIndex() {
         _builder.clearGoalIndex()
       }
       /**
-       * `optional uint32 goal_index = 2;`
+       * <code>optional uint32 goal_index = 2;</code>
        * @return Whether the goalIndex field is set.
+       * @return This builder for chaining.
        */
       public fun hasGoalIndex(): kotlin.Boolean {
         return _builder.hasGoalIndex()
@@ -198,21 +209,23 @@ public object ContractSimResultUpdateKt {
        * `optional double projected_eggs_laid = 3;`
        */
       public var projectedEggsLaid: kotlin.Double
-        @JvmName("getProjectedEggsLaid")
-        get() = _builder.projectedEggsLaid
-        @JvmName("setProjectedEggsLaid")
-        set(value) {
+        @kotlin.jvm.JvmName("getProjectedEggsLaid")
+          get() = _builder.projectedEggsLaid
+        @kotlin.jvm.JvmName("setProjectedEggsLaid")
+          set(value) {
           _builder.projectedEggsLaid = value
         }
       /**
-       * `optional double projected_eggs_laid = 3;`
+       * <code>optional double projected_eggs_laid = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearProjectedEggsLaid() {
         _builder.clearProjectedEggsLaid()
       }
       /**
-       * `optional double projected_eggs_laid = 3;`
+       * <code>optional double projected_eggs_laid = 3;</code>
        * @return Whether the projectedEggsLaid field is set.
+       * @return This builder for chaining.
        */
       public fun hasProjectedEggsLaid(): kotlin.Boolean {
         return _builder.hasProjectedEggsLaid()

@@ -32,21 +32,23 @@ public object ContractSeasonRewardConfirmationRequestKt {
      * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public var rinfo: ei.Ei.BasicRequestInfo
-      @JvmName("getRinfo")
-      get() = _builder.rinfo
-      @JvmName("setRinfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getRinfo")
+        get() = _builder.rinfo
+      @kotlin.jvm.JvmName("setRinfo")
+        set(value) {
         _builder.rinfo = value
       }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * `optional .ei.BasicRequestInfo rinfo = 1;`
+     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
      * @return Whether the rinfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -59,21 +61,23 @@ public object ContractSeasonRewardConfirmationRequestKt {
      * `optional string season_id = 2;`
      */
     public var seasonId: kotlin.String
-      @JvmName("getSeasonId")
-      get() = _builder.seasonId
-      @JvmName("setSeasonId")
-      set(value) {
+      @kotlin.jvm.JvmName("getSeasonId")
+        get() = _builder.seasonId
+      @kotlin.jvm.JvmName("setSeasonId")
+        set(value) {
         _builder.seasonId = value
       }
     /**
-     * `optional string season_id = 2;`
+     * <code>optional string season_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearSeasonId() {
       _builder.clearSeasonId()
     }
     /**
-     * `optional string season_id = 2;`
+     * <code>optional string season_id = 2;</code>
      * @return Whether the seasonId field is set.
+     * @return This builder for chaining.
      */
     public fun hasSeasonId(): kotlin.Boolean {
       return _builder.hasSeasonId()
@@ -83,21 +87,23 @@ public object ContractSeasonRewardConfirmationRequestKt {
      * `optional .ei.ContractSeasonGoal goal = 3;`
      */
     public var goal: ei.Ei.ContractSeasonGoal
-      @JvmName("getGoal")
-      get() = _builder.goal
-      @JvmName("setGoal")
-      set(value) {
+      @kotlin.jvm.JvmName("getGoal")
+        get() = _builder.goal
+      @kotlin.jvm.JvmName("setGoal")
+        set(value) {
         _builder.goal = value
       }
     /**
-     * `optional .ei.ContractSeasonGoal goal = 3;`
+     * <code>optional .ei.ContractSeasonGoal goal = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearGoal() {
       _builder.clearGoal()
     }
     /**
-     * `optional .ei.ContractSeasonGoal goal = 3;`
+     * <code>optional .ei.ContractSeasonGoal goal = 3;</code>
      * @return Whether the goal field is set.
+     * @return This builder for chaining.
      */
     public fun hasGoal(): kotlin.Boolean {
       return _builder.hasGoal()

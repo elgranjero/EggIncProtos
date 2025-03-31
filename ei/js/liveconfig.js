@@ -247,11 +247,11 @@ proto.ei.LiveConfig.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.LiveConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-configId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-boostsConfig: (f = msg.getBoostsConfig()) && proto.ei.LiveConfig.BoostsConfig.toObject(includeInstance, f),
-giftConfig: (f = msg.getGiftConfig()) && proto.ei.LiveConfig.GiftConfig.toObject(includeInstance, f),
-miscConfig: (f = msg.getMiscConfig()) && proto.ei.LiveConfig.MiscConfig.toObject(includeInstance, f),
-helpConfig: (f = msg.getHelpConfig()) && proto.ei.LiveConfig.HelpConfig.toObject(includeInstance, f)
+    configId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    boostsConfig: (f = msg.getBoostsConfig()) && proto.ei.LiveConfig.BoostsConfig.toObject(includeInstance, f),
+    giftConfig: (f = msg.getGiftConfig()) && proto.ei.LiveConfig.GiftConfig.toObject(includeInstance, f),
+    miscConfig: (f = msg.getMiscConfig()) && proto.ei.LiveConfig.MiscConfig.toObject(includeInstance, f),
+    helpConfig: (f = msg.getHelpConfig()) && proto.ei.LiveConfig.HelpConfig.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -422,9 +422,9 @@ proto.ei.LiveConfig.BoostsConfig.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.LiveConfig.BoostsConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-itemConfigsList: jspb.Message.toObjectList(msg.getItemConfigsList(),
+    itemConfigsList: jspb.Message.toObjectList(msg.getItemConfigsList(),
     proto.ei.LiveConfig.BoostsConfig.ItemConfig.toObject, includeInstance),
-cashBoostCooloffTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
+    cashBoostCooloffTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -549,10 +549,10 @@ proto.ei.LiveConfig.BoostsConfig.ItemConfig.prototype.toObject = function(opt_in
  */
 proto.ei.LiveConfig.BoostsConfig.ItemConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-boostId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-price: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-tokenPrice: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-seRequired: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+    boostId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    price: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    tokenPrice: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    seRequired: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -922,23 +922,23 @@ proto.ei.LiveConfig.GiftConfig.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.LiveConfig.GiftConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-giftConfigsList: jspb.Message.toObjectList(msg.getGiftConfigsList(),
+    giftConfigsList: jspb.Message.toObjectList(msg.getGiftConfigsList(),
     proto.ei.LiveConfig.GiftConfig.GiftValueConfig.toObject, includeInstance),
-giftMuMinSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-giftMuMaxSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-giftMuOverallMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
-randomGiftMuConfig: (f = msg.getRandomGiftMuConfig()) && proto.ei.LiveConfig.GiftConfig.GiftMuConfig.toObject(includeInstance, f),
-videoGiftMuConfig: (f = msg.getVideoGiftMuConfig()) && proto.ei.LiveConfig.GiftConfig.GiftMuConfig.toObject(includeInstance, f),
-packageInterval: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-videoOfferInterval: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-videoOfferIntervalContract: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-videoOfferIntervalPiggyFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-videoOfferIntervalPiggyExtraFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-videoResetOnIdle: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
-packageIntervalContract: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-packageIntervalPiggyFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
-packageIntervalPiggyExtraFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
-packageResetOnIdle: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f
+    giftMuMinSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    giftMuMaxSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    giftMuOverallMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == null ? undefined : f,
+    randomGiftMuConfig: (f = msg.getRandomGiftMuConfig()) && proto.ei.LiveConfig.GiftConfig.GiftMuConfig.toObject(includeInstance, f),
+    videoGiftMuConfig: (f = msg.getVideoGiftMuConfig()) && proto.ei.LiveConfig.GiftConfig.GiftMuConfig.toObject(includeInstance, f),
+    packageInterval: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    videoOfferInterval: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    videoOfferIntervalContract: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    videoOfferIntervalPiggyFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    videoOfferIntervalPiggyExtraFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    videoResetOnIdle: (f = jspb.Message.getBooleanField(msg, 14)) == null ? undefined : f,
+    packageIntervalContract: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    packageIntervalPiggyFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    packageIntervalPiggyExtraFull: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f,
+    packageResetOnIdle: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1221,12 +1221,12 @@ proto.ei.LiveConfig.GiftConfig.GiftValueConfig.prototype.toObject = function(opt
  */
 proto.ei.LiveConfig.GiftConfig.GiftValueConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-giftId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-randMin: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-randMax: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-videoMin: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
-videoMax: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
+    giftId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    amount: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    randMin: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    randMax: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    videoMin: (f = jspb.Message.getOptionalFloatingPointField(msg, 5)) == null ? undefined : f,
+    videoMax: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1609,9 +1609,9 @@ proto.ei.LiveConfig.GiftConfig.GiftMuConfig.prototype.toObject = function(opt_in
  */
 proto.ei.LiveConfig.GiftConfig.GiftMuConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-minSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
-maxSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-overallMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    minSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 1)) == null ? undefined : f,
+    maxSpent: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    overallMult: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2433,21 +2433,21 @@ proto.ei.LiveConfig.MiscConfig.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.LiveConfig.MiscConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-askToTrack: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-askToTrackMinSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
-askToTrackMessage: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-askToTrackShowPreDialog: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-askToTrackAfterPrivacy: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
-chickenRunBoostPercentage: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-shellsIntroTickets: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-shellsLightingControlsPrice: jspb.Message.getFieldWithDefault(msg, 14, 175),
-contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
-newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
-contractsClubAvailable: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
-contractsBeta: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
-seasonRewardsEnabled: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f
+    askToTrack: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    askToTrackMinSoulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 2)) == null ? undefined : f,
+    askToTrackMessage: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    askToTrackShowPreDialog: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    askToTrackAfterPrivacy: (f = jspb.Message.getBooleanField(msg, 5)) == null ? undefined : f,
+    chickenRunBoostPercentage: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    shellsIntroTickets: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    shellsMaxFreeChickenConfigs: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    shellsIntroAlertThreshold: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    shellsLightingControlsPrice: jspb.Message.getFieldWithDefault(msg, 14, 175),
+    contractsExpertLeagueMinSoulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 10)) == null ? undefined : f,
+    newPlayerEventDuration: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    contractsClubAvailable: (f = jspb.Message.getBooleanField(msg, 12)) == null ? undefined : f,
+    contractsBeta: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
+    seasonRewardsEnabled: (f = jspb.Message.getBooleanField(msg, 15)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3260,7 +3260,7 @@ proto.ei.LiveConfig.HelpConfig.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.LiveConfig.HelpConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-videoInfosList: jspb.Message.toObjectList(msg.getVideoInfosList(),
+    videoInfosList: jspb.Message.toObjectList(msg.getVideoInfosList(),
     proto.ei.LiveConfig.HelpConfig.HowToVideoInfo.toObject, includeInstance)
   };
 
@@ -3375,12 +3375,12 @@ proto.ei.LiveConfig.HelpConfig.HowToVideoInfo.prototype.toObject = function(opt_
  */
 proto.ei.LiveConfig.HelpConfig.HowToVideoInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-type: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-description: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-duration: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-url: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
+    type: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    description: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    duration: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    url: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    soulEggs: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {

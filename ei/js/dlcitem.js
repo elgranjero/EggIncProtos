@@ -70,13 +70,13 @@ proto.ei.DLCItem.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.DLCItem.toObject = function(includeInstance, msg) {
   var f, obj = {
-name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-directory: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-ext: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-compressed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
-originalSize: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-url: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-checksum: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+    name: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    directory: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    ext: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    compressed: (f = jspb.Message.getBooleanField(msg, 6)) == null ? undefined : f,
+    originalSize: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    url: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    checksum: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

@@ -99,12 +99,12 @@ proto.ei.LeaderboardAnalysis.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.LeaderboardAnalysis.toObject = function(includeInstance, msg) {
   var f, obj = {
-chunksList: jspb.Message.toObjectList(msg.getChunksList(),
+    chunksList: jspb.Message.toObjectList(msg.getChunksList(),
     proto.ei.LeaderboardAnalysis.Chunk.toObject, includeInstance),
-count: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-highScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-lowScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-cursor: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
+    count: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    highScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    lowScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    cursor: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -262,12 +262,12 @@ proto.ei.LeaderboardAnalysis.Chunk.prototype.toObject = function(opt_includeInst
  */
 proto.ei.LeaderboardAnalysis.Chunk.toObject = function(includeInstance, msg) {
   var f, obj = {
-startIndex: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-endIndex: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-highScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-lowScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
-startCursor: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-endCursor: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
+    startIndex: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    endIndex: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    highScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    lowScore: (f = jspb.Message.getOptionalFloatingPointField(msg, 4)) == null ? undefined : f,
+    startCursor: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    endCursor: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {

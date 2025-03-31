@@ -70,10 +70,10 @@ proto.ei.AdAttributionRawData.prototype.toObject = function(opt_includeInstance)
  */
 proto.ei.AdAttributionRawData.toObject = function(includeInstance, msg) {
   var f, obj = {
-deviceAdId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-userId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-adNetwork: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-jsonData: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
+    deviceAdId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    userId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    adNetwork: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    jsonData: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {

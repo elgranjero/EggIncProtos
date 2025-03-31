@@ -70,8 +70,8 @@ proto.ei.CleanAccountRequest.prototype.toObject = function(opt_includeInstance) 
  */
 proto.ei.CleanAccountRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-eiUserIdToKeep: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-gameServicesId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    eiUserIdToKeep: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    gameServicesId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {

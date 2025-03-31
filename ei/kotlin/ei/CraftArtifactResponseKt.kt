@@ -32,21 +32,23 @@ public object CraftArtifactResponseKt {
      * `optional uint64 item_id = 1;`
      */
     public var itemId: kotlin.Long
-      @JvmName("getItemId")
-      get() = _builder.itemId
-      @JvmName("setItemId")
-      set(value) {
+      @kotlin.jvm.JvmName("getItemId")
+        get() = _builder.itemId
+      @kotlin.jvm.JvmName("setItemId")
+        set(value) {
         _builder.itemId = value
       }
     /**
-     * `optional uint64 item_id = 1;`
+     * <code>optional uint64 item_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * `optional uint64 item_id = 1;`
+     * <code>optional uint64 item_id = 1;</code>
      * @return Whether the itemId field is set.
+     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()
@@ -56,21 +58,23 @@ public object CraftArtifactResponseKt {
      * `optional string ei_user_id = 5;`
      */
     public var eiUserId: kotlin.String
-      @JvmName("getEiUserId")
-      get() = _builder.eiUserId
-      @JvmName("setEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getEiUserId")
+        get() = _builder.eiUserId
+      @kotlin.jvm.JvmName("setEiUserId")
+        set(value) {
         _builder.eiUserId = value
       }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * `optional string ei_user_id = 5;`
+     * <code>optional string ei_user_id = 5;</code>
      * @return Whether the eiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -80,21 +84,23 @@ public object CraftArtifactResponseKt {
      * `optional .ei.ArtifactSpec.Rarity rarity_achieved = 2 [default = COMMON];`
      */
     public var rarityAchieved: ei.Ei.ArtifactSpec.Rarity
-      @JvmName("getRarityAchieved")
-      get() = _builder.rarityAchieved
-      @JvmName("setRarityAchieved")
-      set(value) {
+      @kotlin.jvm.JvmName("getRarityAchieved")
+        get() = _builder.rarityAchieved
+      @kotlin.jvm.JvmName("setRarityAchieved")
+        set(value) {
         _builder.rarityAchieved = value
       }
     /**
-     * `optional .ei.ArtifactSpec.Rarity rarity_achieved = 2 [default = COMMON];`
+     * <code>optional .ei.ArtifactSpec.Rarity rarity_achieved = 2 [default = COMMON];</code>
+     * @return This builder for chaining.
      */
     public fun clearRarityAchieved() {
       _builder.clearRarityAchieved()
     }
     /**
-     * `optional .ei.ArtifactSpec.Rarity rarity_achieved = 2 [default = COMMON];`
+     * <code>optional .ei.ArtifactSpec.Rarity rarity_achieved = 2 [default = COMMON];</code>
      * @return Whether the rarityAchieved field is set.
+     * @return This builder for chaining.
      */
     public fun hasRarityAchieved(): kotlin.Boolean {
       return _builder.hasRarityAchieved()
@@ -104,21 +110,23 @@ public object CraftArtifactResponseKt {
      * `optional string server_id = 3;`
      */
     public var serverId: kotlin.String
-      @JvmName("getServerId")
-      get() = _builder.serverId
-      @JvmName("setServerId")
-      set(value) {
+      @kotlin.jvm.JvmName("getServerId")
+        get() = _builder.serverId
+      @kotlin.jvm.JvmName("setServerId")
+        set(value) {
         _builder.serverId = value
       }
     /**
-     * `optional string server_id = 3;`
+     * <code>optional string server_id = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearServerId() {
       _builder.clearServerId()
     }
     /**
-     * `optional string server_id = 3;`
+     * <code>optional string server_id = 3;</code>
      * @return Whether the serverId field is set.
+     * @return This builder for chaining.
      */
     public fun hasServerId(): kotlin.Boolean {
       return _builder.hasServerId()

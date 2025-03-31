@@ -39,66 +39,71 @@ public object ShellShowcaseKt {
      */
      public val top: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.topList
       )
     /**
-     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
+     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
      * @param value The top to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addTop")
+@kotlin.jvm.JvmName("addTop")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>.add(value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.addTop(value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
+     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
      * @param value The top to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignTop")
+@kotlin.jvm.JvmName("plusAssignTop")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>.plusAssign(value: ei.Ei.ShellShowcaseListingInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
+     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
      * @param values The top to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllTop")
+@kotlin.jvm.JvmName("addAllTop")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       _builder.addAllTop(values)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
+     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
      * @param values The top to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllTop")
+@kotlin.jvm.JvmName("plusAssignAllTop")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
+     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
      * @param index The index to set the value at.
      * @param value The top to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setTop")
+@kotlin.jvm.JvmName("setTop")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.setTop(index, value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
+     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearTop")
+@kotlin.jvm.JvmName("clearTop")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, TopProxy>.clear() {
       _builder.clearTop()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -111,66 +116,71 @@ public object ShellShowcaseKt {
      */
      public val featured: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.featuredList
       )
     /**
-     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
+     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
      * @param value The featured to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addFeatured")
+@kotlin.jvm.JvmName("addFeatured")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>.add(value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.addFeatured(value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
+     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
      * @param value The featured to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignFeatured")
+@kotlin.jvm.JvmName("plusAssignFeatured")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>.plusAssign(value: ei.Ei.ShellShowcaseListingInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
+     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
      * @param values The featured to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllFeatured")
+@kotlin.jvm.JvmName("addAllFeatured")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       _builder.addAllFeatured(values)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
+     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
      * @param values The featured to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllFeatured")
+@kotlin.jvm.JvmName("plusAssignAllFeatured")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
+     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
      * @param index The index to set the value at.
      * @param value The featured to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setFeatured")
+@kotlin.jvm.JvmName("setFeatured")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.setFeatured(index, value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
+     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearFeatured")
+@kotlin.jvm.JvmName("clearFeatured")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FeaturedProxy>.clear() {
       _builder.clearFeatured()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -183,66 +193,71 @@ public object ShellShowcaseKt {
      */
      public val fresh: com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.freshList
       )
     /**
-     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      * @param value The fresh to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addFresh")
+@kotlin.jvm.JvmName("addFresh")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.add(value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.addFresh(value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      * @param value The fresh to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignFresh")
+@kotlin.jvm.JvmName("plusAssignFresh")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.plusAssign(value: ei.Ei.ShellShowcaseListingInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      * @param values The fresh to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllFresh")
+@kotlin.jvm.JvmName("addAllFresh")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       _builder.addAllFresh(values)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      * @param values The fresh to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllFresh")
+@kotlin.jvm.JvmName("plusAssignAllFresh")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellShowcaseListingInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
      * @param index The index to set the value at.
      * @param value The fresh to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setFresh")
+@kotlin.jvm.JvmName("setFresh")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.set(index: kotlin.Int, value: ei.Ei.ShellShowcaseListingInfo) {
       _builder.setFresh(index, value)
     }
     /**
-     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
+     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearFresh")
+@kotlin.jvm.JvmName("clearFresh")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellShowcaseListingInfo, FreshProxy>.clear() {
       _builder.clearFresh()
     }
-
   }
 }
 @kotlin.jvm.JvmSynthetic

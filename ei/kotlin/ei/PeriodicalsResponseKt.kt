@@ -32,21 +32,23 @@ public object PeriodicalsResponseKt {
      * `optional .ei.SalesInfo sales = 1;`
      */
     public var sales: ei.Ei.SalesInfo
-      @JvmName("getSales")
-      get() = _builder.sales
-      @JvmName("setSales")
-      set(value) {
+      @kotlin.jvm.JvmName("getSales")
+        get() = _builder.sales
+      @kotlin.jvm.JvmName("setSales")
+        set(value) {
         _builder.sales = value
       }
     /**
-     * `optional .ei.SalesInfo sales = 1;`
+     * <code>optional .ei.SalesInfo sales = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearSales() {
       _builder.clearSales()
     }
     /**
-     * `optional .ei.SalesInfo sales = 1;`
+     * <code>optional .ei.SalesInfo sales = 1;</code>
      * @return Whether the sales field is set.
+     * @return This builder for chaining.
      */
     public fun hasSales(): kotlin.Boolean {
       return _builder.hasSales()
@@ -59,21 +61,23 @@ public object PeriodicalsResponseKt {
      * `optional .ei.EggIncCurrentEvents events = 2;`
      */
     public var events: ei.Ei.EggIncCurrentEvents
-      @JvmName("getEvents")
-      get() = _builder.events
-      @JvmName("setEvents")
-      set(value) {
+      @kotlin.jvm.JvmName("getEvents")
+        get() = _builder.events
+      @kotlin.jvm.JvmName("setEvents")
+        set(value) {
         _builder.events = value
       }
     /**
-     * `optional .ei.EggIncCurrentEvents events = 2;`
+     * <code>optional .ei.EggIncCurrentEvents events = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearEvents() {
       _builder.clearEvents()
     }
     /**
-     * `optional .ei.EggIncCurrentEvents events = 2;`
+     * <code>optional .ei.EggIncCurrentEvents events = 2;</code>
      * @return Whether the events field is set.
+     * @return This builder for chaining.
      */
     public fun hasEvents(): kotlin.Boolean {
       return _builder.hasEvents()
@@ -86,21 +90,23 @@ public object PeriodicalsResponseKt {
      * `optional .ei.ContractsResponse contracts = 3;`
      */
     public var contracts: ei.Ei.ContractsResponse
-      @JvmName("getContracts")
-      get() = _builder.contracts
-      @JvmName("setContracts")
-      set(value) {
+      @kotlin.jvm.JvmName("getContracts")
+        get() = _builder.contracts
+      @kotlin.jvm.JvmName("setContracts")
+        set(value) {
         _builder.contracts = value
       }
     /**
-     * `optional .ei.ContractsResponse contracts = 3;`
+     * <code>optional .ei.ContractsResponse contracts = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearContracts() {
       _builder.clearContracts()
     }
     /**
-     * `optional .ei.ContractsResponse contracts = 3;`
+     * <code>optional .ei.ContractsResponse contracts = 3;</code>
      * @return Whether the contracts field is set.
+     * @return This builder for chaining.
      */
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
@@ -120,66 +126,71 @@ public object PeriodicalsResponseKt {
      */
      public val evaluations: com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.evaluationsList
       )
     /**
-     * `repeated .ei.ContractEvaluation evaluations = 8;`
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
      * @param value The evaluations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addEvaluations")
+@kotlin.jvm.JvmName("addEvaluations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.add(value: ei.Ei.ContractEvaluation) {
       _builder.addEvaluations(value)
     }
     /**
-     * `repeated .ei.ContractEvaluation evaluations = 8;`
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
      * @param value The evaluations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignEvaluations")
+@kotlin.jvm.JvmName("plusAssignEvaluations")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.plusAssign(value: ei.Ei.ContractEvaluation) {
       add(value)
     }
     /**
-     * `repeated .ei.ContractEvaluation evaluations = 8;`
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
      * @param values The evaluations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllEvaluations")
+@kotlin.jvm.JvmName("addAllEvaluations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation>) {
       _builder.addAllEvaluations(values)
     }
     /**
-     * `repeated .ei.ContractEvaluation evaluations = 8;`
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
      * @param values The evaluations to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllEvaluations")
+@kotlin.jvm.JvmName("plusAssignAllEvaluations")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ContractEvaluation evaluations = 8;`
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
      * @param index The index to set the value at.
      * @param value The evaluations to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setEvaluations")
+@kotlin.jvm.JvmName("setEvaluations")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.set(index: kotlin.Int, value: ei.Ei.ContractEvaluation) {
       _builder.setEvaluations(index, value)
     }
     /**
-     * `repeated .ei.ContractEvaluation evaluations = 8;`
+     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearEvaluations")
+@kotlin.jvm.JvmName("clearEvaluations")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation, EvaluationsProxy>.clear() {
       _builder.clearEvaluations()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -192,66 +203,71 @@ public object PeriodicalsResponseKt {
      */
      public val gifts: com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.giftsList
       )
     /**
-     * `repeated .ei.ServerGift gifts = 4;`
+     * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param value The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addGifts")
+@kotlin.jvm.JvmName("addGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.add(value: ei.Ei.ServerGift) {
       _builder.addGifts(value)
     }
     /**
-     * `repeated .ei.ServerGift gifts = 4;`
+     * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param value The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignGifts")
+@kotlin.jvm.JvmName("plusAssignGifts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.plusAssign(value: ei.Ei.ServerGift) {
       add(value)
     }
     /**
-     * `repeated .ei.ServerGift gifts = 4;`
+     * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param values The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllGifts")
+@kotlin.jvm.JvmName("addAllGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ServerGift>) {
       _builder.addAllGifts(values)
     }
     /**
-     * `repeated .ei.ServerGift gifts = 4;`
+     * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param values The gifts to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllGifts")
+@kotlin.jvm.JvmName("plusAssignAllGifts")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ServerGift>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.ServerGift gifts = 4;`
+     * <code>repeated .ei.ServerGift gifts = 4;</code>
      * @param index The index to set the value at.
      * @param value The gifts to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setGifts")
+@kotlin.jvm.JvmName("setGifts")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.set(index: kotlin.Int, value: ei.Ei.ServerGift) {
       _builder.setGifts(index, value)
     }
     /**
-     * `repeated .ei.ServerGift gifts = 4;`
+     * <code>repeated .ei.ServerGift gifts = 4;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearGifts")
+@kotlin.jvm.JvmName("clearGifts")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ServerGift, GiftsProxy>.clear() {
       _builder.clearGifts()
     }
-
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -264,86 +280,93 @@ public object PeriodicalsResponseKt {
      */
      public val artifactCases: com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.artifactCasesList
       )
     /**
-     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
      * @param value The artifactCases to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addArtifactCases")
+@kotlin.jvm.JvmName("addArtifactCases")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.add(value: ei.Ei.CompleteMissionResponse) {
       _builder.addArtifactCases(value)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
      * @param value The artifactCases to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignArtifactCases")
+@kotlin.jvm.JvmName("plusAssignArtifactCases")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.plusAssign(value: ei.Ei.CompleteMissionResponse) {
       add(value)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
      * @param values The artifactCases to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllArtifactCases")
+@kotlin.jvm.JvmName("addAllArtifactCases")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse>) {
       _builder.addAllArtifactCases(values)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
      * @param values The artifactCases to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllArtifactCases")
+@kotlin.jvm.JvmName("plusAssignAllArtifactCases")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CompleteMissionResponse>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
      * @param index The index to set the value at.
      * @param value The artifactCases to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setArtifactCases")
+@kotlin.jvm.JvmName("setArtifactCases")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.set(index: kotlin.Int, value: ei.Ei.CompleteMissionResponse) {
       _builder.setArtifactCases(index, value)
     }
     /**
-     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
+     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearArtifactCases")
+@kotlin.jvm.JvmName("clearArtifactCases")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CompleteMissionResponse, ArtifactCasesProxy>.clear() {
       _builder.clearArtifactCases()
     }
-
 
     /**
      * `optional .ei.LiveConfig live_config = 5;`
      */
     public var liveConfig: ei.Ei.LiveConfig
-      @JvmName("getLiveConfig")
-      get() = _builder.liveConfig
-      @JvmName("setLiveConfig")
-      set(value) {
+      @kotlin.jvm.JvmName("getLiveConfig")
+        get() = _builder.liveConfig
+      @kotlin.jvm.JvmName("setLiveConfig")
+        set(value) {
         _builder.liveConfig = value
       }
     /**
-     * `optional .ei.LiveConfig live_config = 5;`
+     * <code>optional .ei.LiveConfig live_config = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearLiveConfig() {
       _builder.clearLiveConfig()
     }
     /**
-     * `optional .ei.LiveConfig live_config = 5;`
+     * <code>optional .ei.LiveConfig live_config = 5;</code>
      * @return Whether the liveConfig field is set.
+     * @return This builder for chaining.
      */
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
@@ -356,21 +379,23 @@ public object PeriodicalsResponseKt {
      * `optional .ei.MailDB mail_bag = 6;`
      */
     public var mailBag: ei.Ei.MailDB
-      @JvmName("getMailBag")
-      get() = _builder.mailBag
-      @JvmName("setMailBag")
-      set(value) {
+      @kotlin.jvm.JvmName("getMailBag")
+        get() = _builder.mailBag
+      @kotlin.jvm.JvmName("setMailBag")
+        set(value) {
         _builder.mailBag = value
       }
     /**
-     * `optional .ei.MailDB mail_bag = 6;`
+     * <code>optional .ei.MailDB mail_bag = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearMailBag() {
       _builder.clearMailBag()
     }
     /**
-     * `optional .ei.MailDB mail_bag = 6;`
+     * <code>optional .ei.MailDB mail_bag = 6;</code>
      * @return Whether the mailBag field is set.
+     * @return This builder for chaining.
      */
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
@@ -383,21 +408,23 @@ public object PeriodicalsResponseKt {
      * `optional .ei.ContractPlayerInfo contract_player_info = 7;`
      */
     public var contractPlayerInfo: ei.Ei.ContractPlayerInfo
-      @JvmName("getContractPlayerInfo")
-      get() = _builder.contractPlayerInfo
-      @JvmName("setContractPlayerInfo")
-      set(value) {
+      @kotlin.jvm.JvmName("getContractPlayerInfo")
+        get() = _builder.contractPlayerInfo
+      @kotlin.jvm.JvmName("setContractPlayerInfo")
+        set(value) {
         _builder.contractPlayerInfo = value
       }
     /**
-     * `optional .ei.ContractPlayerInfo contract_player_info = 7;`
+     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearContractPlayerInfo() {
       _builder.clearContractPlayerInfo()
     }
     /**
-     * `optional .ei.ContractPlayerInfo contract_player_info = 7;`
+     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
      * @return Whether the contractPlayerInfo field is set.
+     * @return This builder for chaining.
      */
     public fun hasContractPlayerInfo(): kotlin.Boolean {
       return _builder.hasContractPlayerInfo()
@@ -417,66 +444,71 @@ public object PeriodicalsResponseKt {
      */
      public val showcaseRoyalties: com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.showcaseRoyaltiesList
       )
     /**
-     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
      * @param value The showcaseRoyalties to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addShowcaseRoyalties")
+@kotlin.jvm.JvmName("addShowcaseRoyalties")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.add(value: ei.Ei.PeriodicalsResponse.RoyaltyInfo) {
       _builder.addShowcaseRoyalties(value)
     }
     /**
-     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
      * @param value The showcaseRoyalties to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignShowcaseRoyalties")
+@kotlin.jvm.JvmName("plusAssignShowcaseRoyalties")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.plusAssign(value: ei.Ei.PeriodicalsResponse.RoyaltyInfo) {
       add(value)
     }
     /**
-     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
      * @param values The showcaseRoyalties to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllShowcaseRoyalties")
+@kotlin.jvm.JvmName("addAllShowcaseRoyalties")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.PeriodicalsResponse.RoyaltyInfo>) {
       _builder.addAllShowcaseRoyalties(values)
     }
     /**
-     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
      * @param values The showcaseRoyalties to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllShowcaseRoyalties")
+@kotlin.jvm.JvmName("plusAssignAllShowcaseRoyalties")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.PeriodicalsResponse.RoyaltyInfo>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
      * @param index The index to set the value at.
      * @param value The showcaseRoyalties to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setShowcaseRoyalties")
+@kotlin.jvm.JvmName("setShowcaseRoyalties")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.set(index: kotlin.Int, value: ei.Ei.PeriodicalsResponse.RoyaltyInfo) {
       _builder.setShowcaseRoyalties(index, value)
     }
     /**
-     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
+     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearShowcaseRoyalties")
+@kotlin.jvm.JvmName("clearShowcaseRoyalties")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.PeriodicalsResponse.RoyaltyInfo, ShowcaseRoyaltiesProxy>.clear() {
       _builder.clearShowcaseRoyalties()
     }
-
   }
   @kotlin.jvm.JvmName("-initializeroyaltyInfo")
   public inline fun royaltyInfo(block: ei.PeriodicalsResponseKt.RoyaltyInfoKt.Dsl.() -> kotlin.Unit): ei.Ei.PeriodicalsResponse.RoyaltyInfo =
@@ -504,21 +536,23 @@ public object PeriodicalsResponseKt {
        * `optional string id = 1;`
        */
       public var id: kotlin.String
-        @JvmName("getId")
-        get() = _builder.id
-        @JvmName("setId")
-        set(value) {
+        @kotlin.jvm.JvmName("getId")
+          get() = _builder.id
+        @kotlin.jvm.JvmName("setId")
+          set(value) {
           _builder.id = value
         }
       /**
-       * `optional string id = 1;`
+       * <code>optional string id = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * `optional string id = 1;`
+       * <code>optional string id = 1;</code>
        * @return Whether the id field is set.
+       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -528,21 +562,23 @@ public object PeriodicalsResponseKt {
        * `optional uint32 amount = 2;`
        */
       public var amount: kotlin.Int
-        @JvmName("getAmount")
-        get() = _builder.amount
-        @JvmName("setAmount")
-        set(value) {
+        @kotlin.jvm.JvmName("getAmount")
+          get() = _builder.amount
+        @kotlin.jvm.JvmName("setAmount")
+          set(value) {
           _builder.amount = value
         }
       /**
-       * `optional uint32 amount = 2;`
+       * <code>optional uint32 amount = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearAmount() {
         _builder.clearAmount()
       }
       /**
-       * `optional uint32 amount = 2;`
+       * <code>optional uint32 amount = 2;</code>
        * @return Whether the amount field is set.
+       * @return This builder for chaining.
        */
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()

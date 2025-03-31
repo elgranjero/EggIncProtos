@@ -78,7 +78,7 @@ proto.ei.CoopBuffHistory.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.CoopBuffHistory.toObject = function(includeInstance, msg) {
   var f, obj = {
-historyList: jspb.Message.toObjectList(msg.getHistoryList(),
+    historyList: jspb.Message.toObjectList(msg.getHistoryList(),
     proto.ei.CoopBuffState.toObject, includeInstance)
   };
 

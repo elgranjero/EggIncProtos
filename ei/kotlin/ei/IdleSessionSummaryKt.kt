@@ -32,21 +32,23 @@ public object IdleSessionSummaryKt {
      * `optional bool success = 11;`
      */
     public var success: kotlin.Boolean
-      @JvmName("getSuccess")
-      get() = _builder.success
-      @JvmName("setSuccess")
-      set(value) {
+      @kotlin.jvm.JvmName("getSuccess")
+        get() = _builder.success
+      @kotlin.jvm.JvmName("setSuccess")
+        set(value) {
         _builder.success = value
       }
     /**
-     * `optional bool success = 11;`
+     * <code>optional bool success = 11;</code>
+     * @return This builder for chaining.
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * `optional bool success = 11;`
+     * <code>optional bool success = 11;</code>
      * @return Whether the success field is set.
+     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -56,21 +58,23 @@ public object IdleSessionSummaryKt {
      * `optional double time_away = 1;`
      */
     public var timeAway: kotlin.Double
-      @JvmName("getTimeAway")
-      get() = _builder.timeAway
-      @JvmName("setTimeAway")
-      set(value) {
+      @kotlin.jvm.JvmName("getTimeAway")
+        get() = _builder.timeAway
+      @kotlin.jvm.JvmName("setTimeAway")
+        set(value) {
         _builder.timeAway = value
       }
     /**
-     * `optional double time_away = 1;`
+     * <code>optional double time_away = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearTimeAway() {
       _builder.clearTimeAway()
     }
     /**
-     * `optional double time_away = 1;`
+     * <code>optional double time_away = 1;</code>
      * @return Whether the timeAway field is set.
+     * @return This builder for chaining.
      */
     public fun hasTimeAway(): kotlin.Boolean {
       return _builder.hasTimeAway()
@@ -80,21 +84,23 @@ public object IdleSessionSummaryKt {
      * `optional double time_simulated = 2;`
      */
     public var timeSimulated: kotlin.Double
-      @JvmName("getTimeSimulated")
-      get() = _builder.timeSimulated
-      @JvmName("setTimeSimulated")
-      set(value) {
+      @kotlin.jvm.JvmName("getTimeSimulated")
+        get() = _builder.timeSimulated
+      @kotlin.jvm.JvmName("setTimeSimulated")
+        set(value) {
         _builder.timeSimulated = value
       }
     /**
-     * `optional double time_simulated = 2;`
+     * <code>optional double time_simulated = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearTimeSimulated() {
       _builder.clearTimeSimulated()
     }
     /**
-     * `optional double time_simulated = 2;`
+     * <code>optional double time_simulated = 2;</code>
      * @return Whether the timeSimulated field is set.
+     * @return This builder for chaining.
      */
     public fun hasTimeSimulated(): kotlin.Boolean {
       return _builder.hasTimeSimulated()
@@ -104,21 +110,23 @@ public object IdleSessionSummaryKt {
      * `optional uint32 silos_owned = 3;`
      */
     public var silosOwned: kotlin.Int
-      @JvmName("getSilosOwned")
-      get() = _builder.silosOwned
-      @JvmName("setSilosOwned")
-      set(value) {
+      @kotlin.jvm.JvmName("getSilosOwned")
+        get() = _builder.silosOwned
+      @kotlin.jvm.JvmName("setSilosOwned")
+        set(value) {
         _builder.silosOwned = value
       }
     /**
-     * `optional uint32 silos_owned = 3;`
+     * <code>optional uint32 silos_owned = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearSilosOwned() {
       _builder.clearSilosOwned()
     }
     /**
-     * `optional uint32 silos_owned = 3;`
+     * <code>optional uint32 silos_owned = 3;</code>
      * @return Whether the silosOwned field is set.
+     * @return This builder for chaining.
      */
     public fun hasSilosOwned(): kotlin.Boolean {
       return _builder.hasSilosOwned()
@@ -128,21 +136,23 @@ public object IdleSessionSummaryKt {
      * `optional double average_elr = 4;`
      */
     public var averageElr: kotlin.Double
-      @JvmName("getAverageElr")
-      get() = _builder.averageElr
-      @JvmName("setAverageElr")
-      set(value) {
+      @kotlin.jvm.JvmName("getAverageElr")
+        get() = _builder.averageElr
+      @kotlin.jvm.JvmName("setAverageElr")
+        set(value) {
         _builder.averageElr = value
       }
     /**
-     * `optional double average_elr = 4;`
+     * <code>optional double average_elr = 4;</code>
+     * @return This builder for chaining.
      */
     public fun clearAverageElr() {
       _builder.clearAverageElr()
     }
     /**
-     * `optional double average_elr = 4;`
+     * <code>optional double average_elr = 4;</code>
      * @return Whether the averageElr field is set.
+     * @return This builder for chaining.
      */
     public fun hasAverageElr(): kotlin.Boolean {
       return _builder.hasAverageElr()
@@ -152,21 +162,23 @@ public object IdleSessionSummaryKt {
      * `optional double average_msr = 5;`
      */
     public var averageMsr: kotlin.Double
-      @JvmName("getAverageMsr")
-      get() = _builder.averageMsr
-      @JvmName("setAverageMsr")
-      set(value) {
+      @kotlin.jvm.JvmName("getAverageMsr")
+        get() = _builder.averageMsr
+      @kotlin.jvm.JvmName("setAverageMsr")
+        set(value) {
         _builder.averageMsr = value
       }
     /**
-     * `optional double average_msr = 5;`
+     * <code>optional double average_msr = 5;</code>
+     * @return This builder for chaining.
      */
     public fun clearAverageMsr() {
       _builder.clearAverageMsr()
     }
     /**
-     * `optional double average_msr = 5;`
+     * <code>optional double average_msr = 5;</code>
      * @return Whether the averageMsr field is set.
+     * @return This builder for chaining.
      */
     public fun hasAverageMsr(): kotlin.Boolean {
       return _builder.hasAverageMsr()
@@ -176,21 +188,23 @@ public object IdleSessionSummaryKt {
      * `optional double average_egg_delivery_rate = 6;`
      */
     public var averageEggDeliveryRate: kotlin.Double
-      @JvmName("getAverageEggDeliveryRate")
-      get() = _builder.averageEggDeliveryRate
-      @JvmName("setAverageEggDeliveryRate")
-      set(value) {
+      @kotlin.jvm.JvmName("getAverageEggDeliveryRate")
+        get() = _builder.averageEggDeliveryRate
+      @kotlin.jvm.JvmName("setAverageEggDeliveryRate")
+        set(value) {
         _builder.averageEggDeliveryRate = value
       }
     /**
-     * `optional double average_egg_delivery_rate = 6;`
+     * <code>optional double average_egg_delivery_rate = 6;</code>
+     * @return This builder for chaining.
      */
     public fun clearAverageEggDeliveryRate() {
       _builder.clearAverageEggDeliveryRate()
     }
     /**
-     * `optional double average_egg_delivery_rate = 6;`
+     * <code>optional double average_egg_delivery_rate = 6;</code>
      * @return Whether the averageEggDeliveryRate field is set.
+     * @return This builder for chaining.
      */
     public fun hasAverageEggDeliveryRate(): kotlin.Boolean {
       return _builder.hasAverageEggDeliveryRate()
@@ -200,21 +214,23 @@ public object IdleSessionSummaryKt {
      * `optional double last_egg_delivery_rate = 8;`
      */
     public var lastEggDeliveryRate: kotlin.Double
-      @JvmName("getLastEggDeliveryRate")
-      get() = _builder.lastEggDeliveryRate
-      @JvmName("setLastEggDeliveryRate")
-      set(value) {
+      @kotlin.jvm.JvmName("getLastEggDeliveryRate")
+        get() = _builder.lastEggDeliveryRate
+      @kotlin.jvm.JvmName("setLastEggDeliveryRate")
+        set(value) {
         _builder.lastEggDeliveryRate = value
       }
     /**
-     * `optional double last_egg_delivery_rate = 8;`
+     * <code>optional double last_egg_delivery_rate = 8;</code>
+     * @return This builder for chaining.
      */
     public fun clearLastEggDeliveryRate() {
       _builder.clearLastEggDeliveryRate()
     }
     /**
-     * `optional double last_egg_delivery_rate = 8;`
+     * <code>optional double last_egg_delivery_rate = 8;</code>
      * @return Whether the lastEggDeliveryRate field is set.
+     * @return This builder for chaining.
      */
     public fun hasLastEggDeliveryRate(): kotlin.Boolean {
       return _builder.hasLastEggDeliveryRate()
@@ -224,21 +240,23 @@ public object IdleSessionSummaryKt {
      * `optional double eggs_delivered = 9;`
      */
     public var eggsDelivered: kotlin.Double
-      @JvmName("getEggsDelivered")
-      get() = _builder.eggsDelivered
-      @JvmName("setEggsDelivered")
-      set(value) {
+      @kotlin.jvm.JvmName("getEggsDelivered")
+        get() = _builder.eggsDelivered
+      @kotlin.jvm.JvmName("setEggsDelivered")
+        set(value) {
         _builder.eggsDelivered = value
       }
     /**
-     * `optional double eggs_delivered = 9;`
+     * <code>optional double eggs_delivered = 9;</code>
+     * @return This builder for chaining.
      */
     public fun clearEggsDelivered() {
       _builder.clearEggsDelivered()
     }
     /**
-     * `optional double eggs_delivered = 9;`
+     * <code>optional double eggs_delivered = 9;</code>
      * @return Whether the eggsDelivered field is set.
+     * @return This builder for chaining.
      */
     public fun hasEggsDelivered(): kotlin.Boolean {
       return _builder.hasEggsDelivered()
@@ -255,86 +273,93 @@ public object IdleSessionSummaryKt {
      */
      public val stats: com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.statsList
       )
     /**
-     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
      * @param value The stats to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addStats")
+@kotlin.jvm.JvmName("addStats")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.add(value: ei.Ei.IdleSessionSummary.Stat) {
       _builder.addStats(value)
     }
     /**
-     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
      * @param value The stats to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignStats")
+@kotlin.jvm.JvmName("plusAssignStats")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.plusAssign(value: ei.Ei.IdleSessionSummary.Stat) {
       add(value)
     }
     /**
-     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
      * @param values The stats to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllStats")
+@kotlin.jvm.JvmName("addAllStats")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.IdleSessionSummary.Stat>) {
       _builder.addAllStats(values)
     }
     /**
-     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
      * @param values The stats to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllStats")
+@kotlin.jvm.JvmName("plusAssignAllStats")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.IdleSessionSummary.Stat>) {
       addAll(values)
     }
     /**
-     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
      * @param index The index to set the value at.
      * @param value The stats to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setStats")
+@kotlin.jvm.JvmName("setStats")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.set(index: kotlin.Int, value: ei.Ei.IdleSessionSummary.Stat) {
       _builder.setStats(index, value)
     }
     /**
-     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
+     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearStats")
+@kotlin.jvm.JvmName("clearStats")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.IdleSessionSummary.Stat, StatsProxy>.clear() {
       _builder.clearStats()
     }
-
 
     /**
      * `optional uint32 farm_index = 7;`
      */
     public var farmIndex: kotlin.Int
-      @JvmName("getFarmIndex")
-      get() = _builder.farmIndex
-      @JvmName("setFarmIndex")
-      set(value) {
+      @kotlin.jvm.JvmName("getFarmIndex")
+        get() = _builder.farmIndex
+      @kotlin.jvm.JvmName("setFarmIndex")
+        set(value) {
         _builder.farmIndex = value
       }
     /**
-     * `optional uint32 farm_index = 7;`
+     * <code>optional uint32 farm_index = 7;</code>
+     * @return This builder for chaining.
      */
     public fun clearFarmIndex() {
       _builder.clearFarmIndex()
     }
     /**
-     * `optional uint32 farm_index = 7;`
+     * <code>optional uint32 farm_index = 7;</code>
      * @return Whether the farmIndex field is set.
+     * @return This builder for chaining.
      */
     public fun hasFarmIndex(): kotlin.Boolean {
       return _builder.hasFarmIndex()
@@ -366,21 +391,23 @@ public object IdleSessionSummaryKt {
        * `optional string name = 1;`
        */
       public var name: kotlin.String
-        @JvmName("getName")
-        get() = _builder.name
-        @JvmName("setName")
-        set(value) {
+        @kotlin.jvm.JvmName("getName")
+          get() = _builder.name
+        @kotlin.jvm.JvmName("setName")
+          set(value) {
           _builder.name = value
         }
       /**
-       * `optional string name = 1;`
+       * <code>optional string name = 1;</code>
+       * @return This builder for chaining.
        */
       public fun clearName() {
         _builder.clearName()
       }
       /**
-       * `optional string name = 1;`
+       * <code>optional string name = 1;</code>
        * @return Whether the name field is set.
+       * @return This builder for chaining.
        */
       public fun hasName(): kotlin.Boolean {
         return _builder.hasName()
@@ -390,21 +417,23 @@ public object IdleSessionSummaryKt {
        * `optional double min = 2;`
        */
       public var min: kotlin.Double
-        @JvmName("getMin")
-        get() = _builder.min
-        @JvmName("setMin")
-        set(value) {
+        @kotlin.jvm.JvmName("getMin")
+          get() = _builder.min
+        @kotlin.jvm.JvmName("setMin")
+          set(value) {
           _builder.min = value
         }
       /**
-       * `optional double min = 2;`
+       * <code>optional double min = 2;</code>
+       * @return This builder for chaining.
        */
       public fun clearMin() {
         _builder.clearMin()
       }
       /**
-       * `optional double min = 2;`
+       * <code>optional double min = 2;</code>
        * @return Whether the min field is set.
+       * @return This builder for chaining.
        */
       public fun hasMin(): kotlin.Boolean {
         return _builder.hasMin()
@@ -414,21 +443,23 @@ public object IdleSessionSummaryKt {
        * `optional double max = 3;`
        */
       public var max: kotlin.Double
-        @JvmName("getMax")
-        get() = _builder.max
-        @JvmName("setMax")
-        set(value) {
+        @kotlin.jvm.JvmName("getMax")
+          get() = _builder.max
+        @kotlin.jvm.JvmName("setMax")
+          set(value) {
           _builder.max = value
         }
       /**
-       * `optional double max = 3;`
+       * <code>optional double max = 3;</code>
+       * @return This builder for chaining.
        */
       public fun clearMax() {
         _builder.clearMax()
       }
       /**
-       * `optional double max = 3;`
+       * <code>optional double max = 3;</code>
        * @return Whether the max field is set.
+       * @return This builder for chaining.
        */
       public fun hasMax(): kotlin.Boolean {
         return _builder.hasMax()
@@ -438,21 +469,23 @@ public object IdleSessionSummaryKt {
        * `optional double avg = 4;`
        */
       public var avg: kotlin.Double
-        @JvmName("getAvg")
-        get() = _builder.avg
-        @JvmName("setAvg")
-        set(value) {
+        @kotlin.jvm.JvmName("getAvg")
+          get() = _builder.avg
+        @kotlin.jvm.JvmName("setAvg")
+          set(value) {
           _builder.avg = value
         }
       /**
-       * `optional double avg = 4;`
+       * <code>optional double avg = 4;</code>
+       * @return This builder for chaining.
        */
       public fun clearAvg() {
         _builder.clearAvg()
       }
       /**
-       * `optional double avg = 4;`
+       * <code>optional double avg = 4;</code>
        * @return Whether the avg field is set.
+       * @return This builder for chaining.
        */
       public fun hasAvg(): kotlin.Boolean {
         return _builder.hasAvg()
@@ -462,21 +495,23 @@ public object IdleSessionSummaryKt {
        * `optional double total_time = 5;`
        */
       public var totalTime: kotlin.Double
-        @JvmName("getTotalTime")
-        get() = _builder.totalTime
-        @JvmName("setTotalTime")
-        set(value) {
+        @kotlin.jvm.JvmName("getTotalTime")
+          get() = _builder.totalTime
+        @kotlin.jvm.JvmName("setTotalTime")
+          set(value) {
           _builder.totalTime = value
         }
       /**
-       * `optional double total_time = 5;`
+       * <code>optional double total_time = 5;</code>
+       * @return This builder for chaining.
        */
       public fun clearTotalTime() {
         _builder.clearTotalTime()
       }
       /**
-       * `optional double total_time = 5;`
+       * <code>optional double total_time = 5;</code>
        * @return Whether the totalTime field is set.
+       * @return This builder for chaining.
        */
       public fun hasTotalTime(): kotlin.Boolean {
         return _builder.hasTotalTime()

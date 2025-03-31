@@ -32,21 +32,23 @@ public object GameModifierKt {
      * `optional .ei.GameModifier.GameDimension dimension = 1;`
      */
     public var dimension: ei.Ei.GameModifier.GameDimension
-      @JvmName("getDimension")
-      get() = _builder.dimension
-      @JvmName("setDimension")
-      set(value) {
+      @kotlin.jvm.JvmName("getDimension")
+        get() = _builder.dimension
+      @kotlin.jvm.JvmName("setDimension")
+        set(value) {
         _builder.dimension = value
       }
     /**
-     * `optional .ei.GameModifier.GameDimension dimension = 1;`
+     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearDimension() {
       _builder.clearDimension()
     }
     /**
-     * `optional .ei.GameModifier.GameDimension dimension = 1;`
+     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
      * @return Whether the dimension field is set.
+     * @return This builder for chaining.
      */
     public fun hasDimension(): kotlin.Boolean {
       return _builder.hasDimension()
@@ -56,21 +58,23 @@ public object GameModifierKt {
      * `optional double value = 2;`
      */
     public var value: kotlin.Double
-      @JvmName("getValue")
-      get() = _builder.value
-      @JvmName("setValue")
-      set(value) {
+      @kotlin.jvm.JvmName("getValue")
+        get() = _builder.value
+      @kotlin.jvm.JvmName("setValue")
+        set(value) {
         _builder.value = value
       }
     /**
-     * `optional double value = 2;`
+     * <code>optional double value = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearValue() {
       _builder.clearValue()
     }
     /**
-     * `optional double value = 2;`
+     * <code>optional double value = 2;</code>
      * @return Whether the value field is set.
+     * @return This builder for chaining.
      */
     public fun hasValue(): kotlin.Boolean {
       return _builder.hasValue()
@@ -80,21 +84,23 @@ public object GameModifierKt {
      * `optional string description = 3;`
      */
     public var description: kotlin.String
-      @JvmName("getDescription")
-      get() = _builder.description
-      @JvmName("setDescription")
-      set(value) {
+      @kotlin.jvm.JvmName("getDescription")
+        get() = _builder.description
+      @kotlin.jvm.JvmName("setDescription")
+        set(value) {
         _builder.description = value
       }
     /**
-     * `optional string description = 3;`
+     * <code>optional string description = 3;</code>
+     * @return This builder for chaining.
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * `optional string description = 3;`
+     * <code>optional string description = 3;</code>
      * @return Whether the description field is set.
+     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()

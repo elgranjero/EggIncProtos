@@ -72,16 +72,16 @@ proto.ei.JoinCoopResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.JoinCoopResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
-message: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-banned: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
-coopIdentifier: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-matchPercent: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
-numMembers: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
-status: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
-grade: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
-canStart: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f
+    success: (f = jspb.Message.getBooleanField(msg, 1)) == null ? undefined : f,
+    message: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    banned: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
+    coopIdentifier: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    secondsRemaining: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    matchPercent: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
+    numMembers: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    status: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+    grade: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+    canStart: (f = jspb.Message.getBooleanField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {

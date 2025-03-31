@@ -70,7 +70,7 @@ proto.ei.ReturnEDTPayload.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ei.ReturnEDTPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
-eiUserId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
+    eiUserId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {

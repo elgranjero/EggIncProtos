@@ -32,21 +32,23 @@ public object ActionKeyValuePairKt {
      * `required string key = 1;`
      */
     public var key: kotlin.String
-      @JvmName("getKey")
-      get() = _builder.key
-      @JvmName("setKey")
-      set(value) {
+      @kotlin.jvm.JvmName("getKey")
+        get() = _builder.key
+      @kotlin.jvm.JvmName("setKey")
+        set(value) {
         _builder.key = value
       }
     /**
-     * `required string key = 1;`
+     * <code>required string key = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearKey() {
       _builder.clearKey()
     }
     /**
-     * `required string key = 1;`
+     * <code>required string key = 1;</code>
      * @return Whether the key field is set.
+     * @return This builder for chaining.
      */
     public fun hasKey(): kotlin.Boolean {
       return _builder.hasKey()
@@ -56,21 +58,23 @@ public object ActionKeyValuePairKt {
      * `required string value = 2;`
      */
     public var value: kotlin.String
-      @JvmName("getValue")
-      get() = _builder.value
-      @JvmName("setValue")
-      set(value) {
+      @kotlin.jvm.JvmName("getValue")
+        get() = _builder.value
+      @kotlin.jvm.JvmName("setValue")
+        set(value) {
         _builder.value = value
       }
     /**
-     * `required string value = 2;`
+     * <code>required string value = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearValue() {
       _builder.clearValue()
     }
     /**
-     * `required string value = 2;`
+     * <code>required string value = 2;</code>
      * @return Whether the value field is set.
+     * @return This builder for chaining.
      */
     public fun hasValue(): kotlin.Boolean {
       return _builder.hasValue()

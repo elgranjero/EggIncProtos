@@ -32,21 +32,23 @@ public object VerifyPurchaseResponseKt {
      * `optional bool verified = 1;`
      */
     public var verified: kotlin.Boolean
-      @JvmName("getVerified")
-      get() = _builder.verified
-      @JvmName("setVerified")
-      set(value) {
+      @kotlin.jvm.JvmName("getVerified")
+        get() = _builder.verified
+      @kotlin.jvm.JvmName("setVerified")
+        set(value) {
         _builder.verified = value
       }
     /**
-     * `optional bool verified = 1;`
+     * <code>optional bool verified = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearVerified() {
       _builder.clearVerified()
     }
     /**
-     * `optional bool verified = 1;`
+     * <code>optional bool verified = 1;</code>
      * @return Whether the verified field is set.
+     * @return This builder for chaining.
      */
     public fun hasVerified(): kotlin.Boolean {
       return _builder.hasVerified()
@@ -56,21 +58,23 @@ public object VerifyPurchaseResponseKt {
      * `optional string message = 2;`
      */
     public var message: kotlin.String
-      @JvmName("getMessage")
-      get() = _builder.message
-      @JvmName("setMessage")
-      set(value) {
+      @kotlin.jvm.JvmName("getMessage")
+        get() = _builder.message
+      @kotlin.jvm.JvmName("setMessage")
+        set(value) {
         _builder.message = value
       }
     /**
-     * `optional string message = 2;`
+     * <code>optional string message = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * `optional string message = 2;`
+     * <code>optional string message = 2;</code>
      * @return Whether the message field is set.
+     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()

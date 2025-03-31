@@ -79,14 +79,14 @@ proto.ei.ConsumeArtifactRequest.prototype.toObject = function(opt_includeInstanc
  */
 proto.ei.ConsumeArtifactRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-eiUserId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
-artifactServerId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-originalItemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-additionalServerIdsList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
-additionalItemIdsList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
-quantity: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    eiUserId: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    spec: (f = msg.getSpec()) && proto.ei.ArtifactSpec.toObject(includeInstance, f),
+    artifactServerId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    originalItemId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    additionalServerIdsList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
+    additionalItemIdsList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
+    quantity: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {

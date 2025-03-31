@@ -32,21 +32,23 @@ public object AccountTransferPayloadKt {
      * `optional string from_id = 1;`
      */
     public var fromId: kotlin.String
-      @JvmName("getFromId")
-      get() = _builder.fromId
-      @JvmName("setFromId")
-      set(value) {
+      @kotlin.jvm.JvmName("getFromId")
+        get() = _builder.fromId
+      @kotlin.jvm.JvmName("setFromId")
+        set(value) {
         _builder.fromId = value
       }
     /**
-     * `optional string from_id = 1;`
+     * <code>optional string from_id = 1;</code>
+     * @return This builder for chaining.
      */
     public fun clearFromId() {
       _builder.clearFromId()
     }
     /**
-     * `optional string from_id = 1;`
+     * <code>optional string from_id = 1;</code>
      * @return Whether the fromId field is set.
+     * @return This builder for chaining.
      */
     public fun hasFromId(): kotlin.Boolean {
       return _builder.hasFromId()
@@ -56,21 +58,23 @@ public object AccountTransferPayloadKt {
      * `optional string to_ei_user_id = 2;`
      */
     public var toEiUserId: kotlin.String
-      @JvmName("getToEiUserId")
-      get() = _builder.toEiUserId
-      @JvmName("setToEiUserId")
-      set(value) {
+      @kotlin.jvm.JvmName("getToEiUserId")
+        get() = _builder.toEiUserId
+      @kotlin.jvm.JvmName("setToEiUserId")
+        set(value) {
         _builder.toEiUserId = value
       }
     /**
-     * `optional string to_ei_user_id = 2;`
+     * <code>optional string to_ei_user_id = 2;</code>
+     * @return This builder for chaining.
      */
     public fun clearToEiUserId() {
       _builder.clearToEiUserId()
     }
     /**
-     * `optional string to_ei_user_id = 2;`
+     * <code>optional string to_ei_user_id = 2;</code>
      * @return Whether the toEiUserId field is set.
+     * @return This builder for chaining.
      */
     public fun hasToEiUserId(): kotlin.Boolean {
       return _builder.hasToEiUserId()

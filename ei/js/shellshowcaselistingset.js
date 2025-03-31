@@ -78,7 +78,7 @@ proto.ei.ShellShowcaseListingSet.prototype.toObject = function(opt_includeInstan
  */
 proto.ei.ShellShowcaseListingSet.toObject = function(includeInstance, msg) {
   var f, obj = {
-listingsList: jspb.Message.toObjectList(msg.getListingsList(),
+    listingsList: jspb.Message.toObjectList(msg.getListingsList(),
     proto.ei.ShellShowcaseListingInfo.toObject, includeInstance)
   };
 

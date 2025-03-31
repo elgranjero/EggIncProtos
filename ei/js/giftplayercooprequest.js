@@ -71,14 +71,14 @@ proto.ei.GiftPlayerCoopRequest.prototype.toObject = function(opt_includeInstance
  */
 proto.ei.GiftPlayerCoopRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
-contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-playerIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
-requestingUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
-requestingUserName: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
-amount: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
-clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
+    rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
+    contractIdentifier: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+    coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    playerIdentifier: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    requestingUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    requestingUserName: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+    amount: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+    clientVersion: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {

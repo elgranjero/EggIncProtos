@@ -37,59 +37,65 @@ public object EggIncAdConfigKt {
     /**
      * `repeated .ei.AdNetwork network_priority = 1;`
      */
-    public val networkPriority: com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>
+     public val networkPriority: com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>
       @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
+  get() = com.google.protobuf.kotlin.DslList(
         _builder.networkPriorityList
       )
     /**
-     * `repeated .ei.AdNetwork network_priority = 1;`
+     * <code>repeated .ei.AdNetwork network_priority = 1;</code>
      * @param value The networkPriority to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addNetworkPriority")
+@kotlin.jvm.JvmName("addNetworkPriority")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>.add(value: ei.Ei.AdNetwork) {
       _builder.addNetworkPriority(value)
     }/**
-     * `repeated .ei.AdNetwork network_priority = 1;`
+     * <code>repeated .ei.AdNetwork network_priority = 1;</code>
      * @param value The networkPriority to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignNetworkPriority")
+@kotlin.jvm.JvmName("plusAssignNetworkPriority")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>.plusAssign(value: ei.Ei.AdNetwork) {
       add(value)
     }/**
-     * `repeated .ei.AdNetwork network_priority = 1;`
+     * <code>repeated .ei.AdNetwork network_priority = 1;</code>
      * @param values The networkPriority to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllNetworkPriority")
+@kotlin.jvm.JvmName("addAllNetworkPriority")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.AdNetwork>) {
       _builder.addAllNetworkPriority(values)
     }/**
-     * `repeated .ei.AdNetwork network_priority = 1;`
+     * <code>repeated .ei.AdNetwork network_priority = 1;</code>
      * @param values The networkPriority to add.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllNetworkPriority")
+@kotlin.jvm.JvmName("plusAssignAllNetworkPriority")
     @Suppress("NOTHING_TO_INLINE")
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.AdNetwork>) {
       addAll(values)
     }/**
-     * `repeated .ei.AdNetwork network_priority = 1;`
+     * <code>repeated .ei.AdNetwork network_priority = 1;</code>
      * @param index The index to set the value at.
      * @param value The networkPriority to set.
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setNetworkPriority")
+@kotlin.jvm.JvmName("setNetworkPriority")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>.set(index: kotlin.Int, value: ei.Ei.AdNetwork) {
       _builder.setNetworkPriority(index, value)
     }/**
-     * `repeated .ei.AdNetwork network_priority = 1;`
+     * <code>repeated .ei.AdNetwork network_priority = 1;</code>
+     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearNetworkPriority")
+@kotlin.jvm.JvmName("clearNetworkPriority")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.AdNetwork, NetworkPriorityProxy>.clear() {
       _builder.clearNetworkPriority()
     }}
