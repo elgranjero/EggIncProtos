@@ -39,16 +39,14 @@ public object GenericActionBatchRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -72,9 +70,8 @@ public object GenericActionBatchRequestKt {
         _builder.actionsList
       )
     /**
-     * <code>repeated .ei.GenericAction actions = 2;</code>
+     * `repeated .ei.GenericAction actions = 2;`
      * @param value The actions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addActions")
@@ -82,9 +79,8 @@ public object GenericActionBatchRequestKt {
       _builder.addActions(value)
     }
     /**
-     * <code>repeated .ei.GenericAction actions = 2;</code>
+     * `repeated .ei.GenericAction actions = 2;`
      * @param value The actions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignActions")
@@ -93,9 +89,8 @@ public object GenericActionBatchRequestKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.GenericAction actions = 2;</code>
+     * `repeated .ei.GenericAction actions = 2;`
      * @param values The actions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllActions")
@@ -103,9 +98,8 @@ public object GenericActionBatchRequestKt {
       _builder.addAllActions(values)
     }
     /**
-     * <code>repeated .ei.GenericAction actions = 2;</code>
+     * `repeated .ei.GenericAction actions = 2;`
      * @param values The actions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllActions")
@@ -114,10 +108,9 @@ public object GenericActionBatchRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.GenericAction actions = 2;</code>
+     * `repeated .ei.GenericAction actions = 2;`
      * @param index The index to set the value at.
      * @param value The actions to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setActions")
@@ -125,8 +118,7 @@ public object GenericActionBatchRequestKt {
       _builder.setActions(index, value)
     }
     /**
-     * <code>repeated .ei.GenericAction actions = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.GenericAction actions = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearActions")

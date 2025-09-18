@@ -31,6 +31,7 @@ proto.ei.RewardType = {
   ARTIFACT_CASE: 12,
   CHICKEN: 13,
   SHELL_SCRIPT: 14,
+  VIRTUE_GEM: 15,
   UNKNOWN_REWARD: 100
 };
 

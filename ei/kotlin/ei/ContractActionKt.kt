@@ -39,16 +39,14 @@ public object ContractActionKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object ContractActionKt {
         _builder.actionName = value
       }
     /**
-     * <code>optional string action_name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string action_name = 2;`
      */
     public fun clearActionName() {
       _builder.clearActionName()
     }
     /**
-     * <code>optional string action_name = 2;</code>
+     * `optional string action_name = 2;`
      * @return Whether the actionName field is set.
-     * @return This builder for chaining.
      */
     public fun hasActionName(): kotlin.Boolean {
       return _builder.hasActionName()
@@ -91,16 +87,14 @@ public object ContractActionKt {
         _builder.approxTime = value
       }
     /**
-     * <code>optional double approx_time = 3;</code>
-     * @return This builder for chaining.
+     * `optional double approx_time = 3;`
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * <code>optional double approx_time = 3;</code>
+     * `optional double approx_time = 3;`
      * @return Whether the approxTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -117,16 +111,14 @@ public object ContractActionKt {
         _builder.destUserId = value
       }
     /**
-     * <code>optional string dest_user_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string dest_user_id = 4;`
      */
     public fun clearDestUserId() {
       _builder.clearDestUserId()
     }
     /**
-     * <code>optional string dest_user_id = 4;</code>
+     * `optional string dest_user_id = 4;`
      * @return Whether the destUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDestUserId(): kotlin.Boolean {
       return _builder.hasDestUserId()
@@ -143,16 +135,14 @@ public object ContractActionKt {
         _builder.contractId = value
       }
     /**
-     * <code>optional string contract_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string contract_id = 5;`
      */
     public fun clearContractId() {
       _builder.clearContractId()
     }
     /**
-     * <code>optional string contract_id = 5;</code>
+     * `optional string contract_id = 5;`
      * @return Whether the contractId field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractId(): kotlin.Boolean {
       return _builder.hasContractId()
@@ -169,16 +159,14 @@ public object ContractActionKt {
         _builder.coopId = value
       }
     /**
-     * <code>optional string coop_id = 6;</code>
-     * @return This builder for chaining.
+     * `optional string coop_id = 6;`
      */
     public fun clearCoopId() {
       _builder.clearCoopId()
     }
     /**
-     * <code>optional string coop_id = 6;</code>
+     * `optional string coop_id = 6;`
      * @return Whether the coopId field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopId(): kotlin.Boolean {
       return _builder.hasCoopId()
@@ -195,16 +183,14 @@ public object ContractActionKt {
         _builder.autojoin = value
       }
     /**
-     * <code>optional bool autojoin = 7;</code>
-     * @return This builder for chaining.
+     * `optional bool autojoin = 7;`
      */
     public fun clearAutojoin() {
       _builder.clearAutojoin()
     }
     /**
-     * <code>optional bool autojoin = 7;</code>
+     * `optional bool autojoin = 7;`
      * @return Whether the autojoin field is set.
-     * @return This builder for chaining.
      */
     public fun hasAutojoin(): kotlin.Boolean {
       return _builder.hasAutojoin()
@@ -221,16 +207,14 @@ public object ContractActionKt {
         _builder.grade = value
       }
     /**
-     * <code>optional uint32 grade = 8;</code>
-     * @return This builder for chaining.
+     * `optional uint32 grade = 8;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional uint32 grade = 8;</code>
+     * `optional uint32 grade = 8;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -247,16 +231,14 @@ public object ContractActionKt {
         _builder.replay = value
       }
     /**
-     * <code>optional bool replay = 9;</code>
-     * @return This builder for chaining.
+     * `optional bool replay = 9;`
      */
     public fun clearReplay() {
       _builder.clearReplay()
     }
     /**
-     * <code>optional bool replay = 9;</code>
+     * `optional bool replay = 9;`
      * @return Whether the replay field is set.
-     * @return This builder for chaining.
      */
     public fun hasReplay(): kotlin.Boolean {
       return _builder.hasReplay()
@@ -273,16 +255,14 @@ public object ContractActionKt {
         _builder.pointsReplay = value
       }
     /**
-     * <code>optional bool points_replay = 10;</code>
-     * @return This builder for chaining.
+     * `optional bool points_replay = 10;`
      */
     public fun clearPointsReplay() {
       _builder.clearPointsReplay()
     }
     /**
-     * <code>optional bool points_replay = 10;</code>
+     * `optional bool points_replay = 10;`
      * @return Whether the pointsReplay field is set.
-     * @return This builder for chaining.
      */
     public fun hasPointsReplay(): kotlin.Boolean {
       return _builder.hasPointsReplay()
@@ -299,16 +279,14 @@ public object ContractActionKt {
         _builder.rewardType = value
       }
     /**
-     * <code>optional uint32 reward_type = 11;</code>
-     * @return This builder for chaining.
+     * `optional uint32 reward_type = 11;`
      */
     public fun clearRewardType() {
       _builder.clearRewardType()
     }
     /**
-     * <code>optional uint32 reward_type = 11;</code>
+     * `optional uint32 reward_type = 11;`
      * @return Whether the rewardType field is set.
-     * @return This builder for chaining.
      */
     public fun hasRewardType(): kotlin.Boolean {
       return _builder.hasRewardType()
@@ -325,16 +303,14 @@ public object ContractActionKt {
         _builder.rewardSubtype = value
       }
     /**
-     * <code>optional string reward_subtype = 12;</code>
-     * @return This builder for chaining.
+     * `optional string reward_subtype = 12;`
      */
     public fun clearRewardSubtype() {
       _builder.clearRewardSubtype()
     }
     /**
-     * <code>optional string reward_subtype = 12;</code>
+     * `optional string reward_subtype = 12;`
      * @return Whether the rewardSubtype field is set.
-     * @return This builder for chaining.
      */
     public fun hasRewardSubtype(): kotlin.Boolean {
       return _builder.hasRewardSubtype()
@@ -351,16 +327,14 @@ public object ContractActionKt {
         _builder.rewardAmount = value
       }
     /**
-     * <code>optional double reward_amount = 13;</code>
-     * @return This builder for chaining.
+     * `optional double reward_amount = 13;`
      */
     public fun clearRewardAmount() {
       _builder.clearRewardAmount()
     }
     /**
-     * <code>optional double reward_amount = 13;</code>
+     * `optional double reward_amount = 13;`
      * @return Whether the rewardAmount field is set.
-     * @return This builder for chaining.
      */
     public fun hasRewardAmount(): kotlin.Boolean {
       return _builder.hasRewardAmount()
@@ -377,16 +351,14 @@ public object ContractActionKt {
         _builder.goalIndex = value
       }
     /**
-     * <code>optional uint32 goal_index = 14;</code>
-     * @return This builder for chaining.
+     * `optional uint32 goal_index = 14;`
      */
     public fun clearGoalIndex() {
       _builder.clearGoalIndex()
     }
     /**
-     * <code>optional uint32 goal_index = 14;</code>
+     * `optional uint32 goal_index = 14;`
      * @return Whether the goalIndex field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoalIndex(): kotlin.Boolean {
       return _builder.hasGoalIndex()
@@ -403,16 +375,14 @@ public object ContractActionKt {
         _builder.boostId = value
       }
     /**
-     * <code>optional string boost_id = 15;</code>
-     * @return This builder for chaining.
+     * `optional string boost_id = 15;`
      */
     public fun clearBoostId() {
       _builder.clearBoostId()
     }
     /**
-     * <code>optional string boost_id = 15;</code>
+     * `optional string boost_id = 15;`
      * @return Whether the boostId field is set.
-     * @return This builder for chaining.
      */
     public fun hasBoostId(): kotlin.Boolean {
       return _builder.hasBoostId()
@@ -429,16 +399,14 @@ public object ContractActionKt {
         _builder.tokens = value
       }
     /**
-     * <code>optional uint32 tokens = 16;</code>
-     * @return This builder for chaining.
+     * `optional uint32 tokens = 16;`
      */
     public fun clearTokens() {
       _builder.clearTokens()
     }
     /**
-     * <code>optional uint32 tokens = 16;</code>
+     * `optional uint32 tokens = 16;`
      * @return Whether the tokens field is set.
-     * @return This builder for chaining.
      */
     public fun hasTokens(): kotlin.Boolean {
       return _builder.hasTokens()
@@ -455,16 +423,14 @@ public object ContractActionKt {
         _builder.kickReason = value
       }
     /**
-     * <code>optional uint32 kick_reason = 17;</code>
-     * @return This builder for chaining.
+     * `optional uint32 kick_reason = 17;`
      */
     public fun clearKickReason() {
       _builder.clearKickReason()
     }
     /**
-     * <code>optional uint32 kick_reason = 17;</code>
+     * `optional uint32 kick_reason = 17;`
      * @return Whether the kickReason field is set.
-     * @return This builder for chaining.
      */
     public fun hasKickReason(): kotlin.Boolean {
       return _builder.hasKickReason()
@@ -481,16 +447,14 @@ public object ContractActionKt {
         _builder.public = value
       }
     /**
-     * <code>optional bool public = 18;</code>
-     * @return This builder for chaining.
+     * `optional bool public = 18;`
      */
     public fun clearPublic() {
       _builder.clearPublic()
     }
     /**
-     * <code>optional bool public = 18;</code>
+     * `optional bool public = 18;`
      * @return Whether the public field is set.
-     * @return This builder for chaining.
      */
     public fun hasPublic(): kotlin.Boolean {
       return _builder.hasPublic()
@@ -507,16 +471,14 @@ public object ContractActionKt {
         _builder.ccOnly = value
       }
     /**
-     * <code>optional bool cc_only = 19;</code>
-     * @return This builder for chaining.
+     * `optional bool cc_only = 19;`
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * <code>optional bool cc_only = 19;</code>
+     * `optional bool cc_only = 19;`
      * @return Whether the ccOnly field is set.
-     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()

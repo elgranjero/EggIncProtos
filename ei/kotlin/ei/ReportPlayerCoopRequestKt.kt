@@ -39,16 +39,14 @@ public object ReportPlayerCoopRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ReportPlayerCoopRequestKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 2;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 2;</code>
+     * `optional string contract_identifier = 2;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -94,16 +90,14 @@ public object ReportPlayerCoopRequestKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 3;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 3;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 3;</code>
+     * `optional string coop_identifier = 3;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -120,16 +114,14 @@ public object ReportPlayerCoopRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 4;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 4;</code>
+     * `optional string user_id = 4;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -146,16 +138,14 @@ public object ReportPlayerCoopRequestKt {
         _builder.reason = value
       }
     /**
-     * <code>optional .ei.ReportPlayerCoopRequest.Reason reason = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ReportPlayerCoopRequest.Reason reason = 5;`
      */
     public fun clearReason() {
       _builder.clearReason()
     }
     /**
-     * <code>optional .ei.ReportPlayerCoopRequest.Reason reason = 5;</code>
+     * `optional .ei.ReportPlayerCoopRequest.Reason reason = 5;`
      * @return Whether the reason field is set.
-     * @return This builder for chaining.
      */
     public fun hasReason(): kotlin.Boolean {
       return _builder.hasReason()

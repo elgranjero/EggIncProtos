@@ -39,16 +39,14 @@ public object ClearAllUserDataRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ClearAllUserDataRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -94,16 +90,14 @@ public object ClearAllUserDataRequestKt {
         _builder.deviceId = value
       }
     /**
-     * <code>optional string device_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string device_id = 2;`
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * <code>optional string device_id = 2;</code>
+     * `optional string device_id = 2;`
      * @return Whether the deviceId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -120,16 +114,14 @@ public object ClearAllUserDataRequestKt {
         _builder.backupChecksum = value
       }
     /**
-     * <code>optional uint64 backup_checksum = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint64 backup_checksum = 3;`
      */
     public fun clearBackupChecksum() {
       _builder.clearBackupChecksum()
     }
     /**
-     * <code>optional uint64 backup_checksum = 3;</code>
+     * `optional uint64 backup_checksum = 3;`
      * @return Whether the backupChecksum field is set.
-     * @return This builder for chaining.
      */
     public fun hasBackupChecksum(): kotlin.Boolean {
       return _builder.hasBackupChecksum()

@@ -39,16 +39,14 @@ public object AdAttributionRawDataKt {
         _builder.deviceAdId = value
       }
     /**
-     * <code>optional string device_ad_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string device_ad_id = 1;`
      */
     public fun clearDeviceAdId() {
       _builder.clearDeviceAdId()
     }
     /**
-     * <code>optional string device_ad_id = 1;</code>
+     * `optional string device_ad_id = 1;`
      * @return Whether the deviceAdId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceAdId(): kotlin.Boolean {
       return _builder.hasDeviceAdId()
@@ -65,16 +63,14 @@ public object AdAttributionRawDataKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 4;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 4;</code>
+     * `optional string user_id = 4;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -91,16 +87,14 @@ public object AdAttributionRawDataKt {
         _builder.adNetwork = value
       }
     /**
-     * <code>optional string ad_network = 2;</code>
-     * @return This builder for chaining.
+     * `optional string ad_network = 2;`
      */
     public fun clearAdNetwork() {
       _builder.clearAdNetwork()
     }
     /**
-     * <code>optional string ad_network = 2;</code>
+     * `optional string ad_network = 2;`
      * @return Whether the adNetwork field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdNetwork(): kotlin.Boolean {
       return _builder.hasAdNetwork()
@@ -117,16 +111,14 @@ public object AdAttributionRawDataKt {
         _builder.jsonData = value
       }
     /**
-     * <code>optional string json_data = 3;</code>
-     * @return This builder for chaining.
+     * `optional string json_data = 3;`
      */
     public fun clearJsonData() {
       _builder.clearJsonData()
     }
     /**
-     * <code>optional string json_data = 3;</code>
+     * `optional string json_data = 3;`
      * @return Whether the jsonData field is set.
-     * @return This builder for chaining.
      */
     public fun hasJsonData(): kotlin.Boolean {
       return _builder.hasJsonData()

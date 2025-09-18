@@ -39,16 +39,14 @@ public object ContractSeasonInfoKt {
         _builder.id = value
       }
     /**
-     * <code>optional string id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string id = 1;`
      */
     public fun clearId() {
       _builder.clearId()
     }
     /**
-     * <code>optional string id = 1;</code>
+     * `optional string id = 1;`
      * @return Whether the id field is set.
-     * @return This builder for chaining.
      */
     public fun hasId(): kotlin.Boolean {
       return _builder.hasId()
@@ -65,16 +63,14 @@ public object ContractSeasonInfoKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 3;</code>
-     * @return This builder for chaining.
+     * `optional string name = 3;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 3;</code>
+     * `optional string name = 3;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -91,16 +87,14 @@ public object ContractSeasonInfoKt {
         _builder.startTime = value
       }
     /**
-     * <code>optional double start_time = 4;</code>
-     * @return This builder for chaining.
+     * `optional double start_time = 4;`
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * <code>optional double start_time = 4;</code>
+     * `optional double start_time = 4;`
      * @return Whether the startTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -121,9 +115,8 @@ public object ContractSeasonInfoKt {
         _builder.gradeGoalsList
       )
     /**
-     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
+     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
      * @param value The gradeGoals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGradeGoals")
@@ -131,9 +124,8 @@ public object ContractSeasonInfoKt {
       _builder.addGradeGoals(value)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
+     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
      * @param value The gradeGoals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGradeGoals")
@@ -142,9 +134,8 @@ public object ContractSeasonInfoKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
+     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
      * @param values The gradeGoals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGradeGoals")
@@ -152,9 +143,8 @@ public object ContractSeasonInfoKt {
       _builder.addAllGradeGoals(values)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
+     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
      * @param values The gradeGoals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGradeGoals")
@@ -163,10 +153,9 @@ public object ContractSeasonInfoKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
+     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
      * @param index The index to set the value at.
      * @param value The gradeGoals to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGradeGoals")
@@ -174,8 +163,7 @@ public object ContractSeasonInfoKt {
       _builder.setGradeGoals(index, value)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractSeasonInfo.GoalSet grade_goals = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGradeGoals")
@@ -216,16 +204,14 @@ public object ContractSeasonInfoKt {
           _builder.grade = value
         }
       /**
-       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * `optional .ei.Contract.PlayerGrade grade = 1;`
        * @return Whether the grade field is set.
-       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -246,9 +232,8 @@ public object ContractSeasonInfoKt {
           _builder.goalsList
         )
       /**
-       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
+       * `repeated .ei.ContractSeasonGoal goals = 2;`
        * @param value The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGoals")
@@ -256,9 +241,8 @@ public object ContractSeasonInfoKt {
         _builder.addGoals(value)
       }
       /**
-       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
+       * `repeated .ei.ContractSeasonGoal goals = 2;`
        * @param value The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGoals")
@@ -267,9 +251,8 @@ public object ContractSeasonInfoKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
+       * `repeated .ei.ContractSeasonGoal goals = 2;`
        * @param values The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGoals")
@@ -277,9 +260,8 @@ public object ContractSeasonInfoKt {
         _builder.addAllGoals(values)
       }
       /**
-       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
+       * `repeated .ei.ContractSeasonGoal goals = 2;`
        * @param values The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGoals")
@@ -288,10 +270,9 @@ public object ContractSeasonInfoKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
+       * `repeated .ei.ContractSeasonGoal goals = 2;`
        * @param index The index to set the value at.
        * @param value The goals to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGoals")
@@ -299,8 +280,7 @@ public object ContractSeasonInfoKt {
         _builder.setGoals(index, value)
       }
       /**
-       * <code>repeated .ei.ContractSeasonGoal goals = 2;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ContractSeasonGoal goals = 2;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGoals")

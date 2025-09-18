@@ -39,16 +39,14 @@ public object ContractEvaluationKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 40;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 40;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 40;</code>
+     * `optional string contract_identifier = 40;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -65,16 +63,14 @@ public object ContractEvaluationKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 41;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 41;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 41;</code>
+     * `optional string coop_identifier = 41;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -91,16 +87,14 @@ public object ContractEvaluationKt {
         _builder.cxp = value
       }
     /**
-     * <code>optional double cxp = 1;</code>
-     * @return This builder for chaining.
+     * `optional double cxp = 1;`
      */
     public fun clearCxp() {
       _builder.clearCxp()
     }
     /**
-     * <code>optional double cxp = 1;</code>
+     * `optional double cxp = 1;`
      * @return Whether the cxp field is set.
-     * @return This builder for chaining.
      */
     public fun hasCxp(): kotlin.Boolean {
       return _builder.hasCxp()
@@ -117,16 +111,14 @@ public object ContractEvaluationKt {
         _builder.replay = value
       }
     /**
-     * <code>optional bool replay = 24;</code>
-     * @return This builder for chaining.
+     * `optional bool replay = 24;`
      */
     public fun clearReplay() {
       _builder.clearReplay()
     }
     /**
-     * <code>optional bool replay = 24;</code>
+     * `optional bool replay = 24;`
      * @return Whether the replay field is set.
-     * @return This builder for chaining.
      */
     public fun hasReplay(): kotlin.Boolean {
       return _builder.hasReplay()
@@ -143,16 +135,14 @@ public object ContractEvaluationKt {
         _builder.cxpChange = value
       }
     /**
-     * <code>optional double cxp_change = 25;</code>
-     * @return This builder for chaining.
+     * `optional double cxp_change = 25;`
      */
     public fun clearCxpChange() {
       _builder.clearCxpChange()
     }
     /**
-     * <code>optional double cxp_change = 25;</code>
+     * `optional double cxp_change = 25;`
      * @return Whether the cxpChange field is set.
-     * @return This builder for chaining.
      */
     public fun hasCxpChange(): kotlin.Boolean {
       return _builder.hasCxpChange()
@@ -169,16 +159,14 @@ public object ContractEvaluationKt {
         _builder.gradePerformance = value
       }
     /**
-     * <code>optional int32 grade_performance = 2;</code>
-     * @return This builder for chaining.
+     * `optional int32 grade_performance = 2;`
      */
     public fun clearGradePerformance() {
       _builder.clearGradePerformance()
     }
     /**
-     * <code>optional int32 grade_performance = 2;</code>
+     * `optional int32 grade_performance = 2;`
      * @return Whether the gradePerformance field is set.
-     * @return This builder for chaining.
      */
     public fun hasGradePerformance(): kotlin.Boolean {
       return _builder.hasGradePerformance()
@@ -195,16 +183,14 @@ public object ContractEvaluationKt {
         _builder.oldLeague = value
       }
     /**
-     * <code>optional int32 old_league = 9;</code>
-     * @return This builder for chaining.
+     * `optional int32 old_league = 9;`
      */
     public fun clearOldLeague() {
       _builder.clearOldLeague()
     }
     /**
-     * <code>optional int32 old_league = 9;</code>
+     * `optional int32 old_league = 9;`
      * @return Whether the oldLeague field is set.
-     * @return This builder for chaining.
      */
     public fun hasOldLeague(): kotlin.Boolean {
       return _builder.hasOldLeague()
@@ -221,16 +207,14 @@ public object ContractEvaluationKt {
         _builder.oldGoals = value
       }
     /**
-     * <code>optional bool old_goals = 10;</code>
-     * @return This builder for chaining.
+     * `optional bool old_goals = 10;`
      */
     public fun clearOldGoals() {
       _builder.clearOldGoals()
     }
     /**
-     * <code>optional bool old_goals = 10;</code>
+     * `optional bool old_goals = 10;`
      * @return Whether the oldGoals field is set.
-     * @return This builder for chaining.
      */
     public fun hasOldGoals(): kotlin.Boolean {
       return _builder.hasOldGoals()
@@ -247,16 +231,14 @@ public object ContractEvaluationKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 3;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 3;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -273,16 +255,14 @@ public object ContractEvaluationKt {
         _builder.contributionRatio = value
       }
     /**
-     * <code>optional double contribution_ratio = 4;</code>
-     * @return This builder for chaining.
+     * `optional double contribution_ratio = 4;`
      */
     public fun clearContributionRatio() {
       _builder.clearContributionRatio()
     }
     /**
-     * <code>optional double contribution_ratio = 4;</code>
+     * `optional double contribution_ratio = 4;`
      * @return Whether the contributionRatio field is set.
-     * @return This builder for chaining.
      */
     public fun hasContributionRatio(): kotlin.Boolean {
       return _builder.hasContributionRatio()
@@ -299,16 +279,14 @@ public object ContractEvaluationKt {
         _builder.completionPercent = value
       }
     /**
-     * <code>optional double completion_percent = 5;</code>
-     * @return This builder for chaining.
+     * `optional double completion_percent = 5;`
      */
     public fun clearCompletionPercent() {
       _builder.clearCompletionPercent()
     }
     /**
-     * <code>optional double completion_percent = 5;</code>
+     * `optional double completion_percent = 5;`
      * @return Whether the completionPercent field is set.
-     * @return This builder for chaining.
      */
     public fun hasCompletionPercent(): kotlin.Boolean {
       return _builder.hasCompletionPercent()
@@ -325,16 +303,14 @@ public object ContractEvaluationKt {
         _builder.originalLength = value
       }
     /**
-     * <code>optional double original_length = 11;</code>
-     * @return This builder for chaining.
+     * `optional double original_length = 11;`
      */
     public fun clearOriginalLength() {
       _builder.clearOriginalLength()
     }
     /**
-     * <code>optional double original_length = 11;</code>
+     * `optional double original_length = 11;`
      * @return Whether the originalLength field is set.
-     * @return This builder for chaining.
      */
     public fun hasOriginalLength(): kotlin.Boolean {
       return _builder.hasOriginalLength()
@@ -351,16 +327,14 @@ public object ContractEvaluationKt {
         _builder.coopSize = value
       }
     /**
-     * <code>optional uint32 coop_size = 18;</code>
-     * @return This builder for chaining.
+     * `optional uint32 coop_size = 18;`
      */
     public fun clearCoopSize() {
       _builder.clearCoopSize()
     }
     /**
-     * <code>optional uint32 coop_size = 18;</code>
+     * `optional uint32 coop_size = 18;`
      * @return Whether the coopSize field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopSize(): kotlin.Boolean {
       return _builder.hasCoopSize()
@@ -377,16 +351,14 @@ public object ContractEvaluationKt {
         _builder.solo = value
       }
     /**
-     * <code>optional bool solo = 26;</code>
-     * @return This builder for chaining.
+     * `optional bool solo = 26;`
      */
     public fun clearSolo() {
       _builder.clearSolo()
     }
     /**
-     * <code>optional bool solo = 26;</code>
+     * `optional bool solo = 26;`
      * @return Whether the solo field is set.
-     * @return This builder for chaining.
      */
     public fun hasSolo(): kotlin.Boolean {
       return _builder.hasSolo()
@@ -403,16 +375,14 @@ public object ContractEvaluationKt {
         _builder.soulPower = value
       }
     /**
-     * <code>optional double soul_power = 23;</code>
-     * @return This builder for chaining.
+     * `optional double soul_power = 23;`
      */
     public fun clearSoulPower() {
       _builder.clearSoulPower()
     }
     /**
-     * <code>optional double soul_power = 23;</code>
+     * `optional double soul_power = 23;`
      * @return Whether the soulPower field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulPower(): kotlin.Boolean {
       return _builder.hasSoulPower()
@@ -429,16 +399,14 @@ public object ContractEvaluationKt {
         _builder.lastContributionTime = value
       }
     /**
-     * <code>optional double last_contribution_time = 22;</code>
-     * @return This builder for chaining.
+     * `optional double last_contribution_time = 22;`
      */
     public fun clearLastContributionTime() {
       _builder.clearLastContributionTime()
     }
     /**
-     * <code>optional double last_contribution_time = 22;</code>
+     * `optional double last_contribution_time = 22;`
      * @return Whether the lastContributionTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastContributionTime(): kotlin.Boolean {
       return _builder.hasLastContributionTime()
@@ -455,16 +423,14 @@ public object ContractEvaluationKt {
         _builder.completionTime = value
       }
     /**
-     * <code>optional double completion_time = 6;</code>
-     * @return This builder for chaining.
+     * `optional double completion_time = 6;`
      */
     public fun clearCompletionTime() {
       _builder.clearCompletionTime()
     }
     /**
-     * <code>optional double completion_time = 6;</code>
+     * `optional double completion_time = 6;`
      * @return Whether the completionTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasCompletionTime(): kotlin.Boolean {
       return _builder.hasCompletionTime()
@@ -481,16 +447,14 @@ public object ContractEvaluationKt {
         _builder.chickenRunsSent = value
       }
     /**
-     * <code>optional uint32 chicken_runs_sent = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 chicken_runs_sent = 7;`
      */
     public fun clearChickenRunsSent() {
       _builder.clearChickenRunsSent()
     }
     /**
-     * <code>optional uint32 chicken_runs_sent = 7;</code>
+     * `optional uint32 chicken_runs_sent = 7;`
      * @return Whether the chickenRunsSent field is set.
-     * @return This builder for chaining.
      */
     public fun hasChickenRunsSent(): kotlin.Boolean {
       return _builder.hasChickenRunsSent()
@@ -507,16 +471,14 @@ public object ContractEvaluationKt {
         _builder.giftTokensSent = value
       }
     /**
-     * <code>optional uint32 gift_tokens_sent = 8;</code>
-     * @return This builder for chaining.
+     * `optional uint32 gift_tokens_sent = 8;`
      */
     public fun clearGiftTokensSent() {
       _builder.clearGiftTokensSent()
     }
     /**
-     * <code>optional uint32 gift_tokens_sent = 8;</code>
+     * `optional uint32 gift_tokens_sent = 8;`
      * @return Whether the giftTokensSent field is set.
-     * @return This builder for chaining.
      */
     public fun hasGiftTokensSent(): kotlin.Boolean {
       return _builder.hasGiftTokensSent()
@@ -533,16 +495,14 @@ public object ContractEvaluationKt {
         _builder.giftTokensReceived = value
       }
     /**
-     * <code>optional uint32 gift_tokens_received = 15;</code>
-     * @return This builder for chaining.
+     * `optional uint32 gift_tokens_received = 15;`
      */
     public fun clearGiftTokensReceived() {
       _builder.clearGiftTokensReceived()
     }
     /**
-     * <code>optional uint32 gift_tokens_received = 15;</code>
+     * `optional uint32 gift_tokens_received = 15;`
      * @return Whether the giftTokensReceived field is set.
-     * @return This builder for chaining.
      */
     public fun hasGiftTokensReceived(): kotlin.Boolean {
       return _builder.hasGiftTokensReceived()
@@ -559,16 +519,14 @@ public object ContractEvaluationKt {
         _builder.giftTokenValueSent = value
       }
     /**
-     * <code>optional double gift_token_value_sent = 28;</code>
-     * @return This builder for chaining.
+     * `optional double gift_token_value_sent = 28;`
      */
     public fun clearGiftTokenValueSent() {
       _builder.clearGiftTokenValueSent()
     }
     /**
-     * <code>optional double gift_token_value_sent = 28;</code>
+     * `optional double gift_token_value_sent = 28;`
      * @return Whether the giftTokenValueSent field is set.
-     * @return This builder for chaining.
      */
     public fun hasGiftTokenValueSent(): kotlin.Boolean {
       return _builder.hasGiftTokenValueSent()
@@ -585,16 +543,14 @@ public object ContractEvaluationKt {
         _builder.giftTokenValueReceived = value
       }
     /**
-     * <code>optional double gift_token_value_received = 29;</code>
-     * @return This builder for chaining.
+     * `optional double gift_token_value_received = 29;`
      */
     public fun clearGiftTokenValueReceived() {
       _builder.clearGiftTokenValueReceived()
     }
     /**
-     * <code>optional double gift_token_value_received = 29;</code>
+     * `optional double gift_token_value_received = 29;`
      * @return Whether the giftTokenValueReceived field is set.
-     * @return This builder for chaining.
      */
     public fun hasGiftTokenValueReceived(): kotlin.Boolean {
       return _builder.hasGiftTokenValueReceived()
@@ -611,16 +567,14 @@ public object ContractEvaluationKt {
         _builder.boostTokenAllotment = value
       }
     /**
-     * <code>optional uint32 boost_token_allotment = 16;</code>
-     * @return This builder for chaining.
+     * `optional uint32 boost_token_allotment = 16;`
      */
     public fun clearBoostTokenAllotment() {
       _builder.clearBoostTokenAllotment()
     }
     /**
-     * <code>optional uint32 boost_token_allotment = 16;</code>
+     * `optional uint32 boost_token_allotment = 16;`
      * @return Whether the boostTokenAllotment field is set.
-     * @return This builder for chaining.
      */
     public fun hasBoostTokenAllotment(): kotlin.Boolean {
       return _builder.hasBoostTokenAllotment()
@@ -637,16 +591,14 @@ public object ContractEvaluationKt {
         _builder.buffTimeValue = value
       }
     /**
-     * <code>optional double buff_time_value = 17;</code>
-     * @return This builder for chaining.
+     * `optional double buff_time_value = 17;`
      */
     public fun clearBuffTimeValue() {
       _builder.clearBuffTimeValue()
     }
     /**
-     * <code>optional double buff_time_value = 17;</code>
+     * `optional double buff_time_value = 17;`
      * @return Whether the buffTimeValue field is set.
-     * @return This builder for chaining.
      */
     public fun hasBuffTimeValue(): kotlin.Boolean {
       return _builder.hasBuffTimeValue()
@@ -663,16 +615,14 @@ public object ContractEvaluationKt {
         _builder.teamworkScore = value
       }
     /**
-     * <code>optional double teamwork_score = 13;</code>
-     * @return This builder for chaining.
+     * `optional double teamwork_score = 13;`
      */
     public fun clearTeamworkScore() {
       _builder.clearTeamworkScore()
     }
     /**
-     * <code>optional double teamwork_score = 13;</code>
+     * `optional double teamwork_score = 13;`
      * @return Whether the teamworkScore field is set.
-     * @return This builder for chaining.
      */
     public fun hasTeamworkScore(): kotlin.Boolean {
       return _builder.hasTeamworkScore()
@@ -689,16 +639,14 @@ public object ContractEvaluationKt {
         _builder.otherBonuses = value
       }
     /**
-     * <code>optional double other_bonuses = 14;</code>
-     * @return This builder for chaining.
+     * `optional double other_bonuses = 14;`
      */
     public fun clearOtherBonuses() {
       _builder.clearOtherBonuses()
     }
     /**
-     * <code>optional double other_bonuses = 14;</code>
+     * `optional double other_bonuses = 14;`
      * @return Whether the otherBonuses field is set.
-     * @return This builder for chaining.
      */
     public fun hasOtherBonuses(): kotlin.Boolean {
       return _builder.hasOtherBonuses()
@@ -715,16 +663,14 @@ public object ContractEvaluationKt {
         _builder.countedInSeason = value
       }
     /**
-     * <code>optional bool counted_in_season = 20;</code>
-     * @return This builder for chaining.
+     * `optional bool counted_in_season = 20;`
      */
     public fun clearCountedInSeason() {
       _builder.clearCountedInSeason()
     }
     /**
-     * <code>optional bool counted_in_season = 20;</code>
+     * `optional bool counted_in_season = 20;`
      * @return Whether the countedInSeason field is set.
-     * @return This builder for chaining.
      */
     public fun hasCountedInSeason(): kotlin.Boolean {
       return _builder.hasCountedInSeason()
@@ -741,16 +687,14 @@ public object ContractEvaluationKt {
         _builder.seasonId = value
       }
     /**
-     * <code>optional string season_id = 21;</code>
-     * @return This builder for chaining.
+     * `optional string season_id = 21;`
      */
     public fun clearSeasonId() {
       _builder.clearSeasonId()
     }
     /**
-     * <code>optional string season_id = 21;</code>
+     * `optional string season_id = 21;`
      * @return Whether the seasonId field is set.
-     * @return This builder for chaining.
      */
     public fun hasSeasonId(): kotlin.Boolean {
       return _builder.hasSeasonId()
@@ -767,16 +711,14 @@ public object ContractEvaluationKt {
         _builder.timeCheats = value
       }
     /**
-     * <code>optional uint32 time_cheats = 27;</code>
-     * @return This builder for chaining.
+     * `optional uint32 time_cheats = 27;`
      */
     public fun clearTimeCheats() {
       _builder.clearTimeCheats()
     }
     /**
-     * <code>optional uint32 time_cheats = 27;</code>
+     * `optional uint32 time_cheats = 27;`
      * @return Whether the timeCheats field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimeCheats(): kotlin.Boolean {
       return _builder.hasTimeCheats()
@@ -793,16 +735,14 @@ public object ContractEvaluationKt {
         _builder.extraPlayers = value
       }
     /**
-     * <code>optional uint32 extra_players = 30;</code>
-     * @return This builder for chaining.
+     * `optional uint32 extra_players = 30;`
      */
     public fun clearExtraPlayers() {
       _builder.clearExtraPlayers()
     }
     /**
-     * <code>optional uint32 extra_players = 30;</code>
+     * `optional uint32 extra_players = 30;`
      * @return Whether the extraPlayers field is set.
-     * @return This builder for chaining.
      */
     public fun hasExtraPlayers(): kotlin.Boolean {
       return _builder.hasExtraPlayers()
@@ -823,18 +763,16 @@ public object ContractEvaluationKt {
         _builder.issuesList
       )
     /**
-     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 19;</code>
+     * `repeated .ei.ContractEvaluation.PoorBehavior issues = 19;`
      * @param value The issues to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addIssues")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.add(value: ei.Ei.ContractEvaluation.PoorBehavior) {
       _builder.addIssues(value)
     }/**
-     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 19;</code>
+     * `repeated .ei.ContractEvaluation.PoorBehavior issues = 19;`
      * @param value The issues to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignIssues")
@@ -842,18 +780,16 @@ public object ContractEvaluationKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.plusAssign(value: ei.Ei.ContractEvaluation.PoorBehavior) {
       add(value)
     }/**
-     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 19;</code>
+     * `repeated .ei.ContractEvaluation.PoorBehavior issues = 19;`
      * @param values The issues to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllIssues")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation.PoorBehavior>) {
       _builder.addAllIssues(values)
     }/**
-     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 19;</code>
+     * `repeated .ei.ContractEvaluation.PoorBehavior issues = 19;`
      * @param values The issues to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllIssues")
@@ -861,18 +797,16 @@ public object ContractEvaluationKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ContractEvaluation.PoorBehavior>) {
       addAll(values)
     }/**
-     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 19;</code>
+     * `repeated .ei.ContractEvaluation.PoorBehavior issues = 19;`
      * @param index The index to set the value at.
      * @param value The issues to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setIssues")
     public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractEvaluation.PoorBehavior, IssuesProxy>.set(index: kotlin.Int, value: ei.Ei.ContractEvaluation.PoorBehavior) {
       _builder.setIssues(index, value)
     }/**
-     * <code>repeated .ei.ContractEvaluation.PoorBehavior issues = 19;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractEvaluation.PoorBehavior issues = 19;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearIssues")
@@ -886,9 +820,8 @@ public object ContractEvaluationKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class NotesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string notes = 12;</code>
+     * `repeated string notes = 12;`
      * @return A list containing the notes.
-     * @return This builder for chaining.
      */
     public val notes: com.google.protobuf.kotlin.DslList<kotlin.String, NotesProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -896,9 +829,8 @@ public object ContractEvaluationKt {
         _builder.notesList
       )
     /**
-     * <code>repeated string notes = 12;</code>
+     * `repeated string notes = 12;`
      * @param value The notes to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addNotes")
@@ -906,9 +838,8 @@ public object ContractEvaluationKt {
       _builder.addNotes(value)
     }
     /**
-     * <code>repeated string notes = 12;</code>
+     * `repeated string notes = 12;`
      * @param value The notes to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignNotes")
@@ -917,9 +848,8 @@ public object ContractEvaluationKt {
       add(value)
     }
     /**
-     * <code>repeated string notes = 12;</code>
+     * `repeated string notes = 12;`
      * @param values The notes to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllNotes")
@@ -927,9 +857,8 @@ public object ContractEvaluationKt {
       _builder.addAllNotes(values)
     }
     /**
-     * <code>repeated string notes = 12;</code>
+     * `repeated string notes = 12;`
      * @param values The notes to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllNotes")
@@ -938,18 +867,16 @@ public object ContractEvaluationKt {
       addAll(values)
     }
     /**
-     * <code>repeated string notes = 12;</code>
+     * `repeated string notes = 12;`
      * @param index The index to set the value at.
      * @param value The notes to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNotes")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, NotesProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setNotes(index, value)
     }/**
-     * <code>repeated string notes = 12;</code>
-     * @return This builder for chaining.
+     * `repeated string notes = 12;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNotes")
@@ -967,16 +894,14 @@ public object ContractEvaluationKt {
         _builder.version = value
       }
     /**
-     * <code>optional string version = 50;</code>
-     * @return This builder for chaining.
+     * `optional string version = 50;`
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * <code>optional string version = 50;</code>
+     * `optional string version = 50;`
      * @return Whether the version field is set.
-     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -993,16 +918,14 @@ public object ContractEvaluationKt {
         _builder.evaluationStartTime = value
       }
     /**
-     * <code>optional double evaluation_start_time = 51;</code>
-     * @return This builder for chaining.
+     * `optional double evaluation_start_time = 51;`
      */
     public fun clearEvaluationStartTime() {
       _builder.clearEvaluationStartTime()
     }
     /**
-     * <code>optional double evaluation_start_time = 51;</code>
+     * `optional double evaluation_start_time = 51;`
      * @return Whether the evaluationStartTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasEvaluationStartTime(): kotlin.Boolean {
       return _builder.hasEvaluationStartTime()
@@ -1019,16 +942,14 @@ public object ContractEvaluationKt {
         _builder.status = value
       }
     /**
-     * <code>optional .ei.ContractEvaluation.Status status = 52;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractEvaluation.Status status = 52;`
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * <code>optional .ei.ContractEvaluation.Status status = 52;</code>
+     * `optional .ei.ContractEvaluation.Status status = 52;`
      * @return Whether the status field is set.
-     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()

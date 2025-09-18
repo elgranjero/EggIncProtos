@@ -39,16 +39,14 @@ public object Vector3Kt {
         _builder.x = value
       }
     /**
-     * <code>optional float x = 1;</code>
-     * @return This builder for chaining.
+     * `optional float x = 1;`
      */
     public fun clearX() {
       _builder.clearX()
     }
     /**
-     * <code>optional float x = 1;</code>
+     * `optional float x = 1;`
      * @return Whether the x field is set.
-     * @return This builder for chaining.
      */
     public fun hasX(): kotlin.Boolean {
       return _builder.hasX()
@@ -65,16 +63,14 @@ public object Vector3Kt {
         _builder.y = value
       }
     /**
-     * <code>optional float y = 2;</code>
-     * @return This builder for chaining.
+     * `optional float y = 2;`
      */
     public fun clearY() {
       _builder.clearY()
     }
     /**
-     * <code>optional float y = 2;</code>
+     * `optional float y = 2;`
      * @return Whether the y field is set.
-     * @return This builder for chaining.
      */
     public fun hasY(): kotlin.Boolean {
       return _builder.hasY()
@@ -91,16 +87,14 @@ public object Vector3Kt {
         _builder.z = value
       }
     /**
-     * <code>optional float z = 3;</code>
-     * @return This builder for chaining.
+     * `optional float z = 3;`
      */
     public fun clearZ() {
       _builder.clearZ()
     }
     /**
-     * <code>optional float z = 3;</code>
+     * `optional float z = 3;`
      * @return Whether the z field is set.
-     * @return This builder for chaining.
      */
     public fun hasZ(): kotlin.Boolean {
       return _builder.hasZ()

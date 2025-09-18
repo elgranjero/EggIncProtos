@@ -43,9 +43,8 @@ public object ShellDBKt {
         _builder.shellInventoryList
       )
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_inventory = 1;`
      * @param value The shellInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellInventory")
@@ -53,9 +52,8 @@ public object ShellDBKt {
       _builder.addShellInventory(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_inventory = 1;`
      * @param value The shellInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellInventory")
@@ -64,9 +62,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_inventory = 1;`
      * @param values The shellInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellInventory")
@@ -74,9 +71,8 @@ public object ShellDBKt {
       _builder.addAllShellInventory(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_inventory = 1;`
      * @param values The shellInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellInventory")
@@ -85,10 +81,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_inventory = 1;`
      * @param index The index to set the value at.
      * @param value The shellInventory to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellInventory")
@@ -96,8 +91,7 @@ public object ShellDBKt {
       _builder.setShellInventory(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_inventory = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.ShellStatus shell_inventory = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellInventory")
@@ -120,9 +114,8 @@ public object ShellDBKt {
         _builder.shellElementInventoryList
       )
     /**
-     * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
+     * `repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;`
      * @param value The shellElementInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellElementInventory")
@@ -130,9 +123,8 @@ public object ShellDBKt {
       _builder.addShellElementInventory(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
+     * `repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;`
      * @param value The shellElementInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellElementInventory")
@@ -141,9 +133,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
+     * `repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;`
      * @param values The shellElementInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellElementInventory")
@@ -151,9 +142,8 @@ public object ShellDBKt {
       _builder.addAllShellElementInventory(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
+     * `repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;`
      * @param values The shellElementInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellElementInventory")
@@ -162,10 +152,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
+     * `repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;`
      * @param index The index to set the value at.
      * @param value The shellElementInventory to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellElementInventory")
@@ -173,8 +162,7 @@ public object ShellDBKt {
       _builder.setShellElementInventory(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.ShellElementStatus shell_element_inventory = 5;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellElementInventory")
@@ -197,9 +185,8 @@ public object ShellDBKt {
         _builder.shellVariationInventoryList
       )
     /**
-     * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
+     * `repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;`
      * @param value The shellVariationInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellVariationInventory")
@@ -207,9 +194,8 @@ public object ShellDBKt {
       _builder.addShellVariationInventory(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
+     * `repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;`
      * @param value The shellVariationInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellVariationInventory")
@@ -218,9 +204,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
+     * `repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;`
      * @param values The shellVariationInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellVariationInventory")
@@ -228,9 +213,8 @@ public object ShellDBKt {
       _builder.addAllShellVariationInventory(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
+     * `repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;`
      * @param values The shellVariationInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellVariationInventory")
@@ -239,10 +223,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
+     * `repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;`
      * @param index The index to set the value at.
      * @param value The shellVariationInventory to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellVariationInventory")
@@ -250,8 +233,7 @@ public object ShellDBKt {
       _builder.setShellVariationInventory(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.ShellSetVariationStatus shell_variation_inventory = 8;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellVariationInventory")
@@ -274,9 +256,8 @@ public object ShellDBKt {
         _builder.shellSetInventoryList
       )
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;`
      * @param value The shellSetInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellSetInventory")
@@ -284,9 +265,8 @@ public object ShellDBKt {
       _builder.addShellSetInventory(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;`
      * @param value The shellSetInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellSetInventory")
@@ -295,9 +275,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;`
      * @param values The shellSetInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellSetInventory")
@@ -305,9 +284,8 @@ public object ShellDBKt {
       _builder.addAllShellSetInventory(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;`
      * @param values The shellSetInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellSetInventory")
@@ -316,10 +294,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;`
      * @param index The index to set the value at.
      * @param value The shellSetInventory to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellSetInventory")
@@ -327,8 +304,7 @@ public object ShellDBKt {
       _builder.setShellSetInventory(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.ShellStatus shell_set_inventory = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellSetInventory")
@@ -351,9 +327,8 @@ public object ShellDBKt {
         _builder.shellObjectInventoryList
       )
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;`
      * @param value The shellObjectInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellObjectInventory")
@@ -361,9 +336,8 @@ public object ShellDBKt {
       _builder.addShellObjectInventory(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;`
      * @param value The shellObjectInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellObjectInventory")
@@ -372,9 +346,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;`
      * @param values The shellObjectInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellObjectInventory")
@@ -382,9 +355,8 @@ public object ShellDBKt {
       _builder.addAllShellObjectInventory(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;`
      * @param values The shellObjectInventory to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellObjectInventory")
@@ -393,10 +365,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
+     * `repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;`
      * @param index The index to set the value at.
      * @param value The shellObjectInventory to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellObjectInventory")
@@ -404,8 +375,7 @@ public object ShellDBKt {
       _builder.setShellObjectInventory(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.ShellStatus shell_object_inventory = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellObjectInventory")
@@ -428,9 +398,8 @@ public object ShellDBKt {
         _builder.farmConfigsList
       )
     /**
-     * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
+     * `repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;`
      * @param value The farmConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addFarmConfigs")
@@ -438,9 +407,8 @@ public object ShellDBKt {
       _builder.addFarmConfigs(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
+     * `repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;`
      * @param value The farmConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignFarmConfigs")
@@ -449,9 +417,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
+     * `repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;`
      * @param values The farmConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllFarmConfigs")
@@ -459,9 +426,8 @@ public object ShellDBKt {
       _builder.addAllFarmConfigs(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
+     * `repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;`
      * @param values The farmConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllFarmConfigs")
@@ -470,10 +436,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
+     * `repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;`
      * @param index The index to set the value at.
      * @param value The farmConfigs to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setFarmConfigs")
@@ -481,8 +446,7 @@ public object ShellDBKt {
       _builder.setFarmConfigs(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.FarmConfiguration farm_configs = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearFarmConfigs")
@@ -505,9 +469,8 @@ public object ShellDBKt {
         _builder.savedConfigsList
       )
     /**
-     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * `repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;`
      * @param value The savedConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addSavedConfigs")
@@ -515,9 +478,8 @@ public object ShellDBKt {
       _builder.addSavedConfigs(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * `repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;`
      * @param value The savedConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignSavedConfigs")
@@ -526,9 +488,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * `repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;`
      * @param values The savedConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllSavedConfigs")
@@ -536,9 +497,8 @@ public object ShellDBKt {
       _builder.addAllSavedConfigs(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * `repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;`
      * @param values The savedConfigs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllSavedConfigs")
@@ -547,10 +507,9 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
+     * `repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;`
      * @param index The index to set the value at.
      * @param value The savedConfigs to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setSavedConfigs")
@@ -558,8 +517,7 @@ public object ShellDBKt {
       _builder.setSavedConfigs(index, value)
     }
     /**
-     * <code>repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellDB.SavedFarmConfiguration saved_configs = 9;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearSavedConfigs")
@@ -574,9 +532,8 @@ public object ShellDBKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class NewShellsDownloadedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string new_shells_downloaded = 6;</code>
+     * `repeated string new_shells_downloaded = 6;`
      * @return A list containing the newShellsDownloaded.
-     * @return This builder for chaining.
      */
     public val newShellsDownloaded: com.google.protobuf.kotlin.DslList<kotlin.String, NewShellsDownloadedProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -584,9 +541,8 @@ public object ShellDBKt {
         _builder.newShellsDownloadedList
       )
     /**
-     * <code>repeated string new_shells_downloaded = 6;</code>
+     * `repeated string new_shells_downloaded = 6;`
      * @param value The newShellsDownloaded to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addNewShellsDownloaded")
@@ -594,9 +550,8 @@ public object ShellDBKt {
       _builder.addNewShellsDownloaded(value)
     }
     /**
-     * <code>repeated string new_shells_downloaded = 6;</code>
+     * `repeated string new_shells_downloaded = 6;`
      * @param value The newShellsDownloaded to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignNewShellsDownloaded")
@@ -605,9 +560,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated string new_shells_downloaded = 6;</code>
+     * `repeated string new_shells_downloaded = 6;`
      * @param values The newShellsDownloaded to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllNewShellsDownloaded")
@@ -615,9 +569,8 @@ public object ShellDBKt {
       _builder.addAllNewShellsDownloaded(values)
     }
     /**
-     * <code>repeated string new_shells_downloaded = 6;</code>
+     * `repeated string new_shells_downloaded = 6;`
      * @param values The newShellsDownloaded to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllNewShellsDownloaded")
@@ -626,18 +579,16 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated string new_shells_downloaded = 6;</code>
+     * `repeated string new_shells_downloaded = 6;`
      * @param index The index to set the value at.
      * @param value The newShellsDownloaded to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNewShellsDownloaded")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, NewShellsDownloadedProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setNewShellsDownloaded(index, value)
     }/**
-     * <code>repeated string new_shells_downloaded = 6;</code>
-     * @return This builder for chaining.
+     * `repeated string new_shells_downloaded = 6;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNewShellsDownloaded")
@@ -651,9 +602,8 @@ public object ShellDBKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class NewShellsSeenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string new_shells_seen = 7;</code>
+     * `repeated string new_shells_seen = 7;`
      * @return A list containing the newShellsSeen.
-     * @return This builder for chaining.
      */
     public val newShellsSeen: com.google.protobuf.kotlin.DslList<kotlin.String, NewShellsSeenProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -661,9 +611,8 @@ public object ShellDBKt {
         _builder.newShellsSeenList
       )
     /**
-     * <code>repeated string new_shells_seen = 7;</code>
+     * `repeated string new_shells_seen = 7;`
      * @param value The newShellsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addNewShellsSeen")
@@ -671,9 +620,8 @@ public object ShellDBKt {
       _builder.addNewShellsSeen(value)
     }
     /**
-     * <code>repeated string new_shells_seen = 7;</code>
+     * `repeated string new_shells_seen = 7;`
      * @param value The newShellsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignNewShellsSeen")
@@ -682,9 +630,8 @@ public object ShellDBKt {
       add(value)
     }
     /**
-     * <code>repeated string new_shells_seen = 7;</code>
+     * `repeated string new_shells_seen = 7;`
      * @param values The newShellsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllNewShellsSeen")
@@ -692,9 +639,8 @@ public object ShellDBKt {
       _builder.addAllNewShellsSeen(values)
     }
     /**
-     * <code>repeated string new_shells_seen = 7;</code>
+     * `repeated string new_shells_seen = 7;`
      * @param values The newShellsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllNewShellsSeen")
@@ -703,18 +649,16 @@ public object ShellDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated string new_shells_seen = 7;</code>
+     * `repeated string new_shells_seen = 7;`
      * @param index The index to set the value at.
      * @param value The newShellsSeen to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNewShellsSeen")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, NewShellsSeenProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setNewShellsSeen(index, value)
     }/**
-     * <code>repeated string new_shells_seen = 7;</code>
-     * @return This builder for chaining.
+     * `repeated string new_shells_seen = 7;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNewShellsSeen")
@@ -732,16 +676,14 @@ public object ShellDBKt {
         _builder.lastShowcaseFeaturedTimeSeen = value
       }
     /**
-     * <code>optional double last_showcase_featured_time_seen = 11;</code>
-     * @return This builder for chaining.
+     * `optional double last_showcase_featured_time_seen = 11;`
      */
     public fun clearLastShowcaseFeaturedTimeSeen() {
       _builder.clearLastShowcaseFeaturedTimeSeen()
     }
     /**
-     * <code>optional double last_showcase_featured_time_seen = 11;</code>
+     * `optional double last_showcase_featured_time_seen = 11;`
      * @return Whether the lastShowcaseFeaturedTimeSeen field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastShowcaseFeaturedTimeSeen(): kotlin.Boolean {
       return _builder.hasLastShowcaseFeaturedTimeSeen()
@@ -758,16 +700,14 @@ public object ShellDBKt {
         _builder.lightingControlsUnlocked = value
       }
     /**
-     * <code>optional bool lighting_controls_unlocked = 10;</code>
-     * @return This builder for chaining.
+     * `optional bool lighting_controls_unlocked = 10;`
      */
     public fun clearLightingControlsUnlocked() {
       _builder.clearLightingControlsUnlocked()
     }
     /**
-     * <code>optional bool lighting_controls_unlocked = 10;</code>
+     * `optional bool lighting_controls_unlocked = 10;`
      * @return Whether the lightingControlsUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasLightingControlsUnlocked(): kotlin.Boolean {
       return _builder.hasLightingControlsUnlocked()
@@ -806,16 +746,14 @@ public object ShellDBKt {
           _builder.identifier = value
         }
       /**
-       * <code>optional string identifier = 1;</code>
-       * @return This builder for chaining.
+       * `optional string identifier = 1;`
        */
       public fun clearIdentifier() {
         _builder.clearIdentifier()
       }
       /**
-       * <code>optional string identifier = 1;</code>
+       * `optional string identifier = 1;`
        * @return Whether the identifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasIdentifier(): kotlin.Boolean {
         return _builder.hasIdentifier()
@@ -832,16 +770,14 @@ public object ShellDBKt {
           _builder.owned = value
         }
       /**
-       * <code>optional bool owned = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool owned = 2;`
        */
       public fun clearOwned() {
         _builder.clearOwned()
       }
       /**
-       * <code>optional bool owned = 2;</code>
+       * `optional bool owned = 2;`
        * @return Whether the owned field is set.
-       * @return This builder for chaining.
        */
       public fun hasOwned(): kotlin.Boolean {
         return _builder.hasOwned()
@@ -881,16 +817,14 @@ public object ShellDBKt {
           _builder.element = value
         }
       /**
-       * <code>optional .ei.ShellDB.FarmElement element = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellDB.FarmElement element = 1;`
        */
       public fun clearElement() {
         _builder.clearElement()
       }
       /**
-       * <code>optional .ei.ShellDB.FarmElement element = 1;</code>
+       * `optional .ei.ShellDB.FarmElement element = 1;`
        * @return Whether the element field is set.
-       * @return This builder for chaining.
        */
       public fun hasElement(): kotlin.Boolean {
         return _builder.hasElement()
@@ -907,16 +841,14 @@ public object ShellDBKt {
           _builder.setIdentifier = value
         }
       /**
-       * <code>optional string set_identifier = 2;</code>
-       * @return This builder for chaining.
+       * `optional string set_identifier = 2;`
        */
       public fun clearSetIdentifier() {
         _builder.clearSetIdentifier()
       }
       /**
-       * <code>optional string set_identifier = 2;</code>
+       * `optional string set_identifier = 2;`
        * @return Whether the setIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasSetIdentifier(): kotlin.Boolean {
         return _builder.hasSetIdentifier()
@@ -956,16 +888,14 @@ public object ShellDBKt {
           _builder.setIdentifier = value
         }
       /**
-       * <code>optional string set_identifier = 1;</code>
-       * @return This builder for chaining.
+       * `optional string set_identifier = 1;`
        */
       public fun clearSetIdentifier() {
         _builder.clearSetIdentifier()
       }
       /**
-       * <code>optional string set_identifier = 1;</code>
+       * `optional string set_identifier = 1;`
        * @return Whether the setIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasSetIdentifier(): kotlin.Boolean {
         return _builder.hasSetIdentifier()
@@ -978,9 +908,8 @@ public object ShellDBKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class OwnedVariationsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string owned_variations = 2;</code>
+       * `repeated string owned_variations = 2;`
        * @return A list containing the ownedVariations.
-       * @return This builder for chaining.
        */
       public val ownedVariations: com.google.protobuf.kotlin.DslList<kotlin.String, OwnedVariationsProxy>
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -988,9 +917,8 @@ public object ShellDBKt {
           _builder.ownedVariationsList
         )
       /**
-       * <code>repeated string owned_variations = 2;</code>
+       * `repeated string owned_variations = 2;`
        * @param value The ownedVariations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addOwnedVariations")
@@ -998,9 +926,8 @@ public object ShellDBKt {
         _builder.addOwnedVariations(value)
       }
       /**
-       * <code>repeated string owned_variations = 2;</code>
+       * `repeated string owned_variations = 2;`
        * @param value The ownedVariations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignOwnedVariations")
@@ -1009,9 +936,8 @@ public object ShellDBKt {
         add(value)
       }
       /**
-       * <code>repeated string owned_variations = 2;</code>
+       * `repeated string owned_variations = 2;`
        * @param values The ownedVariations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllOwnedVariations")
@@ -1019,9 +945,8 @@ public object ShellDBKt {
         _builder.addAllOwnedVariations(values)
       }
       /**
-       * <code>repeated string owned_variations = 2;</code>
+       * `repeated string owned_variations = 2;`
        * @param values The ownedVariations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllOwnedVariations")
@@ -1030,18 +955,16 @@ public object ShellDBKt {
         addAll(values)
       }
       /**
-       * <code>repeated string owned_variations = 2;</code>
+       * `repeated string owned_variations = 2;`
        * @param index The index to set the value at.
        * @param value The ownedVariations to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setOwnedVariations")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, OwnedVariationsProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setOwnedVariations(index, value)
       }/**
-       * <code>repeated string owned_variations = 2;</code>
-       * @return This builder for chaining.
+       * `repeated string owned_variations = 2;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setOwnedVariations")
@@ -1086,18 +1009,16 @@ public object ShellDBKt {
           _builder.lockedElementsList
         )
       /**
-       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * `repeated .ei.ShellDB.FarmElement locked_elements = 10;`
        * @param value The lockedElements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addLockedElements")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.add(value: ei.Ei.ShellDB.FarmElement) {
         _builder.addLockedElements(value)
       }/**
-       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * `repeated .ei.ShellDB.FarmElement locked_elements = 10;`
        * @param value The lockedElements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignLockedElements")
@@ -1105,18 +1026,16 @@ public object ShellDBKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.plusAssign(value: ei.Ei.ShellDB.FarmElement) {
         add(value)
       }/**
-       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * `repeated .ei.ShellDB.FarmElement locked_elements = 10;`
        * @param values The lockedElements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllLockedElements")
       public fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ShellDB.FarmElement>) {
         _builder.addAllLockedElements(values)
       }/**
-       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * `repeated .ei.ShellDB.FarmElement locked_elements = 10;`
        * @param values The lockedElements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllLockedElements")
@@ -1124,18 +1043,16 @@ public object ShellDBKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ShellDB.FarmElement>) {
         addAll(values)
       }/**
-       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
+       * `repeated .ei.ShellDB.FarmElement locked_elements = 10;`
        * @param index The index to set the value at.
        * @param value The lockedElements to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setLockedElements")
       public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ShellDB.FarmElement, LockedElementsProxy>.set(index: kotlin.Int, value: ei.Ei.ShellDB.FarmElement) {
         _builder.setLockedElements(index, value)
       }/**
-       * <code>repeated .ei.ShellDB.FarmElement locked_elements = 10;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ShellDB.FarmElement locked_elements = 10;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearLockedElements")
@@ -1157,9 +1074,8 @@ public object ShellDBKt {
           _builder.shellConfigsList
         )
       /**
-       * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
+       * `repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;`
        * @param value The shellConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellConfigs")
@@ -1167,9 +1083,8 @@ public object ShellDBKt {
         _builder.addShellConfigs(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
+       * `repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;`
        * @param value The shellConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellConfigs")
@@ -1178,9 +1093,8 @@ public object ShellDBKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
+       * `repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;`
        * @param values The shellConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellConfigs")
@@ -1188,9 +1102,8 @@ public object ShellDBKt {
         _builder.addAllShellConfigs(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
+       * `repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;`
        * @param values The shellConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellConfigs")
@@ -1199,10 +1112,9 @@ public object ShellDBKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
+       * `repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;`
        * @param index The index to set the value at.
        * @param value The shellConfigs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellConfigs")
@@ -1210,8 +1122,7 @@ public object ShellDBKt {
         _builder.setShellConfigs(index, value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ShellDB.ShellConfiguration shell_configs = 1;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellConfigs")
@@ -1234,9 +1145,8 @@ public object ShellDBKt {
           _builder.shellSetConfigsList
         )
       /**
-       * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
+       * `repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;`
        * @param value The shellSetConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellSetConfigs")
@@ -1244,9 +1154,8 @@ public object ShellDBKt {
         _builder.addShellSetConfigs(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
+       * `repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;`
        * @param value The shellSetConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellSetConfigs")
@@ -1255,9 +1164,8 @@ public object ShellDBKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
+       * `repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;`
        * @param values The shellSetConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellSetConfigs")
@@ -1265,9 +1173,8 @@ public object ShellDBKt {
         _builder.addAllShellSetConfigs(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
+       * `repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;`
        * @param values The shellSetConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellSetConfigs")
@@ -1276,10 +1183,9 @@ public object ShellDBKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
+       * `repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;`
        * @param index The index to set the value at.
        * @param value The shellSetConfigs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellSetConfigs")
@@ -1287,8 +1193,7 @@ public object ShellDBKt {
         _builder.setShellSetConfigs(index, value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ShellDB.ShellSetConfiguration shell_set_configs = 2;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellSetConfigs")
@@ -1307,16 +1212,14 @@ public object ShellDBKt {
           _builder.configureChickensByGroup = value
         }
       /**
-       * <code>optional bool configure_chickens_by_group = 7;</code>
-       * @return This builder for chaining.
+       * `optional bool configure_chickens_by_group = 7;`
        */
       public fun clearConfigureChickensByGroup() {
         _builder.clearConfigureChickensByGroup()
       }
       /**
-       * <code>optional bool configure_chickens_by_group = 7;</code>
+       * `optional bool configure_chickens_by_group = 7;`
        * @return Whether the configureChickensByGroup field is set.
-       * @return This builder for chaining.
        */
       public fun hasConfigureChickensByGroup(): kotlin.Boolean {
         return _builder.hasConfigureChickensByGroup()
@@ -1337,9 +1240,8 @@ public object ShellDBKt {
           _builder.groupConfigsList
         )
       /**
-       * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
+       * `repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;`
        * @param value The groupConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGroupConfigs")
@@ -1347,9 +1249,8 @@ public object ShellDBKt {
         _builder.addGroupConfigs(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
+       * `repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;`
        * @param value The groupConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGroupConfigs")
@@ -1358,9 +1259,8 @@ public object ShellDBKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
+       * `repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;`
        * @param values The groupConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGroupConfigs")
@@ -1368,9 +1268,8 @@ public object ShellDBKt {
         _builder.addAllGroupConfigs(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
+       * `repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;`
        * @param values The groupConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGroupConfigs")
@@ -1379,10 +1278,9 @@ public object ShellDBKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
+       * `repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;`
        * @param index The index to set the value at.
        * @param value The groupConfigs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGroupConfigs")
@@ -1390,8 +1288,7 @@ public object ShellDBKt {
         _builder.setGroupConfigs(index, value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ShellDB.ShellGroupConfiguration group_configs = 8;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGroupConfigs")
@@ -1414,9 +1311,8 @@ public object ShellDBKt {
           _builder.chickenConfigsList
         )
       /**
-       * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
+       * `repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;`
        * @param value The chickenConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addChickenConfigs")
@@ -1424,9 +1320,8 @@ public object ShellDBKt {
         _builder.addChickenConfigs(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
+       * `repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;`
        * @param value The chickenConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignChickenConfigs")
@@ -1435,9 +1330,8 @@ public object ShellDBKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
+       * `repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;`
        * @param values The chickenConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllChickenConfigs")
@@ -1445,9 +1339,8 @@ public object ShellDBKt {
         _builder.addAllChickenConfigs(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
+       * `repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;`
        * @param values The chickenConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllChickenConfigs")
@@ -1456,10 +1349,9 @@ public object ShellDBKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
+       * `repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;`
        * @param index The index to set the value at.
        * @param value The chickenConfigs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setChickenConfigs")
@@ -1467,8 +1359,7 @@ public object ShellDBKt {
         _builder.setChickenConfigs(index, value)
       }
       /**
-       * <code>repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ShellDB.ChickenConfig chicken_configs = 9;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearChickenConfigs")
@@ -1487,16 +1378,14 @@ public object ShellDBKt {
           _builder.lightingConfigEnabled = value
         }
       /**
-       * <code>optional bool lighting_config_enabled = 11;</code>
-       * @return This builder for chaining.
+       * `optional bool lighting_config_enabled = 11;`
        */
       public fun clearLightingConfigEnabled() {
         _builder.clearLightingConfigEnabled()
       }
       /**
-       * <code>optional bool lighting_config_enabled = 11;</code>
+       * `optional bool lighting_config_enabled = 11;`
        * @return Whether the lightingConfigEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightingConfigEnabled(): kotlin.Boolean {
         return _builder.hasLightingConfigEnabled()
@@ -1513,16 +1402,14 @@ public object ShellDBKt {
           _builder.lightingConfig = value
         }
       /**
-       * <code>optional .ei.ShellDB.LightingConfig lighting_config = 12;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellDB.LightingConfig lighting_config = 12;`
        */
       public fun clearLightingConfig() {
         _builder.clearLightingConfig()
       }
       /**
-       * <code>optional .ei.ShellDB.LightingConfig lighting_config = 12;</code>
+       * `optional .ei.ShellDB.LightingConfig lighting_config = 12;`
        * @return Whether the lightingConfig field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightingConfig(): kotlin.Boolean {
         return _builder.hasLightingConfig()
@@ -1565,16 +1452,14 @@ public object ShellDBKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -1591,16 +1476,14 @@ public object ShellDBKt {
           _builder.config = value
         }
       /**
-       * <code>optional .ei.ShellDB.FarmConfiguration config = 2;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellDB.FarmConfiguration config = 2;`
        */
       public fun clearConfig() {
         _builder.clearConfig()
       }
       /**
-       * <code>optional .ei.ShellDB.FarmConfiguration config = 2;</code>
+       * `optional .ei.ShellDB.FarmConfiguration config = 2;`
        * @return Whether the config field is set.
-       * @return This builder for chaining.
        */
       public fun hasConfig(): kotlin.Boolean {
         return _builder.hasConfig()
@@ -1620,16 +1503,14 @@ public object ShellDBKt {
           _builder.clientSaveTime = value
         }
       /**
-       * <code>optional double client_save_time = 3;</code>
-       * @return This builder for chaining.
+       * `optional double client_save_time = 3;`
        */
       public fun clearClientSaveTime() {
         _builder.clearClientSaveTime()
       }
       /**
-       * <code>optional double client_save_time = 3;</code>
+       * `optional double client_save_time = 3;`
        * @return Whether the clientSaveTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasClientSaveTime(): kotlin.Boolean {
         return _builder.hasClientSaveTime()
@@ -1646,16 +1527,14 @@ public object ShellDBKt {
           _builder.serverId = value
         }
       /**
-       * <code>optional string server_id = 4;</code>
-       * @return This builder for chaining.
+       * `optional string server_id = 4;`
        */
       public fun clearServerId() {
         _builder.clearServerId()
       }
       /**
-       * <code>optional string server_id = 4;</code>
+       * `optional string server_id = 4;`
        * @return Whether the serverId field is set.
-       * @return This builder for chaining.
        */
       public fun hasServerId(): kotlin.Boolean {
         return _builder.hasServerId()
@@ -1672,16 +1551,14 @@ public object ShellDBKt {
           _builder.displayName = value
         }
       /**
-       * <code>optional string display_name = 5;</code>
-       * @return This builder for chaining.
+       * `optional string display_name = 5;`
        */
       public fun clearDisplayName() {
         _builder.clearDisplayName()
       }
       /**
-       * <code>optional string display_name = 5;</code>
+       * `optional string display_name = 5;`
        * @return Whether the displayName field is set.
-       * @return This builder for chaining.
        */
       public fun hasDisplayName(): kotlin.Boolean {
         return _builder.hasDisplayName()
@@ -1698,16 +1575,14 @@ public object ShellDBKt {
           _builder.purchased = value
         }
       /**
-       * <code>optional bool purchased = 6;</code>
-       * @return This builder for chaining.
+       * `optional bool purchased = 6;`
        */
       public fun clearPurchased() {
         _builder.clearPurchased()
       }
       /**
-       * <code>optional bool purchased = 6;</code>
+       * `optional bool purchased = 6;`
        * @return Whether the purchased field is set.
-       * @return This builder for chaining.
        */
       public fun hasPurchased(): kotlin.Boolean {
         return _builder.hasPurchased()
@@ -1747,16 +1622,14 @@ public object ShellDBKt {
           _builder.assetType = value
         }
       /**
-       * <code>optional .ei.ShellSpec.AssetType asset_type = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellSpec.AssetType asset_type = 1;`
        */
       public fun clearAssetType() {
         _builder.clearAssetType()
       }
       /**
-       * <code>optional .ei.ShellSpec.AssetType asset_type = 1;</code>
+       * `optional .ei.ShellSpec.AssetType asset_type = 1;`
        * @return Whether the assetType field is set.
-       * @return This builder for chaining.
        */
       public fun hasAssetType(): kotlin.Boolean {
         return _builder.hasAssetType()
@@ -1773,16 +1646,14 @@ public object ShellDBKt {
           _builder.index = value
         }
       /**
-       * <code>optional uint32 index = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 index = 2;`
        */
       public fun clearIndex() {
         _builder.clearIndex()
       }
       /**
-       * <code>optional uint32 index = 2;</code>
+       * `optional uint32 index = 2;`
        * @return Whether the index field is set.
-       * @return This builder for chaining.
        */
       public fun hasIndex(): kotlin.Boolean {
         return _builder.hasIndex()
@@ -1799,16 +1670,14 @@ public object ShellDBKt {
           _builder.shellIdentifier = value
         }
       /**
-       * <code>optional string shell_identifier = 3;</code>
-       * @return This builder for chaining.
+       * `optional string shell_identifier = 3;`
        */
       public fun clearShellIdentifier() {
         _builder.clearShellIdentifier()
       }
       /**
-       * <code>optional string shell_identifier = 3;</code>
+       * `optional string shell_identifier = 3;`
        * @return Whether the shellIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellIdentifier(): kotlin.Boolean {
         return _builder.hasShellIdentifier()
@@ -1848,16 +1717,14 @@ public object ShellDBKt {
           _builder.element = value
         }
       /**
-       * <code>optional .ei.ShellDB.FarmElement element = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellDB.FarmElement element = 1;`
        */
       public fun clearElement() {
         _builder.clearElement()
       }
       /**
-       * <code>optional .ei.ShellDB.FarmElement element = 1;</code>
+       * `optional .ei.ShellDB.FarmElement element = 1;`
        * @return Whether the element field is set.
-       * @return This builder for chaining.
        */
       public fun hasElement(): kotlin.Boolean {
         return _builder.hasElement()
@@ -1874,16 +1741,14 @@ public object ShellDBKt {
           _builder.index = value
         }
       /**
-       * <code>optional uint32 index = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 index = 2;`
        */
       public fun clearIndex() {
         _builder.clearIndex()
       }
       /**
-       * <code>optional uint32 index = 2;</code>
+       * `optional uint32 index = 2;`
        * @return Whether the index field is set.
-       * @return This builder for chaining.
        */
       public fun hasIndex(): kotlin.Boolean {
         return _builder.hasIndex()
@@ -1900,16 +1765,14 @@ public object ShellDBKt {
           _builder.shellSetIdentifier = value
         }
       /**
-       * <code>optional string shell_set_identifier = 3;</code>
-       * @return This builder for chaining.
+       * `optional string shell_set_identifier = 3;`
        */
       public fun clearShellSetIdentifier() {
         _builder.clearShellSetIdentifier()
       }
       /**
-       * <code>optional string shell_set_identifier = 3;</code>
+       * `optional string shell_set_identifier = 3;`
        * @return Whether the shellSetIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellSetIdentifier(): kotlin.Boolean {
         return _builder.hasShellSetIdentifier()
@@ -1926,16 +1789,14 @@ public object ShellDBKt {
           _builder.variationIdentifier = value
         }
       /**
-       * <code>optional string variation_identifier = 4;</code>
-       * @return This builder for chaining.
+       * `optional string variation_identifier = 4;`
        */
       public fun clearVariationIdentifier() {
         _builder.clearVariationIdentifier()
       }
       /**
-       * <code>optional string variation_identifier = 4;</code>
+       * `optional string variation_identifier = 4;`
        * @return Whether the variationIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasVariationIdentifier(): kotlin.Boolean {
         return _builder.hasVariationIdentifier()
@@ -1952,16 +1813,14 @@ public object ShellDBKt {
           _builder.decoratorIdentifier = value
         }
       /**
-       * <code>optional string decorator_identifier = 5;</code>
-       * @return This builder for chaining.
+       * `optional string decorator_identifier = 5;`
        */
       public fun clearDecoratorIdentifier() {
         _builder.clearDecoratorIdentifier()
       }
       /**
-       * <code>optional string decorator_identifier = 5;</code>
+       * `optional string decorator_identifier = 5;`
        * @return Whether the decoratorIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasDecoratorIdentifier(): kotlin.Boolean {
         return _builder.hasDecoratorIdentifier()
@@ -2001,16 +1860,14 @@ public object ShellDBKt {
           _builder.assetType = value
         }
       /**
-       * <code>optional .ei.ShellSpec.AssetType asset_type = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellSpec.AssetType asset_type = 1;`
        */
       public fun clearAssetType() {
         _builder.clearAssetType()
       }
       /**
-       * <code>optional .ei.ShellSpec.AssetType asset_type = 1;</code>
+       * `optional .ei.ShellSpec.AssetType asset_type = 1;`
        * @return Whether the assetType field is set.
-       * @return This builder for chaining.
        */
       public fun hasAssetType(): kotlin.Boolean {
         return _builder.hasAssetType()
@@ -2027,16 +1884,14 @@ public object ShellDBKt {
           _builder.groupIdentifier = value
         }
       /**
-       * <code>optional string group_identifier = 2;</code>
-       * @return This builder for chaining.
+       * `optional string group_identifier = 2;`
        */
       public fun clearGroupIdentifier() {
         _builder.clearGroupIdentifier()
       }
       /**
-       * <code>optional string group_identifier = 2;</code>
+       * `optional string group_identifier = 2;`
        * @return Whether the groupIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasGroupIdentifier(): kotlin.Boolean {
         return _builder.hasGroupIdentifier()
@@ -2076,16 +1931,14 @@ public object ShellDBKt {
           _builder.chickenIdentifier = value
         }
       /**
-       * <code>optional string chicken_identifier = 1;</code>
-       * @return This builder for chaining.
+       * `optional string chicken_identifier = 1;`
        */
       public fun clearChickenIdentifier() {
         _builder.clearChickenIdentifier()
       }
       /**
-       * <code>optional string chicken_identifier = 1;</code>
+       * `optional string chicken_identifier = 1;`
        * @return Whether the chickenIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasChickenIdentifier(): kotlin.Boolean {
         return _builder.hasChickenIdentifier()
@@ -2102,16 +1955,14 @@ public object ShellDBKt {
           _builder.hatIdentifier = value
         }
       /**
-       * <code>optional string hat_identifier = 2;</code>
-       * @return This builder for chaining.
+       * `optional string hat_identifier = 2;`
        */
       public fun clearHatIdentifier() {
         _builder.clearHatIdentifier()
       }
       /**
-       * <code>optional string hat_identifier = 2;</code>
+       * `optional string hat_identifier = 2;`
        * @return Whether the hatIdentifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasHatIdentifier(): kotlin.Boolean {
         return _builder.hasHatIdentifier()
@@ -2151,16 +2002,14 @@ public object ShellDBKt {
           _builder.lightDir = value
         }
       /**
-       * <code>optional .ei.Vector3 light_dir = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Vector3 light_dir = 1;`
        */
       public fun clearLightDir() {
         _builder.clearLightDir()
       }
       /**
-       * <code>optional .ei.Vector3 light_dir = 1;</code>
+       * `optional .ei.Vector3 light_dir = 1;`
        * @return Whether the lightDir field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightDir(): kotlin.Boolean {
         return _builder.hasLightDir()
@@ -2180,16 +2029,14 @@ public object ShellDBKt {
           _builder.lightDirectColor = value
         }
       /**
-       * <code>optional .ei.Vector4 light_direct_color = 2;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Vector4 light_direct_color = 2;`
        */
       public fun clearLightDirectColor() {
         _builder.clearLightDirectColor()
       }
       /**
-       * <code>optional .ei.Vector4 light_direct_color = 2;</code>
+       * `optional .ei.Vector4 light_direct_color = 2;`
        * @return Whether the lightDirectColor field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightDirectColor(): kotlin.Boolean {
         return _builder.hasLightDirectColor()
@@ -2209,16 +2056,14 @@ public object ShellDBKt {
           _builder.lightDirectIntensity = value
         }
       /**
-       * <code>optional float light_direct_intensity = 3;</code>
-       * @return This builder for chaining.
+       * `optional float light_direct_intensity = 3;`
        */
       public fun clearLightDirectIntensity() {
         _builder.clearLightDirectIntensity()
       }
       /**
-       * <code>optional float light_direct_intensity = 3;</code>
+       * `optional float light_direct_intensity = 3;`
        * @return Whether the lightDirectIntensity field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightDirectIntensity(): kotlin.Boolean {
         return _builder.hasLightDirectIntensity()
@@ -2235,16 +2080,14 @@ public object ShellDBKt {
           _builder.lightAmbientColor = value
         }
       /**
-       * <code>optional .ei.Vector4 light_ambient_color = 4;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Vector4 light_ambient_color = 4;`
        */
       public fun clearLightAmbientColor() {
         _builder.clearLightAmbientColor()
       }
       /**
-       * <code>optional .ei.Vector4 light_ambient_color = 4;</code>
+       * `optional .ei.Vector4 light_ambient_color = 4;`
        * @return Whether the lightAmbientColor field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightAmbientColor(): kotlin.Boolean {
         return _builder.hasLightAmbientColor()
@@ -2264,16 +2107,14 @@ public object ShellDBKt {
           _builder.lightAmbientIntensity = value
         }
       /**
-       * <code>optional float light_ambient_intensity = 5;</code>
-       * @return This builder for chaining.
+       * `optional float light_ambient_intensity = 5;`
        */
       public fun clearLightAmbientIntensity() {
         _builder.clearLightAmbientIntensity()
       }
       /**
-       * <code>optional float light_ambient_intensity = 5;</code>
+       * `optional float light_ambient_intensity = 5;`
        * @return Whether the lightAmbientIntensity field is set.
-       * @return This builder for chaining.
        */
       public fun hasLightAmbientIntensity(): kotlin.Boolean {
         return _builder.hasLightAmbientIntensity()
@@ -2290,16 +2131,14 @@ public object ShellDBKt {
           _builder.fogColor = value
         }
       /**
-       * <code>optional .ei.Vector4 fog_color = 6;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Vector4 fog_color = 6;`
        */
       public fun clearFogColor() {
         _builder.clearFogColor()
       }
       /**
-       * <code>optional .ei.Vector4 fog_color = 6;</code>
+       * `optional .ei.Vector4 fog_color = 6;`
        * @return Whether the fogColor field is set.
-       * @return This builder for chaining.
        */
       public fun hasFogColor(): kotlin.Boolean {
         return _builder.hasFogColor()
@@ -2319,16 +2158,14 @@ public object ShellDBKt {
           _builder.fogNear = value
         }
       /**
-       * <code>optional float fog_near = 7;</code>
-       * @return This builder for chaining.
+       * `optional float fog_near = 7;`
        */
       public fun clearFogNear() {
         _builder.clearFogNear()
       }
       /**
-       * <code>optional float fog_near = 7;</code>
+       * `optional float fog_near = 7;`
        * @return Whether the fogNear field is set.
-       * @return This builder for chaining.
        */
       public fun hasFogNear(): kotlin.Boolean {
         return _builder.hasFogNear()
@@ -2345,16 +2182,14 @@ public object ShellDBKt {
           _builder.fogFar = value
         }
       /**
-       * <code>optional float fog_far = 8;</code>
-       * @return This builder for chaining.
+       * `optional float fog_far = 8;`
        */
       public fun clearFogFar() {
         _builder.clearFogFar()
       }
       /**
-       * <code>optional float fog_far = 8;</code>
+       * `optional float fog_far = 8;`
        * @return Whether the fogFar field is set.
-       * @return This builder for chaining.
        */
       public fun hasFogFar(): kotlin.Boolean {
         return _builder.hasFogFar()
@@ -2371,16 +2206,14 @@ public object ShellDBKt {
           _builder.fogDensity = value
         }
       /**
-       * <code>optional float fog_density = 9;</code>
-       * @return This builder for chaining.
+       * `optional float fog_density = 9;`
        */
       public fun clearFogDensity() {
         _builder.clearFogDensity()
       }
       /**
-       * <code>optional float fog_density = 9;</code>
+       * `optional float fog_density = 9;`
        * @return Whether the fogDensity field is set.
-       * @return This builder for chaining.
        */
       public fun hasFogDensity(): kotlin.Boolean {
         return _builder.hasFogDensity()

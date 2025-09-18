@@ -39,16 +39,14 @@ public object ContractSimResultUpdateKt {
         _builder.contractId = value
       }
     /**
-     * <code>optional string contract_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string contract_id = 1;`
      */
     public fun clearContractId() {
       _builder.clearContractId()
     }
     /**
-     * <code>optional string contract_id = 1;</code>
+     * `optional string contract_id = 1;`
      * @return Whether the contractId field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractId(): kotlin.Boolean {
       return _builder.hasContractId()
@@ -69,9 +67,8 @@ public object ContractSimResultUpdateKt {
         _builder.goalInfosList
       )
     /**
-     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
+     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
      * @param value The goalInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGoalInfos")
@@ -79,9 +76,8 @@ public object ContractSimResultUpdateKt {
       _builder.addGoalInfos(value)
     }
     /**
-     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
+     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
      * @param value The goalInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGoalInfos")
@@ -90,9 +86,8 @@ public object ContractSimResultUpdateKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
+     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
      * @param values The goalInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGoalInfos")
@@ -100,9 +95,8 @@ public object ContractSimResultUpdateKt {
       _builder.addAllGoalInfos(values)
     }
     /**
-     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
+     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
      * @param values The goalInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGoalInfos")
@@ -111,10 +105,9 @@ public object ContractSimResultUpdateKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
+     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
      * @param index The index to set the value at.
      * @param value The goalInfos to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGoalInfos")
@@ -122,8 +115,7 @@ public object ContractSimResultUpdateKt {
       _builder.setGoalInfos(index, value)
     }
     /**
-     * <code>repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractSimResultUpdate.GoalInfo goal_infos = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGoalInfos")
@@ -164,16 +156,14 @@ public object ContractSimResultUpdateKt {
           _builder.grade = value
         }
       /**
-       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * `optional .ei.Contract.PlayerGrade grade = 1;`
        * @return Whether the grade field is set.
-       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -190,16 +180,14 @@ public object ContractSimResultUpdateKt {
           _builder.goalIndex = value
         }
       /**
-       * <code>optional uint32 goal_index = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 goal_index = 2;`
        */
       public fun clearGoalIndex() {
         _builder.clearGoalIndex()
       }
       /**
-       * <code>optional uint32 goal_index = 2;</code>
+       * `optional uint32 goal_index = 2;`
        * @return Whether the goalIndex field is set.
-       * @return This builder for chaining.
        */
       public fun hasGoalIndex(): kotlin.Boolean {
         return _builder.hasGoalIndex()
@@ -216,16 +204,14 @@ public object ContractSimResultUpdateKt {
           _builder.projectedEggsLaid = value
         }
       /**
-       * <code>optional double projected_eggs_laid = 3;</code>
-       * @return This builder for chaining.
+       * `optional double projected_eggs_laid = 3;`
        */
       public fun clearProjectedEggsLaid() {
         _builder.clearProjectedEggsLaid()
       }
       /**
-       * <code>optional double projected_eggs_laid = 3;</code>
+       * `optional double projected_eggs_laid = 3;`
        * @return Whether the projectedEggsLaid field is set.
-       * @return This builder for chaining.
        */
       public fun hasProjectedEggsLaid(): kotlin.Boolean {
         return _builder.hasProjectedEggsLaid()

@@ -43,9 +43,8 @@ public object ContractEvaluationBatchKt {
         _builder.evalsList
       )
     /**
-     * <code>repeated .ei.ContractEvaluationBatch.Pair evals = 1;</code>
+     * `repeated .ei.ContractEvaluationBatch.Pair evals = 1;`
      * @param value The evals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEvals")
@@ -53,9 +52,8 @@ public object ContractEvaluationBatchKt {
       _builder.addEvals(value)
     }
     /**
-     * <code>repeated .ei.ContractEvaluationBatch.Pair evals = 1;</code>
+     * `repeated .ei.ContractEvaluationBatch.Pair evals = 1;`
      * @param value The evals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEvals")
@@ -64,9 +62,8 @@ public object ContractEvaluationBatchKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ContractEvaluationBatch.Pair evals = 1;</code>
+     * `repeated .ei.ContractEvaluationBatch.Pair evals = 1;`
      * @param values The evals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEvals")
@@ -74,9 +71,8 @@ public object ContractEvaluationBatchKt {
       _builder.addAllEvals(values)
     }
     /**
-     * <code>repeated .ei.ContractEvaluationBatch.Pair evals = 1;</code>
+     * `repeated .ei.ContractEvaluationBatch.Pair evals = 1;`
      * @param values The evals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEvals")
@@ -85,10 +81,9 @@ public object ContractEvaluationBatchKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ContractEvaluationBatch.Pair evals = 1;</code>
+     * `repeated .ei.ContractEvaluationBatch.Pair evals = 1;`
      * @param index The index to set the value at.
      * @param value The evals to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEvals")
@@ -96,8 +91,7 @@ public object ContractEvaluationBatchKt {
       _builder.setEvals(index, value)
     }
     /**
-     * <code>repeated .ei.ContractEvaluationBatch.Pair evals = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractEvaluationBatch.Pair evals = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEvals")
@@ -138,16 +132,14 @@ public object ContractEvaluationBatchKt {
           _builder.userId = value
         }
       /**
-       * <code>optional string user_id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string user_id = 1;`
        */
       public fun clearUserId() {
         _builder.clearUserId()
       }
       /**
-       * <code>optional string user_id = 1;</code>
+       * `optional string user_id = 1;`
        * @return Whether the userId field is set.
-       * @return This builder for chaining.
        */
       public fun hasUserId(): kotlin.Boolean {
         return _builder.hasUserId()
@@ -164,16 +156,14 @@ public object ContractEvaluationBatchKt {
           _builder.cev = value
         }
       /**
-       * <code>optional .ei.ContractEvaluation cev = 2;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ContractEvaluation cev = 2;`
        */
       public fun clearCev() {
         _builder.clearCev()
       }
       /**
-       * <code>optional .ei.ContractEvaluation cev = 2;</code>
+       * `optional .ei.ContractEvaluation cev = 2;`
        * @return Whether the cev field is set.
-       * @return This builder for chaining.
        */
       public fun hasCev(): kotlin.Boolean {
         return _builder.hasCev()

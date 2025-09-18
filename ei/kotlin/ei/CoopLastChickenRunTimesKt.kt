@@ -35,73 +35,67 @@ public object CoopLastChickenRunTimesKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class EntriesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated .ei.CoopChickenRunEntry entries = 3;`
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      */
-     public val entries: com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>
+     public val entries: com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>
       @kotlin.jvm.JvmSynthetic
   get() = com.google.protobuf.kotlin.DslList(
         _builder.entriesList
       )
     /**
-     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      * @param value The entries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEntries")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.add(value: ei.Ei.CoopChickenRunEntry) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>.add(value: ei.Ei.PlayerLastChickenRunTimes) {
       _builder.addEntries(value)
     }
     /**
-     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      * @param value The entries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEntries")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.plusAssign(value: ei.Ei.CoopChickenRunEntry) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>.plusAssign(value: ei.Ei.PlayerLastChickenRunTimes) {
       add(value)
     }
     /**
-     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      * @param values The entries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEntries")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.CoopChickenRunEntry>) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.PlayerLastChickenRunTimes>) {
       _builder.addAllEntries(values)
     }
     /**
-     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      * @param values The entries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEntries")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.CoopChickenRunEntry>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.PlayerLastChickenRunTimes>) {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      * @param index The index to set the value at.
      * @param value The entries to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEntries")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.set(index: kotlin.Int, value: ei.Ei.CoopChickenRunEntry) {
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>.set(index: kotlin.Int, value: ei.Ei.PlayerLastChickenRunTimes) {
       _builder.setEntries(index, value)
     }
     /**
-     * <code>repeated .ei.CoopChickenRunEntry entries = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.PlayerLastChickenRunTimes entries = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEntries")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.CoopChickenRunEntry, EntriesProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.PlayerLastChickenRunTimes, EntriesProxy>.clear() {
       _builder.clearEntries()
     }
   }

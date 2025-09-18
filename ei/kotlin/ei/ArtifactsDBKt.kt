@@ -43,9 +43,8 @@ public object ArtifactsDBKt {
         _builder.inventoryItemsList
       )
     /**
-     * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
+     * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
      * @param value The inventoryItems to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addInventoryItems")
@@ -53,9 +52,8 @@ public object ArtifactsDBKt {
       _builder.addInventoryItems(value)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
+     * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
      * @param value The inventoryItems to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignInventoryItems")
@@ -64,9 +62,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
+     * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
      * @param values The inventoryItems to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllInventoryItems")
@@ -74,9 +71,8 @@ public object ArtifactsDBKt {
       _builder.addAllInventoryItems(values)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
+     * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
      * @param values The inventoryItems to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllInventoryItems")
@@ -85,10 +81,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
+     * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
      * @param index The index to set the value at.
      * @param value The inventoryItems to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setInventoryItems")
@@ -96,8 +91,7 @@ public object ArtifactsDBKt {
       _builder.setInventoryItems(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem inventory_items = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearInventoryItems")
@@ -116,16 +110,14 @@ public object ArtifactsDBKt {
         _builder.itemSequence = value
       }
     /**
-     * <code>optional uint64 item_sequence = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint64 item_sequence = 2;`
      */
     public fun clearItemSequence() {
       _builder.clearItemSequence()
     }
     /**
-     * <code>optional uint64 item_sequence = 2;</code>
+     * `optional uint64 item_sequence = 2;`
      * @return Whether the itemSequence field is set.
-     * @return This builder for chaining.
      */
     public fun hasItemSequence(): kotlin.Boolean {
       return _builder.hasItemSequence()
@@ -136,76 +128,70 @@ public object ArtifactsDBKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class InventorySlotsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class InventorySlotsNOTUSEDProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated .ei.InventorySlot inventory_slots = 3;`
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
      */
-     public val inventorySlots: com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>
+     public val inventorySlotsNOTUSED: com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>
       @kotlin.jvm.JvmSynthetic
   get() = com.google.protobuf.kotlin.DslList(
-        _builder.inventorySlotsList
+        _builder.inventorySlotsNOTUSEDList
       )
     /**
-     * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
-     * @param value The inventorySlots to add.
-     * @return This builder for chaining.
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
+     * @param value The inventorySlotsNOTUSED to add.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("addInventorySlots")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.add(value: ei.Ei.InventorySlot) {
-      _builder.addInventorySlots(value)
+@kotlin.jvm.JvmName("addInventorySlotsNOTUSED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>.add(value: ei.Ei.InventorySlot) {
+      _builder.addInventorySlotsNOTUSED(value)
     }
     /**
-     * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
-     * @param value The inventorySlots to add.
-     * @return This builder for chaining.
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
+     * @param value The inventorySlotsNOTUSED to add.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("plusAssignInventorySlots")
+@kotlin.jvm.JvmName("plusAssignInventorySlotsNOTUSED")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.plusAssign(value: ei.Ei.InventorySlot) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>.plusAssign(value: ei.Ei.InventorySlot) {
       add(value)
     }
     /**
-     * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
-     * @param values The inventorySlots to add.
-     * @return This builder for chaining.
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
+     * @param values The inventorySlotsNOTUSED to add.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("addAllInventorySlots")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.InventorySlot>) {
-      _builder.addAllInventorySlots(values)
+@kotlin.jvm.JvmName("addAllInventorySlotsNOTUSED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.InventorySlot>) {
+      _builder.addAllInventorySlotsNOTUSED(values)
     }
     /**
-     * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
-     * @param values The inventorySlots to add.
-     * @return This builder for chaining.
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
+     * @param values The inventorySlotsNOTUSED to add.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("plusAssignAllInventorySlots")
+@kotlin.jvm.JvmName("plusAssignAllInventorySlotsNOTUSED")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.InventorySlot>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.InventorySlot>) {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
      * @param index The index to set the value at.
-     * @param value The inventorySlots to set.
-     * @return This builder for chaining.
+     * @param value The inventorySlotsNOTUSED to set.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("setInventorySlots")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.set(index: kotlin.Int, value: ei.Ei.InventorySlot) {
-      _builder.setInventorySlots(index, value)
+@kotlin.jvm.JvmName("setInventorySlotsNOTUSED")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>.set(index: kotlin.Int, value: ei.Ei.InventorySlot) {
+      _builder.setInventorySlotsNOTUSED(index, value)
     }
     /**
-     * <code>repeated .ei.InventorySlot inventory_slots = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.InventorySlot inventory_slots_NOT_USED = 3;`
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("clearInventorySlots")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsProxy>.clear() {
-      _builder.clearInventorySlots()
+@kotlin.jvm.JvmName("clearInventorySlotsNOTUSED")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.InventorySlot, InventorySlotsNOTUSEDProxy>.clear() {
+      _builder.clearInventorySlotsNOTUSED()
     }
 
     /**
@@ -215,73 +201,67 @@ public object ArtifactsDBKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ActiveArtifactsDEPRECATEDProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * `repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      */
-     public val activeArtifactsDEPRECATED: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>
+     public val activeArtifactsDEPRECATED: com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>
       @kotlin.jvm.JvmSynthetic
   get() = com.google.protobuf.kotlin.DslList(
         _builder.activeArtifactsDEPRECATEDList
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      * @param value The activeArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addActiveArtifactsDEPRECATED")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.add(value: ei.Ei.ActiveArtifactSlot) {
       _builder.addActiveArtifactsDEPRECATED(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      * @param value The activeArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignActiveArtifactsDEPRECATED")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.plusAssign(value: ei.Ei.ActiveArtifactSlot) {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      * @param values The activeArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllActiveArtifactsDEPRECATED")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ActiveArtifactSlot>) {
       _builder.addAllActiveArtifactsDEPRECATED(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      * @param values The activeArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllActiveArtifactsDEPRECATED")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ActiveArtifactSlot>) {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      * @param index The index to set the value at.
      * @param value The activeArtifactsDEPRECATED to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setActiveArtifactsDEPRECATED")
-    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.set(index: kotlin.Int, value: ei.Ei.ActiveArtifactSlot) {
       _builder.setActiveArtifactsDEPRECATED(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ActiveArtifactSlot active_artifacts_DEPRECATED = 7;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearActiveArtifactsDEPRECATED")
-    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.clear() {
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveArtifactsDEPRECATEDProxy>.clear() {
       _builder.clearActiveArtifactsDEPRECATED()
     }
 
@@ -300,9 +280,8 @@ public object ArtifactsDBKt {
         _builder.activeArtifactSetsList
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;`
      * @param value The activeArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addActiveArtifactSets")
@@ -310,9 +289,8 @@ public object ArtifactsDBKt {
       _builder.addActiveArtifactSets(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;`
      * @param value The activeArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignActiveArtifactSets")
@@ -321,9 +299,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;`
      * @param values The activeArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllActiveArtifactSets")
@@ -331,9 +308,8 @@ public object ArtifactsDBKt {
       _builder.addAllActiveArtifactSets(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;`
      * @param values The activeArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllActiveArtifactSets")
@@ -342,10 +318,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;`
      * @param index The index to set the value at.
      * @param value The activeArtifactSets to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setActiveArtifactSets")
@@ -353,8 +328,7 @@ public object ArtifactsDBKt {
       _builder.setActiveArtifactSets(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet active_artifact_sets = 11;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearActiveArtifactSets")
@@ -377,9 +351,8 @@ public object ArtifactsDBKt {
         _builder.savedArtifactSetsList
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;`
      * @param value The savedArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addSavedArtifactSets")
@@ -387,9 +360,8 @@ public object ArtifactsDBKt {
       _builder.addSavedArtifactSets(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;`
      * @param value The savedArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignSavedArtifactSets")
@@ -398,9 +370,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;`
      * @param values The savedArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllSavedArtifactSets")
@@ -408,9 +379,8 @@ public object ArtifactsDBKt {
       _builder.addAllSavedArtifactSets(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;`
      * @param values The savedArtifactSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllSavedArtifactSets")
@@ -419,10 +389,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;`
      * @param index The index to set the value at.
      * @param value The savedArtifactSets to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setSavedArtifactSets")
@@ -430,8 +399,7 @@ public object ArtifactsDBKt {
       _builder.setSavedArtifactSets(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsDB.ActiveArtifactSet saved_artifact_sets = 13;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearSavedArtifactSets")
@@ -454,9 +422,8 @@ public object ArtifactsDBKt {
         _builder.artifactStatusList
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;`
      * @param value The artifactStatus to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addArtifactStatus")
@@ -464,9 +431,8 @@ public object ArtifactsDBKt {
       _builder.addArtifactStatus(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;`
      * @param value The artifactStatus to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignArtifactStatus")
@@ -475,9 +441,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;`
      * @param values The artifactStatus to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllArtifactStatus")
@@ -485,9 +450,8 @@ public object ArtifactsDBKt {
       _builder.addAllArtifactStatus(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;`
      * @param values The artifactStatus to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllArtifactStatus")
@@ -496,10 +460,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;`
      * @param index The index to set the value at.
      * @param value The artifactStatus to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setArtifactStatus")
@@ -507,8 +470,7 @@ public object ArtifactsDBKt {
       _builder.setArtifactStatus(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 12;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearArtifactStatus")
@@ -527,16 +489,14 @@ public object ArtifactsDBKt {
         _builder.fuelingMission = value
       }
     /**
-     * <code>optional .ei.MissionInfo fueling_mission = 14;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo fueling_mission = 14;`
      */
     public fun clearFuelingMission() {
       _builder.clearFuelingMission()
     }
     /**
-     * <code>optional .ei.MissionInfo fueling_mission = 14;</code>
+     * `optional .ei.MissionInfo fueling_mission = 14;`
      * @return Whether the fuelingMission field is set.
-     * @return This builder for chaining.
      */
     public fun hasFuelingMission(): kotlin.Boolean {
       return _builder.hasFuelingMission()
@@ -560,9 +520,8 @@ public object ArtifactsDBKt {
         _builder.missionInfosList
       )
     /**
-     * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
+     * `repeated .ei.MissionInfo mission_infos = 4;`
      * @param value The missionInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMissionInfos")
@@ -570,9 +529,8 @@ public object ArtifactsDBKt {
       _builder.addMissionInfos(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
+     * `repeated .ei.MissionInfo mission_infos = 4;`
      * @param value The missionInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMissionInfos")
@@ -581,9 +539,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
+     * `repeated .ei.MissionInfo mission_infos = 4;`
      * @param values The missionInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMissionInfos")
@@ -591,9 +548,8 @@ public object ArtifactsDBKt {
       _builder.addAllMissionInfos(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
+     * `repeated .ei.MissionInfo mission_infos = 4;`
      * @param values The missionInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMissionInfos")
@@ -602,10 +558,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
+     * `repeated .ei.MissionInfo mission_infos = 4;`
      * @param index The index to set the value at.
      * @param value The missionInfos to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMissionInfos")
@@ -613,8 +568,7 @@ public object ArtifactsDBKt {
       _builder.setMissionInfos(index, value)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_infos = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.MissionInfo mission_infos = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearMissionInfos")
@@ -637,9 +591,8 @@ public object ArtifactsDBKt {
         _builder.missionArchiveList
       )
     /**
-     * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
+     * `repeated .ei.MissionInfo mission_archive = 5;`
      * @param value The missionArchive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMissionArchive")
@@ -647,9 +600,8 @@ public object ArtifactsDBKt {
       _builder.addMissionArchive(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
+     * `repeated .ei.MissionInfo mission_archive = 5;`
      * @param value The missionArchive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMissionArchive")
@@ -658,9 +610,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
+     * `repeated .ei.MissionInfo mission_archive = 5;`
      * @param values The missionArchive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMissionArchive")
@@ -668,9 +619,8 @@ public object ArtifactsDBKt {
       _builder.addAllMissionArchive(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
+     * `repeated .ei.MissionInfo mission_archive = 5;`
      * @param values The missionArchive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMissionArchive")
@@ -679,10 +629,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
+     * `repeated .ei.MissionInfo mission_archive = 5;`
      * @param index The index to set the value at.
      * @param value The missionArchive to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMissionArchive")
@@ -690,14 +639,40 @@ public object ArtifactsDBKt {
       _builder.setMissionArchive(index, value)
     }
     /**
-     * <code>repeated .ei.MissionInfo mission_archive = 5;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.MissionInfo mission_archive = 5;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearMissionArchive")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.MissionInfo, MissionArchiveProxy>.clear() {
       _builder.clearMissionArchive()
     }
+
+    /**
+     * `optional .ei.ArtifactsDB.VirtueDB virtue_afx_db = 15;`
+     */
+    public var virtueAfxDb: ei.Ei.ArtifactsDB.VirtueDB
+      @kotlin.jvm.JvmName("getVirtueAfxDb")
+        get() = _builder.virtueAfxDb
+      @kotlin.jvm.JvmName("setVirtueAfxDb")
+        set(value) {
+        _builder.virtueAfxDb = value
+      }
+    /**
+     * `optional .ei.ArtifactsDB.VirtueDB virtue_afx_db = 15;`
+     */
+    public fun clearVirtueAfxDb() {
+      _builder.clearVirtueAfxDb()
+    }
+    /**
+     * `optional .ei.ArtifactsDB.VirtueDB virtue_afx_db = 15;`
+     * @return Whether the virtueAfxDb field is set.
+     */
+    public fun hasVirtueAfxDb(): kotlin.Boolean {
+      return _builder.hasVirtueAfxDb()
+    }
+
+    public val ArtifactsDBKt.Dsl.virtueAfxDbOrNull: ei.Ei.ArtifactsDB.VirtueDB?
+      get() = _builder.virtueAfxDbOrNull
 
     /**
      * An uninstantiable, behaviorless type to represent the field in
@@ -714,9 +689,8 @@ public object ArtifactsDBKt {
         _builder.discoveredArtifactsDEPRECATEDList
       )
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * `repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;`
      * @param value The discoveredArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addDiscoveredArtifactsDEPRECATED")
@@ -724,9 +698,8 @@ public object ArtifactsDBKt {
       _builder.addDiscoveredArtifactsDEPRECATED(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * `repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;`
      * @param value The discoveredArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignDiscoveredArtifactsDEPRECATED")
@@ -735,9 +708,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * `repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;`
      * @param values The discoveredArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllDiscoveredArtifactsDEPRECATED")
@@ -745,9 +717,8 @@ public object ArtifactsDBKt {
       _builder.addAllDiscoveredArtifactsDEPRECATED(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * `repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;`
      * @param values The discoveredArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllDiscoveredArtifactsDEPRECATED")
@@ -756,10 +727,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
+     * `repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;`
      * @param index The index to set the value at.
      * @param value The discoveredArtifactsDEPRECATED to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setDiscoveredArtifactsDEPRECATED")
@@ -767,8 +737,7 @@ public object ArtifactsDBKt {
       _builder.setDiscoveredArtifactsDEPRECATED(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactSpec discovered_artifacts_DEPRECATED = 8;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearDiscoveredArtifactsDEPRECATED")
@@ -791,9 +760,8 @@ public object ArtifactsDBKt {
         _builder.craftableArtifactsDEPRECATEDList
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;`
      * @param value The craftableArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCraftableArtifactsDEPRECATED")
@@ -801,9 +769,8 @@ public object ArtifactsDBKt {
       _builder.addCraftableArtifactsDEPRECATED(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;`
      * @param value The craftableArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCraftableArtifactsDEPRECATED")
@@ -812,9 +779,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;`
      * @param values The craftableArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCraftableArtifactsDEPRECATED")
@@ -822,9 +788,8 @@ public object ArtifactsDBKt {
       _builder.addAllCraftableArtifactsDEPRECATED(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;`
      * @param values The craftableArtifactsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCraftableArtifactsDEPRECATED")
@@ -833,10 +798,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;`
      * @param index The index to set the value at.
      * @param value The craftableArtifactsDEPRECATED to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCraftableArtifactsDEPRECATED")
@@ -844,8 +808,7 @@ public object ArtifactsDBKt {
       _builder.setCraftableArtifactsDEPRECATED(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsDB.CraftableArtifact craftable_artifacts_DEPRECATED = 9;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCraftableArtifactsDEPRECATED")
@@ -868,9 +831,8 @@ public object ArtifactsDBKt {
         _builder.craftingCountsDEPRECATEDList
       )
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;`
      * @param value The craftingCountsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCraftingCountsDEPRECATED")
@@ -878,9 +840,8 @@ public object ArtifactsDBKt {
       _builder.addCraftingCountsDEPRECATED(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;`
      * @param value The craftingCountsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCraftingCountsDEPRECATED")
@@ -889,9 +850,8 @@ public object ArtifactsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;`
      * @param values The craftingCountsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCraftingCountsDEPRECATED")
@@ -899,9 +859,8 @@ public object ArtifactsDBKt {
       _builder.addAllCraftingCountsDEPRECATED(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;`
      * @param values The craftingCountsDEPRECATED to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCraftingCountsDEPRECATED")
@@ -910,10 +869,9 @@ public object ArtifactsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
+     * `repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;`
      * @param index The index to set the value at.
      * @param value The craftingCountsDEPRECATED to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCraftingCountsDEPRECATED")
@@ -921,88 +879,12 @@ public object ArtifactsDBKt {
       _builder.setCraftingCountsDEPRECATED(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsDB.CraftableArtifact crafting_counts_DEPRECATED = 10;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCraftingCountsDEPRECATED")
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, CraftingCountsDEPRECATEDProxy>.clear() {
       _builder.clearCraftingCountsDEPRECATED()
-    }
-  }
-  @kotlin.jvm.JvmName("-initializeactiveArtifactSlot")
-  public inline fun activeArtifactSlot(block: ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSlot =
-    ei.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl._create(ei.Ei.ArtifactsDB.ActiveArtifactSlot.newBuilder()).apply { block() }._build()
-  /**
-   * Protobuf type `ei.ArtifactsDB.ActiveArtifactSlot`
-   */
-  public object ActiveArtifactSlotKt {
-    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    @com.google.protobuf.kotlin.ProtoDslMarker
-    public class Dsl private constructor(
-      private val _builder: ei.Ei.ArtifactsDB.ActiveArtifactSlot.Builder
-    ) {
-      public companion object {
-        @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-        internal fun _create(builder: ei.Ei.ArtifactsDB.ActiveArtifactSlot.Builder): Dsl = Dsl(builder)
-      }
-
-      @kotlin.jvm.JvmSynthetic
-  @kotlin.PublishedApi
-      internal fun _build(): ei.Ei.ArtifactsDB.ActiveArtifactSlot = _builder.build()
-
-      /**
-       * `optional bool occupied = 1;`
-       */
-      public var occupied: kotlin.Boolean
-        @kotlin.jvm.JvmName("getOccupied")
-          get() = _builder.occupied
-        @kotlin.jvm.JvmName("setOccupied")
-          set(value) {
-          _builder.occupied = value
-        }
-      /**
-       * <code>optional bool occupied = 1;</code>
-       * @return This builder for chaining.
-       */
-      public fun clearOccupied() {
-        _builder.clearOccupied()
-      }
-      /**
-       * <code>optional bool occupied = 1;</code>
-       * @return Whether the occupied field is set.
-       * @return This builder for chaining.
-       */
-      public fun hasOccupied(): kotlin.Boolean {
-        return _builder.hasOccupied()
-      }
-
-      /**
-       * `optional uint64 item_id = 2;`
-       */
-      public var itemId: kotlin.Long
-        @kotlin.jvm.JvmName("getItemId")
-          get() = _builder.itemId
-        @kotlin.jvm.JvmName("setItemId")
-          set(value) {
-          _builder.itemId = value
-        }
-      /**
-       * <code>optional uint64 item_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public fun clearItemId() {
-        _builder.clearItemId()
-      }
-      /**
-       * <code>optional uint64 item_id = 2;</code>
-       * @return Whether the itemId field is set.
-       * @return This builder for chaining.
-       */
-      public fun hasItemId(): kotlin.Boolean {
-        return _builder.hasItemId()
-      }
     }
   }
   @kotlin.jvm.JvmName("-initializeactiveArtifactSet")
@@ -1034,73 +916,67 @@ public object ArtifactsDBKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class SlotsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * `repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;`
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        */
-       public val slots: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>
+       public val slots: com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>
         @kotlin.jvm.JvmSynthetic
   get() = com.google.protobuf.kotlin.DslList(
           _builder.slotsList
         )
       /**
-       * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        * @param value The slots to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addSlots")
-      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.add(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>.add(value: ei.Ei.ActiveArtifactSlot) {
         _builder.addSlots(value)
       }
       /**
-       * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        * @param value The slots to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignSlots")
       @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.plusAssign(value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>.plusAssign(value: ei.Ei.ActiveArtifactSlot) {
         add(value)
       }
       /**
-       * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        * @param values The slots to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllSlots")
-      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ActiveArtifactSlot>) {
         _builder.addAllSlots(values)
       }
       /**
-       * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        * @param values The slots to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllSlots")
       @Suppress("NOTHING_TO_INLINE")
-      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.ActiveArtifactSlot>) {
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ActiveArtifactSlot>) {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        * @param index The index to set the value at.
        * @param value The slots to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setSlots")
-      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.ActiveArtifactSlot) {
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>.set(index: kotlin.Int, value: ei.Ei.ActiveArtifactSlot) {
         _builder.setSlots(index, value)
       }
       /**
-       * <code>repeated .ei.ArtifactsDB.ActiveArtifactSlot slots = 1;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ActiveArtifactSlot slots = 1;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearSlots")
-      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.ActiveArtifactSlot, SlotsProxy>.clear() {
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, SlotsProxy>.clear() {
         _builder.clearSlots()
       }
 
@@ -1115,16 +991,14 @@ public object ArtifactsDBKt {
           _builder.uid = value
         }
       /**
-       * <code>optional uint32 uid = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 uid = 2;`
        */
       public fun clearUid() {
         _builder.clearUid()
       }
       /**
-       * <code>optional uint32 uid = 2;</code>
+       * `optional uint32 uid = 2;`
        * @return Whether the uid field is set.
-       * @return This builder for chaining.
        */
       public fun hasUid(): kotlin.Boolean {
         return _builder.hasUid()
@@ -1164,16 +1038,14 @@ public object ArtifactsDBKt {
           _builder.spec = value
         }
       /**
-       * <code>optional .ei.ArtifactSpec spec = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ArtifactSpec spec = 1;`
        */
       public fun clearSpec() {
         _builder.clearSpec()
       }
       /**
-       * <code>optional .ei.ArtifactSpec spec = 1;</code>
+       * `optional .ei.ArtifactSpec spec = 1;`
        * @return Whether the spec field is set.
-       * @return This builder for chaining.
        */
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
@@ -1193,16 +1065,14 @@ public object ArtifactsDBKt {
           _builder.discovered = value
         }
       /**
-       * <code>optional bool discovered = 6;</code>
-       * @return This builder for chaining.
+       * `optional bool discovered = 6;`
        */
       public fun clearDiscovered() {
         _builder.clearDiscovered()
       }
       /**
-       * <code>optional bool discovered = 6;</code>
+       * `optional bool discovered = 6;`
        * @return Whether the discovered field is set.
-       * @return This builder for chaining.
        */
       public fun hasDiscovered(): kotlin.Boolean {
         return _builder.hasDiscovered()
@@ -1219,16 +1089,14 @@ public object ArtifactsDBKt {
           _builder.craftable = value
         }
       /**
-       * <code>optional bool craftable = 4;</code>
-       * @return This builder for chaining.
+       * `optional bool craftable = 4;`
        */
       public fun clearCraftable() {
         _builder.clearCraftable()
       }
       /**
-       * <code>optional bool craftable = 4;</code>
+       * `optional bool craftable = 4;`
        * @return Whether the craftable field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftable(): kotlin.Boolean {
         return _builder.hasCraftable()
@@ -1245,16 +1113,14 @@ public object ArtifactsDBKt {
           _builder.recipeDiscovered = value
         }
       /**
-       * <code>optional bool recipe_discovered = 5;</code>
-       * @return This builder for chaining.
+       * `optional bool recipe_discovered = 5;`
        */
       public fun clearRecipeDiscovered() {
         _builder.clearRecipeDiscovered()
       }
       /**
-       * <code>optional bool recipe_discovered = 5;</code>
+       * `optional bool recipe_discovered = 5;`
        * @return Whether the recipeDiscovered field is set.
-       * @return This builder for chaining.
        */
       public fun hasRecipeDiscovered(): kotlin.Boolean {
         return _builder.hasRecipeDiscovered()
@@ -1271,16 +1137,14 @@ public object ArtifactsDBKt {
           _builder.seen = value
         }
       /**
-       * <code>optional bool seen = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool seen = 2;`
        */
       public fun clearSeen() {
         _builder.clearSeen()
       }
       /**
-       * <code>optional bool seen = 2;</code>
+       * `optional bool seen = 2;`
        * @return Whether the seen field is set.
-       * @return This builder for chaining.
        */
       public fun hasSeen(): kotlin.Boolean {
         return _builder.hasSeen()
@@ -1297,30 +1161,243 @@ public object ArtifactsDBKt {
           _builder.count = value
         }
       /**
-       * <code>optional uint32 count = 3;</code>
-       * @return This builder for chaining.
+       * `optional uint32 count = 3;`
        */
       public fun clearCount() {
         _builder.clearCount()
       }
       /**
-       * <code>optional uint32 count = 3;</code>
+       * `optional uint32 count = 3;`
        * @return Whether the count field is set.
-       * @return This builder for chaining.
        */
       public fun hasCount(): kotlin.Boolean {
         return _builder.hasCount()
       }
     }
   }
+  @kotlin.jvm.JvmName("-initializevirtueDB")
+  public inline fun virtueDB(block: ei.ArtifactsDBKt.VirtueDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.VirtueDB =
+    ei.ArtifactsDBKt.VirtueDBKt.Dsl._create(ei.Ei.ArtifactsDB.VirtueDB.newBuilder()).apply { block() }._build()
+  /**
+   * Protobuf type `ei.ArtifactsDB.VirtueDB`
+   */
+  public object VirtueDBKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.ArtifactsDB.VirtueDB.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+    @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.ArtifactsDB.VirtueDB.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+  @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.ArtifactsDB.VirtueDB = _builder.build()
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class InventoryItemsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       */
+       public val inventoryItems: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>
+        @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+          _builder.inventoryItemsList
+        )
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       * @param value The inventoryItems to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addInventoryItems")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.add(value: ei.Ei.ArtifactInventoryItem) {
+        _builder.addInventoryItems(value)
+      }
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       * @param value The inventoryItems to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignInventoryItems")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.plusAssign(value: ei.Ei.ArtifactInventoryItem) {
+        add(value)
+      }
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       * @param values The inventoryItems to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllInventoryItems")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
+        _builder.addAllInventoryItems(values)
+      }
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       * @param values The inventoryItems to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllInventoryItems")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactInventoryItem>) {
+        addAll(values)
+      }
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       * @param index The index to set the value at.
+       * @param value The inventoryItems to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setInventoryItems")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactInventoryItem) {
+        _builder.setInventoryItems(index, value)
+      }
+      /**
+       * `repeated .ei.ArtifactInventoryItem inventory_items = 1;`
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearInventoryItems")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactInventoryItem, InventoryItemsProxy>.clear() {
+        _builder.clearInventoryItems()
+      }
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class ArtifactStatusProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       */
+       public val artifactStatus: com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>
+        @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+          _builder.artifactStatusList
+        )
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       * @param value The artifactStatus to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addArtifactStatus")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.add(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+        _builder.addArtifactStatus(value)
+      }
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       * @param value The artifactStatus to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignArtifactStatus")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.plusAssign(value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+        add(value)
+      }
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       * @param values The artifactStatus to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllArtifactStatus")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+        _builder.addAllArtifactStatus(values)
+      }
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       * @param values The artifactStatus to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllArtifactStatus")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ArtifactsDB.CraftableArtifact>) {
+        addAll(values)
+      }
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       * @param index The index to set the value at.
+       * @param value The artifactStatus to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setArtifactStatus")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.set(index: kotlin.Int, value: ei.Ei.ArtifactsDB.CraftableArtifact) {
+        _builder.setArtifactStatus(index, value)
+      }
+      /**
+       * `repeated .ei.ArtifactsDB.CraftableArtifact artifact_status = 2;`
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearArtifactStatus")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ArtifactsDB.CraftableArtifact, ArtifactStatusProxy>.clear() {
+        _builder.clearArtifactStatus()
+      }
+
+      /**
+       * `optional .ei.MissionInfo fueling_mission = 3;`
+       */
+      public var fuelingMission: ei.Ei.MissionInfo
+        @kotlin.jvm.JvmName("getFuelingMission")
+          get() = _builder.fuelingMission
+        @kotlin.jvm.JvmName("setFuelingMission")
+          set(value) {
+          _builder.fuelingMission = value
+        }
+      /**
+       * `optional .ei.MissionInfo fueling_mission = 3;`
+       */
+      public fun clearFuelingMission() {
+        _builder.clearFuelingMission()
+      }
+      /**
+       * `optional .ei.MissionInfo fueling_mission = 3;`
+       * @return Whether the fuelingMission field is set.
+       */
+      public fun hasFuelingMission(): kotlin.Boolean {
+        return _builder.hasFuelingMission()
+      }
+
+      public val VirtueDBKt.Dsl.fuelingMissionOrNull: ei.Ei.MissionInfo?
+        get() = _builder.fuelingMissionOrNull
+
+      /**
+       * `optional .ei.ArtifactsDB.ActiveArtifactSet active_artifacts = 13;`
+       */
+      public var activeArtifacts: ei.Ei.ArtifactsDB.ActiveArtifactSet
+        @kotlin.jvm.JvmName("getActiveArtifacts")
+          get() = _builder.activeArtifacts
+        @kotlin.jvm.JvmName("setActiveArtifacts")
+          set(value) {
+          _builder.activeArtifacts = value
+        }
+      /**
+       * `optional .ei.ArtifactsDB.ActiveArtifactSet active_artifacts = 13;`
+       */
+      public fun clearActiveArtifacts() {
+        _builder.clearActiveArtifacts()
+      }
+      /**
+       * `optional .ei.ArtifactsDB.ActiveArtifactSet active_artifacts = 13;`
+       * @return Whether the activeArtifacts field is set.
+       */
+      public fun hasActiveArtifacts(): kotlin.Boolean {
+        return _builder.hasActiveArtifacts()
+      }
+
+      public val VirtueDBKt.Dsl.activeArtifactsOrNull: ei.Ei.ArtifactsDB.ActiveArtifactSet?
+        get() = _builder.activeArtifactsOrNull
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsDB.copy(block: `ei`.ArtifactsDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB =
   `ei`.ArtifactsDBKt.Dsl._create(this.toBuilder()).apply { block() }._build()
-
-@kotlin.jvm.JvmSynthetic
-public inline fun ei.Ei.ArtifactsDB.ActiveArtifactSlot.copy(block: `ei`.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSlot =
-  `ei`.ArtifactsDBKt.ActiveArtifactSlotKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ArtifactsDB.ActiveArtifactSet.copy(block: `ei`.ArtifactsDBKt.ActiveArtifactSetKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.ActiveArtifactSet =
@@ -1333,6 +1410,19 @@ public inline fun ei.Ei.ArtifactsDB.CraftableArtifact.copy(block: `ei`.Artifacts
 public val ei.Ei.ArtifactsDB.CraftableArtifactOrBuilder.specOrNull: ei.Ei.ArtifactSpec?
   get() = if (hasSpec()) getSpec() else null
 
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.ArtifactsDB.VirtueDB.copy(block: `ei`.ArtifactsDBKt.VirtueDBKt.Dsl.() -> kotlin.Unit): ei.Ei.ArtifactsDB.VirtueDB =
+  `ei`.ArtifactsDBKt.VirtueDBKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val ei.Ei.ArtifactsDB.VirtueDBOrBuilder.fuelingMissionOrNull: ei.Ei.MissionInfo?
+  get() = if (hasFuelingMission()) getFuelingMission() else null
+
+public val ei.Ei.ArtifactsDB.VirtueDBOrBuilder.activeArtifactsOrNull: ei.Ei.ArtifactsDB.ActiveArtifactSet?
+  get() = if (hasActiveArtifacts()) getActiveArtifacts() else null
+
 public val ei.Ei.ArtifactsDBOrBuilder.fuelingMissionOrNull: ei.Ei.MissionInfo?
   get() = if (hasFuelingMission()) getFuelingMission() else null
+
+public val ei.Ei.ArtifactsDBOrBuilder.virtueAfxDbOrNull: ei.Ei.ArtifactsDB.VirtueDB?
+  get() = if (hasVirtueAfxDb()) getVirtueAfxDb() else null
 

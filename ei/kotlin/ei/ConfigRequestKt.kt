@@ -39,16 +39,14 @@ public object ConfigRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ConfigRequestKt {
         _builder.soulEggs = value
       }
     /**
-     * <code>optional double soul_eggs = 2;</code>
-     * @return This builder for chaining.
+     * `optional double soul_eggs = 2;`
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * <code>optional double soul_eggs = 2;</code>
+     * `optional double soul_eggs = 2;`
      * @return Whether the soulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -94,16 +90,14 @@ public object ConfigRequestKt {
         _builder.contractsUnlocked = value
       }
     /**
-     * <code>optional bool contracts_unlocked = 5;</code>
-     * @return This builder for chaining.
+     * `optional bool contracts_unlocked = 5;`
      */
     public fun clearContractsUnlocked() {
       _builder.clearContractsUnlocked()
     }
     /**
-     * <code>optional bool contracts_unlocked = 5;</code>
+     * `optional bool contracts_unlocked = 5;`
      * @return Whether the contractsUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractsUnlocked(): kotlin.Boolean {
       return _builder.hasContractsUnlocked()
@@ -120,16 +114,14 @@ public object ConfigRequestKt {
         _builder.artifactsUnlocked = value
       }
     /**
-     * <code>optional bool artifacts_unlocked = 3;</code>
-     * @return This builder for chaining.
+     * `optional bool artifacts_unlocked = 3;`
      */
     public fun clearArtifactsUnlocked() {
       _builder.clearArtifactsUnlocked()
     }
     /**
-     * <code>optional bool artifacts_unlocked = 3;</code>
+     * `optional bool artifacts_unlocked = 3;`
      * @return Whether the artifactsUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifactsUnlocked(): kotlin.Boolean {
       return _builder.hasArtifactsUnlocked()
@@ -146,16 +138,14 @@ public object ConfigRequestKt {
         _builder.fuelTankUnlocked = value
       }
     /**
-     * <code>optional bool fuel_tank_unlocked = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool fuel_tank_unlocked = 4;`
      */
     public fun clearFuelTankUnlocked() {
       _builder.clearFuelTankUnlocked()
     }
     /**
-     * <code>optional bool fuel_tank_unlocked = 4;</code>
+     * `optional bool fuel_tank_unlocked = 4;`
      * @return Whether the fuelTankUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasFuelTankUnlocked(): kotlin.Boolean {
       return _builder.hasFuelTankUnlocked()
@@ -172,16 +162,14 @@ public object ConfigRequestKt {
         _builder.proPermit = value
       }
     /**
-     * <code>optional bool pro_permit = 6;</code>
-     * @return This builder for chaining.
+     * `optional bool pro_permit = 6;`
      */
     public fun clearProPermit() {
       _builder.clearProPermit()
     }
     /**
-     * <code>optional bool pro_permit = 6;</code>
+     * `optional bool pro_permit = 6;`
      * @return Whether the proPermit field is set.
-     * @return This builder for chaining.
      */
     public fun hasProPermit(): kotlin.Boolean {
       return _builder.hasProPermit()
@@ -198,16 +186,14 @@ public object ConfigRequestKt {
         _builder.ultra = value
       }
     /**
-     * <code>optional bool ultra = 7;</code>
-     * @return This builder for chaining.
+     * `optional bool ultra = 7;`
      */
     public fun clearUltra() {
       _builder.clearUltra()
     }
     /**
-     * <code>optional bool ultra = 7;</code>
+     * `optional bool ultra = 7;`
      * @return Whether the ultra field is set.
-     * @return This builder for chaining.
      */
     public fun hasUltra(): kotlin.Boolean {
       return _builder.hasUltra()
@@ -224,16 +210,14 @@ public object ConfigRequestKt {
         _builder.tipsChecksum = value
       }
     /**
-     * <code>optional string tips_checksum = 8;</code>
-     * @return This builder for chaining.
+     * `optional string tips_checksum = 8;`
      */
     public fun clearTipsChecksum() {
       _builder.clearTipsChecksum()
     }
     /**
-     * <code>optional string tips_checksum = 8;</code>
+     * `optional string tips_checksum = 8;`
      * @return Whether the tipsChecksum field is set.
-     * @return This builder for chaining.
      */
     public fun hasTipsChecksum(): kotlin.Boolean {
       return _builder.hasTipsChecksum()

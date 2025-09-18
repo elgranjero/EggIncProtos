@@ -39,16 +39,14 @@ public object ConsumeArtifactResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object ConsumeArtifactResponseKt {
         _builder.originalItemId = value
       }
     /**
-     * <code>optional uint64 original_item_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint64 original_item_id = 2;`
      */
     public fun clearOriginalItemId() {
       _builder.clearOriginalItemId()
     }
     /**
-     * <code>optional uint64 original_item_id = 2;</code>
+     * `optional uint64 original_item_id = 2;`
      * @return Whether the originalItemId field is set.
-     * @return This builder for chaining.
      */
     public fun hasOriginalItemId(): kotlin.Boolean {
       return _builder.hasOriginalItemId()
@@ -95,18 +91,16 @@ public object ConsumeArtifactResponseKt {
         _builder.additionalItemIdsList
       )
     /**
-     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * `repeated uint64 additional_item_ids = 6;`
      * @param value The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.add(value: kotlin.Long) {
       _builder.addAdditionalItemIds(value)
     }/**
-     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * `repeated uint64 additional_item_ids = 6;`
      * @param value The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAdditionalItemIds")
@@ -114,18 +108,16 @@ public object ConsumeArtifactResponseKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * `repeated uint64 additional_item_ids = 6;`
      * @param values The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllAdditionalItemIds(values)
     }/**
-     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * `repeated uint64 additional_item_ids = 6;`
      * @param values The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllAdditionalItemIds")
@@ -133,18 +125,16 @@ public object ConsumeArtifactResponseKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 additional_item_ids = 6;</code>
+     * `repeated uint64 additional_item_ids = 6;`
      * @param index The index to set the value at.
      * @param value The additionalItemIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setAdditionalItemIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setAdditionalItemIds(index, value)
     }/**
-     * <code>repeated uint64 additional_item_ids = 6;</code>
-     * @return This builder for chaining.
+     * `repeated uint64 additional_item_ids = 6;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearAdditionalItemIds")
@@ -166,9 +156,8 @@ public object ConsumeArtifactResponseKt {
         _builder.byproductsList
       )
     /**
-     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
+     * `repeated .ei.ArtifactSpec byproducts = 3;`
      * @param value The byproducts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addByproducts")
@@ -176,9 +165,8 @@ public object ConsumeArtifactResponseKt {
       _builder.addByproducts(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
+     * `repeated .ei.ArtifactSpec byproducts = 3;`
      * @param value The byproducts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignByproducts")
@@ -187,9 +175,8 @@ public object ConsumeArtifactResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
+     * `repeated .ei.ArtifactSpec byproducts = 3;`
      * @param values The byproducts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllByproducts")
@@ -197,9 +184,8 @@ public object ConsumeArtifactResponseKt {
       _builder.addAllByproducts(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
+     * `repeated .ei.ArtifactSpec byproducts = 3;`
      * @param values The byproducts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllByproducts")
@@ -208,10 +194,9 @@ public object ConsumeArtifactResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
+     * `repeated .ei.ArtifactSpec byproducts = 3;`
      * @param index The index to set the value at.
      * @param value The byproducts to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setByproducts")
@@ -219,8 +204,7 @@ public object ConsumeArtifactResponseKt {
       _builder.setByproducts(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec byproducts = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactSpec byproducts = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearByproducts")
@@ -243,9 +227,8 @@ public object ConsumeArtifactResponseKt {
         _builder.otherRewardsList
       )
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param value The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addOtherRewards")
@@ -253,9 +236,8 @@ public object ConsumeArtifactResponseKt {
       _builder.addOtherRewards(value)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param value The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignOtherRewards")
@@ -264,9 +246,8 @@ public object ConsumeArtifactResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param values The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllOtherRewards")
@@ -274,9 +255,8 @@ public object ConsumeArtifactResponseKt {
       _builder.addAllOtherRewards(values)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param values The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllOtherRewards")
@@ -285,10 +265,9 @@ public object ConsumeArtifactResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param index The index to set the value at.
      * @param value The otherRewards to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setOtherRewards")
@@ -296,8 +275,7 @@ public object ConsumeArtifactResponseKt {
       _builder.setOtherRewards(index, value)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Reward other_rewards = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearOtherRewards")
@@ -316,16 +294,14 @@ public object ConsumeArtifactResponseKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 5;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 5;</code>
+     * `optional string ei_user_id = 5;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()

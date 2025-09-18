@@ -39,16 +39,14 @@ public object CreateCoopRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 10;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 10;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 10;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 10;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object CreateCoopRequestKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 1;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 1;</code>
+     * `optional string contract_identifier = 1;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -94,16 +90,14 @@ public object CreateCoopRequestKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 2;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 2;</code>
+     * `optional string coop_identifier = 2;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -120,16 +114,14 @@ public object CreateCoopRequestKt {
         _builder.public = value
       }
     /**
-     * <code>optional bool public = 13;</code>
-     * @return This builder for chaining.
+     * `optional bool public = 13;`
      */
     public fun clearPublic() {
       _builder.clearPublic()
     }
     /**
-     * <code>optional bool public = 13;</code>
+     * `optional bool public = 13;`
      * @return Whether the public field is set.
-     * @return This builder for chaining.
      */
     public fun hasPublic(): kotlin.Boolean {
       return _builder.hasPublic()
@@ -146,16 +138,14 @@ public object CreateCoopRequestKt {
         _builder.ccOnly = value
       }
     /**
-     * <code>optional bool cc_only = 14;</code>
-     * @return This builder for chaining.
+     * `optional bool cc_only = 14;`
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * <code>optional bool cc_only = 14;</code>
+     * `optional bool cc_only = 14;`
      * @return Whether the ccOnly field is set.
-     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()
@@ -172,16 +162,14 @@ public object CreateCoopRequestKt {
         _builder.allowAllGrades = value
       }
     /**
-     * <code>optional bool allow_all_grades = 16;</code>
-     * @return This builder for chaining.
+     * `optional bool allow_all_grades = 16;`
      */
     public fun clearAllowAllGrades() {
       _builder.clearAllowAllGrades()
     }
     /**
-     * <code>optional bool allow_all_grades = 16;</code>
+     * `optional bool allow_all_grades = 16;`
      * @return Whether the allowAllGrades field is set.
-     * @return This builder for chaining.
      */
     public fun hasAllowAllGrades(): kotlin.Boolean {
       return _builder.hasAllowAllGrades()
@@ -198,16 +186,14 @@ public object CreateCoopRequestKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 3;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 3;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 3;</code>
+     * `optional double seconds_remaining = 3;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -224,16 +210,14 @@ public object CreateCoopRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 4;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 4;</code>
+     * `optional string user_id = 4;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -250,16 +234,14 @@ public object CreateCoopRequestKt {
         _builder.userName = value
       }
     /**
-     * <code>optional string user_name = 5;</code>
-     * @return This builder for chaining.
+     * `optional string user_name = 5;`
      */
     public fun clearUserName() {
       _builder.clearUserName()
     }
     /**
-     * <code>optional string user_name = 5;</code>
+     * `optional string user_name = 5;`
      * @return Whether the userName field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserName(): kotlin.Boolean {
       return _builder.hasUserName()
@@ -276,16 +258,14 @@ public object CreateCoopRequestKt {
         _builder.soulPower = value
       }
     /**
-     * <code>optional double soul_power = 8;</code>
-     * @return This builder for chaining.
+     * `optional double soul_power = 8;`
      */
     public fun clearSoulPower() {
       _builder.clearSoulPower()
     }
     /**
-     * <code>optional double soul_power = 8;</code>
+     * `optional double soul_power = 8;`
      * @return Whether the soulPower field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulPower(): kotlin.Boolean {
       return _builder.hasSoulPower()
@@ -302,16 +282,14 @@ public object CreateCoopRequestKt {
         _builder.eop = value
       }
     /**
-     * <code>optional double eop = 11;</code>
-     * @return This builder for chaining.
+     * `optional double eop = 11;`
      */
     public fun clearEop() {
       _builder.clearEop()
     }
     /**
-     * <code>optional double eop = 11;</code>
+     * `optional double eop = 11;`
      * @return Whether the eop field is set.
-     * @return This builder for chaining.
      */
     public fun hasEop(): kotlin.Boolean {
       return _builder.hasEop()
@@ -328,16 +306,14 @@ public object CreateCoopRequestKt {
         _builder.league = value
       }
     /**
-     * <code>optional uint32 league = 9;</code>
-     * @return This builder for chaining.
+     * `optional uint32 league = 9;`
      */
     public fun clearLeague() {
       _builder.clearLeague()
     }
     /**
-     * <code>optional uint32 league = 9;</code>
+     * `optional uint32 league = 9;`
      * @return Whether the league field is set.
-     * @return This builder for chaining.
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
@@ -354,16 +330,14 @@ public object CreateCoopRequestKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 12;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 12;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -380,16 +354,14 @@ public object CreateCoopRequestKt {
         _builder.pointsReplay = value
       }
     /**
-     * <code>optional bool points_replay = 15;</code>
-     * @return This builder for chaining.
+     * `optional bool points_replay = 15;`
      */
     public fun clearPointsReplay() {
       _builder.clearPointsReplay()
     }
     /**
-     * <code>optional bool points_replay = 15;</code>
+     * `optional bool points_replay = 15;`
      * @return Whether the pointsReplay field is set.
-     * @return This builder for chaining.
      */
     public fun hasPointsReplay(): kotlin.Boolean {
       return _builder.hasPointsReplay()
@@ -406,16 +378,14 @@ public object CreateCoopRequestKt {
         _builder.platform = value
       }
     /**
-     * <code>optional .ei.Platform platform = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Platform platform = 6;`
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * <code>optional .ei.Platform platform = 6;</code>
+     * `optional .ei.Platform platform = 6;`
      * @return Whether the platform field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -432,16 +402,14 @@ public object CreateCoopRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 7;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 7;</code>
+     * `optional uint32 client_version = 7;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

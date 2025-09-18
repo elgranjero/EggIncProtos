@@ -43,9 +43,8 @@ public object TipsDBKt {
         _builder.tipsList
       )
     /**
-     * <code>repeated .ei.InGameMail tips = 1;</code>
+     * `repeated .ei.InGameMail tips = 1;`
      * @param value The tips to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTips")
@@ -53,9 +52,8 @@ public object TipsDBKt {
       _builder.addTips(value)
     }
     /**
-     * <code>repeated .ei.InGameMail tips = 1;</code>
+     * `repeated .ei.InGameMail tips = 1;`
      * @param value The tips to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTips")
@@ -64,9 +62,8 @@ public object TipsDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.InGameMail tips = 1;</code>
+     * `repeated .ei.InGameMail tips = 1;`
      * @param values The tips to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTips")
@@ -74,9 +71,8 @@ public object TipsDBKt {
       _builder.addAllTips(values)
     }
     /**
-     * <code>repeated .ei.InGameMail tips = 1;</code>
+     * `repeated .ei.InGameMail tips = 1;`
      * @param values The tips to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTips")
@@ -85,10 +81,9 @@ public object TipsDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.InGameMail tips = 1;</code>
+     * `repeated .ei.InGameMail tips = 1;`
      * @param index The index to set the value at.
      * @param value The tips to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTips")
@@ -96,8 +91,7 @@ public object TipsDBKt {
       _builder.setTips(index, value)
     }
     /**
-     * <code>repeated .ei.InGameMail tips = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.InGameMail tips = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTips")

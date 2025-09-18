@@ -43,9 +43,8 @@ public object ContractSeasonInfosKt {
         _builder.infosList
       )
     /**
-     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
+     * `repeated .ei.ContractSeasonInfo infos = 1;`
      * @param value The infos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addInfos")
@@ -53,9 +52,8 @@ public object ContractSeasonInfosKt {
       _builder.addInfos(value)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
+     * `repeated .ei.ContractSeasonInfo infos = 1;`
      * @param value The infos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignInfos")
@@ -64,9 +62,8 @@ public object ContractSeasonInfosKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
+     * `repeated .ei.ContractSeasonInfo infos = 1;`
      * @param values The infos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllInfos")
@@ -74,9 +71,8 @@ public object ContractSeasonInfosKt {
       _builder.addAllInfos(values)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
+     * `repeated .ei.ContractSeasonInfo infos = 1;`
      * @param values The infos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllInfos")
@@ -85,10 +81,9 @@ public object ContractSeasonInfosKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
+     * `repeated .ei.ContractSeasonInfo infos = 1;`
      * @param index The index to set the value at.
      * @param value The infos to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setInfos")
@@ -96,8 +91,7 @@ public object ContractSeasonInfosKt {
       _builder.setInfos(index, value)
     }
     /**
-     * <code>repeated .ei.ContractSeasonInfo infos = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractSeasonInfo infos = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearInfos")

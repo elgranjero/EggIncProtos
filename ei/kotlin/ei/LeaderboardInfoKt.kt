@@ -43,9 +43,8 @@ public object LeaderboardInfoKt {
         _builder.seasonsList
       )
     /**
-     * <code>repeated .ei.LeaderboardInfo.Season seasons = 1;</code>
+     * `repeated .ei.LeaderboardInfo.Season seasons = 1;`
      * @param value The seasons to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addSeasons")
@@ -53,9 +52,8 @@ public object LeaderboardInfoKt {
       _builder.addSeasons(value)
     }
     /**
-     * <code>repeated .ei.LeaderboardInfo.Season seasons = 1;</code>
+     * `repeated .ei.LeaderboardInfo.Season seasons = 1;`
      * @param value The seasons to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignSeasons")
@@ -64,9 +62,8 @@ public object LeaderboardInfoKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.LeaderboardInfo.Season seasons = 1;</code>
+     * `repeated .ei.LeaderboardInfo.Season seasons = 1;`
      * @param values The seasons to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllSeasons")
@@ -74,9 +71,8 @@ public object LeaderboardInfoKt {
       _builder.addAllSeasons(values)
     }
     /**
-     * <code>repeated .ei.LeaderboardInfo.Season seasons = 1;</code>
+     * `repeated .ei.LeaderboardInfo.Season seasons = 1;`
      * @param values The seasons to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllSeasons")
@@ -85,10 +81,9 @@ public object LeaderboardInfoKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.LeaderboardInfo.Season seasons = 1;</code>
+     * `repeated .ei.LeaderboardInfo.Season seasons = 1;`
      * @param index The index to set the value at.
      * @param value The seasons to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setSeasons")
@@ -96,8 +91,7 @@ public object LeaderboardInfoKt {
       _builder.setSeasons(index, value)
     }
     /**
-     * <code>repeated .ei.LeaderboardInfo.Season seasons = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.LeaderboardInfo.Season seasons = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearSeasons")
@@ -116,16 +110,14 @@ public object LeaderboardInfoKt {
         _builder.allTimeScope = value
       }
     /**
-     * <code>optional string all_time_scope = 2;</code>
-     * @return This builder for chaining.
+     * `optional string all_time_scope = 2;`
      */
     public fun clearAllTimeScope() {
       _builder.clearAllTimeScope()
     }
     /**
-     * <code>optional string all_time_scope = 2;</code>
+     * `optional string all_time_scope = 2;`
      * @return Whether the allTimeScope field is set.
-     * @return This builder for chaining.
      */
     public fun hasAllTimeScope(): kotlin.Boolean {
       return _builder.hasAllTimeScope()
@@ -164,16 +156,14 @@ public object LeaderboardInfoKt {
           _builder.scope = value
         }
       /**
-       * <code>optional string scope = 1;</code>
-       * @return This builder for chaining.
+       * `optional string scope = 1;`
        */
       public fun clearScope() {
         _builder.clearScope()
       }
       /**
-       * <code>optional string scope = 1;</code>
+       * `optional string scope = 1;`
        * @return Whether the scope field is set.
-       * @return This builder for chaining.
        */
       public fun hasScope(): kotlin.Boolean {
         return _builder.hasScope()
@@ -190,16 +180,14 @@ public object LeaderboardInfoKt {
           _builder.name = value
         }
       /**
-       * <code>optional string name = 2;</code>
-       * @return This builder for chaining.
+       * `optional string name = 2;`
        */
       public fun clearName() {
         _builder.clearName()
       }
       /**
-       * <code>optional string name = 2;</code>
+       * `optional string name = 2;`
        * @return Whether the name field is set.
-       * @return This builder for chaining.
        */
       public fun hasName(): kotlin.Boolean {
         return _builder.hasName()

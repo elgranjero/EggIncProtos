@@ -39,16 +39,14 @@ public object AuthenticateArtifactResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object AuthenticateArtifactResponseKt {
         _builder.originalItemId = value
       }
     /**
-     * <code>optional uint64 original_item_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint64 original_item_id = 2;`
      */
     public fun clearOriginalItemId() {
       _builder.clearOriginalItemId()
     }
     /**
-     * <code>optional uint64 original_item_id = 2;</code>
+     * `optional uint64 original_item_id = 2;`
      * @return Whether the originalItemId field is set.
-     * @return This builder for chaining.
      */
     public fun hasOriginalItemId(): kotlin.Boolean {
       return _builder.hasOriginalItemId()
@@ -91,16 +87,14 @@ public object AuthenticateArtifactResponseKt {
         _builder.demote = value
       }
     /**
-     * <code>optional bool demote = 3;</code>
-     * @return This builder for chaining.
+     * `optional bool demote = 3;`
      */
     public fun clearDemote() {
       _builder.clearDemote()
     }
     /**
-     * <code>optional bool demote = 3;</code>
+     * `optional bool demote = 3;`
      * @return Whether the demote field is set.
-     * @return This builder for chaining.
      */
     public fun hasDemote(): kotlin.Boolean {
       return _builder.hasDemote()
@@ -117,16 +111,14 @@ public object AuthenticateArtifactResponseKt {
         _builder.delete = value
       }
     /**
-     * <code>optional bool delete = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool delete = 4;`
      */
     public fun clearDelete() {
       _builder.clearDelete()
     }
     /**
-     * <code>optional bool delete = 4;</code>
+     * `optional bool delete = 4;`
      * @return Whether the delete field is set.
-     * @return This builder for chaining.
      */
     public fun hasDelete(): kotlin.Boolean {
       return _builder.hasDelete()
@@ -143,16 +135,14 @@ public object AuthenticateArtifactResponseKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 5;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 5;</code>
+     * `optional string ei_user_id = 5;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()

@@ -39,16 +39,14 @@ public object AdAttributionRowKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object AdAttributionRowKt {
         _builder.adId = value
       }
     /**
-     * <code>optional string ad_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string ad_id = 2;`
      */
     public fun clearAdId() {
       _builder.clearAdId()
     }
     /**
-     * <code>optional string ad_id = 2;</code>
+     * `optional string ad_id = 2;`
      * @return Whether the adId field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdId(): kotlin.Boolean {
       return _builder.hasAdId()
@@ -91,16 +87,14 @@ public object AdAttributionRowKt {
         _builder.adNetwork = value
       }
     /**
-     * <code>optional string ad_network = 3;</code>
-     * @return This builder for chaining.
+     * `optional string ad_network = 3;`
      */
     public fun clearAdNetwork() {
       _builder.clearAdNetwork()
     }
     /**
-     * <code>optional string ad_network = 3;</code>
+     * `optional string ad_network = 3;`
      * @return Whether the adNetwork field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdNetwork(): kotlin.Boolean {
       return _builder.hasAdNetwork()
@@ -117,16 +111,14 @@ public object AdAttributionRowKt {
         _builder.campaign = value
       }
     /**
-     * <code>optional string campaign = 4;</code>
-     * @return This builder for chaining.
+     * `optional string campaign = 4;`
      */
     public fun clearCampaign() {
       _builder.clearCampaign()
     }
     /**
-     * <code>optional string campaign = 4;</code>
+     * `optional string campaign = 4;`
      * @return Whether the campaign field is set.
-     * @return This builder for chaining.
      */
     public fun hasCampaign(): kotlin.Boolean {
       return _builder.hasCampaign()
@@ -143,16 +135,14 @@ public object AdAttributionRowKt {
         _builder.keyword = value
       }
     /**
-     * <code>optional string keyword = 5;</code>
-     * @return This builder for chaining.
+     * `optional string keyword = 5;`
      */
     public fun clearKeyword() {
       _builder.clearKeyword()
     }
     /**
-     * <code>optional string keyword = 5;</code>
+     * `optional string keyword = 5;`
      * @return Whether the keyword field is set.
-     * @return This builder for chaining.
      */
     public fun hasKeyword(): kotlin.Boolean {
       return _builder.hasKeyword()
@@ -169,16 +159,14 @@ public object AdAttributionRowKt {
         _builder.extra = value
       }
     /**
-     * <code>optional string extra = 6;</code>
-     * @return This builder for chaining.
+     * `optional string extra = 6;`
      */
     public fun clearExtra() {
       _builder.clearExtra()
     }
     /**
-     * <code>optional string extra = 6;</code>
+     * `optional string extra = 6;`
      * @return Whether the extra field is set.
-     * @return This builder for chaining.
      */
     public fun hasExtra(): kotlin.Boolean {
       return _builder.hasExtra()
@@ -195,16 +183,14 @@ public object AdAttributionRowKt {
         _builder.clickDate = value
       }
     /**
-     * <code>optional float click_date = 7;</code>
-     * @return This builder for chaining.
+     * `optional float click_date = 7;`
      */
     public fun clearClickDate() {
       _builder.clearClickDate()
     }
     /**
-     * <code>optional float click_date = 7;</code>
+     * `optional float click_date = 7;`
      * @return Whether the clickDate field is set.
-     * @return This builder for chaining.
      */
     public fun hasClickDate(): kotlin.Boolean {
       return _builder.hasClickDate()
@@ -221,16 +207,14 @@ public object AdAttributionRowKt {
         _builder.downloadDate = value
       }
     /**
-     * <code>optional float download_date = 8;</code>
-     * @return This builder for chaining.
+     * `optional float download_date = 8;`
      */
     public fun clearDownloadDate() {
       _builder.clearDownloadDate()
     }
     /**
-     * <code>optional float download_date = 8;</code>
+     * `optional float download_date = 8;`
      * @return Whether the downloadDate field is set.
-     * @return This builder for chaining.
      */
     public fun hasDownloadDate(): kotlin.Boolean {
       return _builder.hasDownloadDate()
@@ -247,16 +231,14 @@ public object AdAttributionRowKt {
         _builder.approxTime = value
       }
     /**
-     * <code>optional float approx_time = 9;</code>
-     * @return This builder for chaining.
+     * `optional float approx_time = 9;`
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * <code>optional float approx_time = 9;</code>
+     * `optional float approx_time = 9;`
      * @return Whether the approxTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()

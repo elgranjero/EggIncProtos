@@ -39,16 +39,14 @@ public object UserDataInfoResponseKt {
         _builder.backupChecksum = value
       }
     /**
-     * <code>optional uint64 backup_checksum = 1;</code>
-     * @return This builder for chaining.
+     * `optional uint64 backup_checksum = 1;`
      */
     public fun clearBackupChecksum() {
       _builder.clearBackupChecksum()
     }
     /**
-     * <code>optional uint64 backup_checksum = 1;</code>
+     * `optional uint64 backup_checksum = 1;`
      * @return Whether the backupChecksum field is set.
-     * @return This builder for chaining.
      */
     public fun hasBackupChecksum(): kotlin.Boolean {
       return _builder.hasBackupChecksum()
@@ -65,16 +63,14 @@ public object UserDataInfoResponseKt {
         _builder.backupTotalCash = value
       }
     /**
-     * <code>optional double backup_total_cash = 2;</code>
-     * @return This builder for chaining.
+     * `optional double backup_total_cash = 2;`
      */
     public fun clearBackupTotalCash() {
       _builder.clearBackupTotalCash()
     }
     /**
-     * <code>optional double backup_total_cash = 2;</code>
+     * `optional double backup_total_cash = 2;`
      * @return Whether the backupTotalCash field is set.
-     * @return This builder for chaining.
      */
     public fun hasBackupTotalCash(): kotlin.Boolean {
       return _builder.hasBackupTotalCash()
@@ -87,9 +83,8 @@ public object UserDataInfoResponseKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class CoopMembershipsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string coop_memberships = 3;</code>
+     * `repeated string coop_memberships = 3;`
      * @return A list containing the coopMemberships.
-     * @return This builder for chaining.
      */
     public val coopMemberships: com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -97,9 +92,8 @@ public object UserDataInfoResponseKt {
         _builder.coopMembershipsList
       )
     /**
-     * <code>repeated string coop_memberships = 3;</code>
+     * `repeated string coop_memberships = 3;`
      * @param value The coopMemberships to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCoopMemberships")
@@ -107,9 +101,8 @@ public object UserDataInfoResponseKt {
       _builder.addCoopMemberships(value)
     }
     /**
-     * <code>repeated string coop_memberships = 3;</code>
+     * `repeated string coop_memberships = 3;`
      * @param value The coopMemberships to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCoopMemberships")
@@ -118,9 +111,8 @@ public object UserDataInfoResponseKt {
       add(value)
     }
     /**
-     * <code>repeated string coop_memberships = 3;</code>
+     * `repeated string coop_memberships = 3;`
      * @param values The coopMemberships to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCoopMemberships")
@@ -128,9 +120,8 @@ public object UserDataInfoResponseKt {
       _builder.addAllCoopMemberships(values)
     }
     /**
-     * <code>repeated string coop_memberships = 3;</code>
+     * `repeated string coop_memberships = 3;`
      * @param values The coopMemberships to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCoopMemberships")
@@ -139,18 +130,16 @@ public object UserDataInfoResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated string coop_memberships = 3;</code>
+     * `repeated string coop_memberships = 3;`
      * @param index The index to set the value at.
      * @param value The coopMemberships to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCoopMemberships")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, CoopMembershipsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setCoopMemberships(index, value)
     }/**
-     * <code>repeated string coop_memberships = 3;</code>
-     * @return This builder for chaining.
+     * `repeated string coop_memberships = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCoopMemberships")

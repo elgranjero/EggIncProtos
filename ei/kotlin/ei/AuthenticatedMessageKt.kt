@@ -39,16 +39,14 @@ public object AuthenticatedMessageKt {
         _builder.message = value
       }
     /**
-     * <code>optional bytes message = 1;</code>
-     * @return This builder for chaining.
+     * `optional bytes message = 1;`
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * <code>optional bytes message = 1;</code>
+     * `optional bytes message = 1;`
      * @return Whether the message field is set.
-     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -65,16 +63,14 @@ public object AuthenticatedMessageKt {
         _builder.version = value
       }
     /**
-     * <code>optional uint32 version = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint32 version = 3;`
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * <code>optional uint32 version = 3;</code>
+     * `optional uint32 version = 3;`
      * @return Whether the version field is set.
-     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -91,16 +87,14 @@ public object AuthenticatedMessageKt {
         _builder.code = value
       }
     /**
-     * <code>optional string code = 2;</code>
-     * @return This builder for chaining.
+     * `optional string code = 2;`
      */
     public fun clearCode() {
       _builder.clearCode()
     }
     /**
-     * <code>optional string code = 2;</code>
+     * `optional string code = 2;`
      * @return Whether the code field is set.
-     * @return This builder for chaining.
      */
     public fun hasCode(): kotlin.Boolean {
       return _builder.hasCode()
@@ -117,16 +111,14 @@ public object AuthenticatedMessageKt {
         _builder.compressed = value
       }
     /**
-     * <code>optional bool compressed = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool compressed = 4;`
      */
     public fun clearCompressed() {
       _builder.clearCompressed()
     }
     /**
-     * <code>optional bool compressed = 4;</code>
+     * `optional bool compressed = 4;`
      * @return Whether the compressed field is set.
-     * @return This builder for chaining.
      */
     public fun hasCompressed(): kotlin.Boolean {
       return _builder.hasCompressed()
@@ -143,16 +135,14 @@ public object AuthenticatedMessageKt {
         _builder.originalSize = value
       }
     /**
-     * <code>optional uint32 original_size = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 original_size = 5;`
      */
     public fun clearOriginalSize() {
       _builder.clearOriginalSize()
     }
     /**
-     * <code>optional uint32 original_size = 5;</code>
+     * `optional uint32 original_size = 5;`
      * @return Whether the originalSize field is set.
-     * @return This builder for chaining.
      */
     public fun hasOriginalSize(): kotlin.Boolean {
       return _builder.hasOriginalSize()
@@ -169,16 +159,14 @@ public object AuthenticatedMessageKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 6;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 6;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 6;</code>
+     * `optional string user_id = 6;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()

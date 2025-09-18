@@ -39,16 +39,14 @@ public object ContractCitationKt {
         _builder.issue = value
       }
     /**
-     * <code>optional .ei.ContractEvaluation.PoorBehavior issue = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractEvaluation.PoorBehavior issue = 1;`
      */
     public fun clearIssue() {
       _builder.clearIssue()
     }
     /**
-     * <code>optional .ei.ContractEvaluation.PoorBehavior issue = 1;</code>
+     * `optional .ei.ContractEvaluation.PoorBehavior issue = 1;`
      * @return Whether the issue field is set.
-     * @return This builder for chaining.
      */
     public fun hasIssue(): kotlin.Boolean {
       return _builder.hasIssue()
@@ -65,16 +63,14 @@ public object ContractCitationKt {
         _builder.timestamp = value
       }
     /**
-     * <code>optional double timestamp = 2;</code>
-     * @return This builder for chaining.
+     * `optional double timestamp = 2;`
      */
     public fun clearTimestamp() {
       _builder.clearTimestamp()
     }
     /**
-     * <code>optional double timestamp = 2;</code>
+     * `optional double timestamp = 2;`
      * @return Whether the timestamp field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimestamp(): kotlin.Boolean {
       return _builder.hasTimestamp()
@@ -91,16 +87,14 @@ public object ContractCitationKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 3;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 3;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()

@@ -43,9 +43,8 @@ public object LeaderboardAnalysisKt {
         _builder.chunksList
       )
     /**
-     * <code>repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;</code>
+     * `repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;`
      * @param value The chunks to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addChunks")
@@ -53,9 +52,8 @@ public object LeaderboardAnalysisKt {
       _builder.addChunks(value)
     }
     /**
-     * <code>repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;</code>
+     * `repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;`
      * @param value The chunks to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignChunks")
@@ -64,9 +62,8 @@ public object LeaderboardAnalysisKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;</code>
+     * `repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;`
      * @param values The chunks to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllChunks")
@@ -74,9 +71,8 @@ public object LeaderboardAnalysisKt {
       _builder.addAllChunks(values)
     }
     /**
-     * <code>repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;</code>
+     * `repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;`
      * @param values The chunks to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllChunks")
@@ -85,10 +81,9 @@ public object LeaderboardAnalysisKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;</code>
+     * `repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;`
      * @param index The index to set the value at.
      * @param value The chunks to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setChunks")
@@ -96,8 +91,7 @@ public object LeaderboardAnalysisKt {
       _builder.setChunks(index, value)
     }
     /**
-     * <code>repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.LeaderboardAnalysis.Chunk chunks = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearChunks")
@@ -116,16 +110,14 @@ public object LeaderboardAnalysisKt {
         _builder.count = value
       }
     /**
-     * <code>optional uint32 count = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 count = 2;`
      */
     public fun clearCount() {
       _builder.clearCount()
     }
     /**
-     * <code>optional uint32 count = 2;</code>
+     * `optional uint32 count = 2;`
      * @return Whether the count field is set.
-     * @return This builder for chaining.
      */
     public fun hasCount(): kotlin.Boolean {
       return _builder.hasCount()
@@ -142,16 +134,14 @@ public object LeaderboardAnalysisKt {
         _builder.highScore = value
       }
     /**
-     * <code>optional double high_score = 3;</code>
-     * @return This builder for chaining.
+     * `optional double high_score = 3;`
      */
     public fun clearHighScore() {
       _builder.clearHighScore()
     }
     /**
-     * <code>optional double high_score = 3;</code>
+     * `optional double high_score = 3;`
      * @return Whether the highScore field is set.
-     * @return This builder for chaining.
      */
     public fun hasHighScore(): kotlin.Boolean {
       return _builder.hasHighScore()
@@ -168,16 +158,14 @@ public object LeaderboardAnalysisKt {
         _builder.lowScore = value
       }
     /**
-     * <code>optional double low_score = 4;</code>
-     * @return This builder for chaining.
+     * `optional double low_score = 4;`
      */
     public fun clearLowScore() {
       _builder.clearLowScore()
     }
     /**
-     * <code>optional double low_score = 4;</code>
+     * `optional double low_score = 4;`
      * @return Whether the lowScore field is set.
-     * @return This builder for chaining.
      */
     public fun hasLowScore(): kotlin.Boolean {
       return _builder.hasLowScore()
@@ -194,16 +182,14 @@ public object LeaderboardAnalysisKt {
         _builder.cursor = value
       }
     /**
-     * <code>optional string cursor = 5;</code>
-     * @return This builder for chaining.
+     * `optional string cursor = 5;`
      */
     public fun clearCursor() {
       _builder.clearCursor()
     }
     /**
-     * <code>optional string cursor = 5;</code>
+     * `optional string cursor = 5;`
      * @return Whether the cursor field is set.
-     * @return This builder for chaining.
      */
     public fun hasCursor(): kotlin.Boolean {
       return _builder.hasCursor()
@@ -242,16 +228,14 @@ public object LeaderboardAnalysisKt {
           _builder.startIndex = value
         }
       /**
-       * <code>optional uint32 start_index = 1;</code>
-       * @return This builder for chaining.
+       * `optional uint32 start_index = 1;`
        */
       public fun clearStartIndex() {
         _builder.clearStartIndex()
       }
       /**
-       * <code>optional uint32 start_index = 1;</code>
+       * `optional uint32 start_index = 1;`
        * @return Whether the startIndex field is set.
-       * @return This builder for chaining.
        */
       public fun hasStartIndex(): kotlin.Boolean {
         return _builder.hasStartIndex()
@@ -268,16 +252,14 @@ public object LeaderboardAnalysisKt {
           _builder.endIndex = value
         }
       /**
-       * <code>optional uint32 end_index = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 end_index = 2;`
        */
       public fun clearEndIndex() {
         _builder.clearEndIndex()
       }
       /**
-       * <code>optional uint32 end_index = 2;</code>
+       * `optional uint32 end_index = 2;`
        * @return Whether the endIndex field is set.
-       * @return This builder for chaining.
        */
       public fun hasEndIndex(): kotlin.Boolean {
         return _builder.hasEndIndex()
@@ -294,16 +276,14 @@ public object LeaderboardAnalysisKt {
           _builder.highScore = value
         }
       /**
-       * <code>optional double high_score = 3;</code>
-       * @return This builder for chaining.
+       * `optional double high_score = 3;`
        */
       public fun clearHighScore() {
         _builder.clearHighScore()
       }
       /**
-       * <code>optional double high_score = 3;</code>
+       * `optional double high_score = 3;`
        * @return Whether the highScore field is set.
-       * @return This builder for chaining.
        */
       public fun hasHighScore(): kotlin.Boolean {
         return _builder.hasHighScore()
@@ -320,16 +300,14 @@ public object LeaderboardAnalysisKt {
           _builder.lowScore = value
         }
       /**
-       * <code>optional double low_score = 4;</code>
-       * @return This builder for chaining.
+       * `optional double low_score = 4;`
        */
       public fun clearLowScore() {
         _builder.clearLowScore()
       }
       /**
-       * <code>optional double low_score = 4;</code>
+       * `optional double low_score = 4;`
        * @return Whether the lowScore field is set.
-       * @return This builder for chaining.
        */
       public fun hasLowScore(): kotlin.Boolean {
         return _builder.hasLowScore()
@@ -346,16 +324,14 @@ public object LeaderboardAnalysisKt {
           _builder.startCursor = value
         }
       /**
-       * <code>optional string start_cursor = 5;</code>
-       * @return This builder for chaining.
+       * `optional string start_cursor = 5;`
        */
       public fun clearStartCursor() {
         _builder.clearStartCursor()
       }
       /**
-       * <code>optional string start_cursor = 5;</code>
+       * `optional string start_cursor = 5;`
        * @return Whether the startCursor field is set.
-       * @return This builder for chaining.
        */
       public fun hasStartCursor(): kotlin.Boolean {
         return _builder.hasStartCursor()
@@ -372,16 +348,14 @@ public object LeaderboardAnalysisKt {
           _builder.endCursor = value
         }
       /**
-       * <code>optional string end_cursor = 6;</code>
-       * @return This builder for chaining.
+       * `optional string end_cursor = 6;`
        */
       public fun clearEndCursor() {
         _builder.clearEndCursor()
       }
       /**
-       * <code>optional string end_cursor = 6;</code>
+       * `optional string end_cursor = 6;`
        * @return Whether the endCursor field is set.
-       * @return This builder for chaining.
        */
       public fun hasEndCursor(): kotlin.Boolean {
         return _builder.hasEndCursor()

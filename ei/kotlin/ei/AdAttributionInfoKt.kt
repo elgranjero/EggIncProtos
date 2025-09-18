@@ -39,16 +39,14 @@ public object AdAttributionInfoKt {
         _builder.deviceAdId = value
       }
     /**
-     * <code>optional string device_ad_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string device_ad_id = 1;`
      */
     public fun clearDeviceAdId() {
       _builder.clearDeviceAdId()
     }
     /**
-     * <code>optional string device_ad_id = 1;</code>
+     * `optional string device_ad_id = 1;`
      * @return Whether the deviceAdId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceAdId(): kotlin.Boolean {
       return _builder.hasDeviceAdId()
@@ -65,16 +63,14 @@ public object AdAttributionInfoKt {
         _builder.networkName = value
       }
     /**
-     * <code>optional string network_name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string network_name = 2;`
      */
     public fun clearNetworkName() {
       _builder.clearNetworkName()
     }
     /**
-     * <code>optional string network_name = 2;</code>
+     * `optional string network_name = 2;`
      * @return Whether the networkName field is set.
-     * @return This builder for chaining.
      */
     public fun hasNetworkName(): kotlin.Boolean {
       return _builder.hasNetworkName()
@@ -91,16 +87,14 @@ public object AdAttributionInfoKt {
         _builder.attribution = value
       }
     /**
-     * <code>optional bool attribution = 3;</code>
-     * @return This builder for chaining.
+     * `optional bool attribution = 3;`
      */
     public fun clearAttribution() {
       _builder.clearAttribution()
     }
     /**
-     * <code>optional bool attribution = 3;</code>
+     * `optional bool attribution = 3;`
      * @return Whether the attribution field is set.
-     * @return This builder for chaining.
      */
     public fun hasAttribution(): kotlin.Boolean {
       return _builder.hasAttribution()
@@ -117,16 +111,14 @@ public object AdAttributionInfoKt {
         _builder.orgName = value
       }
     /**
-     * <code>optional string org_name = 4;</code>
-     * @return This builder for chaining.
+     * `optional string org_name = 4;`
      */
     public fun clearOrgName() {
       _builder.clearOrgName()
     }
     /**
-     * <code>optional string org_name = 4;</code>
+     * `optional string org_name = 4;`
      * @return Whether the orgName field is set.
-     * @return This builder for chaining.
      */
     public fun hasOrgName(): kotlin.Boolean {
       return _builder.hasOrgName()
@@ -143,16 +135,14 @@ public object AdAttributionInfoKt {
         _builder.orgId = value
       }
     /**
-     * <code>optional string org_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string org_id = 5;`
      */
     public fun clearOrgId() {
       _builder.clearOrgId()
     }
     /**
-     * <code>optional string org_id = 5;</code>
+     * `optional string org_id = 5;`
      * @return Whether the orgId field is set.
-     * @return This builder for chaining.
      */
     public fun hasOrgId(): kotlin.Boolean {
       return _builder.hasOrgId()
@@ -169,16 +159,14 @@ public object AdAttributionInfoKt {
         _builder.campaignName = value
       }
     /**
-     * <code>optional string campaign_name = 6;</code>
-     * @return This builder for chaining.
+     * `optional string campaign_name = 6;`
      */
     public fun clearCampaignName() {
       _builder.clearCampaignName()
     }
     /**
-     * <code>optional string campaign_name = 6;</code>
+     * `optional string campaign_name = 6;`
      * @return Whether the campaignName field is set.
-     * @return This builder for chaining.
      */
     public fun hasCampaignName(): kotlin.Boolean {
       return _builder.hasCampaignName()
@@ -195,16 +183,14 @@ public object AdAttributionInfoKt {
         _builder.campaignId = value
       }
     /**
-     * <code>optional string campaign_id = 7;</code>
-     * @return This builder for chaining.
+     * `optional string campaign_id = 7;`
      */
     public fun clearCampaignId() {
       _builder.clearCampaignId()
     }
     /**
-     * <code>optional string campaign_id = 7;</code>
+     * `optional string campaign_id = 7;`
      * @return Whether the campaignId field is set.
-     * @return This builder for chaining.
      */
     public fun hasCampaignId(): kotlin.Boolean {
       return _builder.hasCampaignId()
@@ -221,16 +207,14 @@ public object AdAttributionInfoKt {
         _builder.clickDate = value
       }
     /**
-     * <code>optional string click_date = 8;</code>
-     * @return This builder for chaining.
+     * `optional string click_date = 8;`
      */
     public fun clearClickDate() {
       _builder.clearClickDate()
     }
     /**
-     * <code>optional string click_date = 8;</code>
+     * `optional string click_date = 8;`
      * @return Whether the clickDate field is set.
-     * @return This builder for chaining.
      */
     public fun hasClickDate(): kotlin.Boolean {
       return _builder.hasClickDate()
@@ -247,16 +231,14 @@ public object AdAttributionInfoKt {
         _builder.conversionDate = value
       }
     /**
-     * <code>optional string conversion_date = 9;</code>
-     * @return This builder for chaining.
+     * `optional string conversion_date = 9;`
      */
     public fun clearConversionDate() {
       _builder.clearConversionDate()
     }
     /**
-     * <code>optional string conversion_date = 9;</code>
+     * `optional string conversion_date = 9;`
      * @return Whether the conversionDate field is set.
-     * @return This builder for chaining.
      */
     public fun hasConversionDate(): kotlin.Boolean {
       return _builder.hasConversionDate()
@@ -273,16 +255,14 @@ public object AdAttributionInfoKt {
         _builder.conversionType = value
       }
     /**
-     * <code>optional string conversion_type = 10;</code>
-     * @return This builder for chaining.
+     * `optional string conversion_type = 10;`
      */
     public fun clearConversionType() {
       _builder.clearConversionType()
     }
     /**
-     * <code>optional string conversion_type = 10;</code>
+     * `optional string conversion_type = 10;`
      * @return Whether the conversionType field is set.
-     * @return This builder for chaining.
      */
     public fun hasConversionType(): kotlin.Boolean {
       return _builder.hasConversionType()
@@ -299,16 +279,14 @@ public object AdAttributionInfoKt {
         _builder.geo = value
       }
     /**
-     * <code>optional string geo = 11;</code>
-     * @return This builder for chaining.
+     * `optional string geo = 11;`
      */
     public fun clearGeo() {
       _builder.clearGeo()
     }
     /**
-     * <code>optional string geo = 11;</code>
+     * `optional string geo = 11;`
      * @return Whether the geo field is set.
-     * @return This builder for chaining.
      */
     public fun hasGeo(): kotlin.Boolean {
       return _builder.hasGeo()
@@ -325,16 +303,14 @@ public object AdAttributionInfoKt {
         _builder.adgroupName = value
       }
     /**
-     * <code>optional string adgroup_name = 12;</code>
-     * @return This builder for chaining.
+     * `optional string adgroup_name = 12;`
      */
     public fun clearAdgroupName() {
       _builder.clearAdgroupName()
     }
     /**
-     * <code>optional string adgroup_name = 12;</code>
+     * `optional string adgroup_name = 12;`
      * @return Whether the adgroupName field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdgroupName(): kotlin.Boolean {
       return _builder.hasAdgroupName()
@@ -351,16 +327,14 @@ public object AdAttributionInfoKt {
         _builder.adgroupId = value
       }
     /**
-     * <code>optional string adgroup_id = 13;</code>
-     * @return This builder for chaining.
+     * `optional string adgroup_id = 13;`
      */
     public fun clearAdgroupId() {
       _builder.clearAdgroupId()
     }
     /**
-     * <code>optional string adgroup_id = 13;</code>
+     * `optional string adgroup_id = 13;`
      * @return Whether the adgroupId field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdgroupId(): kotlin.Boolean {
       return _builder.hasAdgroupId()
@@ -377,16 +351,14 @@ public object AdAttributionInfoKt {
         _builder.keyword = value
       }
     /**
-     * <code>optional string keyword = 14;</code>
-     * @return This builder for chaining.
+     * `optional string keyword = 14;`
      */
     public fun clearKeyword() {
       _builder.clearKeyword()
     }
     /**
-     * <code>optional string keyword = 14;</code>
+     * `optional string keyword = 14;`
      * @return Whether the keyword field is set.
-     * @return This builder for chaining.
      */
     public fun hasKeyword(): kotlin.Boolean {
       return _builder.hasKeyword()
@@ -403,16 +375,14 @@ public object AdAttributionInfoKt {
         _builder.keywordId = value
       }
     /**
-     * <code>optional string keyword_id = 15;</code>
-     * @return This builder for chaining.
+     * `optional string keyword_id = 15;`
      */
     public fun clearKeywordId() {
       _builder.clearKeywordId()
     }
     /**
-     * <code>optional string keyword_id = 15;</code>
+     * `optional string keyword_id = 15;`
      * @return Whether the keywordId field is set.
-     * @return This builder for chaining.
      */
     public fun hasKeywordId(): kotlin.Boolean {
       return _builder.hasKeywordId()
@@ -429,16 +399,14 @@ public object AdAttributionInfoKt {
         _builder.keywordExtra = value
       }
     /**
-     * <code>optional string keyword_extra = 16;</code>
-     * @return This builder for chaining.
+     * `optional string keyword_extra = 16;`
      */
     public fun clearKeywordExtra() {
       _builder.clearKeywordExtra()
     }
     /**
-     * <code>optional string keyword_extra = 16;</code>
+     * `optional string keyword_extra = 16;`
      * @return Whether the keywordExtra field is set.
-     * @return This builder for chaining.
      */
     public fun hasKeywordExtra(): kotlin.Boolean {
       return _builder.hasKeywordExtra()
@@ -455,16 +423,14 @@ public object AdAttributionInfoKt {
         _builder.creativesetName = value
       }
     /**
-     * <code>optional string creativeset_name = 17;</code>
-     * @return This builder for chaining.
+     * `optional string creativeset_name = 17;`
      */
     public fun clearCreativesetName() {
       _builder.clearCreativesetName()
     }
     /**
-     * <code>optional string creativeset_name = 17;</code>
+     * `optional string creativeset_name = 17;`
      * @return Whether the creativesetName field is set.
-     * @return This builder for chaining.
      */
     public fun hasCreativesetName(): kotlin.Boolean {
       return _builder.hasCreativesetName()
@@ -481,16 +447,14 @@ public object AdAttributionInfoKt {
         _builder.creativesetId = value
       }
     /**
-     * <code>optional string creativeset_id = 18;</code>
-     * @return This builder for chaining.
+     * `optional string creativeset_id = 18;`
      */
     public fun clearCreativesetId() {
       _builder.clearCreativesetId()
     }
     /**
-     * <code>optional string creativeset_id = 18;</code>
+     * `optional string creativeset_id = 18;`
      * @return Whether the creativesetId field is set.
-     * @return This builder for chaining.
      */
     public fun hasCreativesetId(): kotlin.Boolean {
       return _builder.hasCreativesetId()

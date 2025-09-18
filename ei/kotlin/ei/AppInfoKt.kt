@@ -39,16 +39,14 @@ public object AppInfoKt {
         _builder.versionStr = value
       }
     /**
-     * <code>optional string version_str = 1;</code>
-     * @return This builder for chaining.
+     * `optional string version_str = 1;`
      */
     public fun clearVersionStr() {
       _builder.clearVersionStr()
     }
     /**
-     * <code>optional string version_str = 1;</code>
+     * `optional string version_str = 1;`
      * @return Whether the versionStr field is set.
-     * @return This builder for chaining.
      */
     public fun hasVersionStr(): kotlin.Boolean {
       return _builder.hasVersionStr()
@@ -65,16 +63,14 @@ public object AppInfoKt {
         _builder.sessions = value
       }
     /**
-     * <code>optional uint32 sessions = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 sessions = 2;`
      */
     public fun clearSessions() {
       _builder.clearSessions()
     }
     /**
-     * <code>optional uint32 sessions = 2;</code>
+     * `optional uint32 sessions = 2;`
      * @return Whether the sessions field is set.
-     * @return This builder for chaining.
      */
     public fun hasSessions(): kotlin.Boolean {
       return _builder.hasSessions()
@@ -91,16 +87,14 @@ public object AppInfoKt {
         _builder.numPrestiges = value
       }
     /**
-     * <code>optional uint32 num_prestiges = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint32 num_prestiges = 3;`
      */
     public fun clearNumPrestiges() {
       _builder.clearNumPrestiges()
     }
     /**
-     * <code>optional uint32 num_prestiges = 3;</code>
+     * `optional uint32 num_prestiges = 3;`
      * @return Whether the numPrestiges field is set.
-     * @return This builder for chaining.
      */
     public fun hasNumPrestiges(): kotlin.Boolean {
       return _builder.hasNumPrestiges()
@@ -117,16 +111,14 @@ public object AppInfoKt {
         _builder.soulEggs = value
       }
     /**
-     * <code>optional uint64 soul_eggs = 4;</code>
-     * @return This builder for chaining.
+     * `optional uint64 soul_eggs = 4;`
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * <code>optional uint64 soul_eggs = 4;</code>
+     * `optional uint64 soul_eggs = 4;`
      * @return Whether the soulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -143,16 +135,14 @@ public object AppInfoKt {
         _builder.currentEgg = value
       }
     /**
-     * <code>optional uint32 current_egg = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 current_egg = 5;`
      */
     public fun clearCurrentEgg() {
       _builder.clearCurrentEgg()
     }
     /**
-     * <code>optional uint32 current_egg = 5;</code>
+     * `optional uint32 current_egg = 5;`
      * @return Whether the currentEgg field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentEgg(): kotlin.Boolean {
       return _builder.hasCurrentEgg()
@@ -169,16 +159,14 @@ public object AppInfoKt {
         _builder.goldEarned = value
       }
     /**
-     * <code>optional uint64 gold_earned = 6;</code>
-     * @return This builder for chaining.
+     * `optional uint64 gold_earned = 6;`
      */
     public fun clearGoldEarned() {
       _builder.clearGoldEarned()
     }
     /**
-     * <code>optional uint64 gold_earned = 6;</code>
+     * `optional uint64 gold_earned = 6;`
      * @return Whether the goldEarned field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldEarned(): kotlin.Boolean {
       return _builder.hasGoldEarned()
@@ -195,16 +183,14 @@ public object AppInfoKt {
         _builder.goldSpent = value
       }
     /**
-     * <code>optional uint64 gold_spent = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint64 gold_spent = 7;`
      */
     public fun clearGoldSpent() {
       _builder.clearGoldSpent()
     }
     /**
-     * <code>optional uint64 gold_spent = 7;</code>
+     * `optional uint64 gold_spent = 7;`
      * @return Whether the goldSpent field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldSpent(): kotlin.Boolean {
       return _builder.hasGoldSpent()
@@ -221,16 +207,14 @@ public object AppInfoKt {
         _builder.currentMission = value
       }
     /**
-     * <code>optional uint32 current_mission = 8;</code>
-     * @return This builder for chaining.
+     * `optional uint32 current_mission = 8;`
      */
     public fun clearCurrentMission() {
       _builder.clearCurrentMission()
     }
     /**
-     * <code>optional uint32 current_mission = 8;</code>
+     * `optional uint32 current_mission = 8;`
      * @return Whether the currentMission field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentMission(): kotlin.Boolean {
       return _builder.hasCurrentMission()
@@ -247,16 +231,14 @@ public object AppInfoKt {
         _builder.piggySize = value
       }
     /**
-     * <code>optional uint32 piggy_size = 9;</code>
-     * @return This builder for chaining.
+     * `optional uint32 piggy_size = 9;`
      */
     public fun clearPiggySize() {
       _builder.clearPiggySize()
     }
     /**
-     * <code>optional uint32 piggy_size = 9;</code>
+     * `optional uint32 piggy_size = 9;`
      * @return Whether the piggySize field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggySize(): kotlin.Boolean {
       return _builder.hasPiggySize()
@@ -273,16 +255,14 @@ public object AppInfoKt {
         _builder.numPiggyBreaks = value
       }
     /**
-     * <code>optional uint64 num_piggy_breaks = 10;</code>
-     * @return This builder for chaining.
+     * `optional uint64 num_piggy_breaks = 10;`
      */
     public fun clearNumPiggyBreaks() {
       _builder.clearNumPiggyBreaks()
     }
     /**
-     * <code>optional uint64 num_piggy_breaks = 10;</code>
+     * `optional uint64 num_piggy_breaks = 10;`
      * @return Whether the numPiggyBreaks field is set.
-     * @return This builder for chaining.
      */
     public fun hasNumPiggyBreaks(): kotlin.Boolean {
       return _builder.hasNumPiggyBreaks()
@@ -299,16 +279,14 @@ public object AppInfoKt {
         _builder.verifiedPiggyBreaks = value
       }
     /**
-     * <code>optional uint64 verified_piggy_breaks = 29;</code>
-     * @return This builder for chaining.
+     * `optional uint64 verified_piggy_breaks = 29;`
      */
     public fun clearVerifiedPiggyBreaks() {
       _builder.clearVerifiedPiggyBreaks()
     }
     /**
-     * <code>optional uint64 verified_piggy_breaks = 29;</code>
+     * `optional uint64 verified_piggy_breaks = 29;`
      * @return Whether the verifiedPiggyBreaks field is set.
-     * @return This builder for chaining.
      */
     public fun hasVerifiedPiggyBreaks(): kotlin.Boolean {
       return _builder.hasVerifiedPiggyBreaks()
@@ -325,16 +303,14 @@ public object AppInfoKt {
         _builder.iapPacksPurchased = value
       }
     /**
-     * <code>optional uint64 iap_packs_purchased = 11;</code>
-     * @return This builder for chaining.
+     * `optional uint64 iap_packs_purchased = 11;`
      */
     public fun clearIapPacksPurchased() {
       _builder.clearIapPacksPurchased()
     }
     /**
-     * <code>optional uint64 iap_packs_purchased = 11;</code>
+     * `optional uint64 iap_packs_purchased = 11;`
      * @return Whether the iapPacksPurchased field is set.
-     * @return This builder for chaining.
      */
     public fun hasIapPacksPurchased(): kotlin.Boolean {
       return _builder.hasIapPacksPurchased()
@@ -351,16 +327,14 @@ public object AppInfoKt {
         _builder.permitLevel = value
       }
     /**
-     * <code>optional uint32 permit_level = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint32 permit_level = 12;`
      */
     public fun clearPermitLevel() {
       _builder.clearPermitLevel()
     }
     /**
-     * <code>optional uint32 permit_level = 12;</code>
+     * `optional uint32 permit_level = 12;`
      * @return Whether the permitLevel field is set.
-     * @return This builder for chaining.
      */
     public fun hasPermitLevel(): kotlin.Boolean {
       return _builder.hasPermitLevel()
@@ -377,16 +351,14 @@ public object AppInfoKt {
         _builder.videoDoublerUses = value
       }
     /**
-     * <code>optional uint64 video_doubler_uses = 15;</code>
-     * @return This builder for chaining.
+     * `optional uint64 video_doubler_uses = 15;`
      */
     public fun clearVideoDoublerUses() {
       _builder.clearVideoDoublerUses()
     }
     /**
-     * <code>optional uint64 video_doubler_uses = 15;</code>
+     * `optional uint64 video_doubler_uses = 15;`
      * @return Whether the videoDoublerUses field is set.
-     * @return This builder for chaining.
      */
     public fun hasVideoDoublerUses(): kotlin.Boolean {
       return _builder.hasVideoDoublerUses()
@@ -403,16 +375,14 @@ public object AppInfoKt {
         _builder.droneTakedowns = value
       }
     /**
-     * <code>optional uint64 drone_takedowns = 18;</code>
-     * @return This builder for chaining.
+     * `optional uint64 drone_takedowns = 18;`
      */
     public fun clearDroneTakedowns() {
       _builder.clearDroneTakedowns()
     }
     /**
-     * <code>optional uint64 drone_takedowns = 18;</code>
+     * `optional uint64 drone_takedowns = 18;`
      * @return Whether the droneTakedowns field is set.
-     * @return This builder for chaining.
      */
     public fun hasDroneTakedowns(): kotlin.Boolean {
       return _builder.hasDroneTakedowns()
@@ -429,16 +399,14 @@ public object AppInfoKt {
         _builder.droneTakedownsElite = value
       }
     /**
-     * <code>optional uint64 drone_takedowns_elite = 19;</code>
-     * @return This builder for chaining.
+     * `optional uint64 drone_takedowns_elite = 19;`
      */
     public fun clearDroneTakedownsElite() {
       _builder.clearDroneTakedownsElite()
     }
     /**
-     * <code>optional uint64 drone_takedowns_elite = 19;</code>
+     * `optional uint64 drone_takedowns_elite = 19;`
      * @return Whether the droneTakedownsElite field is set.
-     * @return This builder for chaining.
      */
     public fun hasDroneTakedownsElite(): kotlin.Boolean {
       return _builder.hasDroneTakedownsElite()
@@ -455,16 +423,14 @@ public object AppInfoKt {
         _builder.trophiesUnlocked = value
       }
     /**
-     * <code>optional bool trophies_unlocked = 20;</code>
-     * @return This builder for chaining.
+     * `optional bool trophies_unlocked = 20;`
      */
     public fun clearTrophiesUnlocked() {
       _builder.clearTrophiesUnlocked()
     }
     /**
-     * <code>optional bool trophies_unlocked = 20;</code>
+     * `optional bool trophies_unlocked = 20;`
      * @return Whether the trophiesUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasTrophiesUnlocked(): kotlin.Boolean {
       return _builder.hasTrophiesUnlocked()
@@ -481,16 +447,14 @@ public object AppInfoKt {
         _builder.eggLevel = value
       }
     /**
-     * <code>optional float egg_level = 21;</code>
-     * @return This builder for chaining.
+     * `optional float egg_level = 21;`
      */
     public fun clearEggLevel() {
       _builder.clearEggLevel()
     }
     /**
-     * <code>optional float egg_level = 21;</code>
+     * `optional float egg_level = 21;`
      * @return Whether the eggLevel field is set.
-     * @return This builder for chaining.
      */
     public fun hasEggLevel(): kotlin.Boolean {
       return _builder.hasEggLevel()
@@ -507,16 +471,14 @@ public object AppInfoKt {
         _builder.struggleFactor = value
       }
     /**
-     * <code>optional float struggle_factor = 22;</code>
-     * @return This builder for chaining.
+     * `optional float struggle_factor = 22;`
      */
     public fun clearStruggleFactor() {
       _builder.clearStruggleFactor()
     }
     /**
-     * <code>optional float struggle_factor = 22;</code>
+     * `optional float struggle_factor = 22;`
      * @return Whether the struggleFactor field is set.
-     * @return This builder for chaining.
      */
     public fun hasStruggleFactor(): kotlin.Boolean {
       return _builder.hasStruggleFactor()
@@ -533,16 +495,14 @@ public object AppInfoKt {
         _builder.piggyFull = value
       }
     /**
-     * <code>optional bool piggy_full = 23;</code>
-     * @return This builder for chaining.
+     * `optional bool piggy_full = 23;`
      */
     public fun clearPiggyFull() {
       _builder.clearPiggyFull()
     }
     /**
-     * <code>optional bool piggy_full = 23;</code>
+     * `optional bool piggy_full = 23;`
      * @return Whether the piggyFull field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggyFull(): kotlin.Boolean {
       return _builder.hasPiggyFull()
@@ -559,16 +519,14 @@ public object AppInfoKt {
         _builder.piggyFoundFull = value
       }
     /**
-     * <code>optional bool piggy_found_full = 24;</code>
-     * @return This builder for chaining.
+     * `optional bool piggy_found_full = 24;`
      */
     public fun clearPiggyFoundFull() {
       _builder.clearPiggyFoundFull()
     }
     /**
-     * <code>optional bool piggy_found_full = 24;</code>
+     * `optional bool piggy_found_full = 24;`
      * @return Whether the piggyFoundFull field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggyFoundFull(): kotlin.Boolean {
       return _builder.hasPiggyFoundFull()
@@ -585,16 +543,14 @@ public object AppInfoKt {
         _builder.timePiggyFullRealtime = value
       }
     /**
-     * <code>optional double time_piggy_full_realtime = 25;</code>
-     * @return This builder for chaining.
+     * `optional double time_piggy_full_realtime = 25;`
      */
     public fun clearTimePiggyFullRealtime() {
       _builder.clearTimePiggyFullRealtime()
     }
     /**
-     * <code>optional double time_piggy_full_realtime = 25;</code>
+     * `optional double time_piggy_full_realtime = 25;`
      * @return Whether the timePiggyFullRealtime field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimePiggyFullRealtime(): kotlin.Boolean {
       return _builder.hasTimePiggyFullRealtime()
@@ -611,16 +567,14 @@ public object AppInfoKt {
         _builder.timePiggyFullGametime = value
       }
     /**
-     * <code>optional double time_piggy_full_gametime = 26;</code>
-     * @return This builder for chaining.
+     * `optional double time_piggy_full_gametime = 26;`
      */
     public fun clearTimePiggyFullGametime() {
       _builder.clearTimePiggyFullGametime()
     }
     /**
-     * <code>optional double time_piggy_full_gametime = 26;</code>
+     * `optional double time_piggy_full_gametime = 26;`
      * @return Whether the timePiggyFullGametime field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimePiggyFullGametime(): kotlin.Boolean {
       return _builder.hasTimePiggyFullGametime()
@@ -637,16 +591,14 @@ public object AppInfoKt {
         _builder.lostPiggyIncrements = value
       }
     /**
-     * <code>optional uint64 lost_piggy_increments = 27;</code>
-     * @return This builder for chaining.
+     * `optional uint64 lost_piggy_increments = 27;`
      */
     public fun clearLostPiggyIncrements() {
       _builder.clearLostPiggyIncrements()
     }
     /**
-     * <code>optional uint64 lost_piggy_increments = 27;</code>
+     * `optional uint64 lost_piggy_increments = 27;`
      * @return Whether the lostPiggyIncrements field is set.
-     * @return This builder for chaining.
      */
     public fun hasLostPiggyIncrements(): kotlin.Boolean {
       return _builder.hasLostPiggyIncrements()
@@ -663,16 +615,14 @@ public object AppInfoKt {
         _builder.saleId = value
       }
     /**
-     * <code>optional string sale_id = 28;</code>
-     * @return This builder for chaining.
+     * `optional string sale_id = 28;`
      */
     public fun clearSaleId() {
       _builder.clearSaleId()
     }
     /**
-     * <code>optional string sale_id = 28;</code>
+     * `optional string sale_id = 28;`
      * @return Whether the saleId field is set.
-     * @return This builder for chaining.
      */
     public fun hasSaleId(): kotlin.Boolean {
       return _builder.hasSaleId()
@@ -689,16 +639,14 @@ public object AppInfoKt {
         _builder.unlimitedChickensUses = value
       }
     /**
-     * <code>optional uint64 unlimited_chickens_uses = 13;</code>
-     * @return This builder for chaining.
+     * `optional uint64 unlimited_chickens_uses = 13;`
      */
     public fun clearUnlimitedChickensUses() {
       _builder.clearUnlimitedChickensUses()
     }
     /**
-     * <code>optional uint64 unlimited_chickens_uses = 13;</code>
+     * `optional uint64 unlimited_chickens_uses = 13;`
      * @return Whether the unlimitedChickensUses field is set.
-     * @return This builder for chaining.
      */
     public fun hasUnlimitedChickensUses(): kotlin.Boolean {
       return _builder.hasUnlimitedChickensUses()
@@ -715,16 +663,14 @@ public object AppInfoKt {
         _builder.refillUses = value
       }
     /**
-     * <code>optional uint64 refill_uses = 14;</code>
-     * @return This builder for chaining.
+     * `optional uint64 refill_uses = 14;`
      */
     public fun clearRefillUses() {
       _builder.clearRefillUses()
     }
     /**
-     * <code>optional uint64 refill_uses = 14;</code>
+     * `optional uint64 refill_uses = 14;`
      * @return Whether the refillUses field is set.
-     * @return This builder for chaining.
      */
     public fun hasRefillUses(): kotlin.Boolean {
       return _builder.hasRefillUses()
@@ -741,16 +687,14 @@ public object AppInfoKt {
         _builder.shortWarpUses = value
       }
     /**
-     * <code>optional uint64 short_warp_uses = 16;</code>
-     * @return This builder for chaining.
+     * `optional uint64 short_warp_uses = 16;`
      */
     public fun clearShortWarpUses() {
       _builder.clearShortWarpUses()
     }
     /**
-     * <code>optional uint64 short_warp_uses = 16;</code>
+     * `optional uint64 short_warp_uses = 16;`
      * @return Whether the shortWarpUses field is set.
-     * @return This builder for chaining.
      */
     public fun hasShortWarpUses(): kotlin.Boolean {
       return _builder.hasShortWarpUses()
@@ -767,16 +711,14 @@ public object AppInfoKt {
         _builder.longWarpUses = value
       }
     /**
-     * <code>optional uint64 long_warp_uses = 17;</code>
-     * @return This builder for chaining.
+     * `optional uint64 long_warp_uses = 17;`
      */
     public fun clearLongWarpUses() {
       _builder.clearLongWarpUses()
     }
     /**
-     * <code>optional uint64 long_warp_uses = 17;</code>
+     * `optional uint64 long_warp_uses = 17;`
      * @return Whether the longWarpUses field is set.
-     * @return This builder for chaining.
      */
     public fun hasLongWarpUses(): kotlin.Boolean {
       return _builder.hasLongWarpUses()

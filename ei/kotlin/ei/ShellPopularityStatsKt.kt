@@ -43,9 +43,8 @@ public object ShellPopularityStatsKt {
         _builder.dataList
       )
     /**
-     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
+     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
      * @param value The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addData")
@@ -53,9 +52,8 @@ public object ShellPopularityStatsKt {
       _builder.addData(value)
     }
     /**
-     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
+     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
      * @param value The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignData")
@@ -64,9 +62,8 @@ public object ShellPopularityStatsKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
+     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
      * @param values The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllData")
@@ -74,9 +71,8 @@ public object ShellPopularityStatsKt {
       _builder.addAllData(values)
     }
     /**
-     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
+     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
      * @param values The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllData")
@@ -85,10 +81,9 @@ public object ShellPopularityStatsKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
+     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
      * @param index The index to set the value at.
      * @param value The data to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setData")
@@ -96,8 +91,7 @@ public object ShellPopularityStatsKt {
       _builder.setData(index, value)
     }
     /**
-     * <code>repeated .ei.ShellPopularityStats.Entry data = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellPopularityStats.Entry data = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearData")
@@ -138,16 +132,14 @@ public object ShellPopularityStatsKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -164,16 +156,14 @@ public object ShellPopularityStatsKt {
           _builder.element = value
         }
       /**
-       * <code>optional .ei.ShellDB.FarmElement element = 2;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellDB.FarmElement element = 2;`
        */
       public fun clearElement() {
         _builder.clearElement()
       }
       /**
-       * <code>optional .ei.ShellDB.FarmElement element = 2;</code>
+       * `optional .ei.ShellDB.FarmElement element = 2;`
        * @return Whether the element field is set.
-       * @return This builder for chaining.
        */
       public fun hasElement(): kotlin.Boolean {
         return _builder.hasElement()
@@ -190,16 +180,14 @@ public object ShellPopularityStatsKt {
           _builder.spent = value
         }
       /**
-       * <code>optional uint64 spent = 3;</code>
-       * @return This builder for chaining.
+       * `optional uint64 spent = 3;`
        */
       public fun clearSpent() {
         _builder.clearSpent()
       }
       /**
-       * <code>optional uint64 spent = 3;</code>
+       * `optional uint64 spent = 3;`
        * @return Whether the spent field is set.
-       * @return This builder for chaining.
        */
       public fun hasSpent(): kotlin.Boolean {
         return _builder.hasSpent()
@@ -216,16 +204,14 @@ public object ShellPopularityStatsKt {
           _builder.count = value
         }
       /**
-       * <code>optional uint64 count = 4;</code>
-       * @return This builder for chaining.
+       * `optional uint64 count = 4;`
        */
       public fun clearCount() {
         _builder.clearCount()
       }
       /**
-       * <code>optional uint64 count = 4;</code>
+       * `optional uint64 count = 4;`
        * @return Whether the count field is set.
-       * @return This builder for chaining.
        */
       public fun hasCount(): kotlin.Boolean {
         return _builder.hasCount()

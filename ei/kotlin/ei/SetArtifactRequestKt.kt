@@ -39,16 +39,14 @@ public object SetArtifactRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object SetArtifactRequestKt {
         _builder.artifact = value
       }
     /**
-     * <code>optional .ei.ArtifactInventoryItem artifact = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactInventoryItem artifact = 2;`
      */
     public fun clearArtifact() {
       _builder.clearArtifact()
     }
     /**
-     * <code>optional .ei.ArtifactInventoryItem artifact = 2;</code>
+     * `optional .ei.ArtifactInventoryItem artifact = 2;`
      * @return Whether the artifact field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
@@ -101,9 +97,8 @@ public object SetArtifactRequestKt {
         _builder.stonesList
       )
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
+     * `repeated .ei.ArtifactSpec stones = 3;`
      * @param value The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addStones")
@@ -111,9 +106,8 @@ public object SetArtifactRequestKt {
       _builder.addStones(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
+     * `repeated .ei.ArtifactSpec stones = 3;`
      * @param value The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignStones")
@@ -122,9 +116,8 @@ public object SetArtifactRequestKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
+     * `repeated .ei.ArtifactSpec stones = 3;`
      * @param values The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllStones")
@@ -132,9 +125,8 @@ public object SetArtifactRequestKt {
       _builder.addAllStones(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
+     * `repeated .ei.ArtifactSpec stones = 3;`
      * @param values The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllStones")
@@ -143,10 +135,9 @@ public object SetArtifactRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
+     * `repeated .ei.ArtifactSpec stones = 3;`
      * @param index The index to set the value at.
      * @param value The stones to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setStones")
@@ -154,8 +145,7 @@ public object SetArtifactRequestKt {
       _builder.setStones(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactSpec stones = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearStones")
@@ -174,16 +164,14 @@ public object SetArtifactRequestKt {
         _builder.goldPricePaid = value
       }
     /**
-     * <code>optional double gold_price_paid = 4;</code>
-     * @return This builder for chaining.
+     * `optional double gold_price_paid = 4;`
      */
     public fun clearGoldPricePaid() {
       _builder.clearGoldPricePaid()
     }
     /**
-     * <code>optional double gold_price_paid = 4;</code>
+     * `optional double gold_price_paid = 4;`
      * @return Whether the goldPricePaid field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldPricePaid(): kotlin.Boolean {
       return _builder.hasGoldPricePaid()

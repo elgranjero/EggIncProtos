@@ -39,16 +39,14 @@ public object SubscriptionChangeHintRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 3;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 3;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object SubscriptionChangeHintRequestKt {
         _builder.originalTransactionId = value
       }
     /**
-     * <code>optional string original_transaction_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string original_transaction_id = 1;`
      */
     public fun clearOriginalTransactionId() {
       _builder.clearOriginalTransactionId()
     }
     /**
-     * <code>optional string original_transaction_id = 1;</code>
+     * `optional string original_transaction_id = 1;`
      * @return Whether the originalTransactionId field is set.
-     * @return This builder for chaining.
      */
     public fun hasOriginalTransactionId(): kotlin.Boolean {
       return _builder.hasOriginalTransactionId()
@@ -94,16 +90,14 @@ public object SubscriptionChangeHintRequestKt {
         _builder.nextSubscriptionLevel = value
       }
     /**
-     * <code>optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;`
      */
     public fun clearNextSubscriptionLevel() {
       _builder.clearNextSubscriptionLevel()
     }
     /**
-     * <code>optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;</code>
+     * `optional .ei.UserSubscriptionInfo.Level next_subscription_level = 2;`
      * @return Whether the nextSubscriptionLevel field is set.
-     * @return This builder for chaining.
      */
     public fun hasNextSubscriptionLevel(): kotlin.Boolean {
       return _builder.hasNextSubscriptionLevel()

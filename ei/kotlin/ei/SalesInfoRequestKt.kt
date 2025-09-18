@@ -39,16 +39,14 @@ public object SalesInfoRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object SalesInfoRequestKt {
         _builder.piggyFull = value
       }
     /**
-     * <code>optional bool piggy_full = 2;</code>
-     * @return This builder for chaining.
+     * `optional bool piggy_full = 2;`
      */
     public fun clearPiggyFull() {
       _builder.clearPiggyFull()
     }
     /**
-     * <code>optional bool piggy_full = 2;</code>
+     * `optional bool piggy_full = 2;`
      * @return Whether the piggyFull field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggyFull(): kotlin.Boolean {
       return _builder.hasPiggyFull()
@@ -91,16 +87,14 @@ public object SalesInfoRequestKt {
         _builder.piggyFoundFull = value
       }
     /**
-     * <code>optional bool piggy_found_full = 3;</code>
-     * @return This builder for chaining.
+     * `optional bool piggy_found_full = 3;`
      */
     public fun clearPiggyFoundFull() {
       _builder.clearPiggyFoundFull()
     }
     /**
-     * <code>optional bool piggy_found_full = 3;</code>
+     * `optional bool piggy_found_full = 3;`
      * @return Whether the piggyFoundFull field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggyFoundFull(): kotlin.Boolean {
       return _builder.hasPiggyFoundFull()
@@ -117,16 +111,14 @@ public object SalesInfoRequestKt {
         _builder.secondsFullRealtime = value
       }
     /**
-     * <code>optional double seconds_full_realtime = 4;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_full_realtime = 4;`
      */
     public fun clearSecondsFullRealtime() {
       _builder.clearSecondsFullRealtime()
     }
     /**
-     * <code>optional double seconds_full_realtime = 4;</code>
+     * `optional double seconds_full_realtime = 4;`
      * @return Whether the secondsFullRealtime field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsFullRealtime(): kotlin.Boolean {
       return _builder.hasSecondsFullRealtime()
@@ -143,16 +135,14 @@ public object SalesInfoRequestKt {
         _builder.secondsFullGametime = value
       }
     /**
-     * <code>optional double seconds_full_gametime = 5;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_full_gametime = 5;`
      */
     public fun clearSecondsFullGametime() {
       _builder.clearSecondsFullGametime()
     }
     /**
-     * <code>optional double seconds_full_gametime = 5;</code>
+     * `optional double seconds_full_gametime = 5;`
      * @return Whether the secondsFullGametime field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsFullGametime(): kotlin.Boolean {
       return _builder.hasSecondsFullGametime()
@@ -169,16 +159,14 @@ public object SalesInfoRequestKt {
         _builder.lostIncrements = value
       }
     /**
-     * <code>optional uint32 lost_increments = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 lost_increments = 7;`
      */
     public fun clearLostIncrements() {
       _builder.clearLostIncrements()
     }
     /**
-     * <code>optional uint32 lost_increments = 7;</code>
+     * `optional uint32 lost_increments = 7;`
      * @return Whether the lostIncrements field is set.
-     * @return This builder for chaining.
      */
     public fun hasLostIncrements(): kotlin.Boolean {
       return _builder.hasLostIncrements()
@@ -195,16 +183,14 @@ public object SalesInfoRequestKt {
         _builder.currentClientVersion = value
       }
     /**
-     * <code>optional uint32 current_client_version = 10;</code>
-     * @return This builder for chaining.
+     * `optional uint32 current_client_version = 10;`
      */
     public fun clearCurrentClientVersion() {
       _builder.clearCurrentClientVersion()
     }
     /**
-     * <code>optional uint32 current_client_version = 10;</code>
+     * `optional uint32 current_client_version = 10;`
      * @return Whether the currentClientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentClientVersion(): kotlin.Boolean {
       return _builder.hasCurrentClientVersion()

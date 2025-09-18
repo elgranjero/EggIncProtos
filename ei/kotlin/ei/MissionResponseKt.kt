@@ -39,16 +39,14 @@ public object MissionResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object MissionResponseKt {
         _builder.info = value
       }
     /**
-     * <code>optional .ei.MissionInfo info = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo info = 2;`
      */
     public fun clearInfo() {
       _builder.clearInfo()
     }
     /**
-     * <code>optional .ei.MissionInfo info = 2;</code>
+     * `optional .ei.MissionInfo info = 2;`
      * @return Whether the info field is set.
-     * @return This builder for chaining.
      */
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()

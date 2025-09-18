@@ -39,16 +39,14 @@ public object ContractSeasonGoalKt {
         _builder.cxp = value
       }
     /**
-     * <code>optional double cxp = 1;</code>
-     * @return This builder for chaining.
+     * `optional double cxp = 1;`
      */
     public fun clearCxp() {
       _builder.clearCxp()
     }
     /**
-     * <code>optional double cxp = 1;</code>
+     * `optional double cxp = 1;`
      * @return Whether the cxp field is set.
-     * @return This builder for chaining.
      */
     public fun hasCxp(): kotlin.Boolean {
       return _builder.hasCxp()
@@ -65,16 +63,14 @@ public object ContractSeasonGoalKt {
         _builder.rewardType = value
       }
     /**
-     * <code>optional .ei.RewardType reward_type = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.RewardType reward_type = 3;`
      */
     public fun clearRewardType() {
       _builder.clearRewardType()
     }
     /**
-     * <code>optional .ei.RewardType reward_type = 3;</code>
+     * `optional .ei.RewardType reward_type = 3;`
      * @return Whether the rewardType field is set.
-     * @return This builder for chaining.
      */
     public fun hasRewardType(): kotlin.Boolean {
       return _builder.hasRewardType()
@@ -91,16 +87,14 @@ public object ContractSeasonGoalKt {
         _builder.rewardSubType = value
       }
     /**
-     * <code>optional string reward_sub_type = 4;</code>
-     * @return This builder for chaining.
+     * `optional string reward_sub_type = 4;`
      */
     public fun clearRewardSubType() {
       _builder.clearRewardSubType()
     }
     /**
-     * <code>optional string reward_sub_type = 4;</code>
+     * `optional string reward_sub_type = 4;`
      * @return Whether the rewardSubType field is set.
-     * @return This builder for chaining.
      */
     public fun hasRewardSubType(): kotlin.Boolean {
       return _builder.hasRewardSubType()
@@ -117,16 +111,14 @@ public object ContractSeasonGoalKt {
         _builder.rewardAmount = value
       }
     /**
-     * <code>optional double reward_amount = 5;</code>
-     * @return This builder for chaining.
+     * `optional double reward_amount = 5;`
      */
     public fun clearRewardAmount() {
       _builder.clearRewardAmount()
     }
     /**
-     * <code>optional double reward_amount = 5;</code>
+     * `optional double reward_amount = 5;`
      * @return Whether the rewardAmount field is set.
-     * @return This builder for chaining.
      */
     public fun hasRewardAmount(): kotlin.Boolean {
       return _builder.hasRewardAmount()

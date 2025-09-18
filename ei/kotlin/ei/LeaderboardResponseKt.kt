@@ -39,16 +39,14 @@ public object LeaderboardResponseKt {
         _builder.scope = value
       }
     /**
-     * <code>optional string scope = 1;</code>
-     * @return This builder for chaining.
+     * `optional string scope = 1;`
      */
     public fun clearScope() {
       _builder.clearScope()
     }
     /**
-     * <code>optional string scope = 1;</code>
+     * `optional string scope = 1;`
      * @return Whether the scope field is set.
-     * @return This builder for chaining.
      */
     public fun hasScope(): kotlin.Boolean {
       return _builder.hasScope()
@@ -65,16 +63,14 @@ public object LeaderboardResponseKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 2;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 2;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 2;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -95,9 +91,8 @@ public object LeaderboardResponseKt {
         _builder.topEntriesList
       )
     /**
-     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
+     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
      * @param value The topEntries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTopEntries")
@@ -105,9 +100,8 @@ public object LeaderboardResponseKt {
       _builder.addTopEntries(value)
     }
     /**
-     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
+     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
      * @param value The topEntries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTopEntries")
@@ -116,9 +110,8 @@ public object LeaderboardResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
+     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
      * @param values The topEntries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTopEntries")
@@ -126,9 +119,8 @@ public object LeaderboardResponseKt {
       _builder.addAllTopEntries(values)
     }
     /**
-     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
+     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
      * @param values The topEntries to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTopEntries")
@@ -137,10 +129,9 @@ public object LeaderboardResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
+     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
      * @param index The index to set the value at.
      * @param value The topEntries to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTopEntries")
@@ -148,8 +139,7 @@ public object LeaderboardResponseKt {
       _builder.setTopEntries(index, value)
     }
     /**
-     * <code>repeated .ei.LeaderboardResponse.Entry top_entries = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.LeaderboardResponse.Entry top_entries = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTopEntries")
@@ -168,16 +158,14 @@ public object LeaderboardResponseKt {
         _builder.count = value
       }
     /**
-     * <code>optional uint32 count = 4;</code>
-     * @return This builder for chaining.
+     * `optional uint32 count = 4;`
      */
     public fun clearCount() {
       _builder.clearCount()
     }
     /**
-     * <code>optional uint32 count = 4;</code>
+     * `optional uint32 count = 4;`
      * @return Whether the count field is set.
-     * @return This builder for chaining.
      */
     public fun hasCount(): kotlin.Boolean {
       return _builder.hasCount()
@@ -194,16 +182,14 @@ public object LeaderboardResponseKt {
         _builder.rank = value
       }
     /**
-     * <code>optional uint32 rank = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 rank = 5;`
      */
     public fun clearRank() {
       _builder.clearRank()
     }
     /**
-     * <code>optional uint32 rank = 5;</code>
+     * `optional uint32 rank = 5;`
      * @return Whether the rank field is set.
-     * @return This builder for chaining.
      */
     public fun hasRank(): kotlin.Boolean {
       return _builder.hasRank()
@@ -220,16 +206,14 @@ public object LeaderboardResponseKt {
         _builder.score = value
       }
     /**
-     * <code>optional double score = 6;</code>
-     * @return This builder for chaining.
+     * `optional double score = 6;`
      */
     public fun clearScore() {
       _builder.clearScore()
     }
     /**
-     * <code>optional double score = 6;</code>
+     * `optional double score = 6;`
      * @return Whether the score field is set.
-     * @return This builder for chaining.
      */
     public fun hasScore(): kotlin.Boolean {
       return _builder.hasScore()
@@ -268,16 +252,14 @@ public object LeaderboardResponseKt {
           _builder.rank = value
         }
       /**
-       * <code>optional uint32 rank = 1;</code>
-       * @return This builder for chaining.
+       * `optional uint32 rank = 1;`
        */
       public fun clearRank() {
         _builder.clearRank()
       }
       /**
-       * <code>optional uint32 rank = 1;</code>
+       * `optional uint32 rank = 1;`
        * @return Whether the rank field is set.
-       * @return This builder for chaining.
        */
       public fun hasRank(): kotlin.Boolean {
         return _builder.hasRank()
@@ -294,16 +276,14 @@ public object LeaderboardResponseKt {
           _builder.alias = value
         }
       /**
-       * <code>optional string alias = 2;</code>
-       * @return This builder for chaining.
+       * `optional string alias = 2;`
        */
       public fun clearAlias() {
         _builder.clearAlias()
       }
       /**
-       * <code>optional string alias = 2;</code>
+       * `optional string alias = 2;`
        * @return Whether the alias field is set.
-       * @return This builder for chaining.
        */
       public fun hasAlias(): kotlin.Boolean {
         return _builder.hasAlias()
@@ -320,16 +300,14 @@ public object LeaderboardResponseKt {
           _builder.score = value
         }
       /**
-       * <code>optional double score = 3;</code>
-       * @return This builder for chaining.
+       * `optional double score = 3;`
        */
       public fun clearScore() {
         _builder.clearScore()
       }
       /**
-       * <code>optional double score = 3;</code>
+       * `optional double score = 3;`
        * @return Whether the score field is set.
-       * @return This builder for chaining.
        */
       public fun hasScore(): kotlin.Boolean {
         return _builder.hasScore()

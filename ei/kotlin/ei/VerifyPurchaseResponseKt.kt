@@ -39,16 +39,14 @@ public object VerifyPurchaseResponseKt {
         _builder.verified = value
       }
     /**
-     * <code>optional bool verified = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool verified = 1;`
      */
     public fun clearVerified() {
       _builder.clearVerified()
     }
     /**
-     * <code>optional bool verified = 1;</code>
+     * `optional bool verified = 1;`
      * @return Whether the verified field is set.
-     * @return This builder for chaining.
      */
     public fun hasVerified(): kotlin.Boolean {
       return _builder.hasVerified()
@@ -65,16 +63,14 @@ public object VerifyPurchaseResponseKt {
         _builder.message = value
       }
     /**
-     * <code>optional string message = 2;</code>
-     * @return This builder for chaining.
+     * `optional string message = 2;`
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * <code>optional string message = 2;</code>
+     * `optional string message = 2;`
      * @return Whether the message field is set.
-     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()

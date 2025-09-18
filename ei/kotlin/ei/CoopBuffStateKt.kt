@@ -39,16 +39,14 @@ public object CoopBuffStateKt {
         _builder.eggLayingRate = value
       }
     /**
-     * <code>optional double egg_laying_rate = 1 [default = 1];</code>
-     * @return This builder for chaining.
+     * `optional double egg_laying_rate = 1 [default = 1];`
      */
     public fun clearEggLayingRate() {
       _builder.clearEggLayingRate()
     }
     /**
-     * <code>optional double egg_laying_rate = 1 [default = 1];</code>
+     * `optional double egg_laying_rate = 1 [default = 1];`
      * @return Whether the eggLayingRate field is set.
-     * @return This builder for chaining.
      */
     public fun hasEggLayingRate(): kotlin.Boolean {
       return _builder.hasEggLayingRate()
@@ -65,16 +63,14 @@ public object CoopBuffStateKt {
         _builder.earnings = value
       }
     /**
-     * <code>optional double earnings = 2 [default = 1];</code>
-     * @return This builder for chaining.
+     * `optional double earnings = 2 [default = 1];`
      */
     public fun clearEarnings() {
       _builder.clearEarnings()
     }
     /**
-     * <code>optional double earnings = 2 [default = 1];</code>
+     * `optional double earnings = 2 [default = 1];`
      * @return Whether the earnings field is set.
-     * @return This builder for chaining.
      */
     public fun hasEarnings(): kotlin.Boolean {
       return _builder.hasEarnings()
@@ -91,16 +87,14 @@ public object CoopBuffStateKt {
         _builder.serverTimestamp = value
       }
     /**
-     * <code>optional double server_timestamp = 3;</code>
-     * @return This builder for chaining.
+     * `optional double server_timestamp = 3;`
      */
     public fun clearServerTimestamp() {
       _builder.clearServerTimestamp()
     }
     /**
-     * <code>optional double server_timestamp = 3;</code>
+     * `optional double server_timestamp = 3;`
      * @return Whether the serverTimestamp field is set.
-     * @return This builder for chaining.
      */
     public fun hasServerTimestamp(): kotlin.Boolean {
       return _builder.hasServerTimestamp()

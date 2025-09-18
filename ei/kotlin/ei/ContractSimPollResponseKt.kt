@@ -39,16 +39,14 @@ public object ContractSimPollResponseKt {
         _builder.contractToSimulate = value
       }
     /**
-     * <code>optional .ei.Contract contract_to_simulate = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract contract_to_simulate = 1;`
      */
     public fun clearContractToSimulate() {
       _builder.clearContractToSimulate()
     }
     /**
-     * <code>optional .ei.Contract contract_to_simulate = 1;</code>
+     * `optional .ei.Contract contract_to_simulate = 1;`
      * @return Whether the contractToSimulate field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractToSimulate(): kotlin.Boolean {
       return _builder.hasContractToSimulate()
@@ -68,16 +66,14 @@ public object ContractSimPollResponseKt {
         _builder.simConfig = value
       }
     /**
-     * <code>optional .ei.ContractSimConfig sim_config = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractSimConfig sim_config = 2;`
      */
     public fun clearSimConfig() {
       _builder.clearSimConfig()
     }
     /**
-     * <code>optional .ei.ContractSimConfig sim_config = 2;</code>
+     * `optional .ei.ContractSimConfig sim_config = 2;`
      * @return Whether the simConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasSimConfig(): kotlin.Boolean {
       return _builder.hasSimConfig()

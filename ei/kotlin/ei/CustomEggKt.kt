@@ -39,16 +39,14 @@ public object CustomEggKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 1;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 1;</code>
+     * `optional string identifier = 1;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -65,16 +63,14 @@ public object CustomEggKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string name = 2;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 2;</code>
+     * `optional string name = 2;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -91,16 +87,14 @@ public object CustomEggKt {
         _builder.description = value
       }
     /**
-     * <code>optional string description = 3;</code>
-     * @return This builder for chaining.
+     * `optional string description = 3;`
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * <code>optional string description = 3;</code>
+     * `optional string description = 3;`
      * @return Whether the description field is set.
-     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()
@@ -117,16 +111,14 @@ public object CustomEggKt {
         _builder.value = value
       }
     /**
-     * <code>optional double value = 4;</code>
-     * @return This builder for chaining.
+     * `optional double value = 4;`
      */
     public fun clearValue() {
       _builder.clearValue()
     }
     /**
-     * <code>optional double value = 4;</code>
+     * `optional double value = 4;`
      * @return Whether the value field is set.
-     * @return This builder for chaining.
      */
     public fun hasValue(): kotlin.Boolean {
       return _builder.hasValue()
@@ -143,16 +135,14 @@ public object CustomEggKt {
         _builder.hatcheryId = value
       }
     /**
-     * <code>optional string hatchery_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string hatchery_id = 5;`
      */
     public fun clearHatcheryId() {
       _builder.clearHatcheryId()
     }
     /**
-     * <code>optional string hatchery_id = 5;</code>
+     * `optional string hatchery_id = 5;`
      * @return Whether the hatcheryId field is set.
-     * @return This builder for chaining.
      */
     public fun hasHatcheryId(): kotlin.Boolean {
       return _builder.hasHatcheryId()
@@ -169,16 +159,14 @@ public object CustomEggKt {
         _builder.hatcheryMaxX = value
       }
     /**
-     * <code>optional double hatchery_max_x = 6;</code>
-     * @return This builder for chaining.
+     * `optional double hatchery_max_x = 6;`
      */
     public fun clearHatcheryMaxX() {
       _builder.clearHatcheryMaxX()
     }
     /**
-     * <code>optional double hatchery_max_x = 6;</code>
+     * `optional double hatchery_max_x = 6;`
      * @return Whether the hatcheryMaxX field is set.
-     * @return This builder for chaining.
      */
     public fun hasHatcheryMaxX(): kotlin.Boolean {
       return _builder.hasHatcheryMaxX()
@@ -195,16 +183,14 @@ public object CustomEggKt {
         _builder.icon = value
       }
     /**
-     * <code>optional .ei.DLCItem icon = 7;</code>
-     * @return This builder for chaining.
+     * `optional .ei.DLCItem icon = 7;`
      */
     public fun clearIcon() {
       _builder.clearIcon()
     }
     /**
-     * <code>optional .ei.DLCItem icon = 7;</code>
+     * `optional .ei.DLCItem icon = 7;`
      * @return Whether the icon field is set.
-     * @return This builder for chaining.
      */
     public fun hasIcon(): kotlin.Boolean {
       return _builder.hasIcon()
@@ -224,16 +210,14 @@ public object CustomEggKt {
         _builder.iconWidth = value
       }
     /**
-     * <code>optional double icon_width = 21;</code>
-     * @return This builder for chaining.
+     * `optional double icon_width = 21;`
      */
     public fun clearIconWidth() {
       _builder.clearIconWidth()
     }
     /**
-     * <code>optional double icon_width = 21;</code>
+     * `optional double icon_width = 21;`
      * @return Whether the iconWidth field is set.
-     * @return This builder for chaining.
      */
     public fun hasIconWidth(): kotlin.Boolean {
       return _builder.hasIconWidth()
@@ -250,16 +234,14 @@ public object CustomEggKt {
         _builder.iconHeight = value
       }
     /**
-     * <code>optional double icon_height = 22;</code>
-     * @return This builder for chaining.
+     * `optional double icon_height = 22;`
      */
     public fun clearIconHeight() {
       _builder.clearIconHeight()
     }
     /**
-     * <code>optional double icon_height = 22;</code>
+     * `optional double icon_height = 22;`
      * @return Whether the iconHeight field is set.
-     * @return This builder for chaining.
      */
     public fun hasIconHeight(): kotlin.Boolean {
       return _builder.hasIconHeight()
@@ -280,9 +262,8 @@ public object CustomEggKt {
         _builder.buffsList
       )
     /**
-     * <code>repeated .ei.GameModifier buffs = 8;</code>
+     * `repeated .ei.GameModifier buffs = 8;`
      * @param value The buffs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addBuffs")
@@ -290,9 +271,8 @@ public object CustomEggKt {
       _builder.addBuffs(value)
     }
     /**
-     * <code>repeated .ei.GameModifier buffs = 8;</code>
+     * `repeated .ei.GameModifier buffs = 8;`
      * @param value The buffs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignBuffs")
@@ -301,9 +281,8 @@ public object CustomEggKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.GameModifier buffs = 8;</code>
+     * `repeated .ei.GameModifier buffs = 8;`
      * @param values The buffs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllBuffs")
@@ -311,9 +290,8 @@ public object CustomEggKt {
       _builder.addAllBuffs(values)
     }
     /**
-     * <code>repeated .ei.GameModifier buffs = 8;</code>
+     * `repeated .ei.GameModifier buffs = 8;`
      * @param values The buffs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllBuffs")
@@ -322,10 +300,9 @@ public object CustomEggKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.GameModifier buffs = 8;</code>
+     * `repeated .ei.GameModifier buffs = 8;`
      * @param index The index to set the value at.
      * @param value The buffs to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setBuffs")
@@ -333,8 +310,7 @@ public object CustomEggKt {
       _builder.setBuffs(index, value)
     }
     /**
-     * <code>repeated .ei.GameModifier buffs = 8;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.GameModifier buffs = 8;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearBuffs")

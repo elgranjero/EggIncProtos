@@ -43,9 +43,8 @@ public object ShellShowcaseKt {
         _builder.topList
       )
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
      * @param value The top to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTop")
@@ -53,9 +52,8 @@ public object ShellShowcaseKt {
       _builder.addTop(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
      * @param value The top to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTop")
@@ -64,9 +62,8 @@ public object ShellShowcaseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
      * @param values The top to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTop")
@@ -74,9 +71,8 @@ public object ShellShowcaseKt {
       _builder.addAllTop(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
      * @param values The top to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTop")
@@ -85,10 +81,9 @@ public object ShellShowcaseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
      * @param index The index to set the value at.
      * @param value The top to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTop")
@@ -96,8 +91,7 @@ public object ShellShowcaseKt {
       _builder.setTop(index, value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo top = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellShowcaseListingInfo top = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTop")
@@ -120,9 +114,8 @@ public object ShellShowcaseKt {
         _builder.featuredList
       )
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
+     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
      * @param value The featured to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addFeatured")
@@ -130,9 +123,8 @@ public object ShellShowcaseKt {
       _builder.addFeatured(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
+     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
      * @param value The featured to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignFeatured")
@@ -141,9 +133,8 @@ public object ShellShowcaseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
+     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
      * @param values The featured to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllFeatured")
@@ -151,9 +142,8 @@ public object ShellShowcaseKt {
       _builder.addAllFeatured(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
+     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
      * @param values The featured to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllFeatured")
@@ -162,10 +152,9 @@ public object ShellShowcaseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
+     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
      * @param index The index to set the value at.
      * @param value The featured to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setFeatured")
@@ -173,8 +162,7 @@ public object ShellShowcaseKt {
       _builder.setFeatured(index, value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo featured = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellShowcaseListingInfo featured = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearFeatured")
@@ -197,9 +185,8 @@ public object ShellShowcaseKt {
         _builder.freshList
       )
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
      * @param value The fresh to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addFresh")
@@ -207,9 +194,8 @@ public object ShellShowcaseKt {
       _builder.addFresh(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
      * @param value The fresh to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignFresh")
@@ -218,9 +204,8 @@ public object ShellShowcaseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
      * @param values The fresh to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllFresh")
@@ -228,9 +213,8 @@ public object ShellShowcaseKt {
       _builder.addAllFresh(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
      * @param values The fresh to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllFresh")
@@ -239,10 +223,9 @@ public object ShellShowcaseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
+     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
      * @param index The index to set the value at.
      * @param value The fresh to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setFresh")
@@ -250,8 +233,7 @@ public object ShellShowcaseKt {
       _builder.setFresh(index, value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo fresh = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellShowcaseListingInfo fresh = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearFresh")

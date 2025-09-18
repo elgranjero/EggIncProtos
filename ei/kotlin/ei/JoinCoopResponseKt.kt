@@ -39,16 +39,14 @@ public object JoinCoopResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object JoinCoopResponseKt {
         _builder.message = value
       }
     /**
-     * <code>optional string message = 2;</code>
-     * @return This builder for chaining.
+     * `optional string message = 2;`
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * <code>optional string message = 2;</code>
+     * `optional string message = 2;`
      * @return Whether the message field is set.
-     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -91,16 +87,14 @@ public object JoinCoopResponseKt {
         _builder.banned = value
       }
     /**
-     * <code>optional bool banned = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool banned = 4;`
      */
     public fun clearBanned() {
       _builder.clearBanned()
     }
     /**
-     * <code>optional bool banned = 4;</code>
+     * `optional bool banned = 4;`
      * @return Whether the banned field is set.
-     * @return This builder for chaining.
      */
     public fun hasBanned(): kotlin.Boolean {
       return _builder.hasBanned()
@@ -117,16 +111,14 @@ public object JoinCoopResponseKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 5;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 5;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 5;</code>
+     * `optional string coop_identifier = 5;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -143,16 +135,14 @@ public object JoinCoopResponseKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 3;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 3;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 3;</code>
+     * `optional double seconds_remaining = 3;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -169,16 +159,14 @@ public object JoinCoopResponseKt {
         _builder.matchPercent = value
       }
     /**
-     * <code>optional double match_percent = 6;</code>
-     * @return This builder for chaining.
+     * `optional double match_percent = 6;`
      */
     public fun clearMatchPercent() {
       _builder.clearMatchPercent()
     }
     /**
-     * <code>optional double match_percent = 6;</code>
+     * `optional double match_percent = 6;`
      * @return Whether the matchPercent field is set.
-     * @return This builder for chaining.
      */
     public fun hasMatchPercent(): kotlin.Boolean {
       return _builder.hasMatchPercent()
@@ -195,16 +183,14 @@ public object JoinCoopResponseKt {
         _builder.numMembers = value
       }
     /**
-     * <code>optional uint32 num_members = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 num_members = 7;`
      */
     public fun clearNumMembers() {
       _builder.clearNumMembers()
     }
     /**
-     * <code>optional uint32 num_members = 7;</code>
+     * `optional uint32 num_members = 7;`
      * @return Whether the numMembers field is set.
-     * @return This builder for chaining.
      */
     public fun hasNumMembers(): kotlin.Boolean {
       return _builder.hasNumMembers()
@@ -221,16 +207,14 @@ public object JoinCoopResponseKt {
         _builder.status = value
       }
     /**
-     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractCoopStatusResponse.Status status = 8;`
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * <code>optional .ei.ContractCoopStatusResponse.Status status = 8;</code>
+     * `optional .ei.ContractCoopStatusResponse.Status status = 8;`
      * @return Whether the status field is set.
-     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -247,16 +231,14 @@ public object JoinCoopResponseKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 9;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 9;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 9;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -273,16 +255,14 @@ public object JoinCoopResponseKt {
         _builder.canStart = value
       }
     /**
-     * <code>optional bool can_start = 10;</code>
-     * @return This builder for chaining.
+     * `optional bool can_start = 10;`
      */
     public fun clearCanStart() {
       _builder.clearCanStart()
     }
     /**
-     * <code>optional bool can_start = 10;</code>
+     * `optional bool can_start = 10;`
      * @return Whether the canStart field is set.
-     * @return This builder for chaining.
      */
     public fun hasCanStart(): kotlin.Boolean {
       return _builder.hasCanStart()

@@ -39,16 +39,14 @@ public object ShellSetSpecKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 1;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 1;</code>
+     * `optional string identifier = 1;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -65,16 +63,14 @@ public object ShellSetSpecKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string name = 2;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 2;</code>
+     * `optional string name = 2;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -91,16 +87,14 @@ public object ShellSetSpecKt {
         _builder.price = value
       }
     /**
-     * <code>optional uint32 price = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint32 price = 3;`
      */
     public fun clearPrice() {
       _builder.clearPrice()
     }
     /**
-     * <code>optional uint32 price = 3;</code>
+     * `optional uint32 price = 3;`
      * @return Whether the price field is set.
-     * @return This builder for chaining.
      */
     public fun hasPrice(): kotlin.Boolean {
       return _builder.hasPrice()
@@ -117,16 +111,14 @@ public object ShellSetSpecKt {
         _builder.priceMultDEPRECATED = value
       }
     /**
-     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
-     * @return This builder for chaining.
+     * `optional double price_mult_DEPRECATED = 8 [default = 1];`
      */
     public fun clearPriceMultDEPRECATED() {
       _builder.clearPriceMultDEPRECATED()
     }
     /**
-     * <code>optional double price_mult_DEPRECATED = 8 [default = 1];</code>
+     * `optional double price_mult_DEPRECATED = 8 [default = 1];`
      * @return Whether the priceMultDEPRECATED field is set.
-     * @return This builder for chaining.
      */
     public fun hasPriceMultDEPRECATED(): kotlin.Boolean {
       return _builder.hasPriceMultDEPRECATED()
@@ -143,16 +135,14 @@ public object ShellSetSpecKt {
         _builder.discount = value
       }
     /**
-     * <code>optional double discount = 17;</code>
-     * @return This builder for chaining.
+     * `optional double discount = 17;`
      */
     public fun clearDiscount() {
       _builder.clearDiscount()
     }
     /**
-     * <code>optional double discount = 17;</code>
+     * `optional double discount = 17;`
      * @return Whether the discount field is set.
-     * @return This builder for chaining.
      */
     public fun hasDiscount(): kotlin.Boolean {
       return _builder.hasDiscount()
@@ -169,16 +159,14 @@ public object ShellSetSpecKt {
         _builder.requiredEop = value
       }
     /**
-     * <code>optional uint32 required_eop = 4;</code>
-     * @return This builder for chaining.
+     * `optional uint32 required_eop = 4;`
      */
     public fun clearRequiredEop() {
       _builder.clearRequiredEop()
     }
     /**
-     * <code>optional uint32 required_eop = 4;</code>
+     * `optional uint32 required_eop = 4;`
      * @return Whether the requiredEop field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequiredEop(): kotlin.Boolean {
       return _builder.hasRequiredEop()
@@ -195,16 +183,14 @@ public object ShellSetSpecKt {
         _builder.requiredSoulEggs = value
       }
     /**
-     * <code>optional double required_soul_eggs = 5;</code>
-     * @return This builder for chaining.
+     * `optional double required_soul_eggs = 5;`
      */
     public fun clearRequiredSoulEggs() {
       _builder.clearRequiredSoulEggs()
     }
     /**
-     * <code>optional double required_soul_eggs = 5;</code>
+     * `optional double required_soul_eggs = 5;`
      * @return Whether the requiredSoulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequiredSoulEggs(): kotlin.Boolean {
       return _builder.hasRequiredSoulEggs()
@@ -221,16 +207,14 @@ public object ShellSetSpecKt {
         _builder.requiredParentSet = value
       }
     /**
-     * <code>optional string required_parent_set = 20;</code>
-     * @return This builder for chaining.
+     * `optional string required_parent_set = 20;`
      */
     public fun clearRequiredParentSet() {
       _builder.clearRequiredParentSet()
     }
     /**
-     * <code>optional string required_parent_set = 20;</code>
+     * `optional string required_parent_set = 20;`
      * @return Whether the requiredParentSet field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequiredParentSet(): kotlin.Boolean {
       return _builder.hasRequiredParentSet()
@@ -247,16 +231,14 @@ public object ShellSetSpecKt {
         _builder.isNew = value
       }
     /**
-     * <code>optional bool is_new = 9;</code>
-     * @return This builder for chaining.
+     * `optional bool is_new = 9;`
      */
     public fun clearIsNew() {
       _builder.clearIsNew()
     }
     /**
-     * <code>optional bool is_new = 9;</code>
+     * `optional bool is_new = 9;`
      * @return Whether the isNew field is set.
-     * @return This builder for chaining.
      */
     public fun hasIsNew(): kotlin.Boolean {
       return _builder.hasIsNew()
@@ -273,16 +255,14 @@ public object ShellSetSpecKt {
         _builder.expires = value
       }
     /**
-     * <code>optional bool expires = 10;</code>
-     * @return This builder for chaining.
+     * `optional bool expires = 10;`
      */
     public fun clearExpires() {
       _builder.clearExpires()
     }
     /**
-     * <code>optional bool expires = 10;</code>
+     * `optional bool expires = 10;`
      * @return Whether the expires field is set.
-     * @return This builder for chaining.
      */
     public fun hasExpires(): kotlin.Boolean {
       return _builder.hasExpires()
@@ -299,16 +279,14 @@ public object ShellSetSpecKt {
         _builder.secondsUntilAvailable = value
       }
     /**
-     * <code>optional double seconds_until_available = 18;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_until_available = 18;`
      */
     public fun clearSecondsUntilAvailable() {
       _builder.clearSecondsUntilAvailable()
     }
     /**
-     * <code>optional double seconds_until_available = 18;</code>
+     * `optional double seconds_until_available = 18;`
      * @return Whether the secondsUntilAvailable field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsUntilAvailable(): kotlin.Boolean {
       return _builder.hasSecondsUntilAvailable()
@@ -325,16 +303,14 @@ public object ShellSetSpecKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 11;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 11;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 11;</code>
+     * `optional double seconds_remaining = 11;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -351,16 +327,14 @@ public object ShellSetSpecKt {
         _builder.popularity = value
       }
     /**
-     * <code>optional uint64 popularity = 21;</code>
-     * @return This builder for chaining.
+     * `optional uint64 popularity = 21;`
      */
     public fun clearPopularity() {
       _builder.clearPopularity()
     }
     /**
-     * <code>optional uint64 popularity = 21;</code>
+     * `optional uint64 popularity = 21;`
      * @return Whether the popularity field is set.
-     * @return This builder for chaining.
      */
     public fun hasPopularity(): kotlin.Boolean {
       return _builder.hasPopularity()
@@ -377,16 +351,14 @@ public object ShellSetSpecKt {
         _builder.decorator = value
       }
     /**
-     * <code>optional bool decorator = 14;</code>
-     * @return This builder for chaining.
+     * `optional bool decorator = 14;`
      */
     public fun clearDecorator() {
       _builder.clearDecorator()
     }
     /**
-     * <code>optional bool decorator = 14;</code>
+     * `optional bool decorator = 14;`
      * @return Whether the decorator field is set.
-     * @return This builder for chaining.
      */
     public fun hasDecorator(): kotlin.Boolean {
       return _builder.hasDecorator()
@@ -403,16 +375,14 @@ public object ShellSetSpecKt {
         _builder.modifiedGeometry = value
       }
     /**
-     * <code>optional bool modified_geometry = 13;</code>
-     * @return This builder for chaining.
+     * `optional bool modified_geometry = 13;`
      */
     public fun clearModifiedGeometry() {
       _builder.clearModifiedGeometry()
     }
     /**
-     * <code>optional bool modified_geometry = 13;</code>
+     * `optional bool modified_geometry = 13;`
      * @return Whether the modifiedGeometry field is set.
-     * @return This builder for chaining.
      */
     public fun hasModifiedGeometry(): kotlin.Boolean {
       return _builder.hasModifiedGeometry()
@@ -429,16 +399,14 @@ public object ShellSetSpecKt {
         _builder.elementSet = value
       }
     /**
-     * <code>optional bool element_set = 7;</code>
-     * @return This builder for chaining.
+     * `optional bool element_set = 7;`
      */
     public fun clearElementSet() {
       _builder.clearElementSet()
     }
     /**
-     * <code>optional bool element_set = 7;</code>
+     * `optional bool element_set = 7;`
      * @return Whether the elementSet field is set.
-     * @return This builder for chaining.
      */
     public fun hasElementSet(): kotlin.Boolean {
       return _builder.hasElementSet()
@@ -455,16 +423,14 @@ public object ShellSetSpecKt {
         _builder.hexBaseColor = value
       }
     /**
-     * <code>optional string hex_base_color = 16;</code>
-     * @return This builder for chaining.
+     * `optional string hex_base_color = 16;`
      */
     public fun clearHexBaseColor() {
       _builder.clearHexBaseColor()
     }
     /**
-     * <code>optional string hex_base_color = 16;</code>
+     * `optional string hex_base_color = 16;`
      * @return Whether the hexBaseColor field is set.
-     * @return This builder for chaining.
      */
     public fun hasHexBaseColor(): kotlin.Boolean {
       return _builder.hasHexBaseColor()
@@ -485,9 +451,8 @@ public object ShellSetSpecKt {
         _builder.variationsList
       )
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
+     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
      * @param value The variations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addVariations")
@@ -495,9 +460,8 @@ public object ShellSetSpecKt {
       _builder.addVariations(value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
+     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
      * @param value The variations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignVariations")
@@ -506,9 +470,8 @@ public object ShellSetSpecKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
+     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
      * @param values The variations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllVariations")
@@ -516,9 +479,8 @@ public object ShellSetSpecKt {
       _builder.addAllVariations(values)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
+     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
      * @param values The variations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllVariations")
@@ -527,10 +489,9 @@ public object ShellSetSpecKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
+     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
      * @param index The index to set the value at.
      * @param value The variations to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setVariations")
@@ -538,8 +499,7 @@ public object ShellSetSpecKt {
       _builder.setVariations(index, value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec.VariationSpec variations = 15;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellSetSpec.VariationSpec variations = 15;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearVariations")
@@ -558,16 +518,14 @@ public object ShellSetSpecKt {
         _builder.icon = value
       }
     /**
-     * <code>optional .ei.DLCItem icon = 19;</code>
-     * @return This builder for chaining.
+     * `optional .ei.DLCItem icon = 19;`
      */
     public fun clearIcon() {
       _builder.clearIcon()
     }
     /**
-     * <code>optional .ei.DLCItem icon = 19;</code>
+     * `optional .ei.DLCItem icon = 19;`
      * @return Whether the icon field is set.
-     * @return This builder for chaining.
      */
     public fun hasIcon(): kotlin.Boolean {
       return _builder.hasIcon()
@@ -587,16 +545,14 @@ public object ShellSetSpecKt {
         _builder.defaultAppearance = value
       }
     /**
-     * <code>optional bool default_appearance = 6;</code>
-     * @return This builder for chaining.
+     * `optional bool default_appearance = 6;`
      */
     public fun clearDefaultAppearance() {
       _builder.clearDefaultAppearance()
     }
     /**
-     * <code>optional bool default_appearance = 6;</code>
+     * `optional bool default_appearance = 6;`
      * @return Whether the defaultAppearance field is set.
-     * @return This builder for chaining.
      */
     public fun hasDefaultAppearance(): kotlin.Boolean {
       return _builder.hasDefaultAppearance()
@@ -613,16 +569,14 @@ public object ShellSetSpecKt {
         _builder.customAppearance = value
       }
     /**
-     * <code>optional bool custom_appearance = 12;</code>
-     * @return This builder for chaining.
+     * `optional bool custom_appearance = 12;`
      */
     public fun clearCustomAppearance() {
       _builder.clearCustomAppearance()
     }
     /**
-     * <code>optional bool custom_appearance = 12;</code>
+     * `optional bool custom_appearance = 12;`
      * @return Whether the customAppearance field is set.
-     * @return This builder for chaining.
      */
     public fun hasCustomAppearance(): kotlin.Boolean {
       return _builder.hasCustomAppearance()
@@ -661,16 +615,14 @@ public object ShellSetSpecKt {
           _builder.identifier = value
         }
       /**
-       * <code>optional string identifier = 1;</code>
-       * @return This builder for chaining.
+       * `optional string identifier = 1;`
        */
       public fun clearIdentifier() {
         _builder.clearIdentifier()
       }
       /**
-       * <code>optional string identifier = 1;</code>
+       * `optional string identifier = 1;`
        * @return Whether the identifier field is set.
-       * @return This builder for chaining.
        */
       public fun hasIdentifier(): kotlin.Boolean {
         return _builder.hasIdentifier()
@@ -687,16 +639,14 @@ public object ShellSetSpecKt {
           _builder.hexColor = value
         }
       /**
-       * <code>optional string hex_color = 2;</code>
-       * @return This builder for chaining.
+       * `optional string hex_color = 2;`
        */
       public fun clearHexColor() {
         _builder.clearHexColor()
       }
       /**
-       * <code>optional string hex_color = 2;</code>
+       * `optional string hex_color = 2;`
        * @return Whether the hexColor field is set.
-       * @return This builder for chaining.
        */
       public fun hasHexColor(): kotlin.Boolean {
         return _builder.hasHexColor()
@@ -713,16 +663,14 @@ public object ShellSetSpecKt {
           _builder.price = value
         }
       /**
-       * <code>optional uint32 price = 3;</code>
-       * @return This builder for chaining.
+       * `optional uint32 price = 3;`
        */
       public fun clearPrice() {
         _builder.clearPrice()
       }
       /**
-       * <code>optional uint32 price = 3;</code>
+       * `optional uint32 price = 3;`
        * @return Whether the price field is set.
-       * @return This builder for chaining.
        */
       public fun hasPrice(): kotlin.Boolean {
         return _builder.hasPrice()
@@ -739,16 +687,14 @@ public object ShellSetSpecKt {
           _builder.sortPriority = value
         }
       /**
-       * <code>optional int32 sort_priority = 6;</code>
-       * @return This builder for chaining.
+       * `optional int32 sort_priority = 6;`
        */
       public fun clearSortPriority() {
         _builder.clearSortPriority()
       }
       /**
-       * <code>optional int32 sort_priority = 6;</code>
+       * `optional int32 sort_priority = 6;`
        * @return Whether the sortPriority field is set.
-       * @return This builder for chaining.
        */
       public fun hasSortPriority(): kotlin.Boolean {
         return _builder.hasSortPriority()
@@ -765,16 +711,14 @@ public object ShellSetSpecKt {
           _builder.defaultAppearance = value
         }
       /**
-       * <code>optional bool default_appearance = 4;</code>
-       * @return This builder for chaining.
+       * `optional bool default_appearance = 4;`
        */
       public fun clearDefaultAppearance() {
         _builder.clearDefaultAppearance()
       }
       /**
-       * <code>optional bool default_appearance = 4;</code>
+       * `optional bool default_appearance = 4;`
        * @return Whether the defaultAppearance field is set.
-       * @return This builder for chaining.
        */
       public fun hasDefaultAppearance(): kotlin.Boolean {
         return _builder.hasDefaultAppearance()
@@ -791,16 +735,14 @@ public object ShellSetSpecKt {
           _builder.customAppearance = value
         }
       /**
-       * <code>optional bool custom_appearance = 5;</code>
-       * @return This builder for chaining.
+       * `optional bool custom_appearance = 5;`
        */
       public fun clearCustomAppearance() {
         _builder.clearCustomAppearance()
       }
       /**
-       * <code>optional bool custom_appearance = 5;</code>
+       * `optional bool custom_appearance = 5;`
        * @return Whether the customAppearance field is set.
-       * @return This builder for chaining.
        */
       public fun hasCustomAppearance(): kotlin.Boolean {
         return _builder.hasCustomAppearance()

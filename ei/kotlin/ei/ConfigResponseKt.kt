@@ -39,16 +39,14 @@ public object ConfigResponseKt {
         _builder.liveConfig = value
       }
     /**
-     * <code>optional .ei.LiveConfig live_config = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.LiveConfig live_config = 1;`
      */
     public fun clearLiveConfig() {
       _builder.clearLiveConfig()
     }
     /**
-     * <code>optional .ei.LiveConfig live_config = 1;</code>
+     * `optional .ei.LiveConfig live_config = 1;`
      * @return Whether the liveConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
@@ -68,16 +66,14 @@ public object ConfigResponseKt {
         _builder.mailBag = value
       }
     /**
-     * <code>optional .ei.MailDB mail_bag = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MailDB mail_bag = 2;`
      */
     public fun clearMailBag() {
       _builder.clearMailBag()
     }
     /**
-     * <code>optional .ei.MailDB mail_bag = 2;</code>
+     * `optional .ei.MailDB mail_bag = 2;`
      * @return Whether the mailBag field is set.
-     * @return This builder for chaining.
      */
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
@@ -97,16 +93,14 @@ public object ConfigResponseKt {
         _builder.dlcCatalog = value
       }
     /**
-     * <code>optional .ei.DLCCatalog dlc_catalog = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.DLCCatalog dlc_catalog = 3;`
      */
     public fun clearDlcCatalog() {
       _builder.clearDlcCatalog()
     }
     /**
-     * <code>optional .ei.DLCCatalog dlc_catalog = 3;</code>
+     * `optional .ei.DLCCatalog dlc_catalog = 3;`
      * @return Whether the dlcCatalog field is set.
-     * @return This builder for chaining.
      */
     public fun hasDlcCatalog(): kotlin.Boolean {
       return _builder.hasDlcCatalog()

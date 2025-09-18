@@ -39,16 +39,14 @@ public object InGameMailKt {
         _builder.id = value
       }
     /**
-     * <code>optional string id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string id = 1;`
      */
     public fun clearId() {
       _builder.clearId()
     }
     /**
-     * <code>optional string id = 1;</code>
+     * `optional string id = 1;`
      * @return Whether the id field is set.
-     * @return This builder for chaining.
      */
     public fun hasId(): kotlin.Boolean {
       return _builder.hasId()
@@ -65,16 +63,14 @@ public object InGameMailKt {
         _builder.title = value
       }
     /**
-     * <code>optional string title = 2;</code>
-     * @return This builder for chaining.
+     * `optional string title = 2;`
      */
     public fun clearTitle() {
       _builder.clearTitle()
     }
     /**
-     * <code>optional string title = 2;</code>
+     * `optional string title = 2;`
      * @return Whether the title field is set.
-     * @return This builder for chaining.
      */
     public fun hasTitle(): kotlin.Boolean {
       return _builder.hasTitle()
@@ -91,16 +87,14 @@ public object InGameMailKt {
         _builder.date = value
       }
     /**
-     * <code>optional string date = 8;</code>
-     * @return This builder for chaining.
+     * `optional string date = 8;`
      */
     public fun clearDate() {
       _builder.clearDate()
     }
     /**
-     * <code>optional string date = 8;</code>
+     * `optional string date = 8;`
      * @return Whether the date field is set.
-     * @return This builder for chaining.
      */
     public fun hasDate(): kotlin.Boolean {
       return _builder.hasDate()
@@ -117,16 +111,14 @@ public object InGameMailKt {
         _builder.message = value
       }
     /**
-     * <code>optional string message = 3;</code>
-     * @return This builder for chaining.
+     * `optional string message = 3;`
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * <code>optional string message = 3;</code>
+     * `optional string message = 3;`
      * @return Whether the message field is set.
-     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -143,16 +135,14 @@ public object InGameMailKt {
         _builder.action = value
       }
     /**
-     * <code>optional string action = 4;</code>
-     * @return This builder for chaining.
+     * `optional string action = 4;`
      */
     public fun clearAction() {
       _builder.clearAction()
     }
     /**
-     * <code>optional string action = 4;</code>
+     * `optional string action = 4;`
      * @return Whether the action field is set.
-     * @return This builder for chaining.
      */
     public fun hasAction(): kotlin.Boolean {
       return _builder.hasAction()
@@ -169,16 +159,14 @@ public object InGameMailKt {
         _builder.url = value
       }
     /**
-     * <code>optional string url = 5;</code>
-     * @return This builder for chaining.
+     * `optional string url = 5;`
      */
     public fun clearUrl() {
       _builder.clearUrl()
     }
     /**
-     * <code>optional string url = 5;</code>
+     * `optional string url = 5;`
      * @return Whether the url field is set.
-     * @return This builder for chaining.
      */
     public fun hasUrl(): kotlin.Boolean {
       return _builder.hasUrl()
@@ -195,16 +183,14 @@ public object InGameMailKt {
         _builder.appLink = value
       }
     /**
-     * <code>optional .ei.UILocation app_link = 14;</code>
-     * @return This builder for chaining.
+     * `optional .ei.UILocation app_link = 14;`
      */
     public fun clearAppLink() {
       _builder.clearAppLink()
     }
     /**
-     * <code>optional .ei.UILocation app_link = 14;</code>
+     * `optional .ei.UILocation app_link = 14;`
      * @return Whether the appLink field is set.
-     * @return This builder for chaining.
      */
     public fun hasAppLink(): kotlin.Boolean {
       return _builder.hasAppLink()
@@ -221,16 +207,14 @@ public object InGameMailKt {
         _builder.appLinkExtra = value
       }
     /**
-     * <code>optional string app_link_extra = 15;</code>
-     * @return This builder for chaining.
+     * `optional string app_link_extra = 15;`
      */
     public fun clearAppLinkExtra() {
       _builder.clearAppLinkExtra()
     }
     /**
-     * <code>optional string app_link_extra = 15;</code>
+     * `optional string app_link_extra = 15;`
      * @return Whether the appLinkExtra field is set.
-     * @return This builder for chaining.
      */
     public fun hasAppLinkExtra(): kotlin.Boolean {
       return _builder.hasAppLinkExtra()
@@ -247,16 +231,14 @@ public object InGameMailKt {
         _builder.image = value
       }
     /**
-     * <code>optional .ei.DLCItem image = 16;</code>
-     * @return This builder for chaining.
+     * `optional .ei.DLCItem image = 16;`
      */
     public fun clearImage() {
       _builder.clearImage()
     }
     /**
-     * <code>optional .ei.DLCItem image = 16;</code>
+     * `optional .ei.DLCItem image = 16;`
      * @return Whether the image field is set.
-     * @return This builder for chaining.
      */
     public fun hasImage(): kotlin.Boolean {
       return _builder.hasImage()
@@ -276,16 +258,14 @@ public object InGameMailKt {
         _builder.imageWidth = value
       }
     /**
-     * <code>optional double image_width = 21;</code>
-     * @return This builder for chaining.
+     * `optional double image_width = 21;`
      */
     public fun clearImageWidth() {
       _builder.clearImageWidth()
     }
     /**
-     * <code>optional double image_width = 21;</code>
+     * `optional double image_width = 21;`
      * @return Whether the imageWidth field is set.
-     * @return This builder for chaining.
      */
     public fun hasImageWidth(): kotlin.Boolean {
       return _builder.hasImageWidth()
@@ -302,16 +282,14 @@ public object InGameMailKt {
         _builder.imageHeight = value
       }
     /**
-     * <code>optional double image_height = 22;</code>
-     * @return This builder for chaining.
+     * `optional double image_height = 22;`
      */
     public fun clearImageHeight() {
       _builder.clearImageHeight()
     }
     /**
-     * <code>optional double image_height = 22;</code>
+     * `optional double image_height = 22;`
      * @return Whether the imageHeight field is set.
-     * @return This builder for chaining.
      */
     public fun hasImageHeight(): kotlin.Boolean {
       return _builder.hasImageHeight()
@@ -328,16 +306,14 @@ public object InGameMailKt {
         _builder.platform = value
       }
     /**
-     * <code>optional uint32 platform = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 platform = 7;`
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * <code>optional uint32 platform = 7;</code>
+     * `optional uint32 platform = 7;`
      * @return Whether the platform field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -350,9 +326,8 @@ public object InGameMailKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class BuildsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string builds = 9;</code>
+     * `repeated string builds = 9;`
      * @return A list containing the builds.
-     * @return This builder for chaining.
      */
     public val builds: com.google.protobuf.kotlin.DslList<kotlin.String, BuildsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -360,9 +335,8 @@ public object InGameMailKt {
         _builder.buildsList
       )
     /**
-     * <code>repeated string builds = 9;</code>
+     * `repeated string builds = 9;`
      * @param value The builds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addBuilds")
@@ -370,9 +344,8 @@ public object InGameMailKt {
       _builder.addBuilds(value)
     }
     /**
-     * <code>repeated string builds = 9;</code>
+     * `repeated string builds = 9;`
      * @param value The builds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignBuilds")
@@ -381,9 +354,8 @@ public object InGameMailKt {
       add(value)
     }
     /**
-     * <code>repeated string builds = 9;</code>
+     * `repeated string builds = 9;`
      * @param values The builds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllBuilds")
@@ -391,9 +363,8 @@ public object InGameMailKt {
       _builder.addAllBuilds(values)
     }
     /**
-     * <code>repeated string builds = 9;</code>
+     * `repeated string builds = 9;`
      * @param values The builds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllBuilds")
@@ -402,18 +373,16 @@ public object InGameMailKt {
       addAll(values)
     }
     /**
-     * <code>repeated string builds = 9;</code>
+     * `repeated string builds = 9;`
      * @param index The index to set the value at.
      * @param value The builds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setBuilds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, BuildsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setBuilds(index, value)
     }/**
-     * <code>repeated string builds = 9;</code>
-     * @return This builder for chaining.
+     * `repeated string builds = 9;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setBuilds")
@@ -431,16 +400,14 @@ public object InGameMailKt {
         _builder.minClientVersion = value
       }
     /**
-     * <code>optional uint32 min_client_version = 10;</code>
-     * @return This builder for chaining.
+     * `optional uint32 min_client_version = 10;`
      */
     public fun clearMinClientVersion() {
       _builder.clearMinClientVersion()
     }
     /**
-     * <code>optional uint32 min_client_version = 10;</code>
+     * `optional uint32 min_client_version = 10;`
      * @return Whether the minClientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinClientVersion(): kotlin.Boolean {
       return _builder.hasMinClientVersion()
@@ -457,16 +424,14 @@ public object InGameMailKt {
         _builder.maxClientVersion = value
       }
     /**
-     * <code>optional uint32 max_client_version = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint32 max_client_version = 12;`
      */
     public fun clearMaxClientVersion() {
       _builder.clearMaxClientVersion()
     }
     /**
-     * <code>optional uint32 max_client_version = 12;</code>
+     * `optional uint32 max_client_version = 12;`
      * @return Whether the maxClientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxClientVersion(): kotlin.Boolean {
       return _builder.hasMaxClientVersion()
@@ -483,16 +448,14 @@ public object InGameMailKt {
         _builder.minSoulEggs = value
       }
     /**
-     * <code>optional double min_soul_eggs = 11;</code>
-     * @return This builder for chaining.
+     * `optional double min_soul_eggs = 11;`
      */
     public fun clearMinSoulEggs() {
       _builder.clearMinSoulEggs()
     }
     /**
-     * <code>optional double min_soul_eggs = 11;</code>
+     * `optional double min_soul_eggs = 11;`
      * @return Whether the minSoulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinSoulEggs(): kotlin.Boolean {
       return _builder.hasMinSoulEggs()
@@ -509,16 +472,14 @@ public object InGameMailKt {
         _builder.maxSoulEggs = value
       }
     /**
-     * <code>optional double max_soul_eggs = 29;</code>
-     * @return This builder for chaining.
+     * `optional double max_soul_eggs = 29;`
      */
     public fun clearMaxSoulEggs() {
       _builder.clearMaxSoulEggs()
     }
     /**
-     * <code>optional double max_soul_eggs = 29;</code>
+     * `optional double max_soul_eggs = 29;`
      * @return Whether the maxSoulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxSoulEggs(): kotlin.Boolean {
       return _builder.hasMaxSoulEggs()
@@ -535,16 +496,14 @@ public object InGameMailKt {
         _builder.minMysticalBonus = value
       }
     /**
-     * <code>optional double min_mystical_bonus = 13;</code>
-     * @return This builder for chaining.
+     * `optional double min_mystical_bonus = 13;`
      */
     public fun clearMinMysticalBonus() {
       _builder.clearMinMysticalBonus()
     }
     /**
-     * <code>optional double min_mystical_bonus = 13;</code>
+     * `optional double min_mystical_bonus = 13;`
      * @return Whether the minMysticalBonus field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinMysticalBonus(): kotlin.Boolean {
       return _builder.hasMinMysticalBonus()
@@ -561,16 +520,14 @@ public object InGameMailKt {
         _builder.userType = value
       }
     /**
-     * <code>optional .ei.UserType user_type = 17;</code>
-     * @return This builder for chaining.
+     * `optional .ei.UserType user_type = 17;`
      */
     public fun clearUserType() {
       _builder.clearUserType()
     }
     /**
-     * <code>optional .ei.UserType user_type = 17;</code>
+     * `optional .ei.UserType user_type = 17;`
      * @return Whether the userType field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserType(): kotlin.Boolean {
       return _builder.hasUserType()
@@ -587,16 +544,14 @@ public object InGameMailKt {
         _builder.minPiggyBreaks = value
       }
     /**
-     * <code>optional uint32 min_piggy_breaks = 20;</code>
-     * @return This builder for chaining.
+     * `optional uint32 min_piggy_breaks = 20;`
      */
     public fun clearMinPiggyBreaks() {
       _builder.clearMinPiggyBreaks()
     }
     /**
-     * <code>optional uint32 min_piggy_breaks = 20;</code>
+     * `optional uint32 min_piggy_breaks = 20;`
      * @return Whether the minPiggyBreaks field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinPiggyBreaks(): kotlin.Boolean {
       return _builder.hasMinPiggyBreaks()
@@ -613,16 +568,14 @@ public object InGameMailKt {
         _builder.goldTip = value
       }
     /**
-     * <code>optional double gold_tip = 6;</code>
-     * @return This builder for chaining.
+     * `optional double gold_tip = 6;`
      */
     public fun clearGoldTip() {
       _builder.clearGoldTip()
     }
     /**
-     * <code>optional double gold_tip = 6;</code>
+     * `optional double gold_tip = 6;`
      * @return Whether the goldTip field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldTip(): kotlin.Boolean {
       return _builder.hasGoldTip()
@@ -639,16 +592,14 @@ public object InGameMailKt {
         _builder.tip = value
       }
     /**
-     * <code>optional bool tip = 23;</code>
-     * @return This builder for chaining.
+     * `optional bool tip = 23;`
      */
     public fun clearTip() {
       _builder.clearTip()
     }
     /**
-     * <code>optional bool tip = 23;</code>
+     * `optional bool tip = 23;`
      * @return Whether the tip field is set.
-     * @return This builder for chaining.
      */
     public fun hasTip(): kotlin.Boolean {
       return _builder.hasTip()
@@ -665,16 +616,14 @@ public object InGameMailKt {
         _builder.priority = value
       }
     /**
-     * <code>optional uint32 priority = 27;</code>
-     * @return This builder for chaining.
+     * `optional uint32 priority = 27;`
      */
     public fun clearPriority() {
       _builder.clearPriority()
     }
     /**
-     * <code>optional uint32 priority = 27;</code>
+     * `optional uint32 priority = 27;`
      * @return Whether the priority field is set.
-     * @return This builder for chaining.
      */
     public fun hasPriority(): kotlin.Boolean {
       return _builder.hasPriority()
@@ -691,16 +640,14 @@ public object InGameMailKt {
         _builder.minDaysSinceLastTip = value
       }
     /**
-     * <code>optional double min_days_since_last_tip = 24;</code>
-     * @return This builder for chaining.
+     * `optional double min_days_since_last_tip = 24;`
      */
     public fun clearMinDaysSinceLastTip() {
       _builder.clearMinDaysSinceLastTip()
     }
     /**
-     * <code>optional double min_days_since_last_tip = 24;</code>
+     * `optional double min_days_since_last_tip = 24;`
      * @return Whether the minDaysSinceLastTip field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinDaysSinceLastTip(): kotlin.Boolean {
       return _builder.hasMinDaysSinceLastTip()
@@ -717,16 +664,14 @@ public object InGameMailKt {
         _builder.maxRetries = value
       }
     /**
-     * <code>optional uint32 max_retries = 25;</code>
-     * @return This builder for chaining.
+     * `optional uint32 max_retries = 25;`
      */
     public fun clearMaxRetries() {
       _builder.clearMaxRetries()
     }
     /**
-     * <code>optional uint32 max_retries = 25;</code>
+     * `optional uint32 max_retries = 25;`
      * @return Whether the maxRetries field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxRetries(): kotlin.Boolean {
       return _builder.hasMaxRetries()
@@ -743,16 +688,14 @@ public object InGameMailKt {
         _builder.daysUntilRetry = value
       }
     /**
-     * <code>optional double days_until_retry = 26;</code>
-     * @return This builder for chaining.
+     * `optional double days_until_retry = 26;`
      */
     public fun clearDaysUntilRetry() {
       _builder.clearDaysUntilRetry()
     }
     /**
-     * <code>optional double days_until_retry = 26;</code>
+     * `optional double days_until_retry = 26;`
      * @return Whether the daysUntilRetry field is set.
-     * @return This builder for chaining.
      */
     public fun hasDaysUntilRetry(): kotlin.Boolean {
       return _builder.hasDaysUntilRetry()
@@ -769,16 +712,14 @@ public object InGameMailKt {
         _builder.category = value
       }
     /**
-     * <code>optional string category = 28;</code>
-     * @return This builder for chaining.
+     * `optional string category = 28;`
      */
     public fun clearCategory() {
       _builder.clearCategory()
     }
     /**
-     * <code>optional string category = 28;</code>
+     * `optional string category = 28;`
      * @return Whether the category field is set.
-     * @return This builder for chaining.
      */
     public fun hasCategory(): kotlin.Boolean {
       return _builder.hasCategory()

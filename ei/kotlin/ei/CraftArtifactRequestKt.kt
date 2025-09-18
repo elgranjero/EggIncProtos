@@ -39,16 +39,14 @@ public object CraftArtifactRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 5;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 5;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object CraftArtifactRequestKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 1;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 1;</code>
+     * `optional string ei_user_id = 1;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -94,16 +90,14 @@ public object CraftArtifactRequestKt {
         _builder.spec = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec spec = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec spec = 2;`
      */
     public fun clearSpec() {
       _builder.clearSpec()
     }
     /**
-     * <code>optional .ei.ArtifactSpec spec = 2;</code>
+     * `optional .ei.ArtifactSpec spec = 2;`
      * @return Whether the spec field is set.
-     * @return This builder for chaining.
      */
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
@@ -123,16 +117,14 @@ public object CraftArtifactRequestKt {
         _builder.itemId = value
       }
     /**
-     * <code>optional uint64 item_id = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint64 item_id = 3;`
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * <code>optional uint64 item_id = 3;</code>
+     * `optional uint64 item_id = 3;`
      * @return Whether the itemId field is set.
-     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()
@@ -149,16 +141,14 @@ public object CraftArtifactRequestKt {
         _builder.goldPricePaid = value
       }
     /**
-     * <code>optional double gold_price_paid = 6;</code>
-     * @return This builder for chaining.
+     * `optional double gold_price_paid = 6;`
      */
     public fun clearGoldPricePaid() {
       _builder.clearGoldPricePaid()
     }
     /**
-     * <code>optional double gold_price_paid = 6;</code>
+     * `optional double gold_price_paid = 6;`
      * @return Whether the goldPricePaid field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldPricePaid(): kotlin.Boolean {
       return _builder.hasGoldPricePaid()
@@ -175,16 +165,14 @@ public object CraftArtifactRequestKt {
         _builder.craftingCount = value
       }
     /**
-     * <code>optional uint32 crafting_count = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 crafting_count = 7;`
      */
     public fun clearCraftingCount() {
       _builder.clearCraftingCount()
     }
     /**
-     * <code>optional uint32 crafting_count = 7;</code>
+     * `optional uint32 crafting_count = 7;`
      * @return Whether the craftingCount field is set.
-     * @return This builder for chaining.
      */
     public fun hasCraftingCount(): kotlin.Boolean {
       return _builder.hasCraftingCount()
@@ -201,16 +189,14 @@ public object CraftArtifactRequestKt {
         _builder.craftingXp = value
       }
     /**
-     * <code>optional double crafting_xp = 8;</code>
-     * @return This builder for chaining.
+     * `optional double crafting_xp = 8;`
      */
     public fun clearCraftingXp() {
       _builder.clearCraftingXp()
     }
     /**
-     * <code>optional double crafting_xp = 8;</code>
+     * `optional double crafting_xp = 8;`
      * @return Whether the craftingXp field is set.
-     * @return This builder for chaining.
      */
     public fun hasCraftingXp(): kotlin.Boolean {
       return _builder.hasCraftingXp()
@@ -231,9 +217,8 @@ public object CraftArtifactRequestKt {
         _builder.ingredientsList
       )
     /**
-     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
+     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
      * @param value The ingredients to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addIngredients")
@@ -241,9 +226,8 @@ public object CraftArtifactRequestKt {
       _builder.addIngredients(value)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
+     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
      * @param value The ingredients to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignIngredients")
@@ -252,9 +236,8 @@ public object CraftArtifactRequestKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
+     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
      * @param values The ingredients to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllIngredients")
@@ -262,9 +245,8 @@ public object CraftArtifactRequestKt {
       _builder.addAllIngredients(values)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
+     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
      * @param values The ingredients to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllIngredients")
@@ -273,10 +255,9 @@ public object CraftArtifactRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
+     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
      * @param index The index to set the value at.
      * @param value The ingredients to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setIngredients")
@@ -284,8 +265,7 @@ public object CraftArtifactRequestKt {
       _builder.setIngredients(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactInventoryItem ingredients = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactInventoryItem ingredients = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearIngredients")

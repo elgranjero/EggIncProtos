@@ -39,16 +39,14 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 3;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 3;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 3;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -64,9 +62,8 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class IdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string ids = 1;</code>
+     * `repeated string ids = 1;`
      * @return A list containing the ids.
-     * @return This builder for chaining.
      */
     public val ids: com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -74,9 +71,8 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
         _builder.idsList
       )
     /**
-     * <code>repeated string ids = 1;</code>
+     * `repeated string ids = 1;`
      * @param value The ids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addIds")
@@ -84,9 +80,8 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
       _builder.addIds(value)
     }
     /**
-     * <code>repeated string ids = 1;</code>
+     * `repeated string ids = 1;`
      * @param value The ids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignIds")
@@ -95,9 +90,8 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
       add(value)
     }
     /**
-     * <code>repeated string ids = 1;</code>
+     * `repeated string ids = 1;`
      * @param values The ids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllIds")
@@ -105,9 +99,8 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
       _builder.addAllIds(values)
     }
     /**
-     * <code>repeated string ids = 1;</code>
+     * `repeated string ids = 1;`
      * @param values The ids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllIds")
@@ -116,18 +109,16 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
       addAll(values)
     }
     /**
-     * <code>repeated string ids = 1;</code>
+     * `repeated string ids = 1;`
      * @param index The index to set the value at.
      * @param value The ids to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, IdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setIds(index, value)
     }/**
-     * <code>repeated string ids = 1;</code>
-     * @return This builder for chaining.
+     * `repeated string ids = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setIds")
@@ -145,16 +136,14 @@ public object ShowcaseRoyaltyDeliveryConfirmationKt {
         _builder.amount = value
       }
     /**
-     * <code>optional uint32 amount = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 amount = 2;`
      */
     public fun clearAmount() {
       _builder.clearAmount()
     }
     /**
-     * <code>optional uint32 amount = 2;</code>
+     * `optional uint32 amount = 2;`
      * @return Whether the amount field is set.
-     * @return This builder for chaining.
      */
     public fun hasAmount(): kotlin.Boolean {
       return _builder.hasAmount()

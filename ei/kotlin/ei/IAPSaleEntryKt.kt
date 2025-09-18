@@ -39,16 +39,14 @@ public object IAPSaleEntryKt {
         _builder.productId = value
       }
     /**
-     * <code>optional string product_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string product_id = 1;`
      */
     public fun clearProductId() {
       _builder.clearProductId()
     }
     /**
-     * <code>optional string product_id = 1;</code>
+     * `optional string product_id = 1;`
      * @return Whether the productId field is set.
-     * @return This builder for chaining.
      */
     public fun hasProductId(): kotlin.Boolean {
       return _builder.hasProductId()
@@ -65,16 +63,14 @@ public object IAPSaleEntryKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 2;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 2;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 2;</code>
+     * `optional double seconds_remaining = 2;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -91,16 +87,14 @@ public object IAPSaleEntryKt {
         _builder.discountString = value
       }
     /**
-     * <code>optional string discount_string = 3;</code>
-     * @return This builder for chaining.
+     * `optional string discount_string = 3;`
      */
     public fun clearDiscountString() {
       _builder.clearDiscountString()
     }
     /**
-     * <code>optional string discount_string = 3;</code>
+     * `optional string discount_string = 3;`
      * @return Whether the discountString field is set.
-     * @return This builder for chaining.
      */
     public fun hasDiscountString(): kotlin.Boolean {
       return _builder.hasDiscountString()
@@ -117,16 +111,14 @@ public object IAPSaleEntryKt {
         _builder.saleId = value
       }
     /**
-     * <code>optional string sale_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string sale_id = 4;`
      */
     public fun clearSaleId() {
       _builder.clearSaleId()
     }
     /**
-     * <code>optional string sale_id = 4;</code>
+     * `optional string sale_id = 4;`
      * @return Whether the saleId field is set.
-     * @return This builder for chaining.
      */
     public fun hasSaleId(): kotlin.Boolean {
       return _builder.hasSaleId()

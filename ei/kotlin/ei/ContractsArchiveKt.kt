@@ -43,9 +43,8 @@ public object ContractsArchiveKt {
         _builder.archiveList
       )
     /**
-     * <code>repeated .ei.LocalContract archive = 1;</code>
+     * `repeated .ei.LocalContract archive = 1;`
      * @param value The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addArchive")
@@ -53,9 +52,8 @@ public object ContractsArchiveKt {
       _builder.addArchive(value)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 1;</code>
+     * `repeated .ei.LocalContract archive = 1;`
      * @param value The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignArchive")
@@ -64,9 +62,8 @@ public object ContractsArchiveKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 1;</code>
+     * `repeated .ei.LocalContract archive = 1;`
      * @param values The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllArchive")
@@ -74,9 +71,8 @@ public object ContractsArchiveKt {
       _builder.addAllArchive(values)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 1;</code>
+     * `repeated .ei.LocalContract archive = 1;`
      * @param values The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllArchive")
@@ -85,10 +81,9 @@ public object ContractsArchiveKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 1;</code>
+     * `repeated .ei.LocalContract archive = 1;`
      * @param index The index to set the value at.
      * @param value The archive to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setArchive")
@@ -96,8 +91,7 @@ public object ContractsArchiveKt {
       _builder.setArchive(index, value)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.LocalContract archive = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearArchive")

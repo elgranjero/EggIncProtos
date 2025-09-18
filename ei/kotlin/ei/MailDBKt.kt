@@ -43,9 +43,8 @@ public object MailDBKt {
         _builder.mailList
       )
     /**
-     * <code>repeated .ei.InGameMail mail = 1;</code>
+     * `repeated .ei.InGameMail mail = 1;`
      * @param value The mail to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMail")
@@ -53,9 +52,8 @@ public object MailDBKt {
       _builder.addMail(value)
     }
     /**
-     * <code>repeated .ei.InGameMail mail = 1;</code>
+     * `repeated .ei.InGameMail mail = 1;`
      * @param value The mail to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMail")
@@ -64,9 +62,8 @@ public object MailDBKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.InGameMail mail = 1;</code>
+     * `repeated .ei.InGameMail mail = 1;`
      * @param values The mail to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMail")
@@ -74,9 +71,8 @@ public object MailDBKt {
       _builder.addAllMail(values)
     }
     /**
-     * <code>repeated .ei.InGameMail mail = 1;</code>
+     * `repeated .ei.InGameMail mail = 1;`
      * @param values The mail to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMail")
@@ -85,10 +81,9 @@ public object MailDBKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.InGameMail mail = 1;</code>
+     * `repeated .ei.InGameMail mail = 1;`
      * @param index The index to set the value at.
      * @param value The mail to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMail")
@@ -96,8 +91,7 @@ public object MailDBKt {
       _builder.setMail(index, value)
     }
     /**
-     * <code>repeated .ei.InGameMail mail = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.InGameMail mail = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearMail")
@@ -116,16 +110,14 @@ public object MailDBKt {
         _builder.tipsDbData = value
       }
     /**
-     * <code>optional bytes tips_db_data = 2;</code>
-     * @return This builder for chaining.
+     * `optional bytes tips_db_data = 2;`
      */
     public fun clearTipsDbData() {
       _builder.clearTipsDbData()
     }
     /**
-     * <code>optional bytes tips_db_data = 2;</code>
+     * `optional bytes tips_db_data = 2;`
      * @return Whether the tipsDbData field is set.
-     * @return This builder for chaining.
      */
     public fun hasTipsDbData(): kotlin.Boolean {
       return _builder.hasTipsDbData()
@@ -142,16 +134,14 @@ public object MailDBKt {
         _builder.tipsChecksum = value
       }
     /**
-     * <code>optional string tips_checksum = 3;</code>
-     * @return This builder for chaining.
+     * `optional string tips_checksum = 3;`
      */
     public fun clearTipsChecksum() {
       _builder.clearTipsChecksum()
     }
     /**
-     * <code>optional string tips_checksum = 3;</code>
+     * `optional string tips_checksum = 3;`
      * @return Whether the tipsChecksum field is set.
-     * @return This builder for chaining.
      */
     public fun hasTipsChecksum(): kotlin.Boolean {
       return _builder.hasTipsChecksum()

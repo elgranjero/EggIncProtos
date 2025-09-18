@@ -39,16 +39,14 @@ public object GameModifierKt {
         _builder.dimension = value
       }
     /**
-     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.GameModifier.GameDimension dimension = 1;`
      */
     public fun clearDimension() {
       _builder.clearDimension()
     }
     /**
-     * <code>optional .ei.GameModifier.GameDimension dimension = 1;</code>
+     * `optional .ei.GameModifier.GameDimension dimension = 1;`
      * @return Whether the dimension field is set.
-     * @return This builder for chaining.
      */
     public fun hasDimension(): kotlin.Boolean {
       return _builder.hasDimension()
@@ -65,16 +63,14 @@ public object GameModifierKt {
         _builder.value = value
       }
     /**
-     * <code>optional double value = 2;</code>
-     * @return This builder for chaining.
+     * `optional double value = 2;`
      */
     public fun clearValue() {
       _builder.clearValue()
     }
     /**
-     * <code>optional double value = 2;</code>
+     * `optional double value = 2;`
      * @return Whether the value field is set.
-     * @return This builder for chaining.
      */
     public fun hasValue(): kotlin.Boolean {
       return _builder.hasValue()
@@ -91,16 +87,14 @@ public object GameModifierKt {
         _builder.description = value
       }
     /**
-     * <code>optional string description = 3;</code>
-     * @return This builder for chaining.
+     * `optional string description = 3;`
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * <code>optional string description = 3;</code>
+     * `optional string description = 3;`
      * @return Whether the description field is set.
-     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()

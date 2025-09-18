@@ -39,16 +39,14 @@ public object ConsumeArtifactRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ConsumeArtifactRequestKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 3;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 3;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 3;</code>
+     * `optional string ei_user_id = 3;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -94,16 +90,14 @@ public object ConsumeArtifactRequestKt {
         _builder.spec = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec spec = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec spec = 1;`
      */
     public fun clearSpec() {
       _builder.clearSpec()
     }
     /**
-     * <code>optional .ei.ArtifactSpec spec = 1;</code>
+     * `optional .ei.ArtifactSpec spec = 1;`
      * @return Whether the spec field is set.
-     * @return This builder for chaining.
      */
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
@@ -123,16 +117,14 @@ public object ConsumeArtifactRequestKt {
         _builder.artifactServerId = value
       }
     /**
-     * <code>optional string artifact_server_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string artifact_server_id = 5;`
      */
     public fun clearArtifactServerId() {
       _builder.clearArtifactServerId()
     }
     /**
-     * <code>optional string artifact_server_id = 5;</code>
+     * `optional string artifact_server_id = 5;`
      * @return Whether the artifactServerId field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifactServerId(): kotlin.Boolean {
       return _builder.hasArtifactServerId()
@@ -149,16 +141,14 @@ public object ConsumeArtifactRequestKt {
         _builder.originalItemId = value
       }
     /**
-     * <code>optional uint64 original_item_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint64 original_item_id = 2;`
      */
     public fun clearOriginalItemId() {
       _builder.clearOriginalItemId()
     }
     /**
-     * <code>optional uint64 original_item_id = 2;</code>
+     * `optional uint64 original_item_id = 2;`
      * @return Whether the originalItemId field is set.
-     * @return This builder for chaining.
      */
     public fun hasOriginalItemId(): kotlin.Boolean {
       return _builder.hasOriginalItemId()
@@ -171,9 +161,8 @@ public object ConsumeArtifactRequestKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class AdditionalServerIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string additional_server_ids = 7;</code>
+     * `repeated string additional_server_ids = 7;`
      * @return A list containing the additionalServerIds.
-     * @return This builder for chaining.
      */
     public val additionalServerIds: com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -181,9 +170,8 @@ public object ConsumeArtifactRequestKt {
         _builder.additionalServerIdsList
       )
     /**
-     * <code>repeated string additional_server_ids = 7;</code>
+     * `repeated string additional_server_ids = 7;`
      * @param value The additionalServerIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAdditionalServerIds")
@@ -191,9 +179,8 @@ public object ConsumeArtifactRequestKt {
       _builder.addAdditionalServerIds(value)
     }
     /**
-     * <code>repeated string additional_server_ids = 7;</code>
+     * `repeated string additional_server_ids = 7;`
      * @param value The additionalServerIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAdditionalServerIds")
@@ -202,9 +189,8 @@ public object ConsumeArtifactRequestKt {
       add(value)
     }
     /**
-     * <code>repeated string additional_server_ids = 7;</code>
+     * `repeated string additional_server_ids = 7;`
      * @param values The additionalServerIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllAdditionalServerIds")
@@ -212,9 +198,8 @@ public object ConsumeArtifactRequestKt {
       _builder.addAllAdditionalServerIds(values)
     }
     /**
-     * <code>repeated string additional_server_ids = 7;</code>
+     * `repeated string additional_server_ids = 7;`
      * @param values The additionalServerIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllAdditionalServerIds")
@@ -223,18 +208,16 @@ public object ConsumeArtifactRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated string additional_server_ids = 7;</code>
+     * `repeated string additional_server_ids = 7;`
      * @param index The index to set the value at.
      * @param value The additionalServerIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setAdditionalServerIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, AdditionalServerIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setAdditionalServerIds(index, value)
     }/**
-     * <code>repeated string additional_server_ids = 7;</code>
-     * @return This builder for chaining.
+     * `repeated string additional_server_ids = 7;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setAdditionalServerIds")
@@ -256,18 +239,16 @@ public object ConsumeArtifactRequestKt {
         _builder.additionalItemIdsList
       )
     /**
-     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * `repeated uint64 additional_item_ids = 8;`
      * @param value The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.add(value: kotlin.Long) {
       _builder.addAdditionalItemIds(value)
     }/**
-     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * `repeated uint64 additional_item_ids = 8;`
      * @param value The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAdditionalItemIds")
@@ -275,18 +256,16 @@ public object ConsumeArtifactRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(value: kotlin.Long) {
       add(value)
     }/**
-     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * `repeated uint64 additional_item_ids = 8;`
      * @param values The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllAdditionalItemIds")
     public fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
       _builder.addAllAdditionalItemIds(values)
     }/**
-     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * `repeated uint64 additional_item_ids = 8;`
      * @param values The additionalItemIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllAdditionalItemIds")
@@ -294,18 +273,16 @@ public object ConsumeArtifactRequestKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
       addAll(values)
     }/**
-     * <code>repeated uint64 additional_item_ids = 8;</code>
+     * `repeated uint64 additional_item_ids = 8;`
      * @param index The index to set the value at.
      * @param value The additionalItemIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setAdditionalItemIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, AdditionalItemIdsProxy>.set(index: kotlin.Int, value: kotlin.Long) {
       _builder.setAdditionalItemIds(index, value)
     }/**
-     * <code>repeated uint64 additional_item_ids = 8;</code>
-     * @return This builder for chaining.
+     * `repeated uint64 additional_item_ids = 8;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearAdditionalItemIds")
@@ -323,16 +300,14 @@ public object ConsumeArtifactRequestKt {
         _builder.quantity = value
       }
     /**
-     * <code>optional uint32 quantity = 6;</code>
-     * @return This builder for chaining.
+     * `optional uint32 quantity = 6;`
      */
     public fun clearQuantity() {
       _builder.clearQuantity()
     }
     /**
-     * <code>optional uint32 quantity = 6;</code>
+     * `optional uint32 quantity = 6;`
      * @return Whether the quantity field is set.
-     * @return This builder for chaining.
      */
     public fun hasQuantity(): kotlin.Boolean {
       return _builder.hasQuantity()

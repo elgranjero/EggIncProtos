@@ -39,16 +39,14 @@ public object PeriodicalsResponseKt {
         _builder.sales = value
       }
     /**
-     * <code>optional .ei.SalesInfo sales = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.SalesInfo sales = 1;`
      */
     public fun clearSales() {
       _builder.clearSales()
     }
     /**
-     * <code>optional .ei.SalesInfo sales = 1;</code>
+     * `optional .ei.SalesInfo sales = 1;`
      * @return Whether the sales field is set.
-     * @return This builder for chaining.
      */
     public fun hasSales(): kotlin.Boolean {
       return _builder.hasSales()
@@ -68,16 +66,14 @@ public object PeriodicalsResponseKt {
         _builder.events = value
       }
     /**
-     * <code>optional .ei.EggIncCurrentEvents events = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.EggIncCurrentEvents events = 2;`
      */
     public fun clearEvents() {
       _builder.clearEvents()
     }
     /**
-     * <code>optional .ei.EggIncCurrentEvents events = 2;</code>
+     * `optional .ei.EggIncCurrentEvents events = 2;`
      * @return Whether the events field is set.
-     * @return This builder for chaining.
      */
     public fun hasEvents(): kotlin.Boolean {
       return _builder.hasEvents()
@@ -97,16 +93,14 @@ public object PeriodicalsResponseKt {
         _builder.contracts = value
       }
     /**
-     * <code>optional .ei.ContractsResponse contracts = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractsResponse contracts = 3;`
      */
     public fun clearContracts() {
       _builder.clearContracts()
     }
     /**
-     * <code>optional .ei.ContractsResponse contracts = 3;</code>
+     * `optional .ei.ContractsResponse contracts = 3;`
      * @return Whether the contracts field is set.
-     * @return This builder for chaining.
      */
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
@@ -130,9 +124,8 @@ public object PeriodicalsResponseKt {
         _builder.evaluationsList
       )
     /**
-     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * `repeated .ei.ContractEvaluation evaluations = 8;`
      * @param value The evaluations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEvaluations")
@@ -140,9 +133,8 @@ public object PeriodicalsResponseKt {
       _builder.addEvaluations(value)
     }
     /**
-     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * `repeated .ei.ContractEvaluation evaluations = 8;`
      * @param value The evaluations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEvaluations")
@@ -151,9 +143,8 @@ public object PeriodicalsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * `repeated .ei.ContractEvaluation evaluations = 8;`
      * @param values The evaluations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEvaluations")
@@ -161,9 +152,8 @@ public object PeriodicalsResponseKt {
       _builder.addAllEvaluations(values)
     }
     /**
-     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * `repeated .ei.ContractEvaluation evaluations = 8;`
      * @param values The evaluations to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEvaluations")
@@ -172,10 +162,9 @@ public object PeriodicalsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
+     * `repeated .ei.ContractEvaluation evaluations = 8;`
      * @param index The index to set the value at.
      * @param value The evaluations to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEvaluations")
@@ -183,8 +172,7 @@ public object PeriodicalsResponseKt {
       _builder.setEvaluations(index, value)
     }
     /**
-     * <code>repeated .ei.ContractEvaluation evaluations = 8;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractEvaluation evaluations = 8;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEvaluations")
@@ -207,9 +195,8 @@ public object PeriodicalsResponseKt {
         _builder.giftsList
       )
     /**
-     * <code>repeated .ei.ServerGift gifts = 4;</code>
+     * `repeated .ei.ServerGift gifts = 4;`
      * @param value The gifts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGifts")
@@ -217,9 +204,8 @@ public object PeriodicalsResponseKt {
       _builder.addGifts(value)
     }
     /**
-     * <code>repeated .ei.ServerGift gifts = 4;</code>
+     * `repeated .ei.ServerGift gifts = 4;`
      * @param value The gifts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGifts")
@@ -228,9 +214,8 @@ public object PeriodicalsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ServerGift gifts = 4;</code>
+     * `repeated .ei.ServerGift gifts = 4;`
      * @param values The gifts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGifts")
@@ -238,9 +223,8 @@ public object PeriodicalsResponseKt {
       _builder.addAllGifts(values)
     }
     /**
-     * <code>repeated .ei.ServerGift gifts = 4;</code>
+     * `repeated .ei.ServerGift gifts = 4;`
      * @param values The gifts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGifts")
@@ -249,10 +233,9 @@ public object PeriodicalsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ServerGift gifts = 4;</code>
+     * `repeated .ei.ServerGift gifts = 4;`
      * @param index The index to set the value at.
      * @param value The gifts to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGifts")
@@ -260,8 +243,7 @@ public object PeriodicalsResponseKt {
       _builder.setGifts(index, value)
     }
     /**
-     * <code>repeated .ei.ServerGift gifts = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ServerGift gifts = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGifts")
@@ -284,9 +266,8 @@ public object PeriodicalsResponseKt {
         _builder.artifactCasesList
       )
     /**
-     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
      * @param value The artifactCases to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addArtifactCases")
@@ -294,9 +275,8 @@ public object PeriodicalsResponseKt {
       _builder.addArtifactCases(value)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
      * @param value The artifactCases to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignArtifactCases")
@@ -305,9 +285,8 @@ public object PeriodicalsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
      * @param values The artifactCases to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllArtifactCases")
@@ -315,9 +294,8 @@ public object PeriodicalsResponseKt {
       _builder.addAllArtifactCases(values)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
      * @param values The artifactCases to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllArtifactCases")
@@ -326,10 +304,9 @@ public object PeriodicalsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
+     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
      * @param index The index to set the value at.
      * @param value The artifactCases to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setArtifactCases")
@@ -337,8 +314,7 @@ public object PeriodicalsResponseKt {
       _builder.setArtifactCases(index, value)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse artifact_cases = 9;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CompleteMissionResponse artifact_cases = 9;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearArtifactCases")
@@ -357,16 +333,14 @@ public object PeriodicalsResponseKt {
         _builder.liveConfig = value
       }
     /**
-     * <code>optional .ei.LiveConfig live_config = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.LiveConfig live_config = 5;`
      */
     public fun clearLiveConfig() {
       _builder.clearLiveConfig()
     }
     /**
-     * <code>optional .ei.LiveConfig live_config = 5;</code>
+     * `optional .ei.LiveConfig live_config = 5;`
      * @return Whether the liveConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasLiveConfig(): kotlin.Boolean {
       return _builder.hasLiveConfig()
@@ -386,16 +360,14 @@ public object PeriodicalsResponseKt {
         _builder.mailBag = value
       }
     /**
-     * <code>optional .ei.MailDB mail_bag = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MailDB mail_bag = 6;`
      */
     public fun clearMailBag() {
       _builder.clearMailBag()
     }
     /**
-     * <code>optional .ei.MailDB mail_bag = 6;</code>
+     * `optional .ei.MailDB mail_bag = 6;`
      * @return Whether the mailBag field is set.
-     * @return This builder for chaining.
      */
     public fun hasMailBag(): kotlin.Boolean {
       return _builder.hasMailBag()
@@ -415,16 +387,14 @@ public object PeriodicalsResponseKt {
         _builder.contractPlayerInfo = value
       }
     /**
-     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractPlayerInfo contract_player_info = 7;`
      */
     public fun clearContractPlayerInfo() {
       _builder.clearContractPlayerInfo()
     }
     /**
-     * <code>optional .ei.ContractPlayerInfo contract_player_info = 7;</code>
+     * `optional .ei.ContractPlayerInfo contract_player_info = 7;`
      * @return Whether the contractPlayerInfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractPlayerInfo(): kotlin.Boolean {
       return _builder.hasContractPlayerInfo()
@@ -448,9 +418,8 @@ public object PeriodicalsResponseKt {
         _builder.showcaseRoyaltiesList
       )
     /**
-     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
      * @param value The showcaseRoyalties to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShowcaseRoyalties")
@@ -458,9 +427,8 @@ public object PeriodicalsResponseKt {
       _builder.addShowcaseRoyalties(value)
     }
     /**
-     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
      * @param value The showcaseRoyalties to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShowcaseRoyalties")
@@ -469,9 +437,8 @@ public object PeriodicalsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
      * @param values The showcaseRoyalties to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShowcaseRoyalties")
@@ -479,9 +446,8 @@ public object PeriodicalsResponseKt {
       _builder.addAllShowcaseRoyalties(values)
     }
     /**
-     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
      * @param values The showcaseRoyalties to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShowcaseRoyalties")
@@ -490,10 +456,9 @@ public object PeriodicalsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
+     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
      * @param index The index to set the value at.
      * @param value The showcaseRoyalties to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShowcaseRoyalties")
@@ -501,8 +466,7 @@ public object PeriodicalsResponseKt {
       _builder.setShowcaseRoyalties(index, value)
     }
     /**
-     * <code>repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.PeriodicalsResponse.RoyaltyInfo showcase_royalties = 10;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShowcaseRoyalties")
@@ -543,16 +507,14 @@ public object PeriodicalsResponseKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -569,16 +531,14 @@ public object PeriodicalsResponseKt {
           _builder.amount = value
         }
       /**
-       * <code>optional uint32 amount = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 amount = 2;`
        */
       public fun clearAmount() {
         _builder.clearAmount()
       }
       /**
-       * <code>optional uint32 amount = 2;</code>
+       * `optional uint32 amount = 2;`
        * @return Whether the amount field is set.
-       * @return This builder for chaining.
        */
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()

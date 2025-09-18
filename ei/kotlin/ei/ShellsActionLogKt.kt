@@ -39,16 +39,14 @@ public object ShellsActionLogKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 8;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 8;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ShellsActionLogKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -94,16 +90,14 @@ public object ShellsActionLogKt {
         _builder.action = value
       }
     /**
-     * <code>optional string action = 2;</code>
-     * @return This builder for chaining.
+     * `optional string action = 2;`
      */
     public fun clearAction() {
       _builder.clearAction()
     }
     /**
-     * <code>optional string action = 2;</code>
+     * `optional string action = 2;`
      * @return Whether the action field is set.
-     * @return This builder for chaining.
      */
     public fun hasAction(): kotlin.Boolean {
       return _builder.hasAction()
@@ -120,16 +114,14 @@ public object ShellsActionLogKt {
         _builder.subId = value
       }
     /**
-     * <code>optional string sub_id = 3;</code>
-     * @return This builder for chaining.
+     * `optional string sub_id = 3;`
      */
     public fun clearSubId() {
       _builder.clearSubId()
     }
     /**
-     * <code>optional string sub_id = 3;</code>
+     * `optional string sub_id = 3;`
      * @return Whether the subId field is set.
-     * @return This builder for chaining.
      */
     public fun hasSubId(): kotlin.Boolean {
       return _builder.hasSubId()
@@ -146,16 +138,14 @@ public object ShellsActionLogKt {
         _builder.farmElement = value
       }
     /**
-     * <code>optional .ei.ShellDB.FarmElement farm_element = 9;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellDB.FarmElement farm_element = 9;`
      */
     public fun clearFarmElement() {
       _builder.clearFarmElement()
     }
     /**
-     * <code>optional .ei.ShellDB.FarmElement farm_element = 9;</code>
+     * `optional .ei.ShellDB.FarmElement farm_element = 9;`
      * @return Whether the farmElement field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmElement(): kotlin.Boolean {
       return _builder.hasFarmElement()
@@ -172,16 +162,14 @@ public object ShellsActionLogKt {
         _builder.cost = value
       }
     /**
-     * <code>optional uint32 cost = 4;</code>
-     * @return This builder for chaining.
+     * `optional uint32 cost = 4;`
      */
     public fun clearCost() {
       _builder.clearCost()
     }
     /**
-     * <code>optional uint32 cost = 4;</code>
+     * `optional uint32 cost = 4;`
      * @return Whether the cost field is set.
-     * @return This builder for chaining.
      */
     public fun hasCost(): kotlin.Boolean {
       return _builder.hasCost()
@@ -198,16 +186,14 @@ public object ShellsActionLogKt {
         _builder.approxTime = value
       }
     /**
-     * <code>optional double approx_time = 5;</code>
-     * @return This builder for chaining.
+     * `optional double approx_time = 5;`
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * <code>optional double approx_time = 5;</code>
+     * `optional double approx_time = 5;`
      * @return Whether the approxTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -224,16 +210,14 @@ public object ShellsActionLogKt {
         _builder.version = value
       }
     /**
-     * <code>optional string version = 6;</code>
-     * @return This builder for chaining.
+     * `optional string version = 6;`
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * <code>optional string version = 6;</code>
+     * `optional string version = 6;`
      * @return Whether the version field is set.
-     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -250,16 +234,14 @@ public object ShellsActionLogKt {
         _builder.farmIndex = value
       }
     /**
-     * <code>optional int32 farm_index = 7;</code>
-     * @return This builder for chaining.
+     * `optional int32 farm_index = 7;`
      */
     public fun clearFarmIndex() {
       _builder.clearFarmIndex()
     }
     /**
-     * <code>optional int32 farm_index = 7;</code>
+     * `optional int32 farm_index = 7;`
      * @return Whether the farmIndex field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmIndex(): kotlin.Boolean {
       return _builder.hasFarmIndex()
@@ -276,16 +258,14 @@ public object ShellsActionLogKt {
         _builder.soulEggs = value
       }
     /**
-     * <code>optional double soul_eggs = 10;</code>
-     * @return This builder for chaining.
+     * `optional double soul_eggs = 10;`
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * <code>optional double soul_eggs = 10;</code>
+     * `optional double soul_eggs = 10;`
      * @return Whether the soulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -302,16 +282,14 @@ public object ShellsActionLogKt {
         _builder.ticketsSpent = value
       }
     /**
-     * <code>optional uint64 tickets_spent = 11;</code>
-     * @return This builder for chaining.
+     * `optional uint64 tickets_spent = 11;`
      */
     public fun clearTicketsSpent() {
       _builder.clearTicketsSpent()
     }
     /**
-     * <code>optional uint64 tickets_spent = 11;</code>
+     * `optional uint64 tickets_spent = 11;`
      * @return Whether the ticketsSpent field is set.
-     * @return This builder for chaining.
      */
     public fun hasTicketsSpent(): kotlin.Boolean {
       return _builder.hasTicketsSpent()
@@ -328,16 +306,14 @@ public object ShellsActionLogKt {
         _builder.goldSpent = value
       }
     /**
-     * <code>optional uint64 gold_spent = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint64 gold_spent = 12;`
      */
     public fun clearGoldSpent() {
       _builder.clearGoldSpent()
     }
     /**
-     * <code>optional uint64 gold_spent = 12;</code>
+     * `optional uint64 gold_spent = 12;`
      * @return Whether the goldSpent field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldSpent(): kotlin.Boolean {
       return _builder.hasGoldSpent()

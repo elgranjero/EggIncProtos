@@ -39,16 +39,14 @@ public object CurrencyFlowLogKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object CurrencyFlowLogKt {
         _builder.approxTime = value
       }
     /**
-     * <code>optional double approx_time = 2;</code>
-     * @return This builder for chaining.
+     * `optional double approx_time = 2;`
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * <code>optional double approx_time = 2;</code>
+     * `optional double approx_time = 2;`
      * @return Whether the approxTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -91,16 +87,14 @@ public object CurrencyFlowLogKt {
         _builder.currency = value
       }
     /**
-     * <code>optional .ei.RewardType currency = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.RewardType currency = 3;`
      */
     public fun clearCurrency() {
       _builder.clearCurrency()
     }
     /**
-     * <code>optional .ei.RewardType currency = 3;</code>
+     * `optional .ei.RewardType currency = 3;`
      * @return Whether the currency field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrency(): kotlin.Boolean {
       return _builder.hasCurrency()
@@ -117,16 +111,14 @@ public object CurrencyFlowLogKt {
         _builder.amount = value
       }
     /**
-     * <code>optional int64 amount = 4;</code>
-     * @return This builder for chaining.
+     * `optional int64 amount = 4;`
      */
     public fun clearAmount() {
       _builder.clearAmount()
     }
     /**
-     * <code>optional int64 amount = 4;</code>
+     * `optional int64 amount = 4;`
      * @return Whether the amount field is set.
-     * @return This builder for chaining.
      */
     public fun hasAmount(): kotlin.Boolean {
       return _builder.hasAmount()
@@ -143,16 +135,14 @@ public object CurrencyFlowLogKt {
         _builder.location = value
       }
     /**
-     * <code>optional string location = 5;</code>
-     * @return This builder for chaining.
+     * `optional string location = 5;`
      */
     public fun clearLocation() {
       _builder.clearLocation()
     }
     /**
-     * <code>optional string location = 5;</code>
+     * `optional string location = 5;`
      * @return Whether the location field is set.
-     * @return This builder for chaining.
      */
     public fun hasLocation(): kotlin.Boolean {
       return _builder.hasLocation()
@@ -169,16 +159,14 @@ public object CurrencyFlowLogKt {
         _builder.version = value
       }
     /**
-     * <code>optional string version = 6;</code>
-     * @return This builder for chaining.
+     * `optional string version = 6;`
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * <code>optional string version = 6;</code>
+     * `optional string version = 6;`
      * @return Whether the version field is set.
-     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -195,16 +183,14 @@ public object CurrencyFlowLogKt {
         _builder.platform = value
       }
     /**
-     * <code>optional string platform = 7;</code>
-     * @return This builder for chaining.
+     * `optional string platform = 7;`
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * <code>optional string platform = 7;</code>
+     * `optional string platform = 7;`
      * @return Whether the platform field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -221,16 +207,14 @@ public object CurrencyFlowLogKt {
         _builder.soulEggs = value
       }
     /**
-     * <code>optional double soul_eggs = 8;</code>
-     * @return This builder for chaining.
+     * `optional double soul_eggs = 8;`
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * <code>optional double soul_eggs = 8;</code>
+     * `optional double soul_eggs = 8;`
      * @return Whether the soulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -247,16 +231,14 @@ public object CurrencyFlowLogKt {
         _builder.ticketsSpent = value
       }
     /**
-     * <code>optional uint64 tickets_spent = 9;</code>
-     * @return This builder for chaining.
+     * `optional uint64 tickets_spent = 9;`
      */
     public fun clearTicketsSpent() {
       _builder.clearTicketsSpent()
     }
     /**
-     * <code>optional uint64 tickets_spent = 9;</code>
+     * `optional uint64 tickets_spent = 9;`
      * @return Whether the ticketsSpent field is set.
-     * @return This builder for chaining.
      */
     public fun hasTicketsSpent(): kotlin.Boolean {
       return _builder.hasTicketsSpent()
@@ -273,16 +255,14 @@ public object CurrencyFlowLogKt {
         _builder.goldSpent = value
       }
     /**
-     * <code>optional uint64 gold_spent = 10;</code>
-     * @return This builder for chaining.
+     * `optional uint64 gold_spent = 10;`
      */
     public fun clearGoldSpent() {
       _builder.clearGoldSpent()
     }
     /**
-     * <code>optional uint64 gold_spent = 10;</code>
+     * `optional uint64 gold_spent = 10;`
      * @return Whether the goldSpent field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoldSpent(): kotlin.Boolean {
       return _builder.hasGoldSpent()

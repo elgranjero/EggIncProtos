@@ -39,16 +39,14 @@ public object CompleteMissionResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object CompleteMissionResponseKt {
         _builder.info = value
       }
     /**
-     * <code>optional .ei.MissionInfo info = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo info = 2;`
      */
     public fun clearInfo() {
       _builder.clearInfo()
     }
     /**
-     * <code>optional .ei.MissionInfo info = 2;</code>
+     * `optional .ei.MissionInfo info = 2;`
      * @return Whether the info field is set.
-     * @return This builder for chaining.
      */
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
@@ -98,9 +94,8 @@ public object CompleteMissionResponseKt {
         _builder.artifactsList
       )
     /**
-     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
+     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
      * @param value The artifacts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addArtifacts")
@@ -108,9 +103,8 @@ public object CompleteMissionResponseKt {
       _builder.addArtifacts(value)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
+     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
      * @param value The artifacts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignArtifacts")
@@ -119,9 +113,8 @@ public object CompleteMissionResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
+     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
      * @param values The artifacts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllArtifacts")
@@ -129,9 +122,8 @@ public object CompleteMissionResponseKt {
       _builder.addAllArtifacts(values)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
+     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
      * @param values The artifacts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllArtifacts")
@@ -140,10 +132,9 @@ public object CompleteMissionResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
+     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
      * @param index The index to set the value at.
      * @param value The artifacts to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setArtifacts")
@@ -151,8 +142,7 @@ public object CompleteMissionResponseKt {
       _builder.setArtifacts(index, value)
     }
     /**
-     * <code>repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CompleteMissionResponse.SecureArtifactSpec artifacts = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearArtifacts")
@@ -175,9 +165,8 @@ public object CompleteMissionResponseKt {
         _builder.otherRewardsList
       )
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param value The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addOtherRewards")
@@ -185,9 +174,8 @@ public object CompleteMissionResponseKt {
       _builder.addOtherRewards(value)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param value The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignOtherRewards")
@@ -196,9 +184,8 @@ public object CompleteMissionResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param values The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllOtherRewards")
@@ -206,9 +193,8 @@ public object CompleteMissionResponseKt {
       _builder.addAllOtherRewards(values)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param values The otherRewards to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllOtherRewards")
@@ -217,10 +203,9 @@ public object CompleteMissionResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
+     * `repeated .ei.Reward other_rewards = 4;`
      * @param index The index to set the value at.
      * @param value The otherRewards to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setOtherRewards")
@@ -228,8 +213,7 @@ public object CompleteMissionResponseKt {
       _builder.setOtherRewards(index, value)
     }
     /**
-     * <code>repeated .ei.Reward other_rewards = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Reward other_rewards = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearOtherRewards")
@@ -248,16 +232,14 @@ public object CompleteMissionResponseKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 5;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 5;</code>
+     * `optional string ei_user_id = 5;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -296,16 +278,14 @@ public object CompleteMissionResponseKt {
           _builder.spec = value
         }
       /**
-       * <code>optional .ei.ArtifactSpec spec = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ArtifactSpec spec = 1;`
        */
       public fun clearSpec() {
         _builder.clearSpec()
       }
       /**
-       * <code>optional .ei.ArtifactSpec spec = 1;</code>
+       * `optional .ei.ArtifactSpec spec = 1;`
        * @return Whether the spec field is set.
-       * @return This builder for chaining.
        */
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
@@ -325,16 +305,14 @@ public object CompleteMissionResponseKt {
           _builder.serverId = value
         }
       /**
-       * <code>optional string server_id = 2;</code>
-       * @return This builder for chaining.
+       * `optional string server_id = 2;`
        */
       public fun clearServerId() {
         _builder.clearServerId()
       }
       /**
-       * <code>optional string server_id = 2;</code>
+       * `optional string server_id = 2;`
        * @return Whether the serverId field is set.
-       * @return This builder for chaining.
        */
       public fun hasServerId(): kotlin.Boolean {
         return _builder.hasServerId()

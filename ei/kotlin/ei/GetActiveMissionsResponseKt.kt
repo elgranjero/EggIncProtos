@@ -39,16 +39,14 @@ public object GetActiveMissionsResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -69,9 +67,8 @@ public object GetActiveMissionsResponseKt {
         _builder.activeMissionsList
       )
     /**
-     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
+     * `repeated .ei.MissionInfo active_missions = 2;`
      * @param value The activeMissions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addActiveMissions")
@@ -79,9 +76,8 @@ public object GetActiveMissionsResponseKt {
       _builder.addActiveMissions(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
+     * `repeated .ei.MissionInfo active_missions = 2;`
      * @param value The activeMissions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignActiveMissions")
@@ -90,9 +86,8 @@ public object GetActiveMissionsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
+     * `repeated .ei.MissionInfo active_missions = 2;`
      * @param values The activeMissions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllActiveMissions")
@@ -100,9 +95,8 @@ public object GetActiveMissionsResponseKt {
       _builder.addAllActiveMissions(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
+     * `repeated .ei.MissionInfo active_missions = 2;`
      * @param values The activeMissions to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllActiveMissions")
@@ -111,10 +105,9 @@ public object GetActiveMissionsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
+     * `repeated .ei.MissionInfo active_missions = 2;`
      * @param index The index to set the value at.
      * @param value The activeMissions to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setActiveMissions")
@@ -122,8 +115,7 @@ public object GetActiveMissionsResponseKt {
       _builder.setActiveMissions(index, value)
     }
     /**
-     * <code>repeated .ei.MissionInfo active_missions = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.MissionInfo active_missions = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearActiveMissions")

@@ -187,6 +187,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ActiveArtifactSlot"><span class="badge">M</span>ActiveArtifactSlot</a>
+                </li>
+              
+                <li>
                   <a href="#ei.AdAttributionInfo"><span class="badge">M</span>AdAttributionInfo</a>
                 </li>
               
@@ -251,11 +255,11 @@
                 </li>
               
                 <li>
-                  <a href="#ei.ArtifactsDB.ActiveArtifactSlot"><span class="badge">M</span>ArtifactsDB.ActiveArtifactSlot</a>
+                  <a href="#ei.ArtifactsDB.CraftableArtifact"><span class="badge">M</span>ArtifactsDB.CraftableArtifact</a>
                 </li>
               
                 <li>
-                  <a href="#ei.ArtifactsDB.CraftableArtifact"><span class="badge">M</span>ArtifactsDB.CraftableArtifact</a>
+                  <a href="#ei.ArtifactsDB.VirtueDB"><span class="badge">M</span>ArtifactsDB.VirtueDB</a>
                 </li>
               
                 <li>
@@ -332,6 +336,10 @@
               
                 <li>
                   <a href="#ei.Backup.Tutorial"><span class="badge">M</span>Backup.Tutorial</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.Backup.Virtue"><span class="badge">M</span>Backup.Virtue</a>
                 </li>
               
                 <li>
@@ -623,6 +631,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.GetActiveMissionsRequest"><span class="badge">M</span>GetActiveMissionsRequest</a>
+                </li>
+              
+                <li>
                   <a href="#ei.GetActiveMissionsResponse"><span class="badge">M</span>GetActiveMissionsResponse</a>
                 </li>
               
@@ -787,6 +799,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.PathOfVirtueInfo"><span class="badge">M</span>PathOfVirtueInfo</a>
+                </li>
+              
+                <li>
                   <a href="#ei.PeriodicalsResponse"><span class="badge">M</span>PeriodicalsResponse</a>
                 </li>
               
@@ -796,6 +812,10 @@
               
                 <li>
                   <a href="#ei.PlayerFarmInfo"><span class="badge">M</span>PlayerFarmInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.PlayerLastChickenRunTimes"><span class="badge">M</span>PlayerLastChickenRunTimes</a>
                 </li>
               
                 <li>
@@ -959,6 +979,14 @@
                 </li>
               
                 <li>
+                  <a href="#ei.SyncPathOfVirtueRequest"><span class="badge">M</span>SyncPathOfVirtueRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.SyncPathOfVirtueResponse"><span class="badge">M</span>SyncPathOfVirtueResponse</a>
+                </li>
+              
+                <li>
                   <a href="#ei.TipsDB"><span class="badge">M</span>TipsDB</a>
                 </li>
               
@@ -1096,6 +1124,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.MissionInfo.MissionType"><span class="badge">E</span>MissionInfo.MissionType</a>
+                </li>
+              
+                <li>
                   <a href="#ei.MissionInfo.Spaceship"><span class="badge">E</span>MissionInfo.Spaceship</a>
                 </li>
               
@@ -1133,6 +1165,10 @@
               
                 <li>
                   <a href="#ei.ShellSpec.AssetType"><span class="badge">E</span>ShellSpec.AssetType</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.SyncPathOfVirtueResponse.Status"><span class="badge">E</span>SyncPathOfVirtueResponse.Status</a>
                 </li>
               
                 <li>
@@ -1224,6 +1260,37 @@
                   <td>value</td>
                   <td><a href="#string">string</a></td>
                   <td>required</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ActiveArtifactSlot">ActiveArtifactSlot</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>occupied</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>item_id</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -2232,7 +2299,7 @@
                 </tr>
               
                 <tr>
-                  <td>inventory_slots</td>
+                  <td>inventory_slots_NOT_USED</td>
                   <td><a href="#ei.InventorySlot">InventorySlot</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
@@ -2240,7 +2307,7 @@
               
                 <tr>
                   <td>active_artifacts_DEPRECATED</td>
-                  <td><a href="#ei.ArtifactsDB.ActiveArtifactSlot">ArtifactsDB.ActiveArtifactSlot</a></td>
+                  <td><a href="#ei.ActiveArtifactSlot">ActiveArtifactSlot</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -2288,6 +2355,13 @@
                 </tr>
               
                 <tr>
+                  <td>virtue_afx_db</td>
+                  <td><a href="#ei.ArtifactsDB.VirtueDB">ArtifactsDB.VirtueDB</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>discovered_artifacts_DEPRECATED</td>
                   <td><a href="#ei.ArtifactSpec">ArtifactSpec</a></td>
                   <td>repeated</td>
@@ -2327,7 +2401,7 @@
               
                 <tr>
                   <td>slots</td>
-                  <td><a href="#ei.ArtifactsDB.ActiveArtifactSlot">ArtifactsDB.ActiveArtifactSlot</a></td>
+                  <td><a href="#ei.ActiveArtifactSlot">ActiveArtifactSlot</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -2335,37 +2409,6 @@
                 <tr>
                   <td>uid</td>
                   <td><a href="#uint32">uint32</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="ei.ArtifactsDB.ActiveArtifactSlot">ArtifactsDB.ActiveArtifactSlot</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>occupied</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td>optional</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>item_id</td>
-                  <td><a href="#uint64">uint64</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -2425,6 +2468,51 @@
                 <tr>
                   <td>count</td>
                   <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ArtifactsDB.VirtueDB">ArtifactsDB.VirtueDB</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>inventory_items</td>
+                  <td><a href="#ei.ArtifactInventoryItem">ArtifactInventoryItem</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>artifact_status</td>
+                  <td><a href="#ei.ArtifactsDB.CraftableArtifact">ArtifactsDB.CraftableArtifact</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fueling_mission</td>
+                  <td><a href="#ei.MissionInfo">MissionInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>active_artifacts</td>
+                  <td><a href="#ei.ArtifactsDB.ActiveArtifactSet">ArtifactsDB.ActiveArtifactSet</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -2759,6 +2847,13 @@
                 <tr>
                   <td>artifacts</td>
                   <td><a href="#ei.Backup.Artifacts">Backup.Artifacts</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>virtue</td>
+                  <td><a href="#ei.Backup.Virtue">Backup.Virtue</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -3349,6 +3444,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>time_cheat_debt</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -3536,6 +3638,13 @@
               
                 <tr>
                   <td>colleggtibles_alert</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>eov_alert</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -4175,7 +4284,7 @@
                 </tr>
               
                 <tr>
-                  <td>time_cheat_debt</td>
+                  <td>time_cheat_debt_DEP</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -4457,6 +4566,72 @@
                   <td>tutorial_shown</td>
                   <td><a href="#bool">bool</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.Backup.Virtue">Backup.Virtue</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>shift_count</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>resets</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>eov_earned</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>eggs_delivered</td>
+                  <td><a href="#double">double</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>afx</td>
+                  <td><a href="#ei.Backup.Artifacts">Backup.Artifacts</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>active_afx</td>
+                  <td><a href="#ei.ActiveArtifactSlot">ActiveArtifactSlot</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>last_sync</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -5800,6 +5975,13 @@
                 <tr>
                   <td>client_timestamp</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>background_sync</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -7523,7 +7705,7 @@
               
                 <tr>
                   <td>entries</td>
-                  <td><a href="#ei.CoopChickenRunEntry">CoopChickenRunEntry</a></td>
+                  <td><a href="#ei.PlayerLastChickenRunTimes">PlayerLastChickenRunTimes</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -8733,6 +8915,37 @@
                   <td>actions</td>
                   <td><a href="#ei.GenericAction">GenericAction</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.GetActiveMissionsRequest">GetActiveMissionsRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reset_index</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -11018,6 +11231,20 @@
                 </tr>
               
                 <tr>
+                  <td>type</td>
+                  <td><a href="#ei.MissionInfo.MissionType">MissionInfo.MissionType</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reset_index</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>fuel</td>
                   <td><a href="#ei.MissionInfo.Fuel">MissionInfo.Fuel</a></td>
                   <td>repeated</td>
@@ -11278,6 +11505,44 @@
                   <td>custom_egg_info</td>
                   <td><a href="#ei.CustomEgg">CustomEgg</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.PathOfVirtueInfo">PathOfVirtueInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>server_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sim_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reset_index</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -11567,6 +11832,37 @@
                   <td>timestamp</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.PlayerLastChickenRunTimes">PlayerLastChickenRunTimes</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>user_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>entries</td>
+                  <td><a href="#ei.CoopChickenRunEntry">CoopChickenRunEntry</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -13839,6 +14135,75 @@
 
         
       
+        <h3 id="ei.SyncPathOfVirtueRequest">SyncPathOfVirtueRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reset_index</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sim_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.SyncPathOfVirtueResponse">SyncPathOfVirtueResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#ei.SyncPathOfVirtueResponse.Status">SyncPathOfVirtueResponse.Status</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sim_debt</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.TipsDB">TipsDB</h3>
         <p></p>
 
@@ -15642,6 +16007,36 @@
               </tr>
             
               <tr>
+                <td>CURIOSITY</td>
+                <td>50</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>INTEGRITY</td>
+                <td>51</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HUMILITY</td>
+                <td>52</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>RESILIENCE</td>
+                <td>53</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>KINDNESS</td>
+                <td>54</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>CHOCOLATE</td>
                 <td>100</td>
                 <td><p></p></td>
@@ -15966,6 +16361,29 @@
           </tbody>
         </table>
       
+        <h3 id="ei.MissionInfo.MissionType">MissionInfo.MissionType</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>STANDARD</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>VIRTUE</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="ei.MissionInfo.Spaceship">MissionInfo.Spaceship</h3>
         <p></p>
         <table class="enum-table">
@@ -16090,6 +16508,12 @@
               <tr>
                 <td>ARCHIVED</td>
                 <td>25</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ABORTED</td>
+                <td>30</td>
                 <td><p></p></td>
               </tr>
             
@@ -16249,6 +16673,12 @@
               <tr>
                 <td>SHELL_SCRIPT</td>
                 <td>14</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>VIRTUE_GEM</td>
+                <td>15</td>
                 <td><p></p></td>
               </tr>
             
@@ -16950,6 +17380,36 @@
               </tr>
             
               <tr>
+                <td>HATCHERY_CURIOSITY</td>
+                <td>160</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_INTEGRITY</td>
+                <td>161</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_HUMILITY</td>
+                <td>162</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_RESILIENCE</td>
+                <td>163</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_KINDNESS</td>
+                <td>164</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>HOA_1</td>
                 <td>170</td>
                 <td><p></p></td>
@@ -17088,6 +17548,36 @@
               </tr>
             
               <tr>
+                <td>HATCHERY_CURIOSITY_EXTRA</td>
+                <td>550</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_INTEGRITY_EXTRA</td>
+                <td>551</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_HUMILITY_EXTRA</td>
+                <td>552</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_RESILIENCE_EXTRA</td>
+                <td>553</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>HATCHERY_KINDNESS_EXTRA</td>
+                <td>554</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>HYPERLOOP_TRACK</td>
                 <td>570</td>
                 <td><p></p></td>
@@ -17114,6 +17604,29 @@
               <tr>
                 <td>UNKNOWN</td>
                 <td>9999</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.SyncPathOfVirtueResponse.Status">SyncPathOfVirtueResponse.Status</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>OK</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PROBLEM</td>
+                <td>1</td>
                 <td><p></p></td>
               </tr>
             

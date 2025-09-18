@@ -39,16 +39,14 @@ public object CXPEvalRolloutInfoKt {
         _builder.currentId = value
       }
     /**
-     * <code>optional string current_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string current_id = 1;`
      */
     public fun clearCurrentId() {
       _builder.clearCurrentId()
     }
     /**
-     * <code>optional string current_id = 1;</code>
+     * `optional string current_id = 1;`
      * @return Whether the currentId field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentId(): kotlin.Boolean {
       return _builder.hasCurrentId()
@@ -65,16 +63,14 @@ public object CXPEvalRolloutInfoKt {
         _builder.basisPoints = value
       }
     /**
-     * <code>optional uint32 basis_points = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 basis_points = 2;`
      */
     public fun clearBasisPoints() {
       _builder.clearBasisPoints()
     }
     /**
-     * <code>optional uint32 basis_points = 2;</code>
+     * `optional uint32 basis_points = 2;`
      * @return Whether the basisPoints field is set.
-     * @return This builder for chaining.
      */
     public fun hasBasisPoints(): kotlin.Boolean {
       return _builder.hasBasisPoints()

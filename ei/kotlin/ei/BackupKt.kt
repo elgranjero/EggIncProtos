@@ -39,16 +39,14 @@ public object BackupKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object BackupKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 18;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 18;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 18;</code>
+     * `optional string ei_user_id = 18;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -91,16 +87,14 @@ public object BackupKt {
         _builder.gameServicesId = value
       }
     /**
-     * <code>optional string game_services_id = 16;</code>
-     * @return This builder for chaining.
+     * `optional string game_services_id = 16;`
      */
     public fun clearGameServicesId() {
       _builder.clearGameServicesId()
     }
     /**
-     * <code>optional string game_services_id = 16;</code>
+     * `optional string game_services_id = 16;`
      * @return Whether the gameServicesId field is set.
-     * @return This builder for chaining.
      */
     public fun hasGameServicesId(): kotlin.Boolean {
       return _builder.hasGameServicesId()
@@ -117,16 +111,14 @@ public object BackupKt {
         _builder.pushUserId = value
       }
     /**
-     * <code>optional string push_user_id = 26;</code>
-     * @return This builder for chaining.
+     * `optional string push_user_id = 26;`
      */
     public fun clearPushUserId() {
       _builder.clearPushUserId()
     }
     /**
-     * <code>optional string push_user_id = 26;</code>
+     * `optional string push_user_id = 26;`
      * @return Whether the pushUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasPushUserId(): kotlin.Boolean {
       return _builder.hasPushUserId()
@@ -143,16 +135,14 @@ public object BackupKt {
         _builder.deviceId = value
       }
     /**
-     * <code>optional string device_id = 17;</code>
-     * @return This builder for chaining.
+     * `optional string device_id = 17;`
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * <code>optional string device_id = 17;</code>
+     * `optional string device_id = 17;`
      * @return Whether the deviceId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -169,16 +159,14 @@ public object BackupKt {
         _builder.userName = value
       }
     /**
-     * <code>optional string user_name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string user_name = 2;`
      */
     public fun clearUserName() {
       _builder.clearUserName()
     }
     /**
-     * <code>optional string user_name = 2;</code>
+     * `optional string user_name = 2;`
      * @return Whether the userName field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserName(): kotlin.Boolean {
       return _builder.hasUserName()
@@ -195,16 +183,14 @@ public object BackupKt {
         _builder.approxTime = value
       }
     /**
-     * <code>optional double approx_time = 3;</code>
-     * @return This builder for chaining.
+     * `optional double approx_time = 3;`
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * <code>optional double approx_time = 3;</code>
+     * `optional double approx_time = 3;`
      * @return Whether the approxTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -221,16 +207,14 @@ public object BackupKt {
         _builder.version = value
       }
     /**
-     * <code>optional uint32 version = 21 [default = 0];</code>
-     * @return This builder for chaining.
+     * `optional uint32 version = 21 [default = 0];`
      */
     public fun clearVersion() {
       _builder.clearVersion()
     }
     /**
-     * <code>optional uint32 version = 21 [default = 0];</code>
+     * `optional uint32 version = 21 [default = 0];`
      * @return Whether the version field is set.
-     * @return This builder for chaining.
      */
     public fun hasVersion(): kotlin.Boolean {
       return _builder.hasVersion()
@@ -247,16 +231,14 @@ public object BackupKt {
         _builder.forceOfferBackup = value
       }
     /**
-     * <code>optional bool force_offer_backup = 20;</code>
-     * @return This builder for chaining.
+     * `optional bool force_offer_backup = 20;`
      */
     public fun clearForceOfferBackup() {
       _builder.clearForceOfferBackup()
     }
     /**
-     * <code>optional bool force_offer_backup = 20;</code>
+     * `optional bool force_offer_backup = 20;`
      * @return Whether the forceOfferBackup field is set.
-     * @return This builder for chaining.
      */
     public fun hasForceOfferBackup(): kotlin.Boolean {
       return _builder.hasForceOfferBackup()
@@ -273,16 +255,14 @@ public object BackupKt {
         _builder.forceBackup = value
       }
     /**
-     * <code>optional bool force_backup = 22;</code>
-     * @return This builder for chaining.
+     * `optional bool force_backup = 22;`
      */
     public fun clearForceBackup() {
       _builder.clearForceBackup()
     }
     /**
-     * <code>optional bool force_backup = 22;</code>
+     * `optional bool force_backup = 22;`
      * @return Whether the forceBackup field is set.
-     * @return This builder for chaining.
      */
     public fun hasForceBackup(): kotlin.Boolean {
       return _builder.hasForceBackup()
@@ -299,16 +279,14 @@ public object BackupKt {
         _builder.settings = value
       }
     /**
-     * <code>optional .ei.Backup.Settings settings = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Settings settings = 4;`
      */
     public fun clearSettings() {
       _builder.clearSettings()
     }
     /**
-     * <code>optional .ei.Backup.Settings settings = 4;</code>
+     * `optional .ei.Backup.Settings settings = 4;`
      * @return Whether the settings field is set.
-     * @return This builder for chaining.
      */
     public fun hasSettings(): kotlin.Boolean {
       return _builder.hasSettings()
@@ -328,16 +306,14 @@ public object BackupKt {
         _builder.tutorial = value
       }
     /**
-     * <code>optional .ei.Backup.Tutorial tutorial = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Tutorial tutorial = 5;`
      */
     public fun clearTutorial() {
       _builder.clearTutorial()
     }
     /**
-     * <code>optional .ei.Backup.Tutorial tutorial = 5;</code>
+     * `optional .ei.Backup.Tutorial tutorial = 5;`
      * @return Whether the tutorial field is set.
-     * @return This builder for chaining.
      */
     public fun hasTutorial(): kotlin.Boolean {
       return _builder.hasTutorial()
@@ -357,16 +333,14 @@ public object BackupKt {
         _builder.stats = value
       }
     /**
-     * <code>optional .ei.Backup.Stats stats = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Stats stats = 6;`
      */
     public fun clearStats() {
       _builder.clearStats()
     }
     /**
-     * <code>optional .ei.Backup.Stats stats = 6;</code>
+     * `optional .ei.Backup.Stats stats = 6;`
      * @return Whether the stats field is set.
-     * @return This builder for chaining.
      */
     public fun hasStats(): kotlin.Boolean {
       return _builder.hasStats()
@@ -386,16 +360,14 @@ public object BackupKt {
         _builder.game = value
       }
     /**
-     * <code>optional .ei.Backup.Game game = 7;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Game game = 7;`
      */
     public fun clearGame() {
       _builder.clearGame()
     }
     /**
-     * <code>optional .ei.Backup.Game game = 7;</code>
+     * `optional .ei.Backup.Game game = 7;`
      * @return Whether the game field is set.
-     * @return This builder for chaining.
      */
     public fun hasGame(): kotlin.Boolean {
       return _builder.hasGame()
@@ -415,16 +387,14 @@ public object BackupKt {
         _builder.artifacts = value
       }
     /**
-     * <code>optional .ei.Backup.Artifacts artifacts = 14;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Artifacts artifacts = 14;`
      */
     public fun clearArtifacts() {
       _builder.clearArtifacts()
     }
     /**
-     * <code>optional .ei.Backup.Artifacts artifacts = 14;</code>
+     * `optional .ei.Backup.Artifacts artifacts = 14;`
      * @return Whether the artifacts field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifacts(): kotlin.Boolean {
       return _builder.hasArtifacts()
@@ -432,6 +402,33 @@ public object BackupKt {
 
     public val BackupKt.Dsl.artifactsOrNull: ei.Ei.Backup.Artifacts?
       get() = _builder.artifactsOrNull
+
+    /**
+     * `optional .ei.Backup.Virtue virtue = 29;`
+     */
+    public var virtue: ei.Ei.Backup.Virtue
+      @kotlin.jvm.JvmName("getVirtue")
+        get() = _builder.virtue
+      @kotlin.jvm.JvmName("setVirtue")
+        set(value) {
+        _builder.virtue = value
+      }
+    /**
+     * `optional .ei.Backup.Virtue virtue = 29;`
+     */
+    public fun clearVirtue() {
+      _builder.clearVirtue()
+    }
+    /**
+     * `optional .ei.Backup.Virtue virtue = 29;`
+     * @return Whether the virtue field is set.
+     */
+    public fun hasVirtue(): kotlin.Boolean {
+      return _builder.hasVirtue()
+    }
+
+    public val BackupKt.Dsl.virtueOrNull: ei.Ei.Backup.Virtue?
+      get() = _builder.virtueOrNull
 
     /**
      * `optional .ei.Backup.Shells shells = 25;`
@@ -444,16 +441,14 @@ public object BackupKt {
         _builder.shells = value
       }
     /**
-     * <code>optional .ei.Backup.Shells shells = 25;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Shells shells = 25;`
      */
     public fun clearShells() {
       _builder.clearShells()
     }
     /**
-     * <code>optional .ei.Backup.Shells shells = 25;</code>
+     * `optional .ei.Backup.Shells shells = 25;`
      * @return Whether the shells field is set.
-     * @return This builder for chaining.
      */
     public fun hasShells(): kotlin.Boolean {
       return _builder.hasShells()
@@ -473,16 +468,14 @@ public object BackupKt {
         _builder.sim = value
       }
     /**
-     * <code>optional .ei.Backup.Simulation sim = 8;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Simulation sim = 8;`
      */
     public fun clearSim() {
       _builder.clearSim()
     }
     /**
-     * <code>optional .ei.Backup.Simulation sim = 8;</code>
+     * `optional .ei.Backup.Simulation sim = 8;`
      * @return Whether the sim field is set.
-     * @return This builder for chaining.
      */
     public fun hasSim(): kotlin.Boolean {
       return _builder.hasSim()
@@ -506,9 +499,8 @@ public object BackupKt {
         _builder.farmsList
       )
     /**
-     * <code>repeated .ei.Backup.Simulation farms = 12;</code>
+     * `repeated .ei.Backup.Simulation farms = 12;`
      * @param value The farms to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addFarms")
@@ -516,9 +508,8 @@ public object BackupKt {
       _builder.addFarms(value)
     }
     /**
-     * <code>repeated .ei.Backup.Simulation farms = 12;</code>
+     * `repeated .ei.Backup.Simulation farms = 12;`
      * @param value The farms to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignFarms")
@@ -527,9 +518,8 @@ public object BackupKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Backup.Simulation farms = 12;</code>
+     * `repeated .ei.Backup.Simulation farms = 12;`
      * @param values The farms to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllFarms")
@@ -537,9 +527,8 @@ public object BackupKt {
       _builder.addAllFarms(values)
     }
     /**
-     * <code>repeated .ei.Backup.Simulation farms = 12;</code>
+     * `repeated .ei.Backup.Simulation farms = 12;`
      * @param values The farms to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllFarms")
@@ -548,10 +537,9 @@ public object BackupKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Backup.Simulation farms = 12;</code>
+     * `repeated .ei.Backup.Simulation farms = 12;`
      * @param index The index to set the value at.
      * @param value The farms to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setFarms")
@@ -559,8 +547,7 @@ public object BackupKt {
       _builder.setFarms(index, value)
     }
     /**
-     * <code>repeated .ei.Backup.Simulation farms = 12;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Backup.Simulation farms = 12;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearFarms")
@@ -579,16 +566,14 @@ public object BackupKt {
         _builder.mission = value
       }
     /**
-     * <code>optional .ei.Backup.Mission mission = 9;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Mission mission = 9;`
      */
     public fun clearMission() {
       _builder.clearMission()
     }
     /**
-     * <code>optional .ei.Backup.Mission mission = 9;</code>
+     * `optional .ei.Backup.Mission mission = 9;`
      * @return Whether the mission field is set.
-     * @return This builder for chaining.
      */
     public fun hasMission(): kotlin.Boolean {
       return _builder.hasMission()
@@ -608,16 +593,14 @@ public object BackupKt {
         _builder.misc = value
       }
     /**
-     * <code>optional .ei.Backup.Misc misc = 10;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup.Misc misc = 10;`
      */
     public fun clearMisc() {
       _builder.clearMisc()
     }
     /**
-     * <code>optional .ei.Backup.Misc misc = 10;</code>
+     * `optional .ei.Backup.Misc misc = 10;`
      * @return Whether the misc field is set.
-     * @return This builder for chaining.
      */
     public fun hasMisc(): kotlin.Boolean {
       return _builder.hasMisc()
@@ -637,16 +620,14 @@ public object BackupKt {
         _builder.contracts = value
       }
     /**
-     * <code>optional .ei.MyContracts contracts = 13;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MyContracts contracts = 13;`
      */
     public fun clearContracts() {
       _builder.clearContracts()
     }
     /**
-     * <code>optional .ei.MyContracts contracts = 13;</code>
+     * `optional .ei.MyContracts contracts = 13;`
      * @return Whether the contracts field is set.
-     * @return This builder for chaining.
      */
     public fun hasContracts(): kotlin.Boolean {
       return _builder.hasContracts()
@@ -666,16 +647,14 @@ public object BackupKt {
         _builder.artifactsDb = value
       }
     /**
-     * <code>optional .ei.ArtifactsDB artifacts_db = 15;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactsDB artifacts_db = 15;`
      */
     public fun clearArtifactsDb() {
       _builder.clearArtifactsDb()
     }
     /**
-     * <code>optional .ei.ArtifactsDB artifacts_db = 15;</code>
+     * `optional .ei.ArtifactsDB artifacts_db = 15;`
      * @return Whether the artifactsDb field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifactsDb(): kotlin.Boolean {
       return _builder.hasArtifactsDb()
@@ -695,16 +674,14 @@ public object BackupKt {
         _builder.shellDb = value
       }
     /**
-     * <code>optional .ei.ShellDB shell_db = 24;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellDB shell_db = 24;`
      */
     public fun clearShellDb() {
       _builder.clearShellDb()
     }
     /**
-     * <code>optional .ei.ShellDB shell_db = 24;</code>
+     * `optional .ei.ShellDB shell_db = 24;`
      * @return Whether the shellDb field is set.
-     * @return This builder for chaining.
      */
     public fun hasShellDb(): kotlin.Boolean {
       return _builder.hasShellDb()
@@ -720,9 +697,8 @@ public object BackupKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ReadMailIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string read_mail_ids = 23;</code>
+     * `repeated string read_mail_ids = 23;`
      * @return A list containing the readMailIds.
-     * @return This builder for chaining.
      */
     public val readMailIds: com.google.protobuf.kotlin.DslList<kotlin.String, ReadMailIdsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -730,9 +706,8 @@ public object BackupKt {
         _builder.readMailIdsList
       )
     /**
-     * <code>repeated string read_mail_ids = 23;</code>
+     * `repeated string read_mail_ids = 23;`
      * @param value The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addReadMailIds")
@@ -740,9 +715,8 @@ public object BackupKt {
       _builder.addReadMailIds(value)
     }
     /**
-     * <code>repeated string read_mail_ids = 23;</code>
+     * `repeated string read_mail_ids = 23;`
      * @param value The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignReadMailIds")
@@ -751,9 +725,8 @@ public object BackupKt {
       add(value)
     }
     /**
-     * <code>repeated string read_mail_ids = 23;</code>
+     * `repeated string read_mail_ids = 23;`
      * @param values The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllReadMailIds")
@@ -761,9 +734,8 @@ public object BackupKt {
       _builder.addAllReadMailIds(values)
     }
     /**
-     * <code>repeated string read_mail_ids = 23;</code>
+     * `repeated string read_mail_ids = 23;`
      * @param values The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllReadMailIds")
@@ -772,18 +744,16 @@ public object BackupKt {
       addAll(values)
     }
     /**
-     * <code>repeated string read_mail_ids = 23;</code>
+     * `repeated string read_mail_ids = 23;`
      * @param index The index to set the value at.
      * @param value The readMailIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setReadMailIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ReadMailIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setReadMailIds(index, value)
     }/**
-     * <code>repeated string read_mail_ids = 23;</code>
-     * @return This builder for chaining.
+     * `repeated string read_mail_ids = 23;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setReadMailIds")
@@ -801,16 +771,14 @@ public object BackupKt {
         _builder.mailState = value
       }
     /**
-     * <code>optional .ei.MailState mail_state = 27;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MailState mail_state = 27;`
      */
     public fun clearMailState() {
       _builder.clearMailState()
     }
     /**
-     * <code>optional .ei.MailState mail_state = 27;</code>
+     * `optional .ei.MailState mail_state = 27;`
      * @return Whether the mailState field is set.
-     * @return This builder for chaining.
      */
     public fun hasMailState(): kotlin.Boolean {
       return _builder.hasMailState()
@@ -830,16 +798,14 @@ public object BackupKt {
         _builder.checksum = value
       }
     /**
-     * <code>optional uint64 checksum = 100;</code>
-     * @return This builder for chaining.
+     * `optional uint64 checksum = 100;`
      */
     public fun clearChecksum() {
       _builder.clearChecksum()
     }
     /**
-     * <code>optional uint64 checksum = 100;</code>
+     * `optional uint64 checksum = 100;`
      * @return Whether the checksum field is set.
-     * @return This builder for chaining.
      */
     public fun hasChecksum(): kotlin.Boolean {
       return _builder.hasChecksum()
@@ -856,16 +822,14 @@ public object BackupKt {
         _builder.signature = value
       }
     /**
-     * <code>optional string signature = 101;</code>
-     * @return This builder for chaining.
+     * `optional string signature = 101;`
      */
     public fun clearSignature() {
       _builder.clearSignature()
     }
     /**
-     * <code>optional string signature = 101;</code>
+     * `optional string signature = 101;`
      * @return Whether the signature field is set.
-     * @return This builder for chaining.
      */
     public fun hasSignature(): kotlin.Boolean {
       return _builder.hasSignature()
@@ -904,16 +868,14 @@ public object BackupKt {
           _builder.sfx = value
         }
       /**
-       * <code>optional bool sfx = 1;</code>
-       * @return This builder for chaining.
+       * `optional bool sfx = 1;`
        */
       public fun clearSfx() {
         _builder.clearSfx()
       }
       /**
-       * <code>optional bool sfx = 1;</code>
+       * `optional bool sfx = 1;`
        * @return Whether the sfx field is set.
-       * @return This builder for chaining.
        */
       public fun hasSfx(): kotlin.Boolean {
         return _builder.hasSfx()
@@ -930,16 +892,14 @@ public object BackupKt {
           _builder.music = value
         }
       /**
-       * <code>optional bool music = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool music = 2;`
        */
       public fun clearMusic() {
         _builder.clearMusic()
       }
       /**
-       * <code>optional bool music = 2;</code>
+       * `optional bool music = 2;`
        * @return Whether the music field is set.
-       * @return This builder for chaining.
        */
       public fun hasMusic(): kotlin.Boolean {
         return _builder.hasMusic()
@@ -956,16 +916,14 @@ public object BackupKt {
           _builder.lowBatteryMode = value
         }
       /**
-       * <code>optional bool low_battery_mode = 3;</code>
-       * @return This builder for chaining.
+       * `optional bool low_battery_mode = 3;`
        */
       public fun clearLowBatteryMode() {
         _builder.clearLowBatteryMode()
       }
       /**
-       * <code>optional bool low_battery_mode = 3;</code>
+       * `optional bool low_battery_mode = 3;`
        * @return Whether the lowBatteryMode field is set.
-       * @return This builder for chaining.
        */
       public fun hasLowBatteryMode(): kotlin.Boolean {
         return _builder.hasLowBatteryMode()
@@ -982,16 +940,14 @@ public object BackupKt {
           _builder.lowPerformanceMode = value
         }
       /**
-       * <code>optional bool low_performance_mode = 4;</code>
-       * @return This builder for chaining.
+       * `optional bool low_performance_mode = 4;`
        */
       public fun clearLowPerformanceMode() {
         _builder.clearLowPerformanceMode()
       }
       /**
-       * <code>optional bool low_performance_mode = 4;</code>
+       * `optional bool low_performance_mode = 4;`
        * @return Whether the lowPerformanceMode field is set.
-       * @return This builder for chaining.
        */
       public fun hasLowPerformanceMode(): kotlin.Boolean {
         return _builder.hasLowPerformanceMode()
@@ -1008,16 +964,14 @@ public object BackupKt {
           _builder.forceTouchChickenBtn = value
         }
       /**
-       * <code>optional bool force_touch_chicken_btn = 9;</code>
-       * @return This builder for chaining.
+       * `optional bool force_touch_chicken_btn = 9;`
        */
       public fun clearForceTouchChickenBtn() {
         _builder.clearForceTouchChickenBtn()
       }
       /**
-       * <code>optional bool force_touch_chicken_btn = 9;</code>
+       * `optional bool force_touch_chicken_btn = 9;`
        * @return Whether the forceTouchChickenBtn field is set.
-       * @return This builder for chaining.
        */
       public fun hasForceTouchChickenBtn(): kotlin.Boolean {
         return _builder.hasForceTouchChickenBtn()
@@ -1034,16 +988,14 @@ public object BackupKt {
           _builder.notificationsQueried = value
         }
       /**
-       * <code>optional bool notifications_queried = 5;</code>
-       * @return This builder for chaining.
+       * `optional bool notifications_queried = 5;`
        */
       public fun clearNotificationsQueried() {
         _builder.clearNotificationsQueried()
       }
       /**
-       * <code>optional bool notifications_queried = 5;</code>
+       * `optional bool notifications_queried = 5;`
        * @return Whether the notificationsQueried field is set.
-       * @return This builder for chaining.
        */
       public fun hasNotificationsQueried(): kotlin.Boolean {
         return _builder.hasNotificationsQueried()
@@ -1060,16 +1012,14 @@ public object BackupKt {
           _builder.lastNotificationQueryTime = value
         }
       /**
-       * <code>optional double last_notification_query_time = 27;</code>
-       * @return This builder for chaining.
+       * `optional double last_notification_query_time = 27;`
        */
       public fun clearLastNotificationQueryTime() {
         _builder.clearLastNotificationQueryTime()
       }
       /**
-       * <code>optional double last_notification_query_time = 27;</code>
+       * `optional double last_notification_query_time = 27;`
        * @return Whether the lastNotificationQueryTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastNotificationQueryTime(): kotlin.Boolean {
         return _builder.hasLastNotificationQueryTime()
@@ -1086,16 +1036,14 @@ public object BackupKt {
           _builder.notificationsOn = value
         }
       /**
-       * <code>optional bool notifications_on = 6;</code>
-       * @return This builder for chaining.
+       * `optional bool notifications_on = 6;`
        */
       public fun clearNotificationsOn() {
         _builder.clearNotificationsOn()
       }
       /**
-       * <code>optional bool notifications_on = 6;</code>
+       * `optional bool notifications_on = 6;`
        * @return Whether the notificationsOn field is set.
-       * @return This builder for chaining.
        */
       public fun hasNotificationsOn(): kotlin.Boolean {
         return _builder.hasNotificationsOn()
@@ -1112,16 +1060,14 @@ public object BackupKt {
           _builder.notifyDailyGift = value
         }
       /**
-       * <code>optional bool notify_daily_gift = 11;</code>
-       * @return This builder for chaining.
+       * `optional bool notify_daily_gift = 11;`
        */
       public fun clearNotifyDailyGift() {
         _builder.clearNotifyDailyGift()
       }
       /**
-       * <code>optional bool notify_daily_gift = 11;</code>
+       * `optional bool notify_daily_gift = 11;`
        * @return Whether the notifyDailyGift field is set.
-       * @return This builder for chaining.
        */
       public fun hasNotifyDailyGift(): kotlin.Boolean {
         return _builder.hasNotifyDailyGift()
@@ -1138,16 +1084,14 @@ public object BackupKt {
           _builder.lowPerformance = value
         }
       /**
-       * <code>optional bool low_performance = 10;</code>
-       * @return This builder for chaining.
+       * `optional bool low_performance = 10;`
        */
       public fun clearLowPerformance() {
         _builder.clearLowPerformance()
       }
       /**
-       * <code>optional bool low_performance = 10;</code>
+       * `optional bool low_performance = 10;`
        * @return Whether the lowPerformance field is set.
-       * @return This builder for chaining.
        */
       public fun hasLowPerformance(): kotlin.Boolean {
         return _builder.hasLowPerformance()
@@ -1164,16 +1108,14 @@ public object BackupKt {
           _builder.autoStopFueling = value
         }
       /**
-       * <code>optional bool auto_stop_fueling = 25;</code>
-       * @return This builder for chaining.
+       * `optional bool auto_stop_fueling = 25;`
        */
       public fun clearAutoStopFueling() {
         _builder.clearAutoStopFueling()
       }
       /**
-       * <code>optional bool auto_stop_fueling = 25;</code>
+       * `optional bool auto_stop_fueling = 25;`
        * @return Whether the autoStopFueling field is set.
-       * @return This builder for chaining.
        */
       public fun hasAutoStopFueling(): kotlin.Boolean {
         return _builder.hasAutoStopFueling()
@@ -1190,16 +1132,14 @@ public object BackupKt {
           _builder.maxEnabled = value
         }
       /**
-       * <code>optional bool max_enabled = 26;</code>
-       * @return This builder for chaining.
+       * `optional bool max_enabled = 26;`
        */
       public fun clearMaxEnabled() {
         _builder.clearMaxEnabled()
       }
       /**
-       * <code>optional bool max_enabled = 26;</code>
+       * `optional bool max_enabled = 26;`
        * @return Whether the maxEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasMaxEnabled(): kotlin.Boolean {
         return _builder.hasMaxEnabled()
@@ -1216,16 +1156,14 @@ public object BackupKt {
           _builder.hideCcStatus = value
         }
       /**
-       * <code>optional bool hide_cc_status = 28;</code>
-       * @return This builder for chaining.
+       * `optional bool hide_cc_status = 28;`
        */
       public fun clearHideCcStatus() {
         _builder.clearHideCcStatus()
       }
       /**
-       * <code>optional bool hide_cc_status = 28;</code>
+       * `optional bool hide_cc_status = 28;`
        * @return Whether the hideCcStatus field is set.
-       * @return This builder for chaining.
        */
       public fun hasHideCcStatus(): kotlin.Boolean {
         return _builder.hasHideCcStatus()
@@ -1242,16 +1180,14 @@ public object BackupKt {
           _builder.contractsWidgetEnabled = value
         }
       /**
-       * <code>optional bool contracts_widget_enabled = 29;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_widget_enabled = 29;`
        */
       public fun clearContractsWidgetEnabled() {
         _builder.clearContractsWidgetEnabled()
       }
       /**
-       * <code>optional bool contracts_widget_enabled = 29;</code>
+       * `optional bool contracts_widget_enabled = 29;`
        * @return Whether the contractsWidgetEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsWidgetEnabled(): kotlin.Boolean {
         return _builder.hasContractsWidgetEnabled()
@@ -1268,16 +1204,14 @@ public object BackupKt {
           _builder.artifactSparkle = value
         }
       /**
-       * <code>optional bool artifact_sparkle = 30;</code>
-       * @return This builder for chaining.
+       * `optional bool artifact_sparkle = 30;`
        */
       public fun clearArtifactSparkle() {
         _builder.clearArtifactSparkle()
       }
       /**
-       * <code>optional bool artifact_sparkle = 30;</code>
+       * `optional bool artifact_sparkle = 30;`
        * @return Whether the artifactSparkle field is set.
-       * @return This builder for chaining.
        */
       public fun hasArtifactSparkle(): kotlin.Boolean {
         return _builder.hasArtifactSparkle()
@@ -1294,16 +1228,14 @@ public object BackupKt {
           _builder.lastBackupTime = value
         }
       /**
-       * <code>optional double last_backup_time = 24;</code>
-       * @return This builder for chaining.
+       * `optional double last_backup_time = 24;`
        */
       public fun clearLastBackupTime() {
         _builder.clearLastBackupTime()
       }
       /**
-       * <code>optional double last_backup_time = 24;</code>
+       * `optional double last_backup_time = 24;`
        * @return Whether the lastBackupTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastBackupTime(): kotlin.Boolean {
         return _builder.hasLastBackupTime()
@@ -1320,16 +1252,14 @@ public object BackupKt {
           _builder.coppaQueried = value
         }
       /**
-       * <code>optional bool coppa_queried = 7;</code>
-       * @return This builder for chaining.
+       * `optional bool coppa_queried = 7;`
        */
       public fun clearCoppaQueried() {
         _builder.clearCoppaQueried()
       }
       /**
-       * <code>optional bool coppa_queried = 7;</code>
+       * `optional bool coppa_queried = 7;`
        * @return Whether the coppaQueried field is set.
-       * @return This builder for chaining.
        */
       public fun hasCoppaQueried(): kotlin.Boolean {
         return _builder.hasCoppaQueried()
@@ -1346,16 +1276,14 @@ public object BackupKt {
           _builder.coppaRestricted = value
         }
       /**
-       * <code>optional bool coppa_restricted = 8;</code>
-       * @return This builder for chaining.
+       * `optional bool coppa_restricted = 8;`
        */
       public fun clearCoppaRestricted() {
         _builder.clearCoppaRestricted()
       }
       /**
-       * <code>optional bool coppa_restricted = 8;</code>
+       * `optional bool coppa_restricted = 8;`
        * @return Whether the coppaRestricted field is set.
-       * @return This builder for chaining.
        */
       public fun hasCoppaRestricted(): kotlin.Boolean {
         return _builder.hasCoppaRestricted()
@@ -1372,16 +1300,14 @@ public object BackupKt {
           _builder.gdprConsentQueried = value
         }
       /**
-       * <code>optional bool gdpr_consent_queried = 12;</code>
-       * @return This builder for chaining.
+       * `optional bool gdpr_consent_queried = 12;`
        */
       public fun clearGdprConsentQueried() {
         _builder.clearGdprConsentQueried()
       }
       /**
-       * <code>optional bool gdpr_consent_queried = 12;</code>
+       * `optional bool gdpr_consent_queried = 12;`
        * @return Whether the gdprConsentQueried field is set.
-       * @return This builder for chaining.
        */
       public fun hasGdprConsentQueried(): kotlin.Boolean {
         return _builder.hasGdprConsentQueried()
@@ -1398,16 +1324,14 @@ public object BackupKt {
           _builder.gdprAgeRestricted = value
         }
       /**
-       * <code>optional bool gdpr_age_restricted = 16;</code>
-       * @return This builder for chaining.
+       * `optional bool gdpr_age_restricted = 16;`
        */
       public fun clearGdprAgeRestricted() {
         _builder.clearGdprAgeRestricted()
       }
       /**
-       * <code>optional bool gdpr_age_restricted = 16;</code>
+       * `optional bool gdpr_age_restricted = 16;`
        * @return Whether the gdprAgeRestricted field is set.
-       * @return This builder for chaining.
        */
       public fun hasGdprAgeRestricted(): kotlin.Boolean {
         return _builder.hasGdprAgeRestricted()
@@ -1424,16 +1348,14 @@ public object BackupKt {
           _builder.gdprConsentGiven = value
         }
       /**
-       * <code>optional bool gdpr_consent_given = 13;</code>
-       * @return This builder for chaining.
+       * `optional bool gdpr_consent_given = 13;`
        */
       public fun clearGdprConsentGiven() {
         _builder.clearGdprConsentGiven()
       }
       /**
-       * <code>optional bool gdpr_consent_given = 13;</code>
+       * `optional bool gdpr_consent_given = 13;`
        * @return Whether the gdprConsentGiven field is set.
-       * @return This builder for chaining.
        */
       public fun hasGdprConsentGiven(): kotlin.Boolean {
         return _builder.hasGdprConsentGiven()
@@ -1450,16 +1372,14 @@ public object BackupKt {
           _builder.ageQueried = value
         }
       /**
-       * <code>optional bool age_queried = 18;</code>
-       * @return This builder for chaining.
+       * `optional bool age_queried = 18;`
        */
       public fun clearAgeQueried() {
         _builder.clearAgeQueried()
       }
       /**
-       * <code>optional bool age_queried = 18;</code>
+       * `optional bool age_queried = 18;`
        * @return Whether the ageQueried field is set.
-       * @return This builder for chaining.
        */
       public fun hasAgeQueried(): kotlin.Boolean {
         return _builder.hasAgeQueried()
@@ -1476,16 +1396,14 @@ public object BackupKt {
           _builder.ageRestricted = value
         }
       /**
-       * <code>optional bool age_restricted = 19 [default = false];</code>
-       * @return This builder for chaining.
+       * `optional bool age_restricted = 19 [default = false];`
        */
       public fun clearAgeRestricted() {
         _builder.clearAgeRestricted()
       }
       /**
-       * <code>optional bool age_restricted = 19 [default = false];</code>
+       * `optional bool age_restricted = 19 [default = false];`
        * @return Whether the ageRestricted field is set.
-       * @return This builder for chaining.
        */
       public fun hasAgeRestricted(): kotlin.Boolean {
         return _builder.hasAgeRestricted()
@@ -1502,16 +1420,14 @@ public object BackupKt {
           _builder.dataCollectionConsentQueried = value
         }
       /**
-       * <code>optional bool data_collection_consent_queried = 20;</code>
-       * @return This builder for chaining.
+       * `optional bool data_collection_consent_queried = 20;`
        */
       public fun clearDataCollectionConsentQueried() {
         _builder.clearDataCollectionConsentQueried()
       }
       /**
-       * <code>optional bool data_collection_consent_queried = 20;</code>
+       * `optional bool data_collection_consent_queried = 20;`
        * @return Whether the dataCollectionConsentQueried field is set.
-       * @return This builder for chaining.
        */
       public fun hasDataCollectionConsentQueried(): kotlin.Boolean {
         return _builder.hasDataCollectionConsentQueried()
@@ -1528,16 +1444,14 @@ public object BackupKt {
           _builder.dataCollectionConsentGiven = value
         }
       /**
-       * <code>optional bool data_collection_consent_given = 21;</code>
-       * @return This builder for chaining.
+       * `optional bool data_collection_consent_given = 21;`
        */
       public fun clearDataCollectionConsentGiven() {
         _builder.clearDataCollectionConsentGiven()
       }
       /**
-       * <code>optional bool data_collection_consent_given = 21;</code>
+       * `optional bool data_collection_consent_given = 21;`
        * @return Whether the dataCollectionConsentGiven field is set.
-       * @return This builder for chaining.
        */
       public fun hasDataCollectionConsentGiven(): kotlin.Boolean {
         return _builder.hasDataCollectionConsentGiven()
@@ -1554,16 +1468,14 @@ public object BackupKt {
           _builder.lastDayAgeQueried = value
         }
       /**
-       * <code>optional uint32 last_day_age_queried = 17;</code>
-       * @return This builder for chaining.
+       * `optional uint32 last_day_age_queried = 17;`
        */
       public fun clearLastDayAgeQueried() {
         _builder.clearLastDayAgeQueried()
       }
       /**
-       * <code>optional uint32 last_day_age_queried = 17;</code>
+       * `optional uint32 last_day_age_queried = 17;`
        * @return Whether the lastDayAgeQueried field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastDayAgeQueried(): kotlin.Boolean {
         return _builder.hasLastDayAgeQueried()
@@ -1580,16 +1492,14 @@ public object BackupKt {
           _builder.userAdsEnabled = value
         }
       /**
-       * <code>optional bool user_ads_enabled = 14 [default = true];</code>
-       * @return This builder for chaining.
+       * `optional bool user_ads_enabled = 14 [default = true];`
        */
       public fun clearUserAdsEnabled() {
         _builder.clearUserAdsEnabled()
       }
       /**
-       * <code>optional bool user_ads_enabled = 14 [default = true];</code>
+       * `optional bool user_ads_enabled = 14 [default = true];`
        * @return Whether the userAdsEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasUserAdsEnabled(): kotlin.Boolean {
         return _builder.hasUserAdsEnabled()
@@ -1606,16 +1516,14 @@ public object BackupKt {
           _builder.userCloudEnabled = value
         }
       /**
-       * <code>optional bool user_cloud_enabled = 15 [default = true];</code>
-       * @return This builder for chaining.
+       * `optional bool user_cloud_enabled = 15 [default = true];`
        */
       public fun clearUserCloudEnabled() {
         _builder.clearUserCloudEnabled()
       }
       /**
-       * <code>optional bool user_cloud_enabled = 15 [default = true];</code>
+       * `optional bool user_cloud_enabled = 15 [default = true];`
        * @return Whether the userCloudEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasUserCloudEnabled(): kotlin.Boolean {
         return _builder.hasUserCloudEnabled()
@@ -1632,16 +1540,14 @@ public object BackupKt {
           _builder.userAnalyticsEnabled = value
         }
       /**
-       * <code>optional bool user_analytics_enabled = 22 [default = true];</code>
-       * @return This builder for chaining.
+       * `optional bool user_analytics_enabled = 22 [default = true];`
        */
       public fun clearUserAnalyticsEnabled() {
         _builder.clearUserAnalyticsEnabled()
       }
       /**
-       * <code>optional bool user_analytics_enabled = 22 [default = true];</code>
+       * `optional bool user_analytics_enabled = 22 [default = true];`
        * @return Whether the userAnalyticsEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasUserAnalyticsEnabled(): kotlin.Boolean {
         return _builder.hasUserAnalyticsEnabled()
@@ -1658,16 +1564,14 @@ public object BackupKt {
           _builder.userPersonalizedAdsEnabled = value
         }
       /**
-       * <code>optional bool user_personalized_ads_enabled = 23 [default = true];</code>
-       * @return This builder for chaining.
+       * `optional bool user_personalized_ads_enabled = 23 [default = true];`
        */
       public fun clearUserPersonalizedAdsEnabled() {
         _builder.clearUserPersonalizedAdsEnabled()
       }
       /**
-       * <code>optional bool user_personalized_ads_enabled = 23 [default = true];</code>
+       * `optional bool user_personalized_ads_enabled = 23 [default = true];`
        * @return Whether the userPersonalizedAdsEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasUserPersonalizedAdsEnabled(): kotlin.Boolean {
         return _builder.hasUserPersonalizedAdsEnabled()
@@ -1707,16 +1611,14 @@ public object BackupKt {
           _builder.introShown = value
         }
       /**
-       * <code>optional bool intro_shown = 1;</code>
-       * @return This builder for chaining.
+       * `optional bool intro_shown = 1;`
        */
       public fun clearIntroShown() {
         _builder.clearIntroShown()
       }
       /**
-       * <code>optional bool intro_shown = 1;</code>
+       * `optional bool intro_shown = 1;`
        * @return Whether the introShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasIntroShown(): kotlin.Boolean {
         return _builder.hasIntroShown()
@@ -1733,16 +1635,14 @@ public object BackupKt {
           _builder.clickTutorialShown = value
         }
       /**
-       * <code>optional bool click_tutorial_shown = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool click_tutorial_shown = 2;`
        */
       public fun clearClickTutorialShown() {
         _builder.clearClickTutorialShown()
       }
       /**
-       * <code>optional bool click_tutorial_shown = 2;</code>
+       * `optional bool click_tutorial_shown = 2;`
        * @return Whether the clickTutorialShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasClickTutorialShown(): kotlin.Boolean {
         return _builder.hasClickTutorialShown()
@@ -1759,16 +1659,14 @@ public object BackupKt {
           _builder.buyHabShown = value
         }
       /**
-       * <code>optional bool buy_hab_shown = 3;</code>
-       * @return This builder for chaining.
+       * `optional bool buy_hab_shown = 3;`
        */
       public fun clearBuyHabShown() {
         _builder.clearBuyHabShown()
       }
       /**
-       * <code>optional bool buy_hab_shown = 3;</code>
+       * `optional bool buy_hab_shown = 3;`
        * @return Whether the buyHabShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasBuyHabShown(): kotlin.Boolean {
         return _builder.hasBuyHabShown()
@@ -1785,16 +1683,14 @@ public object BackupKt {
           _builder.hireVehicleShown = value
         }
       /**
-       * <code>optional bool hire_vehicle_shown = 4;</code>
-       * @return This builder for chaining.
+       * `optional bool hire_vehicle_shown = 4;`
        */
       public fun clearHireVehicleShown() {
         _builder.clearHireVehicleShown()
       }
       /**
-       * <code>optional bool hire_vehicle_shown = 4;</code>
+       * `optional bool hire_vehicle_shown = 4;`
        * @return Whether the hireVehicleShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasHireVehicleShown(): kotlin.Boolean {
         return _builder.hasHireVehicleShown()
@@ -1811,16 +1707,14 @@ public object BackupKt {
           _builder.qNumShown = value
         }
       /**
-       * <code>optional bool q_num_shown = 5;</code>
-       * @return This builder for chaining.
+       * `optional bool q_num_shown = 5;`
        */
       public fun clearQNumShown() {
         _builder.clearQNumShown()
       }
       /**
-       * <code>optional bool q_num_shown = 5;</code>
+       * `optional bool q_num_shown = 5;`
        * @return Whether the qNumShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasQNumShown(): kotlin.Boolean {
         return _builder.hasQNumShown()
@@ -1837,16 +1731,14 @@ public object BackupKt {
           _builder.sNumShown = value
         }
       /**
-       * <code>optional bool s_num_shown = 6;</code>
-       * @return This builder for chaining.
+       * `optional bool s_num_shown = 6;`
        */
       public fun clearSNumShown() {
         _builder.clearSNumShown()
       }
       /**
-       * <code>optional bool s_num_shown = 6;</code>
+       * `optional bool s_num_shown = 6;`
        * @return Whether the sNumShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasSNumShown(): kotlin.Boolean {
         return _builder.hasSNumShown()
@@ -1863,16 +1755,14 @@ public object BackupKt {
           _builder.contractsTabShown = value
         }
       /**
-       * <code>optional bool contracts_tab_shown = 7;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_tab_shown = 7;`
        */
       public fun clearContractsTabShown() {
         _builder.clearContractsTabShown()
       }
       /**
-       * <code>optional bool contracts_tab_shown = 7;</code>
+       * `optional bool contracts_tab_shown = 7;`
        * @return Whether the contractsTabShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsTabShown(): kotlin.Boolean {
         return _builder.hasContractsTabShown()
@@ -1889,16 +1779,14 @@ public object BackupKt {
           _builder.contractInfoShown = value
         }
       /**
-       * <code>optional bool contract_info_shown = 8;</code>
-       * @return This builder for chaining.
+       * `optional bool contract_info_shown = 8;`
        */
       public fun clearContractInfoShown() {
         _builder.clearContractInfoShown()
       }
       /**
-       * <code>optional bool contract_info_shown = 8;</code>
+       * `optional bool contract_info_shown = 8;`
        * @return Whether the contractInfoShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractInfoShown(): kotlin.Boolean {
         return _builder.hasContractInfoShown()
@@ -1915,16 +1803,14 @@ public object BackupKt {
           _builder.joinCoopShown = value
         }
       /**
-       * <code>optional bool join_coop_shown = 9;</code>
-       * @return This builder for chaining.
+       * `optional bool join_coop_shown = 9;`
        */
       public fun clearJoinCoopShown() {
         _builder.clearJoinCoopShown()
       }
       /**
-       * <code>optional bool join_coop_shown = 9;</code>
+       * `optional bool join_coop_shown = 9;`
        * @return Whether the joinCoopShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasJoinCoopShown(): kotlin.Boolean {
         return _builder.hasJoinCoopShown()
@@ -1941,16 +1827,14 @@ public object BackupKt {
           _builder.switchFarmShown = value
         }
       /**
-       * <code>optional bool switch_farm_shown = 10;</code>
-       * @return This builder for chaining.
+       * `optional bool switch_farm_shown = 10;`
        */
       public fun clearSwitchFarmShown() {
         _builder.clearSwitchFarmShown()
       }
       /**
-       * <code>optional bool switch_farm_shown = 10;</code>
+       * `optional bool switch_farm_shown = 10;`
        * @return Whether the switchFarmShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasSwitchFarmShown(): kotlin.Boolean {
         return _builder.hasSwitchFarmShown()
@@ -1971,18 +1855,16 @@ public object BackupKt {
           _builder.tutorialShownList
         )
       /**
-       * <code>repeated bool tutorial_shown = 11;</code>
+       * `repeated bool tutorial_shown = 11;`
        * @param value The tutorialShown to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTutorialShown")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Boolean, TutorialShownProxy>.add(value: kotlin.Boolean) {
         _builder.addTutorialShown(value)
       }/**
-       * <code>repeated bool tutorial_shown = 11;</code>
+       * `repeated bool tutorial_shown = 11;`
        * @param value The tutorialShown to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTutorialShown")
@@ -1990,18 +1872,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Boolean, TutorialShownProxy>.plusAssign(value: kotlin.Boolean) {
         add(value)
       }/**
-       * <code>repeated bool tutorial_shown = 11;</code>
+       * `repeated bool tutorial_shown = 11;`
        * @param values The tutorialShown to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTutorialShown")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Boolean, TutorialShownProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Boolean>) {
         _builder.addAllTutorialShown(values)
       }/**
-       * <code>repeated bool tutorial_shown = 11;</code>
+       * `repeated bool tutorial_shown = 11;`
        * @param values The tutorialShown to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTutorialShown")
@@ -2009,18 +1889,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Boolean, TutorialShownProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Boolean>) {
         addAll(values)
       }/**
-       * <code>repeated bool tutorial_shown = 11;</code>
+       * `repeated bool tutorial_shown = 11;`
        * @param index The index to set the value at.
        * @param value The tutorialShown to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTutorialShown")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Boolean, TutorialShownProxy>.set(index: kotlin.Int, value: kotlin.Boolean) {
         _builder.setTutorialShown(index, value)
       }/**
-       * <code>repeated bool tutorial_shown = 11;</code>
-       * @return This builder for chaining.
+       * `repeated bool tutorial_shown = 11;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTutorialShown")
@@ -2065,18 +1943,16 @@ public object BackupKt {
           _builder.eggTotalsOLDList
         )
       /**
-       * <code>repeated uint64 egg_totals_OLD = 1;</code>
+       * `repeated uint64 egg_totals_OLD = 1;`
        * @param value The eggTotalsOLD to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEggTotalsOLD")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, EggTotalsOLDProxy>.add(value: kotlin.Long) {
         _builder.addEggTotalsOLD(value)
       }/**
-       * <code>repeated uint64 egg_totals_OLD = 1;</code>
+       * `repeated uint64 egg_totals_OLD = 1;`
        * @param value The eggTotalsOLD to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEggTotalsOLD")
@@ -2084,18 +1960,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, EggTotalsOLDProxy>.plusAssign(value: kotlin.Long) {
         add(value)
       }/**
-       * <code>repeated uint64 egg_totals_OLD = 1;</code>
+       * `repeated uint64 egg_totals_OLD = 1;`
        * @param values The eggTotalsOLD to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEggTotalsOLD")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, EggTotalsOLDProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
         _builder.addAllEggTotalsOLD(values)
       }/**
-       * <code>repeated uint64 egg_totals_OLD = 1;</code>
+       * `repeated uint64 egg_totals_OLD = 1;`
        * @param values The eggTotalsOLD to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEggTotalsOLD")
@@ -2103,18 +1977,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, EggTotalsOLDProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
         addAll(values)
       }/**
-       * <code>repeated uint64 egg_totals_OLD = 1;</code>
+       * `repeated uint64 egg_totals_OLD = 1;`
        * @param index The index to set the value at.
        * @param value The eggTotalsOLD to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEggTotalsOLD")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, EggTotalsOLDProxy>.set(index: kotlin.Int, value: kotlin.Long) {
         _builder.setEggTotalsOLD(index, value)
       }/**
-       * <code>repeated uint64 egg_totals_OLD = 1;</code>
-       * @return This builder for chaining.
+       * `repeated uint64 egg_totals_OLD = 1;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEggTotalsOLD")
@@ -2136,18 +2008,16 @@ public object BackupKt {
           _builder.eggTotalsList
         )
       /**
-       * <code>repeated double egg_totals = 8;</code>
+       * `repeated double egg_totals = 8;`
        * @param value The eggTotals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEggTotals")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggTotalsProxy>.add(value: kotlin.Double) {
         _builder.addEggTotals(value)
       }/**
-       * <code>repeated double egg_totals = 8;</code>
+       * `repeated double egg_totals = 8;`
        * @param value The eggTotals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEggTotals")
@@ -2155,18 +2025,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggTotalsProxy>.plusAssign(value: kotlin.Double) {
         add(value)
       }/**
-       * <code>repeated double egg_totals = 8;</code>
+       * `repeated double egg_totals = 8;`
        * @param values The eggTotals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEggTotals")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggTotalsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
         _builder.addAllEggTotals(values)
       }/**
-       * <code>repeated double egg_totals = 8;</code>
+       * `repeated double egg_totals = 8;`
        * @param values The eggTotals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEggTotals")
@@ -2174,18 +2042,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggTotalsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
         addAll(values)
       }/**
-       * <code>repeated double egg_totals = 8;</code>
+       * `repeated double egg_totals = 8;`
        * @param index The index to set the value at.
        * @param value The eggTotals to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEggTotals")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggTotalsProxy>.set(index: kotlin.Int, value: kotlin.Double) {
         _builder.setEggTotals(index, value)
       }/**
-       * <code>repeated double egg_totals = 8;</code>
-       * @return This builder for chaining.
+       * `repeated double egg_totals = 8;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEggTotals")
@@ -2203,16 +2069,14 @@ public object BackupKt {
           _builder.unlimitedChickensUses = value
         }
       /**
-       * <code>optional uint64 unlimited_chickens_uses = 7;</code>
-       * @return This builder for chaining.
+       * `optional uint64 unlimited_chickens_uses = 7;`
        */
       public fun clearUnlimitedChickensUses() {
         _builder.clearUnlimitedChickensUses()
       }
       /**
-       * <code>optional uint64 unlimited_chickens_uses = 7;</code>
+       * `optional uint64 unlimited_chickens_uses = 7;`
        * @return Whether the unlimitedChickensUses field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnlimitedChickensUses(): kotlin.Boolean {
         return _builder.hasUnlimitedChickensUses()
@@ -2229,16 +2093,14 @@ public object BackupKt {
           _builder.refillUses = value
         }
       /**
-       * <code>optional uint64 refill_uses = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint64 refill_uses = 2;`
        */
       public fun clearRefillUses() {
         _builder.clearRefillUses()
       }
       /**
-       * <code>optional uint64 refill_uses = 2;</code>
+       * `optional uint64 refill_uses = 2;`
        * @return Whether the refillUses field is set.
-       * @return This builder for chaining.
        */
       public fun hasRefillUses(): kotlin.Boolean {
         return _builder.hasRefillUses()
@@ -2255,16 +2117,14 @@ public object BackupKt {
           _builder.warp1Uses = value
         }
       /**
-       * <code>optional uint64 warp_1_uses = 4;</code>
-       * @return This builder for chaining.
+       * `optional uint64 warp_1_uses = 4;`
        */
       public fun clearWarp1Uses() {
         _builder.clearWarp1Uses()
       }
       /**
-       * <code>optional uint64 warp_1_uses = 4;</code>
+       * `optional uint64 warp_1_uses = 4;`
        * @return Whether the warp1Uses field is set.
-       * @return This builder for chaining.
        */
       public fun hasWarp1Uses(): kotlin.Boolean {
         return _builder.hasWarp1Uses()
@@ -2281,16 +2141,14 @@ public object BackupKt {
           _builder.warp8Uses = value
         }
       /**
-       * <code>optional uint64 warp_8_uses = 5;</code>
-       * @return This builder for chaining.
+       * `optional uint64 warp_8_uses = 5;`
        */
       public fun clearWarp8Uses() {
         _builder.clearWarp8Uses()
       }
       /**
-       * <code>optional uint64 warp_8_uses = 5;</code>
+       * `optional uint64 warp_8_uses = 5;`
        * @return Whether the warp8Uses field is set.
-       * @return This builder for chaining.
        */
       public fun hasWarp8Uses(): kotlin.Boolean {
         return _builder.hasWarp8Uses()
@@ -2307,16 +2165,14 @@ public object BackupKt {
           _builder.boostsUsed = value
         }
       /**
-       * <code>optional uint64 boosts_used = 13;</code>
-       * @return This builder for chaining.
+       * `optional uint64 boosts_used = 13;`
        */
       public fun clearBoostsUsed() {
         _builder.clearBoostsUsed()
       }
       /**
-       * <code>optional uint64 boosts_used = 13;</code>
+       * `optional uint64 boosts_used = 13;`
        * @return Whether the boostsUsed field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostsUsed(): kotlin.Boolean {
         return _builder.hasBoostsUsed()
@@ -2333,16 +2189,14 @@ public object BackupKt {
           _builder.videoDoublerUses = value
         }
       /**
-       * <code>optional uint64 video_doubler_uses = 3;</code>
-       * @return This builder for chaining.
+       * `optional uint64 video_doubler_uses = 3;`
        */
       public fun clearVideoDoublerUses() {
         _builder.clearVideoDoublerUses()
       }
       /**
-       * <code>optional uint64 video_doubler_uses = 3;</code>
+       * `optional uint64 video_doubler_uses = 3;`
        * @return Whether the videoDoublerUses field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoDoublerUses(): kotlin.Boolean {
         return _builder.hasVideoDoublerUses()
@@ -2359,16 +2213,14 @@ public object BackupKt {
           _builder.droneTakedowns = value
         }
       /**
-       * <code>optional uint64 drone_takedowns = 6;</code>
-       * @return This builder for chaining.
+       * `optional uint64 drone_takedowns = 6;`
        */
       public fun clearDroneTakedowns() {
         _builder.clearDroneTakedowns()
       }
       /**
-       * <code>optional uint64 drone_takedowns = 6;</code>
+       * `optional uint64 drone_takedowns = 6;`
        * @return Whether the droneTakedowns field is set.
-       * @return This builder for chaining.
        */
       public fun hasDroneTakedowns(): kotlin.Boolean {
         return _builder.hasDroneTakedowns()
@@ -2385,16 +2237,14 @@ public object BackupKt {
           _builder.droneTakedownsElite = value
         }
       /**
-       * <code>optional uint64 drone_takedowns_elite = 10;</code>
-       * @return This builder for chaining.
+       * `optional uint64 drone_takedowns_elite = 10;`
        */
       public fun clearDroneTakedownsElite() {
         _builder.clearDroneTakedownsElite()
       }
       /**
-       * <code>optional uint64 drone_takedowns_elite = 10;</code>
+       * `optional uint64 drone_takedowns_elite = 10;`
        * @return Whether the droneTakedownsElite field is set.
-       * @return This builder for chaining.
        */
       public fun hasDroneTakedownsElite(): kotlin.Boolean {
         return _builder.hasDroneTakedownsElite()
@@ -2411,16 +2261,14 @@ public object BackupKt {
           _builder.numPrestiges = value
         }
       /**
-       * <code>optional uint64 num_prestiges = 9;</code>
-       * @return This builder for chaining.
+       * `optional uint64 num_prestiges = 9;`
        */
       public fun clearNumPrestiges() {
         _builder.clearNumPrestiges()
       }
       /**
-       * <code>optional uint64 num_prestiges = 9;</code>
+       * `optional uint64 num_prestiges = 9;`
        * @return Whether the numPrestiges field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumPrestiges(): kotlin.Boolean {
         return _builder.hasNumPrestiges()
@@ -2437,16 +2285,14 @@ public object BackupKt {
           _builder.numPiggyBreaks = value
         }
       /**
-       * <code>optional uint64 num_piggy_breaks = 11;</code>
-       * @return This builder for chaining.
+       * `optional uint64 num_piggy_breaks = 11;`
        */
       public fun clearNumPiggyBreaks() {
         _builder.clearNumPiggyBreaks()
       }
       /**
-       * <code>optional uint64 num_piggy_breaks = 11;</code>
+       * `optional uint64 num_piggy_breaks = 11;`
        * @return Whether the numPiggyBreaks field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumPiggyBreaks(): kotlin.Boolean {
         return _builder.hasNumPiggyBreaks()
@@ -2463,16 +2309,14 @@ public object BackupKt {
           _builder.iapPacksPurchased = value
         }
       /**
-       * <code>optional uint64 iap_packs_purchased = 12;</code>
-       * @return This builder for chaining.
+       * `optional uint64 iap_packs_purchased = 12;`
        */
       public fun clearIapPacksPurchased() {
         _builder.clearIapPacksPurchased()
       }
       /**
-       * <code>optional uint64 iap_packs_purchased = 12;</code>
+       * `optional uint64 iap_packs_purchased = 12;`
        * @return Whether the iapPacksPurchased field is set.
-       * @return This builder for chaining.
        */
       public fun hasIapPacksPurchased(): kotlin.Boolean {
         return _builder.hasIapPacksPurchased()
@@ -2489,16 +2333,14 @@ public object BackupKt {
           _builder.piggyFull = value
         }
       /**
-       * <code>optional bool piggy_full = 14;</code>
-       * @return This builder for chaining.
+       * `optional bool piggy_full = 14;`
        */
       public fun clearPiggyFull() {
         _builder.clearPiggyFull()
       }
       /**
-       * <code>optional bool piggy_full = 14;</code>
+       * `optional bool piggy_full = 14;`
        * @return Whether the piggyFull field is set.
-       * @return This builder for chaining.
        */
       public fun hasPiggyFull(): kotlin.Boolean {
         return _builder.hasPiggyFull()
@@ -2515,16 +2357,14 @@ public object BackupKt {
           _builder.piggyFoundFull = value
         }
       /**
-       * <code>optional bool piggy_found_full = 15;</code>
-       * @return This builder for chaining.
+       * `optional bool piggy_found_full = 15;`
        */
       public fun clearPiggyFoundFull() {
         _builder.clearPiggyFoundFull()
       }
       /**
-       * <code>optional bool piggy_found_full = 15;</code>
+       * `optional bool piggy_found_full = 15;`
        * @return Whether the piggyFoundFull field is set.
-       * @return This builder for chaining.
        */
       public fun hasPiggyFoundFull(): kotlin.Boolean {
         return _builder.hasPiggyFoundFull()
@@ -2541,16 +2381,14 @@ public object BackupKt {
           _builder.timePiggyFilledRealtime = value
         }
       /**
-       * <code>optional double time_piggy_filled_realtime = 16;</code>
-       * @return This builder for chaining.
+       * `optional double time_piggy_filled_realtime = 16;`
        */
       public fun clearTimePiggyFilledRealtime() {
         _builder.clearTimePiggyFilledRealtime()
       }
       /**
-       * <code>optional double time_piggy_filled_realtime = 16;</code>
+       * `optional double time_piggy_filled_realtime = 16;`
        * @return Whether the timePiggyFilledRealtime field is set.
-       * @return This builder for chaining.
        */
       public fun hasTimePiggyFilledRealtime(): kotlin.Boolean {
         return _builder.hasTimePiggyFilledRealtime()
@@ -2567,16 +2405,14 @@ public object BackupKt {
           _builder.timePiggyFullGametime = value
         }
       /**
-       * <code>optional double time_piggy_full_gametime = 17;</code>
-       * @return This builder for chaining.
+       * `optional double time_piggy_full_gametime = 17;`
        */
       public fun clearTimePiggyFullGametime() {
         _builder.clearTimePiggyFullGametime()
       }
       /**
-       * <code>optional double time_piggy_full_gametime = 17;</code>
+       * `optional double time_piggy_full_gametime = 17;`
        * @return Whether the timePiggyFullGametime field is set.
-       * @return This builder for chaining.
        */
       public fun hasTimePiggyFullGametime(): kotlin.Boolean {
         return _builder.hasTimePiggyFullGametime()
@@ -2593,16 +2429,14 @@ public object BackupKt {
           _builder.lostPiggyIncrements = value
         }
       /**
-       * <code>optional uint64 lost_piggy_increments = 18;</code>
-       * @return This builder for chaining.
+       * `optional uint64 lost_piggy_increments = 18;`
        */
       public fun clearLostPiggyIncrements() {
         _builder.clearLostPiggyIncrements()
       }
       /**
-       * <code>optional uint64 lost_piggy_increments = 18;</code>
+       * `optional uint64 lost_piggy_increments = 18;`
        * @return Whether the lostPiggyIncrements field is set.
-       * @return This builder for chaining.
        */
       public fun hasLostPiggyIncrements(): kotlin.Boolean {
         return _builder.hasLostPiggyIncrements()
@@ -2642,16 +2476,14 @@ public object BackupKt {
           _builder.currentFarm = value
         }
       /**
-       * <code>optional uint32 current_farm = 22 [default = 0];</code>
-       * @return This builder for chaining.
+       * `optional uint32 current_farm = 22 [default = 0];`
        */
       public fun clearCurrentFarm() {
         _builder.clearCurrentFarm()
       }
       /**
-       * <code>optional uint32 current_farm = 22 [default = 0];</code>
+       * `optional uint32 current_farm = 22 [default = 0];`
        * @return Whether the currentFarm field is set.
-       * @return This builder for chaining.
        */
       public fun hasCurrentFarm(): kotlin.Boolean {
         return _builder.hasCurrentFarm()
@@ -2668,16 +2500,14 @@ public object BackupKt {
           _builder.maxEggReached = value
         }
       /**
-       * <code>optional .ei.Egg max_egg_reached = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Egg max_egg_reached = 1;`
        */
       public fun clearMaxEggReached() {
         _builder.clearMaxEggReached()
       }
       /**
-       * <code>optional .ei.Egg max_egg_reached = 1;</code>
+       * `optional .ei.Egg max_egg_reached = 1;`
        * @return Whether the maxEggReached field is set.
-       * @return This builder for chaining.
        */
       public fun hasMaxEggReached(): kotlin.Boolean {
         return _builder.hasMaxEggReached()
@@ -2694,16 +2524,14 @@ public object BackupKt {
           _builder.goldenEggsEarned = value
         }
       /**
-       * <code>optional uint64 golden_eggs_earned = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint64 golden_eggs_earned = 2;`
        */
       public fun clearGoldenEggsEarned() {
         _builder.clearGoldenEggsEarned()
       }
       /**
-       * <code>optional uint64 golden_eggs_earned = 2;</code>
+       * `optional uint64 golden_eggs_earned = 2;`
        * @return Whether the goldenEggsEarned field is set.
-       * @return This builder for chaining.
        */
       public fun hasGoldenEggsEarned(): kotlin.Boolean {
         return _builder.hasGoldenEggsEarned()
@@ -2720,16 +2548,14 @@ public object BackupKt {
           _builder.goldenEggsSpent = value
         }
       /**
-       * <code>optional uint64 golden_eggs_spent = 3;</code>
-       * @return This builder for chaining.
+       * `optional uint64 golden_eggs_spent = 3;`
        */
       public fun clearGoldenEggsSpent() {
         _builder.clearGoldenEggsSpent()
       }
       /**
-       * <code>optional uint64 golden_eggs_spent = 3;</code>
+       * `optional uint64 golden_eggs_spent = 3;`
        * @return Whether the goldenEggsSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasGoldenEggsSpent(): kotlin.Boolean {
         return _builder.hasGoldenEggsSpent()
@@ -2746,16 +2572,14 @@ public object BackupKt {
           _builder.uncliamedGoldenEggs = value
         }
       /**
-       * <code>optional uint64 uncliamed_golden_eggs = 16;</code>
-       * @return This builder for chaining.
+       * `optional uint64 uncliamed_golden_eggs = 16;`
        */
       public fun clearUncliamedGoldenEggs() {
         _builder.clearUncliamedGoldenEggs()
       }
       /**
-       * <code>optional uint64 uncliamed_golden_eggs = 16;</code>
+       * `optional uint64 uncliamed_golden_eggs = 16;`
        * @return Whether the uncliamedGoldenEggs field is set.
-       * @return This builder for chaining.
        */
       public fun hasUncliamedGoldenEggs(): kotlin.Boolean {
         return _builder.hasUncliamedGoldenEggs()
@@ -2772,16 +2596,14 @@ public object BackupKt {
           _builder.soulEggs = value
         }
       /**
-       * <code>optional uint64 soul_eggs = 4;</code>
-       * @return This builder for chaining.
+       * `optional uint64 soul_eggs = 4;`
        */
       public fun clearSoulEggs() {
         _builder.clearSoulEggs()
       }
       /**
-       * <code>optional uint64 soul_eggs = 4;</code>
+       * `optional uint64 soul_eggs = 4;`
        * @return Whether the soulEggs field is set.
-       * @return This builder for chaining.
        */
       public fun hasSoulEggs(): kotlin.Boolean {
         return _builder.hasSoulEggs()
@@ -2798,16 +2620,14 @@ public object BackupKt {
           _builder.unclaimedSoulEggs = value
         }
       /**
-       * <code>optional uint64 unclaimed_soul_eggs = 17;</code>
-       * @return This builder for chaining.
+       * `optional uint64 unclaimed_soul_eggs = 17;`
        */
       public fun clearUnclaimedSoulEggs() {
         _builder.clearUnclaimedSoulEggs()
       }
       /**
-       * <code>optional uint64 unclaimed_soul_eggs = 17;</code>
+       * `optional uint64 unclaimed_soul_eggs = 17;`
        * @return Whether the unclaimedSoulEggs field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnclaimedSoulEggs(): kotlin.Boolean {
         return _builder.hasUnclaimedSoulEggs()
@@ -2824,16 +2644,14 @@ public object BackupKt {
           _builder.soulEggsD = value
         }
       /**
-       * <code>optional double soul_eggs_d = 34;</code>
-       * @return This builder for chaining.
+       * `optional double soul_eggs_d = 34;`
        */
       public fun clearSoulEggsD() {
         _builder.clearSoulEggsD()
       }
       /**
-       * <code>optional double soul_eggs_d = 34;</code>
+       * `optional double soul_eggs_d = 34;`
        * @return Whether the soulEggsD field is set.
-       * @return This builder for chaining.
        */
       public fun hasSoulEggsD(): kotlin.Boolean {
         return _builder.hasSoulEggsD()
@@ -2850,16 +2668,14 @@ public object BackupKt {
           _builder.unclaimedSoulEggsD = value
         }
       /**
-       * <code>optional double unclaimed_soul_eggs_d = 35;</code>
-       * @return This builder for chaining.
+       * `optional double unclaimed_soul_eggs_d = 35;`
        */
       public fun clearUnclaimedSoulEggsD() {
         _builder.clearUnclaimedSoulEggsD()
       }
       /**
-       * <code>optional double unclaimed_soul_eggs_d = 35;</code>
+       * `optional double unclaimed_soul_eggs_d = 35;`
        * @return Whether the unclaimedSoulEggsD field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnclaimedSoulEggsD(): kotlin.Boolean {
         return _builder.hasUnclaimedSoulEggsD()
@@ -2876,16 +2692,14 @@ public object BackupKt {
           _builder.eggsOfProphecy = value
         }
       /**
-       * <code>optional uint64 eggs_of_prophecy = 23;</code>
-       * @return This builder for chaining.
+       * `optional uint64 eggs_of_prophecy = 23;`
        */
       public fun clearEggsOfProphecy() {
         _builder.clearEggsOfProphecy()
       }
       /**
-       * <code>optional uint64 eggs_of_prophecy = 23;</code>
+       * `optional uint64 eggs_of_prophecy = 23;`
        * @return Whether the eggsOfProphecy field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggsOfProphecy(): kotlin.Boolean {
         return _builder.hasEggsOfProphecy()
@@ -2902,16 +2716,14 @@ public object BackupKt {
           _builder.unclaimedEggsOfProphecy = value
         }
       /**
-       * <code>optional uint64 unclaimed_eggs_of_prophecy = 24;</code>
-       * @return This builder for chaining.
+       * `optional uint64 unclaimed_eggs_of_prophecy = 24;`
        */
       public fun clearUnclaimedEggsOfProphecy() {
         _builder.clearUnclaimedEggsOfProphecy()
       }
       /**
-       * <code>optional uint64 unclaimed_eggs_of_prophecy = 24;</code>
+       * `optional uint64 unclaimed_eggs_of_prophecy = 24;`
        * @return Whether the unclaimedEggsOfProphecy field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnclaimedEggsOfProphecy(): kotlin.Boolean {
         return _builder.hasUnclaimedEggsOfProphecy()
@@ -2928,16 +2740,14 @@ public object BackupKt {
           _builder.shellScriptsEarned = value
         }
       /**
-       * <code>optional uint64 shell_scripts_earned = 38;</code>
-       * @return This builder for chaining.
+       * `optional uint64 shell_scripts_earned = 38;`
        */
       public fun clearShellScriptsEarned() {
         _builder.clearShellScriptsEarned()
       }
       /**
-       * <code>optional uint64 shell_scripts_earned = 38;</code>
+       * `optional uint64 shell_scripts_earned = 38;`
        * @return Whether the shellScriptsEarned field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellScriptsEarned(): kotlin.Boolean {
         return _builder.hasShellScriptsEarned()
@@ -2954,16 +2764,14 @@ public object BackupKt {
           _builder.shellScriptsSpent = value
         }
       /**
-       * <code>optional uint64 shell_scripts_spent = 39;</code>
-       * @return This builder for chaining.
+       * `optional uint64 shell_scripts_spent = 39;`
        */
       public fun clearShellScriptsSpent() {
         _builder.clearShellScriptsSpent()
       }
       /**
-       * <code>optional uint64 shell_scripts_spent = 39;</code>
+       * `optional uint64 shell_scripts_spent = 39;`
        * @return Whether the shellScriptsSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellScriptsSpent(): kotlin.Boolean {
         return _builder.hasShellScriptsSpent()
@@ -2980,16 +2788,14 @@ public object BackupKt {
           _builder.unclaimedShellScripts = value
         }
       /**
-       * <code>optional uint64 unclaimed_shell_scripts = 40;</code>
-       * @return This builder for chaining.
+       * `optional uint64 unclaimed_shell_scripts = 40;`
        */
       public fun clearUnclaimedShellScripts() {
         _builder.clearUnclaimedShellScripts()
       }
       /**
-       * <code>optional uint64 unclaimed_shell_scripts = 40;</code>
+       * `optional uint64 unclaimed_shell_scripts = 40;`
        * @return Whether the unclaimedShellScripts field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnclaimedShellScripts(): kotlin.Boolean {
         return _builder.hasUnclaimedShellScripts()
@@ -3006,16 +2812,14 @@ public object BackupKt {
           _builder.prestigeCashEarned = value
         }
       /**
-       * <code>optional double prestige_cash_earned = 5;</code>
-       * @return This builder for chaining.
+       * `optional double prestige_cash_earned = 5;`
        */
       public fun clearPrestigeCashEarned() {
         _builder.clearPrestigeCashEarned()
       }
       /**
-       * <code>optional double prestige_cash_earned = 5;</code>
+       * `optional double prestige_cash_earned = 5;`
        * @return Whether the prestigeCashEarned field is set.
-       * @return This builder for chaining.
        */
       public fun hasPrestigeCashEarned(): kotlin.Boolean {
         return _builder.hasPrestigeCashEarned()
@@ -3032,16 +2836,14 @@ public object BackupKt {
           _builder.prestigeSoulBoostCash = value
         }
       /**
-       * <code>optional double prestige_soul_boost_cash = 33;</code>
-       * @return This builder for chaining.
+       * `optional double prestige_soul_boost_cash = 33;`
        */
       public fun clearPrestigeSoulBoostCash() {
         _builder.clearPrestigeSoulBoostCash()
       }
       /**
-       * <code>optional double prestige_soul_boost_cash = 33;</code>
+       * `optional double prestige_soul_boost_cash = 33;`
        * @return Whether the prestigeSoulBoostCash field is set.
-       * @return This builder for chaining.
        */
       public fun hasPrestigeSoulBoostCash(): kotlin.Boolean {
         return _builder.hasPrestigeSoulBoostCash()
@@ -3058,16 +2860,14 @@ public object BackupKt {
           _builder.lifetimeCashEarned = value
         }
       /**
-       * <code>optional double lifetime_cash_earned = 6;</code>
-       * @return This builder for chaining.
+       * `optional double lifetime_cash_earned = 6;`
        */
       public fun clearLifetimeCashEarned() {
         _builder.clearLifetimeCashEarned()
       }
       /**
-       * <code>optional double lifetime_cash_earned = 6;</code>
+       * `optional double lifetime_cash_earned = 6;`
        * @return Whether the lifetimeCashEarned field is set.
-       * @return This builder for chaining.
        */
       public fun hasLifetimeCashEarned(): kotlin.Boolean {
         return _builder.hasLifetimeCashEarned()
@@ -3084,16 +2884,14 @@ public object BackupKt {
           _builder.piggyBank = value
         }
       /**
-       * <code>optional uint64 piggy_bank = 7;</code>
-       * @return This builder for chaining.
+       * `optional uint64 piggy_bank = 7;`
        */
       public fun clearPiggyBank() {
         _builder.clearPiggyBank()
       }
       /**
-       * <code>optional uint64 piggy_bank = 7;</code>
+       * `optional uint64 piggy_bank = 7;`
        * @return Whether the piggyBank field is set.
-       * @return This builder for chaining.
        */
       public fun hasPiggyBank(): kotlin.Boolean {
         return _builder.hasPiggyBank()
@@ -3110,16 +2908,14 @@ public object BackupKt {
           _builder.piggyFullAlertShown = value
         }
       /**
-       * <code>optional bool piggy_full_alert_shown = 31;</code>
-       * @return This builder for chaining.
+       * `optional bool piggy_full_alert_shown = 31;`
        */
       public fun clearPiggyFullAlertShown() {
         _builder.clearPiggyFullAlertShown()
       }
       /**
-       * <code>optional bool piggy_full_alert_shown = 31;</code>
+       * `optional bool piggy_full_alert_shown = 31;`
        * @return Whether the piggyFullAlertShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasPiggyFullAlertShown(): kotlin.Boolean {
         return _builder.hasPiggyFullAlertShown()
@@ -3136,16 +2932,14 @@ public object BackupKt {
           _builder.permitLevel = value
         }
       /**
-       * <code>optional uint32 permit_level = 8;</code>
-       * @return This builder for chaining.
+       * `optional uint32 permit_level = 8;`
        */
       public fun clearPermitLevel() {
         _builder.clearPermitLevel()
       }
       /**
-       * <code>optional uint32 permit_level = 8;</code>
+       * `optional uint32 permit_level = 8;`
        * @return Whether the permitLevel field is set.
-       * @return This builder for chaining.
        */
       public fun hasPermitLevel(): kotlin.Boolean {
         return _builder.hasPermitLevel()
@@ -3166,9 +2960,8 @@ public object BackupKt {
           _builder.epicResearchList
         )
       /**
-       * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
+       * `repeated .ei.Backup.ResearchItem epic_research = 9;`
        * @param value The epicResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEpicResearch")
@@ -3176,9 +2969,8 @@ public object BackupKt {
         _builder.addEpicResearch(value)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
+       * `repeated .ei.Backup.ResearchItem epic_research = 9;`
        * @param value The epicResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEpicResearch")
@@ -3187,9 +2979,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
+       * `repeated .ei.Backup.ResearchItem epic_research = 9;`
        * @param values The epicResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEpicResearch")
@@ -3197,9 +2988,8 @@ public object BackupKt {
         _builder.addAllEpicResearch(values)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
+       * `repeated .ei.Backup.ResearchItem epic_research = 9;`
        * @param values The epicResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEpicResearch")
@@ -3208,10 +2998,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
+       * `repeated .ei.Backup.ResearchItem epic_research = 9;`
        * @param index The index to set the value at.
        * @param value The epicResearch to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEpicResearch")
@@ -3219,8 +3008,7 @@ public object BackupKt {
         _builder.setEpicResearch(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem epic_research = 9;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.ResearchItem epic_research = 9;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEpicResearch")
@@ -3239,16 +3027,14 @@ public object BackupKt {
           _builder.hyperloopStation = value
         }
       /**
-       * <code>optional bool hyperloop_station = 29;</code>
-       * @return This builder for chaining.
+       * `optional bool hyperloop_station = 29;`
        */
       public fun clearHyperloopStation() {
         _builder.clearHyperloopStation()
       }
       /**
-       * <code>optional bool hyperloop_station = 29;</code>
+       * `optional bool hyperloop_station = 29;`
        * @return Whether the hyperloopStation field is set.
-       * @return This builder for chaining.
        */
       public fun hasHyperloopStation(): kotlin.Boolean {
         return _builder.hasHyperloopStation()
@@ -3265,16 +3051,14 @@ public object BackupKt {
           _builder.nextDailyGiftTime = value
         }
       /**
-       * <code>optional double next_daily_gift_time = 10;</code>
-       * @return This builder for chaining.
+       * `optional double next_daily_gift_time = 10;`
        */
       public fun clearNextDailyGiftTime() {
         _builder.clearNextDailyGiftTime()
       }
       /**
-       * <code>optional double next_daily_gift_time = 10;</code>
+       * `optional double next_daily_gift_time = 10;`
        * @return Whether the nextDailyGiftTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasNextDailyGiftTime(): kotlin.Boolean {
         return _builder.hasNextDailyGiftTime()
@@ -3291,16 +3075,14 @@ public object BackupKt {
           _builder.lastDailyGiftCollectedDay = value
         }
       /**
-       * <code>optional uint32 last_daily_gift_collected_day = 20;</code>
-       * @return This builder for chaining.
+       * `optional uint32 last_daily_gift_collected_day = 20;`
        */
       public fun clearLastDailyGiftCollectedDay() {
         _builder.clearLastDailyGiftCollectedDay()
       }
       /**
-       * <code>optional uint32 last_daily_gift_collected_day = 20;</code>
+       * `optional uint32 last_daily_gift_collected_day = 20;`
        * @return Whether the lastDailyGiftCollectedDay field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastDailyGiftCollectedDay(): kotlin.Boolean {
         return _builder.hasLastDailyGiftCollectedDay()
@@ -3317,16 +3099,14 @@ public object BackupKt {
           _builder.numDailyGiftsCollected = value
         }
       /**
-       * <code>optional uint32 num_daily_gifts_collected = 28;</code>
-       * @return This builder for chaining.
+       * `optional uint32 num_daily_gifts_collected = 28;`
        */
       public fun clearNumDailyGiftsCollected() {
         _builder.clearNumDailyGiftsCollected()
       }
       /**
-       * <code>optional uint32 num_daily_gifts_collected = 28;</code>
+       * `optional uint32 num_daily_gifts_collected = 28;`
        * @return Whether the numDailyGiftsCollected field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumDailyGiftsCollected(): kotlin.Boolean {
         return _builder.hasNumDailyGiftsCollected()
@@ -3347,9 +3127,8 @@ public object BackupKt {
           _builder.newsList
         )
       /**
-       * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
+       * `repeated .ei.Backup.NewsHeadline news = 11;`
        * @param value The news to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addNews")
@@ -3357,9 +3136,8 @@ public object BackupKt {
         _builder.addNews(value)
       }
       /**
-       * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
+       * `repeated .ei.Backup.NewsHeadline news = 11;`
        * @param value The news to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignNews")
@@ -3368,9 +3146,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
+       * `repeated .ei.Backup.NewsHeadline news = 11;`
        * @param values The news to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllNews")
@@ -3378,9 +3155,8 @@ public object BackupKt {
         _builder.addAllNews(values)
       }
       /**
-       * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
+       * `repeated .ei.Backup.NewsHeadline news = 11;`
        * @param values The news to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllNews")
@@ -3389,10 +3165,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
+       * `repeated .ei.Backup.NewsHeadline news = 11;`
        * @param index The index to set the value at.
        * @param value The news to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNews")
@@ -3400,8 +3175,7 @@ public object BackupKt {
         _builder.setNews(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.NewsHeadline news = 11;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.NewsHeadline news = 11;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearNews")
@@ -3420,16 +3194,14 @@ public object BackupKt {
           _builder.lastNewsTime = value
         }
       /**
-       * <code>optional double last_news_time = 12;</code>
-       * @return This builder for chaining.
+       * `optional double last_news_time = 12;`
        */
       public fun clearLastNewsTime() {
         _builder.clearLastNewsTime()
       }
       /**
-       * <code>optional double last_news_time = 12;</code>
+       * `optional double last_news_time = 12;`
        * @return Whether the lastNewsTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastNewsTime(): kotlin.Boolean {
         return _builder.hasLastNewsTime()
@@ -3446,16 +3218,14 @@ public object BackupKt {
           _builder.currentMultiplier = value
         }
       /**
-       * <code>optional double current_multiplier = 13;</code>
-       * @return This builder for chaining.
+       * `optional double current_multiplier = 13;`
        */
       public fun clearCurrentMultiplier() {
         _builder.clearCurrentMultiplier()
       }
       /**
-       * <code>optional double current_multiplier = 13;</code>
+       * `optional double current_multiplier = 13;`
        * @return Whether the currentMultiplier field is set.
-       * @return This builder for chaining.
        */
       public fun hasCurrentMultiplier(): kotlin.Boolean {
         return _builder.hasCurrentMultiplier()
@@ -3472,16 +3242,14 @@ public object BackupKt {
           _builder.currentMultiplierExpiration = value
         }
       /**
-       * <code>optional double current_multiplier_expiration = 14;</code>
-       * @return This builder for chaining.
+       * `optional double current_multiplier_expiration = 14;`
        */
       public fun clearCurrentMultiplierExpiration() {
         _builder.clearCurrentMultiplierExpiration()
       }
       /**
-       * <code>optional double current_multiplier_expiration = 14;</code>
+       * `optional double current_multiplier_expiration = 14;`
        * @return Whether the currentMultiplierExpiration field is set.
-       * @return This builder for chaining.
        */
       public fun hasCurrentMultiplierExpiration(): kotlin.Boolean {
         return _builder.hasCurrentMultiplierExpiration()
@@ -3502,9 +3270,8 @@ public object BackupKt {
           _builder.achievementsList
         )
       /**
-       * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
+       * `repeated .ei.Backup.AchievementInfo achievements = 15;`
        * @param value The achievements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAchievements")
@@ -3512,9 +3279,8 @@ public object BackupKt {
         _builder.addAchievements(value)
       }
       /**
-       * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
+       * `repeated .ei.Backup.AchievementInfo achievements = 15;`
        * @param value The achievements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAchievements")
@@ -3523,9 +3289,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
+       * `repeated .ei.Backup.AchievementInfo achievements = 15;`
        * @param values The achievements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllAchievements")
@@ -3533,9 +3298,8 @@ public object BackupKt {
         _builder.addAllAchievements(values)
       }
       /**
-       * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
+       * `repeated .ei.Backup.AchievementInfo achievements = 15;`
        * @param values The achievements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllAchievements")
@@ -3544,10 +3308,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
+       * `repeated .ei.Backup.AchievementInfo achievements = 15;`
        * @param index The index to set the value at.
        * @param value The achievements to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setAchievements")
@@ -3555,8 +3318,7 @@ public object BackupKt {
         _builder.setAchievements(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.AchievementInfo achievements = 15;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.AchievementInfo achievements = 15;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearAchievements")
@@ -3579,18 +3341,16 @@ public object BackupKt {
           _builder.maxFarmSizeReachedList
         )
       /**
-       * <code>repeated uint64 max_farm_size_reached = 18;</code>
+       * `repeated uint64 max_farm_size_reached = 18;`
        * @param value The maxFarmSizeReached to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMaxFarmSizeReached")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, MaxFarmSizeReachedProxy>.add(value: kotlin.Long) {
         _builder.addMaxFarmSizeReached(value)
       }/**
-       * <code>repeated uint64 max_farm_size_reached = 18;</code>
+       * `repeated uint64 max_farm_size_reached = 18;`
        * @param value The maxFarmSizeReached to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMaxFarmSizeReached")
@@ -3598,18 +3358,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, MaxFarmSizeReachedProxy>.plusAssign(value: kotlin.Long) {
         add(value)
       }/**
-       * <code>repeated uint64 max_farm_size_reached = 18;</code>
+       * `repeated uint64 max_farm_size_reached = 18;`
        * @param values The maxFarmSizeReached to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMaxFarmSizeReached")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, MaxFarmSizeReachedProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
         _builder.addAllMaxFarmSizeReached(values)
       }/**
-       * <code>repeated uint64 max_farm_size_reached = 18;</code>
+       * `repeated uint64 max_farm_size_reached = 18;`
        * @param values The maxFarmSizeReached to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMaxFarmSizeReached")
@@ -3617,18 +3375,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, MaxFarmSizeReachedProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
         addAll(values)
       }/**
-       * <code>repeated uint64 max_farm_size_reached = 18;</code>
+       * `repeated uint64 max_farm_size_reached = 18;`
        * @param index The index to set the value at.
        * @param value The maxFarmSizeReached to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMaxFarmSizeReached")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, MaxFarmSizeReachedProxy>.set(index: kotlin.Int, value: kotlin.Long) {
         _builder.setMaxFarmSizeReached(index, value)
       }/**
-       * <code>repeated uint64 max_farm_size_reached = 18;</code>
-       * @return This builder for chaining.
+       * `repeated uint64 max_farm_size_reached = 18;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearMaxFarmSizeReached")
@@ -3650,18 +3406,16 @@ public object BackupKt {
           _builder.eggMedalLevelList
         )
       /**
-       * <code>repeated uint32 egg_medal_level = 19;</code>
+       * `repeated uint32 egg_medal_level = 19;`
        * @param value The eggMedalLevel to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEggMedalLevel")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.add(value: kotlin.Int) {
         _builder.addEggMedalLevel(value)
       }/**
-       * <code>repeated uint32 egg_medal_level = 19;</code>
+       * `repeated uint32 egg_medal_level = 19;`
        * @param value The eggMedalLevel to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEggMedalLevel")
@@ -3669,18 +3423,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.plusAssign(value: kotlin.Int) {
         add(value)
       }/**
-       * <code>repeated uint32 egg_medal_level = 19;</code>
+       * `repeated uint32 egg_medal_level = 19;`
        * @param values The eggMedalLevel to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEggMedalLevel")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
         _builder.addAllEggMedalLevel(values)
       }/**
-       * <code>repeated uint32 egg_medal_level = 19;</code>
+       * `repeated uint32 egg_medal_level = 19;`
        * @param values The eggMedalLevel to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEggMedalLevel")
@@ -3688,18 +3440,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
         addAll(values)
       }/**
-       * <code>repeated uint32 egg_medal_level = 19;</code>
+       * `repeated uint32 egg_medal_level = 19;`
        * @param index The index to set the value at.
        * @param value The eggMedalLevel to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEggMedalLevel")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EggMedalLevelProxy>.set(index: kotlin.Int, value: kotlin.Int) {
         _builder.setEggMedalLevel(index, value)
       }/**
-       * <code>repeated uint32 egg_medal_level = 19;</code>
-       * @return This builder for chaining.
+       * `repeated uint32 egg_medal_level = 19;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEggMedalLevel")
@@ -3717,16 +3467,14 @@ public object BackupKt {
           _builder.longIdleNotificationSet = value
         }
       /**
-       * <code>optional bool long_idle_notification_set = 25;</code>
-       * @return This builder for chaining.
+       * `optional bool long_idle_notification_set = 25;`
        */
       public fun clearLongIdleNotificationSet() {
         _builder.clearLongIdleNotificationSet()
       }
       /**
-       * <code>optional bool long_idle_notification_set = 25;</code>
+       * `optional bool long_idle_notification_set = 25;`
        * @return Whether the longIdleNotificationSet field is set.
-       * @return This builder for chaining.
        */
       public fun hasLongIdleNotificationSet(): kotlin.Boolean {
         return _builder.hasLongIdleNotificationSet()
@@ -3743,16 +3491,14 @@ public object BackupKt {
           _builder.longIdleNotificationThreshold = value
         }
       /**
-       * <code>optional double long_idle_notification_threshold = 26;</code>
-       * @return This builder for chaining.
+       * `optional double long_idle_notification_threshold = 26;`
        */
       public fun clearLongIdleNotificationThreshold() {
         _builder.clearLongIdleNotificationThreshold()
       }
       /**
-       * <code>optional double long_idle_notification_threshold = 26;</code>
+       * `optional double long_idle_notification_threshold = 26;`
        * @return Whether the longIdleNotificationThreshold field is set.
-       * @return This builder for chaining.
        */
       public fun hasLongIdleNotificationThreshold(): kotlin.Boolean {
         return _builder.hasLongIdleNotificationThreshold()
@@ -3769,16 +3515,14 @@ public object BackupKt {
           _builder.longIdleReward = value
         }
       /**
-       * <code>optional double long_idle_reward = 27;</code>
-       * @return This builder for chaining.
+       * `optional double long_idle_reward = 27;`
        */
       public fun clearLongIdleReward() {
         _builder.clearLongIdleReward()
       }
       /**
-       * <code>optional double long_idle_reward = 27;</code>
+       * `optional double long_idle_reward = 27;`
        * @return Whether the longIdleReward field is set.
-       * @return This builder for chaining.
        */
       public fun hasLongIdleReward(): kotlin.Boolean {
         return _builder.hasLongIdleReward()
@@ -3799,9 +3543,8 @@ public object BackupKt {
           _builder.boostsList
         )
       /**
-       * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
+       * `repeated .ei.Backup.OwnedBoost boosts = 30;`
        * @param value The boosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addBoosts")
@@ -3809,9 +3552,8 @@ public object BackupKt {
         _builder.addBoosts(value)
       }
       /**
-       * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
+       * `repeated .ei.Backup.OwnedBoost boosts = 30;`
        * @param value The boosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignBoosts")
@@ -3820,9 +3562,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
+       * `repeated .ei.Backup.OwnedBoost boosts = 30;`
        * @param values The boosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllBoosts")
@@ -3830,9 +3571,8 @@ public object BackupKt {
         _builder.addAllBoosts(values)
       }
       /**
-       * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
+       * `repeated .ei.Backup.OwnedBoost boosts = 30;`
        * @param values The boosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllBoosts")
@@ -3841,10 +3581,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
+       * `repeated .ei.Backup.OwnedBoost boosts = 30;`
        * @param index The index to set the value at.
        * @param value The boosts to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setBoosts")
@@ -3852,8 +3591,7 @@ public object BackupKt {
         _builder.setBoosts(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.OwnedBoost boosts = 30;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.OwnedBoost boosts = 30;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearBoosts")
@@ -3872,16 +3610,14 @@ public object BackupKt {
           _builder.totalTimeCheatsDetected = value
         }
       /**
-       * <code>optional uint32 total_time_cheats_detected = 32;</code>
-       * @return This builder for chaining.
+       * `optional uint32 total_time_cheats_detected = 32;`
        */
       public fun clearTotalTimeCheatsDetected() {
         _builder.clearTotalTimeCheatsDetected()
       }
       /**
-       * <code>optional uint32 total_time_cheats_detected = 32;</code>
+       * `optional uint32 total_time_cheats_detected = 32;`
        * @return Whether the totalTimeCheatsDetected field is set.
-       * @return This builder for chaining.
        */
       public fun hasTotalTimeCheatsDetected(): kotlin.Boolean {
         return _builder.hasTotalTimeCheatsDetected()
@@ -3898,16 +3634,14 @@ public object BackupKt {
           _builder.forceEliteContracts = value
         }
       /**
-       * <code>optional bool force_elite_contracts = 36;</code>
-       * @return This builder for chaining.
+       * `optional bool force_elite_contracts = 36;`
        */
       public fun clearForceEliteContracts() {
         _builder.clearForceEliteContracts()
       }
       /**
-       * <code>optional bool force_elite_contracts = 36;</code>
+       * `optional bool force_elite_contracts = 36;`
        * @return Whether the forceEliteContracts field is set.
-       * @return This builder for chaining.
        */
       public fun hasForceEliteContracts(): kotlin.Boolean {
         return _builder.hasForceEliteContracts()
@@ -3924,19 +3658,41 @@ public object BackupKt {
           _builder.newPlayerEventEndTime = value
         }
       /**
-       * <code>optional double new_player_event_end_time = 37;</code>
-       * @return This builder for chaining.
+       * `optional double new_player_event_end_time = 37;`
        */
       public fun clearNewPlayerEventEndTime() {
         _builder.clearNewPlayerEventEndTime()
       }
       /**
-       * <code>optional double new_player_event_end_time = 37;</code>
+       * `optional double new_player_event_end_time = 37;`
        * @return Whether the newPlayerEventEndTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasNewPlayerEventEndTime(): kotlin.Boolean {
         return _builder.hasNewPlayerEventEndTime()
+      }
+
+      /**
+       * `optional double time_cheat_debt = 41;`
+       */
+      public var timeCheatDebt: kotlin.Double
+        @kotlin.jvm.JvmName("getTimeCheatDebt")
+          get() = _builder.timeCheatDebt
+        @kotlin.jvm.JvmName("setTimeCheatDebt")
+          set(value) {
+          _builder.timeCheatDebt = value
+        }
+      /**
+       * `optional double time_cheat_debt = 41;`
+       */
+      public fun clearTimeCheatDebt() {
+        _builder.clearTimeCheatDebt()
+      }
+      /**
+       * `optional double time_cheat_debt = 41;`
+       * @return Whether the timeCheatDebt field is set.
+       */
+      public fun hasTimeCheatDebt(): kotlin.Boolean {
+        return _builder.hasTimeCheatDebt()
       }
     }
   }
@@ -3973,16 +3729,14 @@ public object BackupKt {
           _builder.infusing = value
         }
       /**
-       * <code>optional bool infusing = 1;</code>
-       * @return This builder for chaining.
+       * `optional bool infusing = 1;`
        */
       public fun clearInfusing() {
         _builder.clearInfusing()
       }
       /**
-       * <code>optional bool infusing = 1;</code>
+       * `optional bool infusing = 1;`
        * @return Whether the infusing field is set.
-       * @return This builder for chaining.
        */
       public fun hasInfusing(): kotlin.Boolean {
         return _builder.hasInfusing()
@@ -3999,16 +3753,14 @@ public object BackupKt {
           _builder.itemBeingInfused = value
         }
       /**
-       * <code>optional .ei.ArtifactInventoryItem item_being_infused = 2;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ArtifactInventoryItem item_being_infused = 2;`
        */
       public fun clearItemBeingInfused() {
         _builder.clearItemBeingInfused()
       }
       /**
-       * <code>optional .ei.ArtifactInventoryItem item_being_infused = 2;</code>
+       * `optional .ei.ArtifactInventoryItem item_being_infused = 2;`
        * @return Whether the itemBeingInfused field is set.
-       * @return This builder for chaining.
        */
       public fun hasItemBeingInfused(): kotlin.Boolean {
         return _builder.hasItemBeingInfused()
@@ -4028,16 +3780,14 @@ public object BackupKt {
           _builder.specBeingInfused = value
         }
       /**
-       * <code>optional .ei.ArtifactSpec spec_being_infused = 13;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ArtifactSpec spec_being_infused = 13;`
        */
       public fun clearSpecBeingInfused() {
         _builder.clearSpecBeingInfused()
       }
       /**
-       * <code>optional .ei.ArtifactSpec spec_being_infused = 13;</code>
+       * `optional .ei.ArtifactSpec spec_being_infused = 13;`
        * @return Whether the specBeingInfused field is set.
-       * @return This builder for chaining.
        */
       public fun hasSpecBeingInfused(): kotlin.Boolean {
         return _builder.hasSpecBeingInfused()
@@ -4057,16 +3807,14 @@ public object BackupKt {
           _builder.eggTypeInfusing = value
         }
       /**
-       * <code>optional .ei.Egg egg_type_infusing = 3;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Egg egg_type_infusing = 3;`
        */
       public fun clearEggTypeInfusing() {
         _builder.clearEggTypeInfusing()
       }
       /**
-       * <code>optional .ei.Egg egg_type_infusing = 3;</code>
+       * `optional .ei.Egg egg_type_infusing = 3;`
        * @return Whether the eggTypeInfusing field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggTypeInfusing(): kotlin.Boolean {
         return _builder.hasEggTypeInfusing()
@@ -4083,16 +3831,14 @@ public object BackupKt {
           _builder.infusingEggsRequired = value
         }
       /**
-       * <code>optional double infusing_eggs_required = 4;</code>
-       * @return This builder for chaining.
+       * `optional double infusing_eggs_required = 4;`
        */
       public fun clearInfusingEggsRequired() {
         _builder.clearInfusingEggsRequired()
       }
       /**
-       * <code>optional double infusing_eggs_required = 4;</code>
+       * `optional double infusing_eggs_required = 4;`
        * @return Whether the infusingEggsRequired field is set.
-       * @return This builder for chaining.
        */
       public fun hasInfusingEggsRequired(): kotlin.Boolean {
         return _builder.hasInfusingEggsRequired()
@@ -4109,16 +3855,14 @@ public object BackupKt {
           _builder.eggsInfused = value
         }
       /**
-       * <code>optional double eggs_infused = 5;</code>
-       * @return This builder for chaining.
+       * `optional double eggs_infused = 5;`
        */
       public fun clearEggsInfused() {
         _builder.clearEggsInfused()
       }
       /**
-       * <code>optional double eggs_infused = 5;</code>
+       * `optional double eggs_infused = 5;`
        * @return Whether the eggsInfused field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggsInfused(): kotlin.Boolean {
         return _builder.hasEggsInfused()
@@ -4135,16 +3879,14 @@ public object BackupKt {
           _builder.flowPercentageArtifacts = value
         }
       /**
-       * <code>optional double flow_percentage_artifacts = 6 [default = 0.5];</code>
-       * @return This builder for chaining.
+       * `optional double flow_percentage_artifacts = 6 [default = 0.5];`
        */
       public fun clearFlowPercentageArtifacts() {
         _builder.clearFlowPercentageArtifacts()
       }
       /**
-       * <code>optional double flow_percentage_artifacts = 6 [default = 0.5];</code>
+       * `optional double flow_percentage_artifacts = 6 [default = 0.5];`
        * @return Whether the flowPercentageArtifacts field is set.
-       * @return This builder for chaining.
        */
       public fun hasFlowPercentageArtifacts(): kotlin.Boolean {
         return _builder.hasFlowPercentageArtifacts()
@@ -4161,16 +3903,14 @@ public object BackupKt {
           _builder.fuelingEnabled = value
         }
       /**
-       * <code>optional bool fueling_enabled = 7 [default = true];</code>
-       * @return This builder for chaining.
+       * `optional bool fueling_enabled = 7 [default = true];`
        */
       public fun clearFuelingEnabled() {
         _builder.clearFuelingEnabled()
       }
       /**
-       * <code>optional bool fueling_enabled = 7 [default = true];</code>
+       * `optional bool fueling_enabled = 7 [default = true];`
        * @return Whether the fuelingEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasFuelingEnabled(): kotlin.Boolean {
         return _builder.hasFuelingEnabled()
@@ -4187,16 +3927,14 @@ public object BackupKt {
           _builder.tankFillingEnabled = value
         }
       /**
-       * <code>optional bool tank_filling_enabled = 14;</code>
-       * @return This builder for chaining.
+       * `optional bool tank_filling_enabled = 14;`
        */
       public fun clearTankFillingEnabled() {
         _builder.clearTankFillingEnabled()
       }
       /**
-       * <code>optional bool tank_filling_enabled = 14;</code>
+       * `optional bool tank_filling_enabled = 14;`
        * @return Whether the tankFillingEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasTankFillingEnabled(): kotlin.Boolean {
         return _builder.hasTankFillingEnabled()
@@ -4213,16 +3951,14 @@ public object BackupKt {
           _builder.tankLevel = value
         }
       /**
-       * <code>optional uint32 tank_level = 15;</code>
-       * @return This builder for chaining.
+       * `optional uint32 tank_level = 15;`
        */
       public fun clearTankLevel() {
         _builder.clearTankLevel()
       }
       /**
-       * <code>optional uint32 tank_level = 15;</code>
+       * `optional uint32 tank_level = 15;`
        * @return Whether the tankLevel field is set.
-       * @return This builder for chaining.
        */
       public fun hasTankLevel(): kotlin.Boolean {
         return _builder.hasTankLevel()
@@ -4243,18 +3979,16 @@ public object BackupKt {
           _builder.tankFuelsList
         )
       /**
-       * <code>repeated double tank_fuels = 16;</code>
+       * `repeated double tank_fuels = 16;`
        * @param value The tankFuels to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTankFuels")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankFuelsProxy>.add(value: kotlin.Double) {
         _builder.addTankFuels(value)
       }/**
-       * <code>repeated double tank_fuels = 16;</code>
+       * `repeated double tank_fuels = 16;`
        * @param value The tankFuels to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTankFuels")
@@ -4262,18 +3996,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankFuelsProxy>.plusAssign(value: kotlin.Double) {
         add(value)
       }/**
-       * <code>repeated double tank_fuels = 16;</code>
+       * `repeated double tank_fuels = 16;`
        * @param values The tankFuels to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTankFuels")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankFuelsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
         _builder.addAllTankFuels(values)
       }/**
-       * <code>repeated double tank_fuels = 16;</code>
+       * `repeated double tank_fuels = 16;`
        * @param values The tankFuels to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTankFuels")
@@ -4281,18 +4013,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankFuelsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
         addAll(values)
       }/**
-       * <code>repeated double tank_fuels = 16;</code>
+       * `repeated double tank_fuels = 16;`
        * @param index The index to set the value at.
        * @param value The tankFuels to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTankFuels")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankFuelsProxy>.set(index: kotlin.Int, value: kotlin.Double) {
         _builder.setTankFuels(index, value)
       }/**
-       * <code>repeated double tank_fuels = 16;</code>
-       * @return This builder for chaining.
+       * `repeated double tank_fuels = 16;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTankFuels")
@@ -4314,18 +4044,16 @@ public object BackupKt {
           _builder.tankLimitsList
         )
       /**
-       * <code>repeated double tank_limits = 18;</code>
+       * `repeated double tank_limits = 18;`
        * @param value The tankLimits to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTankLimits")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.add(value: kotlin.Double) {
         _builder.addTankLimits(value)
       }/**
-       * <code>repeated double tank_limits = 18;</code>
+       * `repeated double tank_limits = 18;`
        * @param value The tankLimits to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTankLimits")
@@ -4333,18 +4061,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.plusAssign(value: kotlin.Double) {
         add(value)
       }/**
-       * <code>repeated double tank_limits = 18;</code>
+       * `repeated double tank_limits = 18;`
        * @param values The tankLimits to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTankLimits")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
         _builder.addAllTankLimits(values)
       }/**
-       * <code>repeated double tank_limits = 18;</code>
+       * `repeated double tank_limits = 18;`
        * @param values The tankLimits to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTankLimits")
@@ -4352,18 +4078,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
         addAll(values)
       }/**
-       * <code>repeated double tank_limits = 18;</code>
+       * `repeated double tank_limits = 18;`
        * @param index The index to set the value at.
        * @param value The tankLimits to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTankLimits")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, TankLimitsProxy>.set(index: kotlin.Int, value: kotlin.Double) {
         _builder.setTankLimits(index, value)
       }/**
-       * <code>repeated double tank_limits = 18;</code>
-       * @return This builder for chaining.
+       * `repeated double tank_limits = 18;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTankLimits")
@@ -4381,16 +4105,14 @@ public object BackupKt {
           _builder.lastFueledShip = value
         }
       /**
-       * <code>optional .ei.MissionInfo.Spaceship last_fueled_ship = 9;</code>
-       * @return This builder for chaining.
+       * `optional .ei.MissionInfo.Spaceship last_fueled_ship = 9;`
        */
       public fun clearLastFueledShip() {
         _builder.clearLastFueledShip()
       }
       /**
-       * <code>optional .ei.MissionInfo.Spaceship last_fueled_ship = 9;</code>
+       * `optional .ei.MissionInfo.Spaceship last_fueled_ship = 9;`
        * @return Whether the lastFueledShip field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastFueledShip(): kotlin.Boolean {
         return _builder.hasLastFueledShip()
@@ -4407,16 +4129,14 @@ public object BackupKt {
           _builder.inventoryScore = value
         }
       /**
-       * <code>optional double inventory_score = 10;</code>
-       * @return This builder for chaining.
+       * `optional double inventory_score = 10;`
        */
       public fun clearInventoryScore() {
         _builder.clearInventoryScore()
       }
       /**
-       * <code>optional double inventory_score = 10;</code>
+       * `optional double inventory_score = 10;`
        * @return Whether the inventoryScore field is set.
-       * @return This builder for chaining.
        */
       public fun hasInventoryScore(): kotlin.Boolean {
         return _builder.hasInventoryScore()
@@ -4433,16 +4153,14 @@ public object BackupKt {
           _builder.craftingXp = value
         }
       /**
-       * <code>optional double crafting_xp = 17;</code>
-       * @return This builder for chaining.
+       * `optional double crafting_xp = 17;`
        */
       public fun clearCraftingXp() {
         _builder.clearCraftingXp()
       }
       /**
-       * <code>optional double crafting_xp = 17;</code>
+       * `optional double crafting_xp = 17;`
        * @return Whether the craftingXp field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftingXp(): kotlin.Boolean {
         return _builder.hasCraftingXp()
@@ -4459,16 +4177,14 @@ public object BackupKt {
           _builder.enabled = value
         }
       /**
-       * <code>optional bool enabled = 11;</code>
-       * @return This builder for chaining.
+       * `optional bool enabled = 11;`
        */
       public fun clearEnabled() {
         _builder.clearEnabled()
       }
       /**
-       * <code>optional bool enabled = 11;</code>
+       * `optional bool enabled = 11;`
        * @return Whether the enabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasEnabled(): kotlin.Boolean {
         return _builder.hasEnabled()
@@ -4485,16 +4201,14 @@ public object BackupKt {
           _builder.introShown = value
         }
       /**
-       * <code>optional bool intro_shown = 12;</code>
-       * @return This builder for chaining.
+       * `optional bool intro_shown = 12;`
        */
       public fun clearIntroShown() {
         _builder.clearIntroShown()
       }
       /**
-       * <code>optional bool intro_shown = 12;</code>
+       * `optional bool intro_shown = 12;`
        * @return Whether the introShown field is set.
-       * @return This builder for chaining.
        */
       public fun hasIntroShown(): kotlin.Boolean {
         return _builder.hasIntroShown()
@@ -4511,19 +4225,340 @@ public object BackupKt {
           _builder.infusingEnabledDEPRECATED = value
         }
       /**
-       * <code>optional bool infusing_enabled_DEPRECATED = 8 [default = true];</code>
-       * @return This builder for chaining.
+       * `optional bool infusing_enabled_DEPRECATED = 8 [default = true];`
        */
       public fun clearInfusingEnabledDEPRECATED() {
         _builder.clearInfusingEnabledDEPRECATED()
       }
       /**
-       * <code>optional bool infusing_enabled_DEPRECATED = 8 [default = true];</code>
+       * `optional bool infusing_enabled_DEPRECATED = 8 [default = true];`
        * @return Whether the infusingEnabledDEPRECATED field is set.
-       * @return This builder for chaining.
        */
       public fun hasInfusingEnabledDEPRECATED(): kotlin.Boolean {
         return _builder.hasInfusingEnabledDEPRECATED()
+      }
+    }
+  }
+  @kotlin.jvm.JvmName("-initializevirtue")
+  public inline fun virtue(block: ei.BackupKt.VirtueKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Virtue =
+    ei.BackupKt.VirtueKt.Dsl._create(ei.Ei.Backup.Virtue.newBuilder()).apply { block() }._build()
+  /**
+   * Protobuf type `ei.Backup.Virtue`
+   */
+  public object VirtueKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: ei.Ei.Backup.Virtue.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+    @kotlin.PublishedApi
+        internal fun _create(builder: ei.Ei.Backup.Virtue.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+  @kotlin.PublishedApi
+      internal fun _build(): ei.Ei.Backup.Virtue = _builder.build()
+
+      /**
+       * `optional uint32 shift_count = 1;`
+       */
+      public var shiftCount: kotlin.Int
+        @kotlin.jvm.JvmName("getShiftCount")
+          get() = _builder.shiftCount
+        @kotlin.jvm.JvmName("setShiftCount")
+          set(value) {
+          _builder.shiftCount = value
+        }
+      /**
+       * `optional uint32 shift_count = 1;`
+       */
+      public fun clearShiftCount() {
+        _builder.clearShiftCount()
+      }
+      /**
+       * `optional uint32 shift_count = 1;`
+       * @return Whether the shiftCount field is set.
+       */
+      public fun hasShiftCount(): kotlin.Boolean {
+        return _builder.hasShiftCount()
+      }
+
+      /**
+       * `optional uint32 resets = 2;`
+       */
+      public var resets: kotlin.Int
+        @kotlin.jvm.JvmName("getResets")
+          get() = _builder.resets
+        @kotlin.jvm.JvmName("setResets")
+          set(value) {
+          _builder.resets = value
+        }
+      /**
+       * `optional uint32 resets = 2;`
+       */
+      public fun clearResets() {
+        _builder.clearResets()
+      }
+      /**
+       * `optional uint32 resets = 2;`
+       * @return Whether the resets field is set.
+       */
+      public fun hasResets(): kotlin.Boolean {
+        return _builder.hasResets()
+      }
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class EovEarnedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * `repeated uint32 eov_earned = 3;`
+       */
+       public val eovEarned: com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>
+        @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+          _builder.eovEarnedList
+        )
+      /**
+       * `repeated uint32 eov_earned = 3;`
+       * @param value The eovEarned to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addEovEarned")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>.add(value: kotlin.Int) {
+        _builder.addEovEarned(value)
+      }/**
+       * `repeated uint32 eov_earned = 3;`
+       * @param value The eovEarned to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignEovEarned")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>.plusAssign(value: kotlin.Int) {
+        add(value)
+      }/**
+       * `repeated uint32 eov_earned = 3;`
+       * @param values The eovEarned to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllEovEarned")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
+        _builder.addAllEovEarned(values)
+      }/**
+       * `repeated uint32 eov_earned = 3;`
+       * @param values The eovEarned to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllEovEarned")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
+        addAll(values)
+      }/**
+       * `repeated uint32 eov_earned = 3;`
+       * @param index The index to set the value at.
+       * @param value The eovEarned to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setEovEarned")
+      public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>.set(index: kotlin.Int, value: kotlin.Int) {
+        _builder.setEovEarned(index, value)
+      }/**
+       * `repeated uint32 eov_earned = 3;`
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearEovEarned")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Int, EovEarnedProxy>.clear() {
+        _builder.clearEovEarned()
+      }
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class EggsDeliveredProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * `repeated double eggs_delivered = 4;`
+       */
+       public val eggsDelivered: com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>
+        @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+          _builder.eggsDeliveredList
+        )
+      /**
+       * `repeated double eggs_delivered = 4;`
+       * @param value The eggsDelivered to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addEggsDelivered")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>.add(value: kotlin.Double) {
+        _builder.addEggsDelivered(value)
+      }/**
+       * `repeated double eggs_delivered = 4;`
+       * @param value The eggsDelivered to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignEggsDelivered")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>.plusAssign(value: kotlin.Double) {
+        add(value)
+      }/**
+       * `repeated double eggs_delivered = 4;`
+       * @param values The eggsDelivered to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllEggsDelivered")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
+        _builder.addAllEggsDelivered(values)
+      }/**
+       * `repeated double eggs_delivered = 4;`
+       * @param values The eggsDelivered to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllEggsDelivered")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
+        addAll(values)
+      }/**
+       * `repeated double eggs_delivered = 4;`
+       * @param index The index to set the value at.
+       * @param value The eggsDelivered to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setEggsDelivered")
+      public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>.set(index: kotlin.Int, value: kotlin.Double) {
+        _builder.setEggsDelivered(index, value)
+      }/**
+       * `repeated double eggs_delivered = 4;`
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearEggsDelivered")
+      public fun com.google.protobuf.kotlin.DslList<kotlin.Double, EggsDeliveredProxy>.clear() {
+        _builder.clearEggsDelivered()
+      }
+      /**
+       * `optional .ei.Backup.Artifacts afx = 5;`
+       */
+      public var afx: ei.Ei.Backup.Artifacts
+        @kotlin.jvm.JvmName("getAfx")
+          get() = _builder.afx
+        @kotlin.jvm.JvmName("setAfx")
+          set(value) {
+          _builder.afx = value
+        }
+      /**
+       * `optional .ei.Backup.Artifacts afx = 5;`
+       */
+      public fun clearAfx() {
+        _builder.clearAfx()
+      }
+      /**
+       * `optional .ei.Backup.Artifacts afx = 5;`
+       * @return Whether the afx field is set.
+       */
+      public fun hasAfx(): kotlin.Boolean {
+        return _builder.hasAfx()
+      }
+
+      public val VirtueKt.Dsl.afxOrNull: ei.Ei.Backup.Artifacts?
+        get() = _builder.afxOrNull
+
+      /**
+       * An uninstantiable, behaviorless type to represent the field in
+       * generics.
+       */
+      @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+      public class ActiveAfxProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       */
+       public val activeAfx: com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>
+        @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+          _builder.activeAfxList
+        )
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       * @param value The activeAfx to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addActiveAfx")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>.add(value: ei.Ei.ActiveArtifactSlot) {
+        _builder.addActiveAfx(value)
+      }
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       * @param value The activeAfx to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignActiveAfx")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>.plusAssign(value: ei.Ei.ActiveArtifactSlot) {
+        add(value)
+      }
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       * @param values The activeAfx to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllActiveAfx")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ActiveArtifactSlot>) {
+        _builder.addAllActiveAfx(values)
+      }
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       * @param values The activeAfx to add.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllActiveAfx")
+      @Suppress("NOTHING_TO_INLINE")
+      public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ActiveArtifactSlot>) {
+        addAll(values)
+      }
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       * @param index The index to set the value at.
+       * @param value The activeAfx to set.
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setActiveAfx")
+      public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>.set(index: kotlin.Int, value: ei.Ei.ActiveArtifactSlot) {
+        _builder.setActiveAfx(index, value)
+      }
+      /**
+       * `repeated .ei.ActiveArtifactSlot active_afx = 6;`
+       */
+      @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearActiveAfx")
+      public fun com.google.protobuf.kotlin.DslList<ei.Ei.ActiveArtifactSlot, ActiveAfxProxy>.clear() {
+        _builder.clearActiveAfx()
+      }
+
+      /**
+       * `optional double last_sync = 7;`
+       */
+      public var lastSync: kotlin.Double
+        @kotlin.jvm.JvmName("getLastSync")
+          get() = _builder.lastSync
+        @kotlin.jvm.JvmName("setLastSync")
+          set(value) {
+          _builder.lastSync = value
+        }
+      /**
+       * `optional double last_sync = 7;`
+       */
+      public fun clearLastSync() {
+        _builder.clearLastSync()
+      }
+      /**
+       * `optional double last_sync = 7;`
+       * @return Whether the lastSync field is set.
+       */
+      public fun hasLastSync(): kotlin.Boolean {
+        return _builder.hasLastSync()
       }
     }
   }
@@ -4560,16 +4595,14 @@ public object BackupKt {
           _builder.introAlert = value
         }
       /**
-       * <code>optional bool intro_alert = 1;</code>
-       * @return This builder for chaining.
+       * `optional bool intro_alert = 1;`
        */
       public fun clearIntroAlert() {
         _builder.clearIntroAlert()
       }
       /**
-       * <code>optional bool intro_alert = 1;</code>
+       * `optional bool intro_alert = 1;`
        * @return Whether the introAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasIntroAlert(): kotlin.Boolean {
         return _builder.hasIntroAlert()
@@ -4586,16 +4619,14 @@ public object BackupKt {
           _builder.contractsIntroAlert = value
         }
       /**
-       * <code>optional bool contracts_intro_alert = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_intro_alert = 2;`
        */
       public fun clearContractsIntroAlert() {
         _builder.clearContractsIntroAlert()
       }
       /**
-       * <code>optional bool contracts_intro_alert = 2;</code>
+       * `optional bool contracts_intro_alert = 2;`
        * @return Whether the contractsIntroAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsIntroAlert(): kotlin.Boolean {
         return _builder.hasContractsIntroAlert()
@@ -4616,18 +4647,16 @@ public object BackupKt {
           _builder.numNewList
         )
       /**
-       * <code>repeated int32 num_new = 3;</code>
+       * `repeated int32 num_new = 3;`
        * @param value The numNew to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addNumNew")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.add(value: kotlin.Int) {
         _builder.addNumNew(value)
       }/**
-       * <code>repeated int32 num_new = 3;</code>
+       * `repeated int32 num_new = 3;`
        * @param value The numNew to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignNumNew")
@@ -4635,18 +4664,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.plusAssign(value: kotlin.Int) {
         add(value)
       }/**
-       * <code>repeated int32 num_new = 3;</code>
+       * `repeated int32 num_new = 3;`
        * @param values The numNew to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllNumNew")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
         _builder.addAllNumNew(values)
       }/**
-       * <code>repeated int32 num_new = 3;</code>
+       * `repeated int32 num_new = 3;`
        * @param values The numNew to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllNumNew")
@@ -4654,18 +4681,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
         addAll(values)
       }/**
-       * <code>repeated int32 num_new = 3;</code>
+       * `repeated int32 num_new = 3;`
        * @param index The index to set the value at.
        * @param value The numNew to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setNumNew")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, NumNewProxy>.set(index: kotlin.Int, value: kotlin.Int) {
         _builder.setNumNew(index, value)
       }/**
-       * <code>repeated int32 num_new = 3;</code>
-       * @return This builder for chaining.
+       * `repeated int32 num_new = 3;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearNumNew")
@@ -4706,16 +4731,14 @@ public object BackupKt {
           _builder.eggType = value
         }
       /**
-       * <code>optional .ei.Egg egg_type = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Egg egg_type = 1;`
        */
       public fun clearEggType() {
         _builder.clearEggType()
       }
       /**
-       * <code>optional .ei.Egg egg_type = 1;</code>
+       * `optional .ei.Egg egg_type = 1;`
        * @return Whether the eggType field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggType(): kotlin.Boolean {
         return _builder.hasEggType()
@@ -4732,16 +4755,14 @@ public object BackupKt {
           _builder.farmType = value
         }
       /**
-       * <code>optional .ei.FarmType farm_type = 19;</code>
-       * @return This builder for chaining.
+       * `optional .ei.FarmType farm_type = 19;`
        */
       public fun clearFarmType() {
         _builder.clearFarmType()
       }
       /**
-       * <code>optional .ei.FarmType farm_type = 19;</code>
+       * `optional .ei.FarmType farm_type = 19;`
        * @return Whether the farmType field is set.
-       * @return This builder for chaining.
        */
       public fun hasFarmType(): kotlin.Boolean {
         return _builder.hasFarmType()
@@ -4758,16 +4779,14 @@ public object BackupKt {
           _builder.contractId = value
         }
       /**
-       * <code>optional string contract_id = 20;</code>
-       * @return This builder for chaining.
+       * `optional string contract_id = 20;`
        */
       public fun clearContractId() {
         _builder.clearContractId()
       }
       /**
-       * <code>optional string contract_id = 20;</code>
+       * `optional string contract_id = 20;`
        * @return Whether the contractId field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractId(): kotlin.Boolean {
         return _builder.hasContractId()
@@ -4784,16 +4803,14 @@ public object BackupKt {
           _builder.cashEarned = value
         }
       /**
-       * <code>optional double cash_earned = 2;</code>
-       * @return This builder for chaining.
+       * `optional double cash_earned = 2;`
        */
       public fun clearCashEarned() {
         _builder.clearCashEarned()
       }
       /**
-       * <code>optional double cash_earned = 2;</code>
+       * `optional double cash_earned = 2;`
        * @return Whether the cashEarned field is set.
-       * @return This builder for chaining.
        */
       public fun hasCashEarned(): kotlin.Boolean {
         return _builder.hasCashEarned()
@@ -4810,16 +4827,14 @@ public object BackupKt {
           _builder.cashSpent = value
         }
       /**
-       * <code>optional double cash_spent = 3;</code>
-       * @return This builder for chaining.
+       * `optional double cash_spent = 3;`
        */
       public fun clearCashSpent() {
         _builder.clearCashSpent()
       }
       /**
-       * <code>optional double cash_spent = 3;</code>
+       * `optional double cash_spent = 3;`
        * @return Whether the cashSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasCashSpent(): kotlin.Boolean {
         return _builder.hasCashSpent()
@@ -4836,16 +4851,14 @@ public object BackupKt {
           _builder.unclaimedCash = value
         }
       /**
-       * <code>optional double unclaimed_cash = 4;</code>
-       * @return This builder for chaining.
+       * `optional double unclaimed_cash = 4;`
        */
       public fun clearUnclaimedCash() {
         _builder.clearUnclaimedCash()
       }
       /**
-       * <code>optional double unclaimed_cash = 4;</code>
+       * `optional double unclaimed_cash = 4;`
        * @return Whether the unclaimedCash field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnclaimedCash(): kotlin.Boolean {
         return _builder.hasUnclaimedCash()
@@ -4862,16 +4875,14 @@ public object BackupKt {
           _builder.lastStepTime = value
         }
       /**
-       * <code>optional double last_step_time = 5;</code>
-       * @return This builder for chaining.
+       * `optional double last_step_time = 5;`
        */
       public fun clearLastStepTime() {
         _builder.clearLastStepTime()
       }
       /**
-       * <code>optional double last_step_time = 5;</code>
+       * `optional double last_step_time = 5;`
        * @return Whether the lastStepTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastStepTime(): kotlin.Boolean {
         return _builder.hasLastStepTime()
@@ -4888,16 +4899,14 @@ public object BackupKt {
           _builder.numChickens = value
         }
       /**
-       * <code>optional uint64 num_chickens = 6;</code>
-       * @return This builder for chaining.
+       * `optional uint64 num_chickens = 6;`
        */
       public fun clearNumChickens() {
         _builder.clearNumChickens()
       }
       /**
-       * <code>optional uint64 num_chickens = 6;</code>
+       * `optional uint64 num_chickens = 6;`
        * @return Whether the numChickens field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumChickens(): kotlin.Boolean {
         return _builder.hasNumChickens()
@@ -4914,16 +4923,14 @@ public object BackupKt {
           _builder.numChickensUnsettled = value
         }
       /**
-       * <code>optional uint64 num_chickens_unsettled = 7;</code>
-       * @return This builder for chaining.
+       * `optional uint64 num_chickens_unsettled = 7;`
        */
       public fun clearNumChickensUnsettled() {
         _builder.clearNumChickensUnsettled()
       }
       /**
-       * <code>optional uint64 num_chickens_unsettled = 7;</code>
+       * `optional uint64 num_chickens_unsettled = 7;`
        * @return Whether the numChickensUnsettled field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumChickensUnsettled(): kotlin.Boolean {
         return _builder.hasNumChickensUnsettled()
@@ -4940,16 +4947,14 @@ public object BackupKt {
           _builder.numChickensRunning = value
         }
       /**
-       * <code>optional uint64 num_chickens_running = 8;</code>
-       * @return This builder for chaining.
+       * `optional uint64 num_chickens_running = 8;`
        */
       public fun clearNumChickensRunning() {
         _builder.clearNumChickensRunning()
       }
       /**
-       * <code>optional uint64 num_chickens_running = 8;</code>
+       * `optional uint64 num_chickens_running = 8;`
        * @return Whether the numChickensRunning field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumChickensRunning(): kotlin.Boolean {
         return _builder.hasNumChickensRunning()
@@ -4966,16 +4971,14 @@ public object BackupKt {
           _builder.eggsLaid = value
         }
       /**
-       * <code>optional double eggs_laid = 9;</code>
-       * @return This builder for chaining.
+       * `optional double eggs_laid = 9;`
        */
       public fun clearEggsLaid() {
         _builder.clearEggsLaid()
       }
       /**
-       * <code>optional double eggs_laid = 9;</code>
+       * `optional double eggs_laid = 9;`
        * @return Whether the eggsLaid field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggsLaid(): kotlin.Boolean {
         return _builder.hasEggsLaid()
@@ -4992,16 +4995,14 @@ public object BackupKt {
           _builder.eggsShipped = value
         }
       /**
-       * <code>optional double eggs_shipped = 30;</code>
-       * @return This builder for chaining.
+       * `optional double eggs_shipped = 30;`
        */
       public fun clearEggsShipped() {
         _builder.clearEggsShipped()
       }
       /**
-       * <code>optional double eggs_shipped = 30;</code>
+       * `optional double eggs_shipped = 30;`
        * @return Whether the eggsShipped field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggsShipped(): kotlin.Boolean {
         return _builder.hasEggsShipped()
@@ -5018,16 +5019,14 @@ public object BackupKt {
           _builder.eggsPaidFor = value
         }
       /**
-       * <code>optional double eggs_paid_for = 10;</code>
-       * @return This builder for chaining.
+       * `optional double eggs_paid_for = 10;`
        */
       public fun clearEggsPaidFor() {
         _builder.clearEggsPaidFor()
       }
       /**
-       * <code>optional double eggs_paid_for = 10;</code>
+       * `optional double eggs_paid_for = 10;`
        * @return Whether the eggsPaidFor field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggsPaidFor(): kotlin.Boolean {
         return _builder.hasEggsPaidFor()
@@ -5044,16 +5043,14 @@ public object BackupKt {
           _builder.silosOwned = value
         }
       /**
-       * <code>optional uint32 silos_owned = 11;</code>
-       * @return This builder for chaining.
+       * `optional uint32 silos_owned = 11;`
        */
       public fun clearSilosOwned() {
         _builder.clearSilosOwned()
       }
       /**
-       * <code>optional uint32 silos_owned = 11;</code>
+       * `optional uint32 silos_owned = 11;`
        * @return Whether the silosOwned field is set.
-       * @return This builder for chaining.
        */
       public fun hasSilosOwned(): kotlin.Boolean {
         return _builder.hasSilosOwned()
@@ -5074,18 +5071,16 @@ public object BackupKt {
           _builder.habsList
         )
       /**
-       * <code>repeated uint32 habs = 12;</code>
+       * `repeated uint32 habs = 12;`
        * @param value The habs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addHabs")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.add(value: kotlin.Int) {
         _builder.addHabs(value)
       }/**
-       * <code>repeated uint32 habs = 12;</code>
+       * `repeated uint32 habs = 12;`
        * @param value The habs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignHabs")
@@ -5093,18 +5088,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.plusAssign(value: kotlin.Int) {
         add(value)
       }/**
-       * <code>repeated uint32 habs = 12;</code>
+       * `repeated uint32 habs = 12;`
        * @param values The habs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllHabs")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
         _builder.addAllHabs(values)
       }/**
-       * <code>repeated uint32 habs = 12;</code>
+       * `repeated uint32 habs = 12;`
        * @param values The habs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllHabs")
@@ -5112,18 +5105,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
         addAll(values)
       }/**
-       * <code>repeated uint32 habs = 12;</code>
+       * `repeated uint32 habs = 12;`
        * @param index The index to set the value at.
        * @param value The habs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setHabs")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, HabsProxy>.set(index: kotlin.Int, value: kotlin.Int) {
         _builder.setHabs(index, value)
       }/**
-       * <code>repeated uint32 habs = 12;</code>
-       * @return This builder for chaining.
+       * `repeated uint32 habs = 12;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearHabs")
@@ -5145,18 +5136,16 @@ public object BackupKt {
           _builder.habPopulationList
         )
       /**
-       * <code>repeated uint64 hab_population = 13;</code>
+       * `repeated uint64 hab_population = 13;`
        * @param value The habPopulation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addHabPopulation")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.add(value: kotlin.Long) {
         _builder.addHabPopulation(value)
       }/**
-       * <code>repeated uint64 hab_population = 13;</code>
+       * `repeated uint64 hab_population = 13;`
        * @param value The habPopulation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignHabPopulation")
@@ -5164,18 +5153,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.plusAssign(value: kotlin.Long) {
         add(value)
       }/**
-       * <code>repeated uint64 hab_population = 13;</code>
+       * `repeated uint64 hab_population = 13;`
        * @param values The habPopulation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllHabPopulation")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
         _builder.addAllHabPopulation(values)
       }/**
-       * <code>repeated uint64 hab_population = 13;</code>
+       * `repeated uint64 hab_population = 13;`
        * @param values The habPopulation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllHabPopulation")
@@ -5183,18 +5170,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
         addAll(values)
       }/**
-       * <code>repeated uint64 hab_population = 13;</code>
+       * `repeated uint64 hab_population = 13;`
        * @param index The index to set the value at.
        * @param value The habPopulation to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setHabPopulation")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationProxy>.set(index: kotlin.Int, value: kotlin.Long) {
         _builder.setHabPopulation(index, value)
       }/**
-       * <code>repeated uint64 hab_population = 13;</code>
-       * @return This builder for chaining.
+       * `repeated uint64 hab_population = 13;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearHabPopulation")
@@ -5216,18 +5201,16 @@ public object BackupKt {
           _builder.habPopulationIndoundList
         )
       /**
-       * <code>repeated uint64 hab_population_indound = 14;</code>
+       * `repeated uint64 hab_population_indound = 14;`
        * @param value The habPopulationIndound to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addHabPopulationIndound")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationIndoundProxy>.add(value: kotlin.Long) {
         _builder.addHabPopulationIndound(value)
       }/**
-       * <code>repeated uint64 hab_population_indound = 14;</code>
+       * `repeated uint64 hab_population_indound = 14;`
        * @param value The habPopulationIndound to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignHabPopulationIndound")
@@ -5235,18 +5218,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationIndoundProxy>.plusAssign(value: kotlin.Long) {
         add(value)
       }/**
-       * <code>repeated uint64 hab_population_indound = 14;</code>
+       * `repeated uint64 hab_population_indound = 14;`
        * @param values The habPopulationIndound to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllHabPopulationIndound")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationIndoundProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Long>) {
         _builder.addAllHabPopulationIndound(values)
       }/**
-       * <code>repeated uint64 hab_population_indound = 14;</code>
+       * `repeated uint64 hab_population_indound = 14;`
        * @param values The habPopulationIndound to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllHabPopulationIndound")
@@ -5254,18 +5235,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationIndoundProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Long>) {
         addAll(values)
       }/**
-       * <code>repeated uint64 hab_population_indound = 14;</code>
+       * `repeated uint64 hab_population_indound = 14;`
        * @param index The index to set the value at.
        * @param value The habPopulationIndound to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setHabPopulationIndound")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Long, HabPopulationIndoundProxy>.set(index: kotlin.Int, value: kotlin.Long) {
         _builder.setHabPopulationIndound(index, value)
       }/**
-       * <code>repeated uint64 hab_population_indound = 14;</code>
-       * @return This builder for chaining.
+       * `repeated uint64 hab_population_indound = 14;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearHabPopulationIndound")
@@ -5287,18 +5266,16 @@ public object BackupKt {
           _builder.habIncubatorPopuplationList
         )
       /**
-       * <code>repeated double hab_incubator_popuplation = 15;</code>
+       * `repeated double hab_incubator_popuplation = 15;`
        * @param value The habIncubatorPopuplation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addHabIncubatorPopuplation")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, HabIncubatorPopuplationProxy>.add(value: kotlin.Double) {
         _builder.addHabIncubatorPopuplation(value)
       }/**
-       * <code>repeated double hab_incubator_popuplation = 15;</code>
+       * `repeated double hab_incubator_popuplation = 15;`
        * @param value The habIncubatorPopuplation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignHabIncubatorPopuplation")
@@ -5306,18 +5283,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, HabIncubatorPopuplationProxy>.plusAssign(value: kotlin.Double) {
         add(value)
       }/**
-       * <code>repeated double hab_incubator_popuplation = 15;</code>
+       * `repeated double hab_incubator_popuplation = 15;`
        * @param values The habIncubatorPopuplation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllHabIncubatorPopuplation")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Double, HabIncubatorPopuplationProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Double>) {
         _builder.addAllHabIncubatorPopuplation(values)
       }/**
-       * <code>repeated double hab_incubator_popuplation = 15;</code>
+       * `repeated double hab_incubator_popuplation = 15;`
        * @param values The habIncubatorPopuplation to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllHabIncubatorPopuplation")
@@ -5325,18 +5300,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, HabIncubatorPopuplationProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Double>) {
         addAll(values)
       }/**
-       * <code>repeated double hab_incubator_popuplation = 15;</code>
+       * `repeated double hab_incubator_popuplation = 15;`
        * @param index The index to set the value at.
        * @param value The habIncubatorPopuplation to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setHabIncubatorPopuplation")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Double, HabIncubatorPopuplationProxy>.set(index: kotlin.Int, value: kotlin.Double) {
         _builder.setHabIncubatorPopuplation(index, value)
       }/**
-       * <code>repeated double hab_incubator_popuplation = 15;</code>
-       * @return This builder for chaining.
+       * `repeated double hab_incubator_popuplation = 15;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearHabIncubatorPopuplation")
@@ -5354,16 +5327,14 @@ public object BackupKt {
           _builder.hatcheryPopulation = value
         }
       /**
-       * <code>optional double hatchery_population = 16;</code>
-       * @return This builder for chaining.
+       * `optional double hatchery_population = 16;`
        */
       public fun clearHatcheryPopulation() {
         _builder.clearHatcheryPopulation()
       }
       /**
-       * <code>optional double hatchery_population = 16;</code>
+       * `optional double hatchery_population = 16;`
        * @return Whether the hatcheryPopulation field is set.
-       * @return This builder for chaining.
        */
       public fun hasHatcheryPopulation(): kotlin.Boolean {
         return _builder.hasHatcheryPopulation()
@@ -5384,18 +5355,16 @@ public object BackupKt {
           _builder.vehiclesList
         )
       /**
-       * <code>repeated uint32 vehicles = 17;</code>
+       * `repeated uint32 vehicles = 17;`
        * @param value The vehicles to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addVehicles")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.add(value: kotlin.Int) {
         _builder.addVehicles(value)
       }/**
-       * <code>repeated uint32 vehicles = 17;</code>
+       * `repeated uint32 vehicles = 17;`
        * @param value The vehicles to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignVehicles")
@@ -5403,18 +5372,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.plusAssign(value: kotlin.Int) {
         add(value)
       }/**
-       * <code>repeated uint32 vehicles = 17;</code>
+       * `repeated uint32 vehicles = 17;`
        * @param values The vehicles to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllVehicles")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
         _builder.addAllVehicles(values)
       }/**
-       * <code>repeated uint32 vehicles = 17;</code>
+       * `repeated uint32 vehicles = 17;`
        * @param values The vehicles to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllVehicles")
@@ -5422,18 +5389,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
         addAll(values)
       }/**
-       * <code>repeated uint32 vehicles = 17;</code>
+       * `repeated uint32 vehicles = 17;`
        * @param index The index to set the value at.
        * @param value The vehicles to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setVehicles")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, VehiclesProxy>.set(index: kotlin.Int, value: kotlin.Int) {
         _builder.setVehicles(index, value)
       }/**
-       * <code>repeated uint32 vehicles = 17;</code>
-       * @return This builder for chaining.
+       * `repeated uint32 vehicles = 17;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearVehicles")
@@ -5455,18 +5420,16 @@ public object BackupKt {
           _builder.trainLengthList
         )
       /**
-       * <code>repeated uint32 train_length = 21;</code>
+       * `repeated uint32 train_length = 21;`
        * @param value The trainLength to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTrainLength")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.add(value: kotlin.Int) {
         _builder.addTrainLength(value)
       }/**
-       * <code>repeated uint32 train_length = 21;</code>
+       * `repeated uint32 train_length = 21;`
        * @param value The trainLength to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTrainLength")
@@ -5474,18 +5437,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.plusAssign(value: kotlin.Int) {
         add(value)
       }/**
-       * <code>repeated uint32 train_length = 21;</code>
+       * `repeated uint32 train_length = 21;`
        * @param values The trainLength to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTrainLength")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
         _builder.addAllTrainLength(values)
       }/**
-       * <code>repeated uint32 train_length = 21;</code>
+       * `repeated uint32 train_length = 21;`
        * @param values The trainLength to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTrainLength")
@@ -5493,18 +5454,16 @@ public object BackupKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
         addAll(values)
       }/**
-       * <code>repeated uint32 train_length = 21;</code>
+       * `repeated uint32 train_length = 21;`
        * @param index The index to set the value at.
        * @param value The trainLength to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTrainLength")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, TrainLengthProxy>.set(index: kotlin.Int, value: kotlin.Int) {
         _builder.setTrainLength(index, value)
       }/**
-       * <code>repeated uint32 train_length = 21;</code>
-       * @return This builder for chaining.
+       * `repeated uint32 train_length = 21;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTrainLength")
@@ -5526,9 +5485,8 @@ public object BackupKt {
           _builder.commonResearchList
         )
       /**
-       * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
+       * `repeated .ei.Backup.ResearchItem common_research = 18;`
        * @param value The commonResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCommonResearch")
@@ -5536,9 +5494,8 @@ public object BackupKt {
         _builder.addCommonResearch(value)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
+       * `repeated .ei.Backup.ResearchItem common_research = 18;`
        * @param value The commonResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCommonResearch")
@@ -5547,9 +5504,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
+       * `repeated .ei.Backup.ResearchItem common_research = 18;`
        * @param values The commonResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCommonResearch")
@@ -5557,9 +5513,8 @@ public object BackupKt {
         _builder.addAllCommonResearch(values)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
+       * `repeated .ei.Backup.ResearchItem common_research = 18;`
        * @param values The commonResearch to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCommonResearch")
@@ -5568,10 +5523,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
+       * `repeated .ei.Backup.ResearchItem common_research = 18;`
        * @param index The index to set the value at.
        * @param value The commonResearch to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCommonResearch")
@@ -5579,8 +5533,7 @@ public object BackupKt {
         _builder.setCommonResearch(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.ResearchItem common_research = 18;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.ResearchItem common_research = 18;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCommonResearch")
@@ -5603,9 +5556,8 @@ public object BackupKt {
           _builder.activeBoostsList
         )
       /**
-       * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
+       * `repeated .ei.Backup.ActiveBoost active_boosts = 22;`
        * @param value The activeBoosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addActiveBoosts")
@@ -5613,9 +5565,8 @@ public object BackupKt {
         _builder.addActiveBoosts(value)
       }
       /**
-       * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
+       * `repeated .ei.Backup.ActiveBoost active_boosts = 22;`
        * @param value The activeBoosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignActiveBoosts")
@@ -5624,9 +5575,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
+       * `repeated .ei.Backup.ActiveBoost active_boosts = 22;`
        * @param values The activeBoosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllActiveBoosts")
@@ -5634,9 +5584,8 @@ public object BackupKt {
         _builder.addAllActiveBoosts(values)
       }
       /**
-       * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
+       * `repeated .ei.Backup.ActiveBoost active_boosts = 22;`
        * @param values The activeBoosts to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllActiveBoosts")
@@ -5645,10 +5594,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
+       * `repeated .ei.Backup.ActiveBoost active_boosts = 22;`
        * @param index The index to set the value at.
        * @param value The activeBoosts to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setActiveBoosts")
@@ -5656,8 +5604,7 @@ public object BackupKt {
         _builder.setActiveBoosts(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.ActiveBoost active_boosts = 22;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.ActiveBoost active_boosts = 22;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearActiveBoosts")
@@ -5676,16 +5623,14 @@ public object BackupKt {
           _builder.lastCashBoostTime = value
         }
       /**
-       * <code>optional double last_cash_boost_time = 31;</code>
-       * @return This builder for chaining.
+       * `optional double last_cash_boost_time = 31;`
        */
       public fun clearLastCashBoostTime() {
         _builder.clearLastCashBoostTime()
       }
       /**
-       * <code>optional double last_cash_boost_time = 31;</code>
+       * `optional double last_cash_boost_time = 31;`
        * @return Whether the lastCashBoostTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastCashBoostTime(): kotlin.Boolean {
         return _builder.hasLastCashBoostTime()
@@ -5702,45 +5647,41 @@ public object BackupKt {
           _builder.timeCheatsDetected = value
         }
       /**
-       * <code>optional uint32 time_cheats_detected = 23;</code>
-       * @return This builder for chaining.
+       * `optional uint32 time_cheats_detected = 23;`
        */
       public fun clearTimeCheatsDetected() {
         _builder.clearTimeCheatsDetected()
       }
       /**
-       * <code>optional uint32 time_cheats_detected = 23;</code>
+       * `optional uint32 time_cheats_detected = 23;`
        * @return Whether the timeCheatsDetected field is set.
-       * @return This builder for chaining.
        */
       public fun hasTimeCheatsDetected(): kotlin.Boolean {
         return _builder.hasTimeCheatsDetected()
       }
 
       /**
-       * `optional double time_cheat_debt = 24;`
+       * `optional double time_cheat_debt_DEP = 24;`
        */
-      public var timeCheatDebt: kotlin.Double
-        @kotlin.jvm.JvmName("getTimeCheatDebt")
-          get() = _builder.timeCheatDebt
-        @kotlin.jvm.JvmName("setTimeCheatDebt")
+      public var timeCheatDebtDEP: kotlin.Double
+        @kotlin.jvm.JvmName("getTimeCheatDebtDEP")
+          get() = _builder.timeCheatDebtDEP
+        @kotlin.jvm.JvmName("setTimeCheatDebtDEP")
           set(value) {
-          _builder.timeCheatDebt = value
+          _builder.timeCheatDebtDEP = value
         }
       /**
-       * <code>optional double time_cheat_debt = 24;</code>
-       * @return This builder for chaining.
+       * `optional double time_cheat_debt_DEP = 24;`
        */
-      public fun clearTimeCheatDebt() {
-        _builder.clearTimeCheatDebt()
+      public fun clearTimeCheatDebtDEP() {
+        _builder.clearTimeCheatDebtDEP()
       }
       /**
-       * <code>optional double time_cheat_debt = 24;</code>
-       * @return Whether the timeCheatDebt field is set.
-       * @return This builder for chaining.
+       * `optional double time_cheat_debt_DEP = 24;`
+       * @return Whether the timeCheatDebtDEP field is set.
        */
-      public fun hasTimeCheatDebt(): kotlin.Boolean {
-        return _builder.hasTimeCheatDebt()
+      public fun hasTimeCheatDebtDEP(): kotlin.Boolean {
+        return _builder.hasTimeCheatDebtDEP()
       }
 
       /**
@@ -5754,16 +5695,14 @@ public object BackupKt {
           _builder.boostTokensReceived = value
         }
       /**
-       * <code>optional uint32 boost_tokens_received = 25;</code>
-       * @return This builder for chaining.
+       * `optional uint32 boost_tokens_received = 25;`
        */
       public fun clearBoostTokensReceived() {
         _builder.clearBoostTokensReceived()
       }
       /**
-       * <code>optional uint32 boost_tokens_received = 25;</code>
+       * `optional uint32 boost_tokens_received = 25;`
        * @return Whether the boostTokensReceived field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostTokensReceived(): kotlin.Boolean {
         return _builder.hasBoostTokensReceived()
@@ -5780,16 +5719,14 @@ public object BackupKt {
           _builder.boostTokensSpent = value
         }
       /**
-       * <code>optional uint32 boost_tokens_spent = 26;</code>
-       * @return This builder for chaining.
+       * `optional uint32 boost_tokens_spent = 26;`
        */
       public fun clearBoostTokensSpent() {
         _builder.clearBoostTokensSpent()
       }
       /**
-       * <code>optional uint32 boost_tokens_spent = 26;</code>
+       * `optional uint32 boost_tokens_spent = 26;`
        * @return Whether the boostTokensSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostTokensSpent(): kotlin.Boolean {
         return _builder.hasBoostTokensSpent()
@@ -5806,16 +5743,14 @@ public object BackupKt {
           _builder.boostTokensGiven = value
         }
       /**
-       * <code>optional uint32 boost_tokens_given = 28;</code>
-       * @return This builder for chaining.
+       * `optional uint32 boost_tokens_given = 28;`
        */
       public fun clearBoostTokensGiven() {
         _builder.clearBoostTokensGiven()
       }
       /**
-       * <code>optional uint32 boost_tokens_given = 28;</code>
+       * `optional uint32 boost_tokens_given = 28;`
        * @return Whether the boostTokensGiven field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostTokensGiven(): kotlin.Boolean {
         return _builder.hasBoostTokensGiven()
@@ -5832,16 +5767,14 @@ public object BackupKt {
           _builder.unclaimedBoostTokens = value
         }
       /**
-       * <code>optional uint32 unclaimed_boost_tokens = 27;</code>
-       * @return This builder for chaining.
+       * `optional uint32 unclaimed_boost_tokens = 27;`
        */
       public fun clearUnclaimedBoostTokens() {
         _builder.clearUnclaimedBoostTokens()
       }
       /**
-       * <code>optional uint32 unclaimed_boost_tokens = 27;</code>
+       * `optional uint32 unclaimed_boost_tokens = 27;`
        * @return Whether the unclaimedBoostTokens field is set.
-       * @return This builder for chaining.
        */
       public fun hasUnclaimedBoostTokens(): kotlin.Boolean {
         return _builder.hasUnclaimedBoostTokens()
@@ -5858,16 +5791,14 @@ public object BackupKt {
           _builder.gametimeUntilNextBoostToken = value
         }
       /**
-       * <code>optional double gametime_until_next_boost_token = 29;</code>
-       * @return This builder for chaining.
+       * `optional double gametime_until_next_boost_token = 29;`
        */
       public fun clearGametimeUntilNextBoostToken() {
         _builder.clearGametimeUntilNextBoostToken()
       }
       /**
-       * <code>optional double gametime_until_next_boost_token = 29;</code>
+       * `optional double gametime_until_next_boost_token = 29;`
        * @return Whether the gametimeUntilNextBoostToken field is set.
-       * @return This builder for chaining.
        */
       public fun hasGametimeUntilNextBoostToken(): kotlin.Boolean {
         return _builder.hasGametimeUntilNextBoostToken()
@@ -5884,16 +5815,14 @@ public object BackupKt {
           _builder.totalStepTime = value
         }
       /**
-       * <code>optional double total_step_time = 32;</code>
-       * @return This builder for chaining.
+       * `optional double total_step_time = 32;`
        */
       public fun clearTotalStepTime() {
         _builder.clearTotalStepTime()
       }
       /**
-       * <code>optional double total_step_time = 32;</code>
+       * `optional double total_step_time = 32;`
        * @return Whether the totalStepTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasTotalStepTime(): kotlin.Boolean {
         return _builder.hasTotalStepTime()
@@ -5933,16 +5862,14 @@ public object BackupKt {
           _builder.currentMission = value
         }
       /**
-       * <code>optional string current_mission = 1;</code>
-       * @return This builder for chaining.
+       * `optional string current_mission = 1;`
        */
       public fun clearCurrentMission() {
         _builder.clearCurrentMission()
       }
       /**
-       * <code>optional string current_mission = 1;</code>
+       * `optional string current_mission = 1;`
        * @return Whether the currentMission field is set.
-       * @return This builder for chaining.
        */
       public fun hasCurrentMission(): kotlin.Boolean {
         return _builder.hasCurrentMission()
@@ -5959,16 +5886,14 @@ public object BackupKt {
           _builder.referenceValue = value
         }
       /**
-       * <code>optional double reference_value = 2;</code>
-       * @return This builder for chaining.
+       * `optional double reference_value = 2;`
        */
       public fun clearReferenceValue() {
         _builder.clearReferenceValue()
       }
       /**
-       * <code>optional double reference_value = 2;</code>
+       * `optional double reference_value = 2;`
        * @return Whether the referenceValue field is set.
-       * @return This builder for chaining.
        */
       public fun hasReferenceValue(): kotlin.Boolean {
         return _builder.hasReferenceValue()
@@ -5981,9 +5906,8 @@ public object BackupKt {
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
       public class CurrentMissionsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
       /**
-       * <code>repeated string current_missions = 4;</code>
+       * `repeated string current_missions = 4;`
        * @return A list containing the currentMissions.
-       * @return This builder for chaining.
        */
       public val currentMissions: com.google.protobuf.kotlin.DslList<kotlin.String, CurrentMissionsProxy>
       @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -5991,9 +5915,8 @@ public object BackupKt {
           _builder.currentMissionsList
         )
       /**
-       * <code>repeated string current_missions = 4;</code>
+       * `repeated string current_missions = 4;`
        * @param value The currentMissions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCurrentMissions")
@@ -6001,9 +5924,8 @@ public object BackupKt {
         _builder.addCurrentMissions(value)
       }
       /**
-       * <code>repeated string current_missions = 4;</code>
+       * `repeated string current_missions = 4;`
        * @param value The currentMissions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCurrentMissions")
@@ -6012,9 +5934,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated string current_missions = 4;</code>
+       * `repeated string current_missions = 4;`
        * @param values The currentMissions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCurrentMissions")
@@ -6022,9 +5943,8 @@ public object BackupKt {
         _builder.addAllCurrentMissions(values)
       }
       /**
-       * <code>repeated string current_missions = 4;</code>
+       * `repeated string current_missions = 4;`
        * @param values The currentMissions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCurrentMissions")
@@ -6033,18 +5953,16 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated string current_missions = 4;</code>
+       * `repeated string current_missions = 4;`
        * @param index The index to set the value at.
        * @param value The currentMissions to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCurrentMissions")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, CurrentMissionsProxy>.set(index: kotlin.Int, value: kotlin.String) {
         _builder.setCurrentMissions(index, value)
       }/**
-       * <code>repeated string current_missions = 4;</code>
-       * @return This builder for chaining.
+       * `repeated string current_missions = 4;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCurrentMissions")
@@ -6066,9 +5984,8 @@ public object BackupKt {
           _builder.missionsList
         )
       /**
-       * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
+       * `repeated .ei.Backup.MissionInfo missions = 3;`
        * @param value The missions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMissions")
@@ -6076,9 +5993,8 @@ public object BackupKt {
         _builder.addMissions(value)
       }
       /**
-       * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
+       * `repeated .ei.Backup.MissionInfo missions = 3;`
        * @param value The missions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMissions")
@@ -6087,9 +6003,8 @@ public object BackupKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
+       * `repeated .ei.Backup.MissionInfo missions = 3;`
        * @param values The missions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMissions")
@@ -6097,9 +6012,8 @@ public object BackupKt {
         _builder.addAllMissions(values)
       }
       /**
-       * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
+       * `repeated .ei.Backup.MissionInfo missions = 3;`
        * @param values The missions to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMissions")
@@ -6108,10 +6022,9 @@ public object BackupKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
+       * `repeated .ei.Backup.MissionInfo missions = 3;`
        * @param index The index to set the value at.
        * @param value The missions to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMissions")
@@ -6119,8 +6032,7 @@ public object BackupKt {
         _builder.setMissions(index, value)
       }
       /**
-       * <code>repeated .ei.Backup.MissionInfo missions = 3;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Backup.MissionInfo missions = 3;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearMissions")
@@ -6162,16 +6074,14 @@ public object BackupKt {
           _builder.chickenBtnPrefBig = value
         }
       /**
-       * <code>optional bool chicken_btn_pref_big = 1;</code>
-       * @return This builder for chaining.
+       * `optional bool chicken_btn_pref_big = 1;`
        */
       public fun clearChickenBtnPrefBig() {
         _builder.clearChickenBtnPrefBig()
       }
       /**
-       * <code>optional bool chicken_btn_pref_big = 1;</code>
+       * `optional bool chicken_btn_pref_big = 1;`
        * @return Whether the chickenBtnPrefBig field is set.
-       * @return This builder for chaining.
        */
       public fun hasChickenBtnPrefBig(): kotlin.Boolean {
         return _builder.hasChickenBtnPrefBig()
@@ -6188,16 +6098,14 @@ public object BackupKt {
           _builder.freeHatcheryRefillGiven = value
         }
       /**
-       * <code>optional bool free_hatchery_refill_given = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool free_hatchery_refill_given = 2;`
        */
       public fun clearFreeHatcheryRefillGiven() {
         _builder.clearFreeHatcheryRefillGiven()
       }
       /**
-       * <code>optional bool free_hatchery_refill_given = 2;</code>
+       * `optional bool free_hatchery_refill_given = 2;`
        * @return Whether the freeHatcheryRefillGiven field is set.
-       * @return This builder for chaining.
        */
       public fun hasFreeHatcheryRefillGiven(): kotlin.Boolean {
         return _builder.hasFreeHatcheryRefillGiven()
@@ -6214,16 +6122,14 @@ public object BackupKt {
           _builder.lastShareFarmValue = value
         }
       /**
-       * <code>optional double last_share_farm_value = 3 [default = 10000000];</code>
-       * @return This builder for chaining.
+       * `optional double last_share_farm_value = 3 [default = 10000000];`
        */
       public fun clearLastShareFarmValue() {
         _builder.clearLastShareFarmValue()
       }
       /**
-       * <code>optional double last_share_farm_value = 3 [default = 10000000];</code>
+       * `optional double last_share_farm_value = 3 [default = 10000000];`
        * @return Whether the lastShareFarmValue field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastShareFarmValue(): kotlin.Boolean {
         return _builder.hasLastShareFarmValue()
@@ -6240,16 +6146,14 @@ public object BackupKt {
           _builder.lastShareSwarmFarmValue = value
         }
       /**
-       * <code>optional double last_share_swarm_farm_value = 4 [default = 10000000];</code>
-       * @return This builder for chaining.
+       * `optional double last_share_swarm_farm_value = 4 [default = 10000000];`
        */
       public fun clearLastShareSwarmFarmValue() {
         _builder.clearLastShareSwarmFarmValue()
       }
       /**
-       * <code>optional double last_share_swarm_farm_value = 4 [default = 10000000];</code>
+       * `optional double last_share_swarm_farm_value = 4 [default = 10000000];`
        * @return Whether the lastShareSwarmFarmValue field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastShareSwarmFarmValue(): kotlin.Boolean {
         return _builder.hasLastShareSwarmFarmValue()
@@ -6266,16 +6170,14 @@ public object BackupKt {
           _builder.lastShareSwarmSize = value
         }
       /**
-       * <code>optional double last_share_swarm_size = 5 [default = 140];</code>
-       * @return This builder for chaining.
+       * `optional double last_share_swarm_size = 5 [default = 140];`
        */
       public fun clearLastShareSwarmSize() {
         _builder.clearLastShareSwarmSize()
       }
       /**
-       * <code>optional double last_share_swarm_size = 5 [default = 140];</code>
+       * `optional double last_share_swarm_size = 5 [default = 140];`
        * @return Whether the lastShareSwarmSize field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastShareSwarmSize(): kotlin.Boolean {
         return _builder.hasLastShareSwarmSize()
@@ -6292,16 +6194,14 @@ public object BackupKt {
           _builder.lastPrestigeAlertSoulEggsDEPRECATED = value
         }
       /**
-       * <code>optional uint64 last_prestige_alert_soul_eggs_DEPRECATED = 10 [default = 45];</code>
-       * @return This builder for chaining.
+       * `optional uint64 last_prestige_alert_soul_eggs_DEPRECATED = 10 [default = 45];`
        */
       public fun clearLastPrestigeAlertSoulEggsDEPRECATED() {
         _builder.clearLastPrestigeAlertSoulEggsDEPRECATED()
       }
       /**
-       * <code>optional uint64 last_prestige_alert_soul_eggs_DEPRECATED = 10 [default = 45];</code>
+       * `optional uint64 last_prestige_alert_soul_eggs_DEPRECATED = 10 [default = 45];`
        * @return Whether the lastPrestigeAlertSoulEggsDEPRECATED field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastPrestigeAlertSoulEggsDEPRECATED(): kotlin.Boolean {
         return _builder.hasLastPrestigeAlertSoulEggsDEPRECATED()
@@ -6318,16 +6218,14 @@ public object BackupKt {
           _builder.friendRank = value
         }
       /**
-       * <code>optional uint64 friend_rank = 6;</code>
-       * @return This builder for chaining.
+       * `optional uint64 friend_rank = 6;`
        */
       public fun clearFriendRank() {
         _builder.clearFriendRank()
       }
       /**
-       * <code>optional uint64 friend_rank = 6;</code>
+       * `optional uint64 friend_rank = 6;`
        * @return Whether the friendRank field is set.
-       * @return This builder for chaining.
        */
       public fun hasFriendRank(): kotlin.Boolean {
         return _builder.hasFriendRank()
@@ -6344,16 +6242,14 @@ public object BackupKt {
           _builder.friendRankPop = value
         }
       /**
-       * <code>optional uint64 friend_rank_pop = 7;</code>
-       * @return This builder for chaining.
+       * `optional uint64 friend_rank_pop = 7;`
        */
       public fun clearFriendRankPop() {
         _builder.clearFriendRankPop()
       }
       /**
-       * <code>optional uint64 friend_rank_pop = 7;</code>
+       * `optional uint64 friend_rank_pop = 7;`
        * @return Whether the friendRankPop field is set.
-       * @return This builder for chaining.
        */
       public fun hasFriendRankPop(): kotlin.Boolean {
         return _builder.hasFriendRankPop()
@@ -6370,16 +6266,14 @@ public object BackupKt {
           _builder.globalRank = value
         }
       /**
-       * <code>optional uint64 global_rank = 8;</code>
-       * @return This builder for chaining.
+       * `optional uint64 global_rank = 8;`
        */
       public fun clearGlobalRank() {
         _builder.clearGlobalRank()
       }
       /**
-       * <code>optional uint64 global_rank = 8;</code>
+       * `optional uint64 global_rank = 8;`
        * @return Whether the globalRank field is set.
-       * @return This builder for chaining.
        */
       public fun hasGlobalRank(): kotlin.Boolean {
         return _builder.hasGlobalRank()
@@ -6396,16 +6290,14 @@ public object BackupKt {
           _builder.globalRankPop = value
         }
       /**
-       * <code>optional uint64 global_rank_pop = 9;</code>
-       * @return This builder for chaining.
+       * `optional uint64 global_rank_pop = 9;`
        */
       public fun clearGlobalRankPop() {
         _builder.clearGlobalRankPop()
       }
       /**
-       * <code>optional uint64 global_rank_pop = 9;</code>
+       * `optional uint64 global_rank_pop = 9;`
        * @return Whether the globalRankPop field is set.
-       * @return This builder for chaining.
        */
       public fun hasGlobalRankPop(): kotlin.Boolean {
         return _builder.hasGlobalRankPop()
@@ -6422,16 +6314,14 @@ public object BackupKt {
           _builder.challengesAlert = value
         }
       /**
-       * <code>optional bool challenges_alert = 20;</code>
-       * @return This builder for chaining.
+       * `optional bool challenges_alert = 20;`
        */
       public fun clearChallengesAlert() {
         _builder.clearChallengesAlert()
       }
       /**
-       * <code>optional bool challenges_alert = 20;</code>
+       * `optional bool challenges_alert = 20;`
        * @return Whether the challengesAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasChallengesAlert(): kotlin.Boolean {
         return _builder.hasChallengesAlert()
@@ -6448,16 +6338,14 @@ public object BackupKt {
           _builder.trophyAlert = value
         }
       /**
-       * <code>optional bool trophy_alert = 11;</code>
-       * @return This builder for chaining.
+       * `optional bool trophy_alert = 11;`
        */
       public fun clearTrophyAlert() {
         _builder.clearTrophyAlert()
       }
       /**
-       * <code>optional bool trophy_alert = 11;</code>
+       * `optional bool trophy_alert = 11;`
        * @return Whether the trophyAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasTrophyAlert(): kotlin.Boolean {
         return _builder.hasTrophyAlert()
@@ -6474,16 +6362,14 @@ public object BackupKt {
           _builder.arAlert = value
         }
       /**
-       * <code>optional bool ar_alert = 12;</code>
-       * @return This builder for chaining.
+       * `optional bool ar_alert = 12;`
        */
       public fun clearArAlert() {
         _builder.clearArAlert()
       }
       /**
-       * <code>optional bool ar_alert = 12;</code>
+       * `optional bool ar_alert = 12;`
        * @return Whether the arAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasArAlert(): kotlin.Boolean {
         return _builder.hasArAlert()
@@ -6500,16 +6386,14 @@ public object BackupKt {
           _builder.contractsAlert = value
         }
       /**
-       * <code>optional bool contracts_alert = 13;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_alert = 13;`
        */
       public fun clearContractsAlert() {
         _builder.clearContractsAlert()
       }
       /**
-       * <code>optional bool contracts_alert = 13;</code>
+       * `optional bool contracts_alert = 13;`
        * @return Whether the contractsAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsAlert(): kotlin.Boolean {
         return _builder.hasContractsAlert()
@@ -6526,16 +6410,14 @@ public object BackupKt {
           _builder.contractsAlertV2 = value
         }
       /**
-       * <code>optional bool contracts_alert_v2 = 21;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_alert_v2 = 21;`
        */
       public fun clearContractsAlertV2() {
         _builder.clearContractsAlertV2()
       }
       /**
-       * <code>optional bool contracts_alert_v2 = 21;</code>
+       * `optional bool contracts_alert_v2 = 21;`
        * @return Whether the contractsAlertV2 field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsAlertV2(): kotlin.Boolean {
         return _builder.hasContractsAlertV2()
@@ -6552,16 +6434,14 @@ public object BackupKt {
           _builder.coopAlert = value
         }
       /**
-       * <code>optional bool coop_alert = 14;</code>
-       * @return This builder for chaining.
+       * `optional bool coop_alert = 14;`
        */
       public fun clearCoopAlert() {
         _builder.clearCoopAlert()
       }
       /**
-       * <code>optional bool coop_alert = 14;</code>
+       * `optional bool coop_alert = 14;`
        * @return Whether the coopAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasCoopAlert(): kotlin.Boolean {
         return _builder.hasCoopAlert()
@@ -6578,16 +6458,14 @@ public object BackupKt {
           _builder.coopAlertV2 = value
         }
       /**
-       * <code>optional bool coop_alert_v2 = 22;</code>
-       * @return This builder for chaining.
+       * `optional bool coop_alert_v2 = 22;`
        */
       public fun clearCoopAlertV2() {
         _builder.clearCoopAlertV2()
       }
       /**
-       * <code>optional bool coop_alert_v2 = 22;</code>
+       * `optional bool coop_alert_v2 = 22;`
        * @return Whether the coopAlertV2 field is set.
-       * @return This builder for chaining.
        */
       public fun hasCoopAlertV2(): kotlin.Boolean {
         return _builder.hasCoopAlertV2()
@@ -6604,16 +6482,14 @@ public object BackupKt {
           _builder.switchAlert = value
         }
       /**
-       * <code>optional bool switch_alert = 15;</code>
-       * @return This builder for chaining.
+       * `optional bool switch_alert = 15;`
        */
       public fun clearSwitchAlert() {
         _builder.clearSwitchAlert()
       }
       /**
-       * <code>optional bool switch_alert = 15;</code>
+       * `optional bool switch_alert = 15;`
        * @return Whether the switchAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasSwitchAlert(): kotlin.Boolean {
         return _builder.hasSwitchAlert()
@@ -6630,16 +6506,14 @@ public object BackupKt {
           _builder.eggOfProphecyAlert = value
         }
       /**
-       * <code>optional bool egg_of_prophecy_alert = 16;</code>
-       * @return This builder for chaining.
+       * `optional bool egg_of_prophecy_alert = 16;`
        */
       public fun clearEggOfProphecyAlert() {
         _builder.clearEggOfProphecyAlert()
       }
       /**
-       * <code>optional bool egg_of_prophecy_alert = 16;</code>
+       * `optional bool egg_of_prophecy_alert = 16;`
        * @return Whether the eggOfProphecyAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasEggOfProphecyAlert(): kotlin.Boolean {
         return _builder.hasEggOfProphecyAlert()
@@ -6656,16 +6530,14 @@ public object BackupKt {
           _builder.boostTokenAlert = value
         }
       /**
-       * <code>optional bool boost_token_alert = 17;</code>
-       * @return This builder for chaining.
+       * `optional bool boost_token_alert = 17;`
        */
       public fun clearBoostTokenAlert() {
         _builder.clearBoostTokenAlert()
       }
       /**
-       * <code>optional bool boost_token_alert = 17;</code>
+       * `optional bool boost_token_alert = 17;`
        * @return Whether the boostTokenAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostTokenAlert(): kotlin.Boolean {
         return _builder.hasBoostTokenAlert()
@@ -6682,16 +6554,14 @@ public object BackupKt {
           _builder.soulEggAlert = value
         }
       /**
-       * <code>optional bool soul_egg_alert = 18;</code>
-       * @return This builder for chaining.
+       * `optional bool soul_egg_alert = 18;`
        */
       public fun clearSoulEggAlert() {
         _builder.clearSoulEggAlert()
       }
       /**
-       * <code>optional bool soul_egg_alert = 18;</code>
+       * `optional bool soul_egg_alert = 18;`
        * @return Whether the soulEggAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasSoulEggAlert(): kotlin.Boolean {
         return _builder.hasSoulEggAlert()
@@ -6708,16 +6578,14 @@ public object BackupKt {
           _builder.backupReminderAlert = value
         }
       /**
-       * <code>optional bool backup_reminder_alert = 19;</code>
-       * @return This builder for chaining.
+       * `optional bool backup_reminder_alert = 19;`
        */
       public fun clearBackupReminderAlert() {
         _builder.clearBackupReminderAlert()
       }
       /**
-       * <code>optional bool backup_reminder_alert = 19;</code>
+       * `optional bool backup_reminder_alert = 19;`
        * @return Whether the backupReminderAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasBackupReminderAlert(): kotlin.Boolean {
         return _builder.hasBackupReminderAlert()
@@ -6734,16 +6602,14 @@ public object BackupKt {
           _builder.maxButtonAlert = value
         }
       /**
-       * <code>optional bool max_button_alert = 23;</code>
-       * @return This builder for chaining.
+       * `optional bool max_button_alert = 23;`
        */
       public fun clearMaxButtonAlert() {
         _builder.clearMaxButtonAlert()
       }
       /**
-       * <code>optional bool max_button_alert = 23;</code>
+       * `optional bool max_button_alert = 23;`
        * @return Whether the maxButtonAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasMaxButtonAlert(): kotlin.Boolean {
         return _builder.hasMaxButtonAlert()
@@ -6760,16 +6626,14 @@ public object BackupKt {
           _builder.missionTargetAlert = value
         }
       /**
-       * <code>optional bool mission_target_alert = 24;</code>
-       * @return This builder for chaining.
+       * `optional bool mission_target_alert = 24;`
        */
       public fun clearMissionTargetAlert() {
         _builder.clearMissionTargetAlert()
       }
       /**
-       * <code>optional bool mission_target_alert = 24;</code>
+       * `optional bool mission_target_alert = 24;`
        * @return Whether the missionTargetAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasMissionTargetAlert(): kotlin.Boolean {
         return _builder.hasMissionTargetAlert()
@@ -6786,19 +6650,41 @@ public object BackupKt {
           _builder.colleggtiblesAlert = value
         }
       /**
-       * <code>optional bool colleggtibles_alert = 25;</code>
-       * @return This builder for chaining.
+       * `optional bool colleggtibles_alert = 25;`
        */
       public fun clearColleggtiblesAlert() {
         _builder.clearColleggtiblesAlert()
       }
       /**
-       * <code>optional bool colleggtibles_alert = 25;</code>
+       * `optional bool colleggtibles_alert = 25;`
        * @return Whether the colleggtiblesAlert field is set.
-       * @return This builder for chaining.
        */
       public fun hasColleggtiblesAlert(): kotlin.Boolean {
         return _builder.hasColleggtiblesAlert()
+      }
+
+      /**
+       * `optional bool eov_alert = 26;`
+       */
+      public var eovAlert: kotlin.Boolean
+        @kotlin.jvm.JvmName("getEovAlert")
+          get() = _builder.eovAlert
+        @kotlin.jvm.JvmName("setEovAlert")
+          set(value) {
+          _builder.eovAlert = value
+        }
+      /**
+       * `optional bool eov_alert = 26;`
+       */
+      public fun clearEovAlert() {
+        _builder.clearEovAlert()
+      }
+      /**
+       * `optional bool eov_alert = 26;`
+       * @return Whether the eovAlert field is set.
+       */
+      public fun hasEovAlert(): kotlin.Boolean {
+        return _builder.hasEovAlert()
       }
     }
   }
@@ -6835,16 +6721,14 @@ public object BackupKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -6861,16 +6745,14 @@ public object BackupKt {
           _builder.level = value
         }
       /**
-       * <code>optional uint32 level = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 level = 2;`
        */
       public fun clearLevel() {
         _builder.clearLevel()
       }
       /**
-       * <code>optional uint32 level = 2;</code>
+       * `optional uint32 level = 2;`
        * @return Whether the level field is set.
-       * @return This builder for chaining.
        */
       public fun hasLevel(): kotlin.Boolean {
         return _builder.hasLevel()
@@ -6910,16 +6792,14 @@ public object BackupKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -6936,16 +6816,14 @@ public object BackupKt {
           _builder.read = value
         }
       /**
-       * <code>optional bool read = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool read = 2;`
        */
       public fun clearRead() {
         _builder.clearRead()
       }
       /**
-       * <code>optional bool read = 2;</code>
+       * `optional bool read = 2;`
        * @return Whether the read field is set.
-       * @return This builder for chaining.
        */
       public fun hasRead(): kotlin.Boolean {
         return _builder.hasRead()
@@ -6985,16 +6863,14 @@ public object BackupKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -7011,16 +6887,14 @@ public object BackupKt {
           _builder.achieved = value
         }
       /**
-       * <code>optional bool achieved = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool achieved = 2;`
        */
       public fun clearAchieved() {
         _builder.clearAchieved()
       }
       /**
-       * <code>optional bool achieved = 2;</code>
+       * `optional bool achieved = 2;`
        * @return Whether the achieved field is set.
-       * @return This builder for chaining.
        */
       public fun hasAchieved(): kotlin.Boolean {
         return _builder.hasAchieved()
@@ -7060,16 +6934,14 @@ public object BackupKt {
           _builder.boostId = value
         }
       /**
-       * <code>optional string boost_id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string boost_id = 1;`
        */
       public fun clearBoostId() {
         _builder.clearBoostId()
       }
       /**
-       * <code>optional string boost_id = 1;</code>
+       * `optional string boost_id = 1;`
        * @return Whether the boostId field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostId(): kotlin.Boolean {
         return _builder.hasBoostId()
@@ -7086,16 +6958,14 @@ public object BackupKt {
           _builder.timeRemaining = value
         }
       /**
-       * <code>optional double time_remaining = 2;</code>
-       * @return This builder for chaining.
+       * `optional double time_remaining = 2;`
        */
       public fun clearTimeRemaining() {
         _builder.clearTimeRemaining()
       }
       /**
-       * <code>optional double time_remaining = 2;</code>
+       * `optional double time_remaining = 2;`
        * @return Whether the timeRemaining field is set.
-       * @return This builder for chaining.
        */
       public fun hasTimeRemaining(): kotlin.Boolean {
         return _builder.hasTimeRemaining()
@@ -7112,16 +6982,14 @@ public object BackupKt {
           _builder.referenceValue = value
         }
       /**
-       * <code>optional double reference_value = 3;</code>
-       * @return This builder for chaining.
+       * `optional double reference_value = 3;`
        */
       public fun clearReferenceValue() {
         _builder.clearReferenceValue()
       }
       /**
-       * <code>optional double reference_value = 3;</code>
+       * `optional double reference_value = 3;`
        * @return Whether the referenceValue field is set.
-       * @return This builder for chaining.
        */
       public fun hasReferenceValue(): kotlin.Boolean {
         return _builder.hasReferenceValue()
@@ -7161,16 +7029,14 @@ public object BackupKt {
           _builder.boostId = value
         }
       /**
-       * <code>optional string boost_id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string boost_id = 1;`
        */
       public fun clearBoostId() {
         _builder.clearBoostId()
       }
       /**
-       * <code>optional string boost_id = 1;</code>
+       * `optional string boost_id = 1;`
        * @return Whether the boostId field is set.
-       * @return This builder for chaining.
        */
       public fun hasBoostId(): kotlin.Boolean {
         return _builder.hasBoostId()
@@ -7187,16 +7053,14 @@ public object BackupKt {
           _builder.count = value
         }
       /**
-       * <code>optional uint32 count = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 count = 2;`
        */
       public fun clearCount() {
         _builder.clearCount()
       }
       /**
-       * <code>optional uint32 count = 2;</code>
+       * `optional uint32 count = 2;`
        * @return Whether the count field is set.
-       * @return This builder for chaining.
        */
       public fun hasCount(): kotlin.Boolean {
         return _builder.hasCount()
@@ -7236,16 +7100,14 @@ public object BackupKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -7262,16 +7124,14 @@ public object BackupKt {
           _builder.completed = value
         }
       /**
-       * <code>optional bool completed = 2;</code>
-       * @return This builder for chaining.
+       * `optional bool completed = 2;`
        */
       public fun clearCompleted() {
         _builder.clearCompleted()
       }
       /**
-       * <code>optional bool completed = 2;</code>
+       * `optional bool completed = 2;`
        * @return Whether the completed field is set.
-       * @return This builder for chaining.
        */
       public fun hasCompleted(): kotlin.Boolean {
         return _builder.hasCompleted()
@@ -7288,16 +7148,14 @@ public object BackupKt {
           _builder.referenceValue = value
         }
       /**
-       * <code>optional double reference_value = 3;</code>
-       * @return This builder for chaining.
+       * `optional double reference_value = 3;`
        */
       public fun clearReferenceValue() {
         _builder.clearReferenceValue()
       }
       /**
-       * <code>optional double reference_value = 3;</code>
+       * `optional double reference_value = 3;`
        * @return Whether the referenceValue field is set.
-       * @return This builder for chaining.
        */
       public fun hasReferenceValue(): kotlin.Boolean {
         return _builder.hasReferenceValue()
@@ -7334,6 +7192,13 @@ public val ei.Ei.Backup.ArtifactsOrBuilder.itemBeingInfusedOrNull: ei.Ei.Artifac
 
 public val ei.Ei.Backup.ArtifactsOrBuilder.specBeingInfusedOrNull: ei.Ei.ArtifactSpec?
   get() = if (hasSpecBeingInfused()) getSpecBeingInfused() else null
+
+@kotlin.jvm.JvmSynthetic
+public inline fun ei.Ei.Backup.Virtue.copy(block: `ei`.BackupKt.VirtueKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Virtue =
+  `ei`.BackupKt.VirtueKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val ei.Ei.Backup.VirtueOrBuilder.afxOrNull: ei.Ei.Backup.Artifacts?
+  get() = if (hasAfx()) getAfx() else null
 
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.Backup.Shells.copy(block: `ei`.BackupKt.ShellsKt.Dsl.() -> kotlin.Unit): ei.Ei.Backup.Shells =
@@ -7389,6 +7254,9 @@ public val ei.Ei.BackupOrBuilder.gameOrNull: ei.Ei.Backup.Game?
 
 public val ei.Ei.BackupOrBuilder.artifactsOrNull: ei.Ei.Backup.Artifacts?
   get() = if (hasArtifacts()) getArtifacts() else null
+
+public val ei.Ei.BackupOrBuilder.virtueOrNull: ei.Ei.Backup.Virtue?
+  get() = if (hasVirtue()) getVirtue() else null
 
 public val ei.Ei.BackupOrBuilder.shellsOrNull: ei.Ei.Backup.Shells?
   get() = if (hasShells()) getShells() else null

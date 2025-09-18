@@ -39,16 +39,14 @@ public object MissionInfoKt {
         _builder.ship = value
       }
     /**
-     * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo.Spaceship ship = 1;`
      */
     public fun clearShip() {
       _builder.clearShip()
     }
     /**
-     * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
+     * `optional .ei.MissionInfo.Spaceship ship = 1;`
      * @return Whether the ship field is set.
-     * @return This builder for chaining.
      */
     public fun hasShip(): kotlin.Boolean {
       return _builder.hasShip()
@@ -65,16 +63,14 @@ public object MissionInfoKt {
         _builder.status = value
       }
     /**
-     * <code>optional .ei.MissionInfo.Status status = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo.Status status = 2;`
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * <code>optional .ei.MissionInfo.Status status = 2;</code>
+     * `optional .ei.MissionInfo.Status status = 2;`
      * @return Whether the status field is set.
-     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -91,19 +87,65 @@ public object MissionInfoKt {
         _builder.durationType = value
       }
     /**
-     * <code>optional .ei.MissionInfo.DurationType duration_type = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo.DurationType duration_type = 3;`
      */
     public fun clearDurationType() {
       _builder.clearDurationType()
     }
     /**
-     * <code>optional .ei.MissionInfo.DurationType duration_type = 3;</code>
+     * `optional .ei.MissionInfo.DurationType duration_type = 3;`
      * @return Whether the durationType field is set.
-     * @return This builder for chaining.
      */
     public fun hasDurationType(): kotlin.Boolean {
       return _builder.hasDurationType()
+    }
+
+    /**
+     * `optional .ei.MissionInfo.MissionType type = 14;`
+     */
+    public var type: ei.Ei.MissionInfo.MissionType
+      @kotlin.jvm.JvmName("getType")
+        get() = _builder.type
+      @kotlin.jvm.JvmName("setType")
+        set(value) {
+        _builder.type = value
+      }
+    /**
+     * `optional .ei.MissionInfo.MissionType type = 14;`
+     */
+    public fun clearType() {
+      _builder.clearType()
+    }
+    /**
+     * `optional .ei.MissionInfo.MissionType type = 14;`
+     * @return Whether the type field is set.
+     */
+    public fun hasType(): kotlin.Boolean {
+      return _builder.hasType()
+    }
+
+    /**
+     * `optional uint32 reset_index = 15;`
+     */
+    public var resetIndex: kotlin.Int
+      @kotlin.jvm.JvmName("getResetIndex")
+        get() = _builder.resetIndex
+      @kotlin.jvm.JvmName("setResetIndex")
+        set(value) {
+        _builder.resetIndex = value
+      }
+    /**
+     * `optional uint32 reset_index = 15;`
+     */
+    public fun clearResetIndex() {
+      _builder.clearResetIndex()
+    }
+    /**
+     * `optional uint32 reset_index = 15;`
+     * @return Whether the resetIndex field is set.
+     */
+    public fun hasResetIndex(): kotlin.Boolean {
+      return _builder.hasResetIndex()
     }
 
     /**
@@ -121,9 +163,8 @@ public object MissionInfoKt {
         _builder.fuelList
       )
     /**
-     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
+     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
      * @param value The fuel to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addFuel")
@@ -131,9 +172,8 @@ public object MissionInfoKt {
       _builder.addFuel(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
+     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
      * @param value The fuel to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignFuel")
@@ -142,9 +182,8 @@ public object MissionInfoKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
+     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
      * @param values The fuel to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllFuel")
@@ -152,9 +191,8 @@ public object MissionInfoKt {
       _builder.addAllFuel(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
+     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
      * @param values The fuel to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllFuel")
@@ -163,10 +201,9 @@ public object MissionInfoKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
+     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
      * @param index The index to set the value at.
      * @param value The fuel to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setFuel")
@@ -174,8 +211,7 @@ public object MissionInfoKt {
       _builder.setFuel(index, value)
     }
     /**
-     * <code>repeated .ei.MissionInfo.Fuel fuel = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.MissionInfo.Fuel fuel = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearFuel")
@@ -194,16 +230,14 @@ public object MissionInfoKt {
         _builder.level = value
       }
     /**
-     * <code>optional uint32 level = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint32 level = 12;`
      */
     public fun clearLevel() {
       _builder.clearLevel()
     }
     /**
-     * <code>optional uint32 level = 12;</code>
+     * `optional uint32 level = 12;`
      * @return Whether the level field is set.
-     * @return This builder for chaining.
      */
     public fun hasLevel(): kotlin.Boolean {
       return _builder.hasLevel()
@@ -220,16 +254,14 @@ public object MissionInfoKt {
         _builder.durationSeconds = value
       }
     /**
-     * <code>optional double duration_seconds = 5;</code>
-     * @return This builder for chaining.
+     * `optional double duration_seconds = 5;`
      */
     public fun clearDurationSeconds() {
       _builder.clearDurationSeconds()
     }
     /**
-     * <code>optional double duration_seconds = 5;</code>
+     * `optional double duration_seconds = 5;`
      * @return Whether the durationSeconds field is set.
-     * @return This builder for chaining.
      */
     public fun hasDurationSeconds(): kotlin.Boolean {
       return _builder.hasDurationSeconds()
@@ -246,16 +278,14 @@ public object MissionInfoKt {
         _builder.capacity = value
       }
     /**
-     * <code>optional uint32 capacity = 9;</code>
-     * @return This builder for chaining.
+     * `optional uint32 capacity = 9;`
      */
     public fun clearCapacity() {
       _builder.clearCapacity()
     }
     /**
-     * <code>optional uint32 capacity = 9;</code>
+     * `optional uint32 capacity = 9;`
      * @return Whether the capacity field is set.
-     * @return This builder for chaining.
      */
     public fun hasCapacity(): kotlin.Boolean {
       return _builder.hasCapacity()
@@ -272,16 +302,14 @@ public object MissionInfoKt {
         _builder.qualityBump = value
       }
     /**
-     * <code>optional double quality_bump = 11;</code>
-     * @return This builder for chaining.
+     * `optional double quality_bump = 11;`
      */
     public fun clearQualityBump() {
       _builder.clearQualityBump()
     }
     /**
-     * <code>optional double quality_bump = 11;</code>
+     * `optional double quality_bump = 11;`
      * @return Whether the qualityBump field is set.
-     * @return This builder for chaining.
      */
     public fun hasQualityBump(): kotlin.Boolean {
       return _builder.hasQualityBump()
@@ -298,16 +326,14 @@ public object MissionInfoKt {
         _builder.targetArtifact = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec.Name target_artifact = 13;`
      */
     public fun clearTargetArtifact() {
       _builder.clearTargetArtifact()
     }
     /**
-     * <code>optional .ei.ArtifactSpec.Name target_artifact = 13;</code>
+     * `optional .ei.ArtifactSpec.Name target_artifact = 13;`
      * @return Whether the targetArtifact field is set.
-     * @return This builder for chaining.
      */
     public fun hasTargetArtifact(): kotlin.Boolean {
       return _builder.hasTargetArtifact()
@@ -324,16 +350,14 @@ public object MissionInfoKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 6;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 6;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 6;</code>
+     * `optional double seconds_remaining = 6;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -350,16 +374,14 @@ public object MissionInfoKt {
         _builder.startTimeDerived = value
       }
     /**
-     * <code>optional double start_time_derived = 8;</code>
-     * @return This builder for chaining.
+     * `optional double start_time_derived = 8;`
      */
     public fun clearStartTimeDerived() {
       _builder.clearStartTimeDerived()
     }
     /**
-     * <code>optional double start_time_derived = 8;</code>
+     * `optional double start_time_derived = 8;`
      * @return Whether the startTimeDerived field is set.
-     * @return This builder for chaining.
      */
     public fun hasStartTimeDerived(): kotlin.Boolean {
       return _builder.hasStartTimeDerived()
@@ -376,16 +398,14 @@ public object MissionInfoKt {
         _builder.missionLog = value
       }
     /**
-     * <code>optional string mission_log = 10;</code>
-     * @return This builder for chaining.
+     * `optional string mission_log = 10;`
      */
     public fun clearMissionLog() {
       _builder.clearMissionLog()
     }
     /**
-     * <code>optional string mission_log = 10;</code>
+     * `optional string mission_log = 10;`
      * @return Whether the missionLog field is set.
-     * @return This builder for chaining.
      */
     public fun hasMissionLog(): kotlin.Boolean {
       return _builder.hasMissionLog()
@@ -402,16 +422,14 @@ public object MissionInfoKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 7;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 7;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 7;</code>
+     * `optional string identifier = 7;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -450,16 +468,14 @@ public object MissionInfoKt {
           _builder.egg = value
         }
       /**
-       * <code>optional .ei.Egg egg = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Egg egg = 1;`
        */
       public fun clearEgg() {
         _builder.clearEgg()
       }
       /**
-       * <code>optional .ei.Egg egg = 1;</code>
+       * `optional .ei.Egg egg = 1;`
        * @return Whether the egg field is set.
-       * @return This builder for chaining.
        */
       public fun hasEgg(): kotlin.Boolean {
         return _builder.hasEgg()
@@ -476,16 +492,14 @@ public object MissionInfoKt {
           _builder.amount = value
         }
       /**
-       * <code>optional double amount = 2;</code>
-       * @return This builder for chaining.
+       * `optional double amount = 2;`
        */
       public fun clearAmount() {
         _builder.clearAmount()
       }
       /**
-       * <code>optional double amount = 2;</code>
+       * `optional double amount = 2;`
        * @return Whether the amount field is set.
-       * @return This builder for chaining.
        */
       public fun hasAmount(): kotlin.Boolean {
         return _builder.hasAmount()

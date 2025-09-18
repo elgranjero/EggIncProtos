@@ -39,16 +39,14 @@ public object ArtifactSpecKt {
         _builder.name = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec.Name name = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec.Name name = 1;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional .ei.ArtifactSpec.Name name = 1;</code>
+     * `optional .ei.ArtifactSpec.Name name = 1;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -65,16 +63,14 @@ public object ArtifactSpecKt {
         _builder.level = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec.Level level = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec.Level level = 2;`
      */
     public fun clearLevel() {
       _builder.clearLevel()
     }
     /**
-     * <code>optional .ei.ArtifactSpec.Level level = 2;</code>
+     * `optional .ei.ArtifactSpec.Level level = 2;`
      * @return Whether the level field is set.
-     * @return This builder for chaining.
      */
     public fun hasLevel(): kotlin.Boolean {
       return _builder.hasLevel()
@@ -91,16 +87,14 @@ public object ArtifactSpecKt {
         _builder.rarity = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec.Rarity rarity = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec.Rarity rarity = 3;`
      */
     public fun clearRarity() {
       _builder.clearRarity()
     }
     /**
-     * <code>optional .ei.ArtifactSpec.Rarity rarity = 3;</code>
+     * `optional .ei.ArtifactSpec.Rarity rarity = 3;`
      * @return Whether the rarity field is set.
-     * @return This builder for chaining.
      */
     public fun hasRarity(): kotlin.Boolean {
       return _builder.hasRarity()
@@ -117,16 +111,14 @@ public object ArtifactSpecKt {
         _builder.egg = value
       }
     /**
-     * <code>optional .ei.Egg egg = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Egg egg = 4;`
      */
     public fun clearEgg() {
       _builder.clearEgg()
     }
     /**
-     * <code>optional .ei.Egg egg = 4;</code>
+     * `optional .ei.Egg egg = 4;`
      * @return Whether the egg field is set.
-     * @return This builder for chaining.
      */
     public fun hasEgg(): kotlin.Boolean {
       return _builder.hasEgg()

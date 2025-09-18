@@ -39,16 +39,14 @@ public object CollectSeasonArtifactRewardsRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object CollectSeasonArtifactRewardsRequestKt {
         _builder.seasonIdentifier = value
       }
     /**
-     * <code>optional string season_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string season_identifier = 2;`
      */
     public fun clearSeasonIdentifier() {
       _builder.clearSeasonIdentifier()
     }
     /**
-     * <code>optional string season_identifier = 2;</code>
+     * `optional string season_identifier = 2;`
      * @return Whether the seasonIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasSeasonIdentifier(): kotlin.Boolean {
       return _builder.hasSeasonIdentifier()
@@ -94,16 +90,14 @@ public object CollectSeasonArtifactRewardsRequestKt {
         _builder.cxp = value
       }
     /**
-     * <code>optional double cxp = 3;</code>
-     * @return This builder for chaining.
+     * `optional double cxp = 3;`
      */
     public fun clearCxp() {
       _builder.clearCxp()
     }
     /**
-     * <code>optional double cxp = 3;</code>
+     * `optional double cxp = 3;`
      * @return Whether the cxp field is set.
-     * @return This builder for chaining.
      */
     public fun hasCxp(): kotlin.Boolean {
       return _builder.hasCxp()
@@ -120,16 +114,14 @@ public object CollectSeasonArtifactRewardsRequestKt {
         _builder.bestShip = value
       }
     /**
-     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
      */
     public fun clearBestShip() {
       _builder.clearBestShip()
     }
     /**
-     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
+     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
      * @return Whether the bestShip field is set.
-     * @return This builder for chaining.
      */
     public fun hasBestShip(): kotlin.Boolean {
       return _builder.hasBestShip()

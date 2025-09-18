@@ -39,16 +39,14 @@ public object CreateCoopResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object CreateCoopResponseKt {
         _builder.message = value
       }
     /**
-     * <code>optional string message = 2;</code>
-     * @return This builder for chaining.
+     * `optional string message = 2;`
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * <code>optional string message = 2;</code>
+     * `optional string message = 2;`
      * @return Whether the message field is set.
-     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()

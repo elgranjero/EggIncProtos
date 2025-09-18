@@ -39,16 +39,14 @@ public object ContractCoopStatusUpdateResponseKt {
         _builder.finalized = value
       }
     /**
-     * <code>optional bool finalized = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool finalized = 1;`
      */
     public fun clearFinalized() {
       _builder.clearFinalized()
     }
     /**
-     * <code>optional bool finalized = 1;</code>
+     * `optional bool finalized = 1;`
      * @return Whether the finalized field is set.
-     * @return This builder for chaining.
      */
     public fun hasFinalized(): kotlin.Boolean {
       return _builder.hasFinalized()
@@ -65,16 +63,14 @@ public object ContractCoopStatusUpdateResponseKt {
         _builder.exists = value
       }
     /**
-     * <code>optional bool exists = 2;</code>
-     * @return This builder for chaining.
+     * `optional bool exists = 2;`
      */
     public fun clearExists() {
       _builder.clearExists()
     }
     /**
-     * <code>optional bool exists = 2;</code>
+     * `optional bool exists = 2;`
      * @return Whether the exists field is set.
-     * @return This builder for chaining.
      */
     public fun hasExists(): kotlin.Boolean {
       return _builder.hasExists()
@@ -91,16 +87,14 @@ public object ContractCoopStatusUpdateResponseKt {
         _builder.status = value
       }
     /**
-     * <code>optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;`
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * <code>optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;</code>
+     * `optional .ei.ContractCoopStatusResponse.MemberStatus status = 3;`
      * @return Whether the status field is set.
-     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()

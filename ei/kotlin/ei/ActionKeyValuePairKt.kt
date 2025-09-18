@@ -39,16 +39,14 @@ public object ActionKeyValuePairKt {
         _builder.key = value
       }
     /**
-     * <code>required string key = 1;</code>
-     * @return This builder for chaining.
+     * `required string key = 1;`
      */
     public fun clearKey() {
       _builder.clearKey()
     }
     /**
-     * <code>required string key = 1;</code>
+     * `required string key = 1;`
      * @return Whether the key field is set.
-     * @return This builder for chaining.
      */
     public fun hasKey(): kotlin.Boolean {
       return _builder.hasKey()
@@ -65,16 +63,14 @@ public object ActionKeyValuePairKt {
         _builder.value = value
       }
     /**
-     * <code>required string value = 2;</code>
-     * @return This builder for chaining.
+     * `required string value = 2;`
      */
     public fun clearValue() {
       _builder.clearValue()
     }
     /**
-     * <code>required string value = 2;</code>
+     * `required string value = 2;`
      * @return Whether the value field is set.
-     * @return This builder for chaining.
      */
     public fun hasValue(): kotlin.Boolean {
       return _builder.hasValue()

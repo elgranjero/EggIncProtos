@@ -39,16 +39,14 @@ public object IdleSessionSummaryKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 11;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 11;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 11;</code>
+     * `optional bool success = 11;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object IdleSessionSummaryKt {
         _builder.timeAway = value
       }
     /**
-     * <code>optional double time_away = 1;</code>
-     * @return This builder for chaining.
+     * `optional double time_away = 1;`
      */
     public fun clearTimeAway() {
       _builder.clearTimeAway()
     }
     /**
-     * <code>optional double time_away = 1;</code>
+     * `optional double time_away = 1;`
      * @return Whether the timeAway field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimeAway(): kotlin.Boolean {
       return _builder.hasTimeAway()
@@ -91,16 +87,14 @@ public object IdleSessionSummaryKt {
         _builder.timeSimulated = value
       }
     /**
-     * <code>optional double time_simulated = 2;</code>
-     * @return This builder for chaining.
+     * `optional double time_simulated = 2;`
      */
     public fun clearTimeSimulated() {
       _builder.clearTimeSimulated()
     }
     /**
-     * <code>optional double time_simulated = 2;</code>
+     * `optional double time_simulated = 2;`
      * @return Whether the timeSimulated field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimeSimulated(): kotlin.Boolean {
       return _builder.hasTimeSimulated()
@@ -117,16 +111,14 @@ public object IdleSessionSummaryKt {
         _builder.silosOwned = value
       }
     /**
-     * <code>optional uint32 silos_owned = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint32 silos_owned = 3;`
      */
     public fun clearSilosOwned() {
       _builder.clearSilosOwned()
     }
     /**
-     * <code>optional uint32 silos_owned = 3;</code>
+     * `optional uint32 silos_owned = 3;`
      * @return Whether the silosOwned field is set.
-     * @return This builder for chaining.
      */
     public fun hasSilosOwned(): kotlin.Boolean {
       return _builder.hasSilosOwned()
@@ -143,16 +135,14 @@ public object IdleSessionSummaryKt {
         _builder.averageElr = value
       }
     /**
-     * <code>optional double average_elr = 4;</code>
-     * @return This builder for chaining.
+     * `optional double average_elr = 4;`
      */
     public fun clearAverageElr() {
       _builder.clearAverageElr()
     }
     /**
-     * <code>optional double average_elr = 4;</code>
+     * `optional double average_elr = 4;`
      * @return Whether the averageElr field is set.
-     * @return This builder for chaining.
      */
     public fun hasAverageElr(): kotlin.Boolean {
       return _builder.hasAverageElr()
@@ -169,16 +159,14 @@ public object IdleSessionSummaryKt {
         _builder.averageMsr = value
       }
     /**
-     * <code>optional double average_msr = 5;</code>
-     * @return This builder for chaining.
+     * `optional double average_msr = 5;`
      */
     public fun clearAverageMsr() {
       _builder.clearAverageMsr()
     }
     /**
-     * <code>optional double average_msr = 5;</code>
+     * `optional double average_msr = 5;`
      * @return Whether the averageMsr field is set.
-     * @return This builder for chaining.
      */
     public fun hasAverageMsr(): kotlin.Boolean {
       return _builder.hasAverageMsr()
@@ -195,16 +183,14 @@ public object IdleSessionSummaryKt {
         _builder.averageEggDeliveryRate = value
       }
     /**
-     * <code>optional double average_egg_delivery_rate = 6;</code>
-     * @return This builder for chaining.
+     * `optional double average_egg_delivery_rate = 6;`
      */
     public fun clearAverageEggDeliveryRate() {
       _builder.clearAverageEggDeliveryRate()
     }
     /**
-     * <code>optional double average_egg_delivery_rate = 6;</code>
+     * `optional double average_egg_delivery_rate = 6;`
      * @return Whether the averageEggDeliveryRate field is set.
-     * @return This builder for chaining.
      */
     public fun hasAverageEggDeliveryRate(): kotlin.Boolean {
       return _builder.hasAverageEggDeliveryRate()
@@ -221,16 +207,14 @@ public object IdleSessionSummaryKt {
         _builder.lastEggDeliveryRate = value
       }
     /**
-     * <code>optional double last_egg_delivery_rate = 8;</code>
-     * @return This builder for chaining.
+     * `optional double last_egg_delivery_rate = 8;`
      */
     public fun clearLastEggDeliveryRate() {
       _builder.clearLastEggDeliveryRate()
     }
     /**
-     * <code>optional double last_egg_delivery_rate = 8;</code>
+     * `optional double last_egg_delivery_rate = 8;`
      * @return Whether the lastEggDeliveryRate field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastEggDeliveryRate(): kotlin.Boolean {
       return _builder.hasLastEggDeliveryRate()
@@ -247,16 +231,14 @@ public object IdleSessionSummaryKt {
         _builder.eggsDelivered = value
       }
     /**
-     * <code>optional double eggs_delivered = 9;</code>
-     * @return This builder for chaining.
+     * `optional double eggs_delivered = 9;`
      */
     public fun clearEggsDelivered() {
       _builder.clearEggsDelivered()
     }
     /**
-     * <code>optional double eggs_delivered = 9;</code>
+     * `optional double eggs_delivered = 9;`
      * @return Whether the eggsDelivered field is set.
-     * @return This builder for chaining.
      */
     public fun hasEggsDelivered(): kotlin.Boolean {
       return _builder.hasEggsDelivered()
@@ -277,9 +259,8 @@ public object IdleSessionSummaryKt {
         _builder.statsList
       )
     /**
-     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
      * @param value The stats to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addStats")
@@ -287,9 +268,8 @@ public object IdleSessionSummaryKt {
       _builder.addStats(value)
     }
     /**
-     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
      * @param value The stats to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignStats")
@@ -298,9 +278,8 @@ public object IdleSessionSummaryKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
      * @param values The stats to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllStats")
@@ -308,9 +287,8 @@ public object IdleSessionSummaryKt {
       _builder.addAllStats(values)
     }
     /**
-     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
      * @param values The stats to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllStats")
@@ -319,10 +297,9 @@ public object IdleSessionSummaryKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
      * @param index The index to set the value at.
      * @param value The stats to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setStats")
@@ -330,8 +307,7 @@ public object IdleSessionSummaryKt {
       _builder.setStats(index, value)
     }
     /**
-     * <code>repeated .ei.IdleSessionSummary.Stat stats = 10;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.IdleSessionSummary.Stat stats = 10;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearStats")
@@ -350,16 +326,14 @@ public object IdleSessionSummaryKt {
         _builder.farmIndex = value
       }
     /**
-     * <code>optional uint32 farm_index = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 farm_index = 7;`
      */
     public fun clearFarmIndex() {
       _builder.clearFarmIndex()
     }
     /**
-     * <code>optional uint32 farm_index = 7;</code>
+     * `optional uint32 farm_index = 7;`
      * @return Whether the farmIndex field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmIndex(): kotlin.Boolean {
       return _builder.hasFarmIndex()
@@ -398,16 +372,14 @@ public object IdleSessionSummaryKt {
           _builder.name = value
         }
       /**
-       * <code>optional string name = 1;</code>
-       * @return This builder for chaining.
+       * `optional string name = 1;`
        */
       public fun clearName() {
         _builder.clearName()
       }
       /**
-       * <code>optional string name = 1;</code>
+       * `optional string name = 1;`
        * @return Whether the name field is set.
-       * @return This builder for chaining.
        */
       public fun hasName(): kotlin.Boolean {
         return _builder.hasName()
@@ -424,16 +396,14 @@ public object IdleSessionSummaryKt {
           _builder.min = value
         }
       /**
-       * <code>optional double min = 2;</code>
-       * @return This builder for chaining.
+       * `optional double min = 2;`
        */
       public fun clearMin() {
         _builder.clearMin()
       }
       /**
-       * <code>optional double min = 2;</code>
+       * `optional double min = 2;`
        * @return Whether the min field is set.
-       * @return This builder for chaining.
        */
       public fun hasMin(): kotlin.Boolean {
         return _builder.hasMin()
@@ -450,16 +420,14 @@ public object IdleSessionSummaryKt {
           _builder.max = value
         }
       /**
-       * <code>optional double max = 3;</code>
-       * @return This builder for chaining.
+       * `optional double max = 3;`
        */
       public fun clearMax() {
         _builder.clearMax()
       }
       /**
-       * <code>optional double max = 3;</code>
+       * `optional double max = 3;`
        * @return Whether the max field is set.
-       * @return This builder for chaining.
        */
       public fun hasMax(): kotlin.Boolean {
         return _builder.hasMax()
@@ -476,16 +444,14 @@ public object IdleSessionSummaryKt {
           _builder.avg = value
         }
       /**
-       * <code>optional double avg = 4;</code>
-       * @return This builder for chaining.
+       * `optional double avg = 4;`
        */
       public fun clearAvg() {
         _builder.clearAvg()
       }
       /**
-       * <code>optional double avg = 4;</code>
+       * `optional double avg = 4;`
        * @return Whether the avg field is set.
-       * @return This builder for chaining.
        */
       public fun hasAvg(): kotlin.Boolean {
         return _builder.hasAvg()
@@ -502,16 +468,14 @@ public object IdleSessionSummaryKt {
           _builder.totalTime = value
         }
       /**
-       * <code>optional double total_time = 5;</code>
-       * @return This builder for chaining.
+       * `optional double total_time = 5;`
        */
       public fun clearTotalTime() {
         _builder.clearTotalTime()
       }
       /**
-       * <code>optional double total_time = 5;</code>
+       * `optional double total_time = 5;`
        * @return Whether the totalTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasTotalTime(): kotlin.Boolean {
         return _builder.hasTotalTime()

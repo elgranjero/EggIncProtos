@@ -39,16 +39,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.id = value
       }
     /**
-     * <code>optional string id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string id = 1;`
      */
     public fun clearId() {
       _builder.clearId()
     }
     /**
-     * <code>optional string id = 1;</code>
+     * `optional string id = 1;`
      * @return Whether the id field is set.
-     * @return This builder for chaining.
      */
     public fun hasId(): kotlin.Boolean {
       return _builder.hasId()
@@ -65,16 +63,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.localId = value
       }
     /**
-     * <code>optional string local_id = 12;</code>
-     * @return This builder for chaining.
+     * `optional string local_id = 12;`
      */
     public fun clearLocalId() {
       _builder.clearLocalId()
     }
     /**
-     * <code>optional string local_id = 12;</code>
+     * `optional string local_id = 12;`
      * @return Whether the localId field is set.
-     * @return This builder for chaining.
      */
     public fun hasLocalId(): kotlin.Boolean {
       return _builder.hasLocalId()
@@ -91,16 +87,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string name = 2;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 2;</code>
+     * `optional string name = 2;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -117,16 +111,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.description = value
       }
     /**
-     * <code>optional string description = 3;</code>
-     * @return This builder for chaining.
+     * `optional string description = 3;`
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * <code>optional string description = 3;</code>
+     * `optional string description = 3;`
      * @return Whether the description field is set.
-     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()
@@ -143,16 +135,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.isNew = value
       }
     /**
-     * <code>optional bool is_new = 15;</code>
-     * @return This builder for chaining.
+     * `optional bool is_new = 15;`
      */
     public fun clearIsNew() {
       _builder.clearIsNew()
     }
     /**
-     * <code>optional bool is_new = 15;</code>
+     * `optional bool is_new = 15;`
      * @return Whether the isNew field is set.
-     * @return This builder for chaining.
      */
     public fun hasIsNew(): kotlin.Boolean {
       return _builder.hasIsNew()
@@ -169,16 +159,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.creatorName = value
       }
     /**
-     * <code>optional string creator_name = 14;</code>
-     * @return This builder for chaining.
+     * `optional string creator_name = 14;`
      */
     public fun clearCreatorName() {
       _builder.clearCreatorName()
     }
     /**
-     * <code>optional string creator_name = 14;</code>
+     * `optional string creator_name = 14;`
      * @return Whether the creatorName field is set.
-     * @return This builder for chaining.
      */
     public fun hasCreatorName(): kotlin.Boolean {
       return _builder.hasCreatorName()
@@ -195,16 +183,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.status = value
       }
     /**
-     * <code>optional .ei.ShellShowcaseListingInfo.Status status = 11;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellShowcaseListingInfo.Status status = 11;`
      */
     public fun clearStatus() {
       _builder.clearStatus()
     }
     /**
-     * <code>optional .ei.ShellShowcaseListingInfo.Status status = 11;</code>
+     * `optional .ei.ShellShowcaseListingInfo.Status status = 11;`
      * @return Whether the status field is set.
-     * @return This builder for chaining.
      */
     public fun hasStatus(): kotlin.Boolean {
       return _builder.hasStatus()
@@ -221,16 +207,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.farmConfig = value
       }
     /**
-     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellDB.FarmConfiguration farm_config = 4;`
      */
     public fun clearFarmConfig() {
       _builder.clearFarmConfig()
     }
     /**
-     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 4;</code>
+     * `optional .ei.ShellDB.FarmConfiguration farm_config = 4;`
      * @return Whether the farmConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmConfig(): kotlin.Boolean {
       return _builder.hasFarmConfig()
@@ -250,16 +234,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.sales = value
       }
     /**
-     * <code>optional uint32 sales = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 sales = 5;`
      */
     public fun clearSales() {
       _builder.clearSales()
     }
     /**
-     * <code>optional uint32 sales = 5;</code>
+     * `optional uint32 sales = 5;`
      * @return Whether the sales field is set.
-     * @return This builder for chaining.
      */
     public fun hasSales(): kotlin.Boolean {
       return _builder.hasSales()
@@ -276,16 +258,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.gross = value
       }
     /**
-     * <code>optional uint64 gross = 6;</code>
-     * @return This builder for chaining.
+     * `optional uint64 gross = 6;`
      */
     public fun clearGross() {
       _builder.clearGross()
     }
     /**
-     * <code>optional uint64 gross = 6;</code>
+     * `optional uint64 gross = 6;`
      * @return Whether the gross field is set.
-     * @return This builder for chaining.
      */
     public fun hasGross(): kotlin.Boolean {
       return _builder.hasGross()
@@ -302,16 +282,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.views = value
       }
     /**
-     * <code>optional uint64 views = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint64 views = 7;`
      */
     public fun clearViews() {
       _builder.clearViews()
     }
     /**
-     * <code>optional uint64 views = 7;</code>
+     * `optional uint64 views = 7;`
      * @return Whether the views field is set.
-     * @return This builder for chaining.
      */
     public fun hasViews(): kotlin.Boolean {
       return _builder.hasViews()
@@ -328,16 +306,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.equips = value
       }
     /**
-     * <code>optional uint64 equips = 13;</code>
-     * @return This builder for chaining.
+     * `optional uint64 equips = 13;`
      */
     public fun clearEquips() {
       _builder.clearEquips()
     }
     /**
-     * <code>optional uint64 equips = 13;</code>
+     * `optional uint64 equips = 13;`
      * @return Whether the equips field is set.
-     * @return This builder for chaining.
      */
     public fun hasEquips(): kotlin.Boolean {
       return _builder.hasEquips()
@@ -354,16 +330,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.likes = value
       }
     /**
-     * <code>optional uint32 likes = 8;</code>
-     * @return This builder for chaining.
+     * `optional uint32 likes = 8;`
      */
     public fun clearLikes() {
       _builder.clearLikes()
     }
     /**
-     * <code>optional uint32 likes = 8;</code>
+     * `optional uint32 likes = 8;`
      * @return Whether the likes field is set.
-     * @return This builder for chaining.
      */
     public fun hasLikes(): kotlin.Boolean {
       return _builder.hasLikes()
@@ -380,16 +354,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.dislikes = value
       }
     /**
-     * <code>optional uint32 dislikes = 9;</code>
-     * @return This builder for chaining.
+     * `optional uint32 dislikes = 9;`
      */
     public fun clearDislikes() {
       _builder.clearDislikes()
     }
     /**
-     * <code>optional uint32 dislikes = 9;</code>
+     * `optional uint32 dislikes = 9;`
      * @return Whether the dislikes field is set.
-     * @return This builder for chaining.
      */
     public fun hasDislikes(): kotlin.Boolean {
       return _builder.hasDislikes()
@@ -406,16 +378,14 @@ public object ShellShowcaseListingInfoKt {
         _builder.shareUrl = value
       }
     /**
-     * <code>optional string share_url = 10;</code>
-     * @return This builder for chaining.
+     * `optional string share_url = 10;`
      */
     public fun clearShareUrl() {
       _builder.clearShareUrl()
     }
     /**
-     * <code>optional string share_url = 10;</code>
+     * `optional string share_url = 10;`
      * @return Whether the shareUrl field is set.
-     * @return This builder for chaining.
      */
     public fun hasShareUrl(): kotlin.Boolean {
       return _builder.hasShareUrl()

@@ -39,16 +39,14 @@ public object MissionRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object MissionRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 1;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 1;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 1;</code>
+     * `optional uint32 client_version = 1;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -94,16 +90,14 @@ public object MissionRequestKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 3;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 3;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 3;</code>
+     * `optional string ei_user_id = 3;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -120,16 +114,14 @@ public object MissionRequestKt {
         _builder.info = value
       }
     /**
-     * <code>optional .ei.MissionInfo info = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo info = 2;`
      */
     public fun clearInfo() {
       _builder.clearInfo()
     }
     /**
-     * <code>optional .ei.MissionInfo info = 2;</code>
+     * `optional .ei.MissionInfo info = 2;`
      * @return Whether the info field is set.
-     * @return This builder for chaining.
      */
     public fun hasInfo(): kotlin.Boolean {
       return _builder.hasInfo()
@@ -149,16 +141,14 @@ public object MissionRequestKt {
         _builder.clientInfo = value
       }
     /**
-     * <code>optional .ei.ArtifactsClientInfo client_info = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactsClientInfo client_info = 5;`
      */
     public fun clearClientInfo() {
       _builder.clearClientInfo()
     }
     /**
-     * <code>optional .ei.ArtifactsClientInfo client_info = 5;</code>
+     * `optional .ei.ArtifactsClientInfo client_info = 5;`
      * @return Whether the clientInfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientInfo(): kotlin.Boolean {
       return _builder.hasClientInfo()

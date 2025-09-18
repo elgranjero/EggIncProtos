@@ -39,16 +39,14 @@ public object ArtifactsConfigurationRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 2;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 2;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ArtifactsConfigurationRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 1;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 1;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 1;</code>
+     * `optional uint32 client_version = 1;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

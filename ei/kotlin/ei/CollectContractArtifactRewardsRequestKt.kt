@@ -39,16 +39,14 @@ public object CollectContractArtifactRewardsRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object CollectContractArtifactRewardsRequestKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 2;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 2;</code>
+     * `optional string contract_identifier = 2;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -94,16 +90,14 @@ public object CollectContractArtifactRewardsRequestKt {
         _builder.league = value
       }
     /**
-     * <code>optional uint32 league = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 league = 5;`
      */
     public fun clearLeague() {
       _builder.clearLeague()
     }
     /**
-     * <code>optional uint32 league = 5;</code>
+     * `optional uint32 league = 5;`
      * @return Whether the league field is set.
-     * @return This builder for chaining.
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
@@ -120,16 +114,14 @@ public object CollectContractArtifactRewardsRequestKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 6;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 6;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -146,16 +138,14 @@ public object CollectContractArtifactRewardsRequestKt {
         _builder.goalIndex = value
       }
     /**
-     * <code>optional uint32 goal_index = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint32 goal_index = 3;`
      */
     public fun clearGoalIndex() {
       _builder.clearGoalIndex()
     }
     /**
-     * <code>optional uint32 goal_index = 3;</code>
+     * `optional uint32 goal_index = 3;`
      * @return Whether the goalIndex field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoalIndex(): kotlin.Boolean {
       return _builder.hasGoalIndex()
@@ -172,16 +162,14 @@ public object CollectContractArtifactRewardsRequestKt {
         _builder.bestShip = value
       }
     /**
-     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
      */
     public fun clearBestShip() {
       _builder.clearBestShip()
     }
     /**
-     * <code>optional .ei.MissionInfo.Spaceship best_ship = 4;</code>
+     * `optional .ei.MissionInfo.Spaceship best_ship = 4;`
      * @return Whether the bestShip field is set.
-     * @return This builder for chaining.
      */
     public fun hasBestShip(): kotlin.Boolean {
       return _builder.hasBestShip()

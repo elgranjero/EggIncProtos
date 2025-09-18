@@ -39,16 +39,14 @@ public object QueryCoopRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 5;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 5;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 5;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object QueryCoopRequestKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 1;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 1;</code>
+     * `optional string contract_identifier = 1;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -94,16 +90,14 @@ public object QueryCoopRequestKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 2;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 2;</code>
+     * `optional string coop_identifier = 2;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -120,16 +114,14 @@ public object QueryCoopRequestKt {
         _builder.league = value
       }
     /**
-     * <code>optional uint32 league = 4;</code>
-     * @return This builder for chaining.
+     * `optional uint32 league = 4;`
      */
     public fun clearLeague() {
       _builder.clearLeague()
     }
     /**
-     * <code>optional uint32 league = 4;</code>
+     * `optional uint32 league = 4;`
      * @return Whether the league field is set.
-     * @return This builder for chaining.
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
@@ -146,16 +138,14 @@ public object QueryCoopRequestKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 6;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 6;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 6;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -172,16 +162,14 @@ public object QueryCoopRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 3;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 3;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 3;</code>
+     * `optional uint32 client_version = 3;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

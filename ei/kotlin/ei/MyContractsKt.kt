@@ -35,9 +35,8 @@ public object MyContractsKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ContractIdsSeenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string contract_ids_seen = 3;</code>
+     * `repeated string contract_ids_seen = 3;`
      * @return A list containing the contractIdsSeen.
-     * @return This builder for chaining.
      */
     public val contractIdsSeen: com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -45,9 +44,8 @@ public object MyContractsKt {
         _builder.contractIdsSeenList
       )
     /**
-     * <code>repeated string contract_ids_seen = 3;</code>
+     * `repeated string contract_ids_seen = 3;`
      * @param value The contractIdsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addContractIdsSeen")
@@ -55,9 +53,8 @@ public object MyContractsKt {
       _builder.addContractIdsSeen(value)
     }
     /**
-     * <code>repeated string contract_ids_seen = 3;</code>
+     * `repeated string contract_ids_seen = 3;`
      * @param value The contractIdsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignContractIdsSeen")
@@ -66,9 +63,8 @@ public object MyContractsKt {
       add(value)
     }
     /**
-     * <code>repeated string contract_ids_seen = 3;</code>
+     * `repeated string contract_ids_seen = 3;`
      * @param values The contractIdsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllContractIdsSeen")
@@ -76,9 +72,8 @@ public object MyContractsKt {
       _builder.addAllContractIdsSeen(values)
     }
     /**
-     * <code>repeated string contract_ids_seen = 3;</code>
+     * `repeated string contract_ids_seen = 3;`
      * @param values The contractIdsSeen to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllContractIdsSeen")
@@ -87,18 +82,16 @@ public object MyContractsKt {
       addAll(values)
     }
     /**
-     * <code>repeated string contract_ids_seen = 3;</code>
+     * `repeated string contract_ids_seen = 3;`
      * @param index The index to set the value at.
      * @param value The contractIdsSeen to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setContractIdsSeen")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ContractIdsSeenProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setContractIdsSeen(index, value)
     }/**
-     * <code>repeated string contract_ids_seen = 3;</code>
-     * @return This builder for chaining.
+     * `repeated string contract_ids_seen = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setContractIdsSeen")
@@ -120,9 +113,8 @@ public object MyContractsKt {
         _builder.contractsList
       )
     /**
-     * <code>repeated .ei.LocalContract contracts = 1;</code>
+     * `repeated .ei.LocalContract contracts = 1;`
      * @param value The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addContracts")
@@ -130,9 +122,8 @@ public object MyContractsKt {
       _builder.addContracts(value)
     }
     /**
-     * <code>repeated .ei.LocalContract contracts = 1;</code>
+     * `repeated .ei.LocalContract contracts = 1;`
      * @param value The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignContracts")
@@ -141,9 +132,8 @@ public object MyContractsKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.LocalContract contracts = 1;</code>
+     * `repeated .ei.LocalContract contracts = 1;`
      * @param values The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllContracts")
@@ -151,9 +141,8 @@ public object MyContractsKt {
       _builder.addAllContracts(values)
     }
     /**
-     * <code>repeated .ei.LocalContract contracts = 1;</code>
+     * `repeated .ei.LocalContract contracts = 1;`
      * @param values The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllContracts")
@@ -162,10 +151,9 @@ public object MyContractsKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.LocalContract contracts = 1;</code>
+     * `repeated .ei.LocalContract contracts = 1;`
      * @param index The index to set the value at.
      * @param value The contracts to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setContracts")
@@ -173,8 +161,7 @@ public object MyContractsKt {
       _builder.setContracts(index, value)
     }
     /**
-     * <code>repeated .ei.LocalContract contracts = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.LocalContract contracts = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearContracts")
@@ -197,9 +184,8 @@ public object MyContractsKt {
         _builder.archiveList
       )
     /**
-     * <code>repeated .ei.LocalContract archive = 2;</code>
+     * `repeated .ei.LocalContract archive = 2;`
      * @param value The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addArchive")
@@ -207,9 +193,8 @@ public object MyContractsKt {
       _builder.addArchive(value)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 2;</code>
+     * `repeated .ei.LocalContract archive = 2;`
      * @param value The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignArchive")
@@ -218,9 +203,8 @@ public object MyContractsKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 2;</code>
+     * `repeated .ei.LocalContract archive = 2;`
      * @param values The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllArchive")
@@ -228,9 +212,8 @@ public object MyContractsKt {
       _builder.addAllArchive(values)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 2;</code>
+     * `repeated .ei.LocalContract archive = 2;`
      * @param values The archive to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllArchive")
@@ -239,10 +222,9 @@ public object MyContractsKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 2;</code>
+     * `repeated .ei.LocalContract archive = 2;`
      * @param index The index to set the value at.
      * @param value The archive to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setArchive")
@@ -250,8 +232,7 @@ public object MyContractsKt {
       _builder.setArchive(index, value)
     }
     /**
-     * <code>repeated .ei.LocalContract archive = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.LocalContract archive = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearArchive")
@@ -274,9 +255,8 @@ public object MyContractsKt {
         _builder.currentCoopStatusesList
       )
     /**
-     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
+     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
      * @param value The currentCoopStatuses to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCurrentCoopStatuses")
@@ -284,9 +264,8 @@ public object MyContractsKt {
       _builder.addCurrentCoopStatuses(value)
     }
     /**
-     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
+     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
      * @param value The currentCoopStatuses to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCurrentCoopStatuses")
@@ -295,9 +274,8 @@ public object MyContractsKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
+     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
      * @param values The currentCoopStatuses to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCurrentCoopStatuses")
@@ -305,9 +283,8 @@ public object MyContractsKt {
       _builder.addAllCurrentCoopStatuses(values)
     }
     /**
-     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
+     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
      * @param values The currentCoopStatuses to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCurrentCoopStatuses")
@@ -316,10 +293,9 @@ public object MyContractsKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
+     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
      * @param index The index to set the value at.
      * @param value The currentCoopStatuses to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCurrentCoopStatuses")
@@ -327,8 +303,7 @@ public object MyContractsKt {
       _builder.setCurrentCoopStatuses(index, value)
     }
     /**
-     * <code>repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ContractCoopStatusResponse current_coop_statuses = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCurrentCoopStatuses")
@@ -347,16 +322,14 @@ public object MyContractsKt {
         _builder.lastCpi = value
       }
     /**
-     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractPlayerInfo last_cpi = 5;`
      */
     public fun clearLastCpi() {
       _builder.clearLastCpi()
     }
     /**
-     * <code>optional .ei.ContractPlayerInfo last_cpi = 5;</code>
+     * `optional .ei.ContractPlayerInfo last_cpi = 5;`
      * @return Whether the lastCpi field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastCpi(): kotlin.Boolean {
       return _builder.hasLastCpi()
@@ -376,16 +349,14 @@ public object MyContractsKt {
         _builder.initialGradeRevealed = value
       }
     /**
-     * <code>optional bool initial_grade_revealed = 6;</code>
-     * @return This builder for chaining.
+     * `optional bool initial_grade_revealed = 6;`
      */
     public fun clearInitialGradeRevealed() {
       _builder.clearInitialGradeRevealed()
     }
     /**
-     * <code>optional bool initial_grade_revealed = 6;</code>
+     * `optional bool initial_grade_revealed = 6;`
      * @return Whether the initialGradeRevealed field is set.
-     * @return This builder for chaining.
      */
     public fun hasInitialGradeRevealed(): kotlin.Boolean {
       return _builder.hasInitialGradeRevealed()
@@ -402,16 +373,14 @@ public object MyContractsKt {
         _builder.lastGradeProgressShown = value
       }
     /**
-     * <code>optional double last_grade_progress_shown = 7;</code>
-     * @return This builder for chaining.
+     * `optional double last_grade_progress_shown = 7;`
      */
     public fun clearLastGradeProgressShown() {
       _builder.clearLastGradeProgressShown()
     }
     /**
-     * <code>optional double last_grade_progress_shown = 7;</code>
+     * `optional double last_grade_progress_shown = 7;`
      * @return Whether the lastGradeProgressShown field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastGradeProgressShown(): kotlin.Boolean {
       return _builder.hasLastGradeProgressShown()
@@ -428,16 +397,14 @@ public object MyContractsKt {
         _builder.showAdvancedEvaluations = value
       }
     /**
-     * <code>optional bool show_advanced_evaluations = 8;</code>
-     * @return This builder for chaining.
+     * `optional bool show_advanced_evaluations = 8;`
      */
     public fun clearShowAdvancedEvaluations() {
       _builder.clearShowAdvancedEvaluations()
     }
     /**
-     * <code>optional bool show_advanced_evaluations = 8;</code>
+     * `optional bool show_advanced_evaluations = 8;`
      * @return Whether the showAdvancedEvaluations field is set.
-     * @return This builder for chaining.
      */
     public fun hasShowAdvancedEvaluations(): kotlin.Boolean {
       return _builder.hasShowAdvancedEvaluations()
@@ -458,9 +425,8 @@ public object MyContractsKt {
         _builder.customEggInfoList
       )
     /**
-     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * `repeated .ei.CustomEgg custom_egg_info = 9;`
      * @param value The customEggInfo to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCustomEggInfo")
@@ -468,9 +434,8 @@ public object MyContractsKt {
       _builder.addCustomEggInfo(value)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * `repeated .ei.CustomEgg custom_egg_info = 9;`
      * @param value The customEggInfo to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCustomEggInfo")
@@ -479,9 +444,8 @@ public object MyContractsKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * `repeated .ei.CustomEgg custom_egg_info = 9;`
      * @param values The customEggInfo to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCustomEggInfo")
@@ -489,9 +453,8 @@ public object MyContractsKt {
       _builder.addAllCustomEggInfo(values)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * `repeated .ei.CustomEgg custom_egg_info = 9;`
      * @param values The customEggInfo to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCustomEggInfo")
@@ -500,10 +463,9 @@ public object MyContractsKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
+     * `repeated .ei.CustomEgg custom_egg_info = 9;`
      * @param index The index to set the value at.
      * @param value The customEggInfo to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCustomEggInfo")
@@ -511,8 +473,7 @@ public object MyContractsKt {
       _builder.setCustomEggInfo(index, value)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_egg_info = 9;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CustomEgg custom_egg_info = 9;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCustomEggInfo")

@@ -39,16 +39,14 @@ public object CurrencyFlowBatchRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 2;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 2;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 2;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -72,9 +70,8 @@ public object CurrencyFlowBatchRequestKt {
         _builder.logsList
       )
     /**
-     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
+     * `repeated .ei.CurrencyFlowLog logs = 1;`
      * @param value The logs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addLogs")
@@ -82,9 +79,8 @@ public object CurrencyFlowBatchRequestKt {
       _builder.addLogs(value)
     }
     /**
-     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
+     * `repeated .ei.CurrencyFlowLog logs = 1;`
      * @param value The logs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignLogs")
@@ -93,9 +89,8 @@ public object CurrencyFlowBatchRequestKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
+     * `repeated .ei.CurrencyFlowLog logs = 1;`
      * @param values The logs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllLogs")
@@ -103,9 +98,8 @@ public object CurrencyFlowBatchRequestKt {
       _builder.addAllLogs(values)
     }
     /**
-     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
+     * `repeated .ei.CurrencyFlowLog logs = 1;`
      * @param values The logs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllLogs")
@@ -114,10 +108,9 @@ public object CurrencyFlowBatchRequestKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
+     * `repeated .ei.CurrencyFlowLog logs = 1;`
      * @param index The index to set the value at.
      * @param value The logs to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setLogs")
@@ -125,8 +118,7 @@ public object CurrencyFlowBatchRequestKt {
       _builder.setLogs(index, value)
     }
     /**
-     * <code>repeated .ei.CurrencyFlowLog logs = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CurrencyFlowLog logs = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearLogs")

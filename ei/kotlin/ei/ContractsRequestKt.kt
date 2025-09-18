@@ -39,16 +39,14 @@ public object ContractsRequestKt {
         _builder.soulEggs = value
       }
     /**
-     * <code>optional double soul_eggs = 1;</code>
-     * @return This builder for chaining.
+     * `optional double soul_eggs = 1;`
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * <code>optional double soul_eggs = 1;</code>
+     * `optional double soul_eggs = 1;`
      * @return Whether the soulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -65,16 +63,14 @@ public object ContractsRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 5;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 5;</code>
+     * `optional uint32 client_version = 5;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -91,16 +87,14 @@ public object ContractsRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 2;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 2;</code>
+     * `optional string user_id = 2;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()

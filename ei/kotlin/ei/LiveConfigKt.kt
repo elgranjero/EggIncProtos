@@ -39,16 +39,14 @@ public object LiveConfigKt {
         _builder.configId = value
       }
     /**
-     * <code>optional string config_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string config_id = 1;`
      */
     public fun clearConfigId() {
       _builder.clearConfigId()
     }
     /**
-     * <code>optional string config_id = 1;</code>
+     * `optional string config_id = 1;`
      * @return Whether the configId field is set.
-     * @return This builder for chaining.
      */
     public fun hasConfigId(): kotlin.Boolean {
       return _builder.hasConfigId()
@@ -65,16 +63,14 @@ public object LiveConfigKt {
         _builder.boostsConfig = value
       }
     /**
-     * <code>optional .ei.LiveConfig.BoostsConfig boosts_config = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.LiveConfig.BoostsConfig boosts_config = 2;`
      */
     public fun clearBoostsConfig() {
       _builder.clearBoostsConfig()
     }
     /**
-     * <code>optional .ei.LiveConfig.BoostsConfig boosts_config = 2;</code>
+     * `optional .ei.LiveConfig.BoostsConfig boosts_config = 2;`
      * @return Whether the boostsConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasBoostsConfig(): kotlin.Boolean {
       return _builder.hasBoostsConfig()
@@ -94,16 +90,14 @@ public object LiveConfigKt {
         _builder.giftConfig = value
       }
     /**
-     * <code>optional .ei.LiveConfig.GiftConfig gift_config = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.LiveConfig.GiftConfig gift_config = 3;`
      */
     public fun clearGiftConfig() {
       _builder.clearGiftConfig()
     }
     /**
-     * <code>optional .ei.LiveConfig.GiftConfig gift_config = 3;</code>
+     * `optional .ei.LiveConfig.GiftConfig gift_config = 3;`
      * @return Whether the giftConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasGiftConfig(): kotlin.Boolean {
       return _builder.hasGiftConfig()
@@ -123,16 +117,14 @@ public object LiveConfigKt {
         _builder.miscConfig = value
       }
     /**
-     * <code>optional .ei.LiveConfig.MiscConfig misc_config = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.LiveConfig.MiscConfig misc_config = 4;`
      */
     public fun clearMiscConfig() {
       _builder.clearMiscConfig()
     }
     /**
-     * <code>optional .ei.LiveConfig.MiscConfig misc_config = 4;</code>
+     * `optional .ei.LiveConfig.MiscConfig misc_config = 4;`
      * @return Whether the miscConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasMiscConfig(): kotlin.Boolean {
       return _builder.hasMiscConfig()
@@ -152,16 +144,14 @@ public object LiveConfigKt {
         _builder.helpConfig = value
       }
     /**
-     * <code>optional .ei.LiveConfig.HelpConfig help_config = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.LiveConfig.HelpConfig help_config = 5;`
      */
     public fun clearHelpConfig() {
       _builder.clearHelpConfig()
     }
     /**
-     * <code>optional .ei.LiveConfig.HelpConfig help_config = 5;</code>
+     * `optional .ei.LiveConfig.HelpConfig help_config = 5;`
      * @return Whether the helpConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasHelpConfig(): kotlin.Boolean {
       return _builder.hasHelpConfig()
@@ -207,9 +197,8 @@ public object LiveConfigKt {
           _builder.itemConfigsList
         )
       /**
-       * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
+       * `repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;`
        * @param value The itemConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addItemConfigs")
@@ -217,9 +206,8 @@ public object LiveConfigKt {
         _builder.addItemConfigs(value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
+       * `repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;`
        * @param value The itemConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignItemConfigs")
@@ -228,9 +216,8 @@ public object LiveConfigKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
+       * `repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;`
        * @param values The itemConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllItemConfigs")
@@ -238,9 +225,8 @@ public object LiveConfigKt {
         _builder.addAllItemConfigs(values)
       }
       /**
-       * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
+       * `repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;`
        * @param values The itemConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllItemConfigs")
@@ -249,10 +235,9 @@ public object LiveConfigKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
+       * `repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;`
        * @param index The index to set the value at.
        * @param value The itemConfigs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setItemConfigs")
@@ -260,8 +245,7 @@ public object LiveConfigKt {
         _builder.setItemConfigs(index, value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.LiveConfig.BoostsConfig.ItemConfig item_configs = 1;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearItemConfigs")
@@ -280,16 +264,14 @@ public object LiveConfigKt {
           _builder.cashBoostCooloffTime = value
         }
       /**
-       * <code>optional double cash_boost_cooloff_time = 2;</code>
-       * @return This builder for chaining.
+       * `optional double cash_boost_cooloff_time = 2;`
        */
       public fun clearCashBoostCooloffTime() {
         _builder.clearCashBoostCooloffTime()
       }
       /**
-       * <code>optional double cash_boost_cooloff_time = 2;</code>
+       * `optional double cash_boost_cooloff_time = 2;`
        * @return Whether the cashBoostCooloffTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasCashBoostCooloffTime(): kotlin.Boolean {
         return _builder.hasCashBoostCooloffTime()
@@ -328,16 +310,14 @@ public object LiveConfigKt {
             _builder.boostId = value
           }
         /**
-         * <code>optional string boost_id = 1;</code>
-         * @return This builder for chaining.
+         * `optional string boost_id = 1;`
          */
         public fun clearBoostId() {
           _builder.clearBoostId()
         }
         /**
-         * <code>optional string boost_id = 1;</code>
+         * `optional string boost_id = 1;`
          * @return Whether the boostId field is set.
-         * @return This builder for chaining.
          */
         public fun hasBoostId(): kotlin.Boolean {
           return _builder.hasBoostId()
@@ -354,16 +334,14 @@ public object LiveConfigKt {
             _builder.price = value
           }
         /**
-         * <code>optional uint32 price = 2;</code>
-         * @return This builder for chaining.
+         * `optional uint32 price = 2;`
          */
         public fun clearPrice() {
           _builder.clearPrice()
         }
         /**
-         * <code>optional uint32 price = 2;</code>
+         * `optional uint32 price = 2;`
          * @return Whether the price field is set.
-         * @return This builder for chaining.
          */
         public fun hasPrice(): kotlin.Boolean {
           return _builder.hasPrice()
@@ -380,16 +358,14 @@ public object LiveConfigKt {
             _builder.tokenPrice = value
           }
         /**
-         * <code>optional uint32 token_price = 3;</code>
-         * @return This builder for chaining.
+         * `optional uint32 token_price = 3;`
          */
         public fun clearTokenPrice() {
           _builder.clearTokenPrice()
         }
         /**
-         * <code>optional uint32 token_price = 3;</code>
+         * `optional uint32 token_price = 3;`
          * @return Whether the tokenPrice field is set.
-         * @return This builder for chaining.
          */
         public fun hasTokenPrice(): kotlin.Boolean {
           return _builder.hasTokenPrice()
@@ -406,16 +382,14 @@ public object LiveConfigKt {
             _builder.seRequired = value
           }
         /**
-         * <code>optional double se_required = 4;</code>
-         * @return This builder for chaining.
+         * `optional double se_required = 4;`
          */
         public fun clearSeRequired() {
           _builder.clearSeRequired()
         }
         /**
-         * <code>optional double se_required = 4;</code>
+         * `optional double se_required = 4;`
          * @return Whether the seRequired field is set.
-         * @return This builder for chaining.
          */
         public fun hasSeRequired(): kotlin.Boolean {
           return _builder.hasSeRequired()
@@ -460,9 +434,8 @@ public object LiveConfigKt {
           _builder.giftConfigsList
         )
       /**
-       * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
+       * `repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;`
        * @param value The giftConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGiftConfigs")
@@ -470,9 +443,8 @@ public object LiveConfigKt {
         _builder.addGiftConfigs(value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
+       * `repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;`
        * @param value The giftConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGiftConfigs")
@@ -481,9 +453,8 @@ public object LiveConfigKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
+       * `repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;`
        * @param values The giftConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGiftConfigs")
@@ -491,9 +462,8 @@ public object LiveConfigKt {
         _builder.addAllGiftConfigs(values)
       }
       /**
-       * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
+       * `repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;`
        * @param values The giftConfigs to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGiftConfigs")
@@ -502,10 +472,9 @@ public object LiveConfigKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
+       * `repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;`
        * @param index The index to set the value at.
        * @param value The giftConfigs to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGiftConfigs")
@@ -513,8 +482,7 @@ public object LiveConfigKt {
         _builder.setGiftConfigs(index, value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.LiveConfig.GiftConfig.GiftValueConfig gift_configs = 9;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGiftConfigs")
@@ -533,16 +501,14 @@ public object LiveConfigKt {
           _builder.giftMuMinSpent = value
         }
       /**
-       * <code>optional double gift_mu_min_spent = 10;</code>
-       * @return This builder for chaining.
+       * `optional double gift_mu_min_spent = 10;`
        */
       public fun clearGiftMuMinSpent() {
         _builder.clearGiftMuMinSpent()
       }
       /**
-       * <code>optional double gift_mu_min_spent = 10;</code>
+       * `optional double gift_mu_min_spent = 10;`
        * @return Whether the giftMuMinSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasGiftMuMinSpent(): kotlin.Boolean {
         return _builder.hasGiftMuMinSpent()
@@ -559,16 +525,14 @@ public object LiveConfigKt {
           _builder.giftMuMaxSpent = value
         }
       /**
-       * <code>optional double gift_mu_max_spent = 11;</code>
-       * @return This builder for chaining.
+       * `optional double gift_mu_max_spent = 11;`
        */
       public fun clearGiftMuMaxSpent() {
         _builder.clearGiftMuMaxSpent()
       }
       /**
-       * <code>optional double gift_mu_max_spent = 11;</code>
+       * `optional double gift_mu_max_spent = 11;`
        * @return Whether the giftMuMaxSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasGiftMuMaxSpent(): kotlin.Boolean {
         return _builder.hasGiftMuMaxSpent()
@@ -585,16 +549,14 @@ public object LiveConfigKt {
           _builder.giftMuOverallMult = value
         }
       /**
-       * <code>optional double gift_mu_overall_mult = 12;</code>
-       * @return This builder for chaining.
+       * `optional double gift_mu_overall_mult = 12;`
        */
       public fun clearGiftMuOverallMult() {
         _builder.clearGiftMuOverallMult()
       }
       /**
-       * <code>optional double gift_mu_overall_mult = 12;</code>
+       * `optional double gift_mu_overall_mult = 12;`
        * @return Whether the giftMuOverallMult field is set.
-       * @return This builder for chaining.
        */
       public fun hasGiftMuOverallMult(): kotlin.Boolean {
         return _builder.hasGiftMuOverallMult()
@@ -611,16 +573,14 @@ public object LiveConfigKt {
           _builder.randomGiftMuConfig = value
         }
       /**
-       * <code>optional .ei.LiveConfig.GiftConfig.GiftMuConfig random_gift_mu_config = 15;</code>
-       * @return This builder for chaining.
+       * `optional .ei.LiveConfig.GiftConfig.GiftMuConfig random_gift_mu_config = 15;`
        */
       public fun clearRandomGiftMuConfig() {
         _builder.clearRandomGiftMuConfig()
       }
       /**
-       * <code>optional .ei.LiveConfig.GiftConfig.GiftMuConfig random_gift_mu_config = 15;</code>
+       * `optional .ei.LiveConfig.GiftConfig.GiftMuConfig random_gift_mu_config = 15;`
        * @return Whether the randomGiftMuConfig field is set.
-       * @return This builder for chaining.
        */
       public fun hasRandomGiftMuConfig(): kotlin.Boolean {
         return _builder.hasRandomGiftMuConfig()
@@ -640,16 +600,14 @@ public object LiveConfigKt {
           _builder.videoGiftMuConfig = value
         }
       /**
-       * <code>optional .ei.LiveConfig.GiftConfig.GiftMuConfig video_gift_mu_config = 16;</code>
-       * @return This builder for chaining.
+       * `optional .ei.LiveConfig.GiftConfig.GiftMuConfig video_gift_mu_config = 16;`
        */
       public fun clearVideoGiftMuConfig() {
         _builder.clearVideoGiftMuConfig()
       }
       /**
-       * <code>optional .ei.LiveConfig.GiftConfig.GiftMuConfig video_gift_mu_config = 16;</code>
+       * `optional .ei.LiveConfig.GiftConfig.GiftMuConfig video_gift_mu_config = 16;`
        * @return Whether the videoGiftMuConfig field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoGiftMuConfig(): kotlin.Boolean {
         return _builder.hasVideoGiftMuConfig()
@@ -669,16 +627,14 @@ public object LiveConfigKt {
           _builder.packageInterval = value
         }
       /**
-       * <code>optional double package_interval = 1;</code>
-       * @return This builder for chaining.
+       * `optional double package_interval = 1;`
        */
       public fun clearPackageInterval() {
         _builder.clearPackageInterval()
       }
       /**
-       * <code>optional double package_interval = 1;</code>
+       * `optional double package_interval = 1;`
        * @return Whether the packageInterval field is set.
-       * @return This builder for chaining.
        */
       public fun hasPackageInterval(): kotlin.Boolean {
         return _builder.hasPackageInterval()
@@ -695,16 +651,14 @@ public object LiveConfigKt {
           _builder.videoOfferInterval = value
         }
       /**
-       * <code>optional double video_offer_interval = 2;</code>
-       * @return This builder for chaining.
+       * `optional double video_offer_interval = 2;`
        */
       public fun clearVideoOfferInterval() {
         _builder.clearVideoOfferInterval()
       }
       /**
-       * <code>optional double video_offer_interval = 2;</code>
+       * `optional double video_offer_interval = 2;`
        * @return Whether the videoOfferInterval field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoOfferInterval(): kotlin.Boolean {
         return _builder.hasVideoOfferInterval()
@@ -721,16 +675,14 @@ public object LiveConfigKt {
           _builder.videoOfferIntervalContract = value
         }
       /**
-       * <code>optional double video_offer_interval_contract = 3;</code>
-       * @return This builder for chaining.
+       * `optional double video_offer_interval_contract = 3;`
        */
       public fun clearVideoOfferIntervalContract() {
         _builder.clearVideoOfferIntervalContract()
       }
       /**
-       * <code>optional double video_offer_interval_contract = 3;</code>
+       * `optional double video_offer_interval_contract = 3;`
        * @return Whether the videoOfferIntervalContract field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoOfferIntervalContract(): kotlin.Boolean {
         return _builder.hasVideoOfferIntervalContract()
@@ -747,16 +699,14 @@ public object LiveConfigKt {
           _builder.videoOfferIntervalPiggyFull = value
         }
       /**
-       * <code>optional double video_offer_interval_piggy_full = 4;</code>
-       * @return This builder for chaining.
+       * `optional double video_offer_interval_piggy_full = 4;`
        */
       public fun clearVideoOfferIntervalPiggyFull() {
         _builder.clearVideoOfferIntervalPiggyFull()
       }
       /**
-       * <code>optional double video_offer_interval_piggy_full = 4;</code>
+       * `optional double video_offer_interval_piggy_full = 4;`
        * @return Whether the videoOfferIntervalPiggyFull field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoOfferIntervalPiggyFull(): kotlin.Boolean {
         return _builder.hasVideoOfferIntervalPiggyFull()
@@ -773,16 +723,14 @@ public object LiveConfigKt {
           _builder.videoOfferIntervalPiggyExtraFull = value
         }
       /**
-       * <code>optional double video_offer_interval_piggy_extra_full = 5;</code>
-       * @return This builder for chaining.
+       * `optional double video_offer_interval_piggy_extra_full = 5;`
        */
       public fun clearVideoOfferIntervalPiggyExtraFull() {
         _builder.clearVideoOfferIntervalPiggyExtraFull()
       }
       /**
-       * <code>optional double video_offer_interval_piggy_extra_full = 5;</code>
+       * `optional double video_offer_interval_piggy_extra_full = 5;`
        * @return Whether the videoOfferIntervalPiggyExtraFull field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoOfferIntervalPiggyExtraFull(): kotlin.Boolean {
         return _builder.hasVideoOfferIntervalPiggyExtraFull()
@@ -799,16 +747,14 @@ public object LiveConfigKt {
           _builder.videoResetOnIdle = value
         }
       /**
-       * <code>optional bool video_reset_on_idle = 14;</code>
-       * @return This builder for chaining.
+       * `optional bool video_reset_on_idle = 14;`
        */
       public fun clearVideoResetOnIdle() {
         _builder.clearVideoResetOnIdle()
       }
       /**
-       * <code>optional bool video_reset_on_idle = 14;</code>
+       * `optional bool video_reset_on_idle = 14;`
        * @return Whether the videoResetOnIdle field is set.
-       * @return This builder for chaining.
        */
       public fun hasVideoResetOnIdle(): kotlin.Boolean {
         return _builder.hasVideoResetOnIdle()
@@ -825,16 +771,14 @@ public object LiveConfigKt {
           _builder.packageIntervalContract = value
         }
       /**
-       * <code>optional double package_interval_contract = 6;</code>
-       * @return This builder for chaining.
+       * `optional double package_interval_contract = 6;`
        */
       public fun clearPackageIntervalContract() {
         _builder.clearPackageIntervalContract()
       }
       /**
-       * <code>optional double package_interval_contract = 6;</code>
+       * `optional double package_interval_contract = 6;`
        * @return Whether the packageIntervalContract field is set.
-       * @return This builder for chaining.
        */
       public fun hasPackageIntervalContract(): kotlin.Boolean {
         return _builder.hasPackageIntervalContract()
@@ -851,16 +795,14 @@ public object LiveConfigKt {
           _builder.packageIntervalPiggyFull = value
         }
       /**
-       * <code>optional double package_interval_piggy_full = 7;</code>
-       * @return This builder for chaining.
+       * `optional double package_interval_piggy_full = 7;`
        */
       public fun clearPackageIntervalPiggyFull() {
         _builder.clearPackageIntervalPiggyFull()
       }
       /**
-       * <code>optional double package_interval_piggy_full = 7;</code>
+       * `optional double package_interval_piggy_full = 7;`
        * @return Whether the packageIntervalPiggyFull field is set.
-       * @return This builder for chaining.
        */
       public fun hasPackageIntervalPiggyFull(): kotlin.Boolean {
         return _builder.hasPackageIntervalPiggyFull()
@@ -877,16 +819,14 @@ public object LiveConfigKt {
           _builder.packageIntervalPiggyExtraFull = value
         }
       /**
-       * <code>optional double package_interval_piggy_extra_full = 8;</code>
-       * @return This builder for chaining.
+       * `optional double package_interval_piggy_extra_full = 8;`
        */
       public fun clearPackageIntervalPiggyExtraFull() {
         _builder.clearPackageIntervalPiggyExtraFull()
       }
       /**
-       * <code>optional double package_interval_piggy_extra_full = 8;</code>
+       * `optional double package_interval_piggy_extra_full = 8;`
        * @return Whether the packageIntervalPiggyExtraFull field is set.
-       * @return This builder for chaining.
        */
       public fun hasPackageIntervalPiggyExtraFull(): kotlin.Boolean {
         return _builder.hasPackageIntervalPiggyExtraFull()
@@ -903,16 +843,14 @@ public object LiveConfigKt {
           _builder.packageResetOnIdle = value
         }
       /**
-       * <code>optional bool package_reset_on_idle = 13;</code>
-       * @return This builder for chaining.
+       * `optional bool package_reset_on_idle = 13;`
        */
       public fun clearPackageResetOnIdle() {
         _builder.clearPackageResetOnIdle()
       }
       /**
-       * <code>optional bool package_reset_on_idle = 13;</code>
+       * `optional bool package_reset_on_idle = 13;`
        * @return Whether the packageResetOnIdle field is set.
-       * @return This builder for chaining.
        */
       public fun hasPackageResetOnIdle(): kotlin.Boolean {
         return _builder.hasPackageResetOnIdle()
@@ -951,16 +889,14 @@ public object LiveConfigKt {
             _builder.giftId = value
           }
         /**
-         * <code>optional string gift_id = 1;</code>
-         * @return This builder for chaining.
+         * `optional string gift_id = 1;`
          */
         public fun clearGiftId() {
           _builder.clearGiftId()
         }
         /**
-         * <code>optional string gift_id = 1;</code>
+         * `optional string gift_id = 1;`
          * @return Whether the giftId field is set.
-         * @return This builder for chaining.
          */
         public fun hasGiftId(): kotlin.Boolean {
           return _builder.hasGiftId()
@@ -977,16 +913,14 @@ public object LiveConfigKt {
             _builder.amount = value
           }
         /**
-         * <code>optional double amount = 4;</code>
-         * @return This builder for chaining.
+         * `optional double amount = 4;`
          */
         public fun clearAmount() {
           _builder.clearAmount()
         }
         /**
-         * <code>optional double amount = 4;</code>
+         * `optional double amount = 4;`
          * @return Whether the amount field is set.
-         * @return This builder for chaining.
          */
         public fun hasAmount(): kotlin.Boolean {
           return _builder.hasAmount()
@@ -1003,16 +937,14 @@ public object LiveConfigKt {
             _builder.randMin = value
           }
         /**
-         * <code>optional double rand_min = 2;</code>
-         * @return This builder for chaining.
+         * `optional double rand_min = 2;`
          */
         public fun clearRandMin() {
           _builder.clearRandMin()
         }
         /**
-         * <code>optional double rand_min = 2;</code>
+         * `optional double rand_min = 2;`
          * @return Whether the randMin field is set.
-         * @return This builder for chaining.
          */
         public fun hasRandMin(): kotlin.Boolean {
           return _builder.hasRandMin()
@@ -1029,16 +961,14 @@ public object LiveConfigKt {
             _builder.randMax = value
           }
         /**
-         * <code>optional double rand_max = 3;</code>
-         * @return This builder for chaining.
+         * `optional double rand_max = 3;`
          */
         public fun clearRandMax() {
           _builder.clearRandMax()
         }
         /**
-         * <code>optional double rand_max = 3;</code>
+         * `optional double rand_max = 3;`
          * @return Whether the randMax field is set.
-         * @return This builder for chaining.
          */
         public fun hasRandMax(): kotlin.Boolean {
           return _builder.hasRandMax()
@@ -1055,16 +985,14 @@ public object LiveConfigKt {
             _builder.videoMin = value
           }
         /**
-         * <code>optional double video_min = 5;</code>
-         * @return This builder for chaining.
+         * `optional double video_min = 5;`
          */
         public fun clearVideoMin() {
           _builder.clearVideoMin()
         }
         /**
-         * <code>optional double video_min = 5;</code>
+         * `optional double video_min = 5;`
          * @return Whether the videoMin field is set.
-         * @return This builder for chaining.
          */
         public fun hasVideoMin(): kotlin.Boolean {
           return _builder.hasVideoMin()
@@ -1081,16 +1009,14 @@ public object LiveConfigKt {
             _builder.videoMax = value
           }
         /**
-         * <code>optional double video_max = 6;</code>
-         * @return This builder for chaining.
+         * `optional double video_max = 6;`
          */
         public fun clearVideoMax() {
           _builder.clearVideoMax()
         }
         /**
-         * <code>optional double video_max = 6;</code>
+         * `optional double video_max = 6;`
          * @return Whether the videoMax field is set.
-         * @return This builder for chaining.
          */
         public fun hasVideoMax(): kotlin.Boolean {
           return _builder.hasVideoMax()
@@ -1130,16 +1056,14 @@ public object LiveConfigKt {
             _builder.minSpent = value
           }
         /**
-         * <code>optional double min_spent = 1;</code>
-         * @return This builder for chaining.
+         * `optional double min_spent = 1;`
          */
         public fun clearMinSpent() {
           _builder.clearMinSpent()
         }
         /**
-         * <code>optional double min_spent = 1;</code>
+         * `optional double min_spent = 1;`
          * @return Whether the minSpent field is set.
-         * @return This builder for chaining.
          */
         public fun hasMinSpent(): kotlin.Boolean {
           return _builder.hasMinSpent()
@@ -1156,16 +1080,14 @@ public object LiveConfigKt {
             _builder.maxSpent = value
           }
         /**
-         * <code>optional double max_spent = 2;</code>
-         * @return This builder for chaining.
+         * `optional double max_spent = 2;`
          */
         public fun clearMaxSpent() {
           _builder.clearMaxSpent()
         }
         /**
-         * <code>optional double max_spent = 2;</code>
+         * `optional double max_spent = 2;`
          * @return Whether the maxSpent field is set.
-         * @return This builder for chaining.
          */
         public fun hasMaxSpent(): kotlin.Boolean {
           return _builder.hasMaxSpent()
@@ -1182,16 +1104,14 @@ public object LiveConfigKt {
             _builder.overallMult = value
           }
         /**
-         * <code>optional double overall_mult = 3;</code>
-         * @return This builder for chaining.
+         * `optional double overall_mult = 3;`
          */
         public fun clearOverallMult() {
           _builder.clearOverallMult()
         }
         /**
-         * <code>optional double overall_mult = 3;</code>
+         * `optional double overall_mult = 3;`
          * @return Whether the overallMult field is set.
-         * @return This builder for chaining.
          */
         public fun hasOverallMult(): kotlin.Boolean {
           return _builder.hasOverallMult()
@@ -1232,16 +1152,14 @@ public object LiveConfigKt {
           _builder.askToTrack = value
         }
       /**
-       * <code>optional bool ask_to_track = 1;</code>
-       * @return This builder for chaining.
+       * `optional bool ask_to_track = 1;`
        */
       public fun clearAskToTrack() {
         _builder.clearAskToTrack()
       }
       /**
-       * <code>optional bool ask_to_track = 1;</code>
+       * `optional bool ask_to_track = 1;`
        * @return Whether the askToTrack field is set.
-       * @return This builder for chaining.
        */
       public fun hasAskToTrack(): kotlin.Boolean {
         return _builder.hasAskToTrack()
@@ -1258,16 +1176,14 @@ public object LiveConfigKt {
           _builder.askToTrackMinSoulEggs = value
         }
       /**
-       * <code>optional double ask_to_track_min_soul_eggs = 2;</code>
-       * @return This builder for chaining.
+       * `optional double ask_to_track_min_soul_eggs = 2;`
        */
       public fun clearAskToTrackMinSoulEggs() {
         _builder.clearAskToTrackMinSoulEggs()
       }
       /**
-       * <code>optional double ask_to_track_min_soul_eggs = 2;</code>
+       * `optional double ask_to_track_min_soul_eggs = 2;`
        * @return Whether the askToTrackMinSoulEggs field is set.
-       * @return This builder for chaining.
        */
       public fun hasAskToTrackMinSoulEggs(): kotlin.Boolean {
         return _builder.hasAskToTrackMinSoulEggs()
@@ -1284,16 +1200,14 @@ public object LiveConfigKt {
           _builder.askToTrackMessage = value
         }
       /**
-       * <code>optional string ask_to_track_message = 3;</code>
-       * @return This builder for chaining.
+       * `optional string ask_to_track_message = 3;`
        */
       public fun clearAskToTrackMessage() {
         _builder.clearAskToTrackMessage()
       }
       /**
-       * <code>optional string ask_to_track_message = 3;</code>
+       * `optional string ask_to_track_message = 3;`
        * @return Whether the askToTrackMessage field is set.
-       * @return This builder for chaining.
        */
       public fun hasAskToTrackMessage(): kotlin.Boolean {
         return _builder.hasAskToTrackMessage()
@@ -1310,16 +1224,14 @@ public object LiveConfigKt {
           _builder.askToTrackShowPreDialog = value
         }
       /**
-       * <code>optional bool ask_to_track_show_pre_dialog = 4;</code>
-       * @return This builder for chaining.
+       * `optional bool ask_to_track_show_pre_dialog = 4;`
        */
       public fun clearAskToTrackShowPreDialog() {
         _builder.clearAskToTrackShowPreDialog()
       }
       /**
-       * <code>optional bool ask_to_track_show_pre_dialog = 4;</code>
+       * `optional bool ask_to_track_show_pre_dialog = 4;`
        * @return Whether the askToTrackShowPreDialog field is set.
-       * @return This builder for chaining.
        */
       public fun hasAskToTrackShowPreDialog(): kotlin.Boolean {
         return _builder.hasAskToTrackShowPreDialog()
@@ -1336,16 +1248,14 @@ public object LiveConfigKt {
           _builder.askToTrackAfterPrivacy = value
         }
       /**
-       * <code>optional bool ask_to_track_after_privacy = 5;</code>
-       * @return This builder for chaining.
+       * `optional bool ask_to_track_after_privacy = 5;`
        */
       public fun clearAskToTrackAfterPrivacy() {
         _builder.clearAskToTrackAfterPrivacy()
       }
       /**
-       * <code>optional bool ask_to_track_after_privacy = 5;</code>
+       * `optional bool ask_to_track_after_privacy = 5;`
        * @return Whether the askToTrackAfterPrivacy field is set.
-       * @return This builder for chaining.
        */
       public fun hasAskToTrackAfterPrivacy(): kotlin.Boolean {
         return _builder.hasAskToTrackAfterPrivacy()
@@ -1362,16 +1272,14 @@ public object LiveConfigKt {
           _builder.chickenRunBoostPercentage = value
         }
       /**
-       * <code>optional double chicken_run_boost_percentage = 6;</code>
-       * @return This builder for chaining.
+       * `optional double chicken_run_boost_percentage = 6;`
        */
       public fun clearChickenRunBoostPercentage() {
         _builder.clearChickenRunBoostPercentage()
       }
       /**
-       * <code>optional double chicken_run_boost_percentage = 6;</code>
+       * `optional double chicken_run_boost_percentage = 6;`
        * @return Whether the chickenRunBoostPercentage field is set.
-       * @return This builder for chaining.
        */
       public fun hasChickenRunBoostPercentage(): kotlin.Boolean {
         return _builder.hasChickenRunBoostPercentage()
@@ -1388,16 +1296,14 @@ public object LiveConfigKt {
           _builder.shellsIntroTickets = value
         }
       /**
-       * <code>optional uint32 shells_intro_tickets = 7;</code>
-       * @return This builder for chaining.
+       * `optional uint32 shells_intro_tickets = 7;`
        */
       public fun clearShellsIntroTickets() {
         _builder.clearShellsIntroTickets()
       }
       /**
-       * <code>optional uint32 shells_intro_tickets = 7;</code>
+       * `optional uint32 shells_intro_tickets = 7;`
        * @return Whether the shellsIntroTickets field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellsIntroTickets(): kotlin.Boolean {
         return _builder.hasShellsIntroTickets()
@@ -1414,16 +1320,14 @@ public object LiveConfigKt {
           _builder.shellsMaxFreeChickenConfigs = value
         }
       /**
-       * <code>optional uint32 shells_max_free_chicken_configs = 8;</code>
-       * @return This builder for chaining.
+       * `optional uint32 shells_max_free_chicken_configs = 8;`
        */
       public fun clearShellsMaxFreeChickenConfigs() {
         _builder.clearShellsMaxFreeChickenConfigs()
       }
       /**
-       * <code>optional uint32 shells_max_free_chicken_configs = 8;</code>
+       * `optional uint32 shells_max_free_chicken_configs = 8;`
        * @return Whether the shellsMaxFreeChickenConfigs field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellsMaxFreeChickenConfigs(): kotlin.Boolean {
         return _builder.hasShellsMaxFreeChickenConfigs()
@@ -1440,16 +1344,14 @@ public object LiveConfigKt {
           _builder.shellsIntroAlertThreshold = value
         }
       /**
-       * <code>optional uint32 shells_intro_alert_threshold = 9;</code>
-       * @return This builder for chaining.
+       * `optional uint32 shells_intro_alert_threshold = 9;`
        */
       public fun clearShellsIntroAlertThreshold() {
         _builder.clearShellsIntroAlertThreshold()
       }
       /**
-       * <code>optional uint32 shells_intro_alert_threshold = 9;</code>
+       * `optional uint32 shells_intro_alert_threshold = 9;`
        * @return Whether the shellsIntroAlertThreshold field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellsIntroAlertThreshold(): kotlin.Boolean {
         return _builder.hasShellsIntroAlertThreshold()
@@ -1466,16 +1368,14 @@ public object LiveConfigKt {
           _builder.shellsLightingControlsPrice = value
         }
       /**
-       * <code>optional uint32 shells_lighting_controls_price = 14 [default = 175];</code>
-       * @return This builder for chaining.
+       * `optional uint32 shells_lighting_controls_price = 14 [default = 175];`
        */
       public fun clearShellsLightingControlsPrice() {
         _builder.clearShellsLightingControlsPrice()
       }
       /**
-       * <code>optional uint32 shells_lighting_controls_price = 14 [default = 175];</code>
+       * `optional uint32 shells_lighting_controls_price = 14 [default = 175];`
        * @return Whether the shellsLightingControlsPrice field is set.
-       * @return This builder for chaining.
        */
       public fun hasShellsLightingControlsPrice(): kotlin.Boolean {
         return _builder.hasShellsLightingControlsPrice()
@@ -1492,16 +1392,14 @@ public object LiveConfigKt {
           _builder.contractsExpertLeagueMinSoulPower = value
         }
       /**
-       * <code>optional double contracts_expert_league_min_soul_power = 10;</code>
-       * @return This builder for chaining.
+       * `optional double contracts_expert_league_min_soul_power = 10;`
        */
       public fun clearContractsExpertLeagueMinSoulPower() {
         _builder.clearContractsExpertLeagueMinSoulPower()
       }
       /**
-       * <code>optional double contracts_expert_league_min_soul_power = 10;</code>
+       * `optional double contracts_expert_league_min_soul_power = 10;`
        * @return Whether the contractsExpertLeagueMinSoulPower field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsExpertLeagueMinSoulPower(): kotlin.Boolean {
         return _builder.hasContractsExpertLeagueMinSoulPower()
@@ -1518,16 +1416,14 @@ public object LiveConfigKt {
           _builder.newPlayerEventDuration = value
         }
       /**
-       * <code>optional double new_player_event_duration = 11;</code>
-       * @return This builder for chaining.
+       * `optional double new_player_event_duration = 11;`
        */
       public fun clearNewPlayerEventDuration() {
         _builder.clearNewPlayerEventDuration()
       }
       /**
-       * <code>optional double new_player_event_duration = 11;</code>
+       * `optional double new_player_event_duration = 11;`
        * @return Whether the newPlayerEventDuration field is set.
-       * @return This builder for chaining.
        */
       public fun hasNewPlayerEventDuration(): kotlin.Boolean {
         return _builder.hasNewPlayerEventDuration()
@@ -1544,16 +1440,14 @@ public object LiveConfigKt {
           _builder.contractsClubAvailable = value
         }
       /**
-       * <code>optional bool contracts_club_available = 12;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_club_available = 12;`
        */
       public fun clearContractsClubAvailable() {
         _builder.clearContractsClubAvailable()
       }
       /**
-       * <code>optional bool contracts_club_available = 12;</code>
+       * `optional bool contracts_club_available = 12;`
        * @return Whether the contractsClubAvailable field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsClubAvailable(): kotlin.Boolean {
         return _builder.hasContractsClubAvailable()
@@ -1570,16 +1464,14 @@ public object LiveConfigKt {
           _builder.contractsBeta = value
         }
       /**
-       * <code>optional bool contracts_beta = 13;</code>
-       * @return This builder for chaining.
+       * `optional bool contracts_beta = 13;`
        */
       public fun clearContractsBeta() {
         _builder.clearContractsBeta()
       }
       /**
-       * <code>optional bool contracts_beta = 13;</code>
+       * `optional bool contracts_beta = 13;`
        * @return Whether the contractsBeta field is set.
-       * @return This builder for chaining.
        */
       public fun hasContractsBeta(): kotlin.Boolean {
         return _builder.hasContractsBeta()
@@ -1596,16 +1488,14 @@ public object LiveConfigKt {
           _builder.seasonRewardsEnabled = value
         }
       /**
-       * <code>optional bool season_rewards_enabled = 15;</code>
-       * @return This builder for chaining.
+       * `optional bool season_rewards_enabled = 15;`
        */
       public fun clearSeasonRewardsEnabled() {
         _builder.clearSeasonRewardsEnabled()
       }
       /**
-       * <code>optional bool season_rewards_enabled = 15;</code>
+       * `optional bool season_rewards_enabled = 15;`
        * @return Whether the seasonRewardsEnabled field is set.
-       * @return This builder for chaining.
        */
       public fun hasSeasonRewardsEnabled(): kotlin.Boolean {
         return _builder.hasSeasonRewardsEnabled()
@@ -1649,9 +1539,8 @@ public object LiveConfigKt {
           _builder.videoInfosList
         )
       /**
-       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * `repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;`
        * @param value The videoInfos to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addVideoInfos")
@@ -1659,9 +1548,8 @@ public object LiveConfigKt {
         _builder.addVideoInfos(value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * `repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;`
        * @param value The videoInfos to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignVideoInfos")
@@ -1670,9 +1558,8 @@ public object LiveConfigKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * `repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;`
        * @param values The videoInfos to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllVideoInfos")
@@ -1680,9 +1567,8 @@ public object LiveConfigKt {
         _builder.addAllVideoInfos(values)
       }
       /**
-       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * `repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;`
        * @param values The videoInfos to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllVideoInfos")
@@ -1691,10 +1577,9 @@ public object LiveConfigKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
+       * `repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;`
        * @param index The index to set the value at.
        * @param value The videoInfos to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setVideoInfos")
@@ -1702,8 +1587,7 @@ public object LiveConfigKt {
         _builder.setVideoInfos(index, value)
       }
       /**
-       * <code>repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.LiveConfig.HelpConfig.HowToVideoInfo video_infos = 1;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearVideoInfos")
@@ -1744,16 +1628,14 @@ public object LiveConfigKt {
             _builder.type = value
           }
         /**
-         * <code>optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;</code>
-         * @return This builder for chaining.
+         * `optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;`
          */
         public fun clearType() {
           _builder.clearType()
         }
         /**
-         * <code>optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;</code>
+         * `optional .ei.LiveConfig.HelpConfig.HowToVideoInfo.Type type = 6;`
          * @return Whether the type field is set.
-         * @return This builder for chaining.
          */
         public fun hasType(): kotlin.Boolean {
           return _builder.hasType()
@@ -1770,16 +1652,14 @@ public object LiveConfigKt {
             _builder.name = value
           }
         /**
-         * <code>optional string name = 1;</code>
-         * @return This builder for chaining.
+         * `optional string name = 1;`
          */
         public fun clearName() {
           _builder.clearName()
         }
         /**
-         * <code>optional string name = 1;</code>
+         * `optional string name = 1;`
          * @return Whether the name field is set.
-         * @return This builder for chaining.
          */
         public fun hasName(): kotlin.Boolean {
           return _builder.hasName()
@@ -1796,16 +1676,14 @@ public object LiveConfigKt {
             _builder.description = value
           }
         /**
-         * <code>optional string description = 2;</code>
-         * @return This builder for chaining.
+         * `optional string description = 2;`
          */
         public fun clearDescription() {
           _builder.clearDescription()
         }
         /**
-         * <code>optional string description = 2;</code>
+         * `optional string description = 2;`
          * @return Whether the description field is set.
-         * @return This builder for chaining.
          */
         public fun hasDescription(): kotlin.Boolean {
           return _builder.hasDescription()
@@ -1822,16 +1700,14 @@ public object LiveConfigKt {
             _builder.duration = value
           }
         /**
-         * <code>optional string duration = 5;</code>
-         * @return This builder for chaining.
+         * `optional string duration = 5;`
          */
         public fun clearDuration() {
           _builder.clearDuration()
         }
         /**
-         * <code>optional string duration = 5;</code>
+         * `optional string duration = 5;`
          * @return Whether the duration field is set.
-         * @return This builder for chaining.
          */
         public fun hasDuration(): kotlin.Boolean {
           return _builder.hasDuration()
@@ -1848,16 +1724,14 @@ public object LiveConfigKt {
             _builder.url = value
           }
         /**
-         * <code>optional string url = 3;</code>
-         * @return This builder for chaining.
+         * `optional string url = 3;`
          */
         public fun clearUrl() {
           _builder.clearUrl()
         }
         /**
-         * <code>optional string url = 3;</code>
+         * `optional string url = 3;`
          * @return Whether the url field is set.
-         * @return This builder for chaining.
          */
         public fun hasUrl(): kotlin.Boolean {
           return _builder.hasUrl()
@@ -1874,16 +1748,14 @@ public object LiveConfigKt {
             _builder.soulEggs = value
           }
         /**
-         * <code>optional double soul_eggs = 4;</code>
-         * @return This builder for chaining.
+         * `optional double soul_eggs = 4;`
          */
         public fun clearSoulEggs() {
           _builder.clearSoulEggs()
         }
         /**
-         * <code>optional double soul_eggs = 4;</code>
+         * `optional double soul_eggs = 4;`
          * @return Whether the soulEggs field is set.
-         * @return This builder for chaining.
          */
         public fun hasSoulEggs(): kotlin.Boolean {
           return _builder.hasSoulEggs()

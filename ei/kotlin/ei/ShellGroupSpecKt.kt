@@ -39,16 +39,14 @@ public object ShellGroupSpecKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 1;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 1;</code>
+     * `optional string identifier = 1;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -65,16 +63,14 @@ public object ShellGroupSpecKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 2;</code>
-     * @return This builder for chaining.
+     * `optional string name = 2;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 2;</code>
+     * `optional string name = 2;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -91,16 +87,14 @@ public object ShellGroupSpecKt {
         _builder.assetType = value
       }
     /**
-     * <code>optional .ei.ShellSpec.AssetType asset_type = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellSpec.AssetType asset_type = 5;`
      */
     public fun clearAssetType() {
       _builder.clearAssetType()
     }
     /**
-     * <code>optional .ei.ShellSpec.AssetType asset_type = 5;</code>
+     * `optional .ei.ShellSpec.AssetType asset_type = 5;`
      * @return Whether the assetType field is set.
-     * @return This builder for chaining.
      */
     public fun hasAssetType(): kotlin.Boolean {
       return _builder.hasAssetType()
@@ -113,9 +107,8 @@ public object ShellGroupSpecKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class MemberIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string member_ids = 3;</code>
+     * `repeated string member_ids = 3;`
      * @return A list containing the memberIds.
-     * @return This builder for chaining.
      */
     public val memberIds: com.google.protobuf.kotlin.DslList<kotlin.String, MemberIdsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -123,9 +116,8 @@ public object ShellGroupSpecKt {
         _builder.memberIdsList
       )
     /**
-     * <code>repeated string member_ids = 3;</code>
+     * `repeated string member_ids = 3;`
      * @param value The memberIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMemberIds")
@@ -133,9 +125,8 @@ public object ShellGroupSpecKt {
       _builder.addMemberIds(value)
     }
     /**
-     * <code>repeated string member_ids = 3;</code>
+     * `repeated string member_ids = 3;`
      * @param value The memberIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMemberIds")
@@ -144,9 +135,8 @@ public object ShellGroupSpecKt {
       add(value)
     }
     /**
-     * <code>repeated string member_ids = 3;</code>
+     * `repeated string member_ids = 3;`
      * @param values The memberIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMemberIds")
@@ -154,9 +144,8 @@ public object ShellGroupSpecKt {
       _builder.addAllMemberIds(values)
     }
     /**
-     * <code>repeated string member_ids = 3;</code>
+     * `repeated string member_ids = 3;`
      * @param values The memberIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMemberIds")
@@ -165,18 +154,16 @@ public object ShellGroupSpecKt {
       addAll(values)
     }
     /**
-     * <code>repeated string member_ids = 3;</code>
+     * `repeated string member_ids = 3;`
      * @param index The index to set the value at.
      * @param value The memberIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMemberIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, MemberIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setMemberIds(index, value)
     }/**
-     * <code>repeated string member_ids = 3;</code>
-     * @return This builder for chaining.
+     * `repeated string member_ids = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMemberIds")
@@ -194,16 +181,14 @@ public object ShellGroupSpecKt {
         _builder.priceMultDEPRECATED = value
       }
     /**
-     * <code>optional double price_mult_DEPRECATED = 4;</code>
-     * @return This builder for chaining.
+     * `optional double price_mult_DEPRECATED = 4;`
      */
     public fun clearPriceMultDEPRECATED() {
       _builder.clearPriceMultDEPRECATED()
     }
     /**
-     * <code>optional double price_mult_DEPRECATED = 4;</code>
+     * `optional double price_mult_DEPRECATED = 4;`
      * @return Whether the priceMultDEPRECATED field is set.
-     * @return This builder for chaining.
      */
     public fun hasPriceMultDEPRECATED(): kotlin.Boolean {
       return _builder.hasPriceMultDEPRECATED()

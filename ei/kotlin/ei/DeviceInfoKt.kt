@@ -39,16 +39,14 @@ public object DeviceInfoKt {
         _builder.deviceId = value
       }
     /**
-     * <code>optional string device_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string device_id = 1;`
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * <code>optional string device_id = 1;</code>
+     * `optional string device_id = 1;`
      * @return Whether the deviceId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -65,16 +63,14 @@ public object DeviceInfoKt {
         _builder.advertisingId = value
       }
     /**
-     * <code>optional string advertising_id = 13;</code>
-     * @return This builder for chaining.
+     * `optional string advertising_id = 13;`
      */
     public fun clearAdvertisingId() {
       _builder.clearAdvertisingId()
     }
     /**
-     * <code>optional string advertising_id = 13;</code>
+     * `optional string advertising_id = 13;`
      * @return Whether the advertisingId field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdvertisingId(): kotlin.Boolean {
       return _builder.hasAdvertisingId()
@@ -91,16 +87,14 @@ public object DeviceInfoKt {
         _builder.platform = value
       }
     /**
-     * <code>optional string platform = 2;</code>
-     * @return This builder for chaining.
+     * `optional string platform = 2;`
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * <code>optional string platform = 2;</code>
+     * `optional string platform = 2;`
      * @return Whether the platform field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -117,16 +111,14 @@ public object DeviceInfoKt {
         _builder.formFactor = value
       }
     /**
-     * <code>optional string form_factor = 3;</code>
-     * @return This builder for chaining.
+     * `optional string form_factor = 3;`
      */
     public fun clearFormFactor() {
       _builder.clearFormFactor()
     }
     /**
-     * <code>optional string form_factor = 3;</code>
+     * `optional string form_factor = 3;`
      * @return Whether the formFactor field is set.
-     * @return This builder for chaining.
      */
     public fun hasFormFactor(): kotlin.Boolean {
       return _builder.hasFormFactor()
@@ -143,16 +135,14 @@ public object DeviceInfoKt {
         _builder.deviceName = value
       }
     /**
-     * <code>optional string device_name = 4;</code>
-     * @return This builder for chaining.
+     * `optional string device_name = 4;`
      */
     public fun clearDeviceName() {
       _builder.clearDeviceName()
     }
     /**
-     * <code>optional string device_name = 4;</code>
+     * `optional string device_name = 4;`
      * @return Whether the deviceName field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceName(): kotlin.Boolean {
       return _builder.hasDeviceName()
@@ -169,16 +159,14 @@ public object DeviceInfoKt {
         _builder.platformVersion = value
       }
     /**
-     * <code>optional string platform_version = 5;</code>
-     * @return This builder for chaining.
+     * `optional string platform_version = 5;`
      */
     public fun clearPlatformVersion() {
       _builder.clearPlatformVersion()
     }
     /**
-     * <code>optional string platform_version = 5;</code>
+     * `optional string platform_version = 5;`
      * @return Whether the platformVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatformVersion(): kotlin.Boolean {
       return _builder.hasPlatformVersion()
@@ -195,16 +183,14 @@ public object DeviceInfoKt {
         _builder.localeCountry = value
       }
     /**
-     * <code>optional string locale_country = 6;</code>
-     * @return This builder for chaining.
+     * `optional string locale_country = 6;`
      */
     public fun clearLocaleCountry() {
       _builder.clearLocaleCountry()
     }
     /**
-     * <code>optional string locale_country = 6;</code>
+     * `optional string locale_country = 6;`
      * @return Whether the localeCountry field is set.
-     * @return This builder for chaining.
      */
     public fun hasLocaleCountry(): kotlin.Boolean {
       return _builder.hasLocaleCountry()
@@ -221,16 +207,14 @@ public object DeviceInfoKt {
         _builder.localeLanguage = value
       }
     /**
-     * <code>optional string locale_language = 7;</code>
-     * @return This builder for chaining.
+     * `optional string locale_language = 7;`
      */
     public fun clearLocaleLanguage() {
       _builder.clearLocaleLanguage()
     }
     /**
-     * <code>optional string locale_language = 7;</code>
+     * `optional string locale_language = 7;`
      * @return Whether the localeLanguage field is set.
-     * @return This builder for chaining.
      */
     public fun hasLocaleLanguage(): kotlin.Boolean {
       return _builder.hasLocaleLanguage()
@@ -247,16 +231,14 @@ public object DeviceInfoKt {
         _builder.gpuVendor = value
       }
     /**
-     * <code>optional string gpu_vendor = 8;</code>
-     * @return This builder for chaining.
+     * `optional string gpu_vendor = 8;`
      */
     public fun clearGpuVendor() {
       _builder.clearGpuVendor()
     }
     /**
-     * <code>optional string gpu_vendor = 8;</code>
+     * `optional string gpu_vendor = 8;`
      * @return Whether the gpuVendor field is set.
-     * @return This builder for chaining.
      */
     public fun hasGpuVendor(): kotlin.Boolean {
       return _builder.hasGpuVendor()
@@ -273,16 +255,14 @@ public object DeviceInfoKt {
         _builder.gpuModel = value
       }
     /**
-     * <code>optional string gpu_model = 9;</code>
-     * @return This builder for chaining.
+     * `optional string gpu_model = 9;`
      */
     public fun clearGpuModel() {
       _builder.clearGpuModel()
     }
     /**
-     * <code>optional string gpu_model = 9;</code>
+     * `optional string gpu_model = 9;`
      * @return Whether the gpuModel field is set.
-     * @return This builder for chaining.
      */
     public fun hasGpuModel(): kotlin.Boolean {
       return _builder.hasGpuModel()
@@ -299,16 +279,14 @@ public object DeviceInfoKt {
         _builder.deviceBucket = value
       }
     /**
-     * <code>optional string device_bucket = 10;</code>
-     * @return This builder for chaining.
+     * `optional string device_bucket = 10;`
      */
     public fun clearDeviceBucket() {
       _builder.clearDeviceBucket()
     }
     /**
-     * <code>optional string device_bucket = 10;</code>
+     * `optional string device_bucket = 10;`
      * @return Whether the deviceBucket field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceBucket(): kotlin.Boolean {
       return _builder.hasDeviceBucket()
@@ -325,16 +303,14 @@ public object DeviceInfoKt {
         _builder.screenWidth = value
       }
     /**
-     * <code>optional uint32 screen_width = 11;</code>
-     * @return This builder for chaining.
+     * `optional uint32 screen_width = 11;`
      */
     public fun clearScreenWidth() {
       _builder.clearScreenWidth()
     }
     /**
-     * <code>optional uint32 screen_width = 11;</code>
+     * `optional uint32 screen_width = 11;`
      * @return Whether the screenWidth field is set.
-     * @return This builder for chaining.
      */
     public fun hasScreenWidth(): kotlin.Boolean {
       return _builder.hasScreenWidth()
@@ -351,16 +327,14 @@ public object DeviceInfoKt {
         _builder.screenHeight = value
       }
     /**
-     * <code>optional uint32 screen_height = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint32 screen_height = 12;`
      */
     public fun clearScreenHeight() {
       _builder.clearScreenHeight()
     }
     /**
-     * <code>optional uint32 screen_height = 12;</code>
+     * `optional uint32 screen_height = 12;`
      * @return Whether the screenHeight field is set.
-     * @return This builder for chaining.
      */
     public fun hasScreenHeight(): kotlin.Boolean {
       return _builder.hasScreenHeight()

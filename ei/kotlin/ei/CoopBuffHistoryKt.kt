@@ -43,9 +43,8 @@ public object CoopBuffHistoryKt {
         _builder.historyList
       )
     /**
-     * <code>repeated .ei.CoopBuffState history = 1;</code>
+     * `repeated .ei.CoopBuffState history = 1;`
      * @param value The history to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addHistory")
@@ -53,9 +52,8 @@ public object CoopBuffHistoryKt {
       _builder.addHistory(value)
     }
     /**
-     * <code>repeated .ei.CoopBuffState history = 1;</code>
+     * `repeated .ei.CoopBuffState history = 1;`
      * @param value The history to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignHistory")
@@ -64,9 +62,8 @@ public object CoopBuffHistoryKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CoopBuffState history = 1;</code>
+     * `repeated .ei.CoopBuffState history = 1;`
      * @param values The history to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllHistory")
@@ -74,9 +71,8 @@ public object CoopBuffHistoryKt {
       _builder.addAllHistory(values)
     }
     /**
-     * <code>repeated .ei.CoopBuffState history = 1;</code>
+     * `repeated .ei.CoopBuffState history = 1;`
      * @param values The history to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllHistory")
@@ -85,10 +81,9 @@ public object CoopBuffHistoryKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CoopBuffState history = 1;</code>
+     * `repeated .ei.CoopBuffState history = 1;`
      * @param index The index to set the value at.
      * @param value The history to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setHistory")
@@ -96,8 +91,7 @@ public object CoopBuffHistoryKt {
       _builder.setHistory(index, value)
     }
     /**
-     * <code>repeated .ei.CoopBuffState history = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CoopBuffState history = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearHistory")

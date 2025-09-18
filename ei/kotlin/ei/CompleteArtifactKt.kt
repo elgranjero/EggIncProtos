@@ -39,16 +39,14 @@ public object CompleteArtifactKt {
         _builder.spec = value
       }
     /**
-     * <code>optional .ei.ArtifactSpec spec = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ArtifactSpec spec = 1;`
      */
     public fun clearSpec() {
       _builder.clearSpec()
     }
     /**
-     * <code>optional .ei.ArtifactSpec spec = 1;</code>
+     * `optional .ei.ArtifactSpec spec = 1;`
      * @return Whether the spec field is set.
-     * @return This builder for chaining.
      */
     public fun hasSpec(): kotlin.Boolean {
       return _builder.hasSpec()
@@ -72,9 +70,8 @@ public object CompleteArtifactKt {
         _builder.stonesList
       )
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
+     * `repeated .ei.ArtifactSpec stones = 2;`
      * @param value The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addStones")
@@ -82,9 +79,8 @@ public object CompleteArtifactKt {
       _builder.addStones(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
+     * `repeated .ei.ArtifactSpec stones = 2;`
      * @param value The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignStones")
@@ -93,9 +89,8 @@ public object CompleteArtifactKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
+     * `repeated .ei.ArtifactSpec stones = 2;`
      * @param values The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllStones")
@@ -103,9 +98,8 @@ public object CompleteArtifactKt {
       _builder.addAllStones(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
+     * `repeated .ei.ArtifactSpec stones = 2;`
      * @param values The stones to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllStones")
@@ -114,10 +108,9 @@ public object CompleteArtifactKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
+     * `repeated .ei.ArtifactSpec stones = 2;`
      * @param index The index to set the value at.
      * @param value The stones to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setStones")
@@ -125,8 +118,7 @@ public object CompleteArtifactKt {
       _builder.setStones(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactSpec stones = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactSpec stones = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearStones")

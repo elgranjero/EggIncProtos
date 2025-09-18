@@ -43,9 +43,8 @@ public object ShellShowcaseListingSetKt {
         _builder.listingsList
       )
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo listings = 1;`
      * @param value The listings to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addListings")
@@ -53,9 +52,8 @@ public object ShellShowcaseListingSetKt {
       _builder.addListings(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo listings = 1;`
      * @param value The listings to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignListings")
@@ -64,9 +62,8 @@ public object ShellShowcaseListingSetKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo listings = 1;`
      * @param values The listings to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllListings")
@@ -74,9 +71,8 @@ public object ShellShowcaseListingSetKt {
       _builder.addAllListings(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo listings = 1;`
      * @param values The listings to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllListings")
@@ -85,10 +81,9 @@ public object ShellShowcaseListingSetKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
+     * `repeated .ei.ShellShowcaseListingInfo listings = 1;`
      * @param index The index to set the value at.
      * @param value The listings to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setListings")
@@ -96,8 +91,7 @@ public object ShellShowcaseListingSetKt {
       _builder.setListings(index, value)
     }
     /**
-     * <code>repeated .ei.ShellShowcaseListingInfo listings = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellShowcaseListingInfo listings = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearListings")

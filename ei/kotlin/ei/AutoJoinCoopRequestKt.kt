@@ -39,16 +39,14 @@ public object AutoJoinCoopRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 9;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 9;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 9;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 9;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object AutoJoinCoopRequestKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 1;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 1;</code>
+     * `optional string contract_identifier = 1;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -94,16 +90,14 @@ public object AutoJoinCoopRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 2;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 2;</code>
+     * `optional string user_id = 2;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -120,16 +114,14 @@ public object AutoJoinCoopRequestKt {
         _builder.userName = value
       }
     /**
-     * <code>optional string user_name = 3;</code>
-     * @return This builder for chaining.
+     * `optional string user_name = 3;`
      */
     public fun clearUserName() {
       _builder.clearUserName()
     }
     /**
-     * <code>optional string user_name = 3;</code>
+     * `optional string user_name = 3;`
      * @return Whether the userName field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserName(): kotlin.Boolean {
       return _builder.hasUserName()
@@ -146,16 +138,14 @@ public object AutoJoinCoopRequestKt {
         _builder.soulPower = value
       }
     /**
-     * <code>optional double soul_power = 4;</code>
-     * @return This builder for chaining.
+     * `optional double soul_power = 4;`
      */
     public fun clearSoulPower() {
       _builder.clearSoulPower()
     }
     /**
-     * <code>optional double soul_power = 4;</code>
+     * `optional double soul_power = 4;`
      * @return Whether the soulPower field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulPower(): kotlin.Boolean {
       return _builder.hasSoulPower()
@@ -172,16 +162,14 @@ public object AutoJoinCoopRequestKt {
         _builder.eop = value
       }
     /**
-     * <code>optional double eop = 10;</code>
-     * @return This builder for chaining.
+     * `optional double eop = 10;`
      */
     public fun clearEop() {
       _builder.clearEop()
     }
     /**
-     * <code>optional double eop = 10;</code>
+     * `optional double eop = 10;`
      * @return Whether the eop field is set.
-     * @return This builder for chaining.
      */
     public fun hasEop(): kotlin.Boolean {
       return _builder.hasEop()
@@ -198,16 +186,14 @@ public object AutoJoinCoopRequestKt {
         _builder.league = value
       }
     /**
-     * <code>optional uint32 league = 8;</code>
-     * @return This builder for chaining.
+     * `optional uint32 league = 8;`
      */
     public fun clearLeague() {
       _builder.clearLeague()
     }
     /**
-     * <code>optional uint32 league = 8;</code>
+     * `optional uint32 league = 8;`
      * @return Whether the league field is set.
-     * @return This builder for chaining.
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
@@ -224,16 +210,14 @@ public object AutoJoinCoopRequestKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 12;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 12;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 12;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -250,16 +234,14 @@ public object AutoJoinCoopRequestKt {
         _builder.pointsReplay = value
       }
     /**
-     * <code>optional bool points_replay = 14;</code>
-     * @return This builder for chaining.
+     * `optional bool points_replay = 14;`
      */
     public fun clearPointsReplay() {
       _builder.clearPointsReplay()
     }
     /**
-     * <code>optional bool points_replay = 14;</code>
+     * `optional bool points_replay = 14;`
      * @return Whether the pointsReplay field is set.
-     * @return This builder for chaining.
      */
     public fun hasPointsReplay(): kotlin.Boolean {
       return _builder.hasPointsReplay()
@@ -276,16 +258,14 @@ public object AutoJoinCoopRequestKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 5;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 5;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 5;</code>
+     * `optional double seconds_remaining = 5;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -302,16 +282,14 @@ public object AutoJoinCoopRequestKt {
         _builder.platform = value
       }
     /**
-     * <code>optional .ei.Platform platform = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Platform platform = 6;`
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * <code>optional .ei.Platform platform = 6;</code>
+     * `optional .ei.Platform platform = 6;`
      * @return Whether the platform field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()
@@ -328,16 +306,14 @@ public object AutoJoinCoopRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 7;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 7;</code>
+     * `optional uint32 client_version = 7;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

@@ -35,9 +35,8 @@ public object MailStateKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ReadMailIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string read_mail_ids = 1;</code>
+     * `repeated string read_mail_ids = 1;`
      * @return A list containing the readMailIds.
-     * @return This builder for chaining.
      */
     public val readMailIds: com.google.protobuf.kotlin.DslList<kotlin.String, ReadMailIdsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -45,9 +44,8 @@ public object MailStateKt {
         _builder.readMailIdsList
       )
     /**
-     * <code>repeated string read_mail_ids = 1;</code>
+     * `repeated string read_mail_ids = 1;`
      * @param value The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addReadMailIds")
@@ -55,9 +53,8 @@ public object MailStateKt {
       _builder.addReadMailIds(value)
     }
     /**
-     * <code>repeated string read_mail_ids = 1;</code>
+     * `repeated string read_mail_ids = 1;`
      * @param value The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignReadMailIds")
@@ -66,9 +63,8 @@ public object MailStateKt {
       add(value)
     }
     /**
-     * <code>repeated string read_mail_ids = 1;</code>
+     * `repeated string read_mail_ids = 1;`
      * @param values The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllReadMailIds")
@@ -76,9 +72,8 @@ public object MailStateKt {
       _builder.addAllReadMailIds(values)
     }
     /**
-     * <code>repeated string read_mail_ids = 1;</code>
+     * `repeated string read_mail_ids = 1;`
      * @param values The readMailIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllReadMailIds")
@@ -87,18 +82,16 @@ public object MailStateKt {
       addAll(values)
     }
     /**
-     * <code>repeated string read_mail_ids = 1;</code>
+     * `repeated string read_mail_ids = 1;`
      * @param index The index to set the value at.
      * @param value The readMailIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setReadMailIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ReadMailIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setReadMailIds(index, value)
     }/**
-     * <code>repeated string read_mail_ids = 1;</code>
-     * @return This builder for chaining.
+     * `repeated string read_mail_ids = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setReadMailIds")
@@ -120,9 +113,8 @@ public object MailStateKt {
         _builder.tipsStatesList
       )
     /**
-     * <code>repeated .ei.MailState.TipState tips_states = 2;</code>
+     * `repeated .ei.MailState.TipState tips_states = 2;`
      * @param value The tipsStates to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addTipsStates")
@@ -130,9 +122,8 @@ public object MailStateKt {
       _builder.addTipsStates(value)
     }
     /**
-     * <code>repeated .ei.MailState.TipState tips_states = 2;</code>
+     * `repeated .ei.MailState.TipState tips_states = 2;`
      * @param value The tipsStates to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignTipsStates")
@@ -141,9 +132,8 @@ public object MailStateKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.MailState.TipState tips_states = 2;</code>
+     * `repeated .ei.MailState.TipState tips_states = 2;`
      * @param values The tipsStates to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllTipsStates")
@@ -151,9 +141,8 @@ public object MailStateKt {
       _builder.addAllTipsStates(values)
     }
     /**
-     * <code>repeated .ei.MailState.TipState tips_states = 2;</code>
+     * `repeated .ei.MailState.TipState tips_states = 2;`
      * @param values The tipsStates to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllTipsStates")
@@ -162,10 +151,9 @@ public object MailStateKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.MailState.TipState tips_states = 2;</code>
+     * `repeated .ei.MailState.TipState tips_states = 2;`
      * @param index The index to set the value at.
      * @param value The tipsStates to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setTipsStates")
@@ -173,8 +161,7 @@ public object MailStateKt {
       _builder.setTipsStates(index, value)
     }
     /**
-     * <code>repeated .ei.MailState.TipState tips_states = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.MailState.TipState tips_states = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearTipsStates")
@@ -193,16 +180,14 @@ public object MailStateKt {
         _builder.tipsChecksum = value
       }
     /**
-     * <code>optional string tips_checksum = 3;</code>
-     * @return This builder for chaining.
+     * `optional string tips_checksum = 3;`
      */
     public fun clearTipsChecksum() {
       _builder.clearTipsChecksum()
     }
     /**
-     * <code>optional string tips_checksum = 3;</code>
+     * `optional string tips_checksum = 3;`
      * @return Whether the tipsChecksum field is set.
-     * @return This builder for chaining.
      */
     public fun hasTipsChecksum(): kotlin.Boolean {
       return _builder.hasTipsChecksum()
@@ -241,16 +226,14 @@ public object MailStateKt {
           _builder.id = value
         }
       /**
-       * <code>optional string id = 1;</code>
-       * @return This builder for chaining.
+       * `optional string id = 1;`
        */
       public fun clearId() {
         _builder.clearId()
       }
       /**
-       * <code>optional string id = 1;</code>
+       * `optional string id = 1;`
        * @return Whether the id field is set.
-       * @return This builder for chaining.
        */
       public fun hasId(): kotlin.Boolean {
         return _builder.hasId()
@@ -267,16 +250,14 @@ public object MailStateKt {
           _builder.reads = value
         }
       /**
-       * <code>optional uint32 reads = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 reads = 2;`
        */
       public fun clearReads() {
         _builder.clearReads()
       }
       /**
-       * <code>optional uint32 reads = 2;</code>
+       * `optional uint32 reads = 2;`
        * @return Whether the reads field is set.
-       * @return This builder for chaining.
        */
       public fun hasReads(): kotlin.Boolean {
         return _builder.hasReads()
@@ -293,16 +274,14 @@ public object MailStateKt {
           _builder.timeRead = value
         }
       /**
-       * <code>optional double time_read = 3;</code>
-       * @return This builder for chaining.
+       * `optional double time_read = 3;`
        */
       public fun clearTimeRead() {
         _builder.clearTimeRead()
       }
       /**
-       * <code>optional double time_read = 3;</code>
+       * `optional double time_read = 3;`
        * @return Whether the timeRead field is set.
-       * @return This builder for chaining.
        */
       public fun hasTimeRead(): kotlin.Boolean {
         return _builder.hasTimeRead()

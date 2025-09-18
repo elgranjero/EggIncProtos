@@ -39,16 +39,14 @@ public object ReturnEDTPayloadKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 1;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 1;</code>
+     * `optional string ei_user_id = 1;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()

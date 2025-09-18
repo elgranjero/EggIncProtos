@@ -39,16 +39,14 @@ public object ShellSpecKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 1;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 1;</code>
+     * `optional string identifier = 1;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -65,16 +63,14 @@ public object ShellSpecKt {
         _builder.primaryPiece = value
       }
     /**
-     * <code>optional .ei.ShellSpec.ShellPiece primary_piece = 12;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellSpec.ShellPiece primary_piece = 12;`
      */
     public fun clearPrimaryPiece() {
       _builder.clearPrimaryPiece()
     }
     /**
-     * <code>optional .ei.ShellSpec.ShellPiece primary_piece = 12;</code>
+     * `optional .ei.ShellSpec.ShellPiece primary_piece = 12;`
      * @return Whether the primaryPiece field is set.
-     * @return This builder for chaining.
      */
     public fun hasPrimaryPiece(): kotlin.Boolean {
       return _builder.hasPrimaryPiece()
@@ -98,9 +94,8 @@ public object ShellSpecKt {
         _builder.piecesList
       )
     /**
-     * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
+     * `repeated .ei.ShellSpec.ShellPiece pieces = 11;`
      * @param value The pieces to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addPieces")
@@ -108,9 +103,8 @@ public object ShellSpecKt {
       _builder.addPieces(value)
     }
     /**
-     * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
+     * `repeated .ei.ShellSpec.ShellPiece pieces = 11;`
      * @param value The pieces to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignPieces")
@@ -119,9 +113,8 @@ public object ShellSpecKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
+     * `repeated .ei.ShellSpec.ShellPiece pieces = 11;`
      * @param values The pieces to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllPieces")
@@ -129,9 +122,8 @@ public object ShellSpecKt {
       _builder.addAllPieces(values)
     }
     /**
-     * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
+     * `repeated .ei.ShellSpec.ShellPiece pieces = 11;`
      * @param values The pieces to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllPieces")
@@ -140,10 +132,9 @@ public object ShellSpecKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
+     * `repeated .ei.ShellSpec.ShellPiece pieces = 11;`
      * @param index The index to set the value at.
      * @param value The pieces to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setPieces")
@@ -151,8 +142,7 @@ public object ShellSpecKt {
       _builder.setPieces(index, value)
     }
     /**
-     * <code>repeated .ei.ShellSpec.ShellPiece pieces = 11;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellSpec.ShellPiece pieces = 11;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearPieces")
@@ -175,9 +165,8 @@ public object ShellSpecKt {
         _builder.altAssetsList
       )
     /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
+     * `repeated .ei.DLCItem alt_assets = 18;`
      * @param value The altAssets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAltAssets")
@@ -185,9 +174,8 @@ public object ShellSpecKt {
       _builder.addAltAssets(value)
     }
     /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
+     * `repeated .ei.DLCItem alt_assets = 18;`
      * @param value The altAssets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAltAssets")
@@ -196,9 +184,8 @@ public object ShellSpecKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
+     * `repeated .ei.DLCItem alt_assets = 18;`
      * @param values The altAssets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllAltAssets")
@@ -206,9 +193,8 @@ public object ShellSpecKt {
       _builder.addAllAltAssets(values)
     }
     /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
+     * `repeated .ei.DLCItem alt_assets = 18;`
      * @param values The altAssets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllAltAssets")
@@ -217,10 +203,9 @@ public object ShellSpecKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
+     * `repeated .ei.DLCItem alt_assets = 18;`
      * @param index The index to set the value at.
      * @param value The altAssets to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setAltAssets")
@@ -228,8 +213,7 @@ public object ShellSpecKt {
       _builder.setAltAssets(index, value)
     }
     /**
-     * <code>repeated .ei.DLCItem alt_assets = 18;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.DLCItem alt_assets = 18;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearAltAssets")
@@ -248,16 +232,14 @@ public object ShellSpecKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 3;</code>
-     * @return This builder for chaining.
+     * `optional string name = 3;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 3;</code>
+     * `optional string name = 3;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -274,16 +256,14 @@ public object ShellSpecKt {
         _builder.setIdentifier = value
       }
     /**
-     * <code>optional string set_identifier = 13;</code>
-     * @return This builder for chaining.
+     * `optional string set_identifier = 13;`
      */
     public fun clearSetIdentifier() {
       _builder.clearSetIdentifier()
     }
     /**
-     * <code>optional string set_identifier = 13;</code>
+     * `optional string set_identifier = 13;`
      * @return Whether the setIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasSetIdentifier(): kotlin.Boolean {
       return _builder.hasSetIdentifier()
@@ -300,16 +280,14 @@ public object ShellSpecKt {
         _builder.modifiedGeometry = value
       }
     /**
-     * <code>optional bool modified_geometry = 19;</code>
-     * @return This builder for chaining.
+     * `optional bool modified_geometry = 19;`
      */
     public fun clearModifiedGeometry() {
       _builder.clearModifiedGeometry()
     }
     /**
-     * <code>optional bool modified_geometry = 19;</code>
+     * `optional bool modified_geometry = 19;`
      * @return Whether the modifiedGeometry field is set.
-     * @return This builder for chaining.
      */
     public fun hasModifiedGeometry(): kotlin.Boolean {
       return _builder.hasModifiedGeometry()
@@ -326,16 +304,14 @@ public object ShellSpecKt {
         _builder.price = value
       }
     /**
-     * <code>optional uint32 price = 4;</code>
-     * @return This builder for chaining.
+     * `optional uint32 price = 4;`
      */
     public fun clearPrice() {
       _builder.clearPrice()
     }
     /**
-     * <code>optional uint32 price = 4;</code>
+     * `optional uint32 price = 4;`
      * @return Whether the price field is set.
-     * @return This builder for chaining.
      */
     public fun hasPrice(): kotlin.Boolean {
       return _builder.hasPrice()
@@ -352,16 +328,14 @@ public object ShellSpecKt {
         _builder.requiredEop = value
       }
     /**
-     * <code>optional uint32 required_eop = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 required_eop = 5;`
      */
     public fun clearRequiredEop() {
       _builder.clearRequiredEop()
     }
     /**
-     * <code>optional uint32 required_eop = 5;</code>
+     * `optional uint32 required_eop = 5;`
      * @return Whether the requiredEop field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequiredEop(): kotlin.Boolean {
       return _builder.hasRequiredEop()
@@ -378,16 +352,14 @@ public object ShellSpecKt {
         _builder.requiredSoulEggs = value
       }
     /**
-     * <code>optional double required_soul_eggs = 6;</code>
-     * @return This builder for chaining.
+     * `optional double required_soul_eggs = 6;`
      */
     public fun clearRequiredSoulEggs() {
       _builder.clearRequiredSoulEggs()
     }
     /**
-     * <code>optional double required_soul_eggs = 6;</code>
+     * `optional double required_soul_eggs = 6;`
      * @return Whether the requiredSoulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequiredSoulEggs(): kotlin.Boolean {
       return _builder.hasRequiredSoulEggs()
@@ -404,16 +376,14 @@ public object ShellSpecKt {
         _builder.requiredParentShell = value
       }
     /**
-     * <code>optional string required_parent_shell = 20;</code>
-     * @return This builder for chaining.
+     * `optional string required_parent_shell = 20;`
      */
     public fun clearRequiredParentShell() {
       _builder.clearRequiredParentShell()
     }
     /**
-     * <code>optional string required_parent_shell = 20;</code>
+     * `optional string required_parent_shell = 20;`
      * @return Whether the requiredParentShell field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequiredParentShell(): kotlin.Boolean {
       return _builder.hasRequiredParentShell()
@@ -430,16 +400,14 @@ public object ShellSpecKt {
         _builder.isNew = value
       }
     /**
-     * <code>optional bool is_new = 14;</code>
-     * @return This builder for chaining.
+     * `optional bool is_new = 14;`
      */
     public fun clearIsNew() {
       _builder.clearIsNew()
     }
     /**
-     * <code>optional bool is_new = 14;</code>
+     * `optional bool is_new = 14;`
      * @return Whether the isNew field is set.
-     * @return This builder for chaining.
      */
     public fun hasIsNew(): kotlin.Boolean {
       return _builder.hasIsNew()
@@ -456,16 +424,14 @@ public object ShellSpecKt {
         _builder.expires = value
       }
     /**
-     * <code>optional bool expires = 15;</code>
-     * @return This builder for chaining.
+     * `optional bool expires = 15;`
      */
     public fun clearExpires() {
       _builder.clearExpires()
     }
     /**
-     * <code>optional bool expires = 15;</code>
+     * `optional bool expires = 15;`
      * @return Whether the expires field is set.
-     * @return This builder for chaining.
      */
     public fun hasExpires(): kotlin.Boolean {
       return _builder.hasExpires()
@@ -482,16 +448,14 @@ public object ShellSpecKt {
         _builder.secondsUntilAvailable = value
       }
     /**
-     * <code>optional double seconds_until_available = 17;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_until_available = 17;`
      */
     public fun clearSecondsUntilAvailable() {
       _builder.clearSecondsUntilAvailable()
     }
     /**
-     * <code>optional double seconds_until_available = 17;</code>
+     * `optional double seconds_until_available = 17;`
      * @return Whether the secondsUntilAvailable field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsUntilAvailable(): kotlin.Boolean {
       return _builder.hasSecondsUntilAvailable()
@@ -508,16 +472,14 @@ public object ShellSpecKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 16;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 16;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 16;</code>
+     * `optional double seconds_remaining = 16;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -534,16 +496,14 @@ public object ShellSpecKt {
         _builder.popularity = value
       }
     /**
-     * <code>optional uint64 popularity = 21;</code>
-     * @return This builder for chaining.
+     * `optional uint64 popularity = 21;`
      */
     public fun clearPopularity() {
       _builder.clearPopularity()
     }
     /**
-     * <code>optional uint64 popularity = 21;</code>
+     * `optional uint64 popularity = 21;`
      * @return Whether the popularity field is set.
-     * @return This builder for chaining.
      */
     public fun hasPopularity(): kotlin.Boolean {
       return _builder.hasPopularity()
@@ -560,16 +520,14 @@ public object ShellSpecKt {
         _builder.defaultAppearance = value
       }
     /**
-     * <code>optional bool default_appearance = 8;</code>
-     * @return This builder for chaining.
+     * `optional bool default_appearance = 8;`
      */
     public fun clearDefaultAppearance() {
       _builder.clearDefaultAppearance()
     }
     /**
-     * <code>optional bool default_appearance = 8;</code>
+     * `optional bool default_appearance = 8;`
      * @return Whether the defaultAppearance field is set.
-     * @return This builder for chaining.
      */
     public fun hasDefaultAppearance(): kotlin.Boolean {
       return _builder.hasDefaultAppearance()
@@ -608,16 +566,14 @@ public object ShellSpecKt {
           _builder.assetType = value
         }
       /**
-       * <code>optional .ei.ShellSpec.AssetType asset_type = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ShellSpec.AssetType asset_type = 1;`
        */
       public fun clearAssetType() {
         _builder.clearAssetType()
       }
       /**
-       * <code>optional .ei.ShellSpec.AssetType asset_type = 1;</code>
+       * `optional .ei.ShellSpec.AssetType asset_type = 1;`
        * @return Whether the assetType field is set.
-       * @return This builder for chaining.
        */
       public fun hasAssetType(): kotlin.Boolean {
         return _builder.hasAssetType()
@@ -634,16 +590,14 @@ public object ShellSpecKt {
           _builder.dlc = value
         }
       /**
-       * <code>optional .ei.DLCItem dlc = 2;</code>
-       * @return This builder for chaining.
+       * `optional .ei.DLCItem dlc = 2;`
        */
       public fun clearDlc() {
         _builder.clearDlc()
       }
       /**
-       * <code>optional .ei.DLCItem dlc = 2;</code>
+       * `optional .ei.DLCItem dlc = 2;`
        * @return Whether the dlc field is set.
-       * @return This builder for chaining.
        */
       public fun hasDlc(): kotlin.Boolean {
         return _builder.hasDlc()

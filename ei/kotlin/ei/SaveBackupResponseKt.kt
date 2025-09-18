@@ -39,16 +39,14 @@ public object SaveBackupResponseKt {
         _builder.success = value
       }
     /**
-     * <code>optional bool success = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool success = 1;`
      */
     public fun clearSuccess() {
       _builder.clearSuccess()
     }
     /**
-     * <code>optional bool success = 1;</code>
+     * `optional bool success = 1;`
      * @return Whether the success field is set.
-     * @return This builder for chaining.
      */
     public fun hasSuccess(): kotlin.Boolean {
       return _builder.hasSuccess()
@@ -65,16 +63,14 @@ public object SaveBackupResponseKt {
         _builder.errorCode = value
       }
     /**
-     * <code>optional uint32 error_code = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 error_code = 2;`
      */
     public fun clearErrorCode() {
       _builder.clearErrorCode()
     }
     /**
-     * <code>optional uint32 error_code = 2;</code>
+     * `optional uint32 error_code = 2;`
      * @return Whether the errorCode field is set.
-     * @return This builder for chaining.
      */
     public fun hasErrorCode(): kotlin.Boolean {
       return _builder.hasErrorCode()
@@ -91,16 +87,14 @@ public object SaveBackupResponseKt {
         _builder.message = value
       }
     /**
-     * <code>optional string message = 3;</code>
-     * @return This builder for chaining.
+     * `optional string message = 3;`
      */
     public fun clearMessage() {
       _builder.clearMessage()
     }
     /**
-     * <code>optional string message = 3;</code>
+     * `optional string message = 3;`
      * @return Whether the message field is set.
-     * @return This builder for chaining.
      */
     public fun hasMessage(): kotlin.Boolean {
       return _builder.hasMessage()
@@ -117,16 +111,14 @@ public object SaveBackupResponseKt {
         _builder.existingBackup = value
       }
     /**
-     * <code>optional .ei.Backup existing_backup = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Backup existing_backup = 4;`
      */
     public fun clearExistingBackup() {
       _builder.clearExistingBackup()
     }
     /**
-     * <code>optional .ei.Backup existing_backup = 4;</code>
+     * `optional .ei.Backup existing_backup = 4;`
      * @return Whether the existingBackup field is set.
-     * @return This builder for chaining.
      */
     public fun hasExistingBackup(): kotlin.Boolean {
       return _builder.hasExistingBackup()

@@ -39,16 +39,14 @@ public object AccountTransferPayloadKt {
         _builder.fromId = value
       }
     /**
-     * <code>optional string from_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string from_id = 1;`
      */
     public fun clearFromId() {
       _builder.clearFromId()
     }
     /**
-     * <code>optional string from_id = 1;</code>
+     * `optional string from_id = 1;`
      * @return Whether the fromId field is set.
-     * @return This builder for chaining.
      */
     public fun hasFromId(): kotlin.Boolean {
       return _builder.hasFromId()
@@ -65,16 +63,14 @@ public object AccountTransferPayloadKt {
         _builder.toEiUserId = value
       }
     /**
-     * <code>optional string to_ei_user_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string to_ei_user_id = 2;`
      */
     public fun clearToEiUserId() {
       _builder.clearToEiUserId()
     }
     /**
-     * <code>optional string to_ei_user_id = 2;</code>
+     * `optional string to_ei_user_id = 2;`
      * @return Whether the toEiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasToEiUserId(): kotlin.Boolean {
       return _builder.hasToEiUserId()

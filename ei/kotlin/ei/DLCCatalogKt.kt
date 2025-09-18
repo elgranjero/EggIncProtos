@@ -43,9 +43,8 @@ public object DLCCatalogKt {
         _builder.itemsList
       )
     /**
-     * <code>repeated .ei.DLCItem items = 1;</code>
+     * `repeated .ei.DLCItem items = 1;`
      * @param value The items to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addItems")
@@ -53,9 +52,8 @@ public object DLCCatalogKt {
       _builder.addItems(value)
     }
     /**
-     * <code>repeated .ei.DLCItem items = 1;</code>
+     * `repeated .ei.DLCItem items = 1;`
      * @param value The items to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignItems")
@@ -64,9 +62,8 @@ public object DLCCatalogKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.DLCItem items = 1;</code>
+     * `repeated .ei.DLCItem items = 1;`
      * @param values The items to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllItems")
@@ -74,9 +71,8 @@ public object DLCCatalogKt {
       _builder.addAllItems(values)
     }
     /**
-     * <code>repeated .ei.DLCItem items = 1;</code>
+     * `repeated .ei.DLCItem items = 1;`
      * @param values The items to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllItems")
@@ -85,10 +81,9 @@ public object DLCCatalogKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.DLCItem items = 1;</code>
+     * `repeated .ei.DLCItem items = 1;`
      * @param index The index to set the value at.
      * @param value The items to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setItems")
@@ -96,8 +91,7 @@ public object DLCCatalogKt {
       _builder.setItems(index, value)
     }
     /**
-     * <code>repeated .ei.DLCItem items = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.DLCItem items = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearItems")
@@ -120,9 +114,8 @@ public object DLCCatalogKt {
         _builder.shellsList
       )
     /**
-     * <code>repeated .ei.ShellSpec shells = 2;</code>
+     * `repeated .ei.ShellSpec shells = 2;`
      * @param value The shells to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShells")
@@ -130,9 +123,8 @@ public object DLCCatalogKt {
       _builder.addShells(value)
     }
     /**
-     * <code>repeated .ei.ShellSpec shells = 2;</code>
+     * `repeated .ei.ShellSpec shells = 2;`
      * @param value The shells to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShells")
@@ -141,9 +133,8 @@ public object DLCCatalogKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellSpec shells = 2;</code>
+     * `repeated .ei.ShellSpec shells = 2;`
      * @param values The shells to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShells")
@@ -151,9 +142,8 @@ public object DLCCatalogKt {
       _builder.addAllShells(values)
     }
     /**
-     * <code>repeated .ei.ShellSpec shells = 2;</code>
+     * `repeated .ei.ShellSpec shells = 2;`
      * @param values The shells to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShells")
@@ -162,10 +152,9 @@ public object DLCCatalogKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellSpec shells = 2;</code>
+     * `repeated .ei.ShellSpec shells = 2;`
      * @param index The index to set the value at.
      * @param value The shells to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShells")
@@ -173,8 +162,7 @@ public object DLCCatalogKt {
       _builder.setShells(index, value)
     }
     /**
-     * <code>repeated .ei.ShellSpec shells = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellSpec shells = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShells")
@@ -197,9 +185,8 @@ public object DLCCatalogKt {
         _builder.shellSetsList
       )
     /**
-     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
+     * `repeated .ei.ShellSetSpec shell_sets = 3;`
      * @param value The shellSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellSets")
@@ -207,9 +194,8 @@ public object DLCCatalogKt {
       _builder.addShellSets(value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
+     * `repeated .ei.ShellSetSpec shell_sets = 3;`
      * @param value The shellSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellSets")
@@ -218,9 +204,8 @@ public object DLCCatalogKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
+     * `repeated .ei.ShellSetSpec shell_sets = 3;`
      * @param values The shellSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellSets")
@@ -228,9 +213,8 @@ public object DLCCatalogKt {
       _builder.addAllShellSets(values)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
+     * `repeated .ei.ShellSetSpec shell_sets = 3;`
      * @param values The shellSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellSets")
@@ -239,10 +223,9 @@ public object DLCCatalogKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
+     * `repeated .ei.ShellSetSpec shell_sets = 3;`
      * @param index The index to set the value at.
      * @param value The shellSets to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellSets")
@@ -250,8 +233,7 @@ public object DLCCatalogKt {
       _builder.setShellSets(index, value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec shell_sets = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellSetSpec shell_sets = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellSets")
@@ -274,9 +256,8 @@ public object DLCCatalogKt {
         _builder.decoratorsList
       )
     /**
-     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
+     * `repeated .ei.ShellSetSpec decorators = 6;`
      * @param value The decorators to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addDecorators")
@@ -284,9 +265,8 @@ public object DLCCatalogKt {
       _builder.addDecorators(value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
+     * `repeated .ei.ShellSetSpec decorators = 6;`
      * @param value The decorators to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignDecorators")
@@ -295,9 +275,8 @@ public object DLCCatalogKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
+     * `repeated .ei.ShellSetSpec decorators = 6;`
      * @param values The decorators to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllDecorators")
@@ -305,9 +284,8 @@ public object DLCCatalogKt {
       _builder.addAllDecorators(values)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
+     * `repeated .ei.ShellSetSpec decorators = 6;`
      * @param values The decorators to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllDecorators")
@@ -316,10 +294,9 @@ public object DLCCatalogKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
+     * `repeated .ei.ShellSetSpec decorators = 6;`
      * @param index The index to set the value at.
      * @param value The decorators to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setDecorators")
@@ -327,8 +304,7 @@ public object DLCCatalogKt {
       _builder.setDecorators(index, value)
     }
     /**
-     * <code>repeated .ei.ShellSetSpec decorators = 6;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellSetSpec decorators = 6;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearDecorators")
@@ -351,9 +327,8 @@ public object DLCCatalogKt {
         _builder.shellObjectsList
       )
     /**
-     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
      * @param value The shellObjects to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellObjects")
@@ -361,9 +336,8 @@ public object DLCCatalogKt {
       _builder.addShellObjects(value)
     }
     /**
-     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
      * @param value The shellObjects to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellObjects")
@@ -372,9 +346,8 @@ public object DLCCatalogKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
      * @param values The shellObjects to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellObjects")
@@ -382,9 +355,8 @@ public object DLCCatalogKt {
       _builder.addAllShellObjects(values)
     }
     /**
-     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
      * @param values The shellObjects to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellObjects")
@@ -393,10 +365,9 @@ public object DLCCatalogKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
+     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
      * @param index The index to set the value at.
      * @param value The shellObjects to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellObjects")
@@ -404,8 +375,7 @@ public object DLCCatalogKt {
       _builder.setShellObjects(index, value)
     }
     /**
-     * <code>repeated .ei.ShellObjectSpec shell_objects = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellObjectSpec shell_objects = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellObjects")
@@ -428,9 +398,8 @@ public object DLCCatalogKt {
         _builder.shellGroupsList
       )
     /**
-     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
      * @param value The shellGroups to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addShellGroups")
@@ -438,9 +407,8 @@ public object DLCCatalogKt {
       _builder.addShellGroups(value)
     }
     /**
-     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
      * @param value The shellGroups to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignShellGroups")
@@ -449,9 +417,8 @@ public object DLCCatalogKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
      * @param values The shellGroups to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllShellGroups")
@@ -459,9 +426,8 @@ public object DLCCatalogKt {
       _builder.addAllShellGroups(values)
     }
     /**
-     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
      * @param values The shellGroups to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllShellGroups")
@@ -470,10 +436,9 @@ public object DLCCatalogKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
+     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
      * @param index The index to set the value at.
      * @param value The shellGroups to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setShellGroups")
@@ -481,8 +446,7 @@ public object DLCCatalogKt {
       _builder.setShellGroups(index, value)
     }
     /**
-     * <code>repeated .ei.ShellGroupSpec shell_groups = 5;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ShellGroupSpec shell_groups = 5;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearShellGroups")
@@ -501,16 +465,14 @@ public object DLCCatalogKt {
         _builder.shellsShowcaseLastFeaturedTime = value
       }
     /**
-     * <code>optional double shells_showcase_last_featured_time = 7;</code>
-     * @return This builder for chaining.
+     * `optional double shells_showcase_last_featured_time = 7;`
      */
     public fun clearShellsShowcaseLastFeaturedTime() {
       _builder.clearShellsShowcaseLastFeaturedTime()
     }
     /**
-     * <code>optional double shells_showcase_last_featured_time = 7;</code>
+     * `optional double shells_showcase_last_featured_time = 7;`
      * @return Whether the shellsShowcaseLastFeaturedTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasShellsShowcaseLastFeaturedTime(): kotlin.Boolean {
       return _builder.hasShellsShowcaseLastFeaturedTime()

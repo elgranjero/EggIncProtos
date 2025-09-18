@@ -39,16 +39,14 @@ public object EggIncFirstContactRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 8;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 8;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 8;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object EggIncFirstContactRequestKt {
         _builder.eiUserId = value
       }
     /**
-     * <code>optional string ei_user_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string ei_user_id = 4;`
      */
     public fun clearEiUserId() {
       _builder.clearEiUserId()
     }
     /**
-     * <code>optional string ei_user_id = 4;</code>
+     * `optional string ei_user_id = 4;`
      * @return Whether the eiUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasEiUserId(): kotlin.Boolean {
       return _builder.hasEiUserId()
@@ -94,16 +90,14 @@ public object EggIncFirstContactRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -120,16 +114,14 @@ public object EggIncFirstContactRequestKt {
         _builder.gameServicesId = value
       }
     /**
-     * <code>optional string game_services_id = 7;</code>
-     * @return This builder for chaining.
+     * `optional string game_services_id = 7;`
      */
     public fun clearGameServicesId() {
       _builder.clearGameServicesId()
     }
     /**
-     * <code>optional string game_services_id = 7;</code>
+     * `optional string game_services_id = 7;`
      * @return Whether the gameServicesId field is set.
-     * @return This builder for chaining.
      */
     public fun hasGameServicesId(): kotlin.Boolean {
       return _builder.hasGameServicesId()
@@ -146,16 +138,14 @@ public object EggIncFirstContactRequestKt {
         _builder.deviceId = value
       }
     /**
-     * <code>optional string device_id = 5;</code>
-     * @return This builder for chaining.
+     * `optional string device_id = 5;`
      */
     public fun clearDeviceId() {
       _builder.clearDeviceId()
     }
     /**
-     * <code>optional string device_id = 5;</code>
+     * `optional string device_id = 5;`
      * @return Whether the deviceId field is set.
-     * @return This builder for chaining.
      */
     public fun hasDeviceId(): kotlin.Boolean {
       return _builder.hasDeviceId()
@@ -172,16 +162,14 @@ public object EggIncFirstContactRequestKt {
         _builder.username = value
       }
     /**
-     * <code>optional string username = 6;</code>
-     * @return This builder for chaining.
+     * `optional string username = 6;`
      */
     public fun clearUsername() {
       _builder.clearUsername()
     }
     /**
-     * <code>optional string username = 6;</code>
+     * `optional string username = 6;`
      * @return Whether the username field is set.
-     * @return This builder for chaining.
      */
     public fun hasUsername(): kotlin.Boolean {
       return _builder.hasUsername()
@@ -198,16 +186,14 @@ public object EggIncFirstContactRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 2;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 2;</code>
+     * `optional uint32 client_version = 2;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()
@@ -224,16 +210,14 @@ public object EggIncFirstContactRequestKt {
         _builder.platform = value
       }
     /**
-     * <code>optional .ei.Platform platform = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Platform platform = 3;`
      */
     public fun clearPlatform() {
       _builder.clearPlatform()
     }
     /**
-     * <code>optional .ei.Platform platform = 3;</code>
+     * `optional .ei.Platform platform = 3;`
      * @return Whether the platform field is set.
-     * @return This builder for chaining.
      */
     public fun hasPlatform(): kotlin.Boolean {
       return _builder.hasPlatform()

@@ -39,16 +39,14 @@ public object SubmitShellShowcaseRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 4;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 4;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object SubmitShellShowcaseRequestKt {
         _builder.localId = value
       }
     /**
-     * <code>optional string local_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string local_id = 1;`
      */
     public fun clearLocalId() {
       _builder.clearLocalId()
     }
     /**
-     * <code>optional string local_id = 1;</code>
+     * `optional string local_id = 1;`
      * @return Whether the localId field is set.
-     * @return This builder for chaining.
      */
     public fun hasLocalId(): kotlin.Boolean {
       return _builder.hasLocalId()
@@ -94,16 +90,14 @@ public object SubmitShellShowcaseRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 2;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 2;</code>
+     * `optional string user_id = 2;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -120,16 +114,14 @@ public object SubmitShellShowcaseRequestKt {
         _builder.publicUsername = value
       }
     /**
-     * <code>optional bool public_username = 5;</code>
-     * @return This builder for chaining.
+     * `optional bool public_username = 5;`
      */
     public fun clearPublicUsername() {
       _builder.clearPublicUsername()
     }
     /**
-     * <code>optional bool public_username = 5;</code>
+     * `optional bool public_username = 5;`
      * @return Whether the publicUsername field is set.
-     * @return This builder for chaining.
      */
     public fun hasPublicUsername(): kotlin.Boolean {
       return _builder.hasPublicUsername()
@@ -146,16 +138,14 @@ public object SubmitShellShowcaseRequestKt {
         _builder.farmConfig = value
       }
     /**
-     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ShellDB.FarmConfiguration farm_config = 3;`
      */
     public fun clearFarmConfig() {
       _builder.clearFarmConfig()
     }
     /**
-     * <code>optional .ei.ShellDB.FarmConfiguration farm_config = 3;</code>
+     * `optional .ei.ShellDB.FarmConfiguration farm_config = 3;`
      * @return Whether the farmConfig field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmConfig(): kotlin.Boolean {
       return _builder.hasFarmConfig()

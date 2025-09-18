@@ -39,16 +39,14 @@ public object GenericActionKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object GenericActionKt {
         _builder.ccUser = value
       }
     /**
-     * <code>optional bool cc_user = 9;</code>
-     * @return This builder for chaining.
+     * `optional bool cc_user = 9;`
      */
     public fun clearCcUser() {
       _builder.clearCcUser()
     }
     /**
-     * <code>optional bool cc_user = 9;</code>
+     * `optional bool cc_user = 9;`
      * @return Whether the ccUser field is set.
-     * @return This builder for chaining.
      */
     public fun hasCcUser(): kotlin.Boolean {
       return _builder.hasCcUser()
@@ -91,16 +87,14 @@ public object GenericActionKt {
         _builder.advertisingId = value
       }
     /**
-     * <code>optional string advertising_id = 7;</code>
-     * @return This builder for chaining.
+     * `optional string advertising_id = 7;`
      */
     public fun clearAdvertisingId() {
       _builder.clearAdvertisingId()
     }
     /**
-     * <code>optional string advertising_id = 7;</code>
+     * `optional string advertising_id = 7;`
      * @return Whether the advertisingId field is set.
-     * @return This builder for chaining.
      */
     public fun hasAdvertisingId(): kotlin.Boolean {
       return _builder.hasAdvertisingId()
@@ -117,16 +111,14 @@ public object GenericActionKt {
         _builder.approxTimeDEP = value
       }
     /**
-     * <code>optional float approx_time_DEP = 2;</code>
-     * @return This builder for chaining.
+     * `optional float approx_time_DEP = 2;`
      */
     public fun clearApproxTimeDEP() {
       _builder.clearApproxTimeDEP()
     }
     /**
-     * <code>optional float approx_time_DEP = 2;</code>
+     * `optional float approx_time_DEP = 2;`
      * @return Whether the approxTimeDEP field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTimeDEP(): kotlin.Boolean {
       return _builder.hasApproxTimeDEP()
@@ -143,16 +135,14 @@ public object GenericActionKt {
         _builder.approxTime = value
       }
     /**
-     * <code>optional double approx_time = 8;</code>
-     * @return This builder for chaining.
+     * `optional double approx_time = 8;`
      */
     public fun clearApproxTime() {
       _builder.clearApproxTime()
     }
     /**
-     * <code>optional double approx_time = 8;</code>
+     * `optional double approx_time = 8;`
      * @return Whether the approxTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasApproxTime(): kotlin.Boolean {
       return _builder.hasApproxTime()
@@ -169,16 +159,14 @@ public object GenericActionKt {
         _builder.actionName = value
       }
     /**
-     * <code>optional string action_name = 3;</code>
-     * @return This builder for chaining.
+     * `optional string action_name = 3;`
      */
     public fun clearActionName() {
       _builder.clearActionName()
     }
     /**
-     * <code>optional string action_name = 3;</code>
+     * `optional string action_name = 3;`
      * @return Whether the actionName field is set.
-     * @return This builder for chaining.
      */
     public fun hasActionName(): kotlin.Boolean {
       return _builder.hasActionName()
@@ -199,9 +187,8 @@ public object GenericActionKt {
         _builder.dataList
       )
     /**
-     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
+     * `repeated .ei.ActionKeyValuePair data = 4;`
      * @param value The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addData")
@@ -209,9 +196,8 @@ public object GenericActionKt {
       _builder.addData(value)
     }
     /**
-     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
+     * `repeated .ei.ActionKeyValuePair data = 4;`
      * @param value The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignData")
@@ -220,9 +206,8 @@ public object GenericActionKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
+     * `repeated .ei.ActionKeyValuePair data = 4;`
      * @param values The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllData")
@@ -230,9 +215,8 @@ public object GenericActionKt {
       _builder.addAllData(values)
     }
     /**
-     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
+     * `repeated .ei.ActionKeyValuePair data = 4;`
      * @param values The data to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllData")
@@ -241,10 +225,9 @@ public object GenericActionKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
+     * `repeated .ei.ActionKeyValuePair data = 4;`
      * @param index The index to set the value at.
      * @param value The data to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setData")
@@ -252,8 +235,7 @@ public object GenericActionKt {
       _builder.setData(index, value)
     }
     /**
-     * <code>repeated .ei.ActionKeyValuePair data = 4;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ActionKeyValuePair data = 4;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearData")
@@ -272,16 +254,14 @@ public object GenericActionKt {
         _builder.app = value
       }
     /**
-     * <code>optional .ei.AppInfo app = 5;</code>
-     * @return This builder for chaining.
+     * `optional .ei.AppInfo app = 5;`
      */
     public fun clearApp() {
       _builder.clearApp()
     }
     /**
-     * <code>optional .ei.AppInfo app = 5;</code>
+     * `optional .ei.AppInfo app = 5;`
      * @return Whether the app field is set.
-     * @return This builder for chaining.
      */
     public fun hasApp(): kotlin.Boolean {
       return _builder.hasApp()
@@ -301,16 +281,14 @@ public object GenericActionKt {
         _builder.device = value
       }
     /**
-     * <code>optional .ei.DeviceInfo device = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.DeviceInfo device = 6;`
      */
     public fun clearDevice() {
       _builder.clearDevice()
     }
     /**
-     * <code>optional .ei.DeviceInfo device = 6;</code>
+     * `optional .ei.DeviceInfo device = 6;`
      * @return Whether the device field is set.
-     * @return This builder for chaining.
      */
     public fun hasDevice(): kotlin.Boolean {
       return _builder.hasDevice()

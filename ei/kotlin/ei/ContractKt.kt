@@ -39,16 +39,14 @@ public object ContractKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 1;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 1;</code>
+     * `optional string identifier = 1;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -65,16 +63,14 @@ public object ContractKt {
         _builder.name = value
       }
     /**
-     * <code>optional string name = 9;</code>
-     * @return This builder for chaining.
+     * `optional string name = 9;`
      */
     public fun clearName() {
       _builder.clearName()
     }
     /**
-     * <code>optional string name = 9;</code>
+     * `optional string name = 9;`
      * @return Whether the name field is set.
-     * @return This builder for chaining.
      */
     public fun hasName(): kotlin.Boolean {
       return _builder.hasName()
@@ -91,16 +87,14 @@ public object ContractKt {
         _builder.description = value
       }
     /**
-     * <code>optional string description = 10;</code>
-     * @return This builder for chaining.
+     * `optional string description = 10;`
      */
     public fun clearDescription() {
       _builder.clearDescription()
     }
     /**
-     * <code>optional string description = 10;</code>
+     * `optional string description = 10;`
      * @return Whether the description field is set.
-     * @return This builder for chaining.
      */
     public fun hasDescription(): kotlin.Boolean {
       return _builder.hasDescription()
@@ -117,16 +111,14 @@ public object ContractKt {
         _builder.egg = value
       }
     /**
-     * <code>optional .ei.Egg egg = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Egg egg = 2;`
      */
     public fun clearEgg() {
       _builder.clearEgg()
     }
     /**
-     * <code>optional .ei.Egg egg = 2;</code>
+     * `optional .ei.Egg egg = 2;`
      * @return Whether the egg field is set.
-     * @return This builder for chaining.
      */
     public fun hasEgg(): kotlin.Boolean {
       return _builder.hasEgg()
@@ -143,16 +135,14 @@ public object ContractKt {
         _builder.customEggId = value
       }
     /**
-     * <code>optional string custom_egg_id = 25;</code>
-     * @return This builder for chaining.
+     * `optional string custom_egg_id = 25;`
      */
     public fun clearCustomEggId() {
       _builder.clearCustomEggId()
     }
     /**
-     * <code>optional string custom_egg_id = 25;</code>
+     * `optional string custom_egg_id = 25;`
      * @return Whether the customEggId field is set.
-     * @return This builder for chaining.
      */
     public fun hasCustomEggId(): kotlin.Boolean {
       return _builder.hasCustomEggId()
@@ -173,9 +163,8 @@ public object ContractKt {
         _builder.goalsList
       )
     /**
-     * <code>repeated .ei.Contract.Goal goals = 3;</code>
+     * `repeated .ei.Contract.Goal goals = 3;`
      * @param value The goals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGoals")
@@ -183,9 +172,8 @@ public object ContractKt {
       _builder.addGoals(value)
     }
     /**
-     * <code>repeated .ei.Contract.Goal goals = 3;</code>
+     * `repeated .ei.Contract.Goal goals = 3;`
      * @param value The goals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGoals")
@@ -194,9 +182,8 @@ public object ContractKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Contract.Goal goals = 3;</code>
+     * `repeated .ei.Contract.Goal goals = 3;`
      * @param values The goals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGoals")
@@ -204,9 +191,8 @@ public object ContractKt {
       _builder.addAllGoals(values)
     }
     /**
-     * <code>repeated .ei.Contract.Goal goals = 3;</code>
+     * `repeated .ei.Contract.Goal goals = 3;`
      * @param values The goals to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGoals")
@@ -215,10 +201,9 @@ public object ContractKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Contract.Goal goals = 3;</code>
+     * `repeated .ei.Contract.Goal goals = 3;`
      * @param index The index to set the value at.
      * @param value The goals to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGoals")
@@ -226,8 +211,7 @@ public object ContractKt {
       _builder.setGoals(index, value)
     }
     /**
-     * <code>repeated .ei.Contract.Goal goals = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Contract.Goal goals = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGoals")
@@ -250,9 +234,8 @@ public object ContractKt {
         _builder.goalSetsList
       )
     /**
-     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
+     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
      * @param value The goalSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGoalSets")
@@ -260,9 +243,8 @@ public object ContractKt {
       _builder.addGoalSets(value)
     }
     /**
-     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
+     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
      * @param value The goalSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGoalSets")
@@ -271,9 +253,8 @@ public object ContractKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
+     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
      * @param values The goalSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGoalSets")
@@ -281,9 +262,8 @@ public object ContractKt {
       _builder.addAllGoalSets(values)
     }
     /**
-     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
+     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
      * @param values The goalSets to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGoalSets")
@@ -292,10 +272,9 @@ public object ContractKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
+     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
      * @param index The index to set the value at.
      * @param value The goalSets to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGoalSets")
@@ -303,8 +282,7 @@ public object ContractKt {
       _builder.setGoalSets(index, value)
     }
     /**
-     * <code>repeated .ei.Contract.GoalSet goal_sets = 16;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Contract.GoalSet goal_sets = 16;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGoalSets")
@@ -327,9 +305,8 @@ public object ContractKt {
         _builder.gradeSpecsList
       )
     /**
-     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
      * @param value The gradeSpecs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGradeSpecs")
@@ -337,9 +314,8 @@ public object ContractKt {
       _builder.addGradeSpecs(value)
     }
     /**
-     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
      * @param value The gradeSpecs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGradeSpecs")
@@ -348,9 +324,8 @@ public object ContractKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
      * @param values The gradeSpecs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGradeSpecs")
@@ -358,9 +333,8 @@ public object ContractKt {
       _builder.addAllGradeSpecs(values)
     }
     /**
-     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
      * @param values The gradeSpecs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGradeSpecs")
@@ -369,10 +343,9 @@ public object ContractKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
+     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
      * @param index The index to set the value at.
      * @param value The gradeSpecs to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGradeSpecs")
@@ -380,8 +353,7 @@ public object ContractKt {
       _builder.setGradeSpecs(index, value)
     }
     /**
-     * <code>repeated .ei.Contract.GradeSpec grade_specs = 20;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Contract.GradeSpec grade_specs = 20;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGradeSpecs")
@@ -400,16 +372,14 @@ public object ContractKt {
         _builder.seasonId = value
       }
     /**
-     * <code>optional string season_id = 23;</code>
-     * @return This builder for chaining.
+     * `optional string season_id = 23;`
      */
     public fun clearSeasonId() {
       _builder.clearSeasonId()
     }
     /**
-     * <code>optional string season_id = 23;</code>
+     * `optional string season_id = 23;`
      * @return Whether the seasonId field is set.
-     * @return This builder for chaining.
      */
     public fun hasSeasonId(): kotlin.Boolean {
       return _builder.hasSeasonId()
@@ -426,16 +396,14 @@ public object ContractKt {
         _builder.coopAllowed = value
       }
     /**
-     * <code>optional bool coop_allowed = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool coop_allowed = 4;`
      */
     public fun clearCoopAllowed() {
       _builder.clearCoopAllowed()
     }
     /**
-     * <code>optional bool coop_allowed = 4;</code>
+     * `optional bool coop_allowed = 4;`
      * @return Whether the coopAllowed field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopAllowed(): kotlin.Boolean {
       return _builder.hasCoopAllowed()
@@ -452,16 +420,14 @@ public object ContractKt {
         _builder.maxCoopSize = value
       }
     /**
-     * <code>optional uint32 max_coop_size = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 max_coop_size = 5;`
      */
     public fun clearMaxCoopSize() {
       _builder.clearMaxCoopSize()
     }
     /**
-     * <code>optional uint32 max_coop_size = 5;</code>
+     * `optional uint32 max_coop_size = 5;`
      * @return Whether the maxCoopSize field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxCoopSize(): kotlin.Boolean {
       return _builder.hasMaxCoopSize()
@@ -478,16 +444,14 @@ public object ContractKt {
         _builder.maxBoosts = value
       }
     /**
-     * <code>optional uint32 max_boosts = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint32 max_boosts = 12;`
      */
     public fun clearMaxBoosts() {
       _builder.clearMaxBoosts()
     }
     /**
-     * <code>optional uint32 max_boosts = 12;</code>
+     * `optional uint32 max_boosts = 12;`
      * @return Whether the maxBoosts field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxBoosts(): kotlin.Boolean {
       return _builder.hasMaxBoosts()
@@ -504,16 +468,14 @@ public object ContractKt {
         _builder.minutesPerToken = value
       }
     /**
-     * <code>optional double minutes_per_token = 15 [default = 60];</code>
-     * @return This builder for chaining.
+     * `optional double minutes_per_token = 15 [default = 60];`
      */
     public fun clearMinutesPerToken() {
       _builder.clearMinutesPerToken()
     }
     /**
-     * <code>optional double minutes_per_token = 15 [default = 60];</code>
+     * `optional double minutes_per_token = 15 [default = 60];`
      * @return Whether the minutesPerToken field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinutesPerToken(): kotlin.Boolean {
       return _builder.hasMinutesPerToken()
@@ -530,16 +492,14 @@ public object ContractKt {
         _builder.chickenRunCooldownMinutes = value
       }
     /**
-     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
-     * @return This builder for chaining.
+     * `optional double chicken_run_cooldown_minutes = 18 [default = 180];`
      */
     public fun clearChickenRunCooldownMinutes() {
       _builder.clearChickenRunCooldownMinutes()
     }
     /**
-     * <code>optional double chicken_run_cooldown_minutes = 18 [default = 180];</code>
+     * `optional double chicken_run_cooldown_minutes = 18 [default = 180];`
      * @return Whether the chickenRunCooldownMinutes field is set.
-     * @return This builder for chaining.
      */
     public fun hasChickenRunCooldownMinutes(): kotlin.Boolean {
       return _builder.hasChickenRunCooldownMinutes()
@@ -556,16 +516,14 @@ public object ContractKt {
         _builder.startTime = value
       }
     /**
-     * <code>optional double start_time = 17;</code>
-     * @return This builder for chaining.
+     * `optional double start_time = 17;`
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * <code>optional double start_time = 17;</code>
+     * `optional double start_time = 17;`
      * @return Whether the startTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -582,16 +540,14 @@ public object ContractKt {
         _builder.expirationTime = value
       }
     /**
-     * <code>optional double expiration_time = 6;</code>
-     * @return This builder for chaining.
+     * `optional double expiration_time = 6;`
      */
     public fun clearExpirationTime() {
       _builder.clearExpirationTime()
     }
     /**
-     * <code>optional double expiration_time = 6;</code>
+     * `optional double expiration_time = 6;`
      * @return Whether the expirationTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasExpirationTime(): kotlin.Boolean {
       return _builder.hasExpirationTime()
@@ -608,16 +564,14 @@ public object ContractKt {
         _builder.lengthSeconds = value
       }
     /**
-     * <code>optional double length_seconds = 7;</code>
-     * @return This builder for chaining.
+     * `optional double length_seconds = 7;`
      */
     public fun clearLengthSeconds() {
       _builder.clearLengthSeconds()
     }
     /**
-     * <code>optional double length_seconds = 7;</code>
+     * `optional double length_seconds = 7;`
      * @return Whether the lengthSeconds field is set.
-     * @return This builder for chaining.
      */
     public fun hasLengthSeconds(): kotlin.Boolean {
       return _builder.hasLengthSeconds()
@@ -634,16 +588,14 @@ public object ContractKt {
         _builder.maxSoulEggs = value
       }
     /**
-     * <code>optional double max_soul_eggs = 13;</code>
-     * @return This builder for chaining.
+     * `optional double max_soul_eggs = 13;`
      */
     public fun clearMaxSoulEggs() {
       _builder.clearMaxSoulEggs()
     }
     /**
-     * <code>optional double max_soul_eggs = 13;</code>
+     * `optional double max_soul_eggs = 13;`
      * @return Whether the maxSoulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxSoulEggs(): kotlin.Boolean {
       return _builder.hasMaxSoulEggs()
@@ -660,16 +612,14 @@ public object ContractKt {
         _builder.minClientVersion = value
       }
     /**
-     * <code>optional uint32 min_client_version = 14;</code>
-     * @return This builder for chaining.
+     * `optional uint32 min_client_version = 14;`
      */
     public fun clearMinClientVersion() {
       _builder.clearMinClientVersion()
     }
     /**
-     * <code>optional uint32 min_client_version = 14;</code>
+     * `optional uint32 min_client_version = 14;`
      * @return Whether the minClientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasMinClientVersion(): kotlin.Boolean {
       return _builder.hasMinClientVersion()
@@ -686,16 +636,14 @@ public object ContractKt {
         _builder.leggacy = value
       }
     /**
-     * <code>optional bool leggacy = 19;</code>
-     * @return This builder for chaining.
+     * `optional bool leggacy = 19;`
      */
     public fun clearLeggacy() {
       _builder.clearLeggacy()
     }
     /**
-     * <code>optional bool leggacy = 19;</code>
+     * `optional bool leggacy = 19;`
      * @return Whether the leggacy field is set.
-     * @return This builder for chaining.
      */
     public fun hasLeggacy(): kotlin.Boolean {
       return _builder.hasLeggacy()
@@ -712,16 +660,14 @@ public object ContractKt {
         _builder.ccOnly = value
       }
     /**
-     * <code>optional bool cc_only = 22;</code>
-     * @return This builder for chaining.
+     * `optional bool cc_only = 22;`
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * <code>optional bool cc_only = 22;</code>
+     * `optional bool cc_only = 22;`
      * @return Whether the ccOnly field is set.
-     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()
@@ -734,9 +680,8 @@ public object ContractKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class DefaultShellIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string default_shell_ids = 24;</code>
+     * `repeated string default_shell_ids = 24;`
      * @return A list containing the defaultShellIds.
-     * @return This builder for chaining.
      */
     public val defaultShellIds: com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -744,9 +689,8 @@ public object ContractKt {
         _builder.defaultShellIdsList
       )
     /**
-     * <code>repeated string default_shell_ids = 24;</code>
+     * `repeated string default_shell_ids = 24;`
      * @param value The defaultShellIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addDefaultShellIds")
@@ -754,9 +698,8 @@ public object ContractKt {
       _builder.addDefaultShellIds(value)
     }
     /**
-     * <code>repeated string default_shell_ids = 24;</code>
+     * `repeated string default_shell_ids = 24;`
      * @param value The defaultShellIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignDefaultShellIds")
@@ -765,9 +708,8 @@ public object ContractKt {
       add(value)
     }
     /**
-     * <code>repeated string default_shell_ids = 24;</code>
+     * `repeated string default_shell_ids = 24;`
      * @param values The defaultShellIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllDefaultShellIds")
@@ -775,9 +717,8 @@ public object ContractKt {
       _builder.addAllDefaultShellIds(values)
     }
     /**
-     * <code>repeated string default_shell_ids = 24;</code>
+     * `repeated string default_shell_ids = 24;`
      * @param values The defaultShellIds to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllDefaultShellIds")
@@ -786,18 +727,16 @@ public object ContractKt {
       addAll(values)
     }
     /**
-     * <code>repeated string default_shell_ids = 24;</code>
+     * `repeated string default_shell_ids = 24;`
      * @param index The index to set the value at.
      * @param value The defaultShellIds to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setDefaultShellIds")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, DefaultShellIdsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setDefaultShellIds(index, value)
     }/**
-     * <code>repeated string default_shell_ids = 24;</code>
-     * @return This builder for chaining.
+     * `repeated string default_shell_ids = 24;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setDefaultShellIds")
@@ -815,16 +754,14 @@ public object ContractKt {
         _builder.debug = value
       }
     /**
-     * <code>optional bool debug = 11;</code>
-     * @return This builder for chaining.
+     * `optional bool debug = 11;`
      */
     public fun clearDebug() {
       _builder.clearDebug()
     }
     /**
-     * <code>optional bool debug = 11;</code>
+     * `optional bool debug = 11;`
      * @return Whether the debug field is set.
-     * @return This builder for chaining.
      */
     public fun hasDebug(): kotlin.Boolean {
       return _builder.hasDebug()
@@ -841,16 +778,14 @@ public object ContractKt {
         _builder.key = value
       }
     /**
-     * <code>optional string key = 21;</code>
-     * @return This builder for chaining.
+     * `optional string key = 21;`
      */
     public fun clearKey() {
       _builder.clearKey()
     }
     /**
-     * <code>optional string key = 21;</code>
+     * `optional string key = 21;`
      * @return Whether the key field is set.
-     * @return This builder for chaining.
      */
     public fun hasKey(): kotlin.Boolean {
       return _builder.hasKey()
@@ -889,16 +824,14 @@ public object ContractKt {
           _builder.type = value
         }
       /**
-       * <code>optional .ei.GoalType type = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.GoalType type = 1;`
        */
       public fun clearType() {
         _builder.clearType()
       }
       /**
-       * <code>optional .ei.GoalType type = 1;</code>
+       * `optional .ei.GoalType type = 1;`
        * @return Whether the type field is set.
-       * @return This builder for chaining.
        */
       public fun hasType(): kotlin.Boolean {
         return _builder.hasType()
@@ -915,16 +848,14 @@ public object ContractKt {
           _builder.targetAmount = value
         }
       /**
-       * <code>optional double target_amount = 2;</code>
-       * @return This builder for chaining.
+       * `optional double target_amount = 2;`
        */
       public fun clearTargetAmount() {
         _builder.clearTargetAmount()
       }
       /**
-       * <code>optional double target_amount = 2;</code>
+       * `optional double target_amount = 2;`
        * @return Whether the targetAmount field is set.
-       * @return This builder for chaining.
        */
       public fun hasTargetAmount(): kotlin.Boolean {
         return _builder.hasTargetAmount()
@@ -941,16 +872,14 @@ public object ContractKt {
           _builder.rewardType = value
         }
       /**
-       * <code>optional .ei.RewardType reward_type = 3;</code>
-       * @return This builder for chaining.
+       * `optional .ei.RewardType reward_type = 3;`
        */
       public fun clearRewardType() {
         _builder.clearRewardType()
       }
       /**
-       * <code>optional .ei.RewardType reward_type = 3;</code>
+       * `optional .ei.RewardType reward_type = 3;`
        * @return Whether the rewardType field is set.
-       * @return This builder for chaining.
        */
       public fun hasRewardType(): kotlin.Boolean {
         return _builder.hasRewardType()
@@ -967,16 +896,14 @@ public object ContractKt {
           _builder.rewardSubType = value
         }
       /**
-       * <code>optional string reward_sub_type = 4;</code>
-       * @return This builder for chaining.
+       * `optional string reward_sub_type = 4;`
        */
       public fun clearRewardSubType() {
         _builder.clearRewardSubType()
       }
       /**
-       * <code>optional string reward_sub_type = 4;</code>
+       * `optional string reward_sub_type = 4;`
        * @return Whether the rewardSubType field is set.
-       * @return This builder for chaining.
        */
       public fun hasRewardSubType(): kotlin.Boolean {
         return _builder.hasRewardSubType()
@@ -993,16 +920,14 @@ public object ContractKt {
           _builder.rewardAmount = value
         }
       /**
-       * <code>optional double reward_amount = 5;</code>
-       * @return This builder for chaining.
+       * `optional double reward_amount = 5;`
        */
       public fun clearRewardAmount() {
         _builder.clearRewardAmount()
       }
       /**
-       * <code>optional double reward_amount = 5;</code>
+       * `optional double reward_amount = 5;`
        * @return Whether the rewardAmount field is set.
-       * @return This builder for chaining.
        */
       public fun hasRewardAmount(): kotlin.Boolean {
         return _builder.hasRewardAmount()
@@ -1019,16 +944,14 @@ public object ContractKt {
           _builder.targetSoulEggs = value
         }
       /**
-       * <code>optional double target_soul_eggs = 6;</code>
-       * @return This builder for chaining.
+       * `optional double target_soul_eggs = 6;`
        */
       public fun clearTargetSoulEggs() {
         _builder.clearTargetSoulEggs()
       }
       /**
-       * <code>optional double target_soul_eggs = 6;</code>
+       * `optional double target_soul_eggs = 6;`
        * @return Whether the targetSoulEggs field is set.
-       * @return This builder for chaining.
        */
       public fun hasTargetSoulEggs(): kotlin.Boolean {
         return _builder.hasTargetSoulEggs()
@@ -1072,9 +995,8 @@ public object ContractKt {
           _builder.goalsList
         )
       /**
-       * <code>repeated .ei.Contract.Goal goals = 1;</code>
+       * `repeated .ei.Contract.Goal goals = 1;`
        * @param value The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGoals")
@@ -1082,9 +1004,8 @@ public object ContractKt {
         _builder.addGoals(value)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 1;</code>
+       * `repeated .ei.Contract.Goal goals = 1;`
        * @param value The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGoals")
@@ -1093,9 +1014,8 @@ public object ContractKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 1;</code>
+       * `repeated .ei.Contract.Goal goals = 1;`
        * @param values The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGoals")
@@ -1103,9 +1023,8 @@ public object ContractKt {
         _builder.addAllGoals(values)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 1;</code>
+       * `repeated .ei.Contract.Goal goals = 1;`
        * @param values The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGoals")
@@ -1114,10 +1033,9 @@ public object ContractKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 1;</code>
+       * `repeated .ei.Contract.Goal goals = 1;`
        * @param index The index to set the value at.
        * @param value The goals to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGoals")
@@ -1125,8 +1043,7 @@ public object ContractKt {
         _builder.setGoals(index, value)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 1;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Contract.Goal goals = 1;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGoals")
@@ -1168,16 +1085,14 @@ public object ContractKt {
           _builder.grade = value
         }
       /**
-       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.Contract.PlayerGrade grade = 1;`
        */
       public fun clearGrade() {
         _builder.clearGrade()
       }
       /**
-       * <code>optional .ei.Contract.PlayerGrade grade = 1;</code>
+       * `optional .ei.Contract.PlayerGrade grade = 1;`
        * @return Whether the grade field is set.
-       * @return This builder for chaining.
        */
       public fun hasGrade(): kotlin.Boolean {
         return _builder.hasGrade()
@@ -1198,9 +1113,8 @@ public object ContractKt {
           _builder.goalsList
         )
       /**
-       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * `repeated .ei.Contract.Goal goals = 2;`
        * @param value The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addGoals")
@@ -1208,9 +1122,8 @@ public object ContractKt {
         _builder.addGoals(value)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * `repeated .ei.Contract.Goal goals = 2;`
        * @param value The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignGoals")
@@ -1219,9 +1132,8 @@ public object ContractKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * `repeated .ei.Contract.Goal goals = 2;`
        * @param values The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllGoals")
@@ -1229,9 +1141,8 @@ public object ContractKt {
         _builder.addAllGoals(values)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * `repeated .ei.Contract.Goal goals = 2;`
        * @param values The goals to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllGoals")
@@ -1240,10 +1151,9 @@ public object ContractKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 2;</code>
+       * `repeated .ei.Contract.Goal goals = 2;`
        * @param index The index to set the value at.
        * @param value The goals to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setGoals")
@@ -1251,8 +1161,7 @@ public object ContractKt {
         _builder.setGoals(index, value)
       }
       /**
-       * <code>repeated .ei.Contract.Goal goals = 2;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.Contract.Goal goals = 2;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearGoals")
@@ -1275,9 +1184,8 @@ public object ContractKt {
           _builder.modifiersList
         )
       /**
-       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * `repeated .ei.GameModifier modifiers = 3;`
        * @param value The modifiers to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addModifiers")
@@ -1285,9 +1193,8 @@ public object ContractKt {
         _builder.addModifiers(value)
       }
       /**
-       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * `repeated .ei.GameModifier modifiers = 3;`
        * @param value The modifiers to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignModifiers")
@@ -1296,9 +1203,8 @@ public object ContractKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * `repeated .ei.GameModifier modifiers = 3;`
        * @param values The modifiers to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllModifiers")
@@ -1306,9 +1212,8 @@ public object ContractKt {
         _builder.addAllModifiers(values)
       }
       /**
-       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * `repeated .ei.GameModifier modifiers = 3;`
        * @param values The modifiers to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllModifiers")
@@ -1317,10 +1222,9 @@ public object ContractKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.GameModifier modifiers = 3;</code>
+       * `repeated .ei.GameModifier modifiers = 3;`
        * @param index The index to set the value at.
        * @param value The modifiers to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setModifiers")
@@ -1328,8 +1232,7 @@ public object ContractKt {
         _builder.setModifiers(index, value)
       }
       /**
-       * <code>repeated .ei.GameModifier modifiers = 3;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.GameModifier modifiers = 3;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearModifiers")
@@ -1348,16 +1251,14 @@ public object ContractKt {
           _builder.lengthSeconds = value
         }
       /**
-       * <code>optional double length_seconds = 4;</code>
-       * @return This builder for chaining.
+       * `optional double length_seconds = 4;`
        */
       public fun clearLengthSeconds() {
         _builder.clearLengthSeconds()
       }
       /**
-       * <code>optional double length_seconds = 4;</code>
+       * `optional double length_seconds = 4;`
        * @return Whether the lengthSeconds field is set.
-       * @return This builder for chaining.
        */
       public fun hasLengthSeconds(): kotlin.Boolean {
         return _builder.hasLengthSeconds()

@@ -14,6 +14,7 @@
 goog.provide('proto.ei.MissionInfo');
 goog.provide('proto.ei.MissionInfo.DurationType');
 goog.provide('proto.ei.MissionInfo.Fuel');
+goog.provide('proto.ei.MissionInfo.MissionType');
 goog.provide('proto.ei.MissionInfo.Spaceship');
 goog.provide('proto.ei.MissionInfo.Status');
 
@@ -107,6 +108,8 @@ proto.ei.MissionInfo.toObject = function(includeInstance, msg) {
     ship: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     status: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     durationType: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f,
+    type: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
+    resetIndex: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
     fuelList: jspb.Message.toObjectList(msg.getFuelList(),
     proto.ei.MissionInfo.Fuel.toObject, includeInstance),
     level: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
@@ -165,6 +168,14 @@ proto.ei.MissionInfo.deserializeBinaryFromReader = function(msg, reader) {
     case 3:
       var value = /** @type {!proto.ei.MissionInfo.DurationType} */ (reader.readEnum());
       msg.setDurationType(value);
+      break;
+    case 14:
+      var value = /** @type {!proto.ei.MissionInfo.MissionType} */ (reader.readEnum());
+      msg.setType(value);
+      break;
+    case 15:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setResetIndex(value);
       break;
     case 4:
       var value = new proto.ei.MissionInfo.Fuel;
@@ -254,6 +265,20 @@ proto.ei.MissionInfo.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeEnum(
       3,
+      f
+    );
+  }
+  f = /** @type {!proto.ei.MissionInfo.MissionType} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeEnum(
+      14,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 15));
+  if (f != null) {
+    writer.writeUint32(
+      15,
       f
     );
   }
@@ -358,7 +383,8 @@ proto.ei.MissionInfo.Status = {
   RETURNED: 15,
   ANALYZING: 16,
   COMPLETE: 20,
-  ARCHIVED: 25
+  ARCHIVED: 25,
+  ABORTED: 30
 };
 
 /**
@@ -369,6 +395,14 @@ proto.ei.MissionInfo.DurationType = {
   LONG: 1,
   EPIC: 2,
   TUTORIAL: 3
+};
+
+/**
+ * @enum {number}
+ */
+proto.ei.MissionInfo.MissionType = {
+  STANDARD: 0,
+  VIRTUE: 1
 };
 
 
@@ -672,6 +706,78 @@ proto.ei.MissionInfo.prototype.clearDurationType = function() {
  */
 proto.ei.MissionInfo.prototype.hasDurationType = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional MissionType type = 14;
+ * @return {!proto.ei.MissionInfo.MissionType}
+ */
+proto.ei.MissionInfo.prototype.getType = function() {
+  return /** @type {!proto.ei.MissionInfo.MissionType} */ (jspb.Message.getFieldWithDefault(this, 14, 0));
+};
+
+
+/**
+ * @param {!proto.ei.MissionInfo.MissionType} value
+ * @return {!proto.ei.MissionInfo} returns this
+ */
+proto.ei.MissionInfo.prototype.setType = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MissionInfo} returns this
+ */
+proto.ei.MissionInfo.prototype.clearType = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MissionInfo.prototype.hasType = function() {
+  return jspb.Message.getField(this, 14) != null;
+};
+
+
+/**
+ * optional uint32 reset_index = 15;
+ * @return {number}
+ */
+proto.ei.MissionInfo.prototype.getResetIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 15, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.MissionInfo} returns this
+ */
+proto.ei.MissionInfo.prototype.setResetIndex = function(value) {
+  return jspb.Message.setField(this, 15, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.MissionInfo} returns this
+ */
+proto.ei.MissionInfo.prototype.clearResetIndex = function() {
+  return jspb.Message.setField(this, 15, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.MissionInfo.prototype.hasResetIndex = function() {
+  return jspb.Message.getField(this, 15) != null;
 };
 
 

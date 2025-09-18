@@ -39,16 +39,14 @@ public object LogCompleteMissionPayloadKt {
         _builder.req = value
       }
     /**
-     * <code>optional .ei.MissionRequest req = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.MissionRequest req = 1;`
      */
     public fun clearReq() {
       _builder.clearReq()
     }
     /**
-     * <code>optional .ei.MissionRequest req = 1;</code>
+     * `optional .ei.MissionRequest req = 1;`
      * @return Whether the req field is set.
-     * @return This builder for chaining.
      */
     public fun hasReq(): kotlin.Boolean {
       return _builder.hasReq()
@@ -68,16 +66,14 @@ public object LogCompleteMissionPayloadKt {
         _builder.res = value
       }
     /**
-     * <code>optional .ei.CompleteMissionResponse res = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.CompleteMissionResponse res = 2;`
      */
     public fun clearRes() {
       _builder.clearRes()
     }
     /**
-     * <code>optional .ei.CompleteMissionResponse res = 2;</code>
+     * `optional .ei.CompleteMissionResponse res = 2;`
      * @return Whether the res field is set.
-     * @return This builder for chaining.
      */
     public fun hasRes(): kotlin.Boolean {
       return _builder.hasRes()

@@ -39,16 +39,14 @@ public object ContractSeasonRewardConfirmationRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object ContractSeasonRewardConfirmationRequestKt {
         _builder.seasonId = value
       }
     /**
-     * <code>optional string season_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional string season_id = 2;`
      */
     public fun clearSeasonId() {
       _builder.clearSeasonId()
     }
     /**
-     * <code>optional string season_id = 2;</code>
+     * `optional string season_id = 2;`
      * @return Whether the seasonId field is set.
-     * @return This builder for chaining.
      */
     public fun hasSeasonId(): kotlin.Boolean {
       return _builder.hasSeasonId()
@@ -94,16 +90,14 @@ public object ContractSeasonRewardConfirmationRequestKt {
         _builder.goal = value
       }
     /**
-     * <code>optional .ei.ContractSeasonGoal goal = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractSeasonGoal goal = 3;`
      */
     public fun clearGoal() {
       _builder.clearGoal()
     }
     /**
-     * <code>optional .ei.ContractSeasonGoal goal = 3;</code>
+     * `optional .ei.ContractSeasonGoal goal = 3;`
      * @return Whether the goal field is set.
-     * @return This builder for chaining.
      */
     public fun hasGoal(): kotlin.Boolean {
       return _builder.hasGoal()

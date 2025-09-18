@@ -39,16 +39,14 @@ public object UpdateCoopPermissionsRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 6;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 6;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 6;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 6;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object UpdateCoopPermissionsRequestKt {
         _builder.contractIdentifier = value
       }
     /**
-     * <code>optional string contract_identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string contract_identifier = 1;`
      */
     public fun clearContractIdentifier() {
       _builder.clearContractIdentifier()
     }
     /**
-     * <code>optional string contract_identifier = 1;</code>
+     * `optional string contract_identifier = 1;`
      * @return Whether the contractIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractIdentifier(): kotlin.Boolean {
       return _builder.hasContractIdentifier()
@@ -94,16 +90,14 @@ public object UpdateCoopPermissionsRequestKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 2;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 2;</code>
+     * `optional string coop_identifier = 2;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -120,16 +114,14 @@ public object UpdateCoopPermissionsRequestKt {
         _builder.requestingUserId = value
       }
     /**
-     * <code>optional string requesting_user_id = 3;</code>
-     * @return This builder for chaining.
+     * `optional string requesting_user_id = 3;`
      */
     public fun clearRequestingUserId() {
       _builder.clearRequestingUserId()
     }
     /**
-     * <code>optional string requesting_user_id = 3;</code>
+     * `optional string requesting_user_id = 3;`
      * @return Whether the requestingUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasRequestingUserId(): kotlin.Boolean {
       return _builder.hasRequestingUserId()
@@ -146,16 +138,14 @@ public object UpdateCoopPermissionsRequestKt {
         _builder.public = value
       }
     /**
-     * <code>optional bool public = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool public = 4;`
      */
     public fun clearPublic() {
       _builder.clearPublic()
     }
     /**
-     * <code>optional bool public = 4;</code>
+     * `optional bool public = 4;`
      * @return Whether the public field is set.
-     * @return This builder for chaining.
      */
     public fun hasPublic(): kotlin.Boolean {
       return _builder.hasPublic()
@@ -172,16 +162,14 @@ public object UpdateCoopPermissionsRequestKt {
         _builder.clientVersion = value
       }
     /**
-     * <code>optional uint32 client_version = 5;</code>
-     * @return This builder for chaining.
+     * `optional uint32 client_version = 5;`
      */
     public fun clearClientVersion() {
       _builder.clearClientVersion()
     }
     /**
-     * <code>optional uint32 client_version = 5;</code>
+     * `optional uint32 client_version = 5;`
      * @return Whether the clientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasClientVersion(): kotlin.Boolean {
       return _builder.hasClientVersion()

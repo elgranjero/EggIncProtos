@@ -39,16 +39,14 @@ public object CoopChickenRunEntryKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -65,16 +63,14 @@ public object CoopChickenRunEntryKt {
         _builder.serverTimestamp = value
       }
     /**
-     * <code>optional double server_timestamp = 2;</code>
-     * @return This builder for chaining.
+     * `optional double server_timestamp = 2;`
      */
     public fun clearServerTimestamp() {
       _builder.clearServerTimestamp()
     }
     /**
-     * <code>optional double server_timestamp = 2;</code>
+     * `optional double server_timestamp = 2;`
      * @return Whether the serverTimestamp field is set.
-     * @return This builder for chaining.
      */
     public fun hasServerTimestamp(): kotlin.Boolean {
       return _builder.hasServerTimestamp()

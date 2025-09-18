@@ -39,16 +39,14 @@ public object LocalContractKt {
         _builder.contract = value
       }
     /**
-     * <code>optional .ei.Contract contract = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract contract = 1;`
      */
     public fun clearContract() {
       _builder.clearContract()
     }
     /**
-     * <code>optional .ei.Contract contract = 1;</code>
+     * `optional .ei.Contract contract = 1;`
      * @return Whether the contract field is set.
-     * @return This builder for chaining.
      */
     public fun hasContract(): kotlin.Boolean {
       return _builder.hasContract()
@@ -68,16 +66,14 @@ public object LocalContractKt {
         _builder.coopIdentifier = value
       }
     /**
-     * <code>optional string coop_identifier = 2;</code>
-     * @return This builder for chaining.
+     * `optional string coop_identifier = 2;`
      */
     public fun clearCoopIdentifier() {
       _builder.clearCoopIdentifier()
     }
     /**
-     * <code>optional string coop_identifier = 2;</code>
+     * `optional string coop_identifier = 2;`
      * @return Whether the coopIdentifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopIdentifier(): kotlin.Boolean {
       return _builder.hasCoopIdentifier()
@@ -94,16 +90,14 @@ public object LocalContractKt {
         _builder.accepted = value
       }
     /**
-     * <code>optional bool accepted = 7;</code>
-     * @return This builder for chaining.
+     * `optional bool accepted = 7;`
      */
     public fun clearAccepted() {
       _builder.clearAccepted()
     }
     /**
-     * <code>optional bool accepted = 7;</code>
+     * `optional bool accepted = 7;`
      * @return Whether the accepted field is set.
-     * @return This builder for chaining.
      */
     public fun hasAccepted(): kotlin.Boolean {
       return _builder.hasAccepted()
@@ -120,16 +114,14 @@ public object LocalContractKt {
         _builder.timeAccepted = value
       }
     /**
-     * <code>optional double time_accepted = 3;</code>
-     * @return This builder for chaining.
+     * `optional double time_accepted = 3;`
      */
     public fun clearTimeAccepted() {
       _builder.clearTimeAccepted()
     }
     /**
-     * <code>optional double time_accepted = 3;</code>
+     * `optional double time_accepted = 3;`
      * @return Whether the timeAccepted field is set.
-     * @return This builder for chaining.
      */
     public fun hasTimeAccepted(): kotlin.Boolean {
       return _builder.hasTimeAccepted()
@@ -146,16 +138,14 @@ public object LocalContractKt {
         _builder.cancelled = value
       }
     /**
-     * <code>optional bool cancelled = 4;</code>
-     * @return This builder for chaining.
+     * `optional bool cancelled = 4;`
      */
     public fun clearCancelled() {
       _builder.clearCancelled()
     }
     /**
-     * <code>optional bool cancelled = 4;</code>
+     * `optional bool cancelled = 4;`
      * @return Whether the cancelled field is set.
-     * @return This builder for chaining.
      */
     public fun hasCancelled(): kotlin.Boolean {
       return _builder.hasCancelled()
@@ -172,16 +162,14 @@ public object LocalContractKt {
         _builder.new = value
       }
     /**
-     * <code>optional bool new = 8;</code>
-     * @return This builder for chaining.
+     * `optional bool new = 8;`
      */
     public fun clearNew() {
       _builder.clearNew()
     }
     /**
-     * <code>optional bool new = 8;</code>
+     * `optional bool new = 8;`
      * @return Whether the new field is set.
-     * @return This builder for chaining.
      */
     public fun hasNew(): kotlin.Boolean {
       return _builder.hasNew()
@@ -198,16 +186,14 @@ public object LocalContractKt {
         _builder.coopSharedEndTime = value
       }
     /**
-     * <code>optional double coop_shared_end_time = 5;</code>
-     * @return This builder for chaining.
+     * `optional double coop_shared_end_time = 5;`
      */
     public fun clearCoopSharedEndTime() {
       _builder.clearCoopSharedEndTime()
     }
     /**
-     * <code>optional double coop_shared_end_time = 5;</code>
+     * `optional double coop_shared_end_time = 5;`
      * @return Whether the coopSharedEndTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopSharedEndTime(): kotlin.Boolean {
       return _builder.hasCoopSharedEndTime()
@@ -224,16 +210,14 @@ public object LocalContractKt {
         _builder.coopSimulationEndTime = value
       }
     /**
-     * <code>optional double coop_simulation_end_time = 22;</code>
-     * @return This builder for chaining.
+     * `optional double coop_simulation_end_time = 22;`
      */
     public fun clearCoopSimulationEndTime() {
       _builder.clearCoopSimulationEndTime()
     }
     /**
-     * <code>optional double coop_simulation_end_time = 22;</code>
+     * `optional double coop_simulation_end_time = 22;`
      * @return Whether the coopSimulationEndTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopSimulationEndTime(): kotlin.Boolean {
       return _builder.hasCoopSimulationEndTime()
@@ -250,16 +234,14 @@ public object LocalContractKt {
         _builder.coopGracePeriodEndTime = value
       }
     /**
-     * <code>optional double coop_grace_period_end_time = 9;</code>
-     * @return This builder for chaining.
+     * `optional double coop_grace_period_end_time = 9;`
      */
     public fun clearCoopGracePeriodEndTime() {
       _builder.clearCoopGracePeriodEndTime()
     }
     /**
-     * <code>optional double coop_grace_period_end_time = 9;</code>
+     * `optional double coop_grace_period_end_time = 9;`
      * @return Whether the coopGracePeriodEndTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopGracePeriodEndTime(): kotlin.Boolean {
       return _builder.hasCoopGracePeriodEndTime()
@@ -276,16 +258,14 @@ public object LocalContractKt {
         _builder.coopContributionFinalized = value
       }
     /**
-     * <code>optional bool coop_contribution_finalized = 10;</code>
-     * @return This builder for chaining.
+     * `optional bool coop_contribution_finalized = 10;`
      */
     public fun clearCoopContributionFinalized() {
       _builder.clearCoopContributionFinalized()
     }
     /**
-     * <code>optional bool coop_contribution_finalized = 10;</code>
+     * `optional bool coop_contribution_finalized = 10;`
      * @return Whether the coopContributionFinalized field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopContributionFinalized(): kotlin.Boolean {
       return _builder.hasCoopContributionFinalized()
@@ -302,16 +282,14 @@ public object LocalContractKt {
         _builder.coopLastUploadedContribution = value
       }
     /**
-     * <code>optional double coop_last_uploaded_contribution = 11;</code>
-     * @return This builder for chaining.
+     * `optional double coop_last_uploaded_contribution = 11;`
      */
     public fun clearCoopLastUploadedContribution() {
       _builder.clearCoopLastUploadedContribution()
     }
     /**
-     * <code>optional double coop_last_uploaded_contribution = 11;</code>
+     * `optional double coop_last_uploaded_contribution = 11;`
      * @return Whether the coopLastUploadedContribution field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopLastUploadedContribution(): kotlin.Boolean {
       return _builder.hasCoopLastUploadedContribution()
@@ -328,16 +306,14 @@ public object LocalContractKt {
         _builder.coopUserId = value
       }
     /**
-     * <code>optional string coop_user_id = 13;</code>
-     * @return This builder for chaining.
+     * `optional string coop_user_id = 13;`
      */
     public fun clearCoopUserId() {
       _builder.clearCoopUserId()
     }
     /**
-     * <code>optional string coop_user_id = 13;</code>
+     * `optional string coop_user_id = 13;`
      * @return Whether the coopUserId field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopUserId(): kotlin.Boolean {
       return _builder.hasCoopUserId()
@@ -354,16 +330,14 @@ public object LocalContractKt {
         _builder.coopShareFarm = value
       }
     /**
-     * <code>optional bool coop_share_farm = 17;</code>
-     * @return This builder for chaining.
+     * `optional bool coop_share_farm = 17;`
      */
     public fun clearCoopShareFarm() {
       _builder.clearCoopShareFarm()
     }
     /**
-     * <code>optional bool coop_share_farm = 17;</code>
+     * `optional bool coop_share_farm = 17;`
      * @return Whether the coopShareFarm field is set.
-     * @return This builder for chaining.
      */
     public fun hasCoopShareFarm(): kotlin.Boolean {
       return _builder.hasCoopShareFarm()
@@ -380,16 +354,14 @@ public object LocalContractKt {
         _builder.lastAmountWhenRewardGiven = value
       }
     /**
-     * <code>optional double last_amount_when_reward_given = 6;</code>
-     * @return This builder for chaining.
+     * `optional double last_amount_when_reward_given = 6;`
      */
     public fun clearLastAmountWhenRewardGiven() {
       _builder.clearLastAmountWhenRewardGiven()
     }
     /**
-     * <code>optional double last_amount_when_reward_given = 6;</code>
+     * `optional double last_amount_when_reward_given = 6;`
      * @return Whether the lastAmountWhenRewardGiven field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastAmountWhenRewardGiven(): kotlin.Boolean {
       return _builder.hasLastAmountWhenRewardGiven()
@@ -406,16 +378,14 @@ public object LocalContractKt {
         _builder.numGoalsAchieved = value
       }
     /**
-     * <code>optional uint32 num_goals_achieved = 14;</code>
-     * @return This builder for chaining.
+     * `optional uint32 num_goals_achieved = 14;`
      */
     public fun clearNumGoalsAchieved() {
       _builder.clearNumGoalsAchieved()
     }
     /**
-     * <code>optional uint32 num_goals_achieved = 14;</code>
+     * `optional uint32 num_goals_achieved = 14;`
      * @return Whether the numGoalsAchieved field is set.
-     * @return This builder for chaining.
      */
     public fun hasNumGoalsAchieved(): kotlin.Boolean {
       return _builder.hasNumGoalsAchieved()
@@ -432,16 +402,14 @@ public object LocalContractKt {
         _builder.maxFarmSizeReached = value
       }
     /**
-     * <code>optional double max_farm_size_reached = 23;</code>
-     * @return This builder for chaining.
+     * `optional double max_farm_size_reached = 23;`
      */
     public fun clearMaxFarmSizeReached() {
       _builder.clearMaxFarmSizeReached()
     }
     /**
-     * <code>optional double max_farm_size_reached = 23;</code>
+     * `optional double max_farm_size_reached = 23;`
      * @return Whether the maxFarmSizeReached field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxFarmSizeReached(): kotlin.Boolean {
       return _builder.hasMaxFarmSizeReached()
@@ -458,16 +426,14 @@ public object LocalContractKt {
         _builder.boostsUsed = value
       }
     /**
-     * <code>optional uint32 boosts_used = 12;</code>
-     * @return This builder for chaining.
+     * `optional uint32 boosts_used = 12;`
      */
     public fun clearBoostsUsed() {
       _builder.clearBoostsUsed()
     }
     /**
-     * <code>optional uint32 boosts_used = 12;</code>
+     * `optional uint32 boosts_used = 12;`
      * @return Whether the boostsUsed field is set.
-     * @return This builder for chaining.
      */
     public fun hasBoostsUsed(): kotlin.Boolean {
       return _builder.hasBoostsUsed()
@@ -484,16 +450,14 @@ public object LocalContractKt {
         _builder.pointsReplay = value
       }
     /**
-     * <code>optional bool points_replay = 20;</code>
-     * @return This builder for chaining.
+     * `optional bool points_replay = 20;`
      */
     public fun clearPointsReplay() {
       _builder.clearPointsReplay()
     }
     /**
-     * <code>optional bool points_replay = 20;</code>
+     * `optional bool points_replay = 20;`
      * @return Whether the pointsReplay field is set.
-     * @return This builder for chaining.
      */
     public fun hasPointsReplay(): kotlin.Boolean {
       return _builder.hasPointsReplay()
@@ -510,16 +474,14 @@ public object LocalContractKt {
         _builder.league = value
       }
     /**
-     * <code>optional uint32 league = 15;</code>
-     * @return This builder for chaining.
+     * `optional uint32 league = 15;`
      */
     public fun clearLeague() {
       _builder.clearLeague()
     }
     /**
-     * <code>optional uint32 league = 15;</code>
+     * `optional uint32 league = 15;`
      * @return Whether the league field is set.
-     * @return This builder for chaining.
      */
     public fun hasLeague(): kotlin.Boolean {
       return _builder.hasLeague()
@@ -536,16 +498,14 @@ public object LocalContractKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 18;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 18;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 18;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 18;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()
@@ -562,16 +522,14 @@ public object LocalContractKt {
         _builder.lastNagTime = value
       }
     /**
-     * <code>optional double last_nag_time = 16;</code>
-     * @return This builder for chaining.
+     * `optional double last_nag_time = 16;`
      */
     public fun clearLastNagTime() {
       _builder.clearLastNagTime()
     }
     /**
-     * <code>optional double last_nag_time = 16;</code>
+     * `optional double last_nag_time = 16;`
      * @return Whether the lastNagTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastNagTime(): kotlin.Boolean {
       return _builder.hasLastNagTime()
@@ -588,16 +546,14 @@ public object LocalContractKt {
         _builder.evaluation = value
       }
     /**
-     * <code>optional .ei.ContractEvaluation evaluation = 19;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractEvaluation evaluation = 19;`
      */
     public fun clearEvaluation() {
       _builder.clearEvaluation()
     }
     /**
-     * <code>optional .ei.ContractEvaluation evaluation = 19;</code>
+     * `optional .ei.ContractEvaluation evaluation = 19;`
      * @return Whether the evaluation field is set.
-     * @return This builder for chaining.
      */
     public fun hasEvaluation(): kotlin.Boolean {
       return _builder.hasEvaluation()
@@ -613,9 +569,8 @@ public object LocalContractKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ReportedUuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
-     * <code>repeated string reported_uuids = 21;</code>
+     * `repeated string reported_uuids = 21;`
      * @return A list containing the reportedUuids.
-     * @return This builder for chaining.
      */
     public val reportedUuids: com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
@@ -623,9 +578,8 @@ public object LocalContractKt {
         _builder.reportedUuidsList
       )
     /**
-     * <code>repeated string reported_uuids = 21;</code>
+     * `repeated string reported_uuids = 21;`
      * @param value The reportedUuids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addReportedUuids")
@@ -633,9 +587,8 @@ public object LocalContractKt {
       _builder.addReportedUuids(value)
     }
     /**
-     * <code>repeated string reported_uuids = 21;</code>
+     * `repeated string reported_uuids = 21;`
      * @param value The reportedUuids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignReportedUuids")
@@ -644,9 +597,8 @@ public object LocalContractKt {
       add(value)
     }
     /**
-     * <code>repeated string reported_uuids = 21;</code>
+     * `repeated string reported_uuids = 21;`
      * @param values The reportedUuids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllReportedUuids")
@@ -654,9 +606,8 @@ public object LocalContractKt {
       _builder.addAllReportedUuids(values)
     }
     /**
-     * <code>repeated string reported_uuids = 21;</code>
+     * `repeated string reported_uuids = 21;`
      * @param values The reportedUuids to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllReportedUuids")
@@ -665,18 +616,16 @@ public object LocalContractKt {
       addAll(values)
     }
     /**
-     * <code>repeated string reported_uuids = 21;</code>
+     * `repeated string reported_uuids = 21;`
      * @param index The index to set the value at.
      * @param value The reportedUuids to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setReportedUuids")
     public operator fun com.google.protobuf.kotlin.DslList<kotlin.String, ReportedUuidsProxy>.set(index: kotlin.Int, value: kotlin.String) {
       _builder.setReportedUuids(index, value)
     }/**
-     * <code>repeated string reported_uuids = 21;</code>
-     * @return This builder for chaining.
+     * `repeated string reported_uuids = 21;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setReportedUuids")

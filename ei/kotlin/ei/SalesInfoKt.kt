@@ -43,9 +43,8 @@ public object SalesInfoKt {
         _builder.salesList
       )
     /**
-     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
+     * `repeated .ei.IAPSaleEntry sales = 1;`
      * @param value The sales to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addSales")
@@ -53,9 +52,8 @@ public object SalesInfoKt {
       _builder.addSales(value)
     }
     /**
-     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
+     * `repeated .ei.IAPSaleEntry sales = 1;`
      * @param value The sales to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignSales")
@@ -64,9 +62,8 @@ public object SalesInfoKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
+     * `repeated .ei.IAPSaleEntry sales = 1;`
      * @param values The sales to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllSales")
@@ -74,9 +71,8 @@ public object SalesInfoKt {
       _builder.addAllSales(values)
     }
     /**
-     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
+     * `repeated .ei.IAPSaleEntry sales = 1;`
      * @param values The sales to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllSales")
@@ -85,10 +81,9 @@ public object SalesInfoKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
+     * `repeated .ei.IAPSaleEntry sales = 1;`
      * @param index The index to set the value at.
      * @param value The sales to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setSales")
@@ -96,8 +91,7 @@ public object SalesInfoKt {
       _builder.setSales(index, value)
     }
     /**
-     * <code>repeated .ei.IAPSaleEntry sales = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.IAPSaleEntry sales = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearSales")

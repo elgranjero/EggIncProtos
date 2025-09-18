@@ -39,16 +39,14 @@ public object ArtifactsClientInfoKt {
         _builder.missionCapacityMult = value
       }
     /**
-     * <code>optional double mission_capacity_mult = 1;</code>
-     * @return This builder for chaining.
+     * `optional double mission_capacity_mult = 1;`
      */
     public fun clearMissionCapacityMult() {
       _builder.clearMissionCapacityMult()
     }
     /**
-     * <code>optional double mission_capacity_mult = 1;</code>
+     * `optional double mission_capacity_mult = 1;`
      * @return Whether the missionCapacityMult field is set.
-     * @return This builder for chaining.
      */
     public fun hasMissionCapacityMult(): kotlin.Boolean {
       return _builder.hasMissionCapacityMult()
@@ -65,16 +63,14 @@ public object ArtifactsClientInfoKt {
         _builder.missionDurationMult = value
       }
     /**
-     * <code>optional double mission_duration_mult = 2;</code>
-     * @return This builder for chaining.
+     * `optional double mission_duration_mult = 2;`
      */
     public fun clearMissionDurationMult() {
       _builder.clearMissionDurationMult()
     }
     /**
-     * <code>optional double mission_duration_mult = 2;</code>
+     * `optional double mission_duration_mult = 2;`
      * @return Whether the missionDurationMult field is set.
-     * @return This builder for chaining.
      */
     public fun hasMissionDurationMult(): kotlin.Boolean {
       return _builder.hasMissionDurationMult()
@@ -91,16 +87,14 @@ public object ArtifactsClientInfoKt {
         _builder.missionFtlDurationResearchMult = value
       }
     /**
-     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
-     * @return This builder for chaining.
+     * `optional double mission_ftl_duration_research_mult = 4;`
      */
     public fun clearMissionFtlDurationResearchMult() {
       _builder.clearMissionFtlDurationResearchMult()
     }
     /**
-     * <code>optional double mission_ftl_duration_research_mult = 4;</code>
+     * `optional double mission_ftl_duration_research_mult = 4;`
      * @return Whether the missionFtlDurationResearchMult field is set.
-     * @return This builder for chaining.
      */
     public fun hasMissionFtlDurationResearchMult(): kotlin.Boolean {
       return _builder.hasMissionFtlDurationResearchMult()
@@ -117,16 +111,14 @@ public object ArtifactsClientInfoKt {
         _builder.missionCapacityResearchMult = value
       }
     /**
-     * <code>optional double mission_capacity_research_mult = 6;</code>
-     * @return This builder for chaining.
+     * `optional double mission_capacity_research_mult = 6;`
      */
     public fun clearMissionCapacityResearchMult() {
       _builder.clearMissionCapacityResearchMult()
     }
     /**
-     * <code>optional double mission_capacity_research_mult = 6;</code>
+     * `optional double mission_capacity_research_mult = 6;`
      * @return Whether the missionCapacityResearchMult field is set.
-     * @return This builder for chaining.
      */
     public fun hasMissionCapacityResearchMult(): kotlin.Boolean {
       return _builder.hasMissionCapacityResearchMult()
@@ -147,9 +139,8 @@ public object ArtifactsClientInfoKt {
         _builder.launchCountsList
       )
     /**
-     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
+     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
      * @param value The launchCounts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addLaunchCounts")
@@ -157,9 +148,8 @@ public object ArtifactsClientInfoKt {
       _builder.addLaunchCounts(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
+     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
      * @param value The launchCounts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignLaunchCounts")
@@ -168,9 +158,8 @@ public object ArtifactsClientInfoKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
+     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
      * @param values The launchCounts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllLaunchCounts")
@@ -178,9 +167,8 @@ public object ArtifactsClientInfoKt {
       _builder.addAllLaunchCounts(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
+     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
      * @param values The launchCounts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllLaunchCounts")
@@ -189,10 +177,9 @@ public object ArtifactsClientInfoKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
+     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
      * @param index The index to set the value at.
      * @param value The launchCounts to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setLaunchCounts")
@@ -200,8 +187,7 @@ public object ArtifactsClientInfoKt {
       _builder.setLaunchCounts(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsClientInfo.LaunchCount launch_counts = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearLaunchCounts")
@@ -220,16 +206,14 @@ public object ArtifactsClientInfoKt {
         _builder.lastServerLaunchCountSumTime = value
       }
     /**
-     * <code>optional double last_server_launch_count_sum_time = 5;</code>
-     * @return This builder for chaining.
+     * `optional double last_server_launch_count_sum_time = 5;`
      */
     public fun clearLastServerLaunchCountSumTime() {
       _builder.clearLastServerLaunchCountSumTime()
     }
     /**
-     * <code>optional double last_server_launch_count_sum_time = 5;</code>
+     * `optional double last_server_launch_count_sum_time = 5;`
      * @return Whether the lastServerLaunchCountSumTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasLastServerLaunchCountSumTime(): kotlin.Boolean {
       return _builder.hasLastServerLaunchCountSumTime()
@@ -268,16 +252,14 @@ public object ArtifactsClientInfoKt {
           _builder.ship = value
         }
       /**
-       * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.MissionInfo.Spaceship ship = 1;`
        */
       public fun clearShip() {
         _builder.clearShip()
       }
       /**
-       * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
+       * `optional .ei.MissionInfo.Spaceship ship = 1;`
        * @return Whether the ship field is set.
-       * @return This builder for chaining.
        */
       public fun hasShip(): kotlin.Boolean {
         return _builder.hasShip()
@@ -294,16 +276,14 @@ public object ArtifactsClientInfoKt {
           _builder.numLaunches = value
         }
       /**
-       * <code>optional uint32 num_launches = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 num_launches = 2;`
        */
       public fun clearNumLaunches() {
         _builder.clearNumLaunches()
       }
       /**
-       * <code>optional uint32 num_launches = 2;</code>
+       * `optional uint32 num_launches = 2;`
        * @return Whether the numLaunches field is set.
-       * @return This builder for chaining.
        */
       public fun hasNumLaunches(): kotlin.Boolean {
         return _builder.hasNumLaunches()
@@ -320,16 +300,14 @@ public object ArtifactsClientInfoKt {
           _builder.launchPoints = value
         }
       /**
-       * <code>optional double launch_points = 3;</code>
-       * @return This builder for chaining.
+       * `optional double launch_points = 3;`
        */
       public fun clearLaunchPoints() {
         _builder.clearLaunchPoints()
       }
       /**
-       * <code>optional double launch_points = 3;</code>
+       * `optional double launch_points = 3;`
        * @return Whether the launchPoints field is set.
-       * @return This builder for chaining.
        */
       public fun hasLaunchPoints(): kotlin.Boolean {
         return _builder.hasLaunchPoints()

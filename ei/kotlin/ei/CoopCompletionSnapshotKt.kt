@@ -43,9 +43,8 @@ public object CoopCompletionSnapshotKt {
         _builder.contributorsList
       )
     /**
-     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
+     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
      * @param value The contributors to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addContributors")
@@ -53,9 +52,8 @@ public object CoopCompletionSnapshotKt {
       _builder.addContributors(value)
     }
     /**
-     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
+     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
      * @param value The contributors to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignContributors")
@@ -64,9 +62,8 @@ public object CoopCompletionSnapshotKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
+     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
      * @param values The contributors to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllContributors")
@@ -74,9 +71,8 @@ public object CoopCompletionSnapshotKt {
       _builder.addAllContributors(values)
     }
     /**
-     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
+     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
      * @param values The contributors to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllContributors")
@@ -85,10 +81,9 @@ public object CoopCompletionSnapshotKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
+     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
      * @param index The index to set the value at.
      * @param value The contributors to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setContributors")
@@ -96,8 +91,7 @@ public object CoopCompletionSnapshotKt {
       _builder.setContributors(index, value)
     }
     /**
-     * <code>repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CoopCompletionSnapshot.ContributorSnapshot contributors = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearContributors")
@@ -138,16 +132,14 @@ public object CoopCompletionSnapshotKt {
           _builder.contribution = value
         }
       /**
-       * <code>optional double contribution = 1;</code>
-       * @return This builder for chaining.
+       * `optional double contribution = 1;`
        */
       public fun clearContribution() {
         _builder.clearContribution()
       }
       /**
-       * <code>optional double contribution = 1;</code>
+       * `optional double contribution = 1;`
        * @return Whether the contribution field is set.
-       * @return This builder for chaining.
        */
       public fun hasContribution(): kotlin.Boolean {
         return _builder.hasContribution()
@@ -164,16 +156,14 @@ public object CoopCompletionSnapshotKt {
           _builder.totalStepTime = value
         }
       /**
-       * <code>optional double total_step_time = 8;</code>
-       * @return This builder for chaining.
+       * `optional double total_step_time = 8;`
        */
       public fun clearTotalStepTime() {
         _builder.clearTotalStepTime()
       }
       /**
-       * <code>optional double total_step_time = 8;</code>
+       * `optional double total_step_time = 8;`
        * @return Whether the totalStepTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasTotalStepTime(): kotlin.Boolean {
         return _builder.hasTotalStepTime()
@@ -190,16 +180,14 @@ public object CoopCompletionSnapshotKt {
           _builder.lastContributionTime = value
         }
       /**
-       * <code>optional double last_contribution_time = 6;</code>
-       * @return This builder for chaining.
+       * `optional double last_contribution_time = 6;`
        */
       public fun clearLastContributionTime() {
         _builder.clearLastContributionTime()
       }
       /**
-       * <code>optional double last_contribution_time = 6;</code>
+       * `optional double last_contribution_time = 6;`
        * @return Whether the lastContributionTime field is set.
-       * @return This builder for chaining.
        */
       public fun hasLastContributionTime(): kotlin.Boolean {
         return _builder.hasLastContributionTime()
@@ -216,16 +204,14 @@ public object CoopCompletionSnapshotKt {
           _builder.finalized = value
         }
       /**
-       * <code>optional bool finalized = 7;</code>
-       * @return This builder for chaining.
+       * `optional bool finalized = 7;`
        */
       public fun clearFinalized() {
         _builder.clearFinalized()
       }
       /**
-       * <code>optional bool finalized = 7;</code>
+       * `optional bool finalized = 7;`
        * @return Whether the finalized field is set.
-       * @return This builder for chaining.
        */
       public fun hasFinalized(): kotlin.Boolean {
         return _builder.hasFinalized()
@@ -242,16 +228,14 @@ public object CoopCompletionSnapshotKt {
           _builder.soulPower = value
         }
       /**
-       * <code>optional double soul_power = 2;</code>
-       * @return This builder for chaining.
+       * `optional double soul_power = 2;`
        */
       public fun clearSoulPower() {
         _builder.clearSoulPower()
       }
       /**
-       * <code>optional double soul_power = 2;</code>
+       * `optional double soul_power = 2;`
        * @return Whether the soulPower field is set.
-       * @return This builder for chaining.
        */
       public fun hasSoulPower(): kotlin.Boolean {
         return _builder.hasSoulPower()
@@ -268,16 +252,14 @@ public object CoopCompletionSnapshotKt {
           _builder.userId = value
         }
       /**
-       * <code>optional string user_id = 3;</code>
-       * @return This builder for chaining.
+       * `optional string user_id = 3;`
        */
       public fun clearUserId() {
         _builder.clearUserId()
       }
       /**
-       * <code>optional string user_id = 3;</code>
+       * `optional string user_id = 3;`
        * @return Whether the userId field is set.
-       * @return This builder for chaining.
        */
       public fun hasUserId(): kotlin.Boolean {
         return _builder.hasUserId()
@@ -294,16 +276,14 @@ public object CoopCompletionSnapshotKt {
           _builder.tokens = value
         }
       /**
-       * <code>optional uint32 tokens = 4;</code>
-       * @return This builder for chaining.
+       * `optional uint32 tokens = 4;`
        */
       public fun clearTokens() {
         _builder.clearTokens()
       }
       /**
-       * <code>optional uint32 tokens = 4;</code>
+       * `optional uint32 tokens = 4;`
        * @return Whether the tokens field is set.
-       * @return This builder for chaining.
        */
       public fun hasTokens(): kotlin.Boolean {
         return _builder.hasTokens()
@@ -320,16 +300,14 @@ public object CoopCompletionSnapshotKt {
           _builder.tokensSpent = value
         }
       /**
-       * <code>optional uint32 tokens_spent = 5;</code>
-       * @return This builder for chaining.
+       * `optional uint32 tokens_spent = 5;`
        */
       public fun clearTokensSpent() {
         _builder.clearTokensSpent()
       }
       /**
-       * <code>optional uint32 tokens_spent = 5;</code>
+       * `optional uint32 tokens_spent = 5;`
        * @return Whether the tokensSpent field is set.
-       * @return This builder for chaining.
        */
       public fun hasTokensSpent(): kotlin.Boolean {
         return _builder.hasTokensSpent()

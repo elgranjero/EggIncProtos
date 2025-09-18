@@ -39,16 +39,14 @@ public object GetPeriodicalsRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 12;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 12;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 12;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 12;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object GetPeriodicalsRequestKt {
         _builder.userId = value
       }
     /**
-     * <code>optional string user_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional string user_id = 1;`
      */
     public fun clearUserId() {
       _builder.clearUserId()
     }
     /**
-     * <code>optional string user_id = 1;</code>
+     * `optional string user_id = 1;`
      * @return Whether the userId field is set.
-     * @return This builder for chaining.
      */
     public fun hasUserId(): kotlin.Boolean {
       return _builder.hasUserId()
@@ -94,16 +90,14 @@ public object GetPeriodicalsRequestKt {
         _builder.piggyFull = value
       }
     /**
-     * <code>optional bool piggy_full = 2;</code>
-     * @return This builder for chaining.
+     * `optional bool piggy_full = 2;`
      */
     public fun clearPiggyFull() {
       _builder.clearPiggyFull()
     }
     /**
-     * <code>optional bool piggy_full = 2;</code>
+     * `optional bool piggy_full = 2;`
      * @return Whether the piggyFull field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggyFull(): kotlin.Boolean {
       return _builder.hasPiggyFull()
@@ -120,16 +114,14 @@ public object GetPeriodicalsRequestKt {
         _builder.piggyFoundFull = value
       }
     /**
-     * <code>optional bool piggy_found_full = 3;</code>
-     * @return This builder for chaining.
+     * `optional bool piggy_found_full = 3;`
      */
     public fun clearPiggyFoundFull() {
       _builder.clearPiggyFoundFull()
     }
     /**
-     * <code>optional bool piggy_found_full = 3;</code>
+     * `optional bool piggy_found_full = 3;`
      * @return Whether the piggyFoundFull field is set.
-     * @return This builder for chaining.
      */
     public fun hasPiggyFoundFull(): kotlin.Boolean {
       return _builder.hasPiggyFoundFull()
@@ -146,16 +138,14 @@ public object GetPeriodicalsRequestKt {
         _builder.secondsFullRealtime = value
       }
     /**
-     * <code>optional double seconds_full_realtime = 4;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_full_realtime = 4;`
      */
     public fun clearSecondsFullRealtime() {
       _builder.clearSecondsFullRealtime()
     }
     /**
-     * <code>optional double seconds_full_realtime = 4;</code>
+     * `optional double seconds_full_realtime = 4;`
      * @return Whether the secondsFullRealtime field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsFullRealtime(): kotlin.Boolean {
       return _builder.hasSecondsFullRealtime()
@@ -172,16 +162,14 @@ public object GetPeriodicalsRequestKt {
         _builder.secondsFullGametime = value
       }
     /**
-     * <code>optional double seconds_full_gametime = 5;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_full_gametime = 5;`
      */
     public fun clearSecondsFullGametime() {
       _builder.clearSecondsFullGametime()
     }
     /**
-     * <code>optional double seconds_full_gametime = 5;</code>
+     * `optional double seconds_full_gametime = 5;`
      * @return Whether the secondsFullGametime field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsFullGametime(): kotlin.Boolean {
       return _builder.hasSecondsFullGametime()
@@ -198,16 +186,14 @@ public object GetPeriodicalsRequestKt {
         _builder.lostIncrements = value
       }
     /**
-     * <code>optional uint32 lost_increments = 7;</code>
-     * @return This builder for chaining.
+     * `optional uint32 lost_increments = 7;`
      */
     public fun clearLostIncrements() {
       _builder.clearLostIncrements()
     }
     /**
-     * <code>optional uint32 lost_increments = 7;</code>
+     * `optional uint32 lost_increments = 7;`
      * @return Whether the lostIncrements field is set.
-     * @return This builder for chaining.
      */
     public fun hasLostIncrements(): kotlin.Boolean {
       return _builder.hasLostIncrements()
@@ -224,16 +210,14 @@ public object GetPeriodicalsRequestKt {
         _builder.soulEggs = value
       }
     /**
-     * <code>optional double soul_eggs = 8;</code>
-     * @return This builder for chaining.
+     * `optional double soul_eggs = 8;`
      */
     public fun clearSoulEggs() {
       _builder.clearSoulEggs()
     }
     /**
-     * <code>optional double soul_eggs = 8;</code>
+     * `optional double soul_eggs = 8;`
      * @return Whether the soulEggs field is set.
-     * @return This builder for chaining.
      */
     public fun hasSoulEggs(): kotlin.Boolean {
       return _builder.hasSoulEggs()
@@ -250,16 +234,14 @@ public object GetPeriodicalsRequestKt {
         _builder.mysticalEarningsMult = value
       }
     /**
-     * <code>optional double mystical_earnings_mult = 13;</code>
-     * @return This builder for chaining.
+     * `optional double mystical_earnings_mult = 13;`
      */
     public fun clearMysticalEarningsMult() {
       _builder.clearMysticalEarningsMult()
     }
     /**
-     * <code>optional double mystical_earnings_mult = 13;</code>
+     * `optional double mystical_earnings_mult = 13;`
      * @return Whether the mysticalEarningsMult field is set.
-     * @return This builder for chaining.
      */
     public fun hasMysticalEarningsMult(): kotlin.Boolean {
       return _builder.hasMysticalEarningsMult()
@@ -276,16 +258,14 @@ public object GetPeriodicalsRequestKt {
         _builder.eop = value
       }
     /**
-     * <code>optional uint32 eop = 14;</code>
-     * @return This builder for chaining.
+     * `optional uint32 eop = 14;`
      */
     public fun clearEop() {
       _builder.clearEop()
     }
     /**
-     * <code>optional uint32 eop = 14;</code>
+     * `optional uint32 eop = 14;`
      * @return Whether the eop field is set.
-     * @return This builder for chaining.
      */
     public fun hasEop(): kotlin.Boolean {
       return _builder.hasEop()
@@ -302,16 +282,14 @@ public object GetPeriodicalsRequestKt {
         _builder.contractsUnlocked = value
       }
     /**
-     * <code>optional bool contracts_unlocked = 15;</code>
-     * @return This builder for chaining.
+     * `optional bool contracts_unlocked = 15;`
      */
     public fun clearContractsUnlocked() {
       _builder.clearContractsUnlocked()
     }
     /**
-     * <code>optional bool contracts_unlocked = 15;</code>
+     * `optional bool contracts_unlocked = 15;`
      * @return Whether the contractsUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasContractsUnlocked(): kotlin.Boolean {
       return _builder.hasContractsUnlocked()
@@ -328,16 +306,14 @@ public object GetPeriodicalsRequestKt {
         _builder.artifactsUnlocked = value
       }
     /**
-     * <code>optional bool artifacts_unlocked = 16;</code>
-     * @return This builder for chaining.
+     * `optional bool artifacts_unlocked = 16;`
      */
     public fun clearArtifactsUnlocked() {
       _builder.clearArtifactsUnlocked()
     }
     /**
-     * <code>optional bool artifacts_unlocked = 16;</code>
+     * `optional bool artifacts_unlocked = 16;`
      * @return Whether the artifactsUnlocked field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifactsUnlocked(): kotlin.Boolean {
       return _builder.hasArtifactsUnlocked()
@@ -354,16 +330,14 @@ public object GetPeriodicalsRequestKt {
         _builder.currentClientVersion = value
       }
     /**
-     * <code>optional uint32 current_client_version = 10;</code>
-     * @return This builder for chaining.
+     * `optional uint32 current_client_version = 10;`
      */
     public fun clearCurrentClientVersion() {
       _builder.clearCurrentClientVersion()
     }
     /**
-     * <code>optional uint32 current_client_version = 10;</code>
+     * `optional uint32 current_client_version = 10;`
      * @return Whether the currentClientVersion field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentClientVersion(): kotlin.Boolean {
       return _builder.hasCurrentClientVersion()
@@ -380,16 +354,14 @@ public object GetPeriodicalsRequestKt {
         _builder.debug = value
       }
     /**
-     * <code>optional bool debug = 11;</code>
-     * @return This builder for chaining.
+     * `optional bool debug = 11;`
      */
     public fun clearDebug() {
       _builder.clearDebug()
     }
     /**
-     * <code>optional bool debug = 11;</code>
+     * `optional bool debug = 11;`
      * @return Whether the debug field is set.
-     * @return This builder for chaining.
      */
     public fun hasDebug(): kotlin.Boolean {
       return _builder.hasDebug()

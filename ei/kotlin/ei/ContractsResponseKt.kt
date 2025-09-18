@@ -43,9 +43,8 @@ public object ContractsResponseKt {
         _builder.contractsList
       )
     /**
-     * <code>repeated .ei.Contract contracts = 1;</code>
+     * `repeated .ei.Contract contracts = 1;`
      * @param value The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addContracts")
@@ -53,9 +52,8 @@ public object ContractsResponseKt {
       _builder.addContracts(value)
     }
     /**
-     * <code>repeated .ei.Contract contracts = 1;</code>
+     * `repeated .ei.Contract contracts = 1;`
      * @param value The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignContracts")
@@ -64,9 +62,8 @@ public object ContractsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.Contract contracts = 1;</code>
+     * `repeated .ei.Contract contracts = 1;`
      * @param values The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllContracts")
@@ -74,9 +71,8 @@ public object ContractsResponseKt {
       _builder.addAllContracts(values)
     }
     /**
-     * <code>repeated .ei.Contract contracts = 1;</code>
+     * `repeated .ei.Contract contracts = 1;`
      * @param values The contracts to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllContracts")
@@ -85,10 +81,9 @@ public object ContractsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.Contract contracts = 1;</code>
+     * `repeated .ei.Contract contracts = 1;`
      * @param index The index to set the value at.
      * @param value The contracts to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setContracts")
@@ -96,8 +91,7 @@ public object ContractsResponseKt {
       _builder.setContracts(index, value)
     }
     /**
-     * <code>repeated .ei.Contract contracts = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.Contract contracts = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearContracts")
@@ -120,9 +114,8 @@ public object ContractsResponseKt {
         _builder.customEggsList
       )
     /**
-     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * `repeated .ei.CustomEgg custom_eggs = 6;`
      * @param value The customEggs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCustomEggs")
@@ -130,9 +123,8 @@ public object ContractsResponseKt {
       _builder.addCustomEggs(value)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * `repeated .ei.CustomEgg custom_eggs = 6;`
      * @param value The customEggs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCustomEggs")
@@ -141,9 +133,8 @@ public object ContractsResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * `repeated .ei.CustomEgg custom_eggs = 6;`
      * @param values The customEggs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCustomEggs")
@@ -151,9 +142,8 @@ public object ContractsResponseKt {
       _builder.addAllCustomEggs(values)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * `repeated .ei.CustomEgg custom_eggs = 6;`
      * @param values The customEggs to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCustomEggs")
@@ -162,10 +152,9 @@ public object ContractsResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
+     * `repeated .ei.CustomEgg custom_eggs = 6;`
      * @param index The index to set the value at.
      * @param value The customEggs to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCustomEggs")
@@ -173,8 +162,7 @@ public object ContractsResponseKt {
       _builder.setCustomEggs(index, value)
     }
     /**
-     * <code>repeated .ei.CustomEgg custom_eggs = 6;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.CustomEgg custom_eggs = 6;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCustomEggs")
@@ -193,16 +181,14 @@ public object ContractsResponseKt {
         _builder.warningMessage = value
       }
     /**
-     * <code>optional string warning_message = 4;</code>
-     * @return This builder for chaining.
+     * `optional string warning_message = 4;`
      */
     public fun clearWarningMessage() {
       _builder.clearWarningMessage()
     }
     /**
-     * <code>optional string warning_message = 4;</code>
+     * `optional string warning_message = 4;`
      * @return Whether the warningMessage field is set.
-     * @return This builder for chaining.
      */
     public fun hasWarningMessage(): kotlin.Boolean {
       return _builder.hasWarningMessage()
@@ -219,16 +205,14 @@ public object ContractsResponseKt {
         _builder.totalEop = value
       }
     /**
-     * <code>optional double total_eop = 5;</code>
-     * @return This builder for chaining.
+     * `optional double total_eop = 5;`
      */
     public fun clearTotalEop() {
       _builder.clearTotalEop()
     }
     /**
-     * <code>optional double total_eop = 5;</code>
+     * `optional double total_eop = 5;`
      * @return Whether the totalEop field is set.
-     * @return This builder for chaining.
      */
     public fun hasTotalEop(): kotlin.Boolean {
       return _builder.hasTotalEop()
@@ -245,16 +229,14 @@ public object ContractsResponseKt {
         _builder.serverTime = value
       }
     /**
-     * <code>optional double server_time = 2;</code>
-     * @return This builder for chaining.
+     * `optional double server_time = 2;`
      */
     public fun clearServerTime() {
       _builder.clearServerTime()
     }
     /**
-     * <code>optional double server_time = 2;</code>
+     * `optional double server_time = 2;`
      * @return Whether the serverTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasServerTime(): kotlin.Boolean {
       return _builder.hasServerTime()
@@ -271,16 +253,14 @@ public object ContractsResponseKt {
         _builder.maxEop = value
       }
     /**
-     * <code>optional uint32 max_eop = 3 [default = 1000];</code>
-     * @return This builder for chaining.
+     * `optional uint32 max_eop = 3 [default = 1000];`
      */
     public fun clearMaxEop() {
       _builder.clearMaxEop()
     }
     /**
-     * <code>optional uint32 max_eop = 3 [default = 1000];</code>
+     * `optional uint32 max_eop = 3 [default = 1000];`
      * @return Whether the maxEop field is set.
-     * @return This builder for chaining.
      */
     public fun hasMaxEop(): kotlin.Boolean {
       return _builder.hasMaxEop()
@@ -297,16 +277,14 @@ public object ContractsResponseKt {
         _builder.currentSeason = value
       }
     /**
-     * <code>optional .ei.ContractSeasonInfo current_season = 7;</code>
-     * @return This builder for chaining.
+     * `optional .ei.ContractSeasonInfo current_season = 7;`
      */
     public fun clearCurrentSeason() {
       _builder.clearCurrentSeason()
     }
     /**
-     * <code>optional .ei.ContractSeasonInfo current_season = 7;</code>
+     * `optional .ei.ContractSeasonInfo current_season = 7;`
      * @return Whether the currentSeason field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentSeason(): kotlin.Boolean {
       return _builder.hasCurrentSeason()

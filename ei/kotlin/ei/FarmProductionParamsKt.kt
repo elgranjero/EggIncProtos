@@ -39,16 +39,14 @@ public object FarmProductionParamsKt {
         _builder.farmPopulation = value
       }
     /**
-     * <code>optional double farm_population = 1;</code>
-     * @return This builder for chaining.
+     * `optional double farm_population = 1;`
      */
     public fun clearFarmPopulation() {
       _builder.clearFarmPopulation()
     }
     /**
-     * <code>optional double farm_population = 1;</code>
+     * `optional double farm_population = 1;`
      * @return Whether the farmPopulation field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmPopulation(): kotlin.Boolean {
       return _builder.hasFarmPopulation()
@@ -65,16 +63,14 @@ public object FarmProductionParamsKt {
         _builder.farmCapacity = value
       }
     /**
-     * <code>optional double farm_capacity = 2;</code>
-     * @return This builder for chaining.
+     * `optional double farm_capacity = 2;`
      */
     public fun clearFarmCapacity() {
       _builder.clearFarmCapacity()
     }
     /**
-     * <code>optional double farm_capacity = 2;</code>
+     * `optional double farm_capacity = 2;`
      * @return Whether the farmCapacity field is set.
-     * @return This builder for chaining.
      */
     public fun hasFarmCapacity(): kotlin.Boolean {
       return _builder.hasFarmCapacity()
@@ -91,16 +87,14 @@ public object FarmProductionParamsKt {
         _builder.elr = value
       }
     /**
-     * <code>optional double elr = 3;</code>
-     * @return This builder for chaining.
+     * `optional double elr = 3;`
      */
     public fun clearElr() {
       _builder.clearElr()
     }
     /**
-     * <code>optional double elr = 3;</code>
+     * `optional double elr = 3;`
      * @return Whether the elr field is set.
-     * @return This builder for chaining.
      */
     public fun hasElr(): kotlin.Boolean {
       return _builder.hasElr()
@@ -117,16 +111,14 @@ public object FarmProductionParamsKt {
         _builder.ihr = value
       }
     /**
-     * <code>optional double ihr = 4;</code>
-     * @return This builder for chaining.
+     * `optional double ihr = 4;`
      */
     public fun clearIhr() {
       _builder.clearIhr()
     }
     /**
-     * <code>optional double ihr = 4;</code>
+     * `optional double ihr = 4;`
      * @return Whether the ihr field is set.
-     * @return This builder for chaining.
      */
     public fun hasIhr(): kotlin.Boolean {
       return _builder.hasIhr()
@@ -143,16 +135,14 @@ public object FarmProductionParamsKt {
         _builder.sr = value
       }
     /**
-     * <code>optional double sr = 5;</code>
-     * @return This builder for chaining.
+     * `optional double sr = 5;`
      */
     public fun clearSr() {
       _builder.clearSr()
     }
     /**
-     * <code>optional double sr = 5;</code>
+     * `optional double sr = 5;`
      * @return Whether the sr field is set.
-     * @return This builder for chaining.
      */
     public fun hasSr(): kotlin.Boolean {
       return _builder.hasSr()
@@ -169,16 +159,14 @@ public object FarmProductionParamsKt {
         _builder.delivered = value
       }
     /**
-     * <code>optional double delivered = 6;</code>
-     * @return This builder for chaining.
+     * `optional double delivered = 6;`
      */
     public fun clearDelivered() {
       _builder.clearDelivered()
     }
     /**
-     * <code>optional double delivered = 6;</code>
+     * `optional double delivered = 6;`
      * @return Whether the delivered field is set.
-     * @return This builder for chaining.
      */
     public fun hasDelivered(): kotlin.Boolean {
       return _builder.hasDelivered()

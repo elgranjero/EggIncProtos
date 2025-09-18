@@ -43,9 +43,8 @@ public object ArtifactsConfigurationResponseKt {
         _builder.missionParametersList
       )
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;`
      * @param value The missionParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addMissionParameters")
@@ -53,9 +52,8 @@ public object ArtifactsConfigurationResponseKt {
       _builder.addMissionParameters(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;`
      * @param value The missionParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignMissionParameters")
@@ -64,9 +62,8 @@ public object ArtifactsConfigurationResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;`
      * @param values The missionParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllMissionParameters")
@@ -74,9 +71,8 @@ public object ArtifactsConfigurationResponseKt {
       _builder.addAllMissionParameters(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;`
      * @param values The missionParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllMissionParameters")
@@ -85,10 +81,9 @@ public object ArtifactsConfigurationResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;`
      * @param index The index to set the value at.
      * @param value The missionParameters to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setMissionParameters")
@@ -96,8 +91,7 @@ public object ArtifactsConfigurationResponseKt {
       _builder.setMissionParameters(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters mission_parameters = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearMissionParameters")
@@ -120,9 +114,8 @@ public object ArtifactsConfigurationResponseKt {
         _builder.artifactParametersList
       )
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;`
      * @param value The artifactParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addArtifactParameters")
@@ -130,9 +123,8 @@ public object ArtifactsConfigurationResponseKt {
       _builder.addArtifactParameters(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;`
      * @param value The artifactParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignArtifactParameters")
@@ -141,9 +133,8 @@ public object ArtifactsConfigurationResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;`
      * @param values The artifactParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllArtifactParameters")
@@ -151,9 +142,8 @@ public object ArtifactsConfigurationResponseKt {
       _builder.addAllArtifactParameters(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;`
      * @param values The artifactParameters to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllArtifactParameters")
@@ -162,10 +152,9 @@ public object ArtifactsConfigurationResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;`
      * @param index The index to set the value at.
      * @param value The artifactParameters to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setArtifactParameters")
@@ -173,8 +162,7 @@ public object ArtifactsConfigurationResponseKt {
       _builder.setArtifactParameters(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsConfigurationResponse.ArtifactParameters artifact_parameters = 2;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearArtifactParameters")
@@ -197,9 +185,8 @@ public object ArtifactsConfigurationResponseKt {
         _builder.craftingLevelInfosList
       )
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;`
      * @param value The craftingLevelInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addCraftingLevelInfos")
@@ -207,9 +194,8 @@ public object ArtifactsConfigurationResponseKt {
       _builder.addCraftingLevelInfos(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;`
      * @param value The craftingLevelInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignCraftingLevelInfos")
@@ -218,9 +204,8 @@ public object ArtifactsConfigurationResponseKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;`
      * @param values The craftingLevelInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllCraftingLevelInfos")
@@ -228,9 +213,8 @@ public object ArtifactsConfigurationResponseKt {
       _builder.addAllCraftingLevelInfos(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;`
      * @param values The craftingLevelInfos to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllCraftingLevelInfos")
@@ -239,10 +223,9 @@ public object ArtifactsConfigurationResponseKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
+     * `repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;`
      * @param index The index to set the value at.
      * @param value The craftingLevelInfos to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setCraftingLevelInfos")
@@ -250,8 +233,7 @@ public object ArtifactsConfigurationResponseKt {
       _builder.setCraftingLevelInfos(index, value)
     }
     /**
-     * <code>repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.ArtifactsConfigurationResponse.CraftingLevelInfo crafting_level_infos = 3;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearCraftingLevelInfos")
@@ -292,16 +274,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.ship = value
         }
       /**
-       * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.MissionInfo.Spaceship ship = 1;`
        */
       public fun clearShip() {
         _builder.clearShip()
       }
       /**
-       * <code>optional .ei.MissionInfo.Spaceship ship = 1;</code>
+       * `optional .ei.MissionInfo.Spaceship ship = 1;`
        * @return Whether the ship field is set.
-       * @return This builder for chaining.
        */
       public fun hasShip(): kotlin.Boolean {
         return _builder.hasShip()
@@ -322,9 +302,8 @@ public object ArtifactsConfigurationResponseKt {
           _builder.durationsList
         )
       /**
-       * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
+       * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;`
        * @param value The durations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addDurations")
@@ -332,9 +311,8 @@ public object ArtifactsConfigurationResponseKt {
         _builder.addDurations(value)
       }
       /**
-       * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
+       * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;`
        * @param value The durations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignDurations")
@@ -343,9 +321,8 @@ public object ArtifactsConfigurationResponseKt {
         add(value)
       }
       /**
-       * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
+       * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;`
        * @param values The durations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllDurations")
@@ -353,9 +330,8 @@ public object ArtifactsConfigurationResponseKt {
         _builder.addAllDurations(values)
       }
       /**
-       * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
+       * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;`
        * @param values The durations to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllDurations")
@@ -364,10 +340,9 @@ public object ArtifactsConfigurationResponseKt {
         addAll(values)
       }
       /**
-       * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
+       * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;`
        * @param index The index to set the value at.
        * @param value The durations to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setDurations")
@@ -375,8 +350,7 @@ public object ArtifactsConfigurationResponseKt {
         _builder.setDurations(index, value)
       }
       /**
-       * <code>repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;</code>
-       * @return This builder for chaining.
+       * `repeated .ei.ArtifactsConfigurationResponse.MissionParameters.Duration durations = 3;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearDurations")
@@ -399,18 +373,16 @@ public object ArtifactsConfigurationResponseKt {
           _builder.levelMissionRequirementsList
         )
       /**
-       * <code>repeated uint32 level_mission_requirements = 4;</code>
+       * `repeated uint32 level_mission_requirements = 4;`
        * @param value The levelMissionRequirements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addLevelMissionRequirements")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, LevelMissionRequirementsProxy>.add(value: kotlin.Int) {
         _builder.addLevelMissionRequirements(value)
       }/**
-       * <code>repeated uint32 level_mission_requirements = 4;</code>
+       * `repeated uint32 level_mission_requirements = 4;`
        * @param value The levelMissionRequirements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignLevelMissionRequirements")
@@ -418,18 +390,16 @@ public object ArtifactsConfigurationResponseKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, LevelMissionRequirementsProxy>.plusAssign(value: kotlin.Int) {
         add(value)
       }/**
-       * <code>repeated uint32 level_mission_requirements = 4;</code>
+       * `repeated uint32 level_mission_requirements = 4;`
        * @param values The levelMissionRequirements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllLevelMissionRequirements")
       public fun com.google.protobuf.kotlin.DslList<kotlin.Int, LevelMissionRequirementsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
         _builder.addAllLevelMissionRequirements(values)
       }/**
-       * <code>repeated uint32 level_mission_requirements = 4;</code>
+       * `repeated uint32 level_mission_requirements = 4;`
        * @param values The levelMissionRequirements to add.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllLevelMissionRequirements")
@@ -437,18 +407,16 @@ public object ArtifactsConfigurationResponseKt {
       public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, LevelMissionRequirementsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
         addAll(values)
       }/**
-       * <code>repeated uint32 level_mission_requirements = 4;</code>
+       * `repeated uint32 level_mission_requirements = 4;`
        * @param index The index to set the value at.
        * @param value The levelMissionRequirements to set.
-       * @return This builder for chaining.
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setLevelMissionRequirements")
       public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, LevelMissionRequirementsProxy>.set(index: kotlin.Int, value: kotlin.Int) {
         _builder.setLevelMissionRequirements(index, value)
       }/**
-       * <code>repeated uint32 level_mission_requirements = 4;</code>
-       * @return This builder for chaining.
+       * `repeated uint32 level_mission_requirements = 4;`
        */
       @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearLevelMissionRequirements")
@@ -466,16 +434,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.capacityDEPRECATED = value
         }
       /**
-       * <code>optional uint32 capacity_DEPRECATED = 2;</code>
-       * @return This builder for chaining.
+       * `optional uint32 capacity_DEPRECATED = 2;`
        */
       public fun clearCapacityDEPRECATED() {
         _builder.clearCapacityDEPRECATED()
       }
       /**
-       * <code>optional uint32 capacity_DEPRECATED = 2;</code>
+       * `optional uint32 capacity_DEPRECATED = 2;`
        * @return Whether the capacityDEPRECATED field is set.
-       * @return This builder for chaining.
        */
       public fun hasCapacityDEPRECATED(): kotlin.Boolean {
         return _builder.hasCapacityDEPRECATED()
@@ -514,16 +480,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.durationType = value
           }
         /**
-         * <code>optional .ei.MissionInfo.DurationType duration_type = 1;</code>
-         * @return This builder for chaining.
+         * `optional .ei.MissionInfo.DurationType duration_type = 1;`
          */
         public fun clearDurationType() {
           _builder.clearDurationType()
         }
         /**
-         * <code>optional .ei.MissionInfo.DurationType duration_type = 1;</code>
+         * `optional .ei.MissionInfo.DurationType duration_type = 1;`
          * @return Whether the durationType field is set.
-         * @return This builder for chaining.
          */
         public fun hasDurationType(): kotlin.Boolean {
           return _builder.hasDurationType()
@@ -540,16 +504,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.seconds = value
           }
         /**
-         * <code>optional double seconds = 2;</code>
-         * @return This builder for chaining.
+         * `optional double seconds = 2;`
          */
         public fun clearSeconds() {
           _builder.clearSeconds()
         }
         /**
-         * <code>optional double seconds = 2;</code>
+         * `optional double seconds = 2;`
          * @return Whether the seconds field is set.
-         * @return This builder for chaining.
          */
         public fun hasSeconds(): kotlin.Boolean {
           return _builder.hasSeconds()
@@ -566,16 +528,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.quality = value
           }
         /**
-         * <code>optional float quality = 3;</code>
-         * @return This builder for chaining.
+         * `optional float quality = 3;`
          */
         public fun clearQuality() {
           _builder.clearQuality()
         }
         /**
-         * <code>optional float quality = 3;</code>
+         * `optional float quality = 3;`
          * @return Whether the quality field is set.
-         * @return This builder for chaining.
          */
         public fun hasQuality(): kotlin.Boolean {
           return _builder.hasQuality()
@@ -592,16 +552,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.minQuality = value
           }
         /**
-         * <code>optional float min_quality = 4;</code>
-         * @return This builder for chaining.
+         * `optional float min_quality = 4;`
          */
         public fun clearMinQuality() {
           _builder.clearMinQuality()
         }
         /**
-         * <code>optional float min_quality = 4;</code>
+         * `optional float min_quality = 4;`
          * @return Whether the minQuality field is set.
-         * @return This builder for chaining.
          */
         public fun hasMinQuality(): kotlin.Boolean {
           return _builder.hasMinQuality()
@@ -618,16 +576,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.maxQuality = value
           }
         /**
-         * <code>optional float max_quality = 5;</code>
-         * @return This builder for chaining.
+         * `optional float max_quality = 5;`
          */
         public fun clearMaxQuality() {
           _builder.clearMaxQuality()
         }
         /**
-         * <code>optional float max_quality = 5;</code>
+         * `optional float max_quality = 5;`
          * @return Whether the maxQuality field is set.
-         * @return This builder for chaining.
          */
         public fun hasMaxQuality(): kotlin.Boolean {
           return _builder.hasMaxQuality()
@@ -644,16 +600,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.capacity = value
           }
         /**
-         * <code>optional uint32 capacity = 6;</code>
-         * @return This builder for chaining.
+         * `optional uint32 capacity = 6;`
          */
         public fun clearCapacity() {
           _builder.clearCapacity()
         }
         /**
-         * <code>optional uint32 capacity = 6;</code>
+         * `optional uint32 capacity = 6;`
          * @return Whether the capacity field is set.
-         * @return This builder for chaining.
          */
         public fun hasCapacity(): kotlin.Boolean {
           return _builder.hasCapacity()
@@ -670,16 +624,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.levelCapacityBump = value
           }
         /**
-         * <code>optional uint32 level_capacity_bump = 7;</code>
-         * @return This builder for chaining.
+         * `optional uint32 level_capacity_bump = 7;`
          */
         public fun clearLevelCapacityBump() {
           _builder.clearLevelCapacityBump()
         }
         /**
-         * <code>optional uint32 level_capacity_bump = 7;</code>
+         * `optional uint32 level_capacity_bump = 7;`
          * @return Whether the levelCapacityBump field is set.
-         * @return This builder for chaining.
          */
         public fun hasLevelCapacityBump(): kotlin.Boolean {
           return _builder.hasLevelCapacityBump()
@@ -696,16 +648,14 @@ public object ArtifactsConfigurationResponseKt {
             _builder.levelQualityBump = value
           }
         /**
-         * <code>optional float level_quality_bump = 8;</code>
-         * @return This builder for chaining.
+         * `optional float level_quality_bump = 8;`
          */
         public fun clearLevelQualityBump() {
           _builder.clearLevelQualityBump()
         }
         /**
-         * <code>optional float level_quality_bump = 8;</code>
+         * `optional float level_quality_bump = 8;`
          * @return Whether the levelQualityBump field is set.
-         * @return This builder for chaining.
          */
         public fun hasLevelQualityBump(): kotlin.Boolean {
           return _builder.hasLevelQualityBump()
@@ -746,16 +696,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.spec = value
         }
       /**
-       * <code>optional .ei.ArtifactSpec spec = 1;</code>
-       * @return This builder for chaining.
+       * `optional .ei.ArtifactSpec spec = 1;`
        */
       public fun clearSpec() {
         _builder.clearSpec()
       }
       /**
-       * <code>optional .ei.ArtifactSpec spec = 1;</code>
+       * `optional .ei.ArtifactSpec spec = 1;`
        * @return Whether the spec field is set.
-       * @return This builder for chaining.
        */
       public fun hasSpec(): kotlin.Boolean {
         return _builder.hasSpec()
@@ -775,16 +723,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.baseQuality = value
         }
       /**
-       * <code>optional double base_quality = 2;</code>
-       * @return This builder for chaining.
+       * `optional double base_quality = 2;`
        */
       public fun clearBaseQuality() {
         _builder.clearBaseQuality()
       }
       /**
-       * <code>optional double base_quality = 2;</code>
+       * `optional double base_quality = 2;`
        * @return Whether the baseQuality field is set.
-       * @return This builder for chaining.
        */
       public fun hasBaseQuality(): kotlin.Boolean {
         return _builder.hasBaseQuality()
@@ -801,16 +747,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.oddsMultiplier = value
         }
       /**
-       * <code>optional double odds_multiplier = 4;</code>
-       * @return This builder for chaining.
+       * `optional double odds_multiplier = 4;`
        */
       public fun clearOddsMultiplier() {
         _builder.clearOddsMultiplier()
       }
       /**
-       * <code>optional double odds_multiplier = 4;</code>
+       * `optional double odds_multiplier = 4;`
        * @return Whether the oddsMultiplier field is set.
-       * @return This builder for chaining.
        */
       public fun hasOddsMultiplier(): kotlin.Boolean {
         return _builder.hasOddsMultiplier()
@@ -827,16 +771,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.value = value
         }
       /**
-       * <code>optional double value = 3;</code>
-       * @return This builder for chaining.
+       * `optional double value = 3;`
        */
       public fun clearValue() {
         _builder.clearValue()
       }
       /**
-       * <code>optional double value = 3;</code>
+       * `optional double value = 3;`
        * @return Whether the value field is set.
-       * @return This builder for chaining.
        */
       public fun hasValue(): kotlin.Boolean {
         return _builder.hasValue()
@@ -853,16 +795,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.craftingPrice = value
         }
       /**
-       * <code>optional double crafting_price = 5;</code>
-       * @return This builder for chaining.
+       * `optional double crafting_price = 5;`
        */
       public fun clearCraftingPrice() {
         _builder.clearCraftingPrice()
       }
       /**
-       * <code>optional double crafting_price = 5;</code>
+       * `optional double crafting_price = 5;`
        * @return Whether the craftingPrice field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftingPrice(): kotlin.Boolean {
         return _builder.hasCraftingPrice()
@@ -879,16 +819,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.craftingPriceLow = value
         }
       /**
-       * <code>optional double crafting_price_low = 6;</code>
-       * @return This builder for chaining.
+       * `optional double crafting_price_low = 6;`
        */
       public fun clearCraftingPriceLow() {
         _builder.clearCraftingPriceLow()
       }
       /**
-       * <code>optional double crafting_price_low = 6;</code>
+       * `optional double crafting_price_low = 6;`
        * @return Whether the craftingPriceLow field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftingPriceLow(): kotlin.Boolean {
         return _builder.hasCraftingPriceLow()
@@ -905,16 +843,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.craftingPriceDomain = value
         }
       /**
-       * <code>optional uint32 crafting_price_domain = 7;</code>
-       * @return This builder for chaining.
+       * `optional uint32 crafting_price_domain = 7;`
        */
       public fun clearCraftingPriceDomain() {
         _builder.clearCraftingPriceDomain()
       }
       /**
-       * <code>optional uint32 crafting_price_domain = 7;</code>
+       * `optional uint32 crafting_price_domain = 7;`
        * @return Whether the craftingPriceDomain field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftingPriceDomain(): kotlin.Boolean {
         return _builder.hasCraftingPriceDomain()
@@ -931,16 +867,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.craftingPriceCurve = value
         }
       /**
-       * <code>optional double crafting_price_curve = 8;</code>
-       * @return This builder for chaining.
+       * `optional double crafting_price_curve = 8;`
        */
       public fun clearCraftingPriceCurve() {
         _builder.clearCraftingPriceCurve()
       }
       /**
-       * <code>optional double crafting_price_curve = 8;</code>
+       * `optional double crafting_price_curve = 8;`
        * @return Whether the craftingPriceCurve field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftingPriceCurve(): kotlin.Boolean {
         return _builder.hasCraftingPriceCurve()
@@ -957,16 +891,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.craftingXp = value
         }
       /**
-       * <code>optional uint64 crafting_xp = 9;</code>
-       * @return This builder for chaining.
+       * `optional uint64 crafting_xp = 9;`
        */
       public fun clearCraftingXp() {
         _builder.clearCraftingXp()
       }
       /**
-       * <code>optional uint64 crafting_xp = 9;</code>
+       * `optional uint64 crafting_xp = 9;`
        * @return Whether the craftingXp field is set.
-       * @return This builder for chaining.
        */
       public fun hasCraftingXp(): kotlin.Boolean {
         return _builder.hasCraftingXp()
@@ -1006,16 +938,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.xpRequired = value
         }
       /**
-       * <code>optional double xp_required = 1;</code>
-       * @return This builder for chaining.
+       * `optional double xp_required = 1;`
        */
       public fun clearXpRequired() {
         _builder.clearXpRequired()
       }
       /**
-       * <code>optional double xp_required = 1;</code>
+       * `optional double xp_required = 1;`
        * @return Whether the xpRequired field is set.
-       * @return This builder for chaining.
        */
       public fun hasXpRequired(): kotlin.Boolean {
         return _builder.hasXpRequired()
@@ -1032,16 +962,14 @@ public object ArtifactsConfigurationResponseKt {
           _builder.rarityMult = value
         }
       /**
-       * <code>optional float rarity_mult = 2;</code>
-       * @return This builder for chaining.
+       * `optional float rarity_mult = 2;`
        */
       public fun clearRarityMult() {
         _builder.clearRarityMult()
       }
       /**
-       * <code>optional float rarity_mult = 2;</code>
+       * `optional float rarity_mult = 2;`
        * @return Whether the rarityMult field is set.
-       * @return This builder for chaining.
        */
       public fun hasRarityMult(): kotlin.Boolean {
         return _builder.hasRarityMult()

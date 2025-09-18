@@ -39,16 +39,14 @@ public object DailyGiftInfoKt {
         _builder.currentDay = value
       }
     /**
-     * <code>optional uint32 current_day = 1;</code>
-     * @return This builder for chaining.
+     * `optional uint32 current_day = 1;`
      */
     public fun clearCurrentDay() {
       _builder.clearCurrentDay()
     }
     /**
-     * <code>optional uint32 current_day = 1;</code>
+     * `optional uint32 current_day = 1;`
      * @return Whether the currentDay field is set.
-     * @return This builder for chaining.
      */
     public fun hasCurrentDay(): kotlin.Boolean {
       return _builder.hasCurrentDay()
@@ -65,16 +63,14 @@ public object DailyGiftInfoKt {
         _builder.secondsToNextDay = value
       }
     /**
-     * <code>optional double seconds_to_next_day = 2;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_to_next_day = 2;`
      */
     public fun clearSecondsToNextDay() {
       _builder.clearSecondsToNextDay()
     }
     /**
-     * <code>optional double seconds_to_next_day = 2;</code>
+     * `optional double seconds_to_next_day = 2;`
      * @return Whether the secondsToNextDay field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsToNextDay(): kotlin.Boolean {
       return _builder.hasSecondsToNextDay()

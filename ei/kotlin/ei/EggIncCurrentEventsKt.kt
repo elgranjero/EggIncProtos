@@ -43,9 +43,8 @@ public object EggIncCurrentEventsKt {
         _builder.eventsList
       )
     /**
-     * <code>repeated .ei.EggIncEvent events = 1;</code>
+     * `repeated .ei.EggIncEvent events = 1;`
      * @param value The events to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addEvents")
@@ -53,9 +52,8 @@ public object EggIncCurrentEventsKt {
       _builder.addEvents(value)
     }
     /**
-     * <code>repeated .ei.EggIncEvent events = 1;</code>
+     * `repeated .ei.EggIncEvent events = 1;`
      * @param value The events to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignEvents")
@@ -64,9 +62,8 @@ public object EggIncCurrentEventsKt {
       add(value)
     }
     /**
-     * <code>repeated .ei.EggIncEvent events = 1;</code>
+     * `repeated .ei.EggIncEvent events = 1;`
      * @param values The events to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("addAllEvents")
@@ -74,9 +71,8 @@ public object EggIncCurrentEventsKt {
       _builder.addAllEvents(values)
     }
     /**
-     * <code>repeated .ei.EggIncEvent events = 1;</code>
+     * `repeated .ei.EggIncEvent events = 1;`
      * @param values The events to add.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("plusAssignAllEvents")
@@ -85,10 +81,9 @@ public object EggIncCurrentEventsKt {
       addAll(values)
     }
     /**
-     * <code>repeated .ei.EggIncEvent events = 1;</code>
+     * `repeated .ei.EggIncEvent events = 1;`
      * @param index The index to set the value at.
      * @param value The events to set.
-     * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("setEvents")
@@ -96,8 +91,7 @@ public object EggIncCurrentEventsKt {
       _builder.setEvents(index, value)
     }
     /**
-     * <code>repeated .ei.EggIncEvent events = 1;</code>
-     * @return This builder for chaining.
+     * `repeated .ei.EggIncEvent events = 1;`
      */
     @kotlin.jvm.JvmSynthetic
 @kotlin.jvm.JvmName("clearEvents")

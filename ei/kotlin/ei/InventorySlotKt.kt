@@ -39,16 +39,14 @@ public object InventorySlotKt {
         _builder.occupied = value
       }
     /**
-     * <code>optional bool occupied = 1;</code>
-     * @return This builder for chaining.
+     * `optional bool occupied = 1;`
      */
     public fun clearOccupied() {
       _builder.clearOccupied()
     }
     /**
-     * <code>optional bool occupied = 1;</code>
+     * `optional bool occupied = 1;`
      * @return Whether the occupied field is set.
-     * @return This builder for chaining.
      */
     public fun hasOccupied(): kotlin.Boolean {
       return _builder.hasOccupied()
@@ -65,16 +63,14 @@ public object InventorySlotKt {
         _builder.itemId = value
       }
     /**
-     * <code>optional uint32 item_id = 2;</code>
-     * @return This builder for chaining.
+     * `optional uint32 item_id = 2;`
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * <code>optional uint32 item_id = 2;</code>
+     * `optional uint32 item_id = 2;`
      * @return Whether the itemId field is set.
-     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()

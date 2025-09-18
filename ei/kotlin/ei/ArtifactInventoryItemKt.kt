@@ -39,16 +39,14 @@ public object ArtifactInventoryItemKt {
         _builder.itemId = value
       }
     /**
-     * <code>optional uint64 item_id = 1;</code>
-     * @return This builder for chaining.
+     * `optional uint64 item_id = 1;`
      */
     public fun clearItemId() {
       _builder.clearItemId()
     }
     /**
-     * <code>optional uint64 item_id = 1;</code>
+     * `optional uint64 item_id = 1;`
      * @return Whether the itemId field is set.
-     * @return This builder for chaining.
      */
     public fun hasItemId(): kotlin.Boolean {
       return _builder.hasItemId()
@@ -65,16 +63,14 @@ public object ArtifactInventoryItemKt {
         _builder.artifact = value
       }
     /**
-     * <code>optional .ei.CompleteArtifact artifact = 2;</code>
-     * @return This builder for chaining.
+     * `optional .ei.CompleteArtifact artifact = 2;`
      */
     public fun clearArtifact() {
       _builder.clearArtifact()
     }
     /**
-     * <code>optional .ei.CompleteArtifact artifact = 2;</code>
+     * `optional .ei.CompleteArtifact artifact = 2;`
      * @return Whether the artifact field is set.
-     * @return This builder for chaining.
      */
     public fun hasArtifact(): kotlin.Boolean {
       return _builder.hasArtifact()
@@ -94,16 +90,14 @@ public object ArtifactInventoryItemKt {
         _builder.quantity = value
       }
     /**
-     * <code>optional double quantity = 3;</code>
-     * @return This builder for chaining.
+     * `optional double quantity = 3;`
      */
     public fun clearQuantity() {
       _builder.clearQuantity()
     }
     /**
-     * <code>optional double quantity = 3;</code>
+     * `optional double quantity = 3;`
      * @return Whether the quantity field is set.
-     * @return This builder for chaining.
      */
     public fun hasQuantity(): kotlin.Boolean {
       return _builder.hasQuantity()
@@ -120,16 +114,14 @@ public object ArtifactInventoryItemKt {
         _builder.serverId = value
       }
     /**
-     * <code>optional string server_id = 4;</code>
-     * @return This builder for chaining.
+     * `optional string server_id = 4;`
      */
     public fun clearServerId() {
       _builder.clearServerId()
     }
     /**
-     * <code>optional string server_id = 4;</code>
+     * `optional string server_id = 4;`
      * @return Whether the serverId field is set.
-     * @return This builder for chaining.
      */
     public fun hasServerId(): kotlin.Boolean {
       return _builder.hasServerId()

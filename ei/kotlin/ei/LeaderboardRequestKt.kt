@@ -39,16 +39,14 @@ public object LeaderboardRequestKt {
         _builder.rinfo = value
       }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
-     * @return This builder for chaining.
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      */
     public fun clearRinfo() {
       _builder.clearRinfo()
     }
     /**
-     * <code>optional .ei.BasicRequestInfo rinfo = 1;</code>
+     * `optional .ei.BasicRequestInfo rinfo = 1;`
      * @return Whether the rinfo field is set.
-     * @return This builder for chaining.
      */
     public fun hasRinfo(): kotlin.Boolean {
       return _builder.hasRinfo()
@@ -68,16 +66,14 @@ public object LeaderboardRequestKt {
         _builder.scope = value
       }
     /**
-     * <code>optional string scope = 2;</code>
-     * @return This builder for chaining.
+     * `optional string scope = 2;`
      */
     public fun clearScope() {
       _builder.clearScope()
     }
     /**
-     * <code>optional string scope = 2;</code>
+     * `optional string scope = 2;`
      * @return Whether the scope field is set.
-     * @return This builder for chaining.
      */
     public fun hasScope(): kotlin.Boolean {
       return _builder.hasScope()
@@ -94,16 +90,14 @@ public object LeaderboardRequestKt {
         _builder.grade = value
       }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
-     * @return This builder for chaining.
+     * `optional .ei.Contract.PlayerGrade grade = 3;`
      */
     public fun clearGrade() {
       _builder.clearGrade()
     }
     /**
-     * <code>optional .ei.Contract.PlayerGrade grade = 3;</code>
+     * `optional .ei.Contract.PlayerGrade grade = 3;`
      * @return Whether the grade field is set.
-     * @return This builder for chaining.
      */
     public fun hasGrade(): kotlin.Boolean {
       return _builder.hasGrade()

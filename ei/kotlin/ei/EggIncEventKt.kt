@@ -39,16 +39,14 @@ public object EggIncEventKt {
         _builder.identifier = value
       }
     /**
-     * <code>optional string identifier = 1;</code>
-     * @return This builder for chaining.
+     * `optional string identifier = 1;`
      */
     public fun clearIdentifier() {
       _builder.clearIdentifier()
     }
     /**
-     * <code>optional string identifier = 1;</code>
+     * `optional string identifier = 1;`
      * @return Whether the identifier field is set.
-     * @return This builder for chaining.
      */
     public fun hasIdentifier(): kotlin.Boolean {
       return _builder.hasIdentifier()
@@ -65,16 +63,14 @@ public object EggIncEventKt {
         _builder.secondsRemaining = value
       }
     /**
-     * <code>optional double seconds_remaining = 2;</code>
-     * @return This builder for chaining.
+     * `optional double seconds_remaining = 2;`
      */
     public fun clearSecondsRemaining() {
       _builder.clearSecondsRemaining()
     }
     /**
-     * <code>optional double seconds_remaining = 2;</code>
+     * `optional double seconds_remaining = 2;`
      * @return Whether the secondsRemaining field is set.
-     * @return This builder for chaining.
      */
     public fun hasSecondsRemaining(): kotlin.Boolean {
       return _builder.hasSecondsRemaining()
@@ -91,16 +87,14 @@ public object EggIncEventKt {
         _builder.type = value
       }
     /**
-     * <code>optional string type = 3;</code>
-     * @return This builder for chaining.
+     * `optional string type = 3;`
      */
     public fun clearType() {
       _builder.clearType()
     }
     /**
-     * <code>optional string type = 3;</code>
+     * `optional string type = 3;`
      * @return Whether the type field is set.
-     * @return This builder for chaining.
      */
     public fun hasType(): kotlin.Boolean {
       return _builder.hasType()
@@ -117,16 +111,14 @@ public object EggIncEventKt {
         _builder.multiplier = value
       }
     /**
-     * <code>optional double multiplier = 4;</code>
-     * @return This builder for chaining.
+     * `optional double multiplier = 4;`
      */
     public fun clearMultiplier() {
       _builder.clearMultiplier()
     }
     /**
-     * <code>optional double multiplier = 4;</code>
+     * `optional double multiplier = 4;`
      * @return Whether the multiplier field is set.
-     * @return This builder for chaining.
      */
     public fun hasMultiplier(): kotlin.Boolean {
       return _builder.hasMultiplier()
@@ -143,16 +135,14 @@ public object EggIncEventKt {
         _builder.subtitle = value
       }
     /**
-     * <code>optional string subtitle = 5;</code>
-     * @return This builder for chaining.
+     * `optional string subtitle = 5;`
      */
     public fun clearSubtitle() {
       _builder.clearSubtitle()
     }
     /**
-     * <code>optional string subtitle = 5;</code>
+     * `optional string subtitle = 5;`
      * @return Whether the subtitle field is set.
-     * @return This builder for chaining.
      */
     public fun hasSubtitle(): kotlin.Boolean {
       return _builder.hasSubtitle()
@@ -169,16 +159,14 @@ public object EggIncEventKt {
         _builder.startTime = value
       }
     /**
-     * <code>optional double start_time = 6;</code>
-     * @return This builder for chaining.
+     * `optional double start_time = 6;`
      */
     public fun clearStartTime() {
       _builder.clearStartTime()
     }
     /**
-     * <code>optional double start_time = 6;</code>
+     * `optional double start_time = 6;`
      * @return Whether the startTime field is set.
-     * @return This builder for chaining.
      */
     public fun hasStartTime(): kotlin.Boolean {
       return _builder.hasStartTime()
@@ -195,16 +183,14 @@ public object EggIncEventKt {
         _builder.duration = value
       }
     /**
-     * <code>optional double duration = 7;</code>
-     * @return This builder for chaining.
+     * `optional double duration = 7;`
      */
     public fun clearDuration() {
       _builder.clearDuration()
     }
     /**
-     * <code>optional double duration = 7;</code>
+     * `optional double duration = 7;`
      * @return Whether the duration field is set.
-     * @return This builder for chaining.
      */
     public fun hasDuration(): kotlin.Boolean {
       return _builder.hasDuration()
@@ -221,16 +207,14 @@ public object EggIncEventKt {
         _builder.ccOnly = value
       }
     /**
-     * <code>optional bool cc_only = 8;</code>
-     * @return This builder for chaining.
+     * `optional bool cc_only = 8;`
      */
     public fun clearCcOnly() {
       _builder.clearCcOnly()
     }
     /**
-     * <code>optional bool cc_only = 8;</code>
+     * `optional bool cc_only = 8;`
      * @return Whether the ccOnly field is set.
-     * @return This builder for chaining.
      */
     public fun hasCcOnly(): kotlin.Boolean {
       return _builder.hasCcOnly()
