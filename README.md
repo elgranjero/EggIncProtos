@@ -6,6 +6,7 @@
 - [ei/ei.proto](#ei_ei-proto)
     - [AccountTransferPayload](#ei-AccountTransferPayload)
     - [ActionKeyValuePair](#ei-ActionKeyValuePair)
+    - [ActiveArtifactSlot](#ei-ActiveArtifactSlot)
     - [AdAttributionInfo](#ei-AdAttributionInfo)
     - [AdAttributionRawData](#ei-AdAttributionRawData)
     - [AdAttributionRow](#ei-AdAttributionRow)
@@ -22,8 +23,8 @@
     - [ArtifactsConfigurationResponse.MissionParameters.Duration](#ei-ArtifactsConfigurationResponse-MissionParameters-Duration)
     - [ArtifactsDB](#ei-ArtifactsDB)
     - [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet)
-    - [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot)
     - [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact)
+    - [ArtifactsDB.VirtueDB](#ei-ArtifactsDB-VirtueDB)
     - [AuthenticateArtifactResponse](#ei-AuthenticateArtifactResponse)
     - [AuthenticatedMessage](#ei-AuthenticatedMessage)
     - [AutoJoinCoopRequest](#ei-AutoJoinCoopRequest)
@@ -43,6 +44,7 @@
     - [Backup.Simulation](#ei-Backup-Simulation)
     - [Backup.Stats](#ei-Backup-Stats)
     - [Backup.Tutorial](#ei-Backup-Tutorial)
+    - [Backup.Virtue](#ei-Backup-Virtue)
     - [BasicRequestInfo](#ei-BasicRequestInfo)
     - [CXPEvalRolloutInfo](#ei-CXPEvalRolloutInfo)
     - [CleanAccountRequest](#ei-CleanAccountRequest)
@@ -115,6 +117,7 @@
     - [GameModifier](#ei-GameModifier)
     - [GenericAction](#ei-GenericAction)
     - [GenericActionBatchRequest](#ei-GenericActionBatchRequest)
+    - [GetActiveMissionsRequest](#ei-GetActiveMissionsRequest)
     - [GetActiveMissionsResponse](#ei-GetActiveMissionsResponse)
     - [GetPeriodicalsRequest](#ei-GetPeriodicalsRequest)
     - [GiftPlayerCoopRequest](#ei-GiftPlayerCoopRequest)
@@ -156,9 +159,11 @@
     - [MissionRequest](#ei-MissionRequest)
     - [MissionResponse](#ei-MissionResponse)
     - [MyContracts](#ei-MyContracts)
+    - [PathOfVirtueInfo](#ei-PathOfVirtueInfo)
     - [PeriodicalsResponse](#ei-PeriodicalsResponse)
     - [PeriodicalsResponse.RoyaltyInfo](#ei-PeriodicalsResponse-RoyaltyInfo)
     - [PlayerFarmInfo](#ei-PlayerFarmInfo)
+    - [PlayerLastChickenRunTimes](#ei-PlayerLastChickenRunTimes)
     - [QueryCoopRequest](#ei-QueryCoopRequest)
     - [QueryCoopResponse](#ei-QueryCoopResponse)
     - [ReportPlayerCoopRequest](#ei-ReportPlayerCoopRequest)
@@ -199,6 +204,8 @@
     - [ShowcaseRoyaltyDeliveryConfirmation](#ei-ShowcaseRoyaltyDeliveryConfirmation)
     - [SubmitShellShowcaseRequest](#ei-SubmitShellShowcaseRequest)
     - [SubscriptionChangeHintRequest](#ei-SubscriptionChangeHintRequest)
+    - [SyncPathOfVirtueRequest](#ei-SyncPathOfVirtueRequest)
+    - [SyncPathOfVirtueResponse](#ei-SyncPathOfVirtueResponse)
     - [TipsDB](#ei-TipsDB)
     - [UpdateCoopPermissionsRequest](#ei-UpdateCoopPermissionsRequest)
     - [UpdateCoopPermissionsResponse](#ei-UpdateCoopPermissionsResponse)
@@ -234,6 +241,7 @@
     - [LeaderboardScope](#ei-LeaderboardScope)
     - [LiveConfig.HelpConfig.HowToVideoInfo.Type](#ei-LiveConfig-HelpConfig-HowToVideoInfo-Type)
     - [MissionInfo.DurationType](#ei-MissionInfo-DurationType)
+    - [MissionInfo.MissionType](#ei-MissionInfo-MissionType)
     - [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship)
     - [MissionInfo.Status](#ei-MissionInfo-Status)
     - [Platform](#ei-Platform)
@@ -244,6 +252,7 @@
     - [ShellObjectSpec.ChickenAnimation](#ei-ShellObjectSpec-ChickenAnimation)
     - [ShellShowcaseListingInfo.Status](#ei-ShellShowcaseListingInfo-Status)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
+    - [SyncPathOfVirtueResponse.Status](#ei-SyncPathOfVirtueResponse-Status)
     - [UILocation](#ei-UILocation)
     - [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level)
     - [UserSubscriptionInfo.Status](#ei-UserSubscriptionInfo-Status)
@@ -287,6 +296,22 @@
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) | required |  |
 | value | [string](#string) | required |  |
+
+
+
+
+
+
+<a name="ei-ActiveArtifactSlot"></a>
+
+### ActiveArtifactSlot
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| occupied | [bool](#bool) | optional |  |
+| item_id | [uint64](#uint64) | optional |  |
 
 
 
@@ -604,14 +629,15 @@
 | ----- | ---- | ----- | ----------- |
 | inventory_items | [ArtifactInventoryItem](#ei-ArtifactInventoryItem) | repeated |  |
 | item_sequence | [uint64](#uint64) | optional |  |
-| inventory_slots | [InventorySlot](#ei-InventorySlot) | repeated |  |
-| active_artifacts_DEPRECATED | [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot) | repeated |  |
+| inventory_slots_NOT_USED | [InventorySlot](#ei-InventorySlot) | repeated |  |
+| active_artifacts_DEPRECATED | [ActiveArtifactSlot](#ei-ActiveArtifactSlot) | repeated |  |
 | active_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
 | saved_artifact_sets | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | repeated |  |
 | artifact_status | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
 | fueling_mission | [MissionInfo](#ei-MissionInfo) | optional |  |
 | mission_infos | [MissionInfo](#ei-MissionInfo) | repeated |  |
 | mission_archive | [MissionInfo](#ei-MissionInfo) | repeated |  |
+| virtue_afx_db | [ArtifactsDB.VirtueDB](#ei-ArtifactsDB-VirtueDB) | optional |  |
 | discovered_artifacts_DEPRECATED | [ArtifactSpec](#ei-ArtifactSpec) | repeated |  |
 | craftable_artifacts_DEPRECATED | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
 | crafting_counts_DEPRECATED | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
@@ -629,24 +655,8 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| slots | [ArtifactsDB.ActiveArtifactSlot](#ei-ArtifactsDB-ActiveArtifactSlot) | repeated |  |
+| slots | [ActiveArtifactSlot](#ei-ActiveArtifactSlot) | repeated |  |
 | uid | [uint32](#uint32) | optional |  |
-
-
-
-
-
-
-<a name="ei-ArtifactsDB-ActiveArtifactSlot"></a>
-
-### ArtifactsDB.ActiveArtifactSlot
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| occupied | [bool](#bool) | optional |  |
-| item_id | [uint64](#uint64) | optional |  |
 
 
 
@@ -667,6 +677,24 @@
 | recipe_discovered | [bool](#bool) | optional |  |
 | seen | [bool](#bool) | optional |  |
 | count | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-ArtifactsDB-VirtueDB"></a>
+
+### ArtifactsDB.VirtueDB
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| inventory_items | [ArtifactInventoryItem](#ei-ArtifactInventoryItem) | repeated |  |
+| artifact_status | [ArtifactsDB.CraftableArtifact](#ei-ArtifactsDB-CraftableArtifact) | repeated |  |
+| fueling_mission | [MissionInfo](#ei-MissionInfo) | optional |  |
+| active_artifacts | [ArtifactsDB.ActiveArtifactSet](#ei-ArtifactsDB-ActiveArtifactSet) | optional |  |
 
 
 
@@ -761,6 +789,7 @@
 | stats | [Backup.Stats](#ei-Backup-Stats) | optional |  |
 | game | [Backup.Game](#ei-Backup-Game) | optional |  |
 | artifacts | [Backup.Artifacts](#ei-Backup-Artifacts) | optional |  |
+| virtue | [Backup.Virtue](#ei-Backup-Virtue) | optional |  |
 | shells | [Backup.Shells](#ei-Backup-Shells) | optional |  |
 | sim | [Backup.Simulation](#ei-Backup-Simulation) | optional |  |
 | farms | [Backup.Simulation](#ei-Backup-Simulation) | repeated |  |
@@ -891,6 +920,7 @@
 | total_time_cheats_detected | [uint32](#uint32) | optional |  |
 | force_elite_contracts | [bool](#bool) | optional |  |
 | new_player_event_end_time | [double](#double) | optional |  |
+| time_cheat_debt | [double](#double) | optional |  |
 
 
 
@@ -930,6 +960,7 @@
 | max_button_alert | [bool](#bool) | optional |  |
 | mission_target_alert | [bool](#bool) | optional |  |
 | colleggtibles_alert | [bool](#bool) | optional |  |
+| eov_alert | [bool](#bool) | optional |  |
 
 
 
@@ -1113,7 +1144,7 @@
 | active_boosts | [Backup.ActiveBoost](#ei-Backup-ActiveBoost) | repeated |  |
 | last_cash_boost_time | [double](#double) | optional |  |
 | time_cheats_detected | [uint32](#uint32) | optional |  |
-| time_cheat_debt | [double](#double) | optional |  |
+| time_cheat_debt_DEP | [double](#double) | optional |  |
 | boost_tokens_received | [uint32](#uint32) | optional |  |
 | boost_tokens_spent | [uint32](#uint32) | optional |  |
 | boost_tokens_given | [uint32](#uint32) | optional |  |
@@ -1177,6 +1208,27 @@
 | join_coop_shown | [bool](#bool) | optional |  |
 | switch_farm_shown | [bool](#bool) | optional |  |
 | tutorial_shown | [bool](#bool) | repeated |  |
+
+
+
+
+
+
+<a name="ei-Backup-Virtue"></a>
+
+### Backup.Virtue
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| shift_count | [uint32](#uint32) | optional |  |
+| resets | [uint32](#uint32) | optional |  |
+| eov_earned | [uint32](#uint32) | repeated |  |
+| eggs_delivered | [double](#double) | repeated |  |
+| afx | [Backup.Artifacts](#ei-Backup-Artifacts) | optional |  |
+| active_afx | [ActiveArtifactSlot](#ei-ActiveArtifactSlot) | repeated |  |
+| last_sync | [double](#double) | optional |  |
 
 
 
@@ -1612,6 +1664,7 @@
 | gifts | [ContractCoopStatusResponse.CoopGift](#ei-ContractCoopStatusResponse-CoopGift) | repeated |  |
 | chicken_runs | [ContractCoopStatusResponse.ChickenRun](#ei-ContractCoopStatusResponse-ChickenRun) | repeated |  |
 | client_timestamp | [double](#double) | optional |  |
+| background_sync | [bool](#bool) | optional |  |
 | last_sync_DEP | [double](#double) | optional |  |
 
 
@@ -2216,7 +2269,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| entries | [CoopChickenRunEntry](#ei-CoopChickenRunEntry) | repeated |  |
+| entries | [PlayerLastChickenRunTimes](#ei-PlayerLastChickenRunTimes) | repeated |  |
 
 
 
@@ -2621,6 +2674,22 @@
 | ----- | ---- | ----- | ----------- |
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | actions | [GenericAction](#ei-GenericAction) | repeated |  |
+
+
+
+
+
+
+<a name="ei-GetActiveMissionsRequest"></a>
+
+### GetActiveMissionsRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| reset_index | [uint32](#uint32) | optional |  |
 
 
 
@@ -3375,6 +3444,8 @@
 | ship | [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship) | optional |  |
 | status | [MissionInfo.Status](#ei-MissionInfo-Status) | optional |  |
 | duration_type | [MissionInfo.DurationType](#ei-MissionInfo-DurationType) | optional |  |
+| type | [MissionInfo.MissionType](#ei-MissionInfo-MissionType) | optional |  |
+| reset_index | [uint32](#uint32) | optional |  |
 | fuel | [MissionInfo.Fuel](#ei-MissionInfo-Fuel) | repeated |  |
 | level | [uint32](#uint32) | optional |  |
 | duration_seconds | [double](#double) | optional |  |
@@ -3465,6 +3536,23 @@
 
 
 
+<a name="ei-PathOfVirtueInfo"></a>
+
+### PathOfVirtueInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| server_time | [double](#double) | optional |  |
+| sim_time | [double](#double) | optional |  |
+| reset_index | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
 <a name="ei-PeriodicalsResponse"></a>
 
 ### PeriodicalsResponse
@@ -3535,6 +3623,22 @@
 | artifact_inventory_score | [uint64](#uint64) | optional |  |
 | farm_appearance | [ShellDB.FarmConfiguration](#ei-ShellDB-FarmConfiguration) | optional |  |
 | timestamp | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-PlayerLastChickenRunTimes"></a>
+
+### PlayerLastChickenRunTimes
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) | optional |  |
+| entries | [CoopChickenRunEntry](#ei-CoopChickenRunEntry) | repeated |  |
 
 
 
@@ -4327,6 +4431,39 @@
 
 
 
+<a name="ei-SyncPathOfVirtueRequest"></a>
+
+### SyncPathOfVirtueRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| reset_index | [uint32](#uint32) | optional |  |
+| sim_time | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-SyncPathOfVirtueResponse"></a>
+
+### SyncPathOfVirtueResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| status | [SyncPathOfVirtueResponse.Status](#ei-SyncPathOfVirtueResponse-Status) | optional |  |
+| sim_debt | [double](#double) | optional |  |
+
+
+
+
+
+
 <a name="ei-TipsDB"></a>
 
 ### TipsDB
@@ -4860,6 +4997,11 @@
 | NEBULA | 17 |  |
 | UNIVERSE | 18 |  |
 | ENLIGHTENMENT | 19 |  |
+| CURIOSITY | 50 |  |
+| INTEGRITY | 51 |  |
+| HUMILITY | 52 |  |
+| RESILIENCE | 53 |  |
+| KINDNESS | 54 |  |
 | CHOCOLATE | 100 |  |
 | EASTER | 101 |  |
 | WATERBALLOON | 102 |  |
@@ -4982,6 +5124,18 @@
 
 
 
+<a name="ei-MissionInfo-MissionType"></a>
+
+### MissionInfo.MissionType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| STANDARD | 0 |  |
+| VIRTUE | 1 |  |
+
+
+
 <a name="ei-MissionInfo-Spaceship"></a>
 
 ### MissionInfo.Spaceship
@@ -5017,6 +5171,7 @@
 | ANALYZING | 16 |  |
 | COMPLETE | 20 |  |
 | ARCHIVED | 25 |  |
+| ABORTED | 30 |  |
 
 
 
@@ -5068,6 +5223,7 @@
 | ARTIFACT_CASE | 12 |  |
 | CHICKEN | 13 |  |
 | SHELL_SCRIPT | 14 |  |
+| VIRTUE_GEM | 15 |  |
 | UNKNOWN_REWARD | 100 |  |
 
 
@@ -5225,6 +5381,11 @@
 | HATCHERY_FIREWORK | 142 |  |
 | HATCHERY_PUMPKIN | 143 |  |
 | HATCHERY_CUSTOM | 150 |  |
+| HATCHERY_CURIOSITY | 160 |  |
+| HATCHERY_INTEGRITY | 161 |  |
+| HATCHERY_HUMILITY | 162 |  |
+| HATCHERY_RESILIENCE | 163 |  |
+| HATCHERY_KINDNESS | 164 |  |
 | HOA_1 | 170 |  |
 | HOA_2 | 171 |  |
 | HOA_3 | 172 |  |
@@ -5248,11 +5409,28 @@
 | HATCHERY_UNIVERSE_PROBE | 515 |  |
 | HATCHERY_UNIVERSE_BOLT | 516 |  |
 | HATCHERY_ENLIGHTENMENT_ORB | 520 |  |
+| HATCHERY_CURIOSITY_EXTRA | 550 |  |
+| HATCHERY_INTEGRITY_EXTRA | 551 |  |
+| HATCHERY_HUMILITY_EXTRA | 552 |  |
+| HATCHERY_RESILIENCE_EXTRA | 553 |  |
+| HATCHERY_KINDNESS_EXTRA | 554 |  |
 | HYPERLOOP_TRACK | 570 |  |
 | MAILBOX_FULL | 600 |  |
 | CHICKEN | 1000 |  |
 | HAT | 1010 |  |
 | UNKNOWN | 9999 |  |
+
+
+
+<a name="ei-SyncPathOfVirtueResponse-Status"></a>
+
+### SyncPathOfVirtueResponse.Status
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| OK | 0 |  |
+| PROBLEM | 1 |  |
 
 
 
