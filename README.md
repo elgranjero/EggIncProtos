@@ -1229,6 +1229,7 @@
 | afx | [Backup.Artifacts](#ei-Backup-Artifacts) | optional |  |
 | active_afx | [ActiveArtifactSlot](#ei-ActiveArtifactSlot) | repeated |  |
 | last_sync | [double](#double) | optional |  |
+| past_sim_time | [double](#double) | optional |  |
 
 
 
@@ -5431,6 +5432,7 @@
 | ---- | ------ | ----------- |
 | OK | 0 |  |
 | PROBLEM | 1 |  |
+| HTTP_ERROR | 2 |  |
 
 
 
