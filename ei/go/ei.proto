@@ -195,6 +195,7 @@ message Backup {
         optional Artifacts afx = 5;
         repeated ActiveArtifactSlot active_afx = 6;
         optional double last_sync = 7;
+        optional double past_sim_time = 8;
     }
     
     optional Shells shells = 25;
@@ -2539,6 +2540,7 @@ message SyncPathOfVirtueResponse {
     enum Status {
         OK = 0;
         PROBLEM = 1;
+        HTTP_ERROR = 2;
     }
     
     optional double sim_debt = 2;

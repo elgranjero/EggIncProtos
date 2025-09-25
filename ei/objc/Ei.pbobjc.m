@@ -2450,11 +2450,13 @@ GPBEnumDescriptor *SyncPathOfVirtueResponse_Status_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Ok\000Problem\000";
+        "Ok\000Problem\000HTTPError\000";
     static const int32_t values[] = {
         SyncPathOfVirtueResponse_Status_Ok,
         SyncPathOfVirtueResponse_Status_Problem,
+        SyncPathOfVirtueResponse_Status_HTTPError,
     };
+    static const char *extraTextFormatInfo = "\001\002\004\345\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SyncPathOfVirtueResponse_Status)
                                    runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
@@ -2462,7 +2464,8 @@ GPBEnumDescriptor *SyncPathOfVirtueResponse_Status_EnumDescriptor(void) {
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
                                      enumVerifier:SyncPathOfVirtueResponse_Status_IsValidValue
-                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed];
+                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed
+                              extraTextFormatInfo:extraTextFormatInfo];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
       [worker release];
@@ -2475,6 +2478,7 @@ BOOL SyncPathOfVirtueResponse_Status_IsValidValue(int32_t value__) {
   switch (value__) {
     case SyncPathOfVirtueResponse_Status_Ok:
     case SyncPathOfVirtueResponse_Status_Problem:
+    case SyncPathOfVirtueResponse_Status_HTTPError:
       return YES;
     default:
       return NO;
@@ -4496,6 +4500,7 @@ typedef struct Backup_Artifacts__storage_ {
 @dynamic hasAfx, afx;
 @dynamic activeAfxArray, activeAfxArray_Count;
 @dynamic hasLastSync, lastSync;
+@dynamic hasPastSimTime, pastSimTime;
 
 typedef struct Backup_Virtue__storage_ {
   uint32_t _has_storage_[1];
@@ -4506,6 +4511,7 @@ typedef struct Backup_Virtue__storage_ {
   Backup_Artifacts *afx;
   NSMutableArray *activeAfxArray;
   double lastSync;
+  double pastSimTime;
 } Backup_Virtue__storage_;
 
 // This method is threadsafe because it is initially called
@@ -4574,6 +4580,15 @@ typedef struct Backup_Virtue__storage_ {
         .number = Backup_Virtue_FieldNumber_LastSync,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(Backup_Virtue__storage_, lastSync),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "pastSimTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Backup_Virtue_FieldNumber_PastSimTime,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(Backup_Virtue__storage_, pastSimTime),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
       },

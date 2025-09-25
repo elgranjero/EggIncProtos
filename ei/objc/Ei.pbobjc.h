@@ -1072,6 +1072,7 @@ BOOL UserSubscriptionInfo_Status_IsValidValue(int32_t value);
 typedef GPB_ENUM(SyncPathOfVirtueResponse_Status) {
   SyncPathOfVirtueResponse_Status_Ok = 0,
   SyncPathOfVirtueResponse_Status_Problem = 1,
+  SyncPathOfVirtueResponse_Status_HTTPError = 2,
 };
 
 GPBEnumDescriptor *SyncPathOfVirtueResponse_Status_EnumDescriptor(void);
@@ -1823,6 +1824,7 @@ typedef GPB_ENUM(Backup_Virtue_FieldNumber) {
   Backup_Virtue_FieldNumber_Afx = 5,
   Backup_Virtue_FieldNumber_ActiveAfxArray = 6,
   Backup_Virtue_FieldNumber_LastSync = 7,
+  Backup_Virtue_FieldNumber_PastSimTime = 8,
 };
 
 GPB_FINAL @interface Backup_Virtue : GPBMessage
@@ -1851,6 +1853,9 @@ GPB_FINAL @interface Backup_Virtue : GPBMessage
 
 @property(nonatomic, readwrite) double lastSync;
 @property(nonatomic, readwrite) BOOL hasLastSync;
+
+@property(nonatomic, readwrite) double pastSimTime;
+@property(nonatomic, readwrite) BOOL hasPastSimTime;
 
 @end
 

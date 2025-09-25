@@ -4560,6 +4560,30 @@ public object BackupKt {
       public fun hasLastSync(): kotlin.Boolean {
         return _builder.hasLastSync()
       }
+
+      /**
+       * `optional double past_sim_time = 8;`
+       */
+      public var pastSimTime: kotlin.Double
+        @kotlin.jvm.JvmName("getPastSimTime")
+          get() = _builder.pastSimTime
+        @kotlin.jvm.JvmName("setPastSimTime")
+          set(value) {
+          _builder.pastSimTime = value
+        }
+      /**
+       * `optional double past_sim_time = 8;`
+       */
+      public fun clearPastSimTime() {
+        _builder.clearPastSimTime()
+      }
+      /**
+       * `optional double past_sim_time = 8;`
+       * @return Whether the pastSimTime field is set.
+       */
+      public fun hasPastSimTime(): kotlin.Boolean {
+        return _builder.hasPastSimTime()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializeshells")

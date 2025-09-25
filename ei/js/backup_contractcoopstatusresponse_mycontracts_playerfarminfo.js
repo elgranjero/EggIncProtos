@@ -7254,7 +7254,8 @@ proto.ei.Backup.Virtue.toObject = function(includeInstance, msg) {
     afx: (f = msg.getAfx()) && proto.ei.Backup.Artifacts.toObject(includeInstance, f),
     activeAfxList: jspb.Message.toObjectList(msg.getActiveAfxList(),
     proto.ei.ActiveArtifactSlot.toObject, includeInstance),
-    lastSync: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f
+    lastSync: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    pastSimTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -7324,6 +7325,10 @@ proto.ei.Backup.Virtue.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setLastSync(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setPastSimTime(value);
       break;
     default:
       reader.skipField();
@@ -7402,6 +7407,13 @@ proto.ei.Backup.Virtue.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       7,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeDouble(
+      8,
       f
     );
   }
@@ -7662,6 +7674,42 @@ proto.ei.Backup.Virtue.prototype.clearLastSync = function() {
  */
 proto.ei.Backup.Virtue.prototype.hasLastSync = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional double past_sim_time = 8;
+ * @return {number}
+ */
+proto.ei.Backup.Virtue.prototype.getPastSimTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Virtue} returns this
+ */
+proto.ei.Backup.Virtue.prototype.setPastSimTime = function(value) {
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Virtue} returns this
+ */
+proto.ei.Backup.Virtue.prototype.clearPastSimTime = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Virtue.prototype.hasPastSimTime = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

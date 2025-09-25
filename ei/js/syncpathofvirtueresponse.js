@@ -168,7 +168,8 @@ proto.ei.SyncPathOfVirtueResponse.serializeBinaryToWriter = function(message, wr
  */
 proto.ei.SyncPathOfVirtueResponse.Status = {
   OK: 0,
-  PROBLEM: 1
+  PROBLEM: 1,
+  HTTP_ERROR: 2
 };
 
 /**
