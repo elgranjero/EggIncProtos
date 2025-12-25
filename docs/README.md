@@ -800,6 +800,7 @@
 | shell_db | [ShellDB](#ei-ShellDB) | optional |  |
 | read_mail_ids | [string](#string) | repeated |  |
 | mail_state | [MailState](#ei-MailState) | optional |  |
+| sub_info | [UserSubscriptionInfo](#ei-UserSubscriptionInfo) | optional |  |
 | checksum | [uint64](#uint64) | optional |  |
 | signature | [string](#string) | optional |  |
 

@@ -2662,6 +2662,7 @@ typedef struct Vector4__storage_ {
 @dynamic hasShellDb, shellDb;
 @dynamic readMailIdsArray, readMailIdsArray_Count;
 @dynamic hasMailState, mailState;
+@dynamic hasSubInfo, subInfo;
 @dynamic hasChecksum, checksum;
 @dynamic hasSignature, signature;
 
@@ -2690,6 +2691,7 @@ typedef struct Backup__storage_ {
   NSString *pushUserId;
   MailState *mailState;
   Backup_Virtue *virtue;
+  UserSubscriptionInfo *subInfo;
   NSString *signature;
   double approxTime;
   uint64_t checksum;
@@ -2936,10 +2938,19 @@ typedef struct Backup__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
+        .name = "subInfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(UserSubscriptionInfo),
+        .number = Backup_FieldNumber_SubInfo,
+        .hasIndex = 26,
+        .offset = (uint32_t)offsetof(Backup__storage_, subInfo),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
         .name = "checksum",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Checksum,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(Backup__storage_, checksum),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt64,
@@ -2948,7 +2959,7 @@ typedef struct Backup__storage_ {
         .name = "signature",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Signature,
-        .hasIndex = 27,
+        .hasIndex = 28,
         .offset = (uint32_t)offsetof(Backup__storage_, signature),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,

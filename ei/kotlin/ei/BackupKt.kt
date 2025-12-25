@@ -2,6 +2,7 @@
 // NO CHECKED-IN PROTOBUF GENCODE
 // source: ei.proto
 
+@file:com.google.protobuf.Generated
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
 package ei;
@@ -786,6 +787,33 @@ public object BackupKt {
 
     public val BackupKt.Dsl.mailStateOrNull: ei.Ei.MailState?
       get() = _builder.mailStateOrNull
+
+    /**
+     * `optional .ei.UserSubscriptionInfo sub_info = 30;`
+     */
+    public var subInfo: ei.Ei.UserSubscriptionInfo
+      @kotlin.jvm.JvmName("getSubInfo")
+        get() = _builder.subInfo
+      @kotlin.jvm.JvmName("setSubInfo")
+        set(value) {
+        _builder.subInfo = value
+      }
+    /**
+     * `optional .ei.UserSubscriptionInfo sub_info = 30;`
+     */
+    public fun clearSubInfo() {
+      _builder.clearSubInfo()
+    }
+    /**
+     * `optional .ei.UserSubscriptionInfo sub_info = 30;`
+     * @return Whether the subInfo field is set.
+     */
+    public fun hasSubInfo(): kotlin.Boolean {
+      return _builder.hasSubInfo()
+    }
+
+    public val BackupKt.Dsl.subInfoOrNull: ei.Ei.UserSubscriptionInfo?
+      get() = _builder.subInfoOrNull
 
     /**
      * `optional uint64 checksum = 100;`
@@ -7305,4 +7333,7 @@ public val ei.Ei.BackupOrBuilder.shellDbOrNull: ei.Ei.ShellDB?
 
 public val ei.Ei.BackupOrBuilder.mailStateOrNull: ei.Ei.MailState?
   get() = if (hasMailState()) getMailState() else null
+
+public val ei.Ei.BackupOrBuilder.subInfoOrNull: ei.Ei.UserSubscriptionInfo?
+  get() = if (hasSubInfo()) getSubInfo() else null
 

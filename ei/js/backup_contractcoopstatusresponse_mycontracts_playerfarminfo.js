@@ -54,6 +54,7 @@ goog.require('proto.ei.LocalContract');
 goog.require('proto.ei.MailState');
 goog.require('proto.ei.ShellDB');
 goog.require('proto.ei.ShellDB.FarmConfiguration');
+goog.require('proto.ei.UserSubscriptionInfo');
 
 goog.forwardDeclare('proto.ei.Contract.PlayerGrade');
 goog.forwardDeclare('proto.ei.Egg');
@@ -609,6 +610,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     shellDb: (f = msg.getShellDb()) && proto.ei.ShellDB.toObject(includeInstance, f),
     readMailIdsList: (f = jspb.Message.getRepeatedField(msg, 23)) == null ? undefined : f,
     mailState: (f = msg.getMailState()) && proto.ei.MailState.toObject(includeInstance, f),
+    subInfo: (f = msg.getSubInfo()) && proto.ei.UserSubscriptionInfo.toObject(includeInstance, f),
     checksum: (f = jspb.Message.getField(msg, 100)) == null ? undefined : f,
     signature: (f = jspb.Message.getField(msg, 101)) == null ? undefined : f
   };
@@ -765,6 +767,11 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.MailState;
       reader.readMessage(value,proto.ei.MailState.deserializeBinaryFromReader);
       msg.setMailState(value);
+      break;
+    case 30:
+      var value = new proto.ei.UserSubscriptionInfo;
+      reader.readMessage(value,proto.ei.UserSubscriptionInfo.deserializeBinaryFromReader);
+      msg.setSubInfo(value);
       break;
     case 100:
       var value = /** @type {number} */ (reader.readUint64());
@@ -998,6 +1005,14 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
       27,
       f,
       proto.ei.MailState.serializeBinaryToWriter
+    );
+  }
+  f = message.getSubInfo();
+  if (f != null) {
+    writer.writeMessage(
+      30,
+      f,
+      proto.ei.UserSubscriptionInfo.serializeBinaryToWriter
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 100));
@@ -13513,6 +13528,43 @@ proto.ei.Backup.prototype.clearMailState = function() {
  */
 proto.ei.Backup.prototype.hasMailState = function() {
   return jspb.Message.getField(this, 27) != null;
+};
+
+
+/**
+ * optional UserSubscriptionInfo sub_info = 30;
+ * @return {?proto.ei.UserSubscriptionInfo}
+ */
+proto.ei.Backup.prototype.getSubInfo = function() {
+  return /** @type{?proto.ei.UserSubscriptionInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.UserSubscriptionInfo, 30));
+};
+
+
+/**
+ * @param {?proto.ei.UserSubscriptionInfo|undefined} value
+ * @return {!proto.ei.Backup} returns this
+*/
+proto.ei.Backup.prototype.setSubInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 30, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearSubInfo = function() {
+  return this.setSubInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasSubInfo = function() {
+  return jspb.Message.getField(this, 30) != null;
 };
 
 

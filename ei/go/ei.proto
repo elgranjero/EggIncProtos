@@ -286,6 +286,7 @@ message Backup {
     optional ShellDB shell_db = 24;
     repeated string read_mail_ids = 23;
     optional MailState mail_state = 27;
+    optional UserSubscriptionInfo sub_info = 30;
     optional uint64 checksum = 100;
     optional string signature = 101;
     

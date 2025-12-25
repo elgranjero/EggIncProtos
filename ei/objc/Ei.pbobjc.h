@@ -156,6 +156,7 @@ CF_EXTERN_C_BEGIN
 @class ShellSpec;
 @class ShellSpec_ShellPiece;
 @class ShellsActionLog;
+@class UserSubscriptionInfo;
 @class UserSubscriptionInfo_HistoryEntry;
 @class Vector3;
 @class Vector4;
@@ -1173,6 +1174,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_PushUserId = 26,
   Backup_FieldNumber_MailState = 27,
   Backup_FieldNumber_Virtue = 29,
+  Backup_FieldNumber_SubInfo = 30,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -1278,6 +1280,10 @@ GPB_FINAL @interface Backup : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) MailState *mailState;
 /** Test to see if @c mailState has been set. */
 @property(nonatomic, readwrite) BOOL hasMailState;
+
+@property(nonatomic, readwrite, strong, null_resettable) UserSubscriptionInfo *subInfo;
+/** Test to see if @c subInfo has been set. */
+@property(nonatomic, readwrite) BOOL hasSubInfo;
 
 @property(nonatomic, readwrite) uint64_t checksum;
 @property(nonatomic, readwrite) BOOL hasChecksum;
