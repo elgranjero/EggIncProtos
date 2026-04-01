@@ -19,6 +19,7 @@ goog.require('jspb.Message');
 goog.require('proto.ei.BasicRequestInfo');
 goog.require('proto.ei.FarmProductionParams');
 goog.require('proto.ei.IdleSessionSummary');
+goog.require('proto.ei.PlayerColleggtibleInfo');
 goog.require('proto.ei.PlayerFarmInfo');
 
 /**
@@ -85,6 +86,7 @@ proto.ei.ContractCoopStatusUpdateRequest.toObject = function(includeInstance, ms
     totalStepTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 19)) == null ? undefined : f,
     soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
     eop: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
+    eot: (f = jspb.Message.getField(msg, 20)) == null ? undefined : f,
     boostTokens: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     boostTokensSpent: (f = jspb.Message.getField(msg, 13)) == null ? undefined : f,
     hideCcStatus: (f = jspb.Message.getBooleanField(msg, 17)) == null ? undefined : f,
@@ -92,7 +94,8 @@ proto.ei.ContractCoopStatusUpdateRequest.toObject = function(includeInstance, ms
     farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
     lastIdleSummary: (f = msg.getLastIdleSummary()) && proto.ei.IdleSessionSummary.toObject(includeInstance, f),
     eggLayingRateBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 1.0),
-    earningsBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 1.0)
+    earningsBuff: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 1.0),
+    colleggtibleInfo: (f = msg.getColleggtibleInfo()) && proto.ei.PlayerColleggtibleInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -174,6 +177,10 @@ proto.ei.ContractCoopStatusUpdateRequest.deserializeBinaryFromReader = function(
       var value = /** @type {number} */ (reader.readUint32());
       msg.setEop(value);
       break;
+    case 20:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setEot(value);
+      break;
     case 9:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setBoostTokens(value);
@@ -208,6 +215,11 @@ proto.ei.ContractCoopStatusUpdateRequest.deserializeBinaryFromReader = function(
     case 11:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setEarningsBuff(value);
+      break;
+    case 21:
+      var value = new proto.ei.PlayerColleggtibleInfo;
+      reader.readMessage(value,proto.ei.PlayerColleggtibleInfo.deserializeBinaryFromReader);
+      msg.setColleggtibleInfo(value);
       break;
     default:
       reader.skipField();
@@ -316,6 +328,13 @@ proto.ei.ContractCoopStatusUpdateRequest.serializeBinaryToWriter = function(mess
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 20));
+  if (f != null) {
+    writer.writeUint32(
+      20,
+      f
+    );
+  }
   f = /** @type {number} */ (jspb.Message.getField(message, 9));
   if (f != null) {
     writer.writeUint32(
@@ -373,6 +392,14 @@ proto.ei.ContractCoopStatusUpdateRequest.serializeBinaryToWriter = function(mess
     writer.writeDouble(
       11,
       f
+    );
+  }
+  f = message.getColleggtibleInfo();
+  if (f != null) {
+    writer.writeMessage(
+      21,
+      f,
+      proto.ei.PlayerColleggtibleInfo.serializeBinaryToWriter
     );
   }
 };
@@ -776,6 +803,42 @@ proto.ei.ContractCoopStatusUpdateRequest.prototype.hasEop = function() {
 
 
 /**
+ * optional uint32 eot = 20;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.getEot = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 20, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.setEot = function(value) {
+  return jspb.Message.setField(this, 20, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.clearEot = function() {
+  return jspb.Message.setField(this, 20, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.hasEot = function() {
+  return jspb.Message.getField(this, 20) != null;
+};
+
+
+/**
  * optional uint32 boost_tokens = 9;
  * @return {number}
  */
@@ -1063,6 +1126,43 @@ proto.ei.ContractCoopStatusUpdateRequest.prototype.clearEarningsBuff = function(
  */
 proto.ei.ContractCoopStatusUpdateRequest.prototype.hasEarningsBuff = function() {
   return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional PlayerColleggtibleInfo colleggtible_info = 21;
+ * @return {?proto.ei.PlayerColleggtibleInfo}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.getColleggtibleInfo = function() {
+  return /** @type{?proto.ei.PlayerColleggtibleInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.PlayerColleggtibleInfo, 21));
+};
+
+
+/**
+ * @param {?proto.ei.PlayerColleggtibleInfo|undefined} value
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+*/
+proto.ei.ContractCoopStatusUpdateRequest.prototype.setColleggtibleInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 21, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusUpdateRequest} returns this
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.clearColleggtibleInfo = function() {
+  return this.setColleggtibleInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusUpdateRequest.prototype.hasColleggtibleInfo = function() {
+  return jspb.Message.getField(this, 21) != null;
 };
 
 

@@ -52,6 +52,7 @@ goog.require('proto.ei.CustomEgg');
 goog.require('proto.ei.FarmProductionParams');
 goog.require('proto.ei.LocalContract');
 goog.require('proto.ei.MailState');
+goog.require('proto.ei.PlayerColleggtibleInfo');
 goog.require('proto.ei.ShellDB');
 goog.require('proto.ei.ShellDB.FarmConfiguration');
 goog.require('proto.ei.UserSubscriptionInfo');
@@ -14079,8 +14080,11 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.toObject = function(include
     contributionAmount: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
     contributionRate: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     soulPower: (f = jspb.Message.getOptionalFloatingPointField(msg, 11)) == null ? undefined : f,
+    eop: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
+    eot: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
     productionParams: (f = msg.getProductionParams()) && proto.ei.FarmProductionParams.toObject(includeInstance, f),
     farmInfo: (f = msg.getFarmInfo()) && proto.ei.PlayerFarmInfo.toObject(includeInstance, f),
+    colleggtibleInfo: (f = msg.getColleggtibleInfo()) && proto.ei.PlayerColleggtibleInfo.toObject(includeInstance, f),
     rankChange: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
     recentlyActive: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
     active: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f,
@@ -14161,6 +14165,14 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSoulPower(value);
       break;
+    case 25:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setEop(value);
+      break;
+    case 26:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setEot(value);
+      break;
     case 15:
       var value = new proto.ei.FarmProductionParams;
       reader.readMessage(value,proto.ei.FarmProductionParams.deserializeBinaryFromReader);
@@ -14170,6 +14182,11 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.deserializeBinaryFromReader
       var value = new proto.ei.PlayerFarmInfo;
       reader.readMessage(value,proto.ei.PlayerFarmInfo.deserializeBinaryFromReader);
       msg.setFarmInfo(value);
+      break;
+    case 27:
+      var value = new proto.ei.PlayerColleggtibleInfo;
+      reader.readMessage(value,proto.ei.PlayerColleggtibleInfo.deserializeBinaryFromReader);
+      msg.setColleggtibleInfo(value);
       break;
     case 8:
       var value = /** @type {number} */ (reader.readInt32());
@@ -14310,6 +14327,20 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = f
       f
     );
   }
+  f = /** @type {number} */ (jspb.Message.getField(message, 25));
+  if (f != null) {
+    writer.writeUint32(
+      25,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 26));
+  if (f != null) {
+    writer.writeUint32(
+      26,
+      f
+    );
+  }
   f = message.getProductionParams();
   if (f != null) {
     writer.writeMessage(
@@ -14324,6 +14355,14 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.serializeBinaryToWriter = f
       18,
       f,
       proto.ei.PlayerFarmInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getColleggtibleInfo();
+  if (f != null) {
+    writer.writeMessage(
+      27,
+      f,
+      proto.ei.PlayerColleggtibleInfo.serializeBinaryToWriter
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 8));
@@ -14688,6 +14727,78 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasSoulPower = fu
 
 
 /**
+ * optional uint32 eop = 25;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getEop = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 25, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setEop = function(value) {
+  return jspb.Message.setField(this, 25, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearEop = function() {
+  return jspb.Message.setField(this, 25, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasEop = function() {
+  return jspb.Message.getField(this, 25) != null;
+};
+
+
+/**
+ * optional uint32 eot = 26;
+ * @return {number}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getEot = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 26, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setEot = function(value) {
+  return jspb.Message.setField(this, 26, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearEot = function() {
+  return jspb.Message.setField(this, 26, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasEot = function() {
+  return jspb.Message.getField(this, 26) != null;
+};
+
+
+/**
  * optional FarmProductionParams production_params = 15;
  * @return {?proto.ei.FarmProductionParams}
  */
@@ -14758,6 +14869,43 @@ proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearFarmInfo = f
  */
 proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasFarmInfo = function() {
   return jspb.Message.getField(this, 18) != null;
+};
+
+
+/**
+ * optional PlayerColleggtibleInfo colleggtible_info = 27;
+ * @return {?proto.ei.PlayerColleggtibleInfo}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.getColleggtibleInfo = function() {
+  return /** @type{?proto.ei.PlayerColleggtibleInfo} */ (
+    jspb.Message.getWrapperField(this, proto.ei.PlayerColleggtibleInfo, 27));
+};
+
+
+/**
+ * @param {?proto.ei.PlayerColleggtibleInfo|undefined} value
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+*/
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.setColleggtibleInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 27, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.ContractCoopStatusResponse.ContributionInfo} returns this
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.clearColleggtibleInfo = function() {
+  return this.setColleggtibleInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractCoopStatusResponse.ContributionInfo.prototype.hasColleggtibleInfo = function() {
+  return jspb.Message.getField(this, 27) != null;
 };
 
 

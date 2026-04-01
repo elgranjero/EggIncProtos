@@ -725,6 +725,30 @@ public object InGameMailKt {
     public fun hasCategory(): kotlin.Boolean {
       return _builder.hasCategory()
     }
+
+    /**
+     * `optional float release_time = 30;`
+     */
+    public var releaseTime: kotlin.Float
+      @kotlin.jvm.JvmName("getReleaseTime")
+        get() = _builder.releaseTime
+      @kotlin.jvm.JvmName("setReleaseTime")
+        set(value) {
+        _builder.releaseTime = value
+      }
+    /**
+     * `optional float release_time = 30;`
+     */
+    public fun clearReleaseTime() {
+      _builder.clearReleaseTime()
+    }
+    /**
+     * `optional float release_time = 30;`
+     * @return Whether the releaseTime field is set.
+     */
+    public fun hasReleaseTime(): kotlin.Boolean {
+      return _builder.hasReleaseTime()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

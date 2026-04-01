@@ -106,7 +106,8 @@ proto.ei.InGameMail.toObject = function(includeInstance, msg) {
     minDaysSinceLastTip: (f = jspb.Message.getOptionalFloatingPointField(msg, 24)) == null ? undefined : f,
     maxRetries: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
     daysUntilRetry: (f = jspb.Message.getOptionalFloatingPointField(msg, 26)) == null ? undefined : f,
-    category: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f
+    category: (f = jspb.Message.getField(msg, 28)) == null ? undefined : f,
+    releaseTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 30)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -251,6 +252,10 @@ proto.ei.InGameMail.deserializeBinaryFromReader = function(msg, reader) {
     case 28:
       var value = /** @type {string} */ (reader.readString());
       msg.setCategory(value);
+      break;
+    case 30:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setReleaseTime(value);
       break;
     default:
       reader.skipField();
@@ -468,6 +473,13 @@ proto.ei.InGameMail.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       28,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 30));
+  if (f != null) {
+    writer.writeFloat(
+      30,
       f
     );
   }
@@ -1445,6 +1457,42 @@ proto.ei.InGameMail.prototype.clearCategory = function() {
  */
 proto.ei.InGameMail.prototype.hasCategory = function() {
   return jspb.Message.getField(this, 28) != null;
+};
+
+
+/**
+ * optional float release_time = 30;
+ * @return {number}
+ */
+proto.ei.InGameMail.prototype.getReleaseTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 30, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.setReleaseTime = function(value) {
+  return jspb.Message.setField(this, 30, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.InGameMail} returns this
+ */
+proto.ei.InGameMail.prototype.clearReleaseTime = function() {
+  return jspb.Message.setField(this, 30, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.InGameMail.prototype.hasReleaseTime = function() {
+  return jspb.Message.getField(this, 30) != null;
 };
 
 

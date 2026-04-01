@@ -297,6 +297,30 @@ public object ContractCoopStatusUpdateRequestKt {
     }
 
     /**
+     * `optional uint32 eot = 20;`
+     */
+    public var eot: kotlin.Int
+      @kotlin.jvm.JvmName("getEot")
+        get() = _builder.eot
+      @kotlin.jvm.JvmName("setEot")
+        set(value) {
+        _builder.eot = value
+      }
+    /**
+     * `optional uint32 eot = 20;`
+     */
+    public fun clearEot() {
+      _builder.clearEot()
+    }
+    /**
+     * `optional uint32 eot = 20;`
+     * @return Whether the eot field is set.
+     */
+    public fun hasEot(): kotlin.Boolean {
+      return _builder.hasEot()
+    }
+
+    /**
      * `optional uint32 boost_tokens = 9;`
      */
     public var boostTokens: kotlin.Int
@@ -496,6 +520,33 @@ public object ContractCoopStatusUpdateRequestKt {
     public fun hasEarningsBuff(): kotlin.Boolean {
       return _builder.hasEarningsBuff()
     }
+
+    /**
+     * `optional .ei.PlayerColleggtibleInfo colleggtible_info = 21;`
+     */
+    public var colleggtibleInfo: ei.Ei.PlayerColleggtibleInfo
+      @kotlin.jvm.JvmName("getColleggtibleInfo")
+        get() = _builder.colleggtibleInfo
+      @kotlin.jvm.JvmName("setColleggtibleInfo")
+        set(value) {
+        _builder.colleggtibleInfo = value
+      }
+    /**
+     * `optional .ei.PlayerColleggtibleInfo colleggtible_info = 21;`
+     */
+    public fun clearColleggtibleInfo() {
+      _builder.clearColleggtibleInfo()
+    }
+    /**
+     * `optional .ei.PlayerColleggtibleInfo colleggtible_info = 21;`
+     * @return Whether the colleggtibleInfo field is set.
+     */
+    public fun hasColleggtibleInfo(): kotlin.Boolean {
+      return _builder.hasColleggtibleInfo()
+    }
+
+    public val ContractCoopStatusUpdateRequestKt.Dsl.colleggtibleInfoOrNull: ei.Ei.PlayerColleggtibleInfo?
+      get() = _builder.colleggtibleInfoOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -513,4 +564,7 @@ public val ei.Ei.ContractCoopStatusUpdateRequestOrBuilder.farmInfoOrNull: ei.Ei.
 
 public val ei.Ei.ContractCoopStatusUpdateRequestOrBuilder.lastIdleSummaryOrNull: ei.Ei.IdleSessionSummary?
   get() = if (hasLastIdleSummary()) getLastIdleSummary() else null
+
+public val ei.Ei.ContractCoopStatusUpdateRequestOrBuilder.colleggtibleInfoOrNull: ei.Ei.PlayerColleggtibleInfo?
+  get() = if (hasColleggtibleInfo()) getColleggtibleInfo() else null
 

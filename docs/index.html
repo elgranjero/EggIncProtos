@@ -811,6 +811,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.PlayerColleggtibleInfo"><span class="badge">M</span>PlayerColleggtibleInfo</a>
+                </li>
+              
+                <li>
                   <a href="#ei.PlayerFarmInfo"><span class="badge">M</span>PlayerFarmInfo</a>
                 </li>
               
@@ -6112,6 +6116,20 @@
                 </tr>
               
                 <tr>
+                  <td>eop</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>eot</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>production_params</td>
                   <td><a href="#ei.FarmProductionParams">FarmProductionParams</a></td>
                   <td>optional</td>
@@ -6121,6 +6139,13 @@
                 <tr>
                   <td>farm_info</td>
                   <td><a href="#ei.PlayerFarmInfo">PlayerFarmInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>colleggtible_info</td>
+                  <td><a href="#ei.PlayerColleggtibleInfo">PlayerColleggtibleInfo</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -6370,6 +6395,13 @@
                 </tr>
               
                 <tr>
+                  <td>eot</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>boost_tokens</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -6423,6 +6455,13 @@
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> Default: 1</p></td>
+                </tr>
+              
+                <tr>
+                  <td>colleggtible_info</td>
+                  <td><a href="#ei.PlayerColleggtibleInfo">PlayerColleggtibleInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
                 </tr>
               
             </tbody>
@@ -9579,6 +9618,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>release_time</td>
+                  <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -11675,6 +11721,30 @@
                   <td>amount</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.PlayerColleggtibleInfo">PlayerColleggtibleInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>buffs</td>
+                  <td><a href="#ei.GameModifier">GameModifier</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               

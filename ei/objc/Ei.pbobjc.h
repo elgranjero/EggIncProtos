@@ -128,6 +128,7 @@ CF_EXTERN_C_BEGIN
 @class MissionRequest;
 @class MyContracts;
 @class PeriodicalsResponse_RoyaltyInfo;
+@class PlayerColleggtibleInfo;
 @class PlayerFarmInfo;
 @class PlayerLastChickenRunTimes;
 @class Reward;
@@ -4286,6 +4287,9 @@ typedef GPB_ENUM(ContractCoopStatusResponse_ContributionInfo_FieldNumber) {
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_Finalized = 22,
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_RecentlyActive = 23,
   ContractCoopStatusResponse_ContributionInfo_FieldNumber_CcMember = 24,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_Eop = 25,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_Eot = 26,
+  ContractCoopStatusResponse_ContributionInfo_FieldNumber_ColleggtibleInfo = 27,
 };
 
 GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
@@ -4315,6 +4319,12 @@ GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
 @property(nonatomic, readwrite) double soulPower;
 @property(nonatomic, readwrite) BOOL hasSoulPower;
 
+@property(nonatomic, readwrite) uint32_t eop;
+@property(nonatomic, readwrite) BOOL hasEop;
+
+@property(nonatomic, readwrite) uint32_t eot;
+@property(nonatomic, readwrite) BOOL hasEot;
+
 @property(nonatomic, readwrite, strong, null_resettable) FarmProductionParams *productionParams;
 /** Test to see if @c productionParams has been set. */
 @property(nonatomic, readwrite) BOOL hasProductionParams;
@@ -4322,6 +4332,10 @@ GPB_FINAL @interface ContractCoopStatusResponse_ContributionInfo : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) PlayerFarmInfo *farmInfo;
 /** Test to see if @c farmInfo has been set. */
 @property(nonatomic, readwrite) BOOL hasFarmInfo;
+
+@property(nonatomic, readwrite, strong, null_resettable) PlayerColleggtibleInfo *colleggtibleInfo;
+/** Test to see if @c colleggtibleInfo has been set. */
+@property(nonatomic, readwrite) BOOL hasColleggtibleInfo;
 
 @property(nonatomic, readwrite) int32_t rankChange;
 @property(nonatomic, readwrite) BOOL hasRankChange;
@@ -5290,6 +5304,8 @@ typedef GPB_ENUM(ContractCoopStatusUpdateRequest_FieldNumber) {
   ContractCoopStatusUpdateRequest_FieldNumber_HideCcStatus = 17,
   ContractCoopStatusUpdateRequest_FieldNumber_LastIdleSummary = 18,
   ContractCoopStatusUpdateRequest_FieldNumber_TotalStepTime = 19,
+  ContractCoopStatusUpdateRequest_FieldNumber_Eot = 20,
+  ContractCoopStatusUpdateRequest_FieldNumber_ColleggtibleInfo = 21,
 };
 
 GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
@@ -5332,6 +5348,9 @@ GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
 @property(nonatomic, readwrite) uint32_t eop;
 @property(nonatomic, readwrite) BOOL hasEop;
 
+@property(nonatomic, readwrite) uint32_t eot;
+@property(nonatomic, readwrite) BOOL hasEot;
+
 @property(nonatomic, readwrite) uint32_t boostTokens;
 @property(nonatomic, readwrite) BOOL hasBoostTokens;
 
@@ -5358,6 +5377,24 @@ GPB_FINAL @interface ContractCoopStatusUpdateRequest : GPBMessage
 
 @property(nonatomic, readwrite) double earningsBuff;
 @property(nonatomic, readwrite) BOOL hasEarningsBuff;
+
+@property(nonatomic, readwrite, strong, null_resettable) PlayerColleggtibleInfo *colleggtibleInfo;
+/** Test to see if @c colleggtibleInfo has been set. */
+@property(nonatomic, readwrite) BOOL hasColleggtibleInfo;
+
+@end
+
+#pragma mark - PlayerColleggtibleInfo
+
+typedef GPB_ENUM(PlayerColleggtibleInfo_FieldNumber) {
+  PlayerColleggtibleInfo_FieldNumber_BuffsArray = 1,
+};
+
+GPB_FINAL @interface PlayerColleggtibleInfo : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<GameModifier*> *buffsArray;
+/** The number of items in @c buffsArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger buffsArray_Count;
 
 @end
 
@@ -6223,6 +6260,7 @@ typedef GPB_ENUM(InGameMail_FieldNumber) {
   InGameMail_FieldNumber_Priority = 27,
   InGameMail_FieldNumber_Category = 28,
   InGameMail_FieldNumber_MaxSoulEggs = 29,
+  InGameMail_FieldNumber_ReleaseTime = 30,
 };
 
 GPB_FINAL @interface InGameMail : GPBMessage
@@ -6317,6 +6355,9 @@ GPB_FINAL @interface InGameMail : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *category;
 /** Test to see if @c category has been set. */
 @property(nonatomic, readwrite) BOOL hasCategory;
+
+@property(nonatomic, readwrite) float releaseTime;
+@property(nonatomic, readwrite) BOOL hasReleaseTime;
 
 @end
 

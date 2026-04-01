@@ -841,6 +841,54 @@ public object ContractCoopStatusResponseKt {
       }
 
       /**
+       * `optional uint32 eop = 25;`
+       */
+      public var eop: kotlin.Int
+        @kotlin.jvm.JvmName("getEop")
+          get() = _builder.eop
+        @kotlin.jvm.JvmName("setEop")
+          set(value) {
+          _builder.eop = value
+        }
+      /**
+       * `optional uint32 eop = 25;`
+       */
+      public fun clearEop() {
+        _builder.clearEop()
+      }
+      /**
+       * `optional uint32 eop = 25;`
+       * @return Whether the eop field is set.
+       */
+      public fun hasEop(): kotlin.Boolean {
+        return _builder.hasEop()
+      }
+
+      /**
+       * `optional uint32 eot = 26;`
+       */
+      public var eot: kotlin.Int
+        @kotlin.jvm.JvmName("getEot")
+          get() = _builder.eot
+        @kotlin.jvm.JvmName("setEot")
+          set(value) {
+          _builder.eot = value
+        }
+      /**
+       * `optional uint32 eot = 26;`
+       */
+      public fun clearEot() {
+        _builder.clearEot()
+      }
+      /**
+       * `optional uint32 eot = 26;`
+       * @return Whether the eot field is set.
+       */
+      public fun hasEot(): kotlin.Boolean {
+        return _builder.hasEot()
+      }
+
+      /**
        * `optional .ei.FarmProductionParams production_params = 15;`
        */
       public var productionParams: ei.Ei.FarmProductionParams
@@ -893,6 +941,33 @@ public object ContractCoopStatusResponseKt {
 
       public val ContributionInfoKt.Dsl.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
         get() = _builder.farmInfoOrNull
+
+      /**
+       * `optional .ei.PlayerColleggtibleInfo colleggtible_info = 27;`
+       */
+      public var colleggtibleInfo: ei.Ei.PlayerColleggtibleInfo
+        @kotlin.jvm.JvmName("getColleggtibleInfo")
+          get() = _builder.colleggtibleInfo
+        @kotlin.jvm.JvmName("setColleggtibleInfo")
+          set(value) {
+          _builder.colleggtibleInfo = value
+        }
+      /**
+       * `optional .ei.PlayerColleggtibleInfo colleggtible_info = 27;`
+       */
+      public fun clearColleggtibleInfo() {
+        _builder.clearColleggtibleInfo()
+      }
+      /**
+       * `optional .ei.PlayerColleggtibleInfo colleggtible_info = 27;`
+       * @return Whether the colleggtibleInfo field is set.
+       */
+      public fun hasColleggtibleInfo(): kotlin.Boolean {
+        return _builder.hasColleggtibleInfo()
+      }
+
+      public val ContributionInfoKt.Dsl.colleggtibleInfoOrNull: ei.Ei.PlayerColleggtibleInfo?
+        get() = _builder.colleggtibleInfoOrNull
 
       /**
        * `optional int32 rank_change = 8;`
@@ -1530,6 +1605,9 @@ public val ei.Ei.ContractCoopStatusResponse.ContributionInfoOrBuilder.production
 
 public val ei.Ei.ContractCoopStatusResponse.ContributionInfoOrBuilder.farmInfoOrNull: ei.Ei.PlayerFarmInfo?
   get() = if (hasFarmInfo()) getFarmInfo() else null
+
+public val ei.Ei.ContractCoopStatusResponse.ContributionInfoOrBuilder.colleggtibleInfoOrNull: ei.Ei.PlayerColleggtibleInfo?
+  get() = if (hasColleggtibleInfo()) getColleggtibleInfo() else null
 
 @kotlin.jvm.JvmSynthetic
 public inline fun ei.Ei.ContractCoopStatusResponse.CoopGift.copy(block: `ei`.ContractCoopStatusResponseKt.CoopGiftKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractCoopStatusResponse.CoopGift =

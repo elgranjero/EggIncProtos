@@ -193,6 +193,7 @@ GPBObjCClassDeclaration(MyContracts);
 GPBObjCClassDeclaration(PathOfVirtueInfo);
 GPBObjCClassDeclaration(PeriodicalsResponse);
 GPBObjCClassDeclaration(PeriodicalsResponse_RoyaltyInfo);
+GPBObjCClassDeclaration(PlayerColleggtibleInfo);
 GPBObjCClassDeclaration(PlayerFarmInfo);
 GPBObjCClassDeclaration(PlayerLastChickenRunTimes);
 GPBObjCClassDeclaration(QueryCoopRequest);
@@ -11532,8 +11533,11 @@ typedef struct ContractCoopStatusResponse__storage_ {
 @dynamic hasContributionAmount, contributionAmount;
 @dynamic hasContributionRate, contributionRate;
 @dynamic hasSoulPower, soulPower;
+@dynamic hasEop, eop;
+@dynamic hasEot, eot;
 @dynamic hasProductionParams, productionParams;
 @dynamic hasFarmInfo, farmInfo;
+@dynamic hasColleggtibleInfo, colleggtibleInfo;
 @dynamic hasRankChange, rankChange;
 @dynamic hasRecentlyActive, recentlyActive;
 @dynamic hasActive, active;
@@ -11551,12 +11555,14 @@ typedef struct ContractCoopStatusResponse__storage_ {
 @dynamic hasChickenRunCooldown, chickenRunCooldown;
 
 typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
-  uint32_t _has_storage_[1];
+  uint32_t _has_storage_[2];
   Platform platform;
   int32_t rankChange;
   uint32_t banVotes;
   uint32_t boostTokens;
   uint32_t boostTokensSpent;
+  uint32_t eop;
+  uint32_t eot;
   NSString *userId;
   NSString *userName;
   NSString *pushId;
@@ -11565,6 +11571,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
   PlayerFarmInfo *farmInfo;
   NSString *contractIdentifier;
   NSString *uuid;
+  PlayerColleggtibleInfo *colleggtibleInfo;
   double contributionAmount;
   double contributionRate;
   double soulPower;
@@ -11608,8 +11615,8 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "active",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Active,
-        .hasIndex = 12,
-        .offset = 13,  // Stored in _has_storage_ to save space.
+        .hasIndex = 15,
+        .offset = 16,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -11617,7 +11624,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "platform",
         .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Platform,
-        .hasIndex = 22,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, platform),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeEnum,
@@ -11635,8 +11642,8 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "timeCheatDetected",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_TimeCheatDetected,
-        .hasIndex = 20,
-        .offset = 21,  // Stored in _has_storage_ to save space.
+        .hasIndex = 23,
+        .offset = 24,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -11644,7 +11651,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "rankChange",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_RankChange,
-        .hasIndex = 9,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, rankChange),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeInt32,
@@ -11653,7 +11660,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "pushId",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_PushId,
-        .hasIndex = 23,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, pushId),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -11662,7 +11669,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "banVotes",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BanVotes,
-        .hasIndex = 24,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, banVotes),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
@@ -11680,7 +11687,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "boostTokens",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BoostTokens,
-        .hasIndex = 27,
+        .hasIndex = 30,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, boostTokens),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
@@ -11698,7 +11705,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "boostTokensSpent",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_BoostTokensSpent,
-        .hasIndex = 28,
+        .hasIndex = 31,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, boostTokensSpent),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
@@ -11707,7 +11714,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "productionParams",
         .dataTypeSpecific.clazz = GPBObjCClass(FarmProductionParams),
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ProductionParams,
-        .hasIndex = 7,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, productionParams),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -11716,8 +11723,8 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "leech",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Leech,
-        .hasIndex = 16,
-        .offset = 17,  // Stored in _has_storage_ to save space.
+        .hasIndex = 19,
+        .offset = 20,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -11725,8 +11732,8 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "autojoined",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Autojoined,
-        .hasIndex = 25,
-        .offset = 26,  // Stored in _has_storage_ to save space.
+        .hasIndex = 28,
+        .offset = 29,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -11734,7 +11741,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "farmInfo",
         .dataTypeSpecific.clazz = GPBObjCClass(PlayerFarmInfo),
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_FarmInfo,
-        .hasIndex = 8,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, farmInfo),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -11752,7 +11759,7 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "chickenRunCooldown",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ChickenRunCooldown,
-        .hasIndex = 29,
+        .hasIndex = 32,
         .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, chickenRunCooldown),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
@@ -11770,8 +11777,8 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "finalized",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Finalized,
-        .hasIndex = 18,
-        .offset = 19,  // Stored in _has_storage_ to save space.
+        .hasIndex = 21,
+        .offset = 22,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -11779,8 +11786,8 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "recentlyActive",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_RecentlyActive,
-        .hasIndex = 10,
-        .offset = 11,  // Stored in _has_storage_ to save space.
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -11788,10 +11795,37 @@ typedef struct ContractCoopStatusResponse_ContributionInfo__storage_ {
         .name = "ccMember",
         .dataTypeSpecific.clazz = Nil,
         .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_CcMember,
-        .hasIndex = 14,
-        .offset = 15,  // Stored in _has_storage_ to save space.
+        .hasIndex = 17,
+        .offset = 18,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "eop",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Eop,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, eop),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "eot",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_Eot,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, eot),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "colleggtibleInfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(PlayerColleggtibleInfo),
+        .number = ContractCoopStatusResponse_ContributionInfo_FieldNumber_ColleggtibleInfo,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(ContractCoopStatusResponse_ContributionInfo__storage_, colleggtibleInfo),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -14286,6 +14320,7 @@ typedef struct IdleSessionSummary_Stat__storage_ {
 @dynamic hasTotalStepTime, totalStepTime;
 @dynamic hasSoulPower, soulPower;
 @dynamic hasEop, eop;
+@dynamic hasEot, eot;
 @dynamic hasBoostTokens, boostTokens;
 @dynamic hasBoostTokensSpent, boostTokensSpent;
 @dynamic hasHideCcStatus, hideCcStatus;
@@ -14294,6 +14329,7 @@ typedef struct IdleSessionSummary_Stat__storage_ {
 @dynamic hasLastIdleSummary, lastIdleSummary;
 @dynamic hasEggLayingRateBuff, eggLayingRateBuff;
 @dynamic hasEarningsBuff, earningsBuff;
+@dynamic hasColleggtibleInfo, colleggtibleInfo;
 
 typedef struct ContractCoopStatusUpdateRequest__storage_ {
   uint32_t _has_storage_[1];
@@ -14301,6 +14337,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
   uint32_t boostTokens;
   uint32_t boostTokensSpent;
   uint32_t eop;
+  uint32_t eot;
   NSString *userId;
   NSString *contractIdentifier;
   NSString *coopIdentifier;
@@ -14309,6 +14346,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
   FarmProductionParams *productionParams;
   PlayerFarmInfo *farmInfo;
   IdleSessionSummary *lastIdleSummary;
+  PlayerColleggtibleInfo *colleggtibleInfo;
   double amount;
   double rate;
   double soulPower;
@@ -14408,7 +14446,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "boostTokens",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_BoostTokens,
-        .core.hasIndex = 11,
+        .core.hasIndex = 12,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, boostTokens),
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeUInt32,
@@ -14418,7 +14456,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "eggLayingRateBuff",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_EggLayingRateBuff,
-        .core.hasIndex = 18,
+        .core.hasIndex = 19,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, eggLayingRateBuff),
         .core.flags = GPBFieldHasDefaultValue,
         .core.dataType = GPBDataTypeDouble,
@@ -14428,7 +14466,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "earningsBuff",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_EarningsBuff,
-        .core.hasIndex = 19,
+        .core.hasIndex = 20,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, earningsBuff),
         .core.flags = GPBFieldHasDefaultValue,
         .core.dataType = GPBDataTypeDouble,
@@ -14448,7 +14486,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "boostTokensSpent",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_BoostTokensSpent,
-        .core.hasIndex = 12,
+        .core.hasIndex = 13,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, boostTokensSpent),
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeUInt32,
@@ -14458,7 +14496,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "productionParams",
         .core.dataTypeSpecific.clazz = GPBObjCClass(FarmProductionParams),
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_ProductionParams,
-        .core.hasIndex = 15,
+        .core.hasIndex = 16,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, productionParams),
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeMessage,
@@ -14478,7 +14516,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "farmInfo",
         .core.dataTypeSpecific.clazz = GPBObjCClass(PlayerFarmInfo),
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_FarmInfo,
-        .core.hasIndex = 16,
+        .core.hasIndex = 17,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, farmInfo),
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeMessage,
@@ -14488,8 +14526,8 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "hideCcStatus",
         .core.dataTypeSpecific.clazz = Nil,
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_HideCcStatus,
-        .core.hasIndex = 13,
-        .core.offset = 14,  // Stored in _has_storage_ to save space.
+        .core.hasIndex = 14,
+        .core.offset = 15,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeBool,
       },
@@ -14498,7 +14536,7 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.name = "lastIdleSummary",
         .core.dataTypeSpecific.clazz = GPBObjCClass(IdleSessionSummary),
         .core.number = ContractCoopStatusUpdateRequest_FieldNumber_LastIdleSummary,
-        .core.hasIndex = 17,
+        .core.hasIndex = 18,
         .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, lastIdleSummary),
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeMessage,
@@ -14513,6 +14551,26 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeDouble,
       },
+      {
+        .defaultValue.valueUInt32 = 0U,
+        .core.name = "eot",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = ContractCoopStatusUpdateRequest_FieldNumber_Eot,
+        .core.hasIndex = 11,
+        .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, eot),
+        .core.flags = GPBFieldNone,
+        .core.dataType = GPBDataTypeUInt32,
+      },
+      {
+        .defaultValue.valueMessage = nil,
+        .core.name = "colleggtibleInfo",
+        .core.dataTypeSpecific.clazz = GPBObjCClass(PlayerColleggtibleInfo),
+        .core.number = ContractCoopStatusUpdateRequest_FieldNumber_ColleggtibleInfo,
+        .core.hasIndex = 21,
+        .core.offset = (uint32_t)offsetof(ContractCoopStatusUpdateRequest__storage_, colleggtibleInfo),
+        .core.flags = GPBFieldNone,
+        .core.dataType = GPBDataTypeMessage,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:GPBObjCClass(ContractCoopStatusUpdateRequest)
@@ -14523,6 +14581,52 @@ typedef struct ContractCoopStatusUpdateRequest__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescriptionWithDefault))
                                    storageSize:sizeof(ContractCoopStatusUpdateRequest__storage_)
                                          flags:GPBDescriptorInitializationFlag_FieldsWithDefault];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - PlayerColleggtibleInfo
+
+@implementation PlayerColleggtibleInfo
+
+@dynamic buffsArray, buffsArray_Count;
+
+typedef struct PlayerColleggtibleInfo__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *buffsArray;
+} PlayerColleggtibleInfo__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "buffsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(GameModifier),
+        .number = PlayerColleggtibleInfo_FieldNumber_BuffsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(PlayerColleggtibleInfo__storage_, buffsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(PlayerColleggtibleInfo)
+                                   messageName:@"PlayerColleggtibleInfo"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(PlayerColleggtibleInfo__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -17019,6 +17123,7 @@ typedef struct LiveConfig_HelpConfig_HowToVideoInfo__storage_ {
 @dynamic hasMaxRetries, maxRetries;
 @dynamic hasDaysUntilRetry, daysUntilRetry;
 @dynamic hasCategory, category;
+@dynamic hasReleaseTime, releaseTime;
 
 typedef struct InGameMail__storage_ {
   uint32_t _has_storage_[1];
@@ -17030,6 +17135,7 @@ typedef struct InGameMail__storage_ {
   uint32_t minPiggyBreaks;
   uint32_t maxRetries;
   uint32_t priority;
+  float releaseTime;
   NSString *id_p;
   NSString *title;
   NSString *message;
@@ -17298,6 +17404,15 @@ typedef struct InGameMail__storage_ {
         .offset = (uint32_t)offsetof(InGameMail__storage_, maxSoulEggs),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "releaseTime",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InGameMail_FieldNumber_ReleaseTime,
+        .hasIndex = 27,
+        .offset = (uint32_t)offsetof(InGameMail__storage_, releaseTime),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeFloat,
       },
     };
     GPBDescriptor *localDescriptor =
