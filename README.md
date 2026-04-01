@@ -162,6 +162,7 @@
     - [PathOfVirtueInfo](#ei-PathOfVirtueInfo)
     - [PeriodicalsResponse](#ei-PeriodicalsResponse)
     - [PeriodicalsResponse.RoyaltyInfo](#ei-PeriodicalsResponse-RoyaltyInfo)
+    - [PlayerColleggtibleInfo](#ei-PlayerColleggtibleInfo)
     - [PlayerFarmInfo](#ei-PlayerFarmInfo)
     - [PlayerLastChickenRunTimes](#ei-PlayerLastChickenRunTimes)
     - [QueryCoopRequest](#ei-QueryCoopRequest)
@@ -1706,8 +1707,11 @@
 | contribution_amount | [double](#double) | optional |  |
 | contribution_rate | [double](#double) | optional |  |
 | soul_power | [double](#double) | optional |  |
+| eop | [uint32](#uint32) | optional |  |
+| eot | [uint32](#uint32) | optional |  |
 | production_params | [FarmProductionParams](#ei-FarmProductionParams) | optional |  |
 | farm_info | [PlayerFarmInfo](#ei-PlayerFarmInfo) | optional |  |
+| colleggtible_info | [PlayerColleggtibleInfo](#ei-PlayerColleggtibleInfo) | optional |  |
 | rank_change | [int32](#int32) | optional |  |
 | recently_active | [bool](#bool) | optional |  |
 | active | [bool](#bool) | optional |  |
@@ -1766,6 +1770,7 @@
 | total_step_time | [double](#double) | optional |  |
 | soul_power | [double](#double) | optional |  |
 | eop | [uint32](#uint32) | optional |  |
+| eot | [uint32](#uint32) | optional |  |
 | boost_tokens | [uint32](#uint32) | optional |  |
 | boost_tokens_spent | [uint32](#uint32) | optional |  |
 | hide_cc_status | [bool](#bool) | optional |  |
@@ -1774,6 +1779,7 @@
 | last_idle_summary | [IdleSessionSummary](#ei-IdleSessionSummary) | optional |  |
 | egg_laying_rate_buff | [double](#double) | optional |  Default: 1 |
 | earnings_buff | [double](#double) | optional |  Default: 1 |
+| colleggtible_info | [PlayerColleggtibleInfo](#ei-PlayerColleggtibleInfo) | optional |  |
 
 
 
@@ -2861,6 +2867,7 @@
 | max_retries | [uint32](#uint32) | optional |  |
 | days_until_retry | [double](#double) | optional |  |
 | category | [string](#string) | optional |  |
+| release_time | [float](#float) | optional |  |
 
 
 
@@ -3589,6 +3596,21 @@
 | ----- | ---- | ----- | ----------- |
 | id | [string](#string) | optional |  |
 | amount | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-PlayerColleggtibleInfo"></a>
+
+### PlayerColleggtibleInfo
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| buffs | [GameModifier](#ei-GameModifier) | repeated |  |
 
 
 
