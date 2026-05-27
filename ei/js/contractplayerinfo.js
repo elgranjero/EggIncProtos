@@ -119,7 +119,8 @@ proto.ei.ContractPlayerInfo.toObject = function(includeInstance, msg) {
     unreadEvaluationsList: jspb.Message.toObjectList(msg.getUnreadEvaluationsList(),
     proto.ei.ContractEvaluation.toObject, includeInstance),
     seasonProgressList: jspb.Message.toObjectList(msg.getSeasonProgressList(),
-    proto.ei.ContractPlayerInfo.SeasonProgress.toObject, includeInstance)
+    proto.ei.ContractPlayerInfo.SeasonProgress.toObject, includeInstance),
+    aggregationNotes: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -219,6 +220,10 @@ proto.ei.ContractPlayerInfo.deserializeBinaryFromReader = function(msg, reader) 
       var value = new proto.ei.ContractPlayerInfo.SeasonProgress;
       reader.readMessage(value,proto.ei.ContractPlayerInfo.SeasonProgress.deserializeBinaryFromReader);
       msg.addSeasonProgress(value);
+      break;
+    case 16:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAggregationNotes(value);
       break;
     default:
       reader.skipField();
@@ -354,6 +359,13 @@ proto.ei.ContractPlayerInfo.serializeBinaryToWriter = function(message, writer) 
       15,
       f,
       proto.ei.ContractPlayerInfo.SeasonProgress.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 16));
+  if (f != null) {
+    writer.writeString(
+      16,
+      f
     );
   }
 };
@@ -1252,6 +1264,42 @@ proto.ei.ContractPlayerInfo.prototype.addSeasonProgress = function(opt_value, op
  */
 proto.ei.ContractPlayerInfo.prototype.clearSeasonProgressList = function() {
   return this.setSeasonProgressList([]);
+};
+
+
+/**
+ * optional string aggregation_notes = 16;
+ * @return {string}
+ */
+proto.ei.ContractPlayerInfo.prototype.getAggregationNotes = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 16, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.ContractPlayerInfo} returns this
+ */
+proto.ei.ContractPlayerInfo.prototype.setAggregationNotes = function(value) {
+  return jspb.Message.setField(this, 16, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.ContractPlayerInfo} returns this
+ */
+proto.ei.ContractPlayerInfo.prototype.clearAggregationNotes = function() {
+  return jspb.Message.setField(this, 16, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ContractPlayerInfo.prototype.hasAggregationNotes = function() {
+  return jspb.Message.getField(this, 16) != null;
 };
 
 

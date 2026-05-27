@@ -73,7 +73,8 @@ proto.ei.SyncPathOfVirtueRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     rinfo: (f = msg.getRinfo()) && proto.ei.BasicRequestInfo.toObject(includeInstance, f),
     resetIndex: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
-    simTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f
+    simTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
+    rebaseline: (f = jspb.Message.getBooleanField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -123,6 +124,10 @@ proto.ei.SyncPathOfVirtueRequest.deserializeBinaryFromReader = function(msg, rea
       var value = /** @type {number} */ (reader.readDouble());
       msg.setSimTime(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setRebaseline(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -171,6 +176,13 @@ proto.ei.SyncPathOfVirtueRequest.serializeBinaryToWriter = function(message, wri
   if (f != null) {
     writer.writeDouble(
       3,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeBool(
+      4,
       f
     );
   }
@@ -283,6 +295,42 @@ proto.ei.SyncPathOfVirtueRequest.prototype.clearSimTime = function() {
  */
 proto.ei.SyncPathOfVirtueRequest.prototype.hasSimTime = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional bool rebaseline = 4;
+ * @return {boolean}
+ */
+proto.ei.SyncPathOfVirtueRequest.prototype.getRebaseline = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.SyncPathOfVirtueRequest} returns this
+ */
+proto.ei.SyncPathOfVirtueRequest.prototype.setRebaseline = function(value) {
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.SyncPathOfVirtueRequest} returns this
+ */
+proto.ei.SyncPathOfVirtueRequest.prototype.clearRebaseline = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.SyncPathOfVirtueRequest.prototype.hasRebaseline = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

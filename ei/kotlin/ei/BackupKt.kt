@@ -1604,6 +1604,54 @@ public object BackupKt {
       public fun hasUserPersonalizedAdsEnabled(): kotlin.Boolean {
         return _builder.hasUserPersonalizedAdsEnabled()
       }
+
+      /**
+       * `optional .ei.Backup.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
+       */
+      public var ageComplianceStatus: ei.Ei.Backup.AgeComplianceStatus
+        @kotlin.jvm.JvmName("getAgeComplianceStatus")
+          get() = _builder.ageComplianceStatus
+        @kotlin.jvm.JvmName("setAgeComplianceStatus")
+          set(value) {
+          _builder.ageComplianceStatus = value
+        }
+      /**
+       * `optional .ei.Backup.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
+       */
+      public fun clearAgeComplianceStatus() {
+        _builder.clearAgeComplianceStatus()
+      }
+      /**
+       * `optional .ei.Backup.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
+       * @return Whether the ageComplianceStatus field is set.
+       */
+      public fun hasAgeComplianceStatus(): kotlin.Boolean {
+        return _builder.hasAgeComplianceStatus()
+      }
+
+      /**
+       * `optional double age_signal_fetched_time = 34;`
+       */
+      public var ageSignalFetchedTime: kotlin.Double
+        @kotlin.jvm.JvmName("getAgeSignalFetchedTime")
+          get() = _builder.ageSignalFetchedTime
+        @kotlin.jvm.JvmName("setAgeSignalFetchedTime")
+          set(value) {
+          _builder.ageSignalFetchedTime = value
+        }
+      /**
+       * `optional double age_signal_fetched_time = 34;`
+       */
+      public fun clearAgeSignalFetchedTime() {
+        _builder.clearAgeSignalFetchedTime()
+      }
+      /**
+       * `optional double age_signal_fetched_time = 34;`
+       * @return Whether the ageSignalFetchedTime field is set.
+       */
+      public fun hasAgeSignalFetchedTime(): kotlin.Boolean {
+        return _builder.hasAgeSignalFetchedTime()
+      }
     }
   }
   @kotlin.jvm.JvmName("-initializetutorial")

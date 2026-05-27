@@ -225,6 +225,7 @@
     - [ArtifactSpec.Name](#ei-ArtifactSpec-Name)
     - [ArtifactSpec.Rarity](#ei-ArtifactSpec-Rarity)
     - [ArtifactSpec.Type](#ei-ArtifactSpec-Type)
+    - [Backup.AgeComplianceStatus](#ei-Backup-AgeComplianceStatus)
     - [Contract.PlayerGrade](#ei-Contract-PlayerGrade)
     - [ContractCoopStatusResponse.MemberStatus](#ei-ContractCoopStatusResponse-MemberStatus)
     - [ContractCoopStatusResponse.ResponseStatus](#ei-ContractCoopStatusResponse-ResponseStatus)
@@ -1090,6 +1091,8 @@
 | user_cloud_enabled | [bool](#bool) | optional |  Default: true |
 | user_analytics_enabled | [bool](#bool) | optional |  Default: true |
 | user_personalized_ads_enabled | [bool](#bool) | optional |  Default: true |
+| age_compliance_status | [Backup.AgeComplianceStatus](#ei-Backup-AgeComplianceStatus) | optional |  Default: AGE_COMPLIANCE_NOT_APPLICABLE |
+| age_signal_fetched_time | [double](#double) | optional |  |
 
 
 
@@ -1906,6 +1909,7 @@
 | last_evaluation_version | [string](#string) | optional |  |
 | unread_evaluations | [ContractEvaluation](#ei-ContractEvaluation) | repeated |  |
 | season_progress | [ContractPlayerInfo.SeasonProgress](#ei-ContractPlayerInfo-SeasonProgress) | repeated |  |
+| aggregation_notes | [string](#string) | optional |  |
 
 
 
@@ -4466,6 +4470,7 @@
 | rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
 | reset_index | [uint32](#uint32) | optional |  |
 | sim_time | [double](#double) | optional |  |
+| rebaseline | [bool](#bool) | optional |  |
 
 
 
@@ -4868,6 +4873,21 @@
 | STONE | 1 |  |
 | INGREDIENT | 2 |  |
 | STONE_INGREDIENT | 3 |  |
+
+
+
+<a name="ei-Backup-AgeComplianceStatus"></a>
+
+### Backup.AgeComplianceStatus
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| AGE_COMPLIANCE_NOT_APPLICABLE | 0 |  |
+| AGE_COMPLIANCE_UNKNOWN | 1 |  |
+| AGE_COMPLIANCE_ADULT | 2 |  |
+| AGE_COMPLIANCE_MINOR | 3 |  |
+| AGE_COMPLIANCE_RESTRICTED | 4 |  |
 
 
 

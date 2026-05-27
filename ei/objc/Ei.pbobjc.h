@@ -392,6 +392,24 @@ GPBEnumDescriptor *LeaderboardScope_EnumDescriptor(void);
  **/
 BOOL LeaderboardScope_IsValidValue(int32_t value);
 
+#pragma mark - Enum Backup_AgeComplianceStatus
+
+typedef GPB_ENUM(Backup_AgeComplianceStatus) {
+  Backup_AgeComplianceStatus_AgeComplianceNotApplicable = 0,
+  Backup_AgeComplianceStatus_AgeComplianceUnknown = 1,
+  Backup_AgeComplianceStatus_AgeComplianceAdult = 2,
+  Backup_AgeComplianceStatus_AgeComplianceMinor = 3,
+  Backup_AgeComplianceStatus_AgeComplianceRestricted = 4,
+};
+
+GPBEnumDescriptor *Backup_AgeComplianceStatus_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL Backup_AgeComplianceStatus_IsValidValue(int32_t value);
+
 #pragma mark - Enum EggIncFirstContactResponse_ErrorCodes
 
 typedef GPB_ENUM(EggIncFirstContactResponse_ErrorCodes) {
@@ -1328,6 +1346,8 @@ typedef GPB_ENUM(Backup_Settings_FieldNumber) {
   Backup_Settings_FieldNumber_HideCcStatus = 28,
   Backup_Settings_FieldNumber_ContractsWidgetEnabled = 29,
   Backup_Settings_FieldNumber_ArtifactSparkle = 30,
+  Backup_Settings_FieldNumber_AgeComplianceStatus = 31,
+  Backup_Settings_FieldNumber_AgeSignalFetchedTime = 34,
 };
 
 GPB_FINAL @interface Backup_Settings : GPBMessage
@@ -1421,6 +1441,12 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 
 @property(nonatomic, readwrite) BOOL userPersonalizedAdsEnabled;
 @property(nonatomic, readwrite) BOOL hasUserPersonalizedAdsEnabled;
+
+@property(nonatomic, readwrite) Backup_AgeComplianceStatus ageComplianceStatus;
+@property(nonatomic, readwrite) BOOL hasAgeComplianceStatus;
+
+@property(nonatomic, readwrite) double ageSignalFetchedTime;
+@property(nonatomic, readwrite) BOOL hasAgeSignalFetchedTime;
 
 @end
 
@@ -3384,6 +3410,7 @@ typedef GPB_ENUM(ContractPlayerInfo_FieldNumber) {
   ContractPlayerInfo_FieldNumber_SeasonCxp = 13,
   ContractPlayerInfo_FieldNumber_IssueScore = 14,
   ContractPlayerInfo_FieldNumber_SeasonProgressArray = 15,
+  ContractPlayerInfo_FieldNumber_AggregationNotes = 16,
 };
 
 GPB_FINAL @interface ContractPlayerInfo : GPBMessage
@@ -3437,6 +3464,10 @@ GPB_FINAL @interface ContractPlayerInfo : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ContractPlayerInfo_SeasonProgress*> *seasonProgressArray;
 /** The number of items in @c seasonProgressArray without causing the container to be created. */
 @property(nonatomic, readonly) NSUInteger seasonProgressArray_Count;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *aggregationNotes;
+/** Test to see if @c aggregationNotes has been set. */
+@property(nonatomic, readwrite) BOOL hasAggregationNotes;
 
 @end
 
@@ -9465,6 +9496,7 @@ typedef GPB_ENUM(SyncPathOfVirtueRequest_FieldNumber) {
   SyncPathOfVirtueRequest_FieldNumber_Rinfo = 1,
   SyncPathOfVirtueRequest_FieldNumber_ResetIndex = 2,
   SyncPathOfVirtueRequest_FieldNumber_SimTime = 3,
+  SyncPathOfVirtueRequest_FieldNumber_Rebaseline = 4,
 };
 
 GPB_FINAL @interface SyncPathOfVirtueRequest : GPBMessage
@@ -9478,6 +9510,9 @@ GPB_FINAL @interface SyncPathOfVirtueRequest : GPBMessage
 
 @property(nonatomic, readwrite) double simTime;
 @property(nonatomic, readwrite) BOOL hasSimTime;
+
+@property(nonatomic, readwrite) BOOL rebaseline;
+@property(nonatomic, readwrite) BOOL hasRebaseline;
 
 @end
 

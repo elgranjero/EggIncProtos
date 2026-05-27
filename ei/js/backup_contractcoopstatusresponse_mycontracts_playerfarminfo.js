@@ -14,6 +14,7 @@
 goog.provide('proto.ei.Backup');
 goog.provide('proto.ei.Backup.AchievementInfo');
 goog.provide('proto.ei.Backup.ActiveBoost');
+goog.provide('proto.ei.Backup.AgeComplianceStatus');
 goog.provide('proto.ei.Backup.Artifacts');
 goog.provide('proto.ei.Backup.Game');
 goog.provide('proto.ei.Backup.Misc');
@@ -1033,6 +1034,17 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
 };
 
 
+/**
+ * @enum {number}
+ */
+proto.ei.Backup.AgeComplianceStatus = {
+  AGE_COMPLIANCE_NOT_APPLICABLE: 0,
+  AGE_COMPLIANCE_UNKNOWN: 1,
+  AGE_COMPLIANCE_ADULT: 2,
+  AGE_COMPLIANCE_MINOR: 3,
+  AGE_COMPLIANCE_RESTRICTED: 4
+};
+
 
 
 
@@ -1094,7 +1106,9 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     userAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 14, true),
     userCloudEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 15, true),
     userAnalyticsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 22, true),
-    userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true)
+    userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true),
+    ageComplianceStatus: jspb.Message.getFieldWithDefault(msg, 31, 0),
+    ageSignalFetchedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 34)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1250,6 +1264,14 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 23:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUserPersonalizedAdsEnabled(value);
+      break;
+    case 31:
+      var value = /** @type {!proto.ei.Backup.AgeComplianceStatus} */ (reader.readEnum());
+      msg.setAgeComplianceStatus(value);
+      break;
+    case 34:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setAgeSignalFetchedTime(value);
       break;
     default:
       reader.skipField();
@@ -1487,6 +1509,20 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       23,
+      f
+    );
+  }
+  f = /** @type {!proto.ei.Backup.AgeComplianceStatus} */ (jspb.Message.getField(message, 31));
+  if (f != null) {
+    writer.writeEnum(
+      31,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 34));
+  if (f != null) {
+    writer.writeDouble(
+      34,
       f
     );
   }
@@ -2570,6 +2606,78 @@ proto.ei.Backup.Settings.prototype.clearUserPersonalizedAdsEnabled = function() 
  */
 proto.ei.Backup.Settings.prototype.hasUserPersonalizedAdsEnabled = function() {
   return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
+ * optional AgeComplianceStatus age_compliance_status = 31;
+ * @return {!proto.ei.Backup.AgeComplianceStatus}
+ */
+proto.ei.Backup.Settings.prototype.getAgeComplianceStatus = function() {
+  return /** @type {!proto.ei.Backup.AgeComplianceStatus} */ (jspb.Message.getFieldWithDefault(this, 31, 0));
+};
+
+
+/**
+ * @param {!proto.ei.Backup.AgeComplianceStatus} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setAgeComplianceStatus = function(value) {
+  return jspb.Message.setField(this, 31, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearAgeComplianceStatus = function() {
+  return jspb.Message.setField(this, 31, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasAgeComplianceStatus = function() {
+  return jspb.Message.getField(this, 31) != null;
+};
+
+
+/**
+ * optional double age_signal_fetched_time = 34;
+ * @return {number}
+ */
+proto.ei.Backup.Settings.prototype.getAgeSignalFetchedTime = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 34, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setAgeSignalFetchedTime = function(value) {
+  return jspb.Message.setField(this, 34, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearAgeSignalFetchedTime = function() {
+  return jspb.Message.setField(this, 34, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasAgeSignalFetchedTime = function() {
+  return jspb.Message.getField(this, 34) != null;
 };
 
 

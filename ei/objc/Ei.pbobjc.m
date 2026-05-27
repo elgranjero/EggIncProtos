@@ -811,6 +811,51 @@ BOOL LeaderboardScope_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Enum Backup_AgeComplianceStatus
+
+GPBEnumDescriptor *Backup_AgeComplianceStatus_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "AgeComplianceNotApplicable\000AgeCompliance"
+        "Unknown\000AgeComplianceAdult\000AgeCompliance"
+        "Minor\000AgeComplianceRestricted\000";
+    static const int32_t values[] = {
+        Backup_AgeComplianceStatus_AgeComplianceNotApplicable,
+        Backup_AgeComplianceStatus_AgeComplianceUnknown,
+        Backup_AgeComplianceStatus_AgeComplianceAdult,
+        Backup_AgeComplianceStatus_AgeComplianceMinor,
+        Backup_AgeComplianceStatus_AgeComplianceRestricted,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Backup_AgeComplianceStatus)
+                                   runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:Backup_AgeComplianceStatus_IsValidValue
+                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL Backup_AgeComplianceStatus_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case Backup_AgeComplianceStatus_AgeComplianceNotApplicable:
+    case Backup_AgeComplianceStatus_AgeComplianceUnknown:
+    case Backup_AgeComplianceStatus_AgeComplianceAdult:
+    case Backup_AgeComplianceStatus_AgeComplianceMinor:
+    case Backup_AgeComplianceStatus_AgeComplianceRestricted:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - Enum EggIncFirstContactResponse_ErrorCodes
 
 GPBEnumDescriptor *EggIncFirstContactResponse_ErrorCodes_EnumDescriptor(void) {
@@ -3019,12 +3064,16 @@ typedef struct Backup__storage_ {
 @dynamic hasUserCloudEnabled, userCloudEnabled;
 @dynamic hasUserAnalyticsEnabled, userAnalyticsEnabled;
 @dynamic hasUserPersonalizedAdsEnabled, userPersonalizedAdsEnabled;
+@dynamic hasAgeComplianceStatus, ageComplianceStatus;
+@dynamic hasAgeSignalFetchedTime, ageSignalFetchedTime;
 
 typedef struct Backup_Settings__storage_ {
   uint32_t _has_storage_[2];
   uint32_t lastDayAgeQueried;
+  Backup_AgeComplianceStatus ageComplianceStatus;
   double lastBackupTime;
   double lastNotificationQueryTime;
+  double ageSignalFetchedTime;
 } Backup_Settings__storage_;
 
 // This method is threadsafe because it is initially called
@@ -3332,6 +3381,26 @@ typedef struct Backup_Settings__storage_ {
         .core.offset = 28,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeBool,
+      },
+      {
+        .defaultValue.valueEnum = Backup_AgeComplianceStatus_AgeComplianceNotApplicable,
+        .core.name = "ageComplianceStatus",
+        .core.dataTypeSpecific.enumDescFunc = Backup_AgeComplianceStatus_EnumDescriptor,
+        .core.number = Backup_Settings_FieldNumber_AgeComplianceStatus,
+        .core.hasIndex = 57,
+        .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, ageComplianceStatus),
+        .core.flags = GPBFieldHasDefaultValue,
+        .core.dataType = GPBDataTypeEnum,
+      },
+      {
+        .defaultValue.valueDouble = 0,
+        .core.name = "ageSignalFetchedTime",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Settings_FieldNumber_AgeSignalFetchedTime,
+        .core.hasIndex = 58,
+        .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, ageSignalFetchedTime),
+        .core.flags = GPBFieldNone,
+        .core.dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -8980,6 +9049,7 @@ typedef struct ContractSeasonInfos__storage_ {
 @dynamic hasLastEvaluationVersion, lastEvaluationVersion;
 @dynamic unreadEvaluationsArray, unreadEvaluationsArray_Count;
 @dynamic seasonProgressArray, seasonProgressArray_Count;
+@dynamic hasAggregationNotes, aggregationNotes;
 
 typedef struct ContractPlayerInfo__storage_ {
   uint32_t _has_storage_[1];
@@ -8989,6 +9059,7 @@ typedef struct ContractPlayerInfo__storage_ {
   NSMutableArray *unreadEvaluationsArray;
   GPBEnumArray *issuesArray;
   NSMutableArray *seasonProgressArray;
+  NSString *aggregationNotes;
   double totalCxp;
   double lastEvaluationTime;
   double gradeScore;
@@ -9140,6 +9211,15 @@ typedef struct ContractPlayerInfo__storage_ {
         .offset = (uint32_t)offsetof(ContractPlayerInfo__storage_, seasonProgressArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "aggregationNotes",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ContractPlayerInfo_FieldNumber_AggregationNotes,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(ContractPlayerInfo__storage_, aggregationNotes),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -26269,6 +26349,7 @@ typedef struct PathOfVirtueInfo__storage_ {
 @dynamic hasRinfo, rinfo;
 @dynamic hasResetIndex, resetIndex;
 @dynamic hasSimTime, simTime;
+@dynamic hasRebaseline, rebaseline;
 
 typedef struct SyncPathOfVirtueRequest__storage_ {
   uint32_t _has_storage_[1];
@@ -26309,6 +26390,15 @@ typedef struct SyncPathOfVirtueRequest__storage_ {
         .offset = (uint32_t)offsetof(SyncPathOfVirtueRequest__storage_, simTime),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "rebaseline",
+        .dataTypeSpecific.clazz = Nil,
+        .number = SyncPathOfVirtueRequest_FieldNumber_Rebaseline,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =

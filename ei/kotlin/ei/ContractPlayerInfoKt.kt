@@ -523,6 +523,30 @@ public object ContractPlayerInfoKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.ContractPlayerInfo.SeasonProgress, SeasonProgressProxy>.clear() {
       _builder.clearSeasonProgress()
     }
+
+    /**
+     * `optional string aggregation_notes = 16;`
+     */
+    public var aggregationNotes: kotlin.String
+      @kotlin.jvm.JvmName("getAggregationNotes")
+        get() = _builder.aggregationNotes
+      @kotlin.jvm.JvmName("setAggregationNotes")
+        set(value) {
+        _builder.aggregationNotes = value
+      }
+    /**
+     * `optional string aggregation_notes = 16;`
+     */
+    public fun clearAggregationNotes() {
+      _builder.clearAggregationNotes()
+    }
+    /**
+     * `optional string aggregation_notes = 16;`
+     * @return Whether the aggregationNotes field is set.
+     */
+    public fun hasAggregationNotes(): kotlin.Boolean {
+      return _builder.hasAggregationNotes()
+    }
   }
   @kotlin.jvm.JvmName("-initializeseasonProgress")
   public inline fun seasonProgress(block: ei.ContractPlayerInfoKt.SeasonProgressKt.Dsl.() -> kotlin.Unit): ei.Ei.ContractPlayerInfo.SeasonProgress =

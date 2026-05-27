@@ -103,6 +103,30 @@ public object SyncPathOfVirtueRequestKt {
     public fun hasSimTime(): kotlin.Boolean {
       return _builder.hasSimTime()
     }
+
+    /**
+     * `optional bool rebaseline = 4;`
+     */
+    public var rebaseline: kotlin.Boolean
+      @kotlin.jvm.JvmName("getRebaseline")
+        get() = _builder.rebaseline
+      @kotlin.jvm.JvmName("setRebaseline")
+        set(value) {
+        _builder.rebaseline = value
+      }
+    /**
+     * `optional bool rebaseline = 4;`
+     */
+    public fun clearRebaseline() {
+      _builder.clearRebaseline()
+    }
+    /**
+     * `optional bool rebaseline = 4;`
+     * @return Whether the rebaseline field is set.
+     */
+    public fun hasRebaseline(): kotlin.Boolean {
+      return _builder.hasRebaseline()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
