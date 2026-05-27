@@ -1060,6 +1060,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.Backup.AgeComplianceStatus"><span class="badge">E</span>Backup.AgeComplianceStatus</a>
+                </li>
+              
+                <li>
                   <a href="#ei.Contract.PlayerGrade"><span class="badge">E</span>Contract.PlayerGrade</a>
                 </li>
               
@@ -4064,6 +4068,20 @@
                   <td><p> Default: true</p></td>
                 </tr>
               
+                <tr>
+                  <td>age_compliance_status</td>
+                  <td><a href="#ei.Backup.AgeComplianceStatus">Backup.AgeComplianceStatus</a></td>
+                  <td>optional</td>
+                  <td><p> Default: AGE_COMPLIANCE_NOT_APPLICABLE</p></td>
+                </tr>
+              
+                <tr>
+                  <td>age_signal_fetched_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -6938,6 +6956,13 @@
                   <td>season_progress</td>
                   <td><a href="#ei.ContractPlayerInfo.SeasonProgress">ContractPlayerInfo.SeasonProgress</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>aggregation_notes</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -14250,6 +14275,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>rebaseline</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -15610,6 +15642,47 @@
               <tr>
                 <td>STONE_INGREDIENT</td>
                 <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.Backup.AgeComplianceStatus">Backup.AgeComplianceStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_NOT_APPLICABLE</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_UNKNOWN</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_ADULT</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_MINOR</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_RESTRICTED</td>
+                <td>4</td>
                 <td><p></p></td>
               </tr>
             
