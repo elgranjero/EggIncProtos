@@ -203,6 +203,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.AdminControls"><span class="badge">M</span>AdminControls</a>
+                </li>
+              
+                <li>
                   <a href="#ei.AppInfo"><span class="badge">M</span>AppInfo</a>
                 </li>
               
@@ -1044,6 +1048,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.AgeComplianceStatus"><span class="badge">E</span>AgeComplianceStatus</a>
+                </li>
+              
+                <li>
                   <a href="#ei.ArtifactSpec.Level"><span class="badge">E</span>ArtifactSpec.Level</a>
                 </li>
               
@@ -1057,10 +1065,6 @@
               
                 <li>
                   <a href="#ei.ArtifactSpec.Type"><span class="badge">E</span>ArtifactSpec.Type</a>
-                </li>
-              
-                <li>
-                  <a href="#ei.Backup.AgeComplianceStatus"><span class="badge">E</span>Backup.AgeComplianceStatus</a>
                 </li>
               
                 <li>
@@ -1566,6 +1570,37 @@
                 <tr>
                   <td>approx_time</td>
                   <td><a href="#float">float</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.AdminControls">AdminControls</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>shell_debug</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>showcase_viewer</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -2770,6 +2805,13 @@
               
                 <tr>
                   <td>game_services_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>game_services_id_scoped</td>
                   <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -4070,7 +4112,7 @@
               
                 <tr>
                   <td>age_compliance_status</td>
-                  <td><a href="#ei.Backup.AgeComplianceStatus">Backup.AgeComplianceStatus</a></td>
+                  <td><a href="#ei.AgeComplianceStatus">AgeComplianceStatus</a></td>
                   <td>optional</td>
                   <td><p> Default: AGE_COMPLIANCE_NOT_APPLICABLE</p></td>
                 </tr>
@@ -4806,6 +4848,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>game_services_id_scoped</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -5142,6 +5191,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>age_compliance_status</td>
+                  <td><a href="#ei.AgeComplianceStatus">AgeComplianceStatus</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -5176,6 +5232,13 @@
                 <tr>
                   <td>dlc_catalog</td>
                   <td><a href="#ei.DLCCatalog">DLCCatalog</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>admin</td>
+                  <td><a href="#ei.AdminControls">AdminControls</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -8703,6 +8766,13 @@
               
                 <tr>
                   <td>game_services_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>game_services_id_scoped</td>
                   <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
@@ -15202,6 +15272,47 @@
           </tbody>
         </table>
       
+        <h3 id="ei.AgeComplianceStatus">AgeComplianceStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_NOT_APPLICABLE</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_UNKNOWN</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_ADULT</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_MINOR</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>AGE_COMPLIANCE_RESTRICTED</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="ei.ArtifactSpec.Level">ArtifactSpec.Level</h3>
         <p></p>
         <table class="enum-table">
@@ -15642,47 +15753,6 @@
               <tr>
                 <td>STONE_INGREDIENT</td>
                 <td>3</td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-      
-        <h3 id="ei.Backup.AgeComplianceStatus">Backup.AgeComplianceStatus</h3>
-        <p></p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>AGE_COMPLIANCE_NOT_APPLICABLE</td>
-                <td>0</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>AGE_COMPLIANCE_UNKNOWN</td>
-                <td>1</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>AGE_COMPLIANCE_ADULT</td>
-                <td>2</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>AGE_COMPLIANCE_MINOR</td>
-                <td>3</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>AGE_COMPLIANCE_RESTRICTED</td>
-                <td>4</td>
                 <td><p></p></td>
               </tr>
             

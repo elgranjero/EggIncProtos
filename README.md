@@ -10,6 +10,7 @@
     - [AdAttributionInfo](#ei-AdAttributionInfo)
     - [AdAttributionRawData](#ei-AdAttributionRawData)
     - [AdAttributionRow](#ei-AdAttributionRow)
+    - [AdminControls](#ei-AdminControls)
     - [AppInfo](#ei-AppInfo)
     - [ArtifactInventoryItem](#ei-ArtifactInventoryItem)
     - [ArtifactSpec](#ei-ArtifactSpec)
@@ -221,11 +222,11 @@
     - [VerifyPurchaseResponse](#ei-VerifyPurchaseResponse)
   
     - [AdNetwork](#ei-AdNetwork)
+    - [AgeComplianceStatus](#ei-AgeComplianceStatus)
     - [ArtifactSpec.Level](#ei-ArtifactSpec-Level)
     - [ArtifactSpec.Name](#ei-ArtifactSpec-Name)
     - [ArtifactSpec.Rarity](#ei-ArtifactSpec-Rarity)
     - [ArtifactSpec.Type](#ei-ArtifactSpec-Type)
-    - [Backup.AgeComplianceStatus](#ei-Backup-AgeComplianceStatus)
     - [Contract.PlayerGrade](#ei-Contract-PlayerGrade)
     - [ContractCoopStatusResponse.MemberStatus](#ei-ContractCoopStatusResponse-MemberStatus)
     - [ContractCoopStatusResponse.ResponseStatus](#ei-ContractCoopStatusResponse-ResponseStatus)
@@ -387,6 +388,22 @@
 | click_date | [float](#float) | optional |  |
 | download_date | [float](#float) | optional |  |
 | approx_time | [float](#float) | optional |  |
+
+
+
+
+
+
+<a name="ei-AdminControls"></a>
+
+### AdminControls
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| shell_debug | [bool](#bool) | optional |  |
+| showcase_viewer | [bool](#bool) | optional |  |
 
 
 
@@ -779,6 +796,7 @@
 | user_id | [string](#string) | optional |  |
 | ei_user_id | [string](#string) | optional |  |
 | game_services_id | [string](#string) | optional |  |
+| game_services_id_scoped | [string](#string) | optional |  |
 | push_user_id | [string](#string) | optional |  |
 | device_id | [string](#string) | optional |  |
 | user_name | [string](#string) | optional |  |
@@ -1091,7 +1109,7 @@
 | user_cloud_enabled | [bool](#bool) | optional |  Default: true |
 | user_analytics_enabled | [bool](#bool) | optional |  Default: true |
 | user_personalized_ads_enabled | [bool](#bool) | optional |  Default: true |
-| age_compliance_status | [Backup.AgeComplianceStatus](#ei-Backup-AgeComplianceStatus) | optional |  Default: AGE_COMPLIANCE_NOT_APPLICABLE |
+| age_compliance_status | [AgeComplianceStatus](#ei-AgeComplianceStatus) | optional |  Default: AGE_COMPLIANCE_NOT_APPLICABLE |
 | age_signal_fetched_time | [double](#double) | optional |  |
 
 
@@ -1289,6 +1307,7 @@
 | ----- | ---- | ----- | ----------- |
 | ei_user_id_to_keep | [string](#string) | optional |  |
 | game_services_id | [string](#string) | optional |  |
+| game_services_id_scoped | [string](#string) | optional |  |
 
 
 
@@ -1418,6 +1437,7 @@
 | pro_permit | [bool](#bool) | optional |  |
 | ultra | [bool](#bool) | optional |  |
 | tips_checksum | [string](#string) | optional |  |
+| age_compliance_status | [AgeComplianceStatus](#ei-AgeComplianceStatus) | optional |  |
 
 
 
@@ -1435,6 +1455,7 @@
 | live_config | [LiveConfig](#ei-LiveConfig) | optional |  |
 | mail_bag | [MailDB](#ei-MailDB) | optional |  |
 | dlc_catalog | [DLCCatalog](#ei-DLCCatalog) | optional |  |
+| admin | [AdminControls](#ei-AdminControls) | optional |  |
 
 
 
@@ -2587,6 +2608,7 @@
 | ei_user_id | [string](#string) | optional |  |
 | user_id | [string](#string) | optional |  |
 | game_services_id | [string](#string) | optional |  |
+| game_services_id_scoped | [string](#string) | optional |  |
 | device_id | [string](#string) | optional |  |
 | username | [string](#string) | optional |  |
 | client_version | [uint32](#uint32) | optional |  |
@@ -4769,6 +4791,21 @@
 
 
 
+<a name="ei-AgeComplianceStatus"></a>
+
+### AgeComplianceStatus
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| AGE_COMPLIANCE_NOT_APPLICABLE | 0 |  |
+| AGE_COMPLIANCE_UNKNOWN | 1 |  |
+| AGE_COMPLIANCE_ADULT | 2 |  |
+| AGE_COMPLIANCE_MINOR | 3 |  |
+| AGE_COMPLIANCE_RESTRICTED | 4 |  |
+
+
+
 <a name="ei-ArtifactSpec-Level"></a>
 
 ### ArtifactSpec.Level
@@ -4873,21 +4910,6 @@
 | STONE | 1 |  |
 | INGREDIENT | 2 |  |
 | STONE_INGREDIENT | 3 |  |
-
-
-
-<a name="ei-Backup-AgeComplianceStatus"></a>
-
-### Backup.AgeComplianceStatus
-
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| AGE_COMPLIANCE_NOT_APPLICABLE | 0 |  |
-| AGE_COMPLIANCE_UNKNOWN | 1 |  |
-| AGE_COMPLIANCE_ADULT | 2 |  |
-| AGE_COMPLIANCE_MINOR | 3 |  |
-| AGE_COMPLIANCE_RESTRICTED | 4 |  |
 
 
 
