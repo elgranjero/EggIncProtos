@@ -41,6 +41,7 @@ GPBObjCClassDeclaration(ActiveArtifactSlot);
 GPBObjCClassDeclaration(AdAttributionInfo);
 GPBObjCClassDeclaration(AdAttributionRawData);
 GPBObjCClassDeclaration(AdAttributionRow);
+GPBObjCClassDeclaration(AdminControls);
 GPBObjCClassDeclaration(AppInfo);
 GPBObjCClassDeclaration(ArtifactInventoryItem);
 GPBObjCClassDeclaration(ArtifactSpec);
@@ -774,6 +775,51 @@ BOOL UserType_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Enum AgeComplianceStatus
+
+GPBEnumDescriptor *AgeComplianceStatus_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "AgeComplianceNotApplicable\000AgeCompliance"
+        "Unknown\000AgeComplianceAdult\000AgeCompliance"
+        "Minor\000AgeComplianceRestricted\000";
+    static const int32_t values[] = {
+        AgeComplianceStatus_AgeComplianceNotApplicable,
+        AgeComplianceStatus_AgeComplianceUnknown,
+        AgeComplianceStatus_AgeComplianceAdult,
+        AgeComplianceStatus_AgeComplianceMinor,
+        AgeComplianceStatus_AgeComplianceRestricted,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(AgeComplianceStatus)
+                                   runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:AgeComplianceStatus_IsValidValue
+                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL AgeComplianceStatus_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case AgeComplianceStatus_AgeComplianceNotApplicable:
+    case AgeComplianceStatus_AgeComplianceUnknown:
+    case AgeComplianceStatus_AgeComplianceAdult:
+    case AgeComplianceStatus_AgeComplianceMinor:
+    case AgeComplianceStatus_AgeComplianceRestricted:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - Enum LeaderboardScope
 
 GPBEnumDescriptor *LeaderboardScope_EnumDescriptor(void) {
@@ -805,51 +851,6 @@ BOOL LeaderboardScope_IsValidValue(int32_t value__) {
   switch (value__) {
     case LeaderboardScope_AllTime:
     case LeaderboardScope_CurrentSeason:
-      return YES;
-    default:
-      return NO;
-  }
-}
-
-#pragma mark - Enum Backup_AgeComplianceStatus
-
-GPBEnumDescriptor *Backup_AgeComplianceStatus_EnumDescriptor(void) {
-  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
-  if (!descriptor) {
-    static const char *valueNames =
-        "AgeComplianceNotApplicable\000AgeCompliance"
-        "Unknown\000AgeComplianceAdult\000AgeCompliance"
-        "Minor\000AgeComplianceRestricted\000";
-    static const int32_t values[] = {
-        Backup_AgeComplianceStatus_AgeComplianceNotApplicable,
-        Backup_AgeComplianceStatus_AgeComplianceUnknown,
-        Backup_AgeComplianceStatus_AgeComplianceAdult,
-        Backup_AgeComplianceStatus_AgeComplianceMinor,
-        Backup_AgeComplianceStatus_AgeComplianceRestricted,
-    };
-    GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Backup_AgeComplianceStatus)
-                                   runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:Backup_AgeComplianceStatus_IsValidValue
-                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed];
-    GPBEnumDescriptor *expected = nil;
-    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
-      [worker release];
-    }
-  }
-  return descriptor;
-}
-
-BOOL Backup_AgeComplianceStatus_IsValidValue(int32_t value__) {
-  switch (value__) {
-    case Backup_AgeComplianceStatus_AgeComplianceNotApplicable:
-    case Backup_AgeComplianceStatus_AgeComplianceUnknown:
-    case Backup_AgeComplianceStatus_AgeComplianceAdult:
-    case Backup_AgeComplianceStatus_AgeComplianceMinor:
-    case Backup_AgeComplianceStatus_AgeComplianceRestricted:
       return YES;
     default:
       return NO;
@@ -2685,6 +2686,7 @@ typedef struct Vector4__storage_ {
 @dynamic hasUserId, userId;
 @dynamic hasEiUserId, eiUserId;
 @dynamic hasGameServicesId, gameServicesId;
+@dynamic hasGameServicesIdScoped, gameServicesIdScoped;
 @dynamic hasPushUserId, pushUserId;
 @dynamic hasDeviceId, deviceId;
 @dynamic hasUserName, userName;
@@ -2738,6 +2740,7 @@ typedef struct Backup__storage_ {
   MailState *mailState;
   Backup_Virtue *virtue;
   UserSubscriptionInfo *subInfo;
+  NSString *gameServicesIdScoped;
   NSString *signature;
   double approxTime;
   uint64_t checksum;
@@ -2762,7 +2765,7 @@ typedef struct Backup__storage_ {
         .name = "userName",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_UserName,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(Backup__storage_, userName),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -2771,7 +2774,7 @@ typedef struct Backup__storage_ {
         .name = "approxTime",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ApproxTime,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(Backup__storage_, approxTime),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
@@ -2780,7 +2783,7 @@ typedef struct Backup__storage_ {
         .name = "settings",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Settings),
         .number = Backup_FieldNumber_Settings,
-        .hasIndex = 12,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(Backup__storage_, settings),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2789,7 +2792,7 @@ typedef struct Backup__storage_ {
         .name = "tutorial",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Tutorial),
         .number = Backup_FieldNumber_Tutorial,
-        .hasIndex = 13,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(Backup__storage_, tutorial),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2798,7 +2801,7 @@ typedef struct Backup__storage_ {
         .name = "stats",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Stats),
         .number = Backup_FieldNumber_Stats,
-        .hasIndex = 14,
+        .hasIndex = 15,
         .offset = (uint32_t)offsetof(Backup__storage_, stats),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2807,7 +2810,7 @@ typedef struct Backup__storage_ {
         .name = "game",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Game),
         .number = Backup_FieldNumber_Game,
-        .hasIndex = 15,
+        .hasIndex = 16,
         .offset = (uint32_t)offsetof(Backup__storage_, game),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2816,7 +2819,7 @@ typedef struct Backup__storage_ {
         .name = "sim",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Simulation),
         .number = Backup_FieldNumber_Sim,
-        .hasIndex = 19,
+        .hasIndex = 20,
         .offset = (uint32_t)offsetof(Backup__storage_, sim),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2825,7 +2828,7 @@ typedef struct Backup__storage_ {
         .name = "mission",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Mission),
         .number = Backup_FieldNumber_Mission,
-        .hasIndex = 20,
+        .hasIndex = 21,
         .offset = (uint32_t)offsetof(Backup__storage_, mission),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2834,7 +2837,7 @@ typedef struct Backup__storage_ {
         .name = "misc",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Misc),
         .number = Backup_FieldNumber_Misc,
-        .hasIndex = 21,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(Backup__storage_, misc),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2852,7 +2855,7 @@ typedef struct Backup__storage_ {
         .name = "contracts",
         .dataTypeSpecific.clazz = GPBObjCClass(MyContracts),
         .number = Backup_FieldNumber_Contracts,
-        .hasIndex = 22,
+        .hasIndex = 23,
         .offset = (uint32_t)offsetof(Backup__storage_, contracts),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2861,7 +2864,7 @@ typedef struct Backup__storage_ {
         .name = "artifacts",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Artifacts),
         .number = Backup_FieldNumber_Artifacts,
-        .hasIndex = 16,
+        .hasIndex = 17,
         .offset = (uint32_t)offsetof(Backup__storage_, artifacts),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2870,7 +2873,7 @@ typedef struct Backup__storage_ {
         .name = "artifactsDb",
         .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsDB),
         .number = Backup_FieldNumber_ArtifactsDb,
-        .hasIndex = 23,
+        .hasIndex = 24,
         .offset = (uint32_t)offsetof(Backup__storage_, artifactsDb),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2888,7 +2891,7 @@ typedef struct Backup__storage_ {
         .name = "deviceId",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_DeviceId,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(Backup__storage_, deviceId),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -2906,8 +2909,8 @@ typedef struct Backup__storage_ {
         .name = "forceOfferBackup",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ForceOfferBackup,
-        .hasIndex = 8,
-        .offset = 9,  // Stored in _has_storage_ to save space.
+        .hasIndex = 9,
+        .offset = 10,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -2915,7 +2918,7 @@ typedef struct Backup__storage_ {
         .name = "version",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Version,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(Backup__storage_, version),
         .flags = GPBFieldHasDefaultValue,
         .dataType = GPBDataTypeUInt32,
@@ -2924,8 +2927,8 @@ typedef struct Backup__storage_ {
         .name = "forceBackup",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ForceBackup,
-        .hasIndex = 10,
-        .offset = 11,  // Stored in _has_storage_ to save space.
+        .hasIndex = 11,
+        .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -2942,7 +2945,7 @@ typedef struct Backup__storage_ {
         .name = "shellDb",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellDB),
         .number = Backup_FieldNumber_ShellDb,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(Backup__storage_, shellDb),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2951,7 +2954,7 @@ typedef struct Backup__storage_ {
         .name = "shells",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Shells),
         .number = Backup_FieldNumber_Shells,
-        .hasIndex = 18,
+        .hasIndex = 19,
         .offset = (uint32_t)offsetof(Backup__storage_, shells),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2960,7 +2963,7 @@ typedef struct Backup__storage_ {
         .name = "pushUserId",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_PushUserId,
-        .hasIndex = 3,
+        .hasIndex = 4,
         .offset = (uint32_t)offsetof(Backup__storage_, pushUserId),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -2969,7 +2972,7 @@ typedef struct Backup__storage_ {
         .name = "mailState",
         .dataTypeSpecific.clazz = GPBObjCClass(MailState),
         .number = Backup_FieldNumber_MailState,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(Backup__storage_, mailState),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2978,7 +2981,7 @@ typedef struct Backup__storage_ {
         .name = "virtue",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Virtue),
         .number = Backup_FieldNumber_Virtue,
-        .hasIndex = 17,
+        .hasIndex = 18,
         .offset = (uint32_t)offsetof(Backup__storage_, virtue),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2987,16 +2990,25 @@ typedef struct Backup__storage_ {
         .name = "subInfo",
         .dataTypeSpecific.clazz = GPBObjCClass(UserSubscriptionInfo),
         .number = Backup_FieldNumber_SubInfo,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(Backup__storage_, subInfo),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
       },
       {
+        .name = "gameServicesIdScoped",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Backup_FieldNumber_GameServicesIdScoped,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(Backup__storage_, gameServicesIdScoped),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "checksum",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Checksum,
-        .hasIndex = 27,
+        .hasIndex = 28,
         .offset = (uint32_t)offsetof(Backup__storage_, checksum),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt64,
@@ -3005,7 +3017,7 @@ typedef struct Backup__storage_ {
         .name = "signature",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Signature,
-        .hasIndex = 28,
+        .hasIndex = 29,
         .offset = (uint32_t)offsetof(Backup__storage_, signature),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -3070,7 +3082,7 @@ typedef struct Backup__storage_ {
 typedef struct Backup_Settings__storage_ {
   uint32_t _has_storage_[2];
   uint32_t lastDayAgeQueried;
-  Backup_AgeComplianceStatus ageComplianceStatus;
+  AgeComplianceStatus ageComplianceStatus;
   double lastBackupTime;
   double lastNotificationQueryTime;
   double ageSignalFetchedTime;
@@ -3383,9 +3395,9 @@ typedef struct Backup_Settings__storage_ {
         .core.dataType = GPBDataTypeBool,
       },
       {
-        .defaultValue.valueEnum = Backup_AgeComplianceStatus_AgeComplianceNotApplicable,
+        .defaultValue.valueEnum = AgeComplianceStatus_AgeComplianceNotApplicable,
         .core.name = "ageComplianceStatus",
-        .core.dataTypeSpecific.enumDescFunc = Backup_AgeComplianceStatus_EnumDescriptor,
+        .core.dataTypeSpecific.enumDescFunc = AgeComplianceStatus_EnumDescriptor,
         .core.number = Backup_Settings_FieldNumber_AgeComplianceStatus,
         .core.hasIndex = 57,
         .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, ageComplianceStatus),
@@ -5976,6 +5988,7 @@ typedef struct Backup_MissionInfo__storage_ {
 @dynamic hasEiUserId, eiUserId;
 @dynamic hasUserId, userId;
 @dynamic hasGameServicesId, gameServicesId;
+@dynamic hasGameServicesIdScoped, gameServicesIdScoped;
 @dynamic hasDeviceId, deviceId;
 @dynamic hasUsername, username;
 @dynamic hasClientVersion, clientVersion;
@@ -5991,6 +6004,7 @@ typedef struct EggIncFirstContactRequest__storage_ {
   NSString *username;
   NSString *gameServicesId;
   BasicRequestInfo *rinfo;
+  NSString *gameServicesIdScoped;
 } EggIncFirstContactRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -6012,7 +6026,7 @@ typedef struct EggIncFirstContactRequest__storage_ {
         .name = "clientVersion",
         .dataTypeSpecific.clazz = Nil,
         .number = EggIncFirstContactRequest_FieldNumber_ClientVersion,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, clientVersion),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
@@ -6021,7 +6035,7 @@ typedef struct EggIncFirstContactRequest__storage_ {
         .name = "platform",
         .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
         .number = EggIncFirstContactRequest_FieldNumber_Platform,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, platform),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeEnum,
@@ -6039,7 +6053,7 @@ typedef struct EggIncFirstContactRequest__storage_ {
         .name = "deviceId",
         .dataTypeSpecific.clazz = Nil,
         .number = EggIncFirstContactRequest_FieldNumber_DeviceId,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, deviceId),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -6048,7 +6062,7 @@ typedef struct EggIncFirstContactRequest__storage_ {
         .name = "username",
         .dataTypeSpecific.clazz = Nil,
         .number = EggIncFirstContactRequest_FieldNumber_Username,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, username),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -6070,6 +6084,15 @@ typedef struct EggIncFirstContactRequest__storage_ {
         .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, rinfo),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "gameServicesIdScoped",
+        .dataTypeSpecific.clazz = Nil,
+        .number = EggIncFirstContactRequest_FieldNumber_GameServicesIdScoped,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(EggIncFirstContactRequest__storage_, gameServicesIdScoped),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -18169,9 +18192,11 @@ typedef struct GetPeriodicalsRequest__storage_ {
 @dynamic hasProPermit, proPermit;
 @dynamic hasUltra, ultra;
 @dynamic hasTipsChecksum, tipsChecksum;
+@dynamic hasAgeComplianceStatus, ageComplianceStatus;
 
 typedef struct ConfigRequest__storage_ {
   uint32_t _has_storage_[1];
+  AgeComplianceStatus ageComplianceStatus;
   BasicRequestInfo *rinfo;
   NSString *tipsChecksum;
   double soulEggs;
@@ -18255,6 +18280,15 @@ typedef struct ConfigRequest__storage_ {
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
       },
+      {
+        .name = "ageComplianceStatus",
+        .dataTypeSpecific.enumDescFunc = AgeComplianceStatus_EnumDescriptor,
+        .number = ConfigRequest_FieldNumber_AgeComplianceStatus,
+        .hasIndex = 13,
+        .offset = (uint32_t)offsetof(ConfigRequest__storage_, ageComplianceStatus),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeEnum,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:GPBObjCClass(ConfigRequest)
@@ -18275,6 +18309,61 @@ typedef struct ConfigRequest__storage_ {
 
 @end
 
+#pragma mark - AdminControls
+
+@implementation AdminControls
+
+@dynamic hasShellDebug, shellDebug;
+@dynamic hasShowcaseViewer, showcaseViewer;
+
+typedef struct AdminControls__storage_ {
+  uint32_t _has_storage_[1];
+} AdminControls__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "shellDebug",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AdminControls_FieldNumber_ShellDebug,
+        .hasIndex = 0,
+        .offset = 1,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "showcaseViewer",
+        .dataTypeSpecific.clazz = Nil,
+        .number = AdminControls_FieldNumber_ShowcaseViewer,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeBool,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(AdminControls)
+                                   messageName:@"AdminControls"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(AdminControls__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - ConfigResponse
 
 @implementation ConfigResponse
@@ -18282,12 +18371,14 @@ typedef struct ConfigRequest__storage_ {
 @dynamic hasLiveConfig, liveConfig;
 @dynamic hasMailBag, mailBag;
 @dynamic hasDlcCatalog, dlcCatalog;
+@dynamic hasAdmin, admin;
 
 typedef struct ConfigResponse__storage_ {
   uint32_t _has_storage_[1];
   LiveConfig *liveConfig;
   MailDB *mailBag;
   DLCCatalog *dlcCatalog;
+  AdminControls *admin;
 } ConfigResponse__storage_;
 
 // This method is threadsafe because it is initially called
@@ -18320,6 +18411,15 @@ typedef struct ConfigResponse__storage_ {
         .number = ConfigResponse_FieldNumber_DlcCatalog,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(ConfigResponse__storage_, dlcCatalog),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "admin",
+        .dataTypeSpecific.clazz = GPBObjCClass(AdminControls),
+        .number = ConfigResponse_FieldNumber_Admin,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ConfigResponse__storage_, admin),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
       },
@@ -22222,11 +22322,13 @@ typedef struct SaveBackupResponse__storage_ {
 
 @dynamic hasEiUserIdToKeep, eiUserIdToKeep;
 @dynamic hasGameServicesId, gameServicesId;
+@dynamic hasGameServicesIdScoped, gameServicesIdScoped;
 
 typedef struct CleanAccountRequest__storage_ {
   uint32_t _has_storage_[1];
   NSString *eiUserIdToKeep;
   NSString *gameServicesId;
+  NSString *gameServicesIdScoped;
 } CleanAccountRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -22250,6 +22352,15 @@ typedef struct CleanAccountRequest__storage_ {
         .number = CleanAccountRequest_FieldNumber_GameServicesId,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(CleanAccountRequest__storage_, gameServicesId),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "gameServicesIdScoped",
+        .dataTypeSpecific.clazz = Nil,
+        .number = CleanAccountRequest_FieldNumber_GameServicesIdScoped,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CleanAccountRequest__storage_, gameServicesIdScoped),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
       },

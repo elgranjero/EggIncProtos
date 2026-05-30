@@ -14,7 +14,6 @@
 goog.provide('proto.ei.Backup');
 goog.provide('proto.ei.Backup.AchievementInfo');
 goog.provide('proto.ei.Backup.ActiveBoost');
-goog.provide('proto.ei.Backup.AgeComplianceStatus');
 goog.provide('proto.ei.Backup.Artifacts');
 goog.provide('proto.ei.Backup.Game');
 goog.provide('proto.ei.Backup.Misc');
@@ -58,6 +57,7 @@ goog.require('proto.ei.ShellDB');
 goog.require('proto.ei.ShellDB.FarmConfiguration');
 goog.require('proto.ei.UserSubscriptionInfo');
 
+goog.forwardDeclare('proto.ei.AgeComplianceStatus');
 goog.forwardDeclare('proto.ei.Contract.PlayerGrade');
 goog.forwardDeclare('proto.ei.Egg');
 goog.forwardDeclare('proto.ei.FarmType');
@@ -588,6 +588,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     eiUserId: (f = jspb.Message.getField(msg, 18)) == null ? undefined : f,
     gameServicesId: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    gameServicesIdScoped: (f = jspb.Message.getField(msg, 31)) == null ? undefined : f,
     pushUserId: (f = jspb.Message.getField(msg, 26)) == null ? undefined : f,
     deviceId: (f = jspb.Message.getField(msg, 17)) == null ? undefined : f,
     userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
@@ -662,6 +663,10 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
     case 16:
       var value = /** @type {string} */ (reader.readString());
       msg.setGameServicesId(value);
+      break;
+    case 31:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGameServicesIdScoped(value);
       break;
     case 26:
       var value = /** @type {string} */ (reader.readString());
@@ -830,6 +835,13 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       16,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 31));
+  if (f != null) {
+    writer.writeString(
+      31,
       f
     );
   }
@@ -1033,17 +1045,6 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
-
-/**
- * @enum {number}
- */
-proto.ei.Backup.AgeComplianceStatus = {
-  AGE_COMPLIANCE_NOT_APPLICABLE: 0,
-  AGE_COMPLIANCE_UNKNOWN: 1,
-  AGE_COMPLIANCE_ADULT: 2,
-  AGE_COMPLIANCE_MINOR: 3,
-  AGE_COMPLIANCE_RESTRICTED: 4
-};
 
 
 
@@ -1266,7 +1267,7 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
       msg.setUserPersonalizedAdsEnabled(value);
       break;
     case 31:
-      var value = /** @type {!proto.ei.Backup.AgeComplianceStatus} */ (reader.readEnum());
+      var value = /** @type {!proto.ei.AgeComplianceStatus} */ (reader.readEnum());
       msg.setAgeComplianceStatus(value);
       break;
     case 34:
@@ -1512,7 +1513,7 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = /** @type {!proto.ei.Backup.AgeComplianceStatus} */ (jspb.Message.getField(message, 31));
+  f = /** @type {!proto.ei.AgeComplianceStatus} */ (jspb.Message.getField(message, 31));
   if (f != null) {
     writer.writeEnum(
       31,
@@ -2611,15 +2612,15 @@ proto.ei.Backup.Settings.prototype.hasUserPersonalizedAdsEnabled = function() {
 
 /**
  * optional AgeComplianceStatus age_compliance_status = 31;
- * @return {!proto.ei.Backup.AgeComplianceStatus}
+ * @return {!proto.ei.AgeComplianceStatus}
  */
 proto.ei.Backup.Settings.prototype.getAgeComplianceStatus = function() {
-  return /** @type {!proto.ei.Backup.AgeComplianceStatus} */ (jspb.Message.getFieldWithDefault(this, 31, 0));
+  return /** @type {!proto.ei.AgeComplianceStatus} */ (jspb.Message.getFieldWithDefault(this, 31, 0));
 };
 
 
 /**
- * @param {!proto.ei.Backup.AgeComplianceStatus} value
+ * @param {!proto.ei.AgeComplianceStatus} value
  * @return {!proto.ei.Backup.Settings} returns this
  */
 proto.ei.Backup.Settings.prototype.setAgeComplianceStatus = function(value) {
@@ -12792,6 +12793,42 @@ proto.ei.Backup.prototype.clearGameServicesId = function() {
  */
 proto.ei.Backup.prototype.hasGameServicesId = function() {
   return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional string game_services_id_scoped = 31;
+ * @return {string}
+ */
+proto.ei.Backup.prototype.getGameServicesIdScoped = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 31, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.setGameServicesIdScoped = function(value) {
+  return jspb.Message.setField(this, 31, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearGameServicesIdScoped = function() {
+  return jspb.Message.setField(this, 31, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasGameServicesIdScoped = function() {
+  return jspb.Message.getField(this, 31) != null;
 };
 
 

@@ -71,7 +71,8 @@ proto.ei.CleanAccountRequest.prototype.toObject = function(opt_includeInstance) 
 proto.ei.CleanAccountRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     eiUserIdToKeep: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-    gameServicesId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
+    gameServicesId: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+    gameServicesIdScoped: (f = jspb.Message.getField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -116,6 +117,10 @@ proto.ei.CleanAccountRequest.deserializeBinaryFromReader = function(msg, reader)
       var value = /** @type {string} */ (reader.readString());
       msg.setGameServicesId(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGameServicesIdScoped(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -156,6 +161,13 @@ proto.ei.CleanAccountRequest.serializeBinaryToWriter = function(message, writer)
   if (f != null) {
     writer.writeString(
       2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
+      3,
       f
     );
   }
@@ -231,6 +243,42 @@ proto.ei.CleanAccountRequest.prototype.clearGameServicesId = function() {
  */
 proto.ei.CleanAccountRequest.prototype.hasGameServicesId = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string game_services_id_scoped = 3;
+ * @return {string}
+ */
+proto.ei.CleanAccountRequest.prototype.getGameServicesIdScoped = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.CleanAccountRequest} returns this
+ */
+proto.ei.CleanAccountRequest.prototype.setGameServicesIdScoped = function(value) {
+  return jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.CleanAccountRequest} returns this
+ */
+proto.ei.CleanAccountRequest.prototype.clearGameServicesIdScoped = function() {
+  return jspb.Message.setField(this, 3, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.CleanAccountRequest.prototype.hasGameServicesIdScoped = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

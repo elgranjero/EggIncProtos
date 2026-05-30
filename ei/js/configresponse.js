@@ -16,6 +16,7 @@ goog.provide('proto.ei.ConfigResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ei.AdminControls');
 goog.require('proto.ei.DLCCatalog');
 goog.require('proto.ei.LiveConfig');
 goog.require('proto.ei.MailDB');
@@ -75,7 +76,8 @@ proto.ei.ConfigResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     liveConfig: (f = msg.getLiveConfig()) && proto.ei.LiveConfig.toObject(includeInstance, f),
     mailBag: (f = msg.getMailBag()) && proto.ei.MailDB.toObject(includeInstance, f),
-    dlcCatalog: (f = msg.getDlcCatalog()) && proto.ei.DLCCatalog.toObject(includeInstance, f)
+    dlcCatalog: (f = msg.getDlcCatalog()) && proto.ei.DLCCatalog.toObject(includeInstance, f),
+    admin: (f = msg.getAdmin()) && proto.ei.AdminControls.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -126,6 +128,11 @@ proto.ei.ConfigResponse.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.DLCCatalog;
       reader.readMessage(value,proto.ei.DLCCatalog.deserializeBinaryFromReader);
       msg.setDlcCatalog(value);
+      break;
+    case 4:
+      var value = new proto.ei.AdminControls;
+      reader.readMessage(value,proto.ei.AdminControls.deserializeBinaryFromReader);
+      msg.setAdmin(value);
       break;
     default:
       reader.skipField();
@@ -178,6 +185,14 @@ proto.ei.ConfigResponse.serializeBinaryToWriter = function(message, writer) {
       3,
       f,
       proto.ei.DLCCatalog.serializeBinaryToWriter
+    );
+  }
+  f = message.getAdmin();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.ei.AdminControls.serializeBinaryToWriter
     );
   }
 };
@@ -291,6 +306,43 @@ proto.ei.ConfigResponse.prototype.clearDlcCatalog = function() {
  */
 proto.ei.ConfigResponse.prototype.hasDlcCatalog = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional AdminControls admin = 4;
+ * @return {?proto.ei.AdminControls}
+ */
+proto.ei.ConfigResponse.prototype.getAdmin = function() {
+  return /** @type{?proto.ei.AdminControls} */ (
+    jspb.Message.getWrapperField(this, proto.ei.AdminControls, 4));
+};
+
+
+/**
+ * @param {?proto.ei.AdminControls|undefined} value
+ * @return {!proto.ei.ConfigResponse} returns this
+*/
+proto.ei.ConfigResponse.prototype.setAdmin = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ei.ConfigResponse} returns this
+ */
+proto.ei.ConfigResponse.prototype.clearAdmin = function() {
+  return this.setAdmin(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.ConfigResponse.prototype.hasAdmin = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

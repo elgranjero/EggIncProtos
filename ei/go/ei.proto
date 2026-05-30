@@ -41,6 +41,7 @@ message Backup {
     optional string user_id = 1;
     optional string ei_user_id = 18;
     optional string game_services_id = 16;
+    optional string game_services_id_scoped = 31;
     optional string push_user_id = 26;
     optional string device_id = 17;
     optional string user_name = 2;
@@ -323,14 +324,6 @@ message Backup {
         optional bool completed = 2;
         optional double reference_value = 3;
     }
-    
-    enum AgeComplianceStatus {
-        AGE_COMPLIANCE_NOT_APPLICABLE = 0;
-        AGE_COMPLIANCE_UNKNOWN = 1;
-        AGE_COMPLIANCE_ADULT = 2;
-        AGE_COMPLIANCE_MINOR = 3;
-        AGE_COMPLIANCE_RESTRICTED = 4;
-    }
 }
 
 message EggIncFirstContactRequest {
@@ -338,6 +331,7 @@ message EggIncFirstContactRequest {
     optional string ei_user_id = 4;
     optional string user_id = 1;
     optional string game_services_id = 7;
+    optional string game_services_id_scoped = 9;
     optional string device_id = 5;
     optional string username = 6;
     optional uint32 client_version = 2;
@@ -1531,12 +1525,19 @@ message ConfigRequest {
     optional bool pro_permit = 6;
     optional bool ultra = 7;
     optional string tips_checksum = 8;
+    optional AgeComplianceStatus age_compliance_status = 9;
+}
+
+message AdminControls {
+    optional bool shell_debug = 1;
+    optional bool showcase_viewer = 2;
 }
 
 message ConfigResponse {
     optional LiveConfig live_config = 1;
     optional MailDB mail_bag = 2;
     optional DLCCatalog dlc_catalog = 3;
+    optional AdminControls admin = 4;
 }
 
 message AdAttributionRawData {
@@ -2015,6 +2016,7 @@ message SaveBackupResponse {
 message CleanAccountRequest {
     optional string ei_user_id_to_keep = 1;
     optional string game_services_id = 2;
+    optional string game_services_id_scoped = 3;
 }
 
 message ReturnEDTPayload {
@@ -2669,6 +2671,14 @@ enum UserType {
     ARTIFACTS_ACTIVE = 13;
     PRESTIGE_READY = 14;
     PIGGY_HESITANT = 16;
+}
+
+enum AgeComplianceStatus {
+    AGE_COMPLIANCE_NOT_APPLICABLE = 0;
+    AGE_COMPLIANCE_UNKNOWN = 1;
+    AGE_COMPLIANCE_ADULT = 2;
+    AGE_COMPLIANCE_MINOR = 3;
+    AGE_COMPLIANCE_RESTRICTED = 4;
 }
 
 enum LeaderboardScope {

@@ -129,6 +129,30 @@ public object EggIncFirstContactRequestKt {
     }
 
     /**
+     * `optional string game_services_id_scoped = 9;`
+     */
+    public var gameServicesIdScoped: kotlin.String
+      @kotlin.jvm.JvmName("getGameServicesIdScoped")
+        get() = _builder.gameServicesIdScoped
+      @kotlin.jvm.JvmName("setGameServicesIdScoped")
+        set(value) {
+        _builder.gameServicesIdScoped = value
+      }
+    /**
+     * `optional string game_services_id_scoped = 9;`
+     */
+    public fun clearGameServicesIdScoped() {
+      _builder.clearGameServicesIdScoped()
+    }
+    /**
+     * `optional string game_services_id_scoped = 9;`
+     * @return Whether the gameServicesIdScoped field is set.
+     */
+    public fun hasGameServicesIdScoped(): kotlin.Boolean {
+      return _builder.hasGameServicesIdScoped()
+    }
+
+    /**
      * `optional string device_id = 5;`
      */
     public var deviceId: kotlin.String

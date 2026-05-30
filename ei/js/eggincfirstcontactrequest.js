@@ -76,6 +76,7 @@ proto.ei.EggIncFirstContactRequest.toObject = function(includeInstance, msg) {
     eiUserId: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
     userId: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
     gameServicesId: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    gameServicesIdScoped: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     deviceId: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     username: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
     clientVersion: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
@@ -132,6 +133,10 @@ proto.ei.EggIncFirstContactRequest.deserializeBinaryFromReader = function(msg, r
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setGameServicesId(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGameServicesIdScoped(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
@@ -204,6 +209,13 @@ proto.ei.EggIncFirstContactRequest.serializeBinaryToWriter = function(message, w
   if (f != null) {
     writer.writeString(
       7,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
+    writer.writeString(
+      9,
       f
     );
   }
@@ -380,6 +392,42 @@ proto.ei.EggIncFirstContactRequest.prototype.clearGameServicesId = function() {
  */
 proto.ei.EggIncFirstContactRequest.prototype.hasGameServicesId = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional string game_services_id_scoped = 9;
+ * @return {string}
+ */
+proto.ei.EggIncFirstContactRequest.prototype.getGameServicesIdScoped = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.EggIncFirstContactRequest} returns this
+ */
+proto.ei.EggIncFirstContactRequest.prototype.setGameServicesIdScoped = function(value) {
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.EggIncFirstContactRequest} returns this
+ */
+proto.ei.EggIncFirstContactRequest.prototype.clearGameServicesIdScoped = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.EggIncFirstContactRequest.prototype.hasGameServicesIdScoped = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 

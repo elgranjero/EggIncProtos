@@ -102,6 +102,30 @@ public object BackupKt {
     }
 
     /**
+     * `optional string game_services_id_scoped = 31;`
+     */
+    public var gameServicesIdScoped: kotlin.String
+      @kotlin.jvm.JvmName("getGameServicesIdScoped")
+        get() = _builder.gameServicesIdScoped
+      @kotlin.jvm.JvmName("setGameServicesIdScoped")
+        set(value) {
+        _builder.gameServicesIdScoped = value
+      }
+    /**
+     * `optional string game_services_id_scoped = 31;`
+     */
+    public fun clearGameServicesIdScoped() {
+      _builder.clearGameServicesIdScoped()
+    }
+    /**
+     * `optional string game_services_id_scoped = 31;`
+     * @return Whether the gameServicesIdScoped field is set.
+     */
+    public fun hasGameServicesIdScoped(): kotlin.Boolean {
+      return _builder.hasGameServicesIdScoped()
+    }
+
+    /**
      * `optional string push_user_id = 26;`
      */
     public var pushUserId: kotlin.String
@@ -1606,9 +1630,9 @@ public object BackupKt {
       }
 
       /**
-       * `optional .ei.Backup.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
+       * `optional .ei.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
        */
-      public var ageComplianceStatus: ei.Ei.Backup.AgeComplianceStatus
+      public var ageComplianceStatus: ei.Ei.AgeComplianceStatus
         @kotlin.jvm.JvmName("getAgeComplianceStatus")
           get() = _builder.ageComplianceStatus
         @kotlin.jvm.JvmName("setAgeComplianceStatus")
@@ -1616,13 +1640,13 @@ public object BackupKt {
           _builder.ageComplianceStatus = value
         }
       /**
-       * `optional .ei.Backup.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
+       * `optional .ei.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
        */
       public fun clearAgeComplianceStatus() {
         _builder.clearAgeComplianceStatus()
       }
       /**
-       * `optional .ei.Backup.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
+       * `optional .ei.AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];`
        * @return Whether the ageComplianceStatus field is set.
        */
       public fun hasAgeComplianceStatus(): kotlin.Boolean {

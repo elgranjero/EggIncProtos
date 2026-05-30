@@ -223,6 +223,30 @@ public object ConfigRequestKt {
     public fun hasTipsChecksum(): kotlin.Boolean {
       return _builder.hasTipsChecksum()
     }
+
+    /**
+     * `optional .ei.AgeComplianceStatus age_compliance_status = 9;`
+     */
+    public var ageComplianceStatus: ei.Ei.AgeComplianceStatus
+      @kotlin.jvm.JvmName("getAgeComplianceStatus")
+        get() = _builder.ageComplianceStatus
+      @kotlin.jvm.JvmName("setAgeComplianceStatus")
+        set(value) {
+        _builder.ageComplianceStatus = value
+      }
+    /**
+     * `optional .ei.AgeComplianceStatus age_compliance_status = 9;`
+     */
+    public fun clearAgeComplianceStatus() {
+      _builder.clearAgeComplianceStatus()
+    }
+    /**
+     * `optional .ei.AgeComplianceStatus age_compliance_status = 9;`
+     * @return Whether the ageComplianceStatus field is set.
+     */
+    public fun hasAgeComplianceStatus(): kotlin.Boolean {
+      return _builder.hasAgeComplianceStatus()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

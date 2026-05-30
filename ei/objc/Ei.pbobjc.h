@@ -31,6 +31,7 @@ CF_EXTERN_C_BEGIN
 
 @class ActionKeyValuePair;
 @class ActiveArtifactSlot;
+@class AdminControls;
 @class AppInfo;
 @class ArtifactInventoryItem;
 @class ArtifactSpec;
@@ -377,6 +378,24 @@ GPBEnumDescriptor *UserType_EnumDescriptor(void);
  **/
 BOOL UserType_IsValidValue(int32_t value);
 
+#pragma mark - Enum AgeComplianceStatus
+
+typedef GPB_ENUM(AgeComplianceStatus) {
+  AgeComplianceStatus_AgeComplianceNotApplicable = 0,
+  AgeComplianceStatus_AgeComplianceUnknown = 1,
+  AgeComplianceStatus_AgeComplianceAdult = 2,
+  AgeComplianceStatus_AgeComplianceMinor = 3,
+  AgeComplianceStatus_AgeComplianceRestricted = 4,
+};
+
+GPBEnumDescriptor *AgeComplianceStatus_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL AgeComplianceStatus_IsValidValue(int32_t value);
+
 #pragma mark - Enum LeaderboardScope
 
 typedef GPB_ENUM(LeaderboardScope) {
@@ -391,24 +410,6 @@ GPBEnumDescriptor *LeaderboardScope_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL LeaderboardScope_IsValidValue(int32_t value);
-
-#pragma mark - Enum Backup_AgeComplianceStatus
-
-typedef GPB_ENUM(Backup_AgeComplianceStatus) {
-  Backup_AgeComplianceStatus_AgeComplianceNotApplicable = 0,
-  Backup_AgeComplianceStatus_AgeComplianceUnknown = 1,
-  Backup_AgeComplianceStatus_AgeComplianceAdult = 2,
-  Backup_AgeComplianceStatus_AgeComplianceMinor = 3,
-  Backup_AgeComplianceStatus_AgeComplianceRestricted = 4,
-};
-
-GPBEnumDescriptor *Backup_AgeComplianceStatus_EnumDescriptor(void);
-
-/**
- * Checks to see if the given value is defined by the enum or was not known at
- * the time this source was generated.
- **/
-BOOL Backup_AgeComplianceStatus_IsValidValue(int32_t value);
 
 #pragma mark - Enum EggIncFirstContactResponse_ErrorCodes
 
@@ -1194,6 +1195,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_MailState = 27,
   Backup_FieldNumber_Virtue = 29,
   Backup_FieldNumber_SubInfo = 30,
+  Backup_FieldNumber_GameServicesIdScoped = 31,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -1211,6 +1213,10 @@ GPB_FINAL @interface Backup : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesId;
 /** Test to see if @c gameServicesId has been set. */
 @property(nonatomic, readwrite) BOOL hasGameServicesId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesIdScoped;
+/** Test to see if @c gameServicesIdScoped has been set. */
+@property(nonatomic, readwrite) BOOL hasGameServicesIdScoped;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *pushUserId;
 /** Test to see if @c pushUserId has been set. */
@@ -1442,7 +1448,7 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 @property(nonatomic, readwrite) BOOL userPersonalizedAdsEnabled;
 @property(nonatomic, readwrite) BOOL hasUserPersonalizedAdsEnabled;
 
-@property(nonatomic, readwrite) Backup_AgeComplianceStatus ageComplianceStatus;
+@property(nonatomic, readwrite) AgeComplianceStatus ageComplianceStatus;
 @property(nonatomic, readwrite) BOOL hasAgeComplianceStatus;
 
 @property(nonatomic, readwrite) double ageSignalFetchedTime;
@@ -2328,6 +2334,7 @@ typedef GPB_ENUM(EggIncFirstContactRequest_FieldNumber) {
   EggIncFirstContactRequest_FieldNumber_Username = 6,
   EggIncFirstContactRequest_FieldNumber_GameServicesId = 7,
   EggIncFirstContactRequest_FieldNumber_Rinfo = 8,
+  EggIncFirstContactRequest_FieldNumber_GameServicesIdScoped = 9,
 };
 
 GPB_FINAL @interface EggIncFirstContactRequest : GPBMessage
@@ -2347,6 +2354,10 @@ GPB_FINAL @interface EggIncFirstContactRequest : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesId;
 /** Test to see if @c gameServicesId has been set. */
 @property(nonatomic, readwrite) BOOL hasGameServicesId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesIdScoped;
+/** Test to see if @c gameServicesIdScoped has been set. */
+@property(nonatomic, readwrite) BOOL hasGameServicesIdScoped;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceId;
 /** Test to see if @c deviceId has been set. */
@@ -6631,6 +6642,7 @@ typedef GPB_ENUM(ConfigRequest_FieldNumber) {
   ConfigRequest_FieldNumber_ProPermit = 6,
   ConfigRequest_FieldNumber_Ultra = 7,
   ConfigRequest_FieldNumber_TipsChecksum = 8,
+  ConfigRequest_FieldNumber_AgeComplianceStatus = 9,
 };
 
 GPB_FINAL @interface ConfigRequest : GPBMessage
@@ -6661,6 +6673,26 @@ GPB_FINAL @interface ConfigRequest : GPBMessage
 /** Test to see if @c tipsChecksum has been set. */
 @property(nonatomic, readwrite) BOOL hasTipsChecksum;
 
+@property(nonatomic, readwrite) AgeComplianceStatus ageComplianceStatus;
+@property(nonatomic, readwrite) BOOL hasAgeComplianceStatus;
+
+@end
+
+#pragma mark - AdminControls
+
+typedef GPB_ENUM(AdminControls_FieldNumber) {
+  AdminControls_FieldNumber_ShellDebug = 1,
+  AdminControls_FieldNumber_ShowcaseViewer = 2,
+};
+
+GPB_FINAL @interface AdminControls : GPBMessage
+
+@property(nonatomic, readwrite) BOOL shellDebug;
+@property(nonatomic, readwrite) BOOL hasShellDebug;
+
+@property(nonatomic, readwrite) BOOL showcaseViewer;
+@property(nonatomic, readwrite) BOOL hasShowcaseViewer;
+
 @end
 
 #pragma mark - ConfigResponse
@@ -6669,6 +6701,7 @@ typedef GPB_ENUM(ConfigResponse_FieldNumber) {
   ConfigResponse_FieldNumber_LiveConfig = 1,
   ConfigResponse_FieldNumber_MailBag = 2,
   ConfigResponse_FieldNumber_DlcCatalog = 3,
+  ConfigResponse_FieldNumber_Admin = 4,
 };
 
 GPB_FINAL @interface ConfigResponse : GPBMessage
@@ -6684,6 +6717,10 @@ GPB_FINAL @interface ConfigResponse : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) DLCCatalog *dlcCatalog;
 /** Test to see if @c dlcCatalog has been set. */
 @property(nonatomic, readwrite) BOOL hasDlcCatalog;
+
+@property(nonatomic, readwrite, strong, null_resettable) AdminControls *admin;
+/** Test to see if @c admin has been set. */
+@property(nonatomic, readwrite) BOOL hasAdmin;
 
 @end
 
@@ -8046,6 +8083,7 @@ GPB_FINAL @interface SaveBackupResponse : GPBMessage
 typedef GPB_ENUM(CleanAccountRequest_FieldNumber) {
   CleanAccountRequest_FieldNumber_EiUserIdToKeep = 1,
   CleanAccountRequest_FieldNumber_GameServicesId = 2,
+  CleanAccountRequest_FieldNumber_GameServicesIdScoped = 3,
 };
 
 GPB_FINAL @interface CleanAccountRequest : GPBMessage
@@ -8057,6 +8095,10 @@ GPB_FINAL @interface CleanAccountRequest : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesId;
 /** Test to see if @c gameServicesId has been set. */
 @property(nonatomic, readwrite) BOOL hasGameServicesId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gameServicesIdScoped;
+/** Test to see if @c gameServicesIdScoped has been set. */
+@property(nonatomic, readwrite) BOOL hasGameServicesIdScoped;
 
 @end
 

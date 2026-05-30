@@ -76,6 +76,30 @@ public object CleanAccountRequestKt {
     public fun hasGameServicesId(): kotlin.Boolean {
       return _builder.hasGameServicesId()
     }
+
+    /**
+     * `optional string game_services_id_scoped = 3;`
+     */
+    public var gameServicesIdScoped: kotlin.String
+      @kotlin.jvm.JvmName("getGameServicesIdScoped")
+        get() = _builder.gameServicesIdScoped
+      @kotlin.jvm.JvmName("setGameServicesIdScoped")
+        set(value) {
+        _builder.gameServicesIdScoped = value
+      }
+    /**
+     * `optional string game_services_id_scoped = 3;`
+     */
+    public fun clearGameServicesIdScoped() {
+      _builder.clearGameServicesIdScoped()
+    }
+    /**
+     * `optional string game_services_id_scoped = 3;`
+     * @return Whether the gameServicesIdScoped field is set.
+     */
+    public fun hasGameServicesIdScoped(): kotlin.Boolean {
+      return _builder.hasGameServicesIdScoped()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

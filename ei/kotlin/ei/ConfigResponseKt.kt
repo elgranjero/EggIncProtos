@@ -109,6 +109,33 @@ public object ConfigResponseKt {
 
     public val ConfigResponseKt.Dsl.dlcCatalogOrNull: ei.Ei.DLCCatalog?
       get() = _builder.dlcCatalogOrNull
+
+    /**
+     * `optional .ei.AdminControls admin = 4;`
+     */
+    public var admin: ei.Ei.AdminControls
+      @kotlin.jvm.JvmName("getAdmin")
+        get() = _builder.admin
+      @kotlin.jvm.JvmName("setAdmin")
+        set(value) {
+        _builder.admin = value
+      }
+    /**
+     * `optional .ei.AdminControls admin = 4;`
+     */
+    public fun clearAdmin() {
+      _builder.clearAdmin()
+    }
+    /**
+     * `optional .ei.AdminControls admin = 4;`
+     * @return Whether the admin field is set.
+     */
+    public fun hasAdmin(): kotlin.Boolean {
+      return _builder.hasAdmin()
+    }
+
+    public val ConfigResponseKt.Dsl.adminOrNull: ei.Ei.AdminControls?
+      get() = _builder.adminOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -123,4 +150,7 @@ public val ei.Ei.ConfigResponseOrBuilder.mailBagOrNull: ei.Ei.MailDB?
 
 public val ei.Ei.ConfigResponseOrBuilder.dlcCatalogOrNull: ei.Ei.DLCCatalog?
   get() = if (hasDlcCatalog()) getDlcCatalog() else null
+
+public val ei.Ei.ConfigResponseOrBuilder.adminOrNull: ei.Ei.AdminControls?
+  get() = if (hasAdmin()) getAdmin() else null
 
