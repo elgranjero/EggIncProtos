@@ -57,6 +57,30 @@ public object LocalContractKt {
       get() = _builder.contractOrNull
 
     /**
+     * `optional string contract_identifier = 24;`
+     */
+    public var contractIdentifier: kotlin.String
+      @kotlin.jvm.JvmName("getContractIdentifier")
+        get() = _builder.contractIdentifier
+      @kotlin.jvm.JvmName("setContractIdentifier")
+        set(value) {
+        _builder.contractIdentifier = value
+      }
+    /**
+     * `optional string contract_identifier = 24;`
+     */
+    public fun clearContractIdentifier() {
+      _builder.clearContractIdentifier()
+    }
+    /**
+     * `optional string contract_identifier = 24;`
+     * @return Whether the contractIdentifier field is set.
+     */
+    public fun hasContractIdentifier(): kotlin.Boolean {
+      return _builder.hasContractIdentifier()
+    }
+
+    /**
      * `optional string coop_identifier = 2;`
      */
     public var coopIdentifier: kotlin.String

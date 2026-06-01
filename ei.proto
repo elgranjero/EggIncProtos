@@ -812,6 +812,19 @@ message ContractsResponse {
     optional ContractSeasonInfo current_season = 7;
 }
 
+message ContractsInfoRequest {
+    optional BasicRequestInfo rinfo = 1;
+    repeated string contract_identifiers = 2;
+    optional uint32 client_version = 3;
+}
+
+message ContractsInfoResponse {
+    repeated Contract contracts = 1;
+    repeated CustomEgg custom_eggs = 2;
+    repeated string not_found = 3;
+    optional double server_time = 4;
+}
+
 message ContractCoopStatusRequest {
     optional BasicRequestInfo rinfo = 5;
     optional string contract_identifier = 1;
@@ -953,6 +966,7 @@ message ContractCoopStatusResponse {
 
 message LocalContract {
     optional Contract contract = 1;
+    optional string contract_identifier = 24;
     optional string coop_identifier = 2;
     optional bool accepted = 7;
     optional double time_accepted = 3;
@@ -987,6 +1001,16 @@ message MyContracts {
     optional double last_grade_progress_shown = 7;
     optional bool show_advanced_evaluations = 8;
     repeated CustomEgg custom_egg_info = 9;
+}
+
+message ContractsCache {
+    repeated CachedContractSpec specs = 1;
+    repeated CustomEgg custom_eggs = 2;
+}
+
+message CachedContractSpec {
+    optional Contract contract = 1;
+    optional double cached_at = 2;
 }
 
 message QueryCoopRequest {

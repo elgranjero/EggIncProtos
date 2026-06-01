@@ -355,6 +355,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.CachedContractSpec"><span class="badge">M</span>CachedContractSpec</a>
+                </li>
+              
+                <li>
                   <a href="#ei.CleanAccountRequest"><span class="badge">M</span>CleanAccountRequest</a>
                 </li>
               
@@ -520,6 +524,18 @@
               
                 <li>
                   <a href="#ei.ContractsArchive"><span class="badge">M</span>ContractsArchive</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractsCache"><span class="badge">M</span>ContractsCache</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractsInfoRequest"><span class="badge">M</span>ContractsInfoRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.ContractsInfoResponse"><span class="badge">M</span>ContractsInfoResponse</a>
                 </li>
               
                 <li>
@@ -4824,6 +4840,37 @@
 
         
       
+        <h3 id="ei.CachedContractSpec">CachedContractSpec</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>contract</td>
+                  <td><a href="#ei.Contract">Contract</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cached_at</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="ei.CleanAccountRequest">CleanAccountRequest</h3>
         <p></p>
 
@@ -7530,6 +7577,120 @@
                   <td>archive</td>
                   <td><a href="#ei.LocalContract">LocalContract</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractsCache">ContractsCache</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>specs</td>
+                  <td><a href="#ei.CachedContractSpec">CachedContractSpec</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>custom_eggs</td>
+                  <td><a href="#ei.CustomEgg">CustomEgg</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractsInfoRequest">ContractsInfoRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>contract_identifiers</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>client_version</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ContractsInfoResponse">ContractsInfoResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>contracts</td>
+                  <td><a href="#ei.Contract">Contract</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>custom_eggs</td>
+                  <td><a href="#ei.CustomEgg">CustomEgg</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>not_found</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>server_time</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -10951,6 +11112,13 @@
                 <tr>
                   <td>contract</td>
                   <td><a href="#ei.Contract">Contract</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>contract_identifier</td>
+                  <td><a href="#string">string</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>

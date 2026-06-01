@@ -63,6 +63,7 @@ CF_EXTERN_C_BEGIN
 @class Backup_Tutorial;
 @class Backup_Virtue;
 @class BasicRequestInfo;
+@class CachedContractSpec;
 @class CompleteArtifact;
 @class CompleteMissionResponse;
 @class CompleteMissionResponse_SecureArtifactSpec;
@@ -4029,6 +4030,57 @@ GPB_FINAL @interface ContractsResponse : GPBMessage
 
 @end
 
+#pragma mark - ContractsInfoRequest
+
+typedef GPB_ENUM(ContractsInfoRequest_FieldNumber) {
+  ContractsInfoRequest_FieldNumber_Rinfo = 1,
+  ContractsInfoRequest_FieldNumber_ContractIdentifiersArray = 2,
+  ContractsInfoRequest_FieldNumber_ClientVersion = 3,
+};
+
+GPB_FINAL @interface ContractsInfoRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *contractIdentifiersArray;
+/** The number of items in @c contractIdentifiersArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger contractIdentifiersArray_Count;
+
+@property(nonatomic, readwrite) uint32_t clientVersion;
+@property(nonatomic, readwrite) BOOL hasClientVersion;
+
+@end
+
+#pragma mark - ContractsInfoResponse
+
+typedef GPB_ENUM(ContractsInfoResponse_FieldNumber) {
+  ContractsInfoResponse_FieldNumber_ContractsArray = 1,
+  ContractsInfoResponse_FieldNumber_CustomEggsArray = 2,
+  ContractsInfoResponse_FieldNumber_NotFoundArray = 3,
+  ContractsInfoResponse_FieldNumber_ServerTime = 4,
+};
+
+GPB_FINAL @interface ContractsInfoResponse : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Contract*> *contractsArray;
+/** The number of items in @c contractsArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger contractsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CustomEgg*> *customEggsArray;
+/** The number of items in @c customEggsArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger customEggsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *notFoundArray;
+/** The number of items in @c notFoundArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger notFoundArray_Count;
+
+@property(nonatomic, readwrite) double serverTime;
+@property(nonatomic, readwrite) BOOL hasServerTime;
+
+@end
+
 #pragma mark - ContractCoopStatusRequest
 
 typedef GPB_ENUM(ContractCoopStatusRequest_FieldNumber) {
@@ -4505,6 +4557,7 @@ typedef GPB_ENUM(LocalContract_FieldNumber) {
   LocalContract_FieldNumber_ReportedUuidsArray = 21,
   LocalContract_FieldNumber_CoopSimulationEndTime = 22,
   LocalContract_FieldNumber_MaxFarmSizeReached = 23,
+  LocalContract_FieldNumber_ContractIdentifier = 24,
 };
 
 GPB_FINAL @interface LocalContract : GPBMessage
@@ -4512,6 +4565,10 @@ GPB_FINAL @interface LocalContract : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) Contract *contract;
 /** Test to see if @c contract has been set. */
 @property(nonatomic, readwrite) BOOL hasContract;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *contractIdentifier;
+/** Test to see if @c contractIdentifier has been set. */
+@property(nonatomic, readwrite) BOOL hasContractIdentifier;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *coopIdentifier;
 /** Test to see if @c coopIdentifier has been set. */
@@ -4633,6 +4690,43 @@ GPB_FINAL @interface MyContracts : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CustomEgg*> *customEggInfoArray;
 /** The number of items in @c customEggInfoArray without causing the container to be created. */
 @property(nonatomic, readonly) NSUInteger customEggInfoArray_Count;
+
+@end
+
+#pragma mark - ContractsCache
+
+typedef GPB_ENUM(ContractsCache_FieldNumber) {
+  ContractsCache_FieldNumber_SpecsArray = 1,
+  ContractsCache_FieldNumber_CustomEggsArray = 2,
+};
+
+GPB_FINAL @interface ContractsCache : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CachedContractSpec*> *specsArray;
+/** The number of items in @c specsArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger specsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<CustomEgg*> *customEggsArray;
+/** The number of items in @c customEggsArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger customEggsArray_Count;
+
+@end
+
+#pragma mark - CachedContractSpec
+
+typedef GPB_ENUM(CachedContractSpec_FieldNumber) {
+  CachedContractSpec_FieldNumber_Contract = 1,
+  CachedContractSpec_FieldNumber_CachedAt = 2,
+};
+
+GPB_FINAL @interface CachedContractSpec : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) Contract *contract;
+/** Test to see if @c contract has been set. */
+@property(nonatomic, readwrite) BOOL hasContract;
+
+@property(nonatomic, readwrite) double cachedAt;
+@property(nonatomic, readwrite) BOOL hasCachedAt;
 
 @end
 

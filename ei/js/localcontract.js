@@ -81,6 +81,7 @@ proto.ei.LocalContract.prototype.toObject = function(opt_includeInstance) {
 proto.ei.LocalContract.toObject = function(includeInstance, msg) {
   var f, obj = {
     contract: (f = msg.getContract()) && proto.ei.Contract.toObject(includeInstance, f),
+    contractIdentifier: (f = jspb.Message.getField(msg, 24)) == null ? undefined : f,
     coopIdentifier: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     accepted: (f = jspb.Message.getBooleanField(msg, 7)) == null ? undefined : f,
     timeAccepted: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
@@ -143,6 +144,10 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.Contract;
       reader.readMessage(value,proto.ei.Contract.deserializeBinaryFromReader);
       msg.setContract(value);
+      break;
+    case 24:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setContractIdentifier(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -268,6 +273,13 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
       1,
       f,
       proto.ei.Contract.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 24));
+  if (f != null) {
+    writer.writeString(
+      24,
+      f
     );
   }
   f = /** @type {string} */ (jspb.Message.getField(message, 2));
@@ -462,6 +474,42 @@ proto.ei.LocalContract.prototype.clearContract = function() {
  */
 proto.ei.LocalContract.prototype.hasContract = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string contract_identifier = 24;
+ * @return {string}
+ */
+proto.ei.LocalContract.prototype.getContractIdentifier = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 24, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setContractIdentifier = function(value) {
+  return jspb.Message.setField(this, 24, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearContractIdentifier = function() {
+  return jspb.Message.setField(this, 24, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasContractIdentifier = function() {
+  return jspb.Message.getField(this, 24) != null;
 };
 
 
