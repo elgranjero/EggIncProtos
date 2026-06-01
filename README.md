@@ -48,6 +48,7 @@
     - [Backup.Virtue](#ei-Backup-Virtue)
     - [BasicRequestInfo](#ei-BasicRequestInfo)
     - [CXPEvalRolloutInfo](#ei-CXPEvalRolloutInfo)
+    - [CachedContractSpec](#ei-CachedContractSpec)
     - [CleanAccountRequest](#ei-CleanAccountRequest)
     - [ClearAllUserDataRequest](#ei-ClearAllUserDataRequest)
     - [CollectContractArtifactRewardsRequest](#ei-CollectContractArtifactRewardsRequest)
@@ -90,6 +91,9 @@
     - [ContractSimResultUpdate](#ei-ContractSimResultUpdate)
     - [ContractSimResultUpdate.GoalInfo](#ei-ContractSimResultUpdate-GoalInfo)
     - [ContractsArchive](#ei-ContractsArchive)
+    - [ContractsCache](#ei-ContractsCache)
+    - [ContractsInfoRequest](#ei-ContractsInfoRequest)
+    - [ContractsInfoResponse](#ei-ContractsInfoResponse)
     - [ContractsRequest](#ei-ContractsRequest)
     - [ContractsResponse](#ei-ContractsResponse)
     - [CoopBuffHistory](#ei-CoopBuffHistory)
@@ -1297,6 +1301,22 @@
 
 
 
+<a name="ei-CachedContractSpec"></a>
+
+### CachedContractSpec
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contract | [Contract](#ei-Contract) | optional |  |
+| cached_at | [double](#double) | optional |  |
+
+
+
+
+
+
 <a name="ei-CleanAccountRequest"></a>
 
 ### CleanAccountRequest
@@ -2165,6 +2185,57 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | archive | [LocalContract](#ei-LocalContract) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractsCache"></a>
+
+### ContractsCache
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| specs | [CachedContractSpec](#ei-CachedContractSpec) | repeated |  |
+| custom_eggs | [CustomEgg](#ei-CustomEgg) | repeated |  |
+
+
+
+
+
+
+<a name="ei-ContractsInfoRequest"></a>
+
+### ContractsInfoRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| contract_identifiers | [string](#string) | repeated |  |
+| client_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-ContractsInfoResponse"></a>
+
+### ContractsInfoResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| contracts | [Contract](#ei-Contract) | repeated |  |
+| custom_eggs | [CustomEgg](#ei-CustomEgg) | repeated |  |
+| not_found | [string](#string) | repeated |  |
+| server_time | [double](#double) | optional |  |
 
 
 
@@ -3325,6 +3396,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | contract | [Contract](#ei-Contract) | optional |  |
+| contract_identifier | [string](#string) | optional |  |
 | coop_identifier | [string](#string) | optional |  |
 | accepted | [bool](#bool) | optional |  |
 | time_accepted | [double](#double) | optional |  |
