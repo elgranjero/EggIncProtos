@@ -806,6 +806,7 @@
 | user_name | [string](#string) | optional |  |
 | approx_time | [double](#double) | optional |  |
 | version | [uint32](#uint32) | optional |  Default: 0 |
+| build | [string](#string) | optional |  |
 | force_offer_backup | [bool](#bool) | optional |  |
 | force_backup | [bool](#bool) | optional |  |
 | settings | [Backup.Settings](#ei-Backup-Settings) | optional |  |

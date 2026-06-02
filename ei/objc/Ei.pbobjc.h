@@ -1197,6 +1197,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_Virtue = 29,
   Backup_FieldNumber_SubInfo = 30,
   Backup_FieldNumber_GameServicesIdScoped = 31,
+  Backup_FieldNumber_Build = 32,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -1236,6 +1237,10 @@ GPB_FINAL @interface Backup : GPBMessage
 
 @property(nonatomic, readwrite) uint32_t version;
 @property(nonatomic, readwrite) BOOL hasVersion;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *build;
+/** Test to see if @c build has been set. */
+@property(nonatomic, readwrite) BOOL hasBuild;
 
 @property(nonatomic, readwrite) BOOL forceOfferBackup;
 @property(nonatomic, readwrite) BOOL hasForceOfferBackup;

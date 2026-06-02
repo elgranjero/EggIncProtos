@@ -67524,6 +67524,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Backup final : public ::google::pro
     kEiUserIdFieldNumber = 18,
     kPushUserIdFieldNumber = 26,
     kGameServicesIdScopedFieldNumber = 31,
+    kBuildFieldNumber = 32,
     kSignatureFieldNumber = 101,
     kSettingsFieldNumber = 4,
     kTutorialFieldNumber = 5,
@@ -67708,6 +67709,23 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Backup final : public ::google::pro
   const ::std::string& _internal_game_services_id_scoped() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_game_services_id_scoped(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_game_services_id_scoped();
+
+  public:
+  // optional string build = 32;
+  [[nodiscard]] bool has_build()
+      const;
+  void clear_build() ;
+  [[nodiscard]] const ::std::string& build() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_build(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_build();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_build();
+  void set_allocated_build(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_build() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_build(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_build();
 
   public:
   // optional string signature = 101;
@@ -68031,7 +68049,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Backup final : public ::google::pro
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<5, 30,
+  static const ::google::protobuf::internal::TcParseTable<5, 31,
                                    16, 0,
                                    7>
       _table_;
@@ -68064,6 +68082,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Backup final : public ::google::pro
     ::google::protobuf::internal::ArenaStringPtr ei_user_id_;
     ::google::protobuf::internal::ArenaStringPtr push_user_id_;
     ::google::protobuf::internal::ArenaStringPtr game_services_id_scoped_;
+    ::google::protobuf::internal::ArenaStringPtr build_;
     ::google::protobuf::internal::ArenaStringPtr signature_;
     ::ei::Backup_Settings* PROTOBUF_NULLABLE settings_;
     ::ei::Backup_Tutorial* PROTOBUF_NULLABLE tutorial_;
@@ -76577,14 +76596,14 @@ inline void Backup::set_allocated_user_name(::std::string* PROTOBUF_NULLABLE val
 
 // optional double approx_time = 3;
 inline bool Backup::has_approx_time() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x02000000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x04000000U);
   return value;
 }
 inline void Backup::clear_approx_time() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.approx_time_ = 0;
   ClearHasBit(_impl_._has_bits_[0],
-                  0x02000000U);
+                  0x04000000U);
 }
 inline double Backup::approx_time() const {
   // @@protoc_insertion_point(field_get:ei.Backup.approx_time)
@@ -76592,7 +76611,7 @@ inline double Backup::approx_time() const {
 }
 inline void Backup::set_approx_time(double value) {
   _internal_set_approx_time(value);
-  SetHasBit(_impl_._has_bits_[0], 0x02000000U);
+  SetHasBit(_impl_._has_bits_[0], 0x04000000U);
   // @@protoc_insertion_point(field_set:ei.Backup.approx_time)
 }
 inline double Backup::_internal_approx_time() const {
@@ -76606,14 +76625,14 @@ inline void Backup::_internal_set_approx_time(double value) {
 
 // optional uint32 version = 21 [default = 0];
 inline bool Backup::has_version() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x04000000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x08000000U);
   return value;
 }
 inline void Backup::clear_version() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.version_ = 0u;
   ClearHasBit(_impl_._has_bits_[0],
-                  0x04000000U);
+                  0x08000000U);
 }
 inline ::uint32_t Backup::version() const {
   // @@protoc_insertion_point(field_get:ei.Backup.version)
@@ -76621,7 +76640,7 @@ inline ::uint32_t Backup::version() const {
 }
 inline void Backup::set_version(::uint32_t value) {
   _internal_set_version(value);
-  SetHasBit(_impl_._has_bits_[0], 0x04000000U);
+  SetHasBit(_impl_._has_bits_[0], 0x08000000U);
   // @@protoc_insertion_point(field_set:ei.Backup.version)
 }
 inline ::uint32_t Backup::_internal_version() const {
@@ -76633,16 +76652,85 @@ inline void Backup::_internal_set_version(::uint32_t value) {
   _impl_.version_ = value;
 }
 
+// optional string build = 32;
+inline bool Backup::has_build() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000200U);
+  return value;
+}
+inline void Backup::clear_build() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.build_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0],
+                  0x00000200U);
+}
+inline const ::std::string& Backup::build() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.Backup.build)
+  return _internal_build();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void Backup::set_build(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000200U);
+  _impl_.build_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ei.Backup.build)
+}
+inline ::std::string* PROTOBUF_NONNULL Backup::mutable_build()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000200U);
+  ::std::string* _s = _internal_mutable_build();
+  // @@protoc_insertion_point(field_mutable:ei.Backup.build)
+  return _s;
+}
+inline const ::std::string& Backup::_internal_build() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.build_.Get();
+}
+inline void Backup::_internal_set_build(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.build_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL Backup::_internal_mutable_build() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.build_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE Backup::release_build() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ei.Backup.build)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000200U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000200U);
+  auto* released = _impl_.build_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.build_.Set("", GetArena());
+  }
+  return released;
+}
+inline void Backup::set_allocated_build(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000200U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000200U);
+  }
+  _impl_.build_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.build_.IsDefault()) {
+    _impl_.build_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ei.Backup.build)
+}
+
 // optional bool force_offer_backup = 20;
 inline bool Backup::has_force_offer_backup() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x08000000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x10000000U);
   return value;
 }
 inline void Backup::clear_force_offer_backup() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.force_offer_backup_ = false;
   ClearHasBit(_impl_._has_bits_[0],
-                  0x08000000U);
+                  0x10000000U);
 }
 inline bool Backup::force_offer_backup() const {
   // @@protoc_insertion_point(field_get:ei.Backup.force_offer_backup)
@@ -76650,7 +76738,7 @@ inline bool Backup::force_offer_backup() const {
 }
 inline void Backup::set_force_offer_backup(bool value) {
   _internal_set_force_offer_backup(value);
-  SetHasBit(_impl_._has_bits_[0], 0x08000000U);
+  SetHasBit(_impl_._has_bits_[0], 0x10000000U);
   // @@protoc_insertion_point(field_set:ei.Backup.force_offer_backup)
 }
 inline bool Backup::_internal_force_offer_backup() const {
@@ -76664,14 +76752,14 @@ inline void Backup::_internal_set_force_offer_backup(bool value) {
 
 // optional bool force_backup = 22;
 inline bool Backup::has_force_backup() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x10000000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x20000000U);
   return value;
 }
 inline void Backup::clear_force_backup() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.force_backup_ = false;
   ClearHasBit(_impl_._has_bits_[0],
-                  0x10000000U);
+                  0x20000000U);
 }
 inline bool Backup::force_backup() const {
   // @@protoc_insertion_point(field_get:ei.Backup.force_backup)
@@ -76679,7 +76767,7 @@ inline bool Backup::force_backup() const {
 }
 inline void Backup::set_force_backup(bool value) {
   _internal_set_force_backup(value);
-  SetHasBit(_impl_._has_bits_[0], 0x10000000U);
+  SetHasBit(_impl_._has_bits_[0], 0x20000000U);
   // @@protoc_insertion_point(field_set:ei.Backup.force_backup)
 }
 inline bool Backup::_internal_force_backup() const {
@@ -76693,7 +76781,7 @@ inline void Backup::_internal_set_force_backup(bool value) {
 
 // optional .ei.Backup.Settings settings = 4;
 inline bool Backup::has_settings() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000400U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000800U);
   PROTOBUF_ASSUME(!value || _impl_.settings_ != nullptr);
   return value;
 }
@@ -76701,7 +76789,7 @@ inline void Backup::clear_settings() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.settings_ != nullptr) _impl_.settings_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00000400U);
+                  0x00000800U);
 }
 inline const ::ei::Backup_Settings& Backup::_internal_settings() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -76720,16 +76808,16 @@ inline void Backup::unsafe_arena_set_allocated_settings(
   }
   _impl_.settings_ = reinterpret_cast<::ei::Backup_Settings*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000400U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000800U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.settings)
 }
 inline ::ei::Backup_Settings* PROTOBUF_NULLABLE Backup::release_settings() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
   ::ei::Backup_Settings* released = _impl_.settings_;
   _impl_.settings_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -76749,7 +76837,7 @@ inline ::ei::Backup_Settings* PROTOBUF_NULLABLE Backup::unsafe_arena_release_set
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.settings)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
   ::ei::Backup_Settings* temp = _impl_.settings_;
   _impl_.settings_ = nullptr;
   return temp;
@@ -76764,7 +76852,7 @@ inline ::ei::Backup_Settings* PROTOBUF_NONNULL Backup::_internal_mutable_setting
 }
 inline ::ei::Backup_Settings* PROTOBUF_NONNULL Backup::mutable_settings()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000400U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000800U);
   ::ei::Backup_Settings* _msg = _internal_mutable_settings();
   // @@protoc_insertion_point(field_mutable:ei.Backup.settings)
   return _msg;
@@ -76781,9 +76869,9 @@ inline void Backup::set_allocated_settings(::ei::Backup_Settings* PROTOBUF_NULLA
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000400U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000800U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
   }
 
   _impl_.settings_ = reinterpret_cast<::ei::Backup_Settings*>(value);
@@ -76792,7 +76880,7 @@ inline void Backup::set_allocated_settings(::ei::Backup_Settings* PROTOBUF_NULLA
 
 // optional .ei.Backup.Tutorial tutorial = 5;
 inline bool Backup::has_tutorial() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000800U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00001000U);
   PROTOBUF_ASSUME(!value || _impl_.tutorial_ != nullptr);
   return value;
 }
@@ -76800,7 +76888,7 @@ inline void Backup::clear_tutorial() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.tutorial_ != nullptr) _impl_.tutorial_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00000800U);
+                  0x00001000U);
 }
 inline const ::ei::Backup_Tutorial& Backup::_internal_tutorial() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -76819,16 +76907,16 @@ inline void Backup::unsafe_arena_set_allocated_tutorial(
   }
   _impl_.tutorial_ = reinterpret_cast<::ei::Backup_Tutorial*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000800U);
+    SetHasBit(_impl_._has_bits_[0], 0x00001000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.tutorial)
 }
 inline ::ei::Backup_Tutorial* PROTOBUF_NULLABLE Backup::release_tutorial() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
   ::ei::Backup_Tutorial* released = _impl_.tutorial_;
   _impl_.tutorial_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -76848,7 +76936,7 @@ inline ::ei::Backup_Tutorial* PROTOBUF_NULLABLE Backup::unsafe_arena_release_tut
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.tutorial)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
   ::ei::Backup_Tutorial* temp = _impl_.tutorial_;
   _impl_.tutorial_ = nullptr;
   return temp;
@@ -76863,7 +76951,7 @@ inline ::ei::Backup_Tutorial* PROTOBUF_NONNULL Backup::_internal_mutable_tutoria
 }
 inline ::ei::Backup_Tutorial* PROTOBUF_NONNULL Backup::mutable_tutorial()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000800U);
+  SetHasBit(_impl_._has_bits_[0], 0x00001000U);
   ::ei::Backup_Tutorial* _msg = _internal_mutable_tutorial();
   // @@protoc_insertion_point(field_mutable:ei.Backup.tutorial)
   return _msg;
@@ -76880,9 +76968,9 @@ inline void Backup::set_allocated_tutorial(::ei::Backup_Tutorial* PROTOBUF_NULLA
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000800U);
+    SetHasBit(_impl_._has_bits_[0], 0x00001000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000800U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
   }
 
   _impl_.tutorial_ = reinterpret_cast<::ei::Backup_Tutorial*>(value);
@@ -76891,7 +76979,7 @@ inline void Backup::set_allocated_tutorial(::ei::Backup_Tutorial* PROTOBUF_NULLA
 
 // optional .ei.Backup.Stats stats = 6;
 inline bool Backup::has_stats() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00001000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00002000U);
   PROTOBUF_ASSUME(!value || _impl_.stats_ != nullptr);
   return value;
 }
@@ -76899,7 +76987,7 @@ inline void Backup::clear_stats() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.stats_ != nullptr) _impl_.stats_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00001000U);
+                  0x00002000U);
 }
 inline const ::ei::Backup_Stats& Backup::_internal_stats() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -76918,16 +77006,16 @@ inline void Backup::unsafe_arena_set_allocated_stats(
   }
   _impl_.stats_ = reinterpret_cast<::ei::Backup_Stats*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00001000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00002000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.stats)
 }
 inline ::ei::Backup_Stats* PROTOBUF_NULLABLE Backup::release_stats() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
   ::ei::Backup_Stats* released = _impl_.stats_;
   _impl_.stats_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -76947,7 +77035,7 @@ inline ::ei::Backup_Stats* PROTOBUF_NULLABLE Backup::unsafe_arena_release_stats(
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.stats)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
   ::ei::Backup_Stats* temp = _impl_.stats_;
   _impl_.stats_ = nullptr;
   return temp;
@@ -76962,7 +77050,7 @@ inline ::ei::Backup_Stats* PROTOBUF_NONNULL Backup::_internal_mutable_stats() {
 }
 inline ::ei::Backup_Stats* PROTOBUF_NONNULL Backup::mutable_stats()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00001000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00002000U);
   ::ei::Backup_Stats* _msg = _internal_mutable_stats();
   // @@protoc_insertion_point(field_mutable:ei.Backup.stats)
   return _msg;
@@ -76979,9 +77067,9 @@ inline void Backup::set_allocated_stats(::ei::Backup_Stats* PROTOBUF_NULLABLE va
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00001000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00002000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00001000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
   }
 
   _impl_.stats_ = reinterpret_cast<::ei::Backup_Stats*>(value);
@@ -76990,7 +77078,7 @@ inline void Backup::set_allocated_stats(::ei::Backup_Stats* PROTOBUF_NULLABLE va
 
 // optional .ei.Backup.Game game = 7;
 inline bool Backup::has_game() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00002000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00004000U);
   PROTOBUF_ASSUME(!value || _impl_.game_ != nullptr);
   return value;
 }
@@ -76998,7 +77086,7 @@ inline void Backup::clear_game() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.game_ != nullptr) _impl_.game_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00002000U);
+                  0x00004000U);
 }
 inline const ::ei::Backup_Game& Backup::_internal_game() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77017,16 +77105,16 @@ inline void Backup::unsafe_arena_set_allocated_game(
   }
   _impl_.game_ = reinterpret_cast<::ei::Backup_Game*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00002000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00004000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.game)
 }
 inline ::ei::Backup_Game* PROTOBUF_NULLABLE Backup::release_game() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
   ::ei::Backup_Game* released = _impl_.game_;
   _impl_.game_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77046,7 +77134,7 @@ inline ::ei::Backup_Game* PROTOBUF_NULLABLE Backup::unsafe_arena_release_game() 
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.game)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
   ::ei::Backup_Game* temp = _impl_.game_;
   _impl_.game_ = nullptr;
   return temp;
@@ -77061,7 +77149,7 @@ inline ::ei::Backup_Game* PROTOBUF_NONNULL Backup::_internal_mutable_game() {
 }
 inline ::ei::Backup_Game* PROTOBUF_NONNULL Backup::mutable_game()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00002000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00004000U);
   ::ei::Backup_Game* _msg = _internal_mutable_game();
   // @@protoc_insertion_point(field_mutable:ei.Backup.game)
   return _msg;
@@ -77078,9 +77166,9 @@ inline void Backup::set_allocated_game(::ei::Backup_Game* PROTOBUF_NULLABLE valu
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00002000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00004000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00002000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
   }
 
   _impl_.game_ = reinterpret_cast<::ei::Backup_Game*>(value);
@@ -77089,7 +77177,7 @@ inline void Backup::set_allocated_game(::ei::Backup_Game* PROTOBUF_NULLABLE valu
 
 // optional .ei.Backup.Artifacts artifacts = 14;
 inline bool Backup::has_artifacts() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00040000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00080000U);
   PROTOBUF_ASSUME(!value || _impl_.artifacts_ != nullptr);
   return value;
 }
@@ -77097,7 +77185,7 @@ inline void Backup::clear_artifacts() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.artifacts_ != nullptr) _impl_.artifacts_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00040000U);
+                  0x00080000U);
 }
 inline const ::ei::Backup_Artifacts& Backup::_internal_artifacts() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77116,16 +77204,16 @@ inline void Backup::unsafe_arena_set_allocated_artifacts(
   }
   _impl_.artifacts_ = reinterpret_cast<::ei::Backup_Artifacts*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00040000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00080000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.artifacts)
 }
 inline ::ei::Backup_Artifacts* PROTOBUF_NULLABLE Backup::release_artifacts() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
   ::ei::Backup_Artifacts* released = _impl_.artifacts_;
   _impl_.artifacts_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77145,7 +77233,7 @@ inline ::ei::Backup_Artifacts* PROTOBUF_NULLABLE Backup::unsafe_arena_release_ar
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.artifacts)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
   ::ei::Backup_Artifacts* temp = _impl_.artifacts_;
   _impl_.artifacts_ = nullptr;
   return temp;
@@ -77160,7 +77248,7 @@ inline ::ei::Backup_Artifacts* PROTOBUF_NONNULL Backup::_internal_mutable_artifa
 }
 inline ::ei::Backup_Artifacts* PROTOBUF_NONNULL Backup::mutable_artifacts()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00040000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00080000U);
   ::ei::Backup_Artifacts* _msg = _internal_mutable_artifacts();
   // @@protoc_insertion_point(field_mutable:ei.Backup.artifacts)
   return _msg;
@@ -77177,9 +77265,9 @@ inline void Backup::set_allocated_artifacts(::ei::Backup_Artifacts* PROTOBUF_NUL
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00040000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00080000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
   }
 
   _impl_.artifacts_ = reinterpret_cast<::ei::Backup_Artifacts*>(value);
@@ -77188,7 +77276,7 @@ inline void Backup::set_allocated_artifacts(::ei::Backup_Artifacts* PROTOBUF_NUL
 
 // optional .ei.Backup.Virtue virtue = 29;
 inline bool Backup::has_virtue() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00800000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x01000000U);
   PROTOBUF_ASSUME(!value || _impl_.virtue_ != nullptr);
   return value;
 }
@@ -77196,7 +77284,7 @@ inline void Backup::clear_virtue() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.virtue_ != nullptr) _impl_.virtue_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00800000U);
+                  0x01000000U);
 }
 inline const ::ei::Backup_Virtue& Backup::_internal_virtue() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77215,16 +77303,16 @@ inline void Backup::unsafe_arena_set_allocated_virtue(
   }
   _impl_.virtue_ = reinterpret_cast<::ei::Backup_Virtue*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00800000U);
+    SetHasBit(_impl_._has_bits_[0], 0x01000000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.virtue)
 }
 inline ::ei::Backup_Virtue* PROTOBUF_NULLABLE Backup::release_virtue() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
   ::ei::Backup_Virtue* released = _impl_.virtue_;
   _impl_.virtue_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77244,7 +77332,7 @@ inline ::ei::Backup_Virtue* PROTOBUF_NULLABLE Backup::unsafe_arena_release_virtu
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.virtue)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
   ::ei::Backup_Virtue* temp = _impl_.virtue_;
   _impl_.virtue_ = nullptr;
   return temp;
@@ -77259,7 +77347,7 @@ inline ::ei::Backup_Virtue* PROTOBUF_NONNULL Backup::_internal_mutable_virtue() 
 }
 inline ::ei::Backup_Virtue* PROTOBUF_NONNULL Backup::mutable_virtue()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00800000U);
+  SetHasBit(_impl_._has_bits_[0], 0x01000000U);
   ::ei::Backup_Virtue* _msg = _internal_mutable_virtue();
   // @@protoc_insertion_point(field_mutable:ei.Backup.virtue)
   return _msg;
@@ -77276,9 +77364,9 @@ inline void Backup::set_allocated_virtue(::ei::Backup_Virtue* PROTOBUF_NULLABLE 
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00800000U);
+    SetHasBit(_impl_._has_bits_[0], 0x01000000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
   }
 
   _impl_.virtue_ = reinterpret_cast<::ei::Backup_Virtue*>(value);
@@ -77287,7 +77375,7 @@ inline void Backup::set_allocated_virtue(::ei::Backup_Virtue* PROTOBUF_NULLABLE 
 
 // optional .ei.Backup.Shells shells = 25;
 inline bool Backup::has_shells() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00200000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00400000U);
   PROTOBUF_ASSUME(!value || _impl_.shells_ != nullptr);
   return value;
 }
@@ -77295,7 +77383,7 @@ inline void Backup::clear_shells() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.shells_ != nullptr) _impl_.shells_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00200000U);
+                  0x00400000U);
 }
 inline const ::ei::Backup_Shells& Backup::_internal_shells() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77314,16 +77402,16 @@ inline void Backup::unsafe_arena_set_allocated_shells(
   }
   _impl_.shells_ = reinterpret_cast<::ei::Backup_Shells*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00200000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00400000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.shells)
 }
 inline ::ei::Backup_Shells* PROTOBUF_NULLABLE Backup::release_shells() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
   ::ei::Backup_Shells* released = _impl_.shells_;
   _impl_.shells_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77343,7 +77431,7 @@ inline ::ei::Backup_Shells* PROTOBUF_NULLABLE Backup::unsafe_arena_release_shell
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.shells)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
   ::ei::Backup_Shells* temp = _impl_.shells_;
   _impl_.shells_ = nullptr;
   return temp;
@@ -77358,7 +77446,7 @@ inline ::ei::Backup_Shells* PROTOBUF_NONNULL Backup::_internal_mutable_shells() 
 }
 inline ::ei::Backup_Shells* PROTOBUF_NONNULL Backup::mutable_shells()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00200000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00400000U);
   ::ei::Backup_Shells* _msg = _internal_mutable_shells();
   // @@protoc_insertion_point(field_mutable:ei.Backup.shells)
   return _msg;
@@ -77375,9 +77463,9 @@ inline void Backup::set_allocated_shells(::ei::Backup_Shells* PROTOBUF_NULLABLE 
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00200000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00400000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
   }
 
   _impl_.shells_ = reinterpret_cast<::ei::Backup_Shells*>(value);
@@ -77386,7 +77474,7 @@ inline void Backup::set_allocated_shells(::ei::Backup_Shells* PROTOBUF_NULLABLE 
 
 // optional .ei.Backup.Simulation sim = 8;
 inline bool Backup::has_sim() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00004000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00008000U);
   PROTOBUF_ASSUME(!value || _impl_.sim_ != nullptr);
   return value;
 }
@@ -77394,7 +77482,7 @@ inline void Backup::clear_sim() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.sim_ != nullptr) _impl_.sim_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00004000U);
+                  0x00008000U);
 }
 inline const ::ei::Backup_Simulation& Backup::_internal_sim() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77413,16 +77501,16 @@ inline void Backup::unsafe_arena_set_allocated_sim(
   }
   _impl_.sim_ = reinterpret_cast<::ei::Backup_Simulation*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00004000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00008000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.sim)
 }
 inline ::ei::Backup_Simulation* PROTOBUF_NULLABLE Backup::release_sim() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
   ::ei::Backup_Simulation* released = _impl_.sim_;
   _impl_.sim_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77442,7 +77530,7 @@ inline ::ei::Backup_Simulation* PROTOBUF_NULLABLE Backup::unsafe_arena_release_s
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.sim)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
   ::ei::Backup_Simulation* temp = _impl_.sim_;
   _impl_.sim_ = nullptr;
   return temp;
@@ -77457,7 +77545,7 @@ inline ::ei::Backup_Simulation* PROTOBUF_NONNULL Backup::_internal_mutable_sim()
 }
 inline ::ei::Backup_Simulation* PROTOBUF_NONNULL Backup::mutable_sim()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00004000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00008000U);
   ::ei::Backup_Simulation* _msg = _internal_mutable_sim();
   // @@protoc_insertion_point(field_mutable:ei.Backup.sim)
   return _msg;
@@ -77474,9 +77562,9 @@ inline void Backup::set_allocated_sim(::ei::Backup_Simulation* PROTOBUF_NULLABLE
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00004000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00008000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00004000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
   }
 
   _impl_.sim_ = reinterpret_cast<::ei::Backup_Simulation*>(value);
@@ -77541,7 +77629,7 @@ Backup::_internal_mutable_farms() {
 
 // optional .ei.Backup.Mission mission = 9;
 inline bool Backup::has_mission() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00008000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00010000U);
   PROTOBUF_ASSUME(!value || _impl_.mission_ != nullptr);
   return value;
 }
@@ -77549,7 +77637,7 @@ inline void Backup::clear_mission() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.mission_ != nullptr) _impl_.mission_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00008000U);
+                  0x00010000U);
 }
 inline const ::ei::Backup_Mission& Backup::_internal_mission() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77568,16 +77656,16 @@ inline void Backup::unsafe_arena_set_allocated_mission(
   }
   _impl_.mission_ = reinterpret_cast<::ei::Backup_Mission*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00008000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00010000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.mission)
 }
 inline ::ei::Backup_Mission* PROTOBUF_NULLABLE Backup::release_mission() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
   ::ei::Backup_Mission* released = _impl_.mission_;
   _impl_.mission_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77597,7 +77685,7 @@ inline ::ei::Backup_Mission* PROTOBUF_NULLABLE Backup::unsafe_arena_release_miss
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.mission)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
   ::ei::Backup_Mission* temp = _impl_.mission_;
   _impl_.mission_ = nullptr;
   return temp;
@@ -77612,7 +77700,7 @@ inline ::ei::Backup_Mission* PROTOBUF_NONNULL Backup::_internal_mutable_mission(
 }
 inline ::ei::Backup_Mission* PROTOBUF_NONNULL Backup::mutable_mission()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00008000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00010000U);
   ::ei::Backup_Mission* _msg = _internal_mutable_mission();
   // @@protoc_insertion_point(field_mutable:ei.Backup.mission)
   return _msg;
@@ -77629,9 +77717,9 @@ inline void Backup::set_allocated_mission(::ei::Backup_Mission* PROTOBUF_NULLABL
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00008000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00010000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00008000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
   }
 
   _impl_.mission_ = reinterpret_cast<::ei::Backup_Mission*>(value);
@@ -77640,7 +77728,7 @@ inline void Backup::set_allocated_mission(::ei::Backup_Mission* PROTOBUF_NULLABL
 
 // optional .ei.Backup.Misc misc = 10;
 inline bool Backup::has_misc() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00010000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00020000U);
   PROTOBUF_ASSUME(!value || _impl_.misc_ != nullptr);
   return value;
 }
@@ -77648,7 +77736,7 @@ inline void Backup::clear_misc() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.misc_ != nullptr) _impl_.misc_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00010000U);
+                  0x00020000U);
 }
 inline const ::ei::Backup_Misc& Backup::_internal_misc() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77667,16 +77755,16 @@ inline void Backup::unsafe_arena_set_allocated_misc(
   }
   _impl_.misc_ = reinterpret_cast<::ei::Backup_Misc*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00010000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00020000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.misc)
 }
 inline ::ei::Backup_Misc* PROTOBUF_NULLABLE Backup::release_misc() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
   ::ei::Backup_Misc* released = _impl_.misc_;
   _impl_.misc_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77696,7 +77784,7 @@ inline ::ei::Backup_Misc* PROTOBUF_NULLABLE Backup::unsafe_arena_release_misc() 
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.misc)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
   ::ei::Backup_Misc* temp = _impl_.misc_;
   _impl_.misc_ = nullptr;
   return temp;
@@ -77711,7 +77799,7 @@ inline ::ei::Backup_Misc* PROTOBUF_NONNULL Backup::_internal_mutable_misc() {
 }
 inline ::ei::Backup_Misc* PROTOBUF_NONNULL Backup::mutable_misc()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00010000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00020000U);
   ::ei::Backup_Misc* _msg = _internal_mutable_misc();
   // @@protoc_insertion_point(field_mutable:ei.Backup.misc)
   return _msg;
@@ -77728,9 +77816,9 @@ inline void Backup::set_allocated_misc(::ei::Backup_Misc* PROTOBUF_NULLABLE valu
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00010000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00020000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00010000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
   }
 
   _impl_.misc_ = reinterpret_cast<::ei::Backup_Misc*>(value);
@@ -77739,7 +77827,7 @@ inline void Backup::set_allocated_misc(::ei::Backup_Misc* PROTOBUF_NULLABLE valu
 
 // optional .ei.MyContracts contracts = 13;
 inline bool Backup::has_contracts() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00020000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00040000U);
   PROTOBUF_ASSUME(!value || _impl_.contracts_ != nullptr);
   return value;
 }
@@ -77747,7 +77835,7 @@ inline void Backup::clear_contracts() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.contracts_ != nullptr) _impl_.contracts_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00020000U);
+                  0x00040000U);
 }
 inline const ::ei::MyContracts& Backup::_internal_contracts() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77766,16 +77854,16 @@ inline void Backup::unsafe_arena_set_allocated_contracts(
   }
   _impl_.contracts_ = reinterpret_cast<::ei::MyContracts*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00020000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00040000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.contracts)
 }
 inline ::ei::MyContracts* PROTOBUF_NULLABLE Backup::release_contracts() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
   ::ei::MyContracts* released = _impl_.contracts_;
   _impl_.contracts_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77795,7 +77883,7 @@ inline ::ei::MyContracts* PROTOBUF_NULLABLE Backup::unsafe_arena_release_contrac
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.contracts)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
   ::ei::MyContracts* temp = _impl_.contracts_;
   _impl_.contracts_ = nullptr;
   return temp;
@@ -77810,7 +77898,7 @@ inline ::ei::MyContracts* PROTOBUF_NONNULL Backup::_internal_mutable_contracts()
 }
 inline ::ei::MyContracts* PROTOBUF_NONNULL Backup::mutable_contracts()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00020000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00040000U);
   ::ei::MyContracts* _msg = _internal_mutable_contracts();
   // @@protoc_insertion_point(field_mutable:ei.Backup.contracts)
   return _msg;
@@ -77827,9 +77915,9 @@ inline void Backup::set_allocated_contracts(::ei::MyContracts* PROTOBUF_NULLABLE
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00020000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00040000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00020000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00040000U);
   }
 
   _impl_.contracts_ = reinterpret_cast<::ei::MyContracts*>(value);
@@ -77838,7 +77926,7 @@ inline void Backup::set_allocated_contracts(::ei::MyContracts* PROTOBUF_NULLABLE
 
 // optional .ei.ArtifactsDB artifacts_db = 15;
 inline bool Backup::has_artifacts_db() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00080000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00100000U);
   PROTOBUF_ASSUME(!value || _impl_.artifacts_db_ != nullptr);
   return value;
 }
@@ -77846,7 +77934,7 @@ inline void Backup::clear_artifacts_db() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.artifacts_db_ != nullptr) _impl_.artifacts_db_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00080000U);
+                  0x00100000U);
 }
 inline const ::ei::ArtifactsDB& Backup::_internal_artifacts_db() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77865,16 +77953,16 @@ inline void Backup::unsafe_arena_set_allocated_artifacts_db(
   }
   _impl_.artifacts_db_ = reinterpret_cast<::ei::ArtifactsDB*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00080000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00100000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.artifacts_db)
 }
 inline ::ei::ArtifactsDB* PROTOBUF_NULLABLE Backup::release_artifacts_db() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
   ::ei::ArtifactsDB* released = _impl_.artifacts_db_;
   _impl_.artifacts_db_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77894,7 +77982,7 @@ inline ::ei::ArtifactsDB* PROTOBUF_NULLABLE Backup::unsafe_arena_release_artifac
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.artifacts_db)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
   ::ei::ArtifactsDB* temp = _impl_.artifacts_db_;
   _impl_.artifacts_db_ = nullptr;
   return temp;
@@ -77909,7 +77997,7 @@ inline ::ei::ArtifactsDB* PROTOBUF_NONNULL Backup::_internal_mutable_artifacts_d
 }
 inline ::ei::ArtifactsDB* PROTOBUF_NONNULL Backup::mutable_artifacts_db()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00080000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00100000U);
   ::ei::ArtifactsDB* _msg = _internal_mutable_artifacts_db();
   // @@protoc_insertion_point(field_mutable:ei.Backup.artifacts_db)
   return _msg;
@@ -77926,9 +78014,9 @@ inline void Backup::set_allocated_artifacts_db(::ei::ArtifactsDB* PROTOBUF_NULLA
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00080000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00100000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00080000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
   }
 
   _impl_.artifacts_db_ = reinterpret_cast<::ei::ArtifactsDB*>(value);
@@ -77937,7 +78025,7 @@ inline void Backup::set_allocated_artifacts_db(::ei::ArtifactsDB* PROTOBUF_NULLA
 
 // optional .ei.ShellDB shell_db = 24;
 inline bool Backup::has_shell_db() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00100000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00200000U);
   PROTOBUF_ASSUME(!value || _impl_.shell_db_ != nullptr);
   return value;
 }
@@ -77945,7 +78033,7 @@ inline void Backup::clear_shell_db() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.shell_db_ != nullptr) _impl_.shell_db_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00100000U);
+                  0x00200000U);
 }
 inline const ::ei::ShellDB& Backup::_internal_shell_db() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -77964,16 +78052,16 @@ inline void Backup::unsafe_arena_set_allocated_shell_db(
   }
   _impl_.shell_db_ = reinterpret_cast<::ei::ShellDB*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00100000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00200000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.shell_db)
 }
 inline ::ei::ShellDB* PROTOBUF_NULLABLE Backup::release_shell_db() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
   ::ei::ShellDB* released = _impl_.shell_db_;
   _impl_.shell_db_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -77993,7 +78081,7 @@ inline ::ei::ShellDB* PROTOBUF_NULLABLE Backup::unsafe_arena_release_shell_db() 
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.shell_db)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
   ::ei::ShellDB* temp = _impl_.shell_db_;
   _impl_.shell_db_ = nullptr;
   return temp;
@@ -78008,7 +78096,7 @@ inline ::ei::ShellDB* PROTOBUF_NONNULL Backup::_internal_mutable_shell_db() {
 }
 inline ::ei::ShellDB* PROTOBUF_NONNULL Backup::mutable_shell_db()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00100000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00200000U);
   ::ei::ShellDB* _msg = _internal_mutable_shell_db();
   // @@protoc_insertion_point(field_mutable:ei.Backup.shell_db)
   return _msg;
@@ -78025,9 +78113,9 @@ inline void Backup::set_allocated_shell_db(::ei::ShellDB* PROTOBUF_NULLABLE valu
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00100000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00200000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00100000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00200000U);
   }
 
   _impl_.shell_db_ = reinterpret_cast<::ei::ShellDB*>(value);
@@ -78108,7 +78196,7 @@ Backup::_internal_mutable_read_mail_ids() {
 
 // optional .ei.MailState mail_state = 27;
 inline bool Backup::has_mail_state() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00400000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00800000U);
   PROTOBUF_ASSUME(!value || _impl_.mail_state_ != nullptr);
   return value;
 }
@@ -78116,7 +78204,7 @@ inline void Backup::clear_mail_state() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.mail_state_ != nullptr) _impl_.mail_state_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00400000U);
+                  0x00800000U);
 }
 inline const ::ei::MailState& Backup::_internal_mail_state() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -78135,16 +78223,16 @@ inline void Backup::unsafe_arena_set_allocated_mail_state(
   }
   _impl_.mail_state_ = reinterpret_cast<::ei::MailState*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00400000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00800000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.mail_state)
 }
 inline ::ei::MailState* PROTOBUF_NULLABLE Backup::release_mail_state() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
   ::ei::MailState* released = _impl_.mail_state_;
   _impl_.mail_state_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -78164,7 +78252,7 @@ inline ::ei::MailState* PROTOBUF_NULLABLE Backup::unsafe_arena_release_mail_stat
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.mail_state)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
   ::ei::MailState* temp = _impl_.mail_state_;
   _impl_.mail_state_ = nullptr;
   return temp;
@@ -78179,7 +78267,7 @@ inline ::ei::MailState* PROTOBUF_NONNULL Backup::_internal_mutable_mail_state() 
 }
 inline ::ei::MailState* PROTOBUF_NONNULL Backup::mutable_mail_state()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00400000U);
+  SetHasBit(_impl_._has_bits_[0], 0x00800000U);
   ::ei::MailState* _msg = _internal_mutable_mail_state();
   // @@protoc_insertion_point(field_mutable:ei.Backup.mail_state)
   return _msg;
@@ -78196,9 +78284,9 @@ inline void Backup::set_allocated_mail_state(::ei::MailState* PROTOBUF_NULLABLE 
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00400000U);
+    SetHasBit(_impl_._has_bits_[0], 0x00800000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00400000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00800000U);
   }
 
   _impl_.mail_state_ = reinterpret_cast<::ei::MailState*>(value);
@@ -78207,7 +78295,7 @@ inline void Backup::set_allocated_mail_state(::ei::MailState* PROTOBUF_NULLABLE 
 
 // optional .ei.UserSubscriptionInfo sub_info = 30;
 inline bool Backup::has_sub_info() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x01000000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x02000000U);
   PROTOBUF_ASSUME(!value || _impl_.sub_info_ != nullptr);
   return value;
 }
@@ -78215,7 +78303,7 @@ inline void Backup::clear_sub_info() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.sub_info_ != nullptr) _impl_.sub_info_->Clear();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x01000000U);
+                  0x02000000U);
 }
 inline const ::ei::UserSubscriptionInfo& Backup::_internal_sub_info() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -78234,16 +78322,16 @@ inline void Backup::unsafe_arena_set_allocated_sub_info(
   }
   _impl_.sub_info_ = reinterpret_cast<::ei::UserSubscriptionInfo*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x01000000U);
+    SetHasBit(_impl_._has_bits_[0], 0x02000000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x02000000U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ei.Backup.sub_info)
 }
 inline ::ei::UserSubscriptionInfo* PROTOBUF_NULLABLE Backup::release_sub_info() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x02000000U);
   ::ei::UserSubscriptionInfo* released = _impl_.sub_info_;
   _impl_.sub_info_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -78263,7 +78351,7 @@ inline ::ei::UserSubscriptionInfo* PROTOBUF_NULLABLE Backup::unsafe_arena_releas
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.sub_info)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
+  ClearHasBit(_impl_._has_bits_[0], 0x02000000U);
   ::ei::UserSubscriptionInfo* temp = _impl_.sub_info_;
   _impl_.sub_info_ = nullptr;
   return temp;
@@ -78278,7 +78366,7 @@ inline ::ei::UserSubscriptionInfo* PROTOBUF_NONNULL Backup::_internal_mutable_su
 }
 inline ::ei::UserSubscriptionInfo* PROTOBUF_NONNULL Backup::mutable_sub_info()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x01000000U);
+  SetHasBit(_impl_._has_bits_[0], 0x02000000U);
   ::ei::UserSubscriptionInfo* _msg = _internal_mutable_sub_info();
   // @@protoc_insertion_point(field_mutable:ei.Backup.sub_info)
   return _msg;
@@ -78295,9 +78383,9 @@ inline void Backup::set_allocated_sub_info(::ei::UserSubscriptionInfo* PROTOBUF_
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x01000000U);
+    SetHasBit(_impl_._has_bits_[0], 0x02000000U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x01000000U);
+    ClearHasBit(_impl_._has_bits_[0], 0x02000000U);
   }
 
   _impl_.sub_info_ = reinterpret_cast<::ei::UserSubscriptionInfo*>(value);
@@ -78306,14 +78394,14 @@ inline void Backup::set_allocated_sub_info(::ei::UserSubscriptionInfo* PROTOBUF_
 
 // optional uint64 checksum = 100;
 inline bool Backup::has_checksum() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x20000000U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x40000000U);
   return value;
 }
 inline void Backup::clear_checksum() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.checksum_ = ::uint64_t{0u};
   ClearHasBit(_impl_._has_bits_[0],
-                  0x20000000U);
+                  0x40000000U);
 }
 inline ::uint64_t Backup::checksum() const {
   // @@protoc_insertion_point(field_get:ei.Backup.checksum)
@@ -78321,7 +78409,7 @@ inline ::uint64_t Backup::checksum() const {
 }
 inline void Backup::set_checksum(::uint64_t value) {
   _internal_set_checksum(value);
-  SetHasBit(_impl_._has_bits_[0], 0x20000000U);
+  SetHasBit(_impl_._has_bits_[0], 0x40000000U);
   // @@protoc_insertion_point(field_set:ei.Backup.checksum)
 }
 inline ::uint64_t Backup::_internal_checksum() const {
@@ -78335,14 +78423,14 @@ inline void Backup::_internal_set_checksum(::uint64_t value) {
 
 // optional string signature = 101;
 inline bool Backup::has_signature() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000200U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000400U);
   return value;
 }
 inline void Backup::clear_signature() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.signature_.ClearToEmpty();
   ClearHasBit(_impl_._has_bits_[0],
-                  0x00000200U);
+                  0x00000400U);
 }
 inline const ::std::string& Backup::signature() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
@@ -78352,13 +78440,13 @@ inline const ::std::string& Backup::signature() const
 template <typename Arg_, typename... Args_>
 PROTOBUF_ALWAYS_INLINE void Backup::set_signature(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000200U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000400U);
   _impl_.signature_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:ei.Backup.signature)
 }
 inline ::std::string* PROTOBUF_NONNULL Backup::mutable_signature()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000200U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000400U);
   ::std::string* _s = _internal_mutable_signature();
   // @@protoc_insertion_point(field_mutable:ei.Backup.signature)
   return _s;
@@ -78378,10 +78466,10 @@ inline ::std::string* PROTOBUF_NONNULL Backup::_internal_mutable_signature() {
 inline ::std::string* PROTOBUF_NULLABLE Backup::release_signature() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:ei.Backup.signature)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000200U)) {
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000400U)) {
     return nullptr;
   }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000200U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
   auto* released = _impl_.signature_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
     _impl_.signature_.Set("", GetArena());
@@ -78391,9 +78479,9 @@ inline ::std::string* PROTOBUF_NULLABLE Backup::release_signature() {
 inline void Backup::set_allocated_signature(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000200U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000400U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000200U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
   }
   _impl_.signature_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.signature_.IsDefault()) {

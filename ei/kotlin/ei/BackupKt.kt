@@ -246,6 +246,30 @@ public object BackupKt {
     }
 
     /**
+     * `optional string build = 32;`
+     */
+    public var build: kotlin.String
+      @kotlin.jvm.JvmName("getBuild")
+        get() = _builder.build
+      @kotlin.jvm.JvmName("setBuild")
+        set(value) {
+        _builder.build = value
+      }
+    /**
+     * `optional string build = 32;`
+     */
+    public fun clearBuild() {
+      _builder.clearBuild()
+    }
+    /**
+     * `optional string build = 32;`
+     * @return Whether the build field is set.
+     */
+    public fun hasBuild(): kotlin.Boolean {
+      return _builder.hasBuild()
+    }
+
+    /**
      * `optional bool force_offer_backup = 20;`
      */
     public var forceOfferBackup: kotlin.Boolean

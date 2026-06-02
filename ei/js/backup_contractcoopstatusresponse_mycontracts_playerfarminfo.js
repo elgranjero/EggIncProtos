@@ -594,6 +594,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     userName: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
     approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
     version: jspb.Message.getFieldWithDefault(msg, 21, 0),
+    build: (f = jspb.Message.getField(msg, 32)) == null ? undefined : f,
     forceOfferBackup: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     forceBackup: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     settings: (f = msg.getSettings()) && proto.ei.Backup.Settings.toObject(includeInstance, f),
@@ -687,6 +688,10 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
     case 21:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setVersion(value);
+      break;
+    case 32:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuild(value);
       break;
     case 20:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -877,6 +882,13 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeUint32(
       21,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 32));
+  if (f != null) {
+    writer.writeString(
+      32,
       f
     );
   }
@@ -13009,6 +13021,42 @@ proto.ei.Backup.prototype.clearVersion = function() {
  */
 proto.ei.Backup.prototype.hasVersion = function() {
   return jspb.Message.getField(this, 21) != null;
+};
+
+
+/**
+ * optional string build = 32;
+ * @return {string}
+ */
+proto.ei.Backup.prototype.getBuild = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 32, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.setBuild = function(value) {
+  return jspb.Message.setField(this, 32, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearBuild = function() {
+  return jspb.Message.setField(this, 32, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasBuild = function() {
+  return jspb.Message.getField(this, 32) != null;
 };
 
 

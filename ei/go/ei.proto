@@ -47,6 +47,7 @@ message Backup {
     optional string user_name = 2;
     optional double approx_time = 3;
     optional uint32 version = 21 [default = 0];
+    optional string build = 32;
     optional bool force_offer_backup = 20;
     optional bool force_backup = 22;
     
