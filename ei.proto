@@ -85,6 +85,7 @@ message Backup {
         optional bool user_personalized_ads_enabled = 23 [default = true];
         optional AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];
         optional double age_signal_fetched_time = 34;
+        optional int32 ui_theme = 35;
     }
     
     optional Tutorial tutorial = 5;
