@@ -198,6 +198,30 @@ public object BasicRequestInfoKt {
     }
 
     /**
+     * `optional string device_language = 9;`
+     */
+    public var deviceLanguage: kotlin.String
+      @kotlin.jvm.JvmName("getDeviceLanguage")
+        get() = _builder.deviceLanguage
+      @kotlin.jvm.JvmName("setDeviceLanguage")
+        set(value) {
+        _builder.deviceLanguage = value
+      }
+    /**
+     * `optional string device_language = 9;`
+     */
+    public fun clearDeviceLanguage() {
+      _builder.clearDeviceLanguage()
+    }
+    /**
+     * `optional string device_language = 9;`
+     * @return Whether the deviceLanguage field is set.
+     */
+    public fun hasDeviceLanguage(): kotlin.Boolean {
+      return _builder.hasDeviceLanguage()
+    }
+
+    /**
      * `optional bool debug = 8;`
      */
     public var debug: kotlin.Boolean

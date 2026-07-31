@@ -478,6 +478,77 @@ public object DLCCatalogKt {
     public fun hasShellsShowcaseLastFeaturedTime(): kotlin.Boolean {
       return _builder.hasShellsShowcaseLastFeaturedTime()
     }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class FontPacksProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     */
+     public val fontPacks: com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>
+      @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+        _builder.fontPacksList
+      )
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     * @param value The fontPacks to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addFontPacks")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>.add(value: ei.Ei.FontPack) {
+      _builder.addFontPacks(value)
+    }
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     * @param value The fontPacks to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignFontPacks")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>.plusAssign(value: ei.Ei.FontPack) {
+      add(value)
+    }
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     * @param values The fontPacks to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllFontPacks")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.FontPack>) {
+      _builder.addAllFontPacks(values)
+    }
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     * @param values The fontPacks to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllFontPacks")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.FontPack>) {
+      addAll(values)
+    }
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     * @param index The index to set the value at.
+     * @param value The fontPacks to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setFontPacks")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>.set(index: kotlin.Int, value: ei.Ei.FontPack) {
+      _builder.setFontPacks(index, value)
+    }
+    /**
+     * `repeated .ei.FontPack font_packs = 8;`
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearFontPacks")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.FontPack, FontPacksProxy>.clear() {
+      _builder.clearFontPacks()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

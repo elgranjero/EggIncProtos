@@ -270,6 +270,30 @@ public object BackupKt {
     }
 
     /**
+     * `optional string device_language = 33;`
+     */
+    public var deviceLanguage: kotlin.String
+      @kotlin.jvm.JvmName("getDeviceLanguage")
+        get() = _builder.deviceLanguage
+      @kotlin.jvm.JvmName("setDeviceLanguage")
+        set(value) {
+        _builder.deviceLanguage = value
+      }
+    /**
+     * `optional string device_language = 33;`
+     */
+    public fun clearDeviceLanguage() {
+      _builder.clearDeviceLanguage()
+    }
+    /**
+     * `optional string device_language = 33;`
+     * @return Whether the deviceLanguage field is set.
+     */
+    public fun hasDeviceLanguage(): kotlin.Boolean {
+      return _builder.hasDeviceLanguage()
+    }
+
+    /**
      * `optional bool force_offer_backup = 20;`
      */
     public var forceOfferBackup: kotlin.Boolean
@@ -1699,6 +1723,54 @@ public object BackupKt {
        */
       public fun hasAgeSignalFetchedTime(): kotlin.Boolean {
         return _builder.hasAgeSignalFetchedTime()
+      }
+
+      /**
+       * `optional int32 ui_theme = 35;`
+       */
+      public var uiTheme: kotlin.Int
+        @kotlin.jvm.JvmName("getUiTheme")
+          get() = _builder.uiTheme
+        @kotlin.jvm.JvmName("setUiTheme")
+          set(value) {
+          _builder.uiTheme = value
+        }
+      /**
+       * `optional int32 ui_theme = 35;`
+       */
+      public fun clearUiTheme() {
+        _builder.clearUiTheme()
+      }
+      /**
+       * `optional int32 ui_theme = 35;`
+       * @return Whether the uiTheme field is set.
+       */
+      public fun hasUiTheme(): kotlin.Boolean {
+        return _builder.hasUiTheme()
+      }
+
+      /**
+       * `optional bool localization_enabled = 36;`
+       */
+      public var localizationEnabled: kotlin.Boolean
+        @kotlin.jvm.JvmName("getLocalizationEnabled")
+          get() = _builder.localizationEnabled
+        @kotlin.jvm.JvmName("setLocalizationEnabled")
+          set(value) {
+          _builder.localizationEnabled = value
+        }
+      /**
+       * `optional bool localization_enabled = 36;`
+       */
+      public fun clearLocalizationEnabled() {
+        _builder.clearLocalizationEnabled()
+      }
+      /**
+       * `optional bool localization_enabled = 36;`
+       * @return Whether the localizationEnabled field is set.
+       */
+      public fun hasLocalizationEnabled(): kotlin.Boolean {
+        return _builder.hasLocalizationEnabled()
       }
     }
   }
@@ -6833,6 +6905,30 @@ public object BackupKt {
        */
       public fun hasEovAlert(): kotlin.Boolean {
         return _builder.hasEovAlert()
+      }
+
+      /**
+       * `optional bool translation_alert = 27;`
+       */
+      public var translationAlert: kotlin.Boolean
+        @kotlin.jvm.JvmName("getTranslationAlert")
+          get() = _builder.translationAlert
+        @kotlin.jvm.JvmName("setTranslationAlert")
+          set(value) {
+          _builder.translationAlert = value
+        }
+      /**
+       * `optional bool translation_alert = 27;`
+       */
+      public fun clearTranslationAlert() {
+        _builder.clearTranslationAlert()
+      }
+      /**
+       * `optional bool translation_alert = 27;`
+       * @return Whether the translationAlert field is set.
+       */
+      public fun hasTranslationAlert(): kotlin.Boolean {
+        return _builder.hasTranslationAlert()
       }
     }
   }

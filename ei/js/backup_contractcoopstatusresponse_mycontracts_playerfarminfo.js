@@ -45,6 +45,7 @@ goog.require('proto.ei.ActiveArtifactSlot');
 goog.require('proto.ei.ArtifactInventoryItem');
 goog.require('proto.ei.ArtifactSpec');
 goog.require('proto.ei.ArtifactsDB');
+goog.require('proto.ei.ColleggtibleMaxFarmSize');
 goog.require('proto.ei.CompleteArtifact');
 goog.require('proto.ei.ContractPlayerInfo');
 goog.require('proto.ei.CoopBuffState');
@@ -595,6 +596,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     approxTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
     version: jspb.Message.getFieldWithDefault(msg, 21, 0),
     build: (f = jspb.Message.getField(msg, 32)) == null ? undefined : f,
+    deviceLanguage: (f = jspb.Message.getField(msg, 33)) == null ? undefined : f,
     forceOfferBackup: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     forceBackup: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     settings: (f = msg.getSettings()) && proto.ei.Backup.Settings.toObject(includeInstance, f),
@@ -692,6 +694,10 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
     case 32:
       var value = /** @type {string} */ (reader.readString());
       msg.setBuild(value);
+      break;
+    case 33:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDeviceLanguage(value);
       break;
     case 20:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -889,6 +895,13 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       32,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 33));
+  if (f != null) {
+    writer.writeString(
+      33,
       f
     );
   }
@@ -1121,7 +1134,9 @@ proto.ei.Backup.Settings.toObject = function(includeInstance, msg) {
     userAnalyticsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 22, true),
     userPersonalizedAdsEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 23, true),
     ageComplianceStatus: jspb.Message.getFieldWithDefault(msg, 31, 0),
-    ageSignalFetchedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 34)) == null ? undefined : f
+    ageSignalFetchedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 34)) == null ? undefined : f,
+    uiTheme: (f = jspb.Message.getField(msg, 35)) == null ? undefined : f,
+    localizationEnabled: (f = jspb.Message.getBooleanField(msg, 36)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1285,6 +1300,14 @@ proto.ei.Backup.Settings.deserializeBinaryFromReader = function(msg, reader) {
     case 34:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setAgeSignalFetchedTime(value);
+      break;
+    case 35:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setUiTheme(value);
+      break;
+    case 36:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLocalizationEnabled(value);
       break;
     default:
       reader.skipField();
@@ -1536,6 +1559,20 @@ proto.ei.Backup.Settings.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       34,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 35));
+  if (f != null) {
+    writer.writeInt32(
+      35,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 36));
+  if (f != null) {
+    writer.writeBool(
+      36,
       f
     );
   }
@@ -2691,6 +2728,78 @@ proto.ei.Backup.Settings.prototype.clearAgeSignalFetchedTime = function() {
  */
 proto.ei.Backup.Settings.prototype.hasAgeSignalFetchedTime = function() {
   return jspb.Message.getField(this, 34) != null;
+};
+
+
+/**
+ * optional int32 ui_theme = 35;
+ * @return {number}
+ */
+proto.ei.Backup.Settings.prototype.getUiTheme = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 35, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setUiTheme = function(value) {
+  return jspb.Message.setField(this, 35, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearUiTheme = function() {
+  return jspb.Message.setField(this, 35, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasUiTheme = function() {
+  return jspb.Message.getField(this, 35) != null;
+};
+
+
+/**
+ * optional bool localization_enabled = 36;
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.getLocalizationEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 36, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.setLocalizationEnabled = function(value) {
+  return jspb.Message.setField(this, 36, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Settings} returns this
+ */
+proto.ei.Backup.Settings.prototype.clearLocalizationEnabled = function() {
+  return jspb.Message.setField(this, 36, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Settings.prototype.hasLocalizationEnabled = function() {
+  return jspb.Message.getField(this, 36) != null;
 };
 
 
@@ -10137,7 +10246,8 @@ proto.ei.Backup.Misc.toObject = function(includeInstance, msg) {
     maxButtonAlert: (f = jspb.Message.getBooleanField(msg, 23)) == null ? undefined : f,
     missionTargetAlert: (f = jspb.Message.getBooleanField(msg, 24)) == null ? undefined : f,
     colleggtiblesAlert: (f = jspb.Message.getBooleanField(msg, 25)) == null ? undefined : f,
-    eovAlert: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f
+    eovAlert: (f = jspb.Message.getBooleanField(msg, 26)) == null ? undefined : f,
+    translationAlert: (f = jspb.Message.getBooleanField(msg, 27)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -10277,6 +10387,10 @@ proto.ei.Backup.Misc.deserializeBinaryFromReader = function(msg, reader) {
     case 26:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setEovAlert(value);
+      break;
+    case 27:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setTranslationAlert(value);
       break;
     default:
       reader.skipField();
@@ -10486,6 +10600,13 @@ proto.ei.Backup.Misc.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       26,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 27));
+  if (f != null) {
+    writer.writeBool(
+      27,
       f
     );
   }
@@ -11425,6 +11546,42 @@ proto.ei.Backup.Misc.prototype.clearEovAlert = function() {
  */
 proto.ei.Backup.Misc.prototype.hasEovAlert = function() {
   return jspb.Message.getField(this, 26) != null;
+};
+
+
+/**
+ * optional bool translation_alert = 27;
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.getTranslationAlert = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 27, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.setTranslationAlert = function(value) {
+  return jspb.Message.setField(this, 27, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup.Misc} returns this
+ */
+proto.ei.Backup.Misc.prototype.clearTranslationAlert = function() {
+  return jspb.Message.setField(this, 27, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.Misc.prototype.hasTranslationAlert = function() {
+  return jspb.Message.getField(this, 27) != null;
 };
 
 
@@ -13057,6 +13214,42 @@ proto.ei.Backup.prototype.clearBuild = function() {
  */
 proto.ei.Backup.prototype.hasBuild = function() {
   return jspb.Message.getField(this, 32) != null;
+};
+
+
+/**
+ * optional string device_language = 33;
+ * @return {string}
+ */
+proto.ei.Backup.prototype.getDeviceLanguage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 33, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.setDeviceLanguage = function(value) {
+  return jspb.Message.setField(this, 33, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearDeviceLanguage = function() {
+  return jspb.Message.setField(this, 33, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasDeviceLanguage = function() {
+  return jspb.Message.getField(this, 33) != null;
 };
 
 
@@ -16912,7 +17105,7 @@ proto.ei.ContractCoopStatusResponse.prototype.hasLastSyncDep = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.MyContracts.repeatedFields_ = [3,1,2,4,9];
+proto.ei.MyContracts.repeatedFields_ = [3,1,2,4,9,10];
 
 
 
@@ -16957,7 +17150,9 @@ proto.ei.MyContracts.toObject = function(includeInstance, msg) {
     lastGradeProgressShown: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
     showAdvancedEvaluations: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f,
     customEggInfoList: jspb.Message.toObjectList(msg.getCustomEggInfoList(),
-    proto.ei.CustomEgg.toObject, includeInstance)
+    proto.ei.CustomEgg.toObject, includeInstance),
+    colleggtibleMaxFarmSizeReachedList: jspb.Message.toObjectList(msg.getColleggtibleMaxFarmSizeReachedList(),
+    proto.ei.ColleggtibleMaxFarmSize.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -17034,6 +17229,11 @@ proto.ei.MyContracts.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ei.CustomEgg;
       reader.readMessage(value,proto.ei.CustomEgg.deserializeBinaryFromReader);
       msg.addCustomEggInfo(value);
+      break;
+    case 10:
+      var value = new proto.ei.ColleggtibleMaxFarmSize;
+      reader.readMessage(value,proto.ei.ColleggtibleMaxFarmSize.deserializeBinaryFromReader);
+      msg.addColleggtibleMaxFarmSizeReached(value);
       break;
     default:
       reader.skipField();
@@ -17130,6 +17330,14 @@ proto.ei.MyContracts.serializeBinaryToWriter = function(message, writer) {
       9,
       f,
       proto.ei.CustomEgg.serializeBinaryToWriter
+    );
+  }
+  f = message.getColleggtibleMaxFarmSizeReachedList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      10,
+      f,
+      proto.ei.ColleggtibleMaxFarmSize.serializeBinaryToWriter
     );
   }
 };
@@ -17466,6 +17674,44 @@ proto.ei.MyContracts.prototype.addCustomEggInfo = function(opt_value, opt_index)
  */
 proto.ei.MyContracts.prototype.clearCustomEggInfoList = function() {
   return this.setCustomEggInfoList([]);
+};
+
+
+/**
+ * repeated ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;
+ * @return {!Array<!proto.ei.ColleggtibleMaxFarmSize>}
+ */
+proto.ei.MyContracts.prototype.getColleggtibleMaxFarmSizeReachedList = function() {
+  return /** @type{!Array<!proto.ei.ColleggtibleMaxFarmSize>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ColleggtibleMaxFarmSize, 10));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ColleggtibleMaxFarmSize>} value
+ * @return {!proto.ei.MyContracts} returns this
+*/
+proto.ei.MyContracts.prototype.setColleggtibleMaxFarmSizeReachedList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.ei.ColleggtibleMaxFarmSize=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ColleggtibleMaxFarmSize}
+ */
+proto.ei.MyContracts.prototype.addColleggtibleMaxFarmSizeReached = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.ei.ColleggtibleMaxFarmSize, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.MyContracts} returns this
+ */
+proto.ei.MyContracts.prototype.clearColleggtibleMaxFarmSizeReachedList = function() {
+  return this.setColleggtibleMaxFarmSizeReachedList([]);
 };
 
 

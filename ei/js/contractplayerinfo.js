@@ -18,6 +18,7 @@ goog.provide('proto.ei.ContractPlayerInfo.Status');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.ei.ColleggtibleMaxFarmSize');
 goog.require('proto.ei.ContractEvaluation');
 
 goog.forwardDeclare('proto.ei.Contract.PlayerGrade');
@@ -70,7 +71,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.ContractPlayerInfo.repeatedFields_ = [11,6,15];
+proto.ei.ContractPlayerInfo.repeatedFields_ = [11,6,15,17];
 
 
 
@@ -120,7 +121,9 @@ proto.ei.ContractPlayerInfo.toObject = function(includeInstance, msg) {
     proto.ei.ContractEvaluation.toObject, includeInstance),
     seasonProgressList: jspb.Message.toObjectList(msg.getSeasonProgressList(),
     proto.ei.ContractPlayerInfo.SeasonProgress.toObject, includeInstance),
-    aggregationNotes: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f
+    aggregationNotes: (f = jspb.Message.getField(msg, 16)) == null ? undefined : f,
+    colleggtibleMaxFarmSizeReachedList: jspb.Message.toObjectList(msg.getColleggtibleMaxFarmSizeReachedList(),
+    proto.ei.ColleggtibleMaxFarmSize.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -224,6 +227,11 @@ proto.ei.ContractPlayerInfo.deserializeBinaryFromReader = function(msg, reader) 
     case 16:
       var value = /** @type {string} */ (reader.readString());
       msg.setAggregationNotes(value);
+      break;
+    case 17:
+      var value = new proto.ei.ColleggtibleMaxFarmSize;
+      reader.readMessage(value,proto.ei.ColleggtibleMaxFarmSize.deserializeBinaryFromReader);
+      msg.addColleggtibleMaxFarmSizeReached(value);
       break;
     default:
       reader.skipField();
@@ -366,6 +374,14 @@ proto.ei.ContractPlayerInfo.serializeBinaryToWriter = function(message, writer) 
     writer.writeString(
       16,
       f
+    );
+  }
+  f = message.getColleggtibleMaxFarmSizeReachedList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      17,
+      f,
+      proto.ei.ColleggtibleMaxFarmSize.serializeBinaryToWriter
     );
   }
 };
@@ -1300,6 +1316,44 @@ proto.ei.ContractPlayerInfo.prototype.clearAggregationNotes = function() {
  */
 proto.ei.ContractPlayerInfo.prototype.hasAggregationNotes = function() {
   return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * repeated ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 17;
+ * @return {!Array<!proto.ei.ColleggtibleMaxFarmSize>}
+ */
+proto.ei.ContractPlayerInfo.prototype.getColleggtibleMaxFarmSizeReachedList = function() {
+  return /** @type{!Array<!proto.ei.ColleggtibleMaxFarmSize>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.ColleggtibleMaxFarmSize, 17));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.ColleggtibleMaxFarmSize>} value
+ * @return {!proto.ei.ContractPlayerInfo} returns this
+*/
+proto.ei.ContractPlayerInfo.prototype.setColleggtibleMaxFarmSizeReachedList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 17, value);
+};
+
+
+/**
+ * @param {!proto.ei.ColleggtibleMaxFarmSize=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.ColleggtibleMaxFarmSize}
+ */
+proto.ei.ContractPlayerInfo.prototype.addColleggtibleMaxFarmSizeReached = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 17, opt_value, proto.ei.ColleggtibleMaxFarmSize, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.ContractPlayerInfo} returns this
+ */
+proto.ei.ContractPlayerInfo.prototype.clearColleggtibleMaxFarmSizeReachedList = function() {
+  return this.setColleggtibleMaxFarmSizeReachedList([]);
 };
 
 

@@ -97,6 +97,7 @@ proto.ei.LocalContract.toObject = function(includeInstance, msg) {
     lastAmountWhenRewardGiven: (f = jspb.Message.getOptionalFloatingPointField(msg, 6)) == null ? undefined : f,
     numGoalsAchieved: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
     maxFarmSizeReached: (f = jspb.Message.getOptionalFloatingPointField(msg, 23)) == null ? undefined : f,
+    customEggId: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
     boostsUsed: (f = jspb.Message.getField(msg, 12)) == null ? undefined : f,
     pointsReplay: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     league: (f = jspb.Message.getField(msg, 15)) == null ? undefined : f,
@@ -208,6 +209,10 @@ proto.ei.LocalContract.deserializeBinaryFromReader = function(msg, reader) {
     case 23:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setMaxFarmSizeReached(value);
+      break;
+    case 25:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomEggId(value);
       break;
     case 12:
       var value = /** @type {number} */ (reader.readUint32());
@@ -384,6 +389,13 @@ proto.ei.LocalContract.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeDouble(
       23,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 25));
+  if (f != null) {
+    writer.writeString(
+      25,
       f
     );
   }
@@ -1050,6 +1062,42 @@ proto.ei.LocalContract.prototype.clearMaxFarmSizeReached = function() {
  */
 proto.ei.LocalContract.prototype.hasMaxFarmSizeReached = function() {
   return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
+ * optional string custom_egg_id = 25;
+ * @return {string}
+ */
+proto.ei.LocalContract.prototype.getCustomEggId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.setCustomEggId = function(value) {
+  return jspb.Message.setField(this, 25, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.LocalContract} returns this
+ */
+proto.ei.LocalContract.prototype.clearCustomEggId = function() {
+  return jspb.Message.setField(this, 25, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.LocalContract.prototype.hasCustomEggId = function() {
+  return jspb.Message.getField(this, 25) != null;
 };
 
 

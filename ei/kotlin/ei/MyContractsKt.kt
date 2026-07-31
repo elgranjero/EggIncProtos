@@ -481,6 +481,77 @@ public object MyContractsKt {
     public fun com.google.protobuf.kotlin.DslList<ei.Ei.CustomEgg, CustomEggInfoProxy>.clear() {
       _builder.clearCustomEggInfo()
     }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class ColleggtibleMaxFarmSizeReachedProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     */
+     public val colleggtibleMaxFarmSizeReached: com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>
+      @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+        _builder.colleggtibleMaxFarmSizeReachedList
+      )
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     * @param value The colleggtibleMaxFarmSizeReached to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addColleggtibleMaxFarmSizeReached")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>.add(value: ei.Ei.ColleggtibleMaxFarmSize) {
+      _builder.addColleggtibleMaxFarmSizeReached(value)
+    }
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     * @param value The colleggtibleMaxFarmSizeReached to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignColleggtibleMaxFarmSizeReached")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>.plusAssign(value: ei.Ei.ColleggtibleMaxFarmSize) {
+      add(value)
+    }
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     * @param values The colleggtibleMaxFarmSizeReached to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllColleggtibleMaxFarmSizeReached")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>.addAll(values: kotlin.collections.Iterable<ei.Ei.ColleggtibleMaxFarmSize>) {
+      _builder.addAllColleggtibleMaxFarmSizeReached(values)
+    }
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     * @param values The colleggtibleMaxFarmSizeReached to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllColleggtibleMaxFarmSizeReached")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>.plusAssign(values: kotlin.collections.Iterable<ei.Ei.ColleggtibleMaxFarmSize>) {
+      addAll(values)
+    }
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     * @param index The index to set the value at.
+     * @param value The colleggtibleMaxFarmSizeReached to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setColleggtibleMaxFarmSizeReached")
+    public operator fun com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>.set(index: kotlin.Int, value: ei.Ei.ColleggtibleMaxFarmSize) {
+      _builder.setColleggtibleMaxFarmSizeReached(index, value)
+    }
+    /**
+     * `repeated .ei.ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;`
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearColleggtibleMaxFarmSizeReached")
+    public fun com.google.protobuf.kotlin.DslList<ei.Ei.ColleggtibleMaxFarmSize, ColleggtibleMaxFarmSizeReachedProxy>.clear() {
+      _builder.clearColleggtibleMaxFarmSizeReached()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

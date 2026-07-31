@@ -77,6 +77,7 @@ proto.ei.BasicRequestInfo.toObject = function(includeInstance, msg) {
     platform: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
     country: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
     language: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+    deviceLanguage: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
     debug: (f = jspb.Message.getBooleanField(msg, 8)) == null ? undefined : f
   };
 
@@ -141,6 +142,10 @@ proto.ei.BasicRequestInfo.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setLanguage(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDeviceLanguage(value);
       break;
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -221,6 +226,13 @@ proto.ei.BasicRequestInfo.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       7,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
+    writer.writeString(
+      9,
       f
     );
   }
@@ -483,6 +495,42 @@ proto.ei.BasicRequestInfo.prototype.clearLanguage = function() {
  */
 proto.ei.BasicRequestInfo.prototype.hasLanguage = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional string device_language = 9;
+ * @return {string}
+ */
+proto.ei.BasicRequestInfo.prototype.getDeviceLanguage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.BasicRequestInfo} returns this
+ */
+proto.ei.BasicRequestInfo.prototype.setDeviceLanguage = function(value) {
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.BasicRequestInfo} returns this
+ */
+proto.ei.BasicRequestInfo.prototype.clearDeviceLanguage = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.BasicRequestInfo.prototype.hasDeviceLanguage = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 

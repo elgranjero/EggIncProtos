@@ -84,6 +84,7 @@ GPBObjCClassDeclaration(CleanAccountRequest);
 GPBObjCClassDeclaration(ClearAllUserDataRequest);
 GPBObjCClassDeclaration(CollectContractArtifactRewardsRequest);
 GPBObjCClassDeclaration(CollectSeasonArtifactRewardsRequest);
+GPBObjCClassDeclaration(ColleggtibleMaxFarmSize);
 GPBObjCClassDeclaration(CompleteArtifact);
 GPBObjCClassDeclaration(CompleteMissionResponse);
 GPBObjCClassDeclaration(CompleteMissionResponse_SecureArtifactSpec);
@@ -150,6 +151,7 @@ GPBObjCClassDeclaration(EggIncEvent);
 GPBObjCClassDeclaration(EggIncFirstContactRequest);
 GPBObjCClassDeclaration(EggIncFirstContactResponse);
 GPBObjCClassDeclaration(FarmProductionParams);
+GPBObjCClassDeclaration(FontPack);
 GPBObjCClassDeclaration(GameModifier);
 GPBObjCClassDeclaration(GenericAction);
 GPBObjCClassDeclaration(GenericActionBatchRequest);
@@ -244,6 +246,14 @@ GPBObjCClassDeclaration(SubscriptionChangeHintRequest);
 GPBObjCClassDeclaration(SyncPathOfVirtueRequest);
 GPBObjCClassDeclaration(SyncPathOfVirtueResponse);
 GPBObjCClassDeclaration(TipsDB);
+GPBObjCClassDeclaration(TranslationCache);
+GPBObjCClassDeclaration(TranslationEntry);
+GPBObjCClassDeclaration(TranslationKey);
+GPBObjCClassDeclaration(TranslationPackRequest);
+GPBObjCClassDeclaration(TranslationPackResponse);
+GPBObjCClassDeclaration(TranslationPlaceholder);
+GPBObjCClassDeclaration(TranslationRequest);
+GPBObjCClassDeclaration(TranslationResponse);
 GPBObjCClassDeclaration(UpdateCoopPermissionsRequest);
 GPBObjCClassDeclaration(UpdateCoopPermissionsResponse);
 GPBObjCClassDeclaration(UserDataInfoRequest);
@@ -818,6 +828,92 @@ BOOL AgeComplianceStatus_IsValidValue(int32_t value__) {
     case AgeComplianceStatus_AgeComplianceAdult:
     case AgeComplianceStatus_AgeComplianceMinor:
     case AgeComplianceStatus_AgeComplianceRestricted:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum TranslationPlaceholderType
+
+GPBEnumDescriptor *TranslationPlaceholderType_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "TranslationPlaceholderGeneric\000Translatio"
+        "nPlaceholderNumber\000TranslationPlaceholde"
+        "rName\000TranslationPlaceholderDuration\000Tra"
+        "nslationPlaceholderCount\000";
+    static const int32_t values[] = {
+        TranslationPlaceholderType_TranslationPlaceholderGeneric,
+        TranslationPlaceholderType_TranslationPlaceholderNumber,
+        TranslationPlaceholderType_TranslationPlaceholderName,
+        TranslationPlaceholderType_TranslationPlaceholderDuration,
+        TranslationPlaceholderType_TranslationPlaceholderCount,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(TranslationPlaceholderType)
+                                   runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:TranslationPlaceholderType_IsValidValue
+                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL TranslationPlaceholderType_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case TranslationPlaceholderType_TranslationPlaceholderGeneric:
+    case TranslationPlaceholderType_TranslationPlaceholderNumber:
+    case TranslationPlaceholderType_TranslationPlaceholderName:
+    case TranslationPlaceholderType_TranslationPlaceholderDuration:
+    case TranslationPlaceholderType_TranslationPlaceholderCount:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum TranslationStatus
+
+GPBEnumDescriptor *TranslationStatus_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "TranslationTranslated\000TranslationDeferre"
+        "d\000TranslationUnavailable\000";
+    static const int32_t values[] = {
+        TranslationStatus_TranslationTranslated,
+        TranslationStatus_TranslationDeferred,
+        TranslationStatus_TranslationUnavailable,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(TranslationStatus)
+                                   runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:TranslationStatus_IsValidValue
+                                            flags:GPBEnumDescriptorInitializationFlag_IsClosed];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL TranslationStatus_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case TranslationStatus_TranslationTranslated:
+    case TranslationStatus_TranslationDeferred:
+    case TranslationStatus_TranslationUnavailable:
       return YES;
     default:
       return NO;
@@ -2697,6 +2793,7 @@ typedef struct Vector4__storage_ {
 @dynamic hasApproxTime, approxTime;
 @dynamic hasVersion, version;
 @dynamic hasBuild, build;
+@dynamic hasDeviceLanguage, deviceLanguage;
 @dynamic hasForceOfferBackup, forceOfferBackup;
 @dynamic hasForceBackup, forceBackup;
 @dynamic hasSettings, settings;
@@ -2747,6 +2844,7 @@ typedef struct Backup__storage_ {
   UserSubscriptionInfo *subInfo;
   NSString *gameServicesIdScoped;
   NSString *build;
+  NSString *deviceLanguage;
   NSString *signature;
   double approxTime;
   uint64_t checksum;
@@ -2789,7 +2887,7 @@ typedef struct Backup__storage_ {
         .name = "settings",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Settings),
         .number = Backup_FieldNumber_Settings,
-        .hasIndex = 14,
+        .hasIndex = 15,
         .offset = (uint32_t)offsetof(Backup__storage_, settings),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2798,7 +2896,7 @@ typedef struct Backup__storage_ {
         .name = "tutorial",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Tutorial),
         .number = Backup_FieldNumber_Tutorial,
-        .hasIndex = 15,
+        .hasIndex = 16,
         .offset = (uint32_t)offsetof(Backup__storage_, tutorial),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2807,7 +2905,7 @@ typedef struct Backup__storage_ {
         .name = "stats",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Stats),
         .number = Backup_FieldNumber_Stats,
-        .hasIndex = 16,
+        .hasIndex = 17,
         .offset = (uint32_t)offsetof(Backup__storage_, stats),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2816,7 +2914,7 @@ typedef struct Backup__storage_ {
         .name = "game",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Game),
         .number = Backup_FieldNumber_Game,
-        .hasIndex = 17,
+        .hasIndex = 18,
         .offset = (uint32_t)offsetof(Backup__storage_, game),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2825,7 +2923,7 @@ typedef struct Backup__storage_ {
         .name = "sim",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Simulation),
         .number = Backup_FieldNumber_Sim,
-        .hasIndex = 21,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(Backup__storage_, sim),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2834,7 +2932,7 @@ typedef struct Backup__storage_ {
         .name = "mission",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Mission),
         .number = Backup_FieldNumber_Mission,
-        .hasIndex = 22,
+        .hasIndex = 23,
         .offset = (uint32_t)offsetof(Backup__storage_, mission),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2843,7 +2941,7 @@ typedef struct Backup__storage_ {
         .name = "misc",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Misc),
         .number = Backup_FieldNumber_Misc,
-        .hasIndex = 23,
+        .hasIndex = 24,
         .offset = (uint32_t)offsetof(Backup__storage_, misc),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2861,7 +2959,7 @@ typedef struct Backup__storage_ {
         .name = "contracts",
         .dataTypeSpecific.clazz = GPBObjCClass(MyContracts),
         .number = Backup_FieldNumber_Contracts,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(Backup__storage_, contracts),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2870,7 +2968,7 @@ typedef struct Backup__storage_ {
         .name = "artifacts",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Artifacts),
         .number = Backup_FieldNumber_Artifacts,
-        .hasIndex = 18,
+        .hasIndex = 19,
         .offset = (uint32_t)offsetof(Backup__storage_, artifacts),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2879,7 +2977,7 @@ typedef struct Backup__storage_ {
         .name = "artifactsDb",
         .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsDB),
         .number = Backup_FieldNumber_ArtifactsDb,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(Backup__storage_, artifactsDb),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2915,8 +3013,8 @@ typedef struct Backup__storage_ {
         .name = "forceOfferBackup",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ForceOfferBackup,
-        .hasIndex = 10,
-        .offset = 11,  // Stored in _has_storage_ to save space.
+        .hasIndex = 11,
+        .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -2933,8 +3031,8 @@ typedef struct Backup__storage_ {
         .name = "forceBackup",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ForceBackup,
-        .hasIndex = 12,
-        .offset = 13,  // Stored in _has_storage_ to save space.
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -2951,7 +3049,7 @@ typedef struct Backup__storage_ {
         .name = "shellDb",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellDB),
         .number = Backup_FieldNumber_ShellDb,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(Backup__storage_, shellDb),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2960,7 +3058,7 @@ typedef struct Backup__storage_ {
         .name = "shells",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Shells),
         .number = Backup_FieldNumber_Shells,
-        .hasIndex = 20,
+        .hasIndex = 21,
         .offset = (uint32_t)offsetof(Backup__storage_, shells),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2978,7 +3076,7 @@ typedef struct Backup__storage_ {
         .name = "mailState",
         .dataTypeSpecific.clazz = GPBObjCClass(MailState),
         .number = Backup_FieldNumber_MailState,
-        .hasIndex = 27,
+        .hasIndex = 28,
         .offset = (uint32_t)offsetof(Backup__storage_, mailState),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2987,7 +3085,7 @@ typedef struct Backup__storage_ {
         .name = "virtue",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Virtue),
         .number = Backup_FieldNumber_Virtue,
-        .hasIndex = 19,
+        .hasIndex = 20,
         .offset = (uint32_t)offsetof(Backup__storage_, virtue),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2996,7 +3094,7 @@ typedef struct Backup__storage_ {
         .name = "subInfo",
         .dataTypeSpecific.clazz = GPBObjCClass(UserSubscriptionInfo),
         .number = Backup_FieldNumber_SubInfo,
-        .hasIndex = 28,
+        .hasIndex = 29,
         .offset = (uint32_t)offsetof(Backup__storage_, subInfo),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3020,10 +3118,19 @@ typedef struct Backup__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "deviceLanguage",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Backup_FieldNumber_DeviceLanguage,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(Backup__storage_, deviceLanguage),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "checksum",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Checksum,
-        .hasIndex = 29,
+        .hasIndex = 30,
         .offset = (uint32_t)offsetof(Backup__storage_, checksum),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt64,
@@ -3032,7 +3139,7 @@ typedef struct Backup__storage_ {
         .name = "signature",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Signature,
-        .hasIndex = 30,
+        .hasIndex = 31,
         .offset = (uint32_t)offsetof(Backup__storage_, signature),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
@@ -3093,11 +3200,14 @@ typedef struct Backup__storage_ {
 @dynamic hasUserPersonalizedAdsEnabled, userPersonalizedAdsEnabled;
 @dynamic hasAgeComplianceStatus, ageComplianceStatus;
 @dynamic hasAgeSignalFetchedTime, ageSignalFetchedTime;
+@dynamic hasUiTheme, uiTheme;
+@dynamic hasLocalizationEnabled, localizationEnabled;
 
 typedef struct Backup_Settings__storage_ {
   uint32_t _has_storage_[2];
   uint32_t lastDayAgeQueried;
   AgeComplianceStatus ageComplianceStatus;
+  int32_t uiTheme;
   double lastBackupTime;
   double lastNotificationQueryTime;
   double ageSignalFetchedTime;
@@ -3428,6 +3538,26 @@ typedef struct Backup_Settings__storage_ {
         .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, ageSignalFetchedTime),
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeDouble,
+      },
+      {
+        .defaultValue.valueInt32 = 0,
+        .core.name = "uiTheme",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Settings_FieldNumber_UiTheme,
+        .core.hasIndex = 59,
+        .core.offset = (uint32_t)offsetof(Backup_Settings__storage_, uiTheme),
+        .core.flags = GPBFieldNone,
+        .core.dataType = GPBDataTypeInt32,
+      },
+      {
+        .defaultValue.valueBool = NO,
+        .core.name = "localizationEnabled",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Settings_FieldNumber_LocalizationEnabled,
+        .core.hasIndex = 60,
+        .core.offset = 61,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldNone,
+        .core.dataType = GPBDataTypeBool,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -5323,6 +5453,7 @@ typedef struct Backup_Mission__storage_ {
 @dynamic hasMissionTargetAlert, missionTargetAlert;
 @dynamic hasColleggtiblesAlert, colleggtiblesAlert;
 @dynamic hasEovAlert, eovAlert;
+@dynamic hasTranslationAlert, translationAlert;
 
 typedef struct Backup_Misc__storage_ {
   uint32_t _has_storage_[2];
@@ -5599,6 +5730,16 @@ typedef struct Backup_Misc__storage_ {
         .core.number = Backup_Misc_FieldNumber_EovAlert,
         .core.hasIndex = 42,
         .core.offset = 43,  // Stored in _has_storage_ to save space.
+        .core.flags = GPBFieldNone,
+        .core.dataType = GPBDataTypeBool,
+      },
+      {
+        .defaultValue.valueBool = NO,
+        .core.name = "translationAlert",
+        .core.dataTypeSpecific.clazz = Nil,
+        .core.number = Backup_Misc_FieldNumber_TranslationAlert,
+        .core.hasIndex = 44,
+        .core.offset = 45,  // Stored in _has_storage_ to save space.
         .core.flags = GPBFieldNone,
         .core.dataType = GPBDataTypeBool,
       },
@@ -9088,6 +9229,7 @@ typedef struct ContractSeasonInfos__storage_ {
 @dynamic unreadEvaluationsArray, unreadEvaluationsArray_Count;
 @dynamic seasonProgressArray, seasonProgressArray_Count;
 @dynamic hasAggregationNotes, aggregationNotes;
+@dynamic colleggtibleMaxFarmSizeReachedArray, colleggtibleMaxFarmSizeReachedArray_Count;
 
 typedef struct ContractPlayerInfo__storage_ {
   uint32_t _has_storage_[1];
@@ -9098,6 +9240,7 @@ typedef struct ContractPlayerInfo__storage_ {
   GPBEnumArray *issuesArray;
   NSMutableArray *seasonProgressArray;
   NSString *aggregationNotes;
+  NSMutableArray *colleggtibleMaxFarmSizeReachedArray;
   double totalCxp;
   double lastEvaluationTime;
   double gradeScore;
@@ -9258,6 +9401,15 @@ typedef struct ContractPlayerInfo__storage_ {
         .offset = (uint32_t)offsetof(ContractPlayerInfo__storage_, aggregationNotes),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "colleggtibleMaxFarmSizeReachedArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ColleggtibleMaxFarmSize),
+        .number = ContractPlayerInfo_FieldNumber_ColleggtibleMaxFarmSizeReachedArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ContractPlayerInfo__storage_, colleggtibleMaxFarmSizeReachedArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -10142,6 +10294,7 @@ typedef struct CoopCompletionSnapshot_ContributorSnapshot__storage_ {
 @dynamic hasPlatform, platform;
 @dynamic hasCountry, country;
 @dynamic hasLanguage, language;
+@dynamic hasDeviceLanguage, deviceLanguage;
 @dynamic hasDebug, debug;
 
 typedef struct BasicRequestInfo__storage_ {
@@ -10153,6 +10306,7 @@ typedef struct BasicRequestInfo__storage_ {
   NSString *platform;
   NSString *country;
   NSString *language;
+  NSString *deviceLanguage;
 } BasicRequestInfo__storage_;
 
 // This method is threadsafe because it is initially called
@@ -10228,10 +10382,19 @@ typedef struct BasicRequestInfo__storage_ {
         .name = "debug",
         .dataTypeSpecific.clazz = Nil,
         .number = BasicRequestInfo_FieldNumber_Debug,
-        .hasIndex = 7,
-        .offset = 8,  // Stored in _has_storage_ to save space.
+        .hasIndex = 8,
+        .offset = 9,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "deviceLanguage",
+        .dataTypeSpecific.clazz = Nil,
+        .number = BasicRequestInfo_FieldNumber_DeviceLanguage,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(BasicRequestInfo__storage_, deviceLanguage),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -12283,6 +12446,7 @@ typedef struct ContractCoopStatusResponse_ChickenRun__storage_ {
 @dynamic hasLastAmountWhenRewardGiven, lastAmountWhenRewardGiven;
 @dynamic hasNumGoalsAchieved, numGoalsAchieved;
 @dynamic hasMaxFarmSizeReached, maxFarmSizeReached;
+@dynamic hasCustomEggId, customEggId;
 @dynamic hasBoostsUsed, boostsUsed;
 @dynamic hasPointsReplay, pointsReplay;
 @dynamic hasLeague, league;
@@ -12303,6 +12467,7 @@ typedef struct LocalContract__storage_ {
   ContractEvaluation *evaluation;
   NSMutableArray *reportedUuidsArray;
   NSString *contractIdentifier;
+  NSString *customEggId;
   double timeAccepted;
   double coopSharedEndTime;
   double lastAmountWhenRewardGiven;
@@ -12422,7 +12587,7 @@ typedef struct LocalContract__storage_ {
         .name = "boostsUsed",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_BoostsUsed,
-        .hasIndex = 22,
+        .hasIndex = 23,
         .offset = (uint32_t)offsetof(LocalContract__storage_, boostsUsed),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
@@ -12449,7 +12614,7 @@ typedef struct LocalContract__storage_ {
         .name = "league",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_League,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(LocalContract__storage_, league),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
@@ -12458,7 +12623,7 @@ typedef struct LocalContract__storage_ {
         .name = "lastNagTime",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_LastNagTime,
-        .hasIndex = 27,
+        .hasIndex = 28,
         .offset = (uint32_t)offsetof(LocalContract__storage_, lastNagTime),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
@@ -12476,7 +12641,7 @@ typedef struct LocalContract__storage_ {
         .name = "grade",
         .dataTypeSpecific.enumDescFunc = Contract_PlayerGrade_EnumDescriptor,
         .number = LocalContract_FieldNumber_Grade,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(LocalContract__storage_, grade),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeEnum,
@@ -12485,7 +12650,7 @@ typedef struct LocalContract__storage_ {
         .name = "evaluation",
         .dataTypeSpecific.clazz = GPBObjCClass(ContractEvaluation),
         .number = LocalContract_FieldNumber_Evaluation,
-        .hasIndex = 28,
+        .hasIndex = 29,
         .offset = (uint32_t)offsetof(LocalContract__storage_, evaluation),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -12494,8 +12659,8 @@ typedef struct LocalContract__storage_ {
         .name = "pointsReplay",
         .dataTypeSpecific.clazz = Nil,
         .number = LocalContract_FieldNumber_PointsReplay,
-        .hasIndex = 23,
-        .offset = 24,  // Stored in _has_storage_ to save space.
+        .hasIndex = 24,
+        .offset = 25,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -12535,6 +12700,15 @@ typedef struct LocalContract__storage_ {
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,
       },
+      {
+        .name = "customEggId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = LocalContract_FieldNumber_CustomEggId,
+        .hasIndex = 22,
+        .offset = (uint32_t)offsetof(LocalContract__storage_, customEggId),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:GPBObjCClass(LocalContract)
@@ -12544,6 +12718,63 @@ typedef struct LocalContract__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(LocalContract__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - ColleggtibleMaxFarmSize
+
+@implementation ColleggtibleMaxFarmSize
+
+@dynamic hasEggId, eggId;
+@dynamic hasMaxFarmSizeReached, maxFarmSizeReached;
+
+typedef struct ColleggtibleMaxFarmSize__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *eggId;
+  double maxFarmSizeReached;
+} ColleggtibleMaxFarmSize__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "eggId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ColleggtibleMaxFarmSize_FieldNumber_EggId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ColleggtibleMaxFarmSize__storage_, eggId),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "maxFarmSizeReached",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ColleggtibleMaxFarmSize_FieldNumber_MaxFarmSizeReached,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ColleggtibleMaxFarmSize__storage_, maxFarmSizeReached),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeDouble,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(ColleggtibleMaxFarmSize)
+                                   messageName:@"ColleggtibleMaxFarmSize"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ColleggtibleMaxFarmSize__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
@@ -12568,6 +12799,7 @@ typedef struct LocalContract__storage_ {
 @dynamic hasLastGradeProgressShown, lastGradeProgressShown;
 @dynamic hasShowAdvancedEvaluations, showAdvancedEvaluations;
 @dynamic customEggInfoArray, customEggInfoArray_Count;
+@dynamic colleggtibleMaxFarmSizeReachedArray, colleggtibleMaxFarmSizeReachedArray_Count;
 
 typedef struct MyContracts__storage_ {
   uint32_t _has_storage_[1];
@@ -12577,6 +12809,7 @@ typedef struct MyContracts__storage_ {
   NSMutableArray *currentCoopStatusesArray;
   ContractPlayerInfo *lastCpi;
   NSMutableArray *customEggInfoArray;
+  NSMutableArray *colleggtibleMaxFarmSizeReachedArray;
   double lastGradeProgressShown;
 } MyContracts__storage_;
 
@@ -12664,6 +12897,15 @@ typedef struct MyContracts__storage_ {
         .number = MyContracts_FieldNumber_CustomEggInfoArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(MyContracts__storage_, customEggInfoArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "colleggtibleMaxFarmSizeReachedArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(ColleggtibleMaxFarmSize),
+        .number = MyContracts_FieldNumber_ColleggtibleMaxFarmSizeReachedArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(MyContracts__storage_, colleggtibleMaxFarmSizeReachedArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
@@ -12790,6 +13032,580 @@ typedef struct CachedContractSpec__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CachedContractSpec__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationPlaceholder
+
+@implementation TranslationPlaceholder
+
+@dynamic hasIndex, index;
+@dynamic hasType, type;
+@dynamic hasSample, sample;
+
+typedef struct TranslationPlaceholder__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t index;
+  TranslationPlaceholderType type;
+  NSString *sample;
+} TranslationPlaceholder__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "index",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPlaceholder_FieldNumber_Index,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationPlaceholder__storage_, index),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "type",
+        .dataTypeSpecific.enumDescFunc = TranslationPlaceholderType_EnumDescriptor,
+        .number = TranslationPlaceholder_FieldNumber_Type,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationPlaceholder__storage_, type),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "sample",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPlaceholder_FieldNumber_Sample,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(TranslationPlaceholder__storage_, sample),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationPlaceholder)
+                                   messageName:@"TranslationPlaceholder"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationPlaceholder__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationKey
+
+@implementation TranslationKey
+
+@dynamic hasKey, key;
+@dynamic placeholdersArray, placeholdersArray_Count;
+
+typedef struct TranslationKey__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *key;
+  NSMutableArray *placeholdersArray;
+} TranslationKey__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "key",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationKey_FieldNumber_Key,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationKey__storage_, key),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "placeholdersArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(TranslationPlaceholder),
+        .number = TranslationKey_FieldNumber_PlaceholdersArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TranslationKey__storage_, placeholdersArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationKey)
+                                   messageName:@"TranslationKey"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationKey__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationRequest
+
+@implementation TranslationRequest
+
+@dynamic hasRinfo, rinfo;
+@dynamic hasLanguage, language;
+@dynamic keysArray, keysArray_Count;
+
+typedef struct TranslationRequest__storage_ {
+  uint32_t _has_storage_[1];
+  BasicRequestInfo *rinfo;
+  NSString *language;
+  NSMutableArray *keysArray;
+} TranslationRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = TranslationRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationRequest__storage_, rinfo),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationRequest_FieldNumber_Language,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationRequest__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "keysArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(TranslationKey),
+        .number = TranslationRequest_FieldNumber_KeysArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TranslationRequest__storage_, keysArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationRequest)
+                                   messageName:@"TranslationRequest"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationRequest__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationEntry
+
+@implementation TranslationEntry
+
+@dynamic hasKey, key;
+@dynamic hasTranslation, translation;
+@dynamic hasUnavailable, unavailable;
+@dynamic hasStatus, status;
+
+typedef struct TranslationEntry__storage_ {
+  uint32_t _has_storage_[1];
+  TranslationStatus status;
+  NSString *key;
+  NSString *translation;
+} TranslationEntry__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "key",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationEntry_FieldNumber_Key,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationEntry__storage_, key),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "translation",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationEntry_FieldNumber_Translation,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationEntry__storage_, translation),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "unavailable",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationEntry_FieldNumber_Unavailable,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "status",
+        .dataTypeSpecific.enumDescFunc = TranslationStatus_EnumDescriptor,
+        .number = TranslationEntry_FieldNumber_Status,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(TranslationEntry__storage_, status),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationEntry)
+                                   messageName:@"TranslationEntry"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationEntry__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationResponse
+
+@implementation TranslationResponse
+
+@dynamic hasLanguage, language;
+@dynamic entriesArray, entriesArray_Count;
+@dynamic hasCacheVersion, cacheVersion;
+
+typedef struct TranslationResponse__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t cacheVersion;
+  NSString *language;
+  NSMutableArray *entriesArray;
+} TranslationResponse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationResponse_FieldNumber_Language,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationResponse__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "entriesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(TranslationEntry),
+        .number = TranslationResponse_FieldNumber_EntriesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TranslationResponse__storage_, entriesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "cacheVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationResponse_FieldNumber_CacheVersion,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationResponse__storage_, cacheVersion),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationResponse)
+                                   messageName:@"TranslationResponse"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationResponse__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationCache
+
+@implementation TranslationCache
+
+@dynamic hasLanguage, language;
+@dynamic entriesArray, entriesArray_Count;
+@dynamic hasCachedAt, cachedAt;
+@dynamic hasCacheVersion, cacheVersion;
+
+typedef struct TranslationCache__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t cacheVersion;
+  NSString *language;
+  NSMutableArray *entriesArray;
+  double cachedAt;
+} TranslationCache__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationCache_FieldNumber_Language,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationCache__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "entriesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(TranslationEntry),
+        .number = TranslationCache_FieldNumber_EntriesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TranslationCache__storage_, entriesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "cachedAt",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationCache_FieldNumber_CachedAt,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationCache__storage_, cachedAt),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "cacheVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationCache_FieldNumber_CacheVersion,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(TranslationCache__storage_, cacheVersion),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationCache)
+                                   messageName:@"TranslationCache"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationCache__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationPackRequest
+
+@implementation TranslationPackRequest
+
+@dynamic hasRinfo, rinfo;
+@dynamic hasLanguage, language;
+@dynamic hasCacheVersion, cacheVersion;
+
+typedef struct TranslationPackRequest__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t cacheVersion;
+  BasicRequestInfo *rinfo;
+  NSString *language;
+} TranslationPackRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "rinfo",
+        .dataTypeSpecific.clazz = GPBObjCClass(BasicRequestInfo),
+        .number = TranslationPackRequest_FieldNumber_Rinfo,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationPackRequest__storage_, rinfo),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPackRequest_FieldNumber_Language,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationPackRequest__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "cacheVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPackRequest_FieldNumber_CacheVersion,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(TranslationPackRequest__storage_, cacheVersion),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationPackRequest)
+                                   messageName:@"TranslationPackRequest"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationPackRequest__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationPackResponse
+
+@implementation TranslationPackResponse
+
+@dynamic hasLanguage, language;
+@dynamic entriesArray, entriesArray_Count;
+@dynamic hasCacheVersion, cacheVersion;
+@dynamic hasUpToDate, upToDate;
+@dynamic hasTruncated, truncated;
+
+typedef struct TranslationPackResponse__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t cacheVersion;
+  NSString *language;
+  NSMutableArray *entriesArray;
+} TranslationPackResponse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPackResponse_FieldNumber_Language,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationPackResponse__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "entriesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(TranslationEntry),
+        .number = TranslationPackResponse_FieldNumber_EntriesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TranslationPackResponse__storage_, entriesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "cacheVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPackResponse_FieldNumber_CacheVersion,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationPackResponse__storage_, cacheVersion),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "upToDate",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPackResponse_FieldNumber_UpToDate,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "truncated",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationPackResponse_FieldNumber_Truncated,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeBool,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationPackResponse)
+                                   messageName:@"TranslationPackResponse"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationPackResponse__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
@@ -22833,6 +23649,63 @@ typedef struct DLCItem__storage_ {
 
 @end
 
+#pragma mark - FontPack
+
+@implementation FontPack
+
+@dynamic languagesArray, languagesArray_Count;
+@dynamic facesArray, facesArray_Count;
+
+typedef struct FontPack__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *languagesArray;
+  NSMutableArray *facesArray;
+} FontPack__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "languagesArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = FontPack_FieldNumber_LanguagesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(FontPack__storage_, languagesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "facesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(DLCItem),
+        .number = FontPack_FieldNumber_FacesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(FontPack__storage_, facesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(FontPack)
+                                   messageName:@"FontPack"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(FontPack__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - ShellSpec
 
 @implementation ShellSpec
@@ -23924,6 +24797,7 @@ typedef struct ShellGroupSpec__storage_ {
 @dynamic shellObjectsArray, shellObjectsArray_Count;
 @dynamic shellGroupsArray, shellGroupsArray_Count;
 @dynamic hasShellsShowcaseLastFeaturedTime, shellsShowcaseLastFeaturedTime;
+@dynamic fontPacksArray, fontPacksArray_Count;
 
 typedef struct DLCCatalog__storage_ {
   uint32_t _has_storage_[1];
@@ -23933,6 +24807,7 @@ typedef struct DLCCatalog__storage_ {
   NSMutableArray *shellObjectsArray;
   NSMutableArray *shellGroupsArray;
   NSMutableArray *decoratorsArray;
+  NSMutableArray *fontPacksArray;
   double shellsShowcaseLastFeaturedTime;
 } DLCCatalog__storage_;
 
@@ -24004,6 +24879,15 @@ typedef struct DLCCatalog__storage_ {
         .offset = (uint32_t)offsetof(DLCCatalog__storage_, shellsShowcaseLastFeaturedTime),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "fontPacksArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(FontPack),
+        .number = DLCCatalog_FieldNumber_FontPacksArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(DLCCatalog__storage_, fontPacksArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =

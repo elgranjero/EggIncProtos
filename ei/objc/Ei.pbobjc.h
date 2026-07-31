@@ -64,6 +64,7 @@ CF_EXTERN_C_BEGIN
 @class Backup_Virtue;
 @class BasicRequestInfo;
 @class CachedContractSpec;
+@class ColleggtibleMaxFarmSize;
 @class CompleteArtifact;
 @class CompleteMissionResponse;
 @class CompleteMissionResponse_SecureArtifactSpec;
@@ -102,6 +103,7 @@ CF_EXTERN_C_BEGIN
 @class EggIncCurrentEvents;
 @class EggIncEvent;
 @class FarmProductionParams;
+@class FontPack;
 @class GameModifier;
 @class GenericAction;
 @class IAPSaleEntry;
@@ -159,6 +161,9 @@ CF_EXTERN_C_BEGIN
 @class ShellSpec;
 @class ShellSpec_ShellPiece;
 @class ShellsActionLog;
+@class TranslationEntry;
+@class TranslationKey;
+@class TranslationPlaceholder;
 @class UserSubscriptionInfo;
 @class UserSubscriptionInfo_HistoryEntry;
 @class Vector3;
@@ -396,6 +401,40 @@ GPBEnumDescriptor *AgeComplianceStatus_EnumDescriptor(void);
  * the time this source was generated.
  **/
 BOOL AgeComplianceStatus_IsValidValue(int32_t value);
+
+#pragma mark - Enum TranslationPlaceholderType
+
+typedef GPB_ENUM(TranslationPlaceholderType) {
+  TranslationPlaceholderType_TranslationPlaceholderGeneric = 0,
+  TranslationPlaceholderType_TranslationPlaceholderNumber = 1,
+  TranslationPlaceholderType_TranslationPlaceholderName = 2,
+  TranslationPlaceholderType_TranslationPlaceholderDuration = 3,
+  TranslationPlaceholderType_TranslationPlaceholderCount = 4,
+};
+
+GPBEnumDescriptor *TranslationPlaceholderType_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL TranslationPlaceholderType_IsValidValue(int32_t value);
+
+#pragma mark - Enum TranslationStatus
+
+typedef GPB_ENUM(TranslationStatus) {
+  TranslationStatus_TranslationTranslated = 0,
+  TranslationStatus_TranslationDeferred = 1,
+  TranslationStatus_TranslationUnavailable = 2,
+};
+
+GPBEnumDescriptor *TranslationStatus_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL TranslationStatus_IsValidValue(int32_t value);
 
 #pragma mark - Enum LeaderboardScope
 
@@ -1198,6 +1237,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_SubInfo = 30,
   Backup_FieldNumber_GameServicesIdScoped = 31,
   Backup_FieldNumber_Build = 32,
+  Backup_FieldNumber_DeviceLanguage = 33,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -1241,6 +1281,10 @@ GPB_FINAL @interface Backup : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *build;
 /** Test to see if @c build has been set. */
 @property(nonatomic, readwrite) BOOL hasBuild;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *deviceLanguage;
+/** Test to see if @c deviceLanguage has been set. */
+@property(nonatomic, readwrite) BOOL hasDeviceLanguage;
 
 @property(nonatomic, readwrite) BOOL forceOfferBackup;
 @property(nonatomic, readwrite) BOOL hasForceOfferBackup;
@@ -1360,6 +1404,8 @@ typedef GPB_ENUM(Backup_Settings_FieldNumber) {
   Backup_Settings_FieldNumber_ArtifactSparkle = 30,
   Backup_Settings_FieldNumber_AgeComplianceStatus = 31,
   Backup_Settings_FieldNumber_AgeSignalFetchedTime = 34,
+  Backup_Settings_FieldNumber_UiTheme = 35,
+  Backup_Settings_FieldNumber_LocalizationEnabled = 36,
 };
 
 GPB_FINAL @interface Backup_Settings : GPBMessage
@@ -1459,6 +1505,12 @@ GPB_FINAL @interface Backup_Settings : GPBMessage
 
 @property(nonatomic, readwrite) double ageSignalFetchedTime;
 @property(nonatomic, readwrite) BOOL hasAgeSignalFetchedTime;
+
+@property(nonatomic, readwrite) int32_t uiTheme;
+@property(nonatomic, readwrite) BOOL hasUiTheme;
+
+@property(nonatomic, readwrite) BOOL localizationEnabled;
+@property(nonatomic, readwrite) BOOL hasLocalizationEnabled;
 
 @end
 
@@ -2129,6 +2181,7 @@ typedef GPB_ENUM(Backup_Misc_FieldNumber) {
   Backup_Misc_FieldNumber_MissionTargetAlert = 24,
   Backup_Misc_FieldNumber_ColleggtiblesAlert = 25,
   Backup_Misc_FieldNumber_EovAlert = 26,
+  Backup_Misc_FieldNumber_TranslationAlert = 27,
 };
 
 GPB_FINAL @interface Backup_Misc : GPBMessage
@@ -2210,6 +2263,9 @@ GPB_FINAL @interface Backup_Misc : GPBMessage
 
 @property(nonatomic, readwrite) BOOL eovAlert;
 @property(nonatomic, readwrite) BOOL hasEovAlert;
+
+@property(nonatomic, readwrite) BOOL translationAlert;
+@property(nonatomic, readwrite) BOOL hasTranslationAlert;
 
 @end
 
@@ -3428,6 +3484,7 @@ typedef GPB_ENUM(ContractPlayerInfo_FieldNumber) {
   ContractPlayerInfo_FieldNumber_IssueScore = 14,
   ContractPlayerInfo_FieldNumber_SeasonProgressArray = 15,
   ContractPlayerInfo_FieldNumber_AggregationNotes = 16,
+  ContractPlayerInfo_FieldNumber_ColleggtibleMaxFarmSizeReachedArray = 17,
 };
 
 GPB_FINAL @interface ContractPlayerInfo : GPBMessage
@@ -3485,6 +3542,10 @@ GPB_FINAL @interface ContractPlayerInfo : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *aggregationNotes;
 /** Test to see if @c aggregationNotes has been set. */
 @property(nonatomic, readwrite) BOOL hasAggregationNotes;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ColleggtibleMaxFarmSize*> *colleggtibleMaxFarmSizeReachedArray;
+/** The number of items in @c colleggtibleMaxFarmSizeReachedArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger colleggtibleMaxFarmSizeReachedArray_Count;
 
 @end
 
@@ -3795,6 +3856,7 @@ typedef GPB_ENUM(BasicRequestInfo_FieldNumber) {
   BasicRequestInfo_FieldNumber_Country = 6,
   BasicRequestInfo_FieldNumber_Language = 7,
   BasicRequestInfo_FieldNumber_Debug = 8,
+  BasicRequestInfo_FieldNumber_DeviceLanguage = 9,
 };
 
 GPB_FINAL @interface BasicRequestInfo : GPBMessage
@@ -3825,6 +3887,10 @@ GPB_FINAL @interface BasicRequestInfo : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *language;
 /** Test to see if @c language has been set. */
 @property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *deviceLanguage;
+/** Test to see if @c deviceLanguage has been set. */
+@property(nonatomic, readwrite) BOOL hasDeviceLanguage;
 
 @property(nonatomic, readwrite) BOOL debug;
 @property(nonatomic, readwrite) BOOL hasDebug;
@@ -4563,6 +4629,7 @@ typedef GPB_ENUM(LocalContract_FieldNumber) {
   LocalContract_FieldNumber_CoopSimulationEndTime = 22,
   LocalContract_FieldNumber_MaxFarmSizeReached = 23,
   LocalContract_FieldNumber_ContractIdentifier = 24,
+  LocalContract_FieldNumber_CustomEggId = 25,
 };
 
 GPB_FINAL @interface LocalContract : GPBMessage
@@ -4622,6 +4689,10 @@ GPB_FINAL @interface LocalContract : GPBMessage
 @property(nonatomic, readwrite) double maxFarmSizeReached;
 @property(nonatomic, readwrite) BOOL hasMaxFarmSizeReached;
 
+@property(nonatomic, readwrite, copy, null_resettable) NSString *customEggId;
+/** Test to see if @c customEggId has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomEggId;
+
 @property(nonatomic, readwrite) uint32_t boostsUsed;
 @property(nonatomic, readwrite) BOOL hasBoostsUsed;
 
@@ -4647,6 +4718,24 @@ GPB_FINAL @interface LocalContract : GPBMessage
 
 @end
 
+#pragma mark - ColleggtibleMaxFarmSize
+
+typedef GPB_ENUM(ColleggtibleMaxFarmSize_FieldNumber) {
+  ColleggtibleMaxFarmSize_FieldNumber_EggId = 1,
+  ColleggtibleMaxFarmSize_FieldNumber_MaxFarmSizeReached = 2,
+};
+
+GPB_FINAL @interface ColleggtibleMaxFarmSize : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *eggId;
+/** Test to see if @c eggId has been set. */
+@property(nonatomic, readwrite) BOOL hasEggId;
+
+@property(nonatomic, readwrite) double maxFarmSizeReached;
+@property(nonatomic, readwrite) BOOL hasMaxFarmSizeReached;
+
+@end
+
 #pragma mark - MyContracts
 
 typedef GPB_ENUM(MyContracts_FieldNumber) {
@@ -4659,6 +4748,7 @@ typedef GPB_ENUM(MyContracts_FieldNumber) {
   MyContracts_FieldNumber_LastGradeProgressShown = 7,
   MyContracts_FieldNumber_ShowAdvancedEvaluations = 8,
   MyContracts_FieldNumber_CustomEggInfoArray = 9,
+  MyContracts_FieldNumber_ColleggtibleMaxFarmSizeReachedArray = 10,
 };
 
 GPB_FINAL @interface MyContracts : GPBMessage
@@ -4696,6 +4786,10 @@ GPB_FINAL @interface MyContracts : GPBMessage
 /** The number of items in @c customEggInfoArray without causing the container to be created. */
 @property(nonatomic, readonly) NSUInteger customEggInfoArray_Count;
 
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ColleggtibleMaxFarmSize*> *colleggtibleMaxFarmSizeReachedArray;
+/** The number of items in @c colleggtibleMaxFarmSizeReachedArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger colleggtibleMaxFarmSizeReachedArray_Count;
+
 @end
 
 #pragma mark - ContractsCache
@@ -4732,6 +4826,202 @@ GPB_FINAL @interface CachedContractSpec : GPBMessage
 
 @property(nonatomic, readwrite) double cachedAt;
 @property(nonatomic, readwrite) BOOL hasCachedAt;
+
+@end
+
+#pragma mark - TranslationPlaceholder
+
+typedef GPB_ENUM(TranslationPlaceholder_FieldNumber) {
+  TranslationPlaceholder_FieldNumber_Index = 1,
+  TranslationPlaceholder_FieldNumber_Type = 2,
+  TranslationPlaceholder_FieldNumber_Sample = 3,
+};
+
+GPB_FINAL @interface TranslationPlaceholder : GPBMessage
+
+@property(nonatomic, readwrite) uint32_t index;
+@property(nonatomic, readwrite) BOOL hasIndex;
+
+@property(nonatomic, readwrite) TranslationPlaceholderType type;
+@property(nonatomic, readwrite) BOOL hasType;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *sample;
+/** Test to see if @c sample has been set. */
+@property(nonatomic, readwrite) BOOL hasSample;
+
+@end
+
+#pragma mark - TranslationKey
+
+typedef GPB_ENUM(TranslationKey_FieldNumber) {
+  TranslationKey_FieldNumber_Key = 1,
+  TranslationKey_FieldNumber_PlaceholdersArray = 2,
+};
+
+GPB_FINAL @interface TranslationKey : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *key;
+/** Test to see if @c key has been set. */
+@property(nonatomic, readwrite) BOOL hasKey;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<TranslationPlaceholder*> *placeholdersArray;
+/** The number of items in @c placeholdersArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger placeholdersArray_Count;
+
+@end
+
+#pragma mark - TranslationRequest
+
+typedef GPB_ENUM(TranslationRequest_FieldNumber) {
+  TranslationRequest_FieldNumber_Rinfo = 1,
+  TranslationRequest_FieldNumber_Language = 2,
+  TranslationRequest_FieldNumber_KeysArray = 3,
+};
+
+GPB_FINAL @interface TranslationRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<TranslationKey*> *keysArray;
+/** The number of items in @c keysArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger keysArray_Count;
+
+@end
+
+#pragma mark - TranslationEntry
+
+typedef GPB_ENUM(TranslationEntry_FieldNumber) {
+  TranslationEntry_FieldNumber_Key = 1,
+  TranslationEntry_FieldNumber_Translation = 2,
+  TranslationEntry_FieldNumber_Unavailable = 3,
+  TranslationEntry_FieldNumber_Status = 4,
+};
+
+GPB_FINAL @interface TranslationEntry : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *key;
+/** Test to see if @c key has been set. */
+@property(nonatomic, readwrite) BOOL hasKey;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *translation;
+/** Test to see if @c translation has been set. */
+@property(nonatomic, readwrite) BOOL hasTranslation;
+
+@property(nonatomic, readwrite) BOOL unavailable;
+@property(nonatomic, readwrite) BOOL hasUnavailable;
+
+@property(nonatomic, readwrite) TranslationStatus status;
+@property(nonatomic, readwrite) BOOL hasStatus;
+
+@end
+
+#pragma mark - TranslationResponse
+
+typedef GPB_ENUM(TranslationResponse_FieldNumber) {
+  TranslationResponse_FieldNumber_Language = 1,
+  TranslationResponse_FieldNumber_EntriesArray = 2,
+  TranslationResponse_FieldNumber_CacheVersion = 3,
+};
+
+GPB_FINAL @interface TranslationResponse : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<TranslationEntry*> *entriesArray;
+/** The number of items in @c entriesArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger entriesArray_Count;
+
+@property(nonatomic, readwrite) uint32_t cacheVersion;
+@property(nonatomic, readwrite) BOOL hasCacheVersion;
+
+@end
+
+#pragma mark - TranslationCache
+
+typedef GPB_ENUM(TranslationCache_FieldNumber) {
+  TranslationCache_FieldNumber_Language = 1,
+  TranslationCache_FieldNumber_EntriesArray = 2,
+  TranslationCache_FieldNumber_CachedAt = 3,
+  TranslationCache_FieldNumber_CacheVersion = 4,
+};
+
+GPB_FINAL @interface TranslationCache : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<TranslationEntry*> *entriesArray;
+/** The number of items in @c entriesArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger entriesArray_Count;
+
+@property(nonatomic, readwrite) double cachedAt;
+@property(nonatomic, readwrite) BOOL hasCachedAt;
+
+@property(nonatomic, readwrite) uint32_t cacheVersion;
+@property(nonatomic, readwrite) BOOL hasCacheVersion;
+
+@end
+
+#pragma mark - TranslationPackRequest
+
+typedef GPB_ENUM(TranslationPackRequest_FieldNumber) {
+  TranslationPackRequest_FieldNumber_Rinfo = 1,
+  TranslationPackRequest_FieldNumber_Language = 2,
+  TranslationPackRequest_FieldNumber_CacheVersion = 3,
+};
+
+GPB_FINAL @interface TranslationPackRequest : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) BasicRequestInfo *rinfo;
+/** Test to see if @c rinfo has been set. */
+@property(nonatomic, readwrite) BOOL hasRinfo;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite) uint32_t cacheVersion;
+@property(nonatomic, readwrite) BOOL hasCacheVersion;
+
+@end
+
+#pragma mark - TranslationPackResponse
+
+typedef GPB_ENUM(TranslationPackResponse_FieldNumber) {
+  TranslationPackResponse_FieldNumber_Language = 1,
+  TranslationPackResponse_FieldNumber_EntriesArray = 2,
+  TranslationPackResponse_FieldNumber_CacheVersion = 3,
+  TranslationPackResponse_FieldNumber_UpToDate = 4,
+  TranslationPackResponse_FieldNumber_Truncated = 5,
+};
+
+GPB_FINAL @interface TranslationPackResponse : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<TranslationEntry*> *entriesArray;
+/** The number of items in @c entriesArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger entriesArray_Count;
+
+@property(nonatomic, readwrite) uint32_t cacheVersion;
+@property(nonatomic, readwrite) BOOL hasCacheVersion;
+
+@property(nonatomic, readwrite) BOOL upToDate;
+@property(nonatomic, readwrite) BOOL hasUpToDate;
+
+@property(nonatomic, readwrite) BOOL truncated;
+@property(nonatomic, readwrite) BOOL hasTruncated;
 
 @end
 
@@ -8257,6 +8547,25 @@ GPB_FINAL @interface DLCItem : GPBMessage
 
 @end
 
+#pragma mark - FontPack
+
+typedef GPB_ENUM(FontPack_FieldNumber) {
+  FontPack_FieldNumber_LanguagesArray = 1,
+  FontPack_FieldNumber_FacesArray = 2,
+};
+
+GPB_FINAL @interface FontPack : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *languagesArray;
+/** The number of items in @c languagesArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger languagesArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<DLCItem*> *facesArray;
+/** The number of items in @c facesArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger facesArray_Count;
+
+@end
+
 #pragma mark - ShellSpec
 
 typedef GPB_ENUM(ShellSpec_FieldNumber) {
@@ -8644,6 +8953,7 @@ typedef GPB_ENUM(DLCCatalog_FieldNumber) {
   DLCCatalog_FieldNumber_ShellGroupsArray = 5,
   DLCCatalog_FieldNumber_DecoratorsArray = 6,
   DLCCatalog_FieldNumber_ShellsShowcaseLastFeaturedTime = 7,
+  DLCCatalog_FieldNumber_FontPacksArray = 8,
 };
 
 GPB_FINAL @interface DLCCatalog : GPBMessage
@@ -8674,6 +8984,10 @@ GPB_FINAL @interface DLCCatalog : GPBMessage
 
 @property(nonatomic, readwrite) double shellsShowcaseLastFeaturedTime;
 @property(nonatomic, readwrite) BOOL hasShellsShowcaseLastFeaturedTime;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<FontPack*> *fontPacksArray;
+/** The number of items in @c fontPacksArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger fontPacksArray_Count;
 
 @end
 

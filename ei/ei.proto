@@ -48,6 +48,7 @@ message Backup {
     optional double approx_time = 3;
     optional uint32 version = 21 [default = 0];
     optional string build = 32;
+    optional string device_language = 33;
     optional bool force_offer_backup = 20;
     optional bool force_backup = 22;
     
@@ -85,6 +86,8 @@ message Backup {
         optional bool user_personalized_ads_enabled = 23 [default = true];
         optional AgeComplianceStatus age_compliance_status = 31 [default = AGE_COMPLIANCE_NOT_APPLICABLE];
         optional double age_signal_fetched_time = 34;
+        optional int32 ui_theme = 35;
+        optional bool localization_enabled = 36;
     }
     
     optional Tutorial tutorial = 5;
@@ -283,6 +286,7 @@ message Backup {
         optional bool mission_target_alert = 24;
         optional bool colleggtibles_alert = 25;
         optional bool eov_alert = 26;
+        optional bool translation_alert = 27;
     }
     
     optional MyContracts contracts = 13;
@@ -662,6 +666,7 @@ message ContractPlayerInfo {
     }
     
     optional string aggregation_notes = 16;
+    repeated ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 17;
 }
 
 message ContractEvaluation {
@@ -756,6 +761,7 @@ message BasicRequestInfo {
     optional string platform = 5;
     optional string country = 6;
     optional string language = 7;
+    optional string device_language = 9;
     optional bool debug = 8;
 }
 
@@ -983,6 +989,7 @@ message LocalContract {
     optional double last_amount_when_reward_given = 6;
     optional uint32 num_goals_achieved = 14;
     optional double max_farm_size_reached = 23;
+    optional string custom_egg_id = 25;
     optional uint32 boosts_used = 12;
     optional bool points_replay = 20;
     optional uint32 league = 15;
@@ -990,6 +997,11 @@ message LocalContract {
     optional double last_nag_time = 16;
     optional ContractEvaluation evaluation = 19;
     repeated string reported_uuids = 21;
+}
+
+message ColleggtibleMaxFarmSize {
+    optional string egg_id = 1;
+    optional double max_farm_size_reached = 2;
 }
 
 message MyContracts {
@@ -1002,6 +1014,7 @@ message MyContracts {
     optional double last_grade_progress_shown = 7;
     optional bool show_advanced_evaluations = 8;
     repeated CustomEgg custom_egg_info = 9;
+    repeated ColleggtibleMaxFarmSize colleggtible_max_farm_size_reached = 10;
 }
 
 message ContractsCache {
@@ -1012,6 +1025,57 @@ message ContractsCache {
 message CachedContractSpec {
     optional Contract contract = 1;
     optional double cached_at = 2;
+}
+
+message TranslationPlaceholder {
+    optional uint32 index = 1;
+    optional TranslationPlaceholderType type = 2;
+    optional string sample = 3;
+}
+
+message TranslationKey {
+    optional string key = 1;
+    repeated TranslationPlaceholder placeholders = 2;
+}
+
+message TranslationRequest {
+    optional BasicRequestInfo rinfo = 1;
+    optional string language = 2;
+    repeated TranslationKey keys = 3;
+}
+
+message TranslationEntry {
+    optional string key = 1;
+    optional string translation = 2;
+    optional bool unavailable = 3;
+    optional TranslationStatus status = 4;
+}
+
+message TranslationResponse {
+    optional string language = 1;
+    repeated TranslationEntry entries = 2;
+    optional uint32 cache_version = 3;
+}
+
+message TranslationCache {
+    optional string language = 1;
+    repeated TranslationEntry entries = 2;
+    optional double cached_at = 3;
+    optional uint32 cache_version = 4;
+}
+
+message TranslationPackRequest {
+    optional BasicRequestInfo rinfo = 1;
+    optional string language = 2;
+    optional uint32 cache_version = 3;
+}
+
+message TranslationPackResponse {
+    optional string language = 1;
+    repeated TranslationEntry entries = 2;
+    optional uint32 cache_version = 3;
+    optional bool up_to_date = 4;
+    optional bool truncated = 5;
 }
 
 message QueryCoopRequest {
@@ -2058,6 +2122,11 @@ message DLCItem {
     optional string checksum = 5;
 }
 
+message FontPack {
+    repeated string languages = 1;
+    repeated DLCItem faces = 2;
+}
+
 message ShellSpec {
     optional string identifier = 1;
     
@@ -2285,6 +2354,7 @@ message DLCCatalog {
     repeated ShellObjectSpec shell_objects = 4;
     repeated ShellGroupSpec shell_groups = 5;
     optional double shells_showcase_last_featured_time = 7;
+    repeated FontPack font_packs = 8;
 }
 
 message ShellDB {
@@ -2704,6 +2774,20 @@ enum AgeComplianceStatus {
     AGE_COMPLIANCE_ADULT = 2;
     AGE_COMPLIANCE_MINOR = 3;
     AGE_COMPLIANCE_RESTRICTED = 4;
+}
+
+enum TranslationPlaceholderType {
+    TRANSLATION_PLACEHOLDER_GENERIC = 0;
+    TRANSLATION_PLACEHOLDER_NUMBER = 1;
+    TRANSLATION_PLACEHOLDER_NAME = 2;
+    TRANSLATION_PLACEHOLDER_DURATION = 3;
+    TRANSLATION_PLACEHOLDER_COUNT = 4;
+}
+
+enum TranslationStatus {
+    TRANSLATION_TRANSLATED = 0;
+    TRANSLATION_DEFERRED = 1;
+    TRANSLATION_UNAVAILABLE = 2;
 }
 
 enum LeaderboardScope {

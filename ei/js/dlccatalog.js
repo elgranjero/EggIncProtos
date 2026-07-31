@@ -17,6 +17,7 @@ goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.ei.DLCItem');
+goog.require('proto.ei.FontPack');
 goog.require('proto.ei.ShellGroupSpec');
 goog.require('proto.ei.ShellObjectSpec');
 goog.require('proto.ei.ShellSetSpec');
@@ -49,7 +50,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ei.DLCCatalog.repeatedFields_ = [1,2,3,6,4,5];
+proto.ei.DLCCatalog.repeatedFields_ = [1,2,3,6,4,5,8];
 
 
 
@@ -94,7 +95,9 @@ proto.ei.DLCCatalog.toObject = function(includeInstance, msg) {
     proto.ei.ShellObjectSpec.toObject, includeInstance),
     shellGroupsList: jspb.Message.toObjectList(msg.getShellGroupsList(),
     proto.ei.ShellGroupSpec.toObject, includeInstance),
-    shellsShowcaseLastFeaturedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f
+    shellsShowcaseLastFeaturedTime: (f = jspb.Message.getOptionalFloatingPointField(msg, 7)) == null ? undefined : f,
+    fontPacksList: jspb.Message.toObjectList(msg.getFontPacksList(),
+    proto.ei.FontPack.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -164,6 +167,11 @@ proto.ei.DLCCatalog.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setShellsShowcaseLastFeaturedTime(value);
+      break;
+    case 8:
+      var value = new proto.ei.FontPack;
+      reader.readMessage(value,proto.ei.FontPack.deserializeBinaryFromReader);
+      msg.addFontPacks(value);
       break;
     default:
       reader.skipField();
@@ -247,6 +255,14 @@ proto.ei.DLCCatalog.serializeBinaryToWriter = function(message, writer) {
     writer.writeDouble(
       7,
       f
+    );
+  }
+  f = message.getFontPacksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.ei.FontPack.serializeBinaryToWriter
     );
   }
 };
@@ -513,6 +529,44 @@ proto.ei.DLCCatalog.prototype.clearShellsShowcaseLastFeaturedTime = function() {
  */
 proto.ei.DLCCatalog.prototype.hasShellsShowcaseLastFeaturedTime = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * repeated FontPack font_packs = 8;
+ * @return {!Array<!proto.ei.FontPack>}
+ */
+proto.ei.DLCCatalog.prototype.getFontPacksList = function() {
+  return /** @type{!Array<!proto.ei.FontPack>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ei.FontPack, 8));
+};
+
+
+/**
+ * @param {!Array<!proto.ei.FontPack>} value
+ * @return {!proto.ei.DLCCatalog} returns this
+*/
+proto.ei.DLCCatalog.prototype.setFontPacksList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.ei.FontPack=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ei.FontPack}
+ */
+proto.ei.DLCCatalog.prototype.addFontPacks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.ei.FontPack, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ei.DLCCatalog} returns this
+ */
+proto.ei.DLCCatalog.prototype.clearFontPacksList = function() {
+  return this.setFontPacksList([]);
 };
 
 

@@ -441,6 +441,30 @@ public object LocalContractKt {
     }
 
     /**
+     * `optional string custom_egg_id = 25;`
+     */
+    public var customEggId: kotlin.String
+      @kotlin.jvm.JvmName("getCustomEggId")
+        get() = _builder.customEggId
+      @kotlin.jvm.JvmName("setCustomEggId")
+        set(value) {
+        _builder.customEggId = value
+      }
+    /**
+     * `optional string custom_egg_id = 25;`
+     */
+    public fun clearCustomEggId() {
+      _builder.clearCustomEggId()
+    }
+    /**
+     * `optional string custom_egg_id = 25;`
+     * @return Whether the customEggId field is set.
+     */
+    public fun hasCustomEggId(): kotlin.Boolean {
+      return _builder.hasCustomEggId()
+    }
+
+    /**
      * `optional uint32 boosts_used = 12;`
      */
     public var boostsUsed: kotlin.Int
