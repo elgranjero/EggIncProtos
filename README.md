@@ -53,6 +53,7 @@
     - [ClearAllUserDataRequest](#ei-ClearAllUserDataRequest)
     - [CollectContractArtifactRewardsRequest](#ei-CollectContractArtifactRewardsRequest)
     - [CollectSeasonArtifactRewardsRequest](#ei-CollectSeasonArtifactRewardsRequest)
+    - [ColleggtibleMaxFarmSize](#ei-ColleggtibleMaxFarmSize)
     - [CompleteArtifact](#ei-CompleteArtifact)
     - [CompleteMissionResponse](#ei-CompleteMissionResponse)
     - [CompleteMissionResponse.SecureArtifactSpec](#ei-CompleteMissionResponse-SecureArtifactSpec)
@@ -119,6 +120,7 @@
     - [EggIncFirstContactRequest](#ei-EggIncFirstContactRequest)
     - [EggIncFirstContactResponse](#ei-EggIncFirstContactResponse)
     - [FarmProductionParams](#ei-FarmProductionParams)
+    - [FontPack](#ei-FontPack)
     - [GameModifier](#ei-GameModifier)
     - [GenericAction](#ei-GenericAction)
     - [GenericActionBatchRequest](#ei-GenericActionBatchRequest)
@@ -213,6 +215,14 @@
     - [SyncPathOfVirtueRequest](#ei-SyncPathOfVirtueRequest)
     - [SyncPathOfVirtueResponse](#ei-SyncPathOfVirtueResponse)
     - [TipsDB](#ei-TipsDB)
+    - [TranslationCache](#ei-TranslationCache)
+    - [TranslationEntry](#ei-TranslationEntry)
+    - [TranslationKey](#ei-TranslationKey)
+    - [TranslationPackRequest](#ei-TranslationPackRequest)
+    - [TranslationPackResponse](#ei-TranslationPackResponse)
+    - [TranslationPlaceholder](#ei-TranslationPlaceholder)
+    - [TranslationRequest](#ei-TranslationRequest)
+    - [TranslationResponse](#ei-TranslationResponse)
     - [UpdateCoopPermissionsRequest](#ei-UpdateCoopPermissionsRequest)
     - [UpdateCoopPermissionsResponse](#ei-UpdateCoopPermissionsResponse)
     - [UserDataInfoRequest](#ei-UserDataInfoRequest)
@@ -260,6 +270,8 @@
     - [ShellShowcaseListingInfo.Status](#ei-ShellShowcaseListingInfo-Status)
     - [ShellSpec.AssetType](#ei-ShellSpec-AssetType)
     - [SyncPathOfVirtueResponse.Status](#ei-SyncPathOfVirtueResponse-Status)
+    - [TranslationPlaceholderType](#ei-TranslationPlaceholderType)
+    - [TranslationStatus](#ei-TranslationStatus)
     - [UILocation](#ei-UILocation)
     - [UserSubscriptionInfo.Level](#ei-UserSubscriptionInfo-Level)
     - [UserSubscriptionInfo.Status](#ei-UserSubscriptionInfo-Status)
@@ -807,6 +819,7 @@
 | approx_time | [double](#double) | optional |  |
 | version | [uint32](#uint32) | optional |  Default: 0 |
 | build | [string](#string) | optional |  |
+| device_language | [string](#string) | optional |  |
 | force_offer_backup | [bool](#bool) | optional |  |
 | force_backup | [bool](#bool) | optional |  |
 | settings | [Backup.Settings](#ei-Backup-Settings) | optional |  |
@@ -987,6 +1000,7 @@
 | mission_target_alert | [bool](#bool) | optional |  |
 | colleggtibles_alert | [bool](#bool) | optional |  |
 | eov_alert | [bool](#bool) | optional |  |
+| translation_alert | [bool](#bool) | optional |  |
 
 
 
@@ -1116,6 +1130,8 @@
 | user_personalized_ads_enabled | [bool](#bool) | optional |  Default: true |
 | age_compliance_status | [AgeComplianceStatus](#ei-AgeComplianceStatus) | optional |  Default: AGE_COMPLIANCE_NOT_APPLICABLE |
 | age_signal_fetched_time | [double](#double) | optional |  |
+| ui_theme | [int32](#int32) | optional |  |
+| localization_enabled | [bool](#bool) | optional |  |
 
 
 
@@ -1279,6 +1295,7 @@
 | platform | [string](#string) | optional |  |
 | country | [string](#string) | optional |  |
 | language | [string](#string) | optional |  |
+| device_language | [string](#string) | optional |  |
 | debug | [bool](#bool) | optional |  |
 
 
@@ -1385,6 +1402,22 @@
 | season_identifier | [string](#string) | optional |  |
 | cxp | [double](#double) | optional |  |
 | best_ship | [MissionInfo.Spaceship](#ei-MissionInfo-Spaceship) | optional |  |
+
+
+
+
+
+
+<a name="ei-ColleggtibleMaxFarmSize"></a>
+
+### ColleggtibleMaxFarmSize
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| egg_id | [string](#string) | optional |  |
+| max_farm_size_reached | [double](#double) | optional |  |
 
 
 
@@ -1952,6 +1985,7 @@
 | unread_evaluations | [ContractEvaluation](#ei-ContractEvaluation) | repeated |  |
 | season_progress | [ContractPlayerInfo.SeasonProgress](#ei-ContractPlayerInfo-SeasonProgress) | repeated |  |
 | aggregation_notes | [string](#string) | optional |  |
+| colleggtible_max_farm_size_reached | [ColleggtibleMaxFarmSize](#ei-ColleggtibleMaxFarmSize) | repeated |  |
 
 
 
@@ -2546,6 +2580,7 @@
 | shell_objects | [ShellObjectSpec](#ei-ShellObjectSpec) | repeated |  |
 | shell_groups | [ShellGroupSpec](#ei-ShellGroupSpec) | repeated |  |
 | shells_showcase_last_featured_time | [double](#double) | optional |  |
+| font_packs | [FontPack](#ei-FontPack) | repeated |  |
 
 
 
@@ -2724,6 +2759,22 @@
 | ihr | [double](#double) | optional |  |
 | sr | [double](#double) | optional |  |
 | delivered | [double](#double) | optional |  |
+
+
+
+
+
+
+<a name="ei-FontPack"></a>
+
+### FontPack
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| languages | [string](#string) | repeated |  |
+| faces | [DLCItem](#ei-DLCItem) | repeated |  |
 
 
 
@@ -3413,6 +3464,7 @@
 | last_amount_when_reward_given | [double](#double) | optional |  |
 | num_goals_achieved | [uint32](#uint32) | optional |  |
 | max_farm_size_reached | [double](#double) | optional |  |
+| custom_egg_id | [string](#string) | optional |  |
 | boosts_used | [uint32](#uint32) | optional |  |
 | points_replay | [bool](#bool) | optional |  |
 | league | [uint32](#uint32) | optional |  |
@@ -3638,6 +3690,7 @@
 | last_grade_progress_shown | [double](#double) | optional |  |
 | show_advanced_evaluations | [bool](#bool) | optional |  |
 | custom_egg_info | [CustomEgg](#ei-CustomEgg) | repeated |  |
+| colleggtible_max_farm_size_reached | [ColleggtibleMaxFarmSize](#ei-ColleggtibleMaxFarmSize) | repeated |  |
 
 
 
@@ -4597,6 +4650,145 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | tips | [InGameMail](#ei-InGameMail) | repeated |  |
+
+
+
+
+
+
+<a name="ei-TranslationCache"></a>
+
+### TranslationCache
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| language | [string](#string) | optional |  |
+| entries | [TranslationEntry](#ei-TranslationEntry) | repeated |  |
+| cached_at | [double](#double) | optional |  |
+| cache_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-TranslationEntry"></a>
+
+### TranslationEntry
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) | optional |  |
+| translation | [string](#string) | optional |  |
+| unavailable | [bool](#bool) | optional |  |
+| status | [TranslationStatus](#ei-TranslationStatus) | optional |  |
+
+
+
+
+
+
+<a name="ei-TranslationKey"></a>
+
+### TranslationKey
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) | optional |  |
+| placeholders | [TranslationPlaceholder](#ei-TranslationPlaceholder) | repeated |  |
+
+
+
+
+
+
+<a name="ei-TranslationPackRequest"></a>
+
+### TranslationPackRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| language | [string](#string) | optional |  |
+| cache_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-TranslationPackResponse"></a>
+
+### TranslationPackResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| language | [string](#string) | optional |  |
+| entries | [TranslationEntry](#ei-TranslationEntry) | repeated |  |
+| cache_version | [uint32](#uint32) | optional |  |
+| up_to_date | [bool](#bool) | optional |  |
+| truncated | [bool](#bool) | optional |  |
+
+
+
+
+
+
+<a name="ei-TranslationPlaceholder"></a>
+
+### TranslationPlaceholder
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| index | [uint32](#uint32) | optional |  |
+| type | [TranslationPlaceholderType](#ei-TranslationPlaceholderType) | optional |  |
+| sample | [string](#string) | optional |  |
+
+
+
+
+
+
+<a name="ei-TranslationRequest"></a>
+
+### TranslationRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| rinfo | [BasicRequestInfo](#ei-BasicRequestInfo) | optional |  |
+| language | [string](#string) | optional |  |
+| keys | [TranslationKey](#ei-TranslationKey) | repeated |  |
+
+
+
+
+
+
+<a name="ei-TranslationResponse"></a>
+
+### TranslationResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| language | [string](#string) | optional |  |
+| entries | [TranslationEntry](#ei-TranslationEntry) | repeated |  |
+| cache_version | [uint32](#uint32) | optional |  |
 
 
 
@@ -5571,6 +5763,34 @@
 | OK | 0 |  |
 | PROBLEM | 1 |  |
 | HTTP_ERROR | 2 |  |
+
+
+
+<a name="ei-TranslationPlaceholderType"></a>
+
+### TranslationPlaceholderType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| TRANSLATION_PLACEHOLDER_GENERIC | 0 |  |
+| TRANSLATION_PLACEHOLDER_NUMBER | 1 |  |
+| TRANSLATION_PLACEHOLDER_NAME | 2 |  |
+| TRANSLATION_PLACEHOLDER_DURATION | 3 |  |
+| TRANSLATION_PLACEHOLDER_COUNT | 4 |  |
+
+
+
+<a name="ei-TranslationStatus"></a>
+
+### TranslationStatus
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| TRANSLATION_TRANSLATED | 0 |  |
+| TRANSLATION_DEFERRED | 1 |  |
+| TRANSLATION_UNAVAILABLE | 2 |  |
 
 
 

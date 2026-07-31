@@ -375,6 +375,10 @@
                 </li>
               
                 <li>
+                  <a href="#ei.ColleggtibleMaxFarmSize"><span class="badge">M</span>ColleggtibleMaxFarmSize</a>
+                </li>
+              
+                <li>
                   <a href="#ei.CompleteArtifact"><span class="badge">M</span>CompleteArtifact</a>
                 </li>
               
@@ -636,6 +640,10 @@
               
                 <li>
                   <a href="#ei.FarmProductionParams"><span class="badge">M</span>FarmProductionParams</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.FontPack"><span class="badge">M</span>FontPack</a>
                 </li>
               
                 <li>
@@ -1015,6 +1023,38 @@
                 </li>
               
                 <li>
+                  <a href="#ei.TranslationCache"><span class="badge">M</span>TranslationCache</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationEntry"><span class="badge">M</span>TranslationEntry</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationKey"><span class="badge">M</span>TranslationKey</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationPackRequest"><span class="badge">M</span>TranslationPackRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationPackResponse"><span class="badge">M</span>TranslationPackResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationPlaceholder"><span class="badge">M</span>TranslationPlaceholder</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationRequest"><span class="badge">M</span>TranslationRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationResponse"><span class="badge">M</span>TranslationResponse</a>
+                </li>
+              
+                <li>
                   <a href="#ei.UpdateCoopPermissionsRequest"><span class="badge">M</span>UpdateCoopPermissionsRequest</a>
                 </li>
               
@@ -1197,6 +1237,14 @@
               
                 <li>
                   <a href="#ei.SyncPathOfVirtueResponse.Status"><span class="badge">E</span>SyncPathOfVirtueResponse.Status</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationPlaceholderType"><span class="badge">E</span>TranslationPlaceholderType</a>
+                </li>
+              
+                <li>
+                  <a href="#ei.TranslationStatus"><span class="badge">E</span>TranslationStatus</a>
                 </li>
               
                 <li>
@@ -2876,6 +2924,13 @@
                 </tr>
               
                 <tr>
+                  <td>device_language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>force_offer_backup</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -3730,6 +3785,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>translation_alert</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -4143,6 +4205,20 @@
                 <tr>
                   <td>age_signal_fetched_time</td>
                   <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ui_theme</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>localization_enabled</td>
+                  <td><a href="#bool">bool</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -4803,6 +4879,13 @@
                 </tr>
               
                 <tr>
+                  <td>device_language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>debug</td>
                   <td><a href="#bool">bool</a></td>
                   <td>optional</td>
@@ -5054,6 +5137,37 @@
                 <tr>
                   <td>best_ship</td>
                   <td><a href="#ei.MissionInfo.Spaceship">MissionInfo.Spaceship</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.ColleggtibleMaxFarmSize">ColleggtibleMaxFarmSize</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>egg_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>max_farm_size_reached</td>
+                  <td><a href="#double">double</a></td>
                   <td>optional</td>
                   <td><p> </p></td>
                 </tr>
@@ -7083,6 +7197,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>colleggtible_max_farm_size_reached</td>
+                  <td><a href="#ei.ColleggtibleMaxFarmSize">ColleggtibleMaxFarmSize</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -8568,6 +8689,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>font_packs</td>
+                  <td><a href="#ei.FontPack">FontPack</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -9082,6 +9210,37 @@
                   <td>delivered</td>
                   <td><a href="#double">double</a></td>
                   <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.FontPack">FontPack</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>languages</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>faces</td>
+                  <td><a href="#ei.DLCItem">DLCItem</a></td>
+                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -11236,6 +11395,13 @@
                 </tr>
               
                 <tr>
+                  <td>custom_egg_id</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>boosts_used</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td>optional</td>
@@ -11834,6 +12000,13 @@
                 <tr>
                   <td>custom_egg_info</td>
                   <td><a href="#ei.CustomEgg">CustomEgg</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>colleggtible_max_farm_size_reached</td>
+                  <td><a href="#ei.ColleggtibleMaxFarmSize">ColleggtibleMaxFarmSize</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -14579,6 +14752,331 @@
                   <td>tips</td>
                   <td><a href="#ei.InGameMail">InGameMail</a></td>
                   <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationCache">TranslationCache</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>entries</td>
+                  <td><a href="#ei.TranslationEntry">TranslationEntry</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cached_at</td>
+                  <td><a href="#double">double</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cache_version</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationEntry">TranslationEntry</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>key</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>translation</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>unavailable</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#ei.TranslationStatus">TranslationStatus</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationKey">TranslationKey</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>key</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>placeholders</td>
+                  <td><a href="#ei.TranslationPlaceholder">TranslationPlaceholder</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationPackRequest">TranslationPackRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cache_version</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationPackResponse">TranslationPackResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>entries</td>
+                  <td><a href="#ei.TranslationEntry">TranslationEntry</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cache_version</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>up_to_date</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>truncated</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationPlaceholder">TranslationPlaceholder</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>index</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>type</td>
+                  <td><a href="#ei.TranslationPlaceholderType">TranslationPlaceholderType</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sample</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationRequest">TranslationRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rinfo</td>
+                  <td><a href="#ei.BasicRequestInfo">BasicRequestInfo</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>keys</td>
+                  <td><a href="#ei.TranslationKey">TranslationKey</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="ei.TranslationResponse">TranslationResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>language</td>
+                  <td><a href="#string">string</a></td>
+                  <td>optional</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>entries</td>
+                  <td><a href="#ei.TranslationEntry">TranslationEntry</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cache_version</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>optional</td>
                   <td><p> </p></td>
                 </tr>
               
@@ -18034,6 +18532,76 @@
             
               <tr>
                 <td>HTTP_ERROR</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.TranslationPlaceholderType">TranslationPlaceholderType</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>TRANSLATION_PLACEHOLDER_GENERIC</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TRANSLATION_PLACEHOLDER_NUMBER</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TRANSLATION_PLACEHOLDER_NAME</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TRANSLATION_PLACEHOLDER_DURATION</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TRANSLATION_PLACEHOLDER_COUNT</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ei.TranslationStatus">TranslationStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>TRANSLATION_TRANSLATED</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TRANSLATION_DEFERRED</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TRANSLATION_UNAVAILABLE</td>
                 <td>2</td>
                 <td><p></p></td>
               </tr>
