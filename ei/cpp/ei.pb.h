@@ -1067,6 +1067,22 @@ extern const ::google::protobuf::internal::ClassDataFull FarmProductionParams_cl
 #else
 extern const FarmProductionParamsGlobalsTypeInternal FarmProductionParams_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class FontDLCRequest;
+struct FontDLCRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern FontDLCRequestGlobalsTypeInternal FontDLCRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull FontDLCRequest_class_data_;
+#else
+extern const FontDLCRequestGlobalsTypeInternal FontDLCRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class FontDLCResponse;
+struct FontDLCResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern FontDLCResponseGlobalsTypeInternal FontDLCResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull FontDLCResponse_class_data_;
+#else
+extern const FontDLCResponseGlobalsTypeInternal FontDLCResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class FontPack;
 struct FontPackGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -1890,6 +1906,22 @@ extern TranslationResponseGlobalsTypeInternal TranslationResponse_globals_;
 extern const ::google::protobuf::internal::ClassDataFull TranslationResponse_class_data_;
 #else
 extern const TranslationResponseGlobalsTypeInternal TranslationResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class TranslationSeed;
+struct TranslationSeedGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern TranslationSeedGlobalsTypeInternal TranslationSeed_globals_;
+extern const ::google::protobuf::internal::ClassDataFull TranslationSeed_class_data_;
+#else
+extern const TranslationSeedGlobalsTypeInternal TranslationSeed_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class TranslationSeedEntry;
+struct TranslationSeedEntryGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern TranslationSeedEntryGlobalsTypeInternal TranslationSeedEntry_globals_;
+extern const ::google::protobuf::internal::ClassDataFull TranslationSeedEntry_class_data_;
+#else
+extern const TranslationSeedEntryGlobalsTypeInternal TranslationSeedEntry_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 class UpdateCoopPermissionsRequest;
 struct UpdateCoopPermissionsRequestGlobalsTypeInternal;
@@ -4689,7 +4721,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserVerificationAnalysis final : pu
   [[nodiscard]] static const UserVerificationAnalysis& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserVerificationAnalysis>(&UserVerificationAnalysis_globals_);
   }
-  static constexpr int kIndexInFileMessages = 222;
+  static constexpr int kIndexInFileMessages = 226;
   friend void swap(UserVerificationAnalysis& a, UserVerificationAnalysis& b) { a.Swap(&b); }
   inline void Swap(UserVerificationAnalysis* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5432,7 +5464,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserSubscriptionInfo_HistoryEntry f
   [[nodiscard]] static const UserSubscriptionInfo_HistoryEntry& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserSubscriptionInfo_HistoryEntry>(&UserSubscriptionInfo_HistoryEntry_globals_);
   }
-  static constexpr int kIndexInFileMessages = 223;
+  static constexpr int kIndexInFileMessages = 227;
   friend void swap(UserSubscriptionInfo_HistoryEntry& a, UserSubscriptionInfo_HistoryEntry& b) { a.Swap(&b); }
   inline void Swap(UserSubscriptionInfo_HistoryEntry* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5673,7 +5705,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserDataInfoResponse final : public
   [[nodiscard]] static const UserDataInfoResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserDataInfoResponse>(&UserDataInfoResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 123;
+  static constexpr int kIndexInFileMessages = 127;
   friend void swap(UserDataInfoResponse& a, UserDataInfoResponse& b) { a.Swap(&b); }
   inline void Swap(UserDataInfoResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5919,7 +5951,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateCoopPermissionsResponse final
   [[nodiscard]] static const UpdateCoopPermissionsResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UpdateCoopPermissionsResponse>(&UpdateCoopPermissionsResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 97;
+  static constexpr int kIndexInFileMessages = 101;
   friend void swap(UpdateCoopPermissionsResponse& a, UpdateCoopPermissionsResponse& b) { a.Swap(&b); }
   inline void Swap(UpdateCoopPermissionsResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6078,6 +6110,233 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateCoopPermissionsResponse final
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr message_;
     bool success_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TranslationSeedEntry final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ei.TranslationSeedEntry) */ {
+ public:
+  inline TranslationSeedEntry() : TranslationSeedEntry(nullptr) {}
+  ~TranslationSeedEntry() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(TranslationSeedEntry* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(TranslationSeedEntry));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr TranslationSeedEntry(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline TranslationSeedEntry(const TranslationSeedEntry& from) : TranslationSeedEntry(nullptr, from) {}
+  inline TranslationSeedEntry(TranslationSeedEntry&& from) noexcept : TranslationSeedEntry(nullptr, ::std::move(from)) {}
+  inline TranslationSeedEntry& operator=(const TranslationSeedEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TranslationSeedEntry& operator=(TranslationSeedEntry&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const TranslationSeedEntry& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<TranslationSeedEntry>(&TranslationSeedEntry_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 92;
+  friend void swap(TranslationSeedEntry& a, TranslationSeedEntry& b) { a.Swap(&b); }
+  inline void Swap(TranslationSeedEntry* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(TranslationSeedEntry* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] TranslationSeedEntry* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<TranslationSeedEntry>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const TranslationSeedEntry& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const TranslationSeedEntry& from) { TranslationSeedEntry::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(TranslationSeedEntry* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ei.TranslationSeedEntry"; }
+
+  explicit TranslationSeedEntry(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  TranslationSeedEntry(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const TranslationSeedEntry& from);
+  TranslationSeedEntry(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, TranslationSeedEntry&& from) noexcept
+      : TranslationSeedEntry(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kSourceFieldNumber = 1,
+    kTranslationFieldNumber = 2,
+  };
+  // optional string source = 1;
+  [[nodiscard]] bool has_source()
+      const;
+  void clear_source() ;
+  [[nodiscard]] const ::std::string& source() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_source(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_source();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_source();
+  void set_allocated_source(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_source() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_source(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_source();
+
+  public:
+  // optional string translation = 2;
+  [[nodiscard]] bool has_translation()
+      const;
+  void clear_translation() ;
+  [[nodiscard]] const ::std::string& translation() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_translation(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_translation();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_translation();
+  void set_allocated_translation(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_translation() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_translation(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_translation();
+
+  public:
+  // @@protoc_insertion_point(class_scope:ei.TranslationSeedEntry)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const TranslationSeedEntry& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr source_;
+    ::google::protobuf::internal::ArenaStringPtr translation_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -6632,7 +6891,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SyncPathOfVirtueResponse final : pu
   [[nodiscard]] static const SyncPathOfVirtueResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SyncPathOfVirtueResponse>(&SyncPathOfVirtueResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 229;
+  static constexpr int kIndexInFileMessages = 233;
   friend void swap(SyncPathOfVirtueResponse& a, SyncPathOfVirtueResponse& b) { a.Swap(&b); }
   inline void Swap(SyncPathOfVirtueResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6870,7 +7129,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellSetSpec_VariationSpec final : 
   [[nodiscard]] static const ShellSetSpec_VariationSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellSetSpec_VariationSpec>(&ShellSetSpec_VariationSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 196;
+  static constexpr int kIndexInFileMessages = 200;
   friend void swap(ShellSetSpec_VariationSpec& a, ShellSetSpec_VariationSpec& b) { a.Swap(&b); }
   inline void Swap(ShellSetSpec_VariationSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -7153,7 +7412,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellPopularityStats_Entry final : 
   [[nodiscard]] static const ShellPopularityStats_Entry& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellPopularityStats_Entry>(&ShellPopularityStats_Entry_globals_);
   }
-  static constexpr int kIndexInFileMessages = 213;
+  static constexpr int kIndexInFileMessages = 217;
   friend void swap(ShellPopularityStats_Entry& a, ShellPopularityStats_Entry& b) { a.Swap(&b); }
   inline void Swap(ShellPopularityStats_Entry* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -7403,7 +7662,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellGroupSpec final : public ::goo
   [[nodiscard]] static const ShellGroupSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellGroupSpec>(&ShellGroupSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 200;
+  static constexpr int kIndexInFileMessages = 204;
   friend void swap(ShellGroupSpec& a, ShellGroupSpec& b) { a.Swap(&b); }
   inline void Swap(ShellGroupSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -7687,7 +7946,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ShellStatus final : public 
   [[nodiscard]] static const ShellDB_ShellStatus& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ShellStatus>(&ShellDB_ShellStatus_globals_);
   }
-  static constexpr int kIndexInFileMessages = 202;
+  static constexpr int kIndexInFileMessages = 206;
   friend void swap(ShellDB_ShellStatus& a, ShellDB_ShellStatus& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ShellStatus* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -7909,7 +8168,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ShellSetVariationStatus fin
   [[nodiscard]] static const ShellDB_ShellSetVariationStatus& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ShellSetVariationStatus>(&ShellDB_ShellSetVariationStatus_globals_);
   }
-  static constexpr int kIndexInFileMessages = 204;
+  static constexpr int kIndexInFileMessages = 208;
   friend void swap(ShellDB_ShellSetVariationStatus& a, ShellDB_ShellSetVariationStatus& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ShellSetVariationStatus* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8146,7 +8405,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ShellSetConfiguration final
   [[nodiscard]] static const ShellDB_ShellSetConfiguration& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ShellSetConfiguration>(&ShellDB_ShellSetConfiguration_globals_);
   }
-  static constexpr int kIndexInFileMessages = 208;
+  static constexpr int kIndexInFileMessages = 212;
   friend void swap(ShellDB_ShellSetConfiguration& a, ShellDB_ShellSetConfiguration& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ShellSetConfiguration* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8420,7 +8679,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ShellGroupConfiguration fin
   [[nodiscard]] static const ShellDB_ShellGroupConfiguration& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ShellGroupConfiguration>(&ShellDB_ShellGroupConfiguration_globals_);
   }
-  static constexpr int kIndexInFileMessages = 209;
+  static constexpr int kIndexInFileMessages = 213;
   friend void swap(ShellDB_ShellGroupConfiguration& a, ShellDB_ShellGroupConfiguration& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ShellGroupConfiguration* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8642,7 +8901,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ShellElementStatus final : 
   [[nodiscard]] static const ShellDB_ShellElementStatus& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ShellElementStatus>(&ShellDB_ShellElementStatus_globals_);
   }
-  static constexpr int kIndexInFileMessages = 203;
+  static constexpr int kIndexInFileMessages = 207;
   friend void swap(ShellDB_ShellElementStatus& a, ShellDB_ShellElementStatus& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ShellElementStatus* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8864,7 +9123,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ShellConfiguration final : 
   [[nodiscard]] static const ShellDB_ShellConfiguration& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ShellConfiguration>(&ShellDB_ShellConfiguration_globals_);
   }
-  static constexpr int kIndexInFileMessages = 207;
+  static constexpr int kIndexInFileMessages = 211;
   friend void swap(ShellDB_ShellConfiguration& a, ShellDB_ShellConfiguration& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ShellConfiguration* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -9100,7 +9359,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_ChickenConfig final : publi
   [[nodiscard]] static const ShellDB_ChickenConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_ChickenConfig>(&ShellDB_ChickenConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 210;
+  static constexpr int kIndexInFileMessages = 214;
   friend void swap(ShellDB_ChickenConfig& a, ShellDB_ChickenConfig& b) { a.Swap(&b); }
   inline void Swap(ShellDB_ChickenConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -9327,7 +9586,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SetArtifactResponse final : public 
   [[nodiscard]] static const SetArtifactResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SetArtifactResponse>(&SetArtifactResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 177;
+  static constexpr int kIndexInFileMessages = 181;
   friend void swap(SetArtifactResponse& a, SetArtifactResponse& b) { a.Swap(&b); }
   inline void Swap(SetArtifactResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -9563,7 +9822,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ServerGift final : public ::google:
   [[nodiscard]] static const ServerGift& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ServerGift>(&ServerGift_globals_);
   }
-  static constexpr int kIndexInFileMessages = 125;
+  static constexpr int kIndexInFileMessages = 129;
   friend void swap(ServerGift& a, ServerGift& b) { a.Swap(&b); }
   inline void Swap(ServerGift* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -10346,7 +10605,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReturnEDTPayload final : public ::g
   [[nodiscard]] static const ReturnEDTPayload& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ReturnEDTPayload>(&ReturnEDTPayload_globals_);
   }
-  static constexpr int kIndexInFileMessages = 191;
+  static constexpr int kIndexInFileMessages = 195;
   friend void swap(ReturnEDTPayload& a, ReturnEDTPayload& b) { a.Swap(&b); }
   inline void Swap(ReturnEDTPayload* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -10554,7 +10813,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED QueryCoopResponse final : public ::
   [[nodiscard]] static const QueryCoopResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<QueryCoopResponse>(&QueryCoopResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 90;
+  static constexpr int kIndexInFileMessages = 94;
   friend void swap(QueryCoopResponse& a, QueryCoopResponse& b) { a.Swap(&b); }
   inline void Swap(QueryCoopResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -10841,7 +11100,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PeriodicalsResponse_RoyaltyInfo fin
   [[nodiscard]] static const PeriodicalsResponse_RoyaltyInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PeriodicalsResponse_RoyaltyInfo>(&PeriodicalsResponse_RoyaltyInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 140;
+  static constexpr int kIndexInFileMessages = 144;
   friend void swap(PeriodicalsResponse_RoyaltyInfo& a, PeriodicalsResponse_RoyaltyInfo& b) { a.Swap(&b); }
   inline void Swap(PeriodicalsResponse_RoyaltyInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -11063,7 +11322,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PathOfVirtueInfo final : public ::g
   [[nodiscard]] static const PathOfVirtueInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PathOfVirtueInfo>(&PathOfVirtueInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 227;
+  static constexpr int kIndexInFileMessages = 231;
   friend void swap(PathOfVirtueInfo& a, PathOfVirtueInfo& b) { a.Swap(&b); }
   inline void Swap(PathOfVirtueInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -11294,7 +11553,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MissionInfo_Fuel final : public ::g
   [[nodiscard]] static const MissionInfo_Fuel& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MissionInfo_Fuel>(&MissionInfo_Fuel_globals_);
   }
-  static constexpr int kIndexInFileMessages = 151;
+  static constexpr int kIndexInFileMessages = 155;
   friend void swap(MissionInfo_Fuel& a, MissionInfo_Fuel& b) { a.Swap(&b); }
   inline void Swap(MissionInfo_Fuel* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -11511,7 +11770,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MailState_TipState final : public :
   [[nodiscard]] static const MailState_TipState& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MailState_TipState>(&MailState_TipState_globals_);
   }
-  static constexpr int kIndexInFileMessages = 138;
+  static constexpr int kIndexInFileMessages = 142;
   friend void swap(MailState_TipState& a, MailState_TipState& b) { a.Swap(&b); }
   inline void Swap(MailState_TipState* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -11747,7 +12006,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_MiscConfig final : publi
   [[nodiscard]] static const LiveConfig_MiscConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_MiscConfig>(&LiveConfig_MiscConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 131;
+  static constexpr int kIndexInFileMessages = 135;
   friend void swap(LiveConfig_MiscConfig& a, LiveConfig_MiscConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_MiscConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -12151,7 +12410,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_HelpConfig_HowToVideoInf
   [[nodiscard]] static const LiveConfig_HelpConfig_HowToVideoInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_HelpConfig_HowToVideoInfo>(&LiveConfig_HelpConfig_HowToVideoInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 132;
+  static constexpr int kIndexInFileMessages = 136;
   friend void swap(LiveConfig_HelpConfig_HowToVideoInfo& a, LiveConfig_HelpConfig_HowToVideoInfo& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_HelpConfig_HowToVideoInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -12464,7 +12723,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_GiftConfig_GiftValueConf
   [[nodiscard]] static const LiveConfig_GiftConfig_GiftValueConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_GiftConfig_GiftValueConfig>(&LiveConfig_GiftConfig_GiftValueConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 128;
+  static constexpr int kIndexInFileMessages = 132;
   friend void swap(LiveConfig_GiftConfig_GiftValueConfig& a, LiveConfig_GiftConfig_GiftValueConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_GiftConfig_GiftValueConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -12742,7 +13001,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_GiftConfig_GiftMuConfig 
   [[nodiscard]] static const LiveConfig_GiftConfig_GiftMuConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_GiftConfig_GiftMuConfig>(&LiveConfig_GiftConfig_GiftMuConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 129;
+  static constexpr int kIndexInFileMessages = 133;
   friend void swap(LiveConfig_GiftConfig_GiftMuConfig& a, LiveConfig_GiftConfig_GiftMuConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_GiftConfig_GiftMuConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -12973,7 +13232,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_BoostsConfig_ItemConfig 
   [[nodiscard]] static const LiveConfig_BoostsConfig_ItemConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_BoostsConfig_ItemConfig>(&LiveConfig_BoostsConfig_ItemConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 126;
+  static constexpr int kIndexInFileMessages = 130;
   friend void swap(LiveConfig_BoostsConfig_ItemConfig& a, LiveConfig_BoostsConfig_ItemConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_BoostsConfig_ItemConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -13223,7 +13482,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardResponse_Entry final : p
   [[nodiscard]] static const LeaderboardResponse_Entry& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardResponse_Entry>(&LeaderboardResponse_Entry_globals_);
   }
-  static constexpr int kIndexInFileMessages = 118;
+  static constexpr int kIndexInFileMessages = 122;
   friend void swap(LeaderboardResponse_Entry& a, LeaderboardResponse_Entry& b) { a.Swap(&b); }
   inline void Swap(LeaderboardResponse_Entry* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -13459,7 +13718,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardInfo_Season final : publ
   [[nodiscard]] static const LeaderboardInfo_Season& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardInfo_Season>(&LeaderboardInfo_Season_globals_);
   }
-  static constexpr int kIndexInFileMessages = 115;
+  static constexpr int kIndexInFileMessages = 119;
   friend void swap(LeaderboardInfo_Season& a, LeaderboardInfo_Season& b) { a.Swap(&b); }
   inline void Swap(LeaderboardInfo_Season* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -13686,7 +13945,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardAnalysis_Chunk final : p
   [[nodiscard]] static const LeaderboardAnalysis_Chunk& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardAnalysis_Chunk>(&LeaderboardAnalysis_Chunk_globals_);
   }
-  static constexpr int kIndexInFileMessages = 113;
+  static constexpr int kIndexInFileMessages = 117;
   friend void swap(LeaderboardAnalysis_Chunk& a, LeaderboardAnalysis_Chunk& b) { a.Swap(&b); }
   inline void Swap(LeaderboardAnalysis_Chunk* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -13969,7 +14228,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED JoinCoopResponse final : public ::g
   [[nodiscard]] static const JoinCoopResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<JoinCoopResponse>(&JoinCoopResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 94;
+  static constexpr int kIndexInFileMessages = 98;
   friend void swap(JoinCoopResponse& a, JoinCoopResponse& b) { a.Swap(&b); }
   inline void Swap(JoinCoopResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -14308,7 +14567,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED InventorySlot final : public ::goog
   [[nodiscard]] static const InventorySlot& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<InventorySlot>(&InventorySlot_globals_);
   }
-  static constexpr int kIndexInFileMessages = 156;
+  static constexpr int kIndexInFileMessages = 160;
   friend void swap(InventorySlot& a, InventorySlot& b) { a.Swap(&b); }
   inline void Swap(InventorySlot* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -14525,7 +14784,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED IdleSessionSummary_Stat final : pub
   [[nodiscard]] static const IdleSessionSummary_Stat& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<IdleSessionSummary_Stat>(&IdleSessionSummary_Stat_globals_);
   }
-  static constexpr int kIndexInFileMessages = 103;
+  static constexpr int kIndexInFileMessages = 107;
   friend void swap(IdleSessionSummary_Stat& a, IdleSessionSummary_Stat& b) { a.Swap(&b); }
   inline void Swap(IdleSessionSummary_Stat* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -15250,6 +15509,242 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GameModifier final : public ::googl
     ::google::protobuf::internal::ArenaStringPtr description_;
     double value_;
     int dimension_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED FontDLCRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ei.FontDLCRequest) */ {
+ public:
+  inline FontDLCRequest() : FontDLCRequest(nullptr) {}
+  ~FontDLCRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(FontDLCRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(FontDLCRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr FontDLCRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline FontDLCRequest(const FontDLCRequest& from) : FontDLCRequest(nullptr, from) {}
+  inline FontDLCRequest(FontDLCRequest&& from) noexcept : FontDLCRequest(nullptr, ::std::move(from)) {}
+  inline FontDLCRequest& operator=(const FontDLCRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FontDLCRequest& operator=(FontDLCRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const FontDLCRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<FontDLCRequest>(&FontDLCRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 89;
+  friend void swap(FontDLCRequest& a, FontDLCRequest& b) { a.Swap(&b); }
+  inline void Swap(FontDLCRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FontDLCRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] FontDLCRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<FontDLCRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const FontDLCRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const FontDLCRequest& from) { FontDLCRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(FontDLCRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ei.FontDLCRequest"; }
+
+  explicit FontDLCRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  FontDLCRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const FontDLCRequest& from);
+  FontDLCRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, FontDLCRequest&& from) noexcept
+      : FontDLCRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kLanguageFieldNumber = 1,
+    kClientVersionFieldNumber = 2,
+    kPlatformFieldNumber = 3,
+  };
+  // optional string language = 1;
+  [[nodiscard]] bool has_language()
+      const;
+  void clear_language() ;
+  [[nodiscard]] const ::std::string& language() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_language(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_language();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_language();
+  void set_allocated_language(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_language() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_language(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_language();
+
+  public:
+  // optional uint32 client_version = 2;
+  [[nodiscard]] bool has_client_version()
+      const;
+  void clear_client_version() ;
+  [[nodiscard]] ::uint32_t client_version() const;
+  void set_client_version(::uint32_t value);
+
+  private:
+  ::uint32_t _internal_client_version() const;
+  void _internal_set_client_version(::uint32_t value);
+
+  public:
+  // optional .ei.Platform platform = 3;
+  [[nodiscard]] bool has_platform()
+      const;
+  void clear_platform() ;
+  [[nodiscard]] ::ei::Platform platform() const;
+  void set_platform(::ei::Platform value);
+
+  private:
+  ::ei::Platform _internal_platform() const;
+  void _internal_set_platform(::ei::Platform value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:ei.FontDLCRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 3,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const FontDLCRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr language_;
+    ::uint32_t client_version_;
+    int platform_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -16757,7 +17252,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED DLCItem final : public ::google::pr
   [[nodiscard]] static const DLCItem& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<DLCItem>(&DLCItem_globals_);
   }
-  static constexpr int kIndexInFileMessages = 192;
+  static constexpr int kIndexInFileMessages = 196;
   friend void swap(DLCItem& a, DLCItem& b) { a.Swap(&b); }
   inline void Swap(DLCItem* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -17418,7 +17913,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreateCoopResponse final : public :
   [[nodiscard]] static const CreateCoopResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CreateCoopResponse>(&CreateCoopResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 92;
+  static constexpr int kIndexInFileMessages = 96;
   friend void swap(CreateCoopResponse& a, CreateCoopResponse& b) { a.Swap(&b); }
   inline void Swap(CreateCoopResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -17640,7 +18135,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CraftArtifactResponse final : publi
   [[nodiscard]] static const CraftArtifactResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CraftArtifactResponse>(&CraftArtifactResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 172;
+  static constexpr int kIndexInFileMessages = 176;
   friend void swap(CraftArtifactResponse& a, CraftArtifactResponse& b) { a.Swap(&b); }
   inline void Swap(CraftArtifactResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -18201,7 +18696,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CoopChickenRunEntry final : public 
   [[nodiscard]] static const CoopChickenRunEntry& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CoopChickenRunEntry>(&CoopChickenRunEntry_globals_);
   }
-  static constexpr int kIndexInFileMessages = 110;
+  static constexpr int kIndexInFileMessages = 114;
   friend void swap(CoopChickenRunEntry& a, CoopChickenRunEntry& b) { a.Swap(&b); }
   inline void Swap(CoopChickenRunEntry* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -18423,7 +18918,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CoopBuffState final : public ::goog
   [[nodiscard]] static const CoopBuffState& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CoopBuffState>(&CoopBuffState_globals_);
   }
-  static constexpr int kIndexInFileMessages = 108;
+  static constexpr int kIndexInFileMessages = 112;
   friend void swap(CoopBuffState& a, CoopBuffState& b) { a.Swap(&b); }
   inline void Swap(CoopBuffState* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -20895,7 +21390,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ContractCoopStatusUpdateResponse fi
   [[nodiscard]] static const ContractCoopStatusUpdateResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ContractCoopStatusUpdateResponse>(&ContractCoopStatusUpdateResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 107;
+  static constexpr int kIndexInFileMessages = 111;
   friend void swap(ContractCoopStatusUpdateResponse& a, ContractCoopStatusUpdateResponse& b) { a.Swap(&b); }
   inline void Swap(ContractCoopStatusUpdateResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -21858,7 +22353,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ContractAction final : public ::goo
   [[nodiscard]] static const ContractAction& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ContractAction>(&ContractAction_globals_);
   }
-  static constexpr int kIndexInFileMessages = 121;
+  static constexpr int kIndexInFileMessages = 125;
   friend void swap(ContractAction& a, ContractAction& b) { a.Swap(&b); }
   inline void Swap(ContractAction* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -22848,7 +23343,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CleanAccountRequest final : public 
   [[nodiscard]] static const CleanAccountRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CleanAccountRequest>(&CleanAccountRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 190;
+  static constexpr int kIndexInFileMessages = 194;
   friend void swap(CleanAccountRequest& a, CleanAccountRequest& b) { a.Swap(&b); }
   inline void Swap(CleanAccountRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -23094,7 +23589,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CXPEvalRolloutInfo final : public :
   [[nodiscard]] static const CXPEvalRolloutInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CXPEvalRolloutInfo>(&CXPEvalRolloutInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 226;
+  static constexpr int kIndexInFileMessages = 230;
   friend void swap(CXPEvalRolloutInfo& a, CXPEvalRolloutInfo& b) { a.Swap(&b); }
   inline void Swap(CXPEvalRolloutInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -27305,7 +27800,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AuthenticatedMessage final : public
   [[nodiscard]] static const AuthenticatedMessage& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AuthenticatedMessage>(&AuthenticatedMessage_globals_);
   }
-  static constexpr int kIndexInFileMessages = 183;
+  static constexpr int kIndexInFileMessages = 187;
   friend void swap(AuthenticatedMessage& a, AuthenticatedMessage& b) { a.Swap(&b); }
   inline void Swap(AuthenticatedMessage* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -27593,7 +28088,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AuthenticateArtifactResponse final 
   [[nodiscard]] static const AuthenticateArtifactResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AuthenticateArtifactResponse>(&AuthenticateArtifactResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 175;
+  static constexpr int kIndexInFileMessages = 179;
   friend void swap(AuthenticateArtifactResponse& a, AuthenticateArtifactResponse& b) { a.Swap(&b); }
   inline void Swap(AuthenticateArtifactResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -27857,7 +28352,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsConfigurationResponse_Miss
   [[nodiscard]] static const ArtifactsConfigurationResponse_MissionParameters_Duration& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsConfigurationResponse_MissionParameters_Duration>(&ArtifactsConfigurationResponse_MissionParameters_Duration_globals_);
   }
-  static constexpr int kIndexInFileMessages = 158;
+  static constexpr int kIndexInFileMessages = 162;
   friend void swap(ArtifactsConfigurationResponse_MissionParameters_Duration& a, ArtifactsConfigurationResponse_MissionParameters_Duration& b) { a.Swap(&b); }
   inline void Swap(ArtifactsConfigurationResponse_MissionParameters_Duration* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -28158,7 +28653,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsConfigurationResponse_Craf
   [[nodiscard]] static const ArtifactsConfigurationResponse_CraftingLevelInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsConfigurationResponse_CraftingLevelInfo>(&ArtifactsConfigurationResponse_CraftingLevelInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 161;
+  static constexpr int kIndexInFileMessages = 165;
   friend void swap(ArtifactsConfigurationResponse_CraftingLevelInfo& a, ArtifactsConfigurationResponse_CraftingLevelInfo& b) { a.Swap(&b); }
   inline void Swap(ArtifactsConfigurationResponse_CraftingLevelInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -28375,7 +28870,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsClientInfo_LaunchCount fin
   [[nodiscard]] static const ArtifactsClientInfo_LaunchCount& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsClientInfo_LaunchCount>(&ArtifactsClientInfo_LaunchCount_globals_);
   }
-  static constexpr int kIndexInFileMessages = 149;
+  static constexpr int kIndexInFileMessages = 153;
   friend void swap(ArtifactsClientInfo_LaunchCount& a, ArtifactsClientInfo_LaunchCount& b) { a.Swap(&b); }
   inline void Swap(ArtifactsClientInfo_LaunchCount* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -28606,7 +29101,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactSpec final : public ::googl
   [[nodiscard]] static const ArtifactSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactSpec>(&ArtifactSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 153;
+  static constexpr int kIndexInFileMessages = 157;
   friend void swap(ArtifactSpec& a, ArtifactSpec& b) { a.Swap(&b); }
   inline void Swap(ArtifactSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -29595,7 +30090,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AdminControls final : public ::goog
   [[nodiscard]] static const AdminControls& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AdminControls>(&AdminControls_globals_);
   }
-  static constexpr int kIndexInFileMessages = 144;
+  static constexpr int kIndexInFileMessages = 148;
   friend void swap(AdminControls& a, AdminControls& b) { a.Swap(&b); }
   inline void Swap(AdminControls* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -29812,7 +30307,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AdAttributionRow final : public ::g
   [[nodiscard]] static const AdAttributionRow& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AdAttributionRow>(&AdAttributionRow_globals_);
   }
-  static constexpr int kIndexInFileMessages = 147;
+  static constexpr int kIndexInFileMessages = 151;
   friend void swap(AdAttributionRow& a, AdAttributionRow& b) { a.Swap(&b); }
   inline void Swap(AdAttributionRow* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -30157,7 +30652,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AdAttributionRawData final : public
   [[nodiscard]] static const AdAttributionRawData& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AdAttributionRawData>(&AdAttributionRawData_globals_);
   }
-  static constexpr int kIndexInFileMessages = 146;
+  static constexpr int kIndexInFileMessages = 150;
   friend void swap(AdAttributionRawData& a, AdAttributionRawData& b) { a.Swap(&b); }
   inline void Swap(AdAttributionRawData* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -30422,7 +30917,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AdAttributionInfo final : public ::
   [[nodiscard]] static const AdAttributionInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AdAttributionInfo>(&AdAttributionInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 148;
+  static constexpr int kIndexInFileMessages = 152;
   friend void swap(AdAttributionInfo& a, AdAttributionInfo& b) { a.Swap(&b); }
   inline void Swap(AdAttributionInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -30948,7 +31443,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ActiveArtifactSlot final : public :
   [[nodiscard]] static const ActiveArtifactSlot& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ActiveArtifactSlot>(&ActiveArtifactSlot_globals_);
   }
-  static constexpr int kIndexInFileMessages = 178;
+  static constexpr int kIndexInFileMessages = 182;
   friend void swap(ActiveArtifactSlot& a, ActiveArtifactSlot& b) { a.Swap(&b); }
   inline void Swap(ActiveArtifactSlot* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -31397,7 +31892,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AccountTransferPayload final : publ
   [[nodiscard]] static const AccountTransferPayload& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AccountTransferPayload>(&AccountTransferPayload_globals_);
   }
-  static constexpr int kIndexInFileMessages = 188;
+  static constexpr int kIndexInFileMessages = 192;
   friend void swap(AccountTransferPayload& a, AccountTransferPayload& b) { a.Swap(&b); }
   inline void Swap(AccountTransferPayload* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -31624,7 +32119,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserSubscriptionInfo final : public
   [[nodiscard]] static const UserSubscriptionInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserSubscriptionInfo>(&UserSubscriptionInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 224;
+  static constexpr int kIndexInFileMessages = 228;
   friend void swap(UserSubscriptionInfo& a, UserSubscriptionInfo& b) { a.Swap(&b); }
   inline void Swap(UserSubscriptionInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -32121,7 +32616,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserDataInfoRequest final : public 
   [[nodiscard]] static const UserDataInfoRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserDataInfoRequest>(&UserDataInfoRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 122;
+  static constexpr int kIndexInFileMessages = 126;
   friend void swap(UserDataInfoRequest& a, UserDataInfoRequest& b) { a.Swap(&b); }
   inline void Swap(UserDataInfoRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -32380,7 +32875,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateCoopPermissionsRequest final 
   [[nodiscard]] static const UpdateCoopPermissionsRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UpdateCoopPermissionsRequest>(&UpdateCoopPermissionsRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 96;
+  static constexpr int kIndexInFileMessages = 100;
   friend void swap(UpdateCoopPermissionsRequest& a, UpdateCoopPermissionsRequest& b) { a.Swap(&b); }
   inline void Swap(UpdateCoopPermissionsRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -32609,6 +33104,237 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateCoopPermissionsRequest final 
     ::ei::BasicRequestInfo* PROTOBUF_NULLABLE rinfo_;
     bool public__;
     ::uint32_t client_version_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TranslationSeed final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ei.TranslationSeed) */ {
+ public:
+  inline TranslationSeed() : TranslationSeed(nullptr) {}
+  ~TranslationSeed() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(TranslationSeed* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(TranslationSeed));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr TranslationSeed(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline TranslationSeed(const TranslationSeed& from) : TranslationSeed(nullptr, from) {}
+  inline TranslationSeed(TranslationSeed&& from) noexcept : TranslationSeed(nullptr, ::std::move(from)) {}
+  inline TranslationSeed& operator=(const TranslationSeed& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TranslationSeed& operator=(TranslationSeed&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const TranslationSeed& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<TranslationSeed>(&TranslationSeed_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 91;
+  friend void swap(TranslationSeed& a, TranslationSeed& b) { a.Swap(&b); }
+  inline void Swap(TranslationSeed* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(TranslationSeed* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] TranslationSeed* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<TranslationSeed>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const TranslationSeed& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const TranslationSeed& from) { TranslationSeed::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(TranslationSeed* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ei.TranslationSeed"; }
+
+  explicit TranslationSeed(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  TranslationSeed(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const TranslationSeed& from);
+  TranslationSeed(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, TranslationSeed&& from) noexcept
+      : TranslationSeed(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kEntriesFieldNumber = 2,
+    kLanguageFieldNumber = 1,
+  };
+  // repeated .ei.TranslationSeedEntry entries = 2;
+  [[nodiscard]] int entries_size()
+      const;
+  private:
+  int _internal_entries_size() const;
+
+  public:
+  void clear_entries() ;
+  [[nodiscard]] const ::ei::TranslationSeedEntry& entries(int index) const;
+  [[nodiscard]] ::ei::TranslationSeedEntry* PROTOBUF_NONNULL mutable_entries(int index);
+  ::ei::TranslationSeedEntry* PROTOBUF_NONNULL add_entries();
+  [[nodiscard]] const ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>&
+  entries() const;
+  [[nodiscard]] ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>* PROTOBUF_NONNULL
+  mutable_entries();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>& _internal_entries() const;
+  ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>* PROTOBUF_NONNULL _internal_mutable_entries();
+
+  public:
+  // optional string language = 1;
+  [[nodiscard]] bool has_language()
+      const;
+  void clear_language() ;
+  [[nodiscard]] const ::std::string& language() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_language(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_language();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_language();
+  void set_allocated_language(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_language() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_language(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_language();
+
+  public:
+  // @@protoc_insertion_point(class_scope:ei.TranslationSeed)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const TranslationSeed& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField< ::ei::TranslationSeedEntry > entries_;
+    ::google::protobuf::internal::ArenaStringPtr language_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -33757,6 +34483,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TranslationCache final : public ::g
     kLanguageFieldNumber = 1,
     kCachedAtFieldNumber = 3,
     kCacheVersionFieldNumber = 4,
+    kPackVersionFieldNumber = 5,
   };
   // repeated .ei.TranslationEntry entries = 2;
   [[nodiscard]] int entries_size()
@@ -33820,11 +34547,23 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TranslationCache final : public ::g
   void _internal_set_cache_version(::uint32_t value);
 
   public:
+  // optional uint32 pack_version = 5;
+  [[nodiscard]] bool has_pack_version()
+      const;
+  void clear_pack_version() ;
+  [[nodiscard]] ::uint32_t pack_version() const;
+  void set_pack_version(::uint32_t value);
+
+  private:
+  ::uint32_t _internal_pack_version() const;
+  void _internal_set_pack_version(::uint32_t value);
+
+  public:
   // @@protoc_insertion_point(class_scope:ei.TranslationCache)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<2, 4,
+      ::google::protobuf::internal::TcParseTable<3, 5,
                           1, 0,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
@@ -33857,6 +34596,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TranslationCache final : public ::g
     ::google::protobuf::internal::ArenaStringPtr language_;
     double cached_at_;
     ::uint32_t cache_version_;
+    ::uint32_t pack_version_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -33920,7 +34660,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SyncPathOfVirtueRequest final : pub
   [[nodiscard]] static const SyncPathOfVirtueRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SyncPathOfVirtueRequest>(&SyncPathOfVirtueRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 228;
+  static constexpr int kIndexInFileMessages = 232;
   friend void swap(SyncPathOfVirtueRequest& a, SyncPathOfVirtueRequest& b) { a.Swap(&b); }
   inline void Swap(SyncPathOfVirtueRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -34169,7 +34909,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubscriptionChangeHintRequest final
   [[nodiscard]] static const SubscriptionChangeHintRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubscriptionChangeHintRequest>(&SubscriptionChangeHintRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 225;
+  static constexpr int kIndexInFileMessages = 229;
   friend void swap(SubscriptionChangeHintRequest& a, SubscriptionChangeHintRequest& b) { a.Swap(&b); }
   inline void Swap(SubscriptionChangeHintRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -34409,7 +35149,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShowcaseRoyaltyDeliveryConfirmation
   [[nodiscard]] static const ShowcaseRoyaltyDeliveryConfirmation& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShowcaseRoyaltyDeliveryConfirmation>(&ShowcaseRoyaltyDeliveryConfirmation_globals_);
   }
-  static constexpr int kIndexInFileMessages = 219;
+  static constexpr int kIndexInFileMessages = 223;
   friend void swap(ShowcaseRoyaltyDeliveryConfirmation& a, ShowcaseRoyaltyDeliveryConfirmation& b) { a.Swap(&b); }
   inline void Swap(ShowcaseRoyaltyDeliveryConfirmation* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -34659,7 +35399,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellsActionLog final : public ::go
   [[nodiscard]] static const ShellsActionLog& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellsActionLog>(&ShellsActionLog_globals_);
   }
-  static constexpr int kIndexInFileMessages = 215;
+  static constexpr int kIndexInFileMessages = 219;
   friend void swap(ShellsActionLog& a, ShellsActionLog& b) { a.Swap(&b); }
   inline void Swap(ShellsActionLog* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -35040,7 +35780,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellSpec_ShellPiece final : public
   [[nodiscard]] static const ShellSpec_ShellPiece& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellSpec_ShellPiece>(&ShellSpec_ShellPiece_globals_);
   }
-  static constexpr int kIndexInFileMessages = 194;
+  static constexpr int kIndexInFileMessages = 198;
   friend void swap(ShellSpec_ShellPiece& a, ShellSpec_ShellPiece& b) { a.Swap(&b); }
   inline void Swap(ShellSpec_ShellPiece* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -35261,7 +36001,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellSetSpec final : public ::googl
   [[nodiscard]] static const ShellSetSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellSetSpec>(&ShellSetSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 197;
+  static constexpr int kIndexInFileMessages = 201;
   friend void swap(ShellSetSpec& a, ShellSetSpec& b) { a.Swap(&b); }
   inline void Swap(ShellSetSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -35778,7 +36518,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellPopularityStats final : public
   [[nodiscard]] static const ShellPopularityStats& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellPopularityStats>(&ShellPopularityStats_globals_);
   }
-  static constexpr int kIndexInFileMessages = 214;
+  static constexpr int kIndexInFileMessages = 218;
   friend void swap(ShellPopularityStats& a, ShellPopularityStats& b) { a.Swap(&b); }
   inline void Swap(ShellPopularityStats* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -35991,7 +36731,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellObjectSpec_LODPiece final : pu
   [[nodiscard]] static const ShellObjectSpec_LODPiece& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellObjectSpec_LODPiece>(&ShellObjectSpec_LODPiece_globals_);
   }
-  static constexpr int kIndexInFileMessages = 198;
+  static constexpr int kIndexInFileMessages = 202;
   friend void swap(ShellObjectSpec_LODPiece& a, ShellObjectSpec_LODPiece& b) { a.Swap(&b); }
   inline void Swap(ShellObjectSpec_LODPiece* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -36212,7 +36952,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_LightingConfig final : publ
   [[nodiscard]] static const ShellDB_LightingConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_LightingConfig>(&ShellDB_LightingConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 211;
+  static constexpr int kIndexInFileMessages = 215;
   friend void swap(ShellDB_LightingConfig& a, ShellDB_LightingConfig& b) { a.Swap(&b); }
   inline void Swap(ShellDB_LightingConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -36543,7 +37283,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SendChickenRunCoopRequest final : p
   [[nodiscard]] static const SendChickenRunCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SendChickenRunCoopRequest>(&SendChickenRunCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 100;
+  static constexpr int kIndexInFileMessages = 104;
   friend void swap(SendChickenRunCoopRequest& a, SendChickenRunCoopRequest& b) { a.Swap(&b); }
   inline void Swap(SendChickenRunCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -37085,7 +37825,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReportPlayerCoopRequest final : pub
   [[nodiscard]] static const ReportPlayerCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ReportPlayerCoopRequest>(&ReportPlayerCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 101;
+  static constexpr int kIndexInFileMessages = 105;
   friend void swap(ReportPlayerCoopRequest& a, ReportPlayerCoopRequest& b) { a.Swap(&b); }
   inline void Swap(ReportPlayerCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -37385,7 +38125,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED QueryCoopRequest final : public ::g
   [[nodiscard]] static const QueryCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<QueryCoopRequest>(&QueryCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 89;
+  static constexpr int kIndexInFileMessages = 93;
   friend void swap(QueryCoopRequest& a, QueryCoopRequest& b) { a.Swap(&b); }
   inline void Swap(QueryCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -37672,7 +38412,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerLastChickenRunTimes final : p
   [[nodiscard]] static const PlayerLastChickenRunTimes& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerLastChickenRunTimes>(&PlayerLastChickenRunTimes_globals_);
   }
-  static constexpr int kIndexInFileMessages = 111;
+  static constexpr int kIndexInFileMessages = 115;
   friend void swap(PlayerLastChickenRunTimes& a, PlayerLastChickenRunTimes& b) { a.Swap(&b); }
   inline void Swap(PlayerLastChickenRunTimes* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -37903,7 +38643,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerColleggtibleInfo final : publ
   [[nodiscard]] static const PlayerColleggtibleInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerColleggtibleInfo>(&PlayerColleggtibleInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 106;
+  static constexpr int kIndexInFileMessages = 110;
   friend void swap(PlayerColleggtibleInfo& a, PlayerColleggtibleInfo& b) { a.Swap(&b); }
   inline void Swap(PlayerColleggtibleInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -38115,7 +38855,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MissionInfo final : public ::google
   [[nodiscard]] static const MissionInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MissionInfo>(&MissionInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 152;
+  static constexpr int kIndexInFileMessages = 156;
   friend void swap(MissionInfo& a, MissionInfo& b) { a.Swap(&b); }
   inline void Swap(MissionInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -38631,7 +39371,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MailState final : public ::google::
   [[nodiscard]] static const MailState& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MailState>(&MailState_globals_);
   }
-  static constexpr int kIndexInFileMessages = 139;
+  static constexpr int kIndexInFileMessages = 143;
   friend void swap(MailState& a, MailState& b) { a.Swap(&b); }
   inline void Swap(MailState* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -38892,7 +39632,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_HelpConfig final : publi
   [[nodiscard]] static const LiveConfig_HelpConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_HelpConfig>(&LiveConfig_HelpConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 133;
+  static constexpr int kIndexInFileMessages = 137;
   friend void swap(LiveConfig_HelpConfig& a, LiveConfig_HelpConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_HelpConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -39105,7 +39845,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_GiftConfig final : publi
   [[nodiscard]] static const LiveConfig_GiftConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_GiftConfig>(&LiveConfig_GiftConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 130;
+  static constexpr int kIndexInFileMessages = 134;
   friend void swap(LiveConfig_GiftConfig& a, LiveConfig_GiftConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_GiftConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -39537,7 +40277,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig_BoostsConfig final : pub
   [[nodiscard]] static const LiveConfig_BoostsConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig_BoostsConfig>(&LiveConfig_BoostsConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 127;
+  static constexpr int kIndexInFileMessages = 131;
   friend void swap(LiveConfig_BoostsConfig& a, LiveConfig_BoostsConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig_BoostsConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -39764,7 +40504,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaveCoopRequest final : public ::g
   [[nodiscard]] static const LeaveCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaveCoopRequest>(&LeaveCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 98;
+  static constexpr int kIndexInFileMessages = 102;
   friend void swap(LeaveCoopRequest& a, LeaveCoopRequest& b) { a.Swap(&b); }
   inline void Swap(LeaveCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -40042,7 +40782,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardResponse final : public 
   [[nodiscard]] static const LeaderboardResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardResponse>(&LeaderboardResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 119;
+  static constexpr int kIndexInFileMessages = 123;
   friend void swap(LeaderboardResponse& a, LeaderboardResponse& b) { a.Swap(&b); }
   inline void Swap(LeaderboardResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -40330,7 +41070,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardRequest final : public :
   [[nodiscard]] static const LeaderboardRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardRequest>(&LeaderboardRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 117;
+  static constexpr int kIndexInFileMessages = 121;
   friend void swap(LeaderboardRequest& a, LeaderboardRequest& b) { a.Swap(&b); }
   inline void Swap(LeaderboardRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -40570,7 +41310,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardInfo final : public ::go
   [[nodiscard]] static const LeaderboardInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardInfo>(&LeaderboardInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 116;
+  static constexpr int kIndexInFileMessages = 120;
   friend void swap(LeaderboardInfo& a, LeaderboardInfo& b) { a.Swap(&b); }
   inline void Swap(LeaderboardInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -40802,7 +41542,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LeaderboardAnalysis final : public 
   [[nodiscard]] static const LeaderboardAnalysis& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LeaderboardAnalysis>(&LeaderboardAnalysis_globals_);
   }
-  static constexpr int kIndexInFileMessages = 114;
+  static constexpr int kIndexInFileMessages = 118;
   friend void swap(LeaderboardAnalysis& a, LeaderboardAnalysis& b) { a.Swap(&b); }
   inline void Swap(LeaderboardAnalysis* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -41076,7 +41816,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KickPlayerCoopRequest final : publi
   [[nodiscard]] static const KickPlayerCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<KickPlayerCoopRequest>(&KickPlayerCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 102;
+  static constexpr int kIndexInFileMessages = 106;
   friend void swap(KickPlayerCoopRequest& a, KickPlayerCoopRequest& b) { a.Swap(&b); }
   inline void Swap(KickPlayerCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -41410,7 +42150,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED JoinCoopRequest final : public ::go
   [[nodiscard]] static const JoinCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<JoinCoopRequest>(&JoinCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 93;
+  static constexpr int kIndexInFileMessages = 97;
   friend void swap(JoinCoopRequest& a, JoinCoopRequest& b) { a.Swap(&b); }
   inline void Swap(JoinCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -41805,7 +42545,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED InGameMail final : public ::google:
   [[nodiscard]] static const InGameMail& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<InGameMail>(&InGameMail_globals_);
   }
-  static constexpr int kIndexInFileMessages = 135;
+  static constexpr int kIndexInFileMessages = 139;
   friend void swap(InGameMail& a, InGameMail& b) { a.Swap(&b); }
   inline void Swap(InGameMail* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -42445,7 +43185,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED IdleSessionSummary final : public :
   [[nodiscard]] static const IdleSessionSummary& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<IdleSessionSummary>(&IdleSessionSummary_globals_);
   }
-  static constexpr int kIndexInFileMessages = 104;
+  static constexpr int kIndexInFileMessages = 108;
   friend void swap(IdleSessionSummary& a, IdleSessionSummary& b) { a.Swap(&b); }
   inline void Swap(IdleSessionSummary* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -42798,7 +43538,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GiftPlayerCoopRequest final : publi
   [[nodiscard]] static const GiftPlayerCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GiftPlayerCoopRequest>(&GiftPlayerCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 99;
+  static constexpr int kIndexInFileMessages = 103;
   friend void swap(GiftPlayerCoopRequest& a, GiftPlayerCoopRequest& b) { a.Swap(&b); }
   inline void Swap(GiftPlayerCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -43128,7 +43868,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetPeriodicalsRequest final : publi
   [[nodiscard]] static const GetPeriodicalsRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetPeriodicalsRequest>(&GetPeriodicalsRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 142;
+  static constexpr int kIndexInFileMessages = 146;
   friend void swap(GetPeriodicalsRequest& a, GetPeriodicalsRequest& b) { a.Swap(&b); }
   inline void Swap(GetPeriodicalsRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -43522,7 +44262,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetActiveMissionsRequest final : pu
   [[nodiscard]] static const GetActiveMissionsRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetActiveMissionsRequest>(&GetActiveMissionsRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 165;
+  static constexpr int kIndexInFileMessages = 169;
   friend void swap(GetActiveMissionsRequest& a, GetActiveMissionsRequest& b) { a.Swap(&b); }
   inline void Swap(GetActiveMissionsRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -44095,7 +44835,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED FontPack final : public ::google::p
   [[nodiscard]] static const FontPack& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<FontPack>(&FontPack_globals_);
   }
-  static constexpr int kIndexInFileMessages = 193;
+  static constexpr int kIndexInFileMessages = 197;
   friend void swap(FontPack& a, FontPack& b) { a.Swap(&b); }
   inline void Swap(FontPack* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -45489,7 +46229,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreateCoopRequest final : public ::
   [[nodiscard]] static const CreateCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CreateCoopRequest>(&CreateCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 91;
+  static constexpr int kIndexInFileMessages = 95;
   friend void swap(CreateCoopRequest& a, CreateCoopRequest& b) { a.Swap(&b); }
   inline void Swap(CreateCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -46139,7 +46879,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CoopBuffHistory final : public ::go
   [[nodiscard]] static const CoopBuffHistory& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CoopBuffHistory>(&CoopBuffHistory_globals_);
   }
-  static constexpr int kIndexInFileMessages = 109;
+  static constexpr int kIndexInFileMessages = 113;
   friend void swap(CoopBuffHistory& a, CoopBuffHistory& b) { a.Swap(&b); }
   inline void Swap(CoopBuffHistory* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -49020,7 +49760,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConsumeArtifactResponse final : pub
   [[nodiscard]] static const ConsumeArtifactResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ConsumeArtifactResponse>(&ConsumeArtifactResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 174;
+  static constexpr int kIndexInFileMessages = 178;
   friend void swap(ConsumeArtifactResponse& a, ConsumeArtifactResponse& b) { a.Swap(&b); }
   inline void Swap(ConsumeArtifactResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -49324,7 +50064,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConsumeArtifactRequest final : publ
   [[nodiscard]] static const ConsumeArtifactRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ConsumeArtifactRequest>(&ConsumeArtifactRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 173;
+  static constexpr int kIndexInFileMessages = 177;
   friend void swap(ConsumeArtifactRequest& a, ConsumeArtifactRequest& b) { a.Swap(&b); }
   inline void Swap(ConsumeArtifactRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -49666,7 +50406,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfigRequest final : public ::goog
   [[nodiscard]] static const ConfigRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ConfigRequest>(&ConfigRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 143;
+  static constexpr int kIndexInFileMessages = 147;
   friend void swap(ConfigRequest& a, ConfigRequest& b) { a.Swap(&b); }
   inline void Swap(ConfigRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -49990,7 +50730,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CompleteMissionResponse_SecureArtif
   [[nodiscard]] static const CompleteMissionResponse_SecureArtifactSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CompleteMissionResponse_SecureArtifactSpec>(&CompleteMissionResponse_SecureArtifactSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 167;
+  static constexpr int kIndexInFileMessages = 171;
   friend void swap(CompleteMissionResponse_SecureArtifactSpec& a, CompleteMissionResponse_SecureArtifactSpec& b) { a.Swap(&b); }
   inline void Swap(CompleteMissionResponse_SecureArtifactSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -50216,7 +50956,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CompleteArtifact final : public ::g
   [[nodiscard]] static const CompleteArtifact& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CompleteArtifact>(&CompleteArtifact_globals_);
   }
-  static constexpr int kIndexInFileMessages = 154;
+  static constexpr int kIndexInFileMessages = 158;
   friend void swap(CompleteArtifact& a, CompleteArtifact& b) { a.Swap(&b); }
   inline void Swap(CompleteArtifact* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -50446,7 +51186,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CollectSeasonArtifactRewardsRequest
   [[nodiscard]] static const CollectSeasonArtifactRewardsRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CollectSeasonArtifactRewardsRequest>(&CollectSeasonArtifactRewardsRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 170;
+  static constexpr int kIndexInFileMessages = 174;
   friend void swap(CollectSeasonArtifactRewardsRequest& a, CollectSeasonArtifactRewardsRequest& b) { a.Swap(&b); }
   inline void Swap(CollectSeasonArtifactRewardsRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -50700,7 +51440,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CollectContractArtifactRewardsReque
   [[nodiscard]] static const CollectContractArtifactRewardsRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CollectContractArtifactRewardsRequest>(&CollectContractArtifactRewardsRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 169;
+  static constexpr int kIndexInFileMessages = 173;
   friend void swap(CollectContractArtifactRewardsRequest& a, CollectContractArtifactRewardsRequest& b) { a.Swap(&b); }
   inline void Swap(CollectContractArtifactRewardsRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -50982,7 +51722,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ClearAllUserDataRequest final : pub
   [[nodiscard]] static const ClearAllUserDataRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ClearAllUserDataRequest>(&ClearAllUserDataRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 124;
+  static constexpr int kIndexInFileMessages = 128;
   friend void swap(ClearAllUserDataRequest& a, ClearAllUserDataRequest& b) { a.Swap(&b); }
   inline void Swap(ClearAllUserDataRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -53024,7 +53764,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AutoJoinCoopRequest final : public 
   [[nodiscard]] static const AutoJoinCoopRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AutoJoinCoopRequest>(&AutoJoinCoopRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 95;
+  static constexpr int kIndexInFileMessages = 99;
   friend void swap(AutoJoinCoopRequest& a, AutoJoinCoopRequest& b) { a.Swap(&b); }
   inline void Swap(AutoJoinCoopRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -53400,7 +54140,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsDB_CraftableArtifact final
   [[nodiscard]] static const ArtifactsDB_CraftableArtifact& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsDB_CraftableArtifact>(&ArtifactsDB_CraftableArtifact_globals_);
   }
-  static constexpr int kIndexInFileMessages = 180;
+  static constexpr int kIndexInFileMessages = 184;
   friend void swap(ArtifactsDB_CraftableArtifact& a, ArtifactsDB_CraftableArtifact& b) { a.Swap(&b); }
   inline void Swap(ArtifactsDB_CraftableArtifact* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -53677,7 +54417,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsDB_ActiveArtifactSet final
   [[nodiscard]] static const ArtifactsDB_ActiveArtifactSet& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsDB_ActiveArtifactSet>(&ArtifactsDB_ActiveArtifactSet_globals_);
   }
-  static constexpr int kIndexInFileMessages = 179;
+  static constexpr int kIndexInFileMessages = 183;
   friend void swap(ArtifactsDB_ActiveArtifactSet& a, ArtifactsDB_ActiveArtifactSet& b) { a.Swap(&b); }
   inline void Swap(ArtifactsDB_ActiveArtifactSet* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -53903,7 +54643,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsConfigurationResponse_Miss
   [[nodiscard]] static const ArtifactsConfigurationResponse_MissionParameters& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsConfigurationResponse_MissionParameters>(&ArtifactsConfigurationResponse_MissionParameters_globals_);
   }
-  static constexpr int kIndexInFileMessages = 159;
+  static constexpr int kIndexInFileMessages = 163;
   friend void swap(ArtifactsConfigurationResponse_MissionParameters& a, ArtifactsConfigurationResponse_MissionParameters& b) { a.Swap(&b); }
   inline void Swap(ArtifactsConfigurationResponse_MissionParameters* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -54166,7 +54906,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsConfigurationResponse_Arti
   [[nodiscard]] static const ArtifactsConfigurationResponse_ArtifactParameters& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsConfigurationResponse_ArtifactParameters>(&ArtifactsConfigurationResponse_ArtifactParameters_globals_);
   }
-  static constexpr int kIndexInFileMessages = 160;
+  static constexpr int kIndexInFileMessages = 164;
   friend void swap(ArtifactsConfigurationResponse_ArtifactParameters& a, ArtifactsConfigurationResponse_ArtifactParameters& b) { a.Swap(&b); }
   inline void Swap(ArtifactsConfigurationResponse_ArtifactParameters* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -54485,7 +55225,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsConfigurationRequest final
   [[nodiscard]] static const ArtifactsConfigurationRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsConfigurationRequest>(&ArtifactsConfigurationRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 157;
+  static constexpr int kIndexInFileMessages = 161;
   friend void swap(ArtifactsConfigurationRequest& a, ArtifactsConfigurationRequest& b) { a.Swap(&b); }
   inline void Swap(ArtifactsConfigurationRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -54706,7 +55446,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsClientInfo final : public 
   [[nodiscard]] static const ArtifactsClientInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsClientInfo>(&ArtifactsClientInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 150;
+  static constexpr int kIndexInFileMessages = 154;
   friend void swap(ArtifactsClientInfo& a, ArtifactsClientInfo& b) { a.Swap(&b); }
   inline void Swap(ArtifactsClientInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -55577,7 +56317,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TipsDB final : public ::google::pro
   [[nodiscard]] static const TipsDB& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<TipsDB>(&TipsDB_globals_);
   }
-  static constexpr int kIndexInFileMessages = 137;
+  static constexpr int kIndexInFileMessages = 141;
   friend void swap(TipsDB& a, TipsDB& b) { a.Swap(&b); }
   inline void Swap(TipsDB* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -55789,7 +56529,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellsActionBatch final : public ::
   [[nodiscard]] static const ShellsActionBatch& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellsActionBatch>(&ShellsActionBatch_globals_);
   }
-  static constexpr int kIndexInFileMessages = 221;
+  static constexpr int kIndexInFileMessages = 225;
   friend void swap(ShellsActionBatch& a, ShellsActionBatch& b) { a.Swap(&b); }
   inline void Swap(ShellsActionBatch* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -56019,7 +56759,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellSpec final : public ::google::
   [[nodiscard]] static const ShellSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellSpec>(&ShellSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 195;
+  static constexpr int kIndexInFileMessages = 199;
   friend void swap(ShellSpec& a, ShellSpec& b) { a.Swap(&b); }
   inline void Swap(ShellSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -56614,7 +57354,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellObjectSpec final : public ::go
   [[nodiscard]] static const ShellObjectSpec& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellObjectSpec>(&ShellObjectSpec_globals_);
   }
-  static constexpr int kIndexInFileMessages = 199;
+  static constexpr int kIndexInFileMessages = 203;
   friend void swap(ShellObjectSpec& a, ShellObjectSpec& b) { a.Swap(&b); }
   inline void Swap(ShellObjectSpec* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -57144,7 +57884,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_FarmConfiguration final : p
   [[nodiscard]] static const ShellDB_FarmConfiguration& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_FarmConfiguration>(&ShellDB_FarmConfiguration_globals_);
   }
-  static constexpr int kIndexInFileMessages = 205;
+  static constexpr int kIndexInFileMessages = 209;
   friend void swap(ShellDB_FarmConfiguration& a, ShellDB_FarmConfiguration& b) { a.Swap(&b); }
   inline void Swap(ShellDB_FarmConfiguration* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -57494,7 +58234,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MissionResponse final : public ::go
   [[nodiscard]] static const MissionResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MissionResponse>(&MissionResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 164;
+  static constexpr int kIndexInFileMessages = 168;
   friend void swap(MissionResponse& a, MissionResponse& b) { a.Swap(&b); }
   inline void Swap(MissionResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -57715,7 +58455,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MissionRequest final : public ::goo
   [[nodiscard]] static const MissionRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MissionRequest>(&MissionRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 163;
+  static constexpr int kIndexInFileMessages = 167;
   friend void swap(MissionRequest& a, MissionRequest& b) { a.Swap(&b); }
   inline void Swap(MissionRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -57991,7 +58731,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MailDB final : public ::google::pro
   [[nodiscard]] static const MailDB& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MailDB>(&MailDB_globals_);
   }
-  static constexpr int kIndexInFileMessages = 136;
+  static constexpr int kIndexInFileMessages = 140;
   friend void swap(MailDB& a, MailDB& b) { a.Swap(&b); }
   inline void Swap(MailDB* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -58241,7 +58981,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogConsumeArtifactPayload final : p
   [[nodiscard]] static const LogConsumeArtifactPayload& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LogConsumeArtifactPayload>(&LogConsumeArtifactPayload_globals_);
   }
-  static constexpr int kIndexInFileMessages = 186;
+  static constexpr int kIndexInFileMessages = 190;
   friend void swap(LogConsumeArtifactPayload& a, LogConsumeArtifactPayload& b) { a.Swap(&b); }
   inline void Swap(LogConsumeArtifactPayload* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -58466,7 +59206,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LiveConfig final : public ::google:
   [[nodiscard]] static const LiveConfig& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LiveConfig>(&LiveConfig_globals_);
   }
-  static constexpr int kIndexInFileMessages = 134;
+  static constexpr int kIndexInFileMessages = 138;
   friend void swap(LiveConfig& a, LiveConfig& b) { a.Swap(&b); }
   inline void Swap(LiveConfig* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -58750,7 +59490,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetActiveMissionsResponse final : p
   [[nodiscard]] static const GetActiveMissionsResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetActiveMissionsResponse>(&GetActiveMissionsResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 166;
+  static constexpr int kIndexInFileMessages = 170;
   friend void swap(GetActiveMissionsResponse& a, GetActiveMissionsResponse& b) { a.Swap(&b); }
   inline void Swap(GetActiveMissionsResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -59155,6 +59895,218 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GenericActionBatchRequest final : p
 };
 // -------------------------------------------------------------------
 
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED FontDLCResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ei.FontDLCResponse) */ {
+ public:
+  inline FontDLCResponse() : FontDLCResponse(nullptr) {}
+  ~FontDLCResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(FontDLCResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(FontDLCResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr FontDLCResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline FontDLCResponse(const FontDLCResponse& from) : FontDLCResponse(nullptr, from) {}
+  inline FontDLCResponse(FontDLCResponse&& from) noexcept : FontDLCResponse(nullptr, ::std::move(from)) {}
+  inline FontDLCResponse& operator=(const FontDLCResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FontDLCResponse& operator=(FontDLCResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const FontDLCResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<FontDLCResponse>(&FontDLCResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 90;
+  friend void swap(FontDLCResponse& a, FontDLCResponse& b) { a.Swap(&b); }
+  inline void Swap(FontDLCResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FontDLCResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] FontDLCResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<FontDLCResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const FontDLCResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const FontDLCResponse& from) { FontDLCResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(FontDLCResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ei.FontDLCResponse"; }
+
+  explicit FontDLCResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  FontDLCResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const FontDLCResponse& from);
+  FontDLCResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, FontDLCResponse&& from) noexcept
+      : FontDLCResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kFontPacksFieldNumber = 1,
+  };
+  // repeated .ei.FontPack font_packs = 1;
+  [[nodiscard]] int font_packs_size()
+      const;
+  private:
+  int _internal_font_packs_size() const;
+
+  public:
+  void clear_font_packs() ;
+  [[nodiscard]] const ::ei::FontPack& font_packs(int index) const;
+  [[nodiscard]] ::ei::FontPack* PROTOBUF_NONNULL mutable_font_packs(int index);
+  ::ei::FontPack* PROTOBUF_NONNULL add_font_packs();
+  [[nodiscard]] const ::google::protobuf::RepeatedPtrField<::ei::FontPack>&
+  font_packs() const;
+  [[nodiscard]] ::google::protobuf::RepeatedPtrField<::ei::FontPack>* PROTOBUF_NONNULL
+  mutable_font_packs();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::ei::FontPack>& _internal_font_packs() const;
+  ::google::protobuf::RepeatedPtrField<::ei::FontPack>* PROTOBUF_NONNULL _internal_mutable_font_packs();
+
+  public:
+  // @@protoc_insertion_point(class_scope:ei.FontDLCResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const FontDLCResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField< ::ei::FontPack > font_packs_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ei_2eproto;
+};
+// -------------------------------------------------------------------
+
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CoopLastChickenRunTimes final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:ei.CoopLastChickenRunTimes) */ {
  public:
@@ -59211,7 +60163,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CoopLastChickenRunTimes final : pub
   [[nodiscard]] static const CoopLastChickenRunTimes& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CoopLastChickenRunTimes>(&CoopLastChickenRunTimes_globals_);
   }
-  static constexpr int kIndexInFileMessages = 112;
+  static constexpr int kIndexInFileMessages = 116;
   friend void swap(CoopLastChickenRunTimes& a, CoopLastChickenRunTimes& b) { a.Swap(&b); }
   inline void Swap(CoopLastChickenRunTimes* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -60738,7 +61690,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CompleteMissionResponse final : pub
   [[nodiscard]] static const CompleteMissionResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CompleteMissionResponse>(&CompleteMissionResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 168;
+  static constexpr int kIndexInFileMessages = 172;
   friend void swap(CompleteMissionResponse& a, CompleteMissionResponse& b) { a.Swap(&b); }
   inline void Swap(CompleteMissionResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -61025,7 +61977,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsConfigurationResponse fina
   [[nodiscard]] static const ArtifactsConfigurationResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsConfigurationResponse>(&ArtifactsConfigurationResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 162;
+  static constexpr int kIndexInFileMessages = 166;
   friend void swap(ArtifactsConfigurationResponse& a, ArtifactsConfigurationResponse& b) { a.Swap(&b); }
   inline void Swap(ArtifactsConfigurationResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -61286,7 +62238,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactInventoryItem final : publi
   [[nodiscard]] static const ArtifactInventoryItem& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactInventoryItem>(&ArtifactInventoryItem_globals_);
   }
-  static constexpr int kIndexInFileMessages = 155;
+  static constexpr int kIndexInFileMessages = 159;
   friend void swap(ArtifactInventoryItem& a, ArtifactInventoryItem& b) { a.Swap(&b); }
   inline void Swap(ArtifactInventoryItem* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -61540,7 +62492,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitShellShowcaseRequest final : 
   [[nodiscard]] static const SubmitShellShowcaseRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitShellShowcaseRequest>(&SubmitShellShowcaseRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 216;
+  static constexpr int kIndexInFileMessages = 220;
   friend void swap(SubmitShellShowcaseRequest& a, SubmitShellShowcaseRequest& b) { a.Swap(&b); }
   inline void Swap(SubmitShellShowcaseRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -61817,7 +62769,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellShowcaseListingInfo final : pu
   [[nodiscard]] static const ShellShowcaseListingInfo& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellShowcaseListingInfo>(&ShellShowcaseListingInfo_globals_);
   }
-  static constexpr int kIndexInFileMessages = 218;
+  static constexpr int kIndexInFileMessages = 222;
   friend void swap(ShellShowcaseListingInfo& a, ShellShowcaseListingInfo& b) { a.Swap(&b); }
   inline void Swap(ShellShowcaseListingInfo* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -62275,7 +63227,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB_SavedFarmConfiguration fina
   [[nodiscard]] static const ShellDB_SavedFarmConfiguration& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB_SavedFarmConfiguration>(&ShellDB_SavedFarmConfiguration_globals_);
   }
-  static constexpr int kIndexInFileMessages = 206;
+  static constexpr int kIndexInFileMessages = 210;
   friend void swap(ShellDB_SavedFarmConfiguration& a, ShellDB_SavedFarmConfiguration& b) { a.Swap(&b); }
   inline void Swap(ShellDB_SavedFarmConfiguration* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -62567,7 +63519,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SetArtifactRequest final : public :
   [[nodiscard]] static const SetArtifactRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SetArtifactRequest>(&SetArtifactRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 176;
+  static constexpr int kIndexInFileMessages = 180;
   friend void swap(SetArtifactRequest& a, SetArtifactRequest& b) { a.Swap(&b); }
   inline void Swap(SetArtifactRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -63414,7 +64366,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogCompleteMissionPayload final : p
   [[nodiscard]] static const LogCompleteMissionPayload& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LogCompleteMissionPayload>(&LogCompleteMissionPayload_globals_);
   }
-  static constexpr int kIndexInFileMessages = 184;
+  static constexpr int kIndexInFileMessages = 188;
   friend void swap(LogCompleteMissionPayload& a, LogCompleteMissionPayload& b) { a.Swap(&b); }
   inline void Swap(LogCompleteMissionPayload* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -64221,7 +65173,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED DLCCatalog final : public ::google:
   [[nodiscard]] static const DLCCatalog& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<DLCCatalog>(&DLCCatalog_globals_);
   }
-  static constexpr int kIndexInFileMessages = 201;
+  static constexpr int kIndexInFileMessages = 205;
   friend void swap(DLCCatalog& a, DLCCatalog& b) { a.Swap(&b); }
   inline void Swap(DLCCatalog* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -64585,7 +65537,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CraftArtifactRequest final : public
   [[nodiscard]] static const CraftArtifactRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CraftArtifactRequest>(&CraftArtifactRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 171;
+  static constexpr int kIndexInFileMessages = 175;
   friend void swap(CraftArtifactRequest& a, CraftArtifactRequest& b) { a.Swap(&b); }
   inline void Swap(CraftArtifactRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -66623,7 +67575,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsDB_VirtueDB final : public
   [[nodiscard]] static const ArtifactsDB_VirtueDB& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsDB_VirtueDB>(&ArtifactsDB_VirtueDB_globals_);
   }
-  static constexpr int kIndexInFileMessages = 181;
+  static constexpr int kIndexInFileMessages = 185;
   friend void swap(ArtifactsDB_VirtueDB& a, ArtifactsDB_VirtueDB& b) { a.Swap(&b); }
   inline void Swap(ArtifactsDB_VirtueDB* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -66894,7 +67846,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellShowcaseListingSet final : pub
   [[nodiscard]] static const ShellShowcaseListingSet& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellShowcaseListingSet>(&ShellShowcaseListingSet_globals_);
   }
-  static constexpr int kIndexInFileMessages = 220;
+  static constexpr int kIndexInFileMessages = 224;
   friend void swap(ShellShowcaseListingSet& a, ShellShowcaseListingSet& b) { a.Swap(&b); }
   inline void Swap(ShellShowcaseListingSet* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -67106,7 +68058,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellShowcase final : public ::goog
   [[nodiscard]] static const ShellShowcase& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellShowcase>(&ShellShowcase_globals_);
   }
-  static constexpr int kIndexInFileMessages = 217;
+  static constexpr int kIndexInFileMessages = 221;
   friend void swap(ShellShowcase& a, ShellShowcase& b) { a.Swap(&b); }
   inline void Swap(ShellShowcase* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -67364,7 +68316,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ShellDB final : public ::google::pr
   [[nodiscard]] static const ShellDB& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ShellDB>(&ShellDB_globals_);
   }
-  static constexpr int kIndexInFileMessages = 212;
+  static constexpr int kIndexInFileMessages = 216;
   friend void swap(ShellDB& a, ShellDB& b) { a.Swap(&b); }
   inline void Swap(ShellDB* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -67844,7 +68796,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PeriodicalsResponse final : public 
   [[nodiscard]] static const PeriodicalsResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PeriodicalsResponse>(&PeriodicalsResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 141;
+  static constexpr int kIndexInFileMessages = 145;
   friend void swap(PeriodicalsResponse& a, PeriodicalsResponse& b) { a.Swap(&b); }
   inline void Swap(PeriodicalsResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -68234,7 +69186,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogSetArtifactPayload final : publi
   [[nodiscard]] static const LogSetArtifactPayload& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LogSetArtifactPayload>(&LogSetArtifactPayload_globals_);
   }
-  static constexpr int kIndexInFileMessages = 187;
+  static constexpr int kIndexInFileMessages = 191;
   friend void swap(LogSetArtifactPayload& a, LogSetArtifactPayload& b) { a.Swap(&b); }
   inline void Swap(LogSetArtifactPayload* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -68459,7 +69411,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogCraftArtifactPayload final : pub
   [[nodiscard]] static const LogCraftArtifactPayload& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LogCraftArtifactPayload>(&LogCraftArtifactPayload_globals_);
   }
-  static constexpr int kIndexInFileMessages = 185;
+  static constexpr int kIndexInFileMessages = 189;
   friend void swap(LogCraftArtifactPayload& a, LogCraftArtifactPayload& b) { a.Swap(&b); }
   inline void Swap(LogCraftArtifactPayload* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -68919,7 +69871,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ContractsArchive final : public ::g
   [[nodiscard]] static const ContractsArchive& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ContractsArchive>(&ContractsArchive_globals_);
   }
-  static constexpr int kIndexInFileMessages = 120;
+  static constexpr int kIndexInFileMessages = 124;
   friend void swap(ContractsArchive& a, ContractsArchive& b) { a.Swap(&b); }
   inline void Swap(ContractsArchive* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -69131,7 +70083,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ContractCoopStatusUpdateRequest fin
   [[nodiscard]] static const ContractCoopStatusUpdateRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ContractCoopStatusUpdateRequest>(&ContractCoopStatusUpdateRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 105;
+  static constexpr int kIndexInFileMessages = 109;
   friend void swap(ContractCoopStatusUpdateRequest& a, ContractCoopStatusUpdateRequest& b) { a.Swap(&b); }
   inline void Swap(ContractCoopStatusUpdateRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -70267,7 +71219,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfigResponse final : public ::goo
   [[nodiscard]] static const ConfigResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ConfigResponse>(&ConfigResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 145;
+  static constexpr int kIndexInFileMessages = 149;
   friend void swap(ConfigResponse& a, ConfigResponse& b) { a.Swap(&b); }
   inline void Swap(ConfigResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -70858,7 +71810,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ArtifactsDB final : public ::google
   [[nodiscard]] static const ArtifactsDB& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ArtifactsDB>(&ArtifactsDB_globals_);
   }
-  static constexpr int kIndexInFileMessages = 182;
+  static constexpr int kIndexInFileMessages = 186;
   friend void swap(ArtifactsDB& a, ArtifactsDB& b) { a.Swap(&b); }
   inline void Swap(ArtifactsDB* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -73120,7 +74072,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SaveBackupResponse final : public :
   [[nodiscard]] static const SaveBackupResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SaveBackupResponse>(&SaveBackupResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 189;
+  static constexpr int kIndexInFileMessages = 193;
   friend void swap(SaveBackupResponse& a, SaveBackupResponse& b) { a.Swap(&b); }
   inline void Swap(SaveBackupResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -104036,6 +104988,34 @@ inline void TranslationCache::_internal_set_cache_version(::uint32_t value) {
   _impl_.cache_version_ = value;
 }
 
+// optional uint32 pack_version = 5;
+inline bool TranslationCache::has_pack_version() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000010U);
+  return value;
+}
+inline void TranslationCache::clear_pack_version() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.pack_version_ = 0u;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline ::uint32_t TranslationCache::pack_version() const {
+  // @@protoc_insertion_point(field_get:ei.TranslationCache.pack_version)
+  return _internal_pack_version();
+}
+inline void TranslationCache::set_pack_version(::uint32_t value) {
+  _internal_set_pack_version(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  // @@protoc_insertion_point(field_set:ei.TranslationCache.pack_version)
+}
+inline ::uint32_t TranslationCache::_internal_pack_version() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.pack_version_;
+}
+inline void TranslationCache::_internal_set_pack_version(::uint32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.pack_version_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // TranslationPackRequest
@@ -104443,6 +105423,463 @@ inline bool TranslationPackResponse::_internal_truncated() const {
 inline void TranslationPackResponse::_internal_set_truncated(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.truncated_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// FontDLCRequest
+
+// optional string language = 1;
+inline bool FontDLCRequest::has_language() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
+  return value;
+}
+inline void FontDLCRequest::clear_language() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.language_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& FontDLCRequest::language() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.FontDLCRequest.language)
+  return _internal_language();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void FontDLCRequest::set_language(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.language_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ei.FontDLCRequest.language)
+}
+inline ::std::string* PROTOBUF_NONNULL FontDLCRequest::mutable_language()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_language();
+  // @@protoc_insertion_point(field_mutable:ei.FontDLCRequest.language)
+  return _s;
+}
+inline const ::std::string& FontDLCRequest::_internal_language() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.language_.Get();
+}
+inline void FontDLCRequest::_internal_set_language(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.language_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL FontDLCRequest::_internal_mutable_language() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.language_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE FontDLCRequest::release_language() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ei.FontDLCRequest.language)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.language_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.language_.Set("", GetArena());
+  }
+  return released;
+}
+inline void FontDLCRequest::set_allocated_language(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.language_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.language_.IsDefault()) {
+    _impl_.language_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ei.FontDLCRequest.language)
+}
+
+// optional uint32 client_version = 2;
+inline bool FontDLCRequest::has_client_version() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000002U);
+  return value;
+}
+inline void FontDLCRequest::clear_client_version() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.client_version_ = 0u;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline ::uint32_t FontDLCRequest::client_version() const {
+  // @@protoc_insertion_point(field_get:ei.FontDLCRequest.client_version)
+  return _internal_client_version();
+}
+inline void FontDLCRequest::set_client_version(::uint32_t value) {
+  _internal_set_client_version(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:ei.FontDLCRequest.client_version)
+}
+inline ::uint32_t FontDLCRequest::_internal_client_version() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.client_version_;
+}
+inline void FontDLCRequest::_internal_set_client_version(::uint32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.client_version_ = value;
+}
+
+// optional .ei.Platform platform = 3;
+inline bool FontDLCRequest::has_platform() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
+  return value;
+}
+inline void FontDLCRequest::clear_platform() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.platform_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline ::ei::Platform FontDLCRequest::platform() const {
+  // @@protoc_insertion_point(field_get:ei.FontDLCRequest.platform)
+  return _internal_platform();
+}
+inline void FontDLCRequest::set_platform(::ei::Platform value) {
+  _internal_set_platform(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  // @@protoc_insertion_point(field_set:ei.FontDLCRequest.platform)
+}
+inline ::ei::Platform FontDLCRequest::_internal_platform() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::ei::Platform>(_impl_.platform_);
+}
+inline void FontDLCRequest::_internal_set_platform(::ei::Platform value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+                                          assert(::google::protobuf::internal::ValidateEnum(
+                                              value, ::ei::Platform_internal_data_));
+                                          _impl_.platform_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// FontDLCResponse
+
+// repeated .ei.FontPack font_packs = 1;
+inline int FontDLCResponse::_internal_font_packs_size() const {
+  return _internal_font_packs().size();
+}
+inline int FontDLCResponse::font_packs_size() const {
+  return _internal_font_packs_size();
+}
+inline void FontDLCResponse::clear_font_packs() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.font_packs_.Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::ei::FontPack& FontDLCResponse::font_packs(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.FontDLCResponse.font_packs)
+  return _internal_font_packs().Get(index);
+}
+inline ::ei::FontPack* PROTOBUF_NONNULL FontDLCResponse::mutable_font_packs(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:ei.FontDLCResponse.font_packs)
+  return _internal_mutable_font_packs()->Mutable(index);
+}
+inline ::ei::FontPack* PROTOBUF_NONNULL FontDLCResponse::add_font_packs()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::ei::FontPack* _add =
+      _internal_mutable_font_packs()->InternalAddWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), GetArena());
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add:ei.FontDLCResponse.font_packs)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::ei::FontPack>& FontDLCResponse::font_packs() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:ei.FontDLCResponse.font_packs)
+  return _internal_font_packs();
+}
+inline ::google::protobuf::RepeatedPtrField<::ei::FontPack>* PROTOBUF_NONNULL
+FontDLCResponse::mutable_font_packs() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_mutable_list:ei.FontDLCResponse.font_packs)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_font_packs();
+}
+inline const ::google::protobuf::RepeatedPtrField<::ei::FontPack>&
+FontDLCResponse::_internal_font_packs() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.font_packs_;
+}
+inline ::google::protobuf::RepeatedPtrField<::ei::FontPack>* PROTOBUF_NONNULL
+FontDLCResponse::_internal_mutable_font_packs() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.font_packs_;
+}
+
+// -------------------------------------------------------------------
+
+// TranslationSeed
+
+// optional string language = 1;
+inline bool TranslationSeed::has_language() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000002U);
+  return value;
+}
+inline void TranslationSeed::clear_language() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.language_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& TranslationSeed::language() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.TranslationSeed.language)
+  return _internal_language();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TranslationSeed::set_language(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.language_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ei.TranslationSeed.language)
+}
+inline ::std::string* PROTOBUF_NONNULL TranslationSeed::mutable_language()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_language();
+  // @@protoc_insertion_point(field_mutable:ei.TranslationSeed.language)
+  return _s;
+}
+inline const ::std::string& TranslationSeed::_internal_language() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.language_.Get();
+}
+inline void TranslationSeed::_internal_set_language(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.language_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TranslationSeed::_internal_mutable_language() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.language_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TranslationSeed::release_language() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ei.TranslationSeed.language)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.language_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.language_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TranslationSeed::set_allocated_language(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.language_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.language_.IsDefault()) {
+    _impl_.language_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ei.TranslationSeed.language)
+}
+
+// repeated .ei.TranslationSeedEntry entries = 2;
+inline int TranslationSeed::_internal_entries_size() const {
+  return _internal_entries().size();
+}
+inline int TranslationSeed::entries_size() const {
+  return _internal_entries_size();
+}
+inline void TranslationSeed::clear_entries() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.entries_.Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::ei::TranslationSeedEntry& TranslationSeed::entries(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.TranslationSeed.entries)
+  return _internal_entries().Get(index);
+}
+inline ::ei::TranslationSeedEntry* PROTOBUF_NONNULL TranslationSeed::mutable_entries(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:ei.TranslationSeed.entries)
+  return _internal_mutable_entries()->Mutable(index);
+}
+inline ::ei::TranslationSeedEntry* PROTOBUF_NONNULL TranslationSeed::add_entries()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::ei::TranslationSeedEntry* _add =
+      _internal_mutable_entries()->InternalAddWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), GetArena());
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add:ei.TranslationSeed.entries)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>& TranslationSeed::entries() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:ei.TranslationSeed.entries)
+  return _internal_entries();
+}
+inline ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>* PROTOBUF_NONNULL
+TranslationSeed::mutable_entries() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_mutable_list:ei.TranslationSeed.entries)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_entries();
+}
+inline const ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>&
+TranslationSeed::_internal_entries() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.entries_;
+}
+inline ::google::protobuf::RepeatedPtrField<::ei::TranslationSeedEntry>* PROTOBUF_NONNULL
+TranslationSeed::_internal_mutable_entries() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.entries_;
+}
+
+// -------------------------------------------------------------------
+
+// TranslationSeedEntry
+
+// optional string source = 1;
+inline bool TranslationSeedEntry::has_source() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
+  return value;
+}
+inline void TranslationSeedEntry::clear_source() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.source_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& TranslationSeedEntry::source() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.TranslationSeedEntry.source)
+  return _internal_source();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TranslationSeedEntry::set_source(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.source_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ei.TranslationSeedEntry.source)
+}
+inline ::std::string* PROTOBUF_NONNULL TranslationSeedEntry::mutable_source()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_source();
+  // @@protoc_insertion_point(field_mutable:ei.TranslationSeedEntry.source)
+  return _s;
+}
+inline const ::std::string& TranslationSeedEntry::_internal_source() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.source_.Get();
+}
+inline void TranslationSeedEntry::_internal_set_source(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.source_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TranslationSeedEntry::_internal_mutable_source() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.source_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TranslationSeedEntry::release_source() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ei.TranslationSeedEntry.source)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.source_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.source_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TranslationSeedEntry::set_allocated_source(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.source_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.source_.IsDefault()) {
+    _impl_.source_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ei.TranslationSeedEntry.source)
+}
+
+// optional string translation = 2;
+inline bool TranslationSeedEntry::has_translation() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000002U);
+  return value;
+}
+inline void TranslationSeedEntry::clear_translation() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.translation_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& TranslationSeedEntry::translation() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ei.TranslationSeedEntry.translation)
+  return _internal_translation();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TranslationSeedEntry::set_translation(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.translation_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ei.TranslationSeedEntry.translation)
+}
+inline ::std::string* PROTOBUF_NONNULL TranslationSeedEntry::mutable_translation()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_translation();
+  // @@protoc_insertion_point(field_mutable:ei.TranslationSeedEntry.translation)
+  return _s;
+}
+inline const ::std::string& TranslationSeedEntry::_internal_translation() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.translation_.Get();
+}
+inline void TranslationSeedEntry::_internal_set_translation(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.translation_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TranslationSeedEntry::_internal_mutable_translation() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.translation_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TranslationSeedEntry::release_translation() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ei.TranslationSeedEntry.translation)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.translation_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.translation_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TranslationSeedEntry::set_allocated_translation(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.translation_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.translation_.IsDefault()) {
+    _impl_.translation_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ei.TranslationSeedEntry.translation)
 }
 
 // -------------------------------------------------------------------

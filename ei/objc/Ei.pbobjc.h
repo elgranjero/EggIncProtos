@@ -164,6 +164,7 @@ CF_EXTERN_C_BEGIN
 @class TranslationEntry;
 @class TranslationKey;
 @class TranslationPlaceholder;
+@class TranslationSeedEntry;
 @class UserSubscriptionInfo;
 @class UserSubscriptionInfo_HistoryEntry;
 @class Vector3;
@@ -4951,6 +4952,7 @@ typedef GPB_ENUM(TranslationCache_FieldNumber) {
   TranslationCache_FieldNumber_EntriesArray = 2,
   TranslationCache_FieldNumber_CachedAt = 3,
   TranslationCache_FieldNumber_CacheVersion = 4,
+  TranslationCache_FieldNumber_PackVersion = 5,
 };
 
 GPB_FINAL @interface TranslationCache : GPBMessage
@@ -4968,6 +4970,9 @@ GPB_FINAL @interface TranslationCache : GPBMessage
 
 @property(nonatomic, readwrite) uint32_t cacheVersion;
 @property(nonatomic, readwrite) BOOL hasCacheVersion;
+
+@property(nonatomic, readwrite) uint32_t packVersion;
+@property(nonatomic, readwrite) BOOL hasPackVersion;
 
 @end
 
@@ -5022,6 +5027,80 @@ GPB_FINAL @interface TranslationPackResponse : GPBMessage
 
 @property(nonatomic, readwrite) BOOL truncated;
 @property(nonatomic, readwrite) BOOL hasTruncated;
+
+@end
+
+#pragma mark - FontDLCRequest
+
+typedef GPB_ENUM(FontDLCRequest_FieldNumber) {
+  FontDLCRequest_FieldNumber_Language = 1,
+  FontDLCRequest_FieldNumber_ClientVersion = 2,
+  FontDLCRequest_FieldNumber_Platform = 3,
+};
+
+GPB_FINAL @interface FontDLCRequest : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite) uint32_t clientVersion;
+@property(nonatomic, readwrite) BOOL hasClientVersion;
+
+@property(nonatomic, readwrite) Platform platform;
+@property(nonatomic, readwrite) BOOL hasPlatform;
+
+@end
+
+#pragma mark - FontDLCResponse
+
+typedef GPB_ENUM(FontDLCResponse_FieldNumber) {
+  FontDLCResponse_FieldNumber_FontPacksArray = 1,
+};
+
+GPB_FINAL @interface FontDLCResponse : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<FontPack*> *fontPacksArray;
+/** The number of items in @c fontPacksArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger fontPacksArray_Count;
+
+@end
+
+#pragma mark - TranslationSeed
+
+typedef GPB_ENUM(TranslationSeed_FieldNumber) {
+  TranslationSeed_FieldNumber_Language = 1,
+  TranslationSeed_FieldNumber_EntriesArray = 2,
+};
+
+GPB_FINAL @interface TranslationSeed : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *language;
+/** Test to see if @c language has been set. */
+@property(nonatomic, readwrite) BOOL hasLanguage;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<TranslationSeedEntry*> *entriesArray;
+/** The number of items in @c entriesArray without causing the container to be created. */
+@property(nonatomic, readonly) NSUInteger entriesArray_Count;
+
+@end
+
+#pragma mark - TranslationSeedEntry
+
+typedef GPB_ENUM(TranslationSeedEntry_FieldNumber) {
+  TranslationSeedEntry_FieldNumber_Source = 1,
+  TranslationSeedEntry_FieldNumber_Translation = 2,
+};
+
+GPB_FINAL @interface TranslationSeedEntry : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *source;
+/** Test to see if @c source has been set. */
+@property(nonatomic, readwrite) BOOL hasSource;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *translation;
+/** Test to see if @c translation has been set. */
+@property(nonatomic, readwrite) BOOL hasTranslation;
 
 @end
 

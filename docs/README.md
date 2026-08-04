@@ -120,6 +120,8 @@
     - [EggIncFirstContactRequest](#ei-EggIncFirstContactRequest)
     - [EggIncFirstContactResponse](#ei-EggIncFirstContactResponse)
     - [FarmProductionParams](#ei-FarmProductionParams)
+    - [FontDLCRequest](#ei-FontDLCRequest)
+    - [FontDLCResponse](#ei-FontDLCResponse)
     - [FontPack](#ei-FontPack)
     - [GameModifier](#ei-GameModifier)
     - [GenericAction](#ei-GenericAction)
@@ -223,6 +225,8 @@
     - [TranslationPlaceholder](#ei-TranslationPlaceholder)
     - [TranslationRequest](#ei-TranslationRequest)
     - [TranslationResponse](#ei-TranslationResponse)
+    - [TranslationSeed](#ei-TranslationSeed)
+    - [TranslationSeedEntry](#ei-TranslationSeedEntry)
     - [UpdateCoopPermissionsRequest](#ei-UpdateCoopPermissionsRequest)
     - [UpdateCoopPermissionsResponse](#ei-UpdateCoopPermissionsResponse)
     - [UserDataInfoRequest](#ei-UserDataInfoRequest)
@@ -2765,6 +2769,38 @@
 
 
 
+<a name="ei-FontDLCRequest"></a>
+
+### FontDLCRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| language | [string](#string) | optional |  |
+| client_version | [uint32](#uint32) | optional |  |
+| platform | [Platform](#ei-Platform) | optional |  |
+
+
+
+
+
+
+<a name="ei-FontDLCResponse"></a>
+
+### FontDLCResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| font_packs | [FontPack](#ei-FontPack) | repeated |  |
+
+
+
+
+
+
 <a name="ei-FontPack"></a>
 
 ### FontPack
@@ -4668,6 +4704,7 @@
 | entries | [TranslationEntry](#ei-TranslationEntry) | repeated |  |
 | cached_at | [double](#double) | optional |  |
 | cache_version | [uint32](#uint32) | optional |  |
+| pack_version | [uint32](#uint32) | optional |  |
 
 
 
@@ -4789,6 +4826,38 @@
 | language | [string](#string) | optional |  |
 | entries | [TranslationEntry](#ei-TranslationEntry) | repeated |  |
 | cache_version | [uint32](#uint32) | optional |  |
+
+
+
+
+
+
+<a name="ei-TranslationSeed"></a>
+
+### TranslationSeed
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| language | [string](#string) | optional |  |
+| entries | [TranslationSeedEntry](#ei-TranslationSeedEntry) | repeated |  |
+
+
+
+
+
+
+<a name="ei-TranslationSeedEntry"></a>
+
+### TranslationSeedEntry
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| source | [string](#string) | optional |  |
+| translation | [string](#string) | optional |  |
 
 
 

@@ -1062,6 +1062,7 @@ message TranslationCache {
     repeated TranslationEntry entries = 2;
     optional double cached_at = 3;
     optional uint32 cache_version = 4;
+    optional uint32 pack_version = 5;
 }
 
 message TranslationPackRequest {
@@ -1076,6 +1077,26 @@ message TranslationPackResponse {
     optional uint32 cache_version = 3;
     optional bool up_to_date = 4;
     optional bool truncated = 5;
+}
+
+message FontDLCRequest {
+    optional string language = 1;
+    optional uint32 client_version = 2;
+    optional Platform platform = 3;
+}
+
+message FontDLCResponse {
+    repeated FontPack font_packs = 1;
+}
+
+message TranslationSeed {
+    optional string language = 1;
+    repeated TranslationSeedEntry entries = 2;
+}
+
+message TranslationSeedEntry {
+    optional string source = 1;
+    optional string translation = 2;
 }
 
 message QueryCoopRequest {

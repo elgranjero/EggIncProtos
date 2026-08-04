@@ -137199,6 +137199,17 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
      * @return The cacheVersion.
      */
     int getCacheVersion();
+
+    /**
+     * <code>optional uint32 pack_version = 5;</code>
+     * @return Whether the packVersion field is set.
+     */
+    boolean hasPackVersion();
+    /**
+     * <code>optional uint32 pack_version = 5;</code>
+     * @return The packVersion.
+     */
+    int getPackVersion();
   }
   /**
    * Protobuf type {@code ei.TranslationCache}
@@ -137373,6 +137384,25 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       return cacheVersion_;
     }
 
+    public static final int PACK_VERSION_FIELD_NUMBER = 5;
+    private int packVersion_ = 0;
+    /**
+     * <code>optional uint32 pack_version = 5;</code>
+     * @return Whether the packVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasPackVersion() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 pack_version = 5;</code>
+     * @return The packVersion.
+     */
+    @java.lang.Override
+    public int getPackVersion() {
+      return packVersion_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -137399,6 +137429,9 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt32(4, cacheVersion_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(5, packVersion_);
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -137422,6 +137455,10 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, cacheVersion_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, packVersion_);
       }
       return size;
     }
@@ -137465,6 +137502,11 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         if (getCacheVersion()
             != other.getCacheVersion()) return false;
       }
+      if (hasPackVersion() != other.hasPackVersion()) return false;
+      if (hasPackVersion()) {
+        if (getPackVersion()
+            != other.getPackVersion()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -137492,6 +137534,10 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       if (hasCacheVersion()) {
         hash = (37 * hash) + CACHE_VERSION_FIELD_NUMBER;
         hash = (53 * hash) + getCacheVersion();
+      }
+      if (hasPackVersion()) {
+        hash = (37 * hash) + PACK_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getPackVersion();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -137634,6 +137680,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         bitField0_ = (bitField0_ & ~0x00000002);
         cachedAt_ = 0D;
         cacheVersion_ = 0;
+        packVersion_ = 0;
         return this;
       }
 
@@ -137693,6 +137740,10 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
           result.cacheVersion_ = cacheVersion_;
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.packVersion_ = packVersion_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -137744,6 +137795,9 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         }
         if (other.hasCacheVersion()) {
           setCacheVersion(other.getCacheVersion());
+        }
+        if (other.hasPackVersion()) {
+          setPackVersion(other.getPackVersion());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -137799,6 +137853,11 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 40: {
+                packVersion_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -138212,6 +138271,46 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       public Builder clearCacheVersion() {
         bitField0_ = (bitField0_ & ~0x00000008);
         cacheVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int packVersion_ ;
+      /**
+       * <code>optional uint32 pack_version = 5;</code>
+       * @return Whether the packVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasPackVersion() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 pack_version = 5;</code>
+       * @return The packVersion.
+       */
+      @java.lang.Override
+      public int getPackVersion() {
+        return packVersion_;
+      }
+      /**
+       * <code>optional uint32 pack_version = 5;</code>
+       * @param value The packVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPackVersion(int value) {
+
+        packVersion_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 pack_version = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPackVersion() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        packVersion_ = 0;
         onChanged();
         return this;
       }
@@ -140350,6 +140449,3177 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
 
     @java.lang.Override
     public ei.Ei.TranslationPackResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FontDLCRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ei.FontDLCRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    boolean hasLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The language.
+     */
+    java.lang.String getLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The bytes for language.
+     */
+    com.google.protobuf.ByteString
+        getLanguageBytes();
+
+    /**
+     * <code>optional uint32 client_version = 2;</code>
+     * @return Whether the clientVersion field is set.
+     */
+    boolean hasClientVersion();
+    /**
+     * <code>optional uint32 client_version = 2;</code>
+     * @return The clientVersion.
+     */
+    int getClientVersion();
+
+    /**
+     * <code>optional .ei.Platform platform = 3;</code>
+     * @return Whether the platform field is set.
+     */
+    boolean hasPlatform();
+    /**
+     * <code>optional .ei.Platform platform = 3;</code>
+     * @return The platform.
+     */
+    ei.Ei.Platform getPlatform();
+  }
+  /**
+   * Protobuf type {@code ei.FontDLCRequest}
+   */
+  public static final class FontDLCRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ei.FontDLCRequest)
+      FontDLCRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "FontDLCRequest");
+    }
+    // Use FontDLCRequest.newBuilder() to construct.
+    private FontDLCRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private FontDLCRequest() {
+      language_ = "";
+      platform_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ei.Ei.internal_static_ei_FontDLCRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return ei.Ei.internal_static_ei_FontDLCRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ei.Ei.internal_static_ei_FontDLCRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ei.Ei.FontDLCRequest.class, ei.Ei.FontDLCRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LANGUAGE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object language_ = "";
+    /**
+     * <code>optional string language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The language.
+     */
+    @java.lang.Override
+    public java.lang.String getLanguage() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          language_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The bytes for language.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLanguageBytes() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        language_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_VERSION_FIELD_NUMBER = 2;
+    private int clientVersion_ = 0;
+    /**
+     * <code>optional uint32 client_version = 2;</code>
+     * @return Whether the clientVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientVersion() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 client_version = 2;</code>
+     * @return The clientVersion.
+     */
+    @java.lang.Override
+    public int getClientVersion() {
+      return clientVersion_;
+    }
+
+    public static final int PLATFORM_FIELD_NUMBER = 3;
+    private int platform_ = 0;
+    /**
+     * <code>optional .ei.Platform platform = 3;</code>
+     * @return Whether the platform field is set.
+     */
+    @java.lang.Override public boolean hasPlatform() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .ei.Platform platform = 3;</code>
+     * @return The platform.
+     */
+    @java.lang.Override public ei.Ei.Platform getPlatform() {
+      ei.Ei.Platform result = ei.Ei.Platform.forNumber(platform_);
+      return result == null ? ei.Ei.Platform.UNKNOWN_PLATFORM : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, language_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, clientVersion_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, platform_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, language_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, clientVersion_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, platform_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ei.Ei.FontDLCRequest)) {
+        return super.equals(obj);
+      }
+      ei.Ei.FontDLCRequest other = (ei.Ei.FontDLCRequest) obj;
+
+      if (hasLanguage() != other.hasLanguage()) return false;
+      if (hasLanguage()) {
+        if (!getLanguage()
+            .equals(other.getLanguage())) return false;
+      }
+      if (hasClientVersion() != other.hasClientVersion()) return false;
+      if (hasClientVersion()) {
+        if (getClientVersion()
+            != other.getClientVersion()) return false;
+      }
+      if (hasPlatform() != other.hasPlatform()) return false;
+      if (hasPlatform()) {
+        if (platform_ != other.platform_) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLanguage()) {
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage().hashCode();
+      }
+      if (hasClientVersion()) {
+        hash = (37 * hash) + CLIENT_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getClientVersion();
+      }
+      if (hasPlatform()) {
+        hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
+        hash = (53 * hash) + platform_;
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ei.Ei.FontDLCRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ei.Ei.FontDLCRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ei.Ei.FontDLCRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.FontDLCRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ei.Ei.FontDLCRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ei.FontDLCRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ei.FontDLCRequest)
+        ei.Ei.FontDLCRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ei.Ei.internal_static_ei_FontDLCRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ei.Ei.internal_static_ei_FontDLCRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ei.Ei.FontDLCRequest.class, ei.Ei.FontDLCRequest.Builder.class);
+      }
+
+      // Construct using ei.Ei.FontDLCRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        language_ = "";
+        clientVersion_ = 0;
+        platform_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ei.Ei.internal_static_ei_FontDLCRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ei.Ei.FontDLCRequest getDefaultInstanceForType() {
+        return ei.Ei.FontDLCRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ei.Ei.FontDLCRequest build() {
+        ei.Ei.FontDLCRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ei.Ei.FontDLCRequest buildPartial() {
+        ei.Ei.FontDLCRequest result = new ei.Ei.FontDLCRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ei.Ei.FontDLCRequest result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.language_ = language_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clientVersion_ = clientVersion_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.platform_ = platform_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ei.Ei.FontDLCRequest) {
+          return mergeFrom((ei.Ei.FontDLCRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ei.Ei.FontDLCRequest other) {
+        if (other == ei.Ei.FontDLCRequest.getDefaultInstance()) return this;
+        if (other.hasLanguage()) {
+          language_ = other.language_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasClientVersion()) {
+          setClientVersion(other.getClientVersion());
+        }
+        if (other.hasPlatform()) {
+          setPlatform(other.getPlatform());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                language_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                clientVersion_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                ei.Ei.Platform tmpValue =
+                    ei.Ei.Platform.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  platform_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object language_ = "";
+      /**
+       * <code>optional string language = 1;</code>
+       * @return Whether the language field is set.
+       */
+      public boolean hasLanguage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return The language.
+       */
+      public java.lang.String getLanguage() {
+        java.lang.Object ref = language_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            language_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return The bytes for language.
+       */
+      public com.google.protobuf.ByteString
+          getLanguageBytes() {
+        java.lang.Object ref = language_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          language_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @param value The language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        language_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguage() {
+        language_ = getDefaultInstance().getLanguage();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @param value The bytes for language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        language_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int clientVersion_ ;
+      /**
+       * <code>optional uint32 client_version = 2;</code>
+       * @return Whether the clientVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasClientVersion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 client_version = 2;</code>
+       * @return The clientVersion.
+       */
+      @java.lang.Override
+      public int getClientVersion() {
+        return clientVersion_;
+      }
+      /**
+       * <code>optional uint32 client_version = 2;</code>
+       * @param value The clientVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientVersion(int value) {
+
+        clientVersion_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 client_version = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        clientVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int platform_ = 0;
+      /**
+       * <code>optional .ei.Platform platform = 3;</code>
+       * @return Whether the platform field is set.
+       */
+      @java.lang.Override public boolean hasPlatform() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .ei.Platform platform = 3;</code>
+       * @return The platform.
+       */
+      @java.lang.Override
+      public ei.Ei.Platform getPlatform() {
+        ei.Ei.Platform result = ei.Ei.Platform.forNumber(platform_);
+        return result == null ? ei.Ei.Platform.UNKNOWN_PLATFORM : result;
+      }
+      /**
+       * <code>optional .ei.Platform platform = 3;</code>
+       * @param value The platform to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatform(ei.Ei.Platform value) {
+        if (value == null) { throw new NullPointerException(); }
+        bitField0_ |= 0x00000004;
+        platform_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ei.Platform platform = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatform() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        platform_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ei.FontDLCRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ei.FontDLCRequest)
+    private static final ei.Ei.FontDLCRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ei.Ei.FontDLCRequest();
+    }
+
+    public static ei.Ei.FontDLCRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FontDLCRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FontDLCRequest>() {
+      @java.lang.Override
+      public FontDLCRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FontDLCRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FontDLCRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ei.Ei.FontDLCRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FontDLCResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ei.FontDLCResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    java.util.List<ei.Ei.FontPack> 
+        getFontPacksList();
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    ei.Ei.FontPack getFontPacks(int index);
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    int getFontPacksCount();
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    java.util.List<? extends ei.Ei.FontPackOrBuilder> 
+        getFontPacksOrBuilderList();
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    ei.Ei.FontPackOrBuilder getFontPacksOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ei.FontDLCResponse}
+   */
+  public static final class FontDLCResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ei.FontDLCResponse)
+      FontDLCResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "FontDLCResponse");
+    }
+    // Use FontDLCResponse.newBuilder() to construct.
+    private FontDLCResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private FontDLCResponse() {
+      fontPacks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ei.Ei.internal_static_ei_FontDLCResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return ei.Ei.internal_static_ei_FontDLCResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ei.Ei.internal_static_ei_FontDLCResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ei.Ei.FontDLCResponse.class, ei.Ei.FontDLCResponse.Builder.class);
+    }
+
+    public static final int FONT_PACKS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<ei.Ei.FontPack> fontPacks_;
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ei.Ei.FontPack> getFontPacksList() {
+      return fontPacks_;
+    }
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ei.Ei.FontPackOrBuilder> 
+        getFontPacksOrBuilderList() {
+      return fontPacks_;
+    }
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    @java.lang.Override
+    public int getFontPacksCount() {
+      return fontPacks_.size();
+    }
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    @java.lang.Override
+    public ei.Ei.FontPack getFontPacks(int index) {
+      return fontPacks_.get(index);
+    }
+    /**
+     * <code>repeated .ei.FontPack font_packs = 1;</code>
+     */
+    @java.lang.Override
+    public ei.Ei.FontPackOrBuilder getFontPacksOrBuilder(
+        int index) {
+      return fontPacks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fontPacks_.size(); i++) {
+        output.writeMessage(1, fontPacks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = fontPacks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(fontPacks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ei.Ei.FontDLCResponse)) {
+        return super.equals(obj);
+      }
+      ei.Ei.FontDLCResponse other = (ei.Ei.FontDLCResponse) obj;
+
+      if (!getFontPacksList()
+          .equals(other.getFontPacksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFontPacksCount() > 0) {
+        hash = (37 * hash) + FONT_PACKS_FIELD_NUMBER;
+        hash = (53 * hash) + getFontPacksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ei.Ei.FontDLCResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ei.Ei.FontDLCResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ei.Ei.FontDLCResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.FontDLCResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ei.Ei.FontDLCResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ei.FontDLCResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ei.FontDLCResponse)
+        ei.Ei.FontDLCResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ei.Ei.internal_static_ei_FontDLCResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ei.Ei.internal_static_ei_FontDLCResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ei.Ei.FontDLCResponse.class, ei.Ei.FontDLCResponse.Builder.class);
+      }
+
+      // Construct using ei.Ei.FontDLCResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (fontPacksBuilder_ == null) {
+          fontPacks_ = java.util.Collections.emptyList();
+        } else {
+          fontPacks_ = null;
+          fontPacksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ei.Ei.internal_static_ei_FontDLCResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public ei.Ei.FontDLCResponse getDefaultInstanceForType() {
+        return ei.Ei.FontDLCResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ei.Ei.FontDLCResponse build() {
+        ei.Ei.FontDLCResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ei.Ei.FontDLCResponse buildPartial() {
+        ei.Ei.FontDLCResponse result = new ei.Ei.FontDLCResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ei.Ei.FontDLCResponse result) {
+        if (fontPacksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fontPacks_ = java.util.Collections.unmodifiableList(fontPacks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fontPacks_ = fontPacks_;
+        } else {
+          result.fontPacks_ = fontPacksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(ei.Ei.FontDLCResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ei.Ei.FontDLCResponse) {
+          return mergeFrom((ei.Ei.FontDLCResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ei.Ei.FontDLCResponse other) {
+        if (other == ei.Ei.FontDLCResponse.getDefaultInstance()) return this;
+        if (fontPacksBuilder_ == null) {
+          if (!other.fontPacks_.isEmpty()) {
+            if (fontPacks_.isEmpty()) {
+              fontPacks_ = other.fontPacks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFontPacksIsMutable();
+              fontPacks_.addAll(other.fontPacks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fontPacks_.isEmpty()) {
+            if (fontPacksBuilder_.isEmpty()) {
+              fontPacksBuilder_.dispose();
+              fontPacksBuilder_ = null;
+              fontPacks_ = other.fontPacks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              fontPacksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetFontPacksFieldBuilder() : null;
+            } else {
+              fontPacksBuilder_.addAllMessages(other.fontPacks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ei.Ei.FontPack m =
+                    input.readMessage(
+                        ei.Ei.FontPack.parser(),
+                        extensionRegistry);
+                if (fontPacksBuilder_ == null) {
+                  ensureFontPacksIsMutable();
+                  fontPacks_.add(m);
+                } else {
+                  fontPacksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<ei.Ei.FontPack> fontPacks_ =
+        java.util.Collections.emptyList();
+      private void ensureFontPacksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fontPacks_ = new java.util.ArrayList<ei.Ei.FontPack>(fontPacks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          ei.Ei.FontPack, ei.Ei.FontPack.Builder, ei.Ei.FontPackOrBuilder> fontPacksBuilder_;
+
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public java.util.List<ei.Ei.FontPack> getFontPacksList() {
+        if (fontPacksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fontPacks_);
+        } else {
+          return fontPacksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public int getFontPacksCount() {
+        if (fontPacksBuilder_ == null) {
+          return fontPacks_.size();
+        } else {
+          return fontPacksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public ei.Ei.FontPack getFontPacks(int index) {
+        if (fontPacksBuilder_ == null) {
+          return fontPacks_.get(index);
+        } else {
+          return fontPacksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder setFontPacks(
+          int index, ei.Ei.FontPack value) {
+        if (fontPacksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFontPacksIsMutable();
+          fontPacks_.set(index, value);
+          onChanged();
+        } else {
+          fontPacksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder setFontPacks(
+          int index, ei.Ei.FontPack.Builder builderForValue) {
+        if (fontPacksBuilder_ == null) {
+          ensureFontPacksIsMutable();
+          fontPacks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fontPacksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder addFontPacks(ei.Ei.FontPack value) {
+        if (fontPacksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFontPacksIsMutable();
+          fontPacks_.add(value);
+          onChanged();
+        } else {
+          fontPacksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder addFontPacks(
+          int index, ei.Ei.FontPack value) {
+        if (fontPacksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFontPacksIsMutable();
+          fontPacks_.add(index, value);
+          onChanged();
+        } else {
+          fontPacksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder addFontPacks(
+          ei.Ei.FontPack.Builder builderForValue) {
+        if (fontPacksBuilder_ == null) {
+          ensureFontPacksIsMutable();
+          fontPacks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fontPacksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder addFontPacks(
+          int index, ei.Ei.FontPack.Builder builderForValue) {
+        if (fontPacksBuilder_ == null) {
+          ensureFontPacksIsMutable();
+          fontPacks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fontPacksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder addAllFontPacks(
+          java.lang.Iterable<? extends ei.Ei.FontPack> values) {
+        if (fontPacksBuilder_ == null) {
+          ensureFontPacksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fontPacks_);
+          onChanged();
+        } else {
+          fontPacksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder clearFontPacks() {
+        if (fontPacksBuilder_ == null) {
+          fontPacks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          fontPacksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public Builder removeFontPacks(int index) {
+        if (fontPacksBuilder_ == null) {
+          ensureFontPacksIsMutable();
+          fontPacks_.remove(index);
+          onChanged();
+        } else {
+          fontPacksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public ei.Ei.FontPack.Builder getFontPacksBuilder(
+          int index) {
+        return internalGetFontPacksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public ei.Ei.FontPackOrBuilder getFontPacksOrBuilder(
+          int index) {
+        if (fontPacksBuilder_ == null) {
+          return fontPacks_.get(index);  } else {
+          return fontPacksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public java.util.List<? extends ei.Ei.FontPackOrBuilder> 
+           getFontPacksOrBuilderList() {
+        if (fontPacksBuilder_ != null) {
+          return fontPacksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fontPacks_);
+        }
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public ei.Ei.FontPack.Builder addFontPacksBuilder() {
+        return internalGetFontPacksFieldBuilder().addBuilder(
+            ei.Ei.FontPack.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public ei.Ei.FontPack.Builder addFontPacksBuilder(
+          int index) {
+        return internalGetFontPacksFieldBuilder().addBuilder(
+            index, ei.Ei.FontPack.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ei.FontPack font_packs = 1;</code>
+       */
+      public java.util.List<ei.Ei.FontPack.Builder> 
+           getFontPacksBuilderList() {
+        return internalGetFontPacksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          ei.Ei.FontPack, ei.Ei.FontPack.Builder, ei.Ei.FontPackOrBuilder> 
+          internalGetFontPacksFieldBuilder() {
+        if (fontPacksBuilder_ == null) {
+          fontPacksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              ei.Ei.FontPack, ei.Ei.FontPack.Builder, ei.Ei.FontPackOrBuilder>(
+                  fontPacks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fontPacks_ = null;
+        }
+        return fontPacksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ei.FontDLCResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ei.FontDLCResponse)
+    private static final ei.Ei.FontDLCResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ei.Ei.FontDLCResponse();
+    }
+
+    public static ei.Ei.FontDLCResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FontDLCResponse>
+        PARSER = new com.google.protobuf.AbstractParser<FontDLCResponse>() {
+      @java.lang.Override
+      public FontDLCResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FontDLCResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FontDLCResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ei.Ei.FontDLCResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TranslationSeedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ei.TranslationSeed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    boolean hasLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The language.
+     */
+    java.lang.String getLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The bytes for language.
+     */
+    com.google.protobuf.ByteString
+        getLanguageBytes();
+
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    java.util.List<ei.Ei.TranslationSeedEntry> 
+        getEntriesList();
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    ei.Ei.TranslationSeedEntry getEntries(int index);
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    java.util.List<? extends ei.Ei.TranslationSeedEntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    ei.Ei.TranslationSeedEntryOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ei.TranslationSeed}
+   */
+  public static final class TranslationSeed extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ei.TranslationSeed)
+      TranslationSeedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "TranslationSeed");
+    }
+    // Use TranslationSeed.newBuilder() to construct.
+    private TranslationSeed(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private TranslationSeed() {
+      language_ = "";
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ei.Ei.internal_static_ei_TranslationSeed_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return ei.Ei.internal_static_ei_TranslationSeed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ei.Ei.internal_static_ei_TranslationSeed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ei.Ei.TranslationSeed.class, ei.Ei.TranslationSeed.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LANGUAGE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object language_ = "";
+    /**
+     * <code>optional string language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The language.
+     */
+    @java.lang.Override
+    public java.lang.String getLanguage() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          language_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The bytes for language.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLanguageBytes() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        language_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<ei.Ei.TranslationSeedEntry> entries_;
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ei.Ei.TranslationSeedEntry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ei.Ei.TranslationSeedEntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    @java.lang.Override
+    public ei.Ei.TranslationSeedEntry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+     */
+    @java.lang.Override
+    public ei.Ei.TranslationSeedEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, language_);
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(2, entries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, language_);
+      }
+
+          {
+            final int count = entries_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(entries_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ei.Ei.TranslationSeed)) {
+        return super.equals(obj);
+      }
+      ei.Ei.TranslationSeed other = (ei.Ei.TranslationSeed) obj;
+
+      if (hasLanguage() != other.hasLanguage()) return false;
+      if (hasLanguage()) {
+        if (!getLanguage()
+            .equals(other.getLanguage())) return false;
+      }
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLanguage()) {
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage().hashCode();
+      }
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ei.Ei.TranslationSeed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ei.Ei.TranslationSeed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ei.Ei.TranslationSeed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.TranslationSeed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ei.Ei.TranslationSeed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ei.TranslationSeed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ei.TranslationSeed)
+        ei.Ei.TranslationSeedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ei.Ei.internal_static_ei_TranslationSeed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ei.Ei.internal_static_ei_TranslationSeed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ei.Ei.TranslationSeed.class, ei.Ei.TranslationSeed.Builder.class);
+      }
+
+      // Construct using ei.Ei.TranslationSeed.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        language_ = "";
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+        } else {
+          entries_ = null;
+          entriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ei.Ei.internal_static_ei_TranslationSeed_descriptor;
+      }
+
+      @java.lang.Override
+      public ei.Ei.TranslationSeed getDefaultInstanceForType() {
+        return ei.Ei.TranslationSeed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ei.Ei.TranslationSeed build() {
+        ei.Ei.TranslationSeed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ei.Ei.TranslationSeed buildPartial() {
+        ei.Ei.TranslationSeed result = new ei.Ei.TranslationSeed(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ei.Ei.TranslationSeed result) {
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(ei.Ei.TranslationSeed result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.language_ = language_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ei.Ei.TranslationSeed) {
+          return mergeFrom((ei.Ei.TranslationSeed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ei.Ei.TranslationSeed other) {
+        if (other == ei.Ei.TranslationSeed.getDefaultInstance()) return this;
+        if (other.hasLanguage()) {
+          language_ = other.language_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                language_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                ei.Ei.TranslationSeedEntry m =
+                    input.readMessage(
+                        ei.Ei.TranslationSeedEntry.parser(),
+                        extensionRegistry);
+                if (entriesBuilder_ == null) {
+                  ensureEntriesIsMutable();
+                  entries_.add(m);
+                } else {
+                  entriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object language_ = "";
+      /**
+       * <code>optional string language = 1;</code>
+       * @return Whether the language field is set.
+       */
+      public boolean hasLanguage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return The language.
+       */
+      public java.lang.String getLanguage() {
+        java.lang.Object ref = language_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            language_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return The bytes for language.
+       */
+      public com.google.protobuf.ByteString
+          getLanguageBytes() {
+        java.lang.Object ref = language_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          language_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @param value The language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        language_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguage() {
+        language_ = getDefaultInstance().getLanguage();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @param value The bytes for language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        language_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<ei.Ei.TranslationSeedEntry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          entries_ = new java.util.ArrayList<ei.Ei.TranslationSeedEntry>(entries_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          ei.Ei.TranslationSeedEntry, ei.Ei.TranslationSeedEntry.Builder, ei.Ei.TranslationSeedEntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public java.util.List<ei.Ei.TranslationSeedEntry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public ei.Ei.TranslationSeedEntry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder setEntries(
+          int index, ei.Ei.TranslationSeedEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder setEntries(
+          int index, ei.Ei.TranslationSeedEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder addEntries(ei.Ei.TranslationSeedEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder addEntries(
+          int index, ei.Ei.TranslationSeedEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder addEntries(
+          ei.Ei.TranslationSeedEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder addEntries(
+          int index, ei.Ei.TranslationSeedEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends ei.Ei.TranslationSeedEntry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public ei.Ei.TranslationSeedEntry.Builder getEntriesBuilder(
+          int index) {
+        return internalGetEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public ei.Ei.TranslationSeedEntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public java.util.List<? extends ei.Ei.TranslationSeedEntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public ei.Ei.TranslationSeedEntry.Builder addEntriesBuilder() {
+        return internalGetEntriesFieldBuilder().addBuilder(
+            ei.Ei.TranslationSeedEntry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public ei.Ei.TranslationSeedEntry.Builder addEntriesBuilder(
+          int index) {
+        return internalGetEntriesFieldBuilder().addBuilder(
+            index, ei.Ei.TranslationSeedEntry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ei.TranslationSeedEntry entries = 2;</code>
+       */
+      public java.util.List<ei.Ei.TranslationSeedEntry.Builder> 
+           getEntriesBuilderList() {
+        return internalGetEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          ei.Ei.TranslationSeedEntry, ei.Ei.TranslationSeedEntry.Builder, ei.Ei.TranslationSeedEntryOrBuilder> 
+          internalGetEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              ei.Ei.TranslationSeedEntry, ei.Ei.TranslationSeedEntry.Builder, ei.Ei.TranslationSeedEntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ei.TranslationSeed)
+    }
+
+    // @@protoc_insertion_point(class_scope:ei.TranslationSeed)
+    private static final ei.Ei.TranslationSeed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ei.Ei.TranslationSeed();
+    }
+
+    public static ei.Ei.TranslationSeed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TranslationSeed>
+        PARSER = new com.google.protobuf.AbstractParser<TranslationSeed>() {
+      @java.lang.Override
+      public TranslationSeed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TranslationSeed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TranslationSeed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ei.Ei.TranslationSeed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TranslationSeedEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ei.TranslationSeedEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string source = 1;</code>
+     * @return Whether the source field is set.
+     */
+    boolean hasSource();
+    /**
+     * <code>optional string source = 1;</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <code>optional string source = 1;</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <code>optional string translation = 2;</code>
+     * @return Whether the translation field is set.
+     */
+    boolean hasTranslation();
+    /**
+     * <code>optional string translation = 2;</code>
+     * @return The translation.
+     */
+    java.lang.String getTranslation();
+    /**
+     * <code>optional string translation = 2;</code>
+     * @return The bytes for translation.
+     */
+    com.google.protobuf.ByteString
+        getTranslationBytes();
+  }
+  /**
+   * Protobuf type {@code ei.TranslationSeedEntry}
+   */
+  public static final class TranslationSeedEntry extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ei.TranslationSeedEntry)
+      TranslationSeedEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "TranslationSeedEntry");
+    }
+    // Use TranslationSeedEntry.newBuilder() to construct.
+    private TranslationSeedEntry(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private TranslationSeedEntry() {
+      source_ = "";
+      translation_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ei.Ei.internal_static_ei_TranslationSeedEntry_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return ei.Ei.internal_static_ei_TranslationSeedEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ei.Ei.internal_static_ei_TranslationSeedEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ei.Ei.TranslationSeedEntry.class, ei.Ei.TranslationSeedEntry.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SOURCE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <code>optional string source = 1;</code>
+     * @return Whether the source field is set.
+     */
+    @java.lang.Override
+    public boolean hasSource() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string source = 1;</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          source_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string source = 1;</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSLATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object translation_ = "";
+    /**
+     * <code>optional string translation = 2;</code>
+     * @return Whether the translation field is set.
+     */
+    @java.lang.Override
+    public boolean hasTranslation() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string translation = 2;</code>
+     * @return The translation.
+     */
+    @java.lang.Override
+    public java.lang.String getTranslation() {
+      java.lang.Object ref = translation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          translation_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string translation = 2;</code>
+     * @return The bytes for translation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTranslationBytes() {
+      java.lang.Object ref = translation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        translation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, source_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, translation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, source_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, translation_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ei.Ei.TranslationSeedEntry)) {
+        return super.equals(obj);
+      }
+      ei.Ei.TranslationSeedEntry other = (ei.Ei.TranslationSeedEntry) obj;
+
+      if (hasSource() != other.hasSource()) return false;
+      if (hasSource()) {
+        if (!getSource()
+            .equals(other.getSource())) return false;
+      }
+      if (hasTranslation() != other.hasTranslation()) return false;
+      if (hasTranslation()) {
+        if (!getTranslation()
+            .equals(other.getTranslation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSource()) {
+        hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getSource().hashCode();
+      }
+      if (hasTranslation()) {
+        hash = (37 * hash) + TRANSLATION_FIELD_NUMBER;
+        hash = (53 * hash) + getTranslation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ei.Ei.TranslationSeedEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ei.Ei.TranslationSeedEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ei.Ei.TranslationSeedEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ei.Ei.TranslationSeedEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ei.TranslationSeedEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ei.TranslationSeedEntry)
+        ei.Ei.TranslationSeedEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ei.Ei.internal_static_ei_TranslationSeedEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ei.Ei.internal_static_ei_TranslationSeedEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ei.Ei.TranslationSeedEntry.class, ei.Ei.TranslationSeedEntry.Builder.class);
+      }
+
+      // Construct using ei.Ei.TranslationSeedEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        source_ = "";
+        translation_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ei.Ei.internal_static_ei_TranslationSeedEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public ei.Ei.TranslationSeedEntry getDefaultInstanceForType() {
+        return ei.Ei.TranslationSeedEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ei.Ei.TranslationSeedEntry build() {
+        ei.Ei.TranslationSeedEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ei.Ei.TranslationSeedEntry buildPartial() {
+        ei.Ei.TranslationSeedEntry result = new ei.Ei.TranslationSeedEntry(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ei.Ei.TranslationSeedEntry result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.source_ = source_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.translation_ = translation_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ei.Ei.TranslationSeedEntry) {
+          return mergeFrom((ei.Ei.TranslationSeedEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ei.Ei.TranslationSeedEntry other) {
+        if (other == ei.Ei.TranslationSeedEntry.getDefaultInstance()) return this;
+        if (other.hasSource()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasTranslation()) {
+          translation_ = other.translation_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                source_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                translation_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object source_ = "";
+      /**
+       * <code>optional string source = 1;</code>
+       * @return Whether the source field is set.
+       */
+      public boolean hasSource() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string source = 1;</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            source_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string source = 1;</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string source = 1;</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string source = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string source = 1;</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object translation_ = "";
+      /**
+       * <code>optional string translation = 2;</code>
+       * @return Whether the translation field is set.
+       */
+      public boolean hasTranslation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string translation = 2;</code>
+       * @return The translation.
+       */
+      public java.lang.String getTranslation() {
+        java.lang.Object ref = translation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            translation_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string translation = 2;</code>
+       * @return The bytes for translation.
+       */
+      public com.google.protobuf.ByteString
+          getTranslationBytes() {
+        java.lang.Object ref = translation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          translation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string translation = 2;</code>
+       * @param value The translation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTranslation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        translation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string translation = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTranslation() {
+        translation_ = getDefaultInstance().getTranslation();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string translation = 2;</code>
+       * @param value The bytes for translation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTranslationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        translation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ei.TranslationSeedEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:ei.TranslationSeedEntry)
+    private static final ei.Ei.TranslationSeedEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ei.Ei.TranslationSeedEntry();
+    }
+
+    public static ei.Ei.TranslationSeedEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TranslationSeedEntry>
+        PARSER = new com.google.protobuf.AbstractParser<TranslationSeedEntry>() {
+      @java.lang.Override
+      public TranslationSeedEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TranslationSeedEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TranslationSeedEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ei.Ei.TranslationSeedEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -328506,6 +331776,26 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ei_TranslationPackResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ei_FontDLCRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ei_FontDLCRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ei_FontDLCResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ei_FontDLCResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ei_TranslationSeed_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ei_TranslationSeed_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ei_TranslationSeedEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ei_TranslationSeedEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ei_QueryCoopRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -329758,859 +333048,867 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       "\0162\025.ei.TranslationStatus\"e\n\023TranslationR" +
       "esponse\022\020\n\010language\030\001 \001(\t\022%\n\007entries\030\002 \003" +
       "(\0132\024.ei.TranslationEntry\022\025\n\rcache_versio" +
-      "n\030\003 \001(\r\"u\n\020TranslationCache\022\020\n\010language\030" +
-      "\001 \001(\t\022%\n\007entries\030\002 \003(\0132\024.ei.TranslationE" +
-      "ntry\022\021\n\tcached_at\030\003 \001(\001\022\025\n\rcache_version" +
-      "\030\004 \001(\r\"f\n\026TranslationPackRequest\022#\n\005rinf" +
-      "o\030\001 \001(\0132\024.ei.BasicRequestInfo\022\020\n\010languag" +
-      "e\030\002 \001(\t\022\025\n\rcache_version\030\003 \001(\r\"\220\001\n\027Trans" +
-      "lationPackResponse\022\020\n\010language\030\001 \001(\t\022%\n\007" +
-      "entries\030\002 \003(\0132\024.ei.TranslationEntry\022\025\n\rc" +
-      "ache_version\030\003 \001(\r\022\022\n\nup_to_date\030\004 \001(\010\022\021" +
-      "\n\ttruncated\030\005 \001(\010\"\276\001\n\020QueryCoopRequest\022#" +
-      "\n\005rinfo\030\005 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023c" +
-      "ontract_identifier\030\001 \001(\t\022\027\n\017coop_identif" +
-      "ier\030\002 \001(\t\022\016\n\006league\030\004 \001(\r\022\'\n\005grade\030\006 \001(\016" +
-      "2\030.ei.Contract.PlayerGrade\022\026\n\016client_ver" +
-      "sion\030\003 \001(\r\"\226\001\n\021QueryCoopResponse\022\016\n\006exis" +
-      "ts\030\001 \001(\010\022\014\n\004full\030\002 \001(\010\022\017\n\007expired\030\005 \001(\010\022" +
-      "\030\n\020different_league\030\004 \001(\010\022\027\n\017different_g" +
-      "rade\030\006 \001(\010\022\017\n\007cc_only\030\007 \001(\010\022\016\n\006banned\030\003 " +
-      "\001(\010\"\221\003\n\021CreateCoopRequest\022#\n\005rinfo\030\n \001(\013" +
-      "2\024.ei.BasicRequestInfo\022\033\n\023contract_ident" +
-      "ifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\016\n\006" +
-      "public\030\r \001(\010\022\017\n\007cc_only\030\016 \001(\010\022\030\n\020allow_a" +
-      "ll_grades\030\020 \001(\010\022\031\n\021seconds_remaining\030\003 \001" +
-      "(\001\022\017\n\007user_id\030\004 \001(\t\022\021\n\tuser_name\030\005 \001(\t\022\022" +
-      "\n\nsoul_power\030\010 \001(\001\022\013\n\003eop\030\013 \001(\001\022\016\n\006leagu" +
-      "e\030\t \001(\r\022\'\n\005grade\030\014 \001(\0162\030.ei.Contract.Pla" +
-      "yerGrade\022\025\n\rpoints_replay\030\017 \001(\010\022\036\n\010platf" +
-      "orm\030\006 \001(\0162\014.ei.Platform\022\026\n\016client_versio" +
-      "n\030\007 \001(\r\"6\n\022CreateCoopResponse\022\017\n\007success" +
-      "\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\324\002\n\017JoinCoopRequ" +
-      "est\022#\n\005rinfo\030\n \001(\0132\024.ei.BasicRequestInfo" +
-      "\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017coop_id" +
-      "entifier\030\002 \001(\t\022\017\n\007user_id\030\003 \001(\t\022\021\n\tuser_" +
-      "name\030\004 \001(\t\022\022\n\nsoul_power\030\010 \001(\001\022\013\n\003eop\030\014 " +
-      "\001(\001\022\016\n\006league\030\t \001(\r\022\'\n\005grade\030\r \001(\0162\030.ei." +
-      "Contract.PlayerGrade\022\025\n\rpoints_replay\030\016 " +
-      "\001(\010\022\036\n\010platform\030\005 \001(\0162\014.ei.Platform\022\031\n\021s" +
-      "econds_remaining\030\013 \001(\001\022\026\n\016client_version" +
-      "\030\007 \001(\r\"\227\002\n\020JoinCoopResponse\022\017\n\007success\030\001" +
-      " \001(\010\022\017\n\007message\030\002 \001(\t\022\016\n\006banned\030\004 \001(\010\022\027\n" +
-      "\017coop_identifier\030\005 \001(\t\022\031\n\021seconds_remain" +
-      "ing\030\003 \001(\001\022\025\n\rmatch_percent\030\006 \001(\001\022\023\n\013num_" +
-      "members\030\007 \001(\r\0225\n\006status\030\010 \001(\0162%.ei.Contr" +
-      "actCoopStatusResponse.Status\022\'\n\005grade\030\t " +
-      "\001(\0162\030.ei.Contract.PlayerGrade\022\021\n\tcan_sta" +
-      "rt\030\n \001(\010\"\277\002\n\023AutoJoinCoopRequest\022#\n\005rinf" +
-      "o\030\t \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contrac" +
-      "t_identifier\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\021\n\tu" +
-      "ser_name\030\003 \001(\t\022\022\n\nsoul_power\030\004 \001(\001\022\013\n\003eo" +
-      "p\030\n \001(\001\022\016\n\006league\030\010 \001(\r\022\'\n\005grade\030\014 \001(\0162\030" +
-      ".ei.Contract.PlayerGrade\022\025\n\rpoints_repla" +
-      "y\030\016 \001(\010\022\031\n\021seconds_remaining\030\005 \001(\001\022\036\n\010pl" +
-      "atform\030\006 \001(\0162\014.ei.Platform\022\026\n\016client_ver" +
-      "sion\030\007 \001(\r\"\275\001\n\034UpdateCoopPermissionsRequ" +
-      "est\022#\n\005rinfo\030\006 \001(\0132\024.ei.BasicRequestInfo" +
-      "\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017coop_id" +
-      "entifier\030\002 \001(\t\022\032\n\022requesting_user_id\030\003 \001" +
-      "(\t\022\016\n\006public\030\004 \001(\010\022\026\n\016client_version\030\005 \001" +
-      "(\r\"A\n\035UpdateCoopPermissionsResponse\022\017\n\007s" +
-      "uccess\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\240\001\n\020LeaveC" +
-      "oopRequest\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequ" +
-      "estInfo\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017" +
-      "coop_identifier\030\002 \001(\t\022\031\n\021player_identifi" +
-      "er\030\003 \001(\t\022\026\n\016client_version\030\007 \001(\r\"\357\001\n\025Gif" +
-      "tPlayerCoopRequest\022#\n\005rinfo\030\010 \001(\0132\024.ei.B" +
-      "asicRequestInfo\022\033\n\023contract_identifier\030\001" +
-      " \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\031\n\021player_" +
-      "identifier\030\003 \001(\t\022\032\n\022requesting_user_id\030\004" +
-      " \001(\t\022\034\n\024requesting_user_name\030\006 \001(\t\022\016\n\006am" +
-      "ount\030\005 \001(\r\022\026\n\016client_version\030\007 \001(\r\"\365\001\n\031S" +
-      "endChickenRunCoopRequest\022#\n\005rinfo\030\010 \001(\0132" +
-      "\024.ei.BasicRequestInfo\022\033\n\023contract_identi" +
-      "fier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\031\n\021p" +
-      "layer_identifier\030\003 \001(\t\022\032\n\022requesting_use" +
-      "r_id\030\004 \001(\t\022\034\n\024requesting_user_name\030\006 \001(\t" +
-      "\022\020\n\010farm_pop\030\005 \001(\004\022\026\n\016client_version\030\007 \001" +
-      "(\r\"\200\002\n\027ReportPlayerCoopRequest\022#\n\005rinfo\030" +
-      "\001 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contract_" +
-      "identifier\030\002 \001(\t\022\027\n\017coop_identifier\030\003 \001(" +
-      "\t\022\017\n\007user_id\030\004 \001(\t\0222\n\006reason\030\005 \001(\0162\".ei." +
-      "ReportPlayerCoopRequest.Reason\"E\n\006Reason" +
-      "\022\013\n\007UNKNOWN\020\000\022\022\n\016OFFENSIVE_NAME\020\001\022\014\n\010CHE" +
-      "ATING\020\002\022\014\n\010LEECHING\020\003\"\271\002\n\025KickPlayerCoop" +
+      "n\030\003 \001(\r\"\213\001\n\020TranslationCache\022\020\n\010language" +
+      "\030\001 \001(\t\022%\n\007entries\030\002 \003(\0132\024.ei.Translation" +
+      "Entry\022\021\n\tcached_at\030\003 \001(\001\022\025\n\rcache_versio" +
+      "n\030\004 \001(\r\022\024\n\014pack_version\030\005 \001(\r\"f\n\026Transla" +
+      "tionPackRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.Basi" +
+      "cRequestInfo\022\020\n\010language\030\002 \001(\t\022\025\n\rcache_" +
+      "version\030\003 \001(\r\"\220\001\n\027TranslationPackRespons" +
+      "e\022\020\n\010language\030\001 \001(\t\022%\n\007entries\030\002 \003(\0132\024.e" +
+      "i.TranslationEntry\022\025\n\rcache_version\030\003 \001(" +
+      "\r\022\022\n\nup_to_date\030\004 \001(\010\022\021\n\ttruncated\030\005 \001(\010" +
+      "\"Z\n\016FontDLCRequest\022\020\n\010language\030\001 \001(\t\022\026\n\016" +
+      "client_version\030\002 \001(\r\022\036\n\010platform\030\003 \001(\0162\014" +
+      ".ei.Platform\"3\n\017FontDLCResponse\022 \n\nfont_" +
+      "packs\030\001 \003(\0132\014.ei.FontPack\"N\n\017Translation" +
+      "Seed\022\020\n\010language\030\001 \001(\t\022)\n\007entries\030\002 \003(\0132" +
+      "\030.ei.TranslationSeedEntry\";\n\024Translation" +
+      "SeedEntry\022\016\n\006source\030\001 \001(\t\022\023\n\013translation" +
+      "\030\002 \001(\t\"\276\001\n\020QueryCoopRequest\022#\n\005rinfo\030\005 \001" +
+      "(\0132\024.ei.BasicRequestInfo\022\033\n\023contract_ide" +
+      "ntifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 \001(\t\022\016" +
+      "\n\006league\030\004 \001(\r\022\'\n\005grade\030\006 \001(\0162\030.ei.Contr" +
+      "act.PlayerGrade\022\026\n\016client_version\030\003 \001(\r\"" +
+      "\226\001\n\021QueryCoopResponse\022\016\n\006exists\030\001 \001(\010\022\014\n" +
+      "\004full\030\002 \001(\010\022\017\n\007expired\030\005 \001(\010\022\030\n\020differen" +
+      "t_league\030\004 \001(\010\022\027\n\017different_grade\030\006 \001(\010\022" +
+      "\017\n\007cc_only\030\007 \001(\010\022\016\n\006banned\030\003 \001(\010\"\221\003\n\021Cre" +
+      "ateCoopRequest\022#\n\005rinfo\030\n \001(\0132\024.ei.Basic" +
+      "RequestInfo\022\033\n\023contract_identifier\030\001 \001(\t" +
+      "\022\027\n\017coop_identifier\030\002 \001(\t\022\016\n\006public\030\r \001(" +
+      "\010\022\017\n\007cc_only\030\016 \001(\010\022\030\n\020allow_all_grades\030\020" +
+      " \001(\010\022\031\n\021seconds_remaining\030\003 \001(\001\022\017\n\007user_" +
+      "id\030\004 \001(\t\022\021\n\tuser_name\030\005 \001(\t\022\022\n\nsoul_powe" +
+      "r\030\010 \001(\001\022\013\n\003eop\030\013 \001(\001\022\016\n\006league\030\t \001(\r\022\'\n\005" +
+      "grade\030\014 \001(\0162\030.ei.Contract.PlayerGrade\022\025\n" +
+      "\rpoints_replay\030\017 \001(\010\022\036\n\010platform\030\006 \001(\0162\014" +
+      ".ei.Platform\022\026\n\016client_version\030\007 \001(\r\"6\n\022" +
+      "CreateCoopResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007m" +
+      "essage\030\002 \001(\t\"\324\002\n\017JoinCoopRequest\022#\n\005rinf" +
+      "o\030\n \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contrac" +
+      "t_identifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 " +
+      "\001(\t\022\017\n\007user_id\030\003 \001(\t\022\021\n\tuser_name\030\004 \001(\t\022" +
+      "\022\n\nsoul_power\030\010 \001(\001\022\013\n\003eop\030\014 \001(\001\022\016\n\006leag" +
+      "ue\030\t \001(\r\022\'\n\005grade\030\r \001(\0162\030.ei.Contract.Pl" +
+      "ayerGrade\022\025\n\rpoints_replay\030\016 \001(\010\022\036\n\010plat" +
+      "form\030\005 \001(\0162\014.ei.Platform\022\031\n\021seconds_rema" +
+      "ining\030\013 \001(\001\022\026\n\016client_version\030\007 \001(\r\"\227\002\n\020" +
+      "JoinCoopResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007mes" +
+      "sage\030\002 \001(\t\022\016\n\006banned\030\004 \001(\010\022\027\n\017coop_ident" +
+      "ifier\030\005 \001(\t\022\031\n\021seconds_remaining\030\003 \001(\001\022\025" +
+      "\n\rmatch_percent\030\006 \001(\001\022\023\n\013num_members\030\007 \001" +
+      "(\r\0225\n\006status\030\010 \001(\0162%.ei.ContractCoopStat" +
+      "usResponse.Status\022\'\n\005grade\030\t \001(\0162\030.ei.Co" +
+      "ntract.PlayerGrade\022\021\n\tcan_start\030\n \001(\010\"\277\002" +
+      "\n\023AutoJoinCoopRequest\022#\n\005rinfo\030\t \001(\0132\024.e" +
+      "i.BasicRequestInfo\022\033\n\023contract_identifie" +
+      "r\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\021\n\tuser_name\030\003 " +
+      "\001(\t\022\022\n\nsoul_power\030\004 \001(\001\022\013\n\003eop\030\n \001(\001\022\016\n\006" +
+      "league\030\010 \001(\r\022\'\n\005grade\030\014 \001(\0162\030.ei.Contrac" +
+      "t.PlayerGrade\022\025\n\rpoints_replay\030\016 \001(\010\022\031\n\021" +
+      "seconds_remaining\030\005 \001(\001\022\036\n\010platform\030\006 \001(" +
+      "\0162\014.ei.Platform\022\026\n\016client_version\030\007 \001(\r\"" +
+      "\275\001\n\034UpdateCoopPermissionsRequest\022#\n\005rinf" +
+      "o\030\006 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023contrac" +
+      "t_identifier\030\001 \001(\t\022\027\n\017coop_identifier\030\002 " +
+      "\001(\t\022\032\n\022requesting_user_id\030\003 \001(\t\022\016\n\006publi" +
+      "c\030\004 \001(\010\022\026\n\016client_version\030\005 \001(\r\"A\n\035Updat" +
+      "eCoopPermissionsResponse\022\017\n\007success\030\001 \001(" +
+      "\010\022\017\n\007message\030\002 \001(\t\"\240\001\n\020LeaveCoopRequest\022" +
+      "#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023" +
+      "contract_identifier\030\001 \001(\t\022\027\n\017coop_identi" +
+      "fier\030\002 \001(\t\022\031\n\021player_identifier\030\003 \001(\t\022\026\n" +
+      "\016client_version\030\007 \001(\r\"\357\001\n\025GiftPlayerCoop" +
       "Request\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicRequest" +
       "Info\022\033\n\023contract_identifier\030\001 \001(\t\022\027\n\017coo" +
       "p_identifier\030\002 \001(\t\022\031\n\021player_identifier\030" +
-      "\003 \001(\t\022\032\n\022requesting_user_id\030\004 \001(\t\0220\n\006rea" +
-      "son\030\t \001(\0162 .ei.KickPlayerCoopRequest.Rea" +
-      "son\022\026\n\016client_version\030\007 \001(\r\"D\n\006Reason\022\013\n" +
-      "\007INVALID\020\000\022\013\n\007CHEATER\020\001\022\010\n\004IDLE\020\002\022\t\n\005LEE" +
-      "CH\020\003\022\013\n\007PRIVATE\020\004\"\373\002\n\022IdleSessionSummary" +
-      "\022\017\n\007success\030\013 \001(\010\022\021\n\ttime_away\030\001 \001(\001\022\026\n\016" +
-      "time_simulated\030\002 \001(\001\022\023\n\013silos_owned\030\003 \001(" +
-      "\r\022\023\n\013average_elr\030\004 \001(\001\022\023\n\013average_msr\030\005 " +
-      "\001(\001\022!\n\031average_egg_delivery_rate\030\006 \001(\001\022\036" +
-      "\n\026last_egg_delivery_rate\030\010 \001(\001\022\026\n\016eggs_d" +
-      "elivered\030\t \001(\001\022*\n\005stats\030\n \003(\0132\033.ei.IdleS" +
-      "essionSummary.Stat\022\022\n\nfarm_index\030\007 \001(\r\032O" +
-      "\n\004Stat\022\014\n\004name\030\001 \001(\t\022\013\n\003min\030\002 \001(\001\022\013\n\003max" +
-      "\030\003 \001(\001\022\013\n\003avg\030\004 \001(\001\022\022\n\ntotal_time\030\005 \001(\001\"" +
-      "\361\004\n\037ContractCoopStatusUpdateRequest\022#\n\005r" +
-      "info\030\014 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user" +
-      "_id\030\001 \001(\t\022\033\n\023contract_identifier\030\002 \001(\t\022\027" +
-      "\n\017coop_identifier\030\003 \001(\t\022\024\n\014push_user_id\030" +
-      "\010 \001(\t\022\016\n\006amount\030\004 \001(\001\022\014\n\004rate\030\005 \001(\001\022\034\n\024t" +
-      "ime_cheats_detected\030\006 \001(\r\022\027\n\017total_step_" +
-      "time\030\023 \001(\001\022\022\n\nsoul_power\030\007 \001(\001\022\013\n\003eop\030\017 " +
-      "\001(\r\022\013\n\003eot\030\024 \001(\r\022\024\n\014boost_tokens\030\t \001(\r\022\032" +
-      "\n\022boost_tokens_spent\030\r \001(\r\022\026\n\016hide_cc_st" +
-      "atus\030\021 \001(\010\0223\n\021production_params\030\016 \001(\0132\030." +
-      "ei.FarmProductionParams\022%\n\tfarm_info\030\020 \001" +
-      "(\0132\022.ei.PlayerFarmInfo\0221\n\021last_idle_summ" +
-      "ary\030\022 \001(\0132\026.ei.IdleSessionSummary\022\037\n\024egg" +
-      "_laying_rate_buff\030\n \001(\001:\0011\022\030\n\rearnings_b" +
-      "uff\030\013 \001(\001:\0011\0225\n\021colleggtible_info\030\025 \001(\0132" +
-      "\032.ei.PlayerColleggtibleInfo\"9\n\026PlayerCol" +
-      "leggtibleInfo\022\037\n\005buffs\030\001 \003(\0132\020.ei.GameMo" +
-      "difier\"\202\001\n ContractCoopStatusUpdateRespo" +
-      "nse\022\021\n\tfinalized\030\001 \001(\010\022\016\n\006exists\030\002 \001(\010\022;" +
-      "\n\006status\030\003 \001(\0162+.ei.ContractCoopStatusRe" +
-      "sponse.MemberStatus\"Z\n\rCoopBuffState\022\032\n\017" +
-      "egg_laying_rate\030\001 \001(\001:\0011\022\023\n\010earnings\030\002 \001" +
-      "(\001:\0011\022\030\n\020server_timestamp\030\003 \001(\001\"5\n\017CoopB" +
-      "uffHistory\022\"\n\007history\030\001 \003(\0132\021.ei.CoopBuf" +
-      "fState\"@\n\023CoopChickenRunEntry\022\017\n\007user_id" +
-      "\030\001 \001(\t\022\030\n\020server_timestamp\030\002 \001(\001\"V\n\031Play" +
-      "erLastChickenRunTimes\022\017\n\007user_id\030\004 \001(\t\022(" +
-      "\n\007entries\030\003 \003(\0132\027.ei.CoopChickenRunEntry" +
-      "\"I\n\027CoopLastChickenRunTimes\022.\n\007entries\030\001" +
-      " \003(\0132\035.ei.PlayerLastChickenRunTimes\"\215\002\n\023" +
-      "LeaderboardAnalysis\022-\n\006chunks\030\001 \003(\0132\035.ei" +
-      ".LeaderboardAnalysis.Chunk\022\r\n\005count\030\002 \001(" +
-      "\r\022\022\n\nhigh_score\030\003 \001(\001\022\021\n\tlow_score\030\004 \001(\001" +
-      "\022\016\n\006cursor\030\005 \001(\t\032\200\001\n\005Chunk\022\023\n\013start_inde" +
-      "x\030\001 \001(\r\022\021\n\tend_index\030\002 \001(\r\022\022\n\nhigh_score" +
-      "\030\003 \001(\001\022\021\n\tlow_score\030\004 \001(\001\022\024\n\014start_curso" +
-      "r\030\005 \001(\t\022\022\n\nend_cursor\030\006 \001(\t\"}\n\017Leaderboa" +
-      "rdInfo\022+\n\007seasons\030\001 \003(\0132\032.ei.Leaderboard" +
-      "Info.Season\022\026\n\016all_time_scope\030\002 \001(\t\032%\n\006S" +
-      "eason\022\r\n\005scope\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"q\n\022Le" +
-      "aderboardRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.Bas" +
-      "icRequestInfo\022\r\n\005scope\030\002 \001(\t\022\'\n\005grade\030\003 " +
-      "\001(\0162\030.ei.Contract.PlayerGrade\"\342\001\n\023Leader" +
-      "boardResponse\022\r\n\005scope\030\001 \001(\t\022\'\n\005grade\030\002 " +
-      "\001(\0162\030.ei.Contract.PlayerGrade\0222\n\013top_ent" +
-      "ries\030\003 \003(\0132\035.ei.LeaderboardResponse.Entr" +
-      "y\022\r\n\005count\030\004 \001(\r\022\014\n\004rank\030\005 \001(\r\022\r\n\005score\030" +
-      "\006 \001(\001\0323\n\005Entry\022\014\n\004rank\030\001 \001(\r\022\r\n\005alias\030\002 " +
-      "\001(\t\022\r\n\005score\030\003 \001(\001\"6\n\020ContractsArchive\022\"" +
-      "\n\007archive\030\001 \003(\0132\021.ei.LocalContract\"\377\002\n\016C" +
-      "ontractAction\022\017\n\007user_id\030\001 \001(\t\022\023\n\013action" +
-      "_name\030\002 \001(\t\022\023\n\013approx_time\030\003 \001(\001\022\024\n\014dest" +
-      "_user_id\030\004 \001(\t\022\023\n\013contract_id\030\005 \001(\t\022\017\n\007c" +
-      "oop_id\030\006 \001(\t\022\020\n\010autojoin\030\007 \001(\010\022\r\n\005grade\030" +
-      "\010 \001(\r\022\016\n\006replay\030\t \001(\010\022\025\n\rpoints_replay\030\n" +
-      " \001(\010\022\023\n\013reward_type\030\013 \001(\r\022\026\n\016reward_subt" +
-      "ype\030\014 \001(\t\022\025\n\rreward_amount\030\r \001(\001\022\022\n\ngoal" +
-      "_index\030\016 \001(\r\022\020\n\010boost_id\030\017 \001(\t\022\016\n\006tokens" +
-      "\030\020 \001(\r\022\023\n\013kick_reason\030\021 \001(\r\022\016\n\006public\030\022 " +
-      "\001(\010\022\017\n\007cc_only\030\023 \001(\010\"w\n\023UserDataInfoRequ" +
+      "\003 \001(\t\022\032\n\022requesting_user_id\030\004 \001(\t\022\034\n\024req" +
+      "uesting_user_name\030\006 \001(\t\022\016\n\006amount\030\005 \001(\r\022" +
+      "\026\n\016client_version\030\007 \001(\r\"\365\001\n\031SendChickenR" +
+      "unCoopRequest\022#\n\005rinfo\030\010 \001(\0132\024.ei.BasicR" +
+      "equestInfo\022\033\n\023contract_identifier\030\001 \001(\t\022" +
+      "\027\n\017coop_identifier\030\002 \001(\t\022\031\n\021player_ident" +
+      "ifier\030\003 \001(\t\022\032\n\022requesting_user_id\030\004 \001(\t\022" +
+      "\034\n\024requesting_user_name\030\006 \001(\t\022\020\n\010farm_po" +
+      "p\030\005 \001(\004\022\026\n\016client_version\030\007 \001(\r\"\200\002\n\027Repo" +
+      "rtPlayerCoopRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei." +
+      "BasicRequestInfo\022\033\n\023contract_identifier\030" +
+      "\002 \001(\t\022\027\n\017coop_identifier\030\003 \001(\t\022\017\n\007user_i" +
+      "d\030\004 \001(\t\0222\n\006reason\030\005 \001(\0162\".ei.ReportPlaye" +
+      "rCoopRequest.Reason\"E\n\006Reason\022\013\n\007UNKNOWN" +
+      "\020\000\022\022\n\016OFFENSIVE_NAME\020\001\022\014\n\010CHEATING\020\002\022\014\n\010" +
+      "LEECHING\020\003\"\271\002\n\025KickPlayerCoopRequest\022#\n\005" +
+      "rinfo\030\010 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023con" +
+      "tract_identifier\030\001 \001(\t\022\027\n\017coop_identifie" +
+      "r\030\002 \001(\t\022\031\n\021player_identifier\030\003 \001(\t\022\032\n\022re" +
+      "questing_user_id\030\004 \001(\t\0220\n\006reason\030\t \001(\0162 " +
+      ".ei.KickPlayerCoopRequest.Reason\022\026\n\016clie" +
+      "nt_version\030\007 \001(\r\"D\n\006Reason\022\013\n\007INVALID\020\000\022" +
+      "\013\n\007CHEATER\020\001\022\010\n\004IDLE\020\002\022\t\n\005LEECH\020\003\022\013\n\007PRI" +
+      "VATE\020\004\"\373\002\n\022IdleSessionSummary\022\017\n\007success" +
+      "\030\013 \001(\010\022\021\n\ttime_away\030\001 \001(\001\022\026\n\016time_simula" +
+      "ted\030\002 \001(\001\022\023\n\013silos_owned\030\003 \001(\r\022\023\n\013averag" +
+      "e_elr\030\004 \001(\001\022\023\n\013average_msr\030\005 \001(\001\022!\n\031aver" +
+      "age_egg_delivery_rate\030\006 \001(\001\022\036\n\026last_egg_" +
+      "delivery_rate\030\010 \001(\001\022\026\n\016eggs_delivered\030\t " +
+      "\001(\001\022*\n\005stats\030\n \003(\0132\033.ei.IdleSessionSumma" +
+      "ry.Stat\022\022\n\nfarm_index\030\007 \001(\r\032O\n\004Stat\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\013\n\003min\030\002 \001(\001\022\013\n\003max\030\003 \001(\001\022\013\n\003a" +
+      "vg\030\004 \001(\001\022\022\n\ntotal_time\030\005 \001(\001\"\361\004\n\037Contrac" +
+      "tCoopStatusUpdateRequest\022#\n\005rinfo\030\014 \001(\0132" +
+      "\024.ei.BasicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\033" +
+      "\n\023contract_identifier\030\002 \001(\t\022\027\n\017coop_iden" +
+      "tifier\030\003 \001(\t\022\024\n\014push_user_id\030\010 \001(\t\022\016\n\006am" +
+      "ount\030\004 \001(\001\022\014\n\004rate\030\005 \001(\001\022\034\n\024time_cheats_" +
+      "detected\030\006 \001(\r\022\027\n\017total_step_time\030\023 \001(\001\022" +
+      "\022\n\nsoul_power\030\007 \001(\001\022\013\n\003eop\030\017 \001(\r\022\013\n\003eot\030" +
+      "\024 \001(\r\022\024\n\014boost_tokens\030\t \001(\r\022\032\n\022boost_tok" +
+      "ens_spent\030\r \001(\r\022\026\n\016hide_cc_status\030\021 \001(\010\022" +
+      "3\n\021production_params\030\016 \001(\0132\030.ei.FarmProd" +
+      "uctionParams\022%\n\tfarm_info\030\020 \001(\0132\022.ei.Pla" +
+      "yerFarmInfo\0221\n\021last_idle_summary\030\022 \001(\0132\026" +
+      ".ei.IdleSessionSummary\022\037\n\024egg_laying_rat" +
+      "e_buff\030\n \001(\001:\0011\022\030\n\rearnings_buff\030\013 \001(\001:\001" +
+      "1\0225\n\021colleggtible_info\030\025 \001(\0132\032.ei.Player" +
+      "ColleggtibleInfo\"9\n\026PlayerColleggtibleIn" +
+      "fo\022\037\n\005buffs\030\001 \003(\0132\020.ei.GameModifier\"\202\001\n " +
+      "ContractCoopStatusUpdateResponse\022\021\n\tfina" +
+      "lized\030\001 \001(\010\022\016\n\006exists\030\002 \001(\010\022;\n\006status\030\003 " +
+      "\001(\0162+.ei.ContractCoopStatusResponse.Memb" +
+      "erStatus\"Z\n\rCoopBuffState\022\032\n\017egg_laying_" +
+      "rate\030\001 \001(\001:\0011\022\023\n\010earnings\030\002 \001(\001:\0011\022\030\n\020se" +
+      "rver_timestamp\030\003 \001(\001\"5\n\017CoopBuffHistory\022" +
+      "\"\n\007history\030\001 \003(\0132\021.ei.CoopBuffState\"@\n\023C" +
+      "oopChickenRunEntry\022\017\n\007user_id\030\001 \001(\t\022\030\n\020s" +
+      "erver_timestamp\030\002 \001(\001\"V\n\031PlayerLastChick" +
+      "enRunTimes\022\017\n\007user_id\030\004 \001(\t\022(\n\007entries\030\003" +
+      " \003(\0132\027.ei.CoopChickenRunEntry\"I\n\027CoopLas" +
+      "tChickenRunTimes\022.\n\007entries\030\001 \003(\0132\035.ei.P" +
+      "layerLastChickenRunTimes\"\215\002\n\023Leaderboard" +
+      "Analysis\022-\n\006chunks\030\001 \003(\0132\035.ei.Leaderboar" +
+      "dAnalysis.Chunk\022\r\n\005count\030\002 \001(\r\022\022\n\nhigh_s" +
+      "core\030\003 \001(\001\022\021\n\tlow_score\030\004 \001(\001\022\016\n\006cursor\030" +
+      "\005 \001(\t\032\200\001\n\005Chunk\022\023\n\013start_index\030\001 \001(\r\022\021\n\t" +
+      "end_index\030\002 \001(\r\022\022\n\nhigh_score\030\003 \001(\001\022\021\n\tl" +
+      "ow_score\030\004 \001(\001\022\024\n\014start_cursor\030\005 \001(\t\022\022\n\n" +
+      "end_cursor\030\006 \001(\t\"}\n\017LeaderboardInfo\022+\n\007s" +
+      "easons\030\001 \003(\0132\032.ei.LeaderboardInfo.Season" +
+      "\022\026\n\016all_time_scope\030\002 \001(\t\032%\n\006Season\022\r\n\005sc" +
+      "ope\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"q\n\022LeaderboardRe" +
+      "quest\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestIn" +
+      "fo\022\r\n\005scope\030\002 \001(\t\022\'\n\005grade\030\003 \001(\0162\030.ei.Co" +
+      "ntract.PlayerGrade\"\342\001\n\023LeaderboardRespon" +
+      "se\022\r\n\005scope\030\001 \001(\t\022\'\n\005grade\030\002 \001(\0162\030.ei.Co" +
+      "ntract.PlayerGrade\0222\n\013top_entries\030\003 \003(\0132" +
+      "\035.ei.LeaderboardResponse.Entry\022\r\n\005count\030" +
+      "\004 \001(\r\022\014\n\004rank\030\005 \001(\r\022\r\n\005score\030\006 \001(\001\0323\n\005En" +
+      "try\022\014\n\004rank\030\001 \001(\r\022\r\n\005alias\030\002 \001(\t\022\r\n\005scor" +
+      "e\030\003 \001(\001\"6\n\020ContractsArchive\022\"\n\007archive\030\001" +
+      " \003(\0132\021.ei.LocalContract\"\377\002\n\016ContractActi" +
+      "on\022\017\n\007user_id\030\001 \001(\t\022\023\n\013action_name\030\002 \001(\t" +
+      "\022\023\n\013approx_time\030\003 \001(\001\022\024\n\014dest_user_id\030\004 " +
+      "\001(\t\022\023\n\013contract_id\030\005 \001(\t\022\017\n\007coop_id\030\006 \001(" +
+      "\t\022\020\n\010autojoin\030\007 \001(\010\022\r\n\005grade\030\010 \001(\r\022\016\n\006re" +
+      "play\030\t \001(\010\022\025\n\rpoints_replay\030\n \001(\010\022\023\n\013rew" +
+      "ard_type\030\013 \001(\r\022\026\n\016reward_subtype\030\014 \001(\t\022\025" +
+      "\n\rreward_amount\030\r \001(\001\022\022\n\ngoal_index\030\016 \001(" +
+      "\r\022\020\n\010boost_id\030\017 \001(\t\022\016\n\006tokens\030\020 \001(\r\022\023\n\013k" +
+      "ick_reason\030\021 \001(\r\022\016\n\006public\030\022 \001(\010\022\017\n\007cc_o" +
+      "nly\030\023 \001(\010\"w\n\023UserDataInfoRequest\022#\n\005rinf" +
+      "o\030\004 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user_id" +
+      "\030\001 \001(\t\022\021\n\tdevice_id\030\002 \001(\t\022\027\n\017backup_chec" +
+      "ksum\030\003 \001(\004\"d\n\024UserDataInfoResponse\022\027\n\017ba" +
+      "ckup_checksum\030\001 \001(\004\022\031\n\021backup_total_cash" +
+      "\030\002 \001(\001\022\030\n\020coop_memberships\030\003 \003(\t\"{\n\027Clea" +
+      "rAllUserDataRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei." +
+      "BasicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\021\n\tdev" +
+      "ice_id\030\002 \001(\t\022\027\n\017backup_checksum\030\003 \001(\004\"r\n" +
+      "\nServerGift\022\017\n\007user_id\030\001 \001(\t\022#\n\013reward_t" +
+      "ype\030\003 \001(\0162\016.ei.RewardType\022\027\n\017reward_sub_" +
+      "type\030\004 \001(\t\022\025\n\rreward_amount\030\005 \001(\001\"\276\020\n\nLi" +
+      "veConfig\022\021\n\tconfig_id\030\001 \001(\t\0222\n\rboosts_co" +
+      "nfig\030\002 \001(\0132\033.ei.LiveConfig.BoostsConfig\022" +
+      ".\n\013gift_config\030\003 \001(\0132\031.ei.LiveConfig.Gif" +
+      "tConfig\022.\n\013misc_config\030\004 \001(\0132\031.ei.LiveCo" +
+      "nfig.MiscConfig\022.\n\013help_config\030\005 \001(\0132\031.e" +
+      "i.LiveConfig.HelpConfig\032\306\001\n\014BoostsConfig" +
+      "\022<\n\014item_configs\030\001 \003(\0132&.ei.LiveConfig.B" +
+      "oostsConfig.ItemConfig\022\037\n\027cash_boost_coo" +
+      "loff_time\030\002 \001(\001\032W\n\nItemConfig\022\020\n\010boost_i" +
+      "d\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\023\n\013token_price\030\003 " +
+      "\001(\r\022\023\n\013se_required\030\004 \001(\001\032\336\006\n\nGiftConfig\022" +
+      "?\n\014gift_configs\030\t \003(\0132).ei.LiveConfig.Gi" +
+      "ftConfig.GiftValueConfig\022\031\n\021gift_mu_min_" +
+      "spent\030\n \001(\001\022\031\n\021gift_mu_max_spent\030\013 \001(\001\022\034" +
+      "\n\024gift_mu_overall_mult\030\014 \001(\001\022E\n\025random_g" +
+      "ift_mu_config\030\017 \001(\0132&.ei.LiveConfig.Gift" +
+      "Config.GiftMuConfig\022D\n\024video_gift_mu_con" +
+      "fig\030\020 \001(\0132&.ei.LiveConfig.GiftConfig.Gif" +
+      "tMuConfig\022\030\n\020package_interval\030\001 \001(\001\022\034\n\024v" +
+      "ideo_offer_interval\030\002 \001(\001\022%\n\035video_offer" +
+      "_interval_contract\030\003 \001(\001\022\'\n\037video_offer_" +
+      "interval_piggy_full\030\004 \001(\001\022-\n%video_offer" +
+      "_interval_piggy_extra_full\030\005 \001(\001\022\033\n\023vide" +
+      "o_reset_on_idle\030\016 \001(\010\022!\n\031package_interva" +
+      "l_contract\030\006 \001(\001\022#\n\033package_interval_pig" +
+      "gy_full\030\007 \001(\001\022)\n!package_interval_piggy_" +
+      "extra_full\030\010 \001(\001\022\035\n\025package_reset_on_idl" +
+      "e\030\r \001(\010\032|\n\017GiftValueConfig\022\017\n\007gift_id\030\001 " +
+      "\001(\t\022\016\n\006amount\030\004 \001(\001\022\020\n\010rand_min\030\002 \001(\001\022\020\n" +
+      "\010rand_max\030\003 \001(\001\022\021\n\tvideo_min\030\005 \001(\001\022\021\n\tvi" +
+      "deo_max\030\006 \001(\001\032J\n\014GiftMuConfig\022\021\n\tmin_spe" +
+      "nt\030\001 \001(\001\022\021\n\tmax_spent\030\002 \001(\001\022\024\n\014overall_m" +
+      "ult\030\003 \001(\001\032\233\004\n\nMiscConfig\022\024\n\014ask_to_track" +
+      "\030\001 \001(\010\022\"\n\032ask_to_track_min_soul_eggs\030\002 \001" +
+      "(\001\022\034\n\024ask_to_track_message\030\003 \001(\t\022$\n\034ask_" +
+      "to_track_show_pre_dialog\030\004 \001(\010\022\"\n\032ask_to" +
+      "_track_after_privacy\030\005 \001(\010\022$\n\034chicken_ru" +
+      "n_boost_percentage\030\006 \001(\001\022\034\n\024shells_intro" +
+      "_tickets\030\007 \001(\r\022\'\n\037shells_max_free_chicke" +
+      "n_configs\030\010 \001(\r\022$\n\034shells_intro_alert_th" +
+      "reshold\030\t \001(\r\022+\n\036shells_lighting_control" +
+      "s_price\030\016 \001(\r:\003175\022.\n&contracts_expert_l" +
+      "eague_min_soul_power\030\n \001(\001\022!\n\031new_player" +
+      "_event_duration\030\013 \001(\001\022 \n\030contracts_club_" +
+      "available\030\014 \001(\010\022\026\n\016contracts_beta\030\r \001(\010\022" +
+      "\036\n\026season_rewards_enabled\030\017 \001(\010\032\220\002\n\nHelp" +
+      "Config\022=\n\013video_infos\030\001 \003(\0132(.ei.LiveCon" +
+      "fig.HelpConfig.HowToVideoInfo\032\302\001\n\016HowToV" +
+      "ideoInfo\022;\n\004type\030\006 \001(\0162-.ei.LiveConfig.H" +
+      "elpConfig.HowToVideoInfo.Type\022\014\n\004name\030\001 " +
+      "\001(\t\022\023\n\013description\030\002 \001(\t\022\020\n\010duration\030\005 \001" +
+      "(\t\022\013\n\003url\030\003 \001(\t\022\021\n\tsoul_eggs\030\004 \001(\001\"\036\n\004Ty" +
+      "pe\022\t\n\005VIDEO\020\000\022\013\n\007ARTICLE\020\001\"\354\004\n\nInGameMai" +
+      "l\022\n\n\002id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n\004date\030\010 \001" +
+      "(\t\022\017\n\007message\030\003 \001(\t\022\016\n\006action\030\004 \001(\t\022\013\n\003u" +
+      "rl\030\005 \001(\t\022 \n\010app_link\030\016 \001(\0162\016.ei.UILocati" +
+      "on\022\026\n\016app_link_extra\030\017 \001(\t\022\032\n\005image\030\020 \001(" +
+      "\0132\013.ei.DLCItem\022\023\n\013image_width\030\025 \001(\001\022\024\n\014i" +
+      "mage_height\030\026 \001(\001\022\020\n\010platform\030\007 \001(\r\022\016\n\006b" +
+      "uilds\030\t \003(\t\022\032\n\022min_client_version\030\n \001(\r\022" +
+      "\032\n\022max_client_version\030\014 \001(\r\022\025\n\rmin_soul_" +
+      "eggs\030\013 \001(\001\022\025\n\rmax_soul_eggs\030\035 \001(\001\022\032\n\022min" +
+      "_mystical_bonus\030\r \001(\001\022\037\n\tuser_type\030\021 \001(\016" +
+      "2\014.ei.UserType\022\030\n\020min_piggy_breaks\030\024 \001(\r" +
+      "\022\020\n\010gold_tip\030\006 \001(\001\022\013\n\003tip\030\027 \001(\010\022\020\n\010prior" +
+      "ity\030\033 \001(\r\022\037\n\027min_days_since_last_tip\030\030 \001" +
+      "(\001\022\023\n\013max_retries\030\031 \001(\r\022\030\n\020days_until_re" +
+      "try\030\032 \001(\001\022\020\n\010category\030\034 \001(\t\022\024\n\014release_t" +
+      "ime\030\036 \001(\002\"S\n\006MailDB\022\034\n\004mail\030\001 \003(\0132\016.ei.I" +
+      "nGameMail\022\024\n\014tips_db_data\030\002 \001(\014\022\025\n\rtips_" +
+      "checksum\030\003 \001(\t\"&\n\006TipsDB\022\034\n\004tips\030\001 \003(\0132\016" +
+      ".ei.InGameMail\"\240\001\n\tMailState\022\025\n\rread_mai" +
+      "l_ids\030\001 \003(\t\022+\n\013tips_states\030\002 \003(\0132\026.ei.Ma" +
+      "ilState.TipState\022\025\n\rtips_checksum\030\003 \001(\t\032" +
+      "8\n\010TipState\022\n\n\002id\030\001 \001(\t\022\r\n\005reads\030\002 \001(\r\022\021" +
+      "\n\ttime_read\030\003 \001(\001\"\354\003\n\023PeriodicalsRespons" +
+      "e\022\034\n\005sales\030\001 \001(\0132\r.ei.SalesInfo\022\'\n\006event" +
+      "s\030\002 \001(\0132\027.ei.EggIncCurrentEvents\022(\n\tcont" +
+      "racts\030\003 \001(\0132\025.ei.ContractsResponse\022+\n\013ev" +
+      "aluations\030\010 \003(\0132\026.ei.ContractEvaluation\022" +
+      "\035\n\005gifts\030\004 \003(\0132\016.ei.ServerGift\0223\n\016artifa" +
+      "ct_cases\030\t \003(\0132\033.ei.CompleteMissionRespo",
+      "nse\022#\n\013live_config\030\005 \001(\0132\016.ei.LiveConfig" +
+      "\022\034\n\010mail_bag\030\006 \001(\0132\n.ei.MailDB\0224\n\024contra" +
+      "ct_player_info\030\007 \001(\0132\026.ei.ContractPlayer" +
+      "Info\022?\n\022showcase_royalties\030\n \003(\0132#.ei.Pe" +
+      "riodicalsResponse.RoyaltyInfo\032)\n\013Royalty" +
+      "Info\022\n\n\002id\030\001 \001(\t\022\016\n\006amount\030\002 \001(\r\"\371\002\n\025Get" +
+      "PeriodicalsRequest\022#\n\005rinfo\030\014 \001(\0132\024.ei.B" +
+      "asicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\022\n\npigg" +
+      "y_full\030\002 \001(\010\022\030\n\020piggy_found_full\030\003 \001(\010\022\035" +
+      "\n\025seconds_full_realtime\030\004 \001(\001\022\035\n\025seconds" +
+      "_full_gametime\030\005 \001(\001\022\027\n\017lost_increments\030" +
+      "\007 \001(\r\022\021\n\tsoul_eggs\030\010 \001(\001\022\036\n\026mystical_ear" +
+      "nings_mult\030\r \001(\001\022\013\n\003eop\030\016 \001(\r\022\032\n\022contrac" +
+      "ts_unlocked\030\017 \001(\010\022\032\n\022artifacts_unlocked\030" +
+      "\020 \001(\010\022\036\n\026current_client_version\030\n \001(\r\022\r\n" +
+      "\005debug\030\013 \001(\010\"\215\002\n\rConfigRequest\022#\n\005rinfo\030" +
+      "\001 \001(\0132\024.ei.BasicRequestInfo\022\021\n\tsoul_eggs" +
+      "\030\002 \001(\001\022\032\n\022contracts_unlocked\030\005 \001(\010\022\032\n\022ar" +
+      "tifacts_unlocked\030\003 \001(\010\022\032\n\022fuel_tank_unlo" +
+      "cked\030\004 \001(\010\022\022\n\npro_permit\030\006 \001(\010\022\r\n\005ultra\030" +
+      "\007 \001(\010\022\025\n\rtips_checksum\030\010 \001(\t\0226\n\025age_comp" +
+      "liance_status\030\t \001(\0162\027.ei.AgeComplianceSt" +
+      "atus\"=\n\rAdminControls\022\023\n\013shell_debug\030\001 \001" +
+      "(\010\022\027\n\017showcase_viewer\030\002 \001(\010\"\232\001\n\016ConfigRe" +
+      "sponse\022#\n\013live_config\030\001 \001(\0132\016.ei.LiveCon" +
+      "fig\022\034\n\010mail_bag\030\002 \001(\0132\n.ei.MailDB\022#\n\013dlc" +
+      "_catalog\030\003 \001(\0132\016.ei.DLCCatalog\022 \n\005admin\030" +
+      "\004 \001(\0132\021.ei.AdminControls\"d\n\024AdAttributio" +
+      "nRawData\022\024\n\014device_ad_id\030\001 \001(\t\022\017\n\007user_i" +
+      "d\030\004 \001(\t\022\022\n\nad_network\030\002 \001(\t\022\021\n\tjson_data" +
+      "\030\003 \001(\t\"\270\001\n\020AdAttributionRow\022\017\n\007user_id\030\001" +
+      " \001(\t\022\r\n\005ad_id\030\002 \001(\t\022\022\n\nad_network\030\003 \001(\t\022" +
+      "\020\n\010campaign\030\004 \001(\t\022\017\n\007keyword\030\005 \001(\t\022\r\n\005ex" +
+      "tra\030\006 \001(\t\022\022\n\nclick_date\030\007 \001(\002\022\025\n\rdownloa" +
+      "d_date\030\010 \001(\002\022\023\n\013approx_time\030\t \001(\002\"\215\003\n\021Ad" +
+      "AttributionInfo\022\024\n\014device_ad_id\030\001 \001(\t\022\024\n" +
+      "\014network_name\030\002 \001(\t\022\023\n\013attribution\030\003 \001(\010" +
+      "\022\020\n\010org_name\030\004 \001(\t\022\016\n\006org_id\030\005 \001(\t\022\025\n\rca" +
+      "mpaign_name\030\006 \001(\t\022\023\n\013campaign_id\030\007 \001(\t\022\022" +
+      "\n\nclick_date\030\010 \001(\t\022\027\n\017conversion_date\030\t " +
+      "\001(\t\022\027\n\017conversion_type\030\n \001(\t\022\013\n\003geo\030\013 \001(" +
+      "\t\022\024\n\014adgroup_name\030\014 \001(\t\022\022\n\nadgroup_id\030\r " +
+      "\001(\t\022\017\n\007keyword\030\016 \001(\t\022\022\n\nkeyword_id\030\017 \001(\t" +
+      "\022\025\n\rkeyword_extra\030\020 \001(\t\022\030\n\020creativeset_n" +
+      "ame\030\021 \001(\t\022\026\n\016creativeset_id\030\022 \001(\t\"\363\002\n\023Ar" +
+      "tifactsClientInfo\022\035\n\025mission_capacity_mu" +
+      "lt\030\001 \001(\001\022\035\n\025mission_duration_mult\030\002 \001(\001\022" +
+      "*\n\"mission_ftl_duration_research_mult\030\004 " +
+      "\001(\001\022&\n\036mission_capacity_research_mult\030\006 " +
+      "\001(\001\022:\n\rlaunch_counts\030\003 \003(\0132#.ei.Artifact" +
+      "sClientInfo.LaunchCount\022)\n!last_server_l" +
+      "aunch_count_sum_time\030\005 \001(\001\032c\n\013LaunchCoun" +
+      "t\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionInfo.Spacesh" +
+      "ip\022\024\n\014num_launches\030\002 \001(\r\022\025\n\rlaunch_point" +
+      "s\030\003 \001(\001\"\272\007\n\013MissionInfo\022\'\n\004ship\030\001 \001(\0162\031." +
+      "ei.MissionInfo.Spaceship\022&\n\006status\030\002 \001(\016" +
+      "2\026.ei.MissionInfo.Status\0223\n\rduration_typ" +
+      "e\030\003 \001(\0162\034.ei.MissionInfo.DurationType\022)\n" +
+      "\004type\030\016 \001(\0162\033.ei.MissionInfo.MissionType" +
+      "\022\023\n\013reset_index\030\017 \001(\r\022\"\n\004fuel\030\004 \003(\0132\024.ei" +
+      ".MissionInfo.Fuel\022\r\n\005level\030\014 \001(\r\022\030\n\020dura" +
+      "tion_seconds\030\005 \001(\001\022\020\n\010capacity\030\t \001(\r\022\024\n\014" +
+      "quality_bump\030\013 \001(\001\022.\n\017target_artifact\030\r " +
+      "\001(\0162\025.ei.ArtifactSpec.Name\022\031\n\021seconds_re" +
+      "maining\030\006 \001(\001\022\032\n\022start_time_derived\030\010 \001(" +
+      "\001\022\023\n\013mission_log\030\n \001(\t\022\022\n\nidentifier\030\007 \001" +
+      "(\t\032,\n\004Fuel\022\024\n\003egg\030\001 \001(\0162\007.ei.Egg\022\016\n\006amou" +
+      "nt\030\002 \001(\001\"\307\001\n\tSpaceship\022\017\n\013CHICKEN_ONE\020\000\022" +
+      "\020\n\014CHICKEN_NINE\020\001\022\021\n\rCHICKEN_HEAVY\020\002\022\007\n\003" +
+      "BCR\020\003\022\025\n\021MILLENIUM_CHICKEN\020\004\022\027\n\023CORELLIH" +
+      "EN_CORVETTE\020\005\022\016\n\nGALEGGTICA\020\006\022\016\n\nCHICKFI" +
+      "ANT\020\007\022\014\n\010VOYEGGER\020\010\022\016\n\nHENERPRISE\020\t\022\r\n\tA" +
+      "TREGGIES\020\n\"\201\001\n\006Status\022\013\n\007FUELING\020\000\022\025\n\021PR" +
+      "EPARE_TO_LAUNCH\020\005\022\r\n\tEXPLORING\020\n\022\014\n\010RETU" +
+      "RNED\020\017\022\r\n\tANALYZING\020\020\022\014\n\010COMPLETE\020\024\022\014\n\010A" +
+      "RCHIVED\020\031\022\013\n\007ABORTED\020\036\";\n\014DurationType\022\t" +
+      "\n\005SHORT\020\000\022\010\n\004LONG\020\001\022\010\n\004EPIC\020\002\022\014\n\010TUTORIA" +
+      "L\020\003\"\'\n\013MissionType\022\014\n\010STANDARD\020\000\022\n\n\006VIRT" +
+      "UE\020\001\"\360\013\n\014ArtifactSpec\022#\n\004name\030\001 \001(\0162\025.ei" +
+      ".ArtifactSpec.Name\022%\n\005level\030\002 \001(\0162\026.ei.A" +
+      "rtifactSpec.Level\022\'\n\006rarity\030\003 \001(\0162\027.ei.A" +
+      "rtifactSpec.Rarity\022\024\n\003egg\030\004 \001(\0162\007.ei.Egg" +
+      "\"\212\t\n\004Name\022\017\n\013LUNAR_TOTEM\020\000\022\027\n\023NEODYMIUM_" +
+      "MEDALLION\020\003\022\021\n\rBEAK_OF_MIDAS\020\004\022\025\n\021LIGHT_" +
+      "OF_EGGENDIL\020\005\022\025\n\021DEMETERS_NECKLACE\020\006\022\025\n\021" +
+      "VIAL_MARTIAN_DUST\020\007\022\021\n\rORNATE_GUSSET\020\010\022\017" +
+      "\n\013THE_CHALICE\020\t\022\021\n\rBOOK_OF_BASAN\020\n\022\023\n\017PH" +
+      "OENIX_FEATHER\020\013\022\021\n\rTUNGSTEN_ANKH\020\014\022\023\n\017AU" +
+      "RELIAN_BROOCH\020\025\022\024\n\020CARVED_RAINSTICK\020\026\022\017\n" +
+      "\013PUZZLE_CUBE\020\027\022\025\n\021QUANTUM_METRONOME\020\030\022\024\n" +
+      "\020SHIP_IN_A_BOTTLE\020\031\022\025\n\021TACHYON_DEFLECTOR" +
+      "\020\032\022\030\n\024INTERSTELLAR_COMPASS\020\033\022\025\n\021DILITHIU" +
+      "M_MONOCLE\020\034\022\025\n\021TITANIUM_ACTUATOR\020\035\022\021\n\rME" +
+      "RCURYS_LENS\020\036\022\021\n\rTACHYON_STONE\020\001\022\023\n\017DILI" +
+      "THIUM_STONE\020\037\022\017\n\013SHELL_STONE\020 \022\017\n\013LUNAR_" +
+      "STONE\020!\022\016\n\nSOUL_STONE\020\"\022\022\n\016PROPHECY_STON" +
+      "E\020\'\022\021\n\rQUANTUM_STONE\020$\022\017\n\013TERRA_STONE\020%\022" +
+      "\016\n\nLIFE_STONE\020&\022\021\n\rCLARITY_STONE\020(\022\035\n\031EX" +
+      "TRATERRESTRIAL_ALUMINUM\020\r\022\024\n\020ANCIENT_TUN" +
+      "GSTEN\020\016\022\017\n\013SPACE_ROCKS\020\017\022\016\n\nALIEN_WOOD\020\020" +
+      "\022\022\n\016GOLD_METEORITE\020\021\022\022\n\016TAU_CETI_GEODE\020\022" +
+      "\022\024\n\020CENTAURIAN_STEEL\020\023\022\023\n\017ERIDANI_FEATHE" +
+      "R\020\024\022\017\n\013DRONE_PARTS\020#\022\024\n\020CELESTIAL_BRONZE" +
+      "\020)\022\020\n\014LALANDE_HIDE\020*\022\022\n\016SOLAR_TITANIUM\020+" +
+      "\022\032\n\026TACHYON_STONE_FRAGMENT\020\002\022\034\n\030DILITHIU" +
+      "M_STONE_FRAGMENT\020,\022\030\n\024SHELL_STONE_FRAGME" +
+      "NT\020-\022\030\n\024LUNAR_STONE_FRAGMENT\020.\022\027\n\023SOUL_S" +
+      "TONE_FRAGMENT\020/\022\033\n\027PROPHECY_STONE_FRAGME" +
+      "NT\0200\022\032\n\026QUANTUM_STONE_FRAGMENT\0201\022\030\n\024TERR" +
+      "A_STONE_FRAGMENT\0202\022\027\n\023LIFE_STONE_FRAGMEN" +
+      "T\0203\022\032\n\026CLARITY_STONE_FRAGMENT\0204\022\014\n\007UNKNO" +
+      "WN\020\220N\"H\n\005Level\022\014\n\010INFERIOR\020\000\022\n\n\006LESSER\020\001" +
+      "\022\n\n\006NORMAL\020\002\022\013\n\007GREATER\020\003\022\014\n\010SUPERIOR\020\004\"" +
+      "7\n\006Rarity\022\n\n\006COMMON\020\000\022\010\n\004RARE\020\001\022\010\n\004EPIC\020" +
+      "\002\022\r\n\tLEGENDARY\020\003\"E\n\004Type\022\014\n\010ARTIFACT\020\000\022\t" +
+      "\n\005STONE\020\001\022\016\n\nINGREDIENT\020\002\022\024\n\020STONE_INGRE" +
+      "DIENT\020\003\"T\n\020CompleteArtifact\022\036\n\004spec\030\001 \001(" +
+      "\0132\020.ei.ArtifactSpec\022 \n\006stones\030\002 \003(\0132\020.ei" +
+      ".ArtifactSpec\"u\n\025ArtifactInventoryItem\022\017" +
+      "\n\007item_id\030\001 \001(\004\022&\n\010artifact\030\002 \001(\0132\024.ei.C" +
+      "ompleteArtifact\022\020\n\010quantity\030\003 \001(\001\022\021\n\tser" +
+      "ver_id\030\004 \001(\t\"2\n\rInventorySlot\022\020\n\010occupie" +
+      "d\030\001 \001(\010\022\017\n\007item_id\030\002 \001(\r\"\\\n\035ArtifactsCon" +
+      "figurationRequest\022#\n\005rinfo\030\002 \001(\0132\024.ei.Ba" +
+      "sicRequestInfo\022\026\n\016client_version\030\001 \001(\r\"\377" +
+      "\007\n\036ArtifactsConfigurationResponse\022P\n\022mis" +
+      "sion_parameters\030\001 \003(\01324.ei.ArtifactsConf" +
+      "igurationResponse.MissionParameters\022R\n\023a" +
+      "rtifact_parameters\030\002 \003(\01325.ei.ArtifactsC" +
+      "onfigurationResponse.ArtifactParameters\022" +
+      "R\n\024crafting_level_infos\030\003 \003(\01324.ei.Artif" +
+      "actsConfigurationResponse.CraftingLevelI" +
+      "nfo\032\250\003\n\021MissionParameters\022\'\n\004ship\030\001 \001(\0162" +
+      "\031.ei.MissionInfo.Spaceship\022P\n\tdurations\030" +
+      "\003 \003(\0132=.ei.ArtifactsConfigurationRespons" +
+      "e.MissionParameters.Duration\022\"\n\032level_mi" +
+      "ssion_requirements\030\004 \003(\r\022\033\n\023capacity_DEP" +
+      "RECATED\030\002 \001(\r\032\326\001\n\010Duration\0223\n\rduration_t" +
+      "ype\030\001 \001(\0162\034.ei.MissionInfo.DurationType\022" +
+      "\017\n\007seconds\030\002 \001(\001\022\017\n\007quality\030\003 \001(\002\022\023\n\013min" +
+      "_quality\030\004 \001(\002\022\023\n\013max_quality\030\005 \001(\002\022\020\n\010c" +
+      "apacity\030\006 \001(\r\022\033\n\023level_capacity_bump\030\007 \001" +
+      "(\r\022\032\n\022level_quality_bump\030\010 \001(\002\032\370\001\n\022Artif" +
+      "actParameters\022\036\n\004spec\030\001 \001(\0132\020.ei.Artifac" +
+      "tSpec\022\024\n\014base_quality\030\002 \001(\001\022\027\n\017odds_mult" +
+      "iplier\030\004 \001(\001\022\r\n\005value\030\003 \001(\001\022\026\n\016crafting_" +
+      "price\030\005 \001(\001\022\032\n\022crafting_price_low\030\006 \001(\001\022" +
+      "\035\n\025crafting_price_domain\030\007 \001(\r\022\034\n\024crafti" +
+      "ng_price_curve\030\010 \001(\001\022\023\n\013crafting_xp\030\t \001(" +
+      "\004\032=\n\021CraftingLevelInfo\022\023\n\013xp_required\030\001 " +
+      "\001(\001\022\023\n\013rarity_mult\030\002 \001(\002\"\256\001\n\016MissionRequ" +
       "est\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicRequestInfo" +
-      "\022\017\n\007user_id\030\001 \001(\t\022\021\n\tdevice_id\030\002 \001(\t\022\027\n\017" +
-      "backup_checksum\030\003 \001(\004\"d\n\024UserDataInfoRes" +
-      "ponse\022\027\n\017backup_checksum\030\001 \001(\004\022\031\n\021backup" +
-      "_total_cash\030\002 \001(\001\022\030\n\020coop_memberships\030\003 " +
-      "\003(\t\"{\n\027ClearAllUserDataRequest\022#\n\005rinfo\030" +
-      "\004 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user_id\030\001" +
-      " \001(\t\022\021\n\tdevice_id\030\002 \001(\t\022\027\n\017backup_checks" +
-      "um\030\003 \001(\004\"r\n\nServerGift\022\017\n\007user_id\030\001 \001(\t\022" +
-      "#\n\013reward_type\030\003 \001(\0162\016.ei.RewardType\022\027\n\017" +
-      "reward_sub_type\030\004 \001(\t\022\025\n\rreward_amount\030\005" +
-      " \001(\001\"\276\020\n\nLiveConfig\022\021\n\tconfig_id\030\001 \001(\t\0222" +
-      "\n\rboosts_config\030\002 \001(\0132\033.ei.LiveConfig.Bo" +
-      "ostsConfig\022.\n\013gift_config\030\003 \001(\0132\031.ei.Liv" +
-      "eConfig.GiftConfig\022.\n\013misc_config\030\004 \001(\0132" +
-      "\031.ei.LiveConfig.MiscConfig\022.\n\013help_confi" +
-      "g\030\005 \001(\0132\031.ei.LiveConfig.HelpConfig\032\306\001\n\014B" +
-      "oostsConfig\022<\n\014item_configs\030\001 \003(\0132&.ei.L" +
-      "iveConfig.BoostsConfig.ItemConfig\022\037\n\027cas" +
-      "h_boost_cooloff_time\030\002 \001(\001\032W\n\nItemConfig" +
-      "\022\020\n\010boost_id\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\023\n\013tok" +
-      "en_price\030\003 \001(\r\022\023\n\013se_required\030\004 \001(\001\032\336\006\n\n" +
-      "GiftConfig\022?\n\014gift_configs\030\t \003(\0132).ei.Li" +
-      "veConfig.GiftConfig.GiftValueConfig\022\031\n\021g" +
-      "ift_mu_min_spent\030\n \001(\001\022\031\n\021gift_mu_max_sp" +
-      "ent\030\013 \001(\001\022\034\n\024gift_mu_overall_mult\030\014 \001(\001\022" +
-      "E\n\025random_gift_mu_config\030\017 \001(\0132&.ei.Live" +
-      "Config.GiftConfig.GiftMuConfig\022D\n\024video_" +
-      "gift_mu_config\030\020 \001(\0132&.ei.LiveConfig.Gif" +
-      "tConfig.GiftMuConfig\022\030\n\020package_interval" +
-      "\030\001 \001(\001\022\034\n\024video_offer_interval\030\002 \001(\001\022%\n\035" +
-      "video_offer_interval_contract\030\003 \001(\001\022\'\n\037v" +
-      "ideo_offer_interval_piggy_full\030\004 \001(\001\022-\n%" +
-      "video_offer_interval_piggy_extra_full\030\005 " +
-      "\001(\001\022\033\n\023video_reset_on_idle\030\016 \001(\010\022!\n\031pack" +
-      "age_interval_contract\030\006 \001(\001\022#\n\033package_i" +
-      "nterval_piggy_full\030\007 \001(\001\022)\n!package_inte" +
-      "rval_piggy_extra_full\030\010 \001(\001\022\035\n\025package_r" +
-      "eset_on_idle\030\r \001(\010\032|\n\017GiftValueConfig\022\017\n" +
-      "\007gift_id\030\001 \001(\t\022\016\n\006amount\030\004 \001(\001\022\020\n\010rand_m" +
-      "in\030\002 \001(\001\022\020\n\010rand_max\030\003 \001(\001\022\021\n\tvideo_min\030" +
-      "\005 \001(\001\022\021\n\tvideo_max\030\006 \001(\001\032J\n\014GiftMuConfig" +
-      "\022\021\n\tmin_spent\030\001 \001(\001\022\021\n\tmax_spent\030\002 \001(\001\022\024" +
-      "\n\014overall_mult\030\003 \001(\001\032\233\004\n\nMiscConfig\022\024\n\014a" +
-      "sk_to_track\030\001 \001(\010\022\"\n\032ask_to_track_min_so" +
-      "ul_eggs\030\002 \001(\001\022\034\n\024ask_to_track_message\030\003 " +
-      "\001(\t\022$\n\034ask_to_track_show_pre_dialog\030\004 \001(" +
-      "\010\022\"\n\032ask_to_track_after_privacy\030\005 \001(\010\022$\n" +
-      "\034chicken_run_boost_percentage\030\006 \001(\001\022\034\n\024s" +
-      "hells_intro_tickets\030\007 \001(\r\022\'\n\037shells_max_" +
-      "free_chicken_configs\030\010 \001(\r\022$\n\034shells_int" +
-      "ro_alert_threshold\030\t \001(\r\022+\n\036shells_light" +
-      "ing_controls_price\030\016 \001(\r:\003175\022.\n&contrac" +
-      "ts_expert_league_min_soul_power\030\n \001(\001\022!\n" +
-      "\031new_player_event_duration\030\013 \001(\001\022 \n\030cont" +
-      "racts_club_available\030\014 \001(\010\022\026\n\016contracts_" +
-      "beta\030\r \001(\010\022\036\n\026season_rewards_enabled\030\017 \001" +
-      "(\010\032\220\002\n\nHelpConfig\022=\n\013video_infos\030\001 \003(\0132(" +
-      ".ei.LiveConfig.HelpConfig.HowToVideoInfo" +
-      "\032\302\001\n\016HowToVideoInfo\022;\n\004type\030\006 \001(\0162-.ei.L" +
-      "iveConfig.HelpConfig.HowToVideoInfo.Type" +
-      "\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\020\n\010d" +
-      "uration\030\005 \001(\t\022\013\n\003url\030\003 \001(\t\022\021\n\tsoul_eggs\030" +
-      "\004 \001(\001\"\036\n\004Type\022\t\n\005VIDEO\020\000\022\013\n\007ARTICLE\020\001\"\354\004" +
-      "\n\nInGameMail\022\n\n\002id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022" +
-      "\014\n\004date\030\010 \001(\t\022\017\n\007message\030\003 \001(\t\022\016\n\006action" +
-      "\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022 \n\010app_link\030\016 \001(\0162\016." +
-      "ei.UILocation\022\026\n\016app_link_extra\030\017 \001(\t\022\032\n" +
-      "\005image\030\020 \001(\0132\013.ei.DLCItem\022\023\n\013image_width" +
-      "\030\025 \001(\001\022\024\n\014image_height\030\026 \001(\001\022\020\n\010platform" +
-      "\030\007 \001(\r\022\016\n\006builds\030\t \003(\t\022\032\n\022min_client_ver" +
-      "sion\030\n \001(\r\022\032\n\022max_client_version\030\014 \001(\r\022\025" +
-      "\n\rmin_soul_eggs\030\013 \001(\001\022\025\n\rmax_soul_eggs\030\035" +
-      " \001(\001\022\032\n\022min_mystical_bonus\030\r \001(\001\022\037\n\tuser" +
-      "_type\030\021 \001(\0162\014.ei.UserType\022\030\n\020min_piggy_b" +
-      "reaks\030\024 \001(\r\022\020\n\010gold_tip\030\006 \001(\001\022\013\n\003tip\030\027 \001" +
-      "(\010\022\020\n\010priority\030\033 \001(\r\022\037\n\027min_days_since_l" +
-      "ast_tip\030\030 \001(\001\022\023\n\013max_retries\030\031 \001(\r\022\030\n\020da" +
-      "ys_until_retry\030\032 \001(\001\022\020\n\010category\030\034 \001(\t\022\024" +
-      "\n\014release_time\030\036 \001(\002\"S\n\006MailDB\022\034\n\004mail\030\001" +
-      " \003(\0132\016.ei.InGameMail\022\024\n\014tips_db_data\030\002 \001" +
-      "(\014\022\025\n\rtips_checksum\030\003 \001(\t\"&\n\006TipsDB\022\034\n\004t" +
-      "ips\030\001 \003(\0132\016.ei.InGameMail\"\240\001\n\tMailState\022" +
-      "\025\n\rread_mail_ids\030\001 \003(\t\022+\n\013tips_states\030\002 " +
-      "\003(\0132\026.ei.MailState.TipState\022\025\n\rtips_chec" +
-      "ksum\030\003 \001(\t\0328\n\010TipState\022\n\n\002id\030\001 \001(\t\022\r\n\005re" +
-      "ads\030\002 \001(\r\022\021\n\ttime_read\030\003 \001(\001\"\354\003\n\023Periodi" +
-      "calsResponse\022\034\n\005sales\030\001 \001(\0132\r.ei.SalesIn" +
-      "fo\022\'\n\006events\030\002 \001(\0132\027.ei.EggIncCurrentEve" +
-      "nts\022(\n\tcontracts\030\003 \001(\0132\025.ei.ContractsRes" +
-      "ponse\022+\n\013evaluations\030\010 \003(\0132\026.ei.Contract" +
-      "Evaluation\022\035\n\005gifts\030\004 \003(\0132\016.ei.ServerGif" +
-      "t\0223\n\016artifact_cases\030\t \003(\0132\033.ei.CompleteM" +
-      "issionResponse\022#\n\013live_config\030\005 \001(\0132\016.ei" +
-      ".LiveConfig\022\034\n\010mail_bag\030\006 \001(\0132\n.ei.MailD" +
-      "B\0224\n\024contract_player_info\030\007 \001(\0132\026.ei.Con" +
-      "tractPlayerInfo\022?\n\022showcase_royalties\030\n " +
-      "\003(\0132#.ei.PeriodicalsResponse.RoyaltyInfo" +
-      "\032)\n\013RoyaltyInfo\022\n\n\002id\030\001 \001(\t\022\016\n\006amount\030\002 " +
-      "\001(\r\"\371\002\n\025GetPeriodicalsRequest\022#\n\005rinfo\030\014" +
-      " \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user_id\030\001 ",
-      "\001(\t\022\022\n\npiggy_full\030\002 \001(\010\022\030\n\020piggy_found_f" +
-      "ull\030\003 \001(\010\022\035\n\025seconds_full_realtime\030\004 \001(\001" +
-      "\022\035\n\025seconds_full_gametime\030\005 \001(\001\022\027\n\017lost_" +
-      "increments\030\007 \001(\r\022\021\n\tsoul_eggs\030\010 \001(\001\022\036\n\026m" +
-      "ystical_earnings_mult\030\r \001(\001\022\013\n\003eop\030\016 \001(\r" +
-      "\022\032\n\022contracts_unlocked\030\017 \001(\010\022\032\n\022artifact" +
-      "s_unlocked\030\020 \001(\010\022\036\n\026current_client_versi" +
-      "on\030\n \001(\r\022\r\n\005debug\030\013 \001(\010\"\215\002\n\rConfigReques" +
-      "t\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022\021" +
-      "\n\tsoul_eggs\030\002 \001(\001\022\032\n\022contracts_unlocked\030" +
-      "\005 \001(\010\022\032\n\022artifacts_unlocked\030\003 \001(\010\022\032\n\022fue" +
-      "l_tank_unlocked\030\004 \001(\010\022\022\n\npro_permit\030\006 \001(" +
-      "\010\022\r\n\005ultra\030\007 \001(\010\022\025\n\rtips_checksum\030\010 \001(\t\022" +
-      "6\n\025age_compliance_status\030\t \001(\0162\027.ei.AgeC" +
-      "omplianceStatus\"=\n\rAdminControls\022\023\n\013shel" +
-      "l_debug\030\001 \001(\010\022\027\n\017showcase_viewer\030\002 \001(\010\"\232" +
-      "\001\n\016ConfigResponse\022#\n\013live_config\030\001 \001(\0132\016" +
-      ".ei.LiveConfig\022\034\n\010mail_bag\030\002 \001(\0132\n.ei.Ma" +
-      "ilDB\022#\n\013dlc_catalog\030\003 \001(\0132\016.ei.DLCCatalo" +
-      "g\022 \n\005admin\030\004 \001(\0132\021.ei.AdminControls\"d\n\024A" +
-      "dAttributionRawData\022\024\n\014device_ad_id\030\001 \001(" +
-      "\t\022\017\n\007user_id\030\004 \001(\t\022\022\n\nad_network\030\002 \001(\t\022\021" +
-      "\n\tjson_data\030\003 \001(\t\"\270\001\n\020AdAttributionRow\022\017" +
-      "\n\007user_id\030\001 \001(\t\022\r\n\005ad_id\030\002 \001(\t\022\022\n\nad_net" +
-      "work\030\003 \001(\t\022\020\n\010campaign\030\004 \001(\t\022\017\n\007keyword\030" +
-      "\005 \001(\t\022\r\n\005extra\030\006 \001(\t\022\022\n\nclick_date\030\007 \001(\002" +
-      "\022\025\n\rdownload_date\030\010 \001(\002\022\023\n\013approx_time\030\t" +
-      " \001(\002\"\215\003\n\021AdAttributionInfo\022\024\n\014device_ad_" +
-      "id\030\001 \001(\t\022\024\n\014network_name\030\002 \001(\t\022\023\n\013attrib" +
-      "ution\030\003 \001(\010\022\020\n\010org_name\030\004 \001(\t\022\016\n\006org_id\030" +
-      "\005 \001(\t\022\025\n\rcampaign_name\030\006 \001(\t\022\023\n\013campaign" +
-      "_id\030\007 \001(\t\022\022\n\nclick_date\030\010 \001(\t\022\027\n\017convers" +
-      "ion_date\030\t \001(\t\022\027\n\017conversion_type\030\n \001(\t\022" +
-      "\013\n\003geo\030\013 \001(\t\022\024\n\014adgroup_name\030\014 \001(\t\022\022\n\nad" +
-      "group_id\030\r \001(\t\022\017\n\007keyword\030\016 \001(\t\022\022\n\nkeywo" +
-      "rd_id\030\017 \001(\t\022\025\n\rkeyword_extra\030\020 \001(\t\022\030\n\020cr" +
-      "eativeset_name\030\021 \001(\t\022\026\n\016creativeset_id\030\022" +
-      " \001(\t\"\363\002\n\023ArtifactsClientInfo\022\035\n\025mission_" +
-      "capacity_mult\030\001 \001(\001\022\035\n\025mission_duration_" +
-      "mult\030\002 \001(\001\022*\n\"mission_ftl_duration_resea" +
-      "rch_mult\030\004 \001(\001\022&\n\036mission_capacity_resea" +
-      "rch_mult\030\006 \001(\001\022:\n\rlaunch_counts\030\003 \003(\0132#." +
-      "ei.ArtifactsClientInfo.LaunchCount\022)\n!la" +
-      "st_server_launch_count_sum_time\030\005 \001(\001\032c\n" +
-      "\013LaunchCount\022\'\n\004ship\030\001 \001(\0162\031.ei.MissionI" +
-      "nfo.Spaceship\022\024\n\014num_launches\030\002 \001(\r\022\025\n\rl" +
-      "aunch_points\030\003 \001(\001\"\272\007\n\013MissionInfo\022\'\n\004sh" +
-      "ip\030\001 \001(\0162\031.ei.MissionInfo.Spaceship\022&\n\006s" +
-      "tatus\030\002 \001(\0162\026.ei.MissionInfo.Status\0223\n\rd" +
-      "uration_type\030\003 \001(\0162\034.ei.MissionInfo.Dura" +
-      "tionType\022)\n\004type\030\016 \001(\0162\033.ei.MissionInfo." +
-      "MissionType\022\023\n\013reset_index\030\017 \001(\r\022\"\n\004fuel" +
-      "\030\004 \003(\0132\024.ei.MissionInfo.Fuel\022\r\n\005level\030\014 " +
-      "\001(\r\022\030\n\020duration_seconds\030\005 \001(\001\022\020\n\010capacit" +
-      "y\030\t \001(\r\022\024\n\014quality_bump\030\013 \001(\001\022.\n\017target_" +
-      "artifact\030\r \001(\0162\025.ei.ArtifactSpec.Name\022\031\n" +
-      "\021seconds_remaining\030\006 \001(\001\022\032\n\022start_time_d" +
-      "erived\030\010 \001(\001\022\023\n\013mission_log\030\n \001(\t\022\022\n\nide" +
-      "ntifier\030\007 \001(\t\032,\n\004Fuel\022\024\n\003egg\030\001 \001(\0162\007.ei." +
-      "Egg\022\016\n\006amount\030\002 \001(\001\"\307\001\n\tSpaceship\022\017\n\013CHI" +
-      "CKEN_ONE\020\000\022\020\n\014CHICKEN_NINE\020\001\022\021\n\rCHICKEN_" +
-      "HEAVY\020\002\022\007\n\003BCR\020\003\022\025\n\021MILLENIUM_CHICKEN\020\004\022" +
-      "\027\n\023CORELLIHEN_CORVETTE\020\005\022\016\n\nGALEGGTICA\020\006" +
-      "\022\016\n\nCHICKFIANT\020\007\022\014\n\010VOYEGGER\020\010\022\016\n\nHENERP" +
-      "RISE\020\t\022\r\n\tATREGGIES\020\n\"\201\001\n\006Status\022\013\n\007FUEL" +
-      "ING\020\000\022\025\n\021PREPARE_TO_LAUNCH\020\005\022\r\n\tEXPLORIN" +
-      "G\020\n\022\014\n\010RETURNED\020\017\022\r\n\tANALYZING\020\020\022\014\n\010COMP" +
-      "LETE\020\024\022\014\n\010ARCHIVED\020\031\022\013\n\007ABORTED\020\036\";\n\014Dur" +
-      "ationType\022\t\n\005SHORT\020\000\022\010\n\004LONG\020\001\022\010\n\004EPIC\020\002" +
-      "\022\014\n\010TUTORIAL\020\003\"\'\n\013MissionType\022\014\n\010STANDAR" +
-      "D\020\000\022\n\n\006VIRTUE\020\001\"\360\013\n\014ArtifactSpec\022#\n\004name" +
-      "\030\001 \001(\0162\025.ei.ArtifactSpec.Name\022%\n\005level\030\002" +
-      " \001(\0162\026.ei.ArtifactSpec.Level\022\'\n\006rarity\030\003" +
-      " \001(\0162\027.ei.ArtifactSpec.Rarity\022\024\n\003egg\030\004 \001" +
-      "(\0162\007.ei.Egg\"\212\t\n\004Name\022\017\n\013LUNAR_TOTEM\020\000\022\027\n" +
-      "\023NEODYMIUM_MEDALLION\020\003\022\021\n\rBEAK_OF_MIDAS\020" +
-      "\004\022\025\n\021LIGHT_OF_EGGENDIL\020\005\022\025\n\021DEMETERS_NEC" +
-      "KLACE\020\006\022\025\n\021VIAL_MARTIAN_DUST\020\007\022\021\n\rORNATE" +
-      "_GUSSET\020\010\022\017\n\013THE_CHALICE\020\t\022\021\n\rBOOK_OF_BA" +
-      "SAN\020\n\022\023\n\017PHOENIX_FEATHER\020\013\022\021\n\rTUNGSTEN_A" +
-      "NKH\020\014\022\023\n\017AURELIAN_BROOCH\020\025\022\024\n\020CARVED_RAI" +
-      "NSTICK\020\026\022\017\n\013PUZZLE_CUBE\020\027\022\025\n\021QUANTUM_MET" +
-      "RONOME\020\030\022\024\n\020SHIP_IN_A_BOTTLE\020\031\022\025\n\021TACHYO" +
-      "N_DEFLECTOR\020\032\022\030\n\024INTERSTELLAR_COMPASS\020\033\022" +
-      "\025\n\021DILITHIUM_MONOCLE\020\034\022\025\n\021TITANIUM_ACTUA" +
-      "TOR\020\035\022\021\n\rMERCURYS_LENS\020\036\022\021\n\rTACHYON_STON" +
-      "E\020\001\022\023\n\017DILITHIUM_STONE\020\037\022\017\n\013SHELL_STONE\020" +
-      " \022\017\n\013LUNAR_STONE\020!\022\016\n\nSOUL_STONE\020\"\022\022\n\016PR" +
-      "OPHECY_STONE\020\'\022\021\n\rQUANTUM_STONE\020$\022\017\n\013TER" +
-      "RA_STONE\020%\022\016\n\nLIFE_STONE\020&\022\021\n\rCLARITY_ST" +
-      "ONE\020(\022\035\n\031EXTRATERRESTRIAL_ALUMINUM\020\r\022\024\n\020" +
-      "ANCIENT_TUNGSTEN\020\016\022\017\n\013SPACE_ROCKS\020\017\022\016\n\nA" +
-      "LIEN_WOOD\020\020\022\022\n\016GOLD_METEORITE\020\021\022\022\n\016TAU_C" +
-      "ETI_GEODE\020\022\022\024\n\020CENTAURIAN_STEEL\020\023\022\023\n\017ERI" +
-      "DANI_FEATHER\020\024\022\017\n\013DRONE_PARTS\020#\022\024\n\020CELES" +
-      "TIAL_BRONZE\020)\022\020\n\014LALANDE_HIDE\020*\022\022\n\016SOLAR" +
-      "_TITANIUM\020+\022\032\n\026TACHYON_STONE_FRAGMENT\020\002\022" +
-      "\034\n\030DILITHIUM_STONE_FRAGMENT\020,\022\030\n\024SHELL_S" +
-      "TONE_FRAGMENT\020-\022\030\n\024LUNAR_STONE_FRAGMENT\020" +
-      ".\022\027\n\023SOUL_STONE_FRAGMENT\020/\022\033\n\027PROPHECY_S" +
-      "TONE_FRAGMENT\0200\022\032\n\026QUANTUM_STONE_FRAGMEN" +
-      "T\0201\022\030\n\024TERRA_STONE_FRAGMENT\0202\022\027\n\023LIFE_ST" +
-      "ONE_FRAGMENT\0203\022\032\n\026CLARITY_STONE_FRAGMENT" +
-      "\0204\022\014\n\007UNKNOWN\020\220N\"H\n\005Level\022\014\n\010INFERIOR\020\000\022" +
-      "\n\n\006LESSER\020\001\022\n\n\006NORMAL\020\002\022\013\n\007GREATER\020\003\022\014\n\010" +
-      "SUPERIOR\020\004\"7\n\006Rarity\022\n\n\006COMMON\020\000\022\010\n\004RARE" +
-      "\020\001\022\010\n\004EPIC\020\002\022\r\n\tLEGENDARY\020\003\"E\n\004Type\022\014\n\010A" +
-      "RTIFACT\020\000\022\t\n\005STONE\020\001\022\016\n\nINGREDIENT\020\002\022\024\n\020" +
-      "STONE_INGREDIENT\020\003\"T\n\020CompleteArtifact\022\036" +
-      "\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpec\022 \n\006stones" +
-      "\030\002 \003(\0132\020.ei.ArtifactSpec\"u\n\025ArtifactInve" +
-      "ntoryItem\022\017\n\007item_id\030\001 \001(\004\022&\n\010artifact\030\002" +
-      " \001(\0132\024.ei.CompleteArtifact\022\020\n\010quantity\030\003" +
-      " \001(\001\022\021\n\tserver_id\030\004 \001(\t\"2\n\rInventorySlot" +
-      "\022\020\n\010occupied\030\001 \001(\010\022\017\n\007item_id\030\002 \001(\r\"\\\n\035A" +
-      "rtifactsConfigurationRequest\022#\n\005rinfo\030\002 " +
-      "\001(\0132\024.ei.BasicRequestInfo\022\026\n\016client_vers" +
-      "ion\030\001 \001(\r\"\377\007\n\036ArtifactsConfigurationResp" +
-      "onse\022P\n\022mission_parameters\030\001 \003(\01324.ei.Ar" +
-      "tifactsConfigurationResponse.MissionPara" +
-      "meters\022R\n\023artifact_parameters\030\002 \003(\01325.ei" +
-      ".ArtifactsConfigurationResponse.Artifact" +
-      "Parameters\022R\n\024crafting_level_infos\030\003 \003(\013" +
-      "24.ei.ArtifactsConfigurationResponse.Cra" +
-      "ftingLevelInfo\032\250\003\n\021MissionParameters\022\'\n\004" +
-      "ship\030\001 \001(\0162\031.ei.MissionInfo.Spaceship\022P\n" +
-      "\tdurations\030\003 \003(\0132=.ei.ArtifactsConfigura" +
-      "tionResponse.MissionParameters.Duration\022" +
-      "\"\n\032level_mission_requirements\030\004 \003(\r\022\033\n\023c" +
-      "apacity_DEPRECATED\030\002 \001(\r\032\326\001\n\010Duration\0223\n" +
-      "\rduration_type\030\001 \001(\0162\034.ei.MissionInfo.Du" +
-      "rationType\022\017\n\007seconds\030\002 \001(\001\022\017\n\007quality\030\003" +
-      " \001(\002\022\023\n\013min_quality\030\004 \001(\002\022\023\n\013max_quality" +
-      "\030\005 \001(\002\022\020\n\010capacity\030\006 \001(\r\022\033\n\023level_capaci" +
-      "ty_bump\030\007 \001(\r\022\032\n\022level_quality_bump\030\010 \001(" +
-      "\002\032\370\001\n\022ArtifactParameters\022\036\n\004spec\030\001 \001(\0132\020" +
-      ".ei.ArtifactSpec\022\024\n\014base_quality\030\002 \001(\001\022\027" +
-      "\n\017odds_multiplier\030\004 \001(\001\022\r\n\005value\030\003 \001(\001\022\026" +
-      "\n\016crafting_price\030\005 \001(\001\022\032\n\022crafting_price" +
-      "_low\030\006 \001(\001\022\035\n\025crafting_price_domain\030\007 \001(" +
-      "\r\022\034\n\024crafting_price_curve\030\010 \001(\001\022\023\n\013craft" +
-      "ing_xp\030\t \001(\004\032=\n\021CraftingLevelInfo\022\023\n\013xp_" +
-      "required\030\001 \001(\001\022\023\n\013rarity_mult\030\002 \001(\002\"\256\001\n\016" +
-      "MissionRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.Basic" +
-      "RequestInfo\022\026\n\016client_version\030\001 \001(\r\022\022\n\ne" +
-      "i_user_id\030\003 \001(\t\022\035\n\004info\030\002 \001(\0132\017.ei.Missi" +
-      "onInfo\022,\n\013client_info\030\005 \001(\0132\027.ei.Artifac" +
-      "tsClientInfo\"A\n\017MissionResponse\022\017\n\007succe" +
-      "ss\030\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\"" +
-      "T\n\030GetActiveMissionsRequest\022#\n\005rinfo\030\001 \001" +
-      "(\0132\024.ei.BasicRequestInfo\022\023\n\013reset_index\030" +
-      "\002 \001(\r\"V\n\031GetActiveMissionsResponse\022\017\n\007su" +
-      "ccess\030\001 \001(\010\022(\n\017active_missions\030\002 \003(\0132\017.e" +
-      "i.MissionInfo\"\214\002\n\027CompleteMissionRespons" +
-      "e\022\017\n\007success\030\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.Mi" +
-      "ssionInfo\022A\n\tartifacts\030\003 \003(\0132..ei.Comple" +
-      "teMissionResponse.SecureArtifactSpec\022!\n\r" +
-      "other_rewards\030\004 \003(\0132\n.ei.Reward\022\022\n\nei_us" +
-      "er_id\030\005 \001(\t\032G\n\022SecureArtifactSpec\022\036\n\004spe" +
-      "c\030\001 \001(\0132\020.ei.ArtifactSpec\022\021\n\tserver_id\030\002" +
-      " \001(\t\"\344\001\n%CollectContractArtifactRewardsR" +
-      "equest\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequestI" +
-      "nfo\022\033\n\023contract_identifier\030\002 \001(\t\022\016\n\006leag" +
-      "ue\030\005 \001(\r\022\'\n\005grade\030\006 \001(\0162\030.ei.Contract.Pl" +
-      "ayerGrade\022\022\n\ngoal_index\030\003 \001(\r\022,\n\tbest_sh" +
-      "ip\030\004 \001(\0162\031.ei.MissionInfo.Spaceship\"\240\001\n#" +
-      "CollectSeasonArtifactRewardsRequest\022#\n\005r" +
-      "info\030\001 \001(\0132\024.ei.BasicRequestInfo\022\031\n\021seas" +
-      "on_identifier\030\002 \001(\t\022\013\n\003cxp\030\003 \001(\001\022,\n\tbest" +
-      "_ship\030\004 \001(\0162\031.ei.MissionInfo.Spaceship\"\366" +
-      "\001\n\024CraftArtifactRequest\022#\n\005rinfo\030\005 \001(\0132\024" +
-      ".ei.BasicRequestInfo\022\022\n\nei_user_id\030\001 \001(\t" +
-      "\022\036\n\004spec\030\002 \001(\0132\020.ei.ArtifactSpec\022\017\n\007item" +
-      "_id\030\003 \001(\004\022\027\n\017gold_price_paid\030\006 \001(\001\022\026\n\016cr" +
-      "afting_count\030\007 \001(\r\022\023\n\013crafting_xp\030\010 \001(\001\022" +
-      ".\n\013ingredients\030\004 \003(\0132\031.ei.ArtifactInvent" +
-      "oryItem\"\211\001\n\025CraftArtifactResponse\022\017\n\007ite" +
-      "m_id\030\001 \001(\004\022\022\n\nei_user_id\030\005 \001(\t\0228\n\017rarity" +
-      "_achieved\030\002 \001(\0162\027.ei.ArtifactSpec.Rarity" +
-      ":\006COMMON\022\021\n\tserver_id\030\003 \001(\t\"\365\001\n\026ConsumeA" +
-      "rtifactRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.Basic" +
-      "RequestInfo\022\022\n\nei_user_id\030\003 \001(\t\022\036\n\004spec\030" +
-      "\001 \001(\0132\020.ei.ArtifactSpec\022\032\n\022artifact_serv" +
-      "er_id\030\005 \001(\t\022\030\n\020original_item_id\030\002 \001(\004\022\035\n" +
-      "\025additional_server_ids\030\007 \003(\t\022\033\n\023addition" +
-      "al_item_ids\030\010 \003(\004\022\020\n\010quantity\030\006 \001(\r\"\276\001\n\027" +
-      "ConsumeArtifactResponse\022\017\n\007success\030\001 \001(\010" +
-      "\022\030\n\020original_item_id\030\002 \001(\004\022\033\n\023additional" +
-      "_item_ids\030\006 \003(\004\022$\n\nbyproducts\030\003 \003(\0132\020.ei" +
-      ".ArtifactSpec\022!\n\rother_rewards\030\004 \003(\0132\n.e" +
-      "i.Reward\022\022\n\nei_user_id\030\005 \001(\t\"}\n\034Authenti" +
-      "cateArtifactResponse\022\017\n\007success\030\001 \001(\010\022\030\n" +
-      "\020original_item_id\030\002 \001(\004\022\016\n\006demote\030\003 \001(\010\022" +
-      "\016\n\006delete\030\004 \001(\010\022\022\n\nei_user_id\030\005 \001(\t\"\241\001\n\022" +
-      "SetArtifactRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.B" +
-      "asicRequestInfo\022+\n\010artifact\030\002 \001(\0132\031.ei.A" +
-      "rtifactInventoryItem\022 \n\006stones\030\003 \003(\0132\020.e" +
-      "i.ArtifactSpec\022\027\n\017gold_price_paid\030\004 \001(\001\"" +
-      "T\n\023SetArtifactResponse\022\017\n\007success\030\001 \001(\010\022" +
-      "\030\n\020original_item_id\030\002 \001(\004\022\022\n\nei_user_id\030" +
-      "\005 \001(\t\"7\n\022ActiveArtifactSlot\022\020\n\010occupied\030" +
-      "\001 \001(\010\022\017\n\007item_id\030\002 \001(\004\"\303\t\n\013ArtifactsDB\0222" +
-      "\n\017inventory_items\030\001 \003(\0132\031.ei.ArtifactInv" +
-      "entoryItem\022\025\n\ritem_sequence\030\002 \001(\004\0223\n\030inv" +
-      "entory_slots_NOT_USED\030\003 \003(\0132\021.ei.Invento" +
-      "rySlot\022;\n\033active_artifacts_DEPRECATED\030\007 " +
-      "\003(\0132\026.ei.ActiveArtifactSlot\022?\n\024active_ar" +
-      "tifact_sets\030\013 \003(\0132!.ei.ArtifactsDB.Activ" +
-      "eArtifactSet\022>\n\023saved_artifact_sets\030\r \003(" +
-      "\0132!.ei.ArtifactsDB.ActiveArtifactSet\022:\n\017" +
-      "artifact_status\030\014 \003(\0132!.ei.ArtifactsDB.C" +
-      "raftableArtifact\022(\n\017fueling_mission\030\016 \001(" +
-      "\0132\017.ei.MissionInfo\022&\n\rmission_infos\030\004 \003(" +
-      "\0132\017.ei.MissionInfo\022(\n\017mission_archive\030\005 " +
-      "\003(\0132\017.ei.MissionInfo\022/\n\rvirtue_afx_db\030\017 " +
-      "\001(\0132\030.ei.ArtifactsDB.VirtueDB\0229\n\037discove" +
-      "red_artifacts_DEPRECATED\030\010 \003(\0132\020.ei.Arti" +
-      "factSpec\022I\n\036craftable_artifacts_DEPRECAT" +
-      "ED\030\t \003(\0132!.ei.ArtifactsDB.CraftableArtif" +
-      "act\022E\n\032crafting_counts_DEPRECATED\030\n \003(\0132" +
-      "!.ei.ArtifactsDB.CraftableArtifact\032G\n\021Ac" +
-      "tiveArtifactSet\022%\n\005slots\030\001 \003(\0132\026.ei.Acti" +
-      "veArtifactSlot\022\013\n\003uid\030\002 \001(\r\032\222\001\n\021Craftabl" +
-      "eArtifact\022\036\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpe" +
-      "c\022\022\n\ndiscovered\030\006 \001(\010\022\021\n\tcraftable\030\004 \001(\010" +
-      "\022\031\n\021recipe_discovered\030\005 \001(\010\022\014\n\004seen\030\002 \001(" +
-      "\010\022\r\n\005count\030\003 \001(\r\032\341\001\n\010VirtueDB\0222\n\017invento" +
-      "ry_items\030\001 \003(\0132\031.ei.ArtifactInventoryIte" +
-      "m\022:\n\017artifact_status\030\002 \003(\0132!.ei.Artifact" +
-      "sDB.CraftableArtifact\022(\n\017fueling_mission" +
-      "\030\003 \001(\0132\017.ei.MissionInfo\022;\n\020active_artifa" +
-      "cts\030\r \001(\0132!.ei.ArtifactsDB.ActiveArtifac" +
-      "tSet\"\202\001\n\024AuthenticatedMessage\022\017\n\007message" +
-      "\030\001 \001(\014\022\017\n\007version\030\003 \001(\r\022\014\n\004code\030\002 \001(\t\022\022\n" +
-      "\ncompressed\030\004 \001(\010\022\025\n\roriginal_size\030\005 \001(\r" +
-      "\022\017\n\007user_id\030\006 \001(\t\"f\n\031LogCompleteMissionP" +
-      "ayload\022\037\n\003req\030\001 \001(\0132\022.ei.MissionRequest\022" +
-      "(\n\003res\030\002 \001(\0132\033.ei.CompleteMissionRespons" +
-      "e\"h\n\027LogCraftArtifactPayload\022%\n\003req\030\001 \001(" +
-      "\0132\030.ei.CraftArtifactRequest\022&\n\003res\030\002 \001(\013" +
-      "2\031.ei.CraftArtifactResponse\"n\n\031LogConsum" +
-      "eArtifactPayload\022\'\n\003req\030\001 \001(\0132\032.ei.Consu" +
-      "meArtifactRequest\022(\n\003res\030\002 \001(\0132\033.ei.Cons" +
-      "umeArtifactResponse\"b\n\025LogSetArtifactPay" +
-      "load\022#\n\003req\030\001 \001(\0132\026.ei.SetArtifactReques" +
-      "t\022$\n\003res\030\002 \001(\0132\027.ei.SetArtifactResponse\"" +
-      "@\n\026AccountTransferPayload\022\017\n\007from_id\030\001 \001" +
-      "(\t\022\025\n\rto_ei_user_id\030\002 \001(\t\"\335\001\n\022SaveBackup" +
-      "Response\022\017\n\007success\030\001 \001(\010\022\022\n\nerror_code\030" +
-      "\002 \001(\r\022\017\n\007message\030\003 \001(\t\022#\n\017existing_backu" +
-      "p\030\004 \001(\0132\n.ei.Backup\"l\n\nErrorCodes\022\014\n\010NO_" +
-      "ERROR\020\000\022\022\n\016USER_NOT_FOUND\020\001\022\027\n\023COULD_NOT" +
-      "_OVERWRITE\020\002\022\022\n\016BACKUP_OFFERED\020\003\022\017\n\013BAD_" +
-      "USER_ID\020\004\"l\n\023CleanAccountRequest\022\032\n\022ei_u" +
-      "ser_id_to_keep\030\001 \001(\t\022\030\n\020game_services_id" +
-      "\030\002 \001(\t\022\037\n\027game_services_id_scoped\030\003 \001(\t\"" +
-      "&\n\020ReturnEDTPayload\022\022\n\nei_user_id\030\001 \001(\t\"" +
-      "\201\001\n\007DLCItem\022\014\n\004name\030\001 \001(\t\022\021\n\tdirectory\030\002" +
-      " \001(\t\022\013\n\003ext\030\003 \001(\t\022\022\n\ncompressed\030\006 \001(\010\022\025\n" +
-      "\roriginal_size\030\007 \001(\004\022\013\n\003url\030\004 \001(\t\022\020\n\010che" +
-      "cksum\030\005 \001(\t\"9\n\010FontPack\022\021\n\tlanguages\030\001 \003" +
-      "(\t\022\032\n\005faces\030\002 \003(\0132\013.ei.DLCItem\"\201\025\n\tShell" +
-      "Spec\022\022\n\nidentifier\030\001 \001(\t\022/\n\rprimary_piec" +
-      "e\030\014 \001(\0132\030.ei.ShellSpec.ShellPiece\022(\n\006pie" +
-      "ces\030\013 \003(\0132\030.ei.ShellSpec.ShellPiece\022\037\n\na" +
-      "lt_assets\030\022 \003(\0132\013.ei.DLCItem\022\014\n\004name\030\003 \001" +
-      "(\t\022\026\n\016set_identifier\030\r \001(\t\022\031\n\021modified_g" +
-      "eometry\030\023 \001(\010\022\r\n\005price\030\004 \001(\r\022\024\n\014required" +
-      "_eop\030\005 \001(\r\022\032\n\022required_soul_eggs\030\006 \001(\001\022\035" +
-      "\n\025required_parent_shell\030\024 \001(\t\022\016\n\006is_new\030" +
-      "\016 \001(\010\022\017\n\007expires\030\017 \001(\010\022\037\n\027seconds_until_" +
-      "available\030\021 \001(\001\022\031\n\021seconds_remaining\030\020 \001" +
-      "(\001\022\022\n\npopularity\030\025 \001(\004\022\032\n\022default_appear" +
-      "ance\030\010 \001(\010\032S\n\nShellPiece\022+\n\nasset_type\030\001" +
-      " \001(\0162\027.ei.ShellSpec.AssetType\022\030\n\003dlc\030\002 \001" +
-      "(\0132\013.ei.DLCItem\"\340\020\n\tAssetType\022\010\n\004COOP\020\001\022" +
-      "\t\n\005SHACK\020\002\022\017\n\013SUPER_SHACK\020\003\022\017\n\013SHORT_HOU" +
-      "SE\020\004\022\020\n\014THE_STANDARD\020\005\022\016\n\nLONG_HOUSE\020\006\022\021" +
-      "\n\rDOUBLE_DECKER\020\007\022\r\n\tWAREHOUSE\020\010\022\n\n\006CENT" +
-      "ER\020\t\022\n\n\006BUNKER\020\n\022\n\n\006EGGKEA\020\013\022\n\n\006HAB_1K\020\014" +
-      "\022\n\n\006HANGAR\020\r\022\t\n\005TOWER\020\016\022\013\n\007HAB_10K\020\017\022\014\n\010" +
-      "EGGTOPIA\020\020\022\014\n\010MONOLITH\020\021\022\021\n\rPLANET_PORTA" +
-      "L\020\022\022\024\n\020CHICKEN_UNIVERSE\020\023\022\020\n\014SILO_0_SMAL" +
-      "L\0202\022\016\n\nSILO_0_MED\0203\022\020\n\014SILO_0_LARGE\0204\022\020\n" +
-      "\014SILO_1_SMALL\0205\022\016\n\nSILO_1_MED\0206\022\020\n\014SILO_" +
-      "1_LARGE\0207\022\014\n\010SILO_ALL\020;\022\013\n\007MAILBOX\020F\022\017\n\013" +
-      "TROPHY_CASE\020G\022\n\n\006GROUND\020H\022\r\n\tHARDSCAPE\020I" +
-      "\022\r\n\tHYPERLOOP\020J\022\013\n\007DEPOT_1\020d\022\013\n\007DEPOT_2\020" +
-      "e\022\013\n\007DEPOT_3\020f\022\013\n\007DEPOT_4\020g\022\013\n\007DEPOT_5\020h" +
-      "\022\013\n\007DEPOT_6\020i\022\013\n\007DEPOT_7\020j\022\t\n\005LAB_1\020n\022\t\n" +
-      "\005LAB_2\020o\022\t\n\005LAB_3\020p\022\t\n\005LAB_4\020q\022\t\n\005LAB_5\020" +
-      "r\022\t\n\005LAB_6\020s\022\023\n\017HATCHERY_EDIBLE\020x\022\026\n\022HAT" +
-      "CHERY_SUPERFOOD\020y\022\024\n\020HATCHERY_MEDICAL\020z\022" +
-      "\030\n\024HATCHERY_ROCKET_FUEL\020{\022\032\n\026HATCHERY_SU" +
-      "PERMATERIAL\020|\022\023\n\017HATCHERY_FUSION\020}\022\024\n\020HA" +
-      "TCHERY_QUANTUM\020~\022\030\n\024HATCHERY_IMMORTALITY" +
-      "\020\177\022\025\n\020HATCHERY_TACHYON\020\200\001\022\026\n\021HATCHERY_GR" +
-      "AVITON\020\201\001\022\027\n\022HATCHERY_DILITHIUM\020\202\001\022\025\n\020HA" +
-      "TCHERY_PRODIGY\020\203\001\022\027\n\022HATCHERY_TERRAFORM\020" +
-      "\204\001\022\030\n\023HATCHERY_ANTIMATTER\020\205\001\022\031\n\024HATCHERY" +
-      "_DARK_MATTER\020\206\001\022\020\n\013HATCHERY_AI\020\207\001\022\024\n\017HAT" +
-      "CHERY_NEBULA\020\210\001\022\026\n\021HATCHERY_UNIVERSE\020\211\001\022" +
-      "\033\n\026HATCHERY_ENLIGHTENMENT\020\212\001\022\027\n\022HATCHERY" +
-      "_CHOCOLATE\020\213\001\022\024\n\017HATCHERY_EASTER\020\214\001\022\032\n\025H" +
-      "ATCHERY_WATERBALLOON\020\215\001\022\026\n\021HATCHERY_FIRE" +
-      "WORK\020\216\001\022\025\n\020HATCHERY_PUMPKIN\020\217\001\022\024\n\017HATCHE" +
-      "RY_CUSTOM\020\226\001\022\027\n\022HATCHERY_CURIOSITY\020\240\001\022\027\n" +
-      "\022HATCHERY_INTEGRITY\020\241\001\022\026\n\021HATCHERY_HUMIL" +
-      "ITY\020\242\001\022\030\n\023HATCHERY_RESILIENCE\020\243\001\022\026\n\021HATC" +
-      "HERY_KINDNESS\020\244\001\022\n\n\005HOA_1\020\252\001\022\n\n\005HOA_2\020\253\001" +
-      "\022\n\n\005HOA_3\020\254\001\022\026\n\021MISSION_CONTROL_1\020\264\001\022\026\n\021" +
-      "MISSION_CONTROL_2\020\265\001\022\026\n\021MISSION_CONTROL_" +
-      "3\020\266\001\022\020\n\013FUEL_TANK_1\020\310\001\022\020\n\013FUEL_TANK_2\020\311\001" +
-      "\022\020\n\013FUEL_TANK_3\020\312\001\022\020\n\013FUEL_TANK_4\020\313\001\022\032\n\025" +
-      "HATCHERY_GRAVITON_TOP\020\364\003\022\033\n\026HATCHERY_NEB" +
-      "ULA_MIDDLE\020\365\003\022\030\n\023HATCHERY_NEBULA_TOP\020\366\003\022" +
-      " \n\033HATCHERY_DARK_MATTER_RING_1\020\371\003\022 \n\033HAT" +
-      "CHERY_DARK_MATTER_RING_2\020\372\003\022 \n\033HATCHERY_" +
-      "DARK_MATTER_RING_3\020\373\003\022\026\n\021HATCHERY_AI_TOP" +
-      "_1\020\376\003\022\026\n\021HATCHERY_AI_TOP_2\020\377\003\022\026\n\021HATCHER" +
-      "Y_AI_TOP_3\020\200\004\022\026\n\021HATCHERY_AI_TOP_4\020\201\004\022\034\n" +
-      "\027HATCHERY_UNIVERSE_PROBE\020\203\004\022\033\n\026HATCHERY_" +
-      "UNIVERSE_BOLT\020\204\004\022\037\n\032HATCHERY_ENLIGHTENME" +
-      "NT_ORB\020\210\004\022\035\n\030HATCHERY_CURIOSITY_EXTRA\020\246\004" +
-      "\022\035\n\030HATCHERY_INTEGRITY_EXTRA\020\247\004\022\034\n\027HATCH" +
-      "ERY_HUMILITY_EXTRA\020\250\004\022\036\n\031HATCHERY_RESILI" +
-      "ENCE_EXTRA\020\251\004\022\034\n\027HATCHERY_KINDNESS_EXTRA" +
-      "\020\252\004\022\024\n\017HYPERLOOP_TRACK\020\272\004\022\021\n\014MAILBOX_FUL" +
-      "L\020\330\004\022\014\n\007CHICKEN\020\350\007\022\010\n\003HAT\020\362\007\022\014\n\007UNKNOWN\020" +
-      "\217N\"\252\005\n\014ShellSetSpec\022\022\n\nidentifier\030\001 \001(\t\022" +
-      "\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 \001(\r\022 \n\025price_mu" +
-      "lt_DEPRECATED\030\010 \001(\001:\0011\022\020\n\010discount\030\021 \001(\001" +
-      "\022\024\n\014required_eop\030\004 \001(\r\022\032\n\022required_soul_" +
-      "eggs\030\005 \001(\001\022\033\n\023required_parent_set\030\024 \001(\t\022" +
-      "\016\n\006is_new\030\t \001(\010\022\017\n\007expires\030\n \001(\010\022\037\n\027seco" +
-      "nds_until_available\030\022 \001(\001\022\031\n\021seconds_rem" +
-      "aining\030\013 \001(\001\022\022\n\npopularity\030\025 \001(\004\022\021\n\tdeco" +
-      "rator\030\016 \001(\010\022\031\n\021modified_geometry\030\r \001(\010\022\023" +
-      "\n\013element_set\030\007 \001(\010\022\026\n\016hex_base_color\030\020 " +
-      "\001(\t\0222\n\nvariations\030\017 \003(\0132\036.ei.ShellSetSpe" +
-      "c.VariationSpec\022\031\n\004icon\030\023 \001(\0132\013.ei.DLCIt" +
-      "em\022\032\n\022default_appearance\030\006 \001(\010\022\031\n\021custom" +
-      "_appearance\030\014 \001(\010\032\223\001\n\rVariationSpec\022\022\n\ni" +
-      "dentifier\030\001 \001(\t\022\021\n\thex_color\030\002 \001(\t\022\r\n\005pr" +
-      "ice\030\003 \001(\r\022\025\n\rsort_priority\030\006 \001(\005\022\032\n\022defa" +
-      "ult_appearance\030\004 \001(\010\022\031\n\021custom_appearanc" +
-      "e\030\005 \001(\010\"\325\005\n\017ShellObjectSpec\022\022\n\nidentifie" +
-      "r\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasset_type\030\003 \001(" +
-      "\0162\027.ei.ShellSpec.AssetType\022\024\n\014object_cla" +
-      "ss\030\016 \001(\t\022\023\n\013icon_colors\030\017 \003(\t\022\r\n\005price\030\004" +
-      " \001(\r\022\024\n\014required_eop\030\005 \001(\r\022\032\n\022required_s" +
-      "oul_eggs\030\006 \001(\001\022\016\n\006is_new\030\n \001(\010\022\017\n\007expire" +
-      "s\030\013 \001(\010\022\037\n\027seconds_until_available\030\022 \001(\001" +
-      "\022\031\n\021seconds_remaining\030\014 \001(\001\022\022\n\npopularit" +
-      "y\030\023 \001(\004\022\020\n\010metadata\030\007 \003(\001\022\017\n\007no_hats\030\r \001" +
-      "(\010\022?\n\021chicken_animation\030\020 \001(\0162$.ei.Shell" +
-      "ObjectSpec.ChickenAnimation\022\025\n\rsort_prio" +
-      "rity\030\021 \001(\005\022,\n\006pieces\030\010 \003(\0132\034.ei.ShellObj" +
-      "ectSpec.LODPiece\022\032\n\022default_appearance\030\t" +
-      " \001(\010\0321\n\010LODPiece\022\030\n\003dlc\030\001 \001(\0132\013.ei.DLCIt" +
-      "em\022\013\n\003lod\030\002 \001(\r\"\235\001\n\020ChickenAnimation\022\020\n\014" +
-      "STANDARD_RUN\020\000\022\n\n\006SLOWMO\020\007\022\n\n\006WOBBLE\020\001\022\017" +
-      "\n\013WOBBLE_LEAN\020\005\022\n\n\006SMOOTH\020\002\022\017\n\013SMOOTH_LE" +
-      "AN\020\006\022\t\n\005HOVER\020\003\022\023\n\017SIDEWAYS_SMOOTH\020\004\022\021\n\r" +
-      "SIDEWAYS_LEAN\020\010\"\222\001\n\016ShellGroupSpec\022\022\n\nid" +
-      "entifier\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasset_ty" +
-      "pe\030\005 \001(\0162\027.ei.ShellSpec.AssetType\022\022\n\nmem" +
-      "ber_ids\030\003 \003(\t\022\035\n\025price_mult_DEPRECATED\030\004" +
-      " \001(\001\"\267\002\n\nDLCCatalog\022\032\n\005items\030\001 \003(\0132\013.ei." +
-      "DLCItem\022\035\n\006shells\030\002 \003(\0132\r.ei.ShellSpec\022$" +
-      "\n\nshell_sets\030\003 \003(\0132\020.ei.ShellSetSpec\022$\n\n" +
-      "decorators\030\006 \003(\0132\020.ei.ShellSetSpec\022*\n\rsh" +
-      "ell_objects\030\004 \003(\0132\023.ei.ShellObjectSpec\022(" +
-      "\n\014shell_groups\030\005 \003(\0132\022.ei.ShellGroupSpec" +
-      "\022*\n\"shells_showcase_last_featured_time\030\007" +
-      " \001(\001\022 \n\nfont_packs\030\010 \003(\0132\014.ei.FontPack\"\226" +
-      "\022\n\007ShellDB\0220\n\017shell_inventory\030\001 \003(\0132\027.ei" +
-      ".ShellDB.ShellStatus\022?\n\027shell_element_in" +
-      "ventory\030\005 \003(\0132\036.ei.ShellDB.ShellElementS" +
-      "tatus\022F\n\031shell_variation_inventory\030\010 \003(\013" +
-      "2#.ei.ShellDB.ShellSetVariationStatus\0224\n" +
-      "\023shell_set_inventory\030\002 \003(\0132\027.ei.ShellDB." +
-      "ShellStatus\0227\n\026shell_object_inventory\030\004 " +
-      "\003(\0132\027.ei.ShellDB.ShellStatus\0223\n\014farm_con" +
-      "figs\030\003 \003(\0132\035.ei.ShellDB.FarmConfiguratio" +
-      "n\0229\n\rsaved_configs\030\t \003(\0132\".ei.ShellDB.Sa" +
-      "vedFarmConfiguration\022\035\n\025new_shells_downl" +
-      "oaded\030\006 \003(\t\022\027\n\017new_shells_seen\030\007 \003(\t\022(\n " +
-      "last_showcase_featured_time_seen\030\013 \001(\001\022\"" +
-      "\n\032lighting_controls_unlocked\030\n \001(\010\0320\n\013Sh" +
-      "ellStatus\022\022\n\nidentifier\030\001 \001(\t\022\r\n\005owned\030\002" +
-      " \001(\010\032V\n\022ShellElementStatus\022(\n\007element\030\001 " +
-      "\001(\0162\027.ei.ShellDB.FarmElement\022\026\n\016set_iden" +
-      "tifier\030\002 \001(\t\032K\n\027ShellSetVariationStatus\022" +
-      "\026\n\016set_identifier\030\001 \001(\t\022\030\n\020owned_variati" +
-      "ons\030\002 \003(\t\032\245\003\n\021FarmConfiguration\0220\n\017locke" +
-      "d_elements\030\n \003(\0162\027.ei.ShellDB.FarmElemen" +
-      "t\0225\n\rshell_configs\030\001 \003(\0132\036.ei.ShellDB.Sh" +
-      "ellConfiguration\022<\n\021shell_set_configs\030\002 " +
-      "\003(\0132!.ei.ShellDB.ShellSetConfiguration\022#",
-      "\n\033configure_chickens_by_group\030\007 \001(\010\022:\n\rg" +
-      "roup_configs\030\010 \003(\0132#.ei.ShellDB.ShellGro" +
-      "upConfiguration\0222\n\017chicken_configs\030\t \003(\013" +
-      "2\031.ei.ShellDB.ChickenConfig\022\037\n\027lighting_" +
-      "config_enabled\030\013 \001(\010\0223\n\017lighting_config\030" +
-      "\014 \001(\0132\032.ei.ShellDB.LightingConfig\032\251\001\n\026Sa" +
-      "vedFarmConfiguration\022\n\n\002id\030\001 \001(\t\022-\n\006conf" +
-      "ig\030\002 \001(\0132\035.ei.ShellDB.FarmConfiguration\022" +
-      "\030\n\020client_save_time\030\003 \001(\001\022\021\n\tserver_id\030\004" +
-      " \001(\t\022\024\n\014display_name\030\005 \001(\t\022\021\n\tpurchased\030" +
-      "\006 \001(\010\032j\n\022ShellConfiguration\022+\n\nasset_typ" +
-      "e\030\001 \001(\0162\027.ei.ShellSpec.AssetType\022\r\n\005inde" +
-      "x\030\002 \001(\r\022\030\n\020shell_identifier\030\003 \001(\t\032\252\001\n\025Sh" +
-      "ellSetConfiguration\022(\n\007element\030\001 \001(\0162\027.e" +
-      "i.ShellDB.FarmElement\022\r\n\005index\030\002 \001(\r\022\034\n\024" +
-      "shell_set_identifier\030\003 \001(\t\022\034\n\024variation_" +
-      "identifier\030\004 \001(\t\022\034\n\024decorator_identifier" +
-      "\030\005 \001(\t\032`\n\027ShellGroupConfiguration\022+\n\nass" +
-      "et_type\030\001 \001(\0162\027.ei.ShellSpec.AssetType\022\030" +
-      "\n\020group_identifier\030\002 \001(\t\032C\n\rChickenConfi" +
-      "g\022\032\n\022chicken_identifier\030\001 \001(\t\022\026\n\016hat_ide" +
-      "ntifier\030\002 \001(\t\032\234\002\n\016LightingConfig\022\036\n\tligh" +
-      "t_dir\030\001 \001(\0132\013.ei.Vector3\022\'\n\022light_direct" +
-      "_color\030\002 \001(\0132\013.ei.Vector4\022\036\n\026light_direc" +
-      "t_intensity\030\003 \001(\002\022(\n\023light_ambient_color" +
-      "\030\004 \001(\0132\013.ei.Vector4\022\037\n\027light_ambient_int" +
-      "ensity\030\005 \001(\002\022\036\n\tfog_color\030\006 \001(\0132\013.ei.Vec" +
-      "tor4\022\020\n\010fog_near\030\007 \001(\002\022\017\n\007fog_far\030\010 \001(\002\022" +
-      "\023\n\013fog_density\030\t \001(\002\"\340\001\n\013FarmElement\022\r\n\t" +
-      "HEN_HOUSE\020\001\022\010\n\004SILO\020\002\022\013\n\007MAILBOX\020\003\022\017\n\013TR" +
-      "OPHY_CASE\020\004\022\n\n\006GROUND\020\005\022\r\n\tHARDSCAPE\020\006\022\r" +
-      "\n\tHYPERLOOP\020\007\022\t\n\005DEPOT\020\010\022\007\n\003LAB\020\t\022\014\n\010HAT" +
-      "CHERY\020\n\022\007\n\003HOA\020\013\022\023\n\017MISSION_CONTROL\020\014\022\r\n" +
-      "\tFUEL_TANK\020\r\022\013\n\007CHICKEN\020\016\022\007\n\003HAT\020\017\022\013\n\007UN" +
-      "KNOWN\020c\"\241\001\n\024ShellPopularityStats\022,\n\004data" +
-      "\030\001 \003(\0132\036.ei.ShellPopularityStats.Entry\032[" +
-      "\n\005Entry\022\n\n\002id\030\001 \001(\t\022(\n\007element\030\002 \001(\0162\027.e" +
-      "i.ShellDB.FarmElement\022\r\n\005spent\030\003 \001(\004\022\r\n\005" +
-      "count\030\004 \001(\004\"\234\002\n\017ShellsActionLog\022#\n\005rinfo" +
-      "\030\010 \001(\0132\024.ei.BasicRequestInfo\022\017\n\007user_id\030" +
-      "\001 \001(\t\022\016\n\006action\030\002 \001(\t\022\016\n\006sub_id\030\003 \001(\t\022-\n" +
-      "\014farm_element\030\t \001(\0162\027.ei.ShellDB.FarmEle" +
-      "ment\022\014\n\004cost\030\004 \001(\r\022\023\n\013approx_time\030\005 \001(\001\022" +
-      "\017\n\007version\030\006 \001(\t\022\022\n\nfarm_index\030\007 \001(\005\022\021\n\t" +
-      "soul_eggs\030\n \001(\001\022\025\n\rtickets_spent\030\013 \001(\004\022\022" +
-      "\n\ngold_spent\030\014 \001(\004\"\261\001\n\032SubmitShellShowca" +
-      "seRequest\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicReque" +
-      "stInfo\022\020\n\010local_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(" +
-      "\t\022\027\n\017public_username\030\005 \001(\010\0222\n\013farm_confi" +
-      "g\030\003 \001(\0132\035.ei.ShellDB.FarmConfiguration\"\227" +
-      "\001\n\rShellShowcase\022)\n\003top\030\001 \003(\0132\034.ei.Shell" +
-      "ShowcaseListingInfo\022.\n\010featured\030\002 \003(\0132\034." +
-      "ei.ShellShowcaseListingInfo\022+\n\005fresh\030\003 \003" +
-      "(\0132\034.ei.ShellShowcaseListingInfo\"\304\003\n\030She" +
-      "llShowcaseListingInfo\022\n\n\002id\030\001 \001(\t\022\020\n\010loc" +
-      "al_id\030\014 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description" +
-      "\030\003 \001(\t\022\016\n\006is_new\030\017 \001(\010\022\024\n\014creator_name\030\016" +
-      " \001(\t\0223\n\006status\030\013 \001(\0162#.ei.ShellShowcaseL" +
-      "istingInfo.Status\0222\n\013farm_config\030\004 \001(\0132\035" +
-      ".ei.ShellDB.FarmConfiguration\022\r\n\005sales\030\005" +
-      " \001(\r\022\r\n\005gross\030\006 \001(\004\022\r\n\005views\030\007 \001(\004\022\016\n\006eq" +
-      "uips\030\r \001(\004\022\r\n\005likes\030\010 \001(\r\022\020\n\010dislikes\030\t " +
-      "\001(\r\022\021\n\tshare_url\030\n \001(\t\"g\n\006Status\022\010\n\004NONE" +
-      "\020\000\022\r\n\tSUBMITTED\020\001\022\010\n\004LIVE\020\002\022\014\n\010FEATURED\020" +
-      "\003\022\021\n\rFEATURED_ALUM\020\005\022\014\n\010ARCHIVED\020\006\022\013\n\007IN" +
-      "VALID\020\004\"g\n#ShowcaseRoyaltyDeliveryConfir" +
-      "mation\022#\n\005rinfo\030\003 \001(\0132\024.ei.BasicRequestI" +
-      "nfo\022\013\n\003ids\030\001 \003(\t\022\016\n\006amount\030\002 \001(\r\"I\n\027Shel" +
-      "lShowcaseListingSet\022.\n\010listings\030\001 \003(\0132\034." +
-      "ei.ShellShowcaseListingInfo\"^\n\021ShellsAct" +
-      "ionBatch\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicReques" +
-      "tInfo\022$\n\007actions\030\002 \003(\0132\023.ei.ShellsAction" +
-      "Log\"\355\t\n\030UserVerificationAnalysis\022;\n\016over" +
-      "all_status\030\001 \001(\0162#.ei.UserVerificationAn" +
-      "alysis.Status\022\022\n\nstart_time\030\002 \001(\001\022\027\n\017com" +
-      "pletion_time\030\003 \001(\001\022\032\n\022verification_count" +
-      "\030% \001(\005\022\025\n\rnum_prestiges\030\016 \001(\001\022\021\n\tsoul_eg" +
-      "gs\030\017 \001(\001\022\030\n\020eggs_of_prophecy\030\033 \001(\r\0227\n\nia" +
-      "p_status\030\022 \001(\0162#.ei.UserVerificationAnal" +
-      "ysis.Status\022\033\n\023verified_pro_permit\030\004 \001(\010" +
-      "\022\035\n\025verified_piggy_breaks\030\005 \001(\r\022\032\n\022verif" +
-      "ied_other_iap\030\006 \001(\r\022\026\n\016unverified_iap\030\007 " +
-      "\001(\r\022\023\n\013gold_earned\030\r \001(\001\022\031\n\021regular_iap_" +
-      "buyer\030\026 \001(\010\022\033\n\023regular_iap_cheater\030\027 \001(\010" +
-      "\022=\n\020artifacts_status\030\023 \001(\0162#.ei.UserVeri" +
-      "ficationAnalysis.Status\022\032\n\022missions_comp" +
-      "leted\030\010 \001(\r\022\033\n\023artifacts_collected\030\t \001(\001" +
-      "\022\032\n\022artifacts_consumed\030\n \001(\001\022\036\n\026artifact" +
-      "s_in_inventory\030\013 \001(\001\022#\n\033rare_artifacts_i" +
-      "n_inventory\030! \001(\004\022 \n\030rare_artifacts_on_s" +
-      "erver\030\" \001(\004\022(\n legendary_artifacts_in_in" +
-      "ventory\030# \001(\004\022%\n\035legendary_artifacts_on_" +
-      "server\030$ \001(\004\022\033\n\023gold_spent_crafting\030\025 \001(" +
-      "\001\022\032\n\022excessive_consumes\030\030 \001(\010\022\033\n\023excessi" +
-      "ve_inventory\030\031 \001(\010\022\027\n\017excessive_spend\030\032 " +
-      "\001(\010\022=\n\020contracts_status\030\024 \001(\0162#.ei.UserV" +
-      "erificationAnalysis.Status\022\034\n\024num_coop_m" +
-      "emberships\030\014 \001(\r\022\027\n\017valid_contracts\030\020 \001(" +
-      "\r\022\031\n\021invalid_contracts\030\021 \003(\t\022\025\n\rexcessiv" +
-      "e_eop\030\034 \001(\010\022#\n\033excessive_invalid_contrac" +
-      "ts\030\035 \001(\010\022\020\n\010verified\030\036 \001(\010\022\035\n\025verificati" +
-      "on_override\030\037 \001(\010\022#\n\033verification_overri" +
-      "de_value\030  \001(\010\"3\n\006Status\022\013\n\007UNKNOWN\020\000\022\016\n" +
-      "\nPROCESSING\020\001\022\014\n\010COMPLETE\020\002\"\365\005\n\024UserSubs" +
-      "criptionInfo\022:\n\022subscription_level\030\r \001(\016" +
-      "2\036.ei.UserSubscriptionInfo.Level\022?\n\027next" +
-      "_subscription_level\030\017 \001(\0162\036.ei.UserSubsc" +
-      "riptionInfo.Level\022$\n\034lock_next_subscript" +
-      "ion_level\030\022 \001(\010\022\036\n\010platform\030\n \001(\0162\014.ei.P" +
-      "latform\022\037\n\027original_transaction_id\030\001 \001(\t" +
-      "\022\035\n\025linked_transaction_id\030\020 \001(\t\022\024\n\014ackno" +
-      "wledged\030\021 \001(\010\022\030\n\020first_subscribed\030\002 \001(\001\022" +
-      "\022\n\nperiod_end\030\004 \001(\001\022/\n\006status\030\005 \001(\0162\037.ei" +
-      ".UserSubscriptionInfo.Status\022\024\n\014store_st" +
-      "atus\030\016 \001(\t\022\022\n\nauto_renew\030\006 \001(\010\022\017\n\007sandbo" +
-      "x\030\023 \001(\010\022\024\n\014last_updated\030\007 \001(\001\0226\n\007history" +
-      "\030\t \003(\0132%.ei.UserSubscriptionInfo.History" +
-      "Entry\022\025\n\rpast_user_ids\030\013 \003(\t\032F\n\014HistoryE" +
-      "ntry\022\021\n\ttimestamp\030\001 \001(\001\022\022\n\nmessage_id\030\002 " +
-      "\001(\t\022\017\n\007message\030\003 \001(\t\"\036\n\005Level\022\014\n\010STANDAR" +
-      "D\020\000\022\007\n\003PRO\020\001\"]\n\006Status\022\013\n\007UNKNOWN\020\000\022\n\n\006A" +
-      "CTIVE\020\001\022\013\n\007EXPIRED\020\002\022\013\n\007REVOKED\020\003\022\020\n\014GRA" +
-      "CE_PERIOD\020\004\022\016\n\nPAUSE_HOLD\020\005\"\246\001\n\035Subscrip" +
-      "tionChangeHintRequest\022#\n\005rinfo\030\003 \001(\0132\024.e" +
-      "i.BasicRequestInfo\022\037\n\027original_transacti" +
-      "on_id\030\001 \001(\t\022?\n\027next_subscription_level\030\002" +
-      " \001(\0162\036.ei.UserSubscriptionInfo.Level\">\n\022" +
-      "CXPEvalRolloutInfo\022\022\n\ncurrent_id\030\001 \001(\t\022\024" +
-      "\n\014basis_points\030\002 \001(\r\"N\n\020PathOfVirtueInfo" +
-      "\022\023\n\013server_time\030\001 \001(\001\022\020\n\010sim_time\030\002 \001(\001\022" +
-      "\023\n\013reset_index\030\003 \001(\r\"y\n\027SyncPathOfVirtue" +
+      "\022\026\n\016client_version\030\001 \001(\r\022\022\n\nei_user_id\030\003" +
+      " \001(\t\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\022,\n\013c" +
+      "lient_info\030\005 \001(\0132\027.ei.ArtifactsClientInf" +
+      "o\"A\n\017MissionResponse\022\017\n\007success\030\001 \001(\010\022\035\n" +
+      "\004info\030\002 \001(\0132\017.ei.MissionInfo\"T\n\030GetActiv" +
+      "eMissionsRequest\022#\n\005rinfo\030\001 \001(\0132\024.ei.Bas" +
+      "icRequestInfo\022\023\n\013reset_index\030\002 \001(\r\"V\n\031Ge" +
+      "tActiveMissionsResponse\022\017\n\007success\030\001 \001(\010" +
+      "\022(\n\017active_missions\030\002 \003(\0132\017.ei.MissionIn" +
+      "fo\"\214\002\n\027CompleteMissionResponse\022\017\n\007succes" +
+      "s\030\001 \001(\010\022\035\n\004info\030\002 \001(\0132\017.ei.MissionInfo\022A" +
+      "\n\tartifacts\030\003 \003(\0132..ei.CompleteMissionRe" +
+      "sponse.SecureArtifactSpec\022!\n\rother_rewar" +
+      "ds\030\004 \003(\0132\n.ei.Reward\022\022\n\nei_user_id\030\005 \001(\t" +
+      "\032G\n\022SecureArtifactSpec\022\036\n\004spec\030\001 \001(\0132\020.e" +
+      "i.ArtifactSpec\022\021\n\tserver_id\030\002 \001(\t\"\344\001\n%Co" +
+      "llectContractArtifactRewardsRequest\022#\n\005r" +
+      "info\030\001 \001(\0132\024.ei.BasicRequestInfo\022\033\n\023cont" +
+      "ract_identifier\030\002 \001(\t\022\016\n\006league\030\005 \001(\r\022\'\n" +
+      "\005grade\030\006 \001(\0162\030.ei.Contract.PlayerGrade\022\022" +
+      "\n\ngoal_index\030\003 \001(\r\022,\n\tbest_ship\030\004 \001(\0162\031." +
+      "ei.MissionInfo.Spaceship\"\240\001\n#CollectSeas" +
+      "onArtifactRewardsRequest\022#\n\005rinfo\030\001 \001(\0132" +
+      "\024.ei.BasicRequestInfo\022\031\n\021season_identifi" +
+      "er\030\002 \001(\t\022\013\n\003cxp\030\003 \001(\001\022,\n\tbest_ship\030\004 \001(\016" +
+      "2\031.ei.MissionInfo.Spaceship\"\366\001\n\024CraftArt" +
+      "ifactRequest\022#\n\005rinfo\030\005 \001(\0132\024.ei.BasicRe" +
+      "questInfo\022\022\n\nei_user_id\030\001 \001(\t\022\036\n\004spec\030\002 " +
+      "\001(\0132\020.ei.ArtifactSpec\022\017\n\007item_id\030\003 \001(\004\022\027" +
+      "\n\017gold_price_paid\030\006 \001(\001\022\026\n\016crafting_coun" +
+      "t\030\007 \001(\r\022\023\n\013crafting_xp\030\010 \001(\001\022.\n\013ingredie" +
+      "nts\030\004 \003(\0132\031.ei.ArtifactInventoryItem\"\211\001\n" +
+      "\025CraftArtifactResponse\022\017\n\007item_id\030\001 \001(\004\022" +
+      "\022\n\nei_user_id\030\005 \001(\t\0228\n\017rarity_achieved\030\002" +
+      " \001(\0162\027.ei.ArtifactSpec.Rarity:\006COMMON\022\021\n" +
+      "\tserver_id\030\003 \001(\t\"\365\001\n\026ConsumeArtifactRequ" +
+      "est\022#\n\005rinfo\030\004 \001(\0132\024.ei.BasicRequestInfo" +
+      "\022\022\n\nei_user_id\030\003 \001(\t\022\036\n\004spec\030\001 \001(\0132\020.ei." +
+      "ArtifactSpec\022\032\n\022artifact_server_id\030\005 \001(\t" +
+      "\022\030\n\020original_item_id\030\002 \001(\004\022\035\n\025additional" +
+      "_server_ids\030\007 \003(\t\022\033\n\023additional_item_ids" +
+      "\030\010 \003(\004\022\020\n\010quantity\030\006 \001(\r\"\276\001\n\027ConsumeArti" +
+      "factResponse\022\017\n\007success\030\001 \001(\010\022\030\n\020origina" +
+      "l_item_id\030\002 \001(\004\022\033\n\023additional_item_ids\030\006" +
+      " \003(\004\022$\n\nbyproducts\030\003 \003(\0132\020.ei.ArtifactSp" +
+      "ec\022!\n\rother_rewards\030\004 \003(\0132\n.ei.Reward\022\022\n" +
+      "\nei_user_id\030\005 \001(\t\"}\n\034AuthenticateArtifac" +
+      "tResponse\022\017\n\007success\030\001 \001(\010\022\030\n\020original_i" +
+      "tem_id\030\002 \001(\004\022\016\n\006demote\030\003 \001(\010\022\016\n\006delete\030\004" +
+      " \001(\010\022\022\n\nei_user_id\030\005 \001(\t\"\241\001\n\022SetArtifact" +
       "Request\022#\n\005rinfo\030\001 \001(\0132\024.ei.BasicRequest" +
-      "Info\022\023\n\013reset_index\030\002 \001(\r\022\020\n\010sim_time\030\003 " +
-      "\001(\001\022\022\n\nrebaseline\030\004 \001(\010\"\220\001\n\030SyncPathOfVi" +
-      "rtueResponse\0223\n\006status\030\001 \001(\0162#.ei.SyncPa" +
-      "thOfVirtueResponse.Status\022\020\n\010sim_debt\030\002 " +
-      "\001(\001\"-\n\006Status\022\006\n\002OK\020\000\022\013\n\007PROBLEM\020\001\022\016\n\nHT" +
-      "TP_ERROR\020\002*4\n\010Platform\022\024\n\020UNKNOWN_PLATFO" +
-      "RM\020\000\022\007\n\003IOS\020\001\022\t\n\005DROID\020\002*=\n\020DeviceFormFa" +
-      "ctor\022\022\n\016UNKNOWN_DEVICE\020\000\022\t\n\005PHONE\020\001\022\n\n\006T" +
-      "ABLET\020\002*k\n\tAdNetwork\022\n\n\006VUNGLE\020\000\022\016\n\nCHAR" +
-      "TBOOST\020\001\022\r\n\tAD_COLONY\020\002\022\014\n\010HYPER_MX\020\003\022\t\n" +
-      "\005UNITY\020\004\022\014\n\010FACEBOOK\020\005\022\014\n\010APPLOVIN\020\006*\311\003\n" +
-      "\003Egg\022\n\n\006EDIBLE\020\001\022\r\n\tSUPERFOOD\020\002\022\013\n\007MEDIC" +
-      "AL\020\003\022\017\n\013ROCKET_FUEL\020\004\022\022\n\016SUPER_MATERIAL\020" +
-      "\005\022\n\n\006FUSION\020\006\022\013\n\007QUANTUM\020\007\022\017\n\013IMMORTALIT" +
-      "Y\020\010\022\013\n\007TACHYON\020\t\022\014\n\010GRAVITON\020\n\022\r\n\tDILITH" +
-      "IUM\020\013\022\013\n\007PRODIGY\020\014\022\r\n\tTERRAFORM\020\r\022\016\n\nANT" +
-      "IMATTER\020\016\022\017\n\013DARK_MATTER\020\017\022\006\n\002AI\020\020\022\n\n\006NE" +
-      "BULA\020\021\022\014\n\010UNIVERSE\020\022\022\021\n\rENLIGHTENMENT\020\023\022" +
-      "\r\n\tCURIOSITY\0202\022\r\n\tINTEGRITY\0203\022\014\n\010HUMILIT" +
-      "Y\0204\022\016\n\nRESILIENCE\0205\022\014\n\010KINDNESS\0206\022\r\n\tCHO" +
-      "COLATE\020d\022\n\n\006EASTER\020e\022\020\n\014WATERBALLOON\020f\022\014" +
-      "\n\010FIREWORK\020g\022\013\n\007PUMPKIN\020h\022\017\n\nCUSTOM_EGG\020" +
-      "\310\001\022\014\n\007UNKNOWN\020\350\007*-\n\010FarmType\022\t\n\005EMPTY\020\001\022" +
-      "\010\n\004HOME\020\002\022\014\n\010CONTRACT\020\003*+\n\010GoalType\022\r\n\tE" +
-      "GGS_LAID\020\001\022\020\n\014UNKNOWN_GOAL\020d*\231\002\n\nRewardT" +
-      "ype\022\010\n\004CASH\020\001\022\010\n\004GOLD\020\002\022\r\n\tSOUL_EGGS\020\003\022\024" +
-      "\n\020EGGS_OF_PROPHECY\020\004\022\026\n\022EPIC_RESEARCH_IT" +
-      "EM\020\005\022\016\n\nPIGGY_FILL\020\006\022\024\n\020PIGGY_MULTIPLIER" +
-      "\020\007\022\024\n\020PIGGY_LEVEL_BUMP\020\010\022\t\n\005BOOST\020\t\022\017\n\013B" +
-      "OOST_TOKEN\020\n\022\014\n\010ARTIFACT\020\013\022\021\n\rARTIFACT_C" +
-      "ASE\020\014\022\013\n\007CHICKEN\020\r\022\020\n\014SHELL_SCRIPT\020\016\022\016\n\n" +
-      "VIRTUE_GEM\020\017\022\022\n\016UNKNOWN_REWARD\020d*\347\001\n\nUIL" +
-      "ocation\022\010\n\004NONE\020\000\022\010\n\004SHOP\020\001\022\016\n\nBOOST_SHO" +
-      "P\020\002\022\t\n\005PIGGY\020\003\022\016\n\nPRO_PERMIT\020\004\022\016\n\nULTRA_" +
-      "SHOP\020\n\022\n\n\006SHELLS\020\005\022\016\n\nSHELL_SETS\020\006\022\023\n\017SH" +
-      "ELLS_SHOWCASE\020\014\022\014\n\010CHICKENS\020\007\022\020\n\014CHICKEN" +
-      "_HATS\020\013\022\021\n\rEPIC_RESEARCH\020\010\022\014\n\010SETTINGS\020\t" +
-      "\022\010\n\004HELP\020\r\022\016\n\nUNIVERSITY\020\016*\323\002\n\010UserType\022" +
-      "\r\n\tALL_USERS\020\000\022\014\n\010EGGED_UP\020\017\022\026\n\022CONTRACT" +
-      "S_UNLOCKED\020\001\022\026\n\022ARTIFACTS_UNLOCKED\020\003\022\026\n\022" +
-      "FUEL_TANK_UNLOCKED\020\004\022\025\n\021PRO_PERMIT_ACTIV" +
-      "E\020\005\022\020\n\014ULTRA_ACTIVE\020\006\022\021\n\rNO_PRO_PERMIT\020\007" +
-      "\022\014\n\010NO_ULTRA\020\010\022\026\n\022CONTRACTS_INACTIVE\020\t\022\024" +
-      "\n\020CONTRACTS_ACTIVE\020\n\022\024\n\020PLAYING_CONTRACT" +
-      "\020\013\022\026\n\022ARTIFACTS_INACTIVE\020\014\022\024\n\020ARTIFACTS_" +
-      "ACTIVE\020\r\022\022\n\016PRESTIGE_READY\020\016\022\022\n\016PIGGY_HE" +
-      "SITANT\020\020*\247\001\n\023AgeComplianceStatus\022!\n\035AGE_" +
-      "COMPLIANCE_NOT_APPLICABLE\020\000\022\032\n\026AGE_COMPL" +
-      "IANCE_UNKNOWN\020\001\022\030\n\024AGE_COMPLIANCE_ADULT\020" +
-      "\002\022\030\n\024AGE_COMPLIANCE_MINOR\020\003\022\035\n\031AGE_COMPL" +
-      "IANCE_RESTRICTED\020\004*\320\001\n\032TranslationPlaceh" +
-      "olderType\022#\n\037TRANSLATION_PLACEHOLDER_GEN" +
-      "ERIC\020\000\022\"\n\036TRANSLATION_PLACEHOLDER_NUMBER" +
-      "\020\001\022 \n\034TRANSLATION_PLACEHOLDER_NAME\020\002\022$\n " +
-      "TRANSLATION_PLACEHOLDER_DURATION\020\003\022!\n\035TR" +
-      "ANSLATION_PLACEHOLDER_COUNT\020\004*f\n\021Transla" +
-      "tionStatus\022\032\n\026TRANSLATION_TRANSLATED\020\000\022\030" +
-      "\n\024TRANSLATION_DEFERRED\020\001\022\033\n\027TRANSLATION_" +
-      "UNAVAILABLE\020\002*4\n\020LeaderboardScope\022\014\n\010ALL" +
-      "_TIME\020\000\022\022\n\016CURRENT_SEASON\020\001"
+      "Info\022+\n\010artifact\030\002 \001(\0132\031.ei.ArtifactInve" +
+      "ntoryItem\022 \n\006stones\030\003 \003(\0132\020.ei.ArtifactS" +
+      "pec\022\027\n\017gold_price_paid\030\004 \001(\001\"T\n\023SetArtif" +
+      "actResponse\022\017\n\007success\030\001 \001(\010\022\030\n\020original" +
+      "_item_id\030\002 \001(\004\022\022\n\nei_user_id\030\005 \001(\t\"7\n\022Ac" +
+      "tiveArtifactSlot\022\020\n\010occupied\030\001 \001(\010\022\017\n\007it" +
+      "em_id\030\002 \001(\004\"\303\t\n\013ArtifactsDB\0222\n\017inventory" +
+      "_items\030\001 \003(\0132\031.ei.ArtifactInventoryItem\022" +
+      "\025\n\ritem_sequence\030\002 \001(\004\0223\n\030inventory_slot" +
+      "s_NOT_USED\030\003 \003(\0132\021.ei.InventorySlot\022;\n\033a" +
+      "ctive_artifacts_DEPRECATED\030\007 \003(\0132\026.ei.Ac" +
+      "tiveArtifactSlot\022?\n\024active_artifact_sets" +
+      "\030\013 \003(\0132!.ei.ArtifactsDB.ActiveArtifactSe" +
+      "t\022>\n\023saved_artifact_sets\030\r \003(\0132!.ei.Arti" +
+      "factsDB.ActiveArtifactSet\022:\n\017artifact_st" +
+      "atus\030\014 \003(\0132!.ei.ArtifactsDB.CraftableArt" +
+      "ifact\022(\n\017fueling_mission\030\016 \001(\0132\017.ei.Miss" +
+      "ionInfo\022&\n\rmission_infos\030\004 \003(\0132\017.ei.Miss" +
+      "ionInfo\022(\n\017mission_archive\030\005 \003(\0132\017.ei.Mi" +
+      "ssionInfo\022/\n\rvirtue_afx_db\030\017 \001(\0132\030.ei.Ar" +
+      "tifactsDB.VirtueDB\0229\n\037discovered_artifac" +
+      "ts_DEPRECATED\030\010 \003(\0132\020.ei.ArtifactSpec\022I\n" +
+      "\036craftable_artifacts_DEPRECATED\030\t \003(\0132!." +
+      "ei.ArtifactsDB.CraftableArtifact\022E\n\032craf" +
+      "ting_counts_DEPRECATED\030\n \003(\0132!.ei.Artifa" +
+      "ctsDB.CraftableArtifact\032G\n\021ActiveArtifac" +
+      "tSet\022%\n\005slots\030\001 \003(\0132\026.ei.ActiveArtifactS" +
+      "lot\022\013\n\003uid\030\002 \001(\r\032\222\001\n\021CraftableArtifact\022\036" +
+      "\n\004spec\030\001 \001(\0132\020.ei.ArtifactSpec\022\022\n\ndiscov" +
+      "ered\030\006 \001(\010\022\021\n\tcraftable\030\004 \001(\010\022\031\n\021recipe_" +
+      "discovered\030\005 \001(\010\022\014\n\004seen\030\002 \001(\010\022\r\n\005count\030" +
+      "\003 \001(\r\032\341\001\n\010VirtueDB\0222\n\017inventory_items\030\001 " +
+      "\003(\0132\031.ei.ArtifactInventoryItem\022:\n\017artifa" +
+      "ct_status\030\002 \003(\0132!.ei.ArtifactsDB.Craftab" +
+      "leArtifact\022(\n\017fueling_mission\030\003 \001(\0132\017.ei" +
+      ".MissionInfo\022;\n\020active_artifacts\030\r \001(\0132!" +
+      ".ei.ArtifactsDB.ActiveArtifactSet\"\202\001\n\024Au" +
+      "thenticatedMessage\022\017\n\007message\030\001 \001(\014\022\017\n\007v" +
+      "ersion\030\003 \001(\r\022\014\n\004code\030\002 \001(\t\022\022\n\ncompressed" +
+      "\030\004 \001(\010\022\025\n\roriginal_size\030\005 \001(\r\022\017\n\007user_id" +
+      "\030\006 \001(\t\"f\n\031LogCompleteMissionPayload\022\037\n\003r" +
+      "eq\030\001 \001(\0132\022.ei.MissionRequest\022(\n\003res\030\002 \001(" +
+      "\0132\033.ei.CompleteMissionResponse\"h\n\027LogCra" +
+      "ftArtifactPayload\022%\n\003req\030\001 \001(\0132\030.ei.Craf" +
+      "tArtifactRequest\022&\n\003res\030\002 \001(\0132\031.ei.Craft" +
+      "ArtifactResponse\"n\n\031LogConsumeArtifactPa" +
+      "yload\022\'\n\003req\030\001 \001(\0132\032.ei.ConsumeArtifactR" +
+      "equest\022(\n\003res\030\002 \001(\0132\033.ei.ConsumeArtifact" +
+      "Response\"b\n\025LogSetArtifactPayload\022#\n\003req" +
+      "\030\001 \001(\0132\026.ei.SetArtifactRequest\022$\n\003res\030\002 " +
+      "\001(\0132\027.ei.SetArtifactResponse\"@\n\026AccountT" +
+      "ransferPayload\022\017\n\007from_id\030\001 \001(\t\022\025\n\rto_ei" +
+      "_user_id\030\002 \001(\t\"\335\001\n\022SaveBackupResponse\022\017\n" +
+      "\007success\030\001 \001(\010\022\022\n\nerror_code\030\002 \001(\r\022\017\n\007me" +
+      "ssage\030\003 \001(\t\022#\n\017existing_backup\030\004 \001(\0132\n.e" +
+      "i.Backup\"l\n\nErrorCodes\022\014\n\010NO_ERROR\020\000\022\022\n\016" +
+      "USER_NOT_FOUND\020\001\022\027\n\023COULD_NOT_OVERWRITE\020" +
+      "\002\022\022\n\016BACKUP_OFFERED\020\003\022\017\n\013BAD_USER_ID\020\004\"l" +
+      "\n\023CleanAccountRequest\022\032\n\022ei_user_id_to_k" +
+      "eep\030\001 \001(\t\022\030\n\020game_services_id\030\002 \001(\t\022\037\n\027g" +
+      "ame_services_id_scoped\030\003 \001(\t\"&\n\020ReturnED" +
+      "TPayload\022\022\n\nei_user_id\030\001 \001(\t\"\201\001\n\007DLCItem" +
+      "\022\014\n\004name\030\001 \001(\t\022\021\n\tdirectory\030\002 \001(\t\022\013\n\003ext" +
+      "\030\003 \001(\t\022\022\n\ncompressed\030\006 \001(\010\022\025\n\roriginal_s" +
+      "ize\030\007 \001(\004\022\013\n\003url\030\004 \001(\t\022\020\n\010checksum\030\005 \001(\t" +
+      "\"9\n\010FontPack\022\021\n\tlanguages\030\001 \003(\t\022\032\n\005faces" +
+      "\030\002 \003(\0132\013.ei.DLCItem\"\201\025\n\tShellSpec\022\022\n\nide" +
+      "ntifier\030\001 \001(\t\022/\n\rprimary_piece\030\014 \001(\0132\030.e" +
+      "i.ShellSpec.ShellPiece\022(\n\006pieces\030\013 \003(\0132\030" +
+      ".ei.ShellSpec.ShellPiece\022\037\n\nalt_assets\030\022" +
+      " \003(\0132\013.ei.DLCItem\022\014\n\004name\030\003 \001(\t\022\026\n\016set_i" +
+      "dentifier\030\r \001(\t\022\031\n\021modified_geometry\030\023 \001" +
+      "(\010\022\r\n\005price\030\004 \001(\r\022\024\n\014required_eop\030\005 \001(\r\022" +
+      "\032\n\022required_soul_eggs\030\006 \001(\001\022\035\n\025required_" +
+      "parent_shell\030\024 \001(\t\022\016\n\006is_new\030\016 \001(\010\022\017\n\007ex" +
+      "pires\030\017 \001(\010\022\037\n\027seconds_until_available\030\021" +
+      " \001(\001\022\031\n\021seconds_remaining\030\020 \001(\001\022\022\n\npopul" +
+      "arity\030\025 \001(\004\022\032\n\022default_appearance\030\010 \001(\010\032" +
+      "S\n\nShellPiece\022+\n\nasset_type\030\001 \001(\0162\027.ei.S" +
+      "hellSpec.AssetType\022\030\n\003dlc\030\002 \001(\0132\013.ei.DLC" +
+      "Item\"\340\020\n\tAssetType\022\010\n\004COOP\020\001\022\t\n\005SHACK\020\002\022" +
+      "\017\n\013SUPER_SHACK\020\003\022\017\n\013SHORT_HOUSE\020\004\022\020\n\014THE" +
+      "_STANDARD\020\005\022\016\n\nLONG_HOUSE\020\006\022\021\n\rDOUBLE_DE" +
+      "CKER\020\007\022\r\n\tWAREHOUSE\020\010\022\n\n\006CENTER\020\t\022\n\n\006BUN" +
+      "KER\020\n\022\n\n\006EGGKEA\020\013\022\n\n\006HAB_1K\020\014\022\n\n\006HANGAR\020" +
+      "\r\022\t\n\005TOWER\020\016\022\013\n\007HAB_10K\020\017\022\014\n\010EGGTOPIA\020\020\022" +
+      "\014\n\010MONOLITH\020\021\022\021\n\rPLANET_PORTAL\020\022\022\024\n\020CHIC" +
+      "KEN_UNIVERSE\020\023\022\020\n\014SILO_0_SMALL\0202\022\016\n\nSILO" +
+      "_0_MED\0203\022\020\n\014SILO_0_LARGE\0204\022\020\n\014SILO_1_SMA" +
+      "LL\0205\022\016\n\nSILO_1_MED\0206\022\020\n\014SILO_1_LARGE\0207\022\014" +
+      "\n\010SILO_ALL\020;\022\013\n\007MAILBOX\020F\022\017\n\013TROPHY_CASE" +
+      "\020G\022\n\n\006GROUND\020H\022\r\n\tHARDSCAPE\020I\022\r\n\tHYPERLO" +
+      "OP\020J\022\013\n\007DEPOT_1\020d\022\013\n\007DEPOT_2\020e\022\013\n\007DEPOT_" +
+      "3\020f\022\013\n\007DEPOT_4\020g\022\013\n\007DEPOT_5\020h\022\013\n\007DEPOT_6" +
+      "\020i\022\013\n\007DEPOT_7\020j\022\t\n\005LAB_1\020n\022\t\n\005LAB_2\020o\022\t\n" +
+      "\005LAB_3\020p\022\t\n\005LAB_4\020q\022\t\n\005LAB_5\020r\022\t\n\005LAB_6\020" +
+      "s\022\023\n\017HATCHERY_EDIBLE\020x\022\026\n\022HATCHERY_SUPER" +
+      "FOOD\020y\022\024\n\020HATCHERY_MEDICAL\020z\022\030\n\024HATCHERY" +
+      "_ROCKET_FUEL\020{\022\032\n\026HATCHERY_SUPERMATERIAL" +
+      "\020|\022\023\n\017HATCHERY_FUSION\020}\022\024\n\020HATCHERY_QUAN" +
+      "TUM\020~\022\030\n\024HATCHERY_IMMORTALITY\020\177\022\025\n\020HATCH" +
+      "ERY_TACHYON\020\200\001\022\026\n\021HATCHERY_GRAVITON\020\201\001\022\027" +
+      "\n\022HATCHERY_DILITHIUM\020\202\001\022\025\n\020HATCHERY_PROD" +
+      "IGY\020\203\001\022\027\n\022HATCHERY_TERRAFORM\020\204\001\022\030\n\023HATCH" +
+      "ERY_ANTIMATTER\020\205\001\022\031\n\024HATCHERY_DARK_MATTE" +
+      "R\020\206\001\022\020\n\013HATCHERY_AI\020\207\001\022\024\n\017HATCHERY_NEBUL" +
+      "A\020\210\001\022\026\n\021HATCHERY_UNIVERSE\020\211\001\022\033\n\026HATCHERY" +
+      "_ENLIGHTENMENT\020\212\001\022\027\n\022HATCHERY_CHOCOLATE\020" +
+      "\213\001\022\024\n\017HATCHERY_EASTER\020\214\001\022\032\n\025HATCHERY_WAT" +
+      "ERBALLOON\020\215\001\022\026\n\021HATCHERY_FIREWORK\020\216\001\022\025\n\020" +
+      "HATCHERY_PUMPKIN\020\217\001\022\024\n\017HATCHERY_CUSTOM\020\226" +
+      "\001\022\027\n\022HATCHERY_CURIOSITY\020\240\001\022\027\n\022HATCHERY_I" +
+      "NTEGRITY\020\241\001\022\026\n\021HATCHERY_HUMILITY\020\242\001\022\030\n\023H" +
+      "ATCHERY_RESILIENCE\020\243\001\022\026\n\021HATCHERY_KINDNE" +
+      "SS\020\244\001\022\n\n\005HOA_1\020\252\001\022\n\n\005HOA_2\020\253\001\022\n\n\005HOA_3\020\254" +
+      "\001\022\026\n\021MISSION_CONTROL_1\020\264\001\022\026\n\021MISSION_CON" +
+      "TROL_2\020\265\001\022\026\n\021MISSION_CONTROL_3\020\266\001\022\020\n\013FUE" +
+      "L_TANK_1\020\310\001\022\020\n\013FUEL_TANK_2\020\311\001\022\020\n\013FUEL_TA" +
+      "NK_3\020\312\001\022\020\n\013FUEL_TANK_4\020\313\001\022\032\n\025HATCHERY_GR" +
+      "AVITON_TOP\020\364\003\022\033\n\026HATCHERY_NEBULA_MIDDLE\020" +
+      "\365\003\022\030\n\023HATCHERY_NEBULA_TOP\020\366\003\022 \n\033HATCHERY" +
+      "_DARK_MATTER_RING_1\020\371\003\022 \n\033HATCHERY_DARK_" +
+      "MATTER_RING_2\020\372\003\022 \n\033HATCHERY_DARK_MATTER" +
+      "_RING_3\020\373\003\022\026\n\021HATCHERY_AI_TOP_1\020\376\003\022\026\n\021HA" +
+      "TCHERY_AI_TOP_2\020\377\003\022\026\n\021HATCHERY_AI_TOP_3\020" +
+      "\200\004\022\026\n\021HATCHERY_AI_TOP_4\020\201\004\022\034\n\027HATCHERY_U" +
+      "NIVERSE_PROBE\020\203\004\022\033\n\026HATCHERY_UNIVERSE_BO" +
+      "LT\020\204\004\022\037\n\032HATCHERY_ENLIGHTENMENT_ORB\020\210\004\022\035" +
+      "\n\030HATCHERY_CURIOSITY_EXTRA\020\246\004\022\035\n\030HATCHER" +
+      "Y_INTEGRITY_EXTRA\020\247\004\022\034\n\027HATCHERY_HUMILIT" +
+      "Y_EXTRA\020\250\004\022\036\n\031HATCHERY_RESILIENCE_EXTRA\020" +
+      "\251\004\022\034\n\027HATCHERY_KINDNESS_EXTRA\020\252\004\022\024\n\017HYPE" +
+      "RLOOP_TRACK\020\272\004\022\021\n\014MAILBOX_FULL\020\330\004\022\014\n\007CHI" +
+      "CKEN\020\350\007\022\010\n\003HAT\020\362\007\022\014\n\007UNKNOWN\020\217N\"\252\005\n\014Shel" +
+      "lSetSpec\022\022\n\nidentifier\030\001 \001(\t\022\014\n\004name\030\002 \001" +
+      "(\t\022\r\n\005price\030\003 \001(\r\022 \n\025price_mult_DEPRECAT" +
+      "ED\030\010 \001(\001:\0011\022\020\n\010discount\030\021 \001(\001\022\024\n\014require" +
+      "d_eop\030\004 \001(\r\022\032\n\022required_soul_eggs\030\005 \001(\001\022" +
+      "\033\n\023required_parent_set\030\024 \001(\t\022\016\n\006is_new\030\t" +
+      " \001(\010\022\017\n\007expires\030\n \001(\010\022\037\n\027seconds_until_a" +
+      "vailable\030\022 \001(\001\022\031\n\021seconds_remaining\030\013 \001(" +
+      "\001\022\022\n\npopularity\030\025 \001(\004\022\021\n\tdecorator\030\016 \001(\010" +
+      "\022\031\n\021modified_geometry\030\r \001(\010\022\023\n\013element_s" +
+      "et\030\007 \001(\010\022\026\n\016hex_base_color\030\020 \001(\t\0222\n\nvari" +
+      "ations\030\017 \003(\0132\036.ei.ShellSetSpec.Variation" +
+      "Spec\022\031\n\004icon\030\023 \001(\0132\013.ei.DLCItem\022\032\n\022defau" +
+      "lt_appearance\030\006 \001(\010\022\031\n\021custom_appearance" +
+      "\030\014 \001(\010\032\223\001\n\rVariationSpec\022\022\n\nidentifier\030\001" +
+      " \001(\t\022\021\n\thex_color\030\002 \001(\t\022\r\n\005price\030\003 \001(\r\022\025" +
+      "\n\rsort_priority\030\006 \001(\005\022\032\n\022default_appeara" +
+      "nce\030\004 \001(\010\022\031\n\021custom_appearance\030\005 \001(\010\"\325\005\n" +
+      "\017ShellObjectSpec\022\022\n\nidentifier\030\001 \001(\t\022\014\n\004" +
+      "name\030\002 \001(\t\022+\n\nasset_type\030\003 \001(\0162\027.ei.Shel" +
+      "lSpec.AssetType\022\024\n\014object_class\030\016 \001(\t\022\023\n" +
+      "\013icon_colors\030\017 \003(\t\022\r\n\005price\030\004 \001(\r\022\024\n\014req" +
+      "uired_eop\030\005 \001(\r\022\032\n\022required_soul_eggs\030\006 " +
+      "\001(\001\022\016\n\006is_new\030\n \001(\010\022\017\n\007expires\030\013 \001(\010\022\037\n\027" +
+      "seconds_until_available\030\022 \001(\001\022\031\n\021seconds" +
+      "_remaining\030\014 \001(\001\022\022\n\npopularity\030\023 \001(\004\022\020\n\010" +
+      "metadata\030\007 \003(\001\022\017\n\007no_hats\030\r \001(\010\022?\n\021chick" +
+      "en_animation\030\020 \001(\0162$.ei.ShellObjectSpec." +
+      "ChickenAnimation\022\025\n\rsort_priority\030\021 \001(\005\022" +
+      ",\n\006pieces\030\010 \003(\0132\034.ei.ShellObjectSpec.LOD" +
+      "Piece\022\032\n\022default_appearance\030\t \001(\010\0321\n\010LOD" +
+      "Piece\022\030\n\003dlc\030\001 \001(\0132\013.ei.DLCItem\022\013\n\003lod\030\002" +
+      " \001(\r\"\235\001\n\020ChickenAnimation\022\020\n\014STANDARD_RU" +
+      "N\020\000\022\n\n\006SLOWMO\020\007\022\n\n\006WOBBLE\020\001\022\017\n\013WOBBLE_LE" +
+      "AN\020\005\022\n\n\006SMOOTH\020\002\022\017\n\013SMOOTH_LEAN\020\006\022\t\n\005HOV" +
+      "ER\020\003\022\023\n\017SIDEWAYS_SMOOTH\020\004\022\021\n\rSIDEWAYS_LE" +
+      "AN\020\010\"\222\001\n\016ShellGroupSpec\022\022\n\nidentifier\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022+\n\nasset_type\030\005 \001(\0162\027." +
+      "ei.ShellSpec.AssetType\022\022\n\nmember_ids\030\003 \003" +
+      "(\t\022\035\n\025price_mult_DEPRECATED\030\004 \001(\001\"\267\002\n\nDL" +
+      "CCatalog\022\032\n\005items\030\001 \003(\0132\013.ei.DLCItem\022\035\n\006" +
+      "shells\030\002 \003(\0132\r.ei.ShellSpec\022$\n\nshell_set" +
+      "s\030\003 \003(\0132\020.ei.ShellSetSpec\022$\n\ndecorators\030" +
+      "\006 \003(\0132\020.ei.ShellSetSpec\022*\n\rshell_objects" +
+      "\030\004 \003(\0132\023.ei.ShellObjectSpec\022(\n\014shell_gro" +
+      "ups\030\005 \003(\0132\022.ei.ShellGroupSpec\022*\n\"shells_" +
+      "showcase_last_featured_time\030\007 \001(\001\022 \n\nfon" +
+      "t_packs\030\010 \003(\0132\014.ei.FontPack\"\226\022\n\007ShellDB\022" +
+      "0\n\017shell_inventory\030\001 \003(\0132\027.ei.ShellDB.Sh" +
+      "ellStatus\022?\n\027shell_element_inventory\030\005 \003" +
+      "(\0132\036.ei.ShellDB.ShellElementStatus\022F\n\031sh" +
+      "ell_variation_inventory\030\010 \003(\0132#.ei.Shell" +
+      "DB.ShellSetVariationStatus\0224\n\023shell_set_" +
+      "inventory\030\002 \003(\0132\027.ei.ShellDB.ShellStatus" +
+      "\0227\n\026shell_object_inventory\030\004 \003(\0132\027.ei.Sh" +
+      "ellDB.ShellStatus\0223\n\014farm_configs\030\003 \003(\0132" +
+      "\035.ei.ShellDB.FarmConfiguration\0229\n\rsaved_" +
+      "configs\030\t \003(\0132\".ei.ShellDB.SavedFarmConf" +
+      "iguration\022\035\n\025new_shells_downloaded\030\006 \003(\t" +
+      "\022\027\n\017new_shells_seen\030\007 \003(\t\022(\n last_showca" +
+      "se_featured_time_seen\030\013 \001(\001\022\"\n\032lighting_" +
+      "controls_unlocked\030\n \001(\010\0320\n\013ShellStatus\022\022" +
+      "\n\nidentifier\030\001 \001(\t\022\r\n\005owned\030\002 \001(\010\032V\n\022She" +
+      "llElementStatus\022(\n\007element\030\001 \001(\0162\027.ei.Sh",
+      "ellDB.FarmElement\022\026\n\016set_identifier\030\002 \001(" +
+      "\t\032K\n\027ShellSetVariationStatus\022\026\n\016set_iden" +
+      "tifier\030\001 \001(\t\022\030\n\020owned_variations\030\002 \003(\t\032\245" +
+      "\003\n\021FarmConfiguration\0220\n\017locked_elements\030" +
+      "\n \003(\0162\027.ei.ShellDB.FarmElement\0225\n\rshell_" +
+      "configs\030\001 \003(\0132\036.ei.ShellDB.ShellConfigur" +
+      "ation\022<\n\021shell_set_configs\030\002 \003(\0132!.ei.Sh" +
+      "ellDB.ShellSetConfiguration\022#\n\033configure" +
+      "_chickens_by_group\030\007 \001(\010\022:\n\rgroup_config" +
+      "s\030\010 \003(\0132#.ei.ShellDB.ShellGroupConfigura" +
+      "tion\0222\n\017chicken_configs\030\t \003(\0132\031.ei.Shell" +
+      "DB.ChickenConfig\022\037\n\027lighting_config_enab" +
+      "led\030\013 \001(\010\0223\n\017lighting_config\030\014 \001(\0132\032.ei." +
+      "ShellDB.LightingConfig\032\251\001\n\026SavedFarmConf" +
+      "iguration\022\n\n\002id\030\001 \001(\t\022-\n\006config\030\002 \001(\0132\035." +
+      "ei.ShellDB.FarmConfiguration\022\030\n\020client_s" +
+      "ave_time\030\003 \001(\001\022\021\n\tserver_id\030\004 \001(\t\022\024\n\014dis" +
+      "play_name\030\005 \001(\t\022\021\n\tpurchased\030\006 \001(\010\032j\n\022Sh" +
+      "ellConfiguration\022+\n\nasset_type\030\001 \001(\0162\027.e" +
+      "i.ShellSpec.AssetType\022\r\n\005index\030\002 \001(\r\022\030\n\020" +
+      "shell_identifier\030\003 \001(\t\032\252\001\n\025ShellSetConfi" +
+      "guration\022(\n\007element\030\001 \001(\0162\027.ei.ShellDB.F" +
+      "armElement\022\r\n\005index\030\002 \001(\r\022\034\n\024shell_set_i" +
+      "dentifier\030\003 \001(\t\022\034\n\024variation_identifier\030" +
+      "\004 \001(\t\022\034\n\024decorator_identifier\030\005 \001(\t\032`\n\027S" +
+      "hellGroupConfiguration\022+\n\nasset_type\030\001 \001" +
+      "(\0162\027.ei.ShellSpec.AssetType\022\030\n\020group_ide" +
+      "ntifier\030\002 \001(\t\032C\n\rChickenConfig\022\032\n\022chicke" +
+      "n_identifier\030\001 \001(\t\022\026\n\016hat_identifier\030\002 \001" +
+      "(\t\032\234\002\n\016LightingConfig\022\036\n\tlight_dir\030\001 \001(\013" +
+      "2\013.ei.Vector3\022\'\n\022light_direct_color\030\002 \001(" +
+      "\0132\013.ei.Vector4\022\036\n\026light_direct_intensity" +
+      "\030\003 \001(\002\022(\n\023light_ambient_color\030\004 \001(\0132\013.ei" +
+      ".Vector4\022\037\n\027light_ambient_intensity\030\005 \001(" +
+      "\002\022\036\n\tfog_color\030\006 \001(\0132\013.ei.Vector4\022\020\n\010fog" +
+      "_near\030\007 \001(\002\022\017\n\007fog_far\030\010 \001(\002\022\023\n\013fog_dens" +
+      "ity\030\t \001(\002\"\340\001\n\013FarmElement\022\r\n\tHEN_HOUSE\020\001" +
+      "\022\010\n\004SILO\020\002\022\013\n\007MAILBOX\020\003\022\017\n\013TROPHY_CASE\020\004" +
+      "\022\n\n\006GROUND\020\005\022\r\n\tHARDSCAPE\020\006\022\r\n\tHYPERLOOP" +
+      "\020\007\022\t\n\005DEPOT\020\010\022\007\n\003LAB\020\t\022\014\n\010HATCHERY\020\n\022\007\n\003" +
+      "HOA\020\013\022\023\n\017MISSION_CONTROL\020\014\022\r\n\tFUEL_TANK\020" +
+      "\r\022\013\n\007CHICKEN\020\016\022\007\n\003HAT\020\017\022\013\n\007UNKNOWN\020c\"\241\001\n" +
+      "\024ShellPopularityStats\022,\n\004data\030\001 \003(\0132\036.ei" +
+      ".ShellPopularityStats.Entry\032[\n\005Entry\022\n\n\002" +
+      "id\030\001 \001(\t\022(\n\007element\030\002 \001(\0162\027.ei.ShellDB.F" +
+      "armElement\022\r\n\005spent\030\003 \001(\004\022\r\n\005count\030\004 \001(\004" +
+      "\"\234\002\n\017ShellsActionLog\022#\n\005rinfo\030\010 \001(\0132\024.ei" +
+      ".BasicRequestInfo\022\017\n\007user_id\030\001 \001(\t\022\016\n\006ac" +
+      "tion\030\002 \001(\t\022\016\n\006sub_id\030\003 \001(\t\022-\n\014farm_eleme" +
+      "nt\030\t \001(\0162\027.ei.ShellDB.FarmElement\022\014\n\004cos" +
+      "t\030\004 \001(\r\022\023\n\013approx_time\030\005 \001(\001\022\017\n\007version\030" +
+      "\006 \001(\t\022\022\n\nfarm_index\030\007 \001(\005\022\021\n\tsoul_eggs\030\n" +
+      " \001(\001\022\025\n\rtickets_spent\030\013 \001(\004\022\022\n\ngold_spen" +
+      "t\030\014 \001(\004\"\261\001\n\032SubmitShellShowcaseRequest\022#" +
+      "\n\005rinfo\030\004 \001(\0132\024.ei.BasicRequestInfo\022\020\n\010l" +
+      "ocal_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\027\n\017public" +
+      "_username\030\005 \001(\010\0222\n\013farm_config\030\003 \001(\0132\035.e" +
+      "i.ShellDB.FarmConfiguration\"\227\001\n\rShellSho" +
+      "wcase\022)\n\003top\030\001 \003(\0132\034.ei.ShellShowcaseLis" +
+      "tingInfo\022.\n\010featured\030\002 \003(\0132\034.ei.ShellSho" +
+      "wcaseListingInfo\022+\n\005fresh\030\003 \003(\0132\034.ei.She" +
+      "llShowcaseListingInfo\"\304\003\n\030ShellShowcaseL" +
+      "istingInfo\022\n\n\002id\030\001 \001(\t\022\020\n\010local_id\030\014 \001(\t" +
+      "\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\016\n\006i" +
+      "s_new\030\017 \001(\010\022\024\n\014creator_name\030\016 \001(\t\0223\n\006sta" +
+      "tus\030\013 \001(\0162#.ei.ShellShowcaseListingInfo." +
+      "Status\0222\n\013farm_config\030\004 \001(\0132\035.ei.ShellDB" +
+      ".FarmConfiguration\022\r\n\005sales\030\005 \001(\r\022\r\n\005gro" +
+      "ss\030\006 \001(\004\022\r\n\005views\030\007 \001(\004\022\016\n\006equips\030\r \001(\004\022" +
+      "\r\n\005likes\030\010 \001(\r\022\020\n\010dislikes\030\t \001(\r\022\021\n\tshar" +
+      "e_url\030\n \001(\t\"g\n\006Status\022\010\n\004NONE\020\000\022\r\n\tSUBMI" +
+      "TTED\020\001\022\010\n\004LIVE\020\002\022\014\n\010FEATURED\020\003\022\021\n\rFEATUR" +
+      "ED_ALUM\020\005\022\014\n\010ARCHIVED\020\006\022\013\n\007INVALID\020\004\"g\n#" +
+      "ShowcaseRoyaltyDeliveryConfirmation\022#\n\005r" +
+      "info\030\003 \001(\0132\024.ei.BasicRequestInfo\022\013\n\003ids\030" +
+      "\001 \003(\t\022\016\n\006amount\030\002 \001(\r\"I\n\027ShellShowcaseLi" +
+      "stingSet\022.\n\010listings\030\001 \003(\0132\034.ei.ShellSho" +
+      "wcaseListingInfo\"^\n\021ShellsActionBatch\022#\n" +
+      "\005rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022$\n\007ac" +
+      "tions\030\002 \003(\0132\023.ei.ShellsActionLog\"\355\t\n\030Use" +
+      "rVerificationAnalysis\022;\n\016overall_status\030" +
+      "\001 \001(\0162#.ei.UserVerificationAnalysis.Stat" +
+      "us\022\022\n\nstart_time\030\002 \001(\001\022\027\n\017completion_tim" +
+      "e\030\003 \001(\001\022\032\n\022verification_count\030% \001(\005\022\025\n\rn" +
+      "um_prestiges\030\016 \001(\001\022\021\n\tsoul_eggs\030\017 \001(\001\022\030\n" +
+      "\020eggs_of_prophecy\030\033 \001(\r\0227\n\niap_status\030\022 " +
+      "\001(\0162#.ei.UserVerificationAnalysis.Status" +
+      "\022\033\n\023verified_pro_permit\030\004 \001(\010\022\035\n\025verifie" +
+      "d_piggy_breaks\030\005 \001(\r\022\032\n\022verified_other_i" +
+      "ap\030\006 \001(\r\022\026\n\016unverified_iap\030\007 \001(\r\022\023\n\013gold" +
+      "_earned\030\r \001(\001\022\031\n\021regular_iap_buyer\030\026 \001(\010" +
+      "\022\033\n\023regular_iap_cheater\030\027 \001(\010\022=\n\020artifac" +
+      "ts_status\030\023 \001(\0162#.ei.UserVerificationAna" +
+      "lysis.Status\022\032\n\022missions_completed\030\010 \001(\r" +
+      "\022\033\n\023artifacts_collected\030\t \001(\001\022\032\n\022artifac" +
+      "ts_consumed\030\n \001(\001\022\036\n\026artifacts_in_invent" +
+      "ory\030\013 \001(\001\022#\n\033rare_artifacts_in_inventory" +
+      "\030! \001(\004\022 \n\030rare_artifacts_on_server\030\" \001(\004" +
+      "\022(\n legendary_artifacts_in_inventory\030# \001" +
+      "(\004\022%\n\035legendary_artifacts_on_server\030$ \001(" +
+      "\004\022\033\n\023gold_spent_crafting\030\025 \001(\001\022\032\n\022excess" +
+      "ive_consumes\030\030 \001(\010\022\033\n\023excessive_inventor" +
+      "y\030\031 \001(\010\022\027\n\017excessive_spend\030\032 \001(\010\022=\n\020cont" +
+      "racts_status\030\024 \001(\0162#.ei.UserVerification" +
+      "Analysis.Status\022\034\n\024num_coop_memberships\030" +
+      "\014 \001(\r\022\027\n\017valid_contracts\030\020 \001(\r\022\031\n\021invali" +
+      "d_contracts\030\021 \003(\t\022\025\n\rexcessive_eop\030\034 \001(\010" +
+      "\022#\n\033excessive_invalid_contracts\030\035 \001(\010\022\020\n" +
+      "\010verified\030\036 \001(\010\022\035\n\025verification_override" +
+      "\030\037 \001(\010\022#\n\033verification_override_value\030  " +
+      "\001(\010\"3\n\006Status\022\013\n\007UNKNOWN\020\000\022\016\n\nPROCESSING" +
+      "\020\001\022\014\n\010COMPLETE\020\002\"\365\005\n\024UserSubscriptionInf" +
+      "o\022:\n\022subscription_level\030\r \001(\0162\036.ei.UserS" +
+      "ubscriptionInfo.Level\022?\n\027next_subscripti" +
+      "on_level\030\017 \001(\0162\036.ei.UserSubscriptionInfo" +
+      ".Level\022$\n\034lock_next_subscription_level\030\022" +
+      " \001(\010\022\036\n\010platform\030\n \001(\0162\014.ei.Platform\022\037\n\027" +
+      "original_transaction_id\030\001 \001(\t\022\035\n\025linked_" +
+      "transaction_id\030\020 \001(\t\022\024\n\014acknowledged\030\021 \001" +
+      "(\010\022\030\n\020first_subscribed\030\002 \001(\001\022\022\n\nperiod_e" +
+      "nd\030\004 \001(\001\022/\n\006status\030\005 \001(\0162\037.ei.UserSubscr" +
+      "iptionInfo.Status\022\024\n\014store_status\030\016 \001(\t\022" +
+      "\022\n\nauto_renew\030\006 \001(\010\022\017\n\007sandbox\030\023 \001(\010\022\024\n\014" +
+      "last_updated\030\007 \001(\001\0226\n\007history\030\t \003(\0132%.ei" +
+      ".UserSubscriptionInfo.HistoryEntry\022\025\n\rpa" +
+      "st_user_ids\030\013 \003(\t\032F\n\014HistoryEntry\022\021\n\ttim" +
+      "estamp\030\001 \001(\001\022\022\n\nmessage_id\030\002 \001(\t\022\017\n\007mess" +
+      "age\030\003 \001(\t\"\036\n\005Level\022\014\n\010STANDARD\020\000\022\007\n\003PRO\020" +
+      "\001\"]\n\006Status\022\013\n\007UNKNOWN\020\000\022\n\n\006ACTIVE\020\001\022\013\n\007" +
+      "EXPIRED\020\002\022\013\n\007REVOKED\020\003\022\020\n\014GRACE_PERIOD\020\004" +
+      "\022\016\n\nPAUSE_HOLD\020\005\"\246\001\n\035SubscriptionChangeH" +
+      "intRequest\022#\n\005rinfo\030\003 \001(\0132\024.ei.BasicRequ" +
+      "estInfo\022\037\n\027original_transaction_id\030\001 \001(\t" +
+      "\022?\n\027next_subscription_level\030\002 \001(\0162\036.ei.U" +
+      "serSubscriptionInfo.Level\">\n\022CXPEvalRoll" +
+      "outInfo\022\022\n\ncurrent_id\030\001 \001(\t\022\024\n\014basis_poi" +
+      "nts\030\002 \001(\r\"N\n\020PathOfVirtueInfo\022\023\n\013server_" +
+      "time\030\001 \001(\001\022\020\n\010sim_time\030\002 \001(\001\022\023\n\013reset_in" +
+      "dex\030\003 \001(\r\"y\n\027SyncPathOfVirtueRequest\022#\n\005" +
+      "rinfo\030\001 \001(\0132\024.ei.BasicRequestInfo\022\023\n\013res" +
+      "et_index\030\002 \001(\r\022\020\n\010sim_time\030\003 \001(\001\022\022\n\nreba" +
+      "seline\030\004 \001(\010\"\220\001\n\030SyncPathOfVirtueRespons" +
+      "e\0223\n\006status\030\001 \001(\0162#.ei.SyncPathOfVirtueR" +
+      "esponse.Status\022\020\n\010sim_debt\030\002 \001(\001\"-\n\006Stat" +
+      "us\022\006\n\002OK\020\000\022\013\n\007PROBLEM\020\001\022\016\n\nHTTP_ERROR\020\002*" +
+      "4\n\010Platform\022\024\n\020UNKNOWN_PLATFORM\020\000\022\007\n\003IOS" +
+      "\020\001\022\t\n\005DROID\020\002*=\n\020DeviceFormFactor\022\022\n\016UNK" +
+      "NOWN_DEVICE\020\000\022\t\n\005PHONE\020\001\022\n\n\006TABLET\020\002*k\n\t" +
+      "AdNetwork\022\n\n\006VUNGLE\020\000\022\016\n\nCHARTBOOST\020\001\022\r\n" +
+      "\tAD_COLONY\020\002\022\014\n\010HYPER_MX\020\003\022\t\n\005UNITY\020\004\022\014\n" +
+      "\010FACEBOOK\020\005\022\014\n\010APPLOVIN\020\006*\311\003\n\003Egg\022\n\n\006EDI" +
+      "BLE\020\001\022\r\n\tSUPERFOOD\020\002\022\013\n\007MEDICAL\020\003\022\017\n\013ROC" +
+      "KET_FUEL\020\004\022\022\n\016SUPER_MATERIAL\020\005\022\n\n\006FUSION" +
+      "\020\006\022\013\n\007QUANTUM\020\007\022\017\n\013IMMORTALITY\020\010\022\013\n\007TACH" +
+      "YON\020\t\022\014\n\010GRAVITON\020\n\022\r\n\tDILITHIUM\020\013\022\013\n\007PR" +
+      "ODIGY\020\014\022\r\n\tTERRAFORM\020\r\022\016\n\nANTIMATTER\020\016\022\017" +
+      "\n\013DARK_MATTER\020\017\022\006\n\002AI\020\020\022\n\n\006NEBULA\020\021\022\014\n\010U" +
+      "NIVERSE\020\022\022\021\n\rENLIGHTENMENT\020\023\022\r\n\tCURIOSIT" +
+      "Y\0202\022\r\n\tINTEGRITY\0203\022\014\n\010HUMILITY\0204\022\016\n\nRESI" +
+      "LIENCE\0205\022\014\n\010KINDNESS\0206\022\r\n\tCHOCOLATE\020d\022\n\n" +
+      "\006EASTER\020e\022\020\n\014WATERBALLOON\020f\022\014\n\010FIREWORK\020" +
+      "g\022\013\n\007PUMPKIN\020h\022\017\n\nCUSTOM_EGG\020\310\001\022\014\n\007UNKNO" +
+      "WN\020\350\007*-\n\010FarmType\022\t\n\005EMPTY\020\001\022\010\n\004HOME\020\002\022\014" +
+      "\n\010CONTRACT\020\003*+\n\010GoalType\022\r\n\tEGGS_LAID\020\001\022" +
+      "\020\n\014UNKNOWN_GOAL\020d*\231\002\n\nRewardType\022\010\n\004CASH" +
+      "\020\001\022\010\n\004GOLD\020\002\022\r\n\tSOUL_EGGS\020\003\022\024\n\020EGGS_OF_P" +
+      "ROPHECY\020\004\022\026\n\022EPIC_RESEARCH_ITEM\020\005\022\016\n\nPIG" +
+      "GY_FILL\020\006\022\024\n\020PIGGY_MULTIPLIER\020\007\022\024\n\020PIGGY" +
+      "_LEVEL_BUMP\020\010\022\t\n\005BOOST\020\t\022\017\n\013BOOST_TOKEN\020" +
+      "\n\022\014\n\010ARTIFACT\020\013\022\021\n\rARTIFACT_CASE\020\014\022\013\n\007CH" +
+      "ICKEN\020\r\022\020\n\014SHELL_SCRIPT\020\016\022\016\n\nVIRTUE_GEM\020" +
+      "\017\022\022\n\016UNKNOWN_REWARD\020d*\347\001\n\nUILocation\022\010\n\004" +
+      "NONE\020\000\022\010\n\004SHOP\020\001\022\016\n\nBOOST_SHOP\020\002\022\t\n\005PIGG" +
+      "Y\020\003\022\016\n\nPRO_PERMIT\020\004\022\016\n\nULTRA_SHOP\020\n\022\n\n\006S" +
+      "HELLS\020\005\022\016\n\nSHELL_SETS\020\006\022\023\n\017SHELLS_SHOWCA" +
+      "SE\020\014\022\014\n\010CHICKENS\020\007\022\020\n\014CHICKEN_HATS\020\013\022\021\n\r" +
+      "EPIC_RESEARCH\020\010\022\014\n\010SETTINGS\020\t\022\010\n\004HELP\020\r\022" +
+      "\016\n\nUNIVERSITY\020\016*\323\002\n\010UserType\022\r\n\tALL_USER" +
+      "S\020\000\022\014\n\010EGGED_UP\020\017\022\026\n\022CONTRACTS_UNLOCKED\020" +
+      "\001\022\026\n\022ARTIFACTS_UNLOCKED\020\003\022\026\n\022FUEL_TANK_U" +
+      "NLOCKED\020\004\022\025\n\021PRO_PERMIT_ACTIVE\020\005\022\020\n\014ULTR" +
+      "A_ACTIVE\020\006\022\021\n\rNO_PRO_PERMIT\020\007\022\014\n\010NO_ULTR" +
+      "A\020\010\022\026\n\022CONTRACTS_INACTIVE\020\t\022\024\n\020CONTRACTS" +
+      "_ACTIVE\020\n\022\024\n\020PLAYING_CONTRACT\020\013\022\026\n\022ARTIF" +
+      "ACTS_INACTIVE\020\014\022\024\n\020ARTIFACTS_ACTIVE\020\r\022\022\n" +
+      "\016PRESTIGE_READY\020\016\022\022\n\016PIGGY_HESITANT\020\020*\247\001" +
+      "\n\023AgeComplianceStatus\022!\n\035AGE_COMPLIANCE_" +
+      "NOT_APPLICABLE\020\000\022\032\n\026AGE_COMPLIANCE_UNKNO" +
+      "WN\020\001\022\030\n\024AGE_COMPLIANCE_ADULT\020\002\022\030\n\024AGE_CO" +
+      "MPLIANCE_MINOR\020\003\022\035\n\031AGE_COMPLIANCE_RESTR" +
+      "ICTED\020\004*\320\001\n\032TranslationPlaceholderType\022#" +
+      "\n\037TRANSLATION_PLACEHOLDER_GENERIC\020\000\022\"\n\036T" +
+      "RANSLATION_PLACEHOLDER_NUMBER\020\001\022 \n\034TRANS" +
+      "LATION_PLACEHOLDER_NAME\020\002\022$\n TRANSLATION" +
+      "_PLACEHOLDER_DURATION\020\003\022!\n\035TRANSLATION_P" +
+      "LACEHOLDER_COUNT\020\004*f\n\021TranslationStatus\022" +
+      "\032\n\026TRANSLATION_TRANSLATED\020\000\022\030\n\024TRANSLATI" +
+      "ON_DEFERRED\020\001\022\033\n\027TRANSLATION_UNAVAILABLE" +
+      "\020\002*4\n\020LeaderboardScope\022\014\n\010ALL_TIME\020\000\022\022\n\016" +
+      "CURRENT_SEASON\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -331137,7 +334435,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
     internal_static_ei_TranslationCache_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_TranslationCache_descriptor,
-        new java.lang.String[] { "Language", "Entries", "CachedAt", "CacheVersion", });
+        new java.lang.String[] { "Language", "Entries", "CachedAt", "CacheVersion", "PackVersion", });
     internal_static_ei_TranslationPackRequest_descriptor =
       getDescriptor().getMessageType(58);
     internal_static_ei_TranslationPackRequest_fieldAccessorTable = new
@@ -331150,92 +334448,116 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_TranslationPackResponse_descriptor,
         new java.lang.String[] { "Language", "Entries", "CacheVersion", "UpToDate", "Truncated", });
-    internal_static_ei_QueryCoopRequest_descriptor =
+    internal_static_ei_FontDLCRequest_descriptor =
       getDescriptor().getMessageType(60);
+    internal_static_ei_FontDLCRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ei_FontDLCRequest_descriptor,
+        new java.lang.String[] { "Language", "ClientVersion", "Platform", });
+    internal_static_ei_FontDLCResponse_descriptor =
+      getDescriptor().getMessageType(61);
+    internal_static_ei_FontDLCResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ei_FontDLCResponse_descriptor,
+        new java.lang.String[] { "FontPacks", });
+    internal_static_ei_TranslationSeed_descriptor =
+      getDescriptor().getMessageType(62);
+    internal_static_ei_TranslationSeed_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ei_TranslationSeed_descriptor,
+        new java.lang.String[] { "Language", "Entries", });
+    internal_static_ei_TranslationSeedEntry_descriptor =
+      getDescriptor().getMessageType(63);
+    internal_static_ei_TranslationSeedEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ei_TranslationSeedEntry_descriptor,
+        new java.lang.String[] { "Source", "Translation", });
+    internal_static_ei_QueryCoopRequest_descriptor =
+      getDescriptor().getMessageType(64);
     internal_static_ei_QueryCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_QueryCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "League", "Grade", "ClientVersion", });
     internal_static_ei_QueryCoopResponse_descriptor =
-      getDescriptor().getMessageType(61);
+      getDescriptor().getMessageType(65);
     internal_static_ei_QueryCoopResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_QueryCoopResponse_descriptor,
         new java.lang.String[] { "Exists", "Full", "Expired", "DifferentLeague", "DifferentGrade", "CcOnly", "Banned", });
     internal_static_ei_CreateCoopRequest_descriptor =
-      getDescriptor().getMessageType(62);
+      getDescriptor().getMessageType(66);
     internal_static_ei_CreateCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CreateCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "Public", "CcOnly", "AllowAllGrades", "SecondsRemaining", "UserId", "UserName", "SoulPower", "Eop", "League", "Grade", "PointsReplay", "Platform", "ClientVersion", });
     internal_static_ei_CreateCoopResponse_descriptor =
-      getDescriptor().getMessageType(63);
+      getDescriptor().getMessageType(67);
     internal_static_ei_CreateCoopResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CreateCoopResponse_descriptor,
         new java.lang.String[] { "Success", "Message", });
     internal_static_ei_JoinCoopRequest_descriptor =
-      getDescriptor().getMessageType(64);
+      getDescriptor().getMessageType(68);
     internal_static_ei_JoinCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_JoinCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "UserId", "UserName", "SoulPower", "Eop", "League", "Grade", "PointsReplay", "Platform", "SecondsRemaining", "ClientVersion", });
     internal_static_ei_JoinCoopResponse_descriptor =
-      getDescriptor().getMessageType(65);
+      getDescriptor().getMessageType(69);
     internal_static_ei_JoinCoopResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_JoinCoopResponse_descriptor,
         new java.lang.String[] { "Success", "Message", "Banned", "CoopIdentifier", "SecondsRemaining", "MatchPercent", "NumMembers", "Status", "Grade", "CanStart", });
     internal_static_ei_AutoJoinCoopRequest_descriptor =
-      getDescriptor().getMessageType(66);
+      getDescriptor().getMessageType(70);
     internal_static_ei_AutoJoinCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AutoJoinCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "UserId", "UserName", "SoulPower", "Eop", "League", "Grade", "PointsReplay", "SecondsRemaining", "Platform", "ClientVersion", });
     internal_static_ei_UpdateCoopPermissionsRequest_descriptor =
-      getDescriptor().getMessageType(67);
+      getDescriptor().getMessageType(71);
     internal_static_ei_UpdateCoopPermissionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_UpdateCoopPermissionsRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "RequestingUserId", "Public", "ClientVersion", });
     internal_static_ei_UpdateCoopPermissionsResponse_descriptor =
-      getDescriptor().getMessageType(68);
+      getDescriptor().getMessageType(72);
     internal_static_ei_UpdateCoopPermissionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_UpdateCoopPermissionsResponse_descriptor,
         new java.lang.String[] { "Success", "Message", });
     internal_static_ei_LeaveCoopRequest_descriptor =
-      getDescriptor().getMessageType(69);
+      getDescriptor().getMessageType(73);
     internal_static_ei_LeaveCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LeaveCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "PlayerIdentifier", "ClientVersion", });
     internal_static_ei_GiftPlayerCoopRequest_descriptor =
-      getDescriptor().getMessageType(70);
+      getDescriptor().getMessageType(74);
     internal_static_ei_GiftPlayerCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_GiftPlayerCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "PlayerIdentifier", "RequestingUserId", "RequestingUserName", "Amount", "ClientVersion", });
     internal_static_ei_SendChickenRunCoopRequest_descriptor =
-      getDescriptor().getMessageType(71);
+      getDescriptor().getMessageType(75);
     internal_static_ei_SendChickenRunCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SendChickenRunCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "PlayerIdentifier", "RequestingUserId", "RequestingUserName", "FarmPop", "ClientVersion", });
     internal_static_ei_ReportPlayerCoopRequest_descriptor =
-      getDescriptor().getMessageType(72);
+      getDescriptor().getMessageType(76);
     internal_static_ei_ReportPlayerCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ReportPlayerCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "UserId", "Reason", });
     internal_static_ei_KickPlayerCoopRequest_descriptor =
-      getDescriptor().getMessageType(73);
+      getDescriptor().getMessageType(77);
     internal_static_ei_KickPlayerCoopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_KickPlayerCoopRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "CoopIdentifier", "PlayerIdentifier", "RequestingUserId", "Reason", "ClientVersion", });
     internal_static_ei_IdleSessionSummary_descriptor =
-      getDescriptor().getMessageType(74);
+      getDescriptor().getMessageType(78);
     internal_static_ei_IdleSessionSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_IdleSessionSummary_descriptor,
@@ -331247,55 +334569,55 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_IdleSessionSummary_Stat_descriptor,
         new java.lang.String[] { "Name", "Min", "Max", "Avg", "TotalTime", });
     internal_static_ei_ContractCoopStatusUpdateRequest_descriptor =
-      getDescriptor().getMessageType(75);
+      getDescriptor().getMessageType(79);
     internal_static_ei_ContractCoopStatusUpdateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ContractCoopStatusUpdateRequest_descriptor,
         new java.lang.String[] { "Rinfo", "UserId", "ContractIdentifier", "CoopIdentifier", "PushUserId", "Amount", "Rate", "TimeCheatsDetected", "TotalStepTime", "SoulPower", "Eop", "Eot", "BoostTokens", "BoostTokensSpent", "HideCcStatus", "ProductionParams", "FarmInfo", "LastIdleSummary", "EggLayingRateBuff", "EarningsBuff", "ColleggtibleInfo", });
     internal_static_ei_PlayerColleggtibleInfo_descriptor =
-      getDescriptor().getMessageType(76);
+      getDescriptor().getMessageType(80);
     internal_static_ei_PlayerColleggtibleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_PlayerColleggtibleInfo_descriptor,
         new java.lang.String[] { "Buffs", });
     internal_static_ei_ContractCoopStatusUpdateResponse_descriptor =
-      getDescriptor().getMessageType(77);
+      getDescriptor().getMessageType(81);
     internal_static_ei_ContractCoopStatusUpdateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ContractCoopStatusUpdateResponse_descriptor,
         new java.lang.String[] { "Finalized", "Exists", "Status", });
     internal_static_ei_CoopBuffState_descriptor =
-      getDescriptor().getMessageType(78);
+      getDescriptor().getMessageType(82);
     internal_static_ei_CoopBuffState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CoopBuffState_descriptor,
         new java.lang.String[] { "EggLayingRate", "Earnings", "ServerTimestamp", });
     internal_static_ei_CoopBuffHistory_descriptor =
-      getDescriptor().getMessageType(79);
+      getDescriptor().getMessageType(83);
     internal_static_ei_CoopBuffHistory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CoopBuffHistory_descriptor,
         new java.lang.String[] { "History", });
     internal_static_ei_CoopChickenRunEntry_descriptor =
-      getDescriptor().getMessageType(80);
+      getDescriptor().getMessageType(84);
     internal_static_ei_CoopChickenRunEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CoopChickenRunEntry_descriptor,
         new java.lang.String[] { "UserId", "ServerTimestamp", });
     internal_static_ei_PlayerLastChickenRunTimes_descriptor =
-      getDescriptor().getMessageType(81);
+      getDescriptor().getMessageType(85);
     internal_static_ei_PlayerLastChickenRunTimes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_PlayerLastChickenRunTimes_descriptor,
         new java.lang.String[] { "UserId", "Entries", });
     internal_static_ei_CoopLastChickenRunTimes_descriptor =
-      getDescriptor().getMessageType(82);
+      getDescriptor().getMessageType(86);
     internal_static_ei_CoopLastChickenRunTimes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CoopLastChickenRunTimes_descriptor,
         new java.lang.String[] { "Entries", });
     internal_static_ei_LeaderboardAnalysis_descriptor =
-      getDescriptor().getMessageType(83);
+      getDescriptor().getMessageType(87);
     internal_static_ei_LeaderboardAnalysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LeaderboardAnalysis_descriptor,
@@ -331307,7 +334629,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_LeaderboardAnalysis_Chunk_descriptor,
         new java.lang.String[] { "StartIndex", "EndIndex", "HighScore", "LowScore", "StartCursor", "EndCursor", });
     internal_static_ei_LeaderboardInfo_descriptor =
-      getDescriptor().getMessageType(84);
+      getDescriptor().getMessageType(88);
     internal_static_ei_LeaderboardInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LeaderboardInfo_descriptor,
@@ -331319,13 +334641,13 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_LeaderboardInfo_Season_descriptor,
         new java.lang.String[] { "Scope", "Name", });
     internal_static_ei_LeaderboardRequest_descriptor =
-      getDescriptor().getMessageType(85);
+      getDescriptor().getMessageType(89);
     internal_static_ei_LeaderboardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LeaderboardRequest_descriptor,
         new java.lang.String[] { "Rinfo", "Scope", "Grade", });
     internal_static_ei_LeaderboardResponse_descriptor =
-      getDescriptor().getMessageType(86);
+      getDescriptor().getMessageType(90);
     internal_static_ei_LeaderboardResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LeaderboardResponse_descriptor,
@@ -331337,43 +334659,43 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_LeaderboardResponse_Entry_descriptor,
         new java.lang.String[] { "Rank", "Alias", "Score", });
     internal_static_ei_ContractsArchive_descriptor =
-      getDescriptor().getMessageType(87);
+      getDescriptor().getMessageType(91);
     internal_static_ei_ContractsArchive_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ContractsArchive_descriptor,
         new java.lang.String[] { "Archive", });
     internal_static_ei_ContractAction_descriptor =
-      getDescriptor().getMessageType(88);
+      getDescriptor().getMessageType(92);
     internal_static_ei_ContractAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ContractAction_descriptor,
         new java.lang.String[] { "UserId", "ActionName", "ApproxTime", "DestUserId", "ContractId", "CoopId", "Autojoin", "Grade", "Replay", "PointsReplay", "RewardType", "RewardSubtype", "RewardAmount", "GoalIndex", "BoostId", "Tokens", "KickReason", "Public", "CcOnly", });
     internal_static_ei_UserDataInfoRequest_descriptor =
-      getDescriptor().getMessageType(89);
+      getDescriptor().getMessageType(93);
     internal_static_ei_UserDataInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_UserDataInfoRequest_descriptor,
         new java.lang.String[] { "Rinfo", "UserId", "DeviceId", "BackupChecksum", });
     internal_static_ei_UserDataInfoResponse_descriptor =
-      getDescriptor().getMessageType(90);
+      getDescriptor().getMessageType(94);
     internal_static_ei_UserDataInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_UserDataInfoResponse_descriptor,
         new java.lang.String[] { "BackupChecksum", "BackupTotalCash", "CoopMemberships", });
     internal_static_ei_ClearAllUserDataRequest_descriptor =
-      getDescriptor().getMessageType(91);
+      getDescriptor().getMessageType(95);
     internal_static_ei_ClearAllUserDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ClearAllUserDataRequest_descriptor,
         new java.lang.String[] { "Rinfo", "UserId", "DeviceId", "BackupChecksum", });
     internal_static_ei_ServerGift_descriptor =
-      getDescriptor().getMessageType(92);
+      getDescriptor().getMessageType(96);
     internal_static_ei_ServerGift_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ServerGift_descriptor,
         new java.lang.String[] { "UserId", "RewardType", "RewardSubType", "RewardAmount", });
     internal_static_ei_LiveConfig_descriptor =
-      getDescriptor().getMessageType(93);
+      getDescriptor().getMessageType(97);
     internal_static_ei_LiveConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LiveConfig_descriptor,
@@ -331427,25 +334749,25 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_LiveConfig_HelpConfig_HowToVideoInfo_descriptor,
         new java.lang.String[] { "Type", "Name", "Description", "Duration", "Url", "SoulEggs", });
     internal_static_ei_InGameMail_descriptor =
-      getDescriptor().getMessageType(94);
+      getDescriptor().getMessageType(98);
     internal_static_ei_InGameMail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_InGameMail_descriptor,
         new java.lang.String[] { "Id", "Title", "Date", "Message", "Action", "Url", "AppLink", "AppLinkExtra", "Image", "ImageWidth", "ImageHeight", "Platform", "Builds", "MinClientVersion", "MaxClientVersion", "MinSoulEggs", "MaxSoulEggs", "MinMysticalBonus", "UserType", "MinPiggyBreaks", "GoldTip", "Tip", "Priority", "MinDaysSinceLastTip", "MaxRetries", "DaysUntilRetry", "Category", "ReleaseTime", });
     internal_static_ei_MailDB_descriptor =
-      getDescriptor().getMessageType(95);
+      getDescriptor().getMessageType(99);
     internal_static_ei_MailDB_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_MailDB_descriptor,
         new java.lang.String[] { "Mail", "TipsDbData", "TipsChecksum", });
     internal_static_ei_TipsDB_descriptor =
-      getDescriptor().getMessageType(96);
+      getDescriptor().getMessageType(100);
     internal_static_ei_TipsDB_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_TipsDB_descriptor,
         new java.lang.String[] { "Tips", });
     internal_static_ei_MailState_descriptor =
-      getDescriptor().getMessageType(97);
+      getDescriptor().getMessageType(101);
     internal_static_ei_MailState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_MailState_descriptor,
@@ -331457,7 +334779,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_MailState_TipState_descriptor,
         new java.lang.String[] { "Id", "Reads", "TimeRead", });
     internal_static_ei_PeriodicalsResponse_descriptor =
-      getDescriptor().getMessageType(98);
+      getDescriptor().getMessageType(102);
     internal_static_ei_PeriodicalsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_PeriodicalsResponse_descriptor,
@@ -331469,49 +334791,49 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_PeriodicalsResponse_RoyaltyInfo_descriptor,
         new java.lang.String[] { "Id", "Amount", });
     internal_static_ei_GetPeriodicalsRequest_descriptor =
-      getDescriptor().getMessageType(99);
+      getDescriptor().getMessageType(103);
     internal_static_ei_GetPeriodicalsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_GetPeriodicalsRequest_descriptor,
         new java.lang.String[] { "Rinfo", "UserId", "PiggyFull", "PiggyFoundFull", "SecondsFullRealtime", "SecondsFullGametime", "LostIncrements", "SoulEggs", "MysticalEarningsMult", "Eop", "ContractsUnlocked", "ArtifactsUnlocked", "CurrentClientVersion", "Debug", });
     internal_static_ei_ConfigRequest_descriptor =
-      getDescriptor().getMessageType(100);
+      getDescriptor().getMessageType(104);
     internal_static_ei_ConfigRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ConfigRequest_descriptor,
         new java.lang.String[] { "Rinfo", "SoulEggs", "ContractsUnlocked", "ArtifactsUnlocked", "FuelTankUnlocked", "ProPermit", "Ultra", "TipsChecksum", "AgeComplianceStatus", });
     internal_static_ei_AdminControls_descriptor =
-      getDescriptor().getMessageType(101);
+      getDescriptor().getMessageType(105);
     internal_static_ei_AdminControls_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AdminControls_descriptor,
         new java.lang.String[] { "ShellDebug", "ShowcaseViewer", });
     internal_static_ei_ConfigResponse_descriptor =
-      getDescriptor().getMessageType(102);
+      getDescriptor().getMessageType(106);
     internal_static_ei_ConfigResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ConfigResponse_descriptor,
         new java.lang.String[] { "LiveConfig", "MailBag", "DlcCatalog", "Admin", });
     internal_static_ei_AdAttributionRawData_descriptor =
-      getDescriptor().getMessageType(103);
+      getDescriptor().getMessageType(107);
     internal_static_ei_AdAttributionRawData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AdAttributionRawData_descriptor,
         new java.lang.String[] { "DeviceAdId", "UserId", "AdNetwork", "JsonData", });
     internal_static_ei_AdAttributionRow_descriptor =
-      getDescriptor().getMessageType(104);
+      getDescriptor().getMessageType(108);
     internal_static_ei_AdAttributionRow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AdAttributionRow_descriptor,
         new java.lang.String[] { "UserId", "AdId", "AdNetwork", "Campaign", "Keyword", "Extra", "ClickDate", "DownloadDate", "ApproxTime", });
     internal_static_ei_AdAttributionInfo_descriptor =
-      getDescriptor().getMessageType(105);
+      getDescriptor().getMessageType(109);
     internal_static_ei_AdAttributionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AdAttributionInfo_descriptor,
         new java.lang.String[] { "DeviceAdId", "NetworkName", "Attribution", "OrgName", "OrgId", "CampaignName", "CampaignId", "ClickDate", "ConversionDate", "ConversionType", "Geo", "AdgroupName", "AdgroupId", "Keyword", "KeywordId", "KeywordExtra", "CreativesetName", "CreativesetId", });
     internal_static_ei_ArtifactsClientInfo_descriptor =
-      getDescriptor().getMessageType(106);
+      getDescriptor().getMessageType(110);
     internal_static_ei_ArtifactsClientInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ArtifactsClientInfo_descriptor,
@@ -331523,7 +334845,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ArtifactsClientInfo_LaunchCount_descriptor,
         new java.lang.String[] { "Ship", "NumLaunches", "LaunchPoints", });
     internal_static_ei_MissionInfo_descriptor =
-      getDescriptor().getMessageType(107);
+      getDescriptor().getMessageType(111);
     internal_static_ei_MissionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_MissionInfo_descriptor,
@@ -331535,37 +334857,37 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_MissionInfo_Fuel_descriptor,
         new java.lang.String[] { "Egg", "Amount", });
     internal_static_ei_ArtifactSpec_descriptor =
-      getDescriptor().getMessageType(108);
+      getDescriptor().getMessageType(112);
     internal_static_ei_ArtifactSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ArtifactSpec_descriptor,
         new java.lang.String[] { "Name", "Level", "Rarity", "Egg", });
     internal_static_ei_CompleteArtifact_descriptor =
-      getDescriptor().getMessageType(109);
+      getDescriptor().getMessageType(113);
     internal_static_ei_CompleteArtifact_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CompleteArtifact_descriptor,
         new java.lang.String[] { "Spec", "Stones", });
     internal_static_ei_ArtifactInventoryItem_descriptor =
-      getDescriptor().getMessageType(110);
+      getDescriptor().getMessageType(114);
     internal_static_ei_ArtifactInventoryItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ArtifactInventoryItem_descriptor,
         new java.lang.String[] { "ItemId", "Artifact", "Quantity", "ServerId", });
     internal_static_ei_InventorySlot_descriptor =
-      getDescriptor().getMessageType(111);
+      getDescriptor().getMessageType(115);
     internal_static_ei_InventorySlot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_InventorySlot_descriptor,
         new java.lang.String[] { "Occupied", "ItemId", });
     internal_static_ei_ArtifactsConfigurationRequest_descriptor =
-      getDescriptor().getMessageType(112);
+      getDescriptor().getMessageType(116);
     internal_static_ei_ArtifactsConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ArtifactsConfigurationRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ClientVersion", });
     internal_static_ei_ArtifactsConfigurationResponse_descriptor =
-      getDescriptor().getMessageType(113);
+      getDescriptor().getMessageType(117);
     internal_static_ei_ArtifactsConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ArtifactsConfigurationResponse_descriptor,
@@ -331595,31 +334917,31 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ArtifactsConfigurationResponse_CraftingLevelInfo_descriptor,
         new java.lang.String[] { "XpRequired", "RarityMult", });
     internal_static_ei_MissionRequest_descriptor =
-      getDescriptor().getMessageType(114);
+      getDescriptor().getMessageType(118);
     internal_static_ei_MissionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_MissionRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ClientVersion", "EiUserId", "Info", "ClientInfo", });
     internal_static_ei_MissionResponse_descriptor =
-      getDescriptor().getMessageType(115);
+      getDescriptor().getMessageType(119);
     internal_static_ei_MissionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_MissionResponse_descriptor,
         new java.lang.String[] { "Success", "Info", });
     internal_static_ei_GetActiveMissionsRequest_descriptor =
-      getDescriptor().getMessageType(116);
+      getDescriptor().getMessageType(120);
     internal_static_ei_GetActiveMissionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_GetActiveMissionsRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ResetIndex", });
     internal_static_ei_GetActiveMissionsResponse_descriptor =
-      getDescriptor().getMessageType(117);
+      getDescriptor().getMessageType(121);
     internal_static_ei_GetActiveMissionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_GetActiveMissionsResponse_descriptor,
         new java.lang.String[] { "Success", "ActiveMissions", });
     internal_static_ei_CompleteMissionResponse_descriptor =
-      getDescriptor().getMessageType(118);
+      getDescriptor().getMessageType(122);
     internal_static_ei_CompleteMissionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CompleteMissionResponse_descriptor,
@@ -331631,67 +334953,67 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_CompleteMissionResponse_SecureArtifactSpec_descriptor,
         new java.lang.String[] { "Spec", "ServerId", });
     internal_static_ei_CollectContractArtifactRewardsRequest_descriptor =
-      getDescriptor().getMessageType(119);
+      getDescriptor().getMessageType(123);
     internal_static_ei_CollectContractArtifactRewardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CollectContractArtifactRewardsRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ContractIdentifier", "League", "Grade", "GoalIndex", "BestShip", });
     internal_static_ei_CollectSeasonArtifactRewardsRequest_descriptor =
-      getDescriptor().getMessageType(120);
+      getDescriptor().getMessageType(124);
     internal_static_ei_CollectSeasonArtifactRewardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CollectSeasonArtifactRewardsRequest_descriptor,
         new java.lang.String[] { "Rinfo", "SeasonIdentifier", "Cxp", "BestShip", });
     internal_static_ei_CraftArtifactRequest_descriptor =
-      getDescriptor().getMessageType(121);
+      getDescriptor().getMessageType(125);
     internal_static_ei_CraftArtifactRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CraftArtifactRequest_descriptor,
         new java.lang.String[] { "Rinfo", "EiUserId", "Spec", "ItemId", "GoldPricePaid", "CraftingCount", "CraftingXp", "Ingredients", });
     internal_static_ei_CraftArtifactResponse_descriptor =
-      getDescriptor().getMessageType(122);
+      getDescriptor().getMessageType(126);
     internal_static_ei_CraftArtifactResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CraftArtifactResponse_descriptor,
         new java.lang.String[] { "ItemId", "EiUserId", "RarityAchieved", "ServerId", });
     internal_static_ei_ConsumeArtifactRequest_descriptor =
-      getDescriptor().getMessageType(123);
+      getDescriptor().getMessageType(127);
     internal_static_ei_ConsumeArtifactRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ConsumeArtifactRequest_descriptor,
         new java.lang.String[] { "Rinfo", "EiUserId", "Spec", "ArtifactServerId", "OriginalItemId", "AdditionalServerIds", "AdditionalItemIds", "Quantity", });
     internal_static_ei_ConsumeArtifactResponse_descriptor =
-      getDescriptor().getMessageType(124);
+      getDescriptor().getMessageType(128);
     internal_static_ei_ConsumeArtifactResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ConsumeArtifactResponse_descriptor,
         new java.lang.String[] { "Success", "OriginalItemId", "AdditionalItemIds", "Byproducts", "OtherRewards", "EiUserId", });
     internal_static_ei_AuthenticateArtifactResponse_descriptor =
-      getDescriptor().getMessageType(125);
+      getDescriptor().getMessageType(129);
     internal_static_ei_AuthenticateArtifactResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AuthenticateArtifactResponse_descriptor,
         new java.lang.String[] { "Success", "OriginalItemId", "Demote", "Delete", "EiUserId", });
     internal_static_ei_SetArtifactRequest_descriptor =
-      getDescriptor().getMessageType(126);
+      getDescriptor().getMessageType(130);
     internal_static_ei_SetArtifactRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SetArtifactRequest_descriptor,
         new java.lang.String[] { "Rinfo", "Artifact", "Stones", "GoldPricePaid", });
     internal_static_ei_SetArtifactResponse_descriptor =
-      getDescriptor().getMessageType(127);
+      getDescriptor().getMessageType(131);
     internal_static_ei_SetArtifactResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SetArtifactResponse_descriptor,
         new java.lang.String[] { "Success", "OriginalItemId", "EiUserId", });
     internal_static_ei_ActiveArtifactSlot_descriptor =
-      getDescriptor().getMessageType(128);
+      getDescriptor().getMessageType(132);
     internal_static_ei_ActiveArtifactSlot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ActiveArtifactSlot_descriptor,
         new java.lang.String[] { "Occupied", "ItemId", });
     internal_static_ei_ArtifactsDB_descriptor =
-      getDescriptor().getMessageType(129);
+      getDescriptor().getMessageType(133);
     internal_static_ei_ArtifactsDB_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ArtifactsDB_descriptor,
@@ -331715,73 +335037,73 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ArtifactsDB_VirtueDB_descriptor,
         new java.lang.String[] { "InventoryItems", "ArtifactStatus", "FuelingMission", "ActiveArtifacts", });
     internal_static_ei_AuthenticatedMessage_descriptor =
-      getDescriptor().getMessageType(130);
+      getDescriptor().getMessageType(134);
     internal_static_ei_AuthenticatedMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AuthenticatedMessage_descriptor,
         new java.lang.String[] { "Message", "Version", "Code", "Compressed", "OriginalSize", "UserId", });
     internal_static_ei_LogCompleteMissionPayload_descriptor =
-      getDescriptor().getMessageType(131);
+      getDescriptor().getMessageType(135);
     internal_static_ei_LogCompleteMissionPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LogCompleteMissionPayload_descriptor,
         new java.lang.String[] { "Req", "Res", });
     internal_static_ei_LogCraftArtifactPayload_descriptor =
-      getDescriptor().getMessageType(132);
+      getDescriptor().getMessageType(136);
     internal_static_ei_LogCraftArtifactPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LogCraftArtifactPayload_descriptor,
         new java.lang.String[] { "Req", "Res", });
     internal_static_ei_LogConsumeArtifactPayload_descriptor =
-      getDescriptor().getMessageType(133);
+      getDescriptor().getMessageType(137);
     internal_static_ei_LogConsumeArtifactPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LogConsumeArtifactPayload_descriptor,
         new java.lang.String[] { "Req", "Res", });
     internal_static_ei_LogSetArtifactPayload_descriptor =
-      getDescriptor().getMessageType(134);
+      getDescriptor().getMessageType(138);
     internal_static_ei_LogSetArtifactPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_LogSetArtifactPayload_descriptor,
         new java.lang.String[] { "Req", "Res", });
     internal_static_ei_AccountTransferPayload_descriptor =
-      getDescriptor().getMessageType(135);
+      getDescriptor().getMessageType(139);
     internal_static_ei_AccountTransferPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_AccountTransferPayload_descriptor,
         new java.lang.String[] { "FromId", "ToEiUserId", });
     internal_static_ei_SaveBackupResponse_descriptor =
-      getDescriptor().getMessageType(136);
+      getDescriptor().getMessageType(140);
     internal_static_ei_SaveBackupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SaveBackupResponse_descriptor,
         new java.lang.String[] { "Success", "ErrorCode", "Message", "ExistingBackup", });
     internal_static_ei_CleanAccountRequest_descriptor =
-      getDescriptor().getMessageType(137);
+      getDescriptor().getMessageType(141);
     internal_static_ei_CleanAccountRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CleanAccountRequest_descriptor,
         new java.lang.String[] { "EiUserIdToKeep", "GameServicesId", "GameServicesIdScoped", });
     internal_static_ei_ReturnEDTPayload_descriptor =
-      getDescriptor().getMessageType(138);
+      getDescriptor().getMessageType(142);
     internal_static_ei_ReturnEDTPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ReturnEDTPayload_descriptor,
         new java.lang.String[] { "EiUserId", });
     internal_static_ei_DLCItem_descriptor =
-      getDescriptor().getMessageType(139);
+      getDescriptor().getMessageType(143);
     internal_static_ei_DLCItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_DLCItem_descriptor,
         new java.lang.String[] { "Name", "Directory", "Ext", "Compressed", "OriginalSize", "Url", "Checksum", });
     internal_static_ei_FontPack_descriptor =
-      getDescriptor().getMessageType(140);
+      getDescriptor().getMessageType(144);
     internal_static_ei_FontPack_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_FontPack_descriptor,
         new java.lang.String[] { "Languages", "Faces", });
     internal_static_ei_ShellSpec_descriptor =
-      getDescriptor().getMessageType(141);
+      getDescriptor().getMessageType(145);
     internal_static_ei_ShellSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellSpec_descriptor,
@@ -331793,7 +335115,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ShellSpec_ShellPiece_descriptor,
         new java.lang.String[] { "AssetType", "Dlc", });
     internal_static_ei_ShellSetSpec_descriptor =
-      getDescriptor().getMessageType(142);
+      getDescriptor().getMessageType(146);
     internal_static_ei_ShellSetSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellSetSpec_descriptor,
@@ -331805,7 +335127,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ShellSetSpec_VariationSpec_descriptor,
         new java.lang.String[] { "Identifier", "HexColor", "Price", "SortPriority", "DefaultAppearance", "CustomAppearance", });
     internal_static_ei_ShellObjectSpec_descriptor =
-      getDescriptor().getMessageType(143);
+      getDescriptor().getMessageType(147);
     internal_static_ei_ShellObjectSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellObjectSpec_descriptor,
@@ -331817,19 +335139,19 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ShellObjectSpec_LODPiece_descriptor,
         new java.lang.String[] { "Dlc", "Lod", });
     internal_static_ei_ShellGroupSpec_descriptor =
-      getDescriptor().getMessageType(144);
+      getDescriptor().getMessageType(148);
     internal_static_ei_ShellGroupSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellGroupSpec_descriptor,
         new java.lang.String[] { "Identifier", "Name", "AssetType", "MemberIds", "PriceMultDEPRECATED", });
     internal_static_ei_DLCCatalog_descriptor =
-      getDescriptor().getMessageType(145);
+      getDescriptor().getMessageType(149);
     internal_static_ei_DLCCatalog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_DLCCatalog_descriptor,
         new java.lang.String[] { "Items", "Shells", "ShellSets", "Decorators", "ShellObjects", "ShellGroups", "ShellsShowcaseLastFeaturedTime", "FontPacks", });
     internal_static_ei_ShellDB_descriptor =
-      getDescriptor().getMessageType(146);
+      getDescriptor().getMessageType(150);
     internal_static_ei_ShellDB_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellDB_descriptor,
@@ -331895,7 +335217,7 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ShellDB_LightingConfig_descriptor,
         new java.lang.String[] { "LightDir", "LightDirectColor", "LightDirectIntensity", "LightAmbientColor", "LightAmbientIntensity", "FogColor", "FogNear", "FogFar", "FogDensity", });
     internal_static_ei_ShellPopularityStats_descriptor =
-      getDescriptor().getMessageType(147);
+      getDescriptor().getMessageType(151);
     internal_static_ei_ShellPopularityStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellPopularityStats_descriptor,
@@ -331907,55 +335229,55 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_ShellPopularityStats_Entry_descriptor,
         new java.lang.String[] { "Id", "Element", "Spent", "Count", });
     internal_static_ei_ShellsActionLog_descriptor =
-      getDescriptor().getMessageType(148);
+      getDescriptor().getMessageType(152);
     internal_static_ei_ShellsActionLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellsActionLog_descriptor,
         new java.lang.String[] { "Rinfo", "UserId", "Action", "SubId", "FarmElement", "Cost", "ApproxTime", "Version", "FarmIndex", "SoulEggs", "TicketsSpent", "GoldSpent", });
     internal_static_ei_SubmitShellShowcaseRequest_descriptor =
-      getDescriptor().getMessageType(149);
+      getDescriptor().getMessageType(153);
     internal_static_ei_SubmitShellShowcaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SubmitShellShowcaseRequest_descriptor,
         new java.lang.String[] { "Rinfo", "LocalId", "UserId", "PublicUsername", "FarmConfig", });
     internal_static_ei_ShellShowcase_descriptor =
-      getDescriptor().getMessageType(150);
+      getDescriptor().getMessageType(154);
     internal_static_ei_ShellShowcase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellShowcase_descriptor,
         new java.lang.String[] { "Top", "Featured", "Fresh", });
     internal_static_ei_ShellShowcaseListingInfo_descriptor =
-      getDescriptor().getMessageType(151);
+      getDescriptor().getMessageType(155);
     internal_static_ei_ShellShowcaseListingInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellShowcaseListingInfo_descriptor,
         new java.lang.String[] { "Id", "LocalId", "Name", "Description", "IsNew", "CreatorName", "Status", "FarmConfig", "Sales", "Gross", "Views", "Equips", "Likes", "Dislikes", "ShareUrl", });
     internal_static_ei_ShowcaseRoyaltyDeliveryConfirmation_descriptor =
-      getDescriptor().getMessageType(152);
+      getDescriptor().getMessageType(156);
     internal_static_ei_ShowcaseRoyaltyDeliveryConfirmation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShowcaseRoyaltyDeliveryConfirmation_descriptor,
         new java.lang.String[] { "Rinfo", "Ids", "Amount", });
     internal_static_ei_ShellShowcaseListingSet_descriptor =
-      getDescriptor().getMessageType(153);
+      getDescriptor().getMessageType(157);
     internal_static_ei_ShellShowcaseListingSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellShowcaseListingSet_descriptor,
         new java.lang.String[] { "Listings", });
     internal_static_ei_ShellsActionBatch_descriptor =
-      getDescriptor().getMessageType(154);
+      getDescriptor().getMessageType(158);
     internal_static_ei_ShellsActionBatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_ShellsActionBatch_descriptor,
         new java.lang.String[] { "Rinfo", "Actions", });
     internal_static_ei_UserVerificationAnalysis_descriptor =
-      getDescriptor().getMessageType(155);
+      getDescriptor().getMessageType(159);
     internal_static_ei_UserVerificationAnalysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_UserVerificationAnalysis_descriptor,
         new java.lang.String[] { "OverallStatus", "StartTime", "CompletionTime", "VerificationCount", "NumPrestiges", "SoulEggs", "EggsOfProphecy", "IapStatus", "VerifiedProPermit", "VerifiedPiggyBreaks", "VerifiedOtherIap", "UnverifiedIap", "GoldEarned", "RegularIapBuyer", "RegularIapCheater", "ArtifactsStatus", "MissionsCompleted", "ArtifactsCollected", "ArtifactsConsumed", "ArtifactsInInventory", "RareArtifactsInInventory", "RareArtifactsOnServer", "LegendaryArtifactsInInventory", "LegendaryArtifactsOnServer", "GoldSpentCrafting", "ExcessiveConsumes", "ExcessiveInventory", "ExcessiveSpend", "ContractsStatus", "NumCoopMemberships", "ValidContracts", "InvalidContracts", "ExcessiveEop", "ExcessiveInvalidContracts", "Verified", "VerificationOverride", "VerificationOverrideValue", });
     internal_static_ei_UserSubscriptionInfo_descriptor =
-      getDescriptor().getMessageType(156);
+      getDescriptor().getMessageType(160);
     internal_static_ei_UserSubscriptionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_UserSubscriptionInfo_descriptor,
@@ -331967,31 +335289,31 @@ public final class Ei extends com.google.protobuf.GeneratedFile {
         internal_static_ei_UserSubscriptionInfo_HistoryEntry_descriptor,
         new java.lang.String[] { "Timestamp", "MessageId", "Message", });
     internal_static_ei_SubscriptionChangeHintRequest_descriptor =
-      getDescriptor().getMessageType(157);
+      getDescriptor().getMessageType(161);
     internal_static_ei_SubscriptionChangeHintRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SubscriptionChangeHintRequest_descriptor,
         new java.lang.String[] { "Rinfo", "OriginalTransactionId", "NextSubscriptionLevel", });
     internal_static_ei_CXPEvalRolloutInfo_descriptor =
-      getDescriptor().getMessageType(158);
+      getDescriptor().getMessageType(162);
     internal_static_ei_CXPEvalRolloutInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_CXPEvalRolloutInfo_descriptor,
         new java.lang.String[] { "CurrentId", "BasisPoints", });
     internal_static_ei_PathOfVirtueInfo_descriptor =
-      getDescriptor().getMessageType(159);
+      getDescriptor().getMessageType(163);
     internal_static_ei_PathOfVirtueInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_PathOfVirtueInfo_descriptor,
         new java.lang.String[] { "ServerTime", "SimTime", "ResetIndex", });
     internal_static_ei_SyncPathOfVirtueRequest_descriptor =
-      getDescriptor().getMessageType(160);
+      getDescriptor().getMessageType(164);
     internal_static_ei_SyncPathOfVirtueRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SyncPathOfVirtueRequest_descriptor,
         new java.lang.String[] { "Rinfo", "ResetIndex", "SimTime", "Rebaseline", });
     internal_static_ei_SyncPathOfVirtueResponse_descriptor =
-      getDescriptor().getMessageType(161);
+      getDescriptor().getMessageType(165);
     internal_static_ei_SyncPathOfVirtueResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ei_SyncPathOfVirtueResponse_descriptor,

@@ -82,7 +82,8 @@ proto.ei.TranslationCache.toObject = function(includeInstance, msg) {
     entriesList: jspb.Message.toObjectList(msg.getEntriesList(),
     proto.ei.TranslationEntry.toObject, includeInstance),
     cachedAt: (f = jspb.Message.getOptionalFloatingPointField(msg, 3)) == null ? undefined : f,
-    cacheVersion: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f
+    cacheVersion: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+    packVersion: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -135,6 +136,10 @@ proto.ei.TranslationCache.deserializeBinaryFromReader = function(msg, reader) {
     case 4:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setCacheVersion(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPackVersion(value);
       break;
     default:
       reader.skipField();
@@ -191,6 +196,13 @@ proto.ei.TranslationCache.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeUint32(
       4,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeUint32(
+      5,
       f
     );
   }
@@ -340,6 +352,42 @@ proto.ei.TranslationCache.prototype.clearCacheVersion = function() {
  */
 proto.ei.TranslationCache.prototype.hasCacheVersion = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional uint32 pack_version = 5;
+ * @return {number}
+ */
+proto.ei.TranslationCache.prototype.getPackVersion = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ei.TranslationCache} returns this
+ */
+proto.ei.TranslationCache.prototype.setPackVersion = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.TranslationCache} returns this
+ */
+proto.ei.TranslationCache.prototype.clearPackVersion = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.TranslationCache.prototype.hasPackVersion = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

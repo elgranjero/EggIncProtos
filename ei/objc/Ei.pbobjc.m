@@ -151,6 +151,8 @@ GPBObjCClassDeclaration(EggIncEvent);
 GPBObjCClassDeclaration(EggIncFirstContactRequest);
 GPBObjCClassDeclaration(EggIncFirstContactResponse);
 GPBObjCClassDeclaration(FarmProductionParams);
+GPBObjCClassDeclaration(FontDLCRequest);
+GPBObjCClassDeclaration(FontDLCResponse);
 GPBObjCClassDeclaration(FontPack);
 GPBObjCClassDeclaration(GameModifier);
 GPBObjCClassDeclaration(GenericAction);
@@ -254,6 +256,8 @@ GPBObjCClassDeclaration(TranslationPackResponse);
 GPBObjCClassDeclaration(TranslationPlaceholder);
 GPBObjCClassDeclaration(TranslationRequest);
 GPBObjCClassDeclaration(TranslationResponse);
+GPBObjCClassDeclaration(TranslationSeed);
+GPBObjCClassDeclaration(TranslationSeedEntry);
 GPBObjCClassDeclaration(UpdateCoopPermissionsRequest);
 GPBObjCClassDeclaration(UpdateCoopPermissionsResponse);
 GPBObjCClassDeclaration(UserDataInfoRequest);
@@ -13390,10 +13394,12 @@ typedef struct TranslationResponse__storage_ {
 @dynamic entriesArray, entriesArray_Count;
 @dynamic hasCachedAt, cachedAt;
 @dynamic hasCacheVersion, cacheVersion;
+@dynamic hasPackVersion, packVersion;
 
 typedef struct TranslationCache__storage_ {
   uint32_t _has_storage_[1];
   uint32_t cacheVersion;
+  uint32_t packVersion;
   NSString *language;
   NSMutableArray *entriesArray;
   double cachedAt;
@@ -13438,6 +13444,15 @@ typedef struct TranslationCache__storage_ {
         .number = TranslationCache_FieldNumber_CacheVersion,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(TranslationCache__storage_, cacheVersion),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "packVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationCache_FieldNumber_PackVersion,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(TranslationCache__storage_, packVersion),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt32,
       },
@@ -13606,6 +13621,234 @@ typedef struct TranslationPackResponse__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(TranslationPackResponse__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - FontDLCRequest
+
+@implementation FontDLCRequest
+
+@dynamic hasLanguage, language;
+@dynamic hasClientVersion, clientVersion;
+@dynamic hasPlatform, platform;
+
+typedef struct FontDLCRequest__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t clientVersion;
+  Platform platform;
+  NSString *language;
+} FontDLCRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = FontDLCRequest_FieldNumber_Language,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(FontDLCRequest__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "clientVersion",
+        .dataTypeSpecific.clazz = Nil,
+        .number = FontDLCRequest_FieldNumber_ClientVersion,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(FontDLCRequest__storage_, clientVersion),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "platform",
+        .dataTypeSpecific.enumDescFunc = Platform_EnumDescriptor,
+        .number = FontDLCRequest_FieldNumber_Platform,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(FontDLCRequest__storage_, platform),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(FontDLCRequest)
+                                   messageName:@"FontDLCRequest"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(FontDLCRequest__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - FontDLCResponse
+
+@implementation FontDLCResponse
+
+@dynamic fontPacksArray, fontPacksArray_Count;
+
+typedef struct FontDLCResponse__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *fontPacksArray;
+} FontDLCResponse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "fontPacksArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(FontPack),
+        .number = FontDLCResponse_FieldNumber_FontPacksArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(FontDLCResponse__storage_, fontPacksArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(FontDLCResponse)
+                                   messageName:@"FontDLCResponse"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(FontDLCResponse__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationSeed
+
+@implementation TranslationSeed
+
+@dynamic hasLanguage, language;
+@dynamic entriesArray, entriesArray_Count;
+
+typedef struct TranslationSeed__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *language;
+  NSMutableArray *entriesArray;
+} TranslationSeed__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "language",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationSeed_FieldNumber_Language,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationSeed__storage_, language),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "entriesArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(TranslationSeedEntry),
+        .number = TranslationSeed_FieldNumber_EntriesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(TranslationSeed__storage_, entriesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationSeed)
+                                   messageName:@"TranslationSeed"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationSeed__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - TranslationSeedEntry
+
+@implementation TranslationSeedEntry
+
+@dynamic hasSource, source;
+@dynamic hasTranslation, translation;
+
+typedef struct TranslationSeedEntry__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *source;
+  NSString *translation;
+} TranslationSeedEntry__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "source",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationSeedEntry_FieldNumber_Source,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TranslationSeedEntry__storage_, source),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "translation",
+        .dataTypeSpecific.clazz = Nil,
+        .number = TranslationSeedEntry_FieldNumber_Translation,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TranslationSeedEntry__storage_, translation),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:GPBObjCClass(TranslationSeedEntry)
+                                   messageName:@"TranslationSeedEntry"
+                                runtimeSupport:&GOOGLE_PROTOBUF_OBJC_EXPECTED_GENCODE_VERSION_40311
+                               fileDescription:&EiRoot_FileDescription
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(TranslationSeedEntry__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");

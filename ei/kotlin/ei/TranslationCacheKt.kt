@@ -171,6 +171,30 @@ public object TranslationCacheKt {
     public fun hasCacheVersion(): kotlin.Boolean {
       return _builder.hasCacheVersion()
     }
+
+    /**
+     * `optional uint32 pack_version = 5;`
+     */
+    public var packVersion: kotlin.Int
+      @kotlin.jvm.JvmName("getPackVersion")
+        get() = _builder.packVersion
+      @kotlin.jvm.JvmName("setPackVersion")
+        set(value) {
+        _builder.packVersion = value
+      }
+    /**
+     * `optional uint32 pack_version = 5;`
+     */
+    public fun clearPackVersion() {
+      _builder.clearPackVersion()
+    }
+    /**
+     * `optional uint32 pack_version = 5;`
+     * @return Whether the packVersion field is set.
+     */
+    public fun hasPackVersion(): kotlin.Boolean {
+      return _builder.hasPackVersion()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
