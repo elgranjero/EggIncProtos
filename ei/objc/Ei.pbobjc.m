@@ -2798,6 +2798,7 @@ typedef struct Vector4__storage_ {
 @dynamic hasVersion, version;
 @dynamic hasBuild, build;
 @dynamic hasDeviceLanguage, deviceLanguage;
+@dynamic hasDisplayLanguage, displayLanguage;
 @dynamic hasForceOfferBackup, forceOfferBackup;
 @dynamic hasForceBackup, forceBackup;
 @dynamic hasSettings, settings;
@@ -2821,7 +2822,7 @@ typedef struct Vector4__storage_ {
 @dynamic hasSignature, signature;
 
 typedef struct Backup__storage_ {
-  uint32_t _has_storage_[1];
+  uint32_t _has_storage_[2];
   uint32_t version;
   NSString *userId;
   NSString *userName;
@@ -2849,6 +2850,7 @@ typedef struct Backup__storage_ {
   NSString *gameServicesIdScoped;
   NSString *build;
   NSString *deviceLanguage;
+  NSString *displayLanguage;
   NSString *signature;
   double approxTime;
   uint64_t checksum;
@@ -2891,7 +2893,7 @@ typedef struct Backup__storage_ {
         .name = "settings",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Settings),
         .number = Backup_FieldNumber_Settings,
-        .hasIndex = 15,
+        .hasIndex = 16,
         .offset = (uint32_t)offsetof(Backup__storage_, settings),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2900,7 +2902,7 @@ typedef struct Backup__storage_ {
         .name = "tutorial",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Tutorial),
         .number = Backup_FieldNumber_Tutorial,
-        .hasIndex = 16,
+        .hasIndex = 17,
         .offset = (uint32_t)offsetof(Backup__storage_, tutorial),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2909,7 +2911,7 @@ typedef struct Backup__storage_ {
         .name = "stats",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Stats),
         .number = Backup_FieldNumber_Stats,
-        .hasIndex = 17,
+        .hasIndex = 18,
         .offset = (uint32_t)offsetof(Backup__storage_, stats),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2918,7 +2920,7 @@ typedef struct Backup__storage_ {
         .name = "game",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Game),
         .number = Backup_FieldNumber_Game,
-        .hasIndex = 18,
+        .hasIndex = 19,
         .offset = (uint32_t)offsetof(Backup__storage_, game),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2927,7 +2929,7 @@ typedef struct Backup__storage_ {
         .name = "sim",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Simulation),
         .number = Backup_FieldNumber_Sim,
-        .hasIndex = 22,
+        .hasIndex = 23,
         .offset = (uint32_t)offsetof(Backup__storage_, sim),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2936,7 +2938,7 @@ typedef struct Backup__storage_ {
         .name = "mission",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Mission),
         .number = Backup_FieldNumber_Mission,
-        .hasIndex = 23,
+        .hasIndex = 24,
         .offset = (uint32_t)offsetof(Backup__storage_, mission),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2945,7 +2947,7 @@ typedef struct Backup__storage_ {
         .name = "misc",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Misc),
         .number = Backup_FieldNumber_Misc,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(Backup__storage_, misc),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2963,7 +2965,7 @@ typedef struct Backup__storage_ {
         .name = "contracts",
         .dataTypeSpecific.clazz = GPBObjCClass(MyContracts),
         .number = Backup_FieldNumber_Contracts,
-        .hasIndex = 25,
+        .hasIndex = 26,
         .offset = (uint32_t)offsetof(Backup__storage_, contracts),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2972,7 +2974,7 @@ typedef struct Backup__storage_ {
         .name = "artifacts",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Artifacts),
         .number = Backup_FieldNumber_Artifacts,
-        .hasIndex = 19,
+        .hasIndex = 20,
         .offset = (uint32_t)offsetof(Backup__storage_, artifacts),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -2981,7 +2983,7 @@ typedef struct Backup__storage_ {
         .name = "artifactsDb",
         .dataTypeSpecific.clazz = GPBObjCClass(ArtifactsDB),
         .number = Backup_FieldNumber_ArtifactsDb,
-        .hasIndex = 26,
+        .hasIndex = 27,
         .offset = (uint32_t)offsetof(Backup__storage_, artifactsDb),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3017,8 +3019,8 @@ typedef struct Backup__storage_ {
         .name = "forceOfferBackup",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ForceOfferBackup,
-        .hasIndex = 11,
-        .offset = 12,  // Stored in _has_storage_ to save space.
+        .hasIndex = 12,
+        .offset = 13,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -3035,8 +3037,8 @@ typedef struct Backup__storage_ {
         .name = "forceBackup",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_ForceBackup,
-        .hasIndex = 13,
-        .offset = 14,  // Stored in _has_storage_ to save space.
+        .hasIndex = 14,
+        .offset = 15,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeBool,
       },
@@ -3053,7 +3055,7 @@ typedef struct Backup__storage_ {
         .name = "shellDb",
         .dataTypeSpecific.clazz = GPBObjCClass(ShellDB),
         .number = Backup_FieldNumber_ShellDb,
-        .hasIndex = 27,
+        .hasIndex = 28,
         .offset = (uint32_t)offsetof(Backup__storage_, shellDb),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3062,7 +3064,7 @@ typedef struct Backup__storage_ {
         .name = "shells",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Shells),
         .number = Backup_FieldNumber_Shells,
-        .hasIndex = 21,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(Backup__storage_, shells),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3080,7 +3082,7 @@ typedef struct Backup__storage_ {
         .name = "mailState",
         .dataTypeSpecific.clazz = GPBObjCClass(MailState),
         .number = Backup_FieldNumber_MailState,
-        .hasIndex = 28,
+        .hasIndex = 29,
         .offset = (uint32_t)offsetof(Backup__storage_, mailState),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3089,7 +3091,7 @@ typedef struct Backup__storage_ {
         .name = "virtue",
         .dataTypeSpecific.clazz = GPBObjCClass(Backup_Virtue),
         .number = Backup_FieldNumber_Virtue,
-        .hasIndex = 20,
+        .hasIndex = 21,
         .offset = (uint32_t)offsetof(Backup__storage_, virtue),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3098,7 +3100,7 @@ typedef struct Backup__storage_ {
         .name = "subInfo",
         .dataTypeSpecific.clazz = GPBObjCClass(UserSubscriptionInfo),
         .number = Backup_FieldNumber_SubInfo,
-        .hasIndex = 29,
+        .hasIndex = 30,
         .offset = (uint32_t)offsetof(Backup__storage_, subInfo),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeMessage,
@@ -3131,10 +3133,19 @@ typedef struct Backup__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "displayLanguage",
+        .dataTypeSpecific.clazz = Nil,
+        .number = Backup_FieldNumber_DisplayLanguage,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(Backup__storage_, displayLanguage),
+        .flags = GPBFieldNone,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "checksum",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Checksum,
-        .hasIndex = 30,
+        .hasIndex = 31,
         .offset = (uint32_t)offsetof(Backup__storage_, checksum),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeUInt64,
@@ -3143,7 +3154,7 @@ typedef struct Backup__storage_ {
         .name = "signature",
         .dataTypeSpecific.clazz = Nil,
         .number = Backup_FieldNumber_Signature,
-        .hasIndex = 31,
+        .hasIndex = 32,
         .offset = (uint32_t)offsetof(Backup__storage_, signature),
         .flags = GPBFieldNone,
         .dataType = GPBDataTypeString,

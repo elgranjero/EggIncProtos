@@ -597,6 +597,7 @@ proto.ei.Backup.toObject = function(includeInstance, msg) {
     version: jspb.Message.getFieldWithDefault(msg, 21, 0),
     build: (f = jspb.Message.getField(msg, 32)) == null ? undefined : f,
     deviceLanguage: (f = jspb.Message.getField(msg, 33)) == null ? undefined : f,
+    displayLanguage: (f = jspb.Message.getField(msg, 34)) == null ? undefined : f,
     forceOfferBackup: (f = jspb.Message.getBooleanField(msg, 20)) == null ? undefined : f,
     forceBackup: (f = jspb.Message.getBooleanField(msg, 22)) == null ? undefined : f,
     settings: (f = msg.getSettings()) && proto.ei.Backup.Settings.toObject(includeInstance, f),
@@ -698,6 +699,10 @@ proto.ei.Backup.deserializeBinaryFromReader = function(msg, reader) {
     case 33:
       var value = /** @type {string} */ (reader.readString());
       msg.setDeviceLanguage(value);
+      break;
+    case 34:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDisplayLanguage(value);
       break;
     case 20:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -902,6 +907,13 @@ proto.ei.Backup.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeString(
       33,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 34));
+  if (f != null) {
+    writer.writeString(
+      34,
       f
     );
   }
@@ -13250,6 +13262,42 @@ proto.ei.Backup.prototype.clearDeviceLanguage = function() {
  */
 proto.ei.Backup.prototype.hasDeviceLanguage = function() {
   return jspb.Message.getField(this, 33) != null;
+};
+
+
+/**
+ * optional string display_language = 34;
+ * @return {string}
+ */
+proto.ei.Backup.prototype.getDisplayLanguage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 34, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.setDisplayLanguage = function(value) {
+  return jspb.Message.setField(this, 34, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ei.Backup} returns this
+ */
+proto.ei.Backup.prototype.clearDisplayLanguage = function() {
+  return jspb.Message.setField(this, 34, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ei.Backup.prototype.hasDisplayLanguage = function() {
+  return jspb.Message.getField(this, 34) != null;
 };
 
 

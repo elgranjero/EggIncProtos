@@ -294,6 +294,30 @@ public object BackupKt {
     }
 
     /**
+     * `optional string display_language = 34;`
+     */
+    public var displayLanguage: kotlin.String
+      @kotlin.jvm.JvmName("getDisplayLanguage")
+        get() = _builder.displayLanguage
+      @kotlin.jvm.JvmName("setDisplayLanguage")
+        set(value) {
+        _builder.displayLanguage = value
+      }
+    /**
+     * `optional string display_language = 34;`
+     */
+    public fun clearDisplayLanguage() {
+      _builder.clearDisplayLanguage()
+    }
+    /**
+     * `optional string display_language = 34;`
+     * @return Whether the displayLanguage field is set.
+     */
+    public fun hasDisplayLanguage(): kotlin.Boolean {
+      return _builder.hasDisplayLanguage()
+    }
+
+    /**
      * `optional bool force_offer_backup = 20;`
      */
     public var forceOfferBackup: kotlin.Boolean

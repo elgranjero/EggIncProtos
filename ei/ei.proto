@@ -49,6 +49,7 @@ message Backup {
     optional uint32 version = 21 [default = 0];
     optional string build = 32;
     optional string device_language = 33;
+    optional string display_language = 34;
     optional bool force_offer_backup = 20;
     optional bool force_backup = 22;
     

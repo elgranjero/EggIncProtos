@@ -1239,6 +1239,7 @@ typedef GPB_ENUM(Backup_FieldNumber) {
   Backup_FieldNumber_GameServicesIdScoped = 31,
   Backup_FieldNumber_Build = 32,
   Backup_FieldNumber_DeviceLanguage = 33,
+  Backup_FieldNumber_DisplayLanguage = 34,
   Backup_FieldNumber_Checksum = 100,
   Backup_FieldNumber_Signature = 101,
 };
@@ -1286,6 +1287,10 @@ GPB_FINAL @interface Backup : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceLanguage;
 /** Test to see if @c deviceLanguage has been set. */
 @property(nonatomic, readwrite) BOOL hasDeviceLanguage;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *displayLanguage;
+/** Test to see if @c displayLanguage has been set. */
+@property(nonatomic, readwrite) BOOL hasDisplayLanguage;
 
 @property(nonatomic, readwrite) BOOL forceOfferBackup;
 @property(nonatomic, readwrite) BOOL hasForceOfferBackup;
