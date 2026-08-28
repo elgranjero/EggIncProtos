@@ -1,0 +1,14 @@
+name: Discord Notification
+
+on: [push] # Triggers the workflow on every push event
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom message to Discord via curl
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d '{"content": "🚀 **New Code Push!**\nRepository: '"${{ github.repository }}"'\nCommit: '"${{ github.event.head_commit.message }}"'\nAuthor: '"${{ github.actor }}"'"}' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
